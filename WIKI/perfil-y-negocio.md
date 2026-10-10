@@ -13,7 +13,7 @@
 3. **Adaptar o clonar** a otro mercado o idioma.
 4. **Landing** en Lovable ([[landings-funnels-y-upsells]]).
 5. **Ads en Meta** con la estructura 3-3-3. Para escalar: [[escalado-en-meta-ads]] y [[estructuras-cbo]].
-6. **Multi-geo** si funciona.
+6. **Multi-geo** si funciona: misma oferta en varios mercados = "múltiples ofertas en profit" ([[internacionalizacion]]).
 
 ## Precio estándar
 $27 en inglés (ancla $97) · 14.999–15.990 ARS · garantía de 7 días · pago único · Hotmart, Kiwify, Monetizze, Mercado Pago.
@@ -33,6 +33,9 @@ Lovable (landings) · HeyGen (avatares UGC) · Sora/Flow (testimoniales con IA) 
 - **Meta Ads:** conector oficial de Meta en Claude ([[claude-con-meta-ads]]) y UTMify para atribución.
 - **Cuentas:** Multilogin para perfiles aislados ([[contingencia-de-cuentas]]).
 - **Prompts:** 23 prompts de producción ([[biblioteca-de-prompts]]).
+
+## Preguntas abiertas
+- ¿Con qué cobra Scented Stones en USD: LLC + Stripe, Impultienda o Hotmart? ([[llc-banca-y-fiscal]])
 
 ## Relacionado
 [[como-trabajar-con-santiago]] · [[ofertas]] · [[scented-stones]]

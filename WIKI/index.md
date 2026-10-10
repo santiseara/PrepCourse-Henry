@@ -15,8 +15,8 @@
 ## Negocio y estrategia
 - ⏳ [[modelo-low-ticket]] — la mecánica del modelo y por qué el front-end no es donde está el negocio
 - ✅ [[filosofia-de-marketing]] — Direct response puro: principios, referentes (Hormozi, Agora) y estilo de copy.
-- ⏳ [[internacionalizacion]] — a qué países targetear por mercado, y la decisión de moneda que lo condiciona todo
-- ⏳ [[llc-banca-y-fiscal]] — LLC, ITIN, bancos, cripto y por qué nunca tener toda la plata en un lugar
+- ✅ [[internacionalizacion]] — Una oferta en varios mercados = múltiples ofertas en profit. Países por mercado, localizar en vez de traducir, decisión de moneda.
+- ✅ [[llc-banca-y-fiscal]] — LLC en EE.UU., ITIN, Mercury y Relay, diversificar fondos, cripto para Meta, impuestos.
 - ⏳ [[organizacion-y-registro]] — el registro diario, las tres cuentas con tres trabajos y el recorrido de herramientas
 
 ## Oferta y producto
@@ -24,13 +24,13 @@
 - ✅ [[funnel-hacking]] — Cómo espiar y filtrar ofertas que escalan (3 días, mismo URL, sin marcas personales) y cómo defenderte.
 - ⏳ [[seleccion-y-modelado-de-oferta]] — modelar lo validado en vez de inventar. El error de dos años que originó la regla
 - ⏳ [[validacion-de-oferta]] — 100 USD y una semana por oferta. Cuándo cortar
-- ⏳ [[investigacion-de-mercado]] — la cadena de prompts que produce los cuatro documentos que alimentan todo lo demás
+- ✅ [[investigacion-de-mercado]] — La cadena que produce los 4 documentos base: deep research, Avatar Sheet, Offer Brief y creencias.
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
 - ✅ [[aumento-de-aov]] — Backend: order bumps, upsells pre y post compra, KPIs y los 5 bumps que no se pisan.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
 ## Adquisición — Meta Ads
-- ⏳ [[metodo-v3]] — **la estructura base:** una CBO por oferta, un conjunto por tanda, renovaciones en la misma campaña
+- ✅ [[metodo-v3]] — La estructura base: una CBO por oferta, un conjunto por tanda de 5 a 10 anuncios, renovaciones adentro, campaña de winners.
 - ✅ [[estructuras-cbo]] — Mapa de CBOs (V3, Pocket, aislada, power…), datos CBO contra ABO y 7 reglas.
 - ⏳ [[nomenclatura-del-metodo]] — cómo se nombran campañas, conjuntos, anuncios, pujas y UTMs
 - ⏳ [[metricas-y-kpis]] — costo por visita vs. revenue por visita, y los KPIs de cada eslabón
@@ -41,7 +41,7 @@
 - ⏳ [[optimizacion-de-roas]] — las 6 palancas para sacar un funnel de break-even
 - ✅ [[contingencia-de-cuentas]] — Perfiles de backup, BMs y cuentas para sobrevivir a bloqueos.
 - ⏳ [[problemas-de-cuentas-meta]] — síntomas y soluciones: límites, rechazos, apelaciones y el Business Manager
-- ⏳ [[lectura-de-resultados]] — si no hay ganancia, casi nunca es el anuncio: el orden para diagnosticar
+- ✅ [[lectura-de-resultados]] — Casi nunca es el anuncio: orden de diagnóstico con datos reales (landing → pago, tarjetas, backend, cuenta, horario, reglas de corte).
 
 ## Creatividades
 - ✅ [[hooks]] — Los 3 segundos que sostienen el funnel: hook rate de más del 50%, lo visual pesa más que el guión, método de los "influencers quebrados".
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los 27 temas ⏳ de tu wiki previa.** Por impacto en lo que hacemos ahora: **`metodo-v3`** (la campaña base), **`testeo-de-creativos`**, **`pagina-de-ventas`**, **`quiz-funnel`**, **`metricas-y-kpis`** y **`seleccion-y-modelado-de-oferta`**. Y el texto de los 23 prompts en `RAW/prompts/`.
-2. **Los documentos de investigación de Scented Stones.** No están el Avatar Sheet, el Offer Brief, el deep research ni el documento de creencias. Tu propio método dice que son la memoria que alimenta guiones, hooks e imágenes, y varios prompts no generan nada sin ellos ([[ia-en-el-flujo-de-trabajo]]). 👉 Si los tenés, subilos. Si no, los armamos.
-3. **El backend real de Scented Stones.** Según tu índice previo, la plataforma actual es Impultienda. ¿Piedras corre ahí? ¿Tiene post-pago? ¿El Hero de la landing tiene botón de compra? 👉 Una nota corta con eso y la URL de la landing.
+1. **Los 22 temas ⏳ de tu wiki previa.** `metodo-v3` ya está, pero se apoya en dos que faltan: **`nomenclatura-del-metodo`** (nombres y UTMs) y **`testeo-de-creativos`** (cuándo cortar un anuncio). Después: `pagina-de-ventas`, `quiz-funnel`, `metricas-y-kpis` y `seleccion-y-modelado-de-oferta`.
+2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento ya está en [[investigacion-de-mercado]]. 👉 Pasame la URL de la landing de piedras y los genero con deep research. Quedan en `RAW/scented-stones/` para alimentar guiones, hooks e imágenes.
+3. **Cómo cobra y qué backend tiene Scented Stones.** ¿LLC + Stripe, Impultienda o Hotmart? ¿Tiene post-pago? Define si se puede replicar a LatAm ([[internacionalizacion]]: Mercado Pago no permite multiidioma) y si se puede montar el embudo de OTOs.

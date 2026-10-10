@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-10 — Internacionalización, investigación, lectura de resultados, LLC y método V3
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (internacionalizacion, investigacion-de-mercado, lectura-de-resultados, llc-banca-y-fiscal, metodo-v3).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `scented-stones.md`: sección de expansión y lanzamiento.
+  - `como-trabajar-con-santiago.md`: tamaño de tanda de 5 a 10 anuncios.
+  - `perfil-y-negocio.md`: multi-geo y pregunta de cobro.
+  - `index.md`: estados ✅/⏳ y gaps.
+- **Conexiones inesperadas:**
+  1. **"No necesitás más de una oferta":** la jugada de más palanca con Scented Stones es replicarla en otros mercados, no buscar otra.
+  2. **Santiago lo hizo al revés del manual.** El winner nació en Tier 1 inglés, el mercado "no recomendado para empezar". La expansión natural ahora es hacia abajo: LatAm y AR, con Carmela Vega como persona.
+  3. **Choque de volumen resuelto:** "3 guiones por tanda" es la base creativa; el conjunto V3 pide de 5 a 10 anuncios. Se multiplican los guiones por hooks o B-rolls, y nunca se mezcla imagen con video.
+  4. **El "Tap Learn more" del guión 3 coincide con el botón estándar de V3** ("Más información").
+  5. **El abandono del alemán** es el "si no agarra, no le insistas" de internacionalización.
+  6. **Lectura de resultados equilibra el foco en ads:** cuando falla, casi siempre es landing → pago.
+
 ## 2026-10-10 — Guiones, hooks, IA, imágenes e índice previo
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (guiones-de-video-ads, hooks, ia-en-el-flujo-de-trabajo, imagenes-y-mockups, `_index-wiki-previa.md`).

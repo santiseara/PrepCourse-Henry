@@ -60,6 +60,11 @@
 - **Escala:** "más anuncios, no más ofertas" ([[escalado-en-meta-ads]]). La palanca es el volumen de variables, unos 10 creativos por día cuando toque.
 - **Formatos:** sumar carrusel, estático "LAST ONE" y UGC con avatar a los guiones de 30 segundos.
 
+## Expansión y lanzamiento
+- **Replicar en otros mercados** es la jugada de más palanca ([[internacionalizacion]]): LatAm en español neutro, AR con voseo (persona: Carmela Vega), Italia, Francia o Worldwide en inglés. Si un mercado no agarra en 2 o 3 días, no insistir.
+- **Estructura:** V3, una CBO con un conjunto por tanda de 5 a 10 anuncios, botón "Más información" ([[metodo-v3]]).
+- **Documentos de investigación:** pendientes. Se pueden generar con el procedimiento de [[investigacion-de-mercado]].
+
 ## Preguntas abiertas
 - ¿Qué natives y descripciones acompañaron a estos guiones?
 - ¿Cuál de los 3 rinde más?

@@ -65,7 +65,7 @@
 
 ## Herramientas y método
 - ⏳ [[stack-de-herramientas]] — inventario completo, marcado entre lo que está en uso y lo evaluado
-- ✅ [[biblioteca-de-prompts]] — Mapa de los 23 prompts de producción. Con texto en `RAW/prompts/`: 19 de 23. Incluye qué pide cada uno y dónde choca con tus reglas.
+- ✅ [[biblioteca-de-prompts]] — Los 23 prompts de producción, ✅ todos con texto en `RAW/prompts/`. Qué pide cada uno, qué devuelve y dónde choca con tus reglas o tiene riesgo.
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.
 
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los últimos 4 prompts:** `prompt-variacion-de-guiones-winners` (el clave para piedras), `prompt-vsl-oto-post-purchase`, `prompt-testimonios-sora-2` y `prompt-optimizar-carga-web-html`. Y los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`).
-2. **Los 4 documentos de investigación de Scented Stones.** Ya son **8 prompts que los piden**: upsells, mockups, ángulos, guiones de 30 s, HTML, primary text, imágenes y modelar ofertas. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
-3. **La URL y los datos base de piedras.** Con la URL hago la auditoría, las capturas para el ebook, el HTML para la versión en español y el input de `prompt-one-shot-mockups`. Me falta saber desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+1. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
+2. **La URL de la landing de piedras.** Desbloquea `prompt-variacion-de-guiones-winners`, la auditoría ([[pagina-de-ventas]], [[psicologia-del-comprador]]), el ebook, la optimización de carga y la versión en español. Y los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+3. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.

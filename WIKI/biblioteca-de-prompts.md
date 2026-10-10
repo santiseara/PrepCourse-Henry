@@ -87,7 +87,7 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
   - `prompt-crear-upsells`: para armar el backend de [[aumento-de-aov]].
   - `prompt-testimonios-sora-2`: encaja con tu stack de Sora y HeyGen.
 - `prompt-guiones-30-segundos` es la versión en prompt de tu regla de 30 segundos ([[guiones-y-anuncios]]).
-- **Prompts con texto disponible: 19 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
+- **✅ Carpeta completa: 23 de 23 prompts con texto** en `RAW/prompts/`.
 
 ## 📂 Estado de la carpeta `RAW/prompts/`
 | Prompt | Texto | Qué pide / notas para usarlo |
@@ -111,7 +111,10 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
 | `prompt-imagenes-ads` | ✅ | Pide 4 documentos + **imágenes de referencia** (de la competencia o de tus tests) y las recrea mejoradas, en 1:1. Pide "modelos realistas, nada de stock". ⚠️ Para las natives de piedras, ganan tus reglas: POV, sin cara, boho ([[guiones-y-anuncios]]). Sus ejemplos (dashboards, emprendedor digital) hay que adaptarlos a craft. |
 | `prompt-magic-patterns` | ✅ | Le pegás el sales copy completo y detecta nicho, paleta y tipografía. Genera la landing en **React + Tailwind**: barra sticky, hero, carta, stack, bonus con valor total, precio con moneda dinámica y testimonios. Todos los CTAs van al `[CART_LINK]`. **Lovable también genera React + Tailwind**, así que el prompt debería funcionar ahí casi sin cambios. ⚠️ Las insignias de "Verified Purchase" y las estrellas tienen que ser reales. |
 | `prompt-one-shot-mockups` | ✅ | Le das el texto de la landing, el nombre, el tipo de mockup (bundle o individual) y el formato. Devuelve 1 prompt en inglés: NO FLAT COVERS, entorno acorde al nicho, render de lujo. ⚠️ Trae un ejemplo olvidado en el input ("297 Evaluaciones Listas Para Usar"): hay que reemplazarlo. |
-| Los otros 4 | ⏳ | `prompt-variacion-de-guiones-winners`, `prompt-vsl-oto-post-purchase`, `prompt-testimonios-sora-2` y `prompt-optimizar-carga-web-html`. |
+| `prompt-variacion-de-guiones-winners` | ✅ | **El más importante para piedras.** Pide el guión ganador y la landing (URL, PDF o HTML). Primero **solo analiza**: disección en 8 puntos (estructura, hook, problema, promesa, mecanismo, prueba, cierre, 5–10 frases ADN), producto, diagnóstico de por qué gana y mapa de variantes en 6 categorías (hook, emoción, protagonista, estructura, duración, objeción). Después pregunta por dónde empezar. El análisis de los 3 guiones ya está a medias en [[scented-stones]]. Falta la landing para completarlo. |
+| `prompt-vsl-oto-post-purchase` | ✅ | Guión de VSL para el OTO en 8 puntos: felicitar → "pero" → solución con nombre propio → escasez → entregables + bonus secreto → ancla → garantía de 30+ días → CTA de una sola vez. ⚠️ El punto 3 pide una "explicación **pseudo-científica**" y el 4 sugiere justificaciones como "fue denunciado en las redes". Si no son ciertas, son claims inventados (riesgo de reembolsos, disputas y rechazos). Lo uso con explicaciones reales y escasez real ("solo se ofrece a compradores" sí es cierto). Ver [[embudo-vsl-post-pago]]. |
+| `prompt-testimonios-sora-2` | ✅ | Pide los 4 documentos. Devuelve 3 packs de 14 s / 35–40 palabras (escéptico convertido, profesional, resultado tangible), cada uno con guión para ElevenLabs y prompt de Sora 2 en 9:16. ⚠️ Un avatar de IA presentado como **cliente real** que cuenta resultados es un testimonio fabricado (la FTC lo prohíbe en EE.UU.). Es más seguro el formato "creadora o método contando su experiencia" o una dramatización rotulada. Ver [[ugc-y-video-generativo]]. |
+| `prompt-optimizar-carga-web-html` | ✅ | Le pegás el HTML de la landing. Devuelve auditoría + HTML optimizado en 10 pasos (head, fuentes asíncronas, CSS crítico, imágenes lazy/webp, JS diferido, CLS) **sin tocar nada visible**. Meta: menos de 1,5 s en 4G y más de 95% de carga. Las partes de Shopify CDN no aplican a Lovable; el resto sí. Ver [[pagina-de-ventas]]. |
 
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md (página de la wiki previa, actualizada el 2026-08-10)

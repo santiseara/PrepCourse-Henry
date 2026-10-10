@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-10 — Carpeta RAW/prompts/ completa (23 de 23)
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/prompts/` (prompt-optimizar-carga-web-html, prompt-testimonios-sora-2, prompt-variacion-de-guiones-winners, prompt-vsl-oto-post-purchase).
+- **Cambiado:**
+  - `biblioteca-de-prompts.md`: tabla completa de los 23 prompts, con riesgos marcados.
+  - `scented-stones.md`: paso 1 con el prompt de variación de winners.
+  - `index.md`: gaps reordenados (los documentos de investigación pasan al número 1).
+- **Conexiones inesperadas:**
+  1. **`prompt-variacion-de-guiones-winners` es la versión completa del análisis de DNA** que ya se hizo a mano para piedras (diagnóstico + 6 categorías). Solo le falta la landing.
+  2. **11 de los 23 prompts piden los documentos de investigación.** Todo el sistema depende de ellos.
+  3. **Tres prompts empujan hacia claims que no se pueden sostener:** "explicación pseudo-científica" y "fue denunciado" (VSL OTO), testimonios de clientes hechos con IA (Sora 2) y comentarios inventados (IG). Quedan marcados. Uso la estructura con claims reales.
+  4. **El prompt de VSL OTO pide una garantía de 30 días o más:** quinta fuente a favor de una garantía larga.
+  5. **El prompt de optimización de carga está pensado para Shopify.** Para Lovable sirve todo menos los parámetros del CDN.
+
 ## 2026-10-10 — 5 prompts más a RAW/prompts/ (19 de 23)
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/prompts/` (prompt-imagenes-ads, prompt-magic-patterns, prompt-meta-ads-primary-text, prompt-modelar-ofertas, prompt-one-shot-mockups).

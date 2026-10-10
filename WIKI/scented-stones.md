@@ -76,6 +76,8 @@
 - **Palancas sin probar** ([[optimizacion-de-roas]]): versión larga de 1:30 a 3 minutos, garantía de 30 días, ticket de $37 y backend obligatorio.
 
 ## 🛠️ Prompts listos para piedras ([[biblioteca-de-prompts]])
+- **Paso 1, variables:** `prompt-variacion-de-guiones-winners` con los 3 ganadores + la landing. Es el análisis de "DNA" de esta página, hecho completo y con el mapa de 6 categorías. **Solo falta la URL de la landing.**
+- **Velocidad de la landing:** `prompt-optimizar-carga-web-html` con el HTML de Lovable.
 - **Backend:** `prompt-crear-upsells` (5 bumps + OTO 1 + downsell + OTO 2, todo en PDF). Necesita los 4 documentos.
 - **Guía o bonus:** `prompt-ebook-con-claude`. Lo puedo correr acá con capturas de la landing.
 - **Versión larga del guión de la contadora:** `prompt-ads-storytelling-largos-publico-frio`.

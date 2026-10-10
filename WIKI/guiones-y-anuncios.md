@@ -26,6 +26,11 @@
 | Humblebrag con edad | Fitness |
 | Recuperación de identidad | Fitness |
 
+## 🔁 Variación real (ver [[angulos-publicitarios]])
+- Una variable cuenta solo si cambia el hook, el mecanismo, el ángulo, la objeción, la emoción, el nivel de conciencia o la forma de presentar el producto. Cambiar palabras no cuenta.
+- Proporción: 90% variables del ganador y 10% ángulos nuevos, con ángulos totalmente nuevos 2 o 3 veces por semana.
+- Rotar también el **formato** (voz en off, UGC, carrusel, estático, largo o corto) y el **tamaño** (9:16, 1:1, 3:4, 16:9). Meta castiga con CPM más alto cuando solo se itera el hook.
+
 ## ❌ Lo que no funciona
 - Rivalidad entre amigas o vecinas, comparaciones profesionales, guiones catastróficos o sob-story, storytelling sin números.
 
@@ -58,7 +63,7 @@
 - Por defecto, español con voseo + inglés. El alemán se descartó. Supervivencia iba en español neutro.
 
 ## Relacionado
-[[scented-stones]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
+[[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 
 ## Fuentes
 - RAW/2026-10-10-contexto-maestro-santiago.md (secciones 5 y 6)

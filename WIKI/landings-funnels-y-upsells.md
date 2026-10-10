@@ -13,11 +13,14 @@ Hero → "Does this hit close to home?" → Why now → Complete system (6 pilar
 OTO 1: 9.990 (agenda llena) → OTO 2: 19.990 (eventos) → Downsell: 7.990 (diseños) → OTO 3: 29.990 (marca registrada).
 - Los nombres ("eventos", "agenda llena", "marca registrada") encajan con un producto que se vende a terceros en eventos, el mismo patrón que Scented Stones con las bodas. Ver [[scented-stones]].
 
+## Backend completo
+La teoría completa (bumps, SellEasy, Aftersell, KPIs, los 5 bumps que no se pisan) está en [[aumento-de-aov]].
+
 ## Preguntas abiertas
 - ¿Scented Stones tiene OTOs en inglés? Pedidos de bodas, gift sets y "cómo vender a boutiques" serían upsells naturales.
 
 ## Relacionado
-[[scented-stones]] · [[guiones-y-anuncios]] · [[ofertas]]
+[[scented-stones]] · [[aumento-de-aov]] · [[guiones-y-anuncios]] · [[ofertas]]
 
 ## Fuentes
 - RAW/2026-10-10-contexto-maestro-santiago.md (secciones 3, 7 y 8)

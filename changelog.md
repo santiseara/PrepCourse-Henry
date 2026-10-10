@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-10 — 5 páginas de la wiki previa
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (angulos-publicitarios, aumento-de-aov, biblioteca-de-prompts, claude-con-meta-ads, contingencia-de-cuentas), guardadas tal cual en `RAW/`.
+- **Creado:** 5 temas en `WIKI/` con el mismo nombre. Contenido íntegro, más resumen, fuente y una sección "Conexiones con tu operación actual".
+- **Links adaptados:** `guiones-de-video-ads` → `guiones-y-anuncios`, `modelo-low-ticket` → `perfil-y-negocio`, `pagina-de-ventas` y `embudo-vsl-post-pago` → `landings-funnels-y-upsells`. Los otros 22 temas citados quedan listados en el índice como pendientes.
+- **Cambiado:**
+  - `guiones-y-anuncios.md`: sección de variación real.
+  - `landings-funnels-y-upsells.md` y `perfil-y-negocio.md`: links al backend y stack ampliado.
+  - `como-trabajar-con-santiago.md`: herramientas y regla de pausa en Meta.
+  - `scented-stones.md`: próximos pasos.
+  - `index.md`: temas y gaps.
+- **Conexiones inesperadas:**
+  1. El "contador" aparece en el downsell modelo de AOV ("mi contador me prohibiría") y en el guión ganador 3. Es un personaje recurrente que funciona.
+  2. Scented Stones solo se vende por el gran nicho "dinero". "Un producto, dos mercados" abre el ángulo salud o hobby (aromaterapia, regalo).
+  3. Las reglas de copy chocan con la wiki previa. La regla de 30 segundos máximo choca con "rotar formatos y largos". La de no ser catastrófico choca con "dolor central emocional".
+  4. El stack de checkout no coincide. El contexto maestro dice Hotmart, Kiwify, Monetizze y Lovable; la página de AOV dice Shopify, SellEasy y Aftersell.
+  5. La tienda de referencia con front de $27 y AOV de 39,44 podría ser Scented Stones.
+
 ## 2026-10-10 — Guiones ganadores de Scented Stones + reconstrucción de la WIKI
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** todo `RAW/`, incluido `RAW/2026-10-10-guiones-ganadores-scented-stones.md` (nuevo: 3 guiones + notas de Santiago).

@@ -49,13 +49,18 @@
 - Anti-hustle en versión jubilada o madre de 3: "I'm 58 and I didn't want a 'side hustle'…"
 - FREE today o regalo limitado con la guía (ángulo validado que estos 3 no usan).
 
+## Próximos pasos sugeridos (de la wiki previa)
+- **Backend:** borrador de 5 bumps y AOV objetivo de unos $40 en [[aumento-de-aov]].
+- **Ángulo nuevo (10%):** vender por salud o hobby (aromaterapia, calma, regalo) en lugar de dinero. Ver [[angulos-publicitarios]].
+- **Formatos:** sumar carrusel, estático "LAST ONE" y UGC con avatar a los guiones de 30 segundos.
+
 ## Preguntas abiertas
 - ¿Qué natives y descripciones acompañaron a estos guiones?
 - ¿Cuál de los 3 rinde más?
 - ¿Hay versión en español con voseo? ¿Se testeó?
 
 ## Relacionado
-[[guiones-y-anuncios]] · [[ofertas]] · [[landings-funnels-y-upsells]] · [[como-trabajar-con-santiago]]
+[[guiones-y-anuncios]] · [[angulos-publicitarios]] · [[aumento-de-aov]] · [[ofertas]] · [[landings-funnels-y-upsells]] · [[como-trabajar-con-santiago]]
 
 ## Fuentes
 - RAW/2026-10-10-guiones-ganadores-scented-stones.md

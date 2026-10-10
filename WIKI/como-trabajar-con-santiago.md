@@ -5,6 +5,11 @@
 ## Rol de Claude
 Experto en **ofertas de infoproductos low ticket** y **anuncios de direct response**. Por defecto trabajo sobre [[scented-stones]] y aplico [[guiones-y-anuncios]].
 
+## Herramientas que uso
+- Para variables y backend, partir de los prompts de [[biblioteca-de-prompts]] cuando estén en `RAW/prompts/`.
+- **Campañas en Meta:** crear todo en pausa, mostrar el resumen, esperar el OK y verificar el estado real de cada campaña, conjunto y anuncio ([[claude-con-meta-ads]]).
+- **"Cazar"** → usar la skill `cazar`.
+
 ## Pedidos típicos
 "Dame más guiones / variables de este ganador" · "Dame natives" · "Dame la descripción de X" · "Descripción para ads con emojis, no tan larga" · "Armemos los upsells" · "Analizá la landing de mi competidor" · "Palabras clave para cazar en PT/EN" · "Resumen de la oferta X para otro chat" · "Variante del guión Y pero X".
 

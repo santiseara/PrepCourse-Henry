@@ -27,6 +27,12 @@ $27 en inglés (ancla $97) · 14.999–15.990 ARS · garantía de 7 días · pag
 ## Stack
 Lovable (landings) · HeyGen (avatares UGC) · Sora/Flow (testimoniales con IA) · Facebook Ads Library, Pinterest, Instagram, TikTok (research).
 
+## Stack ampliado (wiki previa)
+- **Checkout y backend:** Shopify + SellEasy (pre-compra) + Aftersell (post-compra), Impultienda para post-pago desde Argentina, order bumps en Hotmart. Ver [[aumento-de-aov]].
+- **Meta Ads:** conector oficial de Meta en Claude ([[claude-con-meta-ads]]) y UTMify para atribución.
+- **Cuentas:** Multilogin para perfiles aislados ([[contingencia-de-cuentas]]).
+- **Prompts:** 23 prompts de producción ([[biblioteca-de-prompts]]).
+
 ## Relacionado
 [[como-trabajar-con-santiago]] · [[ofertas]] · [[scented-stones]]
 

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-10 — Catálogo, testeo de creativos, tracking, UGC y validación
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (subir-ads-con-metodo-catalogo, testeo-de-creativos, tracking-y-atribucion, ugc-y-video-generativo, validacion-de-oferta).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `scented-stones.md`: fase actual, concepto "venta directa", testimonio de 14 s, avatar Susana.
+  - `como-trabajar-con-santiago.md`: reglas de UGC para prompts de video.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **"Los creativos son el 95%" (2026-08) contra "casi nunca es el anuncio, es la landing" (2026-09, con datos).** Conviven: el creativo prevende; si no hay ganancia, se diagnostica landing → pago.
+  2. **Scented Stones ya está validada.** Según el método, el paso siguiente es backend → escalar. Coincide con el gap que se venía marcando.
+  3. **El concepto "venta directa"** (últimos cupos, garantía de 30 días) es el tercer concepto del testeo post-Andrómeda, y ninguno de los 3 ganadores lo usa.
+  4. **Susana (56, maestra jubilada)** encaja con la variable "anti-hustle jubilada" propuesta para piedras.
+  5. **Decisión abierta sobre Emma Carter:** hoy no tiene cara. Hacerla avatar de HeyGen cambiaría la estética de las natives.
+  6. **"Mínimo 20 anuncios antes de abandonar"** plantea la duda de si las craft que no funcionaron llegaron a ese mínimo.
+
 ## 2026-10-10 — Renovación, segmentos, selección de oferta, setup y Shopify/checkout
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (renovacion-de-creativos, segmentos-de-mercado, seleccion-y-modelado-de-oferta, setup-de-campanas, shopify-y-checkout).

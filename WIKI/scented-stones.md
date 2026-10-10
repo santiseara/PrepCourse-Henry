@@ -47,6 +47,8 @@
 - Hook de eliminación de objeciones: "No kiln. No fancy tools. No experience." ([[hooks]])
 - Nostalgia: "My grandma's salt-dough trick turned into $1,200 a month."
 - Versión larga (1:30) del guión 3: "la que juzgaba y se redime", para público frío ([[guiones-de-video-ads]]).
+- **Concepto "venta directa"** (últimos cupos, garantía de 30 días, últimas 24 horas): es el tercer concepto del testeo post-Andrómeda y tus ganadores no lo usan ([[testeo-de-creativos]]).
+- **Testimonio de 14 segundos, "escéptico convertido",** a partir de la contadora. Avatar sugerido para la variable jubilada: Susana ([[ugc-y-video-generativo]]).
 - Objeciones sin explorar: "I don't have time" (2 horas los sábados) y "I'm not crafty".
 - Hook de otra figura cotidiana: el cartero ("why are you shipping so many boxes?"), una vecina que pide por mayor o el marido que hace las cuentas.
 - Hard-money con un pedido puntual: "One bridal shower order paid my car insurance".
@@ -68,6 +70,7 @@
 - **Documentos de investigación:** pendientes. Se pueden generar con el procedimiento de [[investigacion-de-mercado]].
 
 ## Reloj y palancas
+- **Fase:** validada. Lo siguiente según tu método es backend → escalar ([[validacion-de-oferta]]). Las tandas se suben por catálogo para que te copien menos ([[subir-ads-con-metodo-catalogo]]).
 - ⏰ **Caducidad:** las ofertas duran 3 o 4 meses ([[modelo-low-ticket]]). ¿Desde cuándo corre piedras?
 - **Auditoría de la landing** (con la URL): revisar si hay bloques para los 3 tipos de comprador ([[psicologia-del-comprador]]), el texto del botón, la posición del primer botón y la garantía de 30 días ([[pagina-de-ventas]]).
 - **Palancas sin probar** ([[optimizacion-de-roas]]): versión larga de 1:30 a 3 minutos, garantía de 30 días, ticket de $37 y backend obligatorio.

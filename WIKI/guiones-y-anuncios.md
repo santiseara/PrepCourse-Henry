@@ -59,6 +59,7 @@
 ## 💬 Primary text
 - Cuando lo pide "optimizado para ads, con emojis, no tan largo": corto, con emojis de sección.
 - Si una cuenta empieza a rechazar anuncios, lo primero es bajar los emojis ([[problemas-de-cuentas-meta]]).
+- La estructura viene de `prompt-meta-ads-primary-text` (contraintuitivo, dolor agudo, oferta directa), **filtrada por tus reglas**: sin culpar al espectador, sin precio, benefit-forward ([[biblioteca-de-prompts]]).
 
 ## 📝 Descripciones (storytime UGC)
 - **400–500 palabras.** Contexto de la foto → revelación → antes y ahora → contraste → método (Emma Carter) → lo simple que es → cierre de confianza → soft CTA. Benefit-forward.

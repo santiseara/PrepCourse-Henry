@@ -87,7 +87,7 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
   - `prompt-crear-upsells`: para armar el backend de [[aumento-de-aov]].
   - `prompt-testimonios-sora-2`: encaja con tu stack de Sora y HeyGen.
 - `prompt-guiones-30-segundos` es la versión en prompt de tu regla de 30 segundos ([[guiones-y-anuncios]]).
-- **Prompts con texto disponible: 14 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
+- **Prompts con texto disponible: 19 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
 
 ## 📂 Estado de la carpeta `RAW/prompts/`
 | Prompt | Texto | Qué pide / notas para usarlo |
@@ -106,7 +106,12 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
 | `prompt-guiones-por-nivel-de-conciencia` | ✅ | **5 prompts**, uno por nivel de Schwartz, todos con la fórmula de 7 pasos y salida 1 + 2. El **nivel 5 (totalmente consciente)** es para remarketing, carritos abandonados y visitantes. Ver [[angulos-publicitarios]]. |
 | `prompt-html-google-ai-studio` | ✅ | Pide Offer Brief, Avatar, Investigación y el **HTML base**, que no se toca. Cambia **solo** copy, tipografía (familia) y colores. Objetivo: 4% de conversión en tráfico frío. Regla dura: **no inventar bonus ni información**. Ataca 6 objeciones fijas ("no es para mí", "no tengo tiempo", "no tengo experiencia"…). |
 | `prompt-generador-de-prompts-maestros` | ✅ | Meta-prompt: rol ("Asume el rol de…", nunca "Actúa como"), contexto, metodología, restricciones y formato. Si la idea es vaga, pregunta antes. Lo uso cuando me pidas armar un prompt nuevo. |
-| Los otros 9 | ⏳ | `prompt-variacion-de-guiones-winners`, `prompt-vsl-oto-post-purchase`, `prompt-meta-ads-primary-text`, `prompt-modelar-ofertas`, `prompt-testimonios-sora-2`, `prompt-imagenes-ads`, `prompt-one-shot-mockups`, `prompt-magic-patterns` y `prompt-optimizar-carga-web-html`. |
+| `prompt-meta-ads-primary-text` | ✅ | Pide Avatar, Landing e Investigación de competencia. Devuelve 3 variantes: **contraintuitivo** (largo), **dolor agudo** (PAS, medio) y **oferta directa** (corto), cada una con sugerencia visual, headline de menos de 40 caracteres y primary text con emojis. ⚠️ **Choca con tus reglas** en tres puntos: "agresividad ética: es tu culpa si…" y "sesgo de negatividad" contra "no catastrófico / benefit-forward"; "precio ridículo" y "por solo $[Precio]" contra "nunca dar el precio en el ad". **Cuando lo uso, ganan tus reglas** ([[guiones-y-anuncios]]). |
+| `prompt-modelar-ofertas` | ✅ | Pide el PDF de la landing de la competencia + Avatar y Brief. Extrae la Big Idea, el mecanismo y la voz, y arma **Core + 5 bonus** (velocidad, done-for-you, objeción interna, objeción externa, siguiente nivel) con una tabla de valor de ~$392 contra $14.99. Ver [[seleccion-y-modelado-de-oferta]]. |
+| `prompt-imagenes-ads` | ✅ | Pide 4 documentos + **imágenes de referencia** (de la competencia o de tus tests) y las recrea mejoradas, en 1:1. Pide "modelos realistas, nada de stock". ⚠️ Para las natives de piedras, ganan tus reglas: POV, sin cara, boho ([[guiones-y-anuncios]]). Sus ejemplos (dashboards, emprendedor digital) hay que adaptarlos a craft. |
+| `prompt-magic-patterns` | ✅ | Le pegás el sales copy completo y detecta nicho, paleta y tipografía. Genera la landing en **React + Tailwind**: barra sticky, hero, carta, stack, bonus con valor total, precio con moneda dinámica y testimonios. Todos los CTAs van al `[CART_LINK]`. **Lovable también genera React + Tailwind**, así que el prompt debería funcionar ahí casi sin cambios. ⚠️ Las insignias de "Verified Purchase" y las estrellas tienen que ser reales. |
+| `prompt-one-shot-mockups` | ✅ | Le das el texto de la landing, el nombre, el tipo de mockup (bundle o individual) y el formato. Devuelve 1 prompt en inglés: NO FLAT COVERS, entorno acorde al nicho, render de lujo. ⚠️ Trae un ejemplo olvidado en el input ("297 Evaluaciones Listas Para Usar"): hay que reemplazarlo. |
+| Los otros 4 | ⏳ | `prompt-variacion-de-guiones-winners`, `prompt-vsl-oto-post-purchase`, `prompt-testimonios-sora-2` y `prompt-optimizar-carga-web-html`. |
 
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md (página de la wiki previa, actualizada el 2026-08-10)

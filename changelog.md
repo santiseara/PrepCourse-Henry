@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-10 — 5 prompts más a RAW/prompts/ (19 de 23)
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/prompts/` (prompt-imagenes-ads, prompt-magic-patterns, prompt-meta-ads-primary-text, prompt-modelar-ofertas, prompt-one-shot-mockups).
+- **Cambiado:**
+  - `biblioteca-de-prompts.md`: 19 de 23, con sus choques marcados.
+  - `como-trabajar-con-santiago.md`: nueva sección "Prioridad de reglas" (tus reglas personales le ganan a los prompts).
+  - `guiones-y-anuncios.md`: el primary text sigue la estructura del prompt, filtrada por tus reglas.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **`prompt-meta-ads-primary-text` choca de frente con tus reglas.** "Es tu culpa si…" y el sesgo de negatividad van contra "no catastrófico". "Por solo $[Precio]" va contra "sin precio en el ad". Queda fijado que ganan tus reglas.
+  2. **`prompt-magic-patterns` genera React + Tailwind, igual que Lovable.** Tu herramienta de landings puede usarlo casi sin cambios.
+  3. **`prompt-imagenes-ads` pide "modelos realistas"** y tus natives son sin cara. Para natives ganan tus reglas.
+  4. **Ya son 8 prompts que piden los documentos de investigación.** Es por lejos el cuello de botella número 1.
+  5. **`prompt-one-shot-mockups` trae un ejemplo olvidado en el input** ("297 Evaluaciones…"): hay que reemplazarlo antes de usarlo.
+
 ## 2026-10-10 — 5 prompts más a RAW/prompts/ (14 de 23)
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/prompts/` (prompt-generador-de-prompts-maestros, prompt-guiones-7-pasos, prompt-guiones-30-segundos, prompt-guiones-por-nivel-de-conciencia, prompt-html-google-ai-studio).

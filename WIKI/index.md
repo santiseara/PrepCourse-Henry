@@ -65,7 +65,7 @@
 
 ## Herramientas y método
 - ⏳ [[stack-de-herramientas]] — inventario completo, marcado entre lo que está en uso y lo evaluado
-- ✅ [[biblioteca-de-prompts]] — Mapa de los 23 prompts de producción. Con texto en `RAW/prompts/`: 14 de 23 (guiones ×4, ángulos ×2, upsells, ebook, mockups, sales page, HTML, meta-prompt, educar, comentarios IG ⚠️).
+- ✅ [[biblioteca-de-prompts]] — Mapa de los 23 prompts de producción. Con texto en `RAW/prompts/`: 19 de 23. Incluye qué pide cada uno y dónde choca con tus reglas.
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.
 
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los últimos 9 prompts.** Sobre todo `prompt-variacion-de-guiones-winners` (el que más vas a usar con piedras), `prompt-meta-ads-primary-text` y `prompt-vsl-oto-post-purchase`. Y los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`).
-2. **Los 4 documentos de investigación de Scented Stones.** Ya son **5 prompts que no arrancan sin ellos**: upsells, mockups, ángulos Launch Expert, guiones de 30 s y HTML ([[biblioteca-de-prompts]]). Es el mayor cuello de botella del sistema. 👉 Con la URL de la landing los genero con deep research.
-3. **La URL y los datos base de piedras.** Con la URL hago la auditoría, tengo las capturas para el ebook y el HTML base para la versión en español. Me falta saber desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+1. **Los últimos 4 prompts:** `prompt-variacion-de-guiones-winners` (el clave para piedras), `prompt-vsl-oto-post-purchase`, `prompt-testimonios-sora-2` y `prompt-optimizar-carga-web-html`. Y los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`).
+2. **Los 4 documentos de investigación de Scented Stones.** Ya son **8 prompts que los piden**: upsells, mockups, ángulos, guiones de 30 s, HTML, primary text, imágenes y modelar ofertas. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
+3. **La URL y los datos base de piedras.** Con la URL hago la auditoría, las capturas para el ebook, el HTML para la versión en español y el input de `prompt-one-shot-mockups`. Me falta saber desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-10 — Renovación, segmentos, selección de oferta, setup y Shopify/checkout
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (renovacion-de-creativos, segmentos-de-mercado, seleccion-y-modelado-de-oferta, setup-de-campanas, shopify-y-checkout).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `angulos-publicitarios.md` y `scented-stones.md`: **corregida** la sugerencia de probar un ángulo "hobby".
+  - `guiones-de-video-ads.md`: queda resuelto el choque del body.
+  - `ofertas.md`: explicación por segmentos.
+  - `como-trabajar-con-santiago.md`: qué significa "renovar".
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **El segmento explica por qué piedras funcionó y las otras craft no.** Piedras se vende como "ganá plata con un oficio", la prioridad 1 evergreen. Las demás se parecen a "crochet por hobby", que no tiene urgencia de compra.
+  2. **Me corrijo:** la idea de vender piedras por "hobby o aromaterapia" choca con segmentos. Si se explora, tiene que ser salud con mecanismo.
+  3. **Se resuelve el choque del body.** El body fijo es para renovar un ganador; el body variable es para conceptos nuevos.
+  4. **"Respetar el formato al modelar" y "rotar formatos" son dos etapas distintas:** lanzar y después diversificar.
+  5. **Impultienda resuelve el backend de piedras:** OTOs nativos cobrando en USD. Es una recomendación no neutral, porque Santiago tiene código de referido.
+  6. **Tu precio en AR (14.999–15.990) coincide con el mínimo de 15.000 pesos** del material. La escalera sugiere subir a 19.000.
+
 ## 2026-10-10 — Página de ventas, problemas de cuentas, procesadores, psicología del comprador y quiz funnel
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (pagina-de-ventas, problemas-de-cuentas-meta, procesadores-de-pago, psicologia-del-comprador, quiz-funnel).

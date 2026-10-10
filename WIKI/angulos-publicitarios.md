@@ -128,7 +128,7 @@ Dos lecciones dedicadas al principio: `apalancate-de-lo-que-ya-funciona` y `vari
 Relacionado: [[hooks]] · [[guiones-de-video-ads]] · [[testeo-de-creativos]] · [[investigacion-de-mercado]]
 
 ## Conexiones con tu operación actual
-- **[[scented-stones]] solo usa el gran nicho "dinero"** (ingreso extra). Según "un producto, dos mercados", el mismo producto se puede vender por **salud o hobby**: aromaterapia, calma, decoración del hogar, regalo hecho a mano. Es un ángulo nuevo que entra en el 10% de exploración.
+- **[[scented-stones]] solo usa el gran nicho "dinero"** (ingreso extra). Según "un producto, dos mercados", el mismo producto se puede vender por **salud o hobby**: aromaterapia, calma, decoración del hogar, regalo hecho a mano. Es un ángulo nuevo que entra en el 10% de exploración. ⚠️ **Corregido después de procesar [[segmentos-de-mercado]]:** el hobby no tiene urgencia de compra. Si se explora, que sea salud con mecanismo (sueño, ansiedad), no "hobby lindo".
 - **90/10 aplicado a Scented Stones:** 90% variables de los 3 ganadores (otro avatar, hook o edición) y 10% ángulos nuevos.
 - **Choque con la regla de 30 segundos** de [[guiones-y-anuncios]]: acá se recomienda rotar formatos (largos, carrusel, estático, testimonial) y existe un prompt de storytelling de más de 1:30. Hipótesis: los 30 segundos son el formato por defecto, no el único.
 - **"Dolor central emocional"** (culpa, vergüenza…) choca con la regla de no ser catastrófico. Se puede nombrar el dolor y resolverlo rápido, sin quedarse en él.

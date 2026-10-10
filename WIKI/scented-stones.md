@@ -56,7 +56,9 @@
 ## Próximos pasos sugeridos (de la wiki previa)
 - **Backend:** escalera post-pago de 4 OTOs ($37 → $97 GPT → $27 → $17) en [[embudo-vsl-post-pago]], y bumps en [[aumento-de-aov]]. Es el nicho más fácil para upsellear: ingreso extra.
 - **Recupero:** carritos por email y SMS, no por WhatsApp, porque es mercado inglés ([[email-y-automatizaciones]]).
-- **Ángulo nuevo (10%):** vender por salud o hobby (aromaterapia, calma, regalo) en lugar de dinero. Ver [[angulos-publicitarios]].
+- **Ángulo nuevo (10%):** si se explora fuera de "dinero", que sea salud con mecanismo (sueño, ansiedad), no hobby, que no tiene urgencia ([[segmentos-de-mercado]]). El ángulo principal sigue siendo "ganá plata con un oficio".
+- **Cuando se cansen los ganadores:** renovar con 20 a 50 hooks sobre el mismo cuerpo ([[renovacion-de-creativos]]).
+- **Backend:** si corre en Impultienda, los OTOs son nativos y cobran en USD ([[shopify-y-checkout]]).
 - **Escala:** "más anuncios, no más ofertas" ([[escalado-en-meta-ads]]). La palanca es el volumen de variables, unos 10 creativos por día cuando toque.
 - **Formatos:** sumar carrusel, estático "LAST ONE" y UGC con avatar a los guiones de 30 segundos.
 

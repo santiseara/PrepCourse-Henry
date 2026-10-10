@@ -20,9 +20,9 @@
 - ✅ [[organizacion-y-registro]] — Registro diario por oferta (en OUTPUTS/), tres cuentas con tres trabajos, recorrido de herramientas.
 
 ## Oferta y producto
-- ⏳ [[segmentos-de-mercado]] — salud, dinero y relaciones. El filtro previo a todo lo demás
+- ✅ [[segmentos-de-mercado]] — Salud, dinero y relaciones (urgencia de compra), patrón de segmento y matriz nicho × mercado.
 - ✅ [[funnel-hacking]] — Cómo espiar y filtrar ofertas que escalan (3 días, mismo URL, sin marcas personales) y cómo defenderte.
-- ⏳ [[seleccion-y-modelado-de-oferta]] — modelar lo validado en vez de inventar. El error de dos años que originó la regla
+- ✅ [[seleccion-y-modelado-de-oferta]] — Modelar de otro mercado, nunca del mismo. Tres errores, proceso en 24 h, bonus y stack 1 + 5.
 - ⏳ [[validacion-de-oferta]] — 100 USD y una semana por oferta. Cuándo cortar
 - ✅ [[investigacion-de-mercado]] — La cadena que produce los 4 documentos base: deep research, Avatar Sheet, Offer Brief y creencias.
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
@@ -36,7 +36,7 @@
 - ✅ [[metricas-y-kpis]] — Costo por visita contra revenue por visita, KPIs de anuncio y de conversión, CPA break-even, días sin ventas.
 - ⏳ [[testeo-de-creativos]] — pre-testeo y testeo, la regla de las tres decisiones, y el cambio post-Andrómeda
 - ✅ [[escalado-en-meta-ads]] — Volumen creativo primero y presupuesto después: estructuras de escala, bids, surfeo y reglas de corte.
-- ⏳ [[setup-de-campanas]] — configuración paso a paso de una campaña desde cero
+- ✅ [[setup-de-campanas]] — Setup ABO de testeo paso a paso, ajustes que se pasan por alto, calentar cuentas. Anterior a la V3.
 - ⏳ [[subir-ads-con-metodo-catalogo]] — anuncios de catálogo en video único dentro de la V3, con datos reales, y qué parte sale por API
 - ✅ [[optimizacion-de-roas]] — 6 palancas para salir del break-even y las 3 únicas razones por las que algo no escala.
 - ✅ [[contingencia-de-cuentas]] — Perfiles de backup, BMs y cuentas para sobrevivir a bloqueos.
@@ -48,7 +48,7 @@
 - ✅ [[guiones-de-video-ads]] — Método general: fórmula de 7 pasos, variación modular, niveles de conciencia, formatos por duración, diagnosticar antes de variar.
 - ✅ [[angulos-publicitarios]] — Variación real, niveles de conciencia, cómo encontrar ángulos, rotar formatos, 90/10.
 - ✅ [[psicologia-del-comprador]] — Confianza primero. Tres compradores (emocional, lógico, FOMO) y qué bloque de la landing le habla a cada uno.
-- ⏳ [[renovacion-de-creativos]] — por qué muere un ganador y las cuatro formas de revivirlo
+- ✅ [[renovacion-de-creativos]] — El ganador no muere, se satura su público. Cuerpo fijo y de 20 a 50 hooks nuevos, de 4 maneras.
 - ⏳ [[ugc-y-video-generativo]] — reglas fijas de UGC, avatares y prompts de video
 - ✅ [[imagenes-y-mockups]] — NO FLAT COVERS, "Rules of $100K design", prompts de mockup e imagen, mockups transparentes para el checkout.
 
@@ -57,7 +57,7 @@
 - ✅ [[quiz-funnel]] — Unas 16 preguntas antes de la oferta: convierte al 25–30%, tolera un CPC de 1 USD, analítica por pregunta.
 - ✅ [[funnel-de-whatsapp]] — Venta 1 a 1 por WhatsApp sin pasarela, optimizada a compra con etiquetas.
 - ✅ [[diagnostico-de-checkout]] — Muchos inicios de checkout y pocas compras: 9 causas por orden de impacto.
-- ⏳ [[shopify-y-checkout]] — **Impultienda es la plataforma actual**; Shopify y Hotmart quedan como referencia
+- ✅ [[shopify-y-checkout]] — Impultienda es la vigente (checkout solo con email, OTOs nativos, USD). Shopify y Hotmart como referencia.
 - ⏳ [[tracking-y-atribucion]] — UTMify y por qué el lag del pixel de Meta cuesta dinero
 - ✅ [[email-y-automatizaciones]] — Recupero de carritos, flujos post-compra, WhatsApp contra email según el mercado.
 - ✅ [[procesadores-de-pago]] — Stripe, Whop, MercadoPago y PayPal: rechazos, disputas, velocidad de cobro y trucos de cada uno.
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los 12 temas ⏳ de tu wiki previa.** El que más falta hace es **`testeo-de-creativos`**, el más citado. Después **`seleccion-y-modelado-de-oferta`** y **`validacion-de-oferta`**, que completan el ciclo oferta → test, y `shopify-y-checkout`, que aclara la plataforma.
+1. **Los últimos 7 temas ⏳.** Sobre todo **`testeo-de-creativos`**, el más citado de toda la wiki, y **`validacion-de-oferta`**. Después `tracking-y-atribucion`, `ugc-y-video-generativo`, `stack-de-herramientas`, `subir-ads-con-metodo-catalogo` y `mentalidad-y-habitos`.
 2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento está en [[investigacion-de-mercado]]. 👉 Con la URL de la landing los genero con deep research.
-3. **La URL de la landing de piedras y sus datos base.** Con la URL hago además la **auditoría** contra [[pagina-de-ventas]] y [[psicologia-del-comprador]]: posición y texto del botón, bloques para los 3 compradores, garantía. Me falta saber también desde cuándo corre, cómo cobra y si tiene backend.
+3. **La URL y los datos base de piedras.** Con la URL hago la auditoría contra [[pagina-de-ventas]] y [[psicologia-del-comprador]]. También me falta saber desde cuándo corre ([[modelo-low-ticket]]: caducidad de 3–4 meses) y si corre en Impultienda con post-pago ([[shopify-y-checkout]]).

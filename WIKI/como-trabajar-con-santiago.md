@@ -29,6 +29,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **"Verdad, no consuelo":** señalar puntos ciegos y contradicciones sin endulzar ([[ia-en-el-flujo-de-trabajo]]).
 - **Variar un ganador:** primero diagnosticar por qué funciona y después variar en las 6 categorías de [[guiones-de-video-ads]].
 - **Tamaño de tanda:** 5 a 10 anuncios del mismo formato, para llenar un conjunto V3 ([[metodo-v3]]). La base son 3 guiones, multiplicados por hooks o B-rolls.
+- **"Renovar" un ganador** = 20 a 50 hooks sobre el mismo cuerpo, no un guión nuevo ([[renovacion-de-creativos]]).
 - **Volumen:** el ritmo de testeo es de ~10 creativos por día. Si pide "más", entregar tandas que alcancen para eso, con formatos rotados.
 
 ## Registro y nombres

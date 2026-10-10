@@ -38,6 +38,7 @@
 
 ## Lectura del catálogo
 - **Las craft "hidden" tienen la misma estructura que Scented Stones** ($27, ancla $97, persona, inglés), pero solo una funcionó. Lo que diferencia a Scented Stones parece ser el **ángulo de ingreso extra con margen visible** y un producto que se **vende físicamente a terceros** (bodas, regalos). Ver [[scented-stones]].
+- **💡 Explicación según [[segmentos-de-mercado]]:** Scented Stones se vende como "ganá plata con un oficio", el segmento prioritario. Las craft que no funcionaron se parecen más a "hobby", que no tiene urgencia de compra.
 - Los aprendizajes de fitness ([[guiones-y-anuncios]]) siguen siendo útiles como banco de ángulos aunque esas ofertas estén paradas.
 
 ## Relacionado

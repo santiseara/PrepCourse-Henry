@@ -107,7 +107,7 @@ Primero se le pide a la IA que diagnostique **por qué funciona**: estructura, h
 Relacionado: [[hooks]] · [[angulos-publicitarios]] · [[testeo-de-creativos]] · [[biblioteca-de-prompts]] · [[ugc-y-video-generativo]]
 
 ## Conexiones con tu operación actual
-- **Choque con tus reglas.** La regla modular dice que el **body queda igual** y solo cambian el hook y el re-hook. Tu contexto maestro ([[guiones-y-anuncios]]) dice que **los bodies tienen que variar**. Cómo conviven: dentro de un mismo concepto, modular (testear hooks sobre un body probado); entre conceptos, cambiar body y ángulo ([[angulos-publicitarios]]).
+- **Choque con tus reglas.** La regla modular dice que el **body queda igual** y solo cambian el hook y el re-hook. Tu contexto maestro ([[guiones-y-anuncios]]) dice que **los bodies tienen que variar**. Cómo conviven: dentro de un mismo concepto, modular (testear hooks sobre un body probado); entre conceptos, cambiar body y ángulo ([[angulos-publicitarios]]). [[renovacion-de-creativos]] lo confirma: el body fijo es para renovar un ganador.
 - **El guión 3 de [[scented-stones]] es la variante (b) del storytelling:** "alguien que la juzgaba y se redime". La contadora sospecha lavado de plata y termina siendo la primera clienta. Da para una versión larga de 1:30 para público frío.
 - **Tus 3 ganadores según las 6 categorías:** guión 1 = resultado primero, guión 2 = confesión o identidad, guión 3 = contraste + figura externa. Quedan sin explorar el hook de **pregunta directa** y las objeciones **"no tengo tiempo"** y **"no es para mí"**.
 - **"Diagnosticar antes de variar"** ya está hecho para piedras: es la DNA de [[scented-stones]].

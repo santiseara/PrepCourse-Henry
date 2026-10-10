@@ -2,27 +2,19 @@
 
 > Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-10.
 
-## 🧠 Negocio — ofertas low ticket y ads
-| Tema | Resumen |
-|------|---------|
-| [como-trabajar-con-santiago](como-trabajar-con-santiago.md) | **Leer primero.** Rol de Claude, pedidos típicos, reglas de interacción y glosario. |
-| [perfil-y-negocio](perfil-y-negocio.md) | Quién es Santiago, ciclo cazar → adaptar → lanzar, precios, stack y objetivos. |
-| [ofertas](ofertas.md) | Catálogo EN y AR/LATAM, ofertas en foco ⭐ e inactivas 💤. |
-| [guiones-y-anuncios](guiones-y-anuncios.md) | Reglas fijas: estructura de guiones, ángulos que funcionan y que no, CTAs, natives y descripciones. |
-| [landings-funnels-y-upsells](landings-funnels-y-upsells.md) | Funnel de quiz, estructura de landing en Lovable y escalera de OTOs. |
-| [fitia](fitia.md) | Proyecto de marca a largo plazo. ⚠️ Conflicto de nombre pendiente. |
-
-## 📚 Otros
-| Tema | Resumen |
-|------|---------|
-| [prep-course-henry](prep-course-henry.md) | Repo de práctica del Prep Course de Henry: crear un repo en GitHub y clonarlo. |
+## Temas
+- [[como-trabajar-con-santiago]] — **Leer primero.** Rol, reglas de interacción, formato y glosario.
+- [[scented-stones]] — ⭐ La oferta ganadora: ficha, DNA de los 3 mejores guiones e ideas de variables.
+- [[guiones-y-anuncios]] — Reglas fijas de copy, ángulos validados (con 3 nuevos), CTAs, natives y descripciones.
+- [[landings-funnels-y-upsells]] — Estructura de landing en Lovable, funnels y escalera de OTOs.
+- [[ofertas]] — Catálogo: Scented Stones activa y el resto como historial sin resultados.
+- [[perfil-y-negocio]] — Quién es Santiago, su ciclo de trabajo, precios, stack y objetivos.
+- [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
-
-_Todavía no hay respuestas guardadas. Se listarán aquí como `AAAA-MM-DD — título`._
+_Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-
-1. **No hay números.** Ninguna oferta tiene métricas: gasto, CPA, ROAS, CTR, conversión de la landing, take rate de las OTOs. Sin eso no puedo decirte qué escalar, qué matar ni qué ángulo gana de verdad. 👉 Añadí `RAW/metricas.md` con una línea por oferta: gasto, ventas, CPA, ROAS y fecha. Aunque sean aproximados.
-2. **No hay ejemplos reales de lo que ganó.** La "DNA ganadora" está descrita en abstracto. 👉 Pegá en `RAW/` los 3–5 mejores guiones, natives y primary texts de **Scented Stones** y **Chupetines**, y las URLs de sus landings y quizzes. Así cada variable que te arme parte de material probado y no de una regla genérica.
-3. **Faltan datos clave de ofertas y de Fitia.** No hay precios de Sopitas, Calistenia y Fitia. No está claro a qué oferta pertenece la escalera de OTOs en ARS ni si las ofertas en inglés tienen upsells. Tampoco se sabe qué es propio y qué es de afiliado. El rebrand de Fitia sigue sin decidirse. 👉 Una nota corta respondiendo esas preguntas (están en la sección *Preguntas abiertas* de cada tema).
+1. **Faltan las natives y descripciones de Scented Stones.** Tengo los guiones pero no las imágenes ni el copy largo que los acompañan. 👉 Pegá en `RAW/` las 2–3 natives y la descripción que mejor corrieron.
+2. **No hay versión en español de Scented Stones.** No sé si se testeó con voseo o en LATAM. Es la expansión multi-geo más obvia del único winner. 👉 Contame si se probó y cómo salió.
+3. **La landing y los upsells de Scented Stones.** No sé si la landing sigue la estructura estándar ni si hay OTOs en inglés. 👉 Pasá la URL de la landing y, si existen, los upsells.

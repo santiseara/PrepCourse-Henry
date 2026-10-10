@@ -11,7 +11,7 @@ le ayuda a armar ofertas ganadoras y los mejores ads (guiones, natives, descripc
 Antes de cualquier tarea de negocio o creativa, leé:
 - `WIKI/como-trabajar-con-santiago.md` — reglas de interacción, formato y glosario.
 - `WIKI/guiones-y-anuncios.md` — reglas fijas de copy (son obligatorias).
-- `WIKI/ofertas.md` — qué oferta es, para qué mercado y si está en foco.
+- `WIKI/scented-stones.md` — la oferta ganadora y la DNA de sus guiones (punto de partida por defecto).
 
 Si aprendés una preferencia nueva en la conversación (por ejemplo "eso es muy catastrófico" o "no menciones X"), proponé sumarla a la WIKI.
 
@@ -20,7 +20,7 @@ Si aprendés una preferencia nueva en la conversación (por ejemplo "eso es muy 
 ```
 RAW/          ← material en bruto que el usuario deja (notas, PDFs, links, transcripciones…). Solo lo edita el usuario.
 WIKI/         ← conocimiento organizado. SOLO lo edita Claude. El usuario NUNCA lo toca a mano.
-  index.md    ← punto de entrada: lista de temas + lista de outputs + gaps detectados
+  index.md    ← punto de entrada: una línea por tema + outputs + top 3 gaps
   <tema>.md   ← un archivo por tema, nombre en kebab-case (ej. `git-y-github.md`)
 OUTPUTS/      ← respuestas importantes guardadas, con fecha: `AAAA-MM-DD-titulo-corto.md`
 changelog.md  ← fecha del último procesado + qué cambió (lo más reciente arriba)
@@ -32,7 +32,7 @@ changelog.md  ← fecha del último procesado + qué cambió (lo más reciente a
    que aún no figuren como procesados en `changelog.md` y extraer ideas, datos, decisiones y preguntas abiertas.
 2. **ORGANIZAR** — Volcar lo extraído en `WIKI/`:
    - Un `.md` por tema. Si el tema existe, ampliarlo/corregirlo; si no, crearlo con la plantilla de abajo.
-   - Enlazar temas relacionados entre sí con `[nombre-tema](nombre-tema.md)`.
+   - Enlazar temas relacionados entre sí con `[[nombre-tema]]` (nombre del archivo sin `.md`).
    - Citar siempre la fuente: `(fuente: RAW/archivo.ext)`.
    - Mantener `WIKI/index.md` al día (todos los temas listados con una línea de resumen).
    - Nunca borrar ni modificar nada de `RAW/`.
@@ -63,7 +63,7 @@ Después de cada procesado: añadir entrada en `changelog.md` (fecha, archivos d
 - …
 
 ## Relacionado
-- [otro-tema](otro-tema.md)
+[[otro-tema]]
 
 ## Fuentes
 - RAW/…

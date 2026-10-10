@@ -1,58 +1,48 @@
 # Catálogo de ofertas
 
-> Todas las ofertas activas e históricas, ordenadas por mercado y prioridad. Las marcadas ⭐ son las que están en foco ahora. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md)
+> **Hoy la única que funciona es [[scented-stones]].** Según Santiago (2026-10-10), Fitia y las demás no dieron buenos resultados: quedan como historial para reutilizar aprendizajes, no para priorizarlas. (fuente: RAW/2026-10-10-guiones-ganadores-scented-stones.md, RAW/2026-10-10-contexto-maestro-santiago.md)
 
-## ⭐ En foco ahora (prioridad)
-1. **Scented Stones**: el buque insignia y el winner actual. Santiago es el **owner**, no afiliado.
-2. **Leather Blueprint Vault**: recién lanzada.
-3. **Bible Cover Atelier**: nueva.
-4. **Chupetines para Tragos** (AR): está andando bien.
-5. **Calistenia Asiática** (AR, hombres): nueva.
-6. **[Fitia](fitia.md)**: la apuesta de largo plazo.
+## ⭐ Activa
+| Oferta | Mercado | Precio | Persona |
+|---|---|---|---|
+| [[scented-stones]] (owner) | 🇬🇧 Inglés | $27 (de $97) | Emma Carter (42, PA) |
 
-## 🇬🇧 Inglés (US/UK/AU/CA)
+## 💤 Historial — sin buenos resultados
+### 🇬🇧 Inglés
 | Oferta | Qué es | Precio | Persona |
 |---|---|---|---|
-| ⭐ The Scented Stones Method (owner) | Piedras aromáticas: yeso + aceites esenciales + flores secas | $27 (de $97) | Emma Carter (42, PA) |
 | The Little Bootie Studio™ | Patrones de escarpines al crochet + guía de venta | $14 | Emily |
-| ⭐ The Bible Cover Atelier | Fundas de Biblia al crochet | $27 (de $100) | Sin persona (marca) |
+| The Bible Cover Atelier | Fundas de Biblia al crochet | $27 (de $100) | Marca |
 | The Welder's Blueprint Vault | 3.000+ planos de fabricación metálica | $27 (de $97) | — |
-| ⭐ The Leather Blueprint Vault | 170+ planos de cuero (PDF + DXF) | $27 (de $97) | — |
-| The 3D Lamp Profit Pack™ | 250+ STL de lámparas para impresoras 3D | $27 | — |
+| The Leather Blueprint Vault | 170+ planos de cuero (PDF + DXF) | $27 (de $97) | — |
+| The 3D Lamp Profit Pack™ | 250+ STL de lámparas | $27 | — |
 | The Pipe Cleaner Atelier™ | Método + 30 modelos de limpiapipas | $27 | — |
-| Silk & Frame Studio™ | Kinusaiga (foam + tela, sin coser) | $20 (de $67) | — |
+| Silk & Frame Studio™ | Kinusaiga (foam + tela) | $20 (de $67) | — |
 | The Stonecraft Studio™ | Décor en yeso, cemento y terrazzo | $27 (de $97) | — |
-| The Table Atelier™ (afiliado) | Trace-and-cord para individuales y caminos de mesa | $27 (de $97) | — |
-| Funko Pop Studio | Funkos personalizados: foto → 3D → print → pintar | $27 | — |
-| Masonry Course | Albañilería residencial por WhatsApp | $20 | — |
-| The Print & Press Method (afiliado, LIVE) | 1.000+ stickers / iron-on + método | $27 (de $97) | Emma (solo en ads) |
+| The Table Atelier™ (afiliado) | Individuales trace-and-cord | $27 (de $97) | — |
+| Funko Pop Studio | Funkos personalizados | $27 | — |
+| Masonry Course | Albañilería por WhatsApp | $20 | — |
+| The Print & Press Method (afiliado) | 1.000+ stickers / iron-on | $27 (de $97) | Emma |
 
-## 🇦🇷 Argentina / LATAM
+### 🇦🇷 Argentina / LATAM
 | Oferta | Qué es | Precio | Persona |
 |---|---|---|---|
-| ⭐ Chupetines para Tragos | Chupetines que se disuelven en bebidas | 14.999 ARS | Carmela Vega |
-| Curso de Refrigeración | Técnico de aire acondicionado / split | 15.990 ARS (de 47.000) | — |
-| 65 Sopitas para Mujeres 40+ | Challenge de 21 días que reemplaza la cena con sopas | ❓ | Carmela Vega |
-| ⭐ Calistenia Asiática | Producto propio, hombres AR | ❓ | "Coach + nombre japonés" |
-| ⭐ [Fitia](fitia.md) (en desarrollo) | App/plan de weight loss | ❓ | Marca propia |
+| Chupetines para Tragos | Chupetines que se disuelven en bebidas | 14.999 ARS | Carmela Vega |
+| Curso de Refrigeración | Técnico de aire acondicionado | 15.990 ARS | — |
+| 65 Sopitas para Mujeres 40+ | Challenge de 21 días con sopas | — | Carmela Vega |
+| Pilates Hormonal | Wall Pilates en 28 días, mujeres 45+ | — | Experta |
+| Calistenia Asiática | Calistenia para hombres AR | — | "Coach japonés" |
+| Supervivencia (afiliado) | Libro de 200 habilidades | $17 USD | — |
+| Pack de la Calma | Arteterapia (abandonada) | — | — |
+| **Fitia** | App de pérdida de peso pensada como marca a largo plazo. Además, el nombre ya lo usa una app mexicana conocida | — | Marca propia |
 
-## 💤 Inactivas (contexto, no priorizar)
-- **Pilates Hormonal**: wall Pilates en 28 días para mujeres 45+. Es vieja.
-- **Supervivencia LATAM** (afiliado): libro físico "Las Habilidades Perdidas de la Supervivencia", $17 USD (de $166). Su estado no está claro. Usa **español neutro (tuteo)** y va **directo a landing**.
-- **Pack de la Calma** (arteterapia): abandonada. Era una adaptación de Minding Art US e iba directo a landing.
-
-## Patrones del catálogo
-- La mayoría son **craft/oficio "hidden"** a $27 con ancla de $97, en inglés.
-- Las **personas** (Emma Carter, Carmela Vega) se reutilizan entre ofertas.
-- Dos precios se salen del estándar: Little Bootie ($14) y Silk & Frame / Masonry ($20).
-
-## Preguntas abiertas
-- Faltan los precios de Sopitas, Calistenia y Fitia.
-- ¿Qué ofertas son propias y cuáles de afiliado? Solo se sabe de Scented Stones (owner), Table Atelier, Print & Press y Supervivencia (afiliado).
-- ¿Qué números tiene cada oferta (ventas, CPA, ROAS)?
+## Lectura del catálogo
+- **Las craft "hidden" tienen la misma estructura que Scented Stones** ($27, ancla $97, persona, inglés), pero solo una funcionó. Lo que diferencia a Scented Stones parece ser el **ángulo de ingreso extra con margen visible** y un producto que se **vende físicamente a terceros** (bodas, regalos). Ver [[scented-stones]].
+- Los aprendizajes de fitness ([[guiones-y-anuncios]]) siguen siendo útiles como banco de ángulos aunque esas ofertas estén paradas.
 
 ## Relacionado
-- [perfil-y-negocio](perfil-y-negocio.md) · [fitia](fitia.md) · [landings-funnels-y-upsells](landings-funnels-y-upsells.md)
+[[scented-stones]] · [[perfil-y-negocio]] · [[landings-funnels-y-upsells]]
 
 ## Fuentes
-- RAW/2026-10-10-contexto-maestro-santiago.md (secciones 4 y 9)
+- RAW/2026-10-10-contexto-maestro-santiago.md (sección 4)
+- RAW/2026-10-10-guiones-ganadores-scented-stones.md (notas de Santiago)

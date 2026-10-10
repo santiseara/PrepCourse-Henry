@@ -69,7 +69,7 @@ Ojo: si Instagram está conectado a ManyChat a través de un perfil de Facebook 
 - **Calentar el número** de WhatsApp Business o API antes de mandar notificaciones de entrega en volumen, para que no lo bloqueen.
 - **El teléfono no es obligatorio en el checkout.** Cada campo de más es fricción.
 
-Relacionado: [[aumento-de-aov]] · [[shopify-y-checkout]] · [[stack-de-herramientas]] · [[perfil-y-negocio]]
+Relacionado: [[aumento-de-aov]] · [[shopify-y-checkout]] · [[stack-de-herramientas]] · [[modelo-low-ticket]]
 
 ## Conexiones con tu operación actual
 - **[[scented-stones]] es para el mercado en inglés**, así que el recupero va por **email y SMS**, no por WhatsApp. WhatsApp queda para las ofertas en AR y LATAM.

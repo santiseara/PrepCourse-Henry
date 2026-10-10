@@ -65,6 +65,10 @@
 - **Estructura:** V3, una CBO con un conjunto por tanda de 5 a 10 anuncios, botón "Más información" ([[metodo-v3]]).
 - **Documentos de investigación:** pendientes. Se pueden generar con el procedimiento de [[investigacion-de-mercado]].
 
+## Reloj y palancas
+- ⏰ **Caducidad:** las ofertas duran 3 o 4 meses ([[modelo-low-ticket]]). ¿Desde cuándo corre piedras?
+- **Palancas sin probar** ([[optimizacion-de-roas]]): versión larga de 1:30 a 3 minutos, garantía de 30 días, ticket de $37 y backend obligatorio.
+
 ## Preguntas abiertas
 - ¿Qué natives y descripciones acompañaron a estos guiones?
 - ¿Cuál de los 3 rinde más?

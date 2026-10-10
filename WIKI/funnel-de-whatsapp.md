@@ -2,7 +2,7 @@
 
 > Venta 1 a 1 por WhatsApp sin landing ni pasarela, con campaña de interacción que optimiza a compra mediante etiquetas. (fuente: RAW/2026-10-10-wiki-previa/funnel-de-whatsapp.md)
 
-Variante de venta directa sin landing: el anuncio no lleva a una web, **lleva a una conversación de WhatsApp uno a uno** donde se cierra la venta a mano. Mismos productos que en [[perfil-y-negocio]].
+Variante de venta directa sin landing: el anuncio no lleva a una web, **lleva a una conversación de WhatsApp uno a uno** donde se cierra la venta a mano. Mismos productos que en [[modelo-low-ticket]].
 
 ```
 Anuncio (campaña de interacción) → WhatsApp Business 1-a-1 → cierre por mensajes → cobro
@@ -89,7 +89,7 @@ Se puede validar una oferta con campañas de mensajes igual que con landing. El 
 
 - **La matemática es la misma cambiando «visita» por «conversación».** Costo por conversación 0,30 USD × 100 USD de inversión = ~333 conversaciones. Con un 10% de conversión a venta salen ~33 ventas. El precio mínimo para break-even sale de dividir el ingreso que querés recuperar por esas ventas.
 
-Relacionado: [[perfil-y-negocio]] · [[aumento-de-aov]] · [[escalado-en-meta-ads]] · [[funnel-hacking]]
+Relacionado: [[modelo-low-ticket]] · [[aumento-de-aov]] · [[escalado-en-meta-ads]] · [[funnel-hacking]]
 
 ## Conexiones con tu operación actual
 - **Vía para Argentina y LATAM.** Tu stack en pesos (Mercado Pago, transferencia) y tu público hispano encajan con este funnel: sin pasarela y 100% de margen. Si algún día llevás [[scented-stones]] al español, es una opción barata para validar.

@@ -3,7 +3,7 @@
 > Reglas **personales** de Santiago para guiones. El método general (7 pasos, variación modular, niveles de conciencia) está en [[guiones-de-video-ads]] y los hooks en [[hooks]]. Reglas de Santiago para guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
 ## Estructura
-- **Hook → Body → CTA**, como máximo **30 segundos**.
+- **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza.
 - Hooks con estructuras distintas, bodies variados y CTAs que rotan.
 - No nombrar al experto en el guión. ⚠️ El guión ganador 2 dice "Emma's guide": ver [[scented-stones]].

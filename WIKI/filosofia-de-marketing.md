@@ -62,7 +62,7 @@ La frase que resume la vara: **«Quiero guiones asesinos de verdad.»**
 
 > Encontrar una oferta con demanda → construir una oferta irresistible → crear creativos → testear en Meta → encontrar ganadores → optimizar funnel → aumentar AOV → escalar adquisición → expandirse internacionalmente → repetir.
 
-Relacionado: [[seleccion-y-modelado-de-oferta]] · [[hooks]] · [[perfil-y-negocio]]
+Relacionado: [[seleccion-y-modelado-de-oferta]] · [[hooks]] · [[modelo-low-ticket]]
 
 ## Conexiones con tu operación actual
 - **"Polarizante y crudo" no es lo mismo que "catastrófico".** Tus reglas ([[guiones-y-anuncios]]) piden directo y sin rodeos, pero benefit-forward. Crudo en el tono, positivo en la promesa.

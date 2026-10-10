@@ -23,6 +23,7 @@ WIKI/         ← conocimiento organizado. SOLO lo edita Claude. El usuario NUNC
   index.md    ← punto de entrada: una línea por tema + outputs + top 3 gaps
   <tema>.md   ← un archivo por tema, nombre en kebab-case (ej. `git-y-github.md`)
 OUTPUTS/      ← respuestas importantes guardadas, con fecha: `AAAA-MM-DD-titulo-corto.md`
+                también el registro diario de operación: `AAAA-MM-DD-registro-<oferta>.md`
 changelog.md  ← fecha del último procesado + qué cambió (lo más reciente arriba)
 ```
 

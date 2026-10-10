@@ -21,6 +21,7 @@ $27 en inglés (ancla $97) · 14.999–15.990 ARS · garantía de 7 días · pag
 ## Objetivos
 - Encontrar nichos "hidden" con poca competencia y mucho margen. Scented Stones es el primero que lo logró ([[ofertas]]).
 - Subir el AOV con OTOs.
+- El modelo base y su jerarquía (Mercado → Anuncios → Funnel → Producto) están en [[modelo-low-ticket]].
 - A largo plazo: dejar el ciclo "test → burn → repeat" y lograr facturación sostenida. Fitia era la apuesta para eso, pero no dio resultados.
 - **Métricas:** Santiago las comparte cuando haga falta escalar. No pedirlas antes.
 

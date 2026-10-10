@@ -13,11 +13,11 @@
 - ✅ [[landings-funnels-y-upsells]] — Estructura de landing en Lovable, funnels y escalera de OTOs en ARS.
 
 ## Negocio y estrategia
-- ⏳ [[modelo-low-ticket]] — la mecánica del modelo y por qué el front-end no es donde está el negocio
+- ✅ [[modelo-low-ticket]] — Mercado → Anuncios → Funnel → Producto. El front adquiere y el AOV es el negocio. Validar → backend → escalar. Las ofertas caducan a los 3–4 meses.
 - ✅ [[filosofia-de-marketing]] — Direct response puro: principios, referentes (Hormozi, Agora) y estilo de copy.
 - ✅ [[internacionalizacion]] — Una oferta en varios mercados = múltiples ofertas en profit. Países por mercado, localizar en vez de traducir, decisión de moneda.
 - ✅ [[llc-banca-y-fiscal]] — LLC en EE.UU., ITIN, Mercury y Relay, diversificar fondos, cripto para Meta, impuestos.
-- ⏳ [[organizacion-y-registro]] — el registro diario, las tres cuentas con tres trabajos y el recorrido de herramientas
+- ✅ [[organizacion-y-registro]] — Registro diario por oferta (en OUTPUTS/), tres cuentas con tres trabajos, recorrido de herramientas.
 
 ## Oferta y producto
 - ⏳ [[segmentos-de-mercado]] — salud, dinero y relaciones. El filtro previo a todo lo demás
@@ -32,13 +32,13 @@
 ## Adquisición — Meta Ads
 - ✅ [[metodo-v3]] — La estructura base: una CBO por oferta, un conjunto por tanda de 5 a 10 anuncios, renovaciones adentro, campaña de winners.
 - ✅ [[estructuras-cbo]] — Mapa de CBOs (V3, Pocket, aislada, power…), datos CBO contra ABO y 7 reglas.
-- ⏳ [[nomenclatura-del-metodo]] — cómo se nombran campañas, conjuntos, anuncios, pujas y UTMs
-- ⏳ [[metricas-y-kpis]] — costo por visita vs. revenue por visita, y los KPIs de cada eslabón
+- ✅ [[nomenclatura-del-metodo]] — Nombres por fecha de tanda (`DD/M - N`), escaleras de puja y la plantilla única de UTMs.
+- ✅ [[metricas-y-kpis]] — Costo por visita contra revenue por visita, KPIs de anuncio y de conversión, CPA break-even, días sin ventas.
 - ⏳ [[testeo-de-creativos]] — pre-testeo y testeo, la regla de las tres decisiones, y el cambio post-Andrómeda
 - ✅ [[escalado-en-meta-ads]] — Volumen creativo primero y presupuesto después: estructuras de escala, bids, surfeo y reglas de corte.
 - ⏳ [[setup-de-campanas]] — configuración paso a paso de una campaña desde cero
 - ⏳ [[subir-ads-con-metodo-catalogo]] — anuncios de catálogo en video único dentro de la V3, con datos reales, y qué parte sale por API
-- ⏳ [[optimizacion-de-roas]] — las 6 palancas para sacar un funnel de break-even
+- ✅ [[optimizacion-de-roas]] — 6 palancas para salir del break-even y las 3 únicas razones por las que algo no escala.
 - ✅ [[contingencia-de-cuentas]] — Perfiles de backup, BMs y cuentas para sobrevivir a bloqueos.
 - ⏳ [[problemas-de-cuentas-meta]] — síntomas y soluciones: límites, rechazos, apelaciones y el Business Manager
 - ✅ [[lectura-de-resultados]] — Casi nunca es el anuncio: orden de diagnóstico con datos reales (landing → pago, tarjetas, backend, cuenta, horario, reglas de corte).
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los 22 temas ⏳ de tu wiki previa.** `metodo-v3` ya está, pero se apoya en dos que faltan: **`nomenclatura-del-metodo`** (nombres y UTMs) y **`testeo-de-creativos`** (cuándo cortar un anuncio). Después: `pagina-de-ventas`, `quiz-funnel`, `metricas-y-kpis` y `seleccion-y-modelado-de-oferta`.
-2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento ya está en [[investigacion-de-mercado]]. 👉 Pasame la URL de la landing de piedras y los genero con deep research. Quedan en `RAW/scented-stones/` para alimentar guiones, hooks e imágenes.
-3. **Cómo cobra y qué backend tiene Scented Stones.** ¿LLC + Stripe, Impultienda o Hotmart? ¿Tiene post-pago? Define si se puede replicar a LatAm ([[internacionalizacion]]: Mercado Pago no permite multiidioma) y si se puede montar el embudo de OTOs.
+1. **Los 17 temas ⏳ de tu wiki previa.** El más citado que falta es **`testeo-de-creativos`**: lo referencian V3, métricas, nomenclatura, organización y escalado. Después: `pagina-de-ventas`, `quiz-funnel`, `seleccion-y-modelado-de-oferta`, `validacion-de-oferta` y `segmentos-de-mercado`.
+2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento está en [[investigacion-de-mercado]]. 👉 Pasame la URL de la landing de piedras y los genero con deep research.
+3. **Los datos base de Scented Stones.** ¿**Desde cuándo corre**? Importa porque las ofertas caducan a los 3–4 meses ([[modelo-low-ticket]]). ¿Cómo cobra (LLC + Stripe, Impultienda o Hotmart)? ¿Tiene backend o post-pago? Sin backend, según [[optimizacion-de-roas]], no hay forma de pagar más tráfico que la competencia.

@@ -234,7 +234,7 @@ Si los entregables son solo texto o PDF, **no se prometen videocursos** en el bu
 - Crear un «funnel» nuevo disparado por el producto principal. En cada oferta: headline y subheadline, **timer con el nombre del cliente** y minutos de reserva, imagen o carrusel, botones aceptar/rechazar y texto de garantía.
 - Para no perder conversión con el checkout en USD, sumar una app de conversión visual (ej. **Currency Converter Plus**). El visitante sigue viendo su moneda en landing y carrito aunque el checkout cobre en dólares.
 
-Relacionado: [[perfil-y-negocio]] · [[metricas-y-kpis]] · [[shopify-y-checkout]] · [[validacion-de-oferta]]
+Relacionado: [[modelo-low-ticket]] · [[metricas-y-kpis]] · [[shopify-y-checkout]] · [[validacion-de-oferta]]
 
 ## Conexiones con tu operación actual
 - **La escalera en ARS** de [[landings-funnels-y-upsells]] (OTO 1 → OTO 2 → downsell → OTO 3) sigue esta estructura. El downsell (7.990) queda un 20% por debajo del OTO 1 (9.990), cerca de la regla de "mismo producto, 25% menos".

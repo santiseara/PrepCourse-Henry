@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-10 — Métricas, modelo low ticket, nomenclatura, optimización de ROAS y organización
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (metricas-y-kpis, modelo-low-ticket, nomenclatura-del-metodo, optimizacion-de-roas, organizacion-y-registro).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Links restaurados:** `[[modelo-low-ticket]]` vuelve a apuntar a su página en 8 temas; antes iba a `perfil-y-negocio`.
+- **Cambiado:**
+  - `CLAUDE.md`: el registro diario de operación va en `OUTPUTS/`.
+  - `guiones-y-anuncios.md`: la regla de 30 segundos queda marcada como "por defecto" a confirmar.
+  - `scented-stones.md`: reloj de caducidad y palancas.
+  - `como-trabajar-con-santiago.md`: registro y nombres.
+  - `perfil-y-negocio.md`: link al modelo.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **El reloj de Scented Stones está corriendo.** Las ofertas caducan a los 3 o 4 meses y no sé desde cuándo está activa piedras. Replicarla en otros mercados le alarga la vida.
+  2. **Fitia tenía sentido según el propio modelo.** La única excepción a la caducidad es la marca personal propia. El objetivo de romper el ciclo "test → burn" sigue vigente aunque esa oferta no haya funcionado.
+  3. **Ya son 3 páginas** (ángulos, guiones de video y optimización de ROAS) **que piden probar creativos de 1:30 a 3 minutos**, contra la regla de 30 segundos máximo.
+  4. **"Nunca nombrar al experto" es una regla de guión, no de landing.** En la landing, Emma suma autoridad (palanca 2).
+  5. **La skill `ad-builder` se cita y no está en este repo.**
+  6. **"Cargá en RAW y pedí procesá RAW"** aparece en tu propio material: es el flujo de este segundo cerebro.
+
 ## 2026-10-10 — Internacionalización, investigación, lectura de resultados, LLC y método V3
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (internacionalizacion, investigacion-de-mercado, lectura-de-resultados, llc-banca-y-fiscal, metodo-v3).

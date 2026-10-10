@@ -80,6 +80,10 @@
 - **Guía o bonus:** `prompt-ebook-con-claude`. Lo puedo correr acá con capturas de la landing.
 - **Versión larga del guión de la contadora:** `prompt-ads-storytelling-largos-publico-frio`.
 
+- **Landing en español para la expansión:** `prompt-html-google-ai-studio` adapta el HTML de la landing actual a otro idioma o mercado **sin tocar la estructura** ([[internacionalizacion]]).
+- **Remarketing:** no hay ads para quien ya visitó la landing o abandonó el carrito. `prompt-guiones-por-nivel-de-conciencia` (nivel 5) sirve para eso.
+- **Nivel de conciencia de los ganadores:** los guiones 1 y 2 le hablan a quien **no sabía que esto era una oportunidad** (inconsciente del problema: sorpresa, revelación). El 3 suma lógica y urgencia. Los niveles 2 a 5 casi no están explorados.
+
 ## ⚠️ Riesgo: claims de ingresos
 - Los 3 ganadores prometen cifras ("$1,200 extra last month", "$3,500 a month", "$2,000 clean"). En EE.UU. **los claims de ingresos en ads** están regulados (FTC) y **Meta restringe las promesas de dinero fácil**. Hoy funcionan, pero son el punto más probable de rechazo o bloqueo ([[problemas-de-cuentas-meta]]).
 - Cómo bajar el riesgo sin perder la DNA: primera persona, como experiencia propia y no como resultado garantizado (lo pide tu propio `prompt-ads-storytelling-largos-publico-frio`), cuentas creíbles junto a la cifra y evitar "easiest money ever" como promesa al espectador.

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-10 — 5 prompts más a RAW/prompts/ (14 de 23)
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/prompts/` (prompt-generador-de-prompts-maestros, prompt-guiones-7-pasos, prompt-guiones-30-segundos, prompt-guiones-por-nivel-de-conciencia, prompt-html-google-ai-studio).
+- **Cambiado:**
+  - `biblioteca-de-prompts.md`: tabla de estado con 14 de 23.
+  - `guiones-y-anuncios.md`: criterio para el choque entre "3 completos" y "1 + 2 modular".
+  - `scented-stones.md`: landing en español, remarketing y nivel de conciencia de los ganadores.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **Tus prompts de guiones entregan "1 completo + 2 solo de hook"** y tu regla personal pide "3 completos distintos". Criterio: si pedís "guiones", van 3 completos; si pedís "hooks" o "renovar", va el formato modular.
+  2. **"30 segundos ≈ 75 palabras"** (prompt) coincide con tu regla de ~150 palabras por minuto.
+  3. **Los ganadores de piedras le hablan al nivel "inconsciente":** no sabían que esto era una oportunidad. Los niveles 2 a 5 casi no están explorados. El 5 sirve para remarketing, y piedras no tiene remarketing.
+  4. **`prompt-html-google-ai-studio` es la herramienta de la expansión:** adapta la landing que ya funciona a otro idioma sin tocar la estructura.
+  5. **Ya son 5 prompts que exigen los documentos de investigación.** Es el cuello de botella número 1 para producir con tu sistema.
+  6. **El meta-prompt prohíbe "Actúa como"**, pero 6 de tus prompts arrancan así. Es solo estilo, no afecta el resultado.
+
 ## 2026-10-10 — 5 prompts más a RAW/prompts/
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/prompts/` (prompt-crear-mockups, prompt-crear-upsells, prompt-ebook-con-claude, prompt-educar-chatgpt, prompt-escribir-sales-page). Ya hay 9 de 23 prompts con texto.

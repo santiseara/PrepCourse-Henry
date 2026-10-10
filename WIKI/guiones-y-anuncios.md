@@ -4,7 +4,7 @@
 
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
-- **3 guiones completos y distintos por tanda**, nunca pieza por pieza.
+- **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).
 - Hooks con estructuras distintas, bodies variados y CTAs que rotan.
 - No nombrar al experto en el guión. ⚠️ El guión ganador 2 dice "Emma's guide": ver [[scented-stones]].
 - Geo framing: "método argentino" **o** "método brasilero", nunca los dos en la misma tanda.

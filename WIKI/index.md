@@ -65,7 +65,7 @@
 
 ## Herramientas y método
 - ⏳ [[stack-de-herramientas]] — inventario completo, marcado entre lo que está en uso y lo evaluado
-- ✅ [[biblioteca-de-prompts]] — Mapa de los 23 prompts de producción (solo la descripción, sin el texto).
+- ✅ [[biblioteca-de-prompts]] — Mapa de los 23 prompts de producción. Con texto en `RAW/prompts/`: 4 de 23 (storytelling largo, ángulos, ángulos Launch Expert, comentarios IG ⚠️).
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.
 
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los últimos 2 temas ⏳** (`stack-de-herramientas` y `mentalidad-y-habitos`), más el **texto de los 23 prompts** (`RAW/prompts/`) y la skill **`ad-builder`**, que tu material cita y no están acá.
-2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento está en [[investigacion-de-mercado]]. 👉 Con la URL de la landing los genero con deep research.
-3. **La URL y los datos base de piedras.** Con la URL hago la auditoría contra [[pagina-de-ventas]] y [[psicologia-del-comprador]]. Me falta saber desde cuándo corre ([[modelo-low-ticket]]), si está en Impultienda con post-pago ([[shopify-y-checkout]]) y qué tracking usa ([[tracking-y-atribucion]]).
+1. **El resto de `RAW/prompts/`: 19 prompts.** Prioridad: `prompt-variacion-de-guiones-winners`, `prompt-crear-upsells`, `prompt-vsl-oto-post-purchase` y `prompt-meta-ads-primary-text`. Y los últimos 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`).
+2. **Los 4 documentos de investigación de Scented Stones.** Ahora es más urgente: `prompt-angulos-manuales-launch-expert` **no arranca sin ellos** ([[biblioteca-de-prompts]]). 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
+3. **La URL y los datos base de piedras.** Con la URL hago la auditoría contra [[pagina-de-ventas]] y [[psicologia-del-comprador]]. Me falta saber desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.

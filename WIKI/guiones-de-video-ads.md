@@ -39,7 +39,7 @@ El nivel de conciencia es una de las dimensiones que hay que **variar deliberada
 | Formato | Prompt | Lógica |
 |---|---|---|
 | **30 segundos** | `prompt-guiones-30-segundos` | «Narrativa de compresión»: historia emocional completa + venta en 30s exactos |
-| **Storytelling largo (1:30+)** | `prompt-ads-storytelling-largos-publico-frio` | Anuncio-historia que no parece publicidad. **El producto aparece pasado el primer minuto**; el 70% es narración emocional. Para público frío |
+| **Storytelling largo (1:30+)** | `prompt-ads-storytelling-largos-publico-frio` (texto ✅ en `RAW/prompts/`) | Anuncio-historia que no parece publicidad. **El producto aparece pasado el primer minuto**; el 70% es narración emocional. Para público frío |
 | **UGC 8–15s** | — | Segmentos cortos para Seedance |
 | **Testimonial 14s** | `prompt-testimonios-sora-2` | Máx. 35–40 palabras. Hook (0–3s) / Beneficio (4–10s) / Cierre + CTA (11–14s) |
 

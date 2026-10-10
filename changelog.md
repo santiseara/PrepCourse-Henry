@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-10 — Primeros prompts a RAW/prompts/
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/prompts/` (_indice, prompt-ads-storytelling-largos-publico-frio, prompt-angulos-manuales-launch-expert, prompt-angulos, prompt-comentarios-positivos-ig). Van a `RAW/prompts/` con los nombres exactos que cita la WIKI, así las referencias `RAW/prompts/...` de varios temas ya resuelven.
+- **Cambiado:**
+  - `biblioteca-de-prompts.md`: sección "Estado de la carpeta" con qué pide cada prompt disponible y cómo aplicarlo.
+  - `scented-stones.md`: sección de riesgo por claims de ingresos.
+  - `guiones-de-video-ads.md`: marca el prompt de storytelling como disponible.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **El prompt de storytelling ya trae la voz "juez que se redime".** Es la contadora del guión 3 de piedras: la versión larga sale casi directa.
+  2. **`prompt-angulos-manuales-launch-expert` no arranca sin los 4 documentos de investigación.** Sube la prioridad de generarlos para piedras.
+  3. **Tu propio prompt de storytelling pide claims realistas y en primera persona** cuando se toca dinero. Es justo la protección que necesitan los claims de ingresos de los ganadores de piedras frente a FTC y Meta.
+  4. **`prompt-comentarios-positivos-ig` fabrica prueba social** (comentarios con nombres y fotos inventados). Queda marcado como riesgo legal y de cuenta. No lo voy a usar para presentar testimonios falsos como reales.
+
 ## 2026-10-10 — Catálogo, testeo de creativos, tracking, UGC y validación
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (subir-ads-con-metodo-catalogo, testeo-de-creativos, tracking-y-atribucion, ugc-y-video-generativo, validacion-de-oferta).

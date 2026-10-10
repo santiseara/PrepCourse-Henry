@@ -1,6 +1,6 @@
 # Biblioteca de prompts
 
-> Mapa de los 23 prompts de producción de Santiago, por área (guiones, copy, oferta, visual, web, meta). Acá está la descripción; el texto de los prompts todavía no está en el cerebro. (fuente: RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md)
+> Mapa de los 23 prompts de producción de Santiago, por área (guiones, copy, oferta, visual, web, meta). El texto completo de cada prompt se va sumando a `RAW/prompts/` (ver "Estado de la carpeta" abajo). (fuente: RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md, RAW/prompts/_indice.md)
 
 23 prompts que Santiago usa en producción, volcados en `RAW/prompts/`. No son experimentos: cubren el flujo entero del negocio y varios exigen como entrada los documentos de [[investigacion-de-mercado]] (Avatar Sheet, Offer Brief, deep research, documento de creencias).
 
@@ -87,7 +87,16 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
   - `prompt-crear-upsells`: para armar el backend de [[aumento-de-aov]].
   - `prompt-testimonios-sora-2`: encaja con tu stack de Sora y HeyGen.
 - `prompt-guiones-30-segundos` es la versión en prompt de tu regla de 30 segundos ([[guiones-y-anuncios]]).
-- ⚠️ **No tengo el texto de ninguno de los 23 prompts.** Solo esta descripción. Para usarlos tal cual, subilos a `RAW/prompts/`.
+- **Prompts con texto disponible: 4 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
+
+## 📂 Estado de la carpeta `RAW/prompts/`
+| Prompt | Texto | Qué pide / notas para usarlo |
+|---|---|---|
+| `prompt-ads-storytelling-largos-publico-frio` | ✅ | Pide 7 variables (producto, buyer persona, dolor emocional, ángulo, transformación, ancla de precio, CTA). Devuelve 3 guiones de 1:30 a 2:30 (250–380 palabras), cada uno con una voz distinta: afectada, juez que se redime, autoridad que ayuda. Incluye 7 beats, timestamps, shots, overlays y nota de casting. **Para [[scented-stones]], la voz "juez que se redime" es la contadora del guión 3.** |
+| `prompt-angulos-manuales-launch-expert` | ✅ | **No genera nada sin los 4 documentos** (página de ventas, Offer Brief, Avatar Sheet, creencias; ver [[investigacion-de-mercado]]). Devuelve 5 ángulos de imagen estática: dolor agudo, sueño cumplido, mecanismo único, contrarian y UGC nativo. Cada uno con nombre, emoción, gancho de 7–10 palabras y escena. Sirve para natives ([[imagenes-y-mockups]]). |
+| `prompt-angulos` | ✅ | Investigación online de reseñas y comunidades (G2, Trustpilot, Hotmart, TikTok, Reddit…) para encontrar **al menos 3 ángulos alternativos con evidencia real**. Para piedras: comentarios de TikTok y reseñas de guías de scented stones o salt dough. |
+| `prompt-comentarios-positivos-ig` | ✅ | Genera la imagen de una sección de comentarios de Instagram "ultra realista" con nombres y fotos inventados. ⚠️ **Es prueba social fabricada.** Presentar comentarios inventados como reales en una landing o un ad expone a reclamos de defensa del consumidor (en EE.UU., la FTC prohíbe las reseñas falsas) y a rechazos de Meta ([[problemas-de-cuentas-meta]]). No lo voy a usar para generar testimonios falsos presentados como reales. Sí te ayudo a juntar y diseñar **comentarios reales** de compradores. |
+| Los otros 19 | ⏳ | Solo la descripción de arriba. Prioridad: `prompt-variacion-de-guiones-winners`, `prompt-crear-upsells`, `prompt-vsl-oto-post-purchase` y `prompt-meta-ads-primary-text`. |
 
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md (página de la wiki previa, actualizada el 2026-08-10)

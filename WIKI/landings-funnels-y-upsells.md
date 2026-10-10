@@ -14,7 +14,9 @@ OTO 1: 9.990 (agenda llena) → OTO 2: 19.990 (eventos) → Downsell: 7.990 (dis
 - Los nombres ("eventos", "agenda llena", "marca registrada") encajan con un producto que se vende a terceros en eventos, el mismo patrón que Scented Stones con las bodas. Ver [[scented-stones]].
 
 ## Backend completo
-La teoría completa (bumps, SellEasy, Aftersell, KPIs, los 5 bumps que no se pisan) está en [[aumento-de-aov]].
+La teoría completa (bumps, SellEasy, Aftersell, KPIs, los 5 bumps que no se pisan) está en [[aumento-de-aov]]. La versión con VSL y ruleta está en [[embudo-vsl-post-pago]].
+- ⚠️ La escalera en ARS pone el ticket más alto (29.990) al final. La regla de [[embudo-vsl-post-pago]] es que el más alto va **segundo**.
+- Antes de tocar el checkout, usar [[diagnostico-de-checkout]]. Primero: ¿el Hero tiene botón de compra antes de mostrar la oferta?
 
 ## Preguntas abiertas
 - ¿Scented Stones tiene OTOs en inglés? Pedidos de bodas, gift sets y "cómo vender a boutiques" serían upsells naturales.

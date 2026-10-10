@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-10 — 5 páginas más de la wiki previa
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (creacion-de-productos-digitales, diagnostico-de-checkout, disputas-y-reembolsos, email-y-automatizaciones, embudo-vsl-post-pago).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `aumento-de-aov.md`: vuelve el link original a `embudo-vsl-post-pago`, que ya existe.
+  - `landings-funnels-y-upsells.md`: alerta sobre el orden de la escalera y link al diagnóstico de checkout.
+  - `scented-stones.md`: escalera post-pago y recupero por email y SMS.
+  - `index.md`: temas nuevos, pendientes recalculados y gaps.
+- **Conexiones inesperadas:**
+  1. **Scented Stones está en el nicho más fácil para upsellear** (ingreso extra). Quedó un borrador de 4 OTOs: $37 → $97 GPT "Emma" → $27 kit de venta → $17 packaging.
+  2. **Tu escalera en ARS pone el ticket más alto al final** (29.990). La regla del embudo VSL es que el más alto va segundo.
+  3. **El post-pago vende más que el mismo producto como bump.** Varias ideas de bumps de `aumento-de-aov` rinden más como OTO.
+  4. **Hay dos usos de WhatsApp que no hay que mezclar.** Como canal de venta de la persona en el ad (Emma) es un recurso de copy. Como remarketing tuyo, en inglés rinden más el email y el SMS.
+  5. **Este repo es el "segundo cerebro" que la página de disputas propone usar** para pelear contracargos con Claude Code. Faltaría conectar Stripe o MercadoPago.
+  6. **Etsy aparece como referencia de temario** en creación de productos. La prohibición es solo para nombrarlo en los ads.
+
 ## 2026-10-10 — 5 páginas de la wiki previa
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (angulos-publicitarios, aumento-de-aov, biblioteca-de-prompts, claude-con-meta-ads, contingencia-de-cuentas), guardadas tal cual en `RAW/`.

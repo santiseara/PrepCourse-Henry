@@ -161,7 +161,7 @@ El copy del downsell es un buen ejemplo del registro que usa — empatía explí
 
 **KPI: el take rate debe estar por encima del 15%.**
 
-**Cómo subirlo:** el OTO tiene que **resolver el mismo problema del producto principal, pero mejor, más fácil y más rápido**. El cliente ya demostró que ese problema le importa. Ver [[landings-funnels-y-upsells]].
+**Cómo subirlo:** el OTO tiene que **resolver el mismo problema del producto principal, pero mejor, más fácil y más rápido**. El cliente ya demostró que ese problema le importa. Ver [[embudo-vsl-post-pago]].
 
 **Dato de referencia:** una tienda suya con front de **27 USD** y **AOV de 39,44** → ratio 1,44. Por debajo del KPI de 1,50, pero él lo considera aceptable.
 
@@ -240,7 +240,7 @@ Relacionado: [[perfil-y-negocio]] · [[metricas-y-kpis]] · [[shopify-y-checkout
 - **La escalera en ARS** de [[landings-funnels-y-upsells]] (OTO 1 → OTO 2 → downsell → OTO 3) sigue esta estructura. El downsell (7.990) queda un 20% por debajo del OTO 1 (9.990), cerca de la regla de "mismo producto, 25% menos".
 - **El "contador" aparece dos veces.** El downsell modelo dice "algo que mi contador me prohibiría" y el guión ganador 3 de [[scented-stones]] arranca con "My accountant called me…". Es un personaje que funciona en tu copy.
 - **Scented Stones a $27:** con el KPI de AOV de 1,5× el objetivo sería unos **$40**. La tienda de referencia (front 27, AOV 39,44) podría ser esta oferta; falta confirmar.
-- **Ideas de los 5 bumps para Scented Stones** (borrador, sin validar):
+- **Ideas de los 5 bumps para Scented Stones** (borrador, sin validar). Según [[embudo-vsl-post-pago]], el post-pago vende más que el mismo producto como bump: el acelerador y el kit de venta rinden más como OTO.
   1. Acelerador: "Wedding Order Fast-Track", producción en lote para pedidos grandes.
   2. Anti-error: checklist de secado, moho y fijación del aroma.
   3. Done-for-you: etiquetas y tarjetas de regalo imprimibles.

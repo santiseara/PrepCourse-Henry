@@ -58,8 +58,11 @@
 ## 📝 Descripciones (storytime UGC)
 - **400–500 palabras.** Contexto de la foto → revelación → antes y ahora → contraste → método (Emma Carter) → lo simple que es → cierre de confianza → soft CTA. Benefit-forward.
 
+## Campañas
+- No mezclar natives (imagen) con guiones (video) en la misma CBO de testeo ([[estructuras-cbo]]).
+
 ## Tono e idiomas
-- Positivo, directo, enfocado en resultados, hooks que frenen el scroll. Nada técnico.
+- Positivo, directo, enfocado en resultados, hooks que frenen el scroll. Nada técnico. Crudo en el tono, positivo en la promesa ([[filosofia-de-marketing]]).
 - Por defecto, español con voseo + inglés. El alemán se descartó. Supervivencia iba en español neutro.
 
 ## Relacionado

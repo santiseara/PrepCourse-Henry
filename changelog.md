@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-10 — Escalado, CBO, filosofía, WhatsApp y funnel hacking
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (escalado-en-meta-ads, estructuras-cbo, filosofia-de-marketing, funnel-de-whatsapp, funnel-hacking).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `como-trabajar-con-santiago.md`: estándar de copy (nada de frases de IA, transformación, volumen) y filtros de cazar.
+  - `guiones-y-anuncios.md`: no mezclar imagen y video, crudo pero positivo.
+  - `perfil-y-negocio.md`: links al ciclo.
+  - `scented-stones.md`: palanca de escala.
+  - `index.md`: temas, pendientes recalculados y gap 1.
+- **Conexiones inesperadas:**
+  1. **"De 6 ofertas validadas, escala 1"** explica tu catálogo: de unas 20 ofertas, Scented Stones es la que funciona. Es lo esperable.
+  2. **"Más anuncios, no más ofertas"**: la palanca de piedras es el volumen de variables. Pero el ritmo de 10 creativos por día choca con la regla de 3 guiones por tanda.
+  3. **Los dos filtros de cazar no coinciden.** La skill usa 50+ ads y 3+ días; funnel hacking usa mismo URL, 1 semana o más y sin marca personal. Se complementan.
+  4. **Para una oferta en inglés se espía en AR, LATAM y BR**, al revés de tu flujo habitual BR → AR.
+  5. **"Crudo" contra "no catastrófico"** no se contradicen: crudo en el tono, positivo en la promesa.
+  6. **El bid "valor más alto" necesita backend.** Otra razón para montar el post-pago de Scented Stones.
+
 ## 2026-10-10 — 5 páginas más de la wiki previa
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (creacion-de-productos-digitales, diagnostico-de-checkout, disputas-y-reembolsos, email-y-automatizaciones, embudo-vsl-post-pago).

@@ -8,11 +8,11 @@
 - **Mercados:** inglés (US/UK/AU/CA), Argentina con voseo, LATAM neutro. Brasil le sirve como fuente de competencia.
 
 ## Ciclo operativo
-1. **Cazar** winners en Facebook Ads Library (3+ días corriendo, 50+ ads activos).
+1. **Cazar** winners en Facebook Ads Library (3+ días corriendo, 50+ ads activos). Criterios finos en [[funnel-hacking]]. La filosofía de fondo está en [[filosofia-de-marketing]].
 2. **Extraer la DNA** de los guiones ganadores ([[guiones-y-anuncios]]).
 3. **Adaptar o clonar** a otro mercado o idioma.
 4. **Landing** en Lovable ([[landings-funnels-y-upsells]]).
-5. **Ads en Meta** con la estructura 3-3-3.
+5. **Ads en Meta** con la estructura 3-3-3. Para escalar: [[escalado-en-meta-ads]] y [[estructuras-cbo]].
 6. **Multi-geo** si funciona.
 
 ## Precio estándar

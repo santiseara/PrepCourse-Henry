@@ -18,7 +18,7 @@ Casi todos comparten estructura: **asignación de rol → contexto y misión →
 | `prompt-vsl-oto-post-purchase` | Guion de VSL para el upsell post-compra, estructura obligatoria de 8 puntos |
 | `prompt-testimonios-sora-2` | Pack de producción UGC: guion para ElevenLabs + prompt visual para Sora 2. Regla de 14s / 35–40 palabras, 3 estilos (escéptico convertido, profesional, resultado tangible) |
 
-Ver [[guiones-y-anuncios]].
+Ver [[guiones-de-video-ads]].
 
 ## Copy y ángulos
 

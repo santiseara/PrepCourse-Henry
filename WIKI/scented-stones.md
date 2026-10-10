@@ -44,6 +44,10 @@
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
 ## Variables posibles (ideas de próxima tanda)
+- Hook de eliminación de objeciones: "No kiln. No fancy tools. No experience." ([[hooks]])
+- Nostalgia: "My grandma's salt-dough trick turned into $1,200 a month."
+- Versión larga (1:30) del guión 3: "la que juzgaba y se redime", para público frío ([[guiones-de-video-ads]]).
+- Objeciones sin explorar: "I don't have time" (2 horas los sábados) y "I'm not crafty".
 - Hook de otra figura cotidiana: el cartero ("why are you shipping so many boxes?"), una vecina que pide por mayor o el marido que hace las cuentas.
 - Hard-money con un pedido puntual: "One bridal shower order paid my car insurance".
 - Anti-hustle en versión jubilada o madre de 3: "I'm 58 and I didn't want a 'side hustle'…"

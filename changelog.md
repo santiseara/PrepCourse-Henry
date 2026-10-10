@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-10 — Guiones, hooks, IA, imágenes e índice previo
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (guiones-de-video-ads, hooks, ia-en-el-flujo-de-trabajo, imagenes-y-mockups, `_index-wiki-previa.md`).
+- **Creado:** 4 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Cambiado:**
+  - `index.md`: rehecho con las categorías de la wiki previa. Muestra los 19 temas ✅ y los 27 ⏳ pendientes con su descripción, más los gaps.
+  - Se restauran los links `[[guiones-de-video-ads]]` en angulos-publicitarios, biblioteca-de-prompts, embudo-vsl-post-pago y escalado-en-meta-ads (antes apuntaban a `guiones-y-anuncios` porque la página no existía).
+  - `guiones-y-anuncios.md`: separa las reglas personales del método general.
+  - `scented-stones.md`: 4 variables nuevas.
+  - `como-trabajar-con-santiago.md`: "verdad, no consuelo" y diagnosticar antes de variar.
+  - `perfil-y-negocio.md`: Impultienda como plataforma actual.
+  - `landings-funnels-y-upsells.md`: referencia a quiz-funnel.
+- **Conexiones inesperadas:**
+  1. **El guión 3 de Scented Stones calza en la variante (b) del storytelling largo** ("alguien que la juzgaba y se redime"). Da para una versión de 1:30 para público frío.
+  2. **Choque:** la regla modular dice que el body queda igual y tu contexto maestro dice que los bodies tienen que variar. Se resuelve con modular dentro del concepto y body nuevo entre conceptos.
+  3. **El hook de eliminación de objeciones** ("sin azúcar, sin harina, sin horno") se traslada a piedras: "No kiln. No fancy tools. No experience."
+  4. **El índice previo resuelve el conflicto de stack:** Impultienda es la plataforma actual; Shopify y Hotmart eran referencia.
+  5. **Natives contra mockups son dos estéticas opuestas** (UGC boho contra premium editorial) y no se mezclan.
+  6. **Este repo es exactamente la "carpeta local como segundo cerebro"** que recomienda `ia-en-el-flujo-de-trabajo`.
+
 ## 2026-10-10 — Escalado, CBO, filosofía, WhatsApp y funnel hacking
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (escalado-en-meta-ads, estructuras-cbo, filosofia-de-marketing, funnel-de-whatsapp, funnel-hacking).

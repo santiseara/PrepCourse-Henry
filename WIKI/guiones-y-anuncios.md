@@ -1,6 +1,6 @@
 # Guiones y anuncios — reglas fijas
 
-> Reglas de Santiago para guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
+> Reglas **personales** de Santiago para guiones. El método general (7 pasos, variación modular, niveles de conciencia) está en [[guiones-de-video-ads]] y los hooks en [[hooks]]. Reglas de Santiago para guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**.
@@ -51,6 +51,7 @@
 - ✅ Amigas, boca a boca, WhatsApp, bodas, fiestas, gift sets, boutiques, ferias, grupos de iglesia, baby showers.
 
 ## 🖼️ Natives (prompts de imagen)
+- Para ads son estética UGC. Los mockups de landing van aparte y premium ([[imagenes-y-mockups]]). En el pre-testeo se usan unas 20 imágenes por cada 10 videos.
 - POV en primera persona, sin cara (solo manos y antebrazos), estética Pinterest-boho, golden hour.
 - Paleta: sage, dusty pink, oatmeal beige, terracota. Props: cajones de madera, lavanda, papel kraft, hilo de yute, delantal de lino, carteles de pizarra.
 - ⭐ La native de feria **"LAST ONE"** funciona.

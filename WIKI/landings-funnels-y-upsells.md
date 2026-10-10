@@ -3,7 +3,7 @@
 > Estructura de landing en Lovable, funnels y escalera de OTOs. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
 ## Funnel
-- **En la nota maestra:** ad → quiz o formulario → oferta. Ese estándar viene de la etapa de fitness.
+- **En la nota maestra:** ad → quiz o formulario → oferta. Ese estándar viene de la etapa de fitness. La wiki previa tiene una página `quiz-funnel` (16 preguntas antes de la oferta, convierte al 25–30% y tolera un CPC de 1 USD) que todavía no está acá.
 - **En la oferta ganadora ([[scented-stones]]):** los 3 guiones mandan a "link below / Tap Learn more", o sea, a la landing de la guía.
 
 ## Estructura de landing (Lovable)

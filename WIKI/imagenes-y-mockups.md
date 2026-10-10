@@ -66,7 +66,7 @@ De dónde salen esas imágenes de referencia:
 
 ## Recursos visuales para landings
 
-Hay lección dedicada que cubre la producción completa de assets: **testimonios, mockups, fondos, imágenes y carruseles**. Los testimonios de las landings ganadoras Santiago los crea **con su propio WhatsApp** ([[landings-funnels-y-upsells]]).
+Hay lección dedicada que cubre la producción completa de assets: **testimonios, mockups, fondos, imágenes y carruseles**. Los testimonios de las landings ganadoras Santiago los crea **con su propio WhatsApp** ([[pagina-de-ventas]]).
 
 También existe un prompt para generar **secciones de comentarios de Instagram ultra realistas** como prueba social (`prompt-comentarios-positivos-ig`).
 
@@ -116,7 +116,7 @@ Otras: Midjourney v6 · DALL-E 3 · Higgsfield · Grok (B-roll) · Canva (landin
 - **Meta tiene generación de imágenes nativa** en el editor de anuncios, con variantes automáticas a partir de una imagen subida.
 - **Testimonios y capturas para la landing:** el prompt de imagen no se escribe a mano. Se le pide a ChatGPT o Claude («comentario de Facebook», «captura de chat de WhatsApp», «fondo de landing de alto valor percibido»).
 
-Relacionado: [[landings-funnels-y-upsells]] · [[creacion-de-productos-digitales]] · [[ugc-y-video-generativo]] · [[biblioteca-de-prompts]]
+Relacionado: [[pagina-de-ventas]] · [[creacion-de-productos-digitales]] · [[ugc-y-video-generativo]] · [[biblioteca-de-prompts]]
 
 ## Conexiones con tu operación actual
 - **Dos estéticas que no se mezclan.** Las natives de ads ([[guiones-y-anuncios]]) son UGC: POV, boho, golden hour, nada de estudio. Los mockups de landing y checkout son premium y editoriales: NO FLAT COVERS. Cada cosa en su lugar.

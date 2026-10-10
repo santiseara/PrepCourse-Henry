@@ -3,11 +3,13 @@
 > Estructura de landing en Lovable, funnels y escalera de OTOs. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
 ## Funnel
-- **En la nota maestra:** ad → quiz o formulario → oferta. Ese estándar viene de la etapa de fitness. La wiki previa tiene una página `quiz-funnel` (16 preguntas antes de la oferta, convierte al 25–30% y tolera un CPC de 1 USD) que todavía no está acá.
+- **En la nota maestra:** ad → quiz o formulario → oferta. Ese estándar viene de la etapa de fitness. Detalle en [[quiz-funnel]]: unas 16 preguntas, convierte al 25–30% y tolera un CPC de 1 USD.
 - **En la oferta ganadora ([[scented-stones]]):** los 3 guiones mandan a "link below / Tap Learn more", o sea, a la landing de la guía.
 
 ## Estructura de landing (Lovable)
 Hero → "Does this hit close to home?" → Why now → Complete system (6 pilares) → Who it's for → Carousel → "As simple as 1, 2, 3" → Bonuses (4) → Pricing + urgency → Testimonials → Guarantee (7 días) → FAQ → Final CTA.
+
+La estructura de referencia de tu método, comparada con esta, está en [[pagina-de-ventas]]. La diferencia clave: el botón va después de presentar el producto, no en el Hero.
 
 ## Escalera de upsells (en ARS)
 OTO 1: 9.990 (agenda llena) → OTO 2: 19.990 (eventos) → Downsell: 7.990 (diseños) → OTO 3: 29.990 (marca registrada).

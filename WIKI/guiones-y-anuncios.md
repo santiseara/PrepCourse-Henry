@@ -1,6 +1,6 @@
 # Guiones y anuncios — reglas fijas
 
-> Reglas **personales** de Santiago para guiones. El método general (7 pasos, variación modular, niveles de conciencia) está en [[guiones-de-video-ads]] y los hooks en [[hooks]]. Reglas de Santiago para guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
+> Reglas **personales** de Santiago para guiones. El método general (7 pasos, variación modular, niveles de conciencia) está en [[guiones-de-video-ads]] y los hooks en [[hooks]]. Cubre guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
@@ -55,6 +55,10 @@
 - POV en primera persona, sin cara (solo manos y antebrazos), estética Pinterest-boho, golden hour.
 - Paleta: sage, dusty pink, oatmeal beige, terracota. Props: cajones de madera, lavanda, papel kraft, hilo de yute, delantal de lino, carteles de pizarra.
 - ⭐ La native de feria **"LAST ONE"** funciona.
+
+## 💬 Primary text
+- Cuando lo pide "optimizado para ads, con emojis, no tan largo": corto, con emojis de sección.
+- Si una cuenta empieza a rechazar anuncios, lo primero es bajar los emojis ([[problemas-de-cuentas-meta]]).
 
 ## 📝 Descripciones (storytime UGC)
 - **400–500 palabras.** Contexto de la foto → revelación → antes y ahora → contraste → método (Emma Carter) → lo simple que es → cierre de confianza → soft CTA. Benefit-forward.

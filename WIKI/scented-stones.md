@@ -67,6 +67,7 @@
 
 ## Reloj y palancas
 - ⏰ **Caducidad:** las ofertas duran 3 o 4 meses ([[modelo-low-ticket]]). ¿Desde cuándo corre piedras?
+- **Auditoría de la landing** (con la URL): revisar si hay bloques para los 3 tipos de comprador ([[psicologia-del-comprador]]), el texto del botón, la posición del primer botón y la garantía de 30 días ([[pagina-de-ventas]]).
 - **Palancas sin probar** ([[optimizacion-de-roas]]): versión larga de 1:30 a 3 minutos, garantía de 30 días, ticket de $37 y backend obligatorio.
 
 ## Preguntas abiertas

@@ -56,7 +56,7 @@ Complementaria y con prompt propio (`RAW/prompts/prompt-angulos.md`): investigac
 
 El principio que ordena el análisis de competencia: no copiar literalmente, sino identificar **qué está funcionando y por qué** para después **adaptar → mejorar → testear**.
 
-Relacionado: [[seleccion-y-modelado-de-oferta]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[landings-funnels-y-upsells]]
+Relacionado: [[seleccion-y-modelado-de-oferta]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[pagina-de-ventas]]
 
 ## Conexiones con tu operación actual
 - **Scented Stones no tiene estos 4 documentos.** Es el gap número 2 del índice. Se pueden generar con este mismo procedimiento usando **tu propia landing** como input (Fireshot → deep research → Avatar Sheet → Offer Brief → creencias).

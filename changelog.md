@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-10 — Página de ventas, problemas de cuentas, procesadores, psicología del comprador y quiz funnel
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (pagina-de-ventas, problemas-de-cuentas-meta, procesadores-de-pago, psicologia-del-comprador, quiz-funnel).
+- **Creado:** 5 temas en `WIKI/`. Contenido íntegro, más resumen, fuente y "Conexiones con tu operación actual".
+- **Links restaurados:** `[[pagina-de-ventas]]` vuelve a apuntar a su página en 10 temas; antes iba a `landings-funnels-y-upsells`.
+- **Cambiado:**
+  - `landings-funnels-y-upsells.md`: links a quiz-funnel y pagina-de-ventas.
+  - `scented-stones.md`: checklist de auditoría de la landing.
+  - `guiones-y-anuncios.md`: sección de primary text con la regla de emojis y rechazos. Se arregló la intro duplicada.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **Los 3 guiones ganadores de Scented Stones cubren los 3 tipos de comprador.** Emocional ("easiest money"), lógico ("do the quick math") y FOMO (temporada de bodas, boutiques que cierran proveedores). Puede ser parte de por qué funciona y las otras craft no.
+  2. **La garantía de 30 días ya aparece en 3 fuentes** (página de ventas, optimización de ROAS, psicología del comprador) contra tu estándar de 7 días.
+  3. **Tu estructura de Lovable y la de referencia difieren en dónde va el primer botón.** La de referencia lo pone después del producto, y el botón en el Hero es la causa 1 de checkouts falsos.
+  4. **El quiz funnel es tu formato de la etapa fitness.** Tolera un CPC de 1 USD, así que podría servir para piedras en Tier 1 (test: "How much could you make from your kitchen table?").
+  5. **"Menos emojis" para evitar rechazos choca con tu primary text con emojis.** Queda como primera palanca si una cuenta rechaza.
+  6. **Whop permite cobrar en USD sin LLC**: es una opción para la pregunta abierta de cómo cobra piedras.
+
 ## 2026-10-10 — Métricas, modelo low ticket, nomenclatura, optimización de ROAS y organización
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/2026-10-10-wiki-previa/` (metricas-y-kpis, modelo-low-ticket, nomenclatura-del-metodo, optimizacion-de-roas, organizacion-y-registro).

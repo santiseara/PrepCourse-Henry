@@ -25,7 +25,7 @@ Aplicable el mismo día:
 - **Más testimoniales**: imágenes, video, capturas de WhatsApp
 - **Sección de autoridad** — añadir al experto detrás del producto, para activar el sesgo de autoridad
 
-El objetivo declarado: que **el valor percibido quede por encima del precio a pagar**. Ver [[landings-funnels-y-upsells]] y [[seleccion-y-modelado-de-oferta]].
+El objetivo declarado: que **el valor percibido quede por encima del precio a pagar**. Ver [[pagina-de-ventas]] y [[seleccion-y-modelado-de-oferta]].
 
 ## 3. Testear el ticket
 
@@ -91,7 +91,7 @@ Antes de tocar nada, localizar el cuello de botella con [[metricas-y-kpis]]:
 - **Cuello de botella «costo por visita caro con buen CPC»:** es la fuga entre clic y carga. En landings generadas por IA, **un HTML demasiado largo (~1.500 líneas) suele ser el culpable**. Se arregla con el prompt de optimización de carga.
 - **AOV bajo: primero post-pago, después pre-compra.** El post-pago no mete fricción antes del pago.
 
-Relacionado: [[metricas-y-kpis]] · [[aumento-de-aov]] · [[landings-funnels-y-upsells]] · [[validacion-de-oferta]]
+Relacionado: [[metricas-y-kpis]] · [[aumento-de-aov]] · [[pagina-de-ventas]] · [[validacion-de-oferta]]
 
 ## Conexiones con tu operación actual
 - **Tercera fuente contra la regla de 30 segundos.** La palanca 1 pide creativos de 1:30 a 3 minutos. Se suma a [[angulos-publicitarios]] y [[guiones-de-video-ads]]. Para [[scented-stones]], la versión larga del guión 3 de la contadora es la candidata natural.

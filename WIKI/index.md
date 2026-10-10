@@ -40,27 +40,27 @@
 - ⏳ [[subir-ads-con-metodo-catalogo]] — anuncios de catálogo en video único dentro de la V3, con datos reales, y qué parte sale por API
 - ✅ [[optimizacion-de-roas]] — 6 palancas para salir del break-even y las 3 únicas razones por las que algo no escala.
 - ✅ [[contingencia-de-cuentas]] — Perfiles de backup, BMs y cuentas para sobrevivir a bloqueos.
-- ⏳ [[problemas-de-cuentas-meta]] — síntomas y soluciones: límites, rechazos, apelaciones y el Business Manager
+- ✅ [[problemas-de-cuentas-meta]] — Síntomas y soluciones: límites, rechazos, apelaciones, entrega inestable, cambio de ecosistema, no quedarse afuera del Business Manager.
 - ✅ [[lectura-de-resultados]] — Casi nunca es el anuncio: orden de diagnóstico con datos reales (landing → pago, tarjetas, backend, cuenta, horario, reglas de corte).
 
 ## Creatividades
 - ✅ [[hooks]] — Los 3 segundos que sostienen el funnel: hook rate de más del 50%, lo visual pesa más que el guión, método de los "influencers quebrados".
 - ✅ [[guiones-de-video-ads]] — Método general: fórmula de 7 pasos, variación modular, niveles de conciencia, formatos por duración, diagnosticar antes de variar.
 - ✅ [[angulos-publicitarios]] — Variación real, niveles de conciencia, cómo encontrar ángulos, rotar formatos, 90/10.
-- ⏳ [[psicologia-del-comprador]] — emocional, lógico y por FOMO. Si apuntas a uno, pierdes dos tercios
+- ✅ [[psicologia-del-comprador]] — Confianza primero. Tres compradores (emocional, lógico, FOMO) y qué bloque de la landing le habla a cada uno.
 - ⏳ [[renovacion-de-creativos]] — por qué muere un ganador y las cuatro formas de revivirlo
 - ⏳ [[ugc-y-video-generativo]] — reglas fijas de UGC, avatares y prompts de video
 - ✅ [[imagenes-y-mockups]] — NO FLAT COVERS, "Rules of $100K design", prompts de mockup e imagen, mockups transparentes para el checkout.
 
 ## Conversión y operación
-- ⏳ [[pagina-de-ventas]] — la estructura que convierte y la regla del ahorro en dinero, no en porcentaje
-- ⏳ [[quiz-funnel]] — 16 preguntas antes de la oferta; convierte al 25–30% y tolera CPC de 1 USD
+- ✅ [[pagina-de-ventas]] — La estructura que convierte, el ahorro en dinero y no en porcentaje, TSL contra VSL, velocidad de carga y cómo construirla con IA.
+- ✅ [[quiz-funnel]] — Unas 16 preguntas antes de la oferta: convierte al 25–30%, tolera un CPC de 1 USD, analítica por pregunta.
 - ✅ [[funnel-de-whatsapp]] — Venta 1 a 1 por WhatsApp sin pasarela, optimizada a compra con etiquetas.
 - ✅ [[diagnostico-de-checkout]] — Muchos inicios de checkout y pocas compras: 9 causas por orden de impacto.
 - ⏳ [[shopify-y-checkout]] — **Impultienda es la plataforma actual**; Shopify y Hotmart quedan como referencia
 - ⏳ [[tracking-y-atribucion]] — UTMify y por qué el lag del pixel de Meta cuesta dinero
 - ✅ [[email-y-automatizaciones]] — Recupero de carritos, flujos post-compra, WhatsApp contra email según el mercado.
-- ⏳ [[procesadores-de-pago]] — Stripe, Whop, MercadoPago y PayPal: qué gana y qué pierde cada uno
+- ✅ [[procesadores-de-pago]] — Stripe, Whop, MercadoPago y PayPal: rechazos, disputas, velocidad de cobro y trucos de cada uno.
 - ✅ [[disputas-y-reembolsos]] — Contracargos por debajo de ~1%, términos y condiciones, pelear disputas con Claude Code, revisión de Stripe.
 
 ## Herramientas y método
@@ -79,6 +79,6 @@
 _Todavía no hay respuestas guardadas._
 
 ## Top 3 gaps (qué añadir)
-1. **Los 17 temas ⏳ de tu wiki previa.** El más citado que falta es **`testeo-de-creativos`**: lo referencian V3, métricas, nomenclatura, organización y escalado. Después: `pagina-de-ventas`, `quiz-funnel`, `seleccion-y-modelado-de-oferta`, `validacion-de-oferta` y `segmentos-de-mercado`.
-2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento está en [[investigacion-de-mercado]]. 👉 Pasame la URL de la landing de piedras y los genero con deep research.
-3. **Los datos base de Scented Stones.** ¿**Desde cuándo corre**? Importa porque las ofertas caducan a los 3–4 meses ([[modelo-low-ticket]]). ¿Cómo cobra (LLC + Stripe, Impultienda o Hotmart)? ¿Tiene backend o post-pago? Sin backend, según [[optimizacion-de-roas]], no hay forma de pagar más tráfico que la competencia.
+1. **Los 12 temas ⏳ de tu wiki previa.** El que más falta hace es **`testeo-de-creativos`**, el más citado. Después **`seleccion-y-modelado-de-oferta`** y **`validacion-de-oferta`**, que completan el ciclo oferta → test, y `shopify-y-checkout`, que aclara la plataforma.
+2. **Los 4 documentos de investigación de Scented Stones.** El procedimiento está en [[investigacion-de-mercado]]. 👉 Con la URL de la landing los genero con deep research.
+3. **La URL de la landing de piedras y sus datos base.** Con la URL hago además la **auditoría** contra [[pagina-de-ventas]] y [[psicologia-del-comprador]]: posición y texto del botón, bloques para los 3 compradores, garantía. Me falta saber también desde cuándo corre, cómo cobra y si tiene backend.

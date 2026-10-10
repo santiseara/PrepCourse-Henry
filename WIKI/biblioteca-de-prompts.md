@@ -87,7 +87,7 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
   - `prompt-crear-upsells`: para armar el backend de [[aumento-de-aov]].
   - `prompt-testimonios-sora-2`: encaja con tu stack de Sora y HeyGen.
 - `prompt-guiones-30-segundos` es la versión en prompt de tu regla de 30 segundos ([[guiones-y-anuncios]]).
-- **Prompts con texto disponible: 4 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
+- **Prompts con texto disponible: 9 de 23** (tabla de abajo). Para el resto tengo solo la descripción.
 
 ## 📂 Estado de la carpeta `RAW/prompts/`
 | Prompt | Texto | Qué pide / notas para usarlo |
@@ -96,7 +96,12 @@ Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
 | `prompt-angulos-manuales-launch-expert` | ✅ | **No genera nada sin los 4 documentos** (página de ventas, Offer Brief, Avatar Sheet, creencias; ver [[investigacion-de-mercado]]). Devuelve 5 ángulos de imagen estática: dolor agudo, sueño cumplido, mecanismo único, contrarian y UGC nativo. Cada uno con nombre, emoción, gancho de 7–10 palabras y escena. Sirve para natives ([[imagenes-y-mockups]]). |
 | `prompt-angulos` | ✅ | Investigación online de reseñas y comunidades (G2, Trustpilot, Hotmart, TikTok, Reddit…) para encontrar **al menos 3 ángulos alternativos con evidencia real**. Para piedras: comentarios de TikTok y reseñas de guías de scented stones o salt dough. |
 | `prompt-comentarios-positivos-ig` | ✅ | Genera la imagen de una sección de comentarios de Instagram "ultra realista" con nombres y fotos inventados. ⚠️ **Es prueba social fabricada.** Presentar comentarios inventados como reales en una landing o un ad expone a reclamos de defensa del consumidor (en EE.UU., la FTC prohíbe las reseñas falsas) y a rechazos de Meta ([[problemas-de-cuentas-meta]]). No lo voy a usar para generar testimonios falsos presentados como reales. Sí te ayudo a juntar y diseñar **comentarios reales** de compradores. |
-| Los otros 19 | ⏳ | Solo la descripción de arriba. Prioridad: `prompt-variacion-de-guiones-winners`, `prompt-crear-upsells`, `prompt-vsl-oto-post-purchase` y `prompt-meta-ads-primary-text`. |
+| `prompt-crear-upsells` | ✅ | Pide Avatar, Offer, Landing e Investigación. Devuelve un ecosistema de 8 ofertas: 5 bumps que no se pisan (acelerador, anti-error, done-for-you, swipe, toolkit; $7–27), OTO 1 "la Biblia" ($47–97), downsell ($27–37) y OTO 2 ($37–67). **Regla dura: todo en PDF, prohibido sugerir videocursos.** |
+| `prompt-ebook-con-claude` | ✅ | Necesita capturas de la landing y los datos del producto. Escribe el ebook **completo** en HTML A4 listo para PDF: primero un blueprint que mapea cada promesa a un capítulo y después el contenido. Pide no inventar estadísticas. **Lo puedo correr acá directamente** (soy Claude) para la guía o los bonus de [[scented-stones]]. |
+| `prompt-crear-mockups` | ✅ | Pide los 4 documentos. Analiza el ADN visual, **se detiene a preguntar el producto** y después da 3 prompts en inglés (héroe, en contexto, bundle) con estética "Apple meets Rolex". Ver [[imagenes-y-mockups]]. |
+| `prompt-educar-chatgpt` | ✅ | El texto de "verdad, no consuelo". Ya lo aplico como regla ([[como-trabajar-con-santiago]]). |
+| `prompt-escribir-sales-page` | ✅ | **Son dos prompts.** (1) Style transfer de la carta de Ted's Woodworking: mismo número de bullets, mismo "enemigo", stack de bonus con valor, garantía "Love it or Shove it" de 60 días. (2) Acortar a una landing modular de $14.99 con el molde "Herrería" en 9 secciones. ⚠️ El paso 2 pide **"3 testimonios creíbles con foto simulada"**: es el mismo problema de prueba social fabricada que `prompt-comentarios-positivos-ig`. Lo uso con testimonios reales o con espacios marcados para completarlos. ⚠️ El molde pone el botón en el Hero, contra [[diagnostico-de-checkout]] (causa 1). |
+| Los otros 14 | ⏳ | Solo la descripción de arriba. Prioridad: `prompt-variacion-de-guiones-winners`, `prompt-vsl-oto-post-purchase`, `prompt-meta-ads-primary-text` y `prompt-modelar-ofertas`. |
 
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md (página de la wiki previa, actualizada el 2026-08-10)

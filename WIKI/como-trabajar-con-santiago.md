@@ -31,6 +31,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **Tamaño de tanda:** 5 a 10 anuncios del mismo formato, para llenar un conjunto V3 ([[metodo-v3]]). La base son 3 guiones, multiplicados por hooks o B-rolls.
 - **"Renovar" un ganador** = 20 a 50 hooks sobre el mismo cuerpo, no un guión nuevo ([[renovacion-de-creativos]]).
 - **Prompts de video:** reglas fijas de UGC por defecto (9:16, handheld, sin subtítulos, sin música). Testimonios de 14 s y 35–40 palabras ([[ugc-y-video-generativo]]).
+- **Upsells y bonus: solo PDF** (ebook, checklist, plantillas, swipe). Nada de videocursos, porque no los graba ([[biblioteca-de-prompts]]).
 - **Volumen:** el ritmo de testeo es de ~10 creativos por día. Si pide "más", entregar tandas que alcancen para eso, con formatos rotados.
 
 ## Registro y nombres

@@ -75,6 +75,11 @@
 - **Auditoría de la landing** (con la URL): revisar si hay bloques para los 3 tipos de comprador ([[psicologia-del-comprador]]), el texto del botón, la posición del primer botón y la garantía de 30 días ([[pagina-de-ventas]]).
 - **Palancas sin probar** ([[optimizacion-de-roas]]): versión larga de 1:30 a 3 minutos, garantía de 30 días, ticket de $37 y backend obligatorio.
 
+## 🛠️ Prompts listos para piedras ([[biblioteca-de-prompts]])
+- **Backend:** `prompt-crear-upsells` (5 bumps + OTO 1 + downsell + OTO 2, todo en PDF). Necesita los 4 documentos.
+- **Guía o bonus:** `prompt-ebook-con-claude`. Lo puedo correr acá con capturas de la landing.
+- **Versión larga del guión de la contadora:** `prompt-ads-storytelling-largos-publico-frio`.
+
 ## ⚠️ Riesgo: claims de ingresos
 - Los 3 ganadores prometen cifras ("$1,200 extra last month", "$3,500 a month", "$2,000 clean"). En EE.UU. **los claims de ingresos en ads** están regulados (FTC) y **Meta restringe las promesas de dinero fácil**. Hoy funcionan, pero son el punto más probable de rechazo o bloqueo ([[problemas-de-cuentas-meta]]).
 - Cómo bajar el riesgo sin perder la DNA: primera persona, como experiencia propia y no como resultado garantizado (lo pide tu propio `prompt-ads-storytelling-largos-publico-frio`), cuentas creíbles junto a la cifra y evitar "easiest money ever" como promesa al espectador.

@@ -167,7 +167,7 @@ Relacionado: [[aumento-de-aov]] · [[guiones-de-video-ads]] · [[ugc-y-video-gen
 - **Borrador de escalera para Scented Stones** (inglés, front $27), sin validar:
   | | Precio | Idea | Estrategia |
   |---|---|---|---|
-  | OTO 1 | $37 | Video-curso "Pro Finish": técnicas avanzadas, secado rápido, aromas que duran | Mismo problema, mejor resuelto |
+  | OTO 1 | $37 | ~~Video-curso~~ **"Pro Finish Bible" en PDF**: técnicas avanzadas, secado rápido, aromas que duran. Corregido: tu `prompt-crear-upsells` prohíbe videocursos ([[biblioteca-de-prompts]]) | Mismo problema, mejor resuelto |
   | OTO 2 | **$97** | GPT "Emma 1-on-1 Support" | Soporte (costo cero) |
   | OTO 3 | $27 | "Wedding & Boutique Sales Kit": guiones para vender, precios, cómo entrar a boutiques | Problema siguiente: vender |
   | OTO 4 | ~$17 | Etiquetas, tarjetas y packaging imprimibles | Problema siguiente: presentación |

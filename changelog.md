@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-10 — 5 prompts más a RAW/prompts/
+- **Último procesado:** 2026-10-10
+- **Fuentes procesadas:** `RAW/prompts/` (prompt-crear-mockups, prompt-crear-upsells, prompt-ebook-con-claude, prompt-educar-chatgpt, prompt-escribir-sales-page). Ya hay 9 de 23 prompts con texto.
+- **Cambiado:**
+  - `biblioteca-de-prompts.md`: tabla de estado con qué pide cada prompt y sus alertas.
+  - `embudo-vsl-post-pago.md`: **corregido** el borrador de OTO 1 de piedras, de videocurso a PDF.
+  - `scented-stones.md`: sección de prompts listos.
+  - `como-trabajar-con-santiago.md`: regla de upsells y bonus solo en PDF.
+  - `index.md`: actualizado.
+- **Conexiones inesperadas:**
+  1. **Me corrijo otra vez:** había propuesto un videocurso como OTO 1 de piedras, y `prompt-crear-upsells` prohíbe los videocursos porque no se graban. Ahora es una "Pro Finish Bible" en PDF.
+  2. **Ted's Woodworking, la carta modelo, ya trae el ángulo de dinero:** un bonus "How To Start A Woodworking Business" y la FAQ "Can I sell what I make?". Es el segmento "ganá plata con un oficio".
+  3. **Hipótesis:** los Blueprint Vault de Santiago (Welder's, Leather) siguen el molde de Ted's (miles de planos). Se habrían vendido como "colección de planos" y no como "ingreso", que es lo que diferencia a piedras. Falta confirmarlo.
+  4. **Cuarta fuente a favor de una garantía larga:** Ted's ofrece 60 días.
+  5. **El molde "Herrería" pone el botón en el Hero**, contra la causa 1 de checkouts falsos de tu propio diagnóstico.
+  6. **Ya son 3 prompts que exigen los 4 documentos de investigación** (upsells, mockups, ángulos Launch Expert): es el cuello de botella para producir con tus prompts.
+  7. **Testimonios con "foto simulada"** en el prompt de sales page: mismo riesgo que los comentarios fabricados.
+
 ## 2026-10-10 — Primeros prompts a RAW/prompts/
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/prompts/` (_indice, prompt-ads-storytelling-largos-publico-frio, prompt-angulos-manuales-launch-expert, prompt-angulos, prompt-comentarios-positivos-ig). Van a `RAW/prompts/` con los nombres exactos que cita la WIKI, así las referencias `RAW/prompts/...` de varios temas ya resuelven.

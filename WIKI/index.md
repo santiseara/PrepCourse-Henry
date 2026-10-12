@@ -76,7 +76,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
-_Todavía no hay respuestas guardadas._
+- 2026-10-12 — [Plan de caza: ingreso extra con oficio para AR](../OUTPUTS/2026-10-12-plan-caza-ingreso-extra-ar.md) (sin resultados: faltó acceso a la Ads Library)
 
 ## Top 3 gaps (qué añadir)
 1. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).

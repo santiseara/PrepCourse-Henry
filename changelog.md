@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-13 — Regla: TikToks sin marca de agua
+- `WIKI/vsl-reglas-de-armado.md`: los B-rolls de TikTok se bajan sin marca de agua (API tikwm) y se revisan los cuadros.
+
 ## 2026-10-13 — Regla: guiones sin B-roll
 - **Corrección de Santiago:** tampoco quiere las líneas `[BROLL]` en la entrega; solo el título y el texto que se lee.
 - **Cambiado:** `WIKI/como-trabajar-con-santiago.md`, `WIKI/guiones-y-anuncios.md`, `WIKI/resina-rentable.md` y `OUTPUTS/2026-10-13-guiones-resina-rentable.md`.

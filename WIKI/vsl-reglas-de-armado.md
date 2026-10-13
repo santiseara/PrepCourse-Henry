@@ -77,6 +77,7 @@
    - subtítulos ASS (Montserrat ExtraBold 76, franja negra, 2–3 palabras), apagados mientras hay testimonio o bonos en pantalla;
    - 1.3x al final.
    Las placas se arman con `mkgfx.py`.
+6. **B-rolls de TikTok (2026-10-13): siempre sin marca de agua.** `yt-dlp` falla con TikTok (Python 3.9); se bajan con la API de tikwm: `curl "https://www.tikwm.com/api/?hd=1&url=<link>"` y se descarga el campo `hdplay` (o `play`). Después se revisan los cuadros para confirmar que no haya logo.
 
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
@@ -85,6 +86,7 @@
 | 2026-10-12 | Pilates Hormonal | El video se hace con HeyGen | §3 |
 | 2026-10-12 | Pilates Hormonal | "Usá modelos más baratos, intercalá, no uses siempre el mejor" | §3b |
 | 2026-10-13 | Pilates Hormonal | Música suave por debajo, activa, que enganche | §4b |
+| 2026-10-13 | Mamá (Argentina) | "Los tiktoks descargalos sin marca de agua" | §5 paso 6 |
 | 2026-10-13 | Pilates Hormonal | Efectos solo en momentos clave: "cha-ching" al decir el precio; no llenarlo | §4b |
 
 ## Preguntas abiertas

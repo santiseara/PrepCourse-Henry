@@ -79,6 +79,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-13 — [Natives piedras orgánicas](../OUTPUTS/2026-10-13-natives-piedras-organicas.md): 3 natives detrás de escena (24 bolsitas del grado, la canasta de Dana, la ronda de reposición del lunes)
 - 2026-10-13 — [Guiones piedras v6 (formatos virales de TikTok)](../OUTPUTS/2026-10-13-guiones-piedras-v6-tiktok.md): "nunca más compro aromatizantes", "adiviná cuánto cuesta", "empaquetá un pedido conmigo"
 - 2026-10-13 — [Guiones piedras v5](../OUTPUTS/2026-10-13-guiones-piedras-v5.md): 3 originales con la estructura del de Navidad (inmobiliaria, recompra cada 8 semanas, canasta de la peluquería)
 - 2026-10-13 — [Guiones piedras v4](../OUTPUTS/2026-10-13-guiones-piedras-v4.md): 3 originales en EN y ES (Navidad a 10 semanas, el marido que hace la cuenta, pedido de casamiento)

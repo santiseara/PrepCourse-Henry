@@ -52,7 +52,7 @@
 
 ## 🖼️ Natives (prompts de imagen)
 - Para ads son estética UGC. Los mockups de landing van aparte y premium ([[imagenes-y-mockups]]). En el pre-testeo se usan unas 20 imágenes por cada 10 videos.
-- POV en primera persona, sin cara (solo manos y antebrazos), estética Pinterest-boho, golden hour.
+- POV en primera persona, sin cara (solo manos y antebrazos), estética Pinterest-boho, golden hour. ⚠️ Excepción: la native ganadora 2 de piedras muestra la cara de Emma. Las 3 ganadoras y sus patrones están en [[natives-ganadoras]].
 - Paleta: sage, dusty pink, oatmeal beige, terracota. Props: cajones de madera, lavanda, papel kraft, hilo de yute, delantal de lino, carteles de pizarra.
 - ⭐ La native de feria **"LAST ONE"** funciona.
 
@@ -62,7 +62,7 @@
 - La estructura viene de `prompt-meta-ads-primary-text` (contraintuitivo, dolor agudo, oferta directa), **filtrada por tus reglas**: sin culpar al espectador, sin precio, benefit-forward ([[biblioteca-de-prompts]]).
 
 ## 📝 Descripciones (storytime UGC)
-- **400–500 palabras.** Contexto de la foto → revelación → antes y ahora → contraste → método (Emma Carter) → lo simple que es → cierre de confianza → soft CTA. Benefit-forward.
+- **Unas 900 a 1.200 palabras** (las 3 ganadoras reales miden 907, 883 y 1.174; antes figuraba 400–500). Habla de lo que se ve en la imagen → quién es Emma → antes y ahora → origen → primera demanda sin vender → cuentas → método → objeciones → soft CTA. Benefit-forward. Detalle y plantilla en [[natives-ganadoras]].
 
 ## Campañas
 - No mezclar natives (imagen) con guiones (video) en la misma CBO de testeo ([[estructuras-cbo]]).
@@ -73,6 +73,7 @@
 
 ## Registro de preferencias
 - **2026-10-13 · Originalidad > tema.** Gustó el guion de Navidad (13/10 - 1) por original, pero no quiere la tanda entera del mismo tema. Regla: cuando algo gusta por original, se copia la **estructura** (disparador concreto de demanda → gente que ya pide → por qué funciona → precio por pieza → quién compra → por qué empezar ahora), no el tema. Cada guion de la tanda, un comprador o motivo de compra distinto.
+- **2026-10-13 · Guiones limpios.** En la tanda de Resina Rentable pidió sacar las etiquetas (Problema, Valor…) y los segundos: "la idea es que vos lo sepas para armar mejor el guion, pero no lo quiero escrito". Regla: título **Guion N** en negrita y subrayado y abajo el guion con sus `[BROLL]`, nada más. Detalle en [[como-trabajar-con-santiago]].
 - **2026-10-13 · Orgánico gana.** De la tanda de formatos TikTok gustó "empaquetá un pedido conmigo" por orgánico: detrás de escena real (un pedido concreto, un mostrador, una ronda de reposición) por sobre afirmaciones. Las natives de esa línea están en `OUTPUTS/2026-10-13-natives-piedras-organicas.md`.
 
 ## Relacionado

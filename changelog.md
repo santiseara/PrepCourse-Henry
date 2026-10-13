@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Regla: guiones limpios
+- **Corrección de Santiago:** sin etiquetas de estructura ni segundos en los guiones; solo **Guion N** en negrita y subrayado y abajo el guion.
+- **Cambiado:** `WIKI/como-trabajar-con-santiago.md` (regla de formato), `WIKI/guiones-y-anuncios.md` (registro), `WIKI/resina-rentable.md` y `OUTPUTS/2026-10-13-guiones-resina-rentable.md` (reentregado limpio).
+
 ## 2026-10-13 — Guiones Resina Rentable
 - **Investigado:** contenido de resina en TikTok (lo que engancha es el proceso y las inclusiones; no hay ranking de hooks) y los errores que nombran los competidores.
 - **Creado:** `WIKI/resina-rentable.md` (ficha de la oferta nueva a partir del brief del chat) y `OUTPUTS/2026-10-13-guiones-resina-rentable.md` (4 guiones + 5 hooks alternativos).

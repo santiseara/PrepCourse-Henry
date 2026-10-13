@@ -23,6 +23,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **"Largo"** → 400–500 palabras.
 - **Métricas:** no pedirlas. Santiago las manda cuando haga falta.
 - **Entrega para copiar y pegar (siempre):** todo guion, hook, native o descripción va en bloque de código en el chat, se guarda además en `OUTPUTS/AAAA-MM-DD-<titulo>.md` en texto plano (sin citas `>` ni negritas dentro del texto a copiar) y se copia al portapapeles con `pbcopy`. Desde el chat no puede copiar bien.
+- **Formato limpio de guiones (regla fija, 2026-10-13):** cada guion lleva solo el título **Guion N** en negrita y subrayado y abajo el texto que se lee, con las líneas `[BROLL: …]` intercaladas. **No se escriben** etiquetas de estructura (Hook, Problema, Valor, Beneficios, CTA), ni segundos (`@ ~Xs`), ni ángulo, nivel de conciencia, primer frame, conteo de palabras o duración. La estructura la uso yo para armar el guion, no va escrita. En el chat: título en negrita fuera del bloque y el guion en un bloque de código. En el portapapeles: texto enriquecido (RTF) con el título en negrita y subrayado. Si hace falta explicar algo (ángulos, decisiones), va en el mensaje, fuera de los guiones.
 - **Oferta en inglés:** guiones y hooks siempre en 🇬🇧 inglés y 🇪🇸 español con voseo, las dos versiones completas.
 
 ## Quizzes y landings en HTML

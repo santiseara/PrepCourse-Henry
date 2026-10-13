@@ -35,11 +35,11 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 
 ## Reglas propias de esta oferta (pisan las generales de [[guiones-y-anuncios]])
 - **Duración:** 50 a 60 segundos, unas 150 a 175 palabras (la regla general es 30 s).
-- **Estructura con etiquetas:** Hook · Problema · Valor · Beneficios · Urgencia + CTA. El hook trae la promesa o el resultado en los primeros 3 segundos y el dolor entra después, corto.
+- **Estructura interna (no se escribe):** Hook · Problema · Valor · Beneficios · Urgencia + CTA. Las etiquetas no van en la entrega. El hook trae la promesa o el resultado en los primeros 3 segundos y el dolor entra después, corto.
 - **Precio permitido, solo en pesos** y contra el kit. Nunca porcentajes.
 - **Sin cifras de ingreso** ni testimonios inventados. Si hay protagonista, es la narradora contando su experiencia, sin números.
-- **B-roll marcado** `[BROLL: … @ ~Xs]` cada 10 a 15 segundos. Material disponible: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso.
-- **Entrega:** guiones numerados (Guion 1, 2…), ángulo y nivel de conciencia arriba, palabras y duración al final, 5 hooks alternativos para el favorito.
+- **B-roll marcado** `[BROLL: …]` cada 10 a 15 segundos, sin los segundos escritos. Material disponible: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso.
+- **Entrega:** título **Guion N** en negrita y subrayado y abajo el guion. Sin ángulo, nivel, palabras ni duración escritos (corrección del 2026-10-13). Sumar 5 hooks alternativos para el favorito.
 
 ## Investigación de TikTok (13/10)
 - #Resin y #ResinArt suman miles de millones de vistas. Lo que engancha es el proceso (mezclar, verter, desmoldar) y las inclusiones (flores secas, brillos).

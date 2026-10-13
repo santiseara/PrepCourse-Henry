@@ -40,6 +40,9 @@
 - **Las craft "hidden" tienen la misma estructura que Scented Stones** ($27, ancla $97, persona, inglés), pero solo una funcionó. Lo que diferencia a Scented Stones parece ser el **ángulo de ingreso extra con margen visible** y un producto que se **vende físicamente a terceros** (bodas, regalos). Ver [[scented-stones]].
 - **💡 Explicación según [[segmentos-de-mercado]]:** Scented Stones se vende como "ganá plata con un oficio", el segmento prioritario. Las craft que no funcionaron se parecen más a "hobby", que no tiene urgencia de compra.
 - Los aprendizajes de fitness ([[guiones-y-anuncios]]) siguen siendo útiles como banco de ángulos aunque esas ofertas estén paradas.
+- ⚠️ **Chupetines para Tragos** figura arriba como historial, pero el contexto maestro la marca como activa ("está andando bien") y Santiago pidió guiones el 2026-10-11. A confirmar. Va a un quiz de inlead (https://inlead.digital/chupetines-para-bebidas), ofrece chupetines de isomalt sin azúcar para decorar y acompañar bebidas, y promete "más de $2.000.000 ARS al mes". Texto en RAW/2026-10-11-quiz-chupetines-para-bebidas.md. Guiones en `OUTPUTS/2026-10-11-guiones-chupetines.md`.
+
+- ⚠️ **Pilates Hormonal ya no es historial.** El contexto maestro la marcaba como "vieja", pero el 12 y 13 de octubre se le armó el quiz (`OUTPUTS/2026-10-12-quiz-pilates-hormonal.html`), el VSL (`OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md`) y las descripciones para ads (`OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md`). Avatar: Maestra Caro, pilates asiático, mujeres 45+, $14.990 de $49.990, checkout en ImpulTienda. Falta: guiones de video y datos de performance.
 
 ## Relacionado
 [[scented-stones]] · [[perfil-y-negocio]] · [[landings-funnels-y-upsells]]

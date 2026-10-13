@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-13 — Descripciones para ads de Pilates Hormonal
+- **Fuentes:** `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md` (mecanismo, avatar y bonos) + reglas de primary text de `WIKI/guiones-y-anuncios.md`.
+- **Creado:** `OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md`: 3 primary text cortos con emojis, sin precio, CTA al test gratis de 1 minuto.
+- **Cambiado:** `WIKI/index.md` (outputs) y `WIKI/ofertas.md` (Pilates Hormonal está activa otra vez, no es historial).
+
 ## 2026-10-13 — Regla: TikToks sin marca de agua
 - `WIKI/vsl-reglas-de-armado.md`: los B-rolls de TikTok se bajan sin marca de agua (API tikwm) y se revisan los cuadros.
 

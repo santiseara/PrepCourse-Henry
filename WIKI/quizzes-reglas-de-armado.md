@@ -36,7 +36,7 @@
 - Logo: si cambia la marca, rehacerlo con el mismo ícono y el mismo estilo tipográfico.
 
 ## 5. Diseño y textos de la oferta (último paso)
-- **Último paso = VSL arriba de todo.** Toda la oferta queda **oculta** y aparece sola a los **2:40** (160 s) de llegar a ese paso. El timer de urgencia y las notificaciones **arrancan recién cuando aparece la oferta**.
+- **Último paso = VSL arriba de todo.** Toda la oferta queda **oculta** y aparece sola a los `SEGUNDOS_OFERTA` de llegar a ese paso. **Depende del VSL**: tiene que ser después del momento en que el VSL dice el precio. Pilates Hormonal: **3:50 (230 s)**; al principio eran 2:40. El timer de urgencia y las notificaciones **arrancan recién cuando aparece la oferta**.
 - **Espaciado generoso** entre bloques y párrafos ("está todo muy pegado"). Como referencia: un gap de unos 30 px entre bloques e interlineado de 1,6.
 - **Sacar encabezados de relleno** antes de la lista de beneficios ("¡Todo lo que necesitas…", "Al ingresar, desbloqueás…"). La lista va directa.
 - **Todos los CTAs** (botones y cuadros de precio) llevan al link de checkout de ImpulTienda y le suman los UTMs de la URL.
@@ -54,7 +54,7 @@
 - Frecuencia: cada ~16 s, visibles ~4,5 s.
 
 ## 8. Entrega (siempre)
-1. **HTML final** en `~/Desktop/<producto>-quiz.txt`, copiado también con `pbcopy`.
+1. **HTML final** en `~/Desktop/<producto>-quiz.txt`, copiado también con `pbcopy`. **Santiago lo quiere completo, listo para pegar en ImpulTienda**, con las imágenes embebidas (WebP en base64, ~1 MB) y el embed del VSL de **Panda Video** dentro de `<template id="vsl-template">`. Cuando hay cambios, se **reemplaza** el .txt viejo.
 2. **Carpeta de imágenes** `~/Desktop/<producto>-imagenes/` con nombres claros (`p1-mujer.png`, `zona-papada.png`, `mockup.png`…). Sacar las que ya no se usan.
 3. **HTML de prueba** `~/Desktop/<producto>-PRUEBA.html`: el mismo HTML con las imágenes **embebidas** (WebP en base64, ~1 MB), para abrir en Chrome sin la carpeta. Lo abro con `open -a "Google Chrome"`.
 4. Copia en `OUTPUTS/AAAA-MM-DD-quiz-<producto>.html`.
@@ -67,7 +67,7 @@
 - [ ] Ninguna imagen con la marca vieja ni con texto en otro idioma
 - [ ] Mockup: celular con app, sin libros
 - [ ] Testimonios y garantía en HTML nítido
-- [ ] Último paso: VSL arriba y oferta oculta 2:40
+- [ ] Último paso: embed de Panda arriba y oferta oculta hasta después del precio en el VSL
 - [ ] Espaciado amplio en la oferta
 - [ ] Precio, tachado, cuotas, % OFF y FAQ consistentes
 - [ ] Todos los CTAs con el link de checkout correcto
@@ -86,12 +86,15 @@
 | 2026-10-12 | Pilates Hormonal | Imagen de garantía mejorada | §4 HTML nítido |
 | 2026-10-12 | Pilates Hormonal | Todos los CTAs → `https://pilates-hormonal.impultienda.ar/checkout` | §5 CTAs (link propio de la oferta) |
 | 2026-10-12 | Pilates Hormonal | Último paso: VSL arriba y oferta oculta 2:40 | §5 |
+| 2026-10-13 | Pilates Hormonal | VSL de Panda (9:16) cargado; la oferta pasa a aparecer a los 3:50 | §5 |
+| 2026-10-13 | Pilates Hormonal | El .txt final va completo, con las imágenes embebidas, para pegarlo en ImpulTienda | §8 |
 | 2026-10-12 | Pilates Hormonal | Imágenes con GPT Image 1.5 en Higgsfield | §4 |
 
 ## Preguntas abiertas
 - ¿"Pilates Asiático" pasa a llamarse "Pilates Hormonal" en los textos o queda como nombre del método?
 - ¿El sello de pago seguro (Visa, Mercado Pago) también se pasa a HTML?
-- ¿Los 2:40 son fijos para todos los quizzes o dependen del largo de cada VSL?
+- ~~¿Los 2:40 son fijos?~~ No: dependen de cada VSL (Pilates Hormonal: 3:50).
+- ¿ImpulTienda acepta pegar un HTML de ~1 MB? Si no, volver al .txt liviano con las URLs de las imágenes subidas.
 
 ## Relacionado
 [[quiz-funnel]] · [[imagenes-y-mockups]] · [[shopify-y-checkout]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]

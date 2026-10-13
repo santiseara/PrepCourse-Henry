@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-13 — Landing Palabras de la Obediencia (Argentina)
+- Copia de la landing de VSL de LATAM, con voseo y el VSL de Panda. Sin footer, popup ni back-redirect. Botón verde "COMPRAR AHORA" a los 2:45, que lleva al checkout de ImpulTienda con los UTMs. Archivo: `OUTPUTS/2026-10-13-landing-palabras-de-la-obediencia.html`.
+
 ## 2026-10-13 — VSL Las Tres Conexiones (Argentina)
 - Guion adaptado del VSL de LATAM ("VSL Mama") con voseo, experta Juliana Alves y precio $15.990: `OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md`.
 - Avatar nueva en HeyGen y render de 4:20 (84 créditos). B-rolls: 11 recortes de TikTok sin marca de agua, 4 clips de Higgsfield que ya existían y 5 nuevos en Kling 2.6 (25 créditos).

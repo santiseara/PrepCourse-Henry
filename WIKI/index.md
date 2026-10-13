@@ -87,6 +87,7 @@
 - 2026-10-13 — [Guiones piedras v5](../OUTPUTS/2026-10-13-guiones-piedras-v5.md): 3 originales con la estructura del de Navidad (inmobiliaria, recompra cada 8 semanas, canasta de la peluquería)
 - 2026-10-13 — [Guiones piedras v4](../OUTPUTS/2026-10-13-guiones-piedras-v4.md): 3 originales en EN y ES (Navidad a 10 semanas, el marido que hace la cuenta, pedido de casamiento)
 - 2026-10-12 — [Plan de caza: ingreso extra con oficio para AR](../OUTPUTS/2026-10-12-plan-caza-ingreso-extra-ar.md) (sin resultados: faltó acceso a la Ads Library)
+- 2026-10-13 — [Landing Palabras de la Obediencia](../OUTPUTS/2026-10-13-landing-palabras-de-la-obediencia.html): VSL de Panda y botón de compra a los 2:45.
 - 2026-10-13 — [Guion del VSL Las Tres Conexiones (Argentina)](../OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md): experta Juliana Alves, $15.990. Video final en `~/Desktop/mama-vsl/`. Reglas en [[vsl-reglas-de-armado]].
 - 2026-10-12 — [Quiz de Pilates Hormonal](../OUTPUTS/2026-10-12-quiz-pilates-hormonal.html) (modelado de Sana Pilates) para ImpulTienda: 19 pasos, VSL con oferta oculta 2:40, checkout de ImpulTienda. Reglas en [[quizzes-reglas-de-armado]].
 

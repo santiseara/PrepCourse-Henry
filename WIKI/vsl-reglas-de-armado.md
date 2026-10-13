@@ -23,6 +23,9 @@
 - La experta de Pilates Hormonal es la **Maestra Caro**: mujer asiática, foto en `~/Downloads/WhatsApp Image 2026-10-09 at 13.26.36 (1).jpeg`.
 - La voz tiene que sonar **muy real**, combinar con la avatar y sincronizar bien los labios. Acento rioplatense.
 
+- **Las Tres Conexiones (Argentina, crianza):** experta **Juliana Alves**, mujer de unos 45 años con anteojos. La avatar se creó en HeyGen el 2026-10-13 desde la foto `~/Downloads/ChatGPT Image 13 oct 2026, 15_53_13.png` ("Crear un personaje virtual" → "Subir foto"), con la misma voz "voz roma". Precio $15.990, anclaje "sesiones de doscientos mil pesos", garantía de 30 días. Guion: `OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md`.
+- **Subir archivos a HeyGen o Higgsfield desde Claude:** el botón abre el selector nativo de archivos. Antes de hacer clic se intercepta `HTMLInputElement.prototype.click` para los `type=file` y después se usa `file_upload` sobre el input. El archivo tiene que estar en el scratchpad o en el proyecto.
+
 ## 3b. Créditos de Higgsfield: no usar siempre el mejor modelo (2026-10-12)
 - **Intercalar modelos baratos** para B-rolls e imágenes. "Si no, me consume todos los créditos."
 - El modelo caro solo va en los planos que más se ven (el hook o un plano clave). El resto, en el modelo más barato que se vea bien.
@@ -30,6 +33,14 @@
 - Referencia de precios (página de precios de Higgsfield, 2026-10-12): Kling 3.0 a 1080p ~8,75 por clip de 5 s · Kling 3.0 a 720p ~7/5 s · Seedance 2.0 Fast a 720p ~12/5 s · Seedance 2.0 a 720p ~22/5 s. Lipsync: Kling Speak a 720p ~1 crédito por segundo.
 - **Los más baratos para B-roll (~5 créditos por clip de 5 s):** Kling 2.6 sin sonido, Wan 2.6 a 480p, Kling Omni 3 (referencia de imagen o primer y último frame) a 720p. Siguen Grok Video y Wan 2.6 a 720p (~7). Siempre **sin sonido** y a **5 s**.
 - Mezcla sugerida para 12 B-rolls: 2–3 en Kling 3.0 (hook, anatomía 3D) y el resto en Kling 2.6 o Wan 2.6. Son unos 65 créditos en lugar de 105.
+
+## 4a. Edición del VSL de LATAM de crianza ("VSL Mama", 2026-10-13)
+- El original no tiene B-rolls ni placas: es la avatar a cámara con **subtítulos de a una palabra** (blanco con borde negro, fuente tipo Bangers, a la altura del pecho).
+- Para la versión argentina se copia esa edición y **solo se varían los B-rolls**. Pedido de Santiago: **"no pongas el tiktok entero, sino recortes en partes específicas"**, de 2 a 3 s cada uno y variados. Un recorte cada 10–15 s, y se alternan:
+  - TikToks de problema (grito, berrinche, no hace caso);
+  - clips de Higgsfield con la solución (mamá a la altura del hijo, contacto visual, nene que guarda los juguetes, hora de dormir, mamá con la guía en el celular).
+- **Antes de generar en Higgsfield, revisar el historial**: puede que Santiago ya haya generado B-rolls que sirven (2026-10-13: había 5 y se usaron 4).
+- Script: `OUTPUTS/scripts-vsl/edit_tres_conexiones.py`. Además de la edición, mezcla la música y los efectos.
 
 ## 4. Edición (basada en el VSL original de Calistenia Asiática)
 - Formato 9:16, avatar sentada a cámara.
@@ -87,6 +98,8 @@
 | 2026-10-12 | Pilates Hormonal | "Usá modelos más baratos, intercalá, no uses siempre el mejor" | §3b |
 | 2026-10-13 | Pilates Hormonal | Música suave por debajo, activa, que enganche | §4b |
 | 2026-10-13 | Mamá (Argentina) | "Los tiktoks descargalos sin marca de agua" | §5 paso 6 |
+| 2026-10-13 | Tres Conexiones (Argentina) | B-rolls: recortes de partes específicas, no el TikTok entero, e ir variándolos | §4a |
+| 2026-10-13 | Tres Conexiones (Argentina) | "Ya hay generados 5 brolls, tal vez los podés usar" → revisar el historial de Higgsfield antes de generar | §4a |
 | 2026-10-13 | Pilates Hormonal | Efectos solo en momentos clave: "cha-ching" al decir el precio; no llenarlo | §4b |
 
 ## Preguntas abiertas

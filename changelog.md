@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-13 — VSL Las Tres Conexiones (Argentina)
+- Guion adaptado del VSL de LATAM ("VSL Mama") con voseo, experta Juliana Alves y precio $15.990: `OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md`.
+- Avatar nueva en HeyGen y render de 4:20 (84 créditos). B-rolls: 11 recortes de TikTok sin marca de agua, 4 clips de Higgsfield que ya existían y 5 nuevos en Kling 2.6 (25 créditos).
+- Script de edición nuevo: `OUTPUTS/scripts-vsl/edit_tres_conexiones.py`. Subtítulos de a una palabra corregidos contra el guion, placas, música con ducking y efectos. Final de 3:02 a 1.3x en `~/Desktop/mama-vsl/`.
+- `WIKI/vsl-reglas-de-armado.md`: datos de Juliana, cómo subir archivos a HeyGen y edición del VSL de crianza (§4a).
+
 ## 2026-10-13 — Descripciones para ads de Pilates Hormonal
 - **Fuentes:** `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md` (mecanismo, avatar y bonos) + reglas de primary text de `WIKI/guiones-y-anuncios.md`.
 - **Creado:** `OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md`: 3 primary text cortos con emojis, sin precio, CTA al test gratis de 1 minuto.

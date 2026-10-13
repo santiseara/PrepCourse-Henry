@@ -22,6 +22,12 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **"Muy catastrófico"** → benefit-forward, FREE today o abundancia.
 - **"Largo"** → 400–500 palabras.
 - **Métricas:** no pedirlas. Santiago las manda cuando haga falta.
+- **Entrega para copiar y pegar (siempre):** todo guion, hook, native o descripción va en bloque de código en el chat, se guarda además en `OUTPUTS/AAAA-MM-DD-<titulo>.md` en texto plano (sin citas `>` ni negritas dentro del texto a copiar) y se copia al portapapeles con `pbcopy`. Desde el chat no puede copiar bien.
+- **Oferta en inglés:** guiones y hooks siempre en 🇬🇧 inglés y 🇪🇸 español con voseo, las dos versiones completas.
+
+## Quizzes y landings en HTML
+- Antes de armar o editar uno, leer [[quizzes-reglas-de-armado]] y recorrer su checklist.
+- Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
 ## Prioridad de reglas
 - **Cuando un prompt de `RAW/prompts/` choca con tus reglas personales, ganan tus reglas** ([[guiones-y-anuncios]]: no catastrófico, sin precio en el ad, natives sin cara, voseo). Del prompt tomo la estructura, no lo que contradice tus preferencias.

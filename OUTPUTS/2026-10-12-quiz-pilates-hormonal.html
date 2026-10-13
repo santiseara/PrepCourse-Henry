@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Pilates Hormonal</title>
+<meta name="description" content="Pilates Hormonal - Programa de Pilates Asiático para mujeres +40">
+<meta name="theme-color" content="#ffffff">
+
+<!-- =========================================================================
+     CONFIGURACIÓN — lo único que tenés que tocar
+     1) IMAGENES: reemplazá cada nombre de archivo por la URL que te da
+        ImpulTienda al subir esa imagen (la carpeta tiene los mismos nombres).
+     2) LINK_CHECKOUT: tu link de pago. Los botones y los cuadros de precio
+        llevan ahí (se le suman los UTMs de la URL, igual que en el original).
+     3) PIXEL_ID: el ID de tu pixel de Meta (dispara PageView al entrar y
+        Lead al llegar al último paso, como el original).
+     4) SEGUNDOS_OFERTA: cuánto tarda en aparecer la oferta debajo del VSL.
+        160 = 2 minutos y 40 segundos.
+     5) El código del VSL va más abajo, dentro de <template id="vsl-template">.
+     ========================================================================= -->
+<script>
+var IMAGENES = {
+  "logo.png": "logo.png",
+  "p1-mujer.png": "p1-mujer.png",
+  "p2-mujeres.png": "p2-mujeres.png",
+  "p4-mujer.png": "p4-mujer.png",
+  "zona-papada.png": "zona-papada.png",
+  "zona-brazos.png": "zona-brazos.png",
+  "zona-senos.png": "zona-senos.png",
+  "zona-abdomen.png": "zona-abdomen.png",
+  "zona-gluteos.png": "zona-gluteos.png",
+  "punto-delgada.jpg": "punto-delgada.jpg",
+  "punto-delgada-con-panza.jpg": "punto-delgada-con-panza.jpg",
+  "punto-sobrepeso.jpg": "punto-sobrepeso.jpg",
+  "cuerpo-con-curvas.jpg": "cuerpo-con-curvas.jpg",
+  "cuerpo-delgada.jpg": "cuerpo-delgada.jpg",
+  "cuerpo-natural.jpg": "cuerpo-natural.jpg",
+  "cuerpo-tonificada.jpg": "cuerpo-tonificada.jpg",
+  "cuerpo-estoy-bien.jpg": "cuerpo-estoy-bien.jpg",
+  "p9-mujer.png": "p9-mujer.png",
+  "p10-mujer.png": "p10-mujer.png",
+  "p18-mujer.png": "p18-mujer.png",
+  "mockup.png": "mockup.png",
+  "resultado-1.jpg": "resultado-1.jpg",
+  "resultado-2.png": "resultado-2.png",
+  "resultado-3.png": "resultado-3.png",
+  "resultado-4.png": "resultado-4.png",
+  "resultado-5.jpg": "resultado-5.jpg",
+  "resultado-6.png": "resultado-6.png",
+  "circulo-vip.png": "circulo-vip.png",
+  "pago-seguro.png": "pago-seguro.png"
+};
+var LINK_CHECKOUT = "https://pilates-hormonal.impultienda.ar/checkout";
+var PIXEL_ID = "";
+var SEGUNDOS_OFERTA = 160;
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+if (PIXEL_ID) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track', 'PageView');
+}
+</script>
+
+<style>
+:root{
+  --theme:#8b5cf6; --theme-dark:#7c3aed; --theme-soft:rgba(139,92,246,.1); --theme-border:rgba(139,92,246,.5);
+  --magenta:#a21caf; --green:#16a34a; --green-dark:#15803d; --red:#dc2626; --red-dark:#b91c1c; --gray:#6b7280;
+  --text:#020617; --title:#0f172a; --bg:#fafaf9; --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg)}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text);font-size:16px;line-height:1.45;min-height:100vh}
+img{max-width:100%;display:block}
+.wrap{max-width:28rem;margin:0 auto;padding:0 16px 40px;min-height:100vh;display:flex;flex-direction:column}
+
+/* Encabezado */
+.top{position:relative;padding-top:18px}
+.back{position:fixed;top:14px;left:14px;width:36px;height:36px;border:none;background:transparent;cursor:pointer;color:#0f172a;display:flex;align-items:center;justify-content:center;z-index:20}
+.back.hidden{visibility:hidden}
+.logo{height:60px;width:auto;margin:6px auto 22px;object-fit:contain}
+.progress{height:6px;background:rgba(139,92,246,.15);border-radius:99px;overflow:hidden;margin-bottom:22px}
+.progress>div{height:100%;width:0;background:var(--theme);border-radius:99px;transition:width .4s ease}
+
+/* Pasos */
+.step{display:none;flex-direction:column;gap:14px;animation:fade .35s ease}
+.step.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1,h2,h3{color:var(--title);text-align:center;line-height:1.25}
+h1{font-size:2rem;font-weight:800}
+h2{font-size:1.6rem;font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p.c{text-align:center}
+.small{font-size:.85rem}
+.mag{color:var(--magenta)} .pur{color:var(--theme)} .grn{color:var(--green)} .red{color:var(--red)} .gry{color:var(--gray)}
+.img-round{border-radius:var(--radius);width:100%;height:auto}
+.img-blob{border-radius:28% 28% 28% 28%/22% 22% 22% 22%;width:100%}
+
+/* Opciones */
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:50px;padding:10px 14px;text-align:left;font:inherit;color:#0f172a;
+  background:var(--theme-soft);border:1px solid var(--theme-border);border-radius:var(--radius);cursor:pointer;transition:all .2s ease}
+.opt:hover{background:rgba(139,92,246,.18)}
+.opt.sel{background:rgba(139,92,246,.22);border-color:var(--theme);box-shadow:0 0 0 1px var(--theme)}
+.opt.shadow{box-shadow:0 12px 24px -10px rgba(15,23,42,.18)}
+.opt .lbl{flex:1}
+.opt .emo{font-size:1.4rem;width:28px;text-align:center}
+.opt .thumb{width:64px;height:64px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#fff}
+.opt .thumb.big{width:84px;height:84px}
+.opt .chev{color:var(--theme);font-weight:700}
+.chk{width:22px;height:22px;border-radius:6px;border:2px solid var(--theme-border);background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.opt.sel .chk{background:var(--theme);border-color:var(--theme)}
+.opt.sel .chk::after{content:'';width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.radio .chk{border-radius:50%}
+.opt .sub{display:block;font-size:.85rem;color:var(--gray);margin-top:2px}
+
+/* Botones */
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;padding:12px 18px;border:none;border-radius:var(--radius);
+  background:var(--theme);color:#fff;font:600 1rem 'Inter',sans-serif;cursor:pointer;text-align:center;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.07)}
+.btn:active{transform:scale(.98)}
+.btn.success{background:var(--green);box-shadow:0 5px 0 var(--green-dark);font-weight:700;text-transform:none;margin-bottom:5px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(139,92,246,.55)}70%{box-shadow:0 0 0 12px rgba(139,92,246,0)}100%{box-shadow:0 0 0 0 rgba(139,92,246,0)}}
+.btn.success.pulse{animation:pulseg 1.8s infinite}
+@keyframes pulseg{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+
+/* Métrica (paso 4) */
+.metric{background:#fff;border:1px solid #ede9fe;border-radius:var(--radius);padding:14px 16px}
+.metric .row{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:8px}
+.metric .bar{height:8px;background:rgba(139,92,246,.15);border-radius:99px;position:relative}
+.metric .bar>div{height:100%;width:0;background:var(--theme);border-radius:99px;transition:width 1.2s ease}
+.metric .bar>i{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--theme);transform:translate(-50%,-50%);left:0;transition:left 1.2s ease}
+.metric .subt{font-size:.85rem;color:var(--gray);margin-top:8px}
+
+/* Regla altura / peso */
+.units{display:flex;gap:4px;background:#f1f0f4;border-radius:99px;padding:3px;margin:0 auto}
+.units button{border:none;background:transparent;padding:6px 16px;border-radius:99px;font:500 .9rem 'Inter';color:#9ca3af;cursor:pointer}
+.units button.on{background:var(--theme);color:#fff}
+.rvalue{text-align:center;font-size:2.6rem;font-weight:800;color:#0f172a}
+.rvalue small{font-size:1rem;font-weight:600;margin-left:2px}
+.ruler{position:relative;height:84px}
+.ruler .scroller{overflow-x:scroll;overflow-y:hidden;height:84px;scrollbar-width:none;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+.ruler .scroller::-webkit-scrollbar{display:none}
+.ruler .track{position:relative;height:84px}
+.ruler .tick{position:absolute;top:6px;width:1.5px;background:#cbd5e1;height:14px}
+.ruler .tick.m{height:22px;background:#94a3b8}
+.ruler .tick.l{height:30px;background:#94a3b8}
+.ruler .num{position:absolute;top:44px;transform:translateX(-50%);font-size:.85rem;color:#64748b}
+.ruler .needle{position:absolute;left:50%;top:0;width:3px;height:56px;background:var(--theme);transform:translateX(-50%);border-radius:2px;pointer-events:none}
+.ruler .needle::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-bottom-color:var(--theme);border-top:0}
+.rhint{text-align:center;font-size:.75rem;color:#9ca3af;border-top:1px solid #eee;padding-top:6px}
+
+/* Carga (paso 17) */
+.loadbox{background:#fff;border-radius:var(--radius);padding:16px;border:1px solid #f1f0f4}
+.loadbox .row{display:flex;justify-content:space-between;font-weight:600;margin-bottom:8px}
+.loadbox .bar{height:8px;background:rgba(139,92,246,.15);border-radius:99px;overflow:hidden}
+.loadbox .bar>div{height:100%;width:0;background:var(--theme)}
+.quote{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);padding:14px 16px}
+.quote .stars{color:#facc15;letter-spacing:2px;font-size:1rem}
+.quote p{white-space:pre-line;font-size:.95rem;margin:6px 0}
+.quote b{font-size:.9rem}
+
+/* Gráfico (paso 18) */
+.chart{background:#fff;border-radius:var(--radius);padding:14px 10px 8px;border:1px solid #f1f0f4}
+.chart svg{width:100%;height:auto;overflow:visible}
+.chart .tip{font:600 2.7px 'Inter';fill:#fff}
+
+/* Último paso */
+.vsl{width:100%;border-radius:var(--radius);overflow:hidden;background:#000;min-height:200px;position:relative}
+.vsl-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;text-align:center;padding:20px;background:linear-gradient(135deg,#1e1b4b,#4c1d95)}
+.vsl.loaded{background:transparent;min-height:0}
+#oferta{display:none;flex-direction:column;gap:30px;line-height:1.6}
+#oferta h1,#oferta h2,#oferta h3{line-height:1.3}
+#oferta>div:not([class])>*+*{margin-top:10px}
+#oferta .bonus p{margin:0 0 18px}
+#oferta .bonus ul{margin-top:8px!important;margin-bottom:24px!important}
+#oferta .bonus h2+ul{margin-top:8px}
+.reviews{background:#fff;border:1px solid #eee;border-radius:20px;padding:20px 16px;box-shadow:0 10px 30px -18px rgba(15,23,42,.25)}
+.reviews h3{margin-bottom:16px}
+.rv-score{text-align:center;font-size:.85rem;color:#64748b;margin-bottom:16px!important}
+.rv-stars{color:#f5b301;letter-spacing:1px;font-size:.95rem}
+.rv{border:1px solid #f1f0f4;border-radius:16px;padding:14px;background:#fcfcfd}
+.rv+.rv{margin-top:12px!important}
+.rv-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rv-head>div{flex:1;line-height:1.25}
+.rv-head b{display:block;font-size:.95rem;color:#0f172a}
+.rv-ok{font-size:.72rem;color:#16a34a;font-weight:600}
+.rv-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0}
+.rv p{font-size:.93rem;color:#334155;line-height:1.55}
+.guarantee{background:linear-gradient(180deg,#fffbeb,#fef3c7);border:1px solid #fde68a;border-radius:20px;padding:24px 20px;text-align:center}
+.guarantee .seal{width:96px;height:96px;margin:0 auto 6px;display:block;filter:drop-shadow(0 6px 10px rgba(168,122,8,.25))}
+.guarantee h3{color:#78350f;text-transform:uppercase;letter-spacing:.5px}
+.guarantee p{font-size:.95rem;color:#422006;margin-top:8px}
+#oferta.show{display:flex;animation:fade .6s ease}
+.timer{background:#fef2f2;border:1px solid #fecaca;border-radius:var(--radius);padding:12px;text-align:center;color:var(--red-dark);font-weight:700}
+.timer .t{display:inline-flex;gap:6px;align-items:center;margin-top:8px}
+.timer .t span{background:#fee2e2;border-radius:10px;padding:6px 10px;font-size:1.4rem;color:var(--red);min-width:52px}
+.timer .t em{font-style:normal;display:block;font-size:.65rem;font-weight:500;color:#f87171}
+.bonus p{margin-bottom:12px}
+.price-box{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid #4ade80;border-radius:var(--radius);padding:12px 12px 12px 14px;background:#fff;cursor:pointer}
+.price-box .tt{font-weight:700;font-size:1.15rem;color:#0f172a;line-height:1.3}
+.price-box .pv{background:#f1f5f9;border-radius:12px;padding:6px 10px;text-align:left}
+.price-box .pv small{display:block;font-size:.7rem;color:#475569}
+.price-box .pv b{font-size:1.5rem;color:#0f172a;font-weight:800}
+.strike{text-decoration:line-through}
+.carousel{position:relative}
+.car-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 8%}
+.car-track::-webkit-scrollbar{display:none}
+.car-item{flex:0 0 84%;scroll-snap-align:center;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid #eee}
+.car-item img{width:100%;height:auto}
+.car-item p{text-align:center;font-size:.9rem;padding:8px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:10px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#ddd6fe;transition:all .3s}
+.dots i.on{background:var(--theme);width:18px;border-radius:99px}
+.faq details{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);margin-bottom:8px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:14px 44px 14px 16px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'';position:absolute;right:18px;top:50%;width:8px;height:8px;border:solid #64748b;border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .ans{padding:0 16px 14px;font-size:.95rem;color:#334155}
+.faq .ans p+p{margin-top:8px}
+.toast{position:fixed;left:12px;bottom:12px;transform:translateY(16px);max-width:300px;display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(15,23,42,.06);border-radius:14px;
+  box-shadow:0 8px 24px -8px rgba(15,23,42,.22);padding:9px 12px 9px 9px;font-size:.78rem;line-height:1.35;color:#334155;z-index:50;
+  transition:transform .4s ease,opacity .4s ease;opacity:0;pointer-events:none}
+.toast.show{transform:none;opacity:1}
+.toast .t-av{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff;background:linear-gradient(135deg,#d4919a,#8b5cf6)}
+.toast .t-tx b{color:#0f172a}
+.toast .t-sub{font-size:.72rem;color:#64748b;margin-top:2px}
+.toast .t-dot{display:inline-block;vertical-align:middle;margin:-2px 5px 0 1px}
+.toast .t-sub b{color:#16a34a}
+.toast .t-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18);flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <button class="back hidden" id="back" aria-label="Volver" onclick="atras()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <img class="logo" data-img="logo.png" alt="Pilates Hormonal">
+    <div class="progress"><div id="bar"></div></div>
+  </div>
+
+  <!-- PASO 1 -->
+  <section class="step active" data-step="1">
+    <h2>Programa de Pilates Asiático <span class="mag">para mujeres +40</span></h2>
+    <div><p class="c">Según tu edad</p><p class="c"><b>CUESTIONARIO DE 1 MINUTO</b></p></div>
+    <div class="opts" data-single>
+      <button class="opt"><span class="lbl"><b>39-45 →</b></span></button>
+      <button class="opt"><span class="lbl"><b>46-50 →</b></span></button>
+      <button class="opt"><span class="lbl"><b>51-60 →</b></span></button>
+      <button class="opt"><span class="lbl"><b>60+ →</b></span></button>
+    </div>
+    <img data-img="p1-mujer.png" alt="" style="width:100%">
+  </section>
+
+  <!-- PASO 2 -->
+  <section class="step" data-step="2">
+    <div>
+      <h1>No estas <span class="pur">sola</span></h1>
+      <h3>+ <span class="pur">1.2 millones</span> de mujeres <span class="small" style="display:block;font-size:.9rem">comenzaron como tú y transformaron sus vidas</span></h3>
+    </div>
+    <img class="img-round" data-img="p2-mujeres.png" alt="">
+    <div style="height:1rem"></div>
+    <button class="btn pulse" onclick="siguiente()">Continuar</button>
+  </section>
+
+  <!-- PASO 3 -->
+  <section class="step" data-step="3">
+    <h3>¿Cuál es tu <span class="pur">OBJETIVO</span> principal?</h3>
+    <div class="opts" data-single>
+      <button class="opt shadow"><span class="emo">📉</span><span class="lbl">Bajar de peso</span><span class="chev">›</span></button>
+      <button class="opt shadow"><span class="emo">🏃‍♀️</span><span class="lbl">Mantener el peso y ponerse en forma</span><span class="chev">›</span></button>
+      <button class="opt shadow"><span class="emo">🏋️‍♀️</span><span class="lbl">Aumentar músculo</span><span class="chev">›</span></button>
+    </div>
+  </section>
+
+  <!-- PASO 4 -->
+  <section class="step" data-step="4">
+    <div class="metric">
+      <div class="row"><span>Progreso</span><span>45%</span></div>
+      <div class="bar"><div id="metricFill"></div><i id="metricDot"></i></div>
+      <div class="subt">Comenzando tu diagnóstico...</div>
+    </div>
+    <div>
+      <h3>¡Sólo 10 minutos al día cambiarán tus hábitos y <span class="mag">te ayudarán fácilmente!</span></h3>
+      <p class="c" style="margin-top:8px">Con solo unos minutos por día, el Pilates Asiático te ayuda a sentirte más liviana, fuerte y ágil, respetando tu edad, tu cuerpo y tus objetivos personales, sin dolor ni exigencia.</p>
+    </div>
+    <button class="btn" onclick="siguiente()">Continuar</button>
+    <img data-img="p4-mujer.png" alt="" style="width:100%">
+    <div style="height:1rem"></div>
+  </section>
+
+  <!-- PASO 5 -->
+  <section class="step" data-step="5">
+    <div>
+      <h2 style="font-weight:600">Elija un objetivo <span class="mag" style="font-weight:800">adicional</span></h2>
+      <p class="c">Puedes elegir varias opciones</p>
+    </div>
+    <div class="opts" data-multi>
+      <button class="opt shadow"><span class="chk"></span><span class="lbl">Aumentar la energía diaria</span></button>
+      <button class="opt shadow"><span class="chk"></span><span class="lbl">Mejorar la calidad del sueño</span></button>
+      <button class="opt shadow"><span class="chk"></span><span class="lbl">Reducir el estrés y la ansiedad</span></button>
+      <button class="opt shadow"><span class="chk"></span><span class="lbl">Mejorar la postura y la movilidad articular</span></button>
+      <button class="opt shadow"><span class="chk"></span><span class="lbl">Desarrollar flexibilidad</span></button>
+    </div>
+    <div style="height:1rem"></div>
+    <button class="btn" data-continue onclick="siguiente()">Continuar</button>
+  </section>
+
+  <!-- PASO 6 -->
+  <section class="step" data-step="6">
+    <h3>¿Qué <span class="mag">áreas te preocupan</span> más?</h3>
+    <div class="opts" data-multi>
+      <button class="opt"><img class="thumb" data-img="zona-papada.png" alt=""><span class="lbl">Papada</span><span class="chk"></span></button>
+      <button class="opt"><img class="thumb" data-img="zona-brazos.png" alt=""><span class="lbl">Brazos flácidos</span><span class="chk"></span></button>
+      <button class="opt"><img class="thumb" data-img="zona-senos.png" alt=""><span class="lbl">Senos caidos</span><span class="chk"></span></button>
+      <button class="opt"><img class="thumb" data-img="zona-abdomen.png" alt=""><span class="lbl">Grasa abdominal</span><span class="chk"></span></button>
+      <button class="opt"><img class="thumb" data-img="zona-gluteos.png" alt=""><span class="lbl">Glúteos flácidos</span><span class="chk"></span></button>
+    </div>
+    <button class="btn" data-continue onclick="siguiente()">Continuar</button>
+  </section>
+
+  <!-- PASO 7 -->
+  <section class="step" data-step="7">
+    <h2>¿Cual es tu punto de <span class="pur">partida</span>?</h2>
+    <div class="opts" data-single>
+      <button class="opt"><img class="thumb big" data-img="punto-delgada.jpg" alt=""><span class="lbl"><b>Delgada</b><span class="sub">Busco ganar firmeza y salud muscular</span></span></button>
+      <button class="opt"><img class="thumb big" data-img="punto-delgada-con-panza.jpg" alt=""><span class="lbl"><b>Delgada con panza </b><span class="sub">Peso normal, pero necesito tonificar y eliminar inflamación abdominal</span></span></button>
+      <button class="opt"><img class="thumb big" data-img="punto-sobrepeso.jpg" alt=""><span class="lbl"><b>Sobrepeso</b><span class="sub">Busco una manera saludable de recuperar mi figura</span></span></button>
+    </div>
+  </section>
+
+  <!-- PASO 8 -->
+  <section class="step" data-step="8">
+    <h3>¿Cuál es el cuerpo de tus <span class="mag">sueños</span>?</h3>
+    <div class="opts" data-single>
+      <button class="opt"><img class="thumb" data-img="cuerpo-con-curvas.jpg" alt=""><span class="lbl">Con curvas</span></button>
+      <button class="opt"><img class="thumb" data-img="cuerpo-delgada.jpg" alt=""><span class="lbl">Delgada y ligera</span></button>
+      <button class="opt"><img class="thumb" data-img="cuerpo-natural.jpg" alt=""><span class="lbl">En forma natural</span></button>
+      <button class="opt"><img class="thumb" data-img="cuerpo-tonificada.jpg" alt=""><span class="lbl">Tonificada y firme</span></button>
+      <button class="opt"><img class="thumb" data-img="cuerpo-estoy-bien.jpg" alt=""><span class="lbl">Estoy bien con mi cuerpo</span></button>
+    </div>
+    <div style="height:1rem"></div>
+  </section>
+
+  <!-- PASO 9 -->
+  <section class="step" data-step="9">
+    <h3>¿Hace cuánto tiempo estuviste en la <span class="mag">mejor forma</span> de tu vida?</h3>
+    <div class="opts radio" data-single>
+      <button class="opt shadow"><span class="lbl">Hace 1 o 2 años</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Hace 3 a 5 años</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Hace más de 5 años</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Nunca / No lo recuerdo</span><span class="chk"></span></button>
+    </div>
+    <img data-img="p9-mujer.png" alt="" style="width:100%">
+  </section>
+
+  <!-- PASO 10 -->
+  <section class="step" data-step="10">
+    <div>
+      <h2 style="font-weight:600">El Pilates asiático está hecho para mujeres <span class="mag" style="font-weight:800">como vos</span></h2>
+      <p class="c" style="margin-top:10px"><b>Es una forma de ejercicio suave pero profundamente efectiva</b></p>
+      <p class="c" style="margin-top:8px"><b>Está comprobado que ayuda a <span class="mag">bajar de peso, recuperar músculo, reducir inflamación , mejorar la postura y aumentar la energía</span> sin exigencias extremas</b></p>
+    </div>
+    <img data-img="p10-mujer.png" alt="" style="width:100%">
+    <button class="btn" onclick="siguiente()">Entiendo, quiero ver mi plan</button>
+  </section>
+
+  <!-- PASO 11 -->
+  <section class="step" data-step="11">
+    <h3>¿Qué tan <span class="mag">cómoda</span> te sientes al hacer ejercicio?</h3>
+    <div class="opts radio" data-single>
+      <button class="opt shadow"><span class="lbl"><b>Molestias:</b> Tengo dolores articulares o de espalda</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl"><b>Dificultad:</b> Me canso rápido o me falta energía</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl"><b>Cómoda:</b> Puedo moverme bien, pero busco algo efectivo</span><span class="chk"></span></button>
+    </div>
+  </section>
+
+  <!-- PASO 12: ALTURA -->
+  <section class="step" data-step="12">
+    <h2>¿Cual es tu altura?</h2>
+    <div class="units" data-ruler="altura"><button class="on" data-u="cm">cm</button><button data-u="pol">pol</button></div>
+    <div class="rvalue" id="altura-val">180<small>cm</small></div>
+    <div class="ruler" id="altura"></div>
+    <div class="rhint">Arrastre para ajustar</div>
+    <button class="btn" onclick="siguiente()">Siguiente paso</button>
+    <div class="small">
+      <p><b>📊 Calculando tu IMC</b></p>
+      <p>El índice de masa corporal (IMC) es una medida del porcentaje de grasa corporal que se utiliza comúnmente para estimar los niveles de riesgo de posibles problemas de salud.</p>
+    </div>
+  </section>
+
+  <!-- PASO 13: PESO ACTUAL -->
+  <section class="step" data-step="13">
+    <h2>¿Cual es tu peso actual?</h2>
+    <div class="units" data-ruler="peso"><button class="on" data-u="kg">kg</button><button data-u="lb">lb</button></div>
+    <div class="rvalue" id="peso-val">70<small>kg</small></div>
+    <div class="ruler" id="peso"></div>
+    <div class="rhint">Arrastre para ajustar</div>
+    <button class="btn" onclick="siguiente()">Siguiente paso</button>
+    <p class="c small">Tus datos son privados y se usan únicamente para personalizar tu ritmo de progreso</p>
+  </section>
+
+  <!-- PASO 14: PESO OBJETIVO -->
+  <section class="step" data-step="14">
+    <h2>¿Cual es tu peso <span class="mag">objetivo</span>?</h2>
+    <div class="units" data-ruler="objetivo"><button class="on" data-u="kg">kg</button><button data-u="lb">lb</button></div>
+    <div class="rvalue" id="objetivo-val">70<small>kg</small></div>
+    <div class="ruler" id="objetivo"></div>
+    <div class="rhint">Arrastre para ajustar</div>
+    <button class="btn" onclick="siguiente()">Siguiente paso</button>
+  </section>
+
+  <!-- PASO 15 -->
+  <section class="step" data-step="15">
+    <div>
+      <h2 style="font-weight:600">¿Qué es lo más <span class="mag" style="font-weight:800">importante</span> para usted en un programa de Pilates?</h2>
+      <p class="c">Puedes elegir varias opciones</p>
+    </div>
+    <div class="opts" data-multi>
+      <button class="opt shadow"><span class="lbl">Ejercicios suaves y adaptados</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Apoyo profesional</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Enfoque personalizado</span><span class="chk"></span></button>
+      <button class="opt shadow"><span class="lbl">Explicacion de los beneficios para la salud</span><span class="chk"></span></button>
+    </div>
+    <button class="btn" data-continue onclick="siguiente()">Continuar</button>
+  </section>
+
+  <!-- PASO 16 -->
+  <section class="step" data-step="16">
+    <div>
+      <h2>¿Cuál de estos <span class="mag">síntomas</span> tienes?</h2>
+      <p class="c">Puedes elegir varias opciones</p>
+    </div>
+    <div class="opts" data-multi>
+      <button class="opt"><span class="emo">😴</span><span class="lbl">Problemas para dormir</span><span class="chk"></span></button>
+      <button class="opt"><span class="emo">😫</span><span class="lbl">Fatiga</span><span class="chk"></span></button>
+      <button class="opt"><span class="emo">😦</span><span class="lbl">Cambios de humor</span><span class="chk"></span></button>
+      <button class="opt"><span class="emo">🦴</span><span class="lbl">Dolor en las articulaciones</span><span class="chk"></span></button>
+      <button class="opt"><span class="emo">📈</span><span class="lbl">Aumento de peso</span><span class="chk"></span></button>
+      <button class="opt"><span class="emo">♀️</span><span class="lbl">Problema de suelo pelvico</span><span class="chk"></span></button>
+      <button class="opt" data-none><span class="emo">❌️</span><span class="lbl">Ninguna de las anteriores</span><span class="chk"></span></button>
+    </div>
+    <button class="btn pulse" data-continue onclick="siguiente()">Continuar</button>
+  </section>
+
+  <!-- PASO 17: CARGA -->
+  <section class="step" data-step="17">
+    <div class="loadbox">
+      <div class="row"><span>Cargando</span><span id="loadPct">0%</span></div>
+      <div class="bar"><div id="loadFill"></div></div>
+      <p class="c mag" style="margin-top:10px"><b>Creando tu plan personalizado....</b></p>
+    </div>
+    <div class="quote">
+      <div class="stars">★★★★★</div>
+      <p>Tenía 47 años y me sentía invisible. Después de 3 embarazos y la pre-menopausia, evitaba los espejos.
+
+Con el Pilates Asiático no solo recuperé mi figura... recuperé mi ESENCIA. Las rutinas de 15 minutos encajan perfectas en mi vida de mamá ocupada, y por primera vez en años me siento MUJER otra vez.</p>
+      <b>Mariela G. (CABA)</b>
+    </div>
+    <div class="quote">
+      <div class="stars">★★★★★</div>
+      <p>A los 52 pensaba que el dolor de espalda era "parte de la edad". Había probado gym, yoga, caminatas... nada funcionaba sin lastimarme más. Esta guia fue una revelacion, en 3 semanas desapareció el dolor. Por fin encontré algo heco PARA MI cuerpo.</p>
+      <b>Graciela R. (Córdoba)</b>
+    </div>
+  </section>
+
+  <!-- PASO 18: PLAN RECOMENDADO -->
+  <section class="step" data-step="18">
+    <div>
+      <h3 class="grn">PLAN RECOMENDADO PARA VOS:</h3>
+      <p class="c" style="margin-top:6px"><b><span class="mag">Según tus respuestas</span>, el enfoque más adecuado es un plan progresivo, suave y sostenido, pensado para mujeres +40</b></p>
+      <h3 class="mag" style="margin-top:14px">El plan recomendado para vos es el Reto de Pilates Asiático de 28 días.</h3>
+    </div>
+    <div class="chart">
+      <svg viewBox="-8 -12 116 72">
+        <defs>
+          <linearGradient id="gLine" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#dc2626"/><stop offset=".5" stop-color="#fbbf24"/><stop offset="1" stop-color="#22c55e"/>
+          </linearGradient>
+          <linearGradient id="gArea" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#22c55e" stop-opacity=".28"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g stroke="#e5e7eb" stroke-width=".3">
+          <line x1="0" y1="0" x2="100" y2="0"/><line x1="0" y1="12.5" x2="100" y2="12.5"/><line x1="0" y1="25" x2="100" y2="25"/><line x1="0" y1="37.5" x2="100" y2="37.5"/>
+          <line x1="0" y1="0" x2="0" y2="50"/><line x1="33.3" y1="0" x2="33.3" y2="50"/><line x1="66.6" y1="0" x2="66.6" y2="50"/><line x1="100" y1="0" x2="100" y2="50"/>
+        </g>
+        <line x1="0" y1="50" x2="100" y2="50" stroke="#94a3b8" stroke-width=".4"/>
+        <path d="M0,45 C11,45 22,32.5 33.3,32.5 C44,32.5 55,30 66.6,30 C78,30 89,12.5 100,12.5 L100,50 L0,50 Z" fill="url(#gArea)"/>
+        <path id="chartLine" d="M0,45 C11,45 22,32.5 33.3,32.5 C44,32.5 55,30 66.6,30 C78,30 89,12.5 100,12.5" fill="none" stroke="url(#gLine)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="45" r="1.5" fill="#fff" stroke="#dc2626" stroke-width=".7"/>
+        <circle cx="33.3" cy="32.5" r="1.8" fill="#fff" stroke="#f59e0b" stroke-width=".8"/>
+        <circle cx="66.6" cy="30" r="1.8" fill="#fff" stroke="#a3c23a" stroke-width=".8"/>
+        <circle cx="100" cy="12.5" r="2.2" fill="#22c55e" stroke="#fff" stroke-width=".8"/>
+        <g><rect x="18.3" y="23" width="30" height="6" rx="1.5" fill="#f59e0b"/><text class="tip" x="33.5" y="27.1" text-anchor="middle">Aumento de energia</text></g>
+        <g><rect x="77.5" y="3" width="30" height="6" rx="1.5" fill="#22c55e"/><text class="tip" x="92.5" y="7.1" text-anchor="middle">Resultados visibles</text></g>
+        <g font-family="Inter" font-size="3.4" fill="#64748b" text-anchor="middle">
+          <text x="0" y="56">Hoy</text><text x="33.3" y="56">12 dias</text><text x="66.6" y="56">20 dias</text><text x="100" y="56">28 dias</text>
+        </g>
+      </svg>
+    </div>
+    <button class="btn" onclick="siguiente()">Ver mi plan detallado</button>
+    <img class="img-blob" data-img="p18-mujer.png" alt="">
+  </section>
+
+  <!-- PASO 19: VSL + OFERTA -->
+  <section class="step" data-step="19">
+
+    <!-- ===================================================================
+         VSL: pegá tu código de Vturb (o el embed de tu video) ADENTRO de
+         esta etiqueta <template>, reemplazando el comentario.
+         =================================================================== -->
+    <template id="vsl-template">
+      <!-- PEGÁ ACÁ EL CÓDIGO DE TU VSL -->
+    </template>
+    <div class="vsl" id="vsl"><div class="vsl-ph" id="vslPh">Espacio para tu VSL<br>(pegá el código en el &lt;template id="vsl-template"&gt;)</div></div>
+
+    <!-- Todo lo de abajo aparece a los SEGUNDOS_OFERTA de haber llegado a este paso -->
+    <div id="oferta">
+      <div class="timer">⚠️ <u>ATENCIÓN</u>: se cierran cupos en:
+        <div class="t"><span id="tm">05<em>min</em></span> : <span id="ts">00<em>seg</em></span></div>
+      </div>
+
+      <div>
+        <h2>¡Tu plan de Pilates está <span class="grn">listo</span>!</h2>
+        <p class="c red"><b>Consigue resultados visibles en 28 DIAS!</b></p>
+      </div>
+
+      <div>
+        <h3><span class="grn">¿Como funciona</span> el reto de pilates asiatico 28 dias?</h3>
+        <p class="c gry"><b>Durante 28 días seguís una rutina guiada , con ejercicios suaves, diseñados para vos segun tus respuestas</b></p>
+      </div>
+
+      <div class="bonus">
+        <p><b>✅️ Plan personalizado de 28 dias:</b> Un paso a paso de <b>Pilates Asiático</b> <b>en VIDEO </b>diseñado para guiarte durante tu primer mes, asegurando que realices cada movimiento de forma efectiva.</p>
+        <p><b>✅️ App exclusiva:</b> Acceso instantáneo a tus rutinas y seguimiento de hábitos desde tu celular</p>
+        <p><b>✅️ Guías alimenticias: </b>No es una "dieta". Es la respuesta a <em>"</em><b><em>¿Qué como hoy?</em></b><em>"</em>. Recetas rápidas que deshinchan, aceleran tu metabolismo y son ricas de verdad. Comé sin culpa y potenciá los resultados del pilates.</p>
+        <p><b>✅️ Planner semanal:</b> La constancia es la clave, y con esta herramienta es imposible fallar. Organizá tu semana, visualizá tus metas y sentí la satisfacción de marcar cada día como "completado".</p>
+        <p><b>✅️ Asistencia 24/7 </b>¿Tenés una duda sobre una postura? ¿Te duele algo? Tenés acceso directo a nuestro equipo de especialistas. No es un PDF frío; es acompañamiento real para corregirte, motivarte y celebrar tus logros.</p>
+      </div>
+
+      <div>
+        <p class="c strike">Valor total: $49.990</p>
+        <h2>🤯Solo hoy por APENAS</h2>
+        <h1 class="grn">$14.990 pesos (ARS)</h1>
+      </div>
+
+      <div class="price-box" onclick="comprar()">
+        <div class="tt">3 cuotas sin interes con MERCADO PAGO</div>
+        <div class="pv"><small>70 % OFF</small><b>$4.997</b></div>
+      </div>
+
+      <p class="c red"><em>Importante: al completar tus datos </em><b><em><u>ASEGURATE DE COLOCAR BIEN TU EMAIL</u> </em></b><em>para que el plan llegue correctamente</em></p>
+
+      <button class="btn success pulse" onclick="comprar()">QUIERO RECUPERAR MI CUERPO HOY &gt;&gt;</button>
+
+      <img class="img-round" data-img="mockup.png" alt="">
+      <div class="reviews">
+        <h3>Lo que dicen nuestras alumnas</h3>
+        <div class="rv">
+          <div class="rv-head"><span class="rv-av" style="background:#f3d9dc;color:#b4566a">FR</span><div><b>Francesca Rossi</b><span class="rv-ok">✓ Compra verificada</span></div><span class="rv-stars">★★★★★</span></div>
+          <p>Me encanta esta aplicación. Llevo varios meses usándola y ya noto cambios reales. Las rutinas son claras, fáciles de seguir y no me abruman.</p>
+        </div>
+        <div class="rv">
+          <div class="rv-head"><span class="rv-av" style="background:#ede9fe;color:#7c3aed">LB</span><div><b>Laura Bianchi</b><span class="rv-ok">✓ Compra verificada</span></div><span class="rv-stars">★★★★★</span></div>
+          <p>Nunca me habían enganchado los entrenamientos tradicionales. Esto es distinto: simple, accesible y pensado para personas reales. Recién empiezo y me siento muy cómoda.</p>
+        </div>
+        <div class="rv">
+          <div class="rv-head"><span class="rv-av" style="background:#dcfce7;color:#15803d">MC</span><div><b>Martina Conti</b><span class="rv-ok">✓ Compra verificada</span></div><span class="rv-stars">★★★★★</span></div>
+          <p>Con dos hijos y poco tiempo, hacer ejercicio era casi imposible. Este plan se adapta perfecto a mis horarios. Incluso con sesiones cortas, me siento mejor.</p>
+        </div>
+        <div class="rv">
+          <div class="rv-head"><span class="rv-av" style="background:#fef3c7;color:#b45309">SR</span><div><b>Silvia Romano</b><span class="rv-ok">✓ Compra verificada</span></div><span class="rv-stars">★★★★★</span></div>
+          <p>Después de los 45 pensé que ya no era para mí. Me sorprendió lo bien que se adapta al cuerpo y al ritmo de cada una. Me siento más fuerte y más tranquila.</p>
+        </div>
+      </div>
+
+      <div class="carousel">
+        <div class="car-track" id="carTrack">
+          <div class="car-item"><img data-img="resultado-1.jpg" alt=""><p>Silvia, de 75 a 71 kg en 28 dias</p></div>
+          <div class="car-item"><img data-img="resultado-2.png" alt=""><p>Laura, transformacion de postura y gluteos</p></div>
+          <div class="car-item"><img data-img="resultado-3.png" alt=""></div>
+          <div class="car-item"><img data-img="resultado-4.png" alt=""></div>
+          <div class="car-item"><img data-img="resultado-5.jpg" alt=""></div>
+          <div class="car-item"><img data-img="resultado-6.png" alt=""></div>
+        </div>
+        <div class="dots" id="carDots"></div>
+      </div>
+
+      <div class="bonus">
+        <h2 class="pur">BENEFICIO EXCLUSIVO</h2>
+        <h3 style="margin:10px 0"><u>Pase VIP: Círculo Pilates Hormonal</u></h3>
+        <p><em>No solo te llevas el programa completo hoy. Al unirte ahora, congelas tu precio para siempre y aseguras acceso </em><b class="grn"><em>100% GRATIS</em></b><em> a nuestra próxima gran actualización.</em></p>
+        <p><b>Lo que se viene muy pronto a tu App (y por lo que otras pagarán extra):</b></p>
+      </div>
+
+      <div class="bonus">
+        <h2 class="pur">⏳Protocolo Anti-flacidez</h2>
+        <ul style="margin:6px 0 16px 22px"><li><em>Valor en tienda: $</em><b><em><s>18.000</s></em></b><em>| Para ti: </em><b class="grn"><em>GRATIS</em></b><em>.</em></li></ul>
+        <h2 class="pur">⏳Revelacion lumbar cervical</h2>
+        <ul style="margin:6px 0 16px 22px"><li><em>Valor en tienda: $</em><b><em><s>25.000</s></em></b><em>| Para ti: </em><b class="grn"><em>GRATIS</em></b><em>.</em></li></ul>
+        <h2 class="pur">⏳ Drenaje Linfático Express</h2>
+        <ul style="margin:6px 0 6px 22px"><li><em>Valor en tienda: $</em><b><em><s>15.000 </s></em></b><em>| Para ti: </em><b class="grn"><em>GRATIS</em></b><em>.</em></li></ul>
+      </div>
+
+      <img data-img="circulo-vip.png" alt="" style="width:100%">
+
+      <button class="btn success pulse" onclick="comprar()">QUIERO COMENZAR MI PLAN! &gt;&gt;</button>
+
+      <div class="price-box" onclick="comprar()">
+        <div class="tt">3 cuotas sin interes con MERCADO PAGO</div>
+        <div class="pv"><small>70 % OFF</small><b>$4.997</b></div>
+      </div>
+
+      <img data-img="pago-seguro.png" alt="" style="width:100%">
+      <div class="guarantee">
+        <svg class="seal" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d774"/><stop offset=".5" stop-color="#d4a017"/><stop offset="1" stop-color="#a87a08"/></linearGradient></defs>
+          <path fill="url(#gold)" d="M60 4l9 8 12-3 5 11 12 2 1 12 10 7-4 11 6 10-8 9 2 12-11 5-2 12-12 1-7 10-11-4-10 6-9-8-12 3-5-11-12-2-1-12-10-7 4-11-6-10 8-9-2-12 11-5 2-12 12-1 7-10 11 4z"/>
+          <circle cx="60" cy="60" r="38" fill="#fff" opacity=".95"/>
+          <circle cx="60" cy="60" r="34" fill="none" stroke="#d4a017" stroke-width="1.5" stroke-dasharray="2 3"/>
+          <text x="60" y="58" text-anchor="middle" font-family="Inter" font-weight="800" font-size="26" fill="#a87a08">30</text>
+          <text x="60" y="74" text-anchor="middle" font-family="Inter" font-weight="700" font-size="10" fill="#a87a08" letter-spacing="1.5">DÍAS</text>
+        </svg>
+        <h3>Garantía de 30 días</h3>
+        <p>La compra de este material es totalmente <b>sin riesgo para vos</b>. Si no cumple con tus expectativas dentro de los primeros <b>30 días</b> después de la compra, <b>te reembolsamos el 100 % del dinero</b>, sin hacer preguntas.</p>
+      </div>
+
+      <h2>❓Preguntas Frecuentes (FAQ)</h2>
+      <div class="faq">
+        <details><summary>1. ¿Qué pasa si tengo dolor de espalda o rodillas?</summary><div class="ans"><p>Nuestra metodología es de <b>bajo impacto</b>. El Pilates Asiático se enfoca en la movilidad articular y la activación del core para proteger la columna. Si sientes dolor, el manual te enseña a escuchar a tu cuerpo y modificar el ejercicio.</p></div></details>
+        <details><summary>2. ¿Necesito experiencia previa o estar en forma?</summary><div class="ans"><p><b>No.</b> Este programa está diseñado específicamente para mujeres que comienzan desde cero o que han dejado de hacer ejercicio por mucho tiempo. Los movimientos son suaves, controlados y adaptables a cualquier nivel de condición física actual.</p></div></details>
+        <details><summary>3. ¿Cuánto tiempo al día necesito realmente?</summary><div class="ans"><p>Solo entre <b>9 y 20 minutos</b>. Está pensado para agendas ocupadas, permitiéndote cumplir con el reto incluso en tus días más difíciles.</p></div></details>
+        <details><summary>4. ¿Cómo recibo el acceso a la App y los Bonus?</summary><div class="ans"><p>Una vez realizado el pago, recibirás un email de confirmación en pocos minutos con tus datos de acceso. Desde allí podrás ingresar directamente a <b>Pilates Hormonal</b>, tu plataforma 100% web donde encontrarás el Reto de 28 Días, los bonos y todos los materiales del programa.</p><p><b>No necesitás descargar ninguna app.</b> El programa funciona desde cualquier navegador — celular, tablet o computadora — sin instalaciones ni descargas. Simplemente ingresás con tu usuario y contraseña y empezás cuando quieras.</p><p>Si el email no llega en los primeros 15 minutos, revisá la carpeta de spam. Si tampoco está ahí, contactanos y lo resolvemos enseguida.</p></div></details>
+        <details><summary>5. ¿Es un pago único o una suscripción mensual?</summary><div class="ans"><p>Es un <b>pago único de $14.990 ARS</b>. No habrá cargos sorpresa. Al ser parte del grupo "Fundadora", te aseguras de recibir todas las actualizaciones futuras de forma gratuita sin pagar nunca más.</p></div></details>
+        <details><summary>6. ¿Qué pasa si no me gusta el programa?</summary><div class="ans"><p>Queremos que estés 100% segura. Por eso, tienes una <b>garantía de satisfacción de 30 días</b>. Si sientes que el método no es para vos, te devolvemos el total de tu dinero sin preguntas.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ---------- Imágenes ----------
+document.querySelectorAll('img[data-img]').forEach(function (img) {
+  var src = IMAGENES[img.getAttribute('data-img')];
+  if (src) img.src = src;
+});
+
+// ---------- Navegación ----------
+var TOTAL = 19, actual = 1, historial = [];
+var steps = {};
+document.querySelectorAll('.step').forEach(function (s) { steps[+s.dataset.step] = s; });
+
+function mostrar(n) {
+  steps[actual].classList.remove('active');
+  actual = n;
+  steps[n].classList.add('active');
+  document.getElementById('bar').style.width = (n / TOTAL * 100) + '%';
+  document.getElementById('back').classList.toggle('hidden', n === 1 || n === 17);
+  window.scrollTo(0, 0);
+  alEntrar(n);
+}
+function siguiente() { if (actual < TOTAL) { historial.push(actual); mostrar(actual + 1); } }
+function atras() { if (historial.length) mostrar(historial.pop()); }
+document.getElementById('bar').style.width = (1 / TOTAL * 100) + '%';
+
+// ---------- Opciones ----------
+document.querySelectorAll('.opts').forEach(function (grupo) {
+  var multi = grupo.hasAttribute('data-multi');
+  var btns = grupo.querySelectorAll('.opt');
+  var cont = grupo.closest('.step').querySelector('[data-continue]');
+  function check() { if (cont) cont.disabled = !grupo.querySelector('.opt.sel'); }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (multi) {
+        if (b.hasAttribute('data-none')) btns.forEach(function (x) { if (x !== b) x.classList.remove('sel'); });
+        else { var none = grupo.querySelector('[data-none]'); if (none) none.classList.remove('sel'); }
+        b.classList.toggle('sel');
+        check();
+      } else {
+        btns.forEach(function (x) { x.classList.remove('sel'); });
+        b.classList.add('sel');
+        setTimeout(siguiente, 300);
+      }
+    });
+  });
+  check();
+});
+
+// ---------- Reglas de altura y peso ----------
+var reglas = {
+  altura:   { unidades: { cm: [120, 220, 180], pol: [47, 87, 71] }, u: 'cm', v: 180 },
+  peso:     { unidades: { kg: [35, 200, 70],  lb: [77, 440, 154] }, u: 'kg', v: 70 },
+  objetivo: { unidades: { kg: [35, 200, 70],  lb: [77, 440, 154] }, u: 'kg', v: 70 }
+};
+var PX = 10; // píxeles por unidad
+function armarRegla(id) {
+  var r = reglas[id], cont = document.getElementById(id), rango = r.unidades[r.u];
+  cont.innerHTML = '<div class="scroller"><div class="track"></div></div><div class="needle"></div>';
+  var sc = cont.querySelector('.scroller'), tr = cont.querySelector('.track');
+  var mitad = sc.clientWidth / 2 || 200;
+  tr.style.width = ((rango[1] - rango[0]) * PX + mitad * 2) + 'px';
+  var html = '';
+  for (var v = rango[0]; v <= rango[1]; v++) {
+    var x = mitad + (v - rango[0]) * PX, cls = v % 10 === 0 ? 'tick l' : (v % 5 === 0 ? 'tick m' : 'tick');
+    html += '<i class="' + cls + '" style="left:' + x + 'px"></i>';
+    if (v % 10 === 0) html += '<span class="num" style="left:' + x + 'px">' + v + '</span>';
+  }
+  tr.innerHTML = html;
+  sc.scrollLeft = (r.v - rango[0]) * PX;
+  var ultimo = -1;
+  function actualizar() {
+    if (sc.scrollLeft === ultimo) return;
+    ultimo = sc.scrollLeft;
+    r.v = Math.round(sc.scrollLeft / PX) + rango[0];
+    r.v = Math.max(rango[0], Math.min(rango[1], r.v));
+    document.getElementById(id + '-val').innerHTML = r.v + '<small>' + r.u + '</small>';
+  }
+  sc.onscroll = actualizar;
+  clearInterval(r.poll); r.poll = setInterval(actualizar, 120);
+  // arrastre con mouse en compu
+  var down = false, x0 = 0, s0 = 0;
+  sc.onmousedown = function (e) { down = true; x0 = e.pageX; s0 = sc.scrollLeft; sc.style.cursor = 'grabbing'; };
+  window.addEventListener('mouseup', function () { down = false; sc.style.cursor = ''; });
+  sc.onmousemove = function (e) { if (down) sc.scrollLeft = s0 - (e.pageX - x0); };
+  document.getElementById(id + '-val').innerHTML = r.v + '<small>' + r.u + '</small>';
+}
+document.querySelectorAll('.units').forEach(function (u) {
+  var id = u.dataset.ruler;
+  u.querySelectorAll('button').forEach(function (b) {
+    b.onclick = function () {
+      var r = reglas[id], nueva = b.dataset.u;
+      if (nueva === r.u) return;
+      var f = { 'cm>pol': 1 / 2.54, 'pol>cm': 2.54, 'kg>lb': 2.20462, 'lb>kg': 1 / 2.20462 }[r.u + '>' + nueva];
+      r.v = Math.round(r.v * f); r.u = nueva;
+      u.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); });
+      armarRegla(id);
+    };
+  });
+});
+
+// ---------- Acciones al entrar a cada paso ----------
+var reglasArmadas = {};
+function alEntrar(n) {
+  if (n === 4) setTimeout(function () {
+    document.getElementById('metricFill').style.width = '45%';
+    document.getElementById('metricDot').style.left = '45%';
+  }, 150);
+  if (n === 12 || n === 13 || n === 14) {
+    var id = { 12: 'altura', 13: 'peso', 14: 'objetivo' }[n];
+    if (!reglasArmadas[id]) { reglasArmadas[id] = true; setTimeout(function () { armarRegla(id); }, 30); }
+  }
+  if (n === 17) cargar();
+  if (n === 19) ultimoPaso();
+}
+
+// ---------- Paso 17: carga de 5 segundos ----------
+function cargar() {
+  var pct = 0, fill = document.getElementById('loadFill'), txt = document.getElementById('loadPct');
+  var t = setInterval(function () {
+    pct++; fill.style.width = pct + '%'; txt.textContent = pct + '%';
+    if (pct >= 100) { clearInterval(t); setTimeout(siguiente, 400); }
+  }, 50);
+}
+
+// ---------- Paso 19: VSL + oferta oculta ----------
+var vslCargado = false, ofertaMostrada = false;
+function ultimoPaso() {
+  if (window.fbq) fbq('track', 'Lead');
+  if (!vslCargado) {
+    vslCargado = true;
+    var tpl = document.getElementById('vsl-template'), box = document.getElementById('vsl');
+    var clon = tpl.content.cloneNode(true);
+    var tieneCodigo = Array.prototype.some.call(clon.childNodes, function (n) { return n.nodeType === 1; });
+    if (tieneCodigo) {
+      document.getElementById('vslPh').remove();
+      box.classList.add('loaded');
+      clon.querySelectorAll('script').forEach(function (s) {
+        var ns = document.createElement('script');
+        Array.prototype.forEach.call(s.attributes, function (a) { ns.setAttribute(a.name, a.value); });
+        ns.innerHTML = s.innerHTML; s.replaceWith(ns);
+      });
+      box.appendChild(clon);
+    }
+  }
+  if (!ofertaMostrada) setTimeout(mostrarOferta, SEGUNDOS_OFERTA * 1000);
+}
+function mostrarOferta() {
+  if (ofertaMostrada) return;
+  ofertaMostrada = true;
+  document.getElementById('oferta').classList.add('show');
+  iniciarTimer(); iniciarCarrusel(); iniciarNotificaciones();
+}
+
+function iniciarTimer() {
+  var s = 300;
+  function pintar() {
+    var m = Math.floor(s / 60), x = s % 60;
+    document.getElementById('tm').innerHTML = String(m).padStart(2, '0') + '<em>min</em>';
+    document.getElementById('ts').innerHTML = String(x).padStart(2, '0') + '<em>seg</em>';
+  }
+  pintar();
+  var t = setInterval(function () { s--; if (s <= 0) { s = 0; clearInterval(t); } pintar(); }, 1000);
+}
+
+function iniciarCarrusel() {
+  var track = document.getElementById('carTrack'), items = track.children, dots = document.getElementById('carDots'), i = 0;
+  dots.innerHTML = Array.prototype.map.call(items, function () { return '<i></i>'; }).join('');
+  function marcar(k) { Array.prototype.forEach.call(dots.children, function (d, j) { d.classList.toggle('on', j === k); }); }
+  function ir(k) { i = k; track.scrollTo({ left: items[k].offsetLeft - (track.clientWidth - items[k].clientWidth) / 2, behavior: 'smooth' }); marcar(k); }
+  marcar(0);
+  track.addEventListener('scroll', function () {
+    var c = track.scrollLeft + track.clientWidth / 2, best = 0, d = 1e9;
+    Array.prototype.forEach.call(items, function (it, j) { var m = Math.abs(it.offsetLeft + it.clientWidth / 2 - c); if (m < d) { d = m; best = j; } });
+    i = best; marcar(best);
+  });
+  setInterval(function () { ir((i + 1) % items.length); }, 4000);
+}
+
+function iniciarNotificaciones() {
+  var nombres = ["Claudia Rodríguez", "Marcela Rinaldi", "Laura Ostich", "Mónica Mancini", "Andrea Varela", "Silvia Quiroga", "Patricia Navarro"];
+  var ciudades = ["Rosario", "CABA", "Mendoza", "Neuquén", "Mar del Plata", "Córdoba", "Tucumán"];
+  var minutos = [1, 2, 2, 3, 4, 5, 6];
+  // Los cupos siempre bajan: arranca en 9 y nunca baja de 2
+  var cupos = 9, k = 0, toast = document.getElementById('toast');
+  function una() {
+    var j = k % nombres.length;
+    cupos = Math.max(2, cupos - 1);
+    var primerNombre = nombres[j].split(' ')[0] + ' ' + nombres[j].split(' ')[1].charAt(0) + '.';
+    toast.innerHTML =
+      '<span class="t-av">' + nombres[j].charAt(0) + '</span>' +
+      '<div class="t-tx"><p><b>' + primerNombre + '</b> de ' + ciudades[j] + ' se unió a Pilates Hormonal</p>' +
+      '<p class="t-sub"><span class="t-dot"></span>hace ' + minutos[j] + ' min · Quedan <b>' + cupos + ' cupos</b> con descuento</p></div>';
+    toast.classList.add('show');
+    setTimeout(function () { toast.classList.remove('show'); }, 4500);
+    k++;
+  }
+  setTimeout(una, 6000);
+  setInterval(una, 16000);
+}
+
+// ---------- Checkout ----------
+function comprar() {
+  if (!LINK_CHECKOUT) { alert('Falta configurar LINK_CHECKOUT'); return; }
+  var q = window.location.search;
+  if (q) q = (LINK_CHECKOUT.indexOf('?') > -1 ? '&' : '?') + q.slice(1);
+  window.location.href = LINK_CHECKOUT + q;
+}
+</script>
+</body>
+</html>

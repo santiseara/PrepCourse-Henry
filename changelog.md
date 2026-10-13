@@ -1,5 +1,54 @@
 # Changelog
 
+## 2026-10-12 — Quiz de Pilates Hormonal y reglas para armar quizzes
+- **Fuentes:** conversación con Santiago (sin archivos nuevos en RAW). Modelo: el quiz de Sana Pilates que él corre en Argentina (InLead).
+- **Creado:**
+  - `WIKI/quizzes-reglas-de-armado.md`: reglas, registro de correcciones con fecha y checklist de entrega. Se mantiene viva.
+  - `OUTPUTS/2026-10-12-quiz-pilates-hormonal.html`: el quiz final.
+- **Cambiado:**
+  - `CLAUDE.md`: leer las reglas de quizzes antes de armar uno y anotar cada corrección en el momento.
+  - `como-trabajar-con-santiago.md` e `index.md` (tema nuevo y el output).
+  - `quiz-funnel.md`: enlace a la página nueva.
+- **Correcciones registradas:** sin encabezados de relleno, más espaciado, precio $14.990, tachado $49.990 y cuotas de $4.997, mockup de celular en vez de libros, testimonios y garantía en HTML, notificaciones discretas con cupos que solo bajan, CTAs a `pilates-hormonal.impultienda.ar/checkout`.
+
+## 2026-10-11 — Quiz de Chupetines para Bebidas
+- **Último procesado:** 2026-10-11
+- **Fuentes procesadas:** `RAW/2026-10-11-quiz-chupetines-para-bebidas.md` (solo la pantalla de entrada).
+- **Creado:** `OUTPUTS/2026-10-11-guiones-chupetines.md` (3 guiones y 9 hooks, en español con voseo).
+- **Cambiado:** `ofertas.md` (nota sobre el estado de Chupetines).
+- **Conexiones inesperadas:**
+  1. **El estado de Chupetines no coincide:** `ofertas.md` la tiene en historial sin resultados y el contexto maestro la marca como activa.
+  2. **El quiz promete más de $2.000.000 ARS al mes** frente a un precio de 14.999 ARS. Es un claim de ingresos que tiene que tener respaldo.
+  3. **Alcohol:** el quiz habla de tragos y licores. Meta restringe esa categoría.
+
+## 2026-10-11 — Natives ganadoras de Scented Stones
+- **Último procesado:** 2026-10-11
+- **Fuentes procesadas:** `RAW/2026-10-11-natives-ganadoras-scented-stones.md` y `RAW/natives/` (3 imágenes + 3 descripciones).
+- **Creado:** `WIKI/natives-ganadoras.md` (patrones y plantilla) y `OUTPUTS/2026-10-11-natives-piedras.md` (4 natives nuevas, con prompt y descripción en inglés y español).
+- **Cambiado:**
+  - `guiones-y-anuncios.md`: la descripción pasa de 400–500 a 900–1.200 palabras y la regla de "sin cara" tiene una excepción.
+  - `scented-stones.md` e `index.md`: enlaces a la nueva página.
+- **Conexiones inesperadas:**
+  1. **Las descripciones ganadoras miden casi el doble de lo que decía la wiki.** 907, 883 y 1.174 palabras.
+  2. **La descripción narra la imagen casi pieza por pieza:** 47 vendidas + 25 que quedan = las 72 piedras del texto; el cartel "$12 for $30" es el precio del texto.
+  3. **La native 1 dice sal y harina y las natives 2 y 3 dicen yeso.** Las natives, igual que los guiones, no coinciden con la landing.
+  4. **La native 2 afirma que las piedras son seguras para mascotas.** Los aceites esenciales pueden ser tóxicos para perros y gatos. No lo repito.
+  5. **La ganadora 2 muestra una cara**, así que "sin cara" no es una regla absoluta.
+
+## 2026-10-11 — Landing de Scented Stones
+- **Último procesado:** 2026-10-11
+- **Fuentes procesadas:** `RAW/2026-10-11-landing-scented-stones.md` (scentedstone.lovable.app). El texto quedó cortado en la FAQ.
+- **Cambiado:**
+  - `scented-stones.md`: sección Landing, producto real (yeso) y choque de ingredientes resuelto.
+  - `index.md`: gap 2.
+  - `CLAUDE.md` y `como-trabajar-con-santiago.md`: regla fija de entrega (inglés y español, listo para copiar).
+- **Creado:** `OUTPUTS/2026-10-11-guiones-piedras.md` (tanda 11/10) y los guiones de Leather Blueprint Vault del 10/10.
+- **Conexiones inesperadas:**
+  1. **Los ads y la landing describen productos distintos.** Los ganadores dicen sal + harina y la landing vende yeso, aceite de fragancia y molde de silicona.
+  2. **La landing ya trae ángulos que los ganadores no usan:** miedo a perder ahorros, jubilada, pedidos de boda de 80–150 piezas y reposición mensual de boutiques.
+  3. **Los testimonios de la landing tienen cifras fuertes ($200–$380) que no se pueden verificar.** No los uso como claims propios.
+  4. **El primer botón está en el Hero**, la causa 1 de checkouts falsos de tu propio diagnóstico.
+
 ## 2026-10-10 — Carpeta RAW/prompts/ completa (23 de 23)
 - **Último procesado:** 2026-10-10
 - **Fuentes procesadas:** `RAW/prompts/` (prompt-optimizar-carga-web-html, prompt-testimonios-sora-2, prompt-variacion-de-guiones-winners, prompt-vsl-oto-post-purchase).

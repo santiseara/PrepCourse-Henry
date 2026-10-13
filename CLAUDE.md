@@ -13,7 +13,17 @@ Antes de cualquier tarea de negocio o creativa, leé:
 - `WIKI/guiones-y-anuncios.md` — reglas fijas de copy (son obligatorias).
 - `WIKI/scented-stones.md` — la oferta ganadora y la DNA de sus guiones (punto de partida por defecto).
 
+Antes de crear o editar un **quiz funnel / landing en HTML**, leé además:
+- `WIKI/quizzes-reglas-de-armado.md` — reglas, correcciones acumuladas y checklist de entrega (es obligatoria).
+
+**Correcciones de Santiago = memoria viva.** Cada vez que corrige algo que aplica a trabajos futuros (quizzes, landings, imágenes, copy), sumalo **en el momento** a la página de la WIKI que corresponda (registro con fecha + regla), actualizá `changelog.md` y hacé commit y push. No hace falta que lo pida.
+
 Si aprendés una preferencia nueva en la conversación (por ejemplo "eso es muy catastrófico" o "no menciones X"), proponé sumarla a la WIKI.
+
+## Entrega de textos (regla fija)
+
+- Todo guion, hook, native o descripción se entrega **siempre listo para copiar**: en bloque de código en el chat, guardado en `OUTPUTS/AAAA-MM-DD-<titulo>.md` en texto plano y copiado al portapapeles con `pbcopy`.
+- Si la oferta es en inglés, guiones y hooks van **siempre en inglés y español con voseo**, las dos versiones completas.
 
 ## Estructura
 

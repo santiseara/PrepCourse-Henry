@@ -86,7 +86,7 @@ Ver [[escalado-en-meta-ads]] · [[aumento-de-aov]].
 
 - **Compras ÷ landing page views ≈ 5%** en quiz funnels, contado sobre todos los que entran al quiz. El 25–30% se refiere a quien llega a la última página contra la primera.
 
-Relacionado: [[pagina-de-ventas]] · [[metricas-y-kpis]] · [[tracking-y-atribucion]] · [[funnel-hacking]]
+Relacionado: [[pagina-de-ventas]] · [[metricas-y-kpis]] · [[tracking-y-atribucion]] · [[funnel-hacking]] · [[quizzes-reglas-de-armado]] (cómo armarlos en HTML y las correcciones de Santiago)
 
 ## Conexiones con tu operación actual
 - **Es tu funnel estándar de la etapa fitness** ([[landings-funnels-y-upsells]]). CTAs como "test gratis en 1 minuto" o "cuántos kilos podés bajar según tu edad" vienen de acá ([[guiones-y-anuncios]]).

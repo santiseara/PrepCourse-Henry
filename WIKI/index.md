@@ -51,10 +51,12 @@
 - ✅ [[renovacion-de-creativos]] — El ganador no muere, se satura su público. Cuerpo fijo y de 20 a 50 hooks nuevos, de 4 maneras.
 - ✅ [[ugc-y-video-generativo]] — Reglas fijas de UGC, avatares, testimonios para Sora 2 (14 s), Flow/VEO 3, avatar de VSL en HeyGen.
 - ✅ [[imagenes-y-mockups]] — NO FLAT COVERS, "Rules of $100K design", prompts de mockup e imagen, mockups transparentes para el checkout.
+- ✅ [[natives-ganadoras]] — Las 3 natives ganadoras de piedras (imagen + descripción de 900 a 1.200 palabras), sus 13 patrones y la plantilla para armar nuevas.
 
 ## Conversión y operación
 - ✅ [[pagina-de-ventas]] — La estructura que convierte, el ahorro en dinero y no en porcentaje, TSL contra VSL, velocidad de carga y cómo construirla con IA.
 - ✅ [[quiz-funnel]] — Unas 16 preguntas antes de la oferta: convierte al 25–30%, tolera un CPC de 1 USD, analítica por pregunta.
+- ✅ [[quizzes-reglas-de-armado]] — ⭐ **Leer antes de armar cualquier quiz en HTML.** Fidelidad al original, imágenes (GPT Image 1.5 en Higgsfield, mockup de celular), VSL con oferta oculta 2:40, precios y cuotas, notificaciones, entrega y registro de correcciones.
 - ✅ [[funnel-de-whatsapp]] — Venta 1 a 1 por WhatsApp sin pasarela, optimizada a compra con etiquetas.
 - ✅ [[diagnostico-de-checkout]] — Muchos inicios de checkout y pocas compras: 9 causas por orden de impacto.
 - ✅ [[shopify-y-checkout]] — Impultienda es la vigente (checkout solo con email, OTOs nativos, USD). Shopify y Hotmart como referencia.
@@ -77,8 +79,9 @@
 
 ## Outputs
 - 2026-10-12 — [Plan de caza: ingreso extra con oficio para AR](../OUTPUTS/2026-10-12-plan-caza-ingreso-extra-ar.md) (sin resultados: faltó acceso a la Ads Library)
+- 2026-10-12 — [Quiz de Pilates Hormonal](../OUTPUTS/2026-10-12-quiz-pilates-hormonal.html) (modelado de Sana Pilates) para ImpulTienda: 19 pasos, VSL con oferta oculta 2:40, checkout de ImpulTienda. Reglas en [[quizzes-reglas-de-armado]].
 
 ## Top 3 gaps (qué añadir)
 1. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
-2. **La URL de la landing de piedras.** Desbloquea `prompt-variacion-de-guiones-winners`, la auditoría ([[pagina-de-ventas]], [[psicologia-del-comprador]]), el ebook, la optimización de carga y la versión en español. Y los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+2. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
 3. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.

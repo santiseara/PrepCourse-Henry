@@ -15,6 +15,7 @@ Antes de cualquier tarea de negocio o creativa, leé:
 
 Antes de crear o editar un **quiz funnel / landing en HTML**, leé además:
 - `WIKI/quizzes-reglas-de-armado.md` — reglas, correcciones acumuladas y checklist de entrega (es obligatoria).
+- Para un **VSL** (guion, avatar, edición): `WIKI/vsl-reglas-de-armado.md`.
 
 **Correcciones de Santiago = memoria viva.** Cada vez que corrige algo que aplica a trabajos futuros (quizzes, landings, imágenes, copy), sumalo **en el momento** a la página de la WIKI que corresponda (registro con fecha + regla), actualizá `changelog.md` y hacé commit y push. No hace falta que lo pida.
 

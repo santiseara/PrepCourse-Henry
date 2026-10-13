@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-13 — VSL de Pilates Hormonal
+- **Fuentes:** VSL original de Calistenia Asiática (~/Downloads, 6:13) y foto de la Maestra Caro. Conversación con Santiago.
+- **Creado:**
+  - `WIKI/vsl-reglas-de-armado.md`: tono hablado ("Soy la Maestra Caro"), HeyGen, créditos de Higgsfield (intercalar modelos baratos), receta de producción.
+  - `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md`: el guion.
+  - `OUTPUTS/scripts-vsl/` (`edit.py`, `mkgfx.py`).
+- **Entregable:** `~/Desktop/pilates-hormonal-vsl/VSL-Pilates-Hormonal-1.3x.mp4` (4:45, 1080×1920).
+- **Cambiado:** `CLAUDE.md` (leer las reglas de VSL) e `index.md`.
+- **Créditos:** HeyGen 108 · Higgsfield ~105 (Kling 3.0) + 15 (Kling 2.6).
+
 ## 2026-10-12 — Quiz de Pilates Hormonal y reglas para armar quizzes
 - **Fuentes:** conversación con Santiago (sin archivos nuevos en RAW). Modelo: el quiz de Sana Pilates que él corre en Argentina (InLead).
 - **Creado:**

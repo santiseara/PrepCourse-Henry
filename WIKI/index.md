@@ -56,6 +56,7 @@
 ## Conversión y operación
 - ✅ [[pagina-de-ventas]] — La estructura que convierte, el ahorro en dinero y no en porcentaje, TSL contra VSL, velocidad de carga y cómo construirla con IA.
 - ✅ [[quiz-funnel]] — Unas 16 preguntas antes de la oferta: convierte al 25–30%, tolera un CPC de 1 USD, analítica por pregunta.
+- ✅ [[vsl-reglas-de-armado]] — ⭐ **Leer antes de escribir o editar un VSL.** Guion 1 a 1 con el original y tono hablado ("Soy la Maestra Caro"), avatar en HeyGen, subtítulos, B-roll, 1.3x.
 - ✅ [[quizzes-reglas-de-armado]] — ⭐ **Leer antes de armar cualquier quiz en HTML.** Fidelidad al original, imágenes (GPT Image 1.5 en Higgsfield, mockup de celular), VSL con oferta oculta 2:40, precios y cuotas, notificaciones, entrega y registro de correcciones.
 - ✅ [[funnel-de-whatsapp]] — Venta 1 a 1 por WhatsApp sin pasarela, optimizada a compra con etiquetas.
 - ✅ [[diagnostico-de-checkout]] — Muchos inicios de checkout y pocas compras: 9 causas por orden de impacto.

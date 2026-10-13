@@ -41,6 +41,23 @@
   - **tilde verde** en el "¡Felicitaciones!".
 - Recortar silencios y exportar a **1.3x**.
 
+## 4b. Música y efectos de sonido (2026-10-13)
+- **Música siempre:** suave por debajo de la voz, pero **activa y que enganche, no relajada**.
+  - Se compone original con `OUTPUTS/scripts-vsl/music.py` (118 BPM, Am–F–C–G, bombo en negras, bajo con "pump" y arpegio), así no hay reclamos de derechos en Meta.
+  - Mezcla: música unos 15 dB por debajo de la voz (voz -15 LUFS, música -30) y ducking con sidechain cuando ella habla.
+- **Efectos, pocos y solo en momentos clave:**
+  - **"cha-ching" cada vez que dice el precio ($14.990)**;
+  - "pop" con brillo en cada bono;
+  - sello en la garantía;
+  - "ding" en el tilde inicial;
+  - "whoosh" al entrar la app y el testimonio.
+  Unos 10 en total. **No llenarlo de efectos.** Se sintetizan con `sfx.py`.
+- Los efectos van en el momento exacto de la palabra: se transcribe el video final con Whisper y se ubica cada uno sobre la palabra.
+
+## 4c. Entrega y Panda
+- El video final se **reemplaza** en `~/Desktop/<producto>-vsl/` con el mismo nombre.
+- Santiago lo sube a **Panda Video** para ponerle diseños y manda el HTML del embed, que se pega dentro de `<template id="vsl-template">` en el último paso del quiz ([[quizzes-reglas-de-armado]]).
+
 ## 5. Cómo se produjo el de Pilates Hormonal (receta que funcionó, 2026-10-13)
 1. **Transcribir el VSL original** con Whisper (`faster-whisper`, modelo `small`) y sacar cuadros cada 6 s para copiar la edición.
 2. **Guion** en `OUTPUTS/`, en tono hablado y con los números en palabras.
@@ -67,6 +84,8 @@
 | 2026-10-12 | Pilates Hormonal | "Me llamo maestra Caro queda muy raro" → "Soy la Maestra Caro"; que no suene robot | §2 tono hablado |
 | 2026-10-12 | Pilates Hormonal | El video se hace con HeyGen | §3 |
 | 2026-10-12 | Pilates Hormonal | "Usá modelos más baratos, intercalá, no uses siempre el mejor" | §3b |
+| 2026-10-13 | Pilates Hormonal | Música suave por debajo, activa, que enganche | §4b |
+| 2026-10-13 | Pilates Hormonal | Efectos solo en momentos clave: "cha-ching" al decir el precio; no llenarlo | §4b |
 
 ## Preguntas abiertas
 - ¿Qué plan de HeyGen hay y cuál es el largo máximo por video?

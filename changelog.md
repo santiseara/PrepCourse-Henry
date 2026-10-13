@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Guiones piedras v4
+- **Creado:** `OUTPUTS/2026-10-13-guiones-piedras-v4.md`: 3 guiones originales de Scented Stones en inglés y español con voseo. Ángulos nuevos: estacionalidad de Navidad, reacción del marido que hace las cuentas, pedido puntual de casamiento.
+- **Cambiado:** `WIKI/index.md` (outputs).
+
 ## 2026-10-13 — VSL de Pilates Hormonal
 - **Fuentes:** VSL original de Calistenia Asiática (~/Downloads, 6:13) y foto de la Maestra Caro. Conversación con Santiago.
 - **Creado:**

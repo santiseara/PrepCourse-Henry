@@ -71,6 +71,9 @@
 - Positivo, directo, enfocado en resultados, hooks que frenen el scroll. Nada técnico. Crudo en el tono, positivo en la promesa ([[filosofia-de-marketing]]).
 - Por defecto, español con voseo + inglés. El alemán se descartó. Supervivencia iba en español neutro.
 
+## Registro de preferencias
+- **2026-10-13 · Originalidad > tema.** Gustó el guion de Navidad (13/10 - 1) por original, pero no quiere la tanda entera del mismo tema. Regla: cuando algo gusta por original, se copia la **estructura** (disparador concreto de demanda → gente que ya pide → por qué funciona → precio por pieza → quién compra → por qué empezar ahora), no el tema. Cada guion de la tanda, un comprador o motivo de compra distinto.
+
 ## Relacionado
 [[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 

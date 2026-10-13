@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Guiones piedras v5
+- **Creado:** `OUTPUTS/2026-10-13-guiones-piedras-v5.md`: 3 guiones originales (inmobiliaria, recompra cada 8 semanas, canasta de la peluquería) con la estructura del guion de Navidad.
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias: originalidad > tema) e `index.md`.
+
 ## 2026-10-13 — Guiones piedras v4
 - **Creado:** `OUTPUTS/2026-10-13-guiones-piedras-v4.md`: 3 guiones originales de Scented Stones en inglés y español con voseo. Ángulos nuevos: estacionalidad de Navidad, reacción del marido que hace las cuentas, pedido puntual de casamiento.
 - **Cambiado:** `WIKI/index.md` (outputs).

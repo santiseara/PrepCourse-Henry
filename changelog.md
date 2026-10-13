@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-13 — Guiones piedras v6 (TikTok)
+- **Investigado:** formatos virales de TikTok para pequeños negocios. No hay un viral propio de piedras aromáticas (contenido de nicho, hasta ~1.900 likes); se trajeron formatos de otros nichos.
+- **Creado:** `OUTPUTS/2026-10-13-guiones-piedras-v6-tiktok.md`: 3 guiones con primer frame ("nunca más compro X", proceso satisfactorio + adiviná el costo, pack an order with me).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-13 — Guiones piedras v5
 - **Creado:** `OUTPUTS/2026-10-13-guiones-piedras-v5.md`: 3 guiones originales (inmobiliaria, recompra cada 8 semanas, canasta de la peluquería) con la estructura del guion de Navidad.
 - **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias: originalidad > tema) e `index.md`.

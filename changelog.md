@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-13 — Guiones Resina Rentable
+- **Investigado:** contenido de resina en TikTok (lo que engancha es el proceso y las inclusiones; no hay ranking de hooks) y los errores que nombran los competidores.
+- **Creado:** `WIKI/resina-rentable.md` (ficha de la oferta nueva a partir del brief del chat) y `OUTPUTS/2026-10-13-guiones-resina-rentable.md` (4 guiones + 5 hooks alternativos).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-13 — Natives piedras orgánicas
 - **Creado:** `OUTPUTS/2026-10-13-natives-piedras-organicas.md`: 3 natives (prompt de imagen + descripción EN y ES) en la línea orgánica del guion "empaquetá un pedido conmigo".
 - **Cambiado:** `WIKI/guiones-y-anuncios.md` (preferencia: orgánico gana), `WIKI/natives-ganadoras.md` (tanda 13/10) e `index.md`.

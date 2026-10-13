@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
 - ✅ [[guiones-y-anuncios]] — Reglas fijas de copy, variación real, ángulos validados, CTAs, natives y descripciones.
 - ✅ [[perfil-y-negocio]] — Quién es Santiago, su ciclo de trabajo, precios, stack completo y objetivos.
 - ✅ [[ofertas]] — Catálogo: Scented Stones activa y el resto como historial.
@@ -79,6 +80,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-13 — [Guiones Resina Rentable](../OUTPUTS/2026-10-13-guiones-resina-rentable.md): 4 guiones de 50–60 s (mini-clase de burbujas, posavasos conmigo, la que tiró la plata, a cuánto vender un llavero) + 5 hooks
 - 2026-10-13 — [Natives piedras orgánicas](../OUTPUTS/2026-10-13-natives-piedras-organicas.md): 3 natives detrás de escena (24 bolsitas del grado, la canasta de Dana, la ronda de reposición del lunes)
 - 2026-10-13 — [Guiones piedras v6 (formatos virales de TikTok)](../OUTPUTS/2026-10-13-guiones-piedras-v6-tiktok.md): "nunca más compro aromatizantes", "adiviná cuánto cuesta", "empaquetá un pedido conmigo"
 - 2026-10-13 — [Guiones piedras v5](../OUTPUTS/2026-10-13-guiones-piedras-v5.md): 3 originales con la estructura del de Navidad (inmobiliaria, recompra cada 8 semanas, canasta de la peluquería)

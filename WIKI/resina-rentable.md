@@ -38,7 +38,7 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 - **Estructura interna (no se escribe):** Hook · Problema · Valor · Beneficios · Urgencia + CTA. Las etiquetas no van en la entrega. El hook trae la promesa o el resultado en los primeros 3 segundos y el dolor entra después, corto.
 - **Precio permitido, solo en pesos** y contra el kit. Nunca porcentajes.
 - **Sin cifras de ingreso** ni testimonios inventados. Si hay protagonista, es la narradora contando su experiencia, sin números.
-- **B-roll marcado** `[BROLL: …]` cada 10 a 15 segundos, sin los segundos escritos. Material disponible: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso.
+- **B-roll:** no se escribe en la entrega (corrección del 2026-10-13). Material disponible para pensar el guion: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso. Material disponible: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso.
 - **Entrega:** título **Guion N** en negrita y subrayado y abajo el guion. Sin ángulo, nivel, palabras ni duración escritos (corrección del 2026-10-13). Sumar 5 hooks alternativos para el favorito.
 
 ## Investigación de TikTok (13/10)

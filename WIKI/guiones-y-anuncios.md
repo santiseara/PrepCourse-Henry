@@ -73,7 +73,7 @@
 
 ## Registro de preferencias
 - **2026-10-13 · Originalidad > tema.** Gustó el guion de Navidad (13/10 - 1) por original, pero no quiere la tanda entera del mismo tema. Regla: cuando algo gusta por original, se copia la **estructura** (disparador concreto de demanda → gente que ya pide → por qué funciona → precio por pieza → quién compra → por qué empezar ahora), no el tema. Cada guion de la tanda, un comprador o motivo de compra distinto.
-- **2026-10-13 · Guiones limpios.** En la tanda de Resina Rentable pidió sacar las etiquetas (Problema, Valor…) y los segundos: "la idea es que vos lo sepas para armar mejor el guion, pero no lo quiero escrito". Regla: título **Guion N** en negrita y subrayado y abajo el guion con sus `[BROLL]`, nada más. Detalle en [[como-trabajar-con-santiago]].
+- **2026-10-13 · Guiones limpios.** En la tanda de Resina Rentable pidió sacar las etiquetas (Problema, Valor…) y los segundos: "la idea es que vos lo sepas para armar mejor el guion, pero no lo quiero escrito". Regla: título **Guion N** en negrita y subrayado y abajo el guion, nada más. Después pidió sacar también los `[BROLL]`: solo el texto que se lee. Detalle en [[como-trabajar-con-santiago]].
 - **2026-10-13 · Orgánico gana.** De la tanda de formatos TikTok gustó "empaquetá un pedido conmigo" por orgánico: detrás de escena real (un pedido concreto, un mostrador, una ronda de reposición) por sobre afirmaciones. Las natives de esa línea están en `OUTPUTS/2026-10-13-natives-piedras-organicas.md`.
 
 ## Relacionado

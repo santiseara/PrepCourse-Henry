@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Regla: guiones sin B-roll
+- **Corrección de Santiago:** tampoco quiere las líneas `[BROLL]` en la entrega; solo el título y el texto que se lee.
+- **Cambiado:** `WIKI/como-trabajar-con-santiago.md`, `WIKI/guiones-y-anuncios.md`, `WIKI/resina-rentable.md` y `OUTPUTS/2026-10-13-guiones-resina-rentable.md`.
+
 ## 2026-10-13 — Regla: guiones limpios
 - **Corrección de Santiago:** sin etiquetas de estructura ni segundos en los guiones; solo **Guion N** en negrita y subrayado y abajo el guion.
 - **Cambiado:** `WIKI/como-trabajar-con-santiago.md` (regla de formato), `WIKI/guiones-y-anuncios.md` (registro), `WIKI/resina-rentable.md` y `OUTPUTS/2026-10-13-guiones-resina-rentable.md` (reentregado limpio).

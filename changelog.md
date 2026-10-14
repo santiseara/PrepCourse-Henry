@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guiones Chupetines v6
+- **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v6.md` (5 guiones con los elementos del ganador "Si hace 6 meses" + ángulos de piedras: mes desglosado por canal y "Tres cosas").
+- **Cambiado:** `WIKI/index.md` (Outputs; se corrigieron las líneas del UGC con avatar y de las natives de feria).
+
 ## 2026-10-14 — Ad de Pilates "sin saltar ni correr" (rodillas)
 - **Corrección de Santiago:** visuales que no se noten tan IA; B-rolls nuevos solo si es súper necesario.
 - **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Rodillas.mp4` (27 s, pantalla dividida con Caro, B-rolls existentes con look de celular).

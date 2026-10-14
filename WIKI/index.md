@@ -81,11 +81,12 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-14 — Guiones Chupetines v6](../OUTPUTS/2026-10-14-guiones-chupetines-v6.md) — 5 guiones: el mes desglosado, "Tres cosas", diciembre lleno, la caja del súper, el cumpleaños del hijo
 - 2026-10-14 — [Guiones UGC Pilates Hormonal v2](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md): 5 guiones de la experta enfocados en bajar de peso
 - 2026-10-14 — [Guiones UGC Pilates Hormonal](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md): 5 guiones UGC de ~30 s en primera persona con CTA al test gratis
 - [2026-10-14 — Guion Piedras: "Así generé más de 2.000 dólares en un mes"](../OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md) — el mes desglosado por canal (casamiento, feria, locales, WhatsApp), EN/ES
-- [2026-10-14 — Guion Piedras UGC con avatar](../OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md) — respuesta a un comentario, a cámara en la cocina, EN/ES + prompt de escena
-- [2026-10-14 — Natives Piedras: feria v2](../OUTPUTS/2026-10-14-natives-piedras-feria-v2.md) — el baúl a las 6:40, la planilla de rayitas de la hija, la planilla de encargos de Navidad (EN/ES)
+- [2026-10-14 — Guion Piedras UGC con avatar](../OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md) — la caja de 12 piedras para una despedida, a cámara en la cocina, EN/ES + prompt de escena
+- [2026-10-14 — Natives Piedras: feria v2](../OUTPUTS/2026-10-14-natives-piedras-feria-v2.md) — el baúl a las 6:40, la planilla de rayitas de la hija, la planilla de encargos de Navidad (solo EN)
 - [2026-10-14 — Guion Piedras: "Three things" con hook 2](../OUTPUTS/2026-10-14-guion-piedras-three-things-hook-2.md) — cuerpo del ganador con "If you want something to sell from home…"
 - [2026-10-14 — Guiones Piedras v7: variables de "Three things"](../OUTPUTS/2026-10-14-guiones-piedras-v7-three-things.md) — transcripción del ganador + 5 variables EN/ES + 6 hooks
 - 2026-10-14 — [Guiones Resina Rentable v6](../OUTPUTS/2026-10-14-guiones-resina-rentable-v6.md): 4 guiones apuntados al problema y al objetivo (plata propia desde casa, tiró la resina, no sabía cobrar, videos guardados)

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-14 — Ad orgánico de Pilates Hormonal (cortisol, Caro Pilates)
+- **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Cortisol.mp4` (28 s, formato 2: avatar sin fondo en la esquina, B-rolls del VSL, 4 headlines).
+- **Cambiado:**
+  - `OUTPUTS/scripts-vsl/edit_ugc_pip.py`: idioma como argumento, modelo RVM en la carpeta de trabajo, subtítulos sin "…" ni ":".
+  - `WIKI/vsl-reglas-de-armado.md` §6: dónde quedaron los B-rolls de Pilates.
+
 ## 2026-10-14 — Guiones UGC Pilates Hormonal con la experta
 - **Corrección de Santiago:** en los UGC habla la experta, no alumnas.
 - **Cambiado:** `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (5 guiones reescritos en voz de la Maestra Caro) y `WIKI/pilates-hormonal.md` (regla de voz).

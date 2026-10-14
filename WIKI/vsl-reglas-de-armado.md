@@ -127,6 +127,11 @@
   - El fondo se saca con Robust Video Matting en ONNX (`OUTPUTS/scripts-vsl/matte.py`, modelo `rvm_mobilenetv3_fp32.onnx` de los releases de GitHub del proyecto). Corre local y procesa ~4 s de video por segundo.
   - Script: `OUTPUTS/scripts-vsl/edit_ugc_pip.py`. El plan de B-rolls y los headlines van en `plan_pip.json` y `heads_pip.json`, dentro de la carpeta de trabajo.
 
+- **Pilates Hormonal en formato 2 (2026-10-14):** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Cortisol.mp4` (28 s).
+  - Avatar Caro Pilates con "voz roma", en español.
+  - Los **12 B-rolls del VSL** (b01–b12, de Higgsfield) quedaron guardados en `~/Desktop/pilates-hormonal-ad/work/brolls/`. Antes estaban solo en un scratchpad temporal. `b05_embarazada` no se usa.
+  - El script toma el idioma como 5.º argumento (`es`).
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|

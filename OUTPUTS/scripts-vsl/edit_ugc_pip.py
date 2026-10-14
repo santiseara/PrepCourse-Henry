@@ -1,5 +1,5 @@
 """Edición de anuncio UGC "orgánico de TikTok" (variante 2 de los ads de Scented Stones, 2026-10-14).
-Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt>
+Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt> [idioma=en|es]
 La carpeta de trabajo tiene brolls/, sfx/ y fonts/. Necesita matte.py y el modelo RVM (ver RVM abajo).
 
 Diferencias con edit_ugc_split.py (pedido de Santiago: variar las ediciones):
@@ -13,7 +13,7 @@ import sys, os, json, subprocess, unicodedata, difflib, re
 
 FF = os.path.expanduser('~/bin/ffmpeg')
 HERE = os.path.dirname(os.path.abspath(__file__))
-RVM = os.path.expanduser('~/Desktop/scented-stones-ad/work/rvm_mobilenetv3_fp32.onnx')
+RVM = os.path.join(sys.argv[2], 'rvm_mobilenetv3_fp32.onnx')   # el modelo va en la carpeta de trabajo
 SPEED = 1.1
 GAP_MAX, GAP_KEEP = 0.40, 0.18
 PIP_W = 430                          # ancho de la avatar recortada (de 1080)
@@ -22,6 +22,7 @@ CAP_Y = 1080                         # subtítulos arriba de la avatar chiquita
 HEAD_Y = 200
 
 src, wd, out, gpath = sys.argv[1:5]
+LANG = sys.argv[5] if len(sys.argv) > 5 else 'en'
 GUION = open(gpath, encoding='utf-8').read()
 work = os.path.join(wd, 'edit_pip'); os.makedirs(work, exist_ok=True)
 BR, SFX, FONTS = (os.path.join(wd, x) for x in ('brolls', 'sfx', 'fonts'))
@@ -42,7 +43,7 @@ def transcribe(path, cache):
     wav = cache + '.wav'
     run([FF, '-v', 'error', '-y', '-i', path, '-ac', '1', '-ar', '16000', wav])
     m = WhisperModel('small', device='cpu', compute_type='int8')
-    segs, _ = m.transcribe(wav, language='en', word_timestamps=True, beam_size=5, initial_prompt=GUION)
+    segs, _ = m.transcribe(wav, language=LANG, word_timestamps=True, beam_size=5, initial_prompt=GUION)
     words = [{'w': w.word.strip(), 's': w.start, 'e': w.end} for s in segs for w in s.words]
     json.dump(words, open(cache, 'w'), ensure_ascii=False)
     return words
@@ -172,12 +173,12 @@ ev, i = [], 0
 while i < len(toks):
     grp = [toks[i]]
     while (not grp[0].get('money') and len(grp) < 3 and i + len(grp) < len(toks) and not toks[i + len(grp)].get('money')
-           and grp[-1]['w'][-1:] not in '.,?!' and len(' '.join(w['w'] for w in grp)) + len(toks[i + len(grp)]['w']) <= 18):
+           and grp[-1]['w'][-1:] not in '.,?!…:;' and len(' '.join(w['w'] for w in grp)) + len(toks[i + len(grp)]['w']) <= 18):
         grp.append(toks[i + len(grp)])
     a = grp[0]['s']; i += len(grp)
     b = toks[i]['s'] if i < len(toks) else grp[-1]['e'] + 0.3
     b = min(b, grp[-1]['e'] + 0.4)
-    parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!') for w in grp]
+    parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!…:;') for w in grp]
     ev.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{\\pos(540,{CAP_Y})}}' + ' '.join(parts))
 for a, b, txt in heads:
     ev.append(f'Dialogue: 1,{ts(a)},{ts(b)},Head,,0,0,0,,{{\\fscx70\\fscy70\\t(0,110,\\fscx108\\fscy108)\\t(110,190,\\fscx100\\fscy100)}}{txt}')

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Guiones Chupetines v4
+- **Creado:** `OUTPUTS/2026-10-13-guiones-chupetines-v4.md` (3 guiones: Día de la Madre con la florería, la anfitriona de cabañas que repone cada viernes, el regalo de cumpleaños que trae pedidos). Siguen la DNA ganadora y el formato limpio.
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-13 — Guiones Resina Rentable v4 + regla de bodies
 - **Corrección de Santiago:** los bodies no pueden ser teoría ni mini-clase; tienen que seguir la DNA ganadora y convertir.
 - **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md` (guiones 13 a 16).

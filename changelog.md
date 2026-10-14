@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Ad UGC con pantalla dividida (Scented Stones, bridal shower)
+- **Creado:** `OUTPUTS/scripts-vsl/edit_ugc_split.py` (edición de ad corto: pantalla dividida con degradé, headlines rojos, subtítulos de 2 palabras, pop, cha-ching, whoosh y música). Video: `~/Desktop/scented-stones-ad/Scented-Stones-Ad-Bridal.mp4` (36 s, avatar Adsda con la voz Roma en HeyGen).
+- **Cambiado:** `WIKI/vsl-reglas-de-armado.md` (§6 Anuncios UGC con pantalla dividida: estilo de las referencias y receta).
+
 ## 2026-10-14 — Corrección: UGC sin "respuesta a comentario"
 - **Corrección de Santiago:** no quiere guiones con formato de respuesta a un comentario.
 - **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias), `OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md` (v2: caja de pedido para una despedida de soltera).

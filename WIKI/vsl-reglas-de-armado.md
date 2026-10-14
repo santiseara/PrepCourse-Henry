@@ -90,6 +90,32 @@
    Las placas se arman con `mkgfx.py`.
 6. **B-rolls de TikTok (2026-10-13): siempre sin marca de agua.** `yt-dlp` falla con TikTok (Python 3.9); se bajan con la API de tikwm: `curl "https://www.tikwm.com/api/?hd=1&url=<link>"` y se descarga el campo `hdplay` (o `play`). Después se revisan los cuadros para confirmar que no haya logo.
 
+## 6. Anuncios UGC cortos con pantalla dividida (ads de Meta, 2026-10-14)
+- **Referencias:** los ads de crianza en `~/Downloads`: "Qué pasa cuando.mp4" (es el de la pantalla dividida), "Mirá ni debería.mp4", "Si tu hijo.mp4" y "Toda mamá necesita.mp4". Tienen 40–55 s y música suave por debajo (las pausas nunca quedan en silencio).
+- **Formato de la edición:**
+  - la avatar a pantalla completa se alterna con la **pantalla dividida**: avatar arriba y B-roll abajo, desde justo debajo del mentón (y≈900 de 1920), con un **degradé coseno de ~220 px** y sin línea de corte;
+  - el video **arranca con B-roll**.
+- **Subtítulos:**
+  - de 2 palabras, en Arial Black 64, blanco con borde negro, centrados en y≈1400;
+  - no juntan dos oraciones.
+- **Headlines:**
+  - en **rojo** (#E81A2A) con borde negro, en MAYÚSCULAS y en Arial Black 78;
+  - el borde superior va en y≈200, sobre el pelo y arriba de la frente, sin tapar ojos ni cara;
+  - entran con un "pop" de escala;
+  - uno por idea clave, unos 11 en 36 s, de 1–2,4 s cada uno.
+- **Efectos:**
+  - "pop" suave en cada headline;
+  - "cha-ching" en la plata (precio de venta, "lo recuperé con el primer pedido");
+  - whoosh bajito cuando entra un bloque de B-roll.
+- **Ritmo:** recortes de 1–3,5 s de **planos distintos** de cada clip, sin repetir, congelar ni estirar. Recorte de silencios (0,40 → 0,18 s) y **1.1x** (no 1.3x como los VSL).
+- **Avatar en HeyGen:**
+  - Avatares → la avatar → hover en el look → ícono de video → "Creación rápida";
+  - la voz se cambia en "Mis voces" → "voz roma" → "Establecer como predeterminado";
+  - el guion se pega tal cual, en 1080p vertical;
+  - se descarga con el botón de descarga. El `src` del video está bloqueado para JS.
+- **Script:** `OUTPUTS/scripts-vsl/edit_ugc_split.py <heygen.mp4> <carpeta_trabajo> <salida.mp4>`. La carpeta de trabajo tiene `brolls/`, `sfx/` y `fonts/`. El guion va adentro del script, en la variable `GUION`, y también corrige los subtítulos. Los B-rolls y los headlines se anclan a frases en `PLAN` y `HEAD`.
+- Primer ad hecho así: `~/Desktop/scented-stones-ad/Scented-Stones-Ad-Bridal.mp4` (Scented Stones, caja para la despedida de soltera).
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|

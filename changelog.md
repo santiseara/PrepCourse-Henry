@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-14 — Ad UGC "orgánico de TikTok" ($2.000 en un mes, Scented Stones)
+- **Corrección de Santiago:** variar las ediciones y poner pocos headlines, solo en los puntos importantes ("el efecto de sonido cansa").
+- **Creado:**
+  - `OUTPUTS/scripts-vsl/edit_ugc_pip.py`: B-roll a pantalla completa con la avatar recortada sin fondo en la esquina, zoom de salto, 4 headlines, subtítulos con la plata en cifras amarillas.
+  - `OUTPUTS/scripts-vsl/matte.py`: saca el fondo con Robust Video Matting en ONNX.
+  - Video: `~/Desktop/scented-stones-ad/Scented-Stones-Ad-2000-Month.mp4` (41 s).
+- **Cambiado:** `WIKI/vsl-reglas-de-armado.md` (§6: corrección de headlines, formato 2 y registro).
+
 ## 2026-10-14 — Guion "Así generé más de 2.000 dólares en un mes"
 - **Creado:** `OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md` (hook de Santiago + desglose del mes por canal, EN/ES).
 - **Cambiado:** `WIKI/index.md` (Outputs).

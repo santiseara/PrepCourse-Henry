@@ -116,6 +116,17 @@
 - **Script:** `OUTPUTS/scripts-vsl/edit_ugc_split.py <heygen.mp4> <carpeta_trabajo> <salida.mp4>`. La carpeta de trabajo tiene `brolls/`, `sfx/` y `fonts/`. El guion va adentro del script, en la variable `GUION`, y también corrige los subtítulos. Los B-rolls y los headlines se anclan a frases en `PLAN` y `HEAD`.
 - Primer ad hecho así: `~/Desktop/scented-stones-ad/Scented-Stones-Ad-Bridal.mp4` (Scented Stones, caja para la despedida de soltera).
 
+- **Corrección (2026-10-14): "no pongas tantos headlines arriba, porque se hace muy cansador el efecto de sonido; solo los puntos importantes".**
+  - Máximo **3–4 headlines por ad**, solo en los puntos clave: el número grande del hook, la objeción que se rompe, el costo y el CTA.
+  - Cada headline con un solo sonido.
+  - Sin whoosh en cada B-roll.
+- **Variar las ediciones entre ads (2026-10-14).** No repetir siempre la pantalla dividida. Formato 2, "orgánico de TikTok":
+  - B-roll a pantalla completa con la **avatar recortada sin fondo, chiquita en la esquina de abajo a la derecha** (estilo green screen), alternada con la avatar a pantalla completa;
+  - zoom de salto por oración y cortes secos;
+  - subtítulos de 3 palabras en Arial Rounded, con la plata en amarillo.
+  - El fondo se saca con Robust Video Matting en ONNX (`OUTPUTS/scripts-vsl/matte.py`, modelo `rvm_mobilenetv3_fp32.onnx` de los releases de GitHub del proyecto). Corre local y procesa ~4 s de video por segundo.
+  - Script: `OUTPUTS/scripts-vsl/edit_ugc_pip.py`. El plan de B-rolls y los headlines van en `plan_pip.json` y `heads_pip.json`, dentro de la carpeta de trabajo.
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|
@@ -127,6 +138,8 @@
 | 2026-10-13 | Tres Conexiones (Argentina) | B-rolls: recortes de partes específicas, no el TikTok entero, e ir variándolos | §4a |
 | 2026-10-13 | Tres Conexiones (Argentina) | "Ya hay generados 5 brolls, tal vez los podés usar" → revisar el historial de Higgsfield antes de generar | §4a |
 | 2026-10-13 | Pilates Hormonal | Efectos solo en momentos clave: "cha-ching" al decir el precio; no llenarlo | §4b |
+| 2026-10-14 | Scented Stones (ad UGC) | "No pongas tantos headlines arriba, se hace muy cansador el efecto de sonido; solo los puntos importantes" | §6: 3–4 headlines por ad |
+| 2026-10-14 | Scented Stones (ad UGC) | "La idea es variar las ediciones": avatar chiquita sin fondo en una esquina, full UGC orgánico de TikTok | §6: formato 2 |
 
 ## Preguntas abiertas
 - ¿Qué plan de HeyGen hay y cuál es el largo máximo por video?

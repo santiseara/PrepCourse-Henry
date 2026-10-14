@@ -1,0 +1,246 @@
+"""Edición de anuncio UGC "orgánico de TikTok" (variante 2 de los ads de Scented Stones, 2026-10-14).
+Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt>
+La carpeta de trabajo tiene brolls/, sfx/ y fonts/. Necesita matte.py y el modelo RVM (ver RVM abajo).
+
+Diferencias con edit_ugc_split.py (pedido de Santiago: variar las ediciones):
+- B-roll a PANTALLA COMPLETA con la avatar RECORTADA SIN FONDO, chiquita en la esquina de abajo a la derecha
+  (estilo "green screen" de TikTok), alternada con la avatar a pantalla completa y zoom de salto por oración;
+- cortes secos, sin whoosh;
+- POCOS headlines (solo los puntos importantes) y pocos efectos: "el efecto de sonido cansa".
+- subtítulos tipo TikTok: 3 palabras en minúscula, blancos con borde, y la plata resaltada en amarillo.
+"""
+import sys, os, json, subprocess, unicodedata, difflib, re
+
+FF = os.path.expanduser('~/bin/ffmpeg')
+HERE = os.path.dirname(os.path.abspath(__file__))
+RVM = os.path.expanduser('~/Desktop/scented-stones-ad/work/rvm_mobilenetv3_fp32.onnx')
+SPEED = 1.1
+GAP_MAX, GAP_KEEP = 0.40, 0.18
+PIP_W = 430                          # ancho de la avatar recortada (de 1080)
+PIP_X, PIP_Y = 1080 - PIP_W + 20, 1920 - PIP_W * 16 // 9 + 60   # esquina de abajo a la derecha, un poco cortada
+CAP_Y = 1080                         # subtítulos arriba de la avatar chiquita
+HEAD_Y = 200
+
+src, wd, out, gpath = sys.argv[1:5]
+GUION = open(gpath, encoding='utf-8').read()
+work = os.path.join(wd, 'edit_pip'); os.makedirs(work, exist_ok=True)
+BR, SFX, FONTS = (os.path.join(wd, x) for x in ('brolls', 'sfx', 'fonts'))
+
+def run(cmd):
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        print(r.stderr[-3000:]); sys.exit(1)
+
+def duration(path):
+    s = subprocess.run([FF, '-i', path], capture_output=True, text=True).stderr.split('Duration: ')[1].split(',')[0]
+    h, m, x = s.split(':'); return int(h) * 3600 + int(m) * 60 + float(x)
+
+def transcribe(path, cache):
+    if os.path.exists(cache):
+        return json.load(open(cache))
+    from faster_whisper import WhisperModel
+    wav = cache + '.wav'
+    run([FF, '-v', 'error', '-y', '-i', path, '-ac', '1', '-ar', '16000', wav])
+    m = WhisperModel('small', device='cpu', compute_type='int8')
+    segs, _ = m.transcribe(wav, language='en', word_timestamps=True, beam_size=5, initial_prompt=GUION)
+    words = [{'w': w.word.strip(), 's': w.start, 'e': w.end} for s in segs for w in s.words]
+    json.dump(words, open(cache, 'w'), ensure_ascii=False)
+    return words
+
+def norm(s):
+    s = unicodedata.normalize('NFD', s.lower())
+    return ''.join(c for c in s if c.isalnum() and unicodedata.category(c) != 'Mn')
+
+# ---------- Pasada 1: recorte de silencios ----------
+words0 = transcribe(src, os.path.join(work, 'words0.json'))
+dur0 = duration(src)
+keep, cur_s = [], 0.0
+for a, b in zip(words0, words0[1:]):
+    if b['s'] - a['e'] > GAP_MAX:
+        keep.append((cur_s, a['e'] + GAP_KEEP / 2)); cur_s = b['s'] - GAP_KEEP / 2
+keep.append((cur_s, min(dur0, words0[-1]['e'] + 0.5)))
+
+def mapt(t):
+    acc = 0.0
+    for (a, b) in keep:
+        if t < a: return acc
+        if t <= b: return acc + (t - a)
+        acc += b - a
+    return acc
+
+trimmed = os.path.join(work, 'trimmed.mp4')
+if not os.path.exists(trimmed):
+    expr = '+'.join(f'between(t,{a:.3f},{b:.3f})' for a, b in keep)
+    open(os.path.join(work, 'sel.txt'), 'w').write(
+        f"[0:v]select='{expr}',setpts=N/FRAME_RATE/TB,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920[v];"
+        f"[0:a]aselect='{expr}',asetpts=N/SR/TB[a]")
+    run([FF, '-v', 'error', '-y', '-i', src, '-filter_complex_script', os.path.join(work, 'sel.txt'),
+         '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '15', '-preset', 'fast', '-r', '30',
+         '-c:a', 'aac', '-b:a', '192k', trimmed])
+mask = os.path.join(work, 'mask.mp4')
+if not os.path.exists(mask):
+    run(['python3', os.path.join(HERE, 'matte.py'), trimmed, RVM, mask, '540'])
+
+words = []
+for w in words0:   # Whisper parte "thirty" "-five": se une al anterior
+    w = {'w': w['w'], 's': mapt(w['s']) / SPEED, 'e': mapt(w['e']) / SPEED}
+    if words and w['w'][:1] == '-':
+        words[-1] = {**words[-1], 'w': words[-1]['w'] + w['w'], 'e': w['e']}
+    else:
+        words.append(w)
+gt = GUION.split()
+a_, b_ = [norm(w['w']) for w in words], [norm(x) for x in gt]
+for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a_, b_, autojunk=False).get_opcodes():
+    if op in ('equal', 'replace') and i2 - i1 == j2 - j1:
+        for i, j in zip(range(i1, i2), range(j1, j2)):
+            words[i]['w'] = gt[j]
+total = mapt(dur0) / SPEED
+N = [norm(w['w']) for w in words]
+
+def find(phrase, end=False):
+    for alt in phrase.split('|'):
+        toks = [t for t in (norm(x) for x in alt.split()) if t]
+        for i in range(len(N) - len(toks) + 1):
+            if N[i:i + len(toks)] == toks:
+                return words[i + len(toks) - 1]['e'] if end else words[i]['s']
+    print('NO ENCONTRADO:', phrase); return None
+
+# ---------- B-roll a pantalla completa + avatar recortada en la esquina ----------
+# (clip, frase donde entra, frase donde termina, segundo del clip). Planos distintos, sin repetir.
+PLAN = json.load(open(os.path.join(wd, 'plan_pip.json')))
+brolls = []
+for name, p1, p2, ss in PLAN:
+    a, b = find(p1), find(p2, end=True)
+    if a is None or b is None: continue
+    a = 0.0 if a < 0.3 else a - 0.06
+    b = b + 0.12
+    if brolls and a - brolls[-1][2] < 0.45:
+        brolls[-1] = (brolls[-1][0], brolls[-1][1], a, brolls[-1][3])
+    f = os.path.join(BR, name + '.mp4')
+    brolls.append((f, a, a + min(b - a, duration(f) - ss), ss))
+pip_iv = []
+for f, a, b, ss in brolls:
+    if pip_iv and a - pip_iv[-1][1] < 0.05: pip_iv[-1] = (pip_iv[-1][0], b)
+    else: pip_iv.append((a, b))
+
+# zoom de salto: en los tramos de avatar a pantalla completa, una oración sí y otra no
+starts = [0.0] + [words[i + 1]['s'] for i in range(len(words) - 1) if words[i]['w'][-1:] in '.?!']
+zoom = [(starts[i], starts[i + 1] if i + 1 < len(starts) else total) for i in range(1, len(starts), 2)]
+
+# ---------- Headlines: solo los puntos importantes ----------
+HEAD = json.load(open(os.path.join(wd, 'heads_pip.json')))
+heads, sfx = [], []
+for p, txt, fx, d in HEAD:
+    t = find(p)
+    if t is None: continue
+    heads.append((t, min(t + d, total), txt))
+    if fx: sfx.append((fx + '.wav', t, 0.9 if fx == 'chaching' else 0.5))
+
+# ---------- Subtítulos tipo TikTok (3 palabras, la plata en amarillo) ----------
+def ts(t): return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}'
+# las cantidades de plata se muestran en cifras ("eight hundred and fifty" -> "$850"), en amarillo y en su propio bloque
+NUM = {'a': 1, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9,
+       'ten': 10, 'twenty': 20, 'thirty': 30, 'forty': 40, 'fifty': 50, 'sixty': 60, 'seventy': 70, 'eighty': 80, 'ninety': 90}
+def numval(toks):
+    total_, cur = 0, 0
+    for t in toks:
+        t = t.lower().strip('.,?!')
+        if t == 'and': continue
+        if t == 'hundred': cur = max(cur, 1) * 100
+        elif t == 'thousand': total_ += max(cur, 1) * 1000; cur = 0
+        elif '-' in t: cur += sum(NUM.get(x, 0) for x in t.split('-'))
+        else: cur += NUM[t]
+    return total_ + cur
+toks = []
+i = 0
+while i < len(words):
+    j = i
+    while j < len(words) and (words[j]['w'].lower().strip('.,?!') in NUM or words[j]['w'].lower().strip('.,?!') in ('hundred', 'thousand', 'and')
+                              or all(x in NUM for x in words[j]['w'].lower().strip('.,?!').split('-'))):
+        if words[j]['w'][-1:] in '.,?!': j += 1; break
+        j += 1
+    while j > i and words[j - 1]['w'].lower().strip('.,?!') == 'and': j -= 1
+    span = [w['w'] for w in words[i:j]]
+    nxt = words[j]['w'].lower().strip('.,?!') if j < len(words) else ''
+    if any(s.lower().strip('.,?!') in ('hundred', 'thousand') for s in span) and nxt not in ('stones',):
+        e = words[j - 1]['e']
+        if nxt == 'dollars': e = words[j]['e']; j += 1
+        toks.append({'w': f'${numval(span):,}', 's': words[i]['s'], 'e': e, 'money': True}); i = j
+    else:
+        toks.append(dict(words[i])); i += 1
+ev, i = [], 0
+while i < len(toks):
+    grp = [toks[i]]
+    while (not grp[0].get('money') and len(grp) < 3 and i + len(grp) < len(toks) and not toks[i + len(grp)].get('money')
+           and grp[-1]['w'][-1:] not in '.,?!' and len(' '.join(w['w'] for w in grp)) + len(toks[i + len(grp)]['w']) <= 18):
+        grp.append(toks[i + len(grp)])
+    a = grp[0]['s']; i += len(grp)
+    b = toks[i]['s'] if i < len(toks) else grp[-1]['e'] + 0.3
+    b = min(b, grp[-1]['e'] + 0.4)
+    parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!') for w in grp]
+    ev.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{\\pos(540,{CAP_Y})}}' + ' '.join(parts))
+for a, b, txt in heads:
+    ev.append(f'Dialogue: 1,{ts(a)},{ts(b)},Head,,0,0,0,,{{\\fscx70\\fscy70\\t(0,110,\\fscx108\\fscy108)\\t(110,190,\\fscx100\\fscy100)}}{txt}')
+ass = os.path.join(work, 'subs.ass')
+open(ass, 'w', encoding='utf-8').write(f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Arial Rounded MT Bold,68,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,5,2,5,60,60,0,1
+Style: Head,Arial Black,80,&H002A1AE8,&H002A1AE8,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,7,0,8,50,50,{HEAD_Y},1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+""" + '\n'.join(ev) + '\n')
+
+# ---------- Pasada 2: video ----------
+def en(iv): return '+'.join(f'between(t,{a:.3f},{b:.3f})' for a, b in iv) or '0'
+PH = PIP_W * 16 // 9
+inputs = ['-i', trimmed, '-i', mask]
+for f, a, b, ss in brolls: inputs += ['-ss', f'{ss:.2f}', '-t', f'{(b - a) + 0.3:.2f}', '-i', f]
+fc = [f"[0:v]setpts=PTS/{SPEED},fps=30,split=3[base][zs][ps]",
+      "[zs]scale=1210:-2,crop=1080:1920:65:40[zoom]",
+      f"[base][zoom]overlay=0:0:enable='{en(zoom)}'[v0]",
+      f"[1:v]setpts=PTS/{SPEED},fps=30,scale={PIP_W}:{PH},format=gray[pm]",
+      f"[ps]scale={PIP_W}:{PH}[pv]",
+      "[pv][pm]alphamerge[pip]"]
+last = 'v0'
+for i, (f, a, b, ss) in enumerate(brolls):
+    fc.append(f"[{2 + i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setpts=PTS-STARTPTS+{a:.3f}/TB[b{i}]")
+    fc.append(f"[{last}][b{i}]overlay=0:0:eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]")
+    last = f'v{i + 1}'
+fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vp]")
+assp = ass.replace(':', r'\:')
+fc.append(f"[vp]ass='{assp}':fontsdir='{FONTS}',format=yuv420p[vout]")
+fc.append(f"[0:a]atempo={SPEED}[aout]")
+open(os.path.join(work, 'fc.txt'), 'w').write(';\n'.join(fc))
+vid = os.path.join(work, 'video_voz.mkv')
+run([FF, '-v', 'error', '-y'] + inputs + ['-filter_complex_script', os.path.join(work, 'fc.txt'),
+     '-map', '[vout]', '-map', '[aout]', '-t', f'{total:.2f}', '-r', '30',
+     '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', '-c:a', 'pcm_s16le', vid])
+
+# ---------- Audio: voz -14 LUFS, música muy baja con ducking, pocos efectos ----------
+music = os.path.join(work, 'music.wav')
+run(['python3', os.path.join(HERE, 'music.py'), f'{total + 1:.1f}', music])
+ain = ['-i', vid, '-i', music]
+for f, _, _ in sfx: ain += ['-i', os.path.join(SFX, f)]
+af = ["[0:a]loudnorm=I=-14:TP=-1.5:LRA=11,asplit=2[voz][sc]",
+      "[1:a]loudnorm=I=-33:TP=-9[mus]",
+      "[mus][sc]sidechaincompress=threshold=0.03:ratio=3:attack=20:release=400[duck]"]
+mix = ['[voz]', '[duck]']
+for i, (f, t, g) in enumerate(sfx):
+    ms = int(t * 1000)
+    af.append(f"[{2 + i}:a]volume={g * 0.55:.2f},adelay={ms}|{ms}[s{i}]"); mix.append(f'[s{i}]')
+af.append(''.join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.95[aout]")
+open(os.path.join(work, 'af.txt'), 'w').write(';\n'.join(af))
+run([FF, '-v', 'error', '-y'] + ain + ['-filter_complex_script', os.path.join(work, 'af.txt'),
+     '-map', '0:v', '-map', '[aout]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
+     '-t', f'{total:.2f}', '-movflags', '+faststart', out])
+json.dump({'brolls': [(os.path.basename(f), round(a, 2), round(b, 2), ss) for f, a, b, ss in brolls],
+           'heads': [(round(a, 2), round(b, 2), t) for a, b, t in heads], 'sfx': [(f, round(t, 2)) for f, t, g in sfx]},
+          open(os.path.join(work, 'plan.json'), 'w'), indent=1)
+print('listo:', out, f'duración {total:.1f}s', 'brolls', len(brolls), 'headlines', len(heads), 'efectos', len(sfx))

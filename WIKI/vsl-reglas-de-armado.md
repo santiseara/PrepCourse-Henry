@@ -132,6 +132,18 @@
   - Los **12 B-rolls del VSL** (b01–b12, de Higgsfield) quedaron guardados en `~/Desktop/pilates-hormonal-ad/work/brolls/`. Antes estaban solo en un scratchpad temporal. `b05_embarazada` no se usa.
   - El script toma el idioma como 5.º argumento (`es`).
 
+- **Formato 3, "cortes + green screen grande" (2026-10-14).** Pedido de Santiago: "variá la edición, no quiero que pongas el avatar chico".
+  - B-roll a **pantalla completa sin avatar** (`full`) y avatar recortada **en grande** delante del B-roll (`gs`, bajada 330 px; el subtítulo va al pecho).
+  - En el resto, avatar a pantalla completa con zoom de salto.
+  - Va en el mismo script: 5.º campo de cada entrada del plan (`pip`, `full` o `gs`), y el plan se pasa como 6.º argumento.
+  - Primer ad: `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Asia.mp4` (28 s, Caro Pilates, guion "mujeres de 60 en Asia").
+- **B-rolls de ejercicio en Higgsfield (2026-10-14):**
+  - **5 clips con Kling 2.6** (5 créditos cada uno, 25 en total, sin audio, 5 s, 9:16): parque con asiáticas de 60, templo con niebla, sentadilla contra la pared, flexiones contra la pared en casa y plancha contra la pared con brillo en el core.
+  - Guardados en `~/Desktop/pilates-hormonal-ad/work/brolls/h1–h5`.
+  - Se bajan sin el botón: leyendo el `src` de los `<video>` del historial, que en Higgsfield no está bloqueado, y con `curl`.
+  - La sentadilla contra la pared sirve solo los primeros 3 s, porque después la cámara se mete en el cuerpo.
+- **Whisper inventa palabras al principio** cuando se le pasa el guion como `initial_prompt` (salió "Después de un minuto"). El script descarta las que no están en el guion.
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|
@@ -145,6 +157,7 @@
 | 2026-10-13 | Pilates Hormonal | Efectos solo en momentos clave: "cha-ching" al decir el precio; no llenarlo | §4b |
 | 2026-10-14 | Scented Stones (ad UGC) | "No pongas tantos headlines arriba, se hace muy cansador el efecto de sonido; solo los puntos importantes" | §6: 3–4 headlines por ad |
 | 2026-10-14 | Scented Stones (ad UGC) | "La idea es variar las ediciones": avatar chiquita sin fondo en una esquina, full UGC orgánico de TikTok | §6: formato 2 |
+| 2026-10-14 | Pilates Hormonal (ad "Asia") | "Variá la edición, no quiero que pongas el avatar chico"; 5 B-rolls nuevos de ejercicio que llamen la atención | §6: formato 3 |
 
 ## Preguntas abiertas
 - ¿Qué plan de HeyGen hay y cuál es el largo máximo por video?

@@ -1,5 +1,5 @@
 """Edición de anuncio UGC "orgánico de TikTok" (variante 2 de los ads de Scented Stones, 2026-10-14).
-Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt> [idioma=en|es]
+Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt> [idioma=en|es] [plan.json]
 La carpeta de trabajo tiene brolls/, sfx/ y fonts/. Necesita matte.py y el modelo RVM (ver RVM abajo).
 
 Diferencias con edit_ugc_split.py (pedido de Santiago: variar las ediciones):
@@ -18,6 +18,8 @@ SPEED = 1.1
 GAP_MAX, GAP_KEEP = 0.40, 0.18
 PIP_W = 430                          # ancho de la avatar recortada (de 1080)
 PIP_X, PIP_Y = 1080 - PIP_W + 20, 1920 - PIP_W * 16 // 9 + 60   # esquina de abajo a la derecha, un poco cortada
+GS_DY = 330                          # cuánto se baja la avatar grande en modo 'gs'
+CAP_Y_GS = 1560
 CAP_Y = 1080                         # subtítulos arriba de la avatar chiquita
 HEAD_Y = 200
 
@@ -91,10 +93,15 @@ for w in words0:   # Whisper parte "thirty" "-five": se une al anterior
         words.append(w)
 gt = GUION.split()
 a_, b_ = [norm(w['w']) for w in words], [norm(x) for x in gt]
+drop = set()
 for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a_, b_, autojunk=False).get_opcodes():
     if op in ('equal', 'replace') and i2 - i1 == j2 - j1:
         for i, j in zip(range(i1, i2), range(j1, j2)):
             words[i]['w'] = gt[j]
+    elif op == 'delete':                 # palabras que Whisper inventó (no están en el guion)
+        drop.update(range(i1, i2))
+if drop: print('descartadas:', ' '.join(words[i]['w'] for i in sorted(drop)))
+words = [w for i, w in enumerate(words) if i not in drop]
 total = mapt(dur0) / SPEED
 N = [norm(w['w']) for w in words]
 
@@ -108,21 +115,30 @@ def find(phrase, end=False):
 
 # ---------- B-roll a pantalla completa + avatar recortada en la esquina ----------
 # (clip, frase donde entra, frase donde termina, segundo del clip). Planos distintos, sin repetir.
-PLAN = json.load(open(os.path.join(wd, 'plan_pip.json')))
+# Cada entrada puede llevar un 5.º campo con el modo (formato 3, 2026-10-14):
+#   'pip'  = B-roll + avatar chiquita sin fondo en la esquina (por defecto)
+#   'full' = solo el B-roll a pantalla completa (corte, sin avatar)
+#   'gs'   = avatar recortada EN GRANDE delante del B-roll (green screen)
+PLAN = json.load(open(os.path.join(wd, sys.argv[6] if len(sys.argv) > 6 else 'plan_pip.json')))
 brolls = []
-for name, p1, p2, ss in PLAN:
+for item in PLAN:
+    name, p1, p2, ss = item[:4]; mode = item[4] if len(item) > 4 else 'pip'
     a, b = find(p1), find(p2, end=True)
     if a is None or b is None: continue
-    a = 0.0 if a < 0.3 else a - 0.06
+    a = 0.0 if a < 0.6 else a - 0.06
     b = b + 0.12
     if brolls and a - brolls[-1][2] < 0.45:
-        brolls[-1] = (brolls[-1][0], brolls[-1][1], a, brolls[-1][3])
+        brolls[-1] = (*brolls[-1][:2], a, *brolls[-1][3:])
     f = os.path.join(BR, name + '.mp4')
-    brolls.append((f, a, a + min(b - a, duration(f) - ss), ss))
-pip_iv = []
-for f, a, b, ss in brolls:
-    if pip_iv and a - pip_iv[-1][1] < 0.05: pip_iv[-1] = (pip_iv[-1][0], b)
-    else: pip_iv.append((a, b))
+    brolls.append((f, a, a + min(b - a, duration(f) - ss), ss, mode))
+def merge(iv):
+    out_ = []
+    for a, b in iv:
+        if out_ and a - out_[-1][1] < 0.05: out_[-1] = (out_[-1][0], b)
+        else: out_.append((a, b))
+    return out_
+pip_iv = merge([(a, b) for f, a, b, ss, m in brolls if m == 'pip'])
+gs_iv = merge([(a, b) for f, a, b, ss, m in brolls if m == 'gs'])
 
 # zoom de salto: en los tramos de avatar a pantalla completa, una oración sí y otra no
 starts = [0.0] + [words[i + 1]['s'] for i in range(len(words) - 1) if words[i]['w'][-1:] in '.?!']
@@ -179,7 +195,8 @@ while i < len(toks):
     b = toks[i]['s'] if i < len(toks) else grp[-1]['e'] + 0.3
     b = min(b, grp[-1]['e'] + 0.4)
     parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!…:;') for w in grp]
-    ev.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{\\pos(540,{CAP_Y})}}' + ' '.join(parts))
+    cy = CAP_Y_GS if any(x - 0.05 <= a < y for x, y in gs_iv) else CAP_Y   # con la avatar grande, el subtítulo va al pecho
+    ev.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{\\pos(540,{cy})}}' + ' '.join(parts))
 for a, b, txt in heads:
     ev.append(f'Dialogue: 1,{ts(a)},{ts(b)},Head,,0,0,0,,{{\\fscx70\\fscy70\\t(0,110,\\fscx108\\fscy108)\\t(110,190,\\fscx100\\fscy100)}}{txt}')
 ass = os.path.join(work, 'subs.ass')
@@ -202,19 +219,23 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 def en(iv): return '+'.join(f'between(t,{a:.3f},{b:.3f})' for a, b in iv) or '0'
 PH = PIP_W * 16 // 9
 inputs = ['-i', trimmed, '-i', mask]
-for f, a, b, ss in brolls: inputs += ['-ss', f'{ss:.2f}', '-t', f'{(b - a) + 0.3:.2f}', '-i', f]
-fc = [f"[0:v]setpts=PTS/{SPEED},fps=30,split=3[base][zs][ps]",
+for f, a, b, ss, m in brolls: inputs += ['-ss', f'{ss:.2f}', '-t', f'{(b - a) + 0.3:.2f}', '-i', f]
+fc = [f"[0:v]setpts=PTS/{SPEED},fps=30,split=4[base][zs][ps][gv]",
       "[zs]scale=1210:-2,crop=1080:1920:65:40[zoom]",
       f"[base][zoom]overlay=0:0:enable='{en(zoom)}'[v0]",
-      f"[1:v]setpts=PTS/{SPEED},fps=30,scale={PIP_W}:{PH},format=gray[pm]",
+      f"[1:v]setpts=PTS/{SPEED},fps=30,split=2[m1][m2]",
+      f"[m1]scale={PIP_W}:{PH},format=gray[pm]",
+      "[m2]scale=1080:1920,format=gray[gm]",
+      "[gv][gm]alphamerge[gs]",
       f"[ps]scale={PIP_W}:{PH}[pv]",
       "[pv][pm]alphamerge[pip]"]
 last = 'v0'
-for i, (f, a, b, ss) in enumerate(brolls):
+for i, (f, a, b, ss, m) in enumerate(brolls):
     fc.append(f"[{2 + i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setpts=PTS-STARTPTS+{a:.3f}/TB[b{i}]")
     fc.append(f"[{last}][b{i}]overlay=0:0:eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]")
     last = f'v{i + 1}'
-fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vp]")
+fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vq]")
+fc.append(f"[vq][gs]overlay=0:{GS_DY}:enable='{en(gs_iv)}'[vp]")   # avatar grande, bajada para que se vea el B-roll arriba
 assp = ass.replace(':', r'\:')
 fc.append(f"[vp]ass='{assp}':fontsdir='{FONTS}',format=yuv420p[vout]")
 fc.append(f"[0:a]atempo={SPEED}[aout]")
@@ -241,7 +262,7 @@ open(os.path.join(work, 'af.txt'), 'w').write(';\n'.join(af))
 run([FF, '-v', 'error', '-y'] + ain + ['-filter_complex_script', os.path.join(work, 'af.txt'),
      '-map', '0:v', '-map', '[aout]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
      '-t', f'{total:.2f}', '-movflags', '+faststart', out])
-json.dump({'brolls': [(os.path.basename(f), round(a, 2), round(b, 2), ss) for f, a, b, ss in brolls],
+json.dump({'brolls': [(os.path.basename(f), round(a, 2), round(b, 2), ss, m) for f, a, b, ss, m in brolls],
            'heads': [(round(a, 2), round(b, 2), t) for a, b, t in heads], 'sfx': [(f, round(t, 2)) for f, t, g in sfx]},
           open(os.path.join(work, 'plan.json'), 'w'), indent=1)
 print('listo:', out, f'duración {total:.1f}s', 'brolls', len(brolls), 'headlines', len(heads), 'efectos', len(sfx))

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-14 — Ad de Pilates "mujeres de 60 en Asia" (formato 3)
+- **Corrección de Santiago:** variar la edición, sin la avatar chica.
+- **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Asia.mp4` (28 s: cortes a B-roll de pantalla completa y Caro recortada en grande delante del B-roll). Lleva 5 B-rolls nuevos de Higgsfield (Kling 2.6, 25 créditos).
+- **Cambiado:**
+  - `OUTPUTS/scripts-vsl/edit_ugc_pip.py`: modos `full` y `gs`, plan como argumento, descarta palabras inventadas por Whisper.
+  - `WIKI/vsl-reglas-de-armado.md` §6.
+
 ## 2026-10-14 — Ad orgánico de Pilates Hormonal (cortisol, Caro Pilates)
 - **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Cortisol.mp4` (28 s, formato 2: avatar sin fondo en la esquina, B-rolls del VSL, 4 headlines).
 - **Cambiado:**

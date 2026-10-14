@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guion "Así generé más de 2.000 dólares en un mes"
+- **Creado:** `OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md` (hook de Santiago + desglose del mes por canal, EN/ES).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Ad UGC con pantalla dividida (Scented Stones, bridal shower)
 - **Creado:** `OUTPUTS/scripts-vsl/edit_ugc_split.py` (edición de ad corto: pantalla dividida con degradé, headlines rojos, subtítulos de 2 palabras, pop, cha-ching, whoosh y música). Video: `~/Desktop/scented-stones-ad/Scented-Stones-Ad-Bridal.mp4` (36 s, avatar Adsda con la voz Roma en HeyGen).
 - **Cambiado:** `WIKI/vsl-reglas-de-armado.md` (§6 Anuncios UGC con pantalla dividida: estilo de las referencias y receta).

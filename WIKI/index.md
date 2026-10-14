@@ -80,6 +80,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-14 — Guion Piedras: "Así generé más de 2.000 dólares en un mes"](../OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md) — el mes desglosado por canal (casamiento, feria, locales, WhatsApp), EN/ES
 - [2026-10-14 — Guion Piedras UGC con avatar](../OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md) — respuesta a un comentario, a cámara en la cocina, EN/ES + prompt de escena
 - [2026-10-14 — Natives Piedras: feria v2](../OUTPUTS/2026-10-14-natives-piedras-feria-v2.md) — el baúl a las 6:40, la planilla de rayitas de la hija, la planilla de encargos de Navidad (EN/ES)
 - [2026-10-14 — Guion Piedras: "Three things" con hook 2](../OUTPUTS/2026-10-14-guion-piedras-three-things-hook-2.md) — cuerpo del ganador con "If you want something to sell from home…"

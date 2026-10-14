@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-13 — Guiones Resina Rentable v4 + regla de bodies
+- **Corrección de Santiago:** los bodies no pueden ser teoría ni mini-clase; tienen que seguir la DNA ganadora y convertir.
+- **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md` (guiones 13 a 16).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias), `WIKI/resina-rentable.md` e `index.md`.
+
 ## 2026-10-13 — Guiones Resina Rentable v3
 - **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md`: guiones 9 a 12 con el copy textual de la landing.
 - **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.

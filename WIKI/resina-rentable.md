@@ -35,7 +35,7 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 
 ## Reglas propias de esta oferta (pisan las generales de [[guiones-y-anuncios]])
 - **Duración:** 50 a 60 segundos, unas 150 a 175 palabras (la regla general es 30 s).
-- **Estructura interna (no se escribe):** Hook · Problema · Valor · Beneficios · Urgencia + CTA. Las etiquetas no van en la entrega. El hook trae la promesa o el resultado en los primeros 3 segundos y el dolor entra después, corto.
+- **Estructura interna (no se escribe):** la DNA ganadora de [[scented-stones]] (historia en primera persona, origen accidental, demanda y encargos, rutina fácil, curso como puerta barata, CTA). ⚠️ El brief pedía un bloque de "valor" (dato útil); Santiago lo corrigió el 13/10: nada de clases ni teoría. Las etiquetas no van en la entrega. El hook trae la promesa o el resultado en los primeros 3 segundos y el dolor entra después, corto.
 - **Precio permitido, solo en pesos** y contra el kit. Nunca porcentajes.
 - **Sin cifras de ingreso** ni testimonios inventados. Si hay protagonista, es la narradora contando su experiencia, sin números.
 - **B-roll:** no se escribe en la entrega (corrección del 2026-10-13). Material disponible para pensar el guion: video de manos (vertido con flores y hojas de oro, soplete, desmolde a contraluz), fotos de producto y mockup del curso.
@@ -50,6 +50,7 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 - 13/10 — [Guiones 1 a 4](../OUTPUTS/2026-10-13-guiones-resina-rentable.md): mini-clase de burbujas, posavasos conmigo, la que tiró la plata, a cuánto vender un llavero.
 - 13/10 — [Guiones 5 a 8 + guion 2 con el hook 2](../OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md): fiestas de fin de año, qué comprar primero (UV o epoxi), bordes y pulido, oferta directa con precio y garantía.
 - 13/10 — [Guiones 9 a 12](../OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md): pedido "más alineados a la landing". Hooks con las frases textuales de la landing (titular de 7 días, "el problema no sos vos", sin taller ni experiencia, stack de 117.940 contra 15.990).
+- 13/10 — [Guiones 13 a 16](../OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md): con la DNA ganadora. Me la encargan (guion 1 de piedras), nunca quise un emprendimiento (guion 2), la cuñada (guion 3), empaquetá souvenirs de un bautismo conmigo (orgánico).
 
 ## Preguntas abiertas
 - ¿Cuántos proyectos trae el curso?

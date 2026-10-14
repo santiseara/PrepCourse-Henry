@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guion UGC con avatar (piedras)
+- **Creado:** `OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md` (formato respuesta a comentario, EN/ES, ~40 s, + prompt de imagen base del avatar en 9:16).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Corrección: natives solo en inglés
 - **Corrección de Santiago:** las descripciones de las natives van siempre en inglés, sin versión en español.
 - **Cambiado:** `WIKI/natives-ganadoras.md` (plantilla, correcciones y tanda 14/10), `WIKI/como-trabajar-con-santiago.md` (excepción a la regla de idiomas), `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md` (sin las versiones ES).

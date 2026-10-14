@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Piedras: "Three things" con hook 2
+- **Creado:** `OUTPUTS/2026-10-14-guion-piedras-three-things-hook-2.md` (guion 6: cuerpo del ganador + hook 2, EN/ES).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Piedras: ganador "Three things" + variables
 - **Fuente:** video `~/Downloads/Three things.MOV` (transcripto localmente).
 - **Creado:** `OUTPUTS/2026-10-14-guiones-piedras-v7-three-things.md` (transcripción, 5 guiones variables EN/ES y 6 hooks).

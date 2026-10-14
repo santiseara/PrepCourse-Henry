@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Pilates Hormonal: página en la WIKI + guiones UGC
+- **Creado:** `WIKI/pilates-hormonal.md` (ficha juntando VSL, quiz, descripciones y contexto maestro) y `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (5 guiones UGC).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-14 — Ad UGC "orgánico de TikTok" ($2.000 en un mes, Scented Stones)
 - **Corrección de Santiago:** variar las ediciones y poner pocos headlines, solo en los puntos importantes ("el efecto de sonido cansa").
 - **Creado:**

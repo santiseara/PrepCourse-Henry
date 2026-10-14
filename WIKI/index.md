@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
 - ✅ [[guiones-y-anuncios]] — Reglas fijas de copy, variación real, ángulos validados, CTAs, natives y descripciones.
 - ✅ [[perfil-y-negocio]] — Quién es Santiago, su ciclo de trabajo, precios, stack completo y objetivos.
@@ -80,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-14 — [Guiones UGC Pilates Hormonal](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md): 5 guiones UGC de ~30 s en primera persona con CTA al test gratis
 - [2026-10-14 — Guion Piedras: "Así generé más de 2.000 dólares en un mes"](../OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md) — el mes desglosado por canal (casamiento, feria, locales, WhatsApp), EN/ES
 - [2026-10-14 — Guion Piedras UGC con avatar](../OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md) — respuesta a un comentario, a cámara en la cocina, EN/ES + prompt de escena
 - [2026-10-14 — Natives Piedras: feria v2](../OUTPUTS/2026-10-14-natives-piedras-feria-v2.md) — el baúl a las 6:40, la planilla de rayitas de la hija, la planilla de encargos de Navidad (EN/ES)

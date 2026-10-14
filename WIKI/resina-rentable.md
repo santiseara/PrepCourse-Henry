@@ -49,6 +49,7 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 ## Tandas
 - 13/10 — [Guiones 1 a 4](../OUTPUTS/2026-10-13-guiones-resina-rentable.md): mini-clase de burbujas, posavasos conmigo, la que tiró la plata, a cuánto vender un llavero.
 - 13/10 — [Guiones 5 a 8 + guion 2 con el hook 2](../OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md): fiestas de fin de año, qué comprar primero (UV o epoxi), bordes y pulido, oferta directa con precio y garantía.
+- 13/10 — [Guiones 9 a 12](../OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md): pedido "más alineados a la landing". Hooks con las frases textuales de la landing (titular de 7 días, "el problema no sos vos", sin taller ni experiencia, stack de 117.940 contra 15.990).
 
 ## Preguntas abiertas
 - ¿Cuántos proyectos trae el curso?

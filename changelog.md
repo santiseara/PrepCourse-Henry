@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Guiones Resina Rentable v3
+- **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md`: guiones 9 a 12 con el copy textual de la landing.
+- **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.
+
 ## 2026-10-13 — Guiones Resina Rentable v2
 - **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md`: guion 2 armado con el hook 2 + guiones 5 a 8.
 - **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.

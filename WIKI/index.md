@@ -80,6 +80,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-13 — [Guiones Resina Rentable v3](../OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md): 4 guiones con el copy de la landing (titular de 7 días, "el problema no sos vos", objeciones en ráfaga, stack de valor)
 - 2026-10-13 — [Guiones Resina Rentable v2](../OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md): guion 2 con el hook 2 + 4 nuevos (fiestas, qué comprar primero, bordes y pulido, oferta directa)
 - 2026-10-13 — [Descripciones Pilates Hormonal](../OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md): 3 primary text cortos con emojis (contraintuitivo+autoridad, recuperación de identidad, humblebrag con edad), CTA al test gratis
 - 2026-10-13 — [Guiones Resina Rentable](../OUTPUTS/2026-10-13-guiones-resina-rentable.md): 4 guiones de 50–60 s (mini-clase de burbujas, posavasos conmigo, la que tiró la plata, a cuánto vender un llavero) + 5 hooks

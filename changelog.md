@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Corrección: natives solo en inglés
+- **Corrección de Santiago:** las descripciones de las natives van siempre en inglés, sin versión en español.
+- **Cambiado:** `WIKI/natives-ganadoras.md` (plantilla, correcciones y tanda 14/10), `WIKI/como-trabajar-con-santiago.md` (excepción a la regla de idiomas), `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md` (sin las versiones ES).
+
 ## 2026-10-14 — Natives de feria v2
 - **Creado:** `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md` (natives de feria 3 a 5: el baúl cargado a las 6:40, la planilla de la hija, la planilla de encargos de Navidad). Prompt de imagen 3:4 + descripción EN/ES, continuidad con las de feria del 12/10.
 - **Cambiado:** `WIKI/index.md` (Outputs).

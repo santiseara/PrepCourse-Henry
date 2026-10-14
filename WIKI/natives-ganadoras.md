@@ -26,7 +26,7 @@
 ## Plantilla para armar una native nueva
 1. **Imagen:** foto tipo celular en 3:4, con un objeto que sirva de prueba (frasco de billetes, cartel de agotado, recibo, lista de pedidos, nota de un cliente). Prompt en inglés, con el texto de la imagen entre comillas y "spelled exactly".
 2. **Descripción:** hook con número, lugar y hora → describir la imagen → quién es Emma → antes (dolor concreto) → origen del producto → primera demanda sin vender → cuentas → novedad sensorial → objeciones → producto como consecuencia → disclaimers → CTA suave → cierre binario a 30 días.
-3. **Idiomas:** inglés y español con voseo, las dos completas ([[como-trabajar-con-santiago]]).
+3. **Idioma: la descripción va siempre solo en inglés.** No hace falta la versión en español (corrección de Santiago, 2026-10-14). En el chat, lo que se explica de cada native va en español, fuera de los bloques.
 4. **Entrega:** bloque de código en el chat, archivo en `OUTPUTS/` y portapapeles.
 
 ## ⚠️ Riesgos que traen las ganadoras
@@ -38,8 +38,14 @@
 ## Natives propias de la tanda 11/10
 - `OUTPUTS/2026-10-11-natives-piedras.md`: el recibo de $14.37, la tienda que repone cada mes, las cajas de regalo y el pedido de casamiento de 100 piezas. Cada una con prompt y descripción en inglés y español.
 
+## Correcciones
+- **2026-10-14 · Natives solo en inglés.** Santiago: "Las descripciones de las native van siempre en inglés, no las necesito en español". Regla: prompt de imagen y descripción en inglés, sin versión ES.
+
 ## Natives propias de la tanda 13/10
 - `OUTPUTS/2026-10-13-natives-piedras-organicas.md`: ángulo orgánico / detrás de escena. Las 24 bolsitas del grado, la canasta de Dana en la peluquería y la ronda de reposición del lunes (74 piedras para 3 locales). Suma a la peluquera Dana como personaje recurrente.
+
+## Natives propias de la tanda 14/10
+- `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md`: ángulo feria. El baúl cargado a las 6:40 (4ª feria), la planilla de rayitas de la hija y la planilla de encargos de Navidad (temporada que empieza ahora). Solo en inglés.
 
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?

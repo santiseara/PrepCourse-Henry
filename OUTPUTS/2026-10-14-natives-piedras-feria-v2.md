@@ -1,4 +1,4 @@
-Natives Scented Stones - ángulo feria v2 (14/10): 3 natives con prompt de imagen y descripción EN y ES
+Natives Scented Stones - ángulo feria v2 (14/10): 3 natives con prompt de imagen y descripción en inglés
 
 Landing: https://scentedstone.lovable.app/
 Formato de imagen: 3:4 vertical, foto tipo celular.
@@ -14,7 +14,7 @@ NATIVE FERIA 3 | 6:40 de la mañana (el baúl cargado)
 PROMPT DE IMAGEN
 Candid iPhone photo, 3:4 vertical, early morning golden light at dawn, the open trunk of a family SUV parked in a suburban driveway, shot from just behind the car. Inside the trunk: three wooden crates filled with small round handmade scented stones in white, sage and dusty pink with pressed dried lavender, each wrapped loosely in kraft tissue paper; a folded small black chalkboard sign; an empty glass jar; a stack of flat kraft gift boxes; a folded cream linen tablecloth; a small card reader. Taped to the inside of the trunk lid, a handwritten checklist on lined notepaper reading, line by line, "MARKET DAY", "140 stones ✓", "sign ✓", "jar ✓", "boxes ✓", "coffee!" (spelled exactly, correctly kerned, clearly legible). A woman's hand in a sage green knit sleeve, no face, holding a travel coffee cup at the edge of the trunk. In the bottom corner, the nose of a golden retriever poking into the frame. Palette: sage, dusty pink, oatmeal beige, terracotta. Real everyday scene, natural phone-camera grain, imperfect framing, no studio lighting, no watermark, no other text.
 
-DESCRIPCIÓN EN
+DESCRIPCIÓN
 It's 6:40 on a Saturday morning, and everything I need for a whole day of selling fits in the back of my car.
 
 That's the photo. Three wooden crates of scented stones, a hundred and forty of them, wrapped in kraft tissue so they don't knock together on the drive. My folded chalkboard sign. An empty glass jar. A stack of flat gift boxes. A tablecloth. And my checklist, taped inside the trunk, because the one time I didn't make a list, I drove forty minutes and realized I'd left the sign on the kitchen table.
@@ -77,68 +77,6 @@ Or you could still be scrolling.
 
 Either way, I'm going to finish this coffee and go set up my table.
 
-DESCRIPCIÓN ES
-Son las 6:40 de un sábado a la mañana, y todo lo que necesito para un día entero de ventas entra en el baúl de mi auto.
-
-Esa es la foto. Tres cajones de madera con piedras aromáticas, ciento cuarenta, envueltas en papel de seda kraft para que no se golpeen en el viaje. Mi cartelito de pizarra plegado. Un frasco de vidrio vacío. Una pila de cajitas de regalo sin armar. Un mantel. Y mi lista, pegada adentro del baúl, porque la única vez que no hice lista manejé cuarenta minutos y me di cuenta de que había dejado el cartel en la mesa de la cocina.
-
-La última línea de la lista dice solo "café". Esa no se negocia.
-
-Si mirás bien en la esquina, esa es la nariz de Biscuit. Nuestro perro. Está convencido de que cada viaje en auto es por él. No lo es. Se queda en casa con Michael y los chicos.
-
-Me llamo Emma. Tengo cuarenta y dos años y vivo en un pueblo chico de Pensilvania.
-
-Esta es mi cuarta feria. Y te quiero contar cómo fue la mañana de la primera, porque no se pareció en nada a esta.
-
-La noche antes de mi primera feria no dormí. Tenía sesenta piedras en una caja de cartón y un cartel que había escrito tres veces porque la letra se me torcía. Me acuerdo de estar sentada en esta misma entrada a las seis de la mañana, con el motor prendido, pensando en serio en no ir.
-
-¿Y si nadie se para? ¿Y si me quedo siete horas sentada y vuelvo a casa con sesenta piedras y la cara quemada por el sol?
-
-Michael salió en bata, golpeó el vidrio y me dijo: "En el peor de los casos, vamos a tener los placares más perfumados de la cuadra por los próximos diez años".
-
-Me reí y arranqué.
-
-Vendí las sesenta en más o menos una hora y media.
-
-Todavía no lo termino de entender. La gente pasaba, bajaba el ritmo y hacía siempre lo mismo: agarraba una, se la acercaba a la nariz y le cambiaba la cara. Después preguntaba: "¿Qué es esto?". Yo le explicaba, y se llevaba tres.
-
-Tengo que volver un poco y contarte qué son, porque la mayoría nunca vio una.
-
-Una piedra aromática es yeso, aceite de fragancia y un molde de silicona. La vertés, le apoyás unas flores secas arriba y a la mañana ya fraguó. Sin horno. Sin llama, sin cera, sin nada que enchufar. Ponés una en un placard, un cajón o el auto, y huele hermoso durante seis a diez semanas. Cuando se va, dos gotas de aceite y vuelve.
-
-Las aprendí de mi tía Louisa, en Italia, el verano en que cumplí cuarenta. Las tenía por toda la casa. Volví y arruiné tanda tras tanda en la mesa de la cocina hasta que por fin di con la fórmula.
-
-En esa época trabajaba medio tiempo en una florería, y la plata siempre se nos terminaba una semana antes que el mes. Había probado un par de cosas por afuera. Todas me pedían plata de entrada u horas que no tenía. Casi había abandonado la idea de ganar algo extra.
-
-Así que así es un día de feria ahora.
-
-Las ciento cuarenta piedras de este baúl me llevaron tres noches de vertido, en la mesa de la cocina, después de que los chicos se fueron a dormir. Cada una me cuesta unos cincuenta centavos de materiales. O sea que todo lo que hay en esos cajones me costó unos setenta dólares.
-
-En la mesa salen doce dólares cada una, o tres por treinta. La mayoría se lleva tres. Una para el placard, una para el auto, una para regalar.
-
-No vendo como una vendedora. No lo soy. Le doy una piedra a la gente y le digo: "Olé esto". La piedra hace el resto.
-
-Y la feria ni siquiera es la mejor parte. La mejor parte es lo que pasa el lunes. En cada feria, algunas mujeres me preguntan si tomo pedidos. Regalos para maestras. Despedidas de soltera. Un localcito que quiere algunas al lado de la caja. Esos mensajes me llegan por WhatsApp toda la semana.
-
-Quiero ser honesta con una cosa. La primera feria me aterraba. La cuarta es un sábado más. Esa es la diferencia. No el talento. Solo haberlo hecho una vez.
-
-Con el tiempo, tantas mujeres en las ferias me preguntaron cómo las hacía que lo escribí todo.
-
-La fórmula exacta, para que las piedras salgan lisas y no se agrieten. Cuánto aceite usar para que el aroma dure semanas. Cómo terminarlas con flores prensadas. Cómo empaquetarlas. Cómo ponerles precio a las sueltas, a los packs de tres y a los sets de regalo. Y un plan paso a paso para tus primeras semanas, con los mensajes exactos que mando por WhatsApp.
-
-Le puse The Scented Stones Method. Es baratísimo, y lo recuperé en los primeros diez minutos de mi primera feria.
-
-No necesitás ser habilidosa. No necesitás taller ni horno. No necesitás saber vender. Necesitás la mesa de tu cocina, unas noches y un sábado.
-
-No te voy a decir que esto te va a hacer rica. No reemplaza un trabajo de tiempo completo de un día para el otro. Pero convirtió mis sábados en algo que es completamente mío.
-
-Si querés ver exactamente cómo lo hago, el link está abajo.
-
-Dentro de treinta días podrías estar sentada en la entrada de tu casa a las 6:40, café en mano, con el baúl lleno de piedras.
-
-O podrías seguir scrolleando.
-
-De cualquier forma, yo me voy a terminar este café y a armar mi mesa.
 
 ======================================================
 NATIVE FERIA 4 | La planilla de mi hija (las rayitas de cinco)
@@ -147,7 +85,7 @@ NATIVE FERIA 4 | La planilla de mi hija (las rayitas de cinco)
 PROMPT DE IMAGEN
 Candid iPhone photo, 3:4 vertical, outdoor craft fair in warm late-afternoon light, close-up on the corner of a market table with a cream linen tablecloth. A child's hand, about ten years old, in a dusty pink hoodie sleeve, no face, holding a pencil over a small wooden clipboard. The lined paper on the clipboard has a handwritten title "STONES SOLD" and two column headers "SINGLE $12" and "3 FOR $30" (all spelled exactly, correctly kerned, clearly legible), and both columns are filled with many pencil tally marks in groups of five, with a few extra marks squeezed into the margin. Next to the clipboard: a glass jar full of folded dollar bills, a wooden tray with only a few small round white and sage scented stones left, each with pressed dried lavender, and a couple of kraft boxes tied with twine. Background softly blurred: white market tents and people walking. Palette: sage, dusty pink, oatmeal beige, terracotta. Natural phone-camera grain, imperfect framing, no studio lighting, no watermark, no other text.
 
-DESCRIPCIÓN EN
+DESCRIPCIÓN
 "Mom, I ran out of room."
 
 That's what my daughter said at 2:15 last Saturday, holding up the clipboard you see in this photo.
@@ -210,68 +148,6 @@ Or you could still be scrolling.
 
 My daughter has already asked to come to the next market. She wants a bigger clipboard.
 
-DESCRIPCIÓN ES
-"Mamá, me quedé sin lugar".
-
-Eso me dijo mi hija el sábado pasado a las 2:15, levantando la planilla que ves en esta foto.
-
-Tiene diez años. Esa mañana me había preguntado si podía venir a la feria conmigo y "tener un trabajo". Así que le di el más importante: la planilla. Cada vez que alguien compraba una piedra suelta, una rayita en la primera columna. Cada vez que alguien se llevaba tres por treinta, una rayita en la segunda.
-
-Dibujaba esas rayitas de a cinco con una seriedad increíble. A las dos de la tarde ya había llenado las dos columnas y estaba metiendo rayitas en el margen.
-
-Cuando volvimos a casa, contamos juntas en la mesa de la cocina. Treinta y una sueltas. Veintiséis packs de tres. Son ciento nueve piedras, y mil ciento cincuenta y dos dólares en ese frasco.
-
-Hizo la cuenta ella sola, dos veces, porque la primera no se la creyó.
-
-Después me hizo la pregunta que me quedó dando vueltas toda la semana: "¿Cuánto te costaron las piedras?".
-
-Unos cincuenta centavos cada una, le dije. Ciento nueve piedras, unos cincuenta y cinco dólares de materiales.
-
-Me miró fijo y me dijo: "Mamá, es como un puesto de limonada, pero para grandes".
-
-Lo más gracioso del día fue verla entender cómo funciona. A eso de las once, una señora agarró una piedra, la olió y la volvió a dejar. Mi hija se me acercó y me susurró: "Va a volver". Le dije que no se ilusionara. Veinte minutos después, la señora volvió y se llevó tres. Mi hija dibujó su rayita con una floritura, como si acabara de cerrar un negocio. A la tarde ya lo adivinaba cada vez, y acertaba más que yo.
-
-Me llamo Emma. Tengo cuarenta y dos años, vivo en un pueblo chico de Pensilvania con mi marido Michael, nuestros dos hijos y nuestro perro, Biscuit.
-
-Te quiero contar por qué esa planilla me importa tanto, y no es por el número.
-
-Hace dos años, mi hija me escuchaba decir mucho "ahora no se puede". Las zapatillas nuevas no. La excursión del colegio al museo de ciencias no. Las clases de natación que hacían sus amigas no. Yo trabajaba medio tiempo en una florería, Michael trabajaba tiempo completo, y todos los meses la plata se terminaba una semana antes que el mes.
-
-Probé algunas cosas por afuera. Revender ropa por internet. Una app de encuestas que pagaba centavos. Todas se comían las pocas horas que me quedaban o me pedían plata de entrada que no teníamos. Con el tiempo dejé de intentar.
-
-Hasta que, el verano en que cumplí cuarenta, fui a visitar a mi tía Louisa a Italia. Tenía piedritas aromáticas en cada ambiente de la casa. Cuando le pregunté, me dijo que las hacía ella, como las hacía su mamá.
-
-Volví a casa y lo intenté. Yeso, aceite de fragancia, un molde de silicona. Arruiné más tandas de las que puedo contar hasta que me salió. Después hice algunas para regalar. Mi hermana. Mi vecina. Mi peluquera.
-
-Y la gente empezó a preguntarme dónde las podía comprar.
-
-Así terminé en mi primera feria, con sesenta piedras en una caja de cartón, muerta de miedo de que nadie se parara. Se vendieron en más o menos una hora y media.
-
-Esto es lo que pasa con una piedra aromática en una feria. Nadie vio una antes. La gente pasa, baja el ritmo y agarra una. Se la acerca a la nariz y le cambia la cara. Siempre. Después pregunta: "¿Qué es esto?".
-
-No tiene llama, ni cera, ni nada que enchufar. Ponés una en un placard o en el auto, y huele hermoso durante seis a diez semanas. Cuando se va, dos gotas de aceite y vuelve. Por eso las mismas mujeres vuelven a mi mesa, feria tras feria.
-
-Mi hija también se dio cuenta. "Esa señora vino la otra vez", me susurró, de tres personas distintas.
-
-No vendo como una vendedora. Le doy una piedra a la gente y le digo: "Olé esto". Ese es todo mi discurso.
-
-Después de unas cuantas ferias, tantas mujeres me habían preguntado cómo las hacía que lo escribí todo.
-
-La fórmula exacta, para que las piedras salgan lisas y nunca se agrieten. Cuánto aceite usar y cómo hacer que el aroma dure semanas. Cómo prensarles flores. Cómo empaquetarlas. Cómo ponerles precio a las sueltas y a los packs de tres para que la gente se lleve tres. Y un plan para tus primeras semanas, con los mensajes exactos que mando por WhatsApp.
-
-Le puse The Scented Stones Method. Es baratísimo. Lo recuperé con el primer pack de tres que vendí.
-
-No necesitás ser habilidosa. Yo no lo soy. No necesitás taller, ni horno, ni experiencia. Necesitás la mesa de tu cocina, unas noches y un sábado.
-
-No te voy a prometer que esto te va a hacer rica. No reemplaza un trabajo de un día para el otro, y nunca te diría eso. Lo que me dio es algo más chico y, sinceramente, mejor. El mes pasado mi hija empezó natación, y yo no le dije "ahora no se puede".
-
-Si querés ver cómo lo hago, el link está abajo.
-
-Dentro de treinta días, alguien en tu casa podría estar llevando tu planilla.
-
-O podrías seguir scrolleando.
-
-Mi hija ya me pidió venir a la próxima feria. Quiere una planilla más grande.
 
 ======================================================
 NATIVE FERIA 5 | La planilla de encargos de Navidad (temporada que empieza ahora)
@@ -280,7 +156,7 @@ NATIVE FERIA 5 | La planilla de encargos de Navidad (temporada que empieza ahora
 PROMPT DE IMAGEN
 Candid iPhone photo, 3:4 vertical, outdoor holiday craft market in the early evening, warm string lights glowing overhead and soft bokeh in the background. A market table with a cream linen tablecloth: wooden trays of small round handmade scented stones in white, sage and dusty pink with pressed dried flowers; several kraft gift boxes of three stones, each tied with red-and-white baker's twine with a small sprig of dried pine or a cinnamon stick tucked under the bow. A small black chalkboard sign reading "Gift Set of 3 · $30" (spelled exactly, correctly kerned, clearly legible). In the foreground, a wooden clipboard with a lined sheet titled in handwriting "HOLIDAY GIFT SETS · PRE-ORDERS" (spelled exactly, correctly kerned, clearly legible), with almost every line filled in small handwriting (names and numbers small and not legible), and a woman's hand in a cream knit sleeve, no face, writing on the last empty line with a pen. A paper cup of hot cider at the edge. Palette: sage, dusty pink, oatmeal beige, terracotta, with warm holiday lights. Natural phone-camera grain, imperfect framing, no studio lighting, no watermark, no other text.
 
-DESCRIPCIÓN EN
+DESCRIPCIÓN
 Last December, at 11:20 on a Saturday morning, I flipped my order sheet over because the front was already full.
 
 That's the clipboard in this picture. "Holiday Gift Sets, Pre-Orders." Every line is a name, a phone number and how many sets. You can't read them, but trust me, by the end of that day there were forty-one sets on that sheet. And that was on top of everything I sold from the table.
@@ -333,58 +209,6 @@ Or you could be standing in a store on the twenty-third, again.
 
 I know which December I'd choose.
 
-DESCRIPCIÓN ES
-El diciembre pasado, a las 11:20 de un sábado a la mañana, di vuelta mi planilla de pedidos porque el frente ya estaba lleno.
-
-Esa es la planilla de esta foto. "Holiday Gift Sets, Pre-Orders", sets de regalo, encargos. Cada línea es un nombre, un teléfono y cuántos sets. No se leen, pero creeme: al final de ese día había cuarenta y un sets anotados. Y eso además de todo lo que vendí en la mesa.
-
-La feria navideña de mi pueblo es la más grande del año. Lucecitas, sidra caliente, todo el mundo con pulóver, todo el mundo buscando regalos. Y todo el mundo con el mismo problema: ¿qué le regalás a la maestra de tu hijo, al cartero, a una compañera de trabajo o a tu suegra que no sea otra vela u otra taza?
-
-Ahí entran mis cajitas.
-
-El primer nombre de esa planilla fue el de una maestra de jardín. No quería un regalo para ella. Quería veintidós sets, uno para cada familia de su sala, para agradecerles el año. Me dijo que hacía tres diciembres que buscaba algo así y nunca lo encontraba. Anoté su nombre con las manos medio temblando, porque ese solo pedido era más de lo que ganaba en una semana en la florería.
-
-Tres piedras aromáticas en una caja kraft, atadas con hilo rojo y blanco, con una ramita de pino seco o una rama de canela abajo del moño. Treinta dólares. La gente se llevaba cuatro y cinco de una. "Esta es para la maestra de mi hijo, esta para el chofer del micro escolar, esta para mi hermana".
-
-Me llamo Emma. Tengo cuarenta y dos años, vivo en un pueblo chico de Pensilvania con mi marido Michael, nuestros dos hijos y un perro que se llama Biscuit, que se pasó el mes entero tratando de comerse las ramas de canela.
-
-Dos diciembres antes de ese, yo era la que estaba en un negocio a las ocho de la noche del veintitrés, tratando de ver cómo comprarle algo a todos con lo que quedaba en la cuenta. Trabajaba medio tiempo en una florería. Michael trabajaba tiempo completo. Y diciembre era siempre el mes que más temía, porque era el mes en que más se notaba.
-
-Había probado algunas cosas por afuera. Ninguna funcionó. O me pedían plata de entrada o se comían horas que no tenía.
-
-Hasta que fui a visitar a mi tía Louisa a Italia, el verano en que cumplí cuarenta. Tenía estas piedras por toda la casa, como las tenía su mamá. Volví, arruiné tanda tras tanda en la mesa de la cocina y por fin di con la fórmula. Regalé algunas. Y la gente empezó a preguntarme dónde las podía comprar.
-
-Unos meses después estaba en mi primera feria.
-
-Así que te cuento cómo fue esa feria navideña en números, porque sé que es lo que te estás preguntando.
-
-Cada piedra me cuesta unos cincuenta centavos de materiales. Un set de regalo de tres, con la caja y el hilo, me sale unos dos dólares con cincuenta. Lo vendo a treinta.
-
-Cuarenta y un sets encargados son ciento veintitrés piedras. Las vertí la semana siguiente, dos noches en la mesa de la cocina, mientras los chicos armaban el arbolito en el living. La gente las pasó a buscar por casa o por la feria siguiente.
-
-Pero esta es la parte que de verdad quiero que escuches. Las que más vendieron ese diciembre no eran las más talentosas. Eran las que empezaron en octubre.
-
-Porque la temporada de regalos no empieza en diciembre. Empieza ahora. Los padres empiezan a pensar en los regalos para las maestras a principios de noviembre. Las oficinas arman su amigo invisible antes de fin de mes. Las ferias navideñas llenan sus mesas con semanas de anticipación. Si tenés stock listo y una planilla como esta, los pedidos vienen solos. Si arrancás el quince de diciembre, vas atrás de todas.
-
-Y las piedras aromáticas están hechas para esto. Sin llama, sin cera, sin nada que enchufar. Huelen hermoso en un placard, un cajón o el auto durante seis a diez semanas, y cuando el aroma se va, dos gotas de aceite y vuelve. Nadie vio una antes. La gente agarra una, la huele y le cambia la cara. Siempre.
-
-Después de esa feria me llegaron tantos mensajes preguntándome cómo lo hacía que lo escribí todo.
-
-La fórmula exacta, para que las piedras salgan lisas y no se agrieten. Cómo hacer que el aroma dure semanas. Cómo terminarlas con flores secas. Cómo empaquetar un set de regalo como los de esta foto. Cómo ponerles precio. Y los mensajes exactos de WhatsApp que les mando a los locales, a los organizadores de eventos y a la gente que ya tengo cerca.
-
-Le puse The Scented Stones Method. Es baratísimo, y el primer set de regalo que vendí ya lo pagó.
-
-No necesitás ser habilidosa ni tener experiencia, y no necesitás taller ni horno. Necesitás la mesa de tu cocina, unas noches y empezar antes que las demás.
-
-No te voy a decir que esto te va a hacer rica. No lo va a hacer. Pero el diciembre pasado fue el primero en años en que no le tuve miedo al veintitrés.
-
-Si querés ver exactamente cómo lo hago, el link está abajo.
-
-Dentro de diez semanas podrías estar dando vuelta tu propia planilla de encargos.
-
-O podrías estar parada en un negocio el veintitrés, otra vez.
-
-Yo sé qué diciembre elegiría.
 
 ======================================================
 ANTES DE LANZAR

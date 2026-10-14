@@ -19,10 +19,11 @@
 - Quiz: `OUTPUTS/2026-10-12-quiz-pilates-hormonal.html` (19 pasos, VSL al final, oferta a los 3:50). Reglas en [[quizzes-reglas-de-armado]].
 - VSL: `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md` (video de 4:45). Reglas en [[vsl-reglas-de-armado]].
 - Descripciones para ads: `OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md`.
-- Guiones UGC: `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (14/10: jean guardado con edad, el marido y el gimnasio a escondidas, dejé la cinta, la foto de cuerpo entero, la escéptica).
+- Guiones UGC: `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (14/10, voz de la experta: gimnasio que empeora la panza, el error de las alumnas, la técnica asiática, el mensaje de Mariela, hacé esto conmigo en la pared).
 
 ## Reglas para los ads
 - **CTA al test gratis de 1 minuto** (no a la compra). Sin precio en el ad. Ángulos de fitness validados en [[guiones-y-anuncios]]: autoridad + contraintuitivo, reacción de la pareja, humblebrag con edad, recuperación de identidad.
+- **En los UGC habla la experta (Maestra Caro), no alumnas** (corrección del 2026-10-14). Voz de profe con 20 años de pilates: autoridad, lo que ve en sus alumnas, la técnica asiática, demostración en la pared. Sin decir su nombre en el ad (regla general de [[guiones-y-anuncios]]); en el VSL sí se presenta. Testimonios: solo el de Mariela, que ya está en el quiz.
 - **Primera persona.** Nunca afirmar la edad, el peso o la salud de quien mira ("si tenés más de 45…", "tu panza"): la política de atributos personales de Meta lo rechaza. La protagonista habla de ella ("tengo 54").
 - **Sin kilos ni promesas médicas** en los UGC: resultados sentidos (ropa, firmeza, energía, fotos). Es más seguro con las políticas de Meta sobre pérdida de peso.
 - Mecanismo en una o dos líneas como mucho. Nada de clase ([[guiones-y-anuncios]], registro del 13/10).
@@ -30,7 +31,6 @@
 ## Preguntas abiertas
 - ¿"Wall pilates" (contexto maestro) o "pilates asiático" (VSL y quiz)? Los ads usan los dos: "pilates suave, apoyada en la pared".
 - ¿Qué rinde? No hay datos de performance.
-- ¿Los UGC llevan a la Maestra Caro o solo alumnas?
 
 ## Relacionado
 [[ofertas]] · [[quiz-funnel]] · [[ugc-y-video-generativo]] · [[guiones-y-anuncios]]

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guiones UGC Pilates Hormonal con la experta
+- **Corrección de Santiago:** en los UGC habla la experta, no alumnas.
+- **Cambiado:** `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (5 guiones reescritos en voz de la Maestra Caro) y `WIKI/pilates-hormonal.md` (regla de voz).
+
 ## 2026-10-14 — Pilates Hormonal: página en la WIKI + guiones UGC
 - **Creado:** `WIKI/pilates-hormonal.md` (ficha juntando VSL, quiz, descripciones y contexto maestro) y `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (5 guiones UGC).
 - **Cambiado:** `WIKI/index.md`.

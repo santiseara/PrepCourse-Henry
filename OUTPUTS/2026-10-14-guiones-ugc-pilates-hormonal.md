@@ -1,47 +1,44 @@
 **<u>Guion 1</u>**
 
-Tengo cincuenta y cuatro años, y hoy me puse el jean que tenía guardado hace cinco.
-No fui al gimnasio. No hice dieta.
-Hago diez minutos por día, apoyada en la pared del living. Movimientos suaves, lentos, sin saltar.
-Lo que nadie me había dicho es que después de los cuarenta, matarte entrenando te sube el cortisol, y el cuerpo guarda todo en la panza. Necesitaba lo contrario.
-Se llama Pilates Hormonal. Es un reto de veintiocho días.
-Arranca con un test de un minuto. Es gratis. Tocá el botón y hacelo.
+Después de los cuarenta, matarse en el gimnasio no baja la panza. La empeora.
+Hace veinte años que doy pilates, y lo veo todo el tiempo. Mujeres que entrenan una hora, que caminan, que hacen dieta… y la panza sigue ahí.
+Es que a esta edad, el entrenamiento agotador te deja el cortisol alto por horas. Y con el cortisol alto, el cuerpo guarda. Justo en el medio.
+Lo que funciona es lo contrario: diez minutos por día, apoyada en la pared, movimientos lentos y suaves.
+Armé un reto de veintiocho días con eso. Hacé el test gratis de un minuto y te digo por dónde empezar.
 
 
 **<u>Guion 2</u>**
 
-Mi marido me preguntó si estaba yendo al gimnasio a escondidas.
-Le dije que no. Que hago diez minutos por día, en el living, contra la pared.
-No me creyó. Me miró de costado, como buscando la trampa.
-La verdad es que yo tampoco lo creía. Probé de todo: caminar, la cinta, dietas que duraban una semana. Y nada.
-Esto es distinto. Son movimientos lentos, sin impacto, que trabajan los músculos de adentro. Y en pocas semanas me empecé a sentir más firme, más liviana, con otra energía.
-Se llama Pilates Hormonal. Empezá por el test gratis de un minuto. Está acá abajo.
+Este es el error que veo en casi todas mis alumnas de más de cuarenta cuando llegan.
+Entrenan como si tuvieran veinte. Con todo, rápido, hasta quedar destruidas.
+Y después me dicen: profe, no entiendo, hago de todo y no bajo.
+No es falta de voluntad. Es que el cuerpo cambió y te está pidiendo otro estímulo. Lento, profundo, sin impacto.
+Por eso mis rutinas duran diez minutos. En tu casa, contra la pared, sin aparatos. Y es lo que más resultados les dio.
+Se llama Pilates Hormonal. Arrancá por el test gratis de un minuto. Está acá abajo.
 
 
 **<u>Guion 3</u>**
 
-Dejé de hacer una hora de cinta, y recién ahí la panza empezó a bajar.
-Suena al revés, ¿no? A mí también me pareció.
-Pero a esta edad, cuando te matás entrenando, el cortisol se queda alto por horas. Y el cuerpo, en vez de quemar, guarda. Justo en el medio.
-Así que cambié la cinta por diez minutos por día de pilates en la pared. Lento, suave, sin aparatos. Y mi cuerpo empezó a responder como hacía años que no respondía.
-Es un reto de veintiocho días que se llama Pilates Hormonal.
-Hacé el test gratis de un minuto y mirá tu plan según tu edad. No te cuesta nada probar.
+Las mujeres de sesenta en Asia se mantienen firmes, livianas y con energía. Y no es genética.
+Es cómo se mueven. Hace más de ochocientos años que en Oriente se usa una técnica de movimientos lentos, con el peso del cuerpo, que despierta los músculos profundos. Esos que te sostienen por dentro y que, con los años, se duermen.
+Yo me formé en esa técnica, y la adapté para mujeres de acá. Diez minutos por día, en tu casa, apoyada en la pared.
+Es un reto de veintiocho días. Empieza con un test gratis de un minuto. Tocá el botón y hacelo.
 
 
 **<u>Guion 4</u>**
 
-Ayer me saqué una foto de cuerpo entero. Hacía años que no lo hacía.
-En los cumpleaños me ponía atrás de todo. En la playa, con la remera encima. Me había olvidado de cómo era sentirme cómoda en mi cuerpo.
-No fue una dieta lo que me cambió. Fueron diez minutos por día, en casa, apoyada en la pared. Un pilates suave, pensado para mujeres de nuestra edad, que despierta los músculos de adentro.
-Me siento firme otra vez. Me siento yo otra vez.
-Se llama Pilates Hormonal. Arranca con un test de un minuto, gratis. Tocá el botón de abajo.
+Esto me lo escribió una alumna cuando terminó el reto.
+"Tenía cuarenta y siete años y me sentía invisible. Después de tres embarazos y la premenopausia, evitaba los espejos. Con el pilates no solo recuperé mi figura, recuperé mi esencia. Por primera vez en años, me siento mujer otra vez."
+Y no hizo nada extremo. Diez minutos por día, en su casa, apoyada en la pared. Sin gimnasio, sin dietas raras.
+Mensajes como este son los que me hacen seguir.
+Si querés empezar tu reto de veintiocho días, hacé primero el test gratis de un minuto. Te armo el plan según tu edad y tu objetivo.
 
 
 **<u>Guion 5</u>**
 
-Pensé que era otra de esas cosas de Instagram que no sirven para nada. Me equivoqué.
-Lo hice de curiosa. Un test de un minuto, gratis, sobre mi edad y lo que quería cambiar.
-Me armó un plan de veintiocho días. Diez minutos por día, contra la pared, sin aparatos. Yo, que dejé todos los gimnasios que pagué, no dejé ni un día.
-Porque no te mata. No terminás destruida. Terminás con energía.
-Y la ropa me empezó a quedar distinto. La panza, más chata. Las piernas, más firmes.
-Se llama Pilates Hormonal. El test está acá abajo. Hacelo, que no te cuesta nada.
+Apoyá la espalda en la pared y hacé esto conmigo. Diez segundos.
+Llevá el ombligo hacia adentro, como si quisieras pegarlo a la pared. Respirá. Aguantá.
+¿Sentiste eso abajo de la panza? Esos son tus músculos profundos. Los que te sostienen por dentro. En la mayoría de las mujeres de más de cuarenta, están dormidos.
+Cuando los despertás, la panza se afirma, la postura cambia y vuelve la energía.
+Eso es lo que hacemos en mi reto de veintiocho días. Diez minutos por día, así, en tu casa.
+Hacé el test gratis de un minuto y empezá hoy.

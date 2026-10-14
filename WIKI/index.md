@@ -80,6 +80,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-13 — Guiones Chupetines v5: variables de "Si hace 6 meses"](../OUTPUTS/2026-10-13-guiones-chupetines-v5-si-hace-6-meses.md) — transcripción del ganador + 5 variables + 8 hooks
 - [2026-10-13 — Guiones Chupetines v4](../OUTPUTS/2026-10-13-guiones-chupetines-v4.md) — Día de la Madre en una florería, cabañas que reponen cada viernes, el regalo que trae pedidos
 - 2026-10-13 — [Guiones Resina Rentable v4](../OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md): 4 guiones con la DNA ganadora de piedras (me la encargan, nunca quise un emprendimiento, la cuñada, souvenirs de bautismo)
 - 2026-10-13 — [Guiones Resina Rentable v3](../OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md): 4 guiones con el copy de la landing (titular de 7 días, "el problema no sos vos", objeciones en ráfaga, stack de valor)

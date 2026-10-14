@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-13 — Chupetines: ganador "Si hace 6 meses" + variables
+- **Fuente:** video `~/Downloads/si hace 6.mov` (transcripto localmente).
+- **Creado:** `OUTPUTS/2026-10-13-guiones-chupetines-v5-si-hace-6-meses.md` (transcripción, 5 guiones variables y 8 hooks).
+- **Cambiado:** `WIKI/ofertas.md` (ganador y su estructura), `WIKI/index.md` (Outputs).
+
 ## 2026-10-13 — Guiones Chupetines v4
 - **Creado:** `OUTPUTS/2026-10-13-guiones-chupetines-v4.md` (3 guiones: Día de la Madre con la florería, la anfitriona de cabañas que repone cada viernes, el regalo de cumpleaños que trae pedidos). Siguen la DNA ganadora y el formato limpio.
 - **Cambiado:** `WIKI/index.md` (Outputs).

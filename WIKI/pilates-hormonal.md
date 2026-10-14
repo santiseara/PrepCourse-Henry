@@ -24,7 +24,7 @@
 ## Reglas para los ads
 - **CTA al test gratis de 1 minuto** (no a la compra). Sin precio en el ad. Ángulos de fitness validados en [[guiones-y-anuncios]]: autoridad + contraintuitivo, reacción de la pareja, humblebrag con edad, recuperación de identidad.
 - **En los UGC habla la experta (Maestra Caro), no alumnas** (corrección del 2026-10-14). Voz de profe con 20 años de pilates: autoridad, lo que ve en sus alumnas, la técnica asiática, demostración en la pared. Sin decir su nombre en el ad (regla general de [[guiones-y-anuncios]]); en el VSL sí se presenta. Testimonios: solo el de Mariela, que ya está en el quiz.
-- **Primera persona.** Nunca afirmar la edad, el peso o la salud de quien mira ("si tenés más de 45…", "tu panza"): la política de atributos personales de Meta lo rechaza. La protagonista habla de ella ("tengo 54").
+- **Nunca afirmar la edad, el peso o la salud de quien mira** ("si tenés más de 45…", "tu panza"): la política de atributos personales de Meta lo rechaza. La experta habla en general o de sus alumnas ("mis alumnas de más de cuarenta", "después de los cuarenta").
 - **Sin kilos ni promesas médicas** en los UGC: resultados sentidos (ropa, firmeza, energía, fotos). Es más seguro con las políticas de Meta sobre pérdida de peso.
 - Mecanismo en una o dos líneas como mucho. Nada de clase ([[guiones-y-anuncios]], registro del 13/10).
 

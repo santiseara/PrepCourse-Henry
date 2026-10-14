@@ -20,6 +20,7 @@
 - VSL: `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md` (video de 4:45). Reglas en [[vsl-reglas-de-armado]].
 - Descripciones para ads: `OUTPUTS/2026-10-13-descripciones-pilates-hormonal.md`.
 - Guiones UGC: `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md` (14/10, voz de la experta: gimnasio que empeora la panza, el error de las alumnas, la técnica asiática, el mensaje de Mariela, hacé esto conmigo en la pared).
+- Guiones UGC v2: `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md` (14/10, foco en bajar de peso: como lo mismo y subo, no todas bajan igual, las dietas te sacan músculo, sin impacto para las rodillas, primero se va la hinchazón).
 
 ## Reglas para los ads
 - **CTA al test gratis de 1 minuto** (no a la compra). Sin precio en el ad. Ángulos de fitness validados en [[guiones-y-anuncios]]: autoridad + contraintuitivo, reacción de la pareja, humblebrag con edad, recuperación de identidad.

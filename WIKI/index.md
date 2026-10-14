@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-14 — [Guiones UGC Pilates Hormonal v2](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md): 5 guiones de la experta enfocados en bajar de peso
 - 2026-10-14 — [Guiones UGC Pilates Hormonal](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md): 5 guiones UGC de ~30 s en primera persona con CTA al test gratis
 - [2026-10-14 — Guion Piedras: "Así generé más de 2.000 dólares en un mes"](../OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md) — el mes desglosado por canal (casamiento, feria, locales, WhatsApp), EN/ES
 - [2026-10-14 — Guion Piedras UGC con avatar](../OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md) — respuesta a un comentario, a cámara en la cocina, EN/ES + prompt de escena

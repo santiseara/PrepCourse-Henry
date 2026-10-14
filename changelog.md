@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guiones UGC Pilates Hormonal v2 (bajar de peso)
+- **Creado:** `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md` (guiones 6 a 10, voz de la experta, foco en pérdida de peso; temas tomados de las keywords de `OUTPUTS/2026-10-12-top10-keywords-bajar-de-peso.md`).
+- **Cambiado:** `WIKI/pilates-hormonal.md` e `index.md`.
+
 ## 2026-10-14 — Ad de Pilates "mujeres de 60 en Asia" (formato 3)
 - **Corrección de Santiago:** variar la edición, sin la avatar chica.
 - **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Asia.mp4` (28 s: cortes a B-roll de pantalla completa y Caro recortada en grande delante del B-roll). Lleva 5 B-rolls nuevos de Higgsfield (Kling 2.6, 25 créditos).

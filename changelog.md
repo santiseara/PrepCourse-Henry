@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-13 — Guiones Resina Rentable v2
+- **Creado:** `OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md`: guion 2 armado con el hook 2 + guiones 5 a 8.
+- **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.
+
 ## 2026-10-13 — Landing Palabras de la Obediencia (Argentina)
 - Copia de la landing de VSL de LATAM, con voseo y el VSL de Panda. Sin footer, popup ni back-redirect. Botón verde "COMPRAR AHORA" a los 2:45, que lleva al checkout de ImpulTienda con los UTMs. Archivo: `OUTPUTS/2026-10-13-landing-palabras-de-la-obediencia.html`.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Natives de feria v2
+- **Creado:** `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md` (natives de feria 3 a 5: el baúl cargado a las 6:40, la planilla de la hija, la planilla de encargos de Navidad). Prompt de imagen 3:4 + descripción EN/ES, continuidad con las de feria del 12/10.
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Piedras: "Three things" con hook 2
 - **Creado:** `OUTPUTS/2026-10-14-guion-piedras-three-things-hook-2.md` (guion 6: cuerpo del ganador + hook 2, EN/ES).
 - **Cambiado:** `WIKI/index.md` (Outputs).

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guiones Resina Rentable v6
+- **Creado:** `OUTPUTS/2026-10-14-guiones-resina-rentable-v6.md` (guiones 21 a 24, apuntados al problema y al objetivo del cliente).
+- **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.
+
 ## 2026-10-14 — Guiones Resina Rentable v5 + regla "la onda, no la copia"
 - **Corrección de Santiago:** cuando le gusta un guion quiere esa onda, no guiones iguales.
 - **Creado:** `OUTPUTS/2026-10-14-guiones-resina-rentable-v5.md` (guiones 17 a 20).

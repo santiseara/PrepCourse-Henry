@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Corrección: UGC sin "respuesta a comentario"
+- **Corrección de Santiago:** no quiere guiones con formato de respuesta a un comentario.
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias), `OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md` (v2: caja de pedido para una despedida de soltera).
+
 ## 2026-10-14 — Guion UGC con avatar (piedras)
 - **Creado:** `OUTPUTS/2026-10-14-guion-piedras-ugc-avatar.md` (formato respuesta a comentario, EN/ES, ~40 s, + prompt de imagen base del avatar en 9:16).
 - **Cambiado:** `WIKI/index.md` (Outputs).

@@ -1,25 +1,26 @@
 Guion UGC con avatar - Scented Stones (14/10)
-Formato: respuesta a un comentario (TikTok/Reels), creadora hablando a cámara en su cocina con una piedra en la mano. ~40 s.
+v2. La v1 (formato "respuesta a un comentario") no gustó y se descartó.
+Formato: la creadora a cámara en la mesa de su cocina, con una caja de pedido lista para entregar. ~45 s.
 
 Guion 1
 
 EN
-Someone commented, "What do you even do with all those rocks?" Okay, let me show you.
-This is a scented stone. Plaster, a few drops of fragrance oil and a silicone mold. I pour them right here at night, and by morning they're ready.
-This one cost me about fifty cents to make. I sell it for twelve dollars, or three for thirty.
-And I don't sell online. My neighbor saw one in my car and ordered six. Then her sister. Then the hair salon down the street. All on WhatsApp.
-I wish you could smell this. Lavender and vanilla. It lasts for weeks, and when it fades, two drops of oil and it's back. That's why people keep coming back.
-I learned everything from Emma Carter's Scented Stones Method. Short PDF, dirt cheap, and I made it back with my first order.
-Link's below. Make your first one this weekend.
+This box of twelve scented stones cost me about six dollars to make. Tomorrow morning, it turns into a hundred and twenty.
+It's for a bridal shower. The bride's mom saw one at my sister's house and messaged me on WhatsApp.
+I made them right here, on this table, on Tuesday night. Plaster, a few drops of fragrance oil and a silicone mold. No oven. By morning, they were ready.
+Six months ago, I'd never made anything with my hands. Now my orders come from people who smelled one somewhere. No Instagram, no website.
+And they come back, because the scent lasts for weeks and then fades.
+Everything I know is from Emma Carter's Scented Stones Method. Short PDF, dirt cheap. I made it back with my very first order.
+Link's below. Next week, your first box could be sitting on your kitchen table.
 
 ES
-Alguien me comentó: "¿Qué hacés con todas esas piedras?". Bueno, te muestro.
-Esto es una piedra aromática. Yeso, unas gotas de aceite de fragancia y un molde de silicona. Las vierto acá mismo a la noche, y a la mañana están listas.
-Esta me costó unos cincuenta centavos hacerla. La vendo a doce dólares, o tres por treinta.
-Y no vendo por internet. Mi vecina vio una en mi auto y me pidió seis. Después la hermana. Después la peluquería de la vuelta. Todo por WhatsApp.
-Ojalá pudieras olerla. Lavanda y vainilla. Dura semanas, y cuando se va, dos gotas de aceite y vuelve. Por eso la gente vuelve a pedirme.
-Todo lo aprendí con el Scented Stones Method de Emma Carter. Un PDF corto, baratísimo, y lo recuperé con mi primer pedido.
-El link está abajo. Hacé tu primera piedra este fin de semana.
+Esta caja con doce piedras aromáticas me costó unos seis dólares hacerla. Mañana a la mañana se convierte en ciento veinte.
+Es para una despedida de soltera. La mamá de la novia vio una en la casa de mi hermana y me escribió por WhatsApp.
+Las hice acá mismo, en esta mesa, el martes a la noche. Yeso, unas gotas de aceite de fragancia y un molde de silicona. Sin horno. A la mañana estaban listas.
+Hace seis meses nunca había hecho nada con las manos. Ahora los pedidos me llegan de gente que olió una en algún lado. Sin Instagram, sin página web.
+Y vuelven, porque el aroma dura semanas y después se va.
+Todo lo que sé lo aprendí con el Scented Stones Method de Emma Carter. Un PDF corto, baratísimo. Lo recuperé con mi primer pedido.
+El link está abajo. La semana que viene, tu primera caja podría estar en la mesa de tu cocina.
 
 PROMPT DE ESCENA (imagen base del avatar, 9:16)
-Candid iPhone selfie-style video frame, 9:16 vertical, a friendly woman in her late 30s to mid 40s with natural makeup and hair loosely tied back, wearing a cream knit sweater, standing at her kitchen counter in warm late-afternoon window light, talking directly to the camera held at arm's length. She holds one small round white scented stone with pressed dried lavender up near the camera in her right hand. Behind her on the counter, slightly out of focus: wooden trays with rows of handmade scented stones in white, sage and dusty pink, a few silicone molds, a bag of plaster, small amber bottles of fragrance oil, kraft boxes tied with twine and a coffee mug. Real lived-in home kitchen, natural skin texture, slight handheld wobble, natural phone-camera grain. No subtitles, no text, no music, no watermark.
+Candid iPhone video frame, 9:16 vertical, phone propped on the table, a friendly woman in her late 30s to mid 40s with natural makeup and hair loosely tied back, wearing a sage green knit sweater, sitting at a worn wooden kitchen table in warm late-afternoon window light, talking directly to the camera. In front of her, a kraft gift box open with twelve small round white and dusty pink scented stones with pressed dried lavender, each in a small clear cellophane pouch tied with jute twine; her hands rest on the edge of the box. On the table: a spool of jute twine, scissors, a few silicone molds and a coffee mug. Real lived-in home kitchen in the background, natural skin texture, natural phone-camera grain, imperfect framing. No subtitles, no text, no music, no watermark.

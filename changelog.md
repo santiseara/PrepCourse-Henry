@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-14 — Piedras: ganador "Three things" + variables
+- **Fuente:** video `~/Downloads/Three things.MOV` (transcripto localmente).
+- **Creado:** `OUTPUTS/2026-10-14-guiones-piedras-v7-three-things.md` (transcripción, 5 guiones variables EN/ES y 6 hooks).
+- **Cambiado:** `WIKI/scented-stones.md` (ganador y su estructura), `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Guiones Resina Rentable v6
 - **Creado:** `OUTPUTS/2026-10-14-guiones-resina-rentable-v6.md` (guiones 21 a 24, apuntados al problema y al objetivo del cliente).
 - **Cambiado:** `WIKI/resina-rentable.md` (tandas) e `index.md`.

@@ -37,6 +37,11 @@
 - **Reacción de una figura de autoridad cotidiana** (contadora, guión 3). Extiende el hook de "reacción familiar".
 - **Estacionalidad y escasez de oferta** (bodas, boutiques, primavera). Conecta con la native de feria "LAST ONE".
 
+## Ganador "Three things" (2026-10-14)
+- Video de 39 s al que le está yendo bien. Transcripción y variables en `OUTPUTS/2026-10-14-guiones-piedras-v7-three-things.md`.
+- **Estructura:** hook de lista ("Three things nobody tells you about selling scented stones from home") → 3 datos cortos (costo menor a $2, pagan $35–45, solo WhatsApp) → "that's the whole business model" → lo que NO tiene (anuncios, web, logo) → proceso en una línea (mesada, mientras se enfría el café) → compran antes de la foto → nombra a Emma Carter, "short PDF, dirt cheap" → dato de adentro (los 3 aromas que se agotan: lavanda, eucalipto con menta, vainilla con ámbar) → $4.100 el mes pasado en ~12 horas → el marido mecánico gana menos y ahora empaqueta los domingos → CTA corto.
+- ⚠️ Usa "$35 a $45" (la landing dice $6–12 por piedra y sets de $18–35) y menciona Etsy en negativo. Las variables no nombran Etsy.
+
 ## ⚠️ Choques con las reglas fijas (a confirmar)
 - **Precio en el guión:** la regla dice no darlo, pero los guiones 1 y 2 dicen "$27 guide". En los ganadores el precio aparece **como ROI** ("lo recuperé con la primera venta"), no como precio de venta. Hipótesis: el precio sí funciona cuando se presenta como inversión que se recupera.
 - **Nombre del experto:** la regla dice no nombrarlo, pero el guión 2 dice "Emma's guide".

@@ -80,6 +80,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-14 — Guiones Piedras v7: variables de "Three things"](../OUTPUTS/2026-10-14-guiones-piedras-v7-three-things.md) — transcripción del ganador + 5 variables EN/ES + 6 hooks
 - 2026-10-14 — [Guiones Resina Rentable v6](../OUTPUTS/2026-10-14-guiones-resina-rentable-v6.md): 4 guiones apuntados al problema y al objetivo (plata propia desde casa, tiró la resina, no sabía cobrar, videos guardados)
 - 2026-10-14 — [Guiones Resina Rentable v5](../OUTPUTS/2026-10-14-guiones-resina-rentable-v5.md): 4 guiones con la onda del 14 (algo mío, la jubilada, la confesión a mamá, el marido y los yuyos)
 - [2026-10-13 — Guiones Chupetines v5: variables de "Si hace 6 meses"](../OUTPUTS/2026-10-13-guiones-chupetines-v5-si-hace-6-meses.md) — transcripción del ganador + 5 variables + 8 hooks

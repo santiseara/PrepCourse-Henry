@@ -14,6 +14,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 "Dame más guiones / variables de este ganador" · "Dame natives" · "Dame la descripción de X" · "Descripción para ads con emojis, no tan larga" · "Armemos los upsells" · "Analizá la landing de mi competidor" · "Palabras clave para cazar en PT/EN" · "Resumen de la oferta X para otro chat" · "Variante del guión Y pero X".
 
 ## Reglas de interacción
+- **"Me gustó el X"** → copiar la onda (tono, energía, cercanía), no el guion: hooks, protagonistas y situaciones nuevas ([[guiones-y-anuncios]], registro del 2026-10-14).
 - **"Mejores" o "variables"** → otro ángulo de verdad, misma DNA. Partir de la DNA de [[scented-stones]].
 - **"En inglés y español"** → las dos versiones completas.
 - **"X minutos"** → unas 150 palabras por minuto.

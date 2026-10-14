@@ -51,6 +51,10 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 - 13/10 — [Guiones 5 a 8 + guion 2 con el hook 2](../OUTPUTS/2026-10-13-guiones-resina-rentable-v2.md): fiestas de fin de año, qué comprar primero (UV o epoxi), bordes y pulido, oferta directa con precio y garantía.
 - 13/10 — [Guiones 9 a 12](../OUTPUTS/2026-10-13-guiones-resina-rentable-v3.md): pedido "más alineados a la landing". Hooks con las frases textuales de la landing (titular de 7 días, "el problema no sos vos", sin taller ni experiencia, stack de 117.940 contra 15.990).
 - 13/10 — [Guiones 13 a 16](../OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md): con la DNA ganadora. Me la encargan (guion 1 de piedras), nunca quise un emprendimiento (guion 2), la cuñada (guion 3), empaquetá souvenirs de un bautismo conmigo (orgánico).
+- 14/10 — [Guiones 17 a 20](../OUTPUTS/2026-10-14-guiones-resina-rentable-v5.md): con la onda del 14 (el favorito). Algo mío después de ser mamá, la jubilada y sus tardes, la confesión de la bandeja a mamá, el marido y los yuyos.
+
+## Lo que gustó
+- ⭐ **Guion 14** ("Yo nunca quise tener un emprendimiento"): tono íntimo y anti-hustle, rutina con mate, encargos por WhatsApp que llegan sin buscarlos, "es el mismo curso que compré yo".
 
 ## Preguntas abiertas
 - ¿Cuántos proyectos trae el curso?

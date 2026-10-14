@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-14 — Guiones Resina Rentable v5 + regla "la onda, no la copia"
+- **Corrección de Santiago:** cuando le gusta un guion quiere esa onda, no guiones iguales.
+- **Creado:** `OUTPUTS/2026-10-14-guiones-resina-rentable-v5.md` (guiones 17 a 20).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro), `WIKI/como-trabajar-con-santiago.md` (regla de interacción), `WIKI/resina-rentable.md` (lo que gustó, tandas) e `index.md`.
+
 ## 2026-10-13 — Chupetines: ganador "Si hace 6 meses" + variables
 - **Fuente:** video `~/Downloads/si hace 6.mov` (transcripto localmente).
 - **Creado:** `OUTPUTS/2026-10-13-guiones-chupetines-v5-si-hace-6-meses.md` (transcripción, 5 guiones variables y 8 hooks).

@@ -1,5 +1,5 @@
 """Edición de anuncio UGC "orgánico de TikTok" (variante 2 de los ads de Scented Stones, 2026-10-14).
-Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt> [idioma=en|es] [plan.json]
+Uso: python3 edit_ugc_pip.py <heygen.mp4> <carpeta_trabajo> <salida.mp4> <guion.txt> [idioma=en|es] [plan.json] [heads.json]
 La carpeta de trabajo tiene brolls/, sfx/ y fonts/. Necesita matte.py y el modelo RVM (ver RVM abajo).
 
 Diferencias con edit_ugc_split.py (pedido de Santiago: variar las ediciones):
@@ -18,6 +18,12 @@ SPEED = 1.1
 GAP_MAX, GAP_KEEP = 0.40, 0.18
 PIP_W = 430                          # ancho de la avatar recortada (de 1080)
 PIP_X, PIP_Y = 1080 - PIP_W + 20, 1920 - PIP_W * 16 // 9 + 60   # esquina de abajo a la derecha, un poco cortada
+SPLIT_Y, FADE = 880, 220             # modo 'split': dónde empieza el B-roll (debajo del mentón) y alto del degradé
+CAP_Y_SPLIT = 1400
+SPLIT_CROP_Y = 340                    # desde qué altura del B-roll se toma la mitad de abajo
+# "Que no se note tanto la IA" (2026-10-14): a los B-rolls se les da look de celular:
+# leve movimiento de mano, menos saturación y contraste, grano y menos nitidez.
+ORGANIC = True
 GS_DY = 330                          # cuánto se baja la avatar grande en modo 'gs'
 CAP_Y_GS = 1560
 CAP_Y = 1080                         # subtítulos arriba de la avatar chiquita
@@ -26,7 +32,7 @@ HEAD_Y = 200
 src, wd, out, gpath = sys.argv[1:5]
 LANG = sys.argv[5] if len(sys.argv) > 5 else 'en'
 GUION = open(gpath, encoding='utf-8').read()
-work = os.path.join(wd, 'edit_pip'); os.makedirs(work, exist_ok=True)
+work = os.path.join(wd, 'edit_' + os.path.splitext(os.path.basename(src))[0]); os.makedirs(work, exist_ok=True)   # una carpeta por video de HeyGen
 BR, SFX, FONTS = (os.path.join(wd, x) for x in ('brolls', 'sfx', 'fonts'))
 
 def run(cmd):
@@ -56,6 +62,11 @@ def norm(s):
 
 # ---------- Pasada 1: recorte de silencios ----------
 words0 = transcribe(src, os.path.join(work, 'words0.json'))
+# Whisper inventa palabras en los silencios ("194.", "Después de un minuto"): se sacan ANTES de recortar silencios
+_ops = difflib.SequenceMatcher(None, [norm(w['w']) for w in words0], [norm(x) for x in GUION.split()], autojunk=False).get_opcodes()
+_bad = {i for op, i1, i2, j1, j2 in _ops if op == 'delete' for i in range(i1, i2)}
+if _bad: print('inventadas por Whisper:', ' '.join(words0[i]['w'] for i in sorted(_bad)))
+words0 = [w for i, w in enumerate(words0) if i not in _bad]
 dur0 = duration(src)
 keep, cur_s = [], 0.0
 for a, b in zip(words0, words0[1:]):
@@ -119,10 +130,12 @@ def find(phrase, end=False):
 #   'pip'  = B-roll + avatar chiquita sin fondo en la esquina (por defecto)
 #   'full' = solo el B-roll a pantalla completa (corte, sin avatar)
 #   'gs'   = avatar recortada EN GRANDE delante del B-roll (green screen)
+#   'split'= pantalla dividida: avatar arriba, B-roll abajo con degradé suave (formato 1)
 PLAN = json.load(open(os.path.join(wd, sys.argv[6] if len(sys.argv) > 6 else 'plan_pip.json')))
-brolls = []
+brolls, crop_y = [], {}
 for item in PLAN:
     name, p1, p2, ss = item[:4]; mode = item[4] if len(item) > 4 else 'pip'
+    cy_ = item[5] if len(item) > 5 else SPLIT_CROP_Y   # 6.º campo opcional: desde qué altura se recorta el B-roll en 'split'
     a, b = find(p1), find(p2, end=True)
     if a is None or b is None: continue
     a = 0.0 if a < 0.6 else a - 0.06
@@ -130,7 +143,7 @@ for item in PLAN:
     if brolls and a - brolls[-1][2] < 0.45:
         brolls[-1] = (*brolls[-1][:2], a, *brolls[-1][3:])
     f = os.path.join(BR, name + '.mp4')
-    brolls.append((f, a, a + min(b - a, duration(f) - ss), ss, mode))
+    brolls.append((f, a, a + min(b - a, duration(f) - ss), ss, mode)); crop_y[len(brolls) - 1] = cy_
 def merge(iv):
     out_ = []
     for a, b in iv:
@@ -139,13 +152,14 @@ def merge(iv):
     return out_
 pip_iv = merge([(a, b) for f, a, b, ss, m in brolls if m == 'pip'])
 gs_iv = merge([(a, b) for f, a, b, ss, m in brolls if m == 'gs'])
+split_iv = merge([(a, b) for f, a, b, ss, m in brolls if m == 'split'])
 
 # zoom de salto: en los tramos de avatar a pantalla completa, una oración sí y otra no
 starts = [0.0] + [words[i + 1]['s'] for i in range(len(words) - 1) if words[i]['w'][-1:] in '.?!']
 zoom = [(starts[i], starts[i + 1] if i + 1 < len(starts) else total) for i in range(1, len(starts), 2)]
 
 # ---------- Headlines: solo los puntos importantes ----------
-HEAD = json.load(open(os.path.join(wd, 'heads_pip.json')))
+HEAD = json.load(open(os.path.join(wd, sys.argv[7] if len(sys.argv) > 7 else 'heads_pip.json')))
 heads, sfx = [], []
 for p, txt, fx, d in HEAD:
     t = find(p)
@@ -195,7 +209,8 @@ while i < len(toks):
     b = toks[i]['s'] if i < len(toks) else grp[-1]['e'] + 0.3
     b = min(b, grp[-1]['e'] + 0.4)
     parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!…:;') for w in grp]
-    cy = CAP_Y_GS if any(x - 0.05 <= a < y for x, y in gs_iv) else CAP_Y   # con la avatar grande, el subtítulo va al pecho
+    cy = (CAP_Y_GS if any(x - 0.05 <= a < y for x, y in gs_iv) else
+          CAP_Y_SPLIT if any(x - 0.05 <= a < y for x, y in split_iv) else CAP_Y)   # con la avatar grande, el subtítulo va al pecho
     ev.append(f'Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{{\\pos(540,{cy})}}' + ' '.join(parts))
 for a, b, txt in heads:
     ev.append(f'Dialogue: 1,{ts(a)},{ts(b)},Head,,0,0,0,,{{\\fscx70\\fscy70\\t(0,110,\\fscx108\\fscy108)\\t(110,190,\\fscx100\\fscy100)}}{txt}')
@@ -230,9 +245,28 @@ fc = [f"[0:v]setpts=PTS/{SPEED},fps=30,split=4[base][zs][ps][gv]",
       f"[ps]scale={PIP_W}:{PH}[pv]",
       "[pv][pm]alphamerge[pip]"]
 last = 'v0'
+from PIL import Image
+import math
+BH = 1920 - SPLIT_Y
+mk = Image.new('L', (1080, BH), 255)
+for y in range(FADE):
+    mk.paste(int(255 * (0.5 - 0.5 * math.cos(math.pi * y / FADE))), (0, y, 1080, y + 1))
+mpath = os.path.join(work, 'split_mask.png'); mk.save(mpath)
+inputs += ['-loop', '1', '-t', f'{total + 1:.2f}', '-i', mpath]   # con -t: si no, la imagen se repite sin fin
+MI = 2 + len(brolls)
+nsplit = sum(1 for x in brolls if x[4] == 'split')
+if nsplit: fc.append(f"[{MI}:v]format=gray,split={nsplit}" + ''.join(f'[sm{k}]' for k in range(nsplit)))
+LOOK = ("scale=1124:1998,crop=1080:1920:x='22+14*sin(t*1.6)':y='39+11*sin(t*1.2+1)',"
+        "eq=saturation=0.86:contrast=0.95:gamma=1.03,unsharp=5:5:-0.35,noise=alls=7:allf=t," if ORGANIC else '')
+k = 0
 for i, (f, a, b, ss, m) in enumerate(brolls):
-    fc.append(f"[{2 + i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setpts=PTS-STARTPTS+{a:.3f}/TB[b{i}]")
-    fc.append(f"[{last}][b{i}]overlay=0:0:eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]")
+    fc.append(f"[{2 + i}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,{LOOK}setpts=PTS-STARTPTS+{a:.3f}/TB[b{i}]")
+    if m == 'split':   # se toma el centro del plano y se funde con la avatar con el degradé
+        fc.append(f"[b{i}]crop=1080:{BH}:0:{crop_y[i]},format=rgba[c{i}]")   # se toma desde arriba para que la cabeza de la persona del B-roll no quede bajo el degradé
+        fc.append(f"[c{i}][sm{k}]alphamerge[bs{i}]"); k += 1
+        fc.append(f"[{last}][bs{i}]overlay=0:{SPLIT_Y}:eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]")
+    else:
+        fc.append(f"[{last}][b{i}]overlay=0:0:eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[v{i + 1}]")
     last = f'v{i + 1}'
 fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vq]")
 fc.append(f"[vq][gs]overlay=0:{GS_DY}:enable='{en(gs_iv)}'[vp]")   # avatar grande, bajada para que se vea el B-roll arriba

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-14 — Ad de Pilates "sin saltar ni correr" (rodillas)
+- **Corrección de Santiago:** visuales que no se noten tan IA; B-rolls nuevos solo si es súper necesario.
+- **Creado:** `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Rodillas.mp4` (27 s, pantalla dividida con Caro, B-rolls existentes con look de celular).
+- **Cambiado:**
+  - `OUTPUTS/scripts-vsl/edit_ugc_pip.py`: modo `split`, `ORGANIC`, recorte por clip, una carpeta de caché por video, headlines como argumento, filtro de palabras inventadas antes del recorte de silencios.
+  - `WIKI/vsl-reglas-de-armado.md` §6.
+
 ## 2026-10-14 — Guiones UGC Pilates Hormonal v2 (bajar de peso)
 - **Creado:** `OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md` (guiones 6 a 10, voz de la experta, foco en pérdida de peso; temas tomados de las keywords de `OUTPUTS/2026-10-12-top10-keywords-bajar-de-peso.md`).
 - **Cambiado:** `WIKI/pilates-hormonal.md` e `index.md`.

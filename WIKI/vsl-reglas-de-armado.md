@@ -144,6 +144,16 @@
   - La sentadilla contra la pared sirve solo los primeros 3 s, porque después la cámara se mete en el cuerpo.
 - **Whisper inventa palabras al principio** cuando se le pasa el guion como `initial_prompt` (salió "Después de un minuto"). El script descarta las que no están en el guion.
 
+- **Corrección (2026-10-14): "que las visuales no sean tan IA, que no se note tanto; no hagas nuevos B-rolls todo el tiempo, solo si es súper necesario".**
+  - **Reusar primero** los B-rolls que ya están en la carpeta de trabajo. Se generan nuevos solo si falta una escena clave, y se avisa antes.
+  - Elegir los planos **más "reales"** (personas haciendo algo en casa, en el gimnasio o en el parque). No usar hologramas, anatomía, brillos, templos épicos ni nada que grite IA, salvo pedido.
+  - A todos los B-rolls se les da **look de celular** (`ORGANIC = True` en el script): leve movimiento de mano, -14 % de saturación, menos contraste, menos nitidez y grano.
+- **Formato 1 con Caro (pantalla dividida) en el mismo script (2026-10-14):**
+  - Modo `split` (degradé coseno de 220 px desde y=880, subtítulo en y=1400).
+  - El B-roll se recorta desde y=340 para que no quede la cabeza de la persona bajo el degradé. Si el plano importante es la panza, en el 6.º campo del plan va otra altura (ej. 760).
+  - Ad: `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Rodillas.mp4` (27 s): split + algunos cortes a pantalla completa, 4 headlines y 0 B-rolls nuevos.
+- **Bug resuelto:** una imagen con `-loop 1` sin `-t` (más una rama `nullsink`) dejó a ffmpeg corriendo sin fin. Siempre ponerle `-t`.
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|
@@ -158,6 +168,7 @@
 | 2026-10-14 | Scented Stones (ad UGC) | "No pongas tantos headlines arriba, se hace muy cansador el efecto de sonido; solo los puntos importantes" | §6: 3–4 headlines por ad |
 | 2026-10-14 | Scented Stones (ad UGC) | "La idea es variar las ediciones": avatar chiquita sin fondo en una esquina, full UGC orgánico de TikTok | §6: formato 2 |
 | 2026-10-14 | Pilates Hormonal (ad "Asia") | "Variá la edición, no quiero que pongas el avatar chico"; 5 B-rolls nuevos de ejercicio que llamen la atención | §6: formato 3 |
+| 2026-10-14 | Pilates Hormonal (ad "rodillas") | "Fijate que las visuales no sean tan IA; no hagas nuevos B-rolls todo el tiempo, solo si es súper necesario" | §6: reusar B-rolls, planos reales y look de celular |
 
 ## Preguntas abiertas
 - ¿Qué plan de HeyGen hay y cuál es el largo máximo por video?

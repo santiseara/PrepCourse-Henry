@@ -87,6 +87,7 @@
 - [2026-10-14 — Guiones Chupetines v9](../OUTPUTS/2026-10-14-guiones-chupetines-v9.md) — 5 guiones de ~45 s con la estructura del ganador, sin relleno
 - [2026-10-14 — Guiones Chupetines v8 cortos](../OUTPUTS/2026-10-14-guiones-chupetines-v8-cortos.md) — 5 guiones de 25-30 s, directos
 - [2026-10-14 — Guiones Chupetines v7](../OUTPUTS/2026-10-14-guiones-chupetines-v7.md) — 5 guiones: tortas vs. chupetines, el precio equivocado, el agua que se pone rosa, la enfermera, los 300 del casamiento
+- 2026-10-15 — [Post-pagos Mounjaro Humilde](../OUTPUTS/2026-10-15-post-pagos-mounjaro-humilde.md): 10 productos complementarios, escalera de 4 OTOs + bumps
 - 2026-10-14 — [Descripción Mounjaro Humilde](../OUTPUTS/2026-10-14-descripcion-mounjaro-humilde.md): primary text corto con emojis, sin precio, CTA al test de 1 minuto
 - 2026-10-14 — [Descripción Resina Rentable](../OUTPUTS/2026-10-14-descripcion-resina-rentable.md): primary text corto con emojis
 - [2026-10-14 — Guiones Chupetines v6](../OUTPUTS/2026-10-14-guiones-chupetines-v6.md) — 5 guiones: el mes desglosado, "Tres cosas", diciembre lleno, la caja del súper, el cumpleaños del hijo

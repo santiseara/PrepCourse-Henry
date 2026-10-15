@@ -82,7 +82,7 @@ Recomendación para el OTO 3: **#11 Asados, Cumples y Salidas sin Culpa**. Es el
 COMPRA $19.990
  → OTO 1  Protocolo Anti-Antojos       $14.990
  → OTO 2  Nutri Luana 24 h (GPT)       $29.990
- → OTO 3  Rostro Desinflamado          $8.990
- → OTO 4  Reafirmante Casero           $9.990
+ → OTO 3  Rostro Desinflamado          $9.990
+ → OTO 4  Reafirmante Casero           $6.990
 ```
 Un VSL por OTO, con la estructura de 8 puntos de [[embudo-vsl-post-pago]]. Los downsells van con ruleta.

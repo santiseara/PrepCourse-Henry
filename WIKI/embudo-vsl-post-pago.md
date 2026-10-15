@@ -136,6 +136,13 @@ El upsell post-pago exige **checkout en dólares** — Shopify Payments, Stripe 
 - **La VSL va en todos los OTO**, no solo en el primero. Los downsells, en cambio, van con **ruleta** (ver abajo).
 - **Take rate de referencia para el OTO1: 20–35%**, algo menos en Argentina. El KPI de >15% es el piso.
 
+### Reglas de Santiago para los VSL de OTO (2026-10-15, Mounjaro Humilde)
+- **Felicitar solo en el primer OTO.** Si se felicita en todos, "no tiene sentido". Del OTO 2 en adelante se arranca directo, continuando la conversación anterior.
+- **Los VSL tienen que estar encadenados entre sí** (correlación: cada uno retoma al anterior) y **no repetir fórmulas ni frases**, para que no suene a IA.
+- **Duración: 4 a 5 minutos** cada uno.
+- Avatar: la misma experta del front (Nutri Mounjaro). Los B-rolls se pueden repetir, se crean nuevos si hace falta, y la edición va con formatos variados (split, full, green screen, pip).
+- Escalera de Mounjaro Humilde: Anti-Antojos $14.990 → Nutri Luana 24 h (GPT) $29.990 → Rostro Desinflamado $9.990 → Reafirmante Casero $6.990.
+
 ### Estructura de 8 puntos del guion del OTO
 1. Felicitar y tranquilizar sobre la compra que ya hizo
 2. Validar el producto principal e introducir un **«pero»**: un caso concreto donde no alcanza
@@ -174,6 +181,11 @@ Relacionado: [[aumento-de-aov]] · [[guiones-de-video-ads]] · [[ugc-y-video-gen
 - **Tu escalera en ARS** ([[landings-funnels-y-upsells]]: 9.990 → 19.990 → downsell 7.990 → **29.990**) pone el ticket más alto al final. La regla de acá es que **el más alto va segundo**. Vale la pena testearlo.
 - El post-pago **vende más que el mismo producto como order bump**. Varias ideas de bumps de [[aumento-de-aov]] rinden más como OTO.
 - El stack ya lo tenés: HeyGen para el avatar, ElevenLabs y Claude para el guión.
+
+## Registro de correcciones
+| Fecha | Oferta | Corrección | Regla |
+|---|---|---|---|
+| 2026-10-15 | Mounjaro Humilde | "No tenemos que felicitar siempre; que tengan correlación entre sí y no repitan cosas como si fuera una IA"; 4–5 min | Reglas de Santiago para los VSL de OTO |
 
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/embudo-vsl-post-pago.md (página de la wiki previa, actualizada el 2026-08-10)

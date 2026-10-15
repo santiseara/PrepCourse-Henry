@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-15 — Post-pagos de Mounjaro Humilde
+- Escalera: Anti-Antojos $14.990 → GPT $29.990 → Rostro $9.990 → Reafirmante $6.990. Reglas para los VSL de OTO en `WIKI/embudo-vsl-post-pago.md` (felicitar solo en el 1.º, encadenados, sin repetir, 4–5 min). Guion del OTO 1 en `OUTPUTS/2026-10-15-vsl-oto1-anti-antojos-guion.md`.
+
 ## 2026-10-15 — Natives Piedras: variables de "receta gratis"
 - **Creado:** `OUTPUTS/2026-10-15-natives-piedras-receta-gratis.md` (texto de la ganadora, estructura y 2 variables con prompt de imagen, solo EN).
 - **Cambiado:** `WIKI/natives-ganadoras.md` (ganadora corta de ~250 palabras) e `index.md`.

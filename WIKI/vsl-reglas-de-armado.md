@@ -7,7 +7,7 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 1. **Calcular el largo antes de escribir.** HeyGen (voz roma) habla a ~0,27 s por palabra y el recorte de silencios saca otro ~10%. Para **4–5 min editados: ~850 palabras**; para 30 s: ~110.
 2. **Guion aprobado → HeyGen YA.** Creación rápida, clic en el textbox (con `find`) y pegar el guion entero con `document.execCommand('insertText', false, T)` por JS: es instantáneo y no se cuelga como el tipeo largo. Se envía con el botón "Generar script".
 3. **Mientras HeyGen renderiza** (unos 45 s → 3 min y unos 4 min → 12–15 min):
-   - B-rolls en Higgsfield: los prompts uno atrás del otro en una sola tanda, y mirar antes el historial;
+   - B-rolls en Higgsfield: los prompts uno atrás del otro en una sola tanda, y mirar antes el historial. **El tipeo a veces no entra en el textarea** (y "Generate" relanza el prompt anterior): cargar cada prompt por JS con el setter nativo de `HTMLTextAreaElement` + evento `input`, y hacer clic en el botón "Generate" por JS. Así salen 4 en ~15 s;
    - placas (mk_gfx.py), `plan.json`, `heads.json`, `capmap.json` y `stickers.json`;
    - verificar con un script que todas las frases del plan existan en el guion (normalizado).
 4. **Al bajarlo:** esperar a que termine el `.crdownload`, copiarlo y correr `edit_vsl_quiz.py` **en segundo plano**. Mientras edita: WIKI, changelog, guion del próximo.

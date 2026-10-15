@@ -58,3 +58,7 @@
 ## Fuentes
 - RAW/2026-10-11-natives-ganadoras-scented-stones.md
 - RAW/natives/2026-10-11-native-ganadora-1.png, -2.png, -3.png
+
+
+## 2026-10-15 · Ganadora "receta gratis" (corta)
+Le está yendo bien una native de unas 250 palabras, **muy distinta de la plantilla larga**: regala la receta básica (harina, sal, agua tibia, aceite esencial, molde, flores secas) con "Save this", después "la parte honesta" (mi primera tanda era casera, nadie pagaba 12), y vende la **brecha** entre casero y vendible (superficie blanca y lisa, flores que no se ponen marrones, aroma que dura, packaging de boutique) con "the $27 guide", recuperada con la primera venta (set de 40). Cierra con las fiestas y "probá la receta gratis primero". No nombra a Emma. **Ojo:** el material es masa de sal y harina, igual que el ganador 1 de video, no yeso. Texto completo y variables en `OUTPUTS/2026-10-15-natives-piedras-receta-gratis.md`.

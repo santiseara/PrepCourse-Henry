@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Natives Piedras: variables de "receta gratis"
+- **Creado:** `OUTPUTS/2026-10-15-natives-piedras-receta-gratis.md` (texto de la ganadora, estructura y 2 variables con prompt de imagen, solo EN).
+- **Cambiado:** `WIKI/natives-ganadoras.md` (ganadora corta de ~250 palabras) e `index.md`.
+
 ## 2026-10-15 — Guiones Piedras v9 (formatos del nicho)
 - **Creado:** `OUTPUTS/2026-10-15-guiones-piedras-v9-formatos-del-nicho.md` (resumen de la investigación de formatos de ingresos extra + 6 guiones EN/ES).
 - **Cambiado:** `WIKI/index.md` (Outputs).

@@ -17,8 +17,8 @@ import sys, os, json, subprocess, unicodedata, difflib, re
 FF = os.path.expanduser('~/bin/ffmpeg')
 HERE = os.path.dirname(os.path.abspath(__file__))
 RVM = os.path.join(sys.argv[2], 'rvm_mobilenetv3_fp32.onnx')   # el modelo va en la carpeta de trabajo
-SPEED = 1.08
-GAP_MAX, GAP_KEEP = 0.40, 0.18
+SPEED = float(os.environ.get('SPEED', 1.08))          # VSL largos de OTO: SPEED=1.0 para que queden en 4–5 min
+GAP_MAX, GAP_KEEP = float(os.environ.get('GAP_MAX', 0.40)), float(os.environ.get('GAP_KEEP', 0.18))
 PIP_W = 430                          # ancho de la avatar recortada (de 1080)
 PIP_X, PIP_Y = 1080 - PIP_W + 20, 1920 - PIP_W * 16 // 9 + 60   # esquina de abajo a la derecha, un poco cortada
 SPLIT_Y, FADE = 880, 220             # modo 'split': dónde empieza el B-roll (debajo del mentón) y alto del degradé

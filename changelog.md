@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Guiones Piedras v9 (formatos del nicho)
+- **Creado:** `OUTPUTS/2026-10-15-guiones-piedras-v9-formatos-del-nicho.md` (resumen de la investigación de formatos de ingresos extra + 6 guiones EN/ES).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-15 — Guiones Piedras v8 (que se sientan reflejadas)
 - **Creado:** `OUTPUTS/2026-10-15-guiones-piedras-v8-reflejados.md` (5 guiones EN/ES: hooks de identificación + beneficios apilados, precios de la landing).
 - **Cambiado:** `WIKI/index.md` (Outputs).

@@ -11,7 +11,8 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
    - placas (mk_gfx.py), `plan.json`, `heads.json`, `capmap.json` y `stickers.json`;
    - verificar con un script que todas las frases del plan existan en el guion (normalizado).
 4. **Al bajarlo:** esperar a que termine el `.crdownload`, copiarlo y correr `edit_vsl_quiz.py` **en segundo plano**. Mientras edita: WIKI, changelog, guion del próximo.
-5. Revisar con una hoja de contactos (1 cuadro cada 3 s) y un par de cuadros a resolución completa. Comprimir con crf 21 y maxrate 8M.
+5. **Precios en `heads.json`: anclarlos a las palabras de ANTES del número** ("para siempre, por", "te lo llevás por"). Whisper transcribe los montos en cifras ("14 .990") y la frase en palabras no aparece, así que se pierde el "cha-ching". En `capmap.json` sumar las variantes en cifras ("14 .990 pesos", "40 mil pesos").
+6. Revisar con una hoja de contactos (1 cuadro cada 3 s) y un par de cuadros a resolución completa. Comprimir con crf 21 y maxrate 8M.
 - **Formatos de edición disponibles** (`edit_vsl_quiz.py`, 5.º campo del plan): `split` (avatar arriba y placa o B-roll abajo), `full` (B-roll solo), `gs` (avatar grande recortada delante del B-roll) y `pip` (B-roll con la avatar chiquita en la esquina). En un VSL largo conviene alternar los cuatro.
 
 ## 1. Pedido típico

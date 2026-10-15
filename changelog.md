@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-15 — Quiz Mounjaro Humilde sin el paso del e-mail
+- Se saca el paso del e-mail (se pide en el checkout). Nueva regla en `WIKI/quizzes-reglas-de-armado.md`: no pedir datos de contacto en el quiz.
+
 ## 2026-10-14 — VSL final de Mounjaro Humilde + VSL de la nutri en el quiz
 - Quiz: VSL final de Panda en el último paso, con "QUIERO MI PLAN" al 1:20 hacia el checkout de ImpulTienda.
 - Quiz: embed de Panda en el paso 12 (Continuar a los 30 s) y sin audio en la página de resultados. Link actualizado.

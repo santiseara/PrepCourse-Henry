@@ -81,7 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
-- 2026-10-15 — [Quiz Chinese Embroidery (Juliana Alves)](../OUTPUTS/2026-10-15-quiz-chinese-embroidery.html) — quiz de Bordado Chinês (Brasil, Lovable) pasado al inglés: 10 pasos, oferta $27.90 (tachado $147), popup de salida $19.90. Reglas en [[quizzes-reglas-de-armado]].
+- 2026-10-15 — [Quiz Chinese Embroidery (Juliana Alves)](../OUTPUTS/2026-10-15-quiz-chinese-embroidery.html) — quiz de Bordado Chinês (Brasil, Lovable) pasado al inglés: 10 pasos, oferta $27 (tachado $147) con checkout de ImpulTienda, popup de salida $19.90. Reglas en [[quizzes-reglas-de-armado]].
 - [2026-10-15 — Natives Piedras: receta gratis](../OUTPUTS/2026-10-15-natives-piedras-receta-gratis.md) — texto de la ganadora + 2 variables (primera tanda vs. ahora, receta para Navidad), solo EN
 - [2026-10-15 — Guiones Piedras v9: formatos del nicho](../OUTPUTS/2026-10-15-guiones-piedras-v9-formatos-del-nicho.md) — investigación + 6 guiones EN/ES: empezar con 50 dólares, "¿quién paga 12 por una piedra?", hacé la cuenta, mes 1 contra mes 6, Navidad, más de 40
 - [2026-10-15 — Guiones Piedras v8: que se sientan reflejadas](../OUTPUTS/2026-10-15-guiones-piedras-v8-reflejados.md) — 5 guiones EN/ES: la que estira la plata, sin talento ni horno, la casa vacía, pedirle al marido, las 11 de la noche

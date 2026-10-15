@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-15 — Quiz Chinese Embroidery: checkout y precio
+- Checkout `https://chinese-embroidery.impultienda.ar/checkout` en todos los CTAs (con UTMs). Precio 27 USD en la caja de precio y en el tachado del popup. Registro en `WIKI/quizzes-reglas-de-armado.md`.
+
 ## 2026-10-15 — Quiz Chinese Embroidery (Juliana Alves, mercado en inglés)
 - **Creado:** `OUTPUTS/2026-10-15-quiz-chinese-embroidery.html`, modelado del quiz brasileño de Bordado Chinês (vivendodebordadochines.lovable.app). Tapa rehecha con Pillow (Juliana Alves), chats de WhatsApp, garantía y pago seguro en HTML en inglés.
 - **Cambiado:** `WIKI/quizzes-reglas-de-armado.md` (cómo sacar un quiz de Lovable, localización al inglés, recortes de la tapa editada) e `index.md`.

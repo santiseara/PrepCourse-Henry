@@ -17,8 +17,8 @@ SEGUNDOS_BARRA      : a los cuántos segundos de llegar a la oferta aparece la b
 =======================================================================================
 -->
 <script>
-var LINK_CHECKOUT = "https://TU-CHECKOUT.com/chinese-embroidery";
-var LINK_CHECKOUT_POPUP = "https://TU-CHECKOUT.com/chinese-embroidery-1990";
+var LINK_CHECKOUT = "https://chinese-embroidery.impultienda.ar/checkout";
+var LINK_CHECKOUT_POPUP = "https://chinese-embroidery.impultienda.ar/checkout";
 var SEGUNDOS_BARRA = 4;
 </script>
 <style>
@@ -257,7 +257,7 @@ details p{margin-top:12px;font-size:14px;line-height:1.6;color:var(--muted)}
       <h2>Get the <span class="s">FULL COURSE</span> for only <span class="s">$19.90</span></h2>
       <div class="chip">🧵 CHEAPER THAN A SNACK</div>
       <ul id="popList"></ul>
-      <div class="pp"><s>$27.90</s><strong>$19.90</strong><small>one-time payment · 7-day guarantee</small></div>
+      <div class="pp"><s>$27</s><strong>$19.90</strong><small>one-time payment · 7-day guarantee</small></div>
       <p class="tm" role="timer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6h4"/></svg> this offer expires in <span id="popTimer">03:00</span></p>
       <a class="buy btn-checkout" data-link="popup" href="#">YES, I WANT IT FOR $19.90</a>
       <button class="nope" onclick="closePop()">No thanks, I don't want the discount</button>
@@ -419,7 +419,7 @@ function renderOffer(){
   '<section><h2 class="title">Here\'s everything you\'ll get access to in the '+P('Chinese Embroidery')+' course</h2><ul class="benefits">'+INCLUDES.map(function(t){return '<li>'+CHECK.replace('width="17" height="17"','width="20" height="20"')+'<span>'+t+'</span></li>';}).join('')+'</ul></section>'+
   '<section><h2 class="title">Check out some of the '+P('many pieces')+' you\'ll start making:</h2><div class="carousel"><img id="carImg" src="'+PIECES[0]+'" alt="Chinese embroidery piece 1"><button class="nav l" aria-label="Previous piece" onclick="__car(-1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button><button class="nav r" aria-label="Next piece" onclick="__car(1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button></div><div class="dots" id="dots">'+PIECES.map(function(_,i){return '<button aria-label="See piece '+(i+1)+'" onclick="__carTo('+i+')"><span></span></button>';}).join('')+'</div></section>'+
   '<section><h2 class="title p">🎁 Get 5 BONUSES with your course!</h2><ol class="bonus">'+BONUS.map(function(b,i){return '<li><h3><span>🎁 BONUS '+(i+1)+'</span> — '+b[0]+'</h3><p>'+b[1]+'</p></li>';}).join('')+'</ol></section>'+
-  '<section class="pricebox"><div class="hd">One-time payment · no monthly fees</div><div class="bd"><h2>Chinese<br>Embroidery</h2><div class="pr"><small>from $147.00 for:</small><strong>$27.90</strong><em>one-time payment</em></div></div></section>'+
+  '<section class="pricebox"><div class="hd">One-time payment · no monthly fees</div><div class="bd"><h2>Chinese<br>Embroidery</h2><div class="pr"><small>from $147.00 for:</small><strong>$27</strong><em>one-time payment</em></div></div></section>'+
   '<section style="text-align:center"><div class="guarantee">'+SEAL+'<div><h4>7-DAY GUARANTEE</h4><p>Try it with no strings attached! We refund every penny straight to your card.</p></div></div>'+
     '<div class="secure"><span class="lock"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>100% secure<br>purchase · SSL</span><span class="cards"><span style="color:#1a1f71">VISA</span><span style="color:#eb001b">Master<b style="color:#f79e1b">card</b></span><span style="color:#fff;background:#2e77bc;border-color:#2e77bc">AMEX</span></span></div>'+
     '<p class="spots"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> Hurry! Only 8 spots left</p></section>'+

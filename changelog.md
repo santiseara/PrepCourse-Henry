@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Guiones Chupetines v7
+- **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v7.md` (5 guiones con los elementos del ganador "Si hace 6 meses" y ángulos nuevos).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-14 — Descripción para ads de Resina Rentable
 - **Creado:** `OUTPUTS/2026-10-14-descripcion-resina-rentable.md`.
 - **Cambiado:** `WIKI/resina-rentable.md` e `index.md`.

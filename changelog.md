@@ -12,6 +12,7 @@
 - Quiz completo en español con voseo: `~/Desktop/mounjaro-humilde/` (HTML con imágenes embebidas, .txt, `imagenes/`, `original/`, `trabajo/` con los scripts). Copia: `OUTPUTS/2026-10-14-quiz-mounjaro-humilde.html`.
 - Imágenes: tapa nueva con GPT Image 1.5 ("MOUNJARO HUMILDE"); logo, diagrama, HOMBRE/MUJER y DESPUÉS rehechos con Pillow; el resto, del original a 2x.
 - VSL vacíos con botón Continuar; botón final a `LINK_CHECKOUT`.
+- Ronda 2: zonas (Caderas, sin Flancos), sin marca de agua en "Todavía no sé", barra del IMC en Sobrepeso, y medidores para peso y altura (nueva §4b).
 - Correcciones en `WIKI/quizzes-reglas-de-armado.md`: sin la pantalla de elegir WhatsApp/e-mail, y armar más rápido desde el JSON.
 
 ## 2026-10-14 — Guiones Chupetines v6

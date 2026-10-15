@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — Descripción para ads de Resina Rentable
+- **Creado:** `OUTPUTS/2026-10-14-descripcion-resina-rentable.md`.
+- **Cambiado:** `WIKI/resina-rentable.md` e `index.md`.
+
 ## 2026-10-14 — Quiz Mounjaro Humilde (modelado de "Mounjaro de Pobre", Brasil)
 - Quiz completo en español con voseo: `~/Desktop/mounjaro-humilde/` (HTML con imágenes embebidas, .txt, `imagenes/`, `original/`, `trabajo/` con los scripts). Copia: `OUTPUTS/2026-10-14-quiz-mounjaro-humilde.html`.
 - Imágenes: tapa nueva con GPT Image 1.5 ("MOUNJARO HUMILDE"); logo, diagrama, HOMBRE/MUJER y DESPUÉS rehechos con Pillow; el resto, del original a 2x.

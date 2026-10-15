@@ -53,6 +53,7 @@ Objeciones: nunca hizo nada (desde cero) · taller o herramientas caras (no: una
 - 13/10 — [Guiones 13 a 16](../OUTPUTS/2026-10-13-guiones-resina-rentable-v4.md): con la DNA ganadora. Me la encargan (guion 1 de piedras), nunca quise un emprendimiento (guion 2), la cuñada (guion 3), empaquetá souvenirs de un bautismo conmigo (orgánico).
 - 14/10 — [Guiones 17 a 20](../OUTPUTS/2026-10-14-guiones-resina-rentable-v5.md): con la onda del 14 (el favorito). Algo mío después de ser mamá, la jubilada y sus tardes, la confesión de la bandeja a mamá, el marido y los yuyos.
 - 14/10 — [Guiones 21 a 24](../OUTPUTS/2026-10-14-guiones-resina-rentable-v6.md): pedido "más al problema y al objetivo del cliente". Plata propia desde casa, la que tiró la resina y la segunda vez le encargaron todo, la que regalaba porque no sabía cobrar, un año guardando videos. Cada bono aparece como solución a un freno concreto.
+- 14/10 — [Descripción para ads](../OUTPUTS/2026-10-14-descripcion-resina-rentable.md): primary text corto con emojis, sin precio en número (ancla del kit), garantía y 5 bonos.
 
 ## Lo que gustó
 - ⭐ **Guion 14** ("Yo nunca quise tener un emprendimiento"): tono íntimo y anti-hustle, rutina con mate, encargos por WhatsApp que llegan sin buscarlos, "es el mismo curso que compré yo".

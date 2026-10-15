@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- 2026-10-14 — [Descripción Resina Rentable](../OUTPUTS/2026-10-14-descripcion-resina-rentable.md): primary text corto con emojis
 - [2026-10-14 — Guiones Chupetines v6](../OUTPUTS/2026-10-14-guiones-chupetines-v6.md) — 5 guiones: el mes desglosado, "Tres cosas", diciembre lleno, la caja del súper, el cumpleaños del hijo
 - 2026-10-14 — [Guiones UGC Pilates Hormonal v2](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md): 5 guiones de la experta enfocados en bajar de peso
 - 2026-10-14 — [Guiones UGC Pilates Hormonal](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md): 5 guiones UGC de ~30 s en primera persona con CTA al test gratis

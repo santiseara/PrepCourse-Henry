@@ -52,3 +52,27 @@ COMPRA $19.990
 - **El #5 (menopausia) y las dudas médicas del #2 (GPT):** escribirlos sin prometer curas ni reemplazar medicación. El GPT tiene que derivar al médico ante diabetes, hipertensión o embarazo.
 - **El #2:** decir que es un asistente con IA entrenado con el método de la nutri, no "la nutri en persona".
 - **Menús, ejercicios y WhatsApp** ya los promete el VSL del front: tienen que estar en la entrega principal, si no hay reembolsos.
+
+## Elección de Santiago (2026-10-15)
+- ✅ **Protocolo Anti-Antojos** (antes "Anti-Atracones"; el nombre lo cambió él)
+- ✅ **Nutri Luana 24 h** (GPT)
+- ✅ **Reafirmante Casero**
+- Falta un OTO. Estas 5 opciones nuevas no pisan el té ni a los elegidos:
+
+| # | Producto | Dolor | Por qué complementa | Formato | Lugar y precio |
+|---|---|---|---|---|---|
+| 11 | **Asados, Cumples y Salidas sin Culpa** | "El finde tiro todo a la basura": asados, cumpleaños, delivery, salir a comer | Es el dolor que aparece **el primer finde** después de comprar. Le da qué elegir en cada ocasión argentina para no frenar el resultado | PDF: guía por ocasión (asado, pizza, cumple, restaurante, McDonald's) y "plan del lunes" para compensar | OTO 3 · $12.990 |
+| 12 | **Vestite Más Flaca Hoy** | Vergüenza en las fotos y no tener qué ponerse (respuestas del quiz) | Le da un resultado **inmediato**, mientras el té hace lo suyo: cortes, colores, talles y prendas que disimulan la panza | PDF de estilo con ejemplos y una lista de qué comprar | OTO 3 · $9.990 |
+| 13 | **Rostro Desinflamado: chau papada** | Cara hinchada y papada en las fotos | El té trabaja el cuerpo. Esto trabaja la cara: masajes, yoga facial de 5 minutos y hábitos que la deshinchan | PDF con rutina ilustrada | OTO 3 o bump · $8.990 |
+| 14 | **Rodillas y Espalda Livianas** | Dolor al subir escaleras o agacharse (quiz: "dificultades en el día a día") | Alivia el dolor mientras baja de peso. Movilidad suave y comidas antiinflamatorias, sin pisar los ejercicios del front | PDF. Sin promesas médicas: "si el dolor sigue, consultá" | Bump · $7.990 |
+| 15 | **Mañanas con Energía** | Cansancio, "me levanto sin ganas" (beneficio pedido en el quiz) | El té es de noche. Esto es la mañana: desayunos que sacian, rituales de 5 minutos y cómo cortar el bajón de la tarde | PDF | Bump · $5.990 |
+
+### Escalera con el 4.º OTO
+```
+COMPRA $19.990
+ → OTO 1  Protocolo Anti-Antojos       $14.990   (ruleta ~50%)
+ → OTO 2  Nutri Luana 24 h (GPT)       $29.990   (ruleta ~53%)
+ → OTO 3  [el que elijas de 11–15]     $9.990–12.990 (ruleta ~47%)
+ → OTO 4  Reafirmante Casero           $9.990
+```
+Recomendación para el OTO 3: **#11 Asados, Cumples y Salidas sin Culpa**. Es el problema más cercano en el tiempo (el finde), es bien argentino y no se pisa con nada.

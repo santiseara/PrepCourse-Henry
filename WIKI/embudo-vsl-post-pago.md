@@ -140,6 +140,7 @@ El upsell post-pago exige **checkout en dólares** — Shopify Payments, Stripe 
 - **Felicitar solo en el primer OTO.** Si se felicita en todos, "no tiene sentido". Del OTO 2 en adelante se arranca directo, continuando la conversación anterior.
 - **Los VSL tienen que estar encadenados entre sí** (correlación: cada uno retoma al anterior) y **no repetir fórmulas ni frases**, para que no suene a IA.
 - **Duración:** el OTO 1 dura 4–5 min (quedó en 4:15 y "quedó bien"). **Cada OTO siguiente, un poco más corto** (2026-10-15): OTO 2 ~3:45 (~750 palabras), OTO 3 ~3:15 (~650), OTO 4 ~2:45 (~550).
+- **Velocidad: exportar a 1.2–1.3x** (2026-10-15: "acordate de ponerle 1.2 o 1.3 a la velocidad del video, así se ve mejor"). Se hace con `SPEED=1.2` en `edit_vsl_quiz.py`. El guion tiene que ser más largo para compensar (~1.000 palabras para 4 min a 1.2x).
 - **Entregables: solo 2 por OTO** (2026-10-15: "poné solo 2 cosas como entregable"). Sin listas largas ni regalo sorpresa.
 - Avatar: la misma experta del front (Nutri Mounjaro). Los B-rolls se pueden repetir, se crean nuevos si hace falta, y la edición va con formatos variados (split, full, green screen, pip).
 - Escalera de Mounjaro Humilde: Anti-Antojos $14.990 → Nutri Luana 24 h (GPT) $29.990 → Rostro Desinflamado $9.990 → Reafirmante Casero $6.990.
@@ -186,6 +187,7 @@ Relacionado: [[aumento-de-aov]] · [[guiones-de-video-ads]] · [[ugc-y-video-gen
 ## Registro de correcciones
 | Fecha | Oferta | Corrección | Regla |
 |---|---|---|---|
+| 2026-10-15 | Mounjaro Humilde | "Ponele 1.2 o 1.3 a la velocidad del video, así se ve mejor" | Exportar los OTO a 1.2–1.3x |
 | 2026-10-15 | Mounjaro Humilde | "Que vayan siendo un poco más cortos" y "poné solo 2 cosas como entregable" | Duración decreciente; 2 entregables |
 | 2026-10-15 | Mounjaro Humilde | "No tenemos que felicitar siempre; que tengan correlación entre sí y no repitan cosas como si fuera una IA"; 4–5 min | Reglas de Santiago para los VSL de OTO |
 

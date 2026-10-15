@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-15 — Quiz Chinese Embroidery: garantía y foto de Juliana
+- Garantía rediseñada en la paleta del quiz (tarjeta crema, sello dorado de 112 px, título en Fraunces). La foto redonda de Juliana sale de una versión sin texto, con plano abierto y sin agrandar. Reglas en `WIKI/quizzes-reglas-de-armado.md` §4.
+
 ## 2026-10-15 — Quiz Chinese Embroidery: checkout y precio
 - Checkout `https://chinese-embroidery.impultienda.ar/checkout` en todos los CTAs (con UTMs). Precio 27 USD en la caja de precio y en el tachado del popup. Registro en `WIKI/quizzes-reglas-de-armado.md`.
 

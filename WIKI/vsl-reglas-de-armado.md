@@ -2,6 +2,18 @@
 
 > Reglas y correcciones de Santiago para armar VSLs con avatar (después del quiz o en la landing). **Leer antes de escribir un guion de VSL o editar uno.** Cada corrección nueva se suma acá, con fecha. Contexto técnico de avatares y voces en [[ugc-y-video-generativo]]. Reglas del quiz en [[quizzes-reglas-de-armado]].
 
+## 0. Pipeline rápido (regla de Santiago, 2026-10-15: "agilizar y hacer otras cosas mientras algo se procesa")
+Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
+1. **Calcular el largo antes de escribir.** HeyGen (voz roma) habla a ~0,27 s por palabra y el recorte de silencios saca otro ~10%. Para **4–5 min editados: ~850 palabras**; para 30 s: ~110.
+2. **Guion aprobado → HeyGen YA.** Creación rápida, clic en el textbox (con `find`) y pegar el guion entero con `document.execCommand('insertText', false, T)` por JS: es instantáneo y no se cuelga como el tipeo largo. Se envía con el botón "Generar script".
+3. **Mientras HeyGen renderiza** (unos 45 s → 3 min y unos 4 min → 12–15 min):
+   - B-rolls en Higgsfield: los prompts uno atrás del otro en una sola tanda, y mirar antes el historial;
+   - placas (mk_gfx.py), `plan.json`, `heads.json`, `capmap.json` y `stickers.json`;
+   - verificar con un script que todas las frases del plan existan en el guion (normalizado).
+4. **Al bajarlo:** esperar a que termine el `.crdownload`, copiarlo y correr `edit_vsl_quiz.py` **en segundo plano**. Mientras edita: WIKI, changelog, guion del próximo.
+5. Revisar con una hoja de contactos (1 cuadro cada 3 s) y un par de cuadros a resolución completa. Comprimir con crf 21 y maxrate 8M.
+- **Formatos de edición disponibles** (`edit_vsl_quiz.py`, 5.º campo del plan): `split` (avatar arriba y placa o B-roll abajo), `full` (B-roll solo), `gs` (avatar grande recortada delante del B-roll) y `pip` (B-roll con la avatar chiquita en la esquina). En un VSL largo conviene alternar los cuatro.
+
 ## 1. Pedido típico
 - "Te paso el VSL de una oferta mía. Usá **exactamente el mismo guion**, adaptado a la oferta nueva, con acento **rioplatense**, para el público de la oferta."
 - Se entrega **terminado**: avatar con labios sincronizados, B-rolls, subtítulos y edición, a **velocidad 1.3x**, en una carpeta del escritorio. **No se mete en el quiz** hasta que lo pida.

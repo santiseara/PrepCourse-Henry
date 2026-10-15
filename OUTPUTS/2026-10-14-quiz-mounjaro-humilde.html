@@ -15,12 +15,12 @@ SEGUNDOS_BOTON_VSL_NUTRI / SEGUNDOS_BOTON_VSL_FINAL : cuándo aparece el botón 
 ====================================================================
 -->
 <script>
-var LINK_CHECKOUT = "#";
+var LINK_CHECKOUT = "https://mounjaro-humilde.impultienda.ar/checkout";
 var SEGUNDOS_BOTON_VSL_NUTRI = 30;  // el botón Continuar aparece a los 30 s
-var SEGUNDOS_BOTON_VSL_FINAL = 0;   // original: 62
+var SEGUNDOS_BOTON_VSL_FINAL = 80;  // "QUIERO MI PLAN" aparece al 1:20 del VSL
 </script>
 <template id="vsl-nutri"><div style="position:relative;padding-top:177.77777777777777%;"><iframe id="panda-5cd4f76f-ee99-4f3d-baed-14b0effcc5bf" src="https://player-vz-c3e8527f-c25.tv.pandavideo.com/embed/?v=5cd4f76f-ee99-4f3d-baed-14b0effcc5bf" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div></template>
-<template id="vsl-final"></template>
+<template id="vsl-final"><div style="position:relative;padding-top:177.77777777777777%;"><iframe id="panda-8a6088db-00ee-4e85-a6d0-17cbf0acf45c" src="https://player-vz-c3e8527f-c25.tv.pandavideo.com/embed/?v=8a6088db-00ee-4e85-a6d0-17cbf0acf45c" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div></template>
 <style>
 :root{--g:#65a30d;--g2:#568b0b;--txt:#030712;--card:#f7f7f7;--bd:#e5e7eb}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -632,7 +632,21 @@ img.full{width:100%;border-radius:12px;display:block}
       if(html){box.innerHTML=html;[].forEach.call(box.querySelectorAll('script'),function(o){var n=document.createElement('script');[].forEach.call(o.attributes,function(a){n.setAttribute(a.name,a.value);});n.text=o.text;o.parentNode.replaceChild(n,o);});}
       else box.innerHTML='<div class="vslph"><svg width="56" height="56" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>VSL (se carga después)</div>';
     }
-    if(html&&secs>0){btn.classList.add('hide');timers.push(setTimeout(function(){btn.classList.remove('hide');},secs*1000));}
+    // El botón aparece con el tiempo REAL del video: Panda avisa por postMessage (panda_timeupdate).
+    // Si esos avisos no llegan, cuenta desde que arranca el video (panda_play) o desde que se abre el paso.
+    if(html&&secs>0&&!box.dataset.armed){
+      box.dataset.armed=1;btn.classList.add('hide');
+      var fr=box.querySelector('iframe'),done=false,gotTime=false,start=Date.now();
+      var show=function(){if(done)return;done=true;btn.classList.remove('hide');};
+      window.addEventListener('message',function(e){
+        if(fr&&e.source!==fr.contentWindow)return;
+        var d=e.data;if(typeof d==='string'){try{d=JSON.parse(d);}catch(x){return;}}
+        if(!d||typeof d!=='object')return;
+        if(d.message==='panda_timeupdate'&&typeof d.currentTime==='number'){gotTime=true;if(d.currentTime>=secs)show();}
+        if(d.message==='panda_play'&&!gotTime)start=Math.min(start,Date.now());
+      });
+      var clk=setInterval(function(){if(done)return clearInterval(clk);if(!gotTime&&Date.now()-start>=secs*1000)show();},1000);
+    }
   }
   // carga
   function load(s,dur){

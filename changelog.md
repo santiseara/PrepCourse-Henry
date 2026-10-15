@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-14 — VSL final de Mounjaro Humilde + VSL de la nutri en el quiz
+- Quiz: VSL final de Panda en el último paso, con "QUIERO MI PLAN" al 1:20 hacia el checkout de ImpulTienda.
 - Quiz: embed de Panda en el paso 12 (Continuar a los 30 s) y sin audio en la página de resultados. Link actualizado.
 - VSL final (1:28): nutri + testimonio de Karina ($19.990) + garantía de 30 días + placa "Tocá en QUIERO MI PLAN". Opciones nuevas en `edit_vsl_quiz.py` y §8 en `WIKI/vsl-reglas-de-armado.md`.
 

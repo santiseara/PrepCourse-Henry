@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Guiones Piedras v8 (que se sientan reflejadas)
+- **Creado:** `OUTPUTS/2026-10-15-guiones-piedras-v8-reflejados.md` (5 guiones EN/ES: hooks de identificación + beneficios apilados, precios de la landing).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-15 — Quiz Mounjaro Humilde sin el paso del e-mail
 - Se saca el paso del e-mail (se pide en el checkout). Nueva regla en `WIKI/quizzes-reglas-de-armado.md`: no pedir datos de contacto en el quiz.
 

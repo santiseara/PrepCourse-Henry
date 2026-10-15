@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-15 — Guiones Piedras v8: que se sientan reflejadas](../OUTPUTS/2026-10-15-guiones-piedras-v8-reflejados.md) — 5 guiones EN/ES: la que estira la plata, sin talento ni horno, la casa vacía, pedirle al marido, las 11 de la noche
 - [2026-10-14 — Guiones Chupetines v9](../OUTPUTS/2026-10-14-guiones-chupetines-v9.md) — 5 guiones de ~45 s con la estructura del ganador, sin relleno
 - [2026-10-14 — Guiones Chupetines v8 cortos](../OUTPUTS/2026-10-14-guiones-chupetines-v8-cortos.md) — 5 guiones de 25-30 s, directos
 - [2026-10-14 — Guiones Chupetines v7](../OUTPUTS/2026-10-14-guiones-chupetines-v7.md) — 5 guiones: tortas vs. chupetines, el precio equivocado, el agua que se pone rosa, la enfermera, los 300 del casamiento

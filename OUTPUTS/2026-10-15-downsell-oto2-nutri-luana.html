@@ -1,0 +1,346 @@
+<!-- ============================================================
+Downsell Ruleta — OTO 2 Nutri Luana 24 h (Mounjaro Humilde)
+     Precio del producto en ImpulTienda: $14.995 (50% de $29.990).
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<div class="oto" id="oto">
+
+  <div class="oto__stage" style="padding-top:26px;">
+
+    <h1 class="oto__h1" style="text-align:center;">Antes de que sigas...<br><em>dejame hacerte una propuesta.</em></h1>
+
+    <hr class="ds__rule">
+
+    <p class="ds__lead">Entiendo perfecto si ahora no querés sumar nada más. Ya diste un paso grande hoy.</p>
+    <p class="ds__lead">Pero pensá en esto: las dudas van a aparecer igual. En el súper, en un cumpleaños, un domingo a la noche cuando no tenés a quién preguntarle. Y es justo en esos momentos donde la mayoría <b>larga todo</b>.</p>
+    <p class="ds__lead">Nutri Luana 24 h está para eso: <em>que nunca te quedes sola con una duda</em>. Le escribís, te contesta al instante, y seguís.</p>
+    <p class="ds__lead">Como sé que el precio puede pesar, te dejo probar suerte una vez con la ruleta.</p>
+
+    <hr class="ds__rule">
+
+    <!-- ===== RULETA ===== -->
+    <div class="ds__wheelbox" id="dsWheelBox">
+      <p class="ds__wheel-kicker">Tu descuento te espera</p>
+
+      <div class="ds__wheel-wrap">
+        <div class="ds__pointer"></div>
+        <div class="ds__wheel" id="dsWheel">
+        <div class="ds__seg" style="transform:rotate(22.5deg)"><span style="top:-108px">15%</span></div>
+        <div class="ds__seg" style="transform:rotate(67.5deg)"><span style="top:-108px">35%</span></div>
+        <div class="ds__seg" style="transform:rotate(112.5deg)"><span style="top:-108px">50%</span></div>
+        <div class="ds__seg" style="transform:rotate(157.5deg)"><span style="top:-108px">10%</span></div>
+        <div class="ds__seg" style="transform:rotate(202.5deg)"><span style="top:-108px">25%</span></div>
+        <div class="ds__seg" style="transform:rotate(247.5deg)"><span style="top:-108px">5%</span></div>
+        <div class="ds__seg" style="transform:rotate(292.5deg)"><span style="top:-108px">40%</span></div>
+        <div class="ds__seg" style="transform:rotate(337.5deg)"><span style="top:-108px">20%</span></div>
+        </div>
+        <div class="ds__hub">💬</div>
+      </div>
+
+      <button class="ds__spin" id="dsSpin" type="button">Probar mi suerte</button>
+      <p class="ds__spin-note">Tenés un solo intento.</p>
+    </div>
+
+    <!-- ===== RESULTADO ===== -->
+    <div class="ds__result" id="dsResult">
+
+      <!-- TEXTO A (el que pediste) -->
+      <div class="ds__won">
+        <span class="ds__won-kicker">✨ ¡Felicitaciones! Ganaste</span>
+        <div class="ds__won-big">50% OFF</div>
+        <p class="ds__won-txt">Tu nutri en el bolsillo, a mitad de precio. Vale solo mientras estés en esta página.</p>
+      </div>
+
+      <!-- TEXTO B (no promete azar, mismo efecto). Para usarlo: borrá el bloque de arriba y descomentá este.
+      <div class="ds__won">
+        <span class="ds__won-kicker">🔓 Desbloqueaste</span>
+        <div class="ds__won-big">50% OFF</div>
+        <p class="ds__won-txt">Es el descuento que te guardé. Se aplica solo a esta pantalla.</p>
+      </div>
+      -->
+
+      <div class="oto__price">
+        <span class="oto__price-old">$29.990</span>
+        <span class="oto__price-now">$14.995</span>
+        <span class="oto__price-tag">Pago único</span>
+      </div>
+
+      <button class="oto__yes" type="button" data-pp-accept>
+        <b>Quiero mi Nutri Luana por $14.995</b>
+        <small>Acceso para siempre · 50% de descuento ya aplicado</small>
+      </button>
+
+      <ul class="oto__trust">
+        <li>30 días de garantía</li>
+        <li>Sin mensualidad</li>
+        <li>Funciona desde el celular</li>
+      </ul>
+
+      <button class="oto__no" type="button" data-pp-decline>Prefiero resolver mis dudas sola</button>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .oto{
+    --v:#65a30d; --v-dk:#3f6e08; --beige:#efe7dc; --beige-2:#f7f2ea;
+    --ink:#1a1a1a; --line:#e2d9cc; --muted:#8a8178; --rojo:#e23b3b;
+    --amber:#b8791a; --amber-bg:#fdf6e8; --amber-line:#f0dcb4;
+    --body:'Poppins',sans-serif;
+    width:100%; max-width:580px; margin:0 auto; background:#fff; border-radius:22px;
+    padding:0 0 30px; font-family:var(--body); box-sizing:border-box;
+    box-shadow:0 24px 60px rgba(0,0,0,.1); overflow:hidden; color:var(--ink);
+  }
+  .oto *{box-sizing:border-box;}
+  .oto img{display:block; max-width:100%;}
+
+  .oto__topbar{display:flex; justify-content:center; padding:18px; background:var(--beige-2); border-bottom:1px solid var(--line);}
+  .oto__logo{height:34px; width:auto;}
+
+  /* ---------- STEPPER ---------- */
+  .oto__steps{display:flex; align-items:flex-start; justify-content:center; gap:0; padding:22px 14px 26px; overflow:hidden;}
+  .oto__step{position:relative; display:flex; justify-content:center; flex:0 0 auto; min-width:0;}
+  .oto__step-dot{
+    width:34px; height:34px; border-radius:50%; display:grid; place-items:center;
+    background:var(--beige); border:2px solid var(--line); font-size:15px; line-height:1;
+    color:transparent; transition:.3s ease;
+  }
+  /* absolutas: quedan fuera del calculo de ancho, asi 7 nodos entran en cualquier pantalla */
+  .oto__step-lbl{position:absolute; top:calc(100% + 7px); left:50%; transform:translateX(-50%);
+    font-size:10px; font-weight:700; color:var(--muted); letter-spacing:.02em; white-space:nowrap; line-height:1.2;}
+  .oto__step.is-done .oto__step-dot{background:var(--v); border-color:var(--v); color:#fff;}
+  .oto__step.is-done .oto__step-lbl{color:var(--v-dk);}
+  .oto__step.is-now{z-index:1;}
+  .oto__step.is-now .oto__step-dot{
+    background:#fff; border-color:var(--v); transform:scale(1.12);
+    box-shadow:0 0 0 0 rgba(101,163,13,.5); animation:otoPulse 1.8s infinite;
+  }
+  .oto__step.is-now .oto__step-lbl{color:var(--ink); font-weight:800;}
+  @keyframes otoPulse{70%{box-shadow:0 0 0 10px rgba(101,163,13,0);}100%{box-shadow:0 0 0 0 rgba(101,163,13,0);}}
+  .oto__step-line{flex:1 1 auto; height:2px; background:var(--line); margin-top:16px; min-width:6px; max-width:34px;}
+  .oto__step-line.is-done{background:var(--v);}
+
+  .oto__stage{padding:20px 24px 0;}
+
+  /* ---------- ALERTA ---------- */
+  .oto__alert{
+    background:var(--amber-bg); border:1px solid var(--amber-line);
+    border-radius:18px; padding:22px 20px; text-align:center; margin-bottom:26px;
+  }
+  .oto__alert-tag{
+    display:inline-flex; align-items:center; gap:7px; background:#fff;
+    border:1px solid var(--amber-line); color:var(--amber);
+    font-size:10.5px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
+    padding:6px 13px; border-radius:100px; margin-bottom:14px;
+  }
+  .oto__alert-pulse{width:7px; height:7px; border-radius:50%; background:var(--amber); animation:otoBlink 1.2s infinite;}
+  @keyframes otoBlink{0%,100%{opacity:1;}50%{opacity:.25;}}
+
+  .oto__h1{
+    font-size:clamp(23px,5.2vw,31px); font-weight:900; line-height:1.14;
+    letter-spacing:-.022em; margin:0 0 12px; text-wrap:balance;
+  }
+  .oto__h1 em{font-style:normal; color:var(--v); display:inline-block;}
+  .oto__sub{font-size:14px; line-height:1.6; color:#6f665d; margin:0; max-width:430px; margin-inline:auto;}
+  .oto__sub b{color:var(--ink); font-weight:700;}
+
+  /* ---------- VIDEO ---------- */
+  .oto__vsl-label{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    font-size:clamp(15px,3.4vw,18px); font-weight:800; color:var(--v-dk);
+    margin:0 0 14px; text-align:center;
+  }
+  .oto__vsl-label span{animation:otoBob 1.5s ease-in-out infinite;}
+  .oto__vsl-label span:last-child{animation-delay:.2s;}
+  @keyframes otoBob{0%,100%{transform:translateY(0);}50%{transform:translateY(4px);}}
+
+  .oto__vslwrap{width:100%; margin:0 auto 22px; border-radius:16px; overflow:hidden; background:var(--ink); box-shadow:0 16px 40px rgba(0,0,0,.18);}
+  .oto__vsl-ph{aspect-ratio:9/16; display:grid; place-items:center; background:linear-gradient(160deg,#2a2a28,#16161a);}
+  .oto__vsl-ph-in{text-align:center; color:#fff; padding:24px; display:grid; gap:10px; justify-items:center;}
+  .oto__vsl-ph-play{width:62px; height:62px; border-radius:50%; background:rgba(255,255,255,.12); border:2px solid rgba(255,255,255,.3); display:grid; place-items:center; font-size:22px; padding-left:4px;}
+  .oto__vsl-ph-in b{font-size:15px; font-weight:700;}
+  .oto__vsl-ph-in small{font-size:12px; opacity:.6; line-height:1.5; max-width:250px;}
+
+  /* ---------- ESPERA ---------- */
+  .oto__wait{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    font-size:13px; font-weight:600; color:var(--muted); padding:15px 16px;
+    background:var(--beige-2); border:1px dashed var(--line); border-radius:14px;
+  }
+  .oto__wait-spin{width:16px; height:16px; border:2px solid var(--line); border-top-color:var(--v); border-radius:50%; animation:otoSpin .9s linear infinite; flex-shrink:0;}
+  @keyframes otoSpin{to{transform:rotate(360deg);}}
+
+  /* ---------- CTA ---------- */
+  .oto__ctawrap{display:none;}
+  .oto__ctawrap.is-in{display:block; animation:otoIn .5s cubic-bezier(.2,.8,.2,1);}
+  @keyframes otoIn{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);}}
+
+  .oto__price{display:flex; align-items:baseline; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;}
+  .oto__price-old{font-size:16px; font-weight:600; color:var(--muted); text-decoration:line-through;}
+  /* si la tienda no tiene "comparar con precio original", {compare} llega vacio y esto lo oculta */
+  .oto__price-old:empty{display:none;}
+  .oto__price-now{font-size:clamp(30px,7vw,40px); font-weight:900; color:var(--v-dk); letter-spacing:-.03em; line-height:1;}
+  .oto__price-tag{font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--v); background:var(--beige-2); border:1px solid var(--line); padding:5px 11px; border-radius:100px;}
+
+  .oto__yes{
+    display:block; width:100%; text-align:center; text-decoration:none !important;
+    font-family:var(--body); border:none; cursor:pointer; appearance:none;
+    background:linear-gradient(135deg,var(--v),var(--v-dk)); color:#fff !important;
+    border-radius:100px; padding:17px 22px; box-shadow:0 14px 30px rgba(101,163,13,.38);
+    transition:transform .2s ease, box-shadow .2s ease; animation:otoBreathe 2.6s ease-in-out infinite;
+  }
+  .oto__yes b{display:block; font-size:clamp(15px,3.6vw,17px); font-weight:800; letter-spacing:.01em;}
+  .oto__yes small{display:block; font-size:11.5px; font-weight:500; opacity:.82; margin-top:3px;}
+  .oto__yes:hover{transform:translateY(-2px); box-shadow:0 18px 38px rgba(101,163,13,.5); animation:none;}
+  @keyframes otoBreathe{0%,100%{transform:scale(1);}50%{transform:scale(1.018);}}
+
+  .oto__trust{list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 16px; margin:16px 0 0; padding:0;}
+  .oto__trust li{font-size:11.5px; font-weight:600; color:var(--muted); display:flex; align-items:center; gap:6px;}
+  .oto__trust li::before{
+    content:''; width:14px; height:14px; border-radius:50%; flex-shrink:0;
+    background:var(--v) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/9px no-repeat;
+  }
+
+  .oto__no{
+    display:block; width:100%; text-align:center; margin:22px auto 0; max-width:340px;
+    font-family:var(--body); background:none; border:none; cursor:pointer; padding:6px;
+    font-size:12.5px; font-weight:500; color:var(--muted); text-decoration:underline;
+    text-underline-offset:3px; transition:color .2s ease;
+  }
+  .oto__no:hover{color:var(--ink);}
+
+  @media (max-width:480px){
+    .oto{border-radius:0; box-shadow:none;}
+    .oto__stage{padding:18px 16px 0;}
+    .oto__steps{padding:18px 10px 24px;}
+    .oto__step-dot{width:30px; height:30px; font-size:13px;}
+    .oto__step-lbl{font-size:9px;}
+    .oto__step-line{margin-top:14px; max-width:22px;}
+    .oto__alert{padding:20px 16px;}
+  }
+
+  /* ============ DOWNSELL: RULETA ============ */
+  .ds__lead{font-size:14.5px; line-height:1.65; color:#6f665d; margin:0 0 14px;}
+  .ds__lead:last-of-type{margin-bottom:0;}
+  .ds__lead b{color:var(--ink); font-weight:700;}
+  .ds__lead em{font-style:normal; color:var(--v-dk); font-weight:700;}
+
+  .ds__rule{height:1px; background:var(--line); border:0; margin:24px 0;}
+
+  .ds__wheelbox{text-align:center; margin:0 0 6px;}
+  .ds__wheel-kicker{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--v); margin:0 0 16px;}
+
+  .ds__wheel-wrap{position:relative; width:min(300px,78vw); aspect-ratio:1/1; margin:0 auto 22px;}
+  .ds__pointer{
+    position:absolute; top:-8px; left:50%; transform:translateX(-50%); z-index:3;
+    width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent;
+    border-top:26px solid var(--ink); filter:drop-shadow(0 3px 5px rgba(0,0,0,.28));
+  }
+  .ds__wheel{
+    position:absolute; inset:0; border-radius:50%;
+    border:9px solid #fff; box-shadow:0 0 0 3px var(--line), 0 20px 46px rgba(0,0,0,.24);
+    transition:transform 5s cubic-bezier(.12,.72,.08,1);
+    background:conic-gradient(
+      var(--v-dk) 0deg 45deg,  var(--v) 45deg 90deg,
+      var(--v-dk) 90deg 135deg, var(--v) 135deg 180deg,
+      var(--v-dk) 180deg 225deg, var(--v) 225deg 270deg,
+      var(--v-dk) 270deg 315deg, var(--v) 315deg 360deg);
+  }
+  .ds__seg{
+    position:absolute; left:50%; top:50%; width:0; height:0;
+    color:#fff; font-size:15px; font-weight:900; letter-spacing:-.01em;
+    text-shadow:0 1px 3px rgba(0,0,0,.35);
+  }
+  .ds__seg span{position:absolute; transform:translate(-50%,-50%); white-space:nowrap;}
+  .ds__hub{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2;
+    width:62px; height:62px; border-radius:50%; background:#fff; border:3px solid var(--line);
+    display:grid; place-items:center; font-size:22px; box-shadow:0 5px 14px rgba(0,0,0,.18);
+  }
+
+  .ds__spin{
+    width:100%; max-width:330px; background:linear-gradient(135deg,var(--v),var(--v-dk)); color:#fff;
+    border:none; border-radius:100px; padding:17px 22px; font-family:var(--body);
+    font-size:16px; font-weight:900; letter-spacing:.06em; text-transform:uppercase; cursor:pointer;
+    box-shadow:0 14px 30px rgba(101,163,13,.4); transition:transform .2s ease;
+    animation:otoBreathe 2.6s ease-in-out infinite;
+  }
+  .ds__spin:hover:not(:disabled){transform:translateY(-2px);}
+  .ds__spin:disabled{opacity:.5; cursor:default; animation:none;}
+  .ds__spin-note{font-size:12px; color:var(--muted); margin:12px 0 0;}
+
+  /* resultado */
+  .ds__result{display:none;}
+  .ds__result.is-in{display:block; animation:otoIn .55s cubic-bezier(.2,.8,.2,1);}
+  .ds__won{
+    background:linear-gradient(135deg,var(--v),var(--v-dk)); color:#fff;
+    border-radius:18px; padding:22px 20px; text-align:center; margin:0 0 20px;
+    box-shadow:0 16px 38px rgba(101,163,13,.34);
+  }
+  .ds__won-kicker{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; opacity:.85;}
+  .ds__won-big{font-size:clamp(34px,9vw,46px); font-weight:900; line-height:1.02; letter-spacing:-.03em; margin:6px 0 4px;}
+  .ds__won-txt{font-size:13.5px; opacity:.92; margin:0; line-height:1.5;}
+
+  @media (prefers-reduced-motion:reduce){
+    .ds__wheel{transition-duration:.01ms;}
+    .ds__spin, .oto__yes{animation:none;}
+  }
+</style>
+
+<script>
+(function(){
+
+  var SEG_COUNT = 8;     /* porciones de la ruleta */
+  var WIN_INDEX = 2;      /* indice de la porcion de 50% (base 0) */
+  var VUELTAS   = 6;          /* vueltas completas antes de frenar */
+  var SPIN_MS   = 5000;       /* debe coincidir con la transition del CSS */
+
+  function init(){
+    var root = document.getElementById('oto');
+    if(!root || root.getAttribute('data-ready')) return;
+    root.setAttribute('data-ready','1');
+
+    var wheel  = document.getElementById('dsWheel');
+    var spin   = document.getElementById('dsSpin');
+    var result = document.getElementById('dsResult');
+    var box    = document.getElementById('dsWheelBox');
+    if(!wheel || !spin) return;
+
+    var girado = false;
+
+    spin.addEventListener('click', function(){
+      if(girado) return;
+      girado = true;
+      spin.disabled = true;
+      spin.textContent = 'Girando…';
+
+      var paso   = 360 / SEG_COUNT;
+      var centro = WIN_INDEX * paso + paso / 2;
+      /* jitter dentro de la porcion: nunca se pasa de la mitad del ancho */
+      var jitter = (Math.random() * 2 - 1) * (paso / 2 - 13.5);
+      var giro   = VUELTAS * 360 - centro + jitter;
+
+      wheel.style.transform = 'rotate(' + giro + 'deg)';
+
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setTimeout(function(){
+        spin.textContent = '¡Listo!';
+        if(box) box.style.opacity = '.55';
+        result.classList.add('is-in');
+        result.scrollIntoView({behavior:'smooth', block:'center'});
+      }, reduce ? 150 : SPIN_MS + 350);
+    });
+  }
+
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); }
+  else { init(); }
+  setTimeout(init, 400);
+})();
+</script>
+
+

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — VSL de la nutri de Mounjaro Humilde
+- Video de 42 s con la avatar Nutri Mounjaro (HeyGen) y el mismo guion que el de Brasil, adaptado a voseo. Pantalla dividida con capturas del quiz, B-rolls del té, antes y después, subtítulos de a una palabra y 3 palabras en verde.
+- Nuevo script `OUTPUTS/scripts-vsl/edit_vsl_quiz.py` y §7 en `WIKI/vsl-reglas-de-armado.md`.
+
 ## 2026-10-14 — Guiones Chupetines v9
 - **Corrección de Santiago:** la v8 era "muy corta".
 - **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v9.md` (5 guiones de ~45 s, estructura del ganador).

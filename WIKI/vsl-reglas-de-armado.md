@@ -154,6 +154,17 @@
   - Ad: `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Rodillas.mp4` (27 s): split + algunos cortes a pantalla completa, 4 headlines y 0 B-rolls nuevos.
 - **Bug resuelto:** una imagen con `-loop 1` sin `-t` (más una rama `nullsink`) dejó a ffmpeg corriendo sin fin. Siempre ponerle `-t`.
 
+## 7. VSL corto de la nutri dentro del quiz (Mounjaro Humilde, 2026-10-14)
+- El "VSL" de Brasil ("Sua Receitinha Personalizada", 49 s) es el **video de la nutri Luana** del paso 12 del quiz: explica por qué se hacen las preguntas, que la receta es 100% natural y el "poder de las combinaciones".
+- **Avatar:** HeyGen "Nutri Mounjaro" (Avatar IV, con la voz que trae puesta: "voz roma"), Creación rápida, vertical 1080p. Salió de 46 s y costó unos 15–20 créditos. **HeyGen se quedó en 0 créditos** y Santiago cargó más: antes de generar, revisar los créditos (menú de la cuenta → "Créditos: Quedan N").
+- **Edición copiada del original** (`OUTPUTS/scripts-vsl/edit_vsl_quiz.py`, basado en `edit_ugc_pip.py`):
+  - subtítulos **de a una palabra** en mayúscula (Arial Black 82, blanco con borde negro, al pecho y sobre el corte en la pantalla dividida);
+  - **pantalla dividida con capturas del propio quiz** abajo (género, zonas, tipo de cuerpo, edad, dificultades). Se sacan con Chrome headless desde una copia del quiz que abre el paso `?s=N&sel=...`, y se arman en tarjetas con `mk_panels.py`;
+  - B-rolls del té (los 5 de Santiago) e imágenes de antes y después del quiz a pantalla completa;
+  - 3 palabras clave en **verde** con "pop" (MOUNJARO HUMILDE, 100% NATURAL, ¡RÁPIDO Y EFICAZ!);
+  - 1.08x.
+- Entrega: `~/Desktop/mounjaro-humilde/vsl/Mounjaro-Humilde-VSL-Nutri.mp4`. Guion: `OUTPUTS/2026-10-14-vsl-nutri-mounjaro-humilde-guion.md`.
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|

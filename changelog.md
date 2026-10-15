@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-14 — Guiones Chupetines v8 cortos
+- **Corrección de Santiago:** "mejores y sin tanto rollo".
+- **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v8-cortos.md` (5 guiones de 25-30 s).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (regla de guiones cortos para chupetines) e `index.md`.
+
 ## 2026-10-14 — Guiones Chupetines v7
 - **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v7.md` (5 guiones con los elementos del ganador "Si hace 6 meses" y ángulos nuevos).
 - **Cambiado:** `WIKI/index.md` (Outputs).

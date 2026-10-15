@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Quiz Chinese Embroidery (Juliana Alves, mercado en inglés)
+- **Creado:** `OUTPUTS/2026-10-15-quiz-chinese-embroidery.html`, modelado del quiz brasileño de Bordado Chinês (vivendodebordadochines.lovable.app). Tapa rehecha con Pillow (Juliana Alves), chats de WhatsApp, garantía y pago seguro en HTML en inglés.
+- **Cambiado:** `WIKI/quizzes-reglas-de-armado.md` (cómo sacar un quiz de Lovable, localización al inglés, recortes de la tapa editada) e `index.md`.
+
 ## 2026-10-15 — Post-pagos de Mounjaro Humilde
 - Escalera: Anti-Antojos $14.990 → GPT $29.990 → Rostro $9.990 → Reafirmante $6.990. Reglas para los VSL de OTO en `WIKI/embudo-vsl-post-pago.md` (felicitar solo en el 1.º, encadenados, sin repetir, 4–5 min). Guion del OTO 1 en `OUTPUTS/2026-10-15-vsl-oto1-anti-antojos-guion.md`.
 

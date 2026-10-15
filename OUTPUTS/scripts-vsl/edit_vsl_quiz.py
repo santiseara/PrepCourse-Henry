@@ -32,6 +32,13 @@ CAP_Y_GS = 1560
 CAP_Y = 1180                         # a la altura del pecho
 CAP_Y_FULL = 1640                    # sobre B-roll o imagen a pantalla completa
 HEAD_Y = 1330
+# Opciones (VSL 2, 2026-10-14):
+#   NOMUSIC=1        -> sin música (las partes se unen y la música se pone una sola vez)
+#   CAPCOLOR=&H..&   -> color de los subtítulos en ASS (BGR), ej. amarillo verdoso del testimonio: &H003BFFE5
+#   capmap.json      -> [frase, reemplazo]: junta palabras en un solo subtítulo (ej. el precio en cifras)
+#   stickers.json    -> [frase, png, segundos, x, y, ancho, efecto]: imagen encima (sello de garantía)
+NOMUSIC = os.environ.get('NOMUSIC') == '1'
+CAPCOLOR = os.environ.get('CAPCOLOR', '&H00FFFFFF')
 
 src, wd, out, gpath = sys.argv[1:5]
 LANG = sys.argv[5] if len(sys.argv) > 5 else 'es'
@@ -204,6 +211,13 @@ while i < len(words):
         toks.append({'w': f'${numval(span):,}', 's': words[i]['s'], 'e': e, 'money': True}); i = j
     else:
         toks.append(dict(words[i])); i += 1
+cm = os.path.join(wd, os.environ.get('CAPMAP', 'capmap.json'))
+for phr, txt in (json.load(open(cm)) if os.path.exists(cm) else []):
+    pt = [norm(x) for x in phr.split()]
+    for k in range(len(toks) - len(pt) + 1):
+        if [norm(t['w']) for t in toks[k:k + len(pt)]] == pt:
+            toks[k:k + len(pt)] = [{'w': txt, 's': toks[k]['s'], 'e': toks[k + len(pt) - 1]['e'], 'money': True}]
+            break
 ev, i = [], 0
 while i < len(toks):
     grp = [toks[i]]
@@ -213,7 +227,7 @@ while i < len(toks):
     a = grp[0]['s']; i += len(grp)
     b = toks[i]['s'] if i < len(toks) else grp[-1]['e'] + 0.3
     b = min(b, grp[-1]['e'] + 0.4)
-    parts = [('{\\c&H00D7FF&\\fscx115\\fscy115}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!…:;').upper() for w in grp]
+    parts = [('{\\c&H40D61F&\\fscx125\\fscy125}' + w['w'] + '{\\r}') if w.get('money') else w['w'].rstrip('.,?!…:;').upper() for w in grp]
     cy = (CAP_Y_FULL if any(x - 0.05 <= a < y for x, y in full_iv) else
           CAP_Y_GS if any(x - 0.05 <= a < y for x, y in gs_iv) else
           CAP_Y_SPLIT if any(x - 0.05 <= a < y for x, y in split_iv) else CAP_Y)   # con la avatar grande, el subtítulo va al pecho
@@ -229,7 +243,7 @@ WrapStyle: 2
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Arial Black,82,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,7,3,5,60,60,0,1
+Style: Cap,Arial Black,82,{CAPCOLOR},{CAPCOLOR},&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,7,3,5,60,60,0,1
 Style: Head,Arial Black,104,&H0040D61F,&H0040D61F,&H00000000,&H00000000,0,0,0,0,100,100,1,-4,1,8,0,8,50,50,{HEAD_Y},1
 
 [Events]
@@ -277,8 +291,18 @@ for i, (f, a, b, ss, m) in enumerate(brolls):
     last = f'v{i + 1}'
 fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vq]")
 fc.append(f"[vq][gs]overlay=0:{GS_DY}:enable='{en(gs_iv)}'[vp]")   # avatar grande, bajada para que se vea el B-roll arriba
+sp = os.path.join(wd, os.environ.get('STICKERS', 'stickers.json'))
+cur = 'vp'
+for n_, (phr, png, d, x, y, w_, fx) in enumerate(json.load(open(sp)) if os.path.exists(sp) else []):
+    t = find(phr)
+    if t is None: continue
+    k = sum(1 for z in inputs if z == '-i')          # índice de la entrada nueva
+    inputs += ['-loop', '1', '-t', f'{total + 1:.2f}', '-i', os.path.join(wd, png)]
+    fc.append(f"[{k}:v]scale={w_}:-1,format=rgba,fade=t=in:st={t:.2f}:d=0.15:alpha=1,fade=t=out:st={t + d - 0.2:.2f}:d=0.2:alpha=1[st{n_}]")
+    fc.append(f"[{cur}][st{n_}]overlay={x}:{y}:enable='between(t,{t:.3f},{t + d:.3f})'[sk{n_}]"); cur = f'sk{n_}'
+    if fx: sfx.append((fx + '.wav', t, 0.6))
 assp = ass.replace(':', r'\:')
-fc.append(f"[vp]ass='{assp}':fontsdir='{FONTS}',format=yuv420p[vout]")
+fc.append(f"[{cur}]ass='{assp}':fontsdir='{FONTS}',format=yuv420p[vout]")
 fc.append(f"[0:a]atempo={SPEED}[aout]")
 open(os.path.join(work, 'fc.txt'), 'w').write(';\n'.join(fc))
 vid = os.path.join(work, 'video_voz.mkv')
@@ -288,7 +312,10 @@ run([FF, '-v', 'error', '-y'] + inputs + ['-filter_complex_script', os.path.join
 
 # ---------- Audio: voz -14 LUFS, música muy baja con ducking, pocos efectos ----------
 music = os.path.join(work, 'music.wav')
-run(['python3', os.path.join(HERE, 'music.py'), f'{total + 1:.1f}', music])
+if NOMUSIC:   # silencio en lugar de música
+    run([FF, '-v', 'error', '-y', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', f'{total + 1:.1f}', music])
+else:
+    run(['python3', os.path.join(HERE, 'music.py'), f'{total + 1:.1f}', music])
 ain = ['-i', vid, '-i', music]
 for f, _, _ in sfx: ain += ['-i', os.path.join(SFX, f)]
 af = ["[0:a]loudnorm=I=-14:TP=-1.5:LRA=11,asplit=2[voz][sc]",

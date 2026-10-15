@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 — VSL final de Mounjaro Humilde + VSL de la nutri en el quiz
+- Quiz: embed de Panda en el paso 12 (Continuar a los 30 s) y sin audio en la página de resultados. Link actualizado.
+- VSL final (1:28): nutri + testimonio de Karina ($19.990) + garantía de 30 días + placa "Tocá en QUIERO MI PLAN". Opciones nuevas en `edit_vsl_quiz.py` y §8 en `WIKI/vsl-reglas-de-armado.md`.
+
 ## 2026-10-14 — VSL de la nutri de Mounjaro Humilde
 - Video de 42 s con la avatar Nutri Mounjaro (HeyGen) y el mismo guion que el de Brasil, adaptado a voseo. Pantalla dividida con capturas del quiz, B-rolls del té, antes y después, subtítulos de a una palabra y 3 palabras en verde.
 - Nuevo script `OUTPUTS/scripts-vsl/edit_vsl_quiz.py` y §7 en `WIKI/vsl-reglas-de-armado.md`.

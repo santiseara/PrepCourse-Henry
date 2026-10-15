@@ -17,6 +17,7 @@
 - Números en palabras dentro del texto para la voz ("catorce mil novecientos noventa pesos").
 - **No copiar claims médicos falsos** del original. Ejemplo: decir que la terapia hormonal "crea dependencia" se cambia por "dietas extremas o pastillas milagrosas". Avisarle el cambio a Santiago.
 - **No fabricar testimonios en video** de "clientas reales" con IA. Si el original tenía uno, la avatar lee un testimonio que ya existe en el funnel.
+  - **Excepción decidida por Santiago (2026-10-14, Mounjaro Humilde):** si él lo pide, el testimonio en primera persona lo hace su avatar de HeyGen **"Karina testimonio"** (voz roma).
 
 ## 3. Avatar y voz
 - **Avatar: HeyGen** (decisión del 2026-10-12, en lugar de Higgsfield). Lo usa Santiago desde su sesión en Chrome.
@@ -165,9 +166,23 @@
   - 1.08x.
 - Entrega: `~/Desktop/mounjaro-humilde/vsl/Mounjaro-Humilde-VSL-Nutri.mp4`. Guion: `OUTPUTS/2026-10-14-vsl-nutri-mounjaro-humilde-guion.md`.
 
+## 8. VSL final del quiz con testimonio (Mounjaro Humilde, 2026-10-14)
+- El original (1:39) tiene tres partes: la nutri ("¡Felicitaciones! armamos tu plan…"), el **testimonio de una clienta** (casi un minuto, precio "R$47,90, una única vez") y otra vez la nutri (garantía de 30 días, "la panza chata se hace en la cocina", CTA "Tocá en PEGAR MEU PLANO"). Termina con una placa de flechas.
+- Versión AR: precio **$19.990** ("diecinueve mil novecientos noventa pesos"), CTA "Quiero mi plan" (el botón del quiz) y entrega **por e-mail**, porque el quiz ya no pide WhatsApp.
+- HeyGen: la nutri en un solo video (intro + cierre, se corta en "Creemos") y Karina testimonio en otro (1:07). El cuadro de texto de HeyGen a veces no toma el foco: hacer clic con `find` sobre el textbox.
+- Edición: el mismo `edit_vsl_quiz.py`, con nuevas opciones:
+  - `NOMUSIC=1` en cada parte, y la música se pone una sola vez sobre el video unido;
+  - `CAPCOLOR` en amarillo verdoso para el testimonio, como el original;
+  - `capmap.json` para mostrar el precio en cifras ("$19.990" en verde);
+  - `stickers.json` para el sello dorado de garantía de 30 días (`mk_gfx.py`, puntas calculadas);
+  - placa final "Tocá en QUIERO MI PLAN y terminá tu inscripción" con flechas.
+- **Peso:** con grano y crf 17 sale enorme (376 MB para 1:28). Se re-exporta con crf 21 y maxrate 8M (~60 MB).
+- Entrega: `~/Desktop/mounjaro-humilde/vsl2/Mounjaro-Humilde-VSL-Final.mp4` (1:28). Guion: `OUTPUTS/2026-10-14-vsl2-mounjaro-humilde-guion.md`.
+
 ## Registro de correcciones
 | Fecha | VSL | Corrección | Regla |
 |---|---|---|---|
+| 2026-10-14 | Mounjaro Humilde (VSL final) | El testimonio lo hace el avatar "Karina testimonio"; precio $19.990 | §2 excepción, §8 |
 | 2026-10-12 | Pilates Hormonal | "Me llamo maestra Caro queda muy raro" → "Soy la Maestra Caro"; que no suene robot | §2 tono hablado |
 | 2026-10-12 | Pilates Hormonal | El video se hace con HeyGen | §3 |
 | 2026-10-12 | Pilates Hormonal | "Usá modelos más baratos, intercalá, no uses siempre el mejor" | §3b |

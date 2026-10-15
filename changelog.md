@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-14 — Quiz Mounjaro Humilde (modelado de "Mounjaro de Pobre", Brasil)
+- Quiz completo en español con voseo: `~/Desktop/mounjaro-humilde/` (HTML con imágenes embebidas, .txt, `imagenes/`, `original/`, `trabajo/` con los scripts). Copia: `OUTPUTS/2026-10-14-quiz-mounjaro-humilde.html`.
+- Imágenes: tapa nueva con GPT Image 1.5 ("MOUNJARO HUMILDE"); logo, diagrama, HOMBRE/MUJER y DESPUÉS rehechos con Pillow; el resto, del original a 2x.
+- VSL vacíos con botón Continuar; botón final a `LINK_CHECKOUT`.
+- Correcciones en `WIKI/quizzes-reglas-de-armado.md`: sin la pantalla de elegir WhatsApp/e-mail, y armar más rápido desde el JSON.
+
 ## 2026-10-14 — Guiones Chupetines v6
 - **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v6.md` (5 guiones con los elementos del ganador "Si hace 6 meses" + ángulos de piedras: mes desglosado por canal y "Tres cosas").
 - **Cambiado:** `WIKI/index.md` (Outputs; se corrigieron las líneas del UGC con avatar y de las natives de feria).

@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-14 — Guiones Chupetines v9](../OUTPUTS/2026-10-14-guiones-chupetines-v9.md) — 5 guiones de ~45 s con la estructura del ganador, sin relleno
 - [2026-10-14 — Guiones Chupetines v8 cortos](../OUTPUTS/2026-10-14-guiones-chupetines-v8-cortos.md) — 5 guiones de 25-30 s, directos
 - [2026-10-14 — Guiones Chupetines v7](../OUTPUTS/2026-10-14-guiones-chupetines-v7.md) — 5 guiones: tortas vs. chupetines, el precio equivocado, el agua que se pone rosa, la enfermera, los 300 del casamiento
 - 2026-10-14 — [Descripción Resina Rentable](../OUTPUTS/2026-10-14-descripcion-resina-rentable.md): primary text corto con emojis

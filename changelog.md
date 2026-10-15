@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-14 — Guiones Chupetines v9
+- **Corrección de Santiago:** la v8 era "muy corta".
+- **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v9.md` (5 guiones de ~45 s, estructura del ganador).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (largo de referencia: el ganador) e `index.md`.
+
 ## 2026-10-14 — Guiones Chupetines v8 cortos
 - **Corrección de Santiago:** "mejores y sin tanto rollo".
 - **Creado:** `OUTPUTS/2026-10-14-guiones-chupetines-v8-cortos.md` (5 guiones de 25-30 s).

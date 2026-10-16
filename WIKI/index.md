@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
+- 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
 - ✅ [[guiones-y-anuncios]] — Reglas fijas de copy, variación real, ángulos validados, CTAs, natives y descripciones.
 - ✅ [[perfil-y-negocio]] — Quién es Santiago, su ciclo de trabajo, precios, stack completo y objetivos.
@@ -81,6 +82,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-16 · Guiones Patitas Felices](../OUTPUTS/2026-10-16-guiones-patitas-felices.md) · [v2 (10 y 11)](../OUTPUTS/2026-10-16-guiones-patitas-felices-v2.md)
 - [2026-10-16 — Natives Piedras: receta gratis tanda 2](../OUTPUTS/2026-10-16-natives-piedras-receta-gratis-v2.md) — natives 4 a 6 (la tarjeta de receta, la de mi hermana y la mía, "no hay receta secreta"), solo EN
 - [2026-10-16 — Guiones Piedras v11: receta gratis](../OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md) — 5 variables del Guion 1 de la v10 (le gustó): guardalo, la alacena, mi hermana, Navidad, "no hay receta secreta"
 - [2026-10-16 — Guiones Piedras v10](../OUTPUTS/2026-10-16-guiones-piedras-v10.md) — 5 guiones EN/ES: la receta gratis en video, las dos piedras, me echaron en marzo, la directora del colegio, 4 cosas que me hubiera gustado saber

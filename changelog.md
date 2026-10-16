@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-16 — Kit Patitas Felices: oferta nueva y primer video
+- **Creado:** `WIKI/patitas-felices.md` (análisis de los 55 ads de Tigela Cheia, pipeline y correcciones), `OUTPUTS/2026-10-16-guiones-patitas-felices.md` (9 guiones), `-v2.md` (10 y 11), `OUTPUTS/scripts-vsl/rmsubs.py` y `ad_edit.py`.
+- **Correcciones de Santiago:** no repetir la plantilla en una tanda, y voz con silencios recortados a 1.2x.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-16 — Natives Piedras: receta gratis tanda 2
 - **Creado:** `OUTPUTS/2026-10-16-natives-piedras-receta-gratis-v2.md` (natives 4 a 6 con prompt de imagen y descripción, solo EN).
 - **Cambiado:** `WIKI/index.md` (Outputs).

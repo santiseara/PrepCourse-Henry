@@ -166,6 +166,10 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
   - Modo `split` (degradé coseno de 220 px desde y=880, subtítulo en y=1400).
   - El B-roll se recorta desde y=340 para que no quede la cabeza de la persona bajo el degradé. Si el plano importante es la panza, en el 6.º campo del plan va otra altura (ej. 760).
   - Ad: `~/Desktop/pilates-hormonal-ad/Pilates-Hormonal-Ad-Rodillas.mp4` (27 s): split + algunos cortes a pantalla completa, 4 headlines y 0 B-rolls nuevos.
+- **Ad "I thought" y su variable "Budget" (Scented Stones, 2026-10-15):**
+  - El original (`~/Downloads/I thought scented.mp4`, 42 s, ángulo guía gratis, pantalla dividida) usa la avatar de HeyGen **"PERRITA RICA"** (delantal, sweater crema, piedra con lavanda en la mano) con "voz roma" en inglés. No había quedado registrado.
+  - Variable: mismo body y CTA, hook nuevo ("…way out of my budget"). Edición mixta `gs` / `full` / `pip` con los 6 B-rolls de piedras ya existentes (0 nuevos). Plan y headlines en `work/plan_ithought.json` y `work/heads_ithought.json`. La toma de HeyGen salió de 55 s.
+  - Santiago: "hacelos rápido, no gastes créditos de más" → **una sola generación por guion** en HeyGen y nada de B-rolls nuevos si alcanzan los que hay.
 - **Bug resuelto:** una imagen con `-loop 1` sin `-t` (más una rama `nullsink`) dejó a ffmpeg corriendo sin fin. Siempre ponerle `-t`.
 
 ## 7. VSL corto de la nutri dentro del quiz (Mounjaro Humilde, 2026-10-14)

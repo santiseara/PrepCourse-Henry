@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Dos videos variables de "I thought" (Scented Stones)
+- **Creado:** `~/Desktop/scented-stones-ad/Scented-Stones-Ad-Budget.mp4` (hook "fuera de mi presupuesto") y `Scented-Stones-Ad-12-Dollars.mp4` (hook "12 dólares por una piedra"). Avatar PERRITA RICA (voz roma), edición mixta gs/full/pip con los B-rolls existentes, 4 headlines. Una sola generación de HeyGen por video.
+- **Cambiado:** `OUTPUTS/2026-10-15-guion-piedras-i-thought-variable.md` (+ Guion 2), `WIKI/vsl-reglas-de-armado.md` §6 (avatar del ad "I thought" y regla "no gastar créditos de más").
+
 ## 2026-10-15 — Guiones Chupetines v10 (virales)
 - **Creado:** `OUTPUTS/2026-10-15-guiones-chupetines-v10-virales.md` (5 guiones de ~45 s con hooks de identificación).
 - **Cambiado:** `WIKI/index.md` (Outputs).

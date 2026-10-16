@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-15 — Guiones Chupetines v10 virales](../OUTPUTS/2026-10-15-guiones-chupetines-v10-virales.md) — 5 guiones con hooks de la vida argentina: el sueldo al 15, el grupo de mamás, el jefe, "este mes no se puede", el asado
 - 2026-10-15 — [Quiz Chinese Embroidery (Juliana Alves)](../OUTPUTS/2026-10-15-quiz-chinese-embroidery.html) — quiz de Bordado Chinês (Brasil, Lovable) pasado al inglés: 10 pasos, oferta $27 (tachado $147) con checkout de ImpulTienda, popup de salida $19.90. Reglas en [[quizzes-reglas-de-armado]].
 - [2026-10-15 — Guion Piedras: variable de "I thought"](../OUTPUTS/2026-10-15-guion-piedras-i-thought-variable.md) — mismo body y CTA del video "I thought scented stones…" (guía gratis), hook nuevo: "fuera de mi presupuesto". EN/ES
 - [2026-10-15 — Natives Piedras: receta gratis](../OUTPUTS/2026-10-15-natives-piedras-receta-gratis.md) — texto de la ganadora + 2 variables (primera tanda vs. ahora, receta para Navidad), solo EN

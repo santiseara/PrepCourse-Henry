@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Guiones Chupetines v10 (virales)
+- **Creado:** `OUTPUTS/2026-10-15-guiones-chupetines-v10-virales.md` (5 guiones de ~45 s con hooks de identificación).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-15 — Variable del video "I thought" (Scented Stones)
 - **Creado:** `OUTPUTS/2026-10-15-guion-piedras-i-thought-variable.md` (transcripción del video `~/Downloads/I thought scented.mp4`, que no estaba registrado, + hook nuevo con el mismo body y CTA, EN/ES).
 - **Cambiado:** `WIKI/index.md` (Outputs).

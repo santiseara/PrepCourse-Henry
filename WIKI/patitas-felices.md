@@ -22,6 +22,7 @@
   - Las páginas del libro en portugués se traducen con Nano Banana y se animan con Kling, y se insertan con `--insert`. Los textos quemados blancos y sin borde se borran con el modo `white` de `rmsubs.py`.
   - Cada video de la tanda lleva otro estilo de subtítulos (`--style` classic, pop, box, lower, tiktok o story) y otro extra (zoom lento, barra de progreso, título de hook).
   - **Kling:** antes de generar, esperar a que la imagen termine de subir (que el preview deje de ser `blob:`). Si no, genera texto a video sin la imagen y se pierden créditos. Así se perdieron 4 clips (20 créditos).
+- **2026-10-16 · Voz rara y lenta → Roma en Eleven v4.** De los guiones 4 y 9 hechos con Sofía (Multilingual v2, estabilidad 30) dijo: "quedó mal la voz, suena muy rara, habla lento y feo". Desde ahora la voz la genero yo en ElevenLabs (cuenta con créditos que abrió Santiago), con la voz **"Roma"** (español argentino, biblioteca) y el modelo **Eleven v4**, con estabilidad 50 y velocidad 0.98 (habla a ~3,3 palabras/s). Recorte de silencios más suave (0.25 s / quedan 0.13 s) + 1.2x. Los subtítulos se arman con el texto exacto del guion (`--script`), porque Whisper escucha mal algunas palabras ("Entráis sitio").
 - **2026-10-16 · Voz en off.** "Acordate de recortar silencios y de ponerle velocidad 1.2." Se arma 1 video primero y, si lo aprueba, el resto.
 
 ## Preguntas abiertas

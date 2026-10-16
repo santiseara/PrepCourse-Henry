@@ -19,7 +19,7 @@ ap.add_argument('--cut', type=float); ap.add_argument('--end'); ap.add_argument(
 ap.add_argument('--insert', default=''); ap.add_argument('--anchor', default='')
 ap.add_argument('--style', default='classic'); ap.add_argument('--zoom', action='store_true')
 ap.add_argument('--bar', action='store_true'); ap.add_argument('--title', default='')
-ap.add_argument('--capy', type=int, default=1490); ap.add_argument('--speed', type=float, default=1.2)
+ap.add_argument('--capy', type=int, default=1490); ap.add_argument('--script', default=''); ap.add_argument('--speed', type=float, default=1.2)
 A = ap.parse_args()
 tmp = A.out + '_tmp'; os.makedirs(tmp, exist_ok=True)
 W, H = 1080, 1920
@@ -38,7 +38,7 @@ def words(f):
 
 # 1) voz: recorte de silencios y velocidad fija
 run([FF, '-v', 'error', '-y', '-i', A.vo, '-af',
-     'silenceremove=start_periods=1:start_threshold=-45dB:stop_periods=-1:stop_duration=0.15:stop_threshold=-40dB:stop_silence=0.07,aresample=48000',
+     'silenceremove=start_periods=1:start_threshold=-45dB:stop_periods=-1:stop_duration=0.25:stop_threshold=-40dB:stop_silence=0.13,aresample=48000',
      '-ac', '2', f'{tmp}/vo_trim.wav'])
 raw = words(f'{tmp}/vo_trim.wav')
 D = raw[-1][1] + 0.15
@@ -46,6 +46,20 @@ sp = A.speed
 run([FF, '-v', 'error', '-y', '-i', f'{tmp}/vo_trim.wav', '-af', f'atempo={sp:.4f}', f'{tmp}/vo.wav'])
 L = D / sp + 0.5
 wd = [(s / sp, e / sp, w) for s, e, w in raw]
+if A.script:   # subtítulos con el texto exacto del guion (Whisper a veces escucha mal)
+    import difflib
+    sw = open(A.script).read().split()
+    a, b = [norm(x[2]) for x in wd], [norm(x) for x in sw]
+    out = []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op == 'equal':
+            out += [(wd[i1 + k][0], wd[i1 + k][1], sw[j1 + k]) for k in range(i2 - i1)]
+        elif j2 > j1:
+            s0 = wd[i1][0] if i1 < len(wd) else (out[-1][1] if out else 0)
+            e0 = wd[i2 - 1][1] if i2 > i1 else (wd[i1][0] if i1 < len(wd) else s0 + 0.3 * (j2 - j1))
+            st = (e0 - s0) / (j2 - j1)
+            out += [(s0 + k * st, s0 + (k + 1) * st, sw[j1 + k]) for k in range(j2 - j1)]
+    wd = out
 
 tb = None
 if A.end:

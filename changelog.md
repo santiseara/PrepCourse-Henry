@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 — Natives Piedras: receta gratis tanda 2
+- **Creado:** `OUTPUTS/2026-10-16-natives-piedras-receta-gratis-v2.md` (natives 4 a 6 con prompt de imagen y descripción, solo EN).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-16 — Guiones Piedras v11 (receta gratis)
 - **Feedback de Santiago:** le gustó el Guion 1 de la v10 ("esa onda").
 - **Creado:** `OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md` (5 variables EN/ES).

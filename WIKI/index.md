@@ -81,6 +81,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-16 — Natives Piedras: receta gratis tanda 2](../OUTPUTS/2026-10-16-natives-piedras-receta-gratis-v2.md) — natives 4 a 6 (la tarjeta de receta, la de mi hermana y la mía, "no hay receta secreta"), solo EN
 - [2026-10-16 — Guiones Piedras v11: receta gratis](../OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md) — 5 variables del Guion 1 de la v10 (le gustó): guardalo, la alacena, mi hermana, Navidad, "no hay receta secreta"
 - [2026-10-16 — Guiones Piedras v10](../OUTPUTS/2026-10-16-guiones-piedras-v10.md) — 5 guiones EN/ES: la receta gratis en video, las dos piedras, me echaron en marzo, la directora del colegio, 4 cosas que me hubiera gustado saber
 - [2026-10-15 — Guiones Chupetines v10 virales](../OUTPUTS/2026-10-15-guiones-chupetines-v10-virales.md) — 5 guiones con hooks de la vida argentina: el sueldo al 15, el grupo de mamás, el jefe, "este mes no se puede", el asado

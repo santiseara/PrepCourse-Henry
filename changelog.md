@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-16 — Guiones Piedras v11 (receta gratis)
+- **Feedback de Santiago:** le gustó el Guion 1 de la v10 ("esa onda").
+- **Creado:** `OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md` (5 variables EN/ES).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (ángulo que le gustó) e `index.md`.
+
 ## 2026-10-16 — Guiones Piedras v10
 - **Creado:** `OUTPUTS/2026-10-16-guiones-piedras-v10.md` (5 guiones EN/ES; los 2 primeros pasan a video el ángulo de la native ganadora "receta gratis"; material sal y harina).
 - **Cambiado:** `WIKI/index.md` (Outputs).

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Variable del video "I thought" (Scented Stones)
+- **Creado:** `OUTPUTS/2026-10-15-guion-piedras-i-thought-variable.md` (transcripción del video `~/Downloads/I thought scented.mp4`, que no estaba registrado, + hook nuevo con el mismo body y CTA, EN/ES).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-15 — Quiz Chinese Embroidery: garantía y foto de Juliana
 - Garantía rediseñada en la paleta del quiz (tarjeta crema, sello dorado de 112 px, título en Fraunces). La foto redonda de Juliana sale de una versión sin texto, con plano abierto y sin agrandar. Reglas en `WIKI/quizzes-reglas-de-armado.md` §4.
 

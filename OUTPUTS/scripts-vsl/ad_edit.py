@@ -118,7 +118,7 @@ ST = {   # nombre: (palabras por bloque, estilo ASS, color palabra activa, mayú
     'pop':     (2, 'Arial Black,100,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,1,0,0,0,100,100,0,0,1,9,3', '&H0050FF7A&', True, True),
     'box':     (5, 'Arial Black,58,&H00111111,&H00111111,&H00FFFFFF,&H00FFFFFF,1,0,0,0,100,100,0,0,3,14,0', '&H00D06A00&', True, False),
     'lower':   (2, 'Arial Black,86,&H0000E1FF,&H0000E1FF,&H00000000,&H64000000,1,0,0,0,100,100,0,0,1,8,2', '&H00FFFFFF&', True, True),
-    'tiktok':  (3, 'Helvetica Neue,76,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,0,5', '&H0000E1FF&', False, False),
+    'tiktok':  (3, 'Helvetica Neue,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,5,4', '&H0000E1FF&', False, False),
     'story':   (6, 'Arial,60,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,0,0,1,0,4', None, False, False),
 }
 nw, sty, hi, upper, pop = ST[A.style]

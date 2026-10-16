@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 — Patitas Felices: 6 videos en HD
+- **Correcciones de Santiago:** visuales en HD, nada de texto en portugués (o traducido) y variar la edición entre anuncios.
+- **Cambiado:** `WIKI/patitas-felices.md` (registro de correcciones), `OUTPUTS/scripts-vsl/ad_edit.py` (estilos, insertos, ancla por frase, zoom, barra, título) y `rmsubs.py` (modo `white`).
+
 ## 2026-10-16 — Kit Patitas Felices: oferta nueva y primer video
 - **Creado:** `WIKI/patitas-felices.md` (análisis de los 55 ads de Tigela Cheia, pipeline y correcciones), `OUTPUTS/2026-10-16-guiones-patitas-felices.md` (9 guiones), `-v2.md` (10 y 11), `OUTPUTS/scripts-vsl/rmsubs.py` y `ad_edit.py`.
 - **Correcciones de Santiago:** no repetir la plantilla en una tanda, y voz con silencios recortados a 1.2x.

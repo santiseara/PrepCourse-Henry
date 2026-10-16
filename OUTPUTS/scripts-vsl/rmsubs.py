@@ -4,6 +4,7 @@ import sys, cv2, numpy as np, subprocess, os
 src, dst = sys.argv[1], sys.argv[2]
 y0f = float(sys.argv[3]) if len(sys.argv) > 3 else 0.70
 y1f = float(sys.argv[4]) if len(sys.argv) > 4 else 0.84
+MODE = sys.argv[5] if len(sys.argv) > 5 else 'outline'   # 'white': texto blanco con sombra, sin borde (v17)
 cap = cv2.VideoCapture(src)
 fps = cap.get(cv2.CAP_PROP_FPS); W = int(cap.get(3)); H = int(cap.get(4))
 y0, y1 = int(H*y0f), int(H*y1f)
@@ -17,6 +18,16 @@ while True:
     b, g, r = band[...,0], band[...,1], band[...,2]
     white = (b > 200) & (g > 200) & (r > 200) & (np.abs(r-b) < 40)
     yellow = (r > 190) & (g > 170) & (b < 110)
+    if MODE == 'white':
+        w = ((b > 215) & (g > 215) & (r > 215) & (np.abs(r - b) < 28)).astype(np.uint8)
+        n, lab, st, _ = cv2.connectedComponentsWithStats(w, 8)
+        keep = np.zeros(n, bool)
+        for i in range(1, n):
+            if st[i, 3] < H * 0.045 and st[i, 2] < W * 0.25 and st[i, 4] > 3: keep[i] = True
+        m = cv2.dilate(keep[lab].astype(np.uint8), np.ones((5,5),np.uint8), iterations=4)
+        full = np.zeros((H, W), np.uint8); full[y0:y1] = m * 255
+        if full.any(): f = cv2.inpaint(f, full, 7, cv2.INPAINT_TELEA)
+        vw.write(f); continue
     light = (white | yellow).astype(np.uint8)
     dark = ((b < 60) & (g < 60) & (r < 60)).astype(np.uint8)
     near = cv2.dilate(light, k3, iterations=3)

@@ -17,6 +17,11 @@
 
 ## Registro de correcciones
 - **2026-10-16 · Guiones repetidos.** De la primera tanda (9 guiones sobre la plantilla ganadora): "los primeros dos guiones son iguales, hay varios iguales". Regla: aunque el competidor duplique la misma plantilla, en una tanda cada guion usa otra estructura ganadora suya (plantilla, receta UGC, comparación, historia). Hizo 1, 3, 4, 5 y 9, más uno de los nuevos (10 paté / 11 historia).
+- **2026-10-16 · Visuales en HD, sin portugués y edición variada.** Aprobó el primer video ("me gustó") y pidió: "usá visuales en HD, que no se vean mal", "no pongas visuales que tengan textos en portugués, o si las ponés, que lo tengan en español" y "andá variando la edición". Reglas:
+  - Bajar siempre la `video_hd_url` (720x1280), que está en los scripts de la Ads Library, y no la SD de 360p. Chrome bloquea las descargas automáticas después de la primera de cada sitio: hay que pedirle a Santiago que las habilite y bajar cada video desde su propia pestaña.
+  - Las páginas del libro en portugués se traducen con Nano Banana y se animan con Kling, y se insertan con `--insert`. Los textos quemados blancos y sin borde se borran con el modo `white` de `rmsubs.py`.
+  - Cada video de la tanda lleva otro estilo de subtítulos (`--style` classic, pop, box, lower, tiktok o story) y otro extra (zoom lento, barra de progreso, título de hook).
+  - **Kling:** antes de generar, esperar a que la imagen termine de subir (que el preview deje de ser `blob:`). Si no, genera texto a video sin la imagen y se pierden créditos. Así se perdieron 4 clips (20 créditos).
 - **2026-10-16 · Voz en off.** "Acordate de recortar silencios y de ponerle velocidad 1.2." Se arma 1 video primero y, si lo aprueba, el resto.
 
 ## Preguntas abiertas

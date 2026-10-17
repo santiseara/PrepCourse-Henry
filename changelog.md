@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Natives Piedras: feria v3
+- **Corrección de Santiago:** las natives no tan cortas.
+- **Creado:** `OUTPUTS/2026-10-17-natives-piedras-feria-v3.md` (natives 6 a 8, de 900 a 1.200 palabras, solo EN).
+- **Cambiado:** `WIKI/natives-ganadoras.md` (cuándo va la corta y cuándo la larga) e `index.md`.
+
 ## 2026-10-17 — Guiones Piedras v12 (públicos nuevos)
 - **Pedido de Santiago:** apuntar a públicos nuevos porque los de siempre están explotados.
 - **Creado:** `OUTPUTS/2026-10-17-guiones-piedras-v12-publicos-nuevos.md` (6 guiones EN/ES, uno por público nuevo).

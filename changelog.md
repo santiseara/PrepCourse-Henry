@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-17 — Patitas Felices: corrección de variables
+- **Corrección de Santiago:** las variables cambian el guion entero y la visual base, no solo el hook (registrada en `WIKI/patitas-felices.md`).
+- **Creado:** `OUTPUTS/2026-10-17-variables-guion-4-patitas.md` (4 variables nuevas del Guion 4).
+
 ## 2026-10-17 — Patitas Felices: variables 4C y 4D
 - 2 hooks más sobre el cuerpo del Guion 4: 4C (comida de verdad o ultraprocesado) y 4D (texto en pantalla, sin voz). Se usó audio de Roma reciclado porque ElevenLabs se quedó sin créditos.
 - `OUTPUTS/2026-10-17-renovacion-guion-4-patitas-v2.md` y `WIKI/patitas-felices.md`.

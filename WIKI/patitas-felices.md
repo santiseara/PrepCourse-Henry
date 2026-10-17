@@ -15,6 +15,9 @@
 4. Edición: `OUTPUTS/scripts-vsl/ad_edit.py`. Mete nuestro plano final en "Y encima viene con 4 bonos", re-temporiza las visuales, pone subtítulos como los de ellos (mayúsculas, 3 palabras, la que suena en amarillo, a la altura de los quemados) y música de fondo baja.
 - Entregas: `~/Desktop/patitas-felices/final/`.
 
+## Resultados
+- **2026-10-17 · Primer ganador: Guion 4** ("Mirá cómo come ahora", visual v7, subtítulos box + barra, voz Roma). Vendió 2. Se renovó con 2 variables de hook y el cuerpo intacto ([[renovacion-de-creativos]]): **4A** "Antes ni miraba el balanceado. Lo olía y se iba." (hook del perro que huele el balanceado y se echa) y **4B** "Si tu perro deja la comida en el plato, tenés que ver esto." (hook de los dos platos). Guiones en `OUTPUTS/2026-10-17-renovacion-guion-4-patitas.md`, videos `PF-Guion4A/4B.mp4`. El hook nuevo se pega delante de v7 (concat) y `--cut` = duración del hook + 18.03.
+
 ## Registro de correcciones
 - **2026-10-16 · Guiones repetidos.** De la primera tanda (9 guiones sobre la plantilla ganadora): "los primeros dos guiones son iguales, hay varios iguales". Regla: aunque el competidor duplique la misma plantilla, en una tanda cada guion usa otra estructura ganadora suya (plantilla, receta UGC, comparación, historia). Hizo 1, 3, 4, 5 y 9, más uno de los nuevos (10 paté / 11 historia).
 - **2026-10-16 · Visuales en HD, sin portugués y edición variada.** Aprobó el primer video ("me gustó") y pidió: "usá visuales en HD, que no se vean mal", "no pongas visuales que tengan textos en portugués, o si las ponés, que lo tengan en español" y "andá variando la edición". Reglas:

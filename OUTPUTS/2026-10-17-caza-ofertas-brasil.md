@@ -17,3 +17,13 @@ RENDA EXTRA
 - Crochê de sapatinhos: 7+ anunciantes chicos → SUBNICHO.
 
 Método: las ofertas sin cara aparecieron buscando frases exactas del copy (search_type=keyword_exact_phrase), que juntan todas las fanpages de un mismo operador.
+
+LINKS A LA BIBLIOTECA DE ADS (actualizado: total real por página)
+Base: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&search_type=page&view_all_page_id=<ID>
+- Pilates na Parede: Desafio Pilates na Parede 1347793168415658 (~200) · Pilates em Casa 1167419563130957 (~150) · Fernanda Martins 1128954533633359 (~45)
+- HIIT Dance: THAIX digital trainer 416036084921665 (~160) — es marca personal (504 mil seguidores en IG)
+- Mounjaro de Chia: Débora Maiaa 1097916563406368 (~25)
+- Dr. Renan Botelho 378128628724966 (~490) · Talita Perosa Nutri 106253239248296 (~310)
+- Capas de Bíblia: Maria Silva - Artesã 1172922529237611 (~55) + 1264271126771040 (~5, desde 13/10)
+- Myhub.ia 931993346662001 (~260)
+- "Ele chamou atenção": Carla Lopes 101631086071155 (~130, es @alfamed.oficial → salud física) · Fernando Castro 151794918020684 (~34)

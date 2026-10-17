@@ -82,6 +82,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-17 — Caza de ofertas escaladas Brasil](../OUTPUTS/2026-10-17-caza-ofertas-brasil.md) — emagrecimento y renda extra: Pilates na Parede (whale ~400 ads), HIIT Dance, Capas de Bíblia em Crochê
 - [2026-10-17 — Natives Piedras: feria v3](../OUTPUTS/2026-10-17-natives-piedras-feria-v3.md) — natives 6 a 8, largas (la clienta que vuelve, la feria con lluvia, la dueña del local), solo EN
 - [2026-10-17 — Guiones Piedras v12: públicos nuevos](../OUTPUTS/2026-10-17-guiones-piedras-v12-publicos-nuevos.md) — 6 guiones EN/ES: la novia, la recaudación del colegio, la cuidadora, la que hace velas, la de 23 años, la ansiedad
 - [2026-10-16 · Guiones Patitas Felices](../OUTPUTS/2026-10-16-guiones-patitas-felices.md) · [v2 (10 y 11)](../OUTPUTS/2026-10-16-guiones-patitas-felices-v2.md)

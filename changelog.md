@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Caza de ofertas escaladas en Brasil
+- **Pedido de Santiago:** ofertas low ticket digitales escaladas (60+ ads, sin marca personal) en emagrecimento y renda extra, en la Ads Library de BR.
+- **Creado:** `OUTPUTS/2026-10-17-caza-ofertas-brasil.md` + doc en Claude Docs con la tabla de estadísticas.
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-17 — Natives Piedras: feria v3
 - **Corrección de Santiago:** las natives no tan cortas.
 - **Creado:** `OUTPUTS/2026-10-17-natives-piedras-feria-v3.md` (natives 6 a 8, de 900 a 1.200 palabras, solo EN).

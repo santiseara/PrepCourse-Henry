@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Secreto de la Insulina: primer video (remix)
+- **Pedido de Santiago:** un video con la opción A (sus visuales), sin HeyGen ni Higgsfield, con una variable del guion.
+- **Creado:** `WIKI/secreto-de-la-insulina.md`, `OUTPUTS/scripts-vsl/edit_remix.py`, `OUTPUTS/2026-10-17-video-secreto-insulina-remix-1.md` y el video en el escritorio.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-17 — Quiz Secreto de la Insulina (AR)
 - **Pedido de Santiago:** el quiz igual al del competidor validado, en verde, promesa con los kilos deseados en 21 días, peso y altura con barra, $14.990.
 - **Creado:** `OUTPUTS/2026-10-17-quiz-secreto-de-la-insulina.html` (+ `.txt`, PRUEBA e imágenes en el escritorio).

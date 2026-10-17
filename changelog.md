@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Guiones Piedras v12 (públicos nuevos)
+- **Pedido de Santiago:** apuntar a públicos nuevos porque los de siempre están explotados.
+- **Creado:** `OUTPUTS/2026-10-17-guiones-piedras-v12-publicos-nuevos.md` (6 guiones EN/ES, uno por público nuevo).
+- **Cambiado:** `WIKI/index.md` (Outputs).
+
 ## 2026-10-16 — Patitas Felices: 6 videos en HD
 - **Correcciones de Santiago:** visuales en HD, nada de texto en portugués (o traducido) y variar la edición entre anuncios.
 - **Cambiado:** `WIKI/patitas-felices.md` (registro de correcciones), `OUTPUTS/scripts-vsl/ad_edit.py` (estilos, insertos, ancla por frase, zoom, barra, título) y `rmsubs.py` (modo `white`).

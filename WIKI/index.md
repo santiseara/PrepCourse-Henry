@@ -82,6 +82,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-17 — Guiones Piedras v12: públicos nuevos](../OUTPUTS/2026-10-17-guiones-piedras-v12-publicos-nuevos.md) — 6 guiones EN/ES: la novia, la recaudación del colegio, la cuidadora, la que hace velas, la de 23 años, la ansiedad
 - [2026-10-16 · Guiones Patitas Felices](../OUTPUTS/2026-10-16-guiones-patitas-felices.md) · [v2 (10 y 11)](../OUTPUTS/2026-10-16-guiones-patitas-felices-v2.md)
 - [2026-10-16 — Natives Piedras: receta gratis tanda 2](../OUTPUTS/2026-10-16-natives-piedras-receta-gratis-v2.md) — natives 4 a 6 (la tarjeta de receta, la de mi hermana y la mía, "no hay receta secreta"), solo EN
 - [2026-10-16 — Guiones Piedras v11: receta gratis](../OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md) — 5 variables del Guion 1 de la v10 (le gustó): guardalo, la alacena, mi hermana, Navidad, "no hay receta secreta"

@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-17 — Quiz en Shopify
+- `WIKI/shopify-y-checkout.md`: cómo subir un quiz HTML pesado como plantilla Liquid (`layout none`, `content_for_header`, imágenes con `file_url`).
+
 ## 2026-10-17 — Patitas Felices: variables 4A–4D rehechas
 - 4 videos nuevos con guion y visual base distintos, que reemplazan a los anteriores. Voz generada con HeyGen (Karina, voz roma) porque ElevenLabs se quedó sin créditos.
 - `WIKI/patitas-felices.md`: resultados y flujo de voz por HeyGen.

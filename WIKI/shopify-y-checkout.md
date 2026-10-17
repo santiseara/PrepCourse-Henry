@@ -188,6 +188,7 @@ Mencionadas en el material: **Hotmart** (con checkout propio y comisiones), **Gu
 3. Asignarle esa plantilla a la página del paso 1.
 - **Alojarla en Shopify sube la carga** (visitas a la página de destino ÷ clics) **de ~60% a ~80–90%**, frente a un proveedor externo.
 - Imágenes: subirlas en **Contenido → Archivos**, siempre en WebP, y pegar el link generado en el `src` del código.
+- **Quiz HTML pesado (imágenes en base64, ~1 MB) → no va pegado en la página, va como plantilla Liquid.** Editar código → Templates → Add a new template → `page`, tipo `liquid` → pegar el `.liquid`. Ese archivo empieza con `{% layout none %}` (sin el tema encima), lleva `{{ content_for_header }}` en el `<head>` (así el pixel de la app de Facebook dispara en el quiz) y toma las imágenes con `{{ 'img-x.webp' | file_url }}`. Las imágenes se suben a Contenido → Archivos **sin cambiarles el nombre**. Después se crea la página y se le asigna esa plantilla. (Secreto de la Insulina, 2026-10-17)
 
 ### Botones → carrito, no checkout
 - **Los botones de la landing van al carrito, no al checkout**, porque ahí se ofrecen los order bumps.

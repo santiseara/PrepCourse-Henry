@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-17 — Patitas Felices: variables 4C y 4D
+- 2 hooks más sobre el cuerpo del Guion 4: 4C (comida de verdad o ultraprocesado) y 4D (texto en pantalla, sin voz). Se usó audio de Roma reciclado porque ElevenLabs se quedó sin créditos.
+- `OUTPUTS/2026-10-17-renovacion-guion-4-patitas-v2.md` y `WIKI/patitas-felices.md`.
+
 ## 2026-10-17 — Patitas Felices: renovación del Guion 4
 - El Guion 4 vendió 2: 2 variables de hook con el mismo cuerpo (4A y 4B), con voz Roma y videos en `~/Desktop/patitas-felices/final/`.
 - `OUTPUTS/2026-10-17-renovacion-guion-4-patitas.md` y sección *Resultados* en `WIKI/patitas-felices.md`.

@@ -1,9 +1,9 @@
 # Changelog
 
-
 ## 2026-10-17 — Patitas Felices: renovación del Guion 4
 - El Guion 4 vendió 2: 2 variables de hook con el mismo cuerpo (4A y 4B), con voz Roma y videos en `~/Desktop/patitas-felices/final/`.
 - `OUTPUTS/2026-10-17-renovacion-guion-4-patitas.md` y sección *Resultados* en `WIKI/patitas-felices.md`.
+
 ## 2026-10-17 — Secreto de la Insulina: Remix 1 a 6
 - **Correcciones de Santiago:** el principio del video no puede ser estático, y todo va en una sola carpeta (sin subcarpetas).
 - **Creado:** `OUTPUTS/2026-10-17-videos-secreto-insulina-remix-1-6.md` y los videos SI-Remix1..6 en `~/Desktop/secreto-insulina/`.

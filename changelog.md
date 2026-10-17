@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Quiz Secreto de la Insulina (AR)
+- **Pedido de Santiago:** el quiz igual al del competidor validado, en verde, promesa con los kilos deseados en 21 días, peso y altura con barra, $14.990.
+- **Creado:** `OUTPUTS/2026-10-17-quiz-secreto-de-la-insulina.html` (+ `.txt`, PRUEBA e imágenes en el escritorio).
+- **Cambiado:** `WIKI/quizzes-reglas-de-armado.md` (4 correcciones nuevas: copiar el validado, paleta verde, promesa sin inflar, barras siempre) e `index.md`.
+
 ## 2026-10-17 — Caza de ofertas escaladas en Brasil
 - **Pedido de Santiago:** ofertas low ticket digitales escaladas (60+ ads, sin marca personal) en emagrecimento y renda extra, en la Ads Library de BR.
 - **Creado:** `OUTPUTS/2026-10-17-caza-ofertas-brasil.md` + doc en Claude Docs con la tabla de estadísticas.

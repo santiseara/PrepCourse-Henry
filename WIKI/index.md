@@ -82,6 +82,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-17 — Native piedras: variable "Ever heard of"](../OUTPUTS/2026-10-17-native-piedras-descripcion-ever-heard.md) — variable de la descripción corta de tendencia · ver [[natives-ganadoras]]
 - [2026-10-17 — Video Secreto de la Insulina: Remix 1](../OUTPUTS/2026-10-17-video-secreto-insulina-remix-1.md) — voz en off nueva + fragmentos originales, 35 s · ver [[secreto-de-la-insulina]]
 - [2026-10-17 — Quiz Secreto de la Insulina (AR)](../OUTPUTS/2026-10-17-quiz-secreto-de-la-insulina.html) — copia del quiz validado del competidor, en verde, promesa = kilos deseados en 21 días, $14.990 · [análisis](../OUTPUTS/2026-10-17-analisis-secreto-de-la-insulina.md)
 - [2026-10-17 — Caza de ofertas escaladas Brasil](../OUTPUTS/2026-10-17-caza-ofertas-brasil.md) — emagrecimento y renda extra: Pilates na Parede (whale ~400 ads), HIIT Dance, Capas de Bíblia em Crochê

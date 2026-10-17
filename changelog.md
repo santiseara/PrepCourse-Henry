@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Native piedras: variable "Ever heard of"
+- **Pedido de Santiago:** una variable de la descripción "Ever heard of Scented Aroma Stones?".
+- **Creado:** `OUTPUTS/2026-10-17-native-piedras-descripcion-ever-heard.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-17 — Secreto de la Insulina: primer video (remix)
 - **Pedido de Santiago:** un video con la opción A (sus visuales), sin HeyGen ni Higgsfield, con una variable del guion.
 - **Creado:** `WIKI/secreto-de-la-insulina.md`, `OUTPUTS/scripts-vsl/edit_remix.py`, `OUTPUTS/2026-10-17-video-secreto-insulina-remix-1.md` y el video en el escritorio.

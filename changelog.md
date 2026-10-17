@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-17 — Patitas Felices: variables 4A–4D rehechas
+- 4 videos nuevos con guion y visual base distintos, que reemplazan a los anteriores. Voz generada con HeyGen (Karina, voz roma) porque ElevenLabs se quedó sin créditos.
+- `WIKI/patitas-felices.md`: resultados y flujo de voz por HeyGen.
+
 ## 2026-10-17 — Patitas Felices: corrección de variables
 - **Corrección de Santiago:** las variables cambian el guion entero y la visual base, no solo el hook (registrada en `WIKI/patitas-felices.md`).
 - **Creado:** `OUTPUTS/2026-10-17-variables-guion-4-patitas.md` (4 variables nuevas del Guion 4).

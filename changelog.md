@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 — Guiones piedras v13
+- **Pedido de Santiago:** más guiones para piedras.
+- **Creado:** `OUTPUTS/2026-10-18-guiones-piedras-v13.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-17 — Quiz en Shopify
 - `WIKI/shopify-y-checkout.md`: cómo subir un quiz HTML pesado como plantilla Liquid (`layout none`, `content_for_header`, imágenes con `file_url`).
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 — Bachas de concreto: B-roll sin repetir, efectos puntuales y 3 variables
+- **Correcciones de Santiago:** no repetir B-roll y sacar el whoosh de cada corte (cha-ching en la plata).
+- **Cambiado:** `OUTPUTS/scripts-vsl/edit_broll.py` (modo pool con `usage.json`, espejado al reusar, efectos por palabra), `WIKI/bachas-de-concreto.md`, `WIKI/index.md`.
+- **Creado:** `OUTPUTS/2026-10-18-variables-bachas-concreto-en.md` (A2, B2 y C2 en inglés y español). Los 6 videos se rehicieron en `~/Desktop/bachas-concreto/`.
+
 ## 2026-10-18 — Bachas de concreto: voz de hombre + Mark Ross
 - **Corrección de Santiago:** la voz tiene que ser de un hombre de unos 40, y el experto es Mark Ross (se lo puede nombrar).
 - **Rehecho:** las 3 voces con Knox (Google AI Studio) y los 3 videos. Mark Ross aparece en A y B ("Mark Ross's method") y en C ("I'm Mark Ross").

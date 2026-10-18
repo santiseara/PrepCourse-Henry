@@ -83,6 +83,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-18 — Variables bachas de concreto (EN/ES)](../OUTPUTS/2026-10-18-variables-bachas-concreto-en.md) — A2 garaje y bacha de 600 dólares, B2 mi hora en el garaje + chat familiar, C2 de 400 a 800 por bacha con materiales de 40 · ver [[bachas-de-concreto]]
 - [2026-10-18 — Guiones bachas de concreto (EN/ES)](../OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md) — 3 traducciones de los ganadores del competidor (hoy gano 3000, momento para mí, 1200 en una semana), editadas en video · ver [[bachas-de-concreto]]
 - [2026-10-18 — Natives piedras feria v4](../OUTPUTS/2026-10-18-natives-piedras-feria-v4.md) — natives 9 a 11: el hijo que atiende la mesa, Linda la del cuaderno, la foto de la primera feria · ver [[natives-ganadoras]]
 - [2026-10-18 — Guiones piedras v13](../OUTPUTS/2026-10-18-guiones-piedras-v13.md) — receta de los comentarios, mercados navideños, compradora que se volvió vendedora, "¿quién paga 12 por una piedra?", otras manualidades, abuela de 64 · ver [[guiones-y-anuncios]]

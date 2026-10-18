@@ -15,7 +15,13 @@
 1. **Descargar sus ads:** el CSP de Facebook bloquea mandarlos a un servidor local. Lo que anda es bajar todos los `<video>` desde la página con `fetch`, concatenarlos en un único Blob y una sola descarga (`fb_ads_concat.bin`), y después partirlo por tamaños en Python. Se transcriben con faster-whisper (modelo `base` alcanza para leer el guion), empezando por los más viejos.
 2. **Visuales:** TikToks que pasa Santiago, bajados con `yt-dlp` (instalado con `pip install --user`). TikTok falla seguido, así que se reintenta en loop. Salen sin marca de agua.
 3. **Voz: Google AI Studio → Generate speech** (Gemini 3.8 Flash TTS, gratis y sin créditos). **Voz de hombre de unos 40: Knox** (Masculine, "warm and conversational", tono grave), con el estilo: *"American man around 40, a hands-on craftsman telling his own story on TikTok. Warm, genuine, confident and conversational, a little excited, brisk natural pace, no announcer tone."* El texto se pega en el bloque, se genera con **cmd+Enter** (Run queda bloqueado mientras suena el audio anterior: primero hay que pausarlo) y se baja con el ícono de descarga (`Generated Audio ….wav`). Ojo: si el menú de Style queda abierto, lo que tipeás no entra en el bloque de texto. "Roma" no existe en AI Studio (es de ElevenLabs y HeyGen).
-4. **Edición:** `OUTPUTS/scripts-vsl/edit_broll.py plan.json salida.mp4`. Voz sin silencios a **1.2x**, un corte de visual cada ~4–5 s (siempre al final de una palabra), zoom suave alternado, whoosh bajo en cada corte, subtítulos de 3 palabras con la activa en amarillo y música baja. El primer plano siempre en movimiento (un desmolde).
+4. **Edición:** `OUTPUTS/scripts-vsl/edit_broll.py plan.json salida.mp4` en modo **pool**:
+   - Hay 40 recortes de los 7 TikToks, sin tramos con blur.
+   - Ningún recorte se repite dentro de un video, nunca van dos planos seguidos del mismo TikTok y aparecen los 7.
+   - Entre videos se priorizan los recortes menos usados (`usage.json` compartido): se editan en orden y con el mismo `usage.json`. Si un recorte se reusa, va espejado.
+   - Voz sin silencios a 1.2x, un corte cada ~4–5 s (al final de una palabra), zoom suave, subtítulos de 3 palabras con la activa en amarillo y música baja.
+   - **Efectos puntuales, no en cada corte:** cha-ching cuando nombra la plata ("dollars", "income", "pays"), ding en un momento clave (el primer pedido, "I'm Mark Ross"), pop en "Learn More" y un solo whoosh en el primer corte.
+   - Antes de entregar: pasar `blurdetect` de ffmpeg por los videos y por los clips nuevos, porque los TikToks traen transiciones con blur.
 5. **Entrega:** `~/Desktop/bachas-concreto/` con los videos y `guiones-videos.md`.
 
 ## Detalles / notas
@@ -31,6 +37,7 @@
 ## Activos
 - Videos del 2026-10-18: `BC-A-hoy-gano-3000.mp4` (57 s), `BC-B-momento-para-mi.mp4` (71 s) y `BC-C-1200-en-una-semana.mp4` (42 s), rehechos con voz de hombre (Knox).
 - Guiones en inglés y español: `OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md`.
+- Variables A2, B2 y C2 (mismo ángulo, guion nuevo): `OUTPUTS/2026-10-18-variables-bachas-concreto-en.md`. Videos `BC-A2-garaje-3200.mp4`, `BC-B2-mi-hora-en-el-garaje.mp4` y `BC-C2-400-a-800-por-bacha.mp4`.
 
 ## Preguntas abiertas
 - ¿Nombre del producto en inglés, landing y precio?
@@ -38,6 +45,10 @@
 
 ## Registro de correcciones
 - **2026-10-18 · Voz de hombre, no de mujer.** La primera tanda salió con Nika (femenina) y Santiago la rechazó: "la voz tiene que ser de un hombre, de unos 40 años". Regla: en esta oferta la voz siempre es masculina, de unos 40 (Knox). Además, el experto es **Mark Ross** y se lo puede nombrar si hace falta.
+
+- **2026-10-18 · B-roll sin repetir y efectos con sentido.** Sobre la tanda con voz de hombre: "se repiten muchas veces los mismos brolls, usá más… no quiero que se repitan" y "se hace muy cansador el efecto de sonido de 'Swap' cada vez que pasa algo… podés usar el cha-ching cuando nombra la ganancia". Reglas:
+  - En un video no se repite ningún recorte, se rotan todos los clips y nunca van dos planos seguidos del mismo clip.
+  - Nada de whoosh en cada corte: los efectos van solo donde el guion los pide (cha-ching en la plata, ding en un momento clave, pop en el CTA).
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[patitas-felices]] · [[secreto-de-la-insulina]] · [[internacionalizacion]] · [[funnel-hacking]]

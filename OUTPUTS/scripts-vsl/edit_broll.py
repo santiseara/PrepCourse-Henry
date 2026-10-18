@@ -8,9 +8,15 @@ plan.json:
  "vo": "A.wav", "script": "A.txt", "speed": 1.2, "lang": "en",
  "clips": {"Y": {"src": "tt_7541.mp4", "ranges": [[0, 25]]},
            "M": {"src": "tt_7639.mp4", "ranges": [[0, 13]], "zoom": 1.3, "ybias": 1.0}},  # ybias 1 = recorte abajo
- "shots": [["Y", 0], ["G", 0], ["K", 7]],   # orden de visuales (clave, segundo de arranque)
+ "shots": [["Y", 0], ["G", 0], ["K", 7]],   # orden fijo de visuales (clave, segundo de arranque)
+ "pool": [["K", 0, 5], ["T", 2, 6.5]],       # o en vez de "shots": recortes que se reparten solos
+ "first": ["Y", 0], "usage": "usage.json", "seed": 1,
+ "sfx": [["chaching", "dollars", 0], ["ding", "order.", 0], ["pop", "Learn", 0]],  # sonido, palabra, n.º de aparición
+ "whoosh": [1],                               # índices de corte con whoosh (no en todos)
  "cut": [3.6, 4.4, 5.2]                       # mínimo, ideal y máximo de cada plano
 }
+Con "pool": un recorte no se repite en el mismo video, nunca van dos planos seguidos del mismo
+clip y se priorizan los menos usados en videos anteriores (usage.json). Si uno ya se usó, va espejado.
 """
 import os, re, sys, json, subprocess, difflib
 from faster_whisper import WhisperModel
@@ -62,12 +68,40 @@ cuts.append(L)
 def dur(p):
     r = subprocess.run([FF, '-i', p], capture_output=True, text=True).stderr
     h, m, s = re.search(r'Duration: (\d+):(\d+):([\d.]+)', r).groups(); return int(h) * 3600 + int(m) * 60 + float(s)
+import random
+rnd = random.Random(P.get('seed', 0))
+upath = F(P['usage']) if 'usage' in P else None
+usage = json.load(open(upath)) if upath and os.path.exists(upath) else {}
+used, plan = set(), []
+for n in range(len(cuts) - 1):
+    d = cuts[n + 1] - cuts[n]
+    if 'pool' not in P:
+        key, st = P['shots'][n % len(P['shots'])]
+        c = P['clips'][key]
+        end = next((r1 for r0, r1 in c.get('ranges', [[0, 1e9]]) if r0 <= st < r1), 1e9)
+        plan.append((key, st, end, False)); continue
+    prev = [p[0] for p in plan[-2:]]
+    if n == 0 and 'first' in P:
+        seg = next(s for s in P['pool'] if s[0] == P['first'][0] and s[1] == P['first'][1])
+    else:
+        cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0] not in prev[-1:]]
+        here = {k: sum(1 for p in plan if p[0] == k) for k in P['clips']}
+        def score(s):
+            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0], 0) * 4 + (3 if s[0] in prev else 0)
+                    + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
+        seg = min(cand, key=score)
+    sid = f'{seg[0]}@{seg[1]}'; used.add(sid)
+    plan.append((seg[0], seg[1], seg[2], usage.get(sid, 0) % 2 == 1))
+    usage[sid] = usage.get(sid, 0) + 1
+if upath: json.dump(usage, open(upath, 'w'), indent=0)
+print('planos:', ' '.join(f'{k}{s:g}{"↔" if f else ""}' for k, s, e, f in plan))
+
 parts = []
 for n in range(len(cuts) - 1):
     d = cuts[n + 1] - cuts[n]
-    key, st = P['shots'][n % len(P['shots'])]
+    key, st, end, flip = plan[n]
     c = P['clips'][key]; src = F(c['src'])
-    end = next((r1 for r0, r1 in c.get('ranges', [[0, dur(src)]]) if r0 <= st < r1), dur(src))
+    end = min(end, dur(src))
     avail = end - st
     slow = max(1.0, d / avail) if avail > 0 else 1.0          # si el tramo es corto, se estira un poco
     z0 = c.get('zoom', 1.0); yb = c.get('ybias', 0.5)
@@ -75,7 +109,7 @@ for n in range(len(cuts) - 1):
     zexp = f"{z0}*(1+0.07*t/{d:.3f})" if zin else f"{z0}*(1.07-0.07*t/{d:.3f})"
     vf = (f"setpts={slow:.4f}*(PTS-STARTPTS),fps={FPS},"
           f"scale=w='max({W}/iw,{H}/ih)*iw*{zexp}':h=-2:eval=frame:flags=bicubic,"
-          f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},setsar=1,format=yuv420p")
+          f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},{'hflip,' if flip else ''}setsar=1,format=yuv420p")
     pc = f'{tmp}/s{n:02d}.mp4'
     run([FF, '-v', 'error', '-y', '-ss', str(st), '-t', f'{min(avail, d / slow) + 0.1:.3f}', '-i', src, '-an',
          '-vf', vf, '-t', f'{d:.3f}', '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
@@ -113,16 +147,21 @@ for ci, ch in enumerate(chunks):
         ass.append(f'Dialogue: 0,{ts(s)},{ts(e2)},C,,0,0,0,,{{\\pos({W // 2},{CAPY})}}{txt}')
 open(f'{tmp}/subs.ass', 'w').write('\n'.join(ass) + '\n')
 
-# 5) música baja + whoosh en cada corte + mezcla final
+# 5) música baja + efectos puntuales (cha-ching en la plata, ding, pop; whoosh solo en algunos cortes)
 run(['python3', os.path.join(DIR, 'music.py'), f'{L + 1:.2f}', f'{tmp}/music.wav'])
 if not os.path.exists(f'{tmp}/sfx/whoosh.wav'): run(['python3', os.path.join(DIR, 'sfx.py'), f'{tmp}/sfx'])
-wh = cuts[1:-1]
-ins = ['-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav'] + sum([['-i', f'{tmp}/sfx/whoosh.wav'] for _ in wh], [])
+VOL = {'chaching': 0.32, 'ding': 0.28, 'pop': 0.30, 'whoosh': 0.20, 'sello': 0.28}
+hits = [('whoosh', cuts[i] - 0.18) for i in P.get('whoosh', [1]) if 0 < i < len(cuts) - 1]
+for snd, word, occ in P.get('sfx', []):
+    ts_ = [w[0] for w in vw if norm(w[2]) == norm(word)]
+    if occ < len(ts_): hits.append((snd, ts_[occ] - 0.05))
+    else: print(f'aviso: "{word}" n.º {occ} no aparece')
+ins = ['-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav'] + sum([['-i', f'{tmp}/sfx/{s}.wav'] for s, _ in hits], [])
 fc = [f"[0:v]ass={tmp}/subs.ass[v]", f"[2:a]volume=0.10,afade=t=out:st={max(0, L - 1.2):.2f}:d=1.2[m]"]
-for k, c in enumerate(wh):
-    ms = int(max(0, c - 0.18) * 1000)
-    fc.append(f"[{3 + k}:a]volume=0.22,adelay={ms}|{ms}[w{k}]")
-fc.append(f"[1:a][m]{''.join(f'[w{k}]' for k in range(len(wh)))}amix=inputs={2 + len(wh)}:duration=first:normalize=0[a]")
+for k, (s, t) in enumerate(hits):
+    ms = int(max(0, t) * 1000)
+    fc.append(f"[{3 + k}:a]volume={VOL[s]},adelay={ms}|{ms}[w{k}]")
+fc.append(f"[1:a][m]{''.join(f'[w{k}]' for k in range(len(hits)))}amix=inputs={2 + len(hits)}:duration=first:normalize=0[a]")
 run([FF, '-v', 'error', '-y'] + ins + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-map', '[a]',
      '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-t', f'{L:.2f}',
      '-movflags', '+faststart', OUT])

@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
+- 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
 - ✅ [[guiones-y-anuncios]] — Reglas fijas de copy, variación real, ángulos validados, CTAs, natives y descripciones.
@@ -82,6 +83,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-18 — Guiones bachas de concreto (EN/ES)](../OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md) — 3 traducciones de los ganadores del competidor (hoy gano 3000, momento para mí, 1200 en una semana), editadas en video · ver [[bachas-de-concreto]]
 - [2026-10-18 — Natives piedras feria v4](../OUTPUTS/2026-10-18-natives-piedras-feria-v4.md) — natives 9 a 11: el hijo que atiende la mesa, Linda la del cuaderno, la foto de la primera feria · ver [[natives-ganadoras]]
 - [2026-10-18 — Guiones piedras v13](../OUTPUTS/2026-10-18-guiones-piedras-v13.md) — receta de los comentarios, mercados navideños, compradora que se volvió vendedora, "¿quién paga 12 por una piedra?", otras manualidades, abuela de 64 · ver [[guiones-y-anuncios]]
 - [2026-10-17 — Native piedras: variable "Ever heard of"](../OUTPUTS/2026-10-17-native-piedras-descripcion-ever-heard.md) — variable de la descripción corta de tendencia · ver [[natives-ganadoras]]

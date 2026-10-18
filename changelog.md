@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 — Bachas de concreto: voz de hombre + Mark Ross
+- **Corrección de Santiago:** la voz tiene que ser de un hombre de unos 40, y el experto es Mark Ross (se lo puede nombrar).
+- **Rehecho:** las 3 voces con Knox (Google AI Studio) y los 3 videos. Mark Ross aparece en A y B ("Mark Ross's method") y en C ("I'm Mark Ross").
+- **Cambiado:** `WIKI/bachas-de-concreto.md` (voz, experto, registro de correcciones) y `OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md` (español en masculino).
+
 ## 2026-10-18 — Oferta nueva: bachas de concreto (EN)
 - **Pedido de Santiago:** traducir al inglés los mejores ads de "Martin Ferreyra" (De Cemento a Negocio) y editarlos con visuales de 7 TikToks, cambiando de plano cada 4–5 s y con voz de Google AI Studio.
 - **Creado:** `WIKI/bachas-de-concreto.md`, `OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md`, `OUTPUTS/scripts-vsl/edit_broll.py`. Videos en `~/Desktop/bachas-concreto/`.

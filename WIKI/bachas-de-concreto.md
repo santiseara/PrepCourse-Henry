@@ -14,11 +14,12 @@
 ## Cómo se arma un video
 1. **Descargar sus ads:** el CSP de Facebook bloquea mandarlos a un servidor local. Lo que anda es bajar todos los `<video>` desde la página con `fetch`, concatenarlos en un único Blob y una sola descarga (`fb_ads_concat.bin`), y después partirlo por tamaños en Python. Se transcriben con faster-whisper (modelo `base` alcanza para leer el guion), empezando por los más viejos.
 2. **Visuales:** TikToks que pasa Santiago, bajados con `yt-dlp` (instalado con `pip install --user`). TikTok falla seguido, así que se reintenta en loop. Salen sin marca de agua.
-3. **Voz: Google AI Studio → Generate speech** (Gemini 3.8 Flash TTS, gratis y sin créditos). **No existe "Roma"** (es de ElevenLabs/HeyGen). La equivalente es **Nika** (femenina, "warm and approachable", tono medio), con el estilo: *"Natural American woman telling her own story to a friend on TikTok. Warm, genuine, conversational and upbeat, slightly excited, brisk pace, no announcer tone."* El texto se pega en el bloque, se genera con **cmd+Enter** (el botón Run a veces no responde) y se baja con el ícono de descarga (`Generated Audio ….wav`).
+3. **Voz: Google AI Studio → Generate speech** (Gemini 3.8 Flash TTS, gratis y sin créditos). **Voz de hombre de unos 40: Knox** (Masculine, "warm and conversational", tono grave), con el estilo: *"American man around 40, a hands-on craftsman telling his own story on TikTok. Warm, genuine, confident and conversational, a little excited, brisk natural pace, no announcer tone."* El texto se pega en el bloque, se genera con **cmd+Enter** (Run queda bloqueado mientras suena el audio anterior: primero hay que pausarlo) y se baja con el ícono de descarga (`Generated Audio ….wav`). Ojo: si el menú de Style queda abierto, lo que tipeás no entra en el bloque de texto. "Roma" no existe en AI Studio (es de ElevenLabs y HeyGen).
 4. **Edición:** `OUTPUTS/scripts-vsl/edit_broll.py plan.json salida.mp4`. Voz sin silencios a **1.2x**, un corte de visual cada ~4–5 s (siempre al final de una palabra), zoom suave alternado, whoosh bajo en cada corte, subtítulos de 3 palabras con la activa en amarillo y música baja. El primer plano siempre en movimiento (un desmolde).
 5. **Entrega:** `~/Desktop/bachas-concreto/` con los videos y `guiones-videos.md`.
 
 ## Detalles / notas
+- **Experto: Mark Ross.** Se lo puede nombrar cuando suma: "Mark Ross's method" en los testimonios, y "I'm Mark Ross" cuando habla el experto (guion C).
 - **Visuales a cuidar:**
   - `@modina.concreto/7639408597457210644` tiene un cartel con el nombre y el teléfono arriba. Se usa con zoom 1.9 recortado abajo.
   - `@modina.concreto/7671339958967225618` tiene transiciones con blur en 3,3–4,5 s, 13,6–13,9 s y 16,9–17,2 s. Hay que excluirlas.
@@ -28,13 +29,15 @@
 - **Largo:** se respetó el largo del competidor (45 a 76 s editados), no el máximo de 30 s de [[guiones-y-anuncios]], porque el pedido fue traducir sus ganadores.
 
 ## Activos
-- Videos del 2026-10-18: `BC-A-hoy-gano-3000.mp4` (63 s), `BC-B-momento-para-mi.mp4` (76 s) y `BC-C-1200-en-una-semana.mp4` (45 s).
+- Videos del 2026-10-18: `BC-A-hoy-gano-3000.mp4` (57 s), `BC-B-momento-para-mi.mp4` (71 s) y `BC-C-1200-en-una-semana.mp4` (42 s), rehechos con voz de hombre (Knox).
 - Guiones en inglés y español: `OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md`.
 
 ## Preguntas abiertas
 - ¿Nombre del producto en inglés, landing y precio?
-- ¿La voz femenina funciona con visuales donde casi siempre aparecen manos de hombre? Si no rinde, probar una voz masculina de AI Studio.
 - Faltan sus ganadores de imagen (si los tiene) y el texto principal en inglés.
+
+## Registro de correcciones
+- **2026-10-18 · Voz de hombre, no de mujer.** La primera tanda salió con Nika (femenina) y Santiago la rechazó: "la voz tiene que ser de un hombre, de unos 40 años". Regla: en esta oferta la voz siempre es masculina, de unos 40 (Knox). Además, el experto es **Mark Ross** y se lo puede nombrar si hace falta.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[patitas-felices]] · [[secreto-de-la-insulina]] · [[internacionalizacion]] · [[funnel-hacking]]

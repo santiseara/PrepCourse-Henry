@@ -82,6 +82,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-18 — Natives piedras feria v4](../OUTPUTS/2026-10-18-natives-piedras-feria-v4.md) — natives 9 a 11: el hijo que atiende la mesa, Linda la del cuaderno, la foto de la primera feria · ver [[natives-ganadoras]]
 - [2026-10-18 — Guiones piedras v13](../OUTPUTS/2026-10-18-guiones-piedras-v13.md) — receta de los comentarios, mercados navideños, compradora que se volvió vendedora, "¿quién paga 12 por una piedra?", otras manualidades, abuela de 64 · ver [[guiones-y-anuncios]]
 - [2026-10-17 — Native piedras: variable "Ever heard of"](../OUTPUTS/2026-10-17-native-piedras-descripcion-ever-heard.md) — variable de la descripción corta de tendencia · ver [[natives-ganadoras]]
 - [2026-10-17 — Videos Secreto de la Insulina: Remix 1 a 6](../OUTPUTS/2026-10-17-videos-secreto-insulina-remix-1-6.md) — hook original en movimiento + voz en off nueva + fragmentos originales · ver [[secreto-de-la-insulina]]

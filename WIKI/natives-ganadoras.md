@@ -47,6 +47,9 @@
 ## Natives propias de la tanda 14/10
 - `OUTPUTS/2026-10-14-natives-piedras-feria-v2.md`: ángulo feria. El baúl cargado a las 6:40 (4ª feria), la planilla de rayitas de la hija y la planilla de encargos de Navidad (temporada que empieza ahora). Solo en inglés.
 
+## Natives propias de la tanda 18/10
+- `OUTPUTS/2026-10-18-natives-piedras-feria-v4.md`: ángulo feria, largas. Owen (12) atiende la mesa, Linda la del cuaderno (prueba social de una alumna) y la foto de la primera feria (sábana, caja de súper, cartel de $12). Suma a los hijos Owen y Lily.
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

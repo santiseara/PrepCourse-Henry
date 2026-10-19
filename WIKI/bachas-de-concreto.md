@@ -39,6 +39,8 @@
 - Guiones en inglés y español: `OUTPUTS/2026-10-18-guiones-bachas-concreto-en.md`.
 - Variables A2, B2 y C2 (mismo ángulo, guion nuevo): `OUTPUTS/2026-10-18-variables-bachas-concreto-en.md`. Videos `BC-A2-garaje-3200.mp4`, `BC-B2-mi-hora-en-el-garaje.mp4` y `BC-C2-400-a-800-por-bacha.mp4`.
 
+- **Ganador (2026-10-19): Guion B** ("What started as a simple way to unwind…", `BC-B-momento-para-mi.mp4`), con 4 ventas. Su estructura: un rato para desconectar → probé de todo y no era habilidoso → video de bachas de diseño → "parecía difícil, pero era paso a paso" → método desde cero → primera pieza ("no podía creer que la hice yo") → la muestro sin querer vender → un tercero pregunta dónde la compré y cuánto sale → primer pedido, otro, otro → hoy me dedico a esto y lo sigo disfrutando → CTA con Mark Ross. Variables B3 a B7 (mismo ángulo, cada una con otro disparador, otro tercero que la ve y otro CTA): `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md`.
+
 ## Preguntas abiertas
 - ¿Nombre del producto en inglés, landing y precio?
 - Faltan sus ganadores de imagen (si los tiene) y el texto principal en inglés.

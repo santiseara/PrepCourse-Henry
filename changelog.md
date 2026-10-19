@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Bachas de concreto: variables B3 a B7 del ganador
+- **Pedido de Santiago:** al Guion B ("What started…") le va muy bien (4 ventas); hacer variables con la misma estructura y el mismo ángulo.
+- **Creado:** `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md` (B3 a B7, en inglés y español).
+- **Cambiado:** `WIKI/bachas-de-concreto.md` (ganador y su estructura), `WIKI/index.md`.
+
 ## 2026-10-19 — Natives piedras feria v5
 - **Pedido de Santiago:** más natives.
 - **Creado:** `OUTPUTS/2026-10-19-natives-piedras-feria-v5.md` (natives feria 12, 13 y 14, de 900 a 970 palabras).

@@ -18,13 +18,14 @@
 - Bonus: Guía de reemplazos, Untables y rellenos sin azúcar, Lista de compras.
 
 ## Entregas
+- **Checkout (2026-10-18):** https://pan-sin-picos.impultienda.ar/checkout. Lo usan todos los botones y cuadros de cuotas de la oferta, con los UTMs.
 - `~/Desktop/pan-sin-picos/` → `pan-sin-picos-quiz.txt` (para ImpulTienda), `pan-sin-picos-PRUEBA.html`, `pan-sin-picos-site.zip` (para Netlify Drop) y las fotos `img-*.png` (1024×1024).
 
 ## Registro de correcciones
 - **2026-10-18 · "Las imágenes son muy malas… se ve muy low ticket. El quiz está perfecto."** Se reemplazaron el pan en SVG y los emojis grandes por fotos profesionales. Regla general en [[quizzes-reglas-de-armado]] §4.
 
 ## Preguntas abiertas
-- Nombre definitivo, precio, link de checkout y píxel.
+- Nombre definitivo, precio y píxel.
 - ¿Testimonios? Si hay comentarios reales del original o de clientes, se suman en HTML.
 - ¿Habrá VSL? Si hay, se pega en el template y se ajusta `SEGUNDOS_OFERTA`.
 

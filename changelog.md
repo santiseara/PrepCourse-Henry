@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-18 — Pan Sin Picos: link de checkout
+- Todos los CTAs de la oferta van a https://pan-sin-picos.impultienda.ar/checkout (con UTMs). Actualizados el .txt, PRUEBA, zip y la ficha de la oferta (WIKI/pan-sin-picos.md).
+
 ## 2026-10-18 — Pan Sin Picos: fotos profesionales en el quiz
 - **Corrección de Santiago:** "las imágenes son muy malas, me dan ganas de irme del quiz, se ve muy low ticket".
 - **Hecho:** 11 fotos con GPT Image 1.5 (Higgsfield) en portada, género, "qué extrañás", recetas recomendadas, receta de regalo, celular y una galería nueva en la oferta. Los electrodomésticos pasan a lista.

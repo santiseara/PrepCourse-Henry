@@ -15,6 +15,13 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 6. Revisar con una hoja de contactos (1 cuadro cada 3 s) y un par de cuadros a resolución completa. Comprimir con crf 21 y maxrate 8M.
 - **Formatos de edición disponibles** (`edit_vsl_quiz.py`, 5.º campo del plan): `split` (avatar arriba y placa o B-roll abajo), `full` (B-roll solo), `gs` (avatar grande recortada delante del B-roll) y `pip` (B-roll con la avatar chiquita en la esquina). En un VSL largo conviene alternar los cuatro.
 
+## 0b. Voces con Google AI Studio (2026-10-19, pedido de Santiago: "usá google AI studio para las voces")
+- Página: `aistudio.google.com/generate-speech` → "Create new dialog". La extensión de Chrome necesita **permiso para el sitio** (sin eso no hay capturas ni clics; JS sí anda).
+- **Modelo: Gemini 3.1 Flash TTS Preview.** Es gratis y deja generar varias veces. El Gemini 3.8 Flash TTS (el que viene por defecto) da **una sola** generación gratis y después pide una clave paga; Voice Design también es pago.
+- Voz femenina cálida: **Sulafat** (Warm). Otras: Gacrux (Mature), Achernar (Soft). El selector de acento solo trae acentos del inglés: dejar Neutral y dirigir el acento con el **Scene** y la nota del director del hablante (porteña de 50 años, rioplatense, "sh" en ll/y, audio de WhatsApp a una amiga, sin tono de locutora).
+- **Un guion por generación** (~40 s tarda unos 30–40 s). La generación de 1:49 de un tirón no se pudo bajar.
+- **El botón Download no baja nada** (Chrome lo bloquea). El audio completo queda en `document.querySelector('audio').src` como data URI WAV: se manda por `fetch` POST a un receptor local (`recv2.py`, `127.0.0.1:8767`). La primera vez Chrome pide permiso de **red local** y Santiago lo tiene que aceptar.
+
 ## 1. Pedido típico
 - "Te paso el VSL de una oferta mía. Usá **exactamente el mismo guion**, adaptado a la oferta nueva, con acento **rioplatense**, para el público de la oferta."
 - Se entrega **terminado**: avatar con labios sincronizados, B-rolls, subtítulos y edición, a **velocidad 1.3x**, en una carpeta del escritorio. **No se mete en el quiz** hasta que lo pida.

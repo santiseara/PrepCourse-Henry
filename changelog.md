@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Pan Sin Picos: videos 4 a 6 con voces de Google AI Studio
+- **Pedido de Santiago:** 3 videos más, con las voces de Google AI Studio.
+- **Creado:** `OUTPUTS/2026-10-19-guiones-pan-sin-picos-v2.md` y `~/Desktop/pan-sin-picos/PSP-Ad4..6.mp4`.
+- **Cambiado:** `WIKI/vsl-reglas-de-armado.md` (§0b, voces con AI Studio), `WIKI/pan-sin-picos.md`, `WIKI/index.md`.
+
 ## 2026-10-19 — Pan Sin Picos: 3 videos de voz en off (v1)
 - **Pedido de Santiago:** anuncios para la oferta de diabetes con sus visuales (6 videos de recetas en un zip), variables mejores que los ads top de Mesa y Sabor, 3 videos.
 - **Creado:** `OUTPUTS/2026-10-19-guiones-pan-sin-picos-v1.md`, `OUTPUTS/scripts-vsl/edit_voclips.py` y `~/Desktop/pan-sin-picos/PSP-Ad1..3.mp4` + `guiones-ads.md`.

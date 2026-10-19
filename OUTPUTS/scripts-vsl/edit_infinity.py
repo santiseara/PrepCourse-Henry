@@ -35,8 +35,8 @@ def norm(w): return re.sub(r'[^\w]', '', w.lower())
 # 1) voz: recorte de silencios + velocidad, palabras alineadas al guion
 sp = P.get('speed', 1.15)
 run([FF, '-v', 'error', '-y', '-i', F(P['vo']), '-af',
-     'silenceremove=start_periods=1:start_threshold=-45dB:stop_periods=-1:stop_duration=0.25:stop_threshold=-40dB:stop_silence=0.12,'
-     f'atempo={sp:.4f},aresample=48000', '-ac', '2', f'{tmp}/vo.wav'])
+     'silenceremove=start_periods=1:start_threshold=-55dB:stop_periods=-1:stop_duration=0.6:stop_threshold=-55dB:stop_silence=0.35,'
+     f'atempo={sp:.4f},aresample=48000,afade=t=in:d=0.02', '-ac', '2', f'{tmp}/vo.wav'])   # solo acorta pausas largas (antes cortaba colas de palabras)
 model = WhisperModel('small', device='cpu', compute_type='int8')
 segs, _ = model.transcribe(f'{tmp}/vo.wav', language=P.get('lang', 'en'), word_timestamps=True)
 wd = [(w.start, w.end, w.word.strip()) for s in segs for w in s.words]
@@ -112,14 +112,14 @@ for n in range(len(cuts) - 1):
     c = P['clips'][key]; src = F(c['src'])
     zin = n % 2 == 0
     if c.get('still'):
-        z = f"(1+0.10*t/{d:.3f})" if zin else f"(1.10-0.10*t/{d:.3f})"
+        z = f"(1+0.08*t/{d:.3f})" if zin else f"(1.08-0.08*t/{d:.3f})"
         if c.get('fit'):      # foto chica: centrada a lo ancho sobre la misma foto desenfocada
             vf = (f"[0:v]split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:2,eq=brightness=-0.12[bg];"
                   f"[b]scale={W}:-2[fg];[bg][fg]overlay=0:(H-h)/2,fps={FPS},"
-                  f"scale=w='{W}*{z}':h=-2:eval=frame,crop={W}:{H}:(iw-{W})/2:(ih-{H})/2,{'hflip,' if flip else ''}setsar=1,format=yuv420p")
+                  f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,scale={W}:{H}:flags=lanczos,{'hflip,' if flip else ''}setsar=1,format=yuv420p")
         else:
             vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
-                  f"scale=w='{W}*{z}':h=-2:eval=frame,crop={W}:{H}:(iw-{W})/2:(ih-{H})/2,{'hflip,' if flip else ''}setsar=1,format=yuv420p")
+                  f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,scale={W}:{H}:flags=lanczos,{'hflip,' if flip else ''}setsar=1,format=yuv420p")
         pc = f'{tmp}/s{n:02d}.mp4'
         run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d:.3f}', '-i', src, '-filter_complex', vf,
              '-t', f'{d:.3f}', '-r', str(FPS), '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
@@ -128,9 +128,8 @@ for n in range(len(cuts) - 1):
     avail = end - st
     slow = max(1.0, d / avail) if avail > 0 else 1.0
     z0 = c.get('zoom', 1.0); yb = c.get('ybias', 0.5)
-    zexp = f"{z0}*(1+0.06*t/{d:.3f})" if zin else f"{z0}*(1.06-0.06*t/{d:.3f})"
     vf = (f"setpts={slow:.4f}*(PTS-STARTPTS),fps={FPS},"
-          f"scale=w='max({W}/iw,{H}/ih)*iw*{zexp}':h=-2:eval=frame:flags=bicubic,"
+          f"scale=w='ceil(max({W}/iw,{H}/ih)*iw*{z0}/2)*2':h=-2:flags=lanczos,"
           f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},{'hflip,' if flip else ''}setsar=1,format=yuv420p")
     pc = f'{tmp}/s{n:02d}.mp4'
     run([FF, '-v', 'error', '-y', '-ss', str(st), '-t', f'{min(avail, d / slow) + 0.1:.3f}', '-i', src, '-an',
@@ -308,16 +307,17 @@ lines_.append(f"file '{cache[act]}'\n")
 open(f'{tmp}/ov.txt', 'w').write(''.join(lines_))
 run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/ov.txt', '-vf', f'fps={FPS},format=argb',
      '-t', f'{L:.2f}', '-c:v', 'qtrle', f'{tmp}/ov.mov'])
-ins = ['-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav', '-i', f'{tmp}/ov.mov']
-ins += sum([['-i', f'{tmp}/sfx/{s}.wav'] for s, _ in hits], [])
-fc = [f"[0:v][3:v]overlay=0:0:format=auto[ov]", f"[ov]ass={tmp}/subs.ass[v]"]
-fc.append(f"[2:a]volume=0.10,afade=t=out:st={max(0, L - 1.2):.2f}:d=1.2[m]")
-base_i = 4
-for k, (s, t) in enumerate(hits):
+# en dos pasos: con todo junto en un solo filtro, ffmpeg tiraba pedazos de audio (la voz quedaba 1-2 s más corta)
+run([FF, '-v', 'error', '-y', '-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/ov.mov', '-filter_complex',
+     f"[0:v][1:v]overlay=0:0:format=auto[ov];[ov]ass={tmp}/subs.ass[v]", '-map', '[v]',
+     '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-t', f'{L:.2f}', f'{tmp}/video.mp4'])
+ains = ['-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav'] + sum([['-i', f'{tmp}/sfx/{s_}.wav'] for s_, _ in hits], [])
+afc = [f"[1:a]aresample=48000,volume=0.10,afade=t=out:st={max(0, L - 1.2):.2f}:d=1.2[m]"]
+for k, (s_, t) in enumerate(hits):
     ms = int(max(0, t) * 1000)
-    fc.append(f"[{base_i + k}:a]volume={VOL[s]},adelay={ms}|{ms}[w{k}]")
-fc.append(f"[1:a][m]{''.join(f'[w{k}]' for k in range(len(hits)))}amix=inputs={2 + len(hits)}:duration=first:normalize=0[a]")
-run([FF, '-v', 'error', '-y'] + ins + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-map', '[a]',
-     '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-t', f'{L:.2f}',
-     '-movflags', '+faststart', OUT])
+    afc.append(f"[{2 + k}:a]aresample=48000,volume={VOL[s_]},adelay={ms}|{ms}[w{k}]")
+afc.append(f"[0:a]apad=pad_dur=1[vo];[vo][m]{''.join(f'[w{k}]' for k in range(len(hits)))}amix=inputs={2 + len(hits)}:duration=first:normalize=0[a]")
+run([FF, '-v', 'error', '-y'] + ains + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-t', f'{L:.2f}', f'{tmp}/mix.wav'])
+run([FF, '-v', 'error', '-y', '-i', f'{tmp}/video.mp4', '-i', f'{tmp}/mix.wav', '-map', '0:v', '-map', '1:a',
+     '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-t', f'{L:.2f}', '-movflags', '+faststart', OUT])
 print(f'OK {OUT} {L:.1f}s, {len(cuts) - 1} planos (promedio {L / (len(cuts) - 1):.1f}s)')

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-19 — Infinity 3D: arreglo de audio cortado y video trabado
+- **Pedido de Santiago:** los videos le gustaron, pero el audio se corta y algunos se ven trabados.
+- **Cambiado:** `OUTPUTS/scripts-vsl/edit_infinity.py` (recorte de silencios suave, sin zoom en los clips y zoom de fotos al doble de resolución), los 6 videos rehechos y `WIKI/infinity-3d.md` (registro de correcciones).
+
 ## 2026-10-19 — Infinity 3D (mesas infinitas EN): 6 videos
 - **Pedido de Santiago:** pasar al inglés su oferta de mesas (página Infinity 3D), con 6 videos parecidos a los suyos, no iguales, editados con su mismo estilo, usando 7 TikToks como B-roll y rotándolos.
 - **Creado:** `WIKI/infinity-3d.md`, `OUTPUTS/2026-10-19-guiones-infinity-3d-en.md` (EN + ES), `OUTPUTS/scripts-vsl/edit_infinity.py` y `~/Desktop/mesas-resina/IN-V1..V6.mp4`.

@@ -33,6 +33,13 @@
 - Carpeta de trabajo: `~/Desktop/mesas-resina/work/` (`tiktoks/`, `ads/` con sus 23 ads y `transcripts.txt`, `landing/`, `vo/`, `plans/`).
 - **TikToks y tramos a cuidar:** `@jorgevalenzuelam/7683664277789592850` (film y tira LED) trae texto en español en 12–15 s ("pieza 1: 50x76cm") y en 64–68 s (medidas en cm): excluidos. Ese mismo TikTok y `@street_art888/7447541641076018478` muestran caras en muchos tramos.
 
+## Registro de correcciones
+- **2026-10-19 · "Muchas partes que se corta el audio" y "videos medio trabados".**
+  - **Audio:** el `silenceremove` agresivo (pausas de más de 0,25 s, umbral -40 dB) cortaba en seco las colas de las palabras. Regla: solo se acortan las pausas de más de 0,6 s (umbral -55 dB) y quedan 0,35 s.
+  - **Video:** el zoom animado con `scale eval=frame` redondea el tamaño a píxeles enteros en cada cuadro y la imagen salta. Regla: los TikToks van sin zoom, porque ya traen movimiento. Las fotos se hacen zoom al doble de resolución y después se achican.
+  - **Audio que se perdía en la mezcla:** con video, pista de placas, voz, música y efectos en un solo filtro, ffmpeg descartaba pedazos de audio (la voz final quedaba 1–2 s más corta). Regla: render en dos pasos (video con placas y subtítulos → `video.mp4`; mezcla aparte → `mix.wav`; unión con `-c:v copy`). Se verifica comparando la energía de la voz contra el audio final (0 caídas en los 6).
+  - Aplica también a `edit_broll.py`, `edit_voclips.py` y al resto de los editores.
+
 ## Preguntas abiertas
 - ¿Hay ganador en español para priorizar el ángulo? (por cantidad de copias: la cuenta de 8 horas y el de oficio).
 - ¿El nombre "Infinity 3D" se mantiene en inglés en los ads? Por ahora sí, porque la landing lo usa.

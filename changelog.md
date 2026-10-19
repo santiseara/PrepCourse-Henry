@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 — Pan Sin Picos: fotos profesionales en el quiz
+- **Corrección de Santiago:** "las imágenes son muy malas, me dan ganas de irme del quiz, se ve muy low ticket".
+- **Hecho:** 11 fotos con GPT Image 1.5 (Higgsfield) en portada, género, "qué extrañás", recetas recomendadas, receta de regalo, celular y una galería nueva en la oferta. Los electrodomésticos pasan a lista.
+- **Cambiado:** `WIKI/quizzes-reglas-de-armado.md` (§4 + registro), `WIKI/pan-sin-picos.md`, `OUTPUTS/2026-10-18-quiz-pan-sin-picos.html`.
+
 ## 2026-10-18 — Oferta nueva: Pan Sin Picos (quiz para diabéticos)
 - **Pedido de Santiago:** quiz de unas 10 preguntas, lindo y que aporte valor, para vender en Argentina un recetario de panes para diabéticos modelado de Mesa y Sabor (que vende por WhatsApp).
 - **Creado:** `WIKI/pan-sin-picos.md`, `OUTPUTS/2026-10-18-quiz-pan-sin-picos.html`. Entregables en `~/Desktop/pan-sin-picos/`.

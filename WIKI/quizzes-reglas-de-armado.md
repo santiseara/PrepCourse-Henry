@@ -40,6 +40,8 @@
 - **Nada de capturas pixeladas.** Testimonios escritos, garantía y bloques de texto se arman en **HTML** (tarjetas nítidas), no como imagen. Corrección del 2026-10-12.
 - **Foto redonda de la experta (2026-10-15, "se ve mal"):** armar una versión de la foto **sin ningún texto** (pintar el fondo) y recortar de ahí un plano abierto (cabeza entera, hombros y algo del producto), **sin agrandar** el recorte. Si se agranda, se pixela. Nunca recortar de la original con el nombre viejo.
 - **Garantía en la paleta del quiz (2026-10-15, "se ve mal"):** no copiar la estética de la imagen original (fondo negro y rojo chillón) si choca con el diseño. Usar una tarjeta con los colores del quiz, sello dorado grande arriba, título en la fuente display y texto centrado. Los textos curvos del sello tienen que quedar adentro del círculo, sin pisar bordes ni anillos.
+- **Quiz propio, sin original (2026-10-18, "las imágenes me dan ganas de irme del quiz", "se ve muy low ticket"):** nunca resolver las imágenes con ilustraciones SVG ni emojis grandes. Portada, opciones con imagen, género, recetas o resultados y oferta llevan **fotos profesionales** hechas en Higgsfield (GPT Image 1.5, High, 1:1), todas con el mismo estilo (misma luz, mesa y paleta) para que se vean como un solo producto. Los emojis quedan solo como íconos chicos en las opciones de lista.
+- **Higgsfield:** antes de generar, **sacar las imágenes de referencia que quedaron cargadas** de otro proyecto (miniaturas arriba del prompt). Con el plan Plus se pueden lanzar ~4 imágenes a la vez; si se lanzan más, aparece la oferta de upgrade ("Skip Special Offer" para volver).
 - Logo: si cambia la marca, rehacerlo con el mismo ícono y el mismo estilo tipográfico.
 
 ## 4b. Coherencia de componentes (2026-10-14)
@@ -91,6 +93,7 @@
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-10-18 | Pan Sin Picos | "Las imágenes son muy malas, me dan ganas de irme del quiz, se ve muy low ticket" (pan en SVG y emojis) | §4: fotos profesionales con IA y un mismo estilo en todo el quiz; nada de ilustraciones ni emojis como imagen principal |
 | 2026-10-17 | Secreto de la Insulina | "Quiero que sea igual al de él, basémonos en lo validado, el de Mounjaro no funcionó" | §2: cuando pasa el quiz de un competidor escalado, se copia **ese** quiz paso a paso (textos, orden, lógica). No se arma desde una plantilla propia ni se "mejora" el copy |
 | 2026-10-17 | Secreto de la Insulina | Colores: "verde medio oscurito" en vez del naranja original | Paleta verde (#1f6b47); el logo naranja se recolorea a verde con Pillow (mismo diseño) |
 | 2026-10-17 | Secreto de la Insulina | La promesa es la cantidad de kilos que la persona quiere bajar, en 21 días | Kilos = peso actual − peso deseado, sin multiplicadores (el original inflaba ×1,2) |

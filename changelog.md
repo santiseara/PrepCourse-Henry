@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Pan Sin Picos: 3 videos de voz en off (v1)
+- **Pedido de Santiago:** anuncios para la oferta de diabetes con sus visuales (6 videos de recetas en un zip), variables mejores que los ads top de Mesa y Sabor, 3 videos.
+- **Creado:** `OUTPUTS/2026-10-19-guiones-pan-sin-picos-v1.md`, `OUTPUTS/scripts-vsl/edit_voclips.py` y `~/Desktop/pan-sin-picos/PSP-Ad1..3.mp4` + `guiones-ads.md`.
+- **Cambiado:** `WIKI/pan-sin-picos.md` (sección Anuncios con el análisis de sus ads), `WIKI/index.md`.
+
 ## 2026-10-19 — Bachas de concreto: video UGC con Mark Ross
 - **Pedido de Santiago:** armar el video con la avatar de HeyGen "Mark Ross", con buena edición (pantalla dividida, avatar chiquito sin fondo, etc.).
 - **Creado:** `~/Desktop/bachas-concreto/BC-UGC-Mark-Ross.mp4` y la carpeta `work-mark/`.

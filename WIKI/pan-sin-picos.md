@@ -21,6 +21,12 @@
 - **Checkout (2026-10-18):** https://pan-sin-picos.impultienda.ar/checkout. Lo usan todos los botones y cuadros de cuotas de la oferta, con los UTMs.
 - `~/Desktop/pan-sin-picos/` → `pan-sin-picos-quiz.txt` (para ImpulTienda), `pan-sin-picos-PRUEBA.html`, `pan-sin-picos-site.zip` (para Netlify Drop) y las fotos `img-*.png` (1024×1024).
 
+## Anuncios
+- **Sus ads top (Ads Library AR, 2026-10-19, ordenados por impresiones):** todos videos de 1 a 2 min con voz en off sobre recetas, con 5 a 14 copias cada uno. La vocera es "Luli" (12 años controlando la glucosa / "chef especializada en cocina para diabéticos"). Ángulos: "pan de 4 ingredientes sin leche, trigo ni azúcar", "¿sabés lo que se siente comer pan calentito siendo diabética y celíaca?", testimonios ("mi mamá diabética lloró"), textura ("la aprieto y vuelve sola"). Cierre: 125–200 recetas por WhatsApp, "recibís antes de pagar", 50 lugares o "hasta medianoche".
+- **Nuestras variables v1 (2026-10-19)** van por ángulos que ellos no usan: reacción de un tercero (el papá que pregunta de qué panadería es), contraintuitivo (el pan integral del súper es harina de trigo) y objeción "a mí no me sale". CTA al quiz (test de 1 minuto + receta de regalo), sin precio ni WhatsApp. Guiones: `OUTPUTS/2026-10-19-guiones-pan-sin-picos-v1.md`.
+- **Producción:** visuales de recetas que pasa Santiago (videos de voz en off, sin su audio) + voz roma de HeyGen (avatar "Cocinera diabetes", se usa solo el audio) + `OUTPUTS/scripts-vsl/edit_voclips.py` (planos anclados a frases, zoom lento, subtítulos de 3 palabras, música). ElevenLabs quedó sin créditos el 2026-10-19 (188).
+- Entregas en `~/Desktop/pan-sin-picos/` (`PSP-Ad1..3.mp4`).
+
 ## Registro de correcciones
 - **2026-10-18 · "Las imágenes son muy malas… se ve muy low ticket. El quiz está perfecto."** Se reemplazaron el pan en SVG y los emojis grandes por fotos profesionales. Regla general en [[quizzes-reglas-de-armado]] §4.
 

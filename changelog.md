@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Guiones piedras v15 (ángulos nuevos)
+- **Pedido de Santiago:** la v14 eran todos parecidos, con el mismo CTA; innovar con ángulos nuevos.
+- **Creado:** `OUTPUTS/2026-10-19-guiones-piedras-v15-angulos-nuevos.md`.
+- **Cambiado:** `WIKI/index.md`, `WIKI/guiones-y-anuncios.md` (regla nueva).
+
 ## 2026-10-19 — Guiones piedras v14
 - **Pedido de Santiago:** más guiones para piedras.
 - **Creado:** `OUTPUTS/2026-10-19-guiones-piedras-v14.md`.

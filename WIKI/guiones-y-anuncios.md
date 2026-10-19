@@ -87,3 +87,5 @@
 ## Fuentes
 - RAW/2026-10-10-contexto-maestro-santiago.md (secciones 5 y 6)
 - RAW/2026-10-10-guiones-ganadores-scented-stones.md
+
+- **2026-10-19 · Variar ángulo y CTA.** Rechazó la v14 de piedras: "son todos muy similares, mismo CTA siempre, decís las mismas cosas". Regla: cada guion de una tanda con estructura y CTA propios, sin las frases fijas (lista de ingredientes, "12 o tres por 30", "guía de 27 recuperada con la primera venta"). Ver `OUTPUTS/2026-10-19-guiones-piedras-v15-angulos-nuevos.md`.

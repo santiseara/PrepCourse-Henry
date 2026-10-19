@@ -50,6 +50,9 @@
 ## Natives propias de la tanda 18/10
 - `OUTPUTS/2026-10-18-natives-piedras-feria-v4.md`: ángulo feria, largas. Owen (12) atiende la mesa, Linda la del cuaderno (prueba social de una alumna) y la foto de la primera feria (sábana, caja de súper, cartel de $12). Suma a los hijos Owen y Lily.
 
+## Natives propias de la tanda 19/10
+- `OUTPUTS/2026-10-19-natives-piedras-feria-v5.md`: ángulo feria con estructuras distintas (FAQ de 7 preguntas, carta en segunda persona con P.S., la peor feria como historia de fracaso) y cierres distintos, sin el bloque fijo de bio + Louisa + primera feria. Aplica la regla del 19/10 de variar ángulo y CTA.
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

@@ -84,6 +84,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-19 — Natives piedras feria v5](../OUTPUTS/2026-10-19-natives-piedras-feria-v5.md) — natives 12 a 14 con estructuras nuevas: preguntas de la mesa, carta a la mujer de la campera roja, la peor feria (4 de 110) · ver [[natives-ganadoras]]
 - [2026-10-19 — Guiones piedras v15: ángulos nuevos](../OUTPUTS/2026-10-19-guiones-piedras-v15-angulos-nuevos.md) — el cuarto del hijo, sin redes, la mujer de la iglesia, el comentario negativo, "no empieces si", regalos de Navidad · ver [[guiones-y-anuncios]]
 - [2026-10-19 — Guiones piedras v14](../OUTPUTS/2026-10-19-guiones-piedras-v14.md) — 40 centavos que se vuelven 12, "dejá el yeso", el marido narra, la caja en la oficina, domingo de 7 a 9, la boutique de 38 · ver [[guiones-y-anuncios]]
 - [2026-10-18 — Variables bachas de concreto (EN/ES)](../OUTPUTS/2026-10-18-variables-bachas-concreto-en.md) — A2 garaje y bacha de 600 dólares, B2 mi hora en el garaje + chat familiar, C2 de 400 a 800 por bacha con materiales de 40 · ver [[bachas-de-concreto]]

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Infinity 3D (mesas infinitas EN): 6 videos
+- **Pedido de Santiago:** pasar al inglés su oferta de mesas (página Infinity 3D), con 6 videos parecidos a los suyos, no iguales, editados con su mismo estilo, usando 7 TikToks como B-roll y rotándolos.
+- **Creado:** `WIKI/infinity-3d.md`, `OUTPUTS/2026-10-19-guiones-infinity-3d-en.md` (EN + ES), `OUTPUTS/scripts-vsl/edit_infinity.py` y `~/Desktop/mesas-resina/IN-V1..V6.mp4`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-19 — Pan Sin Picos: videos 4 a 6 con voces de Google AI Studio
 - **Pedido de Santiago:** 3 videos más, con las voces de Google AI Studio.
 - **Creado:** `OUTPUTS/2026-10-19-guiones-pan-sin-picos-v2.md` y `~/Desktop/pan-sin-picos/PSP-Ad4..6.mp4`.

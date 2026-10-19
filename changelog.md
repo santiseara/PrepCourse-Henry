@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 — Oferta nueva: Pan Sin Picos (quiz para diabéticos)
+- **Pedido de Santiago:** quiz de unas 10 preguntas, lindo y que aporte valor, para vender en Argentina un recetario de panes para diabéticos modelado de Mesa y Sabor (que vende por WhatsApp).
+- **Creado:** `WIKI/pan-sin-picos.md`, `OUTPUTS/2026-10-18-quiz-pan-sin-picos.html`. Entregables en `~/Desktop/pan-sin-picos/`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-18 — Bachas de concreto: B-roll sin repetir, efectos puntuales y 3 variables
 - **Correcciones de Santiago:** no repetir B-roll y sacar el whoosh de cada corte (cha-ching en la plata).
 - **Cambiado:** `OUTPUTS/scripts-vsl/edit_broll.py` (modo pool con `usage.json`, espejado al reusar, efectos por palabra), `WIKI/bachas-de-concreto.md`, `WIKI/index.md`.

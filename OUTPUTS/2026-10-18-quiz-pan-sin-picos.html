@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pan Sin Picos: tu recetario de panes para diabéticos</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+================= CONFIGURACIÓN — PAN SIN PICOS (AR) =================
+MARCA           : nombre del producto. Se usa en todo el quiz.
+LINK_CHECKOUT   : link de pago. "/checkout" funciona si el quiz está en la misma tienda de ImpulTienda.
+                  Si no, poné el link completo (ej. https://tu-tienda.impultienda.ar/checkout). Se le suman los UTMs.
+PIXEL_ID        : ID del píxel de Meta. Vacío = no carga el píxel.
+PRECIO          : precio final en pesos (número, sin puntos).
+PRECIO_ANTES    : precio tachado (número). El % OFF se calcula solo.
+CUOTAS          : cantidad de cuotas sin interés. La cuota se redondea hacia arriba.
+SEGUNDOS_OFERTA : si pegás un VSL en <template id="vsl-template">, la oferta aparece a estos segundos.
+                  Sin VSL, la oferta aparece enseguida.
+========================================================================
+-->
+<script>
+var MARCA = "Pan Sin Picos";
+var LINK_CHECKOUT = "/checkout";
+var PIXEL_ID = "";
+var PRECIO = 14990;
+var PRECIO_ANTES = 39990;
+var CUOTAS = 3;
+var SEGUNDOS_OFERTA = 0;
+</script>
+<style>
+:root{
+  --p:#c0621f;      /* tostado / caramelo */
+  --p2:#a14f15;
+  --p3:#fcefe3;
+  --p4:#f2d4b9;
+  --ok:#2f7d4f;     /* verde "apto" */
+  --okl:#e6f3eb;
+  --bg:#fdf8f2;
+  --fg:#2b1d14;
+  --mut:#7a6656;
+  --bd:#efe3d6;
+  --card:#ffffff;
+  --gold:#e3a72f;
+  --red:#c2410c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{font-family:'Poppins',Arial,sans-serif;color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.55}
+button{font-family:inherit;color:inherit}
+.app{max-width:480px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column}
+.serif{font-family:'Fraunces',Georgia,serif}
+/* header */
+.hdr{padding:12px 20px 6px;position:sticky;top:0;background:var(--bg);z-index:10}
+.hdr .row{display:flex;align-items:center;justify-content:center;position:relative;height:36px}
+.hdr .back{position:absolute;left:-6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:none;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.logo{display:flex;align-items:center;gap:8px;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:19px;color:var(--fg)}
+.logo .lg-i{width:30px;height:30px;border-radius:9px;background:var(--p);display:flex;align-items:center;justify-content:center}
+.logo .lg-i svg{width:20px;height:20px}
+.hdr .bar{height:6px;background:#f0e4d7;border-radius:99px;overflow:hidden;margin-top:8px}
+.hdr .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--p),#e08a3c);border-radius:99px;transition:width .4s}
+.hdr.hide{display:none}
+.step{display:none;padding:26px 20px 44px;flex-direction:column;gap:18px;animation:fade .35s}
+.step.on{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h1{font-family:'Fraunces',Georgia,serif;font-size:29px;font-weight:800;line-height:1.12;text-align:center;letter-spacing:-.3px}
+h2{font-family:'Fraunces',Georgia,serif;font-size:25px;font-weight:800;line-height:1.2;text-align:center;letter-spacing:-.2px}
+.hl{color:var(--p)}
+.hlg{color:var(--ok)}
+.sub{font-size:14.5px;color:var(--mut);text-align:center;margin-top:-8px}
+.c{text-align:center}
+/* botones */
+.btn{width:100%;border:0;border-radius:16px;padding:17px 24px;font-size:17px;font-weight:700;background:var(--p);color:#fff;cursor:pointer;box-shadow:0 6px 18px -4px rgba(192,98,31,.5);transition:.2s;text-align:center;display:block;text-decoration:none}
+.btn:hover{background:var(--p2)}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn.g{background:var(--ok);box-shadow:0 6px 18px -4px rgba(47,125,79,.5)}
+.btn.g:hover{background:#246a41}
+.btn.pulse{animation:pls 2s ease-in-out infinite}
+@keyframes pls{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+/* opciones */
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;background:var(--card);border:2px solid var(--bd);border-radius:16px;padding:15px 16px;text-align:left;font-size:16px;font-weight:600;cursor:pointer;transition:.18s;box-shadow:0 2px 10px -6px rgba(43,29,20,.18)}
+.opt:hover{border-color:var(--p4)}
+.opt.sel{border-color:var(--p);background:var(--p3)}
+.opt .em{width:42px;height:42px;border-radius:12px;background:var(--p3);display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 42px}
+.opt.sel .em{background:#fff}
+.opt .t{display:block;font-weight:700}
+.opt .d{display:block;font-size:13.5px;font-weight:400;color:var(--mut);margin-top:1px}
+.multi .opt::after{content:'';margin-left:auto;width:22px;height:22px;border-radius:7px;border:2px solid var(--p4);flex:0 0 22px;background:#fff center/14px no-repeat}
+.multi .opt.sel::after{background-color:var(--p);border-color:var(--p);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E")}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt.tile{flex-direction:column;justify-content:center;text-align:center;padding:20px 10px;gap:10px}
+.opt.tile .em{width:64px;height:64px;font-size:34px;border-radius:50%}
+.multi .opt.tile{position:relative}
+.multi .opt.tile::after{position:absolute;top:10px;right:10px;margin:0}
+/* tarjetas */
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:20px 18px;box-shadow:0 10px 30px -20px rgba(43,29,20,.35)}
+.stat{text-align:center}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-size:54px;font-weight:800;color:var(--p);line-height:1}
+.stat p{font-size:16px;margin-top:8px}
+.src{font-size:11.5px;color:var(--mut);text-align:center;margin-top:10px}
+.lead{font-size:16px;text-align:center;color:var(--mut)}
+.lead b{color:var(--fg)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--okl);color:var(--ok);font-size:12.5px;font-weight:700;border-radius:99px;padding:6px 12px}
+.input{width:100%;border:2px solid var(--bd);border-radius:16px;padding:16px 18px;font-size:18px;font-family:inherit;background:#fff;outline:none;color:var(--fg)}
+.input:focus{border-color:var(--p)}
+/* portada */
+.step.cov{padding:18px 20px 30px;gap:16px;min-height:100vh}
+.cov .top{display:flex;justify-content:center}
+.cov .kick{display:flex;justify-content:center}
+.kick span{background:var(--fg);color:#fff;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-radius:99px;padding:6px 14px}
+.hero{position:relative;border-radius:26px;background:radial-gradient(120% 90% at 50% 20%,#fff3e3 0%,#f7dcc0 60%,#efc79f 100%);height:300px;overflow:hidden}
+.hero svg.loaf{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:78%}
+.hero .chip{position:absolute;background:#fff;border-radius:99px;padding:7px 12px;font-size:12.5px;font-weight:700;box-shadow:0 8px 20px -8px rgba(43,29,20,.35);display:flex;align-items:center;gap:6px;white-space:nowrap;animation:flt 4s ease-in-out infinite}
+.hero .chip i{font-style:normal;color:var(--ok);font-weight:900}
+.hero .c1{left:12px;top:16px}
+.hero .c2{right:12px;top:52px;animation-delay:.8s}
+.hero .c3{left:16px;bottom:20px;animation-delay:1.6s}
+.hero .c4{right:14px;bottom:44px;background:var(--p);color:#fff;animation-delay:2.4s}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cov .s{font-size:15px;color:var(--mut);text-align:center;margin-top:-6px}
+.cov .s b{color:var(--fg)}
+.cov .ok{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--mut)}
+.cov .ok i{font-style:normal;color:var(--ok);font-weight:800}
+/* gráfico glucosa */
+.glu svg{width:100%;display:block}
+.glu .lg{display:flex;justify-content:center;gap:16px;font-size:12.5px;font-weight:600;margin-top:8px}
+.glu .lg span{display:flex;align-items:center;gap:6px}
+.glu .lg i{width:14px;height:4px;border-radius:2px;display:inline-block}
+.why{display:flex;flex-direction:column;gap:10px}
+.why div{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.why div b{display:block}
+.why .ic{width:36px;height:36px;border-radius:10px;background:var(--okl);display:flex;align-items:center;justify-content:center;flex:0 0 36px;font-size:18px}
+/* carga */
+.ld .spin{width:120px;height:120px;margin:12px auto 0;position:relative}
+.ld .spin svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ld .spin b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:800;color:var(--p)}
+.lrows{display:flex;flex-direction:column;gap:10px}
+.lrow{background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:13px 16px;display:flex;gap:12px;align-items:center;opacity:.4;transition:.3s;font-size:15px;font-weight:600}
+.lrow.cur{opacity:1;border-color:var(--p4)}
+.lrow.ok{opacity:1;border-color:#cfe7d8;background:var(--okl);color:var(--ok)}
+.lrow .e{font-size:19px;width:24px;text-align:center}
+/* resultado */
+.prof{background:linear-gradient(150deg,#3a2618,#5a3a22);color:#fff;border-radius:22px;padding:22px 20px;position:relative;overflow:hidden}
+.prof::after{content:'';position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(224,138,60,.45),transparent 70%)}
+.prof .lab{font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#f2c9a2}
+.prof .nm2{font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:800;margin-top:2px}
+.prof .rows{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;position:relative;z-index:1}
+.prof .rows div{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 12px}
+.prof .rows small{display:block;font-size:11px;color:#e8cdb4;font-weight:600}
+.prof .rows b{display:block;font-size:14px;line-height:1.3;margin-top:2px}
+.recs{display:flex;flex-direction:column;gap:10px}
+.rec{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:12px}
+.rec .th{width:58px;height:58px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;flex:0 0 58px}
+.rec b{display:block;font-size:15px;line-height:1.3}
+.rec small{display:block;font-size:12.5px;color:var(--mut);margin-top:2px}
+.rec .tg{display:inline-block;background:var(--okl);color:var(--ok);font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px;margin-top:5px}
+.h3{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:800;text-align:center;line-height:1.25}
+.gift{border:2px dashed var(--p);border-radius:20px;background:#fff;overflow:hidden}
+.gift .gh{background:var(--p3);padding:14px 16px;text-align:center}
+.gift .gh small{display:block;font-size:11.5px;font-weight:800;letter-spacing:1.2px;color:var(--p);text-transform:uppercase}
+.gift .gh b{display:block;font-family:'Fraunces',Georgia,serif;font-size:21px;margin-top:2px}
+.gift .gh span{display:block;font-size:13px;color:var(--mut);margin-top:2px}
+.gift .gb{padding:16px 18px;display:flex;flex-direction:column;gap:12px;font-size:15px}
+.gift .gb h4{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--mut)}
+.gift ul,.gift ol{padding-left:20px;display:flex;flex-direction:column;gap:5px}
+.gift .tip{background:var(--okl);border-radius:12px;padding:10px 12px;font-size:13.5px;color:#235c3b}
+/* oferta */
+.urg{background:var(--fg);color:#fff;text-align:center;font-size:13.5px;font-weight:600;padding:10px 14px}
+.urg b{background:var(--gold);color:var(--fg);border-radius:6px;padding:0 6px;margin:0 2px}
+.of{padding:22px 20px 44px;display:flex;flex-direction:column;gap:30px}
+.vsl{border-radius:18px;overflow:hidden;background:#000}
+#oferta{display:none;flex-direction:column;gap:30px}
+#oferta.show{display:flex;animation:fade .6s}
+.timer{background:#fff4ec;border:1px solid #f6cfae;border-radius:18px;padding:14px;text-align:center;color:var(--red);font-weight:700;font-size:15px}
+.timer .t{display:flex;justify-content:center;gap:8px;align-items:center;margin-top:8px;font-size:22px}
+.timer .t span{background:#fff;border:1px solid #f6cfae;border-radius:12px;padding:6px 10px;min-width:62px;font-size:26px;line-height:1.1}
+.timer .t em{font-style:normal;display:block;font-size:11px;font-weight:500;color:#d97745}
+.price-box{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid var(--ok);border-radius:18px;padding:14px 14px 14px 16px;background:#fff;cursor:pointer;box-shadow:0 10px 26px -18px rgba(47,125,79,.6)}
+.price-box .tt{font-weight:700;font-size:17px;line-height:1.3}
+.price-box .tt small{display:block;font-size:12.5px;font-weight:500;color:var(--mut);margin-top:2px}
+.price-box .pv{background:var(--okl);border-radius:14px;padding:8px 12px;text-align:center;flex:0 0 auto}
+.price-box .pv small{display:block;font-size:11.5px;font-weight:800;color:var(--ok)}
+.price-box .pv b{font-size:24px;font-weight:800;white-space:nowrap}
+.mail{font-size:13.5px;color:var(--red);text-align:center;margin-top:-14px}
+.of h2{font-size:26px}
+.mock{position:relative;display:flex;justify-content:center;padding:10px 0 4px}
+.mock::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,#f7d3ae 0%,rgba(247,211,174,0) 70%)}
+.phone{position:relative;width:236px;border-radius:38px;background:#1d1410;padding:9px;box-shadow:0 30px 60px -24px rgba(43,29,20,.6),inset 0 0 0 2px #3a2a20;transform:rotate(-3deg)}
+.phone .scr{border-radius:30px;overflow:hidden;background:var(--bg);height:440px;display:flex;flex-direction:column}
+.phone .notch{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:74px;height:20px;border-radius:99px;background:#1d1410;z-index:2}
+.phone .ah{background:var(--p);color:#fff;padding:40px 14px 14px}
+.phone .ah small{font-size:10px;opacity:.85}
+.phone .ah b{display:block;font-family:'Fraunces',Georgia,serif;font-size:17px;line-height:1.2}
+.phone .srch{margin:-12px 12px 0;background:#fff;border-radius:10px;padding:8px 10px;font-size:10.5px;color:var(--mut);box-shadow:0 6px 14px -8px rgba(0,0,0,.3)}
+.phone .chs{display:flex;gap:5px;padding:10px 12px 4px;flex-wrap:wrap}
+.phone .chs span{font-size:9.5px;font-weight:700;background:var(--okl);color:var(--ok);border-radius:99px;padding:3px 8px}
+.phone .lst{padding:6px 12px;display:flex;flex-direction:column;gap:7px}
+.phone .it{display:flex;gap:9px;align-items:center;background:#fff;border-radius:12px;padding:7px;box-shadow:0 4px 10px -8px rgba(0,0,0,.35)}
+.phone .it i{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-style:normal;flex:0 0 38px}
+.phone .it b{display:block;font-size:10.5px;line-height:1.25}
+.phone .it small{font-size:9px;color:var(--mut)}
+.phone .tab{margin-top:auto;display:flex;justify-content:space-around;padding:9px 0 12px;border-top:1px solid var(--bd);font-size:15px;background:#fff}
+.mock .fl{position:absolute;background:#fff;border-radius:14px;padding:8px 12px;font-size:12px;font-weight:700;box-shadow:0 10px 24px -10px rgba(43,29,20,.4);animation:flt 4s ease-in-out infinite;z-index:3}
+.mock .fl small{display:block;font-size:10.5px;font-weight:500;color:var(--mut)}
+.mock .f1{left:0;top:70px}
+.mock .f2{right:0;bottom:70px;animation-delay:1.5s}
+.incl{display:flex;flex-direction:column;gap:12px}
+.inc{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px}
+.inc .e{width:44px;height:44px;border-radius:12px;background:var(--p3);display:flex;align-items:center;justify-content:center;font-size:22px;flex:0 0 44px}
+.inc b{display:block;font-size:15.5px;line-height:1.3}
+.inc span{display:block;font-size:13.5px;color:var(--mut);margin-top:3px}
+.inc b span{display:inline;font-size:inherit;color:inherit;margin:0}
+.inc.bn{border:2px solid var(--p4);background:#fffaf5}
+.inc .bt{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.8px;background:var(--gold);color:#fff;border-radius:6px;padding:2px 7px;margin-bottom:4px}
+.adapt{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.adapt div{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:12px;font-size:13.5px;font-weight:600;display:flex;gap:8px;align-items:center}
+.adapt div i{font-style:normal;color:var(--ok);font-weight:900}
+.gar{background:#fff;border:2px solid var(--p4);border-radius:22px;padding:24px 20px;text-align:center}
+.gar svg{width:124px;height:124px;display:block;margin:0 auto 10px}
+.gar .gt{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:800}
+.gar p{font-size:14.5px;margin-top:10px;color:#4a3729}
+.faq h3{font-family:'Fraunces',Georgia,serif;font-size:22px;margin-bottom:12px;text-align:center}
+.faq details{background:#fff;border:1px solid var(--bd);border-radius:14px;margin-bottom:8px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:15px 44px 15px 16px;font-weight:600;font-size:15px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'';position:absolute;right:18px;top:50%;width:8px;height:8px;border:solid var(--mut);border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .a{padding:0 16px 16px;font-size:14.5px;color:#4a3729;line-height:1.6}
+.sec{font-size:13px;color:var(--mut);text-align:center;margin-top:-16px}
+.disc{font-size:11.5px;color:var(--mut);text-align:center;line-height:1.5;border-top:1px solid var(--bd);padding-top:16px}
+/* notificaciones */
+.toast{position:fixed;left:12px;bottom:12px;transform:translateY(16px);max-width:300px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(43,29,20,.06);border-radius:14px;box-shadow:0 8px 24px -8px rgba(43,29,20,.25);padding:9px 12px 9px 9px;font-size:12.5px;line-height:1.35;color:#4a3729;z-index:50;transition:transform .4s,opacity .4s;opacity:0;pointer-events:none}
+.toast.show{transform:none;opacity:1}
+.toast .t-av{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;background:linear-gradient(135deg,#e08a3c,#c0621f)}
+.toast b{color:var(--fg)}
+.toast .t-sub{font-size:11px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="app">
+
+<div class="hdr hide" id="hdr">
+  <div class="row">
+    <button class="back" id="back" aria-label="Volver"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="logo"><span class="lg-i"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a4 4 0 0 1 3-7h8a4 4 0 0 1 3 7v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M9 13l2 2 4-4"/></svg></span><span class="marca"></span></div>
+  </div>
+  <div class="bar"><i id="bar"></i></div>
+</div>
+
+<!-- 1 · Portada -->
+<section class="step cov" data-s="1">
+  <div class="top"><div class="logo"><span class="lg-i"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a4 4 0 0 1 3-7h8a4 4 0 0 1 3 7v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M9 13l2 2 4-4"/></svg></span><span class="marca"></span></div></div>
+  <div class="kick"><span>Test de 1 minuto</span></div>
+  <h1>¿Tenés diabetes y <span class="hl">extrañás el pan</span>?</h1>
+  <p class="s">Descubrí qué panes podés volver a comer <b>sin trigo, sin azúcar y sin leche</b>, listos en 10 minutos.</p>
+  <div class="hero">
+    <svg class="loaf" viewBox="0 0 300 200" aria-hidden="true">
+      <ellipse cx="150" cy="182" rx="128" ry="12" fill="#c98d5c" opacity=".35"/>
+      <path d="M40 170 V96 C40 52 80 34 150 34 C220 34 260 52 260 96 V170 Z" fill="#b8692c"/>
+      <path d="M48 168 V98 C48 60 84 44 150 44 C216 44 252 60 252 98 V168 Z" fill="#d68a45"/>
+      <path d="M60 100 C80 86 100 92 112 80 M120 70 C140 62 160 68 176 58 M188 70 C206 64 222 72 238 82" stroke="#f3c08a" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <g fill="#7a4a24"><circle cx="90" cy="120" r="3"/><circle cx="118" cy="104" r="2.6"/><circle cx="150" cy="96" r="3"/><circle cx="182" cy="108" r="2.6"/><circle cx="212" cy="122" r="3"/><circle cx="134" cy="132" r="2.4"/><circle cx="168" cy="138" r="2.6"/><circle cx="104" cy="146" r="2.4"/><circle cx="198" cy="150" r="2.4"/></g>
+      <g fill="#fff6e8"><ellipse cx="102" cy="88" rx="5" ry="2.4" transform="rotate(-20 102 88)"/><ellipse cx="160" cy="78" rx="5" ry="2.4" transform="rotate(10 160 78)"/><ellipse cx="200" cy="94" rx="5" ry="2.4" transform="rotate(25 200 94)"/><ellipse cx="130" cy="118" rx="4.4" ry="2.2"/><ellipse cx="186" cy="128" rx="4.4" ry="2.2" transform="rotate(-15 186 128)"/></g>
+      <path d="M246 172 V108 C246 86 262 78 278 84 C290 90 292 104 292 116 V172 Z" fill="#f6e2c4" stroke="#b8692c" stroke-width="5"/>
+      <g fill="#c99a62"><circle cx="262" cy="120" r="2"/><circle cx="276" cy="134" r="2"/><circle cx="264" cy="150" r="2"/><circle cx="280" cy="160" r="2"/></g>
+    </svg>
+    <div class="chip c1"><i>✓</i> Sin trigo</div>
+    <div class="chip c2"><i>✓</i> Sin azúcar</div>
+    <div class="chip c3"><i>✓</i> Sin leche</div>
+    <div class="chip c4">⏱ Listo en 10 min</div>
+  </div>
+  <button class="btn pulse" data-next>Hacer el test gratis</button>
+  <div class="ok"><span><i>✓</i> Gratis</span><span><i>✓</i> 1 minuto</span><span><i>✓</i> Resultado al instante</span></div>
+</section>
+
+<!-- 2 · Para quién -->
+<section class="step" data-s="2">
+  <h2>¿Para quién son los <span class="hl">panes</span>?</h2>
+  <div class="opts single" data-k="quien">
+    <button class="opt" data-v="yo"><span class="em">🙋</span><span><span class="t">Para mí</span><span class="d">Yo tengo que cuidarme con el azúcar</span></span></button>
+    <button class="opt" data-v="familiar"><span class="em">👵</span><span><span class="t">Para un familiar</span><span class="d">Mamá, papá, pareja o abuelos</span></span></button>
+    <button class="opt" data-v="todos"><span class="em">👨‍👩‍👧</span><span><span class="t">Para mí y toda la familia</span><span class="d">Queremos comer todos lo mismo</span></span></button>
+  </div>
+</section>
+
+<!-- 3 · Género -->
+<section class="step" data-s="3">
+  <h2 id="q-gen">¿Sos mujer u hombre?</h2>
+  <div class="g2 single" data-k="gen">
+    <button class="opt tile" data-v="m"><span class="em">👩</span>Mujer</button>
+    <button class="opt tile" data-v="h"><span class="em">👨</span>Hombre</button>
+  </div>
+</section>
+
+<!-- 4 · Edad -->
+<section class="step" data-s="4">
+  <h2 id="q-edad">¿Qué edad tenés?</h2>
+  <div class="opts single" data-k="edad">
+    <button class="opt" data-v="18-39"><span class="em">🌱</span>Menos de 40 años</button>
+    <button class="opt" data-v="40-54"><span class="em">🌿</span>40 a 54 años</button>
+    <button class="opt" data-v="55-64"><span class="em">🌳</span>55 a 64 años</button>
+    <button class="opt" data-v="65+"><span class="em">🍂</span>65 años o más</button>
+  </div>
+</section>
+
+<!-- 5 · Diagnóstico -->
+<section class="step" data-s="5">
+  <h2 id="q-dx">¿Qué te dijo el <span class="hl">médico</span>?</h2>
+  <div class="opts single" data-k="dx">
+    <button class="opt" data-v="t2"><span class="em">🩸</span>Diabetes tipo 2</button>
+    <button class="opt" data-v="t1"><span class="em">💉</span>Diabetes tipo 1</button>
+    <button class="opt" data-v="pre"><span class="em">⚠️</span>Prediabetes</button>
+    <button class="opt" data-v="ri"><span class="em">🔁</span>Resistencia a la insulina</button>
+    <button class="opt" data-v="prev"><span class="em">🛡️</span>Nada todavía, quiero prevenir</button>
+  </div>
+</section>
+
+<!-- 6 · No estás solo -->
+<section class="step" data-s="6">
+  <div class="c"><span class="badge">🤝 <span id="sola">No estás solo</span></span></div>
+  <div class="card stat">
+    <div class="n">1 de cada 8</div>
+    <p>adultos en Argentina tiene <b>diabetes o la glucemia elevada</b>.</p>
+    <p class="src">Fuente: 4.ª Encuesta Nacional de Factores de Riesgo (2018)</p>
+  </div>
+  <p class="lead">A casi todos les dicen lo mismo: <b>"dejá el pan"</b>. Y el pan es lo que más cuesta dejar.</p>
+  <p class="lead">La buena noticia: <b>el problema no es el pan, es la harina con la que está hecho.</b></p>
+  <button class="btn" data-next>Quiero saber más</button>
+</section>
+
+<!-- 7 · Qué extrañás -->
+<section class="step" data-s="7">
+  <h2>¿Qué es lo que más <span class="hl" id="q-extr">extrañás</span>?</h2>
+  <p class="sub">Elegí todas las que quieras</p>
+  <div class="g2 multi" data-k="extr">
+    <button class="opt tile" data-v="frances"><span class="em">🥖</span>Pan del desayuno</button>
+    <button class="opt tile" data-v="tostadas"><span class="em">🍞</span>Tostadas</button>
+    <button class="opt tile" data-v="pizza"><span class="em">🍕</span>Pizza</button>
+    <button class="opt tile" data-v="facturas"><span class="em">🥐</span>Facturas</button>
+    <button class="opt tile" data-v="sandwich"><span class="em">🥪</span>Sándwiches</button>
+    <button class="opt tile" data-v="dulce"><span class="em">🧁</span>Budines y tortas</button>
+  </div>
+  <button class="btn" data-next data-need="extr">Continuar</button>
+</section>
+
+<!-- 8 · Restricciones -->
+<section class="step" data-s="8">
+  <h2>Además del azúcar, ¿hay algo más que <span class="hl">no puedas comer</span>?</h2>
+  <p class="sub">Así filtramos las recetas para vos</p>
+  <div class="opts multi" data-k="evita">
+    <button class="opt" data-v="gluten"><span class="em">🌾</span><span><span class="t">Gluten</span><span class="d">Soy celíaco/a o lo tengo que evitar</span></span></button>
+    <button class="opt" data-v="lacteos"><span class="em">🥛</span><span><span class="t">Lácteos</span><span class="d">Leche, queso o manteca</span></span></button>
+    <button class="opt" data-v="huevo"><span class="em">🥚</span><span><span class="t">Huevo</span></span></button>
+    <button class="opt" data-v="nueces"><span class="em">🥜</span><span><span class="t">Frutos secos</span><span class="d">Almendras, nueces, maní</span></span></button>
+    <button class="opt" data-v="nada" data-solo><span class="em">✅</span><span><span class="t">Nada más</span><span class="d">Solo cuido el azúcar y las harinas</span></span></button>
+  </div>
+  <button class="btn" data-next data-need="evita">Continuar</button>
+</section>
+
+<!-- 9 · Qué pasa con el pan común -->
+<section class="step" data-s="9">
+  <h2 id="q-pasa">¿Qué te pasa cuando comés <span class="hl">pan común</span>?</h2>
+  <div class="opts single" data-k="pasa">
+    <button class="opt" data-v="sube"><span class="em">📈</span>Se me sube mucho el azúcar</button>
+    <button class="opt" data-v="hambre"><span class="em">🍽️</span>Al rato me agarra más hambre</button>
+    <button class="opt" data-v="pesado"><span class="em">😮‍💨</span>Me siento pesado/a e hinchado/a</button>
+    <button class="opt" data-v="culpa"><span class="em">😔</span>Me da culpa y después me arrepiento</button>
+    <button class="opt" data-v="nocomo"><span class="em">🚫</span>Ya no como pan, me lo prohibieron</button>
+  </div>
+</section>
+
+<!-- 10 · Por qué -->
+<section class="step" data-s="10">
+  <h2>No es el pan. <span class="hl">Es la harina.</span></h2>
+  <p class="lead">La harina blanca se convierte en azúcar muy rápido. Por eso <b id="por-que">el azúcar se te dispara</b>.</p>
+  <div class="card glu">
+    <svg viewBox="0 0 320 170" aria-hidden="true">
+      <line x1="30" y1="140" x2="310" y2="140" stroke="#e7d9ca" stroke-width="1.5"/>
+      <line x1="30" y1="20" x2="30" y2="140" stroke="#e7d9ca" stroke-width="1.5"/>
+      <text x="36" y="14" font-size="10" fill="#7a6656" font-family="Poppins">azúcar en sangre</text>
+      <text x="306" y="156" font-size="10" fill="#7a6656" font-family="Poppins" text-anchor="end">tiempo después de comer</text>
+      <path class="gl" d="M30 120 C70 120 80 28 112 28 C146 28 150 118 190 126 C220 132 230 104 260 112 C280 118 300 120 310 120" fill="none" stroke="#d9534f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="460" stroke-dashoffset="460"/>
+      <path class="gl" d="M30 120 C80 120 100 92 140 90 C190 88 230 106 310 112" fill="none" stroke="#2f7d4f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="460" stroke-dashoffset="460"/>
+      <text x="128" y="36" font-size="11" font-weight="700" fill="#d9534f" font-family="Poppins">pico 📈</text>
+    </svg>
+    <div class="lg"><span><i style="background:#d9534f"></i>Pan de harina blanca</span><span><i style="background:#2f7d4f"></i>Pan sin trigo</span></div>
+    <p class="src">Gráfico ilustrativo</p>
+  </div>
+  <div class="why">
+    <div><span class="ic">🌰</span><span><b>Harinas con fibra</b>Almendra, lino, coco y avena: menos carbohidratos y una suba más suave.</span></div>
+    <div><span class="ic">🚫</span><span><b>Cero azúcar agregada</b>Se endulza con stevia o eritritol cuando hace falta.</span></div>
+    <div><span class="ic">⏱</span><span><b>Fáciles de verdad</b>Sartén, microondas o airfryer. Sin amasar horas.</span></div>
+  </div>
+  <button class="btn" data-next>Entendido, continuar</button>
+</section>
+
+<!-- 11 · Tiempo -->
+<section class="step" data-s="11">
+  <h2>¿Cuánto tiempo tenés para <span class="hl">cocinar</span>?</h2>
+  <div class="opts single" data-k="tiempo">
+    <button class="opt" data-v="10"><span class="em">⚡</span><span><span class="t">10 minutos o menos</span><span class="d">Algo rápido para el desayuno</span></span></button>
+    <button class="opt" data-v="30"><span class="em">⏱</span><span><span class="t">Hasta 30 minutos</span></span></button>
+    <button class="opt" data-v="finde"><span class="em">🗓️</span><span><span class="t">Cocino para toda la semana el finde</span></span></button>
+  </div>
+</section>
+
+<!-- 12 · Cocina -->
+<section class="step" data-s="12">
+  <h2>¿Qué tenés en tu <span class="hl">cocina</span>?</h2>
+  <p class="sub">Elegí todas las que tengas</p>
+  <div class="g2 multi" data-k="coc">
+    <button class="opt tile" data-v="horno"><span class="em">🔥</span>Horno</button>
+    <button class="opt tile" data-v="sarten"><span class="em">🍳</span>Sartén</button>
+    <button class="opt tile" data-v="micro"><span class="em">📟</span>Microondas</button>
+    <button class="opt tile" data-v="airfryer"><span class="em">🌀</span>Airfryer</button>
+  </div>
+  <button class="btn" data-next data-need="coc">Continuar</button>
+</section>
+
+<!-- 13 · Objetivo -->
+<section class="step" data-s="13">
+  <h2>¿Qué es lo que <span class="hl">más querés</span>?</h2>
+  <div class="opts single" data-k="obj">
+    <button class="opt" data-v="glucosa"><span class="em">🩸</span>Cuidar mi azúcar sin dejar de comer rico</button>
+    <button class="opt" data-v="mesa"><span class="em">🍽️</span>Comer lo mismo que mi familia en la mesa</button>
+    <button class="opt" data-v="peso"><span class="em">⚖️</span>Bajar unos kilos</button>
+    <button class="opt" data-v="culpa"><span class="em">😌</span>Disfrutar del pan sin culpa</button>
+  </div>
+</section>
+
+<!-- 14 · Nombre -->
+<section class="step" data-s="14">
+  <div class="c" style="font-size:44px">📘</div>
+  <h2>Último paso: ¿a nombre de quién armamos el <span class="hl">recetario</span>?</h2>
+  <input class="input" id="name" type="text" placeholder="Tu nombre" autocomplete="given-name" maxlength="30">
+  <button class="btn" data-next data-req="name" disabled>Ver mi resultado</button>
+</section>
+
+<!-- 15 · Carga -->
+<section class="step ld" data-s="15" data-load>
+  <h2>Armando tu recetario, <span class="hl nm"></span>...</h2>
+  <div class="spin"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="#f0e4d7" stroke-width="10"/><circle id="ring" cx="60" cy="60" r="52" fill="none" stroke="#c0621f" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg><b id="lpct">0%</b></div>
+  <div class="lrows" id="lrows"></div>
+</section>
+
+<!-- 16 · Resultado -->
+<section class="step" data-s="16" data-result>
+  <div class="c"><span class="badge">✅ Tu resultado está listo</span></div>
+  <div class="prof">
+    <div class="lab">Perfil de <span class="marca"></span></div>
+    <div class="nm2"><span class="nm"></span>, podés volver a comer pan 🍞</div>
+    <div class="rows">
+      <div><small>Perfil</small><b id="r-dx"></b></div>
+      <div><small>Evitás</small><b id="r-ev"></b></div>
+      <div><small>Cocinás con</small><b id="r-co"></b></div>
+      <div><small>Tiempo</small><b id="r-ti"></b></div>
+    </div>
+  </div>
+  <p class="h3">Tus primeros 3 panes recomendados</p>
+  <div class="recs" id="recs"></div>
+  <div class="gift" id="gift"></div>
+  <button class="btn pulse" data-next>Ver mi recetario completo</button>
+</section>
+
+<!-- 17 · Oferta -->
+<section class="step" data-s="17" data-oferta style="padding:0;gap:0">
+  <div class="urg">🔥 Precio especial solo para quienes hicieron el test: quedan <b id="cupos">8</b> cupos</div>
+  <div class="of">
+    <div>
+      <h2><span class="nm"></span>, tu recetario <span class="hl">sin trigo y sin azúcar</span> está listo</h2>
+      <p class="sub" style="margin-top:8px">Se generó con tus respuestas. No salgas de esta página para no perderlo.</p>
+    </div>
+
+    <!-- ===================================================================
+         VSL (opcional): pegá el embed de Panda ADENTRO de esta etiqueta
+         <template>. Si queda vacía, la oferta aparece enseguida.
+         =================================================================== -->
+    <template id="vsl-template"></template>
+    <div class="vsl" id="vsl" style="display:none"></div>
+
+    <div id="oferta">
+      <div class="timer">⚠️ Tu descuento se reserva por:
+        <div class="t"><span id="tm">10<em>min</em></span>:<span id="ts">00<em>seg</em></span></div>
+      </div>
+
+      <div class="price-box" data-buy>
+        <div class="tt"><span class="cuo-n"></span> cuotas sin interés con Mercado Pago<small>o <span class="pr"></span> en un pago</small></div>
+        <div class="pv"><small><span class="off"></span>% OFF</small><b class="cuo"></b></div>
+      </div>
+      <p class="mail"><b><u>Importante:</u></b> al completar tus datos, <b>poné bien tu email</b>: ahí te llega el recetario.</p>
+      <a class="btn g pulse" data-buy href="#">QUIERO MI RECETARIO AHORA 🍞</a>
+
+      <div class="mock">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="scr">
+            <div class="ah"><small>Hola, <span class="nm"></span> 👋</small><b><span class="marca"></span></b></div>
+            <div class="srch">🔍 Buscar entre +200 recetas</div>
+            <div class="chs" id="ph-chs"></div>
+            <div class="lst" id="ph-lst"></div>
+            <div class="tab"><span>🏠</span><span>📖</span><span>❤️</span><span>🛒</span></div>
+          </div>
+        </div>
+        <div class="fl f1">+200 recetas<small>sin trigo ni azúcar</small></div>
+        <div class="fl f2">⏱ 10 min<small>la mayoría</small></div>
+      </div>
+
+      <div>
+        <h2>Todo lo que <span class="hl">recibís hoy</span></h2>
+      </div>
+      <div class="incl">
+        <div class="inc"><span class="e">📘</span><div><b>Recetario <span class="marca"></span>: +200 recetas</b><span>Panes, tostadas, pizzas, sándwiches, facturas y budines sin trigo, sin azúcar y sin leche.</span></div></div>
+        <div class="inc"><span class="e">⚡</span><div><b>Recetas de 10 minutos</b><span>En sartén, microondas, airfryer u horno. Con ingredientes del súper o la dietética.</span></div></div>
+        <div class="inc"><span class="e">📱</span><div><b>Desde el celular, cuando quieras</b><span>Acceso de por vida. Lo abrís en la cocina y seguís el paso a paso.</span></div></div>
+        <div class="inc bn"><span class="e">🎁</span><div><span class="bt">BONUS 1</span><b>Guía de reemplazos</b><span>Qué harina y qué endulzante usar en lugar de la harina blanca y el azúcar.</span></div></div>
+        <div class="inc bn"><span class="e">🎁</span><div><span class="bt">BONUS 2</span><b>Untables y rellenos sin azúcar</b><span>Para que tus panes y tostadas tengan con qué acompañarse.</span></div></div>
+        <div class="inc bn"><span class="e">🎁</span><div><span class="bt">BONUS 3</span><b>Lista de compras</b><span>Todo lo que necesitás, armado para llevar a la dietética.</span></div></div>
+      </div>
+
+      <div>
+        <h2 style="font-size:22px">Adaptado a <span class="hl">lo que vos no podés comer</span></h2>
+      </div>
+      <div class="adapt" id="adapt"></div>
+
+      <div class="price-box" data-buy>
+        <div class="tt"><span class="cuo-n"></span> cuotas sin interés con Mercado Pago<small>Antes <s class="pa"></s> · hoy <span class="pr"></span></small></div>
+        <div class="pv"><small><span class="off"></span>% OFF</small><b class="cuo"></b></div>
+      </div>
+      <a class="btn g pulse" data-buy href="#">SÍ, QUIERO VOLVER A COMER PAN 🥖</a>
+
+      <div class="gar">
+        <svg viewBox="0 0 120 120" id="seal" aria-hidden="true"></svg>
+        <div class="gt">Garantía de 30 días</div>
+        <p>Probá las recetas <span class="tq">tranquilo/a</span>. Si no te gustan, te devolvemos el 100% de lo que pagaste, sin preguntas.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Preguntas frecuentes</h3>
+        <details><summary>¿Sirven si tengo diabetes tipo 1 o tipo 2?</summary><div class="a">Sí. Son panes sin harina de trigo y sin azúcar agregada, hechos con harinas con más fibra. Igual, cada cuerpo es distinto: seguí siempre las indicaciones de tu médico y controlá tu glucemia como lo hacés siempre.</div></details>
+        <details><summary>¿Los ingredientes son caros o difíciles de conseguir?</summary><div class="a">No. Se consiguen en cualquier dietética o en el súper: harina de almendras, lino, coco, avena, huevos y polvo de hornear. Además, el bonus de lista de compras te deja todo armado.</div></details>
+        <details><summary>¿Tengo que saber cocinar?</summary><div class="a">No. La mayoría de las recetas se hacen en 10 minutos, en sartén o microondas, sin amasar. Si sabés mezclar en un bowl, ya está.</div></details>
+        <details><summary>¿Cómo lo recibo?</summary><div class="a">Apenas se acredita el pago te llega un email con el acceso. Lo abrís desde el celular, la tablet o la compu, cuando quieras y para siempre. Si no lo ves en 15 minutos, revisá la carpeta de spam.</div></details>
+        <details><summary>¿Tengo que pagar todos los meses?</summary><div class="a">No. Es un pago único de <b class="pr"></b> (o <span class="cuo-n"></span> cuotas sin interés de <span class="cuo"></span>). No hay suscripción.</div></details>
+        <details><summary>¿Y si no me gusta?</summary><div class="a">Tenés 30 días de garantía. Si no te convence, te devolvemos el 100% de tu plata, sin vueltas.</div></details>
+      </div>
+      <a class="btn g pulse" data-buy href="#">QUIERO MI RECETARIO 🍞</a>
+      <div class="sec">🔒 Pago 100% seguro con Mercado Pago</div>
+      <p class="disc">Este recetario no reemplaza el tratamiento ni las indicaciones de tu médico. Ante cualquier duda sobre tu alimentación, consultá con tu médico o nutricionista.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  // Píxel
+  if(PIXEL_ID){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',PIXEL_ID);fbq('track','PageView');}
+  function px(e){if(window.fbq)fbq('track',e);}
+
+  // Precios
+  function ars(n){return '$'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+  var CUOTA=Math.ceil(PRECIO/CUOTAS),OFF=Math.round((1-PRECIO/PRECIO_ANTES)*100);
+  function fill(c,v){[].forEach.call(document.querySelectorAll('.'+c),function(e){e.textContent=v;});}
+  fill('marca',MARCA);fill('pr',ars(PRECIO));fill('pa',ars(PRECIO_ANTES));fill('cuo',ars(CUOTA));fill('cuo-n',CUOTAS);fill('off',OFF);
+
+  var TOTAL=17,page=1,timers=[];
+  var st={quien:'',gen:'',edad:'',dx:'',extr:[],evita:[],pasa:'',tiempo:'',coc:[],obj:'',name:''};
+  var steps={};[].forEach.call(document.querySelectorAll('.step'),function(s){steps[+s.dataset.s]=s;});
+
+  // Textos según para quién y género
+  function fam(){return st.quien==='familiar';}
+  function o(f,m){return st.gen==='h'?m:f;}
+  function textos(){
+    var g=st.gen;
+    document.getElementById('q-gen').textContent=fam()?'¿La persona que cuida el azúcar es mujer u hombre?':'¿Sos mujer u hombre?';
+    document.getElementById('q-edad').textContent=fam()?'¿Qué edad tiene?':'¿Qué edad tenés?';
+    document.getElementById('q-dx').innerHTML=fam()?'¿Qué le dijo el <span class="hl">médico</span>?':'¿Qué te dijo el <span class="hl">médico</span>?';
+    document.getElementById('q-extr').textContent=fam()?'extraña':'extrañás';
+    document.getElementById('q-pasa').innerHTML=fam()?'¿Qué le pasa cuando come <span class="hl">pan común</span>?':'¿Qué te pasa cuando comés <span class="hl">pan común</span>?';
+    document.getElementById('sola').textContent=g==='m'&&!fam()?'No estás sola':'No estás solo';
+    fill('tq',fam()||!g?'tranquilo/a':o('tranquila','tranquilo'));
+  }
+
+  function go(n){
+    timers.forEach(clearTimeout);timers=[];
+    steps[page].classList.remove('on');page=n;var s=steps[n];s.classList.add('on');
+    document.getElementById('hdr').classList.toggle('hide',n===1||n===TOTAL);
+    document.getElementById('bar').style.width=((n-1)/(TOTAL-2)*100)+'%';
+    fill('nm',st.name||'Hola');textos();
+    window.scrollTo(0,0);
+    if(n===10)curva();
+    if(s.hasAttribute('data-load'))carga();
+    if(s.hasAttribute('data-result'))resultado();
+    if(s.hasAttribute('data-oferta'))oferta();
+  }
+  function next(){go(page+1);}
+  document.getElementById('back').addEventListener('click',function(){if(page>1)go(page-1);});
+
+  [].forEach.call(document.querySelectorAll('[data-next]'),function(b){
+    b.addEventListener('click',function(){
+      if(b.dataset.req){var v=document.getElementById(b.dataset.req).value.trim();if(!v)return;st[b.dataset.req]=v.charAt(0).toUpperCase()+v.slice(1);}
+      next();
+    });
+  });
+  var nameI=document.getElementById('name'),nameB=nameI.parentNode.querySelector('[data-req]');
+  nameI.addEventListener('input',function(){nameB.disabled=!nameI.value.trim();});
+  nameI.addEventListener('keydown',function(e){if(e.key==='Enter'&&nameI.value.trim())nameB.click();});
+
+  // Opciones de una
+  [].forEach.call(document.querySelectorAll('.single'),function(g){
+    var k=g.dataset.k;
+    [].forEach.call(g.querySelectorAll('.opt'),function(op){
+      op.addEventListener('click',function(){[].forEach.call(g.children,function(x){x.classList.remove('sel');});op.classList.add('sel');st[k]=op.dataset.v;setTimeout(next,280);});
+    });
+  });
+  // Opciones múltiples ("Nada más" es excluyente)
+  [].forEach.call(document.querySelectorAll('.multi'),function(g){
+    var k=g.dataset.k,btn=document.querySelector('[data-need="'+k+'"]');btn.disabled=true;
+    [].forEach.call(g.children,function(op){
+      op.addEventListener('click',function(){
+        var on=!op.classList.contains('sel');
+        if(on){[].forEach.call(g.children,function(x){if(op.hasAttribute('data-solo')||x.hasAttribute('data-solo'))x.classList.remove('sel');});}
+        op.classList.toggle('sel',on);
+        st[k]=[].filter.call(g.children,function(x){return x.classList.contains('sel');}).map(function(x){return x.dataset.v;});
+        btn.disabled=!st[k].length;
+      });
+    });
+  });
+
+  function ev(x){return st.evita.indexOf(x)>-1;}
+  function tiene(x){return st.coc.indexOf(x)>-1;}
+
+  // Paso 10: curva
+  function curva(){
+    var t={sube:'el azúcar se te dispara',hambre:'al rato te vuelve el hambre',pesado:'te sentís pesado/a',culpa:'después llega la culpa',nocomo:'te lo prohibieron'}[st.pasa]||'el azúcar se dispara';
+    if(fam())t={sube:'el azúcar se le dispara',hambre:'al rato le vuelve el hambre',pesado:'se siente pesado/a',culpa:'después llega la culpa',nocomo:'se lo prohibieron'}[st.pasa]||'el azúcar se dispara';
+    if(st.gen&&!fam())t=t.replace('pesado/a',o('pesada','pesado'));
+    document.getElementById('por-que').textContent=t;
+    [].forEach.call(document.querySelectorAll('.gl'),function(p,i){
+      p.style.transition='none';p.style.strokeDashoffset=460;p.getBoundingClientRect();
+      p.style.transition='stroke-dashoffset 1.6s ease '+(i*0.5)+'s';p.style.strokeDashoffset=0;
+    });
+  }
+
+  // Paso 15: carga
+  function carga(){
+    var IT=[['🩸','Analizando tu perfil'],['🚫','Sacando lo que no podés comer'],['🍳','Eligiendo recetas para tu cocina'],['📘','Armando tu recetario']];
+    var box=document.getElementById('lrows'),ring=document.getElementById('ring'),pc=document.getElementById('lpct'),i=0,t0=Date.now(),D=6000;
+    box.innerHTML=IT.map(function(x){return '<div class="lrow"><span class="e">'+x[0]+'</span>'+x[1]+'</div>';}).join('');
+    (function tick(){
+      var p=Math.min(1,(Date.now()-t0)/D),k=Math.min(IT.length-1,Math.floor(p*IT.length));
+      ring.style.strokeDashoffset=326.7*(1-p);pc.textContent=Math.round(p*100)+'%';
+      [].forEach.call(box.children,function(r,j){r.className='lrow'+(j<k||p>=1?' ok':j===k?' cur':'');if(j<k||p>=1)r.querySelector('.e').textContent='✅';});
+      if(p<1)timers.push(setTimeout(tick,40));else timers.push(setTimeout(next,700));
+    })();
+  }
+
+  // Recetas según lo que extraña y lo que evita
+  function recetas(){
+    var nu=ev('nueces'),la=ev('lacteos'),hu=ev('huevo');
+    var R={
+      frances:{e:'🥖',bg:'#f6e2c4',n:nu?'Pancitos de lino y semillas':'Pancitos de almendra y lino'},
+      tostadas:{e:'🍞',bg:'#f3dcc0',n:'Pan de molde de semillas para tostar'},
+      pizza:{e:'🍕',bg:'#fde0d2',n:la?'Prepizza de garbanzo, sin queso':'Prepizza de coliflor y queso'},
+      facturas:{e:'🥐',bg:'#fbe8c8',n:nu?'Medialunas de coco sin azúcar':'Medialunas de almendra sin azúcar'},
+      sandwich:{e:'🥪',bg:'#e8f0d8',n:hu?'Pan pita de lino en sartén':'Pan nube para sándwiches'},
+      dulce:{e:'🧁',bg:'#f6dde4',n:hu?'Budín de banana y lino, sin huevo':nu?'Budín de zanahoria sin azúcar':'Budín de banana y nuez sin azúcar'}
+    };
+    var ks=st.extr.slice();['frances','tostadas','pizza','dulce','sandwich','facturas'].forEach(function(k){if(ks.indexOf(k)<0)ks.push(k);});
+    var met=tiene('sarten')?'🍳 Sartén':tiene('micro')?'📟 Microondas':tiene('airfryer')?'🌀 Airfryer':'🔥 Horno';
+    var min=st.tiempo==='10'?'10 min':st.tiempo==='30'?'20 min':'25 min';
+    return ks.map(function(k){var r=R[k];return {e:r.e,bg:r.bg,n:r.n,m:met,t:min};});
+  }
+  function evitaTxt(){
+    var m={gluten:'gluten',lacteos:'lácteos',huevo:'huevo',nueces:'frutos secos'};
+    var l=['trigo','azúcar'].concat(st.evita.filter(function(x){return m[x];}).map(function(x){return m[x];}));
+    return l.slice(0,-1).join(', ')+' y '+l[l.length-1];
+  }
+
+  // Paso 16: resultado
+  function resultado(){
+    var dx={t2:'Diabetes tipo 2',t1:'Diabetes tipo 1',pre:'Prediabetes',ri:'Resistencia a la insulina',prev:'Prevención'}[st.dx]||'Cuidar el azúcar';
+    var ed={'18-39':'-40','40-54':'40-54','55-64':'55-64','65+':'65+'}[st.edad];
+    document.getElementById('r-dx').textContent=dx+(ed?' · '+ed:'');
+    var ev2=evitaTxt();document.getElementById('r-ev').textContent=ev2.charAt(0).toUpperCase()+ev2.slice(1);
+    var cm={horno:'Horno',sarten:'Sartén',micro:'Microondas',airfryer:'Airfryer'};
+    document.getElementById('r-co').textContent=st.coc.map(function(x){return cm[x];}).join(', ')||'Sartén';
+    document.getElementById('r-ti').textContent={'10':'10 min o menos','30':'Hasta 30 min',finde:'Cocina del finde'}[st.tiempo]||'10 min';
+    document.getElementById('recs').innerHTML=recetas().slice(0,3).map(function(r){
+      return '<div class="rec"><span class="th" style="background:'+r.bg+'">'+r.e+'</span><div><b>'+r.n+'</b><small>'+r.m+' · '+r.t+'</small><span class="tg">Sin '+evitaTxt()+'</span></div></div>';
+    }).join('');
+    document.getElementById('gift').innerHTML=regalo();
+  }
+
+  // Receta de regalo (aporta valor)
+  function regalo(){
+    var sinTacc=ev('gluten')?' (sin TACC)':'';
+    var harina=ev('nueces')?'harina de coco':'harina de almendras';
+    var r;
+    if(ev('huevo')){
+      r={n:'Pan chato de lino en sartén',s:'Sin huevo · 10 minutos',
+        i:['4 cucharadas de semillas de lino molidas','4 cucharadas de agua tibia','½ cucharadita de polvo de hornear'+sinTacc,'Sal y orégano a gusto','Unas gotas de aceite de oliva'],
+        p:['Mezclá el lino con el agua y dejalo reposar 5 minutos hasta que espese.','Sumá el polvo de hornear, la sal y el orégano.','Estiralo con una cuchara en una sartén apenas aceitada, bien finito.','Cociná a fuego bajo 3 a 4 minutos por lado, hasta que dore.']};
+    }else{
+      var micro=tiene('micro');
+      r={n:micro?'Pan en taza de 90 segundos':'Pan de sartén en 8 minutos',s:(micro?'Microondas':'Sartén')+' · sin trigo · sin azúcar',
+        i:['1 huevo','2 cucharadas de '+harina,'1 cucharada de semillas de lino molidas','½ cucharadita de polvo de hornear'+sinTacc,'1 cucharada de aceite de oliva','Una pizca de sal'],
+        p:micro?['Mezclá todo con un tenedor en una taza grande.','Microondas 90 segundos.','Desmoldalo, cortalo en 2 rodajas y, si querés, tostalo en la sartén.']:['Mezclá todo con un tenedor en un bowl.','Volcalo en una sartén chica aceitada, a fuego bajo y tapada.','Cociná 4 minutos, dalo vuelta y 3 minutos más.','Cortalo al medio y usalo como pan de sándwich.']};
+    }
+    var tipFam=fam()?'Ideal para que toda la familia coma lo mismo.':'Rinde 2 rodajas, perfecto para el desayuno o la merienda.';
+    return '<div class="gh"><small>🎁 Regalo para vos</small><b>'+r.n+'</b><span>'+r.s+'</span></div>'+
+      '<div class="gb"><h4>Ingredientes</h4><ul>'+r.i.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'+
+      '<h4>Paso a paso</h4><ol>'+r.p.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ol>'+
+      '<div class="tip">💡 '+tipFam+' En el recetario tenés más de 200 como esta.</div></div>';
+  }
+
+  // Paso 17: oferta
+  var ofertaOn=false;
+  function oferta(){
+    px('Lead');
+    // Celular personalizado
+    var ch=['Sin trigo','Sin azúcar'];var m={gluten:'Sin TACC',lacteos:'Sin lácteos',huevo:'Sin huevo',nueces:'Sin frutos secos'};
+    st.evita.forEach(function(x){if(m[x])ch.push(m[x]);});
+    document.getElementById('ph-chs').innerHTML=ch.slice(0,4).map(function(x){return '<span>'+x+'</span>';}).join('');
+    document.getElementById('ph-lst').innerHTML=recetas().slice(0,5).map(function(r){return '<div class="it"><i style="background:'+r.bg+'">'+r.e+'</i><div><b>'+r.n+'</b><small>'+r.m+' · '+r.t+'</small></div></div>';}).join('');
+    // Adaptaciones
+    var ad=[['Sin trigo',1],['Sin azúcar',1],['Sin leche',1],['Sin TACC',ev('gluten')],['Sin huevo',ev('huevo')],['Sin frutos secos',ev('nueces')],['Para '+({sarten:'sartén',micro:'microondas',airfryer:'airfryer',horno:'horno'}[st.coc[0]]||'sartén'),1],['Listas en 10 min',1]];
+    document.getElementById('adapt').innerHTML=ad.filter(function(x){return x[1];}).map(function(x){return '<div><i>✓</i>'+x[0]+'</div>';}).join('');
+    // VSL opcional
+    var tpl=document.getElementById('vsl-template'),v=document.getElementById('vsl');
+    if(tpl.innerHTML.trim()&&!v.innerHTML){v.innerHTML=tpl.innerHTML;v.style.display='block';}
+    if(ofertaOn)return;
+    var seg=v.innerHTML?SEGUNDOS_OFERTA:0;
+    setTimeout(mostrar,seg*1000);
+  }
+  function mostrar(){
+    if(ofertaOn)return;ofertaOn=true;
+    document.getElementById('oferta').classList.add('show');
+    timer();notis();
+  }
+  function timer(){
+    var s=600;
+    function p(){document.getElementById('tm').innerHTML=String(Math.floor(s/60)).padStart(2,'0')+'<em>min</em>';document.getElementById('ts').innerHTML=String(s%60).padStart(2,'0')+'<em>seg</em>';}
+    p();var t=setInterval(function(){s--;if(s<=0){s=0;clearInterval(t);}p();},1000);
+  }
+  // Notificaciones: los cupos solo bajan (de 8 a 2)
+  function notis(){
+    var N=[['Marta G.','Córdoba'],['Carlos R.','Rosario'],['Silvia M.','CABA'],['Norma P.','Mendoza'],['Jorge L.','La Plata'],['Graciela F.','Tucumán'],['Susana B.','Mar del Plata'],['Rubén A.','Neuquén']];
+    var M=[1,2,2,3,4,5,6,7],cupos=8,k=0,el=document.getElementById('toast'),cb=document.getElementById('cupos');
+    function una(){
+      var n=N[k%N.length];cupos=Math.max(2,cupos-1);cb.textContent=cupos;
+      el.innerHTML='<span class="t-av">'+n[0].charAt(0)+'</span><div><p><b>'+n[0]+'</b> de '+n[1]+' se llevó '+MARCA+'</p><p class="t-sub">hace '+M[k%M.length]+' min · Quedan <b>'+cupos+' cupos</b> con descuento</p></div>';
+      el.classList.add('show');setTimeout(function(){el.classList.remove('show');},4500);k++;
+    }
+    setTimeout(una,6000);setInterval(una,16000);
+  }
+
+  // Checkout con UTMs
+  function linkCheckout(){var u=LINK_CHECKOUT,q=location.search.slice(1);if(q)u+=(u.indexOf('?')<0?'?':'&')+q;return u;}
+  [].forEach.call(document.querySelectorAll('[data-buy]'),function(a){
+    if(a.tagName==='A')a.setAttribute('href',linkCheckout());
+    a.addEventListener('click',function(e){e.preventDefault();px('InitiateCheckout');location.href=linkCheckout();});
+  });
+
+  // Sello de garantía (puntos calculados)
+  (function(){
+    var pts=[],N=24;for(var i=0;i<N*2;i++){var a=Math.PI*i/N-Math.PI/2,r=i%2?51:58;pts.push((60+r*Math.cos(a)).toFixed(2)+','+(60+r*Math.sin(a)).toFixed(2));}
+    document.getElementById('seal').innerHTML='<defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3a72f"/><stop offset="1" stop-color="#b9781a"/></linearGradient></defs><polygon fill="url(#sg)" points="'+pts.join(' ')+'"/><circle cx="60" cy="60" r="41" fill="#fff"/><circle cx="60" cy="60" r="36" fill="none" stroke="#c0621f" stroke-width="1.5" stroke-dasharray="2 3"/>'+
+      '<text x="60" y="47" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="9" fill="#c0621f" letter-spacing="1.2">GARANTÍA</text><text x="60" y="72" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="26" fill="#2b1d14">30</text><text x="60" y="86" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="9" fill="#c0621f" letter-spacing="1.2">DÍAS</text>';
+  })();
+
+  go(1);
+})();
+</script>
+</body>
+</html>

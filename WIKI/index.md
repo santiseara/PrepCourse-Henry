@@ -31,6 +31,7 @@
 - ✅ [[investigacion-de-mercado]] — La cadena que produce los 4 documentos base: deep research, Avatar Sheet, Offer Brief y creencias.
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
 - ✅ [[aumento-de-aov]] — Backend: order bumps, upsells pre y post compra, KPIs y los 5 bumps que no se pisan.
+- 🆕 [[pan-sin-picos]] — Recetario de panes para diabéticos (AR), modelado de Mesa y Sabor. Quiz propio de 11 preguntas, personalizado y con receta de regalo.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
 ## Adquisición — Meta Ads
@@ -88,6 +89,7 @@
 - [2026-10-18 — Natives piedras feria v4](../OUTPUTS/2026-10-18-natives-piedras-feria-v4.md) — natives 9 a 11: el hijo que atiende la mesa, Linda la del cuaderno, la foto de la primera feria · ver [[natives-ganadoras]]
 - [2026-10-18 — Guiones piedras v13](../OUTPUTS/2026-10-18-guiones-piedras-v13.md) — receta de los comentarios, mercados navideños, compradora que se volvió vendedora, "¿quién paga 12 por una piedra?", otras manualidades, abuela de 64 · ver [[guiones-y-anuncios]]
 - [2026-10-17 — Native piedras: variable "Ever heard of"](../OUTPUTS/2026-10-17-native-piedras-descripcion-ever-heard.md) — variable de la descripción corta de tendencia · ver [[natives-ganadoras]]
+- [2026-10-18 — Quiz Pan Sin Picos (AR)](../OUTPUTS/2026-10-18-quiz-pan-sin-picos.html) — quiz propio para recetario de panes para diabéticos: 11 preguntas, 3 panes recomendados y receta de regalo, $14.990 · ver [[pan-sin-picos]]
 - [2026-10-17 — Videos Secreto de la Insulina: Remix 1 a 6](../OUTPUTS/2026-10-17-videos-secreto-insulina-remix-1-6.md) — hook original en movimiento + voz en off nueva + fragmentos originales · ver [[secreto-de-la-insulina]]
 - [2026-10-17 — Quiz Secreto de la Insulina (AR)](../OUTPUTS/2026-10-17-quiz-secreto-de-la-insulina.html) — copia del quiz validado del competidor, en verde, promesa = kilos deseados en 21 días, $14.990 · [análisis](../OUTPUTS/2026-10-17-analisis-secreto-de-la-insulina.md)
 - [2026-10-17 — Caza de ofertas escaladas Brasil](../OUTPUTS/2026-10-17-caza-ofertas-brasil.md) — emagrecimento y renda extra: Pilates na Parede (whale ~400 ads), HIIT Dance, Capas de Bíblia em Crochê

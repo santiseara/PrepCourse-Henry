@@ -11,6 +11,7 @@ plan.json:
  "shots": [["Y", 0], ["G", 0], ["K", 7]],   # orden fijo de visuales (clave, segundo de arranque)
  "pool": [["K", 0, 5], ["T", 2, 6.5]],       # o en vez de "shots": recortes que se reparten solos
  "first": ["Y", 0], "usage": "usage.json", "seed": 1,
+ "anchors": [["pouring", 0, "N", 1]],         # el plano que suena con esa palabra (n.º de aparición) muestra ese recorte
  "sfx": [["chaching", "dollars", 0], ["ding", "order.", 0], ["pop", "Learn", 0]],  # sonido, palabra, n.º de aparición
  "whoosh": [1],                               # índices de corte con whoosh (no en todos)
  "cut": [3.6, 4.4, 5.2]                       # mínimo, ideal y máximo de cada plano
@@ -73,6 +74,16 @@ rnd = random.Random(P.get('seed', 0))
 upath = F(P['usage']) if 'usage' in P else None
 usage = json.load(open(upath)) if upath and os.path.exists(upath) else {}
 used, plan = set(), []
+# anchors: [palabra, n.º de aparición, clave, segundo] → el plano que suena con esa palabra muestra eso
+forced = {}
+for word, occ, key, st in P.get('anchors', []):
+    ts_ = [w[0] for w in vw if norm(w[2]) == norm(word)]
+    if occ >= len(ts_): print(f'aviso: anchor "{word}" n.º {occ} no aparece'); continue
+    n = max(i for i in range(len(cuts) - 1) if cuts[i] <= ts_[occ] + 0.05)
+    if n in forced or forced.get(n - 1, [''])[0] == key or forced.get(n + 1, [''])[0] == key:
+        print(f'aviso: anchor "{word}" choca con otro en el plano {n}, se ignora'); continue
+    forced[n] = next(s for s in P['pool'] if s[0] == key and s[1] == st)
+for s in forced.values(): used.add(f'{s[0]}@{s[1]}')
 for n in range(len(cuts) - 1):
     d = cuts[n + 1] - cuts[n]
     if 'pool' not in P:
@@ -81,10 +92,13 @@ for n in range(len(cuts) - 1):
         end = next((r1 for r0, r1 in c.get('ranges', [[0, 1e9]]) if r0 <= st < r1), 1e9)
         plan.append((key, st, end, False)); continue
     prev = [p[0] for p in plan[-2:]]
-    if n == 0 and 'first' in P:
+    if n in forced:
+        seg = forced[n]
+    elif n == 0 and 'first' in P:
         seg = next(s for s in P['pool'] if s[0] == P['first'][0] and s[1] == P['first'][1])
     else:
-        cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0] not in prev[-1:]]
+        nxt = forced[n + 1][0] if n + 1 in forced else None
+        cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0] not in prev[-1:] and s[0] != nxt]
         here = {k: sum(1 for p in plan if p[0] == k) for k in P['clips']}
         def score(s):
             return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0], 0) * 4 + (3 if s[0] in prev else 0)

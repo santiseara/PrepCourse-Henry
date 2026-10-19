@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Bachas de concreto: videos B3 y B5
+- **Pedido de Santiago:** armar con buena edición el B3 y el B5 (después viene uno con avatar).
+- **Creado:** `~/Desktop/bachas-concreto/BC-B3-estres-y-vecino.mp4` y `BC-B5-garaje-de-papa.mp4` (voz Knox, 4 TikToks nuevos de B-roll).
+- **Cambiado:** `OUTPUTS/scripts-vsl/edit_broll.py` (anchors: plano según la palabra), `WIKI/bachas-de-concreto.md`.
+
 ## 2026-10-19 — Bachas de concreto: variables B3 a B7 del ganador
 - **Pedido de Santiago:** al Guion B ("What started…") le va muy bien (4 ventas); hacer variables con la misma estructura y el mismo ángulo.
 - **Creado:** `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md` (B3 a B7, en inglés y español).

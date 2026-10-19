@@ -16,7 +16,8 @@
 2. **Visuales:** TikToks que pasa Santiago, bajados con `yt-dlp` (instalado con `pip install --user`). TikTok falla seguido, así que se reintenta en loop. Salen sin marca de agua.
 3. **Voz: Google AI Studio → Generate speech** (Gemini 3.8 Flash TTS, gratis y sin créditos). **Voz de hombre de unos 40: Knox** (Masculine, "warm and conversational", tono grave), con el estilo: *"American man around 40, a hands-on craftsman telling his own story on TikTok. Warm, genuine, confident and conversational, a little excited, brisk natural pace, no announcer tone."* El texto se pega en el bloque, se genera con **cmd+Enter** (Run queda bloqueado mientras suena el audio anterior: primero hay que pausarlo) y se baja con el ícono de descarga (`Generated Audio ….wav`). Ojo: si el menú de Style queda abierto, lo que tipeás no entra en el bloque de texto. "Roma" no existe en AI Studio (es de ElevenLabs y HeyGen).
 4. **Edición:** `OUTPUTS/scripts-vsl/edit_broll.py plan.json salida.mp4` en modo **pool**:
-   - Hay 40 recortes de los 7 TikToks, sin tramos con blur.
+   - Hay 40 recortes de los 7 TikToks, sin tramos con blur. El 2026-10-19 se sumaron 4 TikToks de @tunegocioenconcreto (`7555698286653443384` bacha roja colada, `7509688033600572728` bacha blanca lijada, `7555149079676718392` bacha moldeada sobre la base, `7527454540250074424` mesa de GRC con agua que perla), y ahora son ~70 recortes. Del 7555149079676718392 hay que excluir los frascos con marca (16–18 s) y el molde blanco casi vacío (8–10 s). El colado rojo va una sola vez por video, porque todos sus tramos se ven iguales.
+   - **Anchors** (`"anchors": [[palabra, aparición, clave, segundo]]`): el plano que suena con esa palabra muestra lo que dice ("pouring" → colado, "Mixing" → balde, "mold" → bacha desmoldada). El CTA ("Learn") va siempre sobre una bacha terminada.
    - Ningún recorte se repite dentro de un video, nunca van dos planos seguidos del mismo TikTok y aparecen los 7.
    - Entre videos se priorizan los recortes menos usados (`usage.json` compartido): se editan en orden y con el mismo `usage.json`. Si un recorte se reusa, va espejado.
    - Voz sin silencios a 1.2x, un corte cada ~4–5 s (al final de una palabra), zoom suave, subtítulos de 3 palabras con la activa en amarillo y música baja.
@@ -40,6 +41,8 @@
 - Variables A2, B2 y C2 (mismo ángulo, guion nuevo): `OUTPUTS/2026-10-18-variables-bachas-concreto-en.md`. Videos `BC-A2-garaje-3200.mp4`, `BC-B2-mi-hora-en-el-garaje.mp4` y `BC-C2-400-a-800-por-bacha.mp4`.
 
 - **Ganador (2026-10-19): Guion B** ("What started as a simple way to unwind…", `BC-B-momento-para-mi.mp4`), con 4 ventas. Su estructura: un rato para desconectar → probé de todo y no era habilidoso → video de bachas de diseño → "parecía difícil, pero era paso a paso" → método desde cero → primera pieza ("no podía creer que la hice yo") → la muestro sin querer vender → un tercero pregunta dónde la compré y cuánto sale → primer pedido, otro, otro → hoy me dedico a esto y lo sigo disfrutando → CTA con Mark Ross. Variables B3 a B7 (mismo ángulo, cada una con otro disparador, otro tercero que la ve y otro CTA): `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md`.
+
+- Videos del 2026-10-19 (variables del ganador B): `BC-B3-estres-y-vecino.mp4` (64 s) y `BC-B5-garaje-de-papa.mp4` (65 s), con B-roll nuevo y anchors.
 
 ## Preguntas abiertas
 - ¿Nombre del producto en inglés, landing y precio?

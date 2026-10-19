@@ -43,6 +43,7 @@
 - **Ganador (2026-10-19): Guion B** ("What started as a simple way to unwind…", `BC-B-momento-para-mi.mp4`), con 4 ventas. Su estructura: un rato para desconectar → probé de todo y no era habilidoso → video de bachas de diseño → "parecía difícil, pero era paso a paso" → método desde cero → primera pieza ("no podía creer que la hice yo") → la muestro sin querer vender → un tercero pregunta dónde la compré y cuánto sale → primer pedido, otro, otro → hoy me dedico a esto y lo sigo disfrutando → CTA con Mark Ross. Variables B3 a B7 (mismo ángulo, cada una con otro disparador, otro tercero que la ve y otro CTA): `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md`.
 
 - Videos del 2026-10-19 (variables del ganador B): `BC-B3-estres-y-vecino.mp4` (64 s) y `BC-B5-garaje-de-papa.mp4` (65 s), con B-roll nuevo y anchors.
+- Guion UGC para la avatar de HeyGen **"Mark Ross"** (ángulo del ganador B, en primera persona como creador del método, ~156 palabras ≈ 40 s): `OUTPUTS/2026-10-19-guion-ugc-mark-ross-bachas.md`.
 
 ## Preguntas abiertas
 - ¿Nombre del producto en inglés, landing y precio?

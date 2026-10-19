@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Bachas de concreto: guion UGC para la avatar Mark Ross
+- **Pedido de Santiago:** guion tipo UGC para la avatar de HeyGen "Mark Ross".
+- **Creado:** `OUTPUTS/2026-10-19-guion-ugc-mark-ross-bachas.md`.
+- **Cambiado:** `WIKI/bachas-de-concreto.md`, `WIKI/index.md`.
+
 ## 2026-10-19 — Bachas de concreto: videos B3 y B5
 - **Pedido de Santiago:** armar con buena edición el B3 y el B5 (después viene uno con avatar).
 - **Creado:** `~/Desktop/bachas-concreto/BC-B3-estres-y-vecino.mp4` y `BC-B5-garaje-de-papa.mp4` (voz Knox, 4 TikToks nuevos de B-roll).

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Guiones piedras v14
+- **Pedido de Santiago:** más guiones para piedras.
+- **Creado:** `OUTPUTS/2026-10-19-guiones-piedras-v14.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-18 — Pan Sin Picos: link de checkout
 - Todos los CTAs de la oferta van a https://pan-sin-picos.impultienda.ar/checkout (con UTMs). Actualizados el .txt, PRUEBA, zip y la ficha de la oferta (WIKI/pan-sin-picos.md).
 

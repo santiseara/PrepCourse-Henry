@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 — Bachas de concreto: video UGC con Mark Ross
+- **Pedido de Santiago:** armar el video con la avatar de HeyGen "Mark Ross", con buena edición (pantalla dividida, avatar chiquito sin fondo, etc.).
+- **Creado:** `~/Desktop/bachas-concreto/BC-UGC-Mark-Ross.mp4` y la carpeta `work-mark/`.
+- **Cambiado:** `WIKI/bachas-de-concreto.md`.
+
 ## 2026-10-19 — Bachas de concreto: guion UGC para la avatar Mark Ross
 - **Pedido de Santiago:** guion tipo UGC para la avatar de HeyGen "Mark Ross".
 - **Creado:** `OUTPUTS/2026-10-19-guion-ugc-mark-ross-bachas.md`.

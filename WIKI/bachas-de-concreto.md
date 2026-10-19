@@ -43,6 +43,11 @@
 - **Ganador (2026-10-19): Guion B** ("What started as a simple way to unwind…", `BC-B-momento-para-mi.mp4`), con 4 ventas. Su estructura: un rato para desconectar → probé de todo y no era habilidoso → video de bachas de diseño → "parecía difícil, pero era paso a paso" → método desde cero → primera pieza ("no podía creer que la hice yo") → la muestro sin querer vender → un tercero pregunta dónde la compré y cuánto sale → primer pedido, otro, otro → hoy me dedico a esto y lo sigo disfrutando → CTA con Mark Ross. Variables B3 a B7 (mismo ángulo, cada una con otro disparador, otro tercero que la ve y otro CTA): `OUTPUTS/2026-10-19-variables-bachas-B-what-started.md`.
 
 - Videos del 2026-10-19 (variables del ganador B): `BC-B3-estres-y-vecino.mp4` (64 s) y `BC-B5-garaje-de-papa.mp4` (65 s), con B-roll nuevo y anchors.
+- **Video UGC con Mark Ross (2026-10-19):** `~/Desktop/bachas-concreto/BC-UGC-Mark-Ross.mp4` (39 s).
+  - Avatar de HeyGen "Mark Ross" (delantal, taller), Avatar IV, voz "Orson - Firm & Measured", Creación rápida en vertical 1080p. Salió de 50 s y costó 14 créditos.
+  - Edición con `edit_vsl_quiz.py` (SPEED=1.1) alternando los 4 modos: pantalla dividida, B-roll solo, Mark grande recortado y Mark chiquito sin fondo. Tiene 18 B-rolls anclados a frases ("looking like this" → la bacha amarilla desmoldada; "the mix, the mold, the finish" → 3 cortes rápidos) y 4 headlines verdes: FULL TIME INCOME con cha-ching, y FIRST ORDER, STEP BY STEP y TAP LEARN MORE con pop.
+  - Carpeta de trabajo: `~/Desktop/bachas-concreto/work-mark/`. Ahí están `brolls/` con los 9 TikToks nombrados (roja, blanca, molde, mesa, amarilla, negra, oval, terrazo, azul), `plan_mark.json` y `heads_mark.json`.
+  - Evitar en pip/gs los planos donde aparece otra persona a cámara (el de `azul` a los 6–14 s), porque quedan dos caras.
 - Guion UGC para la avatar de HeyGen **"Mark Ross"** (ángulo del ganador B, en primera persona como creador del método, ~156 palabras ≈ 40 s): `OUTPUTS/2026-10-19-guion-ugc-mark-ross-bachas.md`.
 
 ## Preguntas abiertas

@@ -30,6 +30,7 @@
 
 ## Activos
 - Videos: `~/Desktop/mesas-resina/IN-V1..V6.mp4` (~33–40 s). Guiones en inglés y español: `OUTPUTS/2026-10-19-guiones-infinity-3d-en.md`.
+- Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-19-descripciones-ads-infinity-3d.md`.
 - Carpeta de trabajo: `~/Desktop/mesas-resina/work/` (`tiktoks/`, `ads/` con sus 23 ads y `transcripts.txt`, `landing/`, `vo/`, `plans/`).
 - **TikToks y tramos a cuidar:** `@jorgevalenzuelam/7683664277789592850` (film y tira LED) trae texto en español en 12–15 s ("pieza 1: 50x76cm") y en 64–68 s (medidas en cm): excluidos. Ese mismo TikTok y `@street_art888/7447541641076018478` muestran caras en muchos tramos.
 

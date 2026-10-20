@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-19 — Infinity 3D: descripciones para ads
+- **Creado:** `OUTPUTS/2026-10-19-descripciones-ads-infinity-3d.md` (3 descripciones, EN + ES).
+- **Cambiado:** `WIKI/infinity-3d.md`.
+
 ## 2026-10-19 — Infinity 3D: arreglo de audio cortado y video trabado
 - **Pedido de Santiago:** los videos le gustaron, pero el audio se corta y algunos se ven trabados.
 - **Cambiado:** `OUTPUTS/scripts-vsl/edit_infinity.py` (recorte de silencios suave, sin zoom en los clips y zoom de fotos al doble de resolución), los 6 videos rehechos y `WIKI/infinity-3d.md` (registro de correcciones).

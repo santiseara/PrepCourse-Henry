@@ -53,6 +53,9 @@
 ## Natives propias de la tanda 19/10
 - `OUTPUTS/2026-10-19-natives-piedras-feria-v5.md`: ángulo feria con estructuras distintas (FAQ de 7 preguntas, carta en segunda persona con P.S., la peor feria como historia de fracaso) y cierres distintos, sin el bloque fijo de bio + Louisa + primera feria. Aplica la regla del 19/10 de variar ángulo y CTA.
 
+## Natives propias de la tanda 20/10
+- `OUTPUTS/2026-10-20-natives-piedras-feria-v6.md`: ángulo feria con estructuras nuevas: gastos y ventas de un sábado a la vista (neto 560 por 13 horas), la lista de frases que escucha en la mesa y la native narrada por Michael (voz del marido, CTA a maridos y esposas).
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

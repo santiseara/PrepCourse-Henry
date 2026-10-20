@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20 — Natives piedras feria v6
+- **Pedido de Santiago:** más natives.
+- **Creado:** `OUTPUTS/2026-10-20-natives-piedras-feria-v6.md` (natives feria 15, 16 y 17, de 900 a 970 palabras).
+- **Cambiado:** `WIKI/index.md`, `WIKI/natives-ganadoras.md`.
+
 ## 2026-10-20 — Guiones piedras v17 (virales)
 - **Pedido de Santiago:** más guiones, mejores y más virales.
 - **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-v17-virales.md`.

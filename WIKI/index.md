@@ -85,6 +85,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-20 — Guiones piedras v16](../OUTPUTS/2026-10-20-guiones-piedras-v16.md) — anfitriona de Airbnb, la hija que cuenta lo de su mamá, desafío de 20 dólares, "ya nadie compra velas", ASMR "subí el volumen", los mensajes del día · ver [[guiones-y-anuncios]]
 - [2026-10-19 — Natives piedras feria v5](../OUTPUTS/2026-10-19-natives-piedras-feria-v5.md) — natives 12 a 14 con estructuras nuevas: preguntas de la mesa, carta a la mujer de la campera roja, la peor feria (4 de 110) · ver [[natives-ganadoras]]
 - [2026-10-19 — Guiones piedras v15: ángulos nuevos](../OUTPUTS/2026-10-19-guiones-piedras-v15-angulos-nuevos.md) — el cuarto del hijo, sin redes, la mujer de la iglesia, el comentario negativo, "no empieces si", regalos de Navidad · ver [[guiones-y-anuncios]]
 - [2026-10-19 — Guiones piedras v14](../OUTPUTS/2026-10-19-guiones-piedras-v14.md) — 40 centavos que se vuelven 12, "dejá el yeso", el marido narra, la caja en la oficina, domingo de 7 a 9, la boutique de 38 · ver [[guiones-y-anuncios]]

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20 — Guiones piedras v16
+- **Pedido de Santiago:** más guiones para piedras.
+- **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-v16.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-19 — Infinity 3D: descripciones para ads
 - **Creado:** `OUTPUTS/2026-10-19-descripciones-ads-infinity-3d.md` (3 descripciones, EN + ES).
 - **Cambiado:** `WIKI/infinity-3d.md`.

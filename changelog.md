@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20 — Scented Stones: 5 videos UGC con PERRITA RICA
+- **Pedido de Santiago:** más videos con el avatar de la oferta, buena edición, variedad de formatos, efectos de sonido y que sean entretenidos.
+- **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v2.md` (EN + ES) y `~/Desktop/scented-stones-ad/SS-UGC-1..5-*.mp4`.
+- **Cambiado:** `OUTPUTS/scripts-vsl/sfx.py` (buzzer, redoble, tic-tac, lápiz), `OUTPUTS/scripts-vsl/edit_ugc_pip.py` (efecto sin headline), `WIKI/vsl-reglas-de-armado.md`, `WIKI/index.md`.
+
 ## 2026-10-20 — Natives piedras feria v6
 - **Pedido de Santiago:** más natives.
 - **Creado:** `OUTPUTS/2026-10-20-natives-piedras-feria-v6.md` (natives feria 15, 16 y 17, de 900 a 970 palabras).

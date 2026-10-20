@@ -164,7 +164,7 @@ heads, sfx = [], []
 for p, txt, fx, d in HEAD:
     t = find(p)
     if t is None: continue
-    heads.append((t, min(t + d, total), txt))
+    if txt: heads.append((t, min(t + d, total), txt))   # texto vacío = solo el efecto (redoble, buzzer...)
     if fx: sfx.append((fx + '.wav', t, 0.9 if fx == 'chaching' else 0.5))
 
 # ---------- Subtítulos tipo TikTok (3 palabras, la plata en amarillo) ----------

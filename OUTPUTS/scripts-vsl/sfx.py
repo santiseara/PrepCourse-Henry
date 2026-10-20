@@ -50,3 +50,27 @@ save('whoosh.wav', w * e)
 t = t_(1.0); thump = np.sin(2 * np.pi * (60 + 80 * np.exp(-t / .03)) * t) * np.exp(-t / .1)
 save('sello.wav', thump * .9 + bell(1318, 1.0, .4) * .35)
 print('ok')
+# Efectos para ads entretenidos (2026-10-20): pocos y en momentos clave
+# buzzer de "error" (lista de errores)
+t = t_(.45); bz = np.sign(np.sin(2 * np.pi * 110 * t)) * .5 + np.sign(np.sin(2 * np.pi * 116 * t)) * .5
+save('buzzer.wav', bp(bz, 150, 3000) * np.minimum(1, (.45 - t) / .08))
+
+# redoble corto antes de una revelación (redoble de tambor que crece)
+d = 1.4; t = t_(d); x = np.zeros(len(t))
+k, step = 0.0, .07
+while k < d - .05:
+    j = int(k * SR); hit = bp(rng.standard_normal(int(.05 * SR)), 900, 6000) * np.exp(-t_(.05) / .012)
+    x[j:j + len(hit)] += hit[:len(x) - j] * (.35 + .65 * k / d); k += step; step = max(.03, step * .93)
+save('drumroll.wav', x)
+
+# tic-tac de reloj (pregunta "adiviná")
+x = np.zeros(int(1.2 * SR))
+for i, f in enumerate((2400, 1800, 2400, 1800)):
+    j = int(i * .3 * SR); c = bell(f, .04, .008); x[j:j + len(c)] += c
+save('tick.wav', x)
+
+# lápiz que escribe (cuentas en la servilleta)
+t = t_(.9); n = bp(rng.standard_normal(len(t)), 2500, 8000)
+save('scribble.wav', n * (.4 + .6 * np.abs(np.sin(2 * np.pi * 7 * t))) * np.minimum(1, (.9 - t) / .1))
+print('ok extra')
+

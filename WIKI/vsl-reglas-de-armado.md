@@ -177,6 +177,12 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
   - El original (`~/Downloads/I thought scented.mp4`, 42 s, ángulo guía gratis, pantalla dividida) usa la avatar de HeyGen **"PERRITA RICA"** (delantal, sweater crema, piedra con lavanda en la mano) con "voz roma" en inglés. No había quedado registrado.
   - Variable: mismo body y CTA, hook nuevo ("…way out of my budget"). Edición mixta `gs` / `full` / `pip` con los 6 B-rolls de piedras ya existentes (0 nuevos). Plan y headlines en `work/plan_ithought.json` y `work/heads_ithought.json`. La toma de HeyGen salió de 55 s.
   - Santiago: "hacelos rápido, no gastes créditos de más" → **una sola generación por guion** en HeyGen y nada de B-rolls nuevos si alcanzan los que hay.
+- **Tanda UGC con PERRITA RICA (Scented Stones, 2026-10-20).** Pedido: "más videos, buena edición, variedad de formatos, efectos de sonido, que sean entretenidos".
+  - 5 guiones de ~115–130 palabras, cada uno con un formato propio (empaquetá conmigo, lista de 3 errores, "adiviná cuánto costó", storytime de la florista, el marido que hace las cuentas en una servilleta). Guiones: `OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v2.md`.
+  - HeyGen: avatar PERRITA RICA → "Usar en un video" → Creación rápida (Avatar IV, voz roma, vertical 1080p). Salen de 34–39 s. **Después de enviar, el cuadro tarda unos 5–10 s en vaciarse**: no pegar el guion siguiente hasta que se vacíe, o se mezclan los textos. Se pueden encolar los 5 seguidos.
+  - Edición con `edit_ugc_pip.py`, mezclando los modos por video (`split`, `pip`, `gs`, `full`) para que no se repitan.
+  - **Efectos nuevos en `sfx.py`:** `buzzer` (cada error de la lista), `drumroll` (antes de revelar un número), `tick` (pregunta "adiviná"), `scribble` (cuentas en papel), además de `ding`. En `heads_*.json` un texto vacío (`""`) pone **solo el efecto**, sin headline.
+  - Higgsfield estaba sin sesión: se usaron solo los 6 B-rolls de piedras que ya había.
 - **Bug resuelto:** una imagen con `-loop 1` sin `-t` (más una rama `nullsink`) dejó a ffmpeg corriendo sin fin. Siempre ponerle `-t`.
 
 ## 7. VSL corto de la nutri dentro del quiz (Mounjaro Humilde, 2026-10-14)

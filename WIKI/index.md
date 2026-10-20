@@ -85,6 +85,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-20 — Guiones UGC con avatar piedras v2](../OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v2.md) — 5 videos con PERRITA RICA: pedido para boutique, 3 errores, adiviná el costo, la florista, la servilleta del marido · ver [[vsl-reglas-de-armado]]
 - [2026-10-20 — Natives piedras feria v6](../OUTPUTS/2026-10-20-natives-piedras-feria-v6.md) — natives 15 a 17: cada dólar de un sábado, lo que la gente dice en la mesa, la cuenta Michael · ver [[natives-ganadoras]]
 - [2026-10-20 — Guiones piedras v17: virales](../OUTPUTS/2026-10-20-guiones-piedras-v17-virales.md) — ranking de ingresos extra, encuesta en la calle, "día 1", POV, el secreto del viaje a Italia, opinión impopular, las abuelas italianas · ver [[guiones-y-anuncios]]
 - [2026-10-20 — Guiones piedras v16](../OUTPUTS/2026-10-20-guiones-piedras-v16.md) — anfitriona de Airbnb, la hija que cuenta lo de su mamá, desafío de 20 dólares, "ya nadie compra velas", ASMR "subí el volumen", los mensajes del día · ver [[guiones-y-anuncios]]

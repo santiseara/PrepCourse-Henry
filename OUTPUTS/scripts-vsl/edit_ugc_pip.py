@@ -51,7 +51,8 @@ def transcribe(path, cache):
     wav = cache + '.wav'
     run([FF, '-v', 'error', '-y', '-i', path, '-ac', '1', '-ar', '16000', wav])
     m = WhisperModel('small', device='cpu', compute_type='int8')
-    segs, _ = m.transcribe(wav, language=LANG, word_timestamps=True, beam_size=5, initial_prompt=GUION)
+    segs, _ = m.transcribe(wav, language=LANG, word_timestamps=True, beam_size=5, initial_prompt=GUION,
+                          condition_on_previous_text=False)   # sin esto, a veces repite frases en bucle al final (2026-10-20)
     words = [{'w': w.word.strip(), 's': w.start, 'e': w.end} for s in segs for w in s.words]
     json.dump(words, open(cache, 'w'), ensure_ascii=False)
     return words

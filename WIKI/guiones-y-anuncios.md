@@ -89,3 +89,4 @@
 - RAW/2026-10-10-guiones-ganadores-scented-stones.md
 
 - **2026-10-19 · Variar ángulo y CTA.** Rechazó la v14 de piedras: "son todos muy similares, mismo CTA siempre, decís las mismas cosas". Regla: cada guion de una tanda con estructura y CTA propios, sin las frases fijas (lista de ingredientes, "12 o tres por 30", "guía de 27 recuperada con la primera venta"). Ver `OUTPUTS/2026-10-19-guiones-piedras-v15-angulos-nuevos.md`.
+- **2026-10-20 · UGC con avatar: gustaron el 1 y el 2.** De la tanda de 5 videos con PERRITA RICA eligió "Pack a boutique order with me" (detrás de escena de un pedido concreto: a quién va, cuánto le paga, cómo llegó el pedido sin venderlo) y "Three mistakes…" (lista numerada con un efecto por ítem). No eligió "adiviná el costo", la florista ni la servilleta del marido. Variables (3 de cada formato, con otro comprador u otra lista y CTA propio): `OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v3.md`.

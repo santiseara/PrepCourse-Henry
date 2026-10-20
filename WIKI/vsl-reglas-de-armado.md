@@ -183,6 +183,7 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
   - Edición con `edit_ugc_pip.py`, mezclando los modos por video (`split`, `pip`, `gs`, `full`) para que no se repitan.
   - **Efectos nuevos en `sfx.py`:** `buzzer` (cada error de la lista), `drumroll` (antes de revelar un número), `tick` (pregunta "adiviná"), `scribble` (cuentas en papel), además de `ding`. En `heads_*.json` un texto vacío (`""`) pone **solo el efecto**, sin headline.
   - Higgsfield estaba sin sesión: se usaron solo los 6 B-rolls de piedras que ya había.
+- **Whisper en bucle (2026-10-20):** en un video repitió frases inventadas al final ("Number four, books…") y se perdieron los anclajes del cierre. Se arregla con `condition_on_previous_text=False` (ya está en `edit_ugc_pip.py`). Si un ancla tiene un número con guion ("eighty-dollar"), Whisper lo transcribe en cifras ("80 dollar") y no se encuentra: anclar en las palabras de al lado.
 - **Bug resuelto:** una imagen con `-loop 1` sin `-t` (más una rama `nullsink`) dejó a ffmpeg corriendo sin fin. Siempre ponerle `-t`.
 
 ## 7. VSL corto de la nutri dentro del quiz (Mounjaro Humilde, 2026-10-14)

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20 — Scented Stones: 6 videos UGC v3 (variables de los videos 1 y 2)
+- **Pedido de Santiago:** le gustaron el 1 (pedido para boutique) y el 2 (tres errores).
+- **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v3.md` (EN + ES) y `~/Desktop/scented-stones-ad/SS-UGC-v3-*.mp4`.
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias), `WIKI/index.md`.
+
 ## 2026-10-20 — Scented Stones: 5 videos UGC con PERRITA RICA
 - **Pedido de Santiago:** más videos con el avatar de la oferta, buena edición, variedad de formatos, efectos de sonido y que sean entretenidos.
 - **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v2.md` (EN + ES) y `~/Desktop/scented-stones-ad/SS-UGC-1..5-*.mp4`.

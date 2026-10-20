@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20 — Guiones piedras v17 (virales)
+- **Pedido de Santiago:** más guiones, mejores y más virales.
+- **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-v17-virales.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-20 — Guiones piedras v16
 - **Pedido de Santiago:** más guiones para piedras.
 - **Creado:** `OUTPUTS/2026-10-20-guiones-piedras-v16.md`.

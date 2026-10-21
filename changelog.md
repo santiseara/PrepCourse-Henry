@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Scented Stones: guiones v19 (nicho ingresos extra)
+- **Corrección de Santiago a la v18:** "apuntá más a guiones del nicho generar ingresos, me estás haciendo situaciones que no traen el público que quiero".
+- **Creado:** `OUTPUTS/2026-10-21-guiones-piedras-v19-ingresos.md` (EN + ES).
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias: público de ingresos extra), `WIKI/index.md`.
+
 ## 2026-10-21 — Scented Stones: guiones v18 (6 ángulos nuevos)
 - **Pedido de Santiago:** "Vamos con mas guiones para piedras".
 - **Creado:** `OUTPUTS/2026-10-21-guiones-piedras-v18.md` (EN + ES).

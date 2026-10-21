@@ -1,22 +1,24 @@
-Guion Scented Stones - 1.000 al mes, con valor (21/10)
+Guion Scented Stones - 1.000 al mes (21/10)
 
-Pedido de Santiago sobre el Guion 1 de la v19: "hacelo de nuevo, pero no compares tres números, hacelo solo con 1000 y aportá valor".
-Una sola meta ($1.000 al mes) desarmada en a dónde va cada piedra, con tres trucos que se pueden aplicar: la muestra gratis en el mostrador, vender en cajita de tres y el mensaje de la semana cuatro.
+Pedido de Santiago sobre el Guion 1 de la v19: "hacelo de nuevo, pero no compares tres números, hacelo solo con 1000". Después aclaró: "quiero el mismo que el anterior pero solo con 1000".
+Misma estructura que el Guion 1 de la v19 (cuántas vender → cuánto te queda por piedra → el desglose → sin local ni seguidores → CTA a comentarios), con una sola meta: $1.000 al mes.
 
 Guion 1
 
 EN
-A thousand extra dollars a month with scented stones isn't luck. It's about a hundred and twenty stones, and here's where every one of them goes.
-Sixty go to three gift shops, twenty each, at six dollars wholesale. That's three hundred and sixty dollars, and they reorder on their own. The trick to getting in: leave five on the counter for free and come back in a week. They've usually sold.
-The other sixty go to your own customers at twelve dollars. That's seven hundred and twenty. And here's what most people miss: don't sell them one at a time. Put three in a little box with a card. Almost nobody buys just one.
-Then, around week four, the scent starts to fade. Text every customer: "Want a fresh set?" That one message brings in half my orders.
-A hundred and twenty stones is two batches a week at the kitchen table. Materials, about sixty dollars for the whole month.
-Screenshot this, it's your plan. The full method is behind Learn More.
+Here's exactly how many scented stones you'd have to sell to make an extra thousand dollars a month.
+Each one costs about fifty cents to make and sells for twelve. So you keep roughly eleven fifty on every stone.
+Sell them all yourself, and that's eighty-seven stones a month. About twenty-two a week.
+That sounds like a lot, so here's how it splits. Three gift shops take twenty stones each at six dollars wholesale. That's three hundred and thirty in your pocket, and they reorder on their own.
+The other seven hundred comes from about sixty stones sold to your own customers. Coworkers, school moms, one Saturday market.
+That's two batches a week at your kitchen table. No store, no website, not a single follower.
+What would an extra thousand a month change for you? Tell me in the comments, then tap Learn More and start on it.
 
 ES
-Mil dólares extra por mes con piedras aromáticas no es suerte. Son unas ciento veinte piedras, y te cuento a dónde va cada una.
-Sesenta van a tres regalerías, veinte cada una, a seis dólares por mayor. Son trescientos sesenta dólares, y te vuelven a pedir solas. El truco para entrar: dejá cinco gratis en el mostrador y volvé en una semana. Casi siempre ya se vendieron.
-Las otras sesenta van a tus propias clientas, a doce dólares. Son setecientos veinte. Y acá está lo que casi nadie hace: no las vendas de a una. Poné tres en una cajita con una tarjeta. Casi nadie se lleva una sola.
-Después, más o menos en la semana cuatro, el aroma empieza a irse. Mandale un mensaje a cada clienta: "¿Querés un set nuevo?". Ese solo mensaje me trae la mitad de los pedidos.
-Ciento veinte piedras son dos tandas por semana en la mesa de la cocina. Materiales, unos sesenta dólares en todo el mes.
-Sacale captura a esto, es tu plan. El método completo está en Más información.
+Esto es exactamente cuántas piedras aromáticas tendrías que vender para sumar mil dólares extra por mes.
+Hacer cada una cuesta unos cincuenta centavos y se vende a doce. O sea que te quedan más o menos once con cincuenta por piedra.
+Si las vendés todas vos, son ochenta y siete piedras por mes. Unas veintidós por semana.
+Parece mucho, así que mirá cómo se reparte. Tres regalerías te llevan veinte piedras cada una a seis dólares por mayor. Son trescientos treinta en tu bolsillo, y te vuelven a pedir solas.
+Los otros setecientos salen de unas sesenta piedras que les vendés a tus propias clientas. Compañeras de trabajo, mamás del colegio, una feria de sábado.
+Son dos tandas por semana en la mesa de tu cocina. Sin local, sin página web, sin un solo seguidor.
+¿Qué te cambiaría tener mil dólares extra por mes? Contame en los comentarios, y después tocá Más información y arrancá.

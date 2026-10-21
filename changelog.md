@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-21 — Scented Stones: guion 1.000 al mes, corregido
+- **Corrección de Santiago:** "quiero el mismo que el anterior pero solo con 1000".
+- **Cambiado:** `OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md` (vuelve a la estructura del 1 de la v19), `WIKI/guiones-y-anuncios.md`, `WIKI/index.md`.
+
 ## 2026-10-21 — Scented Stones: guion 1.000 al mes (rehecho del 1 de la v19)
 - **Pedido de Santiago:** "no compares tres números, hacelo solo con 1000 y aportá valor".
 - **Creado:** `OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md` (EN + ES).

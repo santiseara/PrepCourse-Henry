@@ -85,7 +85,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
-- [2026-10-21 — Guion piedras 1.000 al mes](../OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md) — rehecho del 1 de la v19: una sola meta de $1.000 desarmada en 120 piedras, con 3 trucos (muestra gratis en el mostrador, cajita de tres, mensaje de la semana 4) · ver [[guiones-y-anuncios]]
+- [2026-10-21 — Guion piedras 1.000 al mes](../OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md) — el 1 de la v19 con la misma estructura pero solo con $1.000 (87 piedras, o 60 por mayor + 60 propias) · ver [[guiones-y-anuncios]]
 - [2026-10-21 — Guiones piedras v19 ingresos](../OUTPUTS/2026-10-21-guiones-piedras-v19-ingresos.md) — nicho ingresos extra: cuántas vender para 300/500/1.000, cansada de estafas, el sueldo que se termina el 20, cuánto paga la hora, 3 excusas, plan de 6 fines de semana · ver [[guiones-y-anuncios]]
 - [2026-10-21 — Guiones piedras v18](../OUTPUTS/2026-10-21-guiones-piedras-v18.md) — lobby de hotel, chofer de Uber, cuenta propia tras el divorcio, lo que compré este mes, carta a mí de hace un año, temporada de otoño · ver [[guiones-y-anuncios]]
 - [2026-10-20 — Guiones UGC con avatar piedras v3](../OUTPUTS/2026-10-20-guiones-piedras-ugc-avatar-v3.md) — variables de los que gustaron: peluquería, baby shower, inmobiliaria · 3 compradores, 3 compras inútiles, 3 preguntas de la feria · ver [[guiones-y-anuncios]]

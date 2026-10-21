@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Scented Stones: guiones v18 (6 ángulos nuevos)
+- **Pedido de Santiago:** "Vamos con mas guiones para piedras".
+- **Creado:** `OUTPUTS/2026-10-21-guiones-piedras-v18.md` (EN + ES).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-20 — Corrección: no generar tandas sin pedido
 - **Corrección de Santiago:** "¿Por qué me hacés 11 videos si te dije 2?".
 - **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias).

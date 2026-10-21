@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-21 — Women's Cutting Atlas: landing leída y guiones ajustados
+- **Pedido de Santiago:** "Acá te dejo la info de mi página, agarrá todo de ahí" (HTML de la landing).
+- **Cambiado:** `WIKI/atlas-de-cortes.md` (ficha de la landing: nombre, Cut Maps, oferta y bonus), `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (6 guiones con los términos del producto), `WIKI/index.md`.
+
 ## 2026-10-21 — Atlas Visual de Cortes: oferta nueva y 6 guiones
 - **Pedido de Santiago:** ads en inglés a partir de los ganadores de Estilismo Con Propósito (los que llevan más tiempo y los más duplicados): 4 como los de ellos y 2 variables nuestras.
 - **Creado:** `WIKI/atlas-de-cortes.md` (DNA de 13 videos transcritos), `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (6 guiones, EN + ES con voseo).

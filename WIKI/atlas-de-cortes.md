@@ -32,6 +32,7 @@
 - ⚠️ **Pendientes en la landing:** 6 capturas de reseñas en inglés. Los mockups del pack y de la colección ya los pasó Santiago el 2026-10-21.
 
 ## Detalles / notas
+- Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.
 - Tanda 1 (21/10): 4 guiones adaptados de los ganadores + 2 variables nuestras (cuentas de la plata que se pierde por decir "ese corte no es lo mío", y la estilista con 20 años que tenía una carpetita en el cajón). Ver `OUTPUTS/2026-10-21-guiones-atlas-cortes.md`. Reescritos con los términos de la landing: Women's Cutting Atlas, Cut Maps, sectioning, elevation y guide section, sin el "error a evitar" porque los mapas no lo prometen.
 
 ## Cómo se arma un video (2026-10-21)

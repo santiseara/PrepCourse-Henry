@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Scented Stones: natives 18 y 19 (situaciones 1 y 6)
+- **Pedido de Santiago:** "Vamos con la 1 y la 6".
+- **Creado:** `OUTPUTS/2026-10-21-natives-piedras-ortodoncia-y-periodista.md` (solo inglés, 1.006 y 928 palabras).
+- **Cambiado:** `WIKI/natives-ganadoras.md`, `WIKI/index.md`.
+
 ## 2026-10-21 — Scented Stones: 10 situaciones nuevas para natives
 - **Pedido de Santiago:** "quiero natives nuevas, no quiero más las de siempre, dame 10 situaciones solamente".
 - **Creado:** `OUTPUTS/2026-10-21-natives-piedras-10-situaciones.md` (a la espera de que elija).

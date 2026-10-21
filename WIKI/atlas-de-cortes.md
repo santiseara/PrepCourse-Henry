@@ -49,7 +49,7 @@
 
 ## Activos
 - **Videos (2026-10-21):** `~/Desktop/atlas-cortes/AT-V1..V6.mp4`, de 29 a 36 s, 9:16, voz Sulafat. Guiones al lado, en `guiones-videos.md`.
-  - V1 "Saber ≠ recordar", V2 "La foto", V3 "A mitad del corte" y V4 "¿Cuántos cortes rechazás?" son los del competidor.
+  - V1 "Saber ≠ recordar", V2 "Un lado distinto al otro" (rehecho el 21/10: el de "La foto" repetía al V1), V3 "A mitad del corte" y V4 "¿Cuántos cortes rechazás?" son los del competidor.
   - V5 "La cuenta" ($70–90 → casi $1.000 por mes) y V6 "La carpetita de la estilista" son variables nuestras.
 - Carpeta de trabajo: `~/Desktop/atlas-cortes/work/` (`tiktoks/`, `vo/`, `stills/`, `plans/`, `sheets/`).
 - Ajustes del editor durante la tanda:

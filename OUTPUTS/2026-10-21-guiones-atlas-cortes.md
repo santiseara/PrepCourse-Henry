@@ -16,10 +16,10 @@ Saber hacer un corte y acordártelo con la clienta ya sentada en el sillón son 
 Guion 2
 
 EN
-The client shows you a photo. You recognize the cut. You pick up your shears... and that's when the doubt kicks in. And that's normal. Knowing a cut and remembering every detail with someone watching you in the mirror are not the same thing, especially if it's not a cut you do every week. Checking a reference doesn't make you less of a pro. It just means you're not relying on memory alone. The Women's Cutting Atlas gives you one Cut Map per cut: the sectioning, the elevation, the guide section and the sequence, step by step. Look, confirm, keep cutting. Link below.
+Ever finish a cut and one side came out different from the other? You check it in the mirror, you check it again... and you end up fixing it as you go. Most of the time it's not your technique. It's a tiny difference in tension, in head position, in over-direction or in the guide section. The Women's Cutting Atlas helps you see every one of those points before and during the cut. Sectioning, elevation and guide, one Cut Map per cut. It's a reference to check, not something to study. No memorizing. Just open it and apply it. Tap below and try it on your next client.
 
 ES
-La clienta te muestra una foto. Reconocés el corte. Agarrás la tijera... y ahí te empieza la duda. Y es normal. Saber un corte y acordarte de cada detalle con alguien mirándote por el espejo no es lo mismo, sobre todo si no es un corte que hacés todas las semanas. Consultar no te hace menos profesional. Solo hace que no dependas únicamente de la memoria. En el Atlas de Cortes Femeninos tenés un mapa por corte: la división, la elevación, la mecha guía y la secuencia, paso a paso. Mirás, confirmás y seguís cortando. Te dejo el link abajo.
+¿Alguna vez terminaste un corte y un lado te quedó distinto al otro? Lo mirás en el espejo, lo volvés a mirar... y terminás corrigiendo sobre la marcha. Casi nunca es tu técnica. Es una diferencia chiquita en la tensión, en la posición de la cabeza, en la sobredirección o en la mecha guía. El Atlas de Cortes Femeninos te ayuda a ver cada uno de esos puntos antes y durante el corte. División, elevación y guía, un mapa por corte. Es para consultar, no para estudiar. Nada de memorizar. Lo abrís y lo aplicás. Tocá abajo y probalo con tu próxima clienta.
 
 
 Guion 3

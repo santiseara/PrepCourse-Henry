@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-21 — Women's Cutting Atlas: V2 rehecho
+- **Corrección de Santiago:** "el 2 es igual al 1, hacémelo distinto".
+- **Cambiado:** `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (Guion 2 nuevo: "un lado te quedó distinto al otro"), `~/Desktop/atlas-cortes/AT-V2.mp4`, `WIKI/guiones-y-anuncios.md` (registro), `WIKI/atlas-de-cortes.md`.
+
 ## 2026-10-21 — Women's Cutting Atlas: 6 videos producidos
 - **Pedido de Santiago:** mandó los mockups del pack y de la colección para hacer los videos.
 - **Creado:** `OUTPUTS/scripts-vsl/edit_atlas.py` (editor con la estética del competidor) y los videos `~/Desktop/atlas-cortes/AT-V1..V6.mp4`.

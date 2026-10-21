@@ -29,14 +29,36 @@
 - **Beneficios:** seguridad real, respuesta en segundos, menos correcciones, más cortes en el menú, tiempo recuperado.
 - **Oferta:** $27 USD (ancla $177: atlas $97 + bonus), pago único, contador de 15 minutos, garantía de 7 días, acceso por email. Funciona en el celular o impreso.
 - **5 bonus:** flequillos ($15), diagnóstico visual de cortes ($13), tijeras y herramientas ($18), capas sin líneas ($15), formas de rostro ($19).
-- ⚠️ **Pendientes en la landing:** mockup del pack, foto del pack completo, tapas de los 5 bonus y 6 capturas de reseñas en inglés. Sin mockups no hay B-roll de producto para los videos.
+- ⚠️ **Pendientes en la landing:** 6 capturas de reseñas en inglés. Los mockups del pack y de la colección ya los pasó Santiago el 2026-10-21.
 
 ## Detalles / notas
 - Tanda 1 (21/10): 4 guiones adaptados de los ganadores + 2 variables nuestras (cuentas de la plata que se pierde por decir "ese corte no es lo mío", y la estilista con 20 años que tenía una carpetita en el cajón). Ver `OUTPUTS/2026-10-21-guiones-atlas-cortes.md`. Reescritos con los términos de la landing: Women's Cutting Atlas, Cut Maps, sectioning, elevation y guide section, sin el "error a evitar" porque los mapas no lo prometen.
 
+## Cómo se arma un video (2026-10-21)
+1. **Voz:** Google AI Studio, Gemini 3.1 Flash TTS Preview, voz femenina **Sulafat** (Warm). Scene: *"An American hairstylist in her mid 30s recording a voiceover for a TikTok ad, talking to other stylists. Warm, confident, relatable and conversational… no announcer tone"*. Se genera por JS (`_setTA(2, texto)`, click en Run y esperar que el `data:` del `<audio>` deje de crecer 3 s y pase los 300 KB). Si se captura antes, sale un WAV de 2 KB. Se manda por POST a un receptor local (127.0.0.1:8765). Salen de 32 a 39 s.
+2. **B-roll:** TikToks bajados con `yt-dlp -f best` (son HEVC; con el filtro `vcodec^=h264` fallan todos). URL: `https://www.tiktok.com/@usuario/video/ID`. Seis fuentes limpias en `~/Desktop/atlas-cortes/work/tiktoks/`:
+   - `7261610337856736519`: butterfly en cabeza de práctica. Usar 3–39 s y el resultado de 48–54 s. Excluir el texto del 0–2 s, el producto del 42 s y la cara del 45 s.
+   - `7591869980547829047`: bob en cabeza de práctica. Tiene textos arriba, así que va con zoom 1.2 y `ybias` 1.
+   - `7668379090566565128`: pixie en salón con ángulos dibujados (0°, 45°, 90°). Ideal para "elevation".
+   - `7673220051054382343`: secciones con clips, clienta real.
+   - `7675397335119138070`: bob rubio en salón.
+   - `7429148086867479813`: bob en cabeza de práctica. Tiene el cartel "Corte Bob" abajo, así que va con zoom 1.35 y `ybias` 0.
+   - Descartados: los "me lo corto en casa" (cara a cámara, otro público), los de barbería y los dúos con cara de reacción.
+3. **Producto:** el mockup de páginas y el de la colección que pasó Santiago. Se recortan las páginas (Key Zones, Pixie with Fringe, Diagonal Forward Line, Curly, Natural, tapa) como placas fijas. La colección va sobre degradé berenjena en la placa final. Está en `work/stills/`. Ojo: no sacar el blanco del mockup de páginas, porque se borra el papel.
+4. **Edición:** `OUTPUTS/scripts-vsl/edit_atlas.py plan.json salida.mp4`, una copia de `edit_infinity.py` con la estética del competidor: subtítulos en caja fucsia (Arial Black, minúscula, palabra activa en dorado), chips fucsia, tarjeta de precio berenjena con borde dorado y placa final "THE WOMEN'S CUTTING ATLAS" + colección + CTA fucsia. Los planes salen de `~/Desktop/atlas-cortes/work/plans/gen.py`, con anchors palabra → plano: "Sectioning" → 0°, "elevation" → 45°, "pixie" → pixie terminado, "Women's" → tapa, "Map" → página.
+
+## Activos
+- **Videos (2026-10-21):** `~/Desktop/atlas-cortes/AT-V1..V6.mp4`, de 29 a 36 s, 9:16, voz Sulafat. Guiones al lado, en `guiones-videos.md`.
+  - V1 "Saber ≠ recordar", V2 "La foto", V3 "A mitad del corte" y V4 "¿Cuántos cortes rechazás?" son los del competidor.
+  - V5 "La cuenta" ($70–90 → casi $1.000 por mes) y V6 "La carpetita de la estilista" son variables nuestras.
+- Carpeta de trabajo: `~/Desktop/atlas-cortes/work/` (`tiktoks/`, `vo/`, `stills/`, `plans/`, `sheets/`).
+- Ajustes del editor durante la tanda:
+  - El anchor de la placa final gana a cualquier otro.
+  - La colección queda fija hasta el último cuadro.
+  - Ningún chip pisa la placa final.
+
 ## Preguntas abiertas
-- ¿Los mockups del pack y las páginas de los Cut Maps ya existen? Hacen falta para el B-roll de producto.
-- Producción: voz en off (ElevenLabs o Google AI Studio) sobre B-roll de TikTok de cortes, como en [[bachas-de-concreto]] e [[infinity-3d]].
+- ¿Funciona mejor la voz femenina (Sulafat) o conviene probar otra? Todavía no hay datos.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[funnel-hacking]] · [[seleccion-y-modelado-de-oferta]] · [[bachas-de-concreto]] · [[infinity-3d]]

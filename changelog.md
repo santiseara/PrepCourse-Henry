@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Women's Cutting Atlas: 6 videos producidos
+- **Pedido de Santiago:** mandó los mockups del pack y de la colección para hacer los videos.
+- **Creado:** `OUTPUTS/scripts-vsl/edit_atlas.py` (editor con la estética del competidor) y los videos `~/Desktop/atlas-cortes/AT-V1..V6.mp4`.
+- **Cambiado:** `WIKI/atlas-de-cortes.md` (cómo se arma un video, fuentes de B-roll y activos).
+
 ## 2026-10-21 — Women's Cutting Atlas: landing leída y guiones ajustados
 - **Pedido de Santiago:** "Acá te dejo la info de mi página, agarrá todo de ahí" (HTML de la landing).
 - **Cambiado:** `WIKI/atlas-de-cortes.md` (ficha de la landing: nombre, Cut Maps, oferta y bonus), `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (6 guiones con los términos del producto), `WIKI/index.md`.

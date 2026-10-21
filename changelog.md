@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Scented Stones: 10 situaciones nuevas para natives
+- **Pedido de Santiago:** "quiero natives nuevas, no quiero más las de siempre, dame 10 situaciones solamente".
+- **Creado:** `OUTPUTS/2026-10-21-natives-piedras-10-situaciones.md` (a la espera de que elija).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-21 — Scented Stones: guion 1.000 al mes, corregido
 - **Corrección de Santiago:** "quiero el mismo que el anterior pero solo con 1000".
 - **Cambiado:** `OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md` (vuelve a la estructura del 1 de la v19), `WIKI/guiones-y-anuncios.md`, `WIKI/index.md`.

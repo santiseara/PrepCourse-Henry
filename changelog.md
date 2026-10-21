@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Atlas Visual de Cortes: oferta nueva y 6 guiones
+- **Pedido de Santiago:** ads en inglés a partir de los ganadores de Estilismo Con Propósito (los que llevan más tiempo y los más duplicados): 4 como los de ellos y 2 variables nuestras.
+- **Creado:** `WIKI/atlas-de-cortes.md` (DNA de 13 videos transcritos), `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (6 guiones, EN + ES con voseo).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-21 — Scented Stones: natives 18 y 19 (situaciones 1 y 6)
 - **Pedido de Santiago:** "Vamos con la 1 y la 6".
 - **Creado:** `OUTPUTS/2026-10-21-natives-piedras-ortodoncia-y-periodista.md` (solo inglés, 1.006 y 928 palabras).

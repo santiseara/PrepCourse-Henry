@@ -76,7 +76,7 @@ for n, c in V.items():
         'clips': CLIPS, 'pool': pool, 'seed': n, 'usage': '../usage.json',
         'cut': [2.6, 3.4, 4.2],
         'capy': 1440, 'words': 4, 'progress': True,
-        'music': f'../music/bed_{"ABC"[(n-1)%3]}.wav', 'music_db': -26,
+        'music': f'../music/bed_{"ABC"[(n-1)%3]}.wav', 'music_db': -16,
         'hook': c['hook'],
         'anchors': c['anchors'],
         'first': [c['broll'][0], 0],   # el plano de apertura de cada video

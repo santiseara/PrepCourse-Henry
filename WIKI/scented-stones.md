@@ -9,7 +9,7 @@
 | Precio | $27 (ancla $97) · garantía de 7 días · descarga instantánea |
 | Persona | **Emma Carter**, 42, Pensilvania |
 | Avatar del ad | Mujer que hace las piedras en casa como ingreso extra, sin querer "tener un negocio" |
-| Producto | Piedras de mezcla + aceite esencial + flores secas, en molde, secado de una noche |
+| Producto | **Yeso + aceite de fragancia + molde de silicona**, sin horno (según la landing). ⚠️ Los ads dicen sal + harina: ver Choques |
 
 ## 🧬 DNA de los 3 guiones ganadores
 
@@ -45,7 +45,7 @@
 ## ⚠️ Choques con las reglas fijas (a confirmar)
 - **Precio en el guión:** la regla dice no darlo, pero los guiones 1 y 2 dicen "$27 guide". En los ganadores el precio aparece **como ROI** ("lo recuperé con la primera venta"), no como precio de venta. Hipótesis: el precio sí funciona cuando se presenta como inversión que se recupera.
 - **Nombre del experto:** la regla dice no nombrarlo, pero el guión 2 dice "Emma's guide".
-- **Ingredientes:** los ads dicen *salt + flour* (masa de sal), mientras el catálogo dice *yeso*. ¿Es una simplificación del ad o el producto cambió?
+- **Ingredientes (resuelto con la landing):** el producto es **yeso + aceite de fragancia + molde de silicona**, sin horno. Los 3 ganadores dicen *salt + flour* (masa de sal), o sea que los ads describen otro proceso que el producto que se vende. Riesgo de reclamos y reembolsos, y de rechazo por claim engañoso. Los guiones nuevos siguen la landing.
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
 ## Variables posibles (ideas de próxima tanda)
@@ -95,8 +95,20 @@
 - Los 3 ganadores prometen cifras ("$1,200 extra last month", "$3,500 a month", "$2,000 clean"). En EE.UU. **los claims de ingresos en ads** están regulados (FTC) y **Meta restringe las promesas de dinero fácil**. Hoy funcionan, pero son el punto más probable de rechazo o bloqueo ([[problemas-de-cuentas-meta]]).
 - Cómo bajar el riesgo sin perder la DNA: primera persona, como experiencia propia y no como resultado garantizado (lo pide tu propio `prompt-ads-storytelling-largos-publico-frio`), cuentas creíbles junto a la cifra y evitar "easiest money ever" como promesa al espectador.
 
+## 🌐 Landing (scentedstone.lovable.app)
+> Leída el 2026-10-11. (fuente: RAW/2026-10-11-landing-scented-stones.md)
+- **Promesa:** "Turn plaster and fragrance into a handmade business". Empezar con menos de $15, sin horno ni experiencia, primeros clientes en la semana.
+- **6 pilares:** fórmula base, fragancia que dura 6–10 semanas, moldes y acabados, packaging, precios y ganancia, primeros 10 clientes (scripts de WhatsApp, boutiques y organizadores de eventos, en 14 días).
+- **Números usables en guiones:** costo $0.30–0.60 por piedra, venta $6–12, sets $18–35, margen bruto +85%, una noche de vertido = 40–60 piezas, un pedido de boda = 80–150 piezas, una boutique repone cada mes, "$300–$700 al mes" en el track "desde casa".
+- **Dolores que nombra:** el mes dura más que la plata, side hustles que no llevaron a nada, sin tiempo ni capital, miedo a perder los ahorros ("el problema nunca fuiste vos, fue el plan").
+- **4 bonus "free today":** plan de lanzamiento, guía de materiales y proveedores, moldes DIY, vender sin mostrar la cara.
+- **Oferta:** $27 (ancla $100, dice "save $70"), pago único, derechos comerciales, garantía de 7 días, contador de 13 h.
+- **Prueba social:** 4 testimonios en formato chat (Melissa, Carla, Julia, Dani) con cifras de $200 a $380. No se pueden verificar: no usarlos como claims propios en ads.
+- **Auditoría rápida ([[psicologia-del-comprador]]):** emocional ✅, lógico ✅ (testimonios, garantía, FAQ), FOMO ✅ (contador, "today only"). ⚠️ El primer botón está en el Hero: es la causa 1 de checkouts falsos ([[diagnostico-de-checkout]]). ⚠️ El ancla no cierra: $100 menos $27 son $73 y dice "save $70".
+- **Ángulos que sugiere la landing y los ganadores no usan:** miedo a perder ahorros ("$14"), jubilada ("la señora de las piedras"), pedidos de boda de 80–150 piezas, reposición mensual de boutiques, vender sin mostrar la cara.
+
 ## Preguntas abiertas
-- ¿Qué natives y descripciones acompañaron a estos guiones?
+- ✅ Ya están las 3 natives ganadoras con su descripción: [[natives-ganadoras]]. Sigue abierto qué native acompañó a cada guion de video.
 - ¿Cuál de los 3 rinde más?
 - ¿Hay versión en español con voseo? ¿Se testeó?
 

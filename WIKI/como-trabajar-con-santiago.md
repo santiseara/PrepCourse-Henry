@@ -45,6 +45,11 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **Upsells y bonus: solo PDF** (ebook, checklist, plantillas, swipe). Nada de videocursos, porque no los graba ([[biblioteca-de-prompts]]).
 - **Volumen:** el ritmo de testeo es de ~10 creativos por día. Si pide "más", entregar tandas que alcancen para eso, con formatos rotados.
 
+## Carpetas en el Escritorio (regla fija, 2026-10-22)
+- Cada oferta nueva va en **una sola carpeta** `~/Desktop/<oferta>/` con tres subcarpetas: `imagenes/`, `landing/` y `anuncios/`. Nada suelto en el Escritorio.
+- Imágenes de landing, tapas y mockups van a `imagenes/`. HTML, .txt para ImpulTienda y PRUEBA.html, a `landing/`. Videos, guiones, natives y descripciones de ads, a `anuncios/`.
+- Santiago: "siempre así lo quiero, para que no dejes cosas sueltas en mi escritorio".
+
 ## Registro y nombres
 - Los cambios de presupuesto o de puja que me pases van a `OUTPUTS/AAAA-MM-DD-registro-<oferta>.md` ([[organizacion-y-registro]]).
 - Las tandas se entregan con nombres listos: `DD/M - N` ([[nomenclatura-del-metodo]]).

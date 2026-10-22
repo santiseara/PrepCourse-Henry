@@ -11,11 +11,16 @@
 1. **Bajar sus videos en HD sin Chrome:** las descargas automáticas se bloquean después de la primera por sitio y la página de Facebook no deja mandar datos a la Mac. Se levanta un receptor local (`recv.py` en el scratchpad) en `127.0.0.1:8766`, se navega desde la Ads Library a esa página con las `video_hd_url` en el `#hash` y el servidor las baja con urllib (no hay CORS del lado del servidor).
 2. `rmsubs.py in out 0.50 0.63` saca los subtítulos de una palabra. Deja restos leves: los subtítulos nuevos van a la misma altura (`capy` 1085) para taparlos. **No pasarlo por el montaje final**, porque rompe el cartel "¡ES TU MOMENTO!": ese tramo sale del original sin limpiar y los subtítulos van más arriba (`capy` 600).
 3. Como son diálogos, la voz en off no va sobre gente hablando: **va sobre cuadros congelados con zoom** (Ken Burns) o sobre el montaje final mudo. Los **fragmentos originales** van con su audio y sus labios ("Le di 21 días y cambió todo", "Bajé 18 kilos y sin pasar hambre").
-4. Voz: ElevenLabs, Roma, Eleven v4 (estabilidad 50, velocidad 0.98). **Pegar el texto en un solo párrafo**: con saltos de línea solo genera el primero.
+4. Voz: ElevenLabs, Roma, Eleven v4 (estabilidad 50, velocidad 0.98). **Pegar el texto en un solo párrafo**: con saltos de línea solo genera el primero. Para una tanda, **todas las voces en una sola generación** (una sola descarga, porque Chrome bloquea las siguientes) y después se cortan por guion alineando con Whisper.
 5. Edición: `OUTPUTS/scripts-vsl/edit_remix.py plan.json salida.mp4` (tramos `vo` con `frames` o `clip`, tramos `orig`, música baja, subtítulos de 3 palabras con la activa en amarillo).
 
 ## Entregas
-- `~/Desktop/secreto-insulina-videos/final/SI-Remix1.mp4` (35 s). Guion: `OUTPUTS/2026-10-17-video-secreto-insulina-remix-1.md`.
+- **Todo en una sola carpeta plana: `~/Desktop/secreto-insulina/`** (quiz .txt y PRUEBA, imágenes `img-*.webp`, videos `SI-Remix1..6.mp4`, `guiones-videos.md`). El material de trabajo (videos de referencia, limpios, voces, planes) va al scratchpad, no al escritorio.
+- Guiones: `OUTPUTS/2026-10-17-videos-secreto-insulina-remix-1-6.md`.
+
+## Registro de correcciones
+- **2026-10-17 · "No quiero que el principio sea estático."** El Remix 1 arrancaba con un cuadro congelado. Regla: **el video arranca siempre con imagen en movimiento** (un fragmento original con su audio como hook). Los congelados solo van en el medio, cortos (1,5–2,5 s) y con zoom más marcado (hasta 1,2x).
+- **2026-10-17 · "Entregame todo en una misma carpeta, no me crees carpetas distintas."** Regla: una oferta = una carpeta en el escritorio, sin subcarpetas (ni `ref`, `work`, `final` ni `imagenes`). Las imágenes van sueltas con prefijo `img-`.
 
 ## Preguntas abiertas
 - Link de checkout del quiz (pendiente, lo pasa Santiago).

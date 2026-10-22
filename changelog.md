@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-22 — The Group Work Playbook: análisis del competidor y tanda completa
+- **Pedido de Santiago:** "hacé el mismo análisis que venís haciendo siempre para detectar los mejores anuncios. Y después armar todos los anuncios".
+- **Analizado:** Facebook Ads Library de Talleres Listos (page 1423115024221032, ~160 ads activos) ordenada por impresiones totales, y la landing propia en inglés.
+- **Creado:** `OUTPUTS/2026-10-22-analisis-ads-talleres-listos.md` (ranking de 16 ganadores + 5 patrones + 5 huecos), `OUTPUTS/2026-10-22-guiones-group-work-playbook-v2.md` (10 guiones EN + ES), `OUTPUTS/2026-10-22-descripciones-ads-group-work-playbook-v2.md` (6 primary text EN + ES), `OUTPUTS/2026-10-22-natives-group-work-playbook.md` (10 natives en inglés), `WIKI/group-work-playbook.md`.
+- **Cambiado:** `WIKI/index.md`.
+- **Carpeta:** `~/Desktop/the-group-work-playbook/` con `imagenes/`, `landing/` y `anuncios/`.
+
 ## 2026-10-22 — Atlas de Cortes: descripción de ads definitiva
 - **Pedido de Santiago:** "dame la descripción para la de pelo".
 - **Creado:** `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` (EN + ES) y copia en `~/Desktop/atlas-cortes/descripcion-ads.md`.

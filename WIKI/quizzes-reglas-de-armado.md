@@ -70,6 +70,8 @@
 - Frecuencia: cada ~16 s, visibles ~4,5 s.
 
 ## 8. Entrega (siempre)
+> Desde el 2026-10-22, todo va dentro de `~/Desktop/<oferta>/` (`landing/`, `imagenes/`, `anuncios/`), no suelto en el Escritorio ([[como-trabajar-con-santiago]]).
+
 1. **HTML final** en `~/Desktop/<producto>-quiz.txt`, copiado también con `pbcopy`. **Santiago lo quiere completo, listo para pegar en ImpulTienda**, con las imágenes embebidas (WebP en base64, ~1 MB) y el embed del VSL de **Panda Video** dentro de `<template id="vsl-template">`. Cuando hay cambios, se **reemplaza** el .txt viejo.
 2. **Carpeta de imágenes** `~/Desktop/<producto>-imagenes/` con nombres claros (`p1-mujer.png`, `zona-papada.png`, `mockup.png`…). Sacar las que ya no se usan.
 3. **HTML de prueba** `~/Desktop/<producto>-PRUEBA.html`: el mismo HTML con las imágenes **embebidas** (WebP en base64, ~1 MB), para abrir en Chrome sin la carpeta. Lo abro con `open -a "Google Chrome"`.
@@ -93,6 +95,7 @@
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-10-22 | Landing Herrero de Finde | "Me encantó la landing… los primeros textos, que estén alineados al centro" | En landings, los textos del hero (eyebrow, titular, promesa y bajada) van centrados aunque el original los alinee a la izquierda |
 | 2026-10-18 | Pan Sin Picos | "Las imágenes son muy malas, me dan ganas de irme del quiz, se ve muy low ticket" (pan en SVG y emojis) | §4: fotos profesionales con IA y un mismo estilo en todo el quiz; nada de ilustraciones ni emojis como imagen principal |
 | 2026-10-17 | Secreto de la Insulina | "Quiero que sea igual al de él, basémonos en lo validado, el de Mounjaro no funcionó" | §2: cuando pasa el quiz de un competidor escalado, se copia **ese** quiz paso a paso (textos, orden, lógica). No se arma desde una plantilla propia ni se "mejora" el copy |
 | 2026-10-17 | Secreto de la Insulina | Colores: "verde medio oscurito" en vez del naranja original | Paleta verde (#1f6b47); el logo naranja se recolorea a verde con Pillow (mismo diseño) |

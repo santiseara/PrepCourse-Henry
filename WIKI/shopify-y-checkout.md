@@ -193,6 +193,7 @@ Mencionadas en el material: **Hotmart** (con checkout propio y comisiones), **Gu
 ### Botones → carrito, no checkout
 - **Los botones de la landing van al carrito, no al checkout**, porque ahí se ofrecen los order bumps.
 - Cómo armar el link: agregar **`.xml`** al final de la URL del producto, copiar el **primer número de variante** y usar **`https://tudominio.com/cart/{variante}:1`**.
+- ⚠️ **El link `/cart/{variante}:1` no muestra el carrito: salta directo al checkout.** Para que el botón abra el carrito (2026-10-22, Herrero de Finde: "yo quiero que vaya directo al carrito"), se suma la variante con `fetch('/cart/add.js')`, solo si no estaba ya en el carrito, y después se manda a `/cart`. El link de respaldo es `/cart/add?id={variante}&quantity=1`.
 - Excepción: si solo querés testear rápido y sin order bumps, usá el link directo del checkout. Se consigue simulando una compra y copiando la URL que aparece al tocar «Pagar pedido».
 - En una landing hecha con imágenes dentro de Shopify: dejar solo **«Agregar al carrito»**, nunca «Comprar ahora», por la misma razón.
 

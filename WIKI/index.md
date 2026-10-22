@@ -35,6 +35,7 @@
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
 - ✅ [[aumento-de-aov]] — Backend: order bumps, upsells pre y post compra, KPIs y los 5 bumps que no se pisan.
 - 🆕 [[pan-sin-picos]] — Recetario de panes para diabéticos (AR), modelado de Mesa y Sabor. Quiz propio de 11 preguntas, personalizado y con receta de regalo.
+- 🆕 [[group-work-playbook]] — +150 dinámicas grupales en PDF (USD 27, mercado inglés), modelada de Talleres Listos. 6 módulos, 5 bonos y la DNA de sus ~160 ads.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
 ## Adquisición — Meta Ads
@@ -87,6 +88,10 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-22 — Análisis de ads de Talleres Listos](../OUTPUTS/2026-10-22-analisis-ads-talleres-listos.md) — ranking real por impresiones de sus 16 ganadores, los 5 patrones que los explican y los 5 huecos que no tocan · ver [[group-work-playbook]]
+- [2026-10-22 — Guiones The Group Work Playbook v2](../OUTPUTS/2026-10-22-guiones-group-work-playbook-v2.md) — 10 guiones EN + ES (22/10 - 9 a 18): variedad, propuesta a empresas, padres, dinámica de regalo, taller minuto a minuto, objeción del principiante, online, 15 minutos, cuidados, testimonio · ver [[group-work-playbook]]
+- [2026-10-22 — Descripciones de ads The Group Work Playbook v2](../OUTPUTS/2026-10-22-descripciones-ads-group-work-playbook-v2.md) — 6 primary text EN + ES, cuatro con el body fijo del competidor y dos con cuerpo propio · ver [[group-work-playbook]]
+- [2026-10-22 — Natives The Group Work Playbook](../OUTPUTS/2026-10-22-natives-group-work-playbook.md) — 10 prompts de imagen en inglés, estética consultorio y aula, sin caras · ver [[group-work-playbook]]
 - [2026-10-22 — Descripción de ads del Atlas de Cortes](../OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md) — la definitiva, EN + ES, para los 6 videos · ver [[atlas-de-cortes]]
 - `OUTPUTS/2026-10-22-landing-herrero-de-finde.html` — Landing de Herrero de Finde (ES-AR, imágenes embebidas).
 - [2026-10-22 — Super prompt Women's Cutting Atlas](../OUTPUTS/2026-10-22-super-prompt-atlas-cortes.md) — contexto completo de la oferta (producto, landing, avatar, competidor, reglas de copy) + receta de edición de los videos, para pasarle a otro Claude · ver [[atlas-de-cortes]]

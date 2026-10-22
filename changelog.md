@@ -1,3 +1,10 @@
+## 2026-10-22 (tarde II) — Pilates sin Vueltas: guiones v2 y los 6 videos
+
+- **Corrección de Santiago:** los guiones v1 copiaban la plantilla fija del competidor. Regla nueva en `WIKI/guiones-y-anuncios.md`: se modela **el ángulo ganador**, no la plantilla; cada guion con estructura y cierre propios.
+- **Guiones v2:** `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas-v2.md`. Seis variables del ángulo "la alumna que te rompe la clase", de 69 a 74 s.
+- **Videos:** pipeline de [[group-work-playbook]] reusado (`edit_gwp.py` + `gen_pilates_plans.py` nuevo) en `~/Desktop/pilates-sin-vueltas/anuncios/work/`. Cero créditos: voz de AI Studio, b-roll de Mixkit (serie 48544-48567, estudio de reformers en 1080p) y las fichas de la propia landing.
+- **Aprendizajes nuevos** anotados en `WIKI/pilates-sin-vueltas.md`: la interfaz de AI Studio cambió (no hay Scene ni persona, el acento va en **Style**), las voces en español son de pago, los anchors llevan tilde y qué clips sirven para abrir.
+
 ## 2026-10-22 — Pilates sin Vueltas: relevamiento de Centerline Pilates y tanda 1
 
 - **Oferta nueva:** `WIKI/pilates-sin-vueltas.md`. Biblioteca de clases **para instructoras** (no para alumnas: no confundir con [[pilates-hormonal]]). Clon de **Centerline Pilates**, 41 anuncios activos en inglés sobre ImpulTienda .ar a US$ 27.

@@ -54,8 +54,20 @@ Las 10 escenas: clase de prueba · señora de 74 que no baja al piso · posparto
 - **ClaseLista · Para Instructoras** (page `1349747274893052`): 3 anuncios desde el 12/10, "150 clases de pilates por US$ 9,90", cuenta en BRL apuntando a Argentina. Todavía está testeando, pero es el mismo movimiento que estamos haciendo nosotros y con más clases y menos precio. Revisar en 2 o 3 días si sube el número de anuncios.
 - **Candelapilates / Hada Pilates Academy**: formación de instructoras con marca personal. Otra categoría, se descarta como modelo ([[funnel-hacking]]).
 
+## Producción de los videos (22/10/2026, cero créditos)
+Pipeline reusado de [[group-work-playbook]]: `edit_gwp.py` + `gen_pilates_plans.py`, en `~/Desktop/pilates-sin-vueltas/anuncios/work/`.
+- **Voz:** Google AI Studio, voz **Sulafat**. ⚠️ **La interfaz cambió el 22/10:** ya no está el campo *Scene* ni el de *persona*, y el bloque de texto tiene el placeholder `<gasp> That's a great idea!` en vez de `[amused]`. Ahora el acento se dirige desde el campo **Style** ("Describe the voice style"), que es texto libre. El buscador de voces es "Search 2,000+ voices" (el regex viejo `/search voices/i` ya no matchea).
+- ⚠️ **Las voces en español son de pago:** filtrar Language = Spanish deja la lista vacía con "Link a Paid Key". Se sigue usando una voz inglesa (Sulafat) y se dirige el rioplatense desde el Style. Sale a ~190 palabras por minuto, así que un guion de 184 palabras da 58 s.
+- **B-roll:** Mixkit, serie **48544 a 48567** = un estudio de reformers real, toda en 1080p, el mismo look que el ganador. Descartados por ser primeros planos anatómicos (riesgo con las políticas de Meta y no pegan con el público de instructoras): 48547, 48549, 48550, 48551, 48552, 48553, 48563, 48565. `mk48544` dura solo 4,09 s: tope 3,8.
+- ⚠️ **Planos de apertura:** `mk48562` y `mk48564` arrancan con un primer plano tapado o un reformer vacío y quedan mal de miniatura. Los buenos para abrir: `mk48557`, `mk48567`, `mk48544`, `mk48556`, `mk48561`, `mk45761`.
+- **Stills:** las fichas de clase y de ejercicio de la propia landing (`~/Desktop/pilates-sin-vueltas/landing/img*.webp`), ancladas a la palabra exacta del guion.
+- ⚠️ **Los anchors llevan acento.** `norm()` del editor solo saca lo que no es `\w`, así que las tildes quedan: hay que escribir `índice`, no `indice`.
+- ⚠️ **El CDP corta a los 45 s**, así que la generación de voz se lanza sin `await` (`window._gen(n).then(...)`) y después se consulta `window._wavs`.
+
 ## Activos
-- Guiones v1 (6 videos, 22/10): `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md`. Modelan la tanda del 20/10, uno por escena, de 1:19 a 1:26.
+- **Guiones v2 (los vigentes, 22/10):** `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas-v2.md`. Seis variables del mismo ángulo, cada una con estructura, bajada de producto y cierre propios.
+- Guiones v1 (descartados, 22/10): `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md`. Copiaban la plantilla fija del competidor y Santiago los rechazó: "si todos sus guiones dicen lo mismo, no lo hagamos así".
+- Videos: `~/Desktop/pilates-sin-vueltas/anuncios/PSV-V1.mp4` a `PSV-V6.mp4` (voz en off sobre b-roll de estudio, ~1:00 cada uno).
 - Carpeta de trabajo: `~/Desktop/pilates-sin-vueltas/` con `imagenes/`, `landing/` y `anuncios/`.
 
 ## Reglas para los ads

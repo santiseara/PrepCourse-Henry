@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-22 — Women's Cutting Atlas: super prompt para otro Claude
+- **Pedido de Santiago:** prompt con todo el contexto de la oferta del pelo y de cómo se editaron los videos.
+- **Creado:** `OUTPUTS/2026-10-22-super-prompt-atlas-cortes.md`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-22 — Scented Stones: natives 20 y 21 (opciones v2, 4 y 8)
 - **Pedido de Santiago:** "4 y 8".
 - **Creado:** `OUTPUTS/2026-10-22-natives-piedras-curso-y-cartero.md` (solo inglés).

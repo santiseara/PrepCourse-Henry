@@ -94,7 +94,7 @@ for n, it in enumerate(P['timeline']):
                 run([FF, '-v', 'error', '-y', '-ss', str(ft), '-i', F(P['src']), '-frames:v', '1', '-vf', f'scale={W*2}:{H*2}:flags=lanczos', png])
                 nf = int(round(each * FPS)) + 1
                 zin = (m % 2 == 0)
-                z = "min(zoom+0.0009,1.12)" if zin else "if(eq(on,0),1.12,max(zoom-0.0009,1.0))"
+                z = "min(zoom+0.0022,1.2)" if zin else "if(eq(on,0),1.2,max(zoom-0.0022,1.0))"
                 pc = f'{tmp}/p{n:02d}_{m}.mp4'
                 run([FF, '-v', 'error', '-y', '-loop', '1', '-i', png, '-vf',
                      f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={nf}:s={W}x{H}:fps={FPS},format=yuv420p",

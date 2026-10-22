@@ -40,6 +40,10 @@ Frame de apertura del ganador "Armá tu primer taller grupal en una mañana" (0:
 
 ⚠️ **Sin verificar:** no pude capturar los frames del medio ni el cierre (la extensión perdía el tab group), ni escuchar el audio. Que sea voz en off es muy probable por el formato (b-roll sin cara a cámara) pero no está confirmado. Falta ver cómo son los subtítulos mid-roll y la placa final.
 
+**Edición propia, ya validada contra un render de prueba (28,5 s, 9 planos de 3,2 s):** chip amarillo calificador arriba (y0=60), hook en **caja violeta al centro** (y0=620), subtítulos Montserrat ExtraBold en caja violeta a y=1180 con la palabra activa en amarillo, barra de progreso violeta, música de `music.py` a −26 dB, whooshes en los cortes 1/3/5/7 y placa final con chip amarillo y CTA violeta.
+
+⚠️ Tres cosas que costaron y conviene no repetir: las rutas del plan.json se resuelven **contra la carpeta `plans/`**, no contra `work/` (van con `../`); el campo `hook` usaba por defecto el mismo renderer que el chip (`png_tag`) y se pisaban, ahora usa `png_hook`; y `edit_gwp.py` necesita `sfx.py`, `music.py` y las camas `music/bed_*.wav` en su misma carpeta.
+
 **Pipeline nuestro:** `OUTPUTS/scripts-vsl/edit_gwp.py` (copia de `edit_herrero.py` con esa paleta) y `~/Desktop/the-group-work-playbook/anuncios/work/gen_gwp_plans.py`, que arma los 6 plan.json. Los stills de la landing están en `~/Desktop/the-group-work-playbook/landing/` (mockup, ficha Three chairs con care notes, índice del módulo 1, ficha The wheel of my week, taller 1 de 12 minuto a minuto, worksheet Body map).
 
 ## Huecos que ellos no tocan (nuestros ángulos propios)

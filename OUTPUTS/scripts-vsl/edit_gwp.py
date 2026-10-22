@@ -172,7 +172,7 @@ def split_emoji(txt):
     return (txt[:m.start()], m.group(1)) if m else (txt, None)
 def rrect(d, box, r, fill, outline=None, width=0): d.rounded_rectangle(box, r, fill=fill, outline=outline, width=width)
 
-def png_tag(txt, path, y0=210):
+def png_tag(txt, path, y0=60):   # bien arriba, para no pisar el hook
     im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im); f = font(96, BC)
     words, lines, cur = txt.upper().split(), [], ''
     for w_ in words:
@@ -220,11 +220,12 @@ def png_hook(txt, path):
     em = emoji_img(emo, 68) if emo else None
     lw = [d.textlength(l, font=f) + (em.width + 14 if em and i == len(lines) - 1 else 0) for i, l in enumerate(lines)]
     bw, bh = max(lw) + 90, len(lines) * 88 + 56
-    x0, y0 = (W - bw) / 2, 250
-    rrect(d, (x0, y0, x0 + bw, y0 + bh), 26, (255, 255, 255, 250))
+    x0, y0 = (W - bw) / 2, 620   # el hook va al centro, como en los ganadores del competidor
+    rrect(d, (x0 + 8, y0 + 10, x0 + bw + 8, y0 + bh + 10), 26, (0, 0, 0, 110))
+    rrect(d, (x0, y0, x0 + bw, y0 + bh), 26, ORANGE + (255,))
     for i, l in enumerate(lines):
         y = y0 + 28 + i * 88; x = (W - lw[i]) / 2
-        d.text((x, y), l, font=f, fill=(20, 20, 20))
+        d.text((x, y), l, font=f, fill=(255, 255, 255))
         if em and i == len(lines) - 1: im.alpha_composite(em, (int(x + d.textlength(l, font=f) + 14), int(y + 4)))
     im.save(path)
 
@@ -305,7 +306,7 @@ def png_end(o, path):
 
 ovs = []      # (png, t0, t1, anima)
 if P.get('hook'):
-    png_tag(P['hook'], f'{tmp}/o_hook.png')
+    png_hook(P['hook'], f'{tmp}/o_hook.png')   # caja violeta al centro, el chip amarillo va aparte
     hu = wt(P['hook_until'], P.get('hook_until_occ', 0)) if P.get('hook_until') else None
     ovs.append((f'{tmp}/o_hook.png', 0, hu[1] + 0.15 if hu else (min(cuts[1] + 0.6, 2.8) if len(cuts) > 2 else 2.6), True))
 for k, o in enumerate(P.get('overlays', [])):

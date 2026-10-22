@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-22 — Scented Stones: opciones v2 para natives
+- **Pedido de Santiago:** "dame opciones y yo elijo".
+- **Creado:** `OUTPUTS/2026-10-22-natives-piedras-opciones-v2.md` (a la espera de que elija).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-22 — Scented Stones: guiones v20 con hooks ganadores investigados
 - **Pedido de Santiago:** "quiero que sean ganadores, investigá hooks ganadores en el nicho".
 - **Investigado:** Virlo (hooks virales con vistas), OpusClip, Webtonic, Gethookd.

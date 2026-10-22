@@ -59,6 +59,9 @@
 ## Natives propias de la tanda 21/10
 - `OUTPUTS/2026-10-21-natives-piedras-ortodoncia-y-periodista.md`: primeras fuera de feria, elegidas de una lista de 10 situaciones (`OUTPUTS/2026-10-21-natives-piedras-10-situaciones.md`). 18 = registro semana a semana para pagar la ortodoncia de Owen ($3.230 al contado, termómetro de Lily en la heladera). 19 = periodista de un diario local que compra la guía para probar que es estafa y verifica 5 afirmaciones (voz nueva). Público de ingresos extra.
 
+## Natives propias de la tanda 22/10
+- `OUTPUTS/2026-10-22-natives-piedras-curso-y-cartero.md`: elegidas de `OUTPUTS/2026-10-22-natives-piedras-opciones-v2.md`. 20 = el carrito abierto a la 1:14 con un curso de $1.997, Lily (9) pregunta "¿pero qué vendés?", comparación promesa contra realidad y 4 preguntas antes de comprar cualquier curso. 21 = narra Denise (51, ex cocinera escolar), mujer de Ray, cartero rural; vende en puestos de granja con caja de honestidad (el puesto se queda $2). Suma la objeción "vivo en un pueblo chico".
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

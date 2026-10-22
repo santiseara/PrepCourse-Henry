@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-10.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-22.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
+- 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
 - 🆕 [[herrero-de-finde]] — Oferta nueva AR ($14.990): 1.200 planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga en ImpulTienda traducida y localizada.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
@@ -88,6 +89,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-22 — Guiones Pilates sin Vueltas](../OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md) — 6 guiones de 1:30 en voseo (22/10 - 1 a 6): clase de prueba, la de 74, posparto, prótesis de rodilla, el cuerpo rígido y la objeción de la app, más primary text · ver [[pilates-sin-vueltas]]
 - [2026-10-22 — Análisis de ads de Talleres Listos](../OUTPUTS/2026-10-22-analisis-ads-talleres-listos.md) — ranking real por impresiones de sus 16 ganadores, los 5 patrones que los explican y los 5 huecos que no tocan · ver [[group-work-playbook]]
 - [2026-10-22 — Guiones The Group Work Playbook v2](../OUTPUTS/2026-10-22-guiones-group-work-playbook-v2.md) — 10 guiones EN + ES (22/10 - 9 a 18): variedad, propuesta a empresas, padres, dinámica de regalo, taller minuto a minuto, objeción del principiante, online, 15 minutos, cuidados, testimonio · ver [[group-work-playbook]]
 - [2026-10-22 — Descripciones de ads The Group Work Playbook v2](../OUTPUTS/2026-10-22-descripciones-ads-group-work-playbook-v2.md) — 6 primary text EN + ES, cuatro con el body fijo del competidor y dos con cuerpo propio · ver [[group-work-playbook]]
@@ -170,5 +172,6 @@
 
 ## Top 3 gaps (qué añadir)
 1. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
-2. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
-3. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.
+2. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
+3. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+4. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.

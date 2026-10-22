@@ -1,3 +1,12 @@
+## 2026-10-22 — Pilates sin Vueltas: relevamiento de Centerline Pilates y tanda 1
+
+- **Oferta nueva:** `WIKI/pilates-sin-vueltas.md`. Biblioteca de clases **para instructoras** (no para alumnas: no confundir con [[pilates-hormonal]]). Clon de **Centerline Pilates**, 41 anuncios activos en inglés sobre ImpulTienda .ar a US$ 27.
+- **Relevamiento:** 38 videos descargados y transcriptos con faster_whisper desde la Ads Library (page 998425433348426). Hallazgo central: el 1/10 corrían cortos de 30 s, y la tanda del 20/10 son 10 videos de ~2 minutos, todos con la misma DNA de "alumna imposible". Abandonaron el formato corto.
+- **Entregado:** `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md` — 6 guiones en voseo de 1:19 a 1:26, uno por escena, más el primary text y un banco de 4 ángulos.
+- **Reglas nuevas:** tope de **1:30 por video** en `WIKI/guiones-y-anuncios.md` y `WIKI/como-trabajar-con-santiago.md`.
+- **Competencia detectada:** ClaseLista · Para Instructoras, 3 ads desde el 12/10 en español, 150 clases por US$ 9,90. A revisar en 2 o 3 días.
+- Carpeta `~/Desktop/pilates-sin-vueltas/` creada con `imagenes/`, `landing/` y `anuncios/`.
+
 ## 2026-10-22 (tarde II) — Atlas de Cortes: 3 variables de los dos ganadores
 
 - Santiago avisó que de la tanda del 21/10 los que mejor rindieron son **V2 ("Ever finish a cut and one side came out different?")** y **V3 ("You're halfway through the cut…")**. Queda anotado en la wiki como la DNA a variar en esta oferta.

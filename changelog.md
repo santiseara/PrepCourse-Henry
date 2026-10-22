@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-10-22 — Herrero de Finde: videos v2 con más ritmo
+- **Corrección de Santiago:** "está medio aburrida".
+- **Cambiado:** `OUTPUTS/scripts-vsl/edit_herrero.py` (música de sus ads, zoom y golpe en cada corte, destello + whoosh, placas que saltan, sello VENDIDA, barra de progreso), `anuncios/work/plans/gen.py`, los 6 `HF-V*.mp4` re-renderizados, `WIKI/herrero-de-finde.md` (cómo se arman + registro de correcciones).
+
+## 2026-10-22 — Herrero de Finde: 6 videos de voz en off
+- **Pedido de Santiago:** "armame los videos" (los 6 guiones aprobados).
+- **Creado:** `~/Desktop/herrero-de-finde/anuncios/HF-V1…V6-*.mp4`, `OUTPUTS/scripts-vsl/edit_herrero.py`, `anuncios/work/plans/gen.py`.
+- **Cambiado:** `WIKI/herrero-de-finde.md` (cómo se arman).
+
+## 2026-10-22 — Herrero de Finde: análisis de 180 ads y 6 guiones
+- **Pedido de Santiago:** analizar a fondo sus +300 ads, encontrar patrones (hooks y ediciones que repiten) y hacer 6 de voz en off con B-roll, traducidos casi igual.
+- **Creado:** `OUTPUTS/2026-10-22-guiones-herrero-de-finde.md`, carpeta `~/Desktop/herrero-de-finde/anuncios/work/`.
+- **Cambiado:** `WIKI/herrero-de-finde.md`.
+
+## 2026-10-22 — Herrero de Finde: botones al carrito
+- **Pedido de Santiago:** "yo quiero que vaya directo al carrito" (el permalink `/cart/variante:1` salteaba el carrito).
+- **Cambiado:** `herrero-de-finde-shopify.liquid` (`/cart/add.js` → `/cart`), `WIKI/herrero-de-finde.md`, `WIKI/shopify-y-checkout.md`.
+
+## 2026-10-22 — Herrero de Finde: versión Liquid para Shopify
+- **Pedido de Santiago:** paso a paso para cargar la landing en Shopify.
+- **Creado:** `~/Desktop/herrero-de-finde/landing/herrero-de-finde-shopify.liquid` e imágenes con prefijo `hdf-` en `imagenes/`.
+- **Cambiado:** `WIKI/herrero-de-finde.md`.
+
+## 2026-10-22 — Herrero de Finde: hero centrado
+- **Pedido de Santiago:** "los primeros textos, que estén alineados al centro".
+- **Cambiado:** landing (`~/Desktop/herrero-de-finde/landing/` y `OUTPUTS/2026-10-22-landing-herrero-de-finde.html`), `WIKI/herrero-de-finde.md`, `WIKI/quizzes-reglas-de-armado.md`.
+
+## 2026-10-22 — Regla: una carpeta por oferta en el Escritorio
+- **Pedido de Santiago:** cada oferta en su carpeta con `imagenes/`, `landing/` y `anuncios/`, sin nada suelto.
+- **Cambiado:** `WIKI/como-trabajar-con-santiago.md`, `WIKI/quizzes-reglas-de-armado.md` (§8), `WIKI/herrero-de-finde.md`. Herrero de Finde reordenado en `~/Desktop/herrero-de-finde/`.
+
+## 2026-10-22 — Herrero de Finde: landing en español (clon de The Weekend Fabricator)
+- **Pedido de Santiago:** analizar la oferta en inglés de The Weekend Fabricator y armar la página en español para Argentina.
+- **Creado:** `WIKI/herrero-de-finde.md`, `OUTPUTS/2026-10-22-landing-herrero-de-finde.html`.
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-22 — Women's Cutting Atlas: super prompt para otro Claude
 - **Pedido de Santiago:** prompt con todo el contexto de la oferta del pelo y de cómo se editaron los videos.
 - **Creado:** `OUTPUTS/2026-10-22-super-prompt-atlas-cortes.md`.

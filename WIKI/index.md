@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
+- 🆕 [[herrero-de-finde]] — Oferta nueva AR ($14.990): 1.200 planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga en ImpulTienda traducida y localizada.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
@@ -86,6 +87,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- `OUTPUTS/2026-10-22-landing-herrero-de-finde.html` — Landing de Herrero de Finde (ES-AR, imágenes embebidas).
 - [2026-10-22 — Super prompt Women's Cutting Atlas](../OUTPUTS/2026-10-22-super-prompt-atlas-cortes.md) — contexto completo de la oferta (producto, landing, avatar, competidor, reglas de copy) + receta de edición de los videos, para pasarle a otro Claude · ver [[atlas-de-cortes]]
 - [2026-10-22 — Natives piedras 20 y 21](../OUTPUTS/2026-10-22-natives-piedras-curso-y-cartero.md) — opciones v2, 4 y 8: el curso de $1.997 que casi compra (comparación + 4 preguntas antes de comprar) y Denise, la mujer del cartero, que vende en los puestos de granja de la ruta rural · ver [[natives-ganadoras]]
 - [2026-10-22 — Natives piedras: opciones v2](../OUTPUTS/2026-10-22-natives-piedras-opciones-v2.md) — 10 situaciones nuevas para elegir (plan con $15, los sobres de octubre, la tarjeta escondida, el curso de $2.000, el desafío de la hermana, ocho meses de espera, 5 preguntas, el cartero, ingresos que fracasaron, una semana hora por hora) · ver [[natives-ganadoras]]

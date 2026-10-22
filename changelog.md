@@ -1,3 +1,9 @@
+## 2026-10-22 (tarde II) — Atlas de Cortes: 3 variables de los dos ganadores
+
+- Santiago avisó que de la tanda del 21/10 los que mejor rindieron son **V2 ("Ever finish a cut and one side came out different?")** y **V3 ("You're halfway through the cut…")**. Queda anotado en la wiki como la DNA a variar en esta oferta.
+- Tres variables nuevas con esa onda y situación, mecanismo y CTA propios: **AT-V7** (viernes a la noche mirando tutoriales), **AT-V8** (el corte salió bárbaro pero llevó una hora cuarenta) y **AT-V9** (se secó y el rulo subió). De 28 a 29 s, voz Sulafat, misma edición.
+- Guiones en `OUTPUTS/2026-10-22-guiones-atlas-cortes-v7-v9-variables.md`; videos en `~/Desktop/atlas-cortes/`.
+
 ## 2026-10-22 (tarde) — The Group Work Playbook: análisis de cero con el audio del competidor
 
 - **Relevado de nuevo** el competidor (page 1423115024221032) sin la extensión de Chrome, que estuvo caída casi todo el rato: Chrome headless clásico con `--dump-dom` para la Ads Library, `curl` para los videos, `faster_whisper` para el audio y `ffmpeg` para los frames. El método quedó anotado en la wiki.

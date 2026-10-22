@@ -53,11 +53,17 @@
 - **Videos (2026-10-21):** `~/Desktop/atlas-cortes/AT-V1..V6.mp4`, de 29 a 36 s, 9:16, voz Sulafat. Guiones al lado, en `guiones-videos.md`.
   - V1 "Saber ≠ recordar", V2 "Un lado distinto al otro" (rehecho el 21/10: el de "La foto" repetía al V1), V3 "A mitad del corte" y V4 "¿Cuántos cortes rechazás?" son los del competidor.
   - V5 "La cuenta" ($70–90 → casi $1.000 por mes) y V6 "La carpetita de la estilista" son variables nuestras.
+- **Los que mejor rindieron (dato de Santiago, 22/10): V2 ("Ever finish a cut and one side came out different?") y V3 ("You're halfway through the cut and suddenly… what's next?").** Los dos son el mismo territorio: un momento concreto de fricción durante el servicio y el desculpabilizante "no es tu técnica". Esa es la DNA a variar en esta oferta.
+- **Variables de esos dos (22/10):** `AT-V7`, `AT-V8` y `AT-V9`, de 28 a 29 s, misma voz y misma edición. Guiones en `OUTPUTS/2026-10-22-guiones-atlas-cortes-v7-v9-variables.md` y al final de `guiones-videos.md`.
+  - V7 "Viernes a la noche mirando tutoriales": la clienta reserva un wolf cut para el sábado. Mecanismo: el corte en una sola página. CTA "Open the map".
+  - V8 "El corte salió bárbaro, te llevó una hora cuarenta": no son manos lentas, es trabajar sin la secuencia adelante. Mecanismo: los mapas numerados. CTA "Check the sequence".
+  - V9 "Se secó y el rulo subió": el plan de pelo lacio no sirve para rizado. Mecanismo: el mapa de adaptación a rulos, distribución natural y encogimiento. CTA "see how the curly maps work".
 - Carpeta de trabajo: `~/Desktop/atlas-cortes/work/` (`tiktoks/`, `vo/`, `stills/`, `plans/`, `sheets/`).
 - Ajustes del editor durante la tanda:
   - El anchor de la placa final gana a cualquier otro.
   - La colección queda fija hasta el último cuadro.
   - Ningún chip pisa la placa final.
+  - ⚠️ Los anchors piden un tramo exacto del pool: si se pone uno que no existe (por ejemplo `C` en 27, que va de 24 a 27 y salta a 30), el montaje corta con `StopIteration`. Hay que mirar la tabla `R` antes de anclar.
 
 ## Preguntas abiertas
 - ¿Funciona mejor la voz femenina (Sulafat) o conviene probar otra? Todavía no hay datos.

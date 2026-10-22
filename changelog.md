@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-22 — The Group Work Playbook: pipeline de video con la edición del competidor
+- **Pedido de Santiago:** "la original hace todo con voz en off… la edición tiene que ser similar a la de la original también, la idea es utilizar lo que ya funciona".
+- **Relevado:** frame de apertura del ad #1 de Talleres Listos (b-roll de stock, chip amarillo calificador arriba, hook en cajas violetas, chip blanco con el claim). Anotado en `WIKI/group-work-playbook.md` con lo que quedó sin verificar.
+- **Creado:** `OUTPUTS/scripts-vsl/edit_gwp.py` (copia de edit_herrero.py con esa paleta), `~/Desktop/the-group-work-playbook/anuncios/work/gen_gwp_plans.py` + los 6 `plans/V*.json`, los 6 `vo/V*.txt` y los stills de la landing en `landing/`.
+- **Falta para montar:** las 6 voces en inglés (.wav) y el b-roll de talleres.
+
 ## 2026-10-22 — Regla fija: máximo 6 videos por tanda
 - **Pedido de Santiago:** "son un montón, te voy a dar otra regla para que te la guardes, siempre son máximo 6 videos, nunca son más. Elegí los mejores 6 y hacelos".
 - **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias) y `WIKI/como-trabajar-con-santiago.md` (reemplaza el viejo "5 a 10 anuncios por tanda").

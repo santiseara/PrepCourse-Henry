@@ -31,6 +31,17 @@ Detalle completo en `OUTPUTS/2026-10-22-analisis-ads-talleres-listos.md`. Resume
 - **Sin precio en el ad.** CTA de curiosidad: "mirá todo lo que incluye".
 - **Videos de 20 a 35 s**, verticales, con banner amarillo en el primer frame que califica al público ("PARA PSICÓLOGOS Y PSICOPEDAGOGOS").
 
+## Edición de los videos (relevada del ad #1 por impresiones)
+Frame de apertura del ganador "Armá tu primer taller grupal en una mañana" (0:26):
+- **B-roll real de stock a pantalla completa**, 9:16: un círculo de mujeres sentadas en ronda en una sala luminosa. No son imágenes generadas ni avatar a cámara.
+- **Chip amarillo redondeado arriba** con el calificador del público: "👆 PARA PSICÓLOGOS Y PSICOPEDAGOGOS", en mayúsculas y texto oscuro. Es lo primero que se ve.
+- **Hook en cajas violetas sólidas al centro** (#6D28D9 aprox.), Montserrat ExtraBold en mayúscula, texto blanco, partido en dos bloques.
+- **Chip blanco debajo** con el claim: "+150 dinámicas listas para aplicar 👇".
+
+⚠️ **Sin verificar:** no pude capturar los frames del medio ni el cierre (la extensión perdía el tab group), ni escuchar el audio. Que sea voz en off es muy probable por el formato (b-roll sin cara a cámara) pero no está confirmado. Falta ver cómo son los subtítulos mid-roll y la placa final.
+
+**Pipeline nuestro:** `OUTPUTS/scripts-vsl/edit_gwp.py` (copia de `edit_herrero.py` con esa paleta) y `~/Desktop/the-group-work-playbook/anuncios/work/gen_gwp_plans.py`, que arma los 6 plan.json. Los stills de la landing están en `~/Desktop/the-group-work-playbook/landing/` (mockup, ficha Three chairs con care notes, índice del módulo 1, ficha The wheel of my week, taller 1 de 12 minuto a minuto, worksheet Body map).
+
 ## Huecos que ellos no tocan (nuestros ángulos propios)
 Testimonio en primera persona · regalar una dinámica completa en el ad · cuentas de honorarios (taller de empresa vs. sesión) · los *care notes* y el riesgo profesional (duelo, angustia) · las variantes online.
 

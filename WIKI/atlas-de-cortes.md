@@ -33,6 +33,7 @@
 
 ## Detalles / notas
 - Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.
+- **Descripción definitiva (2026-10-22):** una sola, EN + ES, para acompañar los 6 videos (el competidor usa el mismo copy en todos sus ads). Junta el hook más duplicado ("saber ≠ recordar"), la duda a mitad del corte, los bullets del producto, los 5 bonus y el desactivador de objeción. `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` y `~/Desktop/atlas-cortes/descripcion-ads.md`.
 - Tanda 1 (21/10): 4 guiones adaptados de los ganadores + 2 variables nuestras (cuentas de la plata que se pierde por decir "ese corte no es lo mío", y la estilista con 20 años que tenía una carpetita en el cajón). Ver `OUTPUTS/2026-10-21-guiones-atlas-cortes.md`. Reescritos con los términos de la landing: Women's Cutting Atlas, Cut Maps, sectioning, elevation y guide section, sin el "error a evitar" porque los mapas no lo prometen.
 
 ## Cómo se arma un video (2026-10-21)

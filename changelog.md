@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-22 — Atlas de Cortes: descripción de ads definitiva
+- **Pedido de Santiago:** "dame la descripción para la de pelo".
+- **Creado:** `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` (EN + ES) y copia en `~/Desktop/atlas-cortes/descripcion-ads.md`.
+- **Cambiado:** `WIKI/atlas-de-cortes.md`, `WIKI/index.md`.
+
 ## 2026-10-22 — Herrero de Finde: videos v2 con más ritmo
 - **Corrección de Santiago:** "está medio aburrida".
 - **Cambiado:** `OUTPUTS/scripts-vsl/edit_herrero.py` (música de sus ads, zoom y golpe en cada corte, destello + whoosh, placas que saltan, sello VENDIDA, barra de progreso), `anuncios/work/plans/gen.py`, los 6 `HF-V*.mp4` re-renderizados, `WIKI/herrero-de-finde.md` (cómo se arman + registro de correcciones).

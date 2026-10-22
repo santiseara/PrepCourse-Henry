@@ -87,6 +87,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-22 — Descripción de ads del Atlas de Cortes](../OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md) — la definitiva, EN + ES, para los 6 videos · ver [[atlas-de-cortes]]
 - `OUTPUTS/2026-10-22-landing-herrero-de-finde.html` — Landing de Herrero de Finde (ES-AR, imágenes embebidas).
 - [2026-10-22 — Super prompt Women's Cutting Atlas](../OUTPUTS/2026-10-22-super-prompt-atlas-cortes.md) — contexto completo de la oferta (producto, landing, avatar, competidor, reglas de copy) + receta de edición de los videos, para pasarle a otro Claude · ver [[atlas-de-cortes]]
 - [2026-10-22 — Natives piedras 20 y 21](../OUTPUTS/2026-10-22-natives-piedras-curso-y-cartero.md) — opciones v2, 4 y 8: el curso de $1.997 que casi compra (comparación + 4 preguntas antes de comprar) y Denise, la mujer del cartero, que vende en los puestos de granja de la ruta rural · ver [[natives-ganadoras]]

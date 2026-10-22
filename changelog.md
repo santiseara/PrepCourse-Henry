@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-22 — Scented Stones: guiones v20 con hooks ganadores investigados
+- **Pedido de Santiago:** "quiero que sean ganadores, investigá hooks ganadores en el nicho".
+- **Investigado:** Virlo (hooks virales con vistas), OpusClip, Webtonic, Gethookd.
+- **Creado:** `OUTPUTS/2026-10-22-guiones-piedras-v20-hooks-ganadores.md` (EN + ES).
+- **Cambiado:** `WIKI/hooks.md` (sección de investigación), `WIKI/index.md`.
+
 ## 2026-10-21 — Meta Ads: reglas de armado del anuncio
 - **Corrección de Santiago:** sacar "Anuncios multianunciante"; el texto va separado: texto principal = descripción, título = "Tap the button below", descripción = 5 estrellas.
 - **Cambiado:** `WIKI/claude-con-meta-ads.md` (sección "Reglas de armado del anuncio": multianunciante, campos de texto, IA de Meta apagada, error de Threads #4588023, cuenta Reset FIT sin conector).

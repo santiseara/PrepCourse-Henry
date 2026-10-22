@@ -86,6 +86,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-22 — Guiones piedras v20 hooks ganadores](../OUTPUTS/2026-10-22-guiones-piedras-v20-hooks-ganadores.md) — hooks de patrones virales del nicho dinero (plan de emergencia, contar la plata del mes, confesión de finanzas, PSA contra cursos caros, 30 días con cero seguidores, loss aversion) · ver [[hooks]]
 - [2026-10-21 — Natives piedras 18 y 19](../OUTPUTS/2026-10-21-natives-piedras-ortodoncia-y-periodista.md) — situaciones nuevas 1 y 6: la ortodoncia de Owen ($3.230 en 12 semanas, semana a semana) y la periodista escéptica que verifica 5 afirmaciones · ver [[natives-ganadoras]]
 - [2026-10-21 — Natives piedras: 10 situaciones nuevas](../OUTPUTS/2026-10-21-natives-piedras-10-situaciones.md) — para elegir, fuera de feria: ortodoncia, Carol de la florería, renuncia, horas de Michael, planilla de un año, periodista escéptica, Navidad en efectivo, clase en la cocina, préstamo negado, el contador · ver [[natives-ganadoras]]
 - [2026-10-21 — Guion piedras 1.000 al mes](../OUTPUTS/2026-10-21-guion-piedras-1000-al-mes.md) — el 1 de la v19 con la misma estructura pero solo con $1.000 (87 piedras, o 60 por mayor + 60 propias) · ver [[guiones-y-anuncios]]

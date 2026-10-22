@@ -6,11 +6,11 @@ Montar: for n in 1 2 3 4 5 6; do python3 edit_gwp.py plans/V$n.json ../PSV-V$n.m
 Insumos (todos gratis, sin creditos):
   vo/V1.wav..V6.wav     <- voz en off, Google AI Studio (Sulafat, acento rioplatense por prompt de estilo)
   broll/mk*.mp4         <- stock gratuito de mixkit, estudio de reformers, curado a mano
-  ../../landing/*.webp  <- fichas de clase, ejercicios ilustrados y mockups de la propia landing
+  ../../imagenes/*.webp <- fichas de clase, ejercicios ilustrados y mockups de la propia landing
 """
 import json, os
 
-LAND = '../../../landing/'   # relativo a plans/
+LAND = '../../../imagenes/'   # relativo a plans/
 
 # stills elegidos de la landing
 STILLS = {

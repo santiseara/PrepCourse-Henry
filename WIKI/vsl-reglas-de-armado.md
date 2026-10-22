@@ -16,6 +16,8 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 - **Formatos de edición disponibles** (`edit_vsl_quiz.py`, 5.º campo del plan): `split` (avatar arriba y placa o B-roll abajo), `full` (B-roll solo), `gs` (avatar grande recortada delante del B-roll) y `pip` (B-roll con la avatar chiquita en la esquina). En un VSL largo conviene alternar los cuatro.
 
 ## 0b. Voces con Google AI Studio (2026-10-19, pedido de Santiago: "usá google AI studio para las voces")
+- ⛔ **Un ad de voz en off no gasta un solo crédito** (2026-10-22: "cuando hacemos de voz en off, no tenés que gastar créditos en NADA"). Ni la voz, ni imágenes, ni video generativo. Voz de AI Studio, B-roll de stock gratuito, planos de producto de los stills de la landing. Nada de Higgsfield ni ElevenLabs.
+- La voz la genero **yo** manejando Chrome, nunca se le pide a Santiago que la genere.
 - Página: `aistudio.google.com/generate-speech` → "Create new dialog". La extensión de Chrome necesita **permiso para el sitio** (sin eso no hay capturas ni clics; JS sí anda).
 - **Modelo: Gemini 3.1 Flash TTS Preview.** Es gratis y deja generar varias veces. El Gemini 3.8 Flash TTS (el que viene por defecto) da **una sola** generación gratis y después pide una clave paga; Voice Design también es pago.
 - Voz femenina cálida: **Sulafat** (Warm). Otras: Gacrux (Mature), Achernar (Soft). El selector de acento solo trae acentos del inglés: dejar Neutral y dirigir el acento con el **Scene** y la nota del director del hablante (porteña de 50 años, rioplatense, "sh" en ll/y, audio de WhatsApp a una amiga, sin tono de locutora).

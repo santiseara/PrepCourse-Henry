@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-21 — Meta Ads: reglas de armado del anuncio
+- **Corrección de Santiago:** sacar "Anuncios multianunciante"; el texto va separado: texto principal = descripción, título = "Tap the button below", descripción = 5 estrellas.
+- **Cambiado:** `WIKI/claude-con-meta-ads.md` (sección "Reglas de armado del anuncio": multianunciante, campos de texto, IA de Meta apagada, error de Threads #4588023, cuenta Reset FIT sin conector).
+
 ## 2026-10-21 — Women's Cutting Atlas: V2 rehecho
 - **Corrección de Santiago:** "el 2 es igual al 1, hacémelo distinto".
 - **Cambiado:** `OUTPUTS/2026-10-21-guiones-atlas-cortes.md` (Guion 2 nuevo: "un lado te quedó distinto al otro"), `~/Desktop/atlas-cortes/AT-V2.mp4`, `WIKI/guiones-y-anuncios.md` (registro), `WIKI/atlas-de-cortes.md`.

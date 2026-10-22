@@ -28,6 +28,18 @@
 6. **El conector entra con el perfil de Facebook con el que lo autorizaste.** Si al conectarlo el navegador tenía abierta otra cuenta, no va a ver tus cuentas publicitarias. Autorizalo con el perfil correcto.
 7. **Algunas cuentas no dejan subir videos por URL.** Subí los videos en una cuenta que sí deje (la cuenta master) y cloná desde ahí ([[metodo-v3]]).
 
+## Reglas de armado del anuncio (correcciones de Santiago)
+
+- **2026-10-21 — Anuncios multianunciante: siempre desactivado.** En "Configuración del anuncio" viene tildado por defecto. Hay que destildarlo en cada anuncio.
+- **2026-10-21 — Cada parte del texto va en su campo:**
+  - **Texto principal** → la descripción larga (el copy).
+  - **Título** → "Tap the button below 👇".
+  - **Descripción** → las 5 estrellas ⭐⭐⭐⭐⭐.
+  - Nunca va todo junto en el texto principal.
+- **Apagar la IA de Meta:** destildar los textos y títulos generados con IA, no elegir imágenes generadas con IA y dejar la traducción en 0 idiomas (por defecto viene activada en todos).
+- **Error de Threads #4588023:** la cuenta publicitaria necesita tener asignada la cuenta de Instagram/Threads de la página, en Configuración del negocio. Sin eso no deja publicar.
+- **Cuenta Reset FIT (2026-10-21):** el conector de Meta todavía no está habilitado en esa cuenta ("se está liberando de a poco"). Ahí se arma desde el navegador, y Santiago sube los videos a la biblioteca.
+
 ## Cómo pedirle las cosas
 
 - Dale **todos los datos juntos**: cuenta, pixel, Página, link con UTMs, presupuesto, países, género y nombres. Si falta algo, que pregunte antes de crear.

@@ -1,4 +1,7 @@
-INGLES
+INGLÉS
+
+Las 6 descripciones parean con los 6 videos de la tanda final:
+4 → Guion 9 · 5 → Guion 10 · 6 → Guion 18 · 7 → Guion 12 · 8 → Guion 14 · 9 → Guion 17
 
 Descripción 4
 
@@ -28,15 +31,15 @@ You could send the proposal this week. ✅
 
 Descripción 6
 
-👨‍👩‍👧 A parent workshop where the parents actually take part.
+📅 This time last year my diary had too many holes in it. Today I run three group workshops a month.
 
-The Group Work Playbook: 150+ group activities with goal, materials and step by step, for schools, workplaces, families and therapeutic groups.
+Two in schools, one in a company. I did not change what I know. I changed what I walk in with. 💼
 
-✅ 12 workshops built end to end
-✅ Templates to pitch your workshop to a school or a company
-✅ Printable worksheets and a guide for difficult groups
+I started with the icebreakers module and the proposal template, sent it to a school ten minutes from my practice, and they said yes to the first one. After that the calls started on their own. 📞
 
-📥 Instant PDF download. Tap the button and see everything inside. 👇
+150+ activities, 12 complete workshops and the templates to pitch it. Less than one session. ✅
+
+👇 Tap Learn more and start with one.
 
 
 Descripción 7
@@ -108,15 +111,15 @@ Podrías mandar la propuesta esta misma semana. ✅
 
 Descripción 6
 
-👨‍👩‍👧 Un taller para padres donde los padres de verdad participan.
+📅 El año pasado por esta época mi agenda tenía demasiados huecos. Hoy coordino tres talleres grupales por mes.
 
-The Group Work Playbook: +150 dinámicas grupales con objetivo, materiales y paso a paso, para colegios, empresas, familias y grupos terapéuticos.
+Dos en colegios y uno en una empresa. No cambié lo que sé. Cambié con qué entro. 💼
 
-✅ 12 talleres armados de punta a punta
-✅ Modelos para presentar tu taller a un colegio o empresa
-✅ Fichas imprimibles y guía para manejar grupos difíciles
+Arranqué con el módulo de rompehielos y el modelo de propuesta, se lo mandé a un colegio a diez minutos de mi consultorio y me dijeron que sí al primero. Después los llamados empezaron solos. 📞
 
-📥 Descarga inmediata en PDF. Tocá el botón y mirá todo lo que incluye. 👇
++150 dinámicas, 12 talleres completos y los modelos para presentarlo. Menos que una sesión. ✅
+
+👇 Tocá Más información y arrancá con uno.
 
 
 Descripción 7

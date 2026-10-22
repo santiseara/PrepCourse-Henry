@@ -39,7 +39,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Vender **transformación**, no características.
 - **"Verdad, no consuelo":** señalar puntos ciegos y contradicciones sin endulzar ([[ia-en-el-flujo-de-trabajo]]).
 - **Variar un ganador:** primero diagnosticar por qué funciona y después variar en las 6 categorías de [[guiones-de-video-ads]].
-- **Tamaño de tanda:** 5 a 10 anuncios del mismo formato, para llenar un conjunto V3 ([[metodo-v3]]). La base son 3 guiones, multiplicados por hooks o B-rolls.
+- **Tamaño de tanda: máximo 6 videos, nunca más** (regla fija del 2026-10-22). Si el análisis da más ángulos, elijo los 6 mejores y el resto queda como banco al final del archivo. Para llenar un conjunto V3 se completa con natives o renovaciones de hook, no con más guiones ([[metodo-v3]], [[guiones-y-anuncios]]).
 - **"Renovar" un ganador** = 20 a 50 hooks sobre el mismo cuerpo, no un guión nuevo ([[renovacion-de-creativos]]).
 - **Prompts de video:** reglas fijas de UGC por defecto (9:16, handheld, sin subtítulos, sin música). Testimonios de 14 s y 35–40 palabras ([[ugc-y-video-generativo]]).
 - **Upsells y bonus: solo PDF** (ebook, checklist, plantillas, swipe). Nada de videocursos, porque no los graba ([[biblioteca-de-prompts]]).

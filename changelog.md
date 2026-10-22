@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-22 — Regla fija: máximo 6 videos por tanda
+- **Pedido de Santiago:** "son un montón, te voy a dar otra regla para que te la guardes, siempre son máximo 6 videos, nunca son más. Elegí los mejores 6 y hacelos".
+- **Cambiado:** `WIKI/guiones-y-anuncios.md` (registro de preferencias) y `WIKI/como-trabajar-con-santiago.md` (reemplaza el viejo "5 a 10 anuncios por tanda").
+- **Aplicado:** la tanda de The Group Work Playbook bajó de 10 a 6 guiones (9, 10, 12, 14, 17 y 18); los 4 descartados quedaron como banco al final del archivo. Las 6 descripciones se reparearon con los 6 videos.
+
 ## 2026-10-22 — The Group Work Playbook: análisis del competidor y tanda completa
 - **Pedido de Santiago:** "hacé el mismo análisis que venís haciendo siempre para detectar los mejores anuncios. Y después armar todos los anuncios".
 - **Analizado:** Facebook Ads Library de Talleres Listos (page 1423115024221032, ~160 ads activos) ordenada por impresiones totales, y la landing propia en inglés.

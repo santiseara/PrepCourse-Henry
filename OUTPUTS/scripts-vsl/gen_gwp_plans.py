@@ -37,42 +37,45 @@ CHIP = '+150 READY-TO-RUN ACTIVITIES'
 
 # por video: hook, los b-roll que le tocan, los stills anclados a una palabra del guion
 V = {
- 1: dict(hook='A WHOLE YEAR WITHOUT REPEATING ONE ACTIVITY',
-         broll=['ronda_sentados', 'ronda_parados', 'circulo_charla', 'circulo_abajo', 'jovenes_ventana', 'manos_mesa'],
-         anchors=[['twenty-five', 0, 'L02', 1], ['sheet', 0, 'L01', 1], ['hundred', 0, 'L00', 1]],
-         tag_word='Every', chip_word='icebreakers'),
- 2: dict(hook='THE PROPOSAL A COMPANY SAYS YES TO',
-         broll=['rotafolio_mujer', 'rotafolio_sala', 'reunion_mesa', 'equipo_mesa', 'equipo_cenital', 'firma'],
-         anchors=[['proposal', 0, 'L00', 1], ['workplace', 0, 'L03', 1], ['teams', 0, 'L04', 1]],
-         tag_word='company', chip_word='module'),
- 3: dict(hook='ONE ACTIVITY YOU CAN RUN TOMORROW, FREE',
-         broll=['ronda_sentados', 'pizarra_welcome', 'circulo_charla', 'ronda_parados', 'cuaderno', 'manos_plan'],
-         anchors=[['Agreement', 0, 'L02', 1], ['sheet', 0, 'L01', 1], ['forty-nine', 1, 'L00', 1]],
-         tag_word='Here', chip_word='Playbook'),
- 4: dict(hook='NEVER RUN A GROUP? START WITH THE PLAN',
-         broll=['mujer_pensando', 'mujer_papel', 'circulo_charla', 'taller_mesa', 'escritorio', 'ronda_parados'],
-         anchors=[['plan', 1, 'L04', 1], ['close', 0, 'L01', 1], ['guide', 0, 'L00', 1]],
-         tag_word='never', chip_word='Playbook'),
- 5: dict(hook='EVERY SHEET ENDS WITH ITS CARE NOTES',
-         broll=['mujer_seria', 'mujer_angustia', 'mujer_pensando', 'ronda_sentados', 'aula_docente', 'circulo_abajo'],
-         anchors=[['care', 0, 'L01', 1], ['workshops', 0, 'L04', 1], ['guide', 0, 'L00', 1]],
-         tag_word='Some', chip_word='hundred'),
- 6: dict(hook='THREE GROUP WORKSHOPS A MONTH',
-         broll=['rotafolio_mujer', 'aula_chicos', 'aula_adultos', 'oficina_grupo', 'cuaderno', 'ronda_sentados'],
-         anchors=[['icebreakers', 0, 'L02', 1], ['template', 0, 'L00', 1], ['school', 0, 'L04', 1]],
-         tag_word='year', chip_word='costs'),
+ 1: dict(hook='BUILD YOUR FIRST WORKSHOP IN ONE MORNING',
+         broll=['ronda_sentados', 'taller_mesa', 'pizarra_welcome', 'circulo_abajo', 'ronda_parados', 'circulo_charla'],
+         anchors=[['index', 0, 'L02', 1], ['step', 0, 'L01', 1], ['proposal', 0, 'L00', 1]],
+         tag_word='Building', chip_word='Playbook'),
+ 2: dict(hook='THE SCHOOL JUST CALLED. WHAT DO YOU BRING?',
+         broll=['aula_chicos', 'aula_docente', 'aula_ninos', 'mujer_pensando', 'pizarra_welcome', 'circulo_charla'],
+         anchors=[['index', 0, 'L02', 1], ['workshop', 1, 'L04', 1], ['proposal', 0, 'L00', 1]],
+         tag_word='school', chip_word='Playbook'),
+ 3: dict(hook='A WELLBEING CIRCLE, RUN BY YOU',
+         broll=['circulo_charla', 'circulo_abajo', 'ronda_parados', 'mujer_seria', 'ronda_sentados', 'taller_mesa'],
+         anchors=[['activities', 0, 'L03', 1], ['care', 0, 'L01', 1], ['module', 0, 'L00', 1]],
+         tag_word='women', chip_word='Playbook'),
+ 4: dict(hook='ONE PERSON AN HOUR, OR TEN',
+         broll=['mujer_pensando', 'ronda_sentados', 'taller_mesa', 'pizarra_welcome', 'circulo_charla', 'escritorio'],
+         anchors=[['activities', 0, 'L02', 1], ['workshops', 0, 'L04', 1], ['structure', 0, 'L00', 1]],
+         tag_word='hour', chip_word='Playbook'),
+ 5: dict(hook="BULLYING DOESN'T STOP WITH A TALK",
+         broll=['aula_adultos', 'estudiante', 'aula_chicos', 'aula_ninos', 'pizarra_welcome', 'ronda_parados'],
+         anchors=[['module', 0, 'L02', 1], ['care', 0, 'L01', 1], ['workshop', 0, 'L04', 1]],
+         tag_word='Bullying', chip_word='Playbook'),
+ 6: dict(hook='150 ACTIVITIES, A WHOLE YEAR',
+         broll=['ronda_sentados', 'taller_mesa', 'aula_ninos', 'circulo_abajo', 'cuaderno', 'circulo_charla'],
+         anchors=[['modules', 0, 'L02', 1], ['index', 0, 'L03', 1], ['worksheets', 0, 'L05', 1]],
+         tag_word='hundred', chip_word='Playbook'),
 }
 
 os.makedirs('plans', exist_ok=True)
 for n, c in V.items():
     stills_usados = sorted({a[2] for a in c['anchors']})
-    pool = [[k, 0, 4.5] for k in c['broll']] + [[k, 4.5, 9] for k in c['broll'][:4]] \
-         + [[k, 0, 3] for k in stills_usados]
+    # solo el primer tramo de cada b-roll: mas adelante los clips cambian de escena.
+    # el peso lo lleva el producto, como en los ganadores del competidor.
+    pool = [[k, 0, 4.5] for k in c['broll']] \
+         + [[k, 0, 4.2] for k in stills_usados] + [[k, 0, 3.4] for k in stills_usados] \
+         + [[k, 0, 3.0] for k in stills_usados]
     P = {
-        'vo': f'../vo/V{n}.wav', 'script': f'../vo/V{n}.txt', 'speed': 1.15, 'lang': 'en',
+        'vo': f'../vo/V{n}.wav', 'script': f'../vo/V{n}.txt', 'speed': 1.0, 'lang': 'en',
         'clips': CLIPS, 'pool': pool, 'seed': n, 'usage': '../usage.json',
         'cut': [2.6, 3.4, 4.2],
-        'capy': 1180, 'words': 3, 'progress': True,
+        'capy': 1440, 'words': 4, 'progress': True,
         'music': f'../music/bed_{"ABC"[(n-1)%3]}.wav', 'music_db': -26,
         'hook': c['hook'],
         'anchors': c['anchors'],
@@ -80,8 +83,9 @@ for n, c in V.items():
         'whoosh': [1, 3, 5, 7],
         'sfx': [['pop', 'Tap', 0]],
         'overlays': [
-            {'type': 'tag',  'text': TAG,  'word': c['tag_word'],  'dur': 3.0},
-            {'type': 'chip', 'text': CHIP, 'word': c['chip_word'], 'dur': 2.4},
+            {'type': 'tag',  'text': TAG,  'at': 0.0,  'dur': 3.4},
+            {'type': 'chip', 'text': CHIP, 'at': 0.25, 'dur': 3.15, 'icon': '\U0001F447', 'y': 1020},
+            {'type': 'chip', 'text': CHIP, 'word': c['chip_word'], 'dur': 2.4, 'y': 1600},
             {'type': 'end',  'word': 'Tap',
              'title': ['THE GROUP WORK', 'PLAYBOOK'],
              'sub': '150+ ACTIVITIES · 12 WORKSHOPS',

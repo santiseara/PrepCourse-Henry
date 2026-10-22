@@ -27,7 +27,8 @@ def F(p): return p if os.path.isabs(p) else os.path.join(base, p)
 tmp = os.path.join(base, os.path.basename(OUT) + '_tmp'); os.makedirs(tmp, exist_ok=True)
 W, H, FPS = 1080, 1920, 30
 ORANGE = (109, 40, 217)   # violeta de la marca (se deja el nombre para no tocar el resto)
-GREEN = (250, 204, 21)    # amarillo del chip calificador
+GREEN = (250, 204, 21)    # amarillo (se conserva para png_money)
+TAGBG = (255, 255, 255)   # chip calificador y chip de claim: BLANCOS, como el competidor
 FD = os.path.expanduser('~/Desktop/herrero-de-finde/anuncios/work/fonts')
 BC = FD + '/BarlowCondensed-ExtraBold.ttf'
 MX = FD + '/Montserrat-ExtraBold.ttf'
@@ -183,7 +184,7 @@ def png_tag(txt, path, y0=60):   # bien arriba, para no pisar el hook
     bw = max(d.textlength(l, font=f) for l in lines) + 70; bh = len(lines) * 100 + 40
     x0 = (W - bw) / 2
     rrect(d, (x0 + 8, y0 + 10, x0 + bw + 8, y0 + bh + 10), bh // 2, (0, 0, 0, 110))
-    rrect(d, (x0, y0, x0 + bw, y0 + bh), bh // 2, GREEN + (255,))
+    rrect(d, (x0, y0, x0 + bw, y0 + bh), bh // 2, TAGBG + (255,))
     for i, l in enumerate(lines):
         d.text((W / 2, y0 + 22 + i * 100), l, font=f, fill=(40, 20, 5), anchor='mt')
     im.save(path)
@@ -210,7 +211,7 @@ def png_money(o, path):
 
 def png_hook(txt, path):
     im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im)
-    body, emo = split_emoji(txt); f = font(72, FONT_B)
+    body, emo = split_emoji(txt); f = font(76, MX); body = body.upper()
     words, lines, cur = body.split(), [], ''
     for w_ in words:
         t_ = (cur + ' ' + w_).strip()
@@ -218,29 +219,31 @@ def png_hook(txt, path):
         else: cur = t_
     lines.append(cur)
     em = emoji_img(emo, 68) if emo else None
+    # el competidor parte el hook en bloques violetas independientes, uno por linea
     lw = [d.textlength(l, font=f) + (em.width + 14 if em and i == len(lines) - 1 else 0) for i, l in enumerate(lines)]
-    bw, bh = max(lw) + 90, len(lines) * 88 + 56
-    x0, y0 = (W - bw) / 2, 620   # el hook va al centro, como en los ganadores del competidor
-    rrect(d, (x0 + 8, y0 + 10, x0 + bw + 8, y0 + bh + 10), 26, (0, 0, 0, 110))
-    rrect(d, (x0, y0, x0 + bw, y0 + bh), 26, ORANGE + (255,))
+    lh, gap, y0 = 104, 12, 620
     for i, l in enumerate(lines):
-        y = y0 + 28 + i * 88; x = (W - lw[i]) / 2
+        bw = lw[i] + 72; x0 = (W - bw) / 2; yb = y0 + i * (lh + gap)
+        rrect(d, (x0 + 8, yb + 10, x0 + bw + 8, yb + lh + 10), 24, (0, 0, 0, 110))
+        rrect(d, (x0, yb, x0 + bw, yb + lh), 24, ORANGE + (255,))
+        x = (W - lw[i]) / 2; y = yb + 16
         d.text((x, y), l, font=f, fill=(255, 255, 255))
-        if em and i == len(lines) - 1: im.alpha_composite(em, (int(x + d.textlength(l, font=f) + 14), int(y + 4)))
+        if em and i == len(lines) - 1: im.alpha_composite(em, (int(x + d.textlength(l, font=f) + 14), int(y + 6)))
     im.save(path)
 
-def png_chip(txt, icon, path):
+def png_chip(txt, icon, path, y=1500):
     im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im); f = font(74, BC)
     t_ = txt.upper(); fi = font(52, ICONF)
     emo = emoji_img(icon, 56) if icon and ord(icon[0]) > 0x1F000 else None
     iw = (emo.width + 16) if emo else ((d.textlength(icon, font=fi) + 16) if icon else 0)
     while d.textlength(t_, font=f) + iw > W - 150 and f.size > 40: f = font(f.size - 4, BC)
     tw = d.textlength(t_, font=f) + iw; bw, bh = tw + 70, 96
-    x0, y0 = (W - bw) / 2, 1500
-    rrect(d, (x0, y0, x0 + bw, y0 + bh), 18, (18, 18, 18, 238))
+    x0, y0 = (W - bw) / 2, y
+    rrect(d, (x0 + 6, y0 + 8, x0 + bw + 6, y0 + bh + 8), 18, (0, 0, 0, 90))
+    rrect(d, (x0, y0, x0 + bw, y0 + bh), 18, TAGBG + (250,))
     if emo: im.alpha_composite(emo, (int(x0 + 35), int(y0 + 20)))
     elif icon: d.text((x0 + 35, y0 + 20), icon, font=fi, fill=ORANGE)
-    d.text((x0 + 35 + iw, y0 + 14), t_, font=f, fill=(255, 255, 255))
+    d.text((x0 + 35 + iw, y0 + 14), t_, font=f, fill=(30, 25, 20))
     im.save(path)
 
 def png_price(o, path):
@@ -310,10 +313,14 @@ if P.get('hook'):
     hu = wt(P['hook_until'], P.get('hook_until_occ', 0)) if P.get('hook_until') else None
     ovs.append((f'{tmp}/o_hook.png', 0, hu[1] + 0.15 if hu else (min(cuts[1] + 0.6, 2.8) if len(cuts) > 2 else 2.6), True))
 for k, o in enumerate(P.get('overlays', [])):
-    w = wt(o['word'], o.get('occ', 0))
-    if not w: continue
-    t0 = w[0] - 0.05; pth = f'{tmp}/o{k}.png'
-    if o['type'] == 'chip': png_chip(o['text'], o.get('icon', ''), pth); hits.append(('pop', t0))
+    if 'at' in o:            # el competidor muestra el chip calificador desde el frame 0
+        t0 = float(o['at'])
+    else:
+        w = wt(o['word'], o.get('occ', 0))
+        if not w: continue
+        t0 = w[0] - 0.05
+    pth = f'{tmp}/o{k}.png'
+    if o['type'] == 'chip': png_chip(o['text'], o.get('icon', ''), pth, o.get('y', 1500)); hits.append(('pop', t0))
     elif o['type'] == 'tag': png_tag(o['text'], pth, o.get('y', 210)); hits.append(('pop', t0))
     elif o['type'] == 'money': png_money(o, pth); hits.append(('chaching', t0 + 0.15))
     elif o['type'] == 'price': png_price(o, pth); hits.append(('chaching', t0 + 0.25))
@@ -329,9 +336,10 @@ for k, o in enumerate(P.get('overlays', [])):
 
 # 5) subtítulos (3 palabras, DIN condensada, la que suena en naranja); se ocultan bajo la placa final
 def ts(t): t = max(0, t); return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}'
-CAPY = P.get('capy', 980)        # centro de pantalla, como el competidor
-HI = P.get('hi', '&H0015CCFA&')  # amarillo #FACC15 (BGR)
+CAPY = P.get('capy', 1440)       # a ~75% de alto, donde los pone el competidor
+HI = P.get('hi', None)           # el competidor no resalta la palabra activa; None = texto blanco plano
 end_t = min([t0 for p, t0, t1, a in ovs if t1 == L] or [L + 1])
+start_t = max([t1 for p, t0, t1, a in ovs if t0 <= 0.3] or [0])   # mientras esta el hook no hay subtitulos
 ass = [f'''[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -340,24 +348,24 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: C,Montserrat ExtraBold,96,&H00FFFFFF,&H00FFFFFF,&H00D9286D,&H00D9286D,0,0,0,0,100,100,0,0,3,18,0,5,60,60,0,1
+Style: C,Montserrat ExtraBold,88,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,5,5,5,60,60,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text''']
-def clean(w): return w.replace('…', '').strip(' ,;:"“”').upper()
+def clean(w): return w.replace('…', '').strip(' ,;:"“”')   # sin mayusculas, como el competidor
 chunks, cur = [], []
 for x in vw:
     cur.append(x)
     if len(cur) == P.get('words', 2) or re.search(r'[.?!…]$', x[2]): chunks.append(cur); cur = []
 if cur: chunks.append(cur)
 for ci, ch in enumerate(chunks):
-    if ch[0][0] >= end_t - 0.05: continue
+    if ch[0][0] >= end_t - 0.05 or ch[-1][1] <= start_t: continue
     nxt = chunks[ci + 1][0][0] if ci + 1 < len(chunks) else ch[-1][1] + 0.4
     for wi, (s, e, w) in enumerate(ch):
         e2 = ch[wi + 1][0] if wi + 1 < len(ch) else min(nxt, ch[-1][1] + 0.5)
         e2 = min(e2, end_t)
         pop = '{\\fscx118\\fscy118\\t(0,90,\\fscx100\\fscy100)}' if wi == 0 else ''
-        txt = pop + ' '.join((f'{{\\c{HI}}}' + clean(x[2]) + '{\\r}') if j == wi else clean(x[2]) for j, x in enumerate(ch))
+        txt = pop + ' '.join(((f'{{\\c{HI}}}' + clean(x[2]) + '{\\r}') if (HI and j == wi) else clean(x[2])) for j, x in enumerate(ch))
         ass.append(f'Dialogue: 0,{ts(s)},{ts(e2)},C,,0,0,0,,{{\\pos({W // 2},{CAPY})}}{txt}')
 open(f'{tmp}/subs.ass', 'w').write('\n'.join(ass) + '\n')
 

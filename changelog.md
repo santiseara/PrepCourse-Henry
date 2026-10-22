@@ -1,3 +1,12 @@
+## 2026-10-22 (tarde) — The Group Work Playbook: análisis de cero con el audio del competidor
+
+- **Relevado de nuevo** el competidor (page 1423115024221032) sin la extensión de Chrome, que estuvo caída casi todo el rato: Chrome headless clásico con `--dump-dom` para la Ads Library, `curl` para los videos, `faster_whisper` para el audio y `ffmpeg` para los frames. El método quedó anotado en la wiki.
+- **Transcriptos los 9 videos ganadores.** Hasta ahora nadie había escuchado el audio del competidor: los guiones de la v1 y la v2 se habían escrito solo desde el hook. Quedó la receta real de 6 bloques.
+- **Relevada la edición frame por frame.** Corrige dos cosas que estaban mal en la wiki: el chip calificador es blanco, no amarillo, y los subtítulos van en texto blanco sin caja, no en caja violeta.
+- **Nueva tanda de 6 guiones de voz en off** (EN + ES voseo), calcados a la receta del competidor, de 28 a 31 s: `OUTPUTS/2026-10-22-guiones-group-work-playbook-v3-voz-en-off.md`.
+- **`edit_gwp.py` y `gen_gwp_plans.py` alineados a la edición real** y validados con un render de prueba: chip blanco desde el frame 0, hook en cajas violetas una por línea, subtítulos sin caja que arrancan al irse el hook, más peso de producto que de b-roll, y b-roll curado (fuera los clips corporativos y los que cambian de escena después del segundo 5).
+- Pendiente: las 6 voces en Google AI Studio y el montaje final.
+
 # Changelog
 
 ## 2026-10-22 — The Group Work Playbook: pipeline de video con la edición del competidor

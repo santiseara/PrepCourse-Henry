@@ -109,11 +109,14 @@ for n in range(len(cuts) - 1):
         seg = next(s for s in P['pool'] if s[0] == P['first'][0] and s[1] == P['first'][1])
     else:
         nxt = forced[n + 1][0] if n + 1 in forced else None
-        cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0][:1] not in [q[:1] for q in prev[-1:]] and s[0][:1] != (nxt or ' ')[:1]]
+        # misma fuente = mismas 3 primeras letras (ronda_*, circulo_*); L00/L01/L02 son fichas distintas
+        libres = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used]
+        cand = [s for s in libres if s[0][:3] not in [q[:3] for q in prev[-1:]] and s[0][:3] != (nxt or '   ')[:3]]
+        if not cand: cand = [s for s in libres if s[0] not in prev[-1:]] or libres or P['pool']
         here = {}
-        for p in plan: here[p[0][:1]] = here.get(p[0][:1], 0) + 1     # misma fuente = misma letra inicial
+        for p in plan: here[p[0][:3]] = here.get(p[0][:3], 0) + 1
         def score(s):
-            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:1], 0) * 3 + (3 if s[0] in prev else 0)
+            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:3], 0) * 3 + (3 if s[0] in prev else 0)
                     + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
         seg = min(cand, key=score)
     sid = f'{seg[0]}@{seg[1]}'; used.add(sid)

@@ -5,7 +5,8 @@
 - **Relevada la edición frame por frame.** Corrige dos cosas que estaban mal en la wiki: el chip calificador es blanco, no amarillo, y los subtítulos van en texto blanco sin caja, no en caja violeta.
 - **Nueva tanda de 6 guiones de voz en off** (EN + ES voseo), calcados a la receta del competidor, de 28 a 31 s: `OUTPUTS/2026-10-22-guiones-group-work-playbook-v3-voz-en-off.md`.
 - **`edit_gwp.py` y `gen_gwp_plans.py` alineados a la edición real** y validados con un render de prueba: chip blanco desde el frame 0, hook en cajas violetas una por línea, subtítulos sin caja que arrancan al irse el hook, más peso de producto que de b-roll, y b-roll curado (fuera los clips corporativos y los que cambian de escena después del segundo 5).
-- Pendiente: las 6 voces en Google AI Studio y el montaje final.
+- **Los 6 videos montados**: `~/Desktop/the-group-work-playbook/anuncios/GWP-V1.mp4` a `GWP-V6.mp4`, de 25 a 30 s. Voces de AI Studio (Sulafat) verificadas una por una contra su guion.
+- Anotado en la wiki cómo sacar el audio de AI Studio, que fue lo que más costó (CSP, clipboard y descargas bloqueadas).
 
 # Changelog
 

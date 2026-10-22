@@ -49,6 +49,12 @@ Detalle completo, con las 9 transcripciones y los frames, en `OUTPUTS/2026-10-22
 
 **Nuestra edición (`edit_gwp.py`), ya alineada a eso y validada con un render de prueba:** chip blanco calificador desde el frame 0 (`'at': 0.0`), hook en cajas violetas una por línea, chip de claim blanco debajo del hook (y=1020) y repetido mid-roll (y=1600), subtítulos blancos sin caja a y=1440 que arrancan recién cuando se va el hook, pool con más stills de producto que b-roll, música a −26 dB y whooshes en los cortes. Se conserva la placa final con CTA, que el competidor no tiene: es decisión nuestra.
 
+**Voces en off (22/10/2026):** Google AI Studio, Gemini 3.8 Flash TTS, voz **Sulafat** (warm, middle pitch), una por guion, sin instrucción de estilo. Salen a ~200 palabras por minuto, así que el plan va con `speed: 1.0` (con 1.15 quedaban aceleradas).
+
+⚠️ **Sacar el audio de AI Studio es lo que más cuesta.** Lo que no funciona: el POST a `127.0.0.1` (su CSP bloquea la red privada, así que el workaround de `recv.py` no sirve ahí), `navigator.clipboard.writeText` con el data URL entero (cuelga el renderer, el CDP corta a los 45 s) y descargar el `data:` URL directo (Chrome bloquea los grandes). Lo que sí funciona: `fetch(audio.src) → blob → URL.createObjectURL → <a download>`. Chrome permite **una sola descarga automática por página** y después hay que habilitar *Descargas automáticas: Permitir* para el sitio, lo hace Santiago en dos clics. Conviene generar los 6 primero y guardarlos en un `window._wavs` y recién al final bajarlos todos juntos.
+
+⚠️ **Después de cambiar `gen_gwp_plans.py` hay que volver a correrlo**: los `plans/V*.json` no se regeneran solos y el montaje sale con el b-roll viejo.
+
 ⚠️ **B-roll:** usar solo el tramo 0 a 4,5 s de cada clip; varios cambian de escena después (mk135 pasa a un loft de oficina a los 5 s). Descartados por no pegar con el nicho: mk08, mk103, mk105, mk106, mk110, mk113, mk129 (artesanía), mk135. El resto está verificado a 4,3 s.
 
 ⚠️ Tres cosas que costaron y conviene no repetir: las rutas del plan.json se resuelven **contra la carpeta `plans/`**, no contra `work/` (van con `../`); el campo `hook` usaba por defecto el mismo renderer que el chip (`png_tag`) y se pisaban, ahora usa `png_hook`; y `edit_gwp.py` necesita `sfx.py`, `music.py` y las camas `music/bed_*.wav` en su misma carpeta.

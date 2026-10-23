@@ -1,3 +1,10 @@
+## 2026-10-23 — Pilates sin Vueltas: las 6 voces rehechas con acento argentino
+
+- Santiago: "tiene una voz que habla muy neutro y parece que son videos para LATAM, pero necesito que sean videos para acento argentino". Se regeneraron las seis voces en Google AI Studio con el modelo **Gemini 3.1 Flash TTS Preview**, voz Sulafat y un **Audio Profile** porteño (sh en ll/y, s aspirada, melodía italiana, voseo) + Scene en Buenos Aires. Pace en **Natural**, porque el default leía lento.
+- Guion 1 corregido: **"Me operaron la rodilla" → "Me operé de la rodilla"** (el TTS pronunciaba "operaron" raro). Cambiado también en `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas-v2.md`.
+- **PSV-V1 a PSV-V6 remontados** (62 a 69 s, 19 a 22 planos). Las voces viejas quedaron en `work/vo/V1_neutro.wav.bak` y el `usage.json` anterior en `usage.json.bak`.
+- Dos hallazgos nuevos en `WIKI/vsl-reglas-de-armado.md` y `WIKI/pilates-sin-vueltas.md`: con el modelo 3.1 **el botón Download ya baja el WAV** (no hace falta receptor local) y **hay que confirmar que cada generación arrancó** — la mitad de los envíos no disparó y el Download bajó de nuevo el audio anterior, sin aviso. Se detectó comparando md5 y transcribiendo con Whisper.
+
 ## 2026-10-23 — Atlas de Cortes: AT-V14, el UGC con avatar de HeyGen
 
 - **AT-V14.mp4** (34,5 s, 12 planos) terminado: avatar "Emily Carter - Cutting Atlas" con voz Annie - Lifelike, generado en HeyGen y bajado con el botón de descarga de la tarjeta (el `fetch` al `<video>` falla por CORS).

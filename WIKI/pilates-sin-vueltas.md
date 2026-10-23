@@ -56,18 +56,22 @@ Las 10 escenas: clase de prueba · señora de 74 que no baja al piso · posparto
 
 ## Producción de los videos (22/10/2026, cero créditos)
 Pipeline reusado de [[group-work-playbook]]: `edit_gwp.py` + `gen_pilates_plans.py`, en `~/Desktop/pilates-sin-vueltas/anuncios/work/`.
-- **Voz:** Google AI Studio, voz **Sulafat**. ⚠️ **La interfaz cambió el 22/10:** ya no está el campo *Scene* ni el de *persona*, y el bloque de texto tiene el placeholder `<gasp> That's a great idea!` en vez de `[amused]`. Ahora el acento se dirige desde el campo **Style** ("Describe the voice style"), que es texto libre. El buscador de voces es "Search 2,000+ voices" (el regex viejo `/search voices/i` ya no matchea).
+- **Voz:** Google AI Studio, voz **Sulafat**. ⚠️ **La interfaz cambió el 22/10:** con el modelo 3.8 por defecto ya no está el campo *Scene* ni el de *persona*, y el bloque de texto tiene el placeholder `<gasp> That's a great idea!` en vez de `[amused]`. El buscador de voces es "Search 2,000+ voices" (el regex viejo `/search voices/i` ya no matchea).
+- 🆕 **2026-10-23 · Al elegir Gemini 3.1 Flash TTS Preview vuelven *Scene* y *Sample Context*,** y el panel del hablante trae **Audio Profile** ("Describe the voice persona") más una **Director's note** con Style, Pace y Accent. Ahí se dirige el rioplatense: el Accent solo trae acentos del inglés (queda en **Neutral**) y el acento argentino sale del **Audio Profile** + el **Scene**.
+- 🆕 **2026-10-23 · El botón Download ya funciona.** Baja el WAV a `~/Downloads/Generated Audio <fecha> - <hora>.wav`. No hace falta receptor local ni leer el data URI del `<audio>` (con 3.1 el `<audio>` del DOM solo tiene un pitido de 0,04 s: el audio va por Web Audio).
 - ⚠️ **Las voces en español son de pago:** filtrar Language = Spanish deja la lista vacía con "Link a Paid Key". Se sigue usando una voz inglesa (Sulafat) y se dirige el rioplatense desde el Style. Sale a ~190 palabras por minuto, así que un guion de 184 palabras da 58 s.
 - **B-roll:** Mixkit, serie **48544 a 48567** = un estudio de reformers real, toda en 1080p, el mismo look que el ganador. Descartados por ser primeros planos anatómicos (riesgo con las políticas de Meta y no pegan con el público de instructoras): 48547, 48549, 48550, 48551, 48552, 48553, 48563, 48565. `mk48544` dura solo 4,09 s: tope 3,8.
 - ⚠️ **Planos de apertura:** `mk48562` y `mk48564` arrancan con un primer plano tapado o un reformer vacío y quedan mal de miniatura. Los buenos para abrir: `mk48557`, `mk48567`, `mk48544`, `mk48556`, `mk48561`, `mk45761`.
 - **Stills:** las fichas de clase y de ejercicio de la propia landing (`~/Desktop/pilates-sin-vueltas/imagenes/img*.webp`), ancladas a la palabra exacta del guion.
 - ⚠️ **Los anchors llevan acento.** `norm()` del editor solo saca lo que no es `\w`, así que las tildes quedan: hay que escribir `índice`, no `indice`.
 - ⚠️ **El CDP corta a los 45 s**, así que la generación de voz se lanza sin `await` (`window._gen(n).then(...)`) y después se consulta `window._wavs`.
+- 🆕 **2026-10-23 · Verificar SIEMPRE que la generación arrancó.** La mitad de las tandas no se generó y el botón Download bajó de nuevo el audio anterior: salieron tres archivos repetidos de a pares sin ningún aviso. Reglas: enviar con **clic en el textarea + `cmd+Return`** (el clic en el botón Run no dispara si el audio anterior está sonando), sacar una captura a los 6 s y confirmar que aparece **Stop**, y después del `mv` comparar **md5 y duración** contra el anterior. Al final, transcribir los WAV con Whisper y chequear que cada uno diga su guion.
 
 ## Activos
 - **Guiones v2 (los vigentes, 22/10):** `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas-v2.md`. Seis variables del mismo ángulo, cada una con estructura, bajada de producto y cierre propios.
 - Guiones v1 (descartados, 22/10): `OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md`. Copiaban la plantilla fija del competidor y Santiago los rechazó: "si todos sus guiones dicen lo mismo, no lo hagamos así".
-- Videos: `~/Desktop/pilates-sin-vueltas/anuncios/PSV-V1.mp4` a `PSV-V6.mp4` (voz en off sobre b-roll de estudio, ~1:00 cada uno).
+- Videos: `~/Desktop/pilates-sin-vueltas/anuncios/PSV-V1.mp4` a `PSV-V6.mp4` (voz en off sobre b-roll de estudio).
+- 🆕 **Rehechos el 23/10 con acento argentino.** Santiago: "tiene una voz que habla muy neutro y parece que son videos para LATAM". Se regeneraron las seis voces con el Audio Profile porteño (ver arriba) y se corrigió el guion 1: **"Me operaron la rodilla" → "Me operé de la rodilla"**, porque el TTS pronunciaba "operaron" raro. Las voces nuevas salen un poco más largas (1:02 a 1:10 contra 0:53-0:58), dentro del tope de 1:30. Las voces viejas quedaron en `work/vo/V1_neutro.wav.bak`.
 - Carpeta de trabajo: `~/Desktop/pilates-sin-vueltas/` con `imagenes/`, `landing/` y `anuncios/`.
 
 ## Reglas para los ads

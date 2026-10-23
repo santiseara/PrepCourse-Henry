@@ -1,3 +1,11 @@
+## 2026-10-23 — The Women's Cutting Atlas: el producto principal, armado por código
+
+- Se armó el producto completo de la oferta de pelo: **`~/Desktop/atlas-cortes/producto/out/The-Womens-Cutting-Atlas.pdf`**, 56 páginas A4, 25 mapas de corte, 6 módulos y sección de referencia.
+- **Todas las ilustraciones son SVG generado por código** (`producto/build/heads.py`): cuatro vistas de la cabeza, siluetas de pelo por corte, diagramas de elevación con transportador, patrones de sección y mechas con tijera. Cero fotos, cero Higgsfield, cero HeyGen.
+- El PDF se arma con Chrome headless desde HTML + CSS (`render.py`, `style.css`, `content_01..04.py`, `main.py`), así que cualquier corrección se re-renderiza en segundos.
+- La estructura de cada mapa copia la que la landing muestra de muestra (Technical data, 8 pasos, Ideal for, Common mistakes, Final check, Pro tip) y están incluidos todos los cortes que la landing enseña antes de pagar.
+- Detalles en `WIKI/atlas-de-cortes.md`, sección **El producto principal**, con los dos pendientes: rehacer los mockups de la landing con páginas reales y armar los 5 bonus.
+
 ## 2026-10-23 — Pilates sin Vueltas: las 6 voces rehechas con acento argentino
 
 - Santiago: "tiene una voz que habla muy neutro y parece que son videos para LATAM, pero necesito que sean videos para acento argentino". Se regeneraron las seis voces en Google AI Studio con el modelo **Gemini 3.1 Flash TTS Preview**, voz Sulafat y un **Audio Profile** porteño (sh en ll/y, s aspirada, melodía italiana, voseo) + Scene en Buenos Aires. Pace en **Natural**, porque el default leía lento.

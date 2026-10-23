@@ -108,6 +108,18 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
   - 🆕 **2026-10-23 · Antes de anclar un chip, buscar la palabra en todo el guion.** El chip "Nobody ever noticed" salió en el segundo 1 porque "noticed" también estaba en la primera frase ("something I noticed at my first salon job") y `wt()` toma la ocurrencia 0. Se arregló con `'occ': 1`. Si la palabra se repite, va con `occ`, o se ancla en otra palabra única.
   - ⚠️ Los anchors piden un tramo exacto del pool: si se pone uno que no existe (por ejemplo `C` en 27, que va de 24 a 27 y salta a 30), el montaje corta con `StopIteration`. Hay que mirar la tabla `R` antes de anclar.
 
+## 📘 El producto principal (2026-10-23)
+> Armado entero por código: `~/Desktop/atlas-cortes/producto/`. Nada de fotos de stock ni de IA generativa (regla de Santiago: "no uses ni HeyGen ni Higgsfield"). Todas las ilustraciones son **SVG dibujado por código** y el PDF se imprime con Chrome headless.
+
+- **Entrega:** `~/Desktop/atlas-cortes/producto/out/The-Womens-Cutting-Atlas.pdf` — **56 páginas A4**, 2,1 MB, sirve en celular y para imprimir.
+- **Estructura (cubre 1 a 1 lo que promete la landing):** portada · cómo se usa · índice · **Módulo 1 Core principles** (10 páginas: zonas de la cabeza, las cuatro secciones, patrones de sección, elevación 0/45/90/135, mecha guía, sobredirección, distribución, tensión y posición de cabeza, líneas de corte, mojado o seco) · **Módulo 2 Base shapes** (5: las cuatro formas, sólida, graduada, uniforme, increase) · **Módulo 3 Short cuts** (6 mapas) · **Módulo 4 Mid-length and long** (10 mapas) · **Módulo 5 Texture and movement** (7: shag, wolf, point cutting, notching, slide cutting, dry texturizing, tijera de entresacar y navaja) · **Módulo 6 Adaptations** (5: rizado, pelo fino, pelo denso, remolinos, corregir un corte crecido) · **Referencia** (checklist de consulta, ángulos de un vistazo, glosario, índice de cortes).
+- **25 mapas de corte**, cada uno en una sola página con la estructura exacta que muestra la landing: Technical data (Technique · Angle · Guide · Distribution · Length), silueta del resultado, mapa de secciones, **8 pasos numerados**, Ideal for, Common mistakes, Final check y Pro tip.
+- **Están todos los cortes que la landing muestra de muestra**: Modern Shag, Kitty Cut, Hush Cut, Bixie, Long Bob, la página de las cuatro secciones y la de ángulos de elevación. El comprador encuentra exactamente lo que vio antes de pagar: es la primera palanca contra el reembolso.
+- **Cómo se regenera:** `cd ~/Desktop/atlas-cortes/producto/build && python3 main.py`. `heads.py` dibuja las cabezas (perfil, frente, nuca, cenital), las siluetas de pelo y las mechas con tijera; `render.py` arma las plantillas de página; `content_01..04.py` son el contenido; `style.css` el diseño. `preview.py` recorta páginas sueltas para revisarlas.
+- **Control de calidad:** hay un chequeo de desborde que corre sobre el HTML en Chrome y marca cualquier página cuyo contenido se pase del borde. Al cerrar la versión 1 estaba en cero.
+- ⚠️ **Pendiente:** los mockups de la landing muestran páginas con **fotos**; el producto real son ilustraciones vectoriales. Conviene rehacer los mockups con páginas reales del PDF para que lo que se ve antes de pagar sea lo que se recibe.
+- ⚠️ **Pendiente:** los 5 bonus de la oferta (flequillos, diagnóstico visual, tijeras y herramientas, capas sin líneas, formas de rostro) todavía no están armados. El sistema ya está hecho, así que cada bonus es contenido nuevo sobre las mismas plantillas.
+
 ## Preguntas abiertas
 - ¿Funciona mejor la voz femenina (Sulafat) o conviene probar otra? Todavía no hay datos.
 

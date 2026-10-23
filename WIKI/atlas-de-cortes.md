@@ -58,6 +58,16 @@
 
 - **Tanda v10 a v15 (23/10):** 6 variables de esa DNA, cada una con su momento, su mecanismo y su CTA. Guion 10 "igual que la última vez", 11 "la sección que sobra", 12 "los tres segundos antes del primer corte", 13 "el secado cambia todo", 14 variable de la carpetita (los diez segundos que nadie nota) y 15 "la que viene a arreglar un corte de otra". `OUTPUTS/2026-10-23-guiones-atlas-cortes-v10-v15.md` y `~/Desktop/atlas-cortes/guiones-v10-v15.md`.
 
+
+## 🎬 Tanda del 23/10: los 3 elegidos
+De la v10–v15 se eligieron 3 para producir, por qué cada uno:
+- **V10 "same as last time"** — la clienta vuelve y pide el mismo corte de hace seis meses. Territorio de V2/V3 (fricción con la clienta presente) con un momento que todavía no usamos.
+- **V12 "scissors in the air"** — los tres segundos de pausa antes del primer corte. Es lo más cercano a "An angled bob, where do you start", el ad ajeno que corre a $11,02.
+- **V14 UGC con avatar de HeyGen** — variable de V6 (la carpetita), el mejor CPA con volumen real. Reescrito en primera persona: la estilista que mira el celular diez segundos antes de cada corte. Guion y prompt del avatar en `OUTPUTS/2026-10-23-guion-ugc-avatar-atlas.md`.
+- Descartados: 11 (muy técnico), 13 (se pisa con el V9 de rizado) y 15 (más de nicho).
+- **Videos listos (23/10):** `~/Desktop/atlas-cortes/AT-V10.mp4` (29,1 s, 11 planos) y `AT-V12.mp4` (36,5 s, 15 planos), 9:16, voz Sulafat, revisados con hoja de contactos. Falta el V14 con avatar.
+- Producción: V10 y V12 con el pipeline de siempre (voz Sulafat en AI Studio + `edit_atlas.py`, planes nuevos en `work/plans/gen.py`). El receptor local del Atlas corre en el **puerto 8768**, porque el 8765 queda tomado por otras ofertas.
+
 ## Detalles / notas
 - Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.
 - **Descripción definitiva (2026-10-22):** una sola, EN + ES, para acompañar los 6 videos (el competidor usa el mismo copy en todos sus ads). Junta el hook más duplicado ("saber ≠ recordar"), la duda a mitad del corte, los bullets del producto, los 5 bonus y el desactivador de objeción. `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` y `~/Desktop/atlas-cortes/descripcion-ads.md`.
@@ -90,6 +100,8 @@
   - El anchor de la placa final gana a cualquier otro.
   - La colección queda fija hasta el último cuadro.
   - Ningún chip pisa la placa final.
+  - 🆕 **2026-10-23 · `noflip` en los clips con números o texto.** El editor espeja un tramo cuando ya se usó un número impar de veces, y eso daba vuelta los ángulos dibujados del clip C (0°, 45°, 90°): se leía "45" al revés. Se agregó la opción `noflip` a `edit_atlas.py` (igual que las fotos, que nunca se espejan) y el clip C quedó marcado en `gen.py`. Cualquier B-roll con texto en pantalla va marcado así.
+  - 🆕 **2026-10-23 · Chips de hasta ~30 caracteres.** "First section · guide · elevation" (34) se salía del borde; con "Section · guide · elevation" entra. Antes de entregar, mirar la hoja de contactos.
   - ⚠️ Los anchors piden un tramo exacto del pool: si se pone uno que no existe (por ejemplo `C` en 27, que va de 24 a 27 y salta a 30), el montaje corta con `StopIteration`. Hay que mirar la tabla `R` antes de anclar.
 
 ## Preguntas abiertas

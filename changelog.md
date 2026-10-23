@@ -1,3 +1,10 @@
+## 2026-10-23 — Atlas de Cortes: tanda de 3 y dos videos terminados
+
+- Se eligieron los 3 mejores de la v10–v15: V10 ("same as last time"), V12 ("scissors in the air") y V14 (UGC con avatar, variable del V6).
+- **AT-V10.mp4** (29,1 s) y **AT-V12.mp4** (36,5 s) hechos con voz Sulafat y `edit_atlas.py`. Planes nuevos en `work/plans/gen.py`.
+- Nuevo: `OUTPUTS/2026-10-23-guion-ugc-avatar-atlas.md` con el guion UGC en primera persona y el prompt de la imagen base del avatar de HeyGen.
+- Mejora del editor: opción **`noflip`** en `edit_atlas.py` para los clips con números o texto en pantalla (el ángulo "45" salía espejado). Anotado en `WIKI/atlas-de-cortes.md`.
+
 ## 2026-10-23 — Atlas de Cortes: análisis de los ads que venden y tanda v10 a v15
 
 - Santiago pasó la captura de los 10 conjuntos activos del Women's Cutting Atlas (~23 compras, ~390 USD, frecuencia 1,08–1,16).

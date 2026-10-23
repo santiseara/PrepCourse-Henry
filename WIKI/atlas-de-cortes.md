@@ -66,7 +66,7 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - **V14 UGC con avatar de HeyGen** — variable de V6 (la carpetita), el mejor CPA con volumen real. Reescrito en primera persona: la estilista que mira el celular diez segundos antes de cada corte. Guion y prompt del avatar en `OUTPUTS/2026-10-23-guion-ugc-avatar-atlas.md`.
 - Descartados: 11 (muy técnico), 13 (se pisa con el V9 de rizado) y 15 (más de nicho).
 - **Avatar de HeyGen (23/10):** **"Emily Carter - Cutting Atlas"**, creado desde la foto que hizo Santiago con ChatGPT (`~/Downloads/Retrato cálido de peluquera en el salón.png`, copia en el scratchpad como `avatar-stylist.png`). Voz **Annie - Lifelike** (US, femenina, natural, middle-age) de la biblioteca de HeyGen. Flujo: Nuevo Avatar → Un personaje nuevo → Empezar → Subir foto (por `file_upload` sobre el `input[type=file]`, nunca clic) → nombre → Ponles voz → Usar otra voz → Biblioteca HeyGen → Usar en un video → Creación rápida → pegar el guion con `execCommand('insertText')` → formato Retrato → botón ↑.
-- **Videos listos (23/10):** `~/Desktop/atlas-cortes/AT-V10.mp4` (29,1 s, 11 planos), `AT-V12.mp4` (36,5 s, 15 planos) y `AT-V14.mp4` (34,5 s, 12 planos, el del avatar), 9:16, revisados con hoja de contactos.
+- **Videos listos (23/10):** `~/Desktop/atlas-cortes/anuncios/AT-V10.mp4` (29,1 s, 11 planos), `AT-V12.mp4` (36,5 s, 15 planos) y `AT-V14.mp4` (34,5 s, 12 planos, el del avatar), 9:16, revisados con hoja de contactos.
 - **Editor nuevo para el avatar (23/10): `OUTPUTS/scripts-vsl/edit_atlas_avatar.py`.** `edit_atlas.py` es solo voz en off con B-roll: nunca muestra una cara. Para el UGC con avatar la base es el video de HeyGen (habla a cámara todo el tiempo) y se corta a B-roll o a una foto del producto solo en las palabras marcadas. Como la voz sale del propio video, **no se recortan silencios**: video y audio se aceleran juntos (`speed: 1.08`) para no romper el lipsync. Mantiene la estética del Atlas: subtítulos en caja fucsia, chips rosas y placa final. El plan se arma con `work/plans/gen14.py` y lleva `cutaways` (palabra, ocurrencia, clip, segundo, duración) en lugar de `pool` + `anchors`. Dos cortes seguidos a menos de 0,5 s se ignoran solos (por eso el corte de "elevation" quedó cubierto por el de "sectioning").
 - **Descarga desde HeyGen:** `fetch` al src del `<video>` falla por CORS. Se baja con el botón de descarga de la tarjeta (icono ↓ → "Descargar") y el archivo cae en `~/Downloads` como `Vídeo de Avatar_1080p (N).mp4`.
 - Producción: V10 y V12 con el pipeline de siempre (voz Sulafat en AI Studio + `edit_atlas.py`, planes nuevos en `work/plans/gen.py`). El receptor local del Atlas corre en el **puerto 8768**, porque el 8765 queda tomado por otras ofertas.
@@ -78,7 +78,7 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 
 ## Cómo se arma un video (2026-10-21)
 1. **Voz:** Google AI Studio, Gemini 3.1 Flash TTS Preview, voz femenina **Sulafat** (Warm). Scene: *"An American hairstylist in her mid 30s recording a voiceover for a TikTok ad, talking to other stylists. Warm, confident, relatable and conversational… no announcer tone"*. Se genera por JS (`_setTA(2, texto)`, click en Run y esperar que el `data:` del `<audio>` deje de crecer 3 s y pase los 300 KB). Si se captura antes, sale un WAV de 2 KB. Se manda por POST a un receptor local (127.0.0.1:8765). Salen de 32 a 39 s.
-2. **B-roll:** TikToks bajados con `yt-dlp -f best` (son HEVC; con el filtro `vcodec^=h264` fallan todos). URL: `https://www.tiktok.com/@usuario/video/ID`. Seis fuentes limpias en `~/Desktop/atlas-cortes/work/tiktoks/`:
+2. **B-roll:** TikToks bajados con `yt-dlp -f best` (son HEVC; con el filtro `vcodec^=h264` fallan todos). URL: `https://www.tiktok.com/@usuario/video/ID`. Seis fuentes limpias en `~/Desktop/atlas-cortes/anuncios/material/tiktoks/`:
    - `7261610337856736519`: butterfly en cabeza de práctica. Usar 3–39 s y el resultado de 48–54 s. Excluir el texto del 0–2 s, el producto del 42 s y la cara del 45 s.
    - `7591869980547829047`: bob en cabeza de práctica. Tiene textos arriba, así que va con zoom 1.2 y `ybias` 1.
    - `7668379090566565128`: pixie en salón con ángulos dibujados (0°, 45°, 90°). Ideal para "elevation".
@@ -87,10 +87,10 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
    - `7429148086867479813`: bob en cabeza de práctica. Tiene el cartel "Corte Bob" abajo, así que va con zoom 1.35 y `ybias` 0.
    - Descartados: los "me lo corto en casa" (cara a cámara, otro público), los de barbería y los dúos con cara de reacción.
 3. **Producto:** el mockup de páginas y el de la colección que pasó Santiago. Se recortan las páginas (Key Zones, Pixie with Fringe, Diagonal Forward Line, Curly, Natural, tapa) como placas fijas. La colección va sobre degradé berenjena en la placa final. Está en `work/stills/`. Ojo: no sacar el blanco del mockup de páginas, porque se borra el papel.
-4. **Edición:** `OUTPUTS/scripts-vsl/edit_atlas.py plan.json salida.mp4`, una copia de `edit_infinity.py` con la estética del competidor: subtítulos en caja fucsia (Arial Black, minúscula, palabra activa en dorado), chips fucsia, tarjeta de precio berenjena con borde dorado y placa final "THE WOMEN'S CUTTING ATLAS" + colección + CTA fucsia. Los planes salen de `~/Desktop/atlas-cortes/work/plans/gen.py`, con anchors palabra → plano: "Sectioning" → 0°, "elevation" → 45°, "pixie" → pixie terminado, "Women's" → tapa, "Map" → página.
+4. **Edición:** `OUTPUTS/scripts-vsl/edit_atlas.py plan.json salida.mp4`, una copia de `edit_infinity.py` con la estética del competidor: subtítulos en caja fucsia (Arial Black, minúscula, palabra activa en dorado), chips fucsia, tarjeta de precio berenjena con borde dorado y placa final "THE WOMEN'S CUTTING ATLAS" + colección + CTA fucsia. Los planes salen de `~/Desktop/atlas-cortes/anuncios/material/plans/gen.py`, con anchors palabra → plano: "Sectioning" → 0°, "elevation" → 45°, "pixie" → pixie terminado, "Women's" → tapa, "Map" → página.
 
 ## Activos
-- **Videos (2026-10-21):** `~/Desktop/atlas-cortes/AT-V1..V6.mp4`, de 29 a 36 s, 9:16, voz Sulafat. Guiones al lado, en `guiones-videos.md`.
+- **Videos (2026-10-21):** `~/Desktop/atlas-cortes/anuncios/AT-V1..V6.mp4`, de 29 a 36 s, 9:16, voz Sulafat. Guiones al lado, en `guiones-videos.md`.
   - V1 "Saber ≠ recordar", V2 "Un lado distinto al otro" (rehecho el 21/10: el de "La foto" repetía al V1), V3 "A mitad del corte" y V4 "¿Cuántos cortes rechazás?" son los del competidor.
   - V5 "La cuenta" ($70–90 → casi $1.000 por mes) y V6 "La carpetita de la estilista" son variables nuestras.
 - **Los que mejor rindieron (dato de Santiago, 22/10): V2 ("Ever finish a cut and one side came out different?") y V3 ("You're halfway through the cut and suddenly… what's next?").** Los dos son el mismo territorio: un momento concreto de fricción durante el servicio y el desculpabilizante "no es tu técnica". Esa es la DNA a variar en esta oferta.
@@ -98,7 +98,7 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
   - V7 "Viernes a la noche mirando tutoriales": la clienta reserva un wolf cut para el sábado. Mecanismo: el corte en una sola página. CTA "Open the map".
   - V8 "El corte salió bárbaro, te llevó una hora cuarenta": no son manos lentas, es trabajar sin la secuencia adelante. Mecanismo: los mapas numerados. CTA "Check the sequence".
   - V9 "Se secó y el rulo subió": el plan de pelo lacio no sirve para rizado. Mecanismo: el mapa de adaptación a rulos, distribución natural y encogimiento. CTA "see how the curly maps work".
-- Carpeta de trabajo: `~/Desktop/atlas-cortes/work/` (`tiktoks/`, `vo/`, `stills/`, `plans/`, `sheets/`).
+- Carpeta de trabajo: `~/Desktop/atlas-cortes/anuncios/material/` (`tiktoks/`, `vo/`, `stills/`, `plans/`, `sheets/`, `heygen/`, `referencias-ugc/`).
 - Ajustes del editor durante la tanda:
   - El anchor de la placa final gana a cualquier otro.
   - La colección queda fija hasta el último cuadro.
@@ -108,14 +108,32 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
   - 🆕 **2026-10-23 · Antes de anclar un chip, buscar la palabra en todo el guion.** El chip "Nobody ever noticed" salió en el segundo 1 porque "noticed" también estaba en la primera frase ("something I noticed at my first salon job") y `wt()` toma la ocurrencia 0. Se arregló con `'occ': 1`. Si la palabra se repite, va con `occ`, o se ancla en otra palabra única.
   - ⚠️ Los anchors piden un tramo exacto del pool: si se pone uno que no existe (por ejemplo `C` en 27, que va de 24 a 27 y salta a 30), el montaje corta con `StopIteration`. Hay que mirar la tabla `R` antes de anclar.
 
+## 🗂️ Orden de la carpeta (2026-10-23)
+> Santiago: *"Ordename la carpeta de la oferta. Ordenámelo por anuncios producto."* Desde ahora toda oferta se ordena así, con un `LEEME.md` en la raíz que explica qué hay en cada lado.
+
+```
+~/Desktop/atlas-cortes/
+├── LEEME.md
+├── producto/
+│   ├── The-Womens-Cutting-Atlas.pdf   ← el entregable, en la raíz de producto (no enterrado en out/)
+│   ├── muestras/                      ← páginas sueltas en PNG
+│   └── fuente/                        ← el código que genera el PDF
+└── anuncios/
+    ├── AT-V*.mp4                      ← videos listos para subir
+    ├── guiones/                       ← guiones, guion UGC, descripción de los ads
+    └── material/                      ← crudo (vo, stills, tiktoks, heygen, plans, sheets, referencias-ugc)
+```
+
+- **El entregable va en la raíz de su carpeta**, con el nombre del producto. Nada de `out/`, `build/`, `work/` a la vista: el crudo vive en `material/` o `fuente/`.
+
 ## 📘 El producto principal (2026-10-23)
 > Armado entero por código: `~/Desktop/atlas-cortes/producto/`. Nada de fotos de stock ni de IA generativa (regla de Santiago: "no uses ni HeyGen ni Higgsfield"). Todas las ilustraciones son **SVG dibujado por código** y el PDF se imprime con Chrome headless.
 
-- **Entrega:** `~/Desktop/atlas-cortes/producto/out/The-Womens-Cutting-Atlas.pdf` — **56 páginas A4**, 2,1 MB, sirve en celular y para imprimir.
+- **Entrega:** `~/Desktop/atlas-cortes/producto/The-Womens-Cutting-Atlas.pdf` — **56 páginas A4**, 2,1 MB, sirve en celular y para imprimir.
 - **Estructura (cubre 1 a 1 lo que promete la landing):** portada · cómo se usa · índice · **Módulo 1 Core principles** (10 páginas: zonas de la cabeza, las cuatro secciones, patrones de sección, elevación 0/45/90/135, mecha guía, sobredirección, distribución, tensión y posición de cabeza, líneas de corte, mojado o seco) · **Módulo 2 Base shapes** (5: las cuatro formas, sólida, graduada, uniforme, increase) · **Módulo 3 Short cuts** (6 mapas) · **Módulo 4 Mid-length and long** (10 mapas) · **Módulo 5 Texture and movement** (7: shag, wolf, point cutting, notching, slide cutting, dry texturizing, tijera de entresacar y navaja) · **Módulo 6 Adaptations** (5: rizado, pelo fino, pelo denso, remolinos, corregir un corte crecido) · **Referencia** (checklist de consulta, ángulos de un vistazo, glosario, índice de cortes).
 - **25 mapas de corte**, cada uno en una sola página con la estructura exacta que muestra la landing: Technical data (Technique · Angle · Guide · Distribution · Length), silueta del resultado, mapa de secciones, **8 pasos numerados**, Ideal for, Common mistakes, Final check y Pro tip.
 - **Están todos los cortes que la landing muestra de muestra**: Modern Shag, Kitty Cut, Hush Cut, Bixie, Long Bob, la página de las cuatro secciones y la de ángulos de elevación. El comprador encuentra exactamente lo que vio antes de pagar: es la primera palanca contra el reembolso.
-- **Cómo se regenera:** `cd ~/Desktop/atlas-cortes/producto/build && python3 main.py`. `heads.py` dibuja las cabezas (perfil, frente, nuca, cenital), las siluetas de pelo y las mechas con tijera; `render.py` arma las plantillas de página; `content_01..04.py` son el contenido; `style.css` el diseño. `preview.py` recorta páginas sueltas para revisarlas.
+- **Cómo se regenera:** `cd ~/Desktop/atlas-cortes/producto/fuente && python3 main.py` (deja el PDF en `producto/`). `heads.py` dibuja las cabezas (perfil, frente, nuca, cenital), las siluetas de pelo y las mechas con tijera; `render.py` arma las plantillas de página; `content_01..04.py` son el contenido; `style.css` el diseño. `preview.py` recorta páginas sueltas para revisarlas.
 - **Control de calidad:** hay un chequeo de desborde que corre sobre el HTML en Chrome y marca cualquier página cuyo contenido se pase del borde. Al cerrar la versión 1 estaba en cero.
 - ⚠️ **Pendiente:** los mockups de la landing muestran páginas con **fotos**; el producto real son ilustraciones vectoriales. Conviene rehacer los mockups con páginas reales del PDF para que lo que se ve antes de pagar sea lo que se recibe.
 - ⚠️ **Pendiente:** los 5 bonus de la oferta (flequillos, diagnóstico visual, tijeras y herramientas, capas sin líneas, formas de rostro) todavía no están armados. El sistema ya está hecho, así que cada bonus es contenido nuevo sobre las mismas plantillas.

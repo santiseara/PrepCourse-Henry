@@ -1,7 +1,14 @@
+## 2026-10-23 — The Women's Cutting Atlas: carpeta ordenada por entregable
+
+- Santiago: *"Me lo tenés que mandar en PDF. No sé en dónde lo dejaste. Ordename la carpeta de la oferta. Ordenámelo por anuncios producto."* El PDF estaba enterrado en `producto/out/`.
+- `~/Desktop/atlas-cortes/` quedó con **dos carpetas y un `LEEME.md`**: `producto/` (el PDF en la raíz + `muestras/` + `fuente/`) y `anuncios/` (los 12 `AT-V*.mp4` + `guiones/` + `material/` con todo el crudo).
+- `render.py` ahora escribe el PDF en `producto/` y el HTML intermedio en `fuente/`. Reconstruido y verificado: 56 páginas, 2,1 MB.
+- Regla nueva en `WIKI/atlas-de-cortes.md` (**Orden de la carpeta**) y en la memoria `carpeta-por-oferta`: el entregable final va en la raíz de su carpeta con el nombre del producto, el crudo en `material/` o `fuente/`.
+
 ## 2026-10-23 — The Women's Cutting Atlas: el producto principal, armado por código
 
-- Se armó el producto completo de la oferta de pelo: **`~/Desktop/atlas-cortes/producto/out/The-Womens-Cutting-Atlas.pdf`**, 56 páginas A4, 25 mapas de corte, 6 módulos y sección de referencia.
-- **Todas las ilustraciones son SVG generado por código** (`producto/build/heads.py`): cuatro vistas de la cabeza, siluetas de pelo por corte, diagramas de elevación con transportador, patrones de sección y mechas con tijera. Cero fotos, cero Higgsfield, cero HeyGen.
+- Se armó el producto completo de la oferta de pelo: **`~/Desktop/atlas-cortes/producto/The-Womens-Cutting-Atlas.pdf`**, 56 páginas A4, 25 mapas de corte, 6 módulos y sección de referencia.
+- **Todas las ilustraciones son SVG generado por código** (`producto/fuente/heads.py`): cuatro vistas de la cabeza, siluetas de pelo por corte, diagramas de elevación con transportador, patrones de sección y mechas con tijera. Cero fotos, cero Higgsfield, cero HeyGen.
 - El PDF se arma con Chrome headless desde HTML + CSS (`render.py`, `style.css`, `content_01..04.py`, `main.py`), así que cualquier corrección se re-renderiza en segundos.
 - La estructura de cada mapa copia la que la landing muestra de muestra (Technical data, 8 pasos, Ideal for, Common mistakes, Final check, Pro tip) y están incluidos todos los cortes que la landing enseña antes de pagar.
 - Detalles en `WIKI/atlas-de-cortes.md`, sección **El producto principal**, con los dos pendientes: rehacer los mockups de la landing con páginas reales y armar los 5 bonus.

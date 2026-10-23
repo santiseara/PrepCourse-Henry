@@ -1,3 +1,9 @@
+## 2026-10-23 — Atlas de Cortes: AT-V14, el UGC con avatar de HeyGen
+
+- **AT-V14.mp4** (34,5 s, 12 planos) terminado: avatar "Emily Carter - Cutting Atlas" con voz Annie - Lifelike, generado en HeyGen y bajado con el botón de descarga de la tarjeta (el `fetch` al `<video>` falla por CORS).
+- Nuevo editor **`OUTPUTS/scripts-vsl/edit_atlas_avatar.py`**: la base es el video del avatar y se corta a B-roll o al producto solo en las palabras marcadas. Video y audio se aceleran juntos (1,08) para no romper el lipsync; mantiene subtítulos fucsia, chips y placa final del Atlas. Plan en `work/plans/gen14.py` + `V14.json`, guion en `work/vo/V14.txt`.
+- Regla nueva en `WIKI/atlas-de-cortes.md`: antes de anclar un chip hay que buscar la palabra en todo el guion. "Nobody ever noticed" salía en el segundo 1 porque "noticed" también está en la primera frase; se arregla con `occ`.
+
 ## 2026-10-23 — Atlas de Cortes: tanda de 3 y dos videos terminados
 
 - Se eligieron los 3 mejores de la v10–v15: V10 ("same as last time"), V12 ("scissors in the air") y V14 (UGC con avatar, variable del V6).

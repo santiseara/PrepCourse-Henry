@@ -1,3 +1,9 @@
+## 2026-10-22 (tarde III) — The Group Work Playbook: la descripción definitiva
+
+- Pidió **una** descripción para los ads (no una tanda). `OUTPUTS/2026-10-22-descripcion-ads-group-work-playbook-definitiva.md`, EN + ES, con el molde que ya usamos en el Atlas de Cortes: verdad del avatar → el momento del documento en blanco → reframe → una ficha por dinámica con bullets de íconos → los 5 bonos → frase de estado nuevo → CTA sin precio.
+- Ángulo elegido: **saber sostener un grupo ≠ tener la hora armada**. Sirve para los seis videos de la tanda, así que reemplaza a las 9 descripciones anteriores como primary text por defecto.
+- Sin frases repetidas de `2026-10-22-descripciones-ads-group-work-playbook.md` ni de su v2.
+
 ## 2026-10-22 (tarde II) — Pilates sin Vueltas: guiones v2 y los 6 videos
 
 - **Corrección de Santiago:** los guiones v1 copiaban la plantilla fija del competidor. Regla nueva en `WIKI/guiones-y-anuncios.md`: se modela **el ángulo ganador**, no la plantilla; cada guion con estructura y cierre propios.

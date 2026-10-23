@@ -89,6 +89,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-23 — Guiones piedras v21 ingresos extra](../OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md) — 6 guiones EN + ES (23/10 - 1 a 6): la regalería que pide 80, el pedido de casamiento que paga el seguro, la reposición mensual, vender sin mostrar la cara, la jubilada de 61 y cuánto arriesgás · ver [[scented-stones]]
 - [2026-10-22 — Descripción de ads The Group Work Playbook](../OUTPUTS/2026-10-22-descripcion-ads-group-work-playbook-definitiva.md) — la definitiva, EN + ES, una sola para los 6 videos: la hora en blanco · ver [[group-work-playbook]]
 - [2026-10-22 — Guiones Pilates sin Vueltas](../OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md) — 6 guiones de 1:30 en voseo (22/10 - 1 a 6): clase de prueba, la de 74, posparto, prótesis de rodilla, el cuerpo rígido y la objeción de la app, más primary text · ver [[pilates-sin-vueltas]]
 - [2026-10-22 — Análisis de ads de Talleres Listos](../OUTPUTS/2026-10-22-analisis-ads-talleres-listos.md) — ranking real por impresiones de sus 16 ganadores, los 5 patrones que los explican y los 5 huecos que no tocan · ver [[group-work-playbook]]

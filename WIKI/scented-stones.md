@@ -49,6 +49,7 @@
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
 ## Variables posibles (ideas de próxima tanda)
+✅ **Usadas en la v21 (23/10):** la regalería que pide más de lo que podés hacer, un pedido de casamiento que paga un gasto fijo, la reposición mensual como ingreso que se repite, vender sin mostrar la cara, la jubilada de 61 y la cuenta de cuánto arriesgás al probar. Siguen libres: nostalgia de la abuela, FREE today, testimonio de 14 s del escéptico convertido y la versión larga del guion de la contadora (`OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md`).
 - Hook de eliminación de objeciones: "No kiln. No fancy tools. No experience." ([[hooks]])
 - Nostalgia: "My grandma's salt-dough trick turned into $1,200 a month."
 - Versión larga (1:30) del guión 3: "la que juzgaba y se redime", para público frío ([[guiones-de-video-ads]]).

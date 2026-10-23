@@ -1,3 +1,10 @@
+## 2026-10-23 — Piedras: tanda v21 de guiones
+
+- **Entregado:** `OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md`, 6 guiones EN + ES de 56 a 63 s (23/10 - 1 a 6).
+- Seis ángulos que no estaban usados, todos en el carril de ingresos extra que pidió el 21/10: demanda del local por encima de la capacidad, un pedido grande que cubre un gasto fijo, la reposición mensual como ingreso recurrente, vender sin mostrar la cara, la jubilada de 61 y la cuenta del riesgo real de probar.
+- Estructura y CTA propios en cada uno, y los números tomados de la landing (yeso, menos de $15 para arrancar, 40-60 piedras por noche de vertido, $6 por mayor, pedido de casamiento de 120 piezas).
+- `WIKI/scented-stones.md`: marcadas como usadas las ideas de próxima tanda que entraron en esta v21 y las que siguen libres.
+
 ## 2026-10-22 (tarde III) — The Group Work Playbook: la descripción definitiva
 
 - Pidió **una** descripción para los ads (no una tanda). `OUTPUTS/2026-10-22-descripcion-ads-group-work-playbook-definitiva.md`, EN + ES, con el molde que ya usamos en el Atlas de Cortes: verdad del avatar → el momento del documento en blanco → reframe → una ficha por dinámica con bullets de íconos → los 5 bonos → frase de estado nuevo → CTA sin precio.

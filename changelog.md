@@ -1,3 +1,11 @@
+## 2026-10-23 — Herrero de Finde: material de los videos V7–V12 listo (faltan las voces)
+
+- Santiago: *"Armame los videos."* Quedó todo armado menos la voz en off: **la extensión de Chrome pierde la pestaña entre llamada y llamada** (el grupo de pestañas desaparece después del primer click), así que no se pudieron grabar las 6 voces en AI Studio.
+- **Textos de voz** en `anuncios/work/vo/V7.txt` a `V12.txt`.
+- **Fichas nuevas:** las 4 hojas de un plano en español generadas por código (`anuncios/work/stills/mk_hojas.py`): el dibujo, la lista de compras, la lista de cortes y el orden de soldadura. Las `hdf-pagina-*.webp` del original no sirven para el ad: están en inglés y llevan la marca del competidor.
+- **Planes de edición** `V7.json` a `V12.json` con `anuncios/work/plans/gen2.py`, verificados (todas las palabras ancla existen en su guion).
+- **Corrección de números:** el V8 y el V9 tenían precios inventados. Se cambiaron por planos reales de la landing (protector de cabina, botellero, hoja de portón, escalera, pérgola). Regla anotada en `WIKI/herrero-de-finde.md`.
+
 ## 2026-10-23 — Herrero de Finde: lectura de la primera tanda y 6 variables nuevas
 
 - Santiago pasó los números de los 6 conjuntos del 23/10: **76,57 USD, 7 compras, CPA 10,94**. *"Consiguió ventas, pero tampoco tanto, hay que agarrar lo que funcionó y mejorarlo."*

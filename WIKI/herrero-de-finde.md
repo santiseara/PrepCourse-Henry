@@ -67,7 +67,13 @@
 - **Lo que no:** el V1 (anécdota "un tipo me dijo…", trailers) es el único con cero ventas. En este nicho la historia antes de la plata no entra.
 - El V2 ("sumá lo que tenés en el garage") se apagó con el segundo mejor CPA (8,70) y un solo presupuesto gastado. Su ángulo vuelve mejorado en el V11.
 - **Regla que sale de acá:** todo guion de Herrero de Finde arranca con un número o una comparación de plata en el primer segundo, y el cuerpo siempre trae costo de material → precio de venta sugerido.
-- **Tanda V7–V12 (2026-10-23):** `OUTPUTS/2026-10-23-guiones-herrero-de-finde-v7-v12.md`. Comparación de costo (alambre tubular), lista de 5 trabajos que te piden y nunca cotizás, un trabajo en un finde (portón corredizo), escalera para el que nunca vendió (fogonero), inventario del garage y recorrido de lo que hay adentro del pack.
+- **Tanda V7–V12 (2026-10-23):** `OUTPUTS/2026-10-23-guiones-herrero-de-finde-v7-v12.md`. Comparación de costo (alambre tubular), lista de 5 trabajos que te piden y nunca cotizás, una hoja de portón en un finde, escalera para el que nunca vendió (fogonero), inventario del garage y recorrido hoja por hoja de lo que hay adentro.
+- **Regla nueva: los números salen de fichas reales.** En el borrador del V8 y del V9 había precios inventados (reja de ventana, asador con carro, portón corredizo). Se reemplazaron por planos que existen de verdad, con los precios de la landing: protector de cabina (TK-082, $283.000 → $590.000-$765.000), botellero (FN-139, $327.000 → $885.000-$1.150.000), hoja de portón 3,66 (FM-068, $883.000 → $1.480.000-$1.925.000), escalera de hierro (ST-064, $1.322.000 → $2.440.000-$3.170.000) y pérgola (ST-015, $1.429.000 → $2.605.000-$3.385.000). Antes de escribir un número en un guion, se busca la ficha; si no existe, se cambia el ítem.
+
+## Material nuevo para los videos V7–V12 (2026-10-23)
+- **Las 4 hojas de un plano en español**, generadas por código: `anuncios/work/stills/mk_hojas.py` → `hoja-1-dibujo.png` (tres vistas + medida total), `hoja-2-compras.png` (lista de compras y total $961.000 → precio de venta), `hoja-3-cortes.png` (tabla A-H con largo de corte) y `hoja-4-soldadura.png` (14 pasos). Mismo estilo que las fichas. **Reemplazan a las `hdf-pagina-*.webp` del original, que están en inglés y llevan la marca del competidor.**
+- **Planes de edición:** `anuncios/work/plans/gen2.py` genera `V7.json` a `V12.json` con la estética v2 (música, zoom, destellos, barra de progreso) y comparte `usage.json` con la tanda anterior para no repetir recortes.
+- **Textos de voz:** `anuncios/work/vo/V7.txt` a `V12.txt`, listos para pegar en AI Studio.
 
 ## Preguntas abiertas
 - **Producto:** ¿de dónde sale la biblioteca de planos en español? Las 8 páginas del carrusel "Abrí un plano" son del original y están en inglés.

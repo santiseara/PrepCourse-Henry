@@ -108,6 +108,13 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
   - 🆕 **2026-10-23 · Antes de anclar un chip, buscar la palabra en todo el guion.** El chip "Nobody ever noticed" salió en el segundo 1 porque "noticed" también estaba en la primera frase ("something I noticed at my first salon job") y `wt()` toma la ocurrencia 0. Se arregló con `'occ': 1`. Si la palabra se repite, va con `occ`, o se ancla en otra palabra única.
   - ⚠️ Los anchors piden un tramo exacto del pool: si se pone uno que no existe (por ejemplo `C` en 27, que va de 24 a 27 y salta a 30), el montaje corta con `StopIteration`. Hay que mirar la tabla `R` antes de anclar.
 
+
+## 📝 Natives (23/10)
+- Primera tanda de natives de la oferta: 3, solo en inglés, en `OUTPUTS/2026-10-23-natives-atlas-cortes.md` y en `~/Desktop/atlas-cortes/anuncios/natives/`. Arquitectura modelada del nicho de pelo en US (ver [[natives-ganadoras]]).
+- **El relevamiento dio dos cosas:** (1) nadie en el mundo corre natives de copy largo apuntadas a peluqueras — el nicho es todo video; (2) la voz que ya gana en el mundo del pelo es la **cosmetóloga veterana con dirección exacta** (nombre, edad, años de licencia, ciudad, su salón), con 15+ páginas corriéndola hoy, pero vendiéndole al consumidor final. Somos los primeros en apuntarla a la estilista.
+- Las narradoras son tres y distintas (Rhonda en Fort Wayne, Gina en Erie, Lorraine en Tucson): nada de una Emma única como en [[scented-stones]], porque en el nicho de pelo cada native ganadora usa otro nombre y otro pueblo.
+- La imagen es foto de celular 3:4 **sin caras**, con un objeto que hace de prueba: el cajón del sillón con hojas laminadas pegadas por dentro, dos montoncitos de pelo distintos en el piso al barrer, el celular apoyado en el espejo con un mapa abierto al lado de la tijera. Los tres objetos son coherentes con el producto real (páginas vectoriales, no fotos).
+
 ## 🗂️ Orden de la carpeta (2026-10-23)
 > Santiago: *"Ordename la carpeta de la oferta. Ordenámelo por anuncios producto."* Desde ahora toda oferta se ordena así, con un `LEEME.md` en la raíz que explica qué hay en cada lado.
 

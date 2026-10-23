@@ -86,6 +86,44 @@ Cuatro natives de 1.500 a 2.500 palabras, cada una con otro nombre y otro pueblo
 ## Natives propias de la tanda 23/10
 - `OUTPUTS/2026-10-23-natives-piedras-22-y-23.md`: las dos primeras escritas con la arquitectura de Thrift AI. **22 = el cajón de la mesa de luz** (Cheryl, 57, Zanesville OH, encuentra en el cajón de la vecina que se muda la piedra que le regaló hace seis años, chipeada y con la flor marrón; la hija de la vecina, 34, le dice que estuvo "haciendo keepsakes y poniéndoles precio de souvenir"). **23 = "reads as homemade"** (Brenda, 58, Elkhart IN, la rechazan de la feria del pueblo con dos líneas y tiene el mail pegado dentro de la puerta del armario; una expositora de 34 le explica las cuatro diferencias en el estacionamiento: "homemade and handmade are one letter apart and about forty dollars"). Las dos de 1.528 palabras, voz nueva, sin Emma, y el bloque de los cuatro errores (masa de sal, flor fresca, fragancia a destiempo y celofán) como demo de lo que el producto dice que NO antes de decir que sí.
 
+
+## 💇 DNA de las natives ganadoras del nicho de pelo (relevada 23/10/2026)
+> Para [[atlas-de-cortes]]. Análisis completo en `OUTPUTS/2026-10-23-analisis-natives-nicho-pelo.md`. Relevado a mano en la Ads Library (la tool `ads_library_search` del conector **no sirve para esto**: no devuelve el cuerpo del anuncio y el matching de keywords trae basura. Para natives hay que ir por browser con `media_type=image` y leer el texto).
+
+- ⭐ **Hallazgo 1: no existe una sola native de copy largo apuntada a peluqueras.** "for stylists" da 7 resultados (extensiones y alquiler de sillón), "cosmetology school" 11, `hairstylist` en US 430 (todos salones locales). El nicho de educación para estilistas corre **100% video**. Hueco abierto.
+- ⭐ **Hallazgo 2: la voz que ya ganó en el mundo del pelo es la de la cosmetóloga veterana**, pero vendiéndole al consumidor final (caída de pelo). Es una industria: Dr. Emily Hartman (15 ads activos), Areliaa (8), Hair By Anna Lee (5), My Healthy Skin (4), Alopecia Reset (3), Dr. Lisa Downing (2), Everly, Sandra Mitchell. El mismo cuerpo corriendo en páginas distintas = ya pasó el test interno. Usan esa voz **incluso para vender fibromialgia** ("I've done hair for 41 years…"): así convierte.
+- Hooks al aire: *"I pull 47 clumps of hair out of women's brushes every single day. I won't use a single hair growth product in my own salon."* (Donna Whitfield, 58, 31 años, Knoxville TN) · *"I style 40 women a week. I watch them stare at their part line in my mirror and try not to cry."* · *"I have been cutting the same man's hair every three weeks for twenty-six years, and last March he sat down in my chair and asked me, very politely, what my name was."*
+
+**Arquitectura (desarmada sobre la de Donna Whitfield, ~3.900 palabras):**
+1. Hook = **número contado + una negativa + promesa de secreto**. Nunca promesa genérica.
+2. Credencial con dirección exacta: nombre, edad, años de licencia, ciudad, su salón.
+3. Autoridad por las manos: "lo sé antes de que me lo digan, lo siento cuando le meto los dedos".
+4. Escalera temporal del dolor: cómo llega, a los 3 meses, a los 6, al año, cuándo deja de venir.
+5. **Una clienta con nombre y apellido como tragedia**, en el centro del texto, con el producto todavía inexistente.
+6. Reencuadre: "todos miran el pelo, el pelo nunca fue el problema".
+7. Lo que probó y falló, uno por uno, y **por qué** falla cada uno.
+8. Su propio despertar **con fecha exacta** y un espejo.
+9. Humildad de oficio: "soy peluquera, no médica".
+10. **El producto lo trae un tercero**, nunca ella. "Cuatro casualidades no son una casualidad".
+11. **El primer intento fallido** (la versión genérica no hizo nada) y recién ahí el diferenciador. Es lo que vuelve creíble al producto.
+12. Bitácora semana por semana del resultado propio.
+13. Prueba social en círculos que se agrandan: hermana → clienta → vecina → 34 mujeres.
+14. Bloque de honestidad y riesgo propio: "esto me puede costar clientas".
+15. **Checklist de 5 criterios de compra**, armado para que solo el producto los cumpla.
+16. Garantía + "solo por este link" + aviso de imitaciones.
+17. Firma: nombre, "Licensed Cosmetologist, 31 years", ciudad.
+18. **Seis postscriptums**, cada uno con otra objeción u otro segmento, y el link repetido debajo de cada uno.
+19. El cierre vuelve a la imagen de la apertura.
+
+- ⚠️ **Qué NO copiamos:** el villano químico y el mecanismo pseudo-médico (riesgo Meta/FTC), las fotos de antes y después, los testimonios inventados en cantidad y **cualquier cosa de plata**: en esta oferta el ángulo de negocio rinde la mitad (CJTO 4 y 5 a 22 USD contra 11–13 de los de fricción en el servicio, ver [[atlas-de-cortes]]).
+
+## Natives propias del Atlas, tanda 1 (23/10)
+- `OUTPUTS/2026-10-23-natives-atlas-cortes.md` — las 3 primeras natives de la oferta de pelo, solo en inglés, 1.600 a 1.900 palabras cada una, con la arquitectura de arriba y el desculpabilizante "no es tu técnica, es memoria" como motor.
+  - **1 · "The eleven pages taped inside my station drawer"** (Rhonda Teague, 54, 29 años, Fort Wayne IN). Ángulo permiso: ella ya se hizo sus propias hojas laminadas. Modela el CJTO 6 (la carpetita), mejor CPA con volumen. Clienta-tragedia: Bridget, 16 años de clienta, que se fue a otro salón y volvió con el shag que Rhonda le había negado.
+  - **2 · "The two piles of hair on my floor were not the same size"** (Gina Petrosky, 49, 25 años, Erie PA). Ángulo el lado distinto. Objeto de apertura: dos montoncitos de pelo de distinto tamaño al barrer. Mecanismo: "el corte se decide en los primeros cuatro minutos; después es ejecutar o perseguir". Clienta-tragedia: Denise, 16 años, que pasó de 6 a 10 semanas y dejó de venir sin quejarse nunca.
+  - **3 · "The girl at the next chair took the cut I turned down"** (Lorraine Vasquez, 58, 31 años, Tucson AZ). Ángulo el menú que se encoge: 31 años de oficio reducidos a cuatro cortes por las frases con las que iba declinando ("con tu densidad yo no iría tan corto"). La de 24 años le dice la frase que ordena todo: *"I know how to do it. I just do not know it by heart. Those are not the same thing."*
+- Las tres llevan: el **primer intento fallido** convertido en **"dos cortes, uno que el mapa frenó y otro que salió"** (el mapa dice NO antes de decir SÍ), el checklist de 5 criterios de referencia, 3 o 4 P.S. con el link debajo de cada uno, firma con licencia y ciudad, y cierre que vuelve a la foto. Sin precio (va "dirt cheap"), sin plata, sin caras en la imagen.
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

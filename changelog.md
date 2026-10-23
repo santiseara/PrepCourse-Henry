@@ -1,3 +1,10 @@
+## 2026-10-23 — Herrero de Finde: lectura de la primera tanda y 6 variables nuevas
+
+- Santiago pasó los números de los 6 conjuntos del 23/10: **76,57 USD, 7 compras, CPA 10,94**. *"Consiguió ventas, pero tampoco tanto, hay que agarrar lo que funcionó y mejorarlo."*
+- **Diagnóstico:** los conjuntos que vendieron abren con plata o un número en el primer segundo. Gana la **comparación de costo** (V6, "menos que un tanque de nafta", CPA 7,05) y después las **listas costo de material → precio de venta** (V5, V4, V3). El único con cero ventas es el V1, el de la anécdota. El V2 se apagó con el segundo mejor CPA (8,70) y un solo presupuesto gastado.
+- **Tanda V7–V12** en `OUTPUTS/2026-10-23-guiones-herrero-de-finde-v7-v12.md` (+ copia en `~/Desktop/herrero-de-finde/anuncios/guiones-v7-v12.md`): comparación de costo con el alambre tubular, 5 trabajos que te piden y nunca cotizás, un portón corredizo en un finde, escalera para el que nunca vendió, inventario del garage y recorrido de lo que hay adentro. Cada una con estructura y CTA propios, todas bajo 1:30.
+- Resultados y regla nueva anotados en `WIKI/herrero-de-finde.md`; tabla completa en `OUTPUTS/2026-10-23-registro-herrero-de-finde.md`.
+
 ## 2026-10-23 — The Women's Cutting Atlas: primera tanda de natives (3, en inglés)
 
 - Santiago: *"Ahora quiero que armemos natives, pero para pelo... Investiga a ver qué es lo que está funcionando."* Se relevó la Ads Library a mano (la tool `ads_library_search` del conector no devuelve el cuerpo del anuncio y el matching trae basura: para natives hay que ir por browser con `media_type=image`).

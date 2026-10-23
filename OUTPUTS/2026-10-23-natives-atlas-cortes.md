@@ -136,7 +136,7 @@ An order to follow. Numbered. First this section, then this one.
 Readable in under a minute, on a phone, propped against a mirror, with wet hands.
 The mistake written down next to the step where people make it.
 
-It does all five. It is dirt cheap, which still bothers me a little given what that course cost me in 2019. The link is below this post.
+It does all five. It is dirt cheap, which still bothers me a little given what that course cost me in 2019.
 Bridget booked with me again in July. Her sister told her I do the shag now. I do not know if that is true or if her sister made it up, but she sat down and asked and this time I said yes and then I checked the page for thirty seconds before I picked up my shears.
 
 She did not notice. Nobody ever notices.
@@ -250,7 +250,7 @@ Give you an order. Numbered, so you can find your place if you get interrupted, 
 Write down the mistake next to the step where it happens. Not a list of general tips at the end. Next to the step.
 Open in one second on a phone with a wet hand, or print, because half of us still like paper.
 
-It does those five things and nothing else, which is why it is worth having. And it is dirt cheap, which annoys me when I think about Pittsburgh. It is in the link below.
+It does those five things and nothing else, which is why it is worth having. And it is dirt cheap, which annoys me when I think about Pittsburgh.
 I am not going to tell you Denise is coming back. She is not. Sixteen years ended because of a guide I set by eye while we were talking about her daughter's wedding.
 
 But there is a woman named Arlene who comes in on Fridays who asked me three weeks ago whether I had gotten new scissors, because something was different.
@@ -366,7 +366,7 @@ Numbered steps, so when you get interrupted - and in a salon you will get interr
 The mistake written next to the step where people make it, not in a general tips section.
 Readable in under a minute. Phone or printed.
 
-It does all of that and it is dirt cheap, which is its own small insult to the money I have spent on education over thirty-one years. The link is below this post.
+It does all of that and it is dirt cheap, which is its own small insult to the money I have spent on education over thirty-one years.
 The teacher with the butterfly cut comes to me now. Nicolette moved to Phoenix in September and left me her clients, which is the nicest thing anybody in this industry has ever done for me, and when that woman sat down I told her the truth. I said I turned her down in April because I could not remember the sectioning, and I can now, because I look it up.
 
 She said, "I thought you just did not like the haircut."

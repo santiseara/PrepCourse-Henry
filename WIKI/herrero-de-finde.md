@@ -61,6 +61,14 @@
 - **2026-10-22 · Videos: "está medio aburrida".** Regla para los videos de voz en off sobre B-roll: no alcanza con cortes rápidos. Llevan **música de fondo** (idealmente la del competidor), **movimiento constante** (zoom en todo el plano y golpe en cada corte), **destellos con whoosh**, placas animadas y **barra de progreso**.
 - **2026-10-22 · "Me encantó la landing".** Único pedido: los primeros textos del hero (eyebrow, título, promesa y bajada) **centrados**. Se aplicó con una regla CSS sobre `.hero`.
 
+## Resultados de la primera tanda (2026-10-23)
+- 6 conjuntos ABO, un video por conjunto. **76,57 USD gastados, 7 compras, CPA 10,94 USD.** Tabla completa en `OUTPUTS/2026-10-23-registro-herrero-de-finde.md`.
+- **Lo que compró:** los conjuntos que vendieron abren con **plata o un número en el primer segundo**. El mejor es la **comparación de costo** (V6, "por menos que un tanque de nafta", CPA 7,05), después las **listas de costo de material → precio de venta** (V5 11,39 · V4 13,56 · V3 10,71).
+- **Lo que no:** el V1 (anécdota "un tipo me dijo…", trailers) es el único con cero ventas. En este nicho la historia antes de la plata no entra.
+- El V2 ("sumá lo que tenés en el garage") se apagó con el segundo mejor CPA (8,70) y un solo presupuesto gastado. Su ángulo vuelve mejorado en el V11.
+- **Regla que sale de acá:** todo guion de Herrero de Finde arranca con un número o una comparación de plata en el primer segundo, y el cuerpo siempre trae costo de material → precio de venta sugerido.
+- **Tanda V7–V12 (2026-10-23):** `OUTPUTS/2026-10-23-guiones-herrero-de-finde-v7-v12.md`. Comparación de costo (alambre tubular), lista de 5 trabajos que te piden y nunca cotizás, un trabajo en un finde (portón corredizo), escalera para el que nunca vendió (fogonero), inventario del garage y recorrido de lo que hay adentro del pack.
+
 ## Preguntas abiertas
 - **Producto:** ¿de dónde sale la biblioteca de planos en español? Las 8 páginas del carrusel "Abrí un plano" son del original y están en inglés.
 - Imágenes con algo de texto en inglés que quedaron: `planilla-impresa` ("CUT LIST – WELDING BENCH"), la nota manuscrita de la tapa del bonus 2 y los carteles chicos de `casa-de-hierros`.

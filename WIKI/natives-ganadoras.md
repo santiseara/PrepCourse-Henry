@@ -83,6 +83,9 @@ Cuatro natives de 1.500 a 2.500 palabras, cada una con otro nombre y otro pueblo
 
 - **2026-10-23 · Las ideas se buscan en el nicho, no en mi cabeza.** Le propuse 5 ideas de natives salidas del banco interno (el estante alquilado, el cuaderno de precios, la caja de las falladas, medio garaje, la vecina mayorista) y las rechazó todas: "no me gustó ninguno, ponete a investigar las mejores natives del nicho". Regla: antes de proponer natives o guiones nuevos, **relevar la Ads Library del nicho y modelar la arquitectura de lo que ya está ganando**, igual que el 22/10 con los hooks de video. Las opciones se entregan con la estructura de los ganadores explicitada, no como ocurrencias sueltas. Opciones nuevas en `OUTPUTS/2026-10-23-natives-piedras-10-opciones-v4.md`.
 
+## Natives propias de la tanda 23/10
+- `OUTPUTS/2026-10-23-natives-piedras-22-y-23.md`: las dos primeras escritas con la arquitectura de Thrift AI. **22 = el cajón de la mesa de luz** (Cheryl, 57, Zanesville OH, encuentra en el cajón de la vecina que se muda la piedra que le regaló hace seis años, chipeada y con la flor marrón; la hija de la vecina, 34, le dice que estuvo "haciendo keepsakes y poniéndoles precio de souvenir"). **23 = "reads as homemade"** (Brenda, 58, Elkhart IN, la rechazan de la feria del pueblo con dos líneas y tiene el mail pegado dentro de la puerta del armario; una expositora de 34 le explica las cuatro diferencias en el estacionamiento: "homemade and handmade are one letter apart and about forty dollars"). Las dos de 1.528 palabras, voz nueva, sin Emma, y el bloque de los cuatro errores (masa de sal, flor fresca, fragancia a destiempo y celofán) como demo de lo que el producto dice que NO antes de decir que sí.
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

@@ -1,3 +1,9 @@
+## 2026-10-23 (tarde II) — Natives 22 y 23 de piedras
+
+- Eligió la 2 y la 8 de las diez opciones. `OUTPUTS/2026-10-23-natives-piedras-22-y-23.md`, 1.528 palabras cada una, solo en inglés.
+- Primeras natives escritas con la arquitectura de Thrift AI: abren con un objeto (una piedra vieja en el cajón de una mesa de luz, un mail de rechazo pegado dentro de un armario), el método lo trae una mujer de 34, la demo dice primero lo que está mal y después lo que va, los números son chicos (180 y 140 el primer mes) y el cierre vuelve a la imagen del principio.
+- **Voz nueva en cada una** (Cheryl, 57, Zanesville OH y Brenda, 58, Elkhart IN) en vez de Emma Carter: las cuatro ganadoras del nicho usan un nombre y un pueblo distintos por native, y Emma ya es expositora de feria en nuestras natives, así que la 23 se contradecía.
+
 ## 2026-10-23 (tarde) — Natives: relevamiento del nicho y 10 opciones nuevas
 
 - **Corrección de Santiago:** rechazó las 5 ideas de natives que le propuse de mi propio banco. "Ponete a investigar las mejores natives del nicho". Regla nueva en `WIKI/natives-ganadoras.md`: las ideas se modelan de la Ads Library del nicho, no se inventan.

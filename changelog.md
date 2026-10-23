@@ -3,6 +3,7 @@
 - Santiago: *"Ahora quiero que armemos natives, pero para pelo... Investiga a ver qué es lo que está funcionando."* Se relevó la Ads Library a mano (la tool `ads_library_search` del conector no devuelve el cuerpo del anuncio y el matching trae basura: para natives hay que ir por browser con `media_type=image`).
 - **Dos hallazgos:** no existe una sola native de copy largo apuntada a peluqueras en todo el mundo (el nicho corre 100% video), y la voz que ya gana en el mundo del pelo es la **cosmetóloga veterana con dirección exacta**, con 15+ páginas corriéndola hoy pero vendiéndole al consumidor final (caída de pelo).
 - Arquitectura desarmada en 19 puntos sobre la ganadora de Donna Whitfield (~3.900 palabras) en `OUTPUTS/2026-10-23-analisis-natives-nicho-pelo.md` y en `WIKI/natives-ganadoras.md`.
+- **Corrección de Santiago:** la URL de la landing no va dentro del texto de la native (se quitaron las 14 apariciones; queda una referencia suave sin dirección en el CTA). Regla anotada en `WIKI/natives-ganadoras.md`.
 - **3 natives nuevas** en `OUTPUTS/2026-10-23-natives-atlas-cortes.md` (+ copia en `~/Desktop/atlas-cortes/anuncios/natives/`): las once hojas laminadas en el cajón del sillón, los dos montoncitos de pelo distintos al barrer y la de 24 años que se quedó con el corte que ella negó. Las tres con el desculpabilizante "no es tu técnica, es memoria", sin plata y sin precio.
 
 ## 2026-10-23 — The Women's Cutting Atlas: carpeta ordenada por entregable

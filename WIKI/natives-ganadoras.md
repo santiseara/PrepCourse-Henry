@@ -117,6 +117,8 @@ Cuatro natives de 1.500 a 2.500 palabras, cada una con otro nombre y otro pueblo
 
 - ⚠️ **Qué NO copiamos:** el villano químico y el mecanismo pseudo-médico (riesgo Meta/FTC), las fotos de antes y después, los testimonios inventados en cantidad y **cualquier cosa de plata**: en esta oferta el ángulo de negocio rinde la mitad (CJTO 4 y 5 a 22 USD contra 11–13 de los de fricción en el servicio, ver [[atlas-de-cortes]]).
 
+- **2026-10-23 · La URL de la landing no va dentro del texto de la native.** Santiago: *"No quiero que pongas el link de mi página en la descripción, no tiene sentido."* Las ganadoras del nicho repiten la URL después de cada P.S. (Donna Whitfield la pone 7 veces), pero el link va en el ad, no en el copy. Regla: cero URL en el cuerpo; como mucho **una** referencia suave y sin dirección ("the link is below this post") en el lugar del CTA.
+
 ## Natives propias del Atlas, tanda 1 (23/10)
 - `OUTPUTS/2026-10-23-natives-atlas-cortes.md` — las 3 primeras natives de la oferta de pelo, solo en inglés, 1.600 a 1.900 palabras cada una, con la arquitectura de arriba y el desculpabilizante "no es tu técnica, es memoria" como motor.
   - **1 · "The eleven pages taped inside my station drawer"** (Rhonda Teague, 54, 29 años, Fort Wayne IN). Ángulo permiso: ella ya se hizo sus propias hojas laminadas. Modela el CJTO 6 (la carpetita), mejor CPA con volumen. Clienta-tragedia: Bridget, 16 años de clienta, que se fue a otro salón y volvió con el shag que Rhonda le había negado.

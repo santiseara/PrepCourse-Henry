@@ -1,8 +1,7 @@
 NATIVES - THE WOMEN'S CUTTING ATLAS
 Tanda 1 (23/10/2026). Modeladas sobre la arquitectura ganadora del nicho de pelo en US
 (native narrada por una cosmetologa veterana, 3.500+ palabras, 15+ paginas corriendola hoy).
-Las tres en ingles. Imagen 3:4, foto de celular, sin caras.
-
+Las tres en ingles. Imagen 3:4, foto de celular, sin caras. Sin la URL dentro del texto: el link va en el ad.
 
 =====================================================================
 NATIVE 1 - THE ELEVEN PAGES TAPED INSIDE MY STATION DRAWER
@@ -137,10 +136,7 @@ An order to follow. Numbered. First this section, then this one.
 Readable in under a minute, on a phone, propped against a mirror, with wet hands.
 The mistake written down next to the step where people make it.
 
-It does all five. It is dirt cheap, which still bothers me a little given what that course cost me in 2019.
-
-https://women-s-cutting-atlas.impultienda.ar/
-
+It does all five. It is dirt cheap, which still bothers me a little given what that course cost me in 2019. The link is below this post.
 Bridget booked with me again in July. Her sister told her I do the shag now. I do not know if that is true or if her sister made it up, but she sat down and asked and this time I said yes and then I checked the page for thirty seconds before I picked up my shears.
 
 She did not notice. Nobody ever notices.
@@ -152,18 +148,9 @@ Licensed cosmetologist, 29 years
 Fort Wayne, Indiana
 
 P.S. If you are reading this thinking "I have been doing hair for twenty-five years, I should not need this" - that was my exact sentence, for about seven years, while I quietly talked women out of the cuts they came in for. Nobody is grading you on how much you can hold in your head at ten in the morning. The woman in your chair is not grading you on that either. She just wants the cut she asked for.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.S. On the phone thing. I worried about this more than anything else, so here is what actually happens: I look at it while she is still in the shampoo chair, or while I am sectioning, which is the exact moment every stylist alive is looking down anyway. It is twenty to thirty seconds. In two years nobody has asked me what I am looking at. Alyssa has been doing it in front of her clients for four years. Clients do not see a stylist checking a reference. They see a stylist taking a second before she starts, which is the most reassuring thing you can do in front of a mirror.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.P.S. It is not Pinterest photos. I want to be blunt about that because that is what I assumed. Pinterest is the result. Anybody can see the result. What I never had was the back of the head with the sectioning drawn on it and the degree I am supposed to hold it at, which is the entire job. If it had been photos of finished haircuts I would have wanted my money back in ten minutes.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.P.P.S. I printed mine. I know that is not the point of it, but I am fifty-four and I like paper. It works either way, which is the only reason I am mentioning it. The pages that are taped in my drawer are now the ones I printed out of it, and the eleven old ones are in a folder in my tote bag because I cannot throw them out.
-https://women-s-cutting-atlas.impultienda.ar/
-
-
 =====================================================================
 NATIVE 2 - THE TWO PILES OF HAIR ON MY FLOOR WERE NOT THE SAME SIZE
 (angulo el lado distinto / la correccion - modela el CJTO 2)
@@ -263,10 +250,7 @@ Give you an order. Numbered, so you can find your place if you get interrupted, 
 Write down the mistake next to the step where it happens. Not a list of general tips at the end. Next to the step.
 Open in one second on a phone with a wet hand, or print, because half of us still like paper.
 
-It does those five things and nothing else, which is why it is worth having. And it is dirt cheap, which annoys me when I think about Pittsburgh.
-
-https://women-s-cutting-atlas.impultienda.ar/
-
+It does those five things and nothing else, which is why it is worth having. And it is dirt cheap, which annoys me when I think about Pittsburgh. It is in the link below.
 I am not going to tell you Denise is coming back. She is not. Sixteen years ended because of a guide I set by eye while we were talking about her daughter's wedding.
 
 But there is a woman named Arlene who comes in on Fridays who asked me three weeks ago whether I had gotten new scissors, because something was different.
@@ -278,15 +262,8 @@ Licensed cosmetologist, 25 years
 Erie, Pennsylvania
 
 P.S. I did not have a technique problem and if that is what you heard, read it again. I can execute anything you put in front of me. What I did not have was the thing you need in the four minutes before any of it is visible, written down somewhere I could reach it with a client in the chair. There is a difference between not knowing how and not having it in front of you, and the whole industry acts like only the first one exists.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.S. If you are the one who has been quietly getting checked by somebody else - a coworker, your daughter, the owner walking past - you already know this is not about hands. Having another set of eyes is a workaround for not having the information. It works, and it also means you are depending on who happens to be working that day.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.P.S. For the women who are self-taught, or who did school twenty years ago in another state, or who learned in somebody's kitchen: you are exactly who this is easiest for. You have the hands already. What you were never handed was the sectioning on paper. I went to a real school and graduated with honors and I still had to learn the graduated bob properly at forty-eight from a diagram, so nobody here is behind anybody.
-https://women-s-cutting-atlas.impultienda.ar/
-
-
 =====================================================================
 NATIVE 3 - THE GIRL AT THE NEXT CHAIR TOOK THE CUT I TURNED DOWN
 (angulo el tercero mas joven / el menu que se encoge)
@@ -389,10 +366,7 @@ Numbered steps, so when you get interrupted - and in a salon you will get interr
 The mistake written next to the step where people make it, not in a general tips section.
 Readable in under a minute. Phone or printed.
 
-It does all of that and it is dirt cheap, which is its own small insult to the money I have spent on education over thirty-one years.
-
-https://women-s-cutting-atlas.impultienda.ar/
-
+It does all of that and it is dirt cheap, which is its own small insult to the money I have spent on education over thirty-one years. The link is below this post.
 The teacher with the butterfly cut comes to me now. Nicolette moved to Phoenix in September and left me her clients, which is the nicest thing anybody in this industry has ever done for me, and when that woman sat down I told her the truth. I said I turned her down in April because I could not remember the sectioning, and I can now, because I look it up.
 
 She said, "I thought you just did not like the haircut."
@@ -404,13 +378,6 @@ Licensed cosmetologist, 31 years
 Tucson, Arizona
 
 P.S. If the word "look it up" is the part catching in your throat, I understand, because it caught in mine for twenty-nine years. Here is the only thing that moved me: the client does not want a stylist who has it all memorized. She has no idea what you have memorized. She wants the haircut she asked for. The memorizing was never for her. It was for us, and it cost me a decade of my menu.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.S. On being seen with your phone. I thought about this for a week before I tried it and it turned out to be nothing. I read it while she is at the shampoo bowl or while I am sectioning, which is already the moment you are looking down. It is twenty or thirty seconds. Nobody has ever asked. The one time a client did glance over, she said "oh, is that her cut?" and I said yes, and she thought it was wonderful that I was checking.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.P.S. For the girls who are two or three years out of school and already quietly avoiding things: do not spend twenty-nine years the way I did. The avoiding does not feel like avoiding. It feels like good judgment and it sounds like a professional sentence and it will shrink your menu down to four haircuts before you notice it happening.
-https://women-s-cutting-atlas.impultienda.ar/
-
 P.P.P.P.S. I am not going to tell you it makes you better at cutting hair. It does not. It made me willing, which turned out to be the thing that was actually missing. The hands I already had. Everybody reading this already has the hands.
-https://women-s-cutting-atlas.impultienda.ar/

@@ -1,3 +1,10 @@
+## 2026-10-23 (tarde) — Natives: relevamiento del nicho y 10 opciones nuevas
+
+- **Corrección de Santiago:** rechazó las 5 ideas de natives que le propuse de mi propio banco. "Ponete a investigar las mejores natives del nicho". Regla nueva en `WIKI/natives-ganadoras.md`: las ideas se modelan de la Ads Library del nicho, no se inventan.
+- **Relevamiento:** página **Side Hustle Radar** (780046011848027), ~75 ads activos del producto **Thrift AI**, bajada con el truco de Chrome headless `--dump-dom`. Cuatro natives de 1.500 a 2.500 palabras, mismo avatar que el nuestro, con una arquitectura de 12 pasos documentada en `OUTPUTS/2026-10-23-analisis-natives-ganadoras-nicho-thrift-ai.md`.
+- **Hallazgo central:** abren con una pérdida y un objeto que no se entiende, nunca con la cifra; el método lo trae siempre un tercero más joven; los números son chicos (340 el primer mes) y van con un bloque de honestidad; el cierre vuelve a la imagen del principio y el CTA es una línea sola. Nuestras tres ganadoras hacen lo contrario en cuatro de esos puntos.
+- **Entregado:** `OUTPUTS/2026-10-23-natives-piedras-10-opciones-v4.md`, 10 situaciones con esa arquitectura para que elija.
+
 ## 2026-10-23 — Piedras: tanda v21 de guiones
 
 - **Entregado:** `OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md`, 6 guiones EN + ES de 56 a 63 s (23/10 - 1 a 6).

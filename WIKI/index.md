@@ -89,6 +89,8 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-23 — Análisis de las natives ganadoras del nicho (Thrift AI)](../OUTPUTS/2026-10-23-analisis-natives-ganadoras-nicho-thrift-ai.md) — los 12 pasos de la arquitectura que corre Side Hustle Radar con ~75 ads, y los 5 puntos donde nuestras natives hacen lo contrario · ver [[natives-ganadoras]]
+- [2026-10-23 — Natives piedras: 10 opciones v4](../OUTPUTS/2026-10-23-natives-piedras-10-opciones-v4.md) — 10 situaciones armadas con la arquitectura de Thrift AI, para elegir cuáles escribir · ver [[natives-ganadoras]]
 - [2026-10-23 — Guiones piedras v21 ingresos extra](../OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md) — 6 guiones EN + ES (23/10 - 1 a 6): la regalería que pide 80, el pedido de casamiento que paga el seguro, la reposición mensual, vender sin mostrar la cara, la jubilada de 61 y cuánto arriesgás · ver [[scented-stones]]
 - [2026-10-22 — Descripción de ads The Group Work Playbook](../OUTPUTS/2026-10-22-descripcion-ads-group-work-playbook-definitiva.md) — la definitiva, EN + ES, una sola para los 6 videos: la hora en blanco · ver [[group-work-playbook]]
 - [2026-10-22 — Guiones Pilates sin Vueltas](../OUTPUTS/2026-10-22-guiones-pilates-sin-vueltas.md) — 6 guiones de 1:30 en voseo (22/10 - 1 a 6): clase de prueba, la de 74, posparto, prótesis de rodilla, el cuerpo rígido y la objeción de la app, más primary text · ver [[pilates-sin-vueltas]]

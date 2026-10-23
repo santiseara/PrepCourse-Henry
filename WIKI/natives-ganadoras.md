@@ -62,6 +62,27 @@
 ## Natives propias de la tanda 22/10
 - `OUTPUTS/2026-10-22-natives-piedras-curso-y-cartero.md`: elegidas de `OUTPUTS/2026-10-22-natives-piedras-opciones-v2.md`. 20 = el carrito abierto a la 1:14 con un curso de $1.997, Lily (9) pregunta "¿pero qué vendés?", comparación promesa contra realidad y 4 preguntas antes de comprar cualquier curso. 21 = narra Denise (51, ex cocinera escolar), mujer de Ray, cartero rural; vende en puestos de granja con caja de honestidad (el puesto se queda $2). Suma la objeción "vivo en un pueblo chico".
 
+## 🏆 DNA de las natives ganadoras del nicho: Thrift AI (relevada 23/10/2026)
+> Las mejores natives que corren hoy en el nicho de ingreso extra para mujeres de 50+. Página **Side Hustle Radar** (780046011848027), ~75 ads activos, producto **Thrift AI** (app gratis que dice por cuánto se vendió de verdad un objeto en eBay). Avatar idéntico al nuestro. Análisis completo en `OUTPUTS/2026-10-23-analisis-natives-ganadoras-nicho-thrift-ai.md`.
+
+Cuatro natives de 1.500 a 2.500 palabras, cada una con otro nombre y otro pueblo, todas con esta arquitectura:
+1. **Abre con un objeto que no se entiende, nunca con plata.** Una lista de números en la Biblia de la madre muerta, una tarjeta de Navidad devuelta con sticker "DECEASED", la billetera de un viudo en el buzón, un chico de 19 paseando al perro de ella.
+2. **Se presenta con dirección exacta:** nombre, edad, pueblo real, el trabajo, el marido con oficio concreto, los hijos grandes que llaman los domingos, la mascota con nombre.
+3. **La pérdida ocupa la mitad del texto** y en todo ese tramo el producto no existe.
+4. **El hobby que va en una sola dirección:** "hace veinte años que voy los sábados, nunca vendí nada", más la duda textual "¿es un buen hallazgo o es basura? Y lo vuelvo a poner en el estante".
+5. **Lo que ya probó y falló:** el grupo de Facebook con 40 respuestas distintas y Google Lens, que muestra lo que piden y no lo que alguien pagó.
+6. **El producto lo trae un tercero más joven**, nunca ella: el sobrino de 24, el vecino de 19, la nuera, la cajera de 22.
+7. **Una metáfora propia por native:** "cualquiera escribe una receta, lo que importa es lo que sale del horno" · "eso es leer el pronóstico, vos querés mirar por la ventana" · "estás leyendo el menú, no los tickets".
+8. **La demo son dos objetos y dos veredictos, en este orden:** primero uno que el producto rechaza (perdés 15), después uno que aprueba (8 dólares que se vendieron a 300).
+9. **Bloque de honestidad explícito:** "no te voy a decir que me hice rica", "me dice que no más veces de las que me dice que sí, y por eso le creo".
+10. **Números chicos:** 340 dólares el primer mes, tres horas por semana, "el hobby ahora se paga solo". Nunca miles.
+11. **El cierre vuelve a la imagen de la apertura.**
+12. **El CTA es una línea sola al final**, con prueba social del producto (4.8 estrellas, 21.000 reseñas), no testimonios de plata.
+
+⚠️ **En qué nos equivocábamos.** Nuestras tres ganadoras abren con la cifra y la ponen grande (1.140, 3.500 al mes), Emma descubre el método sola y el cierre es un CTA con futuro binario. Las del nicho hacen lo contrario en los cuatro puntos, y además bajan muchísimo la exposición a Meta y a la FTC ([[problemas-de-cuentas-meta]]).
+
+- **2026-10-23 · Las ideas se buscan en el nicho, no en mi cabeza.** Le propuse 5 ideas de natives salidas del banco interno (el estante alquilado, el cuaderno de precios, la caja de las falladas, medio garaje, la vecina mayorista) y las rechazó todas: "no me gustó ninguno, ponete a investigar las mejores natives del nicho". Regla: antes de proponer natives o guiones nuevos, **relevar la Ads Library del nicho y modelar la arquitectura de lo que ya está ganando**, igual que el 22/10 con los hooks de video. Las opciones se entregan con la estructura de los ganadores explicitada, no como ocurrencias sueltas. Opciones nuevas en `OUTPUTS/2026-10-23-natives-piedras-10-opciones-v4.md`.
+
 ## Preguntas abiertas
 - ¿Cuál de las 3 ganadoras rinde más y qué métricas tienen?
 - ¿Cuántas natives por tanda y en qué proporción de imagen contra video?

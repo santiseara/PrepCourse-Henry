@@ -1,3 +1,10 @@
+## 2026-10-23 — Atlas de Cortes: análisis de los ads que venden y tanda v10 a v15
+
+- Santiago pasó la captura de los 10 conjuntos activos del Women's Cutting Atlas (~23 compras, ~390 USD, frecuencia 1,08–1,16).
+- Se sumó a `WIKI/atlas-de-cortes.md` la sección **Resultados reales de la cuenta** con la tabla CJTO por CJTO y el diagnóstico: vende el momento de fricción concreto durante el servicio; el ángulo de plata (V4 y V5) rinde la mitad; V6 (prueba social, la carpetita) es el sleeper; sub-segmentar (V9 rizado) y la foto de Pinterest no venden.
+- Nuevo: `OUTPUTS/2026-10-23-guiones-atlas-cortes-v10-v15.md`, 6 variables EN + ES con momento, mecanismo y CTA propios, más banco de 3 ángulos.
+- Pendiente: pedirle a Santiago los guiones de los CJTO 10, 11 y 12 (no son nuestros y los 10 y 12 son los de mejor CPA).
+
 ## 2026-10-23 (tarde II) — Natives 22 y 23 de piedras
 
 - Eligió la 2 y la 8 de las diez opciones. `OUTPUTS/2026-10-23-natives-piedras-22-y-23.md`, 1.528 palabras cada una, solo en inglés.

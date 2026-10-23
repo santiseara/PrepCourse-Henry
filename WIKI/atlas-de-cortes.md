@@ -31,6 +31,33 @@
 - **5 bonus:** flequillos ($15), diagnóstico visual de cortes ($13), tijeras y herramientas ($18), capas sin líneas ($15), formas de rostro ($19).
 - ⚠️ **Pendientes en la landing:** 6 capturas de reseñas en inglés. Los mockups del pack y de la colección ya los pasó Santiago el 2026-10-21.
 
+## 📊 Resultados reales de la cuenta (2026-10-23)
+> Captura de Santiago: 10 conjuntos activos, ~23 compras y ~390 USD de gasto. Frecuencia de 1,08 a 1,16 en todos: nada fatigado. La cuenta está en el portfolio Reset FIT y el MCP de Meta no la puede leer, así que los números salen de la captura.
+
+| CJTO | Guion | Compras | Alcance | CPA |
+|---|---|---|---|---|
+| 12 | "That cut…" (no es nuestro) | 2 | 175 | **$11,22** |
+| 11 | "She shows…" (la foto) | 0 | 120 | — |
+| 10 | "An angled…" (no es nuestro) | 2 | 159 | **$11,02** |
+| 9 | V9 rizado | 0 | 112 | — |
+| 7 | V8 "The cut came out great" | 1 | 129 | $12,26 |
+| 6 | V6 la carpetita | 4 | 576 | **$13,39** |
+| 5 | V5 la cuenta ($70–90) | 2 | 459 | $22,61 |
+| 4 | V4 "How many cuts…" | 1 | 296 | $22,38 |
+| 3 | V3 "halfway through" | 6 | 1.175 | $17,47 |
+| 2 | V2 "one side different" | 5 | 1.011 | $18,61 |
+
+**Qué enseña:**
+- ⭐ **Lo que vende es un momento de fricción concreto durante el servicio, con la clienta presente.** V2, V3, V8 y los dos ajenos de $11 son todos eso.
+- ❌ **El ángulo de plata rinde la mitad.** V5 ($22,61) y V4 ($22,38) son los dos peores y los dos hablan de negocio (cuánto perdés, cuántos cortes rechazás). En esta oferta la que compra no busca ingresos: tapa una inseguridad. **Nada de cuentas ni de dinero en el hook.** Es lo contrario de [[scented-stones]], donde el nicho sí es de ingresos extra.
+- ✅ **El desculpabilizante es el motor:** "no es tu técnica, es memoria" está en los cuatro que venden. El miedo no es no saber, es que se note.
+- ⭐ **V6 (la carpetita) es el sleeper:** $13,39 con volumen real. Único de prueba social ("las que la rompen tampoco adivinan, consultan"). Da permiso. Hay que explotarlo más.
+- ❌ **Sub-segmentar mata:** V9 (solo rizado) y la foto de Pinterest, 0 ventas. El rizado recorta el público; la foto es un momento demasiado genérico y no duele.
+- Los tres del 23/10 vienen a $11–12 pero con 112 a 175 de alcance: dirección buena, muestra chica. Dejarlos llegar a ~500 de alcance antes de decidir.
+- ⚠️ **Pendiente:** los CJTO 10, 11 y 12 no los armamos nosotros y no tenemos sus guiones. Los 10 y 12 son los de mejor CPA de la cuenta: hay que pedirle los textos a Santiago para modelarlos.
+
+- **Tanda v10 a v15 (23/10):** 6 variables de esa DNA, cada una con su momento, su mecanismo y su CTA. Guion 10 "igual que la última vez", 11 "la sección que sobra", 12 "los tres segundos antes del primer corte", 13 "el secado cambia todo", 14 variable de la carpetita (los diez segundos que nadie nota) y 15 "la que viene a arreglar un corte de otra". `OUTPUTS/2026-10-23-guiones-atlas-cortes-v10-v15.md` y `~/Desktop/atlas-cortes/guiones-v10-v15.md`.
+
 ## Detalles / notas
 - Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.
 - **Descripción definitiva (2026-10-22):** una sola, EN + ES, para acompañar los 6 videos (el competidor usa el mismo copy en todos sus ads). Junta el hook más duplicado ("saber ≠ recordar"), la duda a mitad del corte, los bullets del producto, los 5 bonus y el desactivador de objeción. `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` y `~/Desktop/atlas-cortes/descripcion-ads.md`.

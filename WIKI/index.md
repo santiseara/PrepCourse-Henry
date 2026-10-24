@@ -92,7 +92,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
-- [2026-10-24 — Caza: renda extra + emagrecimento black (Brasil)](../OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md) — primera caza con la skill: 25 anunciantes contados, el whale de 496 ads del operador Nakamura, Roberta Carvalho con 34 días sin pausa y el veredicto ENTRAR en renda extra de oficio · ver [[caza-de-ofertas]]
+- [2026-10-24 — Caza: renda extra + emagrecimento black (Brasil)](../OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md) — 11 fanpages auditadas en la Biblioteca: el subnicho de **adesivos para panos de prato** (R$ 10, 106 días corriendo, 4/4 en el score) y el stack de ofertas de R$ 10 por oficio de Maria Alice · ver [[caza-de-ofertas]]
 - [2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y plan](../OUTPUTS/2026-10-24-protocolo-chia-28d-analisis-y-plan-vsl.md) — estructura minuto a minuto del VSL de Protocolo Chía 4S, inventario de b-rolls, placas y plan de clonado para LATAM · ver [[protocolo-chia-28d]]
 - [Guiones Profesional Digital, tanda 1](../OUTPUTS/2026-10-24-guiones-profesional-digital.md) — 6 guiones anti-bloqueo, uno por familia ganadora de Elevada Digital.
 - [2026-10-24 — Natives piedras 24, 25 y 26 (BIZOP)](../OUTPUTS/2026-10-24-natives-piedras-24-25-26-bizop.md) — el mostrador vacío, el calendario de pedidos del año y la góndola de ambientadores: arquitectura del nicho con el eje en la oportunidad de negocio · ver [[natives-ganadoras]]

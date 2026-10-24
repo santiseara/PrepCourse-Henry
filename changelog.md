@@ -1,12 +1,12 @@
 ## 2026-10-24 — Primera caza con la skill: renda extra + emagrecimento black (Brasil)
 
-- Barrido mundial en la Ads Library: 12 keywords en portugués, 20+ consultas, **25 anunciantes con el arsenal contado uno por uno**.
-- **Emagrecimento black = WHALE DOMINANTE.** Operador "Ryu Nakamura" con **496 ads activos repartidos en 2 fanpages** (quiz → protocolo de 28 días, cuenta en USD); Dra Lidiane Nutri 227; Isadora Nogueira 125; Carlão Silva 92 con **8 días verificados** y ~40 creativos duplicados.
-- Tres apps globales fuera de categoría (Lessie Fitness 13.354 ads, Liliia 2.140, Eat Smart 880): mismo funnel de quiz corriendo en vietnamita e italiano. No modelables.
-- **Renda extra genérico = DESCARTAR** (31.114 ads pero atomizado: nadie pasa de 17). **Renda extra de oficio = ENTRAR**: Roberta Carvalho 45 ads con **34 días sin pausa**, Carmen Artesanal 13 días, Nina Artesanato **65 días** con solo 4 ads (oferta validada, operador tímido).
-- Radar para el 27/10: Crochê Studio (11 ads lanzados hoy, PDFs de R$ 39 a R$ 79), "PIX OCULTO por R$ 10", Renda com Unhas R$ 97.
+- Barrido mundial (12 keywords, 25+ consultas por API) **+ auditoría de 11 fanpages en la Biblioteca web**, con fechas de inicio, dominios, precios y copys verificados.
+- **Ganadora 4/4: el subnicho de "adesivos para panos de prato".** PDF de +37 calcomanías para repasadores a **R$ 6,90–10**, vendido por WhatsApp. ~240 ads activos entre 9 anunciantes; **Pinturas da Sueli con 97 ads corriendo desde el 10 de julio (106 días)**, Mais Você 79 días, Roberta Carvalho 45 ads / 35 días. Veredicto: **arbitrar al mercado inglés**, mismo avatar que Scented Stones.
+- **Maria Alice (69 ads, 26 días): el modelo de negocio a copiar.** Stack de ofertas de **R$ 10 por oficio**, cada una en su dominio `.shop` (licores, partituras de sax, cifras litúrgicas, uno en holandés) y **+500 proyectos de parrillas para fabricar** = Herrero de Finde en Brasil. Dos bullets suyos para robar.
+- **Emagrecimento: Isadora Nogueira** (130 ads, 36 días, gasto sostenido en 18 fechas distintas, "Protocolo Restart" en desafiorestart.com.br) y **Carlão Silva** (92 ads, 27 días, dos dominios para la misma oferta).
+- **Corrección sobre el "whale" de 510 ads:** al abrirlo en el navegador resultó ser **calistenia asiática para hombres +40** (lastafit.site) y con solo **9 días** de antigüedad. Descartado. Dra Lidiane Nutri (230 ads, 43 días) vende un **encapsulado manipulado**, no infoproducto.
 - Informe completo en `OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md`.
-- **Aprendizajes de la herramienta sumados a `WIKI/caza-de-ofertas.md`:** contar con `limit: 1`; no pagina hacia atrás (la longevidad de los whales grandes no se puede verificar); la antigüedad aparece en las búsquedas por keyword, no en las de `page_ids`; `kiwify` como footprint destapa las low ticket con precio visible; subnicho de oficio > nicho genérico.
+- **Método: `WIKI/caza-de-ofertas.md` tiene ahora un Paso 3 obligatorio** — auditar en la Biblioteca web con `country=ALL`, porque la API no da fechas de inicio, dominios ni precios, y **el ranking por volumen sale al revés sin las fechas**.
 
 ## 2026-10-24 — La skill `cazar` entra al cerebro
 

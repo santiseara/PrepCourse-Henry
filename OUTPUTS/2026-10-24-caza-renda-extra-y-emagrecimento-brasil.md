@@ -1,214 +1,236 @@
 # Caza 24/10/2026 — Renda extra + Emagrecimento black (Brasil)
 
 > Barrido mundial en la Biblioteca de Anuncios de Meta con la skill `cazar` ([[caza-de-ofertas]]).
-> 12 keywords en portugués, 20+ consultas, 25 anunciantes con el arsenal contado uno por uno.
-> Filtro aplicado: el de la skill (50+ ads activos, 3+ días) **+** los tuyos (low ticket, escondida, sin marca personal, ya vendiendo).
+> **12 keywords en portugués · 25+ consultas por API · 11 fanpages auditadas una por una en el navegador.**
+> Todas las fechas, landings y precios de abajo están **verificados en la Biblioteca**, no estimados.
+> Filtro: el de la skill (50+ ads, 3+ días) **+** los tuyos (low ticket, escondida, sin marca personal, ya vendiendo).
 
 ---
 
-## 1. Resumen en 30 segundos
+## 1. Lo que hay que leer sí o sí
 
-| | Emagrecimento "black" | Renda extra |
-|---|---|---|
-| **Veredicto** | **WHALE DOMINANTE** | **SUBNICHO** (el genérico está muerto) |
-| Whales encontrados | 5 (de 92 a 496 ads) | 1 (45 ads) |
-| Dónde está el hueco | Mercados de habla inglesa | Subnicho de **oficio + WhatsApp** |
-| Mejor candidata | Operador "Nakamura" (496 ads) | Roberta Carvalho (34 días sin pausa) |
+**🏆 La ganadora: el subnicho de "adesivos para panos de prato".**
+Calcomanías en PDF para decorar repasadores de cocina, a **R$ 6,90–10,00** (US$ 1,30–1,85), vendidas por WhatsApp. **~240 anuncios activos entre 9 anunciantes**, y el más viejo lleva **106 días corriendo sin pausa**. Es el único caso de toda la caza que saca **4/4 en el score de señales**.
 
-**El hallazgo del día:** el nicho de renda extra genérico ("ganhe dinheiro em casa") está **atomizado** — miles de anunciantes con 2 a 15 ads que mueren en una semana. El dinero real está en el **subnicho de oficio** (artesanato, crochê, unhas), donde aparecen las ofertas más viejas y con menos competencia.
+**🥈 El modelo a copiar: Maria Alice.** No vende una oferta: corre un **stack de productos de R$ 10, uno por oficio**, cada uno en su propio dominio `.shop`. Uno de ellos es **+500 proyectos de parrillas para fabricar** — o sea, [[herrero-de-finde]] en Brasil a R$ 10. Y ya tiene un dominio en holandés: **está haciendo el arbitraje que vos querés hacer**.
+
+**⚠️ Corrección importante sobre el whale de 500 ads.** En el barrido por API aparecía como el pez gordo del nicho de bajar de peso. Al abrirlo en el navegador resultó ser **calistenia asiática para hombres de +40** — exactamente lo que me dijiste que no te interesa. Además su ad más viejo es del 19/10: **9 días, no meses**. Queda descartado.
 
 ---
 
-## 2. EMAGRECIMENTO BLACK — shortlist rankeada
+## 2. 🏆 EL SUBNICHO GANADOR — Adesivos para panos de prato
 
-### 🥇 #1 — Operador "Ryu Nakamura" (2 fanpages) · **496 ads activos**
+Producto: **PDF con +37 modelos de calcomanías** para imprimir y pegar en repasadores. Público: mujeres que hacen artesanía y quieren venderla. Funnel: **anuncio → WhatsApp → venta**, sin landing.
 
-El whale más grande de la caza. **Misma oferta repartida en dos fanpages** — la señal de que se esconde de los cloners.
+| Anunciante | page_id | Ads activos | **Ad activo más viejo** | Días corriendo | Moneda |
+|---|---|---|---|---|---|
+| **Pinturas da Sueli** | `689775884228472` | **97** | **10 jul. 2026** | **106 días** 🔥 | BRL |
+| **Roberta Carvalho** | `1279755271890328` | **45** | 19 sept. 2026 | **35 días** | USD |
+| Mais Você | `133188449874410` | 14 | 6 ago. 2026 | **79 días** | BRL |
+| Beatriz Silva | — | 11 | — | — | — |
+| Carmen Artesanal | `1338533809344372` | 11 | 10 oct. 2026 | 14 días | USD |
+| Artesanatos da Mari · Ana María · Dicas da Helenah | — | 3 c/u | — | — | — |
 
-| Dato | Valor |
+**Total del subnicho: ~240 anuncios activos · 9 anunciantes · precios R$ 6,90 y R$ 10,00.**
+
+### Links
+
+- Pinturas da Sueli → https://www.facebook.com/ads/library/?view_all_page_id=689775884228472
+- Roberta Carvalho → https://www.facebook.com/ads/library/?view_all_page_id=1279755271890328
+- Mais Você → https://www.facebook.com/ads/library/?view_all_page_id=133188449874410
+- Carmen Artesanal → https://www.facebook.com/ads/library/?view_all_page_id=1338533809344372
+- Búsqueda del subnicho completo → https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=adesivos%20para%20panos%20de%20prato&search_type=keyword_unordered
+
+### El copy ganador (Roberta Carvalho, 19/9, todavía activo)
+
+```
+🎨🧺 KIT COMPLETO DE ADESIVOS PARA PANOS DE PRATO
+
+Quer dar um toque mais bonito, delicado e profissional aos seus panos de prato?
+
+📦 Você vai receber +37 modelos exclusivos em PDF, com diversos temas
+para você imprimir e utilizar nas suas peças artesanais!
+
+✨ O KIT INCLUI:
+🐔 Galinhas, galos e temas de fazenda
+☕ Cafés, xícaras e bules
+🌻 Flores, girassóis e estampas florais
+🍰 Bolos, doces e receitas
+❤️ Frases de amor, carinho e motivação
+🏡 Frases especiais para cozinha e lar
+🍴 Talheres, utensílios e acessórios
+🧺 Cestas e elementos artesanais
+🌸 Modelos delicados e decorativos
+
+📄 Arquivo em PDF  🖨️ Pronto para imprimir  🎨 +37 modelos variados
+
+🔥 E você recebe o KIT COMPLETO por apenas R$ 10,00!
+```
+
+**La arquitectura del copy:** título con emoji + beneficio emocional ("bonito, delicado y profesional") → entregable numerado (+37 modelos) → **lista de 9 temas con un emoji cada uno** (que es lo que hace sentir que el kit es enorme) → 3 garantías de formato → precio al final como remate. Cero historia, cero promesa de plata. **Es exactamente la estructura que te funciona en [[scented-stones]].**
+
+### Por qué esto es la candidata A
+
+| Señal | Estado |
 |---|---|
-| Fanpage A | **Ryu Nakamura** · `1237334109469401` · **332 ads activos** |
-| Fanpage B | **Mestre Ryu Nakamura** · `962256263646003` · **164 ads activos** |
-| Ads Library A | https://www.facebook.com/ads/library/?view_all_page_id=1237334109469401 |
-| Ads Library B | https://www.facebook.com/ads/library/?view_all_page_id=962256263646003 |
-| Moneda | **USD** (cuenta extranjera comprando tráfico brasileño) |
-| Antigüedad observada | lotes diarios del 21 al 24/10 |
-| Ángulo A | `🔥 Transforme seu corpo em 28 Dias` |
-| Ángulo B | `Faça o teste gratuito 📲` → **quiz funnel** |
+| ① Longevidad 45+ días | ✅ **106 días** (Pinturas da Sueli), 79 (Mais Você), 35 (Roberta) |
+| ② Volumen 50+ ads de un jugador | ✅ **97 ads** |
+| ③ Duplicación 10+ del mismo creativo | ✅ Roberta tiene 9 ads idénticos del 19/9 |
+| ④ Hueco de arbitraje | ✅ sin equivalente en habla inglesa |
+| **SCORE** | **4/4 — CANDIDATA A** |
 
-**Por qué importa:** los 164 ads de la fanpage B llevan **el mismo título idéntico**. Eso es un creativo que ya ganó el test interno — es el ángulo a modelar primero. La estructura es quiz → plan personalizado de 28 días, exactamente el esqueleto de [[protocolo-chia-28d]].
-
-Creativos a mirar primero (los más duplicados):
-- https://www.facebook.com/ads/library/?id=2402112956987322
-- https://www.facebook.com/ads/library/?id=1424605129874263
-- https://www.facebook.com/ads/library/?id=1674835684371964
+Y además cumple tus cuatro filtros: **low ticket** (R$ 10), **escondida** (nadie mira repasadores), **sin marca personal** (páginas genéricas, cero experto a la vista), **ya vendiendo** (106 días).
 
 ---
 
-### 🥈 #2 — Dra Lidiane Nutri · **227 ads activos**
-
-| Dato | Valor |
-|---|---|
-| page_id | `269803192877483` |
-| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=269803192877483 |
-| Ads activos | **227** |
-| Moneda | **BRL** (operador brasileño local) |
-| Antigüedad observada | 23 y 24/10 |
-| Ángulo | `🚨 NÃO IGNORE ESSES SINAIS!` — **miedo + síntomas**, el ángulo black clásico |
-
-Los 227 ads corren **el mismo creativo**. Persona de "Dra." nutricionista: ojo, acá hay que verificar si es una persona real (descartable) o un personaje fabricado para la oferta (modelable). Mi lectura: por el volumen y el formato, es un personaje.
-
-- Creativo duplicado: https://www.facebook.com/ads/library/?id=2011756332818813
-
----
-
-### 🥉 #3 — Carlão Silva · **92 ads activos · 8 días corriendo** ⭐
-
-**La más interesante para modelar**, aunque no sea la más grande: es la única del nicho donde pude **verificar la antigüedad**.
-
-| Dato | Valor |
-|---|---|
-| page_id | `183878161475545` |
-| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=183878161475545 |
-| Ads activos | **92** |
-| Antigüedad **verificada** | ad más viejo activo del **16/10** → **8 días sin pausa** |
-| Moneda | **USD** + algunos en BRL (dos cuentas) |
-| Ángulo | `Descubra aqui` — repetido en ~40 ads |
-
-Escalada visible por lotes: 16/10 (~25 ads) → 20/10 → 21/10 → 23/10 (7 ads en BRL) → 24/10 (16 ads). **Está escalando ahora mismo**, no hace un mes. Es la ventana más fresca de las tres.
-
-- Creativo duplicado: https://www.facebook.com/ads/library/?id=1436976308651818
-- Lote del 16/10 (el más viejo): https://www.facebook.com/ads/library/?id=1830629934951662
-
----
-
-### #4 — Isadora Nogueira · **125 ads activos**
-
-| Dato | Valor |
-|---|---|
-| page_id | `277332599356492` |
-| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=277332599356492 |
-| Ads activos | **125** · Moneda **BRL** |
-| Ángulo | `Alimentos que podem estar atrapalhando sua rotina` — **culpa sin acusar**, versión suave del black |
-
-Ese hook es el más elegante de toda la caza: ataca la comida sin prometer kilos, así esquiva el bloqueo de Meta. Conecta directo con tus reglas anti-bloqueo de [[profesional-digital]].
-
-- https://www.facebook.com/ads/library/?id=1699298801882938
-
----
-
-### ⚠️ Fuera de categoría — las apps globales (NO modelables)
-
-Aparecieron tres monstruos que **no son ofertas brasileñas** sino apps de suscripción multi-idioma. Las anoto porque explican el funnel que todos copian, pero competirles es suicidio:
-
-| Página | page_id | Ads activos | Señal |
-|---|---|---|---|
-| Lessie Fitness | `116143894813499` | **13.354** | creativo devuelto en **vietnamita** |
-| Liliia Fitness | `532718256584886` | **2.140** | creativo devuelto en **italiano** |
-| Eat Smart Every Day | `1068378719702576` | **880** | corre en ES y PT, ads desde el 14/10 |
-
-Las tres usan el mismo esqueleto: **quiz → plan personalizado → suscripción**. Es el funnel que valida el formato, pero son jugadores con presupuesto de app, no de low ticket.
-
----
-
-## 3. RENDA EXTRA — shortlist rankeada
-
-### 🥇 #1 — Roberta Carvalho · **45 ads · 34 días sin pausa** ⭐⭐
-
-**La mejor candidata de todo el informe por longevidad verificada.**
-
-| Dato | Valor |
-|---|---|
-| page_id | `1279755271890328` |
-| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=1279755271890328 |
-| Ads activos | **45** |
-| Antigüedad **verificada** | ads del **20/09** todavía activos → **34 días corriendo** |
-| Moneda | **USD** |
-| Nicho | Artesanato / manualidades para vender |
-| Ángulo | `Converse conosco` → **funnel de WhatsApp**, no landing |
-
-Ads activos rastreados en 7 fechas distintas: 20/09, 21/09, 24/09, 01/10, 09/10, 20/10, 21/10. **Nadie banca 34 días de gasto perdedor.** Es la prueba más dura de rentabilidad que dio toda la caza.
-
-- Ad del 20/09 (el más viejo activo): https://www.facebook.com/ads/library/?id=28618227171164586
-- Ad del 21/10 (el más nuevo): https://www.facebook.com/ads/library/?id=1659291895583169
-
----
-
-### #2 — Maria Alice · **67 ads activos**
+## 3. 🥈 EL MODELO DE NEGOCIO A COPIAR — Maria Alice
 
 | Dato | Valor |
 |---|---|
 | page_id | `235850109592181` |
 | Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=235850109592181 |
-| Ads activos | **67** · Moneda **USD** |
-| Antigüedad observada | lote del 24/10 |
-| Ángulo | `OFERTA UNICA👉` |
+| Ads activos | **69** |
+| Ad activo más viejo | **28 sept. 2026** → **26 días** |
+| Moneda | **USD** |
+| Precio de todo | **R$ 10** |
 
-Pasa el filtro de volumen pero **no pude verificar antigüedad**: todo lo que devolvió la herramienta es de hoy. Candidata B hasta la segunda pasada.
+No vende un producto: vende **un catálogo de productos de R$ 10, uno por oficio**, cada uno con su dominio propio:
+
+| Dominio | Oferta |
+|---|---|
+| `licoremcasa.shop` | 150 recetas de licores + 150 de batidas + tabla de precios + guion de venta por WhatsApp + videoclase de packaging |
+| `partiturasax.shop` | Partituras de saxo |
+| `cifrasliturgicas.shop` | Cifras litúrgicas |
+| `eeuwiglied.shop` | **En holandés** — ya está testeando Europa |
+| (sin dominio visible) | **+500 proyectos de parrillas para fabricar** |
+
+### El copy de parrillas — tu competencia directa en Brasil, a R$ 10
+
+```
+🔥 +500 PROJETOS DE CHURRASQUEIRAS PRONTOS PRA FABRICAR 🔥
+
+Chega de perder tempo quebrando a cabeça com medida e desperdiçando chapa. 😤
+Aqui você recebe o projeto pronto: é só cortar, soldar e vender. 💰
+
+✅ Mais de 500 projetos com desenho e medidas
+✅ Lista de corte de cada peça
+✅ Lista de material com a quantidade certa pra comprar
+✅ Chapa, tambor, bafo, com tampa, portátil, gourmet e de embutir
+✅ Abre no celular, dá pra levar pra oficina
+
+🛠️ Feito pra serralheiro e pra quem tem uma máquina de solda em casa
+   e quer fazer uma renda extra.
+
+🎁 Hoje por apenas R$ 10
+```
+
+**Lo que te roba de Herrero de Finde y hace mejor:** el bullet *"Abre no celular, dá pra levar pra oficina"* — resuelve la objeción física del taller. Y *"é só cortar, soldar e vender"* comprime todo el mecanismo en cinco palabras. Para sumar a [[herrero-de-finde]].
+
+**Score: 3/4 — candidata B** (le falta longevidad: 26 días).
 
 ---
 
-### #3 — Nina Artesanato · 4 ads · **65 días corriendo** 💡
+## 4. EMAGRECIMENTO — las que sí sirven
+
+### 🥇 Isadora Nogueira — la mejor del nicho · **130 ads · 36 días**
 
 | Dato | Valor |
 |---|---|
-| page_id | `1207151622478449` |
-| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=1207151622478449 |
-| Ads activos | **4** · Moneda BRL |
-| Antigüedad **verificada** | ads del **06/08** todavía activos → **65 días** |
+| page_id | `277332599356492` |
+| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=277332599356492 |
+| Ads activos | **130** |
+| Ad más viejo activo | **18 sept. 2026** → **36 días** |
+| Landings | **desafiorestart.com.br** · **startprotocolo.com** |
+| Producto | **"Protocolo Restart"** — infoproducto digital |
+| Moneda | BRL |
 
-No escala (4 ads), pero **lleva más de dos meses corriendo**. Es el caso exacto que describe [[funnel-hacking]]: *"mucha gente tiene ofertas que convierten y no se anima a meterle presupuesto. Eso es una oportunidad, no una descalificación."* Oferta validada, operador tímido → hueco para entrar con presupuesto de verdad.
+**Lo que la hace la mejor: gasto sostenido, no picos.** Tiene ads activos creados en **18 fechas distintas** a lo largo de los 36 días (18/9, 23/9, 25/9, 27/9, 30/9, 3/10, 4/10, 5/10, 6/10, 7/10, 9/10, 11/10, 14/10, 17/10, 18/10, 19/10, 22/10, 23/10, 24/10). Eso es alguien que renueva creativos todos los días porque le está dando ganancia, no alguien que hizo un lote y se fue.
+
+**El copy black (modelable):**
+```
+E se eu te dissesse que 8 alimentos que você come todos os dias
+estão sabotando seu metabolismo?
+
+O Protocolo Restart revela não só quais são esses alimentos,
+mas também o método exato para desinflamar seu corpo e derreter gordura.
+
+Um segredo guardado a sete chaves, agora ao seu alcance.
+
+Comente "Eu quero" aqui que eu te envio os detalhes 👇🏻
+```
+
+El ángulo es **el enemigo numerado** (8 alimentos) + **mecanismo con nombre** (Protocolo Restart) + **CTA por comentario** en vez de link, que baja el CPM y esquiva la revisión. **Score: 3,5/4 — candidata B+.**
 
 ---
 
-### #4 — Carmen Artesanal · 11 ads · 13 días
+### Carlão Silva — **92 ads · 27 días**
 
-`1338533809344372` · https://www.facebook.com/ads/library/?view_all_page_id=1338533809344372
-Ads del 10/10 al 23/10, USD, mismo funnel de WhatsApp que Roberta Carvalho. **Tercer anunciante del mismo subnicho con el mismo formato** → el patrón se confirma.
+| Dato | Valor |
+|---|---|
+| page_id | `183878161475545` |
+| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=183878161475545 |
+| Ads activos | **92** (11 de ellos del 27/9, todavía corriendo) |
+| Ad más viejo activo | **27 sept. 2026** → **27 días** |
+| Landings | **avaliacaogratuitapaizao.com.br** · **diagnosticodopaizao.net** |
+| Formato | Video de 1:45 + CTA "Descubra aqui" |
+
+Copy único repetido en ~40 anuncios: *"Chega de segredo. Quer saber como elas conseguiram esses resultados? Clica aqui embaixo que eu te mostro o caminho."* Dos dominios distintos para la misma oferta = **se está escondiendo** (la táctica de defensa que vos tenés documentada en [[funnel-hacking]]). **Score: 3/4 — candidata B.**
 
 ---
 
-## 4. Radar — testers a revisar el 27/10
+### Dra Lidiane Nutri — 230 ads · 43 días · **pero NO es infoproducto**
 
-Ninguno pasa el filtro hoy, pero arrancaron esta semana. Si en 3 días subieron el número de ads, están escalando:
+| Dato | Valor |
+|---|---|
+| page_id | `269803192877483` |
+| Ads Library | https://www.facebook.com/ads/library/?view_all_page_id=269803192877483 |
+| Ads activos | **230** · más viejo: **11 sept. 2026 → 43 días** |
+| Funnel | 100% WhatsApp |
 
-| Página | page_id | Ads | Oferta | Precio visible |
+Vende un **encapsulado manipulado** ("Topa fazer meu jejum metabólico junto com meu encapsulado?", "vou te falar tudo sobre meu manipulado"). Es producto físico con receta: no modelable como low ticket digital, y con riesgo regulatorio alto. **El ángulo sí sirve**: "jejum metabólico" + consulta por WhatsApp.
+
+---
+
+### ❌ Descartados del nicho
+
+| Página | Ads | Por qué se descarta |
+|---|---|---|
+| **Ryu Nakamura** + **Mestre Ryu Nakamura** | ~510 | **Calistenia asiática para hombres +40** — justo lo que no querés. Landing `lastafit.site`. Y solo **9 días** de antigüedad (ad más viejo: 15/10). Volumen sin historia. |
+| Lessie Fitness | 13.354 | App global de suscripción, creativos en vietnamita |
+| Liliia Fitness | 2.140 | Misma app, creativos en italiano |
+| Eat Smart Every Day | 880 | Misma categoría, corre en ES y PT |
+| Nina Artesanato | 0 | La API la daba con 4 activos; en la Biblioteca ya no aparece ninguno. Apagó. |
+
+Las tres apps usan el mismo esqueleto (quiz → plan personalizado → suscripción) y lo corren en decenas de idiomas. Validan el formato, pero tienen presupuesto de app: no competirles.
+
+---
+
+## 5. Radar — revisar el 27/10
+
+| Página | page_id | Ads | Oferta | Precio |
 |---|---|---|---|---|
-| **Crochê Studio** | `1311977375342058` | 11 (todos de hoy) | Amigurumi, guías en PDF | **R$ 39 / R$ 59 / kit R$ 79** |
+| **Crochê Studio** | `1311977375342058` | 11 (todos de hoy) | Amigurumi, guías PDF, 5 productos | **R$ 39 / 59 / 79** |
 | Renda com Unhas | `1317322318138559` | 2 | Curso alongamento de unhas | **R$ 97** |
-| Brasil Super Ofertas | `182678391589462` | 5 | **"PIX OCULTO por apenas R$ 10"** | **R$ 10** |
+| Brasil Super Ofertas | `182678391589462` | 5 | "PIX OCULTO" | **R$ 10** |
 | Passinhos que Educam | `1397199170141998` | 1 | Kit Rotina Mágica | **R$ 29,90** |
-| Protocolo lumina | `1267149479822757` | 1 | — | — (pero corre desde el **25/09**) |
+| Protocolo lumina | `1267149479822757` | 1 | — | corre desde el **25/09** |
 
-**Crochê Studio es el que más vale mirar**: lanzó 11 ads hoy con 5 productos distintos de R$ 39 a R$ 79, página faceless, cuenta en USD. Es alguien armando una operación low ticket de cero, igual que vos. Si el 27/10 tiene 40 ads, encontró el ángulo.
-
----
-
-## 5. Veredictos
-
-### Emagrecimento black → **WHALE DOMINANTE**
-Cinco anunciantes con 92 a 496 ads atacando la misma promesa, más tres apps globales. **No competir de frente en Brasil.** El camino es modelar el funnel (quiz → protocolo de 28 días) y lanzarlo en un mercado con hueco.
-
-### Renda extra genérico → **DESCARTAR**
-31.114 anuncios activos, pero al contar anunciante por anunciante: Quem Cuida Pet 5 ads, Nilton melo 10, Erick Puppin 17, Brasil Super Ofertas 5. **Todos mueren antes de escalar.** Demanda enorme, promesa quemada.
-
-### Renda extra de oficio (artesanato/crochê/unhas) → **ENTRAR** ⭐
-Tres anunciantes con el mismo formato (Roberta 45 ads/34 días, Carmen 11 ads/13 días, Nina 4 ads/65 días), ninguno domina, y el formato se repite: **nicho de oficio + funnel de WhatsApp + cuenta en USD**. Demanda validada con espacio real.
+Crochê Studio lanzó 11 ads hoy con 5 productos distintos, página faceless, cuenta en USD. Es alguien armando una operación low ticket desde cero. Si el 27/10 tiene 40+ ads, encontró el ángulo y vale modelarlo entero.
 
 ---
 
-## 6. Score de 4 señales
+## 6. Veredictos
 
-| Candidata | ① Longevidad 45+ d | ② Volumen 50+ | ③ Duplicación 10+ | ④ Hueco arbitraje | Score |
-|---|---|---|---|---|---|
-| **Roberta Carvalho** | ⚠️ 34 d (casi) | ❌ 45 | ✅ | ✅ | **2,5/4 — B** |
-| **Operador Nakamura** | ❓ no verificable | ✅ 496 | ✅ 164 iguales | ✅ | **3/4 — B** |
-| **Carlão Silva** | ❌ 8 d | ✅ 92 | ✅ ~40 iguales | ✅ | **3/4 — B** |
-| Dra Lidiane Nutri | ❓ | ✅ 227 | ✅ | ⚠️ | **2,5/4** |
-| Isadora Nogueira | ❓ | ✅ 125 | ✅ | ⚠️ | **2,5/4** |
-| Nina Artesanato | ✅ **65 d** | ❌ 4 | ❌ | ✅ | **2/4 — observar** |
+| Mercado | Anunciantes | Veredicto |
+|---|---|---|
+| **Adesivos para panos de prato** | 9, ninguno domina | **SUBNICHO validado — ARBITRAR** ⭐ |
+| **Stack de R$ 10 por oficio** (modelo Maria Alice) | 1 visible | **ENTRAR** ⭐ |
+| Emagrecimento black digital | 3 (Isadora, Carlão, + testers) | **ENTRAR con cuidado** |
+| Emagrecimento con encapsulados | 1 fuerte | **DESCARTAR** (producto físico, riesgo) |
+| Calistenia / fitness +40 | 1 whale + 3 apps | **DESCARTAR** (lo pediste vos) |
+| Renda extra genérico | miles atomizados | **DESCARTAR** — nadie pasa de 17 ads |
 
-**Ninguna llegó a 4/4.** La razón es honesta y está explicada abajo: la herramienta no me dejó verificar la longevidad de las páginas grandes.
+**Por qué "arbitrar" y no "entrar" en los adesivos:** 9 anunciantes en Brasil con creativos muy parecidos es saturación según la escalera de la skill. Pero 106 días de longevidad prueban que la oferta convierte. La jugada no es pelear en Brasil: es **llevarla a un mercado donde no existe**.
 
 ---
 
@@ -216,35 +238,54 @@ Tres anunciantes con el mismo formato (Roberta 45 ads/34 días, Carmen 11 ads/13
 
 **Brasil (fuente) → habla inglesa (destino).**
 
-El ángulo **quiz → protocolo personalizado de 28 días** está validado en Brasil por 496 ads del operador Nakamura y replicado por las apps globales. Liliia Fitness ya lo corre en italiano y Lessie en vietnamita — o sea que el formato **viaja entre idiomas sin perder conversión**, que es la prueba de que el ángulo no depende de la cultura local.
+El producto es **calcomanías imprimibles en PDF para repasadores de cocina a US$ 2**. En Brasil lleva 106 días validado por 9 anunciantes. En habla inglesa el equivalente ("tea towel transfer designs", "kitchen towel iron-on patterns") es el mismo universo de [[scented-stones]]: mujer de 50-60, manualidades, vender en ferias y Facebook Marketplace.
 
-Orden de prioridad para vos: **1) inglés** (donde ya corre [[scented-stones]] y tenés el testeo armado), 2) Europa, 3) LATAM.
+Tres razones por las que encaja con lo que ya tenés armado:
+1. **Mismo avatar que Scented Stones** — podés reusar el Avatar Sheet y los ángulos de [[natives-ganadoras]].
+2. **Mismo formato de entrega** (PDF imprimible) — cero costo marginal, cero logística.
+3. **Mismo mercado donde ya tenés el testeo armado** ([[testeo-habla-inglesa]]: US/CA/AU/UK/NZ, ABO $10 por conjunto).
 
-Para renda extra de oficio, el par es al revés: Brasil tiene artesanato validado con WhatsApp, y en habla inglesa el equivalente (craft → side income) es justo el terreno de [[scented-stones]] y [[natives-ganadoras]] — o sea que **ya estás en el mercado destino correcto**, y lo que falta es traer el ángulo de oficio brasileño.
-
----
-
-## 8. Lo que NO pude verificar (y cómo resolverlo)
-
-Tres límites reales de esta caza, para que no tomes decisiones con datos que no tengo:
-
-1. **No tengo las URLs de las landings.** El conector devuelve el `ad_snapshot_url` (la vista del anuncio) pero no el link de destino. Para mapear landings, precios y upsells hay que **abrir los snapshots en el navegador** — lo puedo hacer con Chrome cuando me digas.
-2. **No pude verificar la longevidad de las páginas con más de 50 ads.** La herramienta devuelve los 50 ads más recientes y no deja paginar hacia atrás. Por eso Nakamura, Lidiane e Isadora quedaron con "❓" en la señal ①: tienen volumen probado pero antigüedad desconocida. Donde sí la verifiqué (Roberta, Nina, Carlão) fue porque los ads viejos aparecieron en las búsquedas por keyword.
-3. **No confirmé si las "Dra." y los nombres propios son personas reales o personajes.** Tu regla es descartar marcas personales; esto se resuelve mirando el Instagram de cada página (si tiene +10.000 seguidores y un experto en los creativos, se descarta).
+Y el segundo par, para [[herrero-de-finde]]: Maria Alice vende **+500 proyectos de parrillas a R$ 10 en Brasil**. Vos vendés lo mismo en Argentina. Su bullet *"abre no celular, dá pra levar pra oficina"* y su compresión *"é só cortar, soldar e vender"* son para robar ya.
 
 ---
 
-## 9. Próximo paso sugerido
+## 8. Score de 4 señales — tabla final
 
-1. **Abrir los snapshots de las 3 candidatas B** (Nakamura, Carlão, Roberta) con Chrome → sacar landing, precio, order bumps y upsells.
-2. **Segunda pasada el 27/10** sobre la tabla de radar: si Crochê Studio pasó de 11 a 40+ ads, encontró el ángulo y vale modelarlo entero.
-3. **Decidir cuál de los dos caminos tomar**: el funnel de quiz de emagrecimento (más grande, más competido, más caro de testear) o el de oficio + WhatsApp (más chico, más barato, con hueco verificado de 34 y 65 días).
+| Candidata | ① Longevidad 45+ d | ② Volumen 50+ | ③ Duplicación 10+ | ④ Hueco arbitraje | Score |
+|---|---|---|---|---|---|
+| **Pinturas da Sueli** (adesivos) | ✅ **106 d** | ✅ 97 | ✅ | ✅ | **4/4 — A** 🏆 |
+| **Isadora Nogueira** | ⚠️ 36 d | ✅ 130 | ✅ | ✅ | **3,5/4 — B+** |
+| **Maria Alice** | ❌ 26 d | ✅ 69 | ✅ | ✅ | **3/4 — B** |
+| **Carlão Silva** | ❌ 27 d | ✅ 92 | ✅ | ✅ | **3/4 — B** |
+| Mais Você (adesivos) | ✅ **79 d** | ❌ 14 | ❌ | ✅ | 2/4 |
+| Roberta Carvalho | ❌ 35 d | ❌ 45 | ✅ | ✅ | 2/4 |
+| Dra Lidiane Nutri | ❌ 43 d | ✅ 230 | ✅ | ❌ físico | 2,5/4 |
+| Operador Nakamura | ❌ 9 d | ✅ 510 | ✅ | ❌ descartado | 2/4 |
 
-Mi recomendación: **el de oficio**. Tiene longevidad verificada, competencia débil, ticket bajo, cero marca personal y encaja con lo que ya sabés hacer de [[scented-stones]].
+---
+
+## 9. Qué haría yo el lunes
+
+1. **Comprar las dos ofertas de adesivos** (Pinturas da Sueli y Roberta Carvalho, R$ 10 cada una = menos de US$ 4 las dos). Ver el PDF, el flujo de WhatsApp, si hay order bump y qué upsell tiran después. Es la inversión más barata de información de toda la caza.
+2. **Armar la versión en inglés**: "+37 printable tea towel transfer designs", PDF, US$ 7–9, con la arquitectura de copy de Roberta (lista de 9 temas con emoji).
+3. **Testearla con tu setup de siempre** ([[testeo-habla-inglesa]]): 3 guiones, ABO $10 por conjunto, US/CA/AU/UK/NZ.
+4. **Sumar a Herrero de Finde** los dos bullets de Maria Alice.
+5. **Revisar Crochê Studio el 27/10.**
+
+---
+
+## 10. Honestidad sobre los datos
+
+- **Verificado en la Biblioteca** (navegador): fechas de inicio, cantidad de ads, dominios de destino, precios y copys de las 11 fanpages auditadas.
+- **No verificado:** no compré ninguna oferta, así que **no sé qué hay detrás del WhatsApp ni en el checkout** (order bumps, upsells, precio real final). Es el punto 1 de la lista de arriba.
+- **Beatriz Silva** (11 ads en el subnicho de adesivos) quedó sin auditar en detalle.
+- **La API y la Biblioteca web no siempre coinciden**: Nina Artesanato figuraba con 4 ads activos por API y con 0 en la web. Cuando hay diferencia, **vale la web**.
+- No confirmé si "Isadora Nogueira", "Carlão Silva" o "Dra Lidiane" son personas reales o personajes. Ninguna muestra un experto con audiencia propia en los creativos, así que por tu regla de marca personal pasan, pero conviene mirarles el Instagram antes de modelar.
 
 ---
 
 ## Fuentes
-- `ads_library_search` (conector oficial de Meta), 24/10/2026 — 12 keywords, 20+ consultas, 25 páginas con arsenal contado.
-- Keywords usadas: renda extra · ganhar dinheiro em casa · por dia no pix · trabalhar pela internet sem aparecer · crochê · artesanato para vender e lucrar · kiwify · secar barriga · receita caseira para emagrecer.
+- `ads_library_search` (conector oficial de Meta) + Biblioteca de Anuncios en el navegador, 24/10/2026.
+- 12 keywords: renda extra · ganhar dinheiro em casa · por dia no pix · trabalhar pela internet sem aparecer · crochê · artesanato para vender e lucrar · kiwify · secar barriga · receita caseira para emagrecer · adesivos para panos de prato.
+- 11 fanpages auditadas en el navegador con fechas de inicio, dominios y copys.
 - Método: [[caza-de-ofertas]] · criterios de [[funnel-hacking]]

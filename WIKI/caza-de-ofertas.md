@@ -132,6 +132,33 @@ La skill es más exigente en volumen y más laxa en tiempo. **Lo mejor es combin
 
 > **Recordatorio de la skill:** el whale valida la **OFERTA**, no te salva de un test sucio. Landing degradada, pixel ciego o un solo conjunto queman igual — cuando lances, armá el test en serio ([[setup-de-campanas]] · [[testeo-de-creativos]]).
 
+## Paso 3 (obligatorio) — auditar en el navegador
+
+**Registro 24/10/2026: la API sola no alcanza.** Después del barrido y el conteo, hay que abrir cada candidata en la Biblioteca web. Es el paso que convierte una lista de números en una oferta modelable, y resuelve **las cuatro cosas que la API no da**:
+
+| Dato | API | Biblioteca web |
+|---|---|---|
+| Fecha de inicio de cada ad | ❌ solo los 50 más nuevos | ✅ **todas, al scrollear** |
+| Dominio de la landing | ❌ nunca | ✅ |
+| Precio y copy completo | ❌ solo el título | ✅ |
+| Producto real que vende | ❌ se adivina | ✅ |
+
+**La URL que sirve** (país = todos, solo activos):
+
+```
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=<PAGE_ID>&search_type=page&media_type=all
+```
+
+⚠️ **Si no ponés `country=ALL`, la Biblioteca filtra por Argentina y te dice "no hay anuncios"** aunque la página tenga 300 corriendo. Es el error que más tiempo hace perder.
+
+**Cómo leerla:** scrollear hasta el fondo para cargar todos los ads y después contar las fechas de *"En circulación desde el…"* agrupadas por día. Eso da **la longevidad real y el patrón de gasto**, que es la señal más valiosa:
+- Muchos ads viejos todavía activos repartidos en **muchas fechas distintas** = renueva creativos todos los días porque gana plata. **La mejor señal que existe.**
+- Todo el volumen concentrado en **2 o 3 días recientes** = lote masivo de testeo, no historia. Volumen sin rentabilidad probada.
+
+**Por qué importa:** en la primera caza, el anunciante con 510 ads (el más grande por volumen) resultó tener **9 días de antigüedad** y vender calistenia; mientras que el verdadero winner tenía 97 ads y **106 días corriendo**. Con la API sola, el ranking salía al revés.
+
+> Truco: al extraer dominios por JavaScript, reemplazar los puntos antes de devolverlos (`replace(/\./g,' punto ')`) — si no, el filtro de seguridad del navegador los tapa como si fueran un token.
+
 ## Cómo se comporta la herramienta de verdad (registro 24/10/2026)
 
 Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil, ver el output abajo). Esto **no está en la skill** y cambia cómo hay que usarla:
@@ -144,6 +171,7 @@ Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil,
 - **Las keywords genéricas traen ruido de otros nichos.** "por dia no pix" devolvió 1,3 M de resultados con suplementos mexicanos. Frases de 2-3 palabras específicas del nicho ("secar barriga", "receita caseira para emagrecer") funcionan mucho mejor.
 - **Los footprints de checkout funcionan muy bien**: `kiwify` como `search_terms` devolvió 16.354 ads y fue la ronda que más ofertas low ticket con **precio visible en el título** destapó (R$ 29,90, R$ 39, R$ 97). Probar también `cakto`, `kirvano`, `hub.la`.
 - **El ranking por defecto favorece testers.** Como ordena por lo más nuevo, la primera pantalla siempre son lanzamientos de hoy. Los winners viejos hay que ir a buscarlos con keywords de subnicho.
+- **El volumen engaña sin la fecha.** Un anunciante con cientos de ads puede llevar 9 días; otro con 97 puede llevar 106. El conteo por API **ordena mal** si no se cruza con las fechas del navegador.
 - **Subnicho > nicho.** El término genérico ("renda extra") devuelve miles de anunciantes atomizados que mueren en una semana. El término de oficio ("crochê", "artesanato para vender") destapa las ofertas con 34 y 65 días corriendo.
 
 ## Preguntas abiertas

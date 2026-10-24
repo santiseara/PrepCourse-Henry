@@ -1,3 +1,9 @@
+## 2026-10-24 — Herrero de Finde: los 6 videos V7–V12, terminados
+
+- Las 6 voces grabadas en AI Studio (Knox + Style argentino) y los 6 videos renderizados: `~/Desktop/herrero-de-finde/anuncios/HF-V7…HF-V12-*.mp4`, de 46 a 61 s.
+- **Tres arreglos durante el render:** el V8 se cortaba por una palabra ancla con ocurrencia mal contada ("cinco" es también la primera palabra del guion); las fichas se recortaban a lo ancho por el zoom constante (`fit_w` pasó de 1,2 a 0,86); y un clip de B-roll lleva el cartel en inglés "And that's how you do that" desde el segundo 97 (`LIMITE = {'Y': 96}` en `gen2.py`).
+- **Corrección de Santiago:** *"¿Cuántos videos estás haciendo? Solo quería 3."* Regla nueva en `WIKI/guiones-y-anuncios.md` y en la memoria: **la tanda es de 3**; el máximo de 6 es un tope. Para subir van el V7, el V8 y el V11; V9, V10 y V12 quedan de banco.
+
 ## 2026-10-24 — Scented Stones: natives 24, 25 y 26 con el ángulo BIZOP
 
 - Santiago: *"Ahora vamos con las natives, apuntando a esto que hablamos."* Se aplicó la regla del 24/10 (bizop, sin historia larga ni cálculos) **sin perder** la arquitectura del nicho Thrift AI ni el largo de 900–1.200 palabras.

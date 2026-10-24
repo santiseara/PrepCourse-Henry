@@ -75,7 +75,7 @@
 - **Planes de edición:** `anuncios/work/plans/gen2.py` genera `V7.json` a `V12.json` con la estética v2 (música, zoom, destellos, barra de progreso) y comparte `usage.json` con la tanda anterior para no repetir recortes.
 - **Textos de voz:** `anuncios/work/vo/V7.txt` a `V12.txt`.
 - **Voces (2026-10-24):** las 6 grabadas en AI Studio con Knox y el mismo Style argentino de la tanda anterior (`V7.wav` a `V12.wav`, de 54 a 72 s en crudo). La extensión de Chrome había perdido la pestaña seis veces el 23/10; al día siguiente funcionó sin tocar nada.
-- **Videos finales:** `anuncios/HF-V7…HF-V12-*.mp4`, de 46 a 61 s.
+- **Videos finales:** `anuncios/HF-V7…HF-V12-*.mp4`, de 46 a 61 s. **Para subir van 3** (V7, V8 y V11); V9, V10 y V12 quedan de banco ([[guiones-y-anuncios]], registro del 2026-10-24).
 
 ### Dos cosas que salieron de este render (reglas)
 - **`fit_w` va en 1.0, no en 1.2.** Con 1,2 la ficha se escala más ancha que la pantalla y se recorta un 8% por lado: se perdía el título del plano y la columna de la derecha de las tablas (la de los precios y la de los largos de corte). Con 1.0 entra entera con margen.

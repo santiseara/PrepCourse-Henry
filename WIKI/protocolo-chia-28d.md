@@ -17,10 +17,16 @@
 - Carpeta de la oferta: `~/Desktop/protocolo-chia-28d/` (`imagenes/`, `landing/`, `anuncios/`, `vsl/`).
 - Avatar propuesto: nutricionista latina de unos 38 años, bata blanca sobre polera verde oliva, anteojos redondos. Prompt en `~/Desktop/protocolo-chia-28d/vsl/PROMPT-AVATAR.txt`.
 
+## Avance (2026-10-24)
+- **Avatar creado en HeyGen: "Valeria Chia 28D"** (personaje virtual desde foto, voz "Buddy - Voice 3", español de México neutro). La foto está en `~/Desktop/protocolo-chia-28d/imagenes/avatar-valeria.png`.
+- Guion dividido en 4 bloques (`part01` a `part04.txt`) por el tope de 5.000 caracteres de HeyGen.
+- **Bloque 1 generado y bajado:** `~/Desktop/protocolo-chia-28d/vsl/HEYGEN-parte01.mp4` (4:48, 1080x1920). Costó 231 créditos con Avatar 6 Pro y dejó la cuenta en 6: los bloques 2, 3 y 4 quedaron rechazados por falta de créditos ([[vsl-reglas-de-armado]] §3c).
+- **55 b-rolls recortados del original** y limpiados de subtítulos quemados con `rmsubs.py`: `~/Desktop/protocolo-chia-28d/vsl/brolls/clean/`. Sin testimonios ni pantallas de la app y el checkout del competidor.
+- Precio definido: **17 USD**, anclas 140 / 97 / 70. Entregable **con app web** (la armamos nosotros).
+
 ## Preguntas abiertas
-- País, moneda, precio y pasarela de la versión LATAM (el original es ARS + MercadoPago).
-- ¿Hay quiz propio adelante del VSL? El guion lo da por hecho desde la primera línea.
-- ¿El entregable incluye app o es PDF? El competidor entrega una PWA con seguimiento.
+- Pasarela para cobrar 17 USD en LATAM.
+- El quiz se hace después (Santiago, 2026-10-24). El VSL igual abre dando por hecho que respondió las preguntas.
 - ¿Hay testimonios propios para el bloque de 8:13 a 9:47?
 
 ## Relacionado

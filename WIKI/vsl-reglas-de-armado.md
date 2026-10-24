@@ -59,6 +59,13 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 - **Los más baratos para B-roll (~5 créditos por clip de 5 s):** Kling 2.6 sin sonido, Wan 2.6 a 480p, Kling Omni 3 (referencia de imagen o primer y último frame) a 720p. Siguen Grok Video y Wan 2.6 a 720p (~7). Siempre **sin sonido** y a **5 s**.
 - Mezcla sugerida para 12 B-rolls: 2–3 en Kling 3.0 (hook, anatomía 3D) y el resto en Kling 2.6 o Wan 2.6. Son unos 65 créditos en lugar de 105.
 
+## 3c. Créditos de HeyGen por modelo (medido el 2026-10-24, Protocolo Chía 28D)
+- **Avatar 6 · Pro (Beta): ~48 créditos por minuto.** Un bloque de 4.489 caracteres salió en 4:48 y costó **231 créditos**. Hace gestos con las manos y expresiones guiadas por el guion: es lo más parecido al original con avatar real.
+- **Avatar IV: ~17 créditos por minuto** (los videos "CHIA G2/G3" de 1:02 costaron 17 cada uno). Movimiento genérico, sin gesto de manos.
+- Un VSL de 18 minutos cuesta unos **870 créditos con Avatar 6 Pro** y unos **300 con Avatar IV**. Antes de arrancar un VSL largo, calcular esto y avisarle a Santiago.
+- **El cuadro de Creación rápida tiene un tope de 5.000 caracteres**: un VSL largo se encola en bloques de ~4.500 (unas 780 palabras, 4:45 de video) y se unen en la edición.
+- Si no alcanzan los créditos, los videos se encolan igual y quedan en Proyectos con el cartel "No tienes suficientes créditos": no se pierden créditos, pero hay que volver a enviarlos.
+
 ## 4a. Edición del VSL de LATAM de crianza ("VSL Mama", 2026-10-13)
 - El original no tiene B-rolls ni placas: es la avatar a cámara con **subtítulos de a una palabra** (blanco con borde negro, fuente tipo Bangers, a la altura del pecho).
 - Para la versión argentina se copia esa edición y **solo se varían los B-rolls**. Pedido de Santiago: **"no pongas el tiktok entero, sino recortes en partes específicas"**, de 2 a 3 s cada uno y variados. Un recorte cada 10–15 s, y se alternan:

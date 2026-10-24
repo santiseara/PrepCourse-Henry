@@ -1,3 +1,11 @@
+## 2026-10-24 — Scented Stones: tanda v22 de guiones (ingresos extra) y relectura de la landing
+
+- Santiago: *"Vamos con mas guiones para piedras. Armemos guiones ganadores, que apunten a mi publico"* + la URL de la landing de nuevo.
+- **Relectura de `scentedstone.lovable.app`:** aparecen el catálogo con precio por tipo de pieza (colgantes marmoladas $6–10, terrazzo $7–12, cuarzo con vena dorada $9–14, difusores de auto y placard $6–9, sets $18–35) y las cifras de los 4 testimonios. Anotado en `WIKI/scented-stones.md`.
+- **Tanda v22** en `OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md` (+ copia en `~/Desktop/scented-stones-ad/anuncios/`): 6 guiones de **mecánica de negocio**, ninguno de los ángulos de las tandas v15–v21. La habilitación que no necesitás · el costo mayorista que duplica la ganancia · fabricante vs. revendedora de comisión · vender en sets en vez de sueltas · el P&L honesto de octubre · la competencia del pueblo como prueba de demanda.
+- Todos entre 78 y 83 segundos (tope de 1:30), estructura y CTA propios por guion, sin precio de la guía salvo como "baratísimo / dirt cheap", sin Etsy.
+- Banco al final del archivo: feria de navidad, el pedido que no pude cumplir, nostalgia de la abuela, FREE today y el testimonio del escéptico.
+
 ## 2026-10-23 — Herrero de Finde: material de los videos V7–V12 listo (faltan las voces)
 
 - Santiago: *"Armame los videos."* Quedó todo armado menos la voz en off: **la extensión de Chrome pierde la pestaña entre llamada y llamada** (el grupo de pestañas desaparece después del primer click), así que no se pudieron grabar las 6 voces en AI Studio.

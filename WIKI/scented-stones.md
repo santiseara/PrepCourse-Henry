@@ -49,6 +49,7 @@
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
 ## Variables posibles (ideas de próxima tanda)
+✅ **Usadas en la v22 (24/10):** la habilitación que no necesitás, el costo mayorista que duplica la ganancia, fabricante vs. revendedora de comisión, vender en sets en vez de piezas sueltas, el P&L honesto de octubre y la competencia del pueblo como prueba de demanda (`OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md`).
 ✅ **Usadas en la v21 (23/10):** la regalería que pide más de lo que podés hacer, un pedido de casamiento que paga un gasto fijo, la reposición mensual como ingreso que se repite, vender sin mostrar la cara, la jubilada de 61 y la cuenta de cuánto arriesgás al probar. Siguen libres: nostalgia de la abuela, FREE today, testimonio de 14 s del escéptico convertido y la versión larga del guion de la contadora (`OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md`).
 - Hook de eliminación de objeciones: "No kiln. No fancy tools. No experience." ([[hooks]])
 - Nostalgia: "My grandma's salt-dough trick turned into $1,200 a month."
@@ -101,6 +102,8 @@
 - **Promesa:** "Turn plaster and fragrance into a handmade business". Empezar con menos de $15, sin horno ni experiencia, primeros clientes en la semana.
 - **6 pilares:** fórmula base, fragancia que dura 6–10 semanas, moldes y acabados, packaging, precios y ganancia, primeros 10 clientes (scripts de WhatsApp, boutiques y organizadores de eventos, en 14 días).
 - **Números usables en guiones:** costo $0.30–0.60 por piedra, venta $6–12, sets $18–35, margen bruto +85%, una noche de vertido = 40–60 piezas, un pedido de boda = 80–150 piezas, una boutique repone cada mes, "$300–$700 al mes" en el track "desde casa".
+- **Catálogo de piezas con precio (relectura 2026-10-24):** colgantes marmoladas $6–10 · terrazzo moteado $7–12 · botánicas prensadas (marcadas *Best Seller*) · cuarzo con vena dorada $9–14 · sets en caja $18–35 · souvenirs de boda y eventos por volumen · **difusores de auto y de placard $6–9**. Sirven para variar el precio por pieza en los guiones sin repetir siempre "doce dólares".
+- **Testimonios con cifras (sin verificar, no usar como claim propio):** $380 en dos semanas · $340 por un pedido de 120 souvenirs de boda · ~$200 por semana · $92 la primera semana y $268 la tercera.
 - **Dolores que nombra:** el mes dura más que la plata, side hustles que no llevaron a nada, sin tiempo ni capital, miedo a perder los ahorros ("el problema nunca fuiste vos, fue el plan").
 - **4 bonus "free today":** plan de lanzamiento, guía de materiales y proveedores, moldes DIY, vender sin mostrar la cara.
 - **Oferta:** $27 (ancla $100, dice "save $70"), pago único, derechos comerciales, garantía de 7 días, contador de 13 h.

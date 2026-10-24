@@ -132,6 +132,20 @@ La skill es más exigente en volumen y más laxa en tiempo. **Lo mejor es combin
 
 > **Recordatorio de la skill:** el whale valida la **OFERTA**, no te salva de un test sucio. Landing degradada, pixel ciego o un solo conjunto queman igual — cuando lances, armá el test en serio ([[setup-de-campanas]] · [[testeo-de-creativos]]).
 
+## Cómo se comporta la herramienta de verdad (registro 24/10/2026)
+
+Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil, ver el output abajo). Esto **no está en la skill** y cambia cómo hay que usarla:
+
+- **Para contar, usar `limit: 1`.** El campo `estimated_total_count` trae el total real de ads de la página igual. Ahorra miles de tokens por consulta: contar 15 anunciantes sale casi gratis.
+- **Devuelve los ads más NUEVOS y no pagina.** Con más de 50 ads activos, es imposible llegar al más viejo → **la señal ① (longevidad) no se puede verificar en las páginas grandes**. Justo al revés de lo que uno querría.
+- **La antigüedad aparece de rebote en las búsquedas por keyword**, no en las de `page_ids`: ahí sí salen ads de hace semanas o meses. Si querés longevidad, mirá las fechas de los resultados por keyword y después contá con `page_ids`.
+- **`ad_active_status: ALL` no sirve para medir historial**: devolvió el mismo número que `ACTIVE`.
+- **No devuelve la URL de la landing**, solo el `ad_snapshot_url`. Para mapear landings, precios y upsells hay que abrir los snapshots con el navegador.
+- **Las keywords genéricas traen ruido de otros nichos.** "por dia no pix" devolvió 1,3 M de resultados con suplementos mexicanos. Frases de 2-3 palabras específicas del nicho ("secar barriga", "receita caseira para emagrecer") funcionan mucho mejor.
+- **Los footprints de checkout funcionan muy bien**: `kiwify` como `search_terms` devolvió 16.354 ads y fue la ronda que más ofertas low ticket con **precio visible en el título** destapó (R$ 29,90, R$ 39, R$ 97). Probar también `cakto`, `kirvano`, `hub.la`.
+- **El ranking por defecto favorece testers.** Como ordena por lo más nuevo, la primera pantalla siempre son lanzamientos de hoy. Los winners viejos hay que ir a buscarlos con keywords de subnicho.
+- **Subnicho > nicho.** El término genérico ("renda extra") devuelve miles de anunciantes atomizados que mueren en una semana. El término de oficio ("crochê", "artesanato para vender") destapa las ofertas con 34 y 65 días corriendo.
+
 ## Preguntas abiertas
 - ¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50? (la formación diría 10–15; la skill no contempla el caso)
 - ¿Guardar un registro acumulado de cazas para la segunda pasada a los 2–3 días (subió/bajó el número de ads), como pide [[funnel-hacking]]?
@@ -141,4 +155,5 @@ La skill es más exigente en volumen y más laxa en tiempo. **Lo mejor es combin
 
 ## Fuentes
 - RAW/2026-10-24-skill-cazar.md (la skill, cargada por Santiago el 24/10/2026)
+- OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md (primera caza real: de ahí salen las notas de comportamiento de la herramienta)
 - Criterios de selección dictados por Santiago en la conversación del 24/10/2026

@@ -1,3 +1,13 @@
+## 2026-10-24 — Primera caza con la skill: renda extra + emagrecimento black (Brasil)
+
+- Barrido mundial en la Ads Library: 12 keywords en portugués, 20+ consultas, **25 anunciantes con el arsenal contado uno por uno**.
+- **Emagrecimento black = WHALE DOMINANTE.** Operador "Ryu Nakamura" con **496 ads activos repartidos en 2 fanpages** (quiz → protocolo de 28 días, cuenta en USD); Dra Lidiane Nutri 227; Isadora Nogueira 125; Carlão Silva 92 con **8 días verificados** y ~40 creativos duplicados.
+- Tres apps globales fuera de categoría (Lessie Fitness 13.354 ads, Liliia 2.140, Eat Smart 880): mismo funnel de quiz corriendo en vietnamita e italiano. No modelables.
+- **Renda extra genérico = DESCARTAR** (31.114 ads pero atomizado: nadie pasa de 17). **Renda extra de oficio = ENTRAR**: Roberta Carvalho 45 ads con **34 días sin pausa**, Carmen Artesanal 13 días, Nina Artesanato **65 días** con solo 4 ads (oferta validada, operador tímido).
+- Radar para el 27/10: Crochê Studio (11 ads lanzados hoy, PDFs de R$ 39 a R$ 79), "PIX OCULTO por R$ 10", Renda com Unhas R$ 97.
+- Informe completo en `OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md`.
+- **Aprendizajes de la herramienta sumados a `WIKI/caza-de-ofertas.md`:** contar con `limit: 1`; no pagina hacia atrás (la longevidad de los whales grandes no se puede verificar); la antigüedad aparece en las búsquedas por keyword, no en las de `page_ids`; `kiwify` como footprint destapa las low ticket con precio visible; subnicho de oficio > nicho genérico.
+
 ## 2026-10-24 — La skill `cazar` entra al cerebro
 
 - Santiago cargó `SKILL-2.md` (la skill **cazar**) → copiada a `RAW/2026-10-24-skill-cazar.md`. Es idéntica a la que ya está instalada en las sesiones, así que no hubo que instalar nada.

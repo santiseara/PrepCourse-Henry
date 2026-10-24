@@ -73,7 +73,14 @@
 ## Material nuevo para los videos V7–V12 (2026-10-23)
 - **Las 4 hojas de un plano en español**, generadas por código: `anuncios/work/stills/mk_hojas.py` → `hoja-1-dibujo.png` (tres vistas + medida total), `hoja-2-compras.png` (lista de compras y total $961.000 → precio de venta), `hoja-3-cortes.png` (tabla A-H con largo de corte) y `hoja-4-soldadura.png` (14 pasos). Mismo estilo que las fichas. **Reemplazan a las `hdf-pagina-*.webp` del original, que están en inglés y llevan la marca del competidor.**
 - **Planes de edición:** `anuncios/work/plans/gen2.py` genera `V7.json` a `V12.json` con la estética v2 (música, zoom, destellos, barra de progreso) y comparte `usage.json` con la tanda anterior para no repetir recortes.
-- **Textos de voz:** `anuncios/work/vo/V7.txt` a `V12.txt`, listos para pegar en AI Studio.
+- **Textos de voz:** `anuncios/work/vo/V7.txt` a `V12.txt`.
+- **Voces (2026-10-24):** las 6 grabadas en AI Studio con Knox y el mismo Style argentino de la tanda anterior (`V7.wav` a `V12.wav`, de 54 a 72 s en crudo). La extensión de Chrome había perdido la pestaña seis veces el 23/10; al día siguiente funcionó sin tocar nada.
+- **Videos finales:** `anuncios/HF-V7…HF-V12-*.mp4`, de 46 a 61 s.
+
+### Dos cosas que salieron de este render (reglas)
+- **`fit_w` va en 1.0, no en 1.2.** Con 1,2 la ficha se escala más ancha que la pantalla y se recorta un 8% por lado: se perdía el título del plano y la columna de la derecha de las tablas (la de los precios y la de los largos de corte). Con 1.0 entra entera con margen.
+- **Revisar los tramos tardíos del B-roll.** El clip `7566063571134680350.mp4` (Y) lleva el cartel en inglés *"And that's how you do that"* desde el segundo 97 hasta el final, y se coló en el V8. En `gen2.py` quedó el diccionario `LIMITE = {'Y': 96}` para cortar ese tramo. Antes de dar una tanda por buena, mirar frames de los videos terminados, no solo de los clips.
+- **Ojo con la ocurrencia de las palabras ancla.** En el V8 anclé la pérgola en `'cinco,'` ocurrencia 0, que es la primera palabra del guion ("Cinco trabajos…"), y el render se cortó con `max() arg is an empty sequence`. Cuando el hook repite una palabra del cuerpo, contar las ocurrencias.
 
 ## Preguntas abiertas
 - **Producto:** ¿de dónde sale la biblioteca de planos en español? Las 8 páginas del carrusel "Abrí un plano" son del original y están en inglés.

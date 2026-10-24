@@ -1,3 +1,10 @@
+## 2026-10-24 — Scented Stones: natives 24, 25 y 26 con el ángulo BIZOP
+
+- Santiago: *"Ahora vamos con las natives, apuntando a esto que hablamos."* Se aplicó la regla del 24/10 (bizop, sin historia larga ni cálculos) **sin perder** la arquitectura del nicho Thrift AI ni el largo de 900–1.200 palabras.
+- **Qué cambió respecto de las natives 22 y 23:** el objeto de apertura ya es la oportunidad (un mostrador vacío, un calendario de pedidos, la góndola de ambientadores), desaparece el tramo de pérdida que ocupaba media native y no hay un solo desglose de cuentas. El bloque de honestidad y el tercero más joven se mantienen porque son los que dan credibilidad.
+- `OUTPUTS/2026-10-24-natives-piedras-24-25-26-bizop.md` (+ copia en `~/Desktop/scented-stones-ad/anuncios/`): **24** el canasto con la tarjeta "LOCAL MAKERS - ASK FOR DIANE" (Marcie Dalton, Kirksville MO) · **25** el calendario de la heladera con "MONROE WEDDING - 120 FAVORS" (Paula Renfro, Chillicothe OH) · **26** la góndola de plug-ins contra una piedra en la mano (Sharon Kimbrough, Hattiesburg MS).
+- Fichas de las tres en `WIKI/natives-ganadoras.md`.
+
 ## 2026-10-24 — Scented Stones: regla nueva de formato BIZOP y tanda v23
 
 - Santiago rechazó la v22 completa: *"esos guiones no me están gustando para nada. Son mucha historia, mucha vuelta. A la gente le aburre eso… vendelo más como un bizop, como un business opportunity… todos esos cálculos son los que los aburren a los clientes. Tenemos que buscar que se vea súper llamativo lo que ofrecemos."*

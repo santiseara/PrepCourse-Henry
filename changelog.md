@@ -1,3 +1,11 @@
+## 2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y arranque del clon
+
+- Santiago trajo el VSL de **Protocolo Chía 4S** (Argentina, +700 anuncios prendidos) para clonarlo en LATAM con acento neutro, misma edición y mismos b-rolls, bajo el nombre **Protocolo Chía 28D**.
+- Video transcripto con Whisper (17:46) y edición mapeada con hojas de contacto: estructura en 16 bloques, inventario de b-rolls y catálogo de placas en `OUTPUTS/2026-10-24-protocolo-chia-28d-analisis-y-plan-vsl.md`.
+- Nueva página `WIKI/protocolo-chia-28d.md`.
+- Entregado el prompt del avatar (`~/Desktop/protocolo-chia-28d/vsl/PROMPT-AVATAR.txt`) y el guion neutro 1 a 1 con el original (`GUION-VSL-CHIA-28D-v1.txt`, 2.960 palabras) con los precios como marcadores hasta ver la página.
+- Pendiente de Santiago: la página original, país/moneda/precio, si hay quiz y si hay testimonios propios.
+
 ## 2026-10-24 — Profesional Digital: análisis de Elevada Digital y 6 videos anti-bloqueo
 
 - Pedido de Santiago: modelar los ganadores de Elevada Digital para Argentina **con guiones que no se bloqueen** (en LATAM le rechazaron todos los anuncios por prometer de más).

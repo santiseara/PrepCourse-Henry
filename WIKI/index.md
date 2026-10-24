@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
@@ -90,6 +91,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y plan](../OUTPUTS/2026-10-24-protocolo-chia-28d-analisis-y-plan-vsl.md) — estructura minuto a minuto del VSL de Protocolo Chía 4S, inventario de b-rolls, placas y plan de clonado para LATAM · ver [[protocolo-chia-28d]]
 - [Guiones Profesional Digital, tanda 1](../OUTPUTS/2026-10-24-guiones-profesional-digital.md) — 6 guiones anti-bloqueo, uno por familia ganadora de Elevada Digital.
 - [2026-10-24 — Natives piedras 24, 25 y 26 (BIZOP)](../OUTPUTS/2026-10-24-natives-piedras-24-25-26-bizop.md) — el mostrador vacío, el calendario de pedidos del año y la góndola de ambientadores: arquitectura del nicho con el eje en la oportunidad de negocio · ver [[natives-ganadoras]]
 - [2026-10-24 — Guiones piedras v23 BIZOP](../OUTPUTS/2026-10-24-guiones-piedras-v23-bizop.md) — 6 guiones EN + ES de 45–55 s con formato oportunidad de negocio, después de que la v22 fuera rechazada por "mucha historia y muchos cálculos" · ver [[guiones-y-anuncios]]

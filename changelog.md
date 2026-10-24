@@ -1,3 +1,12 @@
+## 2026-10-24 — Profesional Digital: análisis de Elevada Digital y 6 videos anti-bloqueo
+
+- Pedido de Santiago: modelar los ganadores de Elevada Digital para Argentina **con guiones que no se bloqueen** (en LATAM le rechazaron todos los anuncios por prometer de más).
+- Relevados 274 anuncios activos, 239 videos bajados y 163 únicos transcriptos con Whisper. Patrones (hooks, formato visual, duplicados, días activos) en `WIKI/profesional-digital.md`.
+- Reglas anti-bloqueo nuevas (sin montos ni plazos, sin atributos personales, resultado en primera persona y chico, anti-hype, CTA limpio) en `WIKI/profesional-digital.md`.
+- 6 guiones en `OUTPUTS/2026-10-24-guiones-profesional-digital.md` y 6 videos de voz en off (Sulafat porteña + b-roll de Mixkit + tapas de la landing) en `~/Desktop/profesional-digital/anuncios/PD-V1…V6.mp4`.
+- Alerta: la landing tiene el pie y las reseñas del competidor ("Candamil Digital Ventures LLC · elevadadigital.com", capturas de "elevada_digital").
+- Santiago: *"Acordate que solo son 6 videos los que tenés que hacer."* Para el lanzamiento de una oferta nueva la tanda es de 6.
+
 ## 2026-10-24 — Herrero de Finde: los 6 videos V7–V12, terminados
 
 - Las 6 voces grabadas en AI Studio (Knox + Style argentino) y los 6 videos renderizados: `~/Desktop/herrero-de-finde/anuncios/HF-V7…HF-V12-*.mp4`, de 46 a 61 s.

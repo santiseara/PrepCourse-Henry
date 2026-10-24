@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
 - 🆕 [[herrero-de-finde]] — Oferta nueva AR ($14.990): 1.200 planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga en ImpulTienda traducida y localizada.
@@ -89,6 +90,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [Guiones Profesional Digital, tanda 1](../OUTPUTS/2026-10-24-guiones-profesional-digital.md) — 6 guiones anti-bloqueo, uno por familia ganadora de Elevada Digital.
 - [2026-10-24 — Natives piedras 24, 25 y 26 (BIZOP)](../OUTPUTS/2026-10-24-natives-piedras-24-25-26-bizop.md) — el mostrador vacío, el calendario de pedidos del año y la góndola de ambientadores: arquitectura del nicho con el eje en la oportunidad de negocio · ver [[natives-ganadoras]]
 - [2026-10-24 — Guiones piedras v23 BIZOP](../OUTPUTS/2026-10-24-guiones-piedras-v23-bizop.md) — 6 guiones EN + ES de 45–55 s con formato oportunidad de negocio, después de que la v22 fuera rechazada por "mucha historia y muchos cálculos" · ver [[guiones-y-anuncios]]
 - [2026-10-24 — Guiones piedras v22 ingresos extra](../OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md) — 6 guiones EN + ES (24/10 - 1 a 6) de mecánica de negocio: habilitación, costo mayorista, fabricante vs. revendedora, vender en sets, P&L honesto y la competencia como prueba de demanda · ver [[scented-stones]]

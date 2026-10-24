@@ -1,3 +1,9 @@
+## 2026-10-24 — Scented Stones: regla nueva de formato BIZOP y tanda v23
+
+- Santiago rechazó la v22 completa: *"esos guiones no me están gustando para nada. Son mucha historia, mucha vuelta. A la gente le aburre eso… vendelo más como un bizop, como un business opportunity… todos esos cálculos son los que los aburren a los clientes. Tenemos que buscar que se vea súper llamativo lo que ofrecemos."*
+- **Regla nueva** anotada en `WIKI/guiones-y-anuncios.md` (registro 2026-10-24) y marcada en `WIKI/scented-stones.md`: oportunidad en la primera línea, segunda persona, 45–55 s, **un solo número llamativo y cero desgloses**, estructura margen → facilidad → quién compra → por qué ahora → CTA duro. Manda sobre la DNA en primera persona de los ganadores.
+- **Tanda v23** en `OUTPUTS/2026-10-24-guiones-piedras-v23-bizop.md` (+ copia en `~/Desktop/scented-stones-ad/anuncios/`): margen absurdo declarado · demanda sin oferta en tu ciudad · la lista de "sin" · el negocio en 3 pasos · reemplazar un turno de fin de semana · la temporada que cierra en febrero. Entre 47 y 54 segundos.
+
 ## 2026-10-24 — Scented Stones: tanda v22 de guiones (ingresos extra) y relectura de la landing
 
 - Santiago: *"Vamos con mas guiones para piedras. Armemos guiones ganadores, que apunten a mi publico"* + la URL de la landing de nuevo.

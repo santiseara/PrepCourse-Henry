@@ -49,7 +49,8 @@
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
 ## Variables posibles (ideas de próxima tanda)
-✅ **Usadas en la v22 (24/10):** la habilitación que no necesitás, el costo mayorista que duplica la ganancia, fabricante vs. revendedora de comisión, vender en sets en vez de piezas sueltas, el P&L honesto de octubre y la competencia del pueblo como prueba de demanda (`OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md`).
+✅ **Formato vigente desde el 24/10: BIZOP.** La v22 (storytelling con cuentas) fue rechazada entera y se reemplazó por la v23: oportunidad en la primera línea, segunda persona, 45–55 s, un solo número. Ángulos usados en la v23: margen absurdo declarado, demanda sin oferta en tu ciudad, la lista de "sin", el negocio en 3 pasos, reemplazar un turno de fin de semana y la temporada que cierra en febrero (`OUTPUTS/2026-10-24-guiones-piedras-v23-bizop.md`). Regla completa en [[guiones-y-anuncios]].
+❌ **Usadas en la v22 (24/10, rechazada por historia y cuentas):** la habilitación que no necesitás, el costo mayorista que duplica la ganancia, fabricante vs. revendedora de comisión, vender en sets en vez de piezas sueltas, el P&L honesto de octubre y la competencia del pueblo como prueba de demanda (`OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md`).
 ✅ **Usadas en la v21 (23/10):** la regalería que pide más de lo que podés hacer, un pedido de casamiento que paga un gasto fijo, la reposición mensual como ingreso que se repite, vender sin mostrar la cara, la jubilada de 61 y la cuenta de cuánto arriesgás al probar. Siguen libres: nostalgia de la abuela, FREE today, testimonio de 14 s del escéptico convertido y la versión larga del guion de la contadora (`OUTPUTS/2026-10-23-guiones-piedras-v21-ingresos.md`).
 - Hook de eliminación de objeciones: "No kiln. No fancy tools. No experience." ([[hooks]])
 - Nostalgia: "My grandma's salt-dough trick turned into $1,200 a month."

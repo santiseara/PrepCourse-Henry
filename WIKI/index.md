@@ -89,6 +89,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-24 — Guiones piedras v23 BIZOP](../OUTPUTS/2026-10-24-guiones-piedras-v23-bizop.md) — 6 guiones EN + ES de 45–55 s con formato oportunidad de negocio, después de que la v22 fuera rechazada por "mucha historia y muchos cálculos" · ver [[guiones-y-anuncios]]
 - [2026-10-24 — Guiones piedras v22 ingresos extra](../OUTPUTS/2026-10-24-guiones-piedras-v22-ingresos.md) — 6 guiones EN + ES (24/10 - 1 a 6) de mecánica de negocio: habilitación, costo mayorista, fabricante vs. revendedora, vender en sets, P&L honesto y la competencia como prueba de demanda · ver [[scented-stones]]
 - [2026-10-23 — Atlas de Cortes: lectura de resultados y tanda v10 a v15](../OUTPUTS/2026-10-23-guiones-atlas-cortes-v10-v15.md) — por qué venden los ads del Atlas (momento de fricción en el servicio, nunca el ángulo de plata) y 6 variables nuevas · ver [[atlas-de-cortes]]
 - [2026-10-23 — Natives piedras 22 y 23](../OUTPUTS/2026-10-23-natives-piedras-22-y-23.md) — las dos primeras con la arquitectura de Thrift AI: el cajón de la mesa de luz (Cheryl, 57) y "reads as homemade" (Brenda, 58) · ver [[natives-ganadoras]]

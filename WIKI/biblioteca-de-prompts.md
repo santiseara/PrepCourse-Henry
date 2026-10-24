@@ -1,0 +1,121 @@
+# Biblioteca de prompts
+
+> Mapa de los 23 prompts de producción de Santiago, por área (guiones, copy, oferta, visual, web, meta). El texto completo de cada prompt se va sumando a `RAW/prompts/` (ver "Estado de la carpeta" abajo). (fuente: RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md, RAW/prompts/_indice.md)
+
+23 prompts que Santiago usa en producción, volcados en `RAW/prompts/`. No son experimentos: cubren el flujo entero del negocio y varios exigen como entrada los documentos de [[investigacion-de-mercado]] (Avatar Sheet, Offer Brief, deep research, documento de creencias).
+
+Casi todos comparten estructura: **asignación de rol → contexto y misión → reglas duras → formato de salida obligatorio**. Es el patrón que sistematiza `prompt-generador-de-prompts-maestros`, un meta-prompt que convierte ideas vagas en prompts de alto rendimiento.
+
+## Guiones y video
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-guiones-por-nivel-de-conciencia` | **5 prompts en uno**, uno por nivel de conciencia de Schwartz. Fórmula de 7 pasos |
+| `prompt-guiones-7-pasos` | Guiones de video ad con la estructura base |
+| `prompt-guiones-30-segundos` | «Narrativa de compresión»: historia emocional completa + venta en 30s exactos |
+| `prompt-ads-storytelling-largos-publico-frio` | Anuncio-historia de 1:30+, el producto aparece pasado el primer minuto, 70% narración |
+| `prompt-variacion-de-guiones-winners` | Guion ganador + sales page → variantes masivas sobre la estructura que funciona |
+| `prompt-vsl-oto-post-purchase` | Guion de VSL para el upsell post-compra, estructura obligatoria de 8 puntos |
+| `prompt-testimonios-sora-2` | Pack de producción UGC: guion para ElevenLabs + prompt visual para Sora 2. Regla de 14s / 35–40 palabras, 3 estilos (escéptico convertido, profesional, resultado tangible) |
+
+Ver [[guiones-de-video-ads]].
+
+## Copy y ángulos
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-angulos` | Investigación online para encontrar ángulos nuevos |
+| `prompt-angulos-manuales-launch-expert` | Ángulos de alto CTR combinando psicología visual y copy, formateados para Launch Expert AI Creative Suite |
+| `prompt-meta-ads-primary-text` | Primary text de Meta Ads. Registro polarizante y crudo, orientado a ROAS |
+| `prompt-escribir-sales-page` | Style transfer desde una carta de ventas fuente al producto nuevo. **Son dos prompts**: uno escribe el sales letter y otro lo **acorta**. Se ejecuta en Claude |
+| `prompt-comentarios-positivos-ig` | Imágenes de secciones de comentarios de Instagram ultra realistas, como prueba social |
+
+Ver [[angulos-publicitarios]] · [[pagina-de-ventas]].
+
+**Inputs que exige el prompt de sales page** (útil tenerlos listos antes de ejecutarlo): nombre y producto · nicho · avatar · **el gran número** · promesa principal · dolores · **el enemigo** (lo que ya probaron y les falló) · características clave · bonus · precio real y precio de oferta.
+
+El «enemigo» es el que más se olvida y el que más trabaja: nombrar lo que la persona ya intentó sin éxito valida su frustración antes de proponer nada.
+
+## Oferta
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-modelar-ofertas` | Offer hacking estilo Hormozi: toma una oferta validada y la reconstruye |
+| `prompt-crear-upsells` | Ecosistemas de productos digitales encadenados para maximizar AOV |
+
+Ver [[seleccion-y-modelado-de-oferta]] · [[aumento-de-aov]].
+
+## Visual y producto
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-imagenes-ads` | Prompts de texto-a-imagen para anuncios estáticos |
+| `prompt-crear-mockups` | Packaging high-end y psicología del color |
+| `prompt-one-shot-mockups` | Convierte productos digitales intangibles en objetos fotorrealistas de alto valor percibido |
+| `prompt-ebook-con-claude` | Escribe y maqueta un ebook completo en HTML/CSS para impresión (paged media) |
+
+Ver [[imagenes-y-mockups]] · [[creacion-de-productos-digitales]].
+
+## Web
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-html-google-ai-studio` | Adapta una página de ventas HTML existente a un producto nuevo manteniendo la estructura |
+| `prompt-magic-patterns` | Detecta nicho y avatar leyendo el sales copy y genera la landing con paleta y UI acordes |
+| `prompt-optimizar-carga-web-html` | Core Web Vitals para landings de tráfico pago, sin alterar el diseño |
+
+Ver [[pagina-de-ventas]].
+
+## Meta
+
+| Prompt | Qué hace |
+|---|---|
+| `prompt-generador-de-prompts-maestros` | Convierte ideas vagas en prompts estructurados |
+| `prompt-educar-chatgpt` | Instrucción de sistema para respuestas sin filtro. **Se pega en las instrucciones del proyecto**, no como mensaje suelto — ver [[ia-en-el-flujo-de-trabajo]] |
+
+## Observaciones
+
+**Dos pares casi duplicados** que conviene resolver: `prompt-crear-mockups` vs `prompt-one-shot-mockups`, y `prompt-guiones-7-pasos` vs `prompt-guiones-30-segundos` (ambos titulados «Script Ad Prompt Doc – Productos Digitales» en origen, pero con contenido distinto).
+
+**El nivel de conciencia como eje.** El prompt de guiones por nivel de conciencia es el más elaborado del conjunto y refleja algo que aparece también en las preferencias de variación creativa: el nivel de conciencia del público es una de las dimensiones que hay que variar deliberadamente al testear. Ver [[angulos-publicitarios]].
+
+Relacionado: [[ia-en-el-flujo-de-trabajo]] · [[investigacion-de-mercado]]
+
+## Conexiones con tu operación actual
+- Los más útiles para [[scented-stones]] ahora mismo:
+  - `prompt-variacion-de-guiones-winners`: tus 3 ganadores + la sales page → variables.
+  - `prompt-crear-upsells`: para armar el backend de [[aumento-de-aov]].
+  - `prompt-testimonios-sora-2`: encaja con tu stack de Sora y HeyGen.
+- `prompt-guiones-30-segundos` es la versión en prompt de tu regla de 30 segundos ([[guiones-y-anuncios]]).
+- **✅ Carpeta completa: 23 de 23 prompts con texto** en `RAW/prompts/`.
+
+## 📂 Estado de la carpeta `RAW/prompts/`
+| Prompt | Texto | Qué pide / notas para usarlo |
+|---|---|---|
+| `prompt-ads-storytelling-largos-publico-frio` | ✅ | Pide 7 variables (producto, buyer persona, dolor emocional, ángulo, transformación, ancla de precio, CTA). Devuelve 3 guiones de 1:30 a 2:30 (250–380 palabras), cada uno con una voz distinta: afectada, juez que se redime, autoridad que ayuda. Incluye 7 beats, timestamps, shots, overlays y nota de casting. **Para [[scented-stones]], la voz "juez que se redime" es la contadora del guión 3.** |
+| `prompt-angulos-manuales-launch-expert` | ✅ | **No genera nada sin los 4 documentos** (página de ventas, Offer Brief, Avatar Sheet, creencias; ver [[investigacion-de-mercado]]). Devuelve 5 ángulos de imagen estática: dolor agudo, sueño cumplido, mecanismo único, contrarian y UGC nativo. Cada uno con nombre, emoción, gancho de 7–10 palabras y escena. Sirve para natives ([[imagenes-y-mockups]]). |
+| `prompt-angulos` | ✅ | Investigación online de reseñas y comunidades (G2, Trustpilot, Hotmart, TikTok, Reddit…) para encontrar **al menos 3 ángulos alternativos con evidencia real**. Para piedras: comentarios de TikTok y reseñas de guías de scented stones o salt dough. |
+| `prompt-comentarios-positivos-ig` | ✅ | Genera la imagen de una sección de comentarios de Instagram "ultra realista" con nombres y fotos inventados. ⚠️ **Es prueba social fabricada.** Presentar comentarios inventados como reales en una landing o un ad expone a reclamos de defensa del consumidor (en EE.UU., la FTC prohíbe las reseñas falsas) y a rechazos de Meta ([[problemas-de-cuentas-meta]]). No lo voy a usar para generar testimonios falsos presentados como reales. Sí te ayudo a juntar y diseñar **comentarios reales** de compradores. |
+| `prompt-crear-upsells` | ✅ | Pide Avatar, Offer, Landing e Investigación. Devuelve un ecosistema de 8 ofertas: 5 bumps que no se pisan (acelerador, anti-error, done-for-you, swipe, toolkit; $7–27), OTO 1 "la Biblia" ($47–97), downsell ($27–37) y OTO 2 ($37–67). **Regla dura: todo en PDF, prohibido sugerir videocursos.** |
+| `prompt-ebook-con-claude` | ✅ | Necesita capturas de la landing y los datos del producto. Escribe el ebook **completo** en HTML A4 listo para PDF: primero un blueprint que mapea cada promesa a un capítulo y después el contenido. Pide no inventar estadísticas. **Lo puedo correr acá directamente** (soy Claude) para la guía o los bonus de [[scented-stones]]. |
+| `prompt-crear-mockups` | ✅ | Pide los 4 documentos. Analiza el ADN visual, **se detiene a preguntar el producto** y después da 3 prompts en inglés (héroe, en contexto, bundle) con estética "Apple meets Rolex". Ver [[imagenes-y-mockups]]. |
+| `prompt-educar-chatgpt` | ✅ | El texto de "verdad, no consuelo". Ya lo aplico como regla ([[como-trabajar-con-santiago]]). |
+| `prompt-escribir-sales-page` | ✅ | **Son dos prompts.** (1) Style transfer de la carta de Ted's Woodworking: mismo número de bullets, mismo "enemigo", stack de bonus con valor, garantía "Love it or Shove it" de 60 días. (2) Acortar a una landing modular de $14.99 con el molde "Herrería" en 9 secciones. ⚠️ El paso 2 pide **"3 testimonios creíbles con foto simulada"**: es el mismo problema de prueba social fabricada que `prompt-comentarios-positivos-ig`. Lo uso con testimonios reales o con espacios marcados para completarlos. ⚠️ El molde pone el botón en el Hero, contra [[diagnostico-de-checkout]] (causa 1). |
+| `prompt-guiones-7-pasos` | ✅ | Pide la investigación y el nombre del producto. Devuelve **1 concepto completo (pasos 1–7) + 2 variaciones solo de hook y re-hook**, con el body fijo (modular). ⚠️ Choca con tu regla personal de "3 guiones completos distintos por tanda" ([[guiones-y-anuncios]]). |
+| `prompt-guiones-30-segundos` | ✅ | Pide los 5 documentos. "Narrativa de compresión": **~75 palabras** en 30 s, que coincide con tu regla de ~150 palabras por minuto. Sale en tabla de visual y audio con tiempos. Body fijo + 3 variantes de hook: dolor, creencia rota y deseo. |
+| `prompt-guiones-por-nivel-de-conciencia` | ✅ | **5 prompts**, uno por nivel de Schwartz, todos con la fórmula de 7 pasos y salida 1 + 2. El **nivel 5 (totalmente consciente)** es para remarketing, carritos abandonados y visitantes. Ver [[angulos-publicitarios]]. |
+| `prompt-html-google-ai-studio` | ✅ | Pide Offer Brief, Avatar, Investigación y el **HTML base**, que no se toca. Cambia **solo** copy, tipografía (familia) y colores. Objetivo: 4% de conversión en tráfico frío. Regla dura: **no inventar bonus ni información**. Ataca 6 objeciones fijas ("no es para mí", "no tengo tiempo", "no tengo experiencia"…). |
+| `prompt-generador-de-prompts-maestros` | ✅ | Meta-prompt: rol ("Asume el rol de…", nunca "Actúa como"), contexto, metodología, restricciones y formato. Si la idea es vaga, pregunta antes. Lo uso cuando me pidas armar un prompt nuevo. |
+| `prompt-meta-ads-primary-text` | ✅ | Pide Avatar, Landing e Investigación de competencia. Devuelve 3 variantes: **contraintuitivo** (largo), **dolor agudo** (PAS, medio) y **oferta directa** (corto), cada una con sugerencia visual, headline de menos de 40 caracteres y primary text con emojis. ⚠️ **Choca con tus reglas** en tres puntos: "agresividad ética: es tu culpa si…" y "sesgo de negatividad" contra "no catastrófico / benefit-forward"; "precio ridículo" y "por solo $[Precio]" contra "nunca dar el precio en el ad". **Cuando lo uso, ganan tus reglas** ([[guiones-y-anuncios]]). |
+| `prompt-modelar-ofertas` | ✅ | Pide el PDF de la landing de la competencia + Avatar y Brief. Extrae la Big Idea, el mecanismo y la voz, y arma **Core + 5 bonus** (velocidad, done-for-you, objeción interna, objeción externa, siguiente nivel) con una tabla de valor de ~$392 contra $14.99. Ver [[seleccion-y-modelado-de-oferta]]. |
+| `prompt-imagenes-ads` | ✅ | Pide 4 documentos + **imágenes de referencia** (de la competencia o de tus tests) y las recrea mejoradas, en 1:1. Pide "modelos realistas, nada de stock". ⚠️ Para las natives de piedras, ganan tus reglas: POV, sin cara, boho ([[guiones-y-anuncios]]). Sus ejemplos (dashboards, emprendedor digital) hay que adaptarlos a craft. |
+| `prompt-magic-patterns` | ✅ | Le pegás el sales copy completo y detecta nicho, paleta y tipografía. Genera la landing en **React + Tailwind**: barra sticky, hero, carta, stack, bonus con valor total, precio con moneda dinámica y testimonios. Todos los CTAs van al `[CART_LINK]`. **Lovable también genera React + Tailwind**, así que el prompt debería funcionar ahí casi sin cambios. ⚠️ Las insignias de "Verified Purchase" y las estrellas tienen que ser reales. |
+| `prompt-one-shot-mockups` | ✅ | Le das el texto de la landing, el nombre, el tipo de mockup (bundle o individual) y el formato. Devuelve 1 prompt en inglés: NO FLAT COVERS, entorno acorde al nicho, render de lujo. ⚠️ Trae un ejemplo olvidado en el input ("297 Evaluaciones Listas Para Usar"): hay que reemplazarlo. |
+| `prompt-variacion-de-guiones-winners` | ✅ | **El más importante para piedras.** Pide el guión ganador y la landing (URL, PDF o HTML). Primero **solo analiza**: disección en 8 puntos (estructura, hook, problema, promesa, mecanismo, prueba, cierre, 5–10 frases ADN), producto, diagnóstico de por qué gana y mapa de variantes en 6 categorías (hook, emoción, protagonista, estructura, duración, objeción). Después pregunta por dónde empezar. El análisis de los 3 guiones ya está a medias en [[scented-stones]]. Falta la landing para completarlo. |
+| `prompt-vsl-oto-post-purchase` | ✅ | Guión de VSL para el OTO en 8 puntos: felicitar → "pero" → solución con nombre propio → escasez → entregables + bonus secreto → ancla → garantía de 30+ días → CTA de una sola vez. ⚠️ El punto 3 pide una "explicación **pseudo-científica**" y el 4 sugiere justificaciones como "fue denunciado en las redes". Si no son ciertas, son claims inventados (riesgo de reembolsos, disputas y rechazos). Lo uso con explicaciones reales y escasez real ("solo se ofrece a compradores" sí es cierto). Ver [[embudo-vsl-post-pago]]. |
+| `prompt-testimonios-sora-2` | ✅ | Pide los 4 documentos. Devuelve 3 packs de 14 s / 35–40 palabras (escéptico convertido, profesional, resultado tangible), cada uno con guión para ElevenLabs y prompt de Sora 2 en 9:16. ⚠️ Un avatar de IA presentado como **cliente real** que cuenta resultados es un testimonio fabricado (la FTC lo prohíbe en EE.UU.). Es más seguro el formato "creadora o método contando su experiencia" o una dramatización rotulada. Ver [[ugc-y-video-generativo]]. |
+| `prompt-optimizar-carga-web-html` | ✅ | Le pegás el HTML de la landing. Devuelve auditoría + HTML optimizado en 10 pasos (head, fuentes asíncronas, CSS crítico, imágenes lazy/webp, JS diferido, CLS) **sin tocar nada visible**. Meta: menos de 1,5 s en 4G y más de 95% de carga. Las partes de Shopify CDN no aplican a Lovable; el resto sí. Ver [[pagina-de-ventas]]. |
+
+## Fuentes
+- RAW/2026-10-10-wiki-previa/biblioteca-de-prompts.md (página de la wiki previa, actualizada el 2026-08-10)
+- Fuentes originales citadas (todavía no están en este cerebro): RAW/prompts/_indice.md, RAW/prompts/

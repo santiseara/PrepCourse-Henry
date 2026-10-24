@@ -15,7 +15,7 @@
 - ¿Qué módulos del Prep Course ya están hechos y cuáles faltan?
 
 ## Relacionado
-- _(aún no hay otros temas)_
+- (sin relación con los temas de negocio)
 
 ## Fuentes
 - `README.md`

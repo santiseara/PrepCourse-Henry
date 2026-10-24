@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palabras de la Obediencia</title>
+<!--
+  ══════════ CONFIGURACIÓN ══════════
+  LINK_CHECKOUT    → adonde lleva el botón (se le suman los UTMs de la URL).
+  SEGUNDOS_BOTON   → segundo del VSL en que aparece el botón (2:45 = 165).
+  El VSL de Panda está en la sección "VIDEO VSL".
+-->
+<script>
+  var LINK_CHECKOUT  = 'https://palabras-de-la-obediencia.impultienda.ar/checkout';
+  var SEGUNDOS_BOTON = 165;
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Rubik:wght@400;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --color-primary: #0F172A;
+    --color-cta-dark: #B91C1C;
+    --color-urgency: #F59E0B;
+    --color-urgency-dark: #D97706;
+    --color-bg: #FFFFFF;
+    --color-text: #0F172A;
+    --color-text-muted: #475569;
+    --color-border: #E2E8F0;
+    --font-heading: 'Rubik', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Barra de urgencia ── */
+  .urgency-bar {
+    background: var(--color-cta-dark);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 16px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1.4;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: var(--color-bg);
+    color: var(--color-primary);
+    padding: 24px 24px 0;
+    text-align: center;
+  }
+  .hero__eyebrow {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.12);
+    color: #92600A;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 8px rgba(245, 158, 11, 0.15);
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .hero__eyebrow .eb-linea { display: block; white-space: nowrap; }
+  .hero__headline {
+    font-family: var(--font-heading);
+    font-size: clamp(20px, 3.8vw, 30px);
+    font-weight: 700;
+    line-height: 1.22;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .hero__headline--light {
+    font-weight: 400;
+    color: var(--color-text);
+    font-size: .88em;
+  }
+  .hero__headline span:not(.hero__headline--light) { color: var(--color-urgency-dark); }
+
+  /* ── VSL ── */
+  .vsl-section { background: var(--color-bg); padding: 24px 24px 32px; }
+  .vsl-wrapper { max-width: 760px; margin: 0 auto; }
+  .vsl-player  { width: 100%; max-width: 400px; margin: 0 auto; background: #000; }
+
+  /* ── Botón de compra (aparece a los SEGUNDOS_BOTON) ── */
+  .order-section { background: var(--color-bg); padding: 0 24px 40px; text-align: center; }
+  .order-section.esconder { display: none; }
+  .order-box { max-width: 480px; margin: 0 auto; animation: aparecer .5s ease; }
+  @keyframes aparecer { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  .btn-buy {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #4ADE80 0%, #16A34A 100%);
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 800;
+    font-size: clamp(18px, 4.2vw, 20px);
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    padding: 22px 16px;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #15803D;
+    transition: filter 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,.35);
+  }
+  .btn-buy:hover  { filter: brightness(1.08); transform: scale(1.03); }
+  .btn-buy:active { transform: scale(0.99); box-shadow: 0 3px 0 #15803D; }
+  .btn-buy::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    animation: btn-sonar 2.2s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes btn-sonar {
+    0%   { box-shadow: 0 0 0 0    rgba(34, 197, 94, .55); }
+    70%  { box-shadow: 0 0 0 18px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0    rgba(34, 197, 94, 0); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ══════════ BARRA DE URGENCIA ══════════ -->
+  <div class="urgency-bar" role="alert">
+    ⚠️ Esta presentación está disponible para un número limitado de personas. Cuando se agoten los cupos, la vamos a sacar.
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <span class="hero__eyebrow"><span class="eb-linea">Especialista en crianza revela</span><span class="eb-linea">método&nbsp;secreto</span></span>
+    <h1 class="hero__headline">
+      Decí Estas <span>"Palabras de la Obediencia"</span><br>
+      y Hacé que tu Hijo te Haga Caso<br>
+      Desde la Primera Vez que le Hablás...<br>
+      <span class="hero__headline--light">(Sin Gritar, Castigar ni Chantajear)</span>
+    </h1>
+  </section>
+
+  <!-- ══════════ VIDEO VSL (Panda) ══════════ -->
+  <section class="vsl-section">
+    <div class="vsl-wrapper">
+      <div class="vsl-player">
+        <div style="position:relative;padding-top:177.77777777777777%;"><iframe id="panda-2926be59-196b-42bc-a2d7-c349e344793f" src="https://player-vz-c3e8527f-c25.tv.pandavideo.com/embed/?v=2926be59-196b-42bc-a2d7-c349e344793f" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BOTÓN DE COMPRA ══════════ -->
+  <section class="order-section esconder" id="oferta">
+    <div class="order-box">
+      <a href="#" class="btn-buy" rel="noopener">Comprar ahora</a>
+    </div>
+  </section>
+
+<script>
+  /* Ajusta el eyebrow y el título para que entren en el ancho disponible (solo achica). */
+  (function () {
+    function fitToWidth(el, available, minSize) {
+      if (!el) return;
+      el.style.fontSize = '';
+      el.style.whiteSpace = 'nowrap';
+      var natural = el.scrollWidth;
+      el.style.whiteSpace = '';
+      if (natural > available) {
+        var size = parseFloat(getComputedStyle(el).fontSize);
+        el.style.fontSize = Math.max(minSize, size * (available / natural) * 0.98) + 'px';
+      }
+    }
+    function fitAll() {
+      var h1 = document.querySelector('.hero__headline');
+      var eb = document.querySelector('.hero__eyebrow');
+      if (h1) fitToWidth(h1, h1.clientWidth, 15);
+      if (eb) {
+        var s = eb.parentElement, cs = getComputedStyle(s);
+        fitToWidth(eb, s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight), 9);
+      }
+    }
+    fitAll();
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fitAll, 150); });
+  })();
+
+  /* Link de checkout con los UTMs de la URL. */
+  (function () {
+    function destino() {
+      try {
+        var url = new URL(LINK_CHECKOUT);
+        new URLSearchParams(window.location.search).forEach(function (v, k) { url.searchParams.set(k, v); });
+        return url.toString();
+      } catch (e) { return LINK_CHECKOUT; }
+    }
+    document.querySelectorAll('.btn-buy').forEach(function (b) {
+      b.href = destino();
+      b.addEventListener('click', function () { this.href = destino(); });
+    });
+  })();
+
+  /* Botón a los SEGUNDOS_BOTON del VSL.
+     Panda avisa el tiempo del video por postMessage (panda_timeupdate).
+     Si no llegan esos avisos, cuenta desde que arranca el video (o desde que carga la página). */
+  (function () {
+    var oferta = document.getElementById('oferta');
+    var CLAVE = 'boton_visto_2926be59';
+    var mostrado = false, recibeTiempo = false, inicio = null;
+    function mostrar() {
+      if (mostrado) return;
+      mostrado = true;
+      oferta.classList.remove('esconder');
+      try { localStorage.setItem(CLAVE, '1'); } catch (e) {}
+    }
+    try { if (localStorage.getItem(CLAVE) === '1') { mostrar(); return; } } catch (e) {}
+
+    window.addEventListener('message', function (e) {
+      var d = e.data;
+      if (typeof d === 'string') { try { d = JSON.parse(d); } catch (x) { return; } }
+      if (!d || typeof d !== 'object') return;
+      if (d.message === 'panda_timeupdate' && typeof d.currentTime === 'number') {
+        recibeTiempo = true;
+        if (d.currentTime >= SEGUNDOS_BOTON) mostrar();
+      }
+      if (d.message === 'panda_play' && inicio === null) inicio = Date.now();
+    });
+
+    var carga = Date.now();
+    var reloj = setInterval(function () {
+      if (mostrado) return clearInterval(reloj);
+      if (recibeTiempo) return;
+      var desde = inicio !== null ? inicio : carga;
+      if (Date.now() - desde >= SEGUNDOS_BOTON * 1000) mostrar();
+    }, 1000);
+  })();
+</script>
+</body>
+</html>

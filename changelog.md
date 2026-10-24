@@ -16,6 +16,14 @@
 - Tabla comparando los dos filtros que conviven: el de la skill (50+ ads, 3+ días, todo el mundo) y el de la formación ([[funnel-hacking]]: 10–15 ads, 1 semana, mismo URL, sin marca personal). Se usan combinados.
 - Enlaces cruzados actualizados en `index.md`, `funnel-hacking.md`, `como-trabajar-con-santiago.md` y `claude-con-meta-ads.md`.
 
+## 2026-10-24 — Protocolo Chía 28D: avatar, bloque 1 del VSL y regla de créditos
+
+- Avatar **"Valeria Chia 28D"** creado en HeyGen desde la foto de Santiago, con voz neutra de México ("Buddy - Voice 3").
+- Guion dividido en 4 bloques por el tope de 5.000 caracteres del cuadro de Creación rápida. **Bloque 1 generado** (4:48, 1080x1920): `~/Desktop/protocolo-chia-28d/vsl/HEYGEN-parte01.mp4`.
+- ⚠️ El bloque 1 se llevó **231 de los 237 créditos** porque salió con Avatar 6 Pro (~48 créditos por minuto). Los bloques 2, 3 y 4 quedaron rechazados por saldo.
+- Santiago: *"Usa el avatar IV siempre, me gastaste todos los creditos"*. Regla fija en `WIKI/vsl-reglas-de-armado.md` §3c y en `WIKI/como-trabajar-con-santiago.md`: siempre Avatar IV y avisar el costo antes de una tanda larga.
+- **55 b-rolls** recortados del original y limpiados de subtítulos quemados con `rmsubs.py`: `~/Desktop/protocolo-chia-28d/vsl/brolls/clean/`.
+
 ## 2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y arranque del clon
 
 - Santiago trajo el VSL de **Protocolo Chía 4S** (Argentina, +700 anuncios prendidos) para clonarlo en LATAM con acento neutro, misma edición y mismos b-rolls, bajo el nombre **Protocolo Chía 28D**.

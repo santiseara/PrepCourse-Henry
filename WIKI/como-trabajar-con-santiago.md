@@ -31,6 +31,10 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Antes de armar o editar uno, leer [[quizzes-reglas-de-armado]] y recorrer su checklist.
 - Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
+## Créditos (regla fija, 2026-10-24)
+- En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).
+- Antes de mandar una tanda larga a renderizar, **calcular el costo y avisarle**. Si el saldo no alcanza para todo, avisar primero y no quemar el saldo en el primer bloque.
+
 ## Prioridad de reglas
 - **Cuando un prompt de `RAW/prompts/` choca con tus reglas personales, ganan tus reglas** ([[guiones-y-anuncios]]: no catastrófico, sin precio en el ad, natives sin cara, voseo). Del prompt tomo la estructura, no lo que contradice tus preferencias.
 

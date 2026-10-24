@@ -60,6 +60,7 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 - Mezcla sugerida para 12 B-rolls: 2–3 en Kling 3.0 (hook, anatomía 3D) y el resto en Kling 2.6 o Wan 2.6. Son unos 65 créditos en lugar de 105.
 
 ## 3c. Créditos de HeyGen por modelo (medido el 2026-10-24, Protocolo Chía 28D)
+- ⛔ **REGLA FIJA (2026-10-24): en HeyGen se usa SIEMPRE Avatar IV.** Santiago, después de que el primer bloque del VSL de chía se llevara 231 de 237 créditos con Avatar 6 Pro: *"Usa el avatar IV siempre, me gastaste todos los creditos"*. Nunca Avatar 6 (Pro ni Turbo) ni ningún modelo nuevo que venga por defecto, aunque gesticule mejor. **Antes de enviar, revisar qué modelo está elegido en Creación rápida** (el selector vuelve solo al modelo caro).
 - **Avatar 6 · Pro (Beta): ~48 créditos por minuto.** Un bloque de 4.489 caracteres salió en 4:48 y costó **231 créditos**. Hace gestos con las manos y expresiones guiadas por el guion: es lo más parecido al original con avatar real.
 - **Avatar IV: ~17 créditos por minuto** (los videos "CHIA G2/G3" de 1:02 costaron 17 cada uno). Movimiento genérico, sin gesto de manos.
 - Un VSL de 18 minutos cuesta unos **870 créditos con Avatar 6 Pro** y unos **300 con Avatar IV**. Antes de arrancar un VSL largo, calcular esto y avisarle a Santiago.

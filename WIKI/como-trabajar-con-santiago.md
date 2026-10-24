@@ -32,6 +32,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
 ## Créditos (regla fija, 2026-10-24)
+- **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).
 - Antes de mandar una tanda larga a renderizar, **calcular el costo y avisarle**. Si el saldo no alcanza para todo, avisar primero y no quemar el saldo en el primer bloque.
 

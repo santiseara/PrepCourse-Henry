@@ -1,3 +1,11 @@
+## 2026-10-24 — La skill `cazar` entra al cerebro
+
+- Santiago cargó `SKILL-2.md` (la skill **cazar**) → copiada a `RAW/2026-10-24-skill-cazar.md`. Es idéntica a la que ya está instalada en las sesiones, así que no hubo que instalar nada.
+- Nueva página `WIKI/caza-de-ofertas.md` con la skill entera: barrido mundial con `ads_library_search`, los 4 ejes de keywords, el conteo de arsenal con `page_ids`, el filtro madre (50+ ads activos con 3+ días), la escalera de certeza hasta WHALE, el veredicto (ENTRAR / SUBNICHO / DESCARTAR / WHALE), el arbitraje multi-mercado y el score de 4 señales.
+- **Criterio nuevo de Santiago (registro):** busca ofertas **low ticket, escondidas (no las comunes que ve todo el mundo), sin marca personal, ya escaladas o empezando a escalar, y que vendan.** Sumado a `caza-de-ofertas.md` y a `como-trabajar-con-santiago.md`.
+- Tabla comparando los dos filtros que conviven: el de la skill (50+ ads, 3+ días, todo el mundo) y el de la formación ([[funnel-hacking]]: 10–15 ads, 1 semana, mismo URL, sin marca personal). Se usan combinados.
+- Enlaces cruzados actualizados en `index.md`, `funnel-hacking.md`, `como-trabajar-con-santiago.md` y `claude-con-meta-ads.md`.
+
 ## 2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y arranque del clon
 
 - Santiago trajo el VSL de **Protocolo Chía 4S** (Argentina, +700 anuncios prendidos) para clonarlo en LATAM con acento neutro, misma edición y mismos b-rolls, bajo el nombre **Protocolo Chía 28D**.

@@ -9,7 +9,7 @@
 - Crear campañas, conjuntos y anuncios con la estructura del [[metodo-v3]].
 - **Clonar anuncios entre cuentas por post ID**, sin volver a subir los videos.
 - Leer resultados por campaña, conjunto o anuncio, y cruzarlos con UTMify.
-- Buscar competidores en la Biblioteca de Anuncios (la skill `cazar` lo hace sola).
+- Buscar competidores en la Biblioteca de Anuncios (la skill `cazar` lo hace sola → [[caza-de-ofertas]]).
 - Armar catálogos, conjuntos de productos y feeds ([[subir-ads-con-metodo-catalogo]]).
 
 ## Lo que no puede hacer (y se hace a mano)
@@ -49,7 +49,7 @@
 Relacionado: [[metodo-v3]] · [[nomenclatura-del-metodo]] · [[ia-en-el-flujo-de-trabajo]] · [[problemas-de-cuentas-meta]]
 
 ## Conexiones con tu operación actual
-- La skill **`cazar`** está disponible en estas sesiones: puedo buscar winners en la Biblioteca de Anuncios cuando me lo pidas.
+- La skill **`cazar`** está disponible en estas sesiones: puedo buscar winners en la Biblioteca de Anuncios cuando me lo pidas. Está documentada entera en [[caza-de-ofertas]] (usa `ads_library_search`, solo lectura).
 - El conector de Meta Ads **no está conectado en este entorno** (sesión en la nube). Para crear campañas desde Claude hay que conectarlo en esta sesión o trabajar desde la tuya.
 - La regla "crear todo en pausa → mostrar resumen → verificar el estado real" pasa a ser obligatoria para mí cada vez que toque campañas.
 

@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-22.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-24.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -31,6 +31,7 @@
 
 ## Oferta y producto
 - ✅ [[segmentos-de-mercado]] — Salud, dinero y relaciones (urgencia de compra), patrón de segmento y matriz nicho × mercado.
+- 🆕 [[caza-de-ofertas]] — La skill `cazar`: barrido mundial en la Ads Library, filtro madre de 50+ ads con 3+ días, escalera de certeza hasta WHALE, score de 4 señales y veredicto. **Qué oferta busca Santiago: low ticket, escondida, sin marca personal, ya vendiendo.**
 - ✅ [[funnel-hacking]] — Cómo espiar y filtrar ofertas que escalan (3 días, mismo URL, sin marcas personales) y cómo defenderte.
 - ✅ [[seleccion-y-modelado-de-oferta]] — Modelar de otro mercado, nunca del mismo. Tres errores, proceso en 24 h, bonus y stack 1 + 5.
 - ✅ [[validacion-de-oferta]] — MVP, 100 USD y una semana por oferta, oferta validada contra creativo validado, después: backend → escalar.

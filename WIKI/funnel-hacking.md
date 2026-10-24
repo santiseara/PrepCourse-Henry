@@ -205,7 +205,7 @@ Al toparse con una oferta de una marca personal conocida, el consejo es explíci
 Relacionado: [[segmentos-de-mercado]] · [[seleccion-y-modelado-de-oferta]] · [[investigacion-de-mercado]] · [[angulos-publicitarios]] · [[aumento-de-aov]]
 
 ## Conexiones con tu operación actual
-- **Dos filtros distintos para "cazar".** Tu contexto maestro y la skill `cazar` usan **50+ ads activos con 3+ días**. Esta página propone **10–15 ads (20–30 estricto), 1 semana o más, todos al mismo URL y sin marca personal**. Conviene combinarlos: mismo URL y sin marca personal son filtros que la skill no menciona.
+- **Dos filtros distintos para "cazar".** La skill está documentada entera en [[caza-de-ofertas]]. Tu contexto maestro y la skill `cazar` usan **50+ ads activos con 3+ días**. Esta página propone **10–15 ads (20–30 estricto), 1 semana o más, todos al mismo URL y sin marca personal**. Conviene combinarlos: mismo URL y sin marca personal son filtros que la skill no menciona.
 - **Para ofertas en inglés como Scented Stones**, espiar en Argentina, LATAM y Brasil. Es el camino inverso a tu flujo habitual BR → AR.
 - **Emma Carter es una persona sin cara** (manos, POV): encaja con buscar cuentas faceless y no depender de una marca personal.
 - **Defensa:** con un solo winner, repartir los anuncios en varias fanpages y dominios hace que te modelen menos. El cloaking (Ghost Ads) tiene riesgo de cuenta ([[contingencia-de-cuentas]]).

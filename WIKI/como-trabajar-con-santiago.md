@@ -8,7 +8,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 ## Herramientas que uso
 - Para variables y backend, partir de los prompts de [[biblioteca-de-prompts]] cuando estén en `RAW/prompts/`.
 - **Campañas en Meta:** crear todo en pausa, mostrar el resumen, esperar el OK y verificar el estado real de cada campaña, conjunto y anuncio ([[claude-con-meta-ads]]).
-- **"Cazar"** → usar la skill `cazar` y sumarle los filtros de [[funnel-hacking]]: mismo URL, sin marca personal, 1 semana o más.
+- **"Cazar"** → usar la skill `cazar` ([[caza-de-ofertas]], documentada entera) y sumarle los filtros de [[funnel-hacking]]: mismo URL, sin marca personal, 1 semana o más. Lo que busca Santiago: **low ticket, escondida (no la que ve todo el mundo), sin marca personal, ya escalada o empezando a escalar, y que venda.**
 
 ## Pedidos típicos
 "Dame más guiones / variables de este ganador" · "Dame natives" · "Dame la descripción de X" · "Descripción para ads con emojis, no tan larga" · "Armemos los upsells" · "Analizá la landing de mi competidor" · "Palabras clave para cazar en PT/EN" · "Resumen de la oferta X para otro chat" · "Variante del guión Y pero X".

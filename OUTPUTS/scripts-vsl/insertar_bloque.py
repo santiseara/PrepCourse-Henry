@@ -6,7 +6,7 @@ FF = os.path.expanduser('~/bin/ffmpeg')
 base, bloque, seg, out = sys.argv[1], sys.argv[2], float(sys.argv[3]), sys.argv[4]
 tmp = tempfile.mkdtemp(prefix='ins_')
 VF = 'scale=1080:1920:flags=lanczos,fps=30,setsar=1'
-ENC = ['-c:v','libx264','-crf','18','-preset','veryfast','-pix_fmt','yuv420p',
+ENC = ['-c:v','libx264','-crf',os.environ.get('CRF','18'),'-preset',os.environ.get('PRESET','veryfast'),'-pix_fmt','yuv420p',
        '-c:a','aac','-b:a','192k','-ar','48000','-ac','2']
 a, b, c = f'{tmp}/a.mp4', f'{tmp}/b.mp4', f'{tmp}/c.mp4'
 subprocess.run([FF,'-y','-v','error','-i',base,'-t',f'{seg:.3f}','-vf',VF]+ENC+[a], check=True)

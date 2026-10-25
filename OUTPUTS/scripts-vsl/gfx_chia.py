@@ -121,9 +121,9 @@ def final():
     w, h = 1080, 1920
     im = Image.new('RGBA', (w, h), VERDE); d = ImageDraw.Draw(im)
     d.text((w // 2, 330), 'ESTA ES TU', font=f(BLACK, 110), fill=(255, 255, 255, 255), anchor='mm')
-    d.text((w // 2, 460), 'ÚLTIMA OPORTUNIDAD', font=f(BLACK, 92), fill=(255, 255, 255, 255), anchor='mm')
+    d.text((w // 2, 460), 'ÚLTIMA OPORTUNIDAD', font=f(BLACK, 74), fill=(255, 255, 255, 255), anchor='mm')
     d.rounded_rectangle([90, 600, w - 90, 760], 30, fill=(255, 255, 255, 235))
-    d.text((w // 2, 648), 'Desbloqueá tu acceso al', font=f(ROUND, 44), fill=(30, 40, 34, 255), anchor='mm')
+    d.text((w // 2, 648), 'Desbloquea tu acceso al', font=f(ROUND, 44), fill=(30, 40, 34, 255), anchor='mm')
     d.text((w // 2, 712), 'PROTOCOLO CHÍA 28D', font=f(BLACK, 56), fill=VERDE_OSC, anchor='mm')
     d.text((w // 2, 900), 'Y no te preocupes:', font=f(ROUND, 48), fill=(255, 255, 255, 255), anchor='mm')
     d.text((w // 2, 975), 'tienes 60 DÍAS de garantía', font=f(BLACK, 54), fill=(255, 255, 255, 255), anchor='mm')

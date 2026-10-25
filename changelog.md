@@ -1,3 +1,12 @@
+## 2026-10-25 — Protocolo Chía 28D: VSL terminado (18:45) y quiz listo
+
+- **`~/Desktop/protocolo-chia-28d/vsl/Protocolo-Chia-28D-VSL.mp4`**: 18:45, 1080x1920, 820 MB. 45 b-rolls, 25 placas, 9 efectos, música, subtítulo palabra por palabra y el bloque de 3 testimonios insertado a los 8:49.
+- **HeyGen se comió dos tramos del guion** (la empatía del minuto 2:27 y el anclaje de 140/97 dólares). Se regeneraron esas frases con Avatar IV (~8 créditos) y se pegaron en el crudo.
+- **El recorte de silencios se había comido 10 s de voz real** porque el guion de referencia tenía esas frases en otro orden y el alineador las tomó por invento de Whisper. Se reordenó el guion y se rehízo el recorte.
+- **18 de 45 b-rolls traían a la presentadora del competidor en las puntas.** Detector nuevo (`OUTPUTS/scripts-vsl/detectar_presentadora.py`) + parche por ventana con el tramo limpio del propio clip y los subtítulos re-quemados. También se sacaron el cartel "$24.999", el badge fijo del competidor y los subtítulos en voseo del checkout, y se rehizo la placa final (se salía de pantalla y decía "Desbloqueá").
+- **Quiz** en `landing/` (ImpulTienda + PRUEBA.html), en neutro, a US$ 17, con el botón a los 860 s.
+- Script nuevo `insertar_bloque.py`, `TRIM_PRESET` en `edit_vsl_quiz.py` (el recorte pasó de 90 a 4 minutos) y §4e nueva en [[vsl-reglas-de-armado]].
+
 ## 2026-10-25 — Natives piedras: 10 opciones bizop + las 27 y 28 escritas
 
 - `OUTPUTS/2026-10-25-natives-piedras-10-opciones-bizop.md`: diez opciones con la arquitectura del nicho y el eje corrido a oportunidad (el objeto de apertura es la oportunidad, sin pérdida, sin desgloses, un mecanismo por opción).

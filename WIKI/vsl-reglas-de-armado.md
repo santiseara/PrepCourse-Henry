@@ -107,6 +107,15 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 - Cortar siempre en una frase cerrada: terminar un testimonio a mitad de palabra se nota muchísimo.
 - **Avisar los desfasajes que quedan**: si el checkout viejo muestra otro precio u otra moneda que la del guion nuevo, hay que rehacer esa captura cuando exista el checkout propio.
 
+## 4e. Revisión obligatoria antes de entregar un VSL clonado (2026-10-25, Protocolo Chía 28D)
+Los b-rolls recortados del video del competidor **traen medio segundo de su presentadora en cada punta** (el corte cae en la transición). Mirar el centro del clip no alcanza: 18 de 45 clips tenían a la presentadora del original al principio o al final, y en el render quedaba 1 segundo de otra mujer con nuestros subtítulos encima.
+- **Detector automático**: se arma una huella (32x64 en grises) promediando frames de un clip que sea 100% presentadora y se compara contra todos los frames de todos los clips (1 muestra cada 0,1 s). Distancia < 60 = presentadora. `OUTPUTS/scripts-vsl/detectar_presentadora.py`.
+- Con el mapa de tramos sucios se elige **el tramo limpio más largo** de cada clip y se lo vuelve a poner encima, estirado con `setpts` si es más corto que la ventana, **con el mismo LOOK** (grano, saturación, micro-movimiento) para que no se note el parche.
+- Los **subtítulos quedan debajo del parche**: hay que re-quemarlos. Se filtran las líneas de `subs.ass` que caen en esas ventanas a un `.ass` chico y se queman después de los overlays.
+- **Orden importante**: si se tapa un clip al que ya se le había borrado el subtítulo quemado con `delogo`, el parche **vuelve a traer el subtítulo viejo**. El `delogo` va siempre *después* de los overlays.
+- Revisar siempre **tres frames por b-roll** (inicio +0,25 s, centro y final −0,25 s), no solo el centro.
+- Mirar también lo que el clip trae quemado: precios viejos (`$24.999`), badges fijos del competidor y placas de su oferta aparecen en cualquier clip sacado después del minuto en que el original los pone en pantalla.
+
 ## 4c. Entrega y Panda
 - El video final se **reemplaza** en `~/Desktop/<producto>-vsl/` con el mismo nombre.
 - Santiago lo sube a **Panda Video** para ponerle diseños y manda el HTML del embed, que se pega dentro de `<template id="vsl-template">` en el último paso del quiz ([[quizzes-reglas-de-armado]]).

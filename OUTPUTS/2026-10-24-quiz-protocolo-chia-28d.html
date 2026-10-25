@@ -8,7 +8,7 @@
      LINK_CHECKOUT    : /checkout      <-- cambiar por el checkout de ImpulTienda
      PRECIO           : US$ 17
      PIXEL_ID         : lo pone la tienda (ya está en el template de ImpulTienda)
-     SEGUNDOS_OFERTA  : 840  (14:00) — el VSL dice el precio a las 13:46
+     SEGUNDOS_OFERTA  : 860  (14:20) — el VSL dice el precio a las 14:04 y el anclaje cierra a las 14:08
      VSL              : va dentro de <template id="vsl-template"> (abajo del todo)
      IMAGENES         : (las mismas del quiz original, ya subidas)
        logo          https://i.postimg.cc/VkfDb3y3/logo.webp
@@ -279,11 +279,12 @@
      CONFIG
      SEGUNDOS_OFERTA : retraso del botón de checkout
        0   = botón visible al toque  -> MODO TEST
-       840 = 14:00                   -> MODO PRODUCCIÓN
-             (el VSL dice "diecisiete dólares" a las 13:46)
+       860 = 14:20                   -> MODO PRODUCCIÓN
+             (el VSL dice "diecisiete dólares" a las 14:04 y cierra
+              el anclaje "de casi 140 a solo 17" a las 14:08)
      LINK_CHECKOUT  : checkout de ImpulTienda; se le suman los UTMs de la URL
      ========================================================= */
-  var SEGUNDOS_OFERTA = 840;
+  var SEGUNDOS_OFERTA = 860;
   var LINK_CHECKOUT   = '/checkout';
 
   function init(){

@@ -100,7 +100,7 @@ if not os.path.exists(trimmed):
         f"[0:v]select='{expr}',setpts=N/FRAME_RATE/TB,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920[v];"
         f"[0:a]aselect='{expr}',asetpts=N/SR/TB[a]")
     run([FF, '-v', 'error', '-y', '-i', src, '-filter_complex_script', os.path.join(work, 'sel.txt'),
-         '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '15', '-preset', 'fast', '-r', '30',
+         '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '15', '-preset', os.environ.get('TRIM_PRESET', 'fast'), '-r', '30',
          '-c:a', 'aac', '-b:a', '192k', trimmed])
 mask = os.path.join(work, 'mask.mp4')
 if not os.path.exists(mask):

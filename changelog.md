@@ -1,3 +1,9 @@
+## 2026-10-25 — Natives piedras: 10 opciones bizop + las 27 y 28 escritas
+
+- `OUTPUTS/2026-10-25-natives-piedras-10-opciones-bizop.md`: diez opciones con la arquitectura del nicho y el eje corrido a oportunidad (el objeto de apertura es la oportunidad, sin pérdida, sin desgloses, un mecanismo por opción).
+- Eligió la 1 y pidió una de feria: `OUTPUTS/2026-10-25-natives-piedras-27-y-28.md`. **27** = la etiqueta de $28 en una cadena de deco (la demanda ya probada por el retail). **28** = la caja del dinero al cierre de la feria con tres papeles encima (la feria es donde te encuentran los compradores por volumen, no el día de ventas).
+- WIKI: tanda registrada en [[natives-ganadoras]] y outputs enlazados en `index.md`.
+
 ## 2026-10-25 — Piedras v25: bizop duro (y regla nueva)
 
 - Santiago rechazó la v24: *"No me gustaron, acordate lo que te dije del bizop, tenemos que apuntar a eso"*. Diagnóstico: escena o tesis en la primera línea y varios números por guion (el desglose que la regla del 24/10 ya prohibía).

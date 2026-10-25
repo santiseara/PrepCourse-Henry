@@ -125,6 +125,14 @@ Los b-rolls recortados del video del competidor **traen medio segundo de su pres
 - Revisar siempre **tres frames por b-roll** (inicio +0,25 s, centro y final −0,25 s), no solo el centro.
 - Mirar también lo que el clip trae quemado: precios viejos (`$24.999`), badges fijos del competidor y placas de su oferta aparecen en cualquier clip sacado después del minuto en que el original los pone en pantalla.
 
+## 4f. El render va por segmentos en paralelo, nunca en un filtro único (2026-10-25)
+Santiago: *"ni en pedo vas a tardar de nuevo 8 horas… esto tiene que tardar como muchísimo media hora"*. Tenía razón y el problema era el motor, no la edición.
+- **Por qué tardaba 8 h:** `edit_vsl_quiz.py` armaba **un solo `filter_complex` con 70 capas** (45 b-rolls + 25 placas) aplicado a los 17 minutos enteros. Aunque una capa esté apagada en ese instante, ffmpeg copia igual el cuadro de 1080x1920 por cada capa y por cada cuadro: una cadena en serie, de un hilo, a 0,03x.
+- **Cómo se hace ahora:** `RAPIDO=1` activa `OUTPUTS/scripts-vsl/render_rapido.py`. Corta la línea de tiempo en los bordes de cada b-roll, placa y zoom (~320 segmentos de 2 a 25 s), arma cada segmento con **2 o 3 capas en vez de 70**, los renderiza **de a 8 en paralelo** (`NUCLEOS`) y los pega con `-c copy`. Los subtítulos se recortan a un `.ass` por segmento con los tiempos corridos al cero.
+- **Resultado medido:** 318 segmentos en **7:21** + 2:12 la pasada de audio y música = **9 minutos** para 16 minutos de video, contra 8 horas. `REUSAR=1` reaprovecha los segmentos ya hechos.
+- Dos trampas al armarlo: en los segmentos con pantalla dividida las etiquetas del filtro se desfasaban (hay que usar el índice de la entrada como nombre, no un contador), y la lista del `concat` necesita **rutas absolutas** o no encuentra los segmentos.
+- Con esto, **corregir una placa o un ancla y volver a tirar cuesta minutos**, así que conviene revisar y re-renderizar en vez de parchear el video final.
+
 ## 4c. Entrega y Panda
 - El video final se **reemplaza** en `~/Desktop/<producto>-vsl/` con el mismo nombre.
 - Santiago lo sube a **Panda Video** para ponerle diseños y manda el HTML del embed, que se pega dentro de `<template id="vsl-template">` en el último paso del quiz ([[quizzes-reglas-de-armado]]).

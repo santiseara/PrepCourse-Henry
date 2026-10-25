@@ -1,3 +1,12 @@
+## 2026-10-25 — Protocolo Chía 28D: voz nueva (Achernar) y render 50 veces más rápido
+
+- Santiago: *"la voz de la experta no me gustó nada"* → se eligió **Achernar** de las 3 pruebas y se rehízo el VSL entero con esa voz.
+- **Voz en Google AI Studio** (gratis, 5 bloques de ~580 palabras) y **HeyGen solo para el lipsync** sobre ese audio (Avatar IV, 720p, **286 créditos**). Al final se le pone el WAV original encima del video, así que no queda la pérdida del MP3 que se sube.
+- Revisión palabra por palabra con `revisar_voz.py`: se encontraron y corrigieron 2 errores reales (un bloque se comía "hambre", otro leía mal "SSL").
+- **Render por segmentos en paralelo** (`RAPIDO=1` + `render_rapido.py`): de **8 horas a 9 minutos**. Detalle en [[vsl-reglas-de-armado]] §4f.
+- Los b-rolls quedaron limpios **en el archivo**: se recortó la presentadora del competidor de 16 clips, se borraron los subtítulos en voseo del checkout y se cambiaron los 2 planos del cierre que tenían quemado el "$24.999".
+- **`Protocolo-Chia-28D-VSL.mp4` final: 17:16.** El precio pasó a las 12:59, así que el botón del quiz pasó a **795 s**.
+
 ## 2026-10-25 — Protocolo Chía 28D: VSL terminado (18:45) y quiz listo
 
 - **`~/Desktop/protocolo-chia-28d/vsl/Protocolo-Chia-28D-VSL.mp4`**: 18:45, 1080x1920, 820 MB. 45 b-rolls, 25 placas, 9 efectos, música, subtítulo palabra por palabra y el bloque de 3 testimonios insertado a los 8:49.

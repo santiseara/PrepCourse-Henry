@@ -293,9 +293,11 @@ fc.append(f"[{last}][pip]overlay={PIP_X}:{PIP_Y}:enable='{en(pip_iv)}'[vq]")
 fc.append(f"[vq][gs]overlay=0:{GS_DY}:enable='{en(gs_iv)}'[vp]")   # avatar grande, bajada para que se vea el B-roll arriba
 sp = os.path.join(wd, os.environ.get('STICKERS', 'stickers.json'))
 cur = 'vp'
+stks = []
 for n_, (phr, png, d, x, y, w_, fx) in enumerate(json.load(open(sp)) if os.path.exists(sp) else []):
     t = find(phr)
     if t is None: continue
+    stks.append((os.path.join(wd, png), round(t, 3), d, x, y, w_))
     k = sum(1 for z in inputs if z == '-i')          # índice de la entrada nueva
     inputs += ['-loop', '1', '-t', f'{total + 1:.2f}', '-i', os.path.join(wd, png)]
     fc.append(f"[{k}:v]scale={w_}:-1,format=rgba,fade=t=in:st={t:.2f}:d=0.15:alpha=1,fade=t=out:st={t + d - 0.2:.2f}:d=0.2:alpha=1[st{n_}]")
@@ -306,9 +308,19 @@ fc.append(f"[{cur}]ass='{assp}':fontsdir='{FONTS}',format=yuv420p[vout]")
 fc.append(f"[0:a]atempo={SPEED}[aout]")
 open(os.path.join(work, 'fc.txt'), 'w').write(';\n'.join(fc))
 vid = os.path.join(work, 'video_voz.mkv')
-run([FF, '-v', 'error', '-y'] + inputs + ['-filter_complex_script', os.path.join(work, 'fc.txt'),
-     '-map', '[vout]', '-map', '[aout]', '-t', f'{total:.2f}', '-r', '30',
-     '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', '-c:a', 'pcm_s16le', vid])
+if os.environ.get('RAPIDO'):   # render por segmentos en paralelo (minutos en vez de horas)
+    json.dump({'trimmed': trimmed, 'ass': ass, 'fonts': FONTS, 'total': total,
+               'tmp': os.path.join(work, 'segs'), 'split_y': SPLIT_Y, 'split_mask': mpath,
+               'look': LOOK, 'zoom': [[round(a, 3), round(b, 3)] for a, b in zoom],
+               'brolls': [[f, round(a, 3), round(b, 3), ss, m, crop_y[i]]
+                          for i, (f, a, b, ss, m) in enumerate(brolls)],
+               'stickers': stks},
+              open(os.path.join(work, 'render.json'), 'w'), indent=1)
+    run(['python3', os.path.join(HERE, 'render_rapido.py'), os.path.join(work, 'render.json'), vid])
+else:
+    run([FF, '-v', 'error', '-y'] + inputs + ['-filter_complex_script', os.path.join(work, 'fc.txt'),
+         '-map', '[vout]', '-map', '[aout]', '-t', f'{total:.2f}', '-r', '30',
+         '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', '-c:a', 'pcm_s16le', vid])
 
 # ---------- Audio: voz -14 LUFS, música muy baja con ducking, pocos efectos ----------
 music = os.path.join(work, 'music.wav')

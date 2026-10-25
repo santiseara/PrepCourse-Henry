@@ -1,0 +1,28 @@
+Guion 13
+
+Una caja de discos de corte te sale más que esto. Y los discos se gastan igual, cortes bien o cortes mal. La diferencia es cuántas veces cortás la misma pieza. Esto son más de 1.200 planos de herrería y cada uno trae la lista de cortes armada: pieza A, tantos milímetros; pieza B, tantos; cada ángulo, cada boca de caño, todo escrito antes de que prendas la amoladora. Vas a la casa de hierros con la lista en la mano, pedís lo justo, cortás una vez y las piezas cierran solas. Un rack overland para caja de camioneta de 2,44: 456 mil pesos de hierro, de ocho a doce horas de laburo, y el plano te dice que lo cobres entre 855 mil y un millón 115. Eso es un rack. Atrás hay mil doscientos más, en diez carpetas: portones, rejas, parrillas, ahumadores, trailers, racks, mesas, escaleras y muebles de hierro. Se descarga al instante, lo abrís en el celular arriba del banco o lo imprimís y lo llenás de tiza. Un solo pago y es baratísimo. Tocá Más información y que el próximo disco que gastes sea en una pieza que ya está vendida.
+
+
+Guion 14
+
+Cargar el tubo de mezcla te sale más caro que esto. Y la mitad de ese gas se te va soldando dos veces lo mismo. Soldás, se tuerce, cortás, volvés a soldar. Eso no es falta de pulso: es falta de orden. Cada uno de estos más de 1.200 planos trae el orden de soldadura numerado, del uno hasta el final. Qué punteás primero, qué escuadrás antes de llenar el cordón, en qué momento das vuelta la pieza para que no te quede panza. Lo seguís y sale derecha de una. Una parrilla argentina de 1,83 por 76: 921 mil pesos de hierro, de doce a dieciséis horas, y se cobra entre un millón 550 y dos millones 15. Con el orden escrito, esas dieciséis horas son dieciséis y no veinticuatro. Hay diez carpetas: parrillas y ahumadores, portones, rejas, trailers, racks, escaleras, muebles, cocheras y herramientas de taller. Te llega al mail en segundos, es un solo pago, es baratísimo y es tuyo para siempre. Tocá Más información, abrí una parrilla y soldala este sábado en el orden que dice.
+
+
+Guion 15
+
+El hierro que tirás en recortes cada mes te sale más que esto. Comprás una barra de seis metros, usás cuatro y pico, y el resto queda parado contra la pared hasta que se oxida. Pasa por una razón sola: calculaste a ojo. En estos más de 1.200 planos, cada trabajo abre con la lista de compras hecha. Tantos metros de caño estructural de tal medida, tantos de planchuela, tantos de hierro redondo, cuántas bisagras, cuántos metros de malla. Vas con esa lista, comprás exacto y el sobrante te entra en la mano. Una mesa de trabajo para motos de 2,13: 846 mil pesos de material, de diez a catorce horas, se vende entre un millón 440 y un millón 870. Y esos 846 mil son 846 mil, no un millón porque compraste una barra de más. Son diez carpetas ordenadas por tipo de trabajo y los mil doscientos planos traen todos la misma lista. Lo bajás ahora, un solo pago, baratísimo. Tocá Más información y que el próximo caño que compres entre entero en el trabajo.
+
+
+Guion 19
+
+El cliente te pregunta qué más sabés hacer. Y vos no tenés nada para mostrarle. Le decís "y… lo que me traigas", y ahí se termina la charla y el trabajo. Ese cliente ya te eligió, ya te pagó una vez y ya sabe cómo laburás. Es el más fácil de venderle y lo estás dejando ir. Con esto le abrís el celular y le mostrás: portones y rejas, parrillas y ahumadores, trailers, racks para la camioneta, escaleras, cocheras, mesas y muebles de hierro. Diez carpetas, más de 1.200 trabajos con el dibujo, las medidas y el precio ya calculado. El tipo que te compró un portón te señala una isla de cocina de 2,13 por 91: 708 mil pesos de material, de diez a catorce horas, se cobra entre un millón 430 y un millón 860. Y la semana que viene te pide una escalera. El mismo cliente, tres trabajos. Se descarga al instante, es un solo pago y es baratísimo. Tocá Más información y la próxima vez que te pregunten qué más hacés, mostrales la carpeta.
+
+
+Guion 20
+
+Los planos que bajás gratis de internet te dan un perchero de herraduras. Acá tenés un porta autos de doble eje. Ellos, una maceta colgante. Acá, un portón de campo de tres metros con tablillas. Ellos, un banquito de caño. Acá, una parrilla con elevador a manivela. Esa es toda la diferencia: los de internet son fotos lindas sin una sola medida, y estos son más de 1.200 planos fabricables con las tres vistas, cada corte en milímetros, el orden de soldadura numerado y, abajo, el precio al que se vende terminado. Un porta autos de 2,44 por 6,10, doble eje: siete millones 946 de hierro, se cobra entre once millones 275 y catorce millones 660. Eso no está en ningún pdf gratis, y es el tipo de trabajo que te cambia el mes. Diez carpetas, de lo chico a lo grande, ordenadas por tipo. Un solo pago, baratísimo, tuyo para siempre. Tocá Más información y dejá de fabricar lo que encontraste en Google.
+
+
+Guion 21
+
+Tu amigo te pide un fogonero. ¿Cuánto le cobrás? Ahí te trabás. Le tirás un número bajo porque te da cosa, o decís "después arreglamos" y lo terminás regalando. Y no es que seas blando: es que no sabés cuánto vale lo que hacés. Cada uno de estos más de 1.200 planos trae el precio de venta calculado abajo del dibujo, al lado de lo que te sale el material. Un fogonero hexagonal de 1,22: 470 mil pesos de hierro, de seis a nueve horas, se vende entre 805 mil y un millón 45. Con ese número al lado no dudás ni te da vergüenza: le pasás el precio y listo. Y si te quiere bajar, sabés exactamente hasta dónde podés ceder sin trabajar gratis. Lo mismo para portones, parrillas, ahumadores, trailers, racks, mesas y escaleras, en diez carpetas. Llega al mail en segundos, un solo pago, baratísimo. Tocá Más información y contestale a tu amigo hoy mismo, con el número en la mano.

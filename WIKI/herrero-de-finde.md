@@ -82,6 +82,45 @@
 - **Revisar los tramos tardíos del B-roll.** El clip `7566063571134680350.mp4` (Y) lleva el cartel en inglés *"And that's how you do that"* desde el segundo 97 hasta el final, y se coló en el V8. En `gen2.py` quedó el diccionario `LIMITE = {'Y': 96}` para cortar ese tramo. Antes de dar una tanda por buena, mirar frames de los videos terminados, no solo de los clips.
 - **Ojo con la ocurrencia de las palabras ancla.** En el V8 anclé la pérgola en `'cinco,'` ocurrencia 0, que es la primera palabra del guion ("Cinco trabajos…"), y el render se cortó con `max() arg is an empty sequence`. Cuando el hook repite una palabra del cuerpo, contar las ocurrencias.
 
+## El V7 es el ganador (2026-10-25)
+- **6 ventas en el día con CPA de 1 USD.** La primera tanda entera había hecho 7 ventas a 10,94 de promedio y su mejor conjunto (V6, tanque de nafta) estaba en 7,05. El V7 baja el CPA un orden de magnitud.
+- **Por qué gana:** compara contra un **consumible del oficio** (rollo de alambre tubular), no contra un gasto de la vida como la nafta. Es jerga que solo entiende un herrero, así que el hook filtra el público en la primera palabra. Después da el giro **consumible → activo** ("el alambre se te termina en dos trabajos, esto te queda para siempre"), que ancla el precio sin nombrarlo.
+- Lo completan: dolor de oficio y no de bolsillo ("dibujar, probar y volver a cortar es lo que te come el finde y el material"), las diez carpetas nombradas una por una, **un solo** ejemplo con números y chico al final, y CTA con día ("así el sábado ya estás cortando").
+- **DNA para variar:** gasto que ya hacés en el taller → esto cuesta menos y no se gasta → **una sola** de las cuatro hojas explicada en detalle → una ficha real con costo y precio de venta → CTA con fecha.
+- **Regla:** el objeto de comparación tiene que ser **jerga de taller**. Cuanto más específico del oficio, más barato el clic. La comparación genérica (nafta, café) convierte peor.
+
+## Tanda V13–V18 (2026-10-25)
+- `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`, también en `anuncios/guiones-v13-v18.md`. Seis variables de la DNA del V7: caja de discos (lista de cortes, TK-024), carga del tubo de mezcla (orden de soldadura, BQ-090), el hierro tirado en recortes (lista de compras, SH-148), lo que cobran por un plano suelto (dibujo en tres vistas, TR-072), lo que perdés cotizando a ojo (precio sugerido, GY-096) y el sábado perdido dibujando (las cuatro hojas, BQ-028).
+- De 175 a 196 palabras: a 1,20x quedan en 58–65 s, el largo del V7.
+- Santiago pidió 6 aunque su regla de variables es 3. Se le marcó que son 6 apuestas sobre un dato de un solo día y que lo prudente sería subir 3 y esperar la confirmación del V7.
+- Faltan las voces y el render.
+
+## Banco de fichas verificadas (2026-10-25)
+Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes de poner un número en un guion, sale de acá.**
+
+| Plan | Trabajo | Material | Precio de venta | Horas |
+|---|---|---|---|---|
+| BQ-028 | Fogonero hexagonal 122 cm | $470.000 | $805.000–$1.045.000 | 6–9 |
+| BQ-053 | Parrilla Santa María 152 cm | $961.000 | $1.590.000–$2.070.000 | 14–18 |
+| BQ-069 | Ahumador offset 76 x 152 | $1.995.000 | $3.145.000–$4.090.000 | 20–30 |
+| BQ-090 | Parrilla argentina 183 x 76 | $921.000 | $1.550.000–$2.015.000 | 12–16 |
+| BQ-130 | Ahumador vertical 76 x 168 (chapa 3 mm) | $1.115.000 | $1.990.000–$2.585.000 | 16–22 |
+| BQ-133 | Ahumador offset de competición 91 x 213 | $3.220.000 | $4.830.000–$6.280.000 | 30–40 |
+| FN-022 | Mesa de comedor con patas en X 2,44 x 1,02 | $654.000 | $1.430.000–$1.860.000 | 12–15 |
+| FN-107 | Estructura de isla de cocina 213 x 91 | $708.000 | $1.430.000–$1.860.000 | 10–13 |
+| GY-020 | Jaula de potencia 132 x 152 x 244 | $682.000 | $1.235.000–$1.610.000 | 10–14 |
+| GY-096 | Rig de entrenamiento 2,44 x 2,74 | $1.271.000 | $2.235.000–$2.910.000 | 16–24 |
+| SH-128 | Mesa de fabricación 3 x 1,2 estructura pesada | $1.900.000 | $2.985.000–$3.880.000 | 10–14 |
+| SH-148 | Mesa de trabajo para motos 213 cm | $846.000 | $1.440.000–$1.870.000 | 10–14 |
+| TK-024 | Rack overland para caja de 2,44 | $456.000 | $855.000–$1.115.000 | 8–12 |
+| TK-060 | Bandeja plana para camioneta 274 x 203 | $1.794.000 | $2.975.000–$3.870.000 | 20–28 |
+| TR-072 | Trailer con rampa 2,08 x 4,88 | $3.765.000 | $5.570.000–$7.245.000 | 28–34 |
+| TR-117 | Trailer para lancha de 6,7 m | $3.543.000 | $5.015.000–$6.520.000 | 27–33 |
+| TR-129 | Porta autos 2,44 x 6,10 doble eje | $7.946.000 | $11.275.000–$14.660.000 | 45–60 |
+| TR-148 | Base para tiny house 2,44 x 7,32 | $11.165.000 | $15.560.000–$20.225.000 | 50–70 |
+
+Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.000–$765.000), FN-139 botellero ($327.000 → $885.000–$1.150.000), FM-068 hoja de portón 3,66 ($883.000 → $1.480.000–$1.925.000), ST-064 escalera ($1.322.000 → $2.440.000–$3.170.000), ST-015 pérgola ($1.429.000 → $2.605.000–$3.385.000) y el fogonero cuadrado ($170.000 → $415.000–$535.000).
+
 ## Preguntas abiertas
 - **Producto:** ¿de dónde sale la biblioteca de planos en español? Las 8 páginas del carrusel "Abrí un plano" son del original y están en inglés.
 - Imágenes con algo de texto en inglés que quedaron: `planilla-impresa` ("CUT LIST – WELDING BENCH"), la nota manuscrita de la tapa del bonus 2 y los carteles chicos de `casa-de-hierros`.

@@ -31,6 +31,11 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Antes de armar o editar uno, leer [[quizzes-reglas-de-armado]] y recorrer su checklist.
 - Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
+## Trabajar en la compu de Santiago (regla fija, 2026-10-25)
+- **Todo el laburo se hace en su Mac, siempre.** Santiago: *"acordate de laburar en mi compu SIEMPRE"*. Voces, renders, descargas, imágenes y archivos van a su disco, no a un entorno remoto ni a una carpeta temporal del sistema.
+- En la práctica: las voces se graban con su Chrome en AI Studio, los videos se renderizan con los scripts locales de `OUTPUTS/scripts-vsl/`, y los entregables terminan en `~/Desktop/<oferta>/` según la regla de carpetas de arriba.
+- Los archivos intermedios que no son entregables van al scratchpad de la sesión, nunca sueltos en el Escritorio ni en `/tmp`.
+
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).

@@ -22,3 +22,36 @@ Campaña de testeo, 6 conjuntos ABO, un video por conjunto. Gasto total 76,57 US
 
 ### Decisión
 Tanda V7–V12 (`OUTPUTS/2026-10-23-guiones-herrero-de-finde-v7-v12.md`): las 6 con número o comparación de plata en el primer segundo, cero anécdota, costo → precio de venta en el cuerpo y CTA propio en cada una.
+
+## 2026-10-25 · El V7 es el ganador de la oferta
+
+Dato que pasó Santiago: el **V7 ("Un rollo de alambre tubular…") hizo 6 ventas en el día con un CPA de 1 USD.**
+Para dimensionar: la primera tanda entera (6 conjuntos) hizo 7 ventas con CPA promedio de 10,94, y el mejor de esa tanda (V6, tanque de nafta) estaba en 7,05. El V7 baja el CPA un orden de magnitud.
+
+### Por qué ganó (diagnóstico)
+1. **Compara contra un consumible del oficio, no contra un gasto de la vida.** El V6 usaba el tanque de nafta, que entiende cualquiera. El V7 usa el **rollo de alambre tubular**, que solo entiende un herrero. El hook filtra el público en la primera palabra y por eso cae el CPA.
+2. **Giro consumible → activo:** "el alambre se te termina en dos trabajos. Esto te queda para siempre". Ancla el precio sin nombrarlo.
+3. **Dolor de oficio, no de bolsillo:** "dibujar, probar y volver a cortar es lo que te come el finde y el material".
+4. **Inventario concreto:** las diez carpetas nombradas una por una.
+5. **Un solo ejemplo con números, chico y al final** (fogonero, 4-6 h, 415–535 mil). No una lista de cinco.
+6. **CTA con día:** "así el sábado ya estás cortando".
+
+### DNA que queda para variar
+Gasto que ya hacés en el taller → esto cuesta menos y no se gasta → **una sola** de las cuatro hojas explicada en detalle → una ficha real con costo y precio de venta → CTA con fecha.
+
+### Tanda V13–V18 (2026-10-25)
+Seis variables de esa DNA en `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`. Cada una cambia el gasto comparado (todos jerga de taller), la hoja del plano que explica y la ficha:
+
+| Guion | Gasto comparado | Hoja que explica | Ficha |
+|---|---|---|---|
+| V13 | Caja de discos de corte | Lista de cortes | TK-024 rack overland · 456 mil → 855 mil–1,115 M |
+| V14 | Carga del tubo de mezcla | Orden de soldadura | BQ-090 parrilla argentina · 921 mil → 1,55–2,015 M |
+| V15 | El hierro tirado en recortes | Lista de compras | SH-148 mesa para motos · 846 mil → 1,44–1,87 M |
+| V16 | Lo que cobran por un plano suelto | Dibujo en tres vistas | TR-072 trailer con rampa · 3,765 M → 5,57–7,245 M |
+| V17 | Lo que perdés cotizando a ojo | Precio de venta sugerido | GY-096 rig · 1,271 M → 2,235–2,91 M |
+| V18 | El sábado perdido dibujando | Las cuatro hojas juntas | BQ-028 fogonero hexagonal · 470 mil → 805 mil–1,045 M |
+
+De 175 a 196 palabras cada uno: a 1,20x quedan en 58–65 s, el mismo largo que el V7.
+
+### Nota de criterio
+Son 6 variables de un solo dato de un solo día. Se le marcó a Santiago que lo prudente es subir 3 y dejar 3 para cuando el V7 confirme. Pidió 6 y se entregaron 6.

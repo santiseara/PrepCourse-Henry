@@ -1,3 +1,10 @@
+## 2026-10-24 — Profesional Digital: los 6 videos, re-renderizados más rápidos
+
+- Santiago: *"necesito que a todos les metas un poco más de velocidad y cortes bien los silencios, quedaron lentos"*.
+- `work/edit_pd.py` ahora lee `silence: [stop_duration, stop_silence]` del plan (antes estaba fijo en 0.6/0.35). Los 6 planes pasaron a `speed: 1.22`, `silence: [0.26, 0.12]` y `cut: [1.9, 2.4, 2.9]`.
+- Los 6 MP4 se reemplazaron en `~/Desktop/profesional-digital/anuncios/`; los viejos quedaron en `work/old/`. Bajaron de 39–44 s a 33–38 s.
+- WIKI: regla fija nueva en [[guiones-y-anuncios]], detalle técnico en [[ugc-y-video-generativo]] y registro en [[profesional-digital]].
+
 ## 2026-10-24 — Primera caza con la skill: renda extra + emagrecimento black (Brasil)
 
 - Barrido mundial (12 keywords, 25+ consultas por API) **+ auditoría de 11 fanpages en la Biblioteca web**, con fechas de inicio, dominios, precios y copys verificados.

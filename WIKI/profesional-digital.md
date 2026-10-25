@@ -48,6 +48,8 @@ Meta rechaza en este nicho por tres políticas: promesas de ingresos poco realis
 - **Las capturas de reseñas son del competidor:** se ve "elevada_digital", "Elevada Digital" y "elevadadigital.com" en los chats (`IMG_56xx`, `IMG_6022`, `resenaed*`). Además de ser de otra marca, Meta las puede leer como testimonios falsos.
 - **Promesas que Meta también revisa en la landing:** "¿CANSADA DE TRABAJAR SIN VER RESULTADOS?" (atributo personal), "EN SOLO 7 DÍAS", "dejar de depender de un sueldo fijo", "cambiar tu situación económica", la reseña "hoy gano 350 dólares al mes", "31 personas están viendo esto ahora" y el contador de "solo hoy" que se reinicia. Si los anuncios se siguen rechazando con estos guiones, lo siguiente a limpiar es la landing.
 
+- 🆕 **2026-10-24 · Re-render de los 6 videos, más rápidos.** Santiago los vio lentos. Se pasó `edit_pd.py` a leer `silence` del plan y los 6 planes quedaron en `speed: 1.22`, `silence: [0.26, 0.12]` y `cut: [1.9, 2.4, 2.9]`. Duraciones: V1 41,2→34,5 s · V2 44,2→37,7 s · V3 38,9→33,0 s · V4 39,6→34,4 s · V5 42,9→36,4 s · V6 42,5→37,0 s. Los MP4 viejos quedaron en `~/Desktop/profesional-digital/anuncios/work/old/`.
+
 ## Preguntas abiertas
 - ¿Qué anuncios exactos se bloquearon en LATAM y con qué motivo? Sirve para afinar las reglas.
 - Garantía: la landing dice 7 días.

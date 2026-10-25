@@ -65,6 +65,7 @@ Para ciertos UGC se pide **fondo verde / chroma**, con el objetivo explícito de
 - Voz natural, sin efectos innecesarios
 - Persona hablando directamente a cámara
 - Con ElevenLabs, **la duración del guion debe coincidir con la del creativo de referencia** del competidor
+- **Ritmo de la voz en off (24/10/2026).** En los editores (`edit_*.py`) la voz pasa siempre por `silenceremove` + `atempo` antes de alinear subtítulos. Valores que pidió Santiago: `speed` ≥ **1.20** y `silence: [0.26, 0.12]` (umbral de pausa / silencio que se deja). Con 0.6/0.35 el ad "queda lento". Si el audio ya viene de un avatar que habla a cámara, no se tocan los silencios ([[atlas-de-cortes]]).
 
 ## Herramientas
 

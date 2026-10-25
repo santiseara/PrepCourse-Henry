@@ -1,3 +1,9 @@
+## 2026-10-25 — Piedras v24: 3 variables bizop
+
+- Pedido: *"Vamos con mas guiones para piedras"*. Al ser variables de algo que ya corre, la tanda es de **3** (regla del 24/10), con el formato **BIZOP** vigente desde la v23.
+- `OUTPUTS/2026-10-25-guiones-piedras-v24-bizop.md` (25/10 - 1 a 3), EN + ES, 45–55 s, ángulos nuevos: la demanda ya probada por el retail ($28 la etiqueta en las cadenas), el cliente que compra 150 de una (novias, hoteles, inmobiliarias, empresas) y el poder de precio sin fábrica que pueda competir. CTAs distintos entre sí y distintos de la v23. Banco con 4 ángulos más al final del archivo.
+- WIKI: ángulos usados anotados en [[scented-stones]] y output enlazado en `index.md`.
+
 ## 2026-10-24 — Protocolo Chía 28D: testimonios, pantallas de la app/checkout y quiz
 
 - Santiago: *"Armalos vos o pone los mismos, esa oferta original es mia"* y *"usa los de la original"*. Se dejan de tratar como material ajeno: se reusan los **3 testimonios** y las pantallas de la **app** y del **checkout** del VSL viejo.

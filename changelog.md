@@ -1,3 +1,10 @@
+## 2026-10-25 — Piedras v25: bizop duro (y regla nueva)
+
+- Santiago rechazó la v24: *"No me gustaron, acordate lo que te dije del bizop, tenemos que apuntar a eso"*. Diagnóstico: escena o tesis en la primera línea y varios números por guion (el desglose que la regla del 24/10 ya prohibía).
+- **Regla nueva en [[guiones-y-anuncios]] (bizop duro):** oportunidad en crudo en la primera línea, **un solo número en todo el guion**, el negocio en tres verbos cortos y CTA con acción concreta y fecha.
+- `OUTPUTS/2026-10-25-guiones-piedras-v25-bizop-duro.md` (25/10 - 4 a 6), EN + ES: la demanda que ya existe sin proveedor, un cliente de 150 piezas y el mercado protegido (el yeso pesa y se rompe).
+- WIKI: registro en [[guiones-y-anuncios]], v24 marcada como rechazada en [[scented-stones]], output enlazado en `index.md`.
+
 ## 2026-10-25 — Piedras v24: 3 variables bizop
 
 - Pedido: *"Vamos con mas guiones para piedras"*. Al ser variables de algo que ya corre, la tanda es de **3** (regla del 24/10), con el formato **BIZOP** vigente desde la v23.

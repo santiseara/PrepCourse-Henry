@@ -1,0 +1,415 @@
+<!-- =========================================================================
+     PROTOCOLO CHÍA 28D — QUIZ (LATAM, español neutro)
+     Copia exacta del quiz original (Mounjaro de chía), con los textos
+     pasados de voseo argentino a español neutro y el precio en USD.
+
+     CONFIGURACIÓN
+     -------------
+     LINK_CHECKOUT    : /checkout      <-- cambiar por el checkout de ImpulTienda
+     PRECIO           : US$ 17
+     PIXEL_ID         : lo pone la tienda (ya está en el template de ImpulTienda)
+     SEGUNDOS_OFERTA  : 840  (14:00) — el VSL dice el precio a las 13:46
+     VSL              : va dentro de <template id="vsl-template"> (abajo del todo)
+     IMAGENES         : (las mismas del quiz original, ya subidas)
+       logo          https://i.postimg.cc/VkfDb3y3/logo.webp
+       antes-mujer   https://i.postimg.cc/t49pnCCD/19-3.webp
+       antes-hombre  https://i.postimg.cc/X7SV3gMW/18-3.webp
+       genero-mujer  https://i.postimg.cc/Kvz1kNqn/8bc94ac11389f76a8ff5f367be64a319.webp
+       genero-hombre https://i.postimg.cc/pdNrSt2z/71b9b95ef82b2491f5e65459c23af6c0.webp
+       cuerpo/zonas  storage de la tienda (data-img-f / data-img-m en cada opción)
+     ========================================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<div class="qz" id="qz">
+
+  <div class="qz__topbar"><img class="qz__logo" src="https://i.postimg.cc/VkfDb3y3/logo.webp" alt="Logo"></div>
+
+  <div class="qz__bar-wrap" id="qzBarWrap" style="display:none;">
+    <div class="qz__bar"><div class="qz__bar-fill" id="qzBar"></div></div>
+    <span class="qz__step" id="qzStep">1 / 5</span>
+  </div>
+
+  <div class="qz__stage" id="qzStage">
+
+    <!-- PROMESA -->
+    <div class="qz__slide qz__promise is-active" data-step="promise">
+      <span class="qz__badge">🔥 Reto de verano</span>
+      <h1 class="qz__promise-title">Baja hasta más de 20 kilos con el <em>Mounjaro de chía</em></h1>
+      <p class="qz__promise-sub">Haz la encuesta y armamos tu <b>plan personalizado</b> en 1 minuto.</p>
+      <div class="qz__promise-ba">
+        <div class="qz__promise-ba-item"><img src="https://i.postimg.cc/t49pnCCD/19-3.webp" alt="Antes y después mujer"></div>
+        <div class="qz__promise-ba-item"><img src="https://i.postimg.cc/X7SV3gMW/18-3.webp" alt="Antes y después hombre"></div>
+      </div>
+      <button class="qz__start" id="qzStart">Empezar ahora →</button>
+      <div class="qz__urgency"><span class="qz__dot"></span> <b id="qzLive">37</b> personas están llenando el formulario ahora</div>
+    </div>
+
+    <!-- P1 kilos -->
+    <div class="qz__slide" data-step="q" data-barn="0">
+      <h2 class="qz__title">¿Cuántos kilos quieres perder?</h2>
+      <div class="qz__opts" data-type="single">
+        <button class="qz__opt" data-next><span class="qz__emo">✨</span> Hasta 5 kg</button>
+        <button class="qz__opt" data-next><span class="qz__emo">💪</span> De 6 a 10 kg</button>
+        <button class="qz__opt" data-next><span class="qz__emo">🔥</span> De 11 a 15 kg</button>
+        <button class="qz__opt" data-next><span class="qz__emo">⚡</span> De 16 a 20 kg</button>
+        <button class="qz__opt" data-next><span class="qz__emo">🎯</span> Más de 20 kg</button>
+      </div>
+    </div>
+
+    <!-- P2 género -->
+    <div class="qz__slide" data-step="q" data-barn="1">
+      <h2 class="qz__title">¿Cuál es tu género?</h2>
+      <p class="qz__hint">Selecciona una opción para personalizar tu protocolo</p>
+      <div class="qz__opts qz__opts--img" data-type="single">
+        <button class="qz__opt qz__opt--img" data-next data-gender="f">
+          <span class="qz__opt-img"><img src="https://i.postimg.cc/Kvz1kNqn/8bc94ac11389f76a8ff5f367be64a319.webp" alt="Mujer"></span>
+          <span class="qz__opt-lbl">👩 Mujer</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-next data-gender="m">
+          <span class="qz__opt-img"><img src="https://i.postimg.cc/pdNrSt2z/71b9b95ef82b2491f5e65459c23af6c0.webp" alt="Hombre"></span>
+          <span class="qz__opt-lbl">👨 Hombre</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- P3 edad -->
+    <div class="qz__slide" data-step="q" data-barn="2">
+      <h2 class="qz__title">¿Cuántos años tienes?</h2>
+      <div class="qz__opts" data-type="single">
+        <button class="qz__opt" data-next><span class="qz__emo">🌸</span> Menos de 25</button>
+        <button class="qz__opt" data-next><span class="qz__emo">💫</span> De 25 a 34</button>
+        <button class="qz__opt" data-next><span class="qz__emo">🌟</span> De 35 a 44</button>
+        <button class="qz__opt" data-next><span class="qz__emo">✨</span> De 45 a 54</button>
+        <button class="qz__opt" data-next><span class="qz__emo">👑</span> 55 o más</button>
+      </div>
+    </div>
+
+    <!-- P4 cuerpo -->
+    <div class="qz__slide" data-step="q" data-barn="3">
+      <h2 class="qz__title">¿Cómo describirías tu cuerpo hoy?</h2>
+      <div class="qz__opts qz__opts--img qz__opts--body" data-type="single">
+        <button class="qz__opt qz__opt--img" data-next>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995156905_corpo-f-regular.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995161508_corpo-m-regular.webp" src="" alt="Regular"></span>
+          <span class="qz__opt-lbl">🙂 Regular</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-next>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995155017_corpo-f-flacido.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995159253_corpo-m-flacido.webp" src="" alt="Flácido"></span>
+          <span class="qz__opt-lbl">🌀 Flácido</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-next>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995158348_corpo-f-sobrepeso.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995160239_corpo-m-sobrepeso.webp" src="" alt="Sobrepeso"></span>
+          <span class="qz__opt-lbl">💗 Sobrepeso</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- P5 zonas multi -->
+    <div class="qz__slide" data-step="q" data-barn="4">
+      <h2 class="qz__title">¿Qué zonas quieres trabajar más?</h2>
+      <p class="qz__hint">Puedes marcar más de una</p>
+      <div class="qz__opts qz__opts--img qz__opts--zones" data-type="multi">
+        <button class="qz__opt qz__opt--img" data-multi>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995170029_area-f-abdomen.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995166648_area-m-abdomen.webp" src="" alt="Abdomen"></span>
+          <span class="qz__opt-lbl">🔻 Abdomen</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-multi>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995165497_area-f-peito.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995162476_area-m-peito.webp" src="" alt="Pecho"></span>
+          <span class="qz__opt-lbl">💠 Pecho</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-multi>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995164494_area-f-flancos.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995163425_area-m-flancos.webp" src="" alt="Cintura"></span>
+          <span class="qz__opt-lbl">⏳ Cintura</span>
+        </button>
+        <button class="qz__opt qz__opt--img" data-multi>
+          <span class="qz__opt-img"><img data-img-f="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995169009_area-f-bracos.webp" data-img-m="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/475f16da-67cc-470f-97da-a0fa4933e0a6/1788995167651_area-m-bracos.webp" src="" alt="Brazos"></span>
+          <span class="qz__opt-lbl">💪 Brazos</span>
+        </button>
+      </div>
+      <button class="qz__continue" id="qzContinue" disabled>Continuar →</button>
+    </div>
+
+    <!-- ANALIZANDO -->
+    <div class="qz__slide qz__analyze" data-step="analyze">
+      <div class="qz__spinner"></div>
+      <h2 class="qz__title">Analizando tus respuestas…</h2>
+      <ul class="qz__anlist" id="qzAnList">
+        <li>Comparando tu perfil con el de personas con tu mismo objetivo</li>
+        <li>Identificando tu perfil y tu zona principal</li>
+        <li>Comparando con quienes ya siguieron el protocolo</li>
+        <li>Ajustando el cálculo según tu edad</li>
+      </ul>
+    </div>
+
+    <!-- FINAL VSL -->
+    <div class="qz__slide qz__final" data-step="final">
+      <span class="qz__badge">✅ Tu plan está listo</span>
+      <h2 class="qz__title">Mira el video con tu plan personalizado</h2>
+      <p class="qz__final-txt">Presta atención hasta el final para recibir la receta ajustada a tu perfil.</p>
+
+      <div class="qz__vslwrap" id="qzVsl"></div>
+
+      <!-- Aviso mientras el CTA está bloqueado -->
+      <div class="qz__wait" id="qzWait" style="display:none;">
+        <span class="qz__wait-spin"></span> Sigue mirando el video para desbloquear tu plan
+      </div>
+
+      <!-- CTA con retraso -->
+      <div class="qz__ctawrap" id="qzCtaWrap">
+        <a class="qz__cta" id="qzCta" href="/checkout">Quiero mi plan · US$ 17 →</a>
+        <p class="qz__final-note">🔒 Compra 100% segura · Acceso inmediato por correo</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====== EMBED DEL VSL ======
+     Pegar acá adentro el embed del reproductor (VTurb o Panda) del VSL
+     "Protocolo Chía 28D". Se inyecta solo cuando la persona llega al
+     último paso, para que no empiece a cargar durante el quiz.          -->
+<template id="vsl-template">
+  <vturb-smartplayer id="vid-REEMPLAZAR" style="display:block; margin:0 auto; width:100%; max-width:400px;"><div class="vturb-player-placeholder" style="position:relative; width:100%; padding:177.77777777777777% 0 0; z-index:0; background-color:black;"></div></vturb-smartplayer>
+</template>
+
+<style>
+  .qz{
+    --qz-verde:#5a7d5a; --qz-verde-dk:#3f5c3f; --qz-beige:#efe7dc; --qz-beige-2:#f7f2ea;
+    --qz-ink:#1a1a1a; --qz-line:#e2d9cc; --qz-muted:#8a8178; --qz-rojo:#e23b3b;
+    --qz-body:'Poppins',sans-serif;
+    max-width:580px; margin:0 auto; background:#fff; border-radius:22px; padding:0 0 30px;
+    font-family:var(--qz-body); box-sizing:border-box; box-shadow:0 24px 60px rgba(0,0,0,.1); overflow:hidden;
+  }
+  .qz *{box-sizing:border-box;}
+  .qz img{display:block; max-width:100%;}
+
+  .qz__topbar{display:flex; justify-content:center; padding:18px; background:var(--qz-beige-2); border-bottom:1px solid var(--qz-line);}
+  .qz__logo{height:34px; width:auto;}
+
+  .qz__bar-wrap{display:flex; align-items:center; gap:12px; padding:18px 24px 0;}
+  .qz__bar{flex:1; height:8px; background:var(--qz-beige); border-radius:100px; overflow:hidden;}
+  .qz__bar-fill{height:100%; width:0%; background:linear-gradient(90deg,var(--qz-verde),var(--qz-verde-dk)); border-radius:100px; transition:width .5s cubic-bezier(.4,0,.2,1);}
+  .qz__step{font-size:12px; font-weight:700; color:var(--qz-muted); flex-shrink:0;}
+
+  .qz__stage{padding:24px;}
+  .qz__slide{display:none; animation:qzIn .4s ease;}
+  .qz__slide.is-active{display:block;}
+  @keyframes qzIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
+
+  .qz__badge{display:inline-block; background:var(--qz-verde); color:#fff; font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:14px;}
+  .qz__title{font-size:clamp(20px,3.6vw,26px); font-weight:800; color:var(--qz-ink); margin:0 0 6px; line-height:1.25; text-align:center; letter-spacing:-.01em;}
+  .qz__hint{font-size:13px; color:var(--qz-muted); text-align:center; margin:0 0 20px;}
+  .qz__title + .qz__opts{margin-top:22px;}
+
+  .qz__promise{text-align:center;}
+  .qz__promise-title{font-size:clamp(24px,5vw,34px); font-weight:900; color:var(--qz-ink); margin:0 0 12px; line-height:1.12; letter-spacing:-.02em;}
+  .qz__promise-title em{font-style:normal; color:var(--qz-verde);}
+  .qz__promise-sub{font-size:15px; color:var(--qz-muted); margin:0 0 22px; line-height:1.5;}
+  .qz__promise-sub b{color:var(--qz-ink);}
+  .qz__promise-ba{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:22px;}
+  .qz__promise-ba-item{border-radius:16px; overflow:hidden; box-shadow:0 14px 36px rgba(0,0,0,.16); background:var(--qz-beige);}
+  .qz__promise-ba-item img{width:100%; height:auto; display:block;}
+  .qz__start{width:100%; background:linear-gradient(135deg,var(--qz-verde),var(--qz-verde-dk)); color:#fff; border:none; border-radius:100px; padding:18px; font-family:var(--qz-body); font-size:16px; font-weight:800; cursor:pointer; box-shadow:0 12px 28px rgba(90,125,90,.4); transition:transform .2s ease, filter .2s ease; text-transform:uppercase; letter-spacing:.02em;}
+  .qz__start:hover{transform:translateY(-2px); filter:brightness(1.06);}
+
+  .qz__urgency{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:16px; font-size:12.5px; font-weight:600; color:var(--qz-rojo);}
+  .qz__urgency b{font-weight:800;}
+  .qz__dot{width:9px; height:9px; border-radius:50%; background:var(--qz-rojo); flex-shrink:0; animation:qzPulse 1.4s infinite;}
+  @keyframes qzPulse{0%{box-shadow:0 0 0 0 rgba(226,59,59,.6);}70%{box-shadow:0 0 0 8px rgba(226,59,59,0);}100%{box-shadow:0 0 0 0 rgba(226,59,59,0);}}
+
+  .qz__opts{display:flex; flex-direction:column; gap:11px;}
+  .qz__opt{width:100%; text-align:left; background:var(--qz-beige-2); border:2px solid var(--qz-line); border-radius:14px; padding:16px 18px; font-family:var(--qz-body); font-size:15px; font-weight:600; color:var(--qz-ink); cursor:pointer; transition:all .18s ease; display:flex; align-items:center; gap:12px;}
+  .qz__opt:hover{border-color:var(--qz-verde); background:#fff; transform:translateX(3px);}
+  .qz__opt.is-sel{border-color:var(--qz-verde); background:var(--qz-verde); color:#fff;}
+  .qz__emo{font-size:19px; flex-shrink:0;}
+
+  .qz__opts--img{flex-direction:row; flex-wrap:wrap; gap:12px;}
+  .qz__opt--img{flex:1 1 calc(50% - 6px); flex-direction:column; align-items:center; gap:10px; text-align:center; padding:12px 10px;}
+  .qz__opt--img:hover{transform:translateY(-3px);}
+  .qz__opt-img{width:100%; aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:var(--qz-beige);}
+  .qz__opt-img img{width:100%; height:100%; object-fit:cover;}
+  .qz__opt-lbl{font-size:14px; font-weight:700;}
+  .qz__opts--body .qz__opt--img{flex:1 1 calc(33.33% - 8px);}
+
+  .qz__continue{width:100%; margin-top:20px; background:linear-gradient(135deg,var(--qz-verde),var(--qz-verde-dk)); color:#fff; border:none; border-radius:100px; padding:16px; font-family:var(--qz-body); font-size:15px; font-weight:800; cursor:pointer; transition:opacity .2s ease, transform .2s ease;}
+  .qz__continue:disabled{opacity:.35; cursor:default;}
+  .qz__continue:not(:disabled):hover{transform:translateY(-2px);}
+
+  .qz__analyze{text-align:center; padding:16px 0;}
+  .qz__spinner{width:54px; height:54px; margin:0 auto 22px; border:4px solid var(--qz-beige); border-top-color:var(--qz-verde); border-radius:50%; animation:qzSpin .9s linear infinite;}
+  @keyframes qzSpin{to{transform:rotate(360deg);}}
+  .qz__anlist{list-style:none; margin:22px auto 0; padding:0; display:flex; flex-direction:column; gap:12px; max-width:420px;}
+  .qz__anlist li{font-size:13.5px; color:var(--qz-muted); opacity:0; transform:translateY(8px); transition:.5s ease; padding-left:28px; position:relative; text-align:left;}
+  .qz__anlist li::before{content:''; position:absolute; left:0; top:0; width:18px; height:18px; border-radius:50%; background:var(--qz-verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat;}
+  .qz__anlist li.is-in{opacity:1; transform:translateY(0);}
+
+  .qz__final{text-align:center;}
+  .qz__final-txt{font-size:14px; color:var(--qz-muted); line-height:1.55; margin:0 auto 20px; max-width:420px;}
+
+  /* VSL (el embed trae su propio ratio inline) */
+  .qz__vslwrap{width:100%; margin:0 auto 22px; border-radius:14px; overflow:hidden; background:var(--qz-ink);}
+
+  /* Aviso mientras el CTA está bloqueado */
+  .qz__wait{display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; font-weight:600; color:var(--qz-muted); padding:14px 16px; background:var(--qz-beige-2); border:1px dashed var(--qz-line); border-radius:14px;}
+  .qz__wait-spin{width:16px; height:16px; border:2px solid var(--qz-line); border-top-color:var(--qz-verde); border-radius:50%; animation:qzSpin .9s linear infinite; flex-shrink:0;}
+
+  /* CTA con retraso */
+  .qz__ctawrap{display:none;}
+  .qz__ctawrap.is-in{display:block; animation:qzIn .5s ease;}
+  .qz__cta{display:inline-block; width:100%; background:linear-gradient(135deg,var(--qz-verde),var(--qz-verde-dk)); color:#fff !important; text-decoration:none !important; font-weight:800; font-size:16px; padding:18px 24px; border-radius:100px; box-shadow:0 12px 28px rgba(90,125,90,.4); transition:transform .2s ease; text-transform:uppercase; letter-spacing:.02em;}
+  .qz__cta:hover{transform:translateY(-2px);}
+  .qz__final-note{font-size:12px; color:var(--qz-muted); margin:14px 0 0;}
+
+  @media (max-width:480px){
+    .qz{border-radius:0;}
+    .qz__stage{padding:20px 16px;}
+    .qz__opt{padding:14px 15px; font-size:14px;}
+    .qz__opts--img{gap:10px;}
+    .qz__opt-lbl{font-size:12.5px;}
+    .qz__promise-ba{gap:8px;}
+  }
+</style>
+
+<script>
+(function(){
+
+  /* =========================================================
+     CONFIG
+     SEGUNDOS_OFERTA : retraso del botón de checkout
+       0   = botón visible al toque  -> MODO TEST
+       840 = 14:00                   -> MODO PRODUCCIÓN
+             (el VSL dice "diecisiete dólares" a las 13:46)
+     LINK_CHECKOUT  : checkout de ImpulTienda; se le suman los UTMs de la URL
+     ========================================================= */
+  var SEGUNDOS_OFERTA = 840;
+  var LINK_CHECKOUT   = '/checkout';
+
+  function init(){
+    var qz = document.getElementById('qz');
+    if(!qz || qz.getAttribute('data-ready')) return;
+    qz.setAttribute('data-ready','1');
+
+    var slides = qz.querySelectorAll('.qz__slide');
+    var bar = document.getElementById('qzBar');
+    var stepEl = document.getElementById('qzStep');
+    var barWrap = document.getElementById('qzBarWrap');
+    var TOTAL_Q = 5;
+    var current = 0;
+    var gender = 'f';
+    var ctaArmed = false;
+
+    /* Todos los CTAs van al checkout con los UTMs de la URL */
+    (function(){
+      var cta = document.getElementById('qzCta');
+      if(!cta) return;
+      var qs = window.location.search || '';
+      cta.setAttribute('href', LINK_CHECKOUT + qs);
+      cta.addEventListener('click', function(){
+        if(typeof window.metaTrackInitiateCheckout === 'function'){ window.metaTrackInitiateCheckout({}); }
+      });
+    })();
+
+    function applyGenderImages(){
+      qz.querySelectorAll('img[data-img-f]').forEach(function(img){
+        img.src = gender === 'm' ? img.getAttribute('data-img-m') : img.getAttribute('data-img-f');
+      });
+    }
+
+    /* Carga el player recién al llegar al final (si no, arranca solo mientras hacen el quiz) */
+    var vslLoaded = false;
+    function loadVsl(){
+      if(vslLoaded) return;
+      vslLoaded = true;
+      var tpl = document.getElementById('vsl-template');
+      var wrap = document.getElementById('qzVsl');
+      if(!tpl || !wrap) return;
+      wrap.appendChild(tpl.content.cloneNode(true));
+      tpl.querySelectorAll('script').forEach(function(old){
+        var s = document.createElement('script');
+        if(old.src){ s.src = old.src; s.async = true; } else { s.textContent = old.textContent; }
+        document.head.appendChild(s);
+      });
+    }
+
+    /* Arma el botón: lo muestra ya (test) o al cumplirse el retraso */
+    function armCta(){
+      if(ctaArmed) return;
+      ctaArmed = true;
+      var wrap = document.getElementById('qzCtaWrap');
+      var wait = document.getElementById('qzWait');
+      if(!wrap) return;
+
+      if(SEGUNDOS_OFERTA <= 0){
+        wrap.classList.add('is-in');
+        if(wait) wait.style.display = 'none';
+        return;
+      }
+
+      if(wait) wait.style.display = 'flex';
+      setTimeout(function(){
+        wrap.classList.add('is-in');
+        if(wait) wait.style.display = 'none';
+        wrap.scrollIntoView({behavior:'smooth', block:'center'});
+      }, SEGUNDOS_OFERTA * 1000);
+    }
+
+    function show(n){
+      slides.forEach(function(s){ s.classList.remove('is-active'); });
+      slides[n].classList.add('is-active');
+      current = n;
+      var step = slides[n].getAttribute('data-step');
+      if(step === 'q'){
+        barWrap.style.display='flex'; stepEl.style.visibility='visible';
+        var qi = parseInt(slides[n].getAttribute('data-barn'),10);
+        bar.style.width = ((qi+1)/TOTAL_Q*100)+'%';
+        stepEl.textContent = (qi+1)+' / '+TOTAL_Q;
+      } else if(step === 'promise'){
+        barWrap.style.display='none';
+      } else {
+        barWrap.style.display='flex'; bar.style.width='100%'; stepEl.style.visibility='hidden';
+      }
+      if(slides[n].classList.contains('qz__analyze')){ runAnalyze(); }
+      if(step === 'final'){ loadVsl(); armCta(); }
+      qz.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    document.getElementById('qzStart').addEventListener('click', function(){ show(current+1); });
+
+    qz.querySelectorAll('[data-next]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var opts = btn.closest('.qz__opts');
+        opts.querySelectorAll('.qz__opt').forEach(function(o){ o.classList.remove('is-sel'); });
+        btn.classList.add('is-sel');
+        if(btn.hasAttribute('data-gender')){ gender = btn.getAttribute('data-gender'); applyGenderImages(); }
+        setTimeout(function(){ show(current+1); }, 260);
+      });
+    });
+
+    var continueBtn = document.getElementById('qzContinue');
+    qz.querySelectorAll('[data-multi]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btn.classList.toggle('is-sel');
+        var any = btn.closest('.qz__opts').querySelectorAll('.is-sel').length>0;
+        if(continueBtn) continueBtn.disabled = !any;
+      });
+    });
+    if(continueBtn){ continueBtn.addEventListener('click', function(){ show(current+1); }); }
+
+    function runAnalyze(){
+      var items = document.querySelectorAll('#qzAnList li');
+      items.forEach(function(li,i){ li.classList.remove('is-in'); setTimeout(function(){ li.classList.add('is-in'); }, 400+i*700); });
+      setTimeout(function(){ show(current+1); }, 400 + items.length*700 + 900);
+    }
+
+    var live = document.getElementById('qzLive');
+    if(live){ setInterval(function(){ live.textContent = 33+Math.floor(Math.random()*12); }, 3000); }
+
+    applyGenderImages();
+    show(0);
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+  setTimeout(init, 400);
+})();
+</script>

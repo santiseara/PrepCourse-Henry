@@ -98,6 +98,15 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
   Unos 10 en total. **No llenarlo de efectos.** Se sintetizan con `sfx.py`.
 - Los efectos van en el momento exacto de la palabra: se transcribe el video final con Whisper y se ubica cada uno sobre la palabra.
 
+## 4d. Reusar tramos del VSL original (testimonios, app, checkout) (2026-10-24, Protocolo Chía 28D)
+- Cuando la oferta original **es de Santiago**, los testimonios y las capturas de la app y del checkout **se reusan tal cual** del MP4 viejo en vez de grabarlos de nuevo. Preguntar antes: si el original es de un competidor, no se tocan.
+- Un tramo con **voz propia** (testimonios) no entra por `plan.json`: `plan.json` solo pone b-rolls mudos encima de la avatar. El bloque se arma aparte y se **inserta** en el render final con `OUTPUTS/scripts-vsl/insertar_bloque.py base.mp4 bloque.mp4 <segundo> salida.mp4`. El segundo se calcula sobre la línea del guion donde la avatar lo presenta.
+- **Sacar la marca vieja en los dos canales.** No alcanza con cortar el audio: el subtítulo quemado va adelantado y sigue mostrando el nombre viejo. Para cada mención:
+  1. se corta el audio+video del tramo (con los tiempos palabra por palabra de Whisper);
+  2. si el subtítulo igual lo muestra, se borra esa banda con `rmsubs.py` y se escribe el reemplazo en un `.ass` con el mismo estilo (Arial Black 82, borde 7, blanco con la primera palabra en amarillo, `\pos(540,1392)` para el subtítulo de un testimonio vertical).
+- Cortar siempre en una frase cerrada: terminar un testimonio a mitad de palabra se nota muchísimo.
+- **Avisar los desfasajes que quedan**: si el checkout viejo muestra otro precio u otra moneda que la del guion nuevo, hay que rehacer esa captura cuando exista el checkout propio.
+
 ## 4c. Entrega y Panda
 - El video final se **reemplaza** en `~/Desktop/<producto>-vsl/` con el mismo nombre.
 - Santiago lo sube a **Panda Video** para ponerle diseños y manda el HTML del embed, que se pega dentro de `<template id="vsl-template">` en el último paso del quiz ([[quizzes-reglas-de-armado]]).

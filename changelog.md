@@ -1,3 +1,12 @@
+## 2026-10-24 — Protocolo Chía 28D: testimonios, pantallas de la app/checkout y quiz
+
+- Santiago: *"Armalos vos o pone los mismos, esa oferta original es mia"* y *"usa los de la original"*. Se dejan de tratar como material ajeno: se reusan los **3 testimonios** y las pantallas de la **app** y del **checkout** del VSL viejo.
+- **`testimonios/TESTIMONIOS.mp4` (1:22):** los 3 testimonios del original (8:18–9:46) sin las menciones a la marca vieja. Se cortó "el protocolo Chía 4S" y "Alejandra" del audio y, donde el subtítulo quemado los seguía mostrando, se borró la banda con `rmsubs.py` y se escribió "GRACIAS DOCTORA" con el mismo estilo.
+- **10 b-rolls nuevos** de la app (`b0637 b0645 b0650 b0656 b0661 b0666`) y del checkout (`b0810 b0816 b0824 b0833`), limpios de subtítulos y sumados a `plan.json` (45 entradas).
+- **Script nuevo `OUTPUTS/scripts-vsl/insertar_bloque.py`:** mete un bloque con su propio audio adentro del render final, en un segundo exacto.
+- **Quiz armado:** `~/Desktop/protocolo-chia-28d/landing/protocolo-chia-28d-quiz.txt` + `PRUEBA.html` (probado en Chrome, los 5 pasos y el CTA). Copia del quiz original (ImpulTienda, `custom_html`), en español neutro y a **US$ 17**, con el botón a los **840 s** porque el VSL dice el precio a las 13:46.
+- WIKI: §4d nueva en [[vsl-reglas-de-armado]], fuente `custom_html` y registro en [[quizzes-reglas-de-armado]], avance en [[protocolo-chia-28d]].
+
 ## 2026-10-24 — Profesional Digital: los 6 videos, re-renderizados más rápidos
 
 - Santiago: *"necesito que a todos les metas un poco más de velocidad y cortes bien los silencios, quedaron lentos"*.

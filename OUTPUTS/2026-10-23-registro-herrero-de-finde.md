@@ -39,7 +39,26 @@ Para dimensionar: la primera tanda entera (6 conjuntos) hizo 7 ventas con CPA pr
 ### DNA que queda para variar
 Gasto que ya hacés en el taller → esto cuesta menos y no se gasta → **una sola** de las cuatro hojas explicada en detalle → una ficha real con costo y precio de venta → CTA con fecha.
 
-### Tanda V13–V18 (2026-10-25)
+### Tanda final que se arma: V13–V15 + V19–V21 (2026-10-25)
+Santiago pidió 3 variables propias del V7 y 3 sacadas de ganadores del competidor que no hubiéramos hecho, **sin avatar**.
+
+**Del competidor (filtrado por copias, iteraciones y estilo):** se descartaron 051 (avatar PIP del herrero), 016 (dibujos animados) y 036 (podcast de dos). Quedaron, verificados por frames, 011, 030/041 y 100.
+
+| Guion | Origen | Gasto / situación | Hoja que explica | Ficha |
+|---|---|---|---|---|
+| V13 | propio (DNA V7) | Caja de discos de corte | Lista de cortes | TK-024 rack overland · 456 mil → 855 mil–1,115 M |
+| V14 | propio (DNA V7) | Carga del tubo de mezcla | Orden de soldadura | BQ-090 parrilla argentina · 921 mil → 1,55–2,015 M |
+| V15 | propio (DNA V7) | El hierro tirado en recortes | Lista de compras | SH-148 mesa para motos · 846 mil → 1,44–1,87 M |
+| V19 | competidor 011 (9 copias) | "¿Qué más sabés hacer?" | Catálogo para el cliente que ya te compró | FN-107 isla de cocina · 708 mil → 1,43–1,86 M |
+| V20 | competidor 030 y 041 (6 copias) | Ellos vs. nosotros | Dibujo en tres vistas | TR-129 porta autos · 7,946 M → 11,275–14,66 M |
+| V21 | competidor 100 (5 copias) | "¿Cuánto le cobrás a tu amigo?" | Precio de venta sugerido | BQ-028 fogonero hexagonal · 470 mil → 805 mil–1,045 M |
+
+Guiones: `OUTPUTS/2026-10-25-guiones-herrero-de-finde-tanda-v13-v21.md`. Voces grabadas en AI Studio (Knox, Style argentino), de 54 a 69 s en crudo. Videos: `anuncios/HF-V13…HF-V21.mp4`.
+
+### Banco: V16, V17 y V18 (2026-10-25)
+Quedaron escritos y sin producir en `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`: lo que cobran por un plano suelto (TR-072), lo que perdés cotizando a ojo (GY-096) y el sábado perdido dibujando (BQ-028).
+
+### Tanda V13–V18 descartada como conjunto (2026-10-25)
 Seis variables de esa DNA en `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`. Cada una cambia el gasto comparado (todos jerga de taller), la hoja del plano que explica y la ficha:
 
 | Guion | Gasto comparado | Hoja que explica | Ficha |

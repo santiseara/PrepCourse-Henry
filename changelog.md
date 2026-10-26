@@ -1,3 +1,13 @@
+## 2026-10-26 (madrugada) — Herrero de Finde: el V7 es el ganador y sale la tanda de 6
+
+- Santiago pasó el dato: el **V7 ("Un rollo de alambre tubular…") hizo 6 ventas en el día con CPA de 1 USD**. La tanda 1 entera había hecho 7 ventas a 10,94 de promedio.
+- **Diagnóstico de por qué gana:** compara contra un **consumible del oficio** (no contra la nafta, que entiende cualquiera), con el giro consumible → activo. La jerga filtra el público en la primera palabra y por eso baja el CPA. DNA completa en [[herrero-de-finde]].
+- **Tanda producida (6 videos):** 3 variables propias de esa DNA (caja de discos / tubo de mezcla / hierro tirado en recortes) y 3 de **ganadores del competidor sin avatar**, elegidos por copias y verificados por frames: su 011 ("qué más sabés hacer", 9 copias), sus 030 y 041 ("ellos vs. nosotros", 6) y su 100 ("cuánto le cobrás a tu amigo", 5). Se descartaron 051 (avatar PIP), 016 (dibujos animados) y 036 (podcast).
+- Guiones: `OUTPUTS/2026-10-25-guiones-herrero-de-finde-tanda-v13-v21.md`. Voces en AI Studio (Knox), videos `anuncios/HF-V13…HF-V21.mp4`. Banco sin producir: V16, V17 y V18.
+- **Banco de fichas verificadas** sumado a la wiki: 18 planos leídos de las imágenes con su material, precio de venta y horas. Antes de poner un número en un guion, sale de ahí.
+- **Reglas nuevas:** anclas y hooks con tilde validados contra el `.txt` de voz antes de renderizar; verificar por md5 que el wav descargado de AI Studio sea el nuevo (el del V19 bajó repetido); Voice Design es de pago, el camino gratis es Create new dialog.
+- **Regla de trabajo:** *"acordate de laburar en mi compu SIEMPRE"* → [[como-trabajar-con-santiago]].
+
 ## 2026-10-25 (noche, 2) — El VSL de Panda ya está pegado en el quiz
 
 - Santiago subió el VSL a **Panda Video** (`d96e9c95-796d-4deb-ad81-ae68f42c23ad`) y pasó el embed.

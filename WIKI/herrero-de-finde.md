@@ -89,7 +89,20 @@
 - **DNA para variar:** gasto que ya hacés en el taller → esto cuesta menos y no se gasta → **una sola** de las cuatro hojas explicada en detalle → una ficha real con costo y precio de venta → CTA con fecha.
 - **Regla:** el objeto de comparación tiene que ser **jerga de taller**. Cuanto más específico del oficio, más barato el clic. La comparación genérica (nafta, café) convierte peor.
 
-## Tanda V13–V18 (2026-10-25)
+## Tanda que se produce: V13–V15 + V19–V21 (2026-10-25)
+- Santiago: **3 variables propias del V7 y 3 de ganadores del competidor que no hubiéramos hecho, sin avatar.**
+- **Propias (DNA del V7):** caja de discos (lista de cortes, TK-024), carga del tubo de mezcla (orden de soldadura, BQ-090) y el hierro tirado en recortes (lista de compras, SH-148).
+- **Del competidor:** V19 de su video 011, 9 copias ("el cliente te pregunta qué más sabés hacer", FN-107); V20 de sus 030 y 041, 6 copias ("ellos te dan un perchero de herraduras, acá un porta autos", TR-129); V21 de su 100, 5 copias ("tu amigo te pide un fogonero, ¿cuánto le cobrás?", BQ-028).
+- **Cómo se eligieron:** ranking por copias del mismo video en `anuncios/work/rows.json`, descarte de las seis familias ya usadas (trailers, costo→precio, listas de 5, inventario del garage, tres cosas, comparación de costo) y **verificación visual por frames** para sacar los de avatar. Se descartaron así 051 (avatar PIP), 016 (dibujos animados, Buck) y 036 (podcast de dos).
+- Guiones en `OUTPUTS/2026-10-25-guiones-herrero-de-finde-tanda-v13-v21.md`. Planes en `anuncios/work/plans/gen3.py`, voces en `vo/V13…V21.wav`, videos `anuncios/HF-V13…HF-V21.mp4`.
+- Banco sin producir (V16, V17, V18): plano suelto (TR-072), cotizar a ojo (GY-096) y el sábado perdido (BQ-028), en `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`.
+
+### Tres cosas que salieron de esta tanda (reglas)
+- **Las anclas y los hooks van con tilde, copiados del texto real.** Escribí `'Toca'`, `'cobras?'`, `'Mas barato…'` y el render avisó `"cobras?" n.º 0 no aparece`, además de poner las etiquetas en pantalla con faltas de ortografía. Ahora `gen3.py` se valida contra el `.txt` de voz antes de renderizar: cada ancla se reemplaza por la forma exacta del guion y se corrige la ocurrencia si se pasa.
+- **Verificar que el audio descargado sea el nuevo.** Al bajar el V19 justo después de tocar Run, AI Studio entregó **el wav del guion anterior** (mismo md5 que el V15). Regla: antes de guardar, mirar que el reproductor esté sonando el audio nuevo (cambia la duración) y comparar el md5 contra los ya guardados.
+- **Voice Design es de pago.** Al entrar a una voz desde la portada de AI Studio se abre "Create voice · Voice Design", que pide vincular una clave de API paga. El camino gratis es **Create new dialog** → cambiar la voz del Speaker 1 a Knox desde Speaker settings.
+
+## Tanda V13–V18 (borrador, 2026-10-25)
 - `OUTPUTS/2026-10-25-guiones-herrero-de-finde-v13-v18.md`, también en `anuncios/guiones-v13-v18.md`. Seis variables de la DNA del V7: caja de discos (lista de cortes, TK-024), carga del tubo de mezcla (orden de soldadura, BQ-090), el hierro tirado en recortes (lista de compras, SH-148), lo que cobran por un plano suelto (dibujo en tres vistas, TR-072), lo que perdés cotizando a ojo (precio sugerido, GY-096) y el sábado perdido dibujando (las cuatro hojas, BQ-028).
 - De 175 a 196 palabras: a 1,20x quedan en 58–65 s, el largo del V7.
 - Santiago pidió 6 aunque su regla de variables es 3. Se le marcó que son 6 apuestas sobre un dato de un solo día y que lo prudente sería subir 3 y esperar la confirmación del V7.

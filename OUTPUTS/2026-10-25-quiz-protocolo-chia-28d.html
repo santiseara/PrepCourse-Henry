@@ -177,7 +177,7 @@
      Si algún día lo pasás a VTurb o Panda: dejá VIDEO_URL vacío y pegá el
      embed de ellos acá adentro, reemplazando el <div class="qz__player">. -->
 <template id="vsl-template">
-  <div class="qz__player">
+  <div class="qz__player" id="qzPlayer">
     <video id="qzVideo" playsinline webkit-playsinline preload="auto" x5-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate"></video>
     <button class="qz__unmute is-off" id="qzUnmute" type="button">
       <span class="qz__unmute-ic">🔊</span>
@@ -274,6 +274,10 @@
   .qz__unmute-ic{width:84px; height:84px; border-radius:50%; background:var(--qz-verde); display:flex; align-items:center;
     justify-content:center; font-size:36px; box-shadow:0 12px 32px rgba(0,0,0,.45); animation:qzLatido 1.6s ease-in-out infinite;}
   @keyframes qzLatido{0%,100%{transform:scale(1);}50%{transform:scale(1.09);}}
+  .qz__vslerr{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    width:100%; max-width:400px; margin:0 auto; aspect-ratio:9/16; padding:26px; text-align:center;
+    background:#1b1b1b; color:#ffd9d9; font-size:15px; font-weight:700; line-height:1.45;}
+  .qz__vslerr small{display:block; color:#b9b2a8; font-size:12px; font-weight:500; line-height:1.6;}
 
   /* Aviso mientras el CTA está bloqueado */
   .qz__wait{display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; font-weight:600; color:var(--qz-muted); padding:14px 16px; background:var(--qz-beige-2); border:1px dashed var(--qz-line); border-radius:14px;}
@@ -362,7 +366,21 @@
       });
 
       var v = document.getElementById('qzVideo');
-      if(!v || !VIDEO_URL) return;   /* embed externo: el botón sale por reloj */
+      var caja = document.getElementById('qzPlayer');
+
+      /* ---- A) Embed externo (Panda / VTurb): no hay <video> nuestro ---- */
+      if(!v){ escucharEmbed(wrap); return; }
+
+      /* ---- B) Player propio ---- */
+      if(!VIDEO_URL || VIDEO_URL.indexOf('REEMPLAZAR') !== -1){
+        /* Falta cargar la dirección del MP4: avisamos en pantalla en vez de
+           dejar un cuadro negro, y soltamos el botón por reloj. */
+        if(caja) caja.innerHTML = '<div class="qz__vslerr">Falta poner la dirección del video'
+          + '<small>En el HTML del quiz, cambiá <b>var VIDEO_URL</b> por la dirección del MP4 subido,'
+          + ' o pegá el embed de Panda/VTurb dentro de &lt;template id="vsl-template"&gt;.</small></div>';
+        return;
+      }
+
       var btn = document.getElementById('qzUnmute');
 
       /* Arranca de una. Venimos de un clic, así que probamos con sonido;
@@ -384,10 +402,53 @@
         });
       }
 
+      /* Si el archivo no existe o el hosting lo rechaza, que se vea el motivo */
+      v.addEventListener('error', function(){
+        if(caja) caja.innerHTML = '<div class="qz__vslerr">El video no cargó'
+          + '<small>Revisá <b>var VIDEO_URL</b>: que la dirección exista, que sea https'
+          + ' y que el hosting acepte Range requests.</small></div>';
+      });
+
       /* El botón se desbloquea por el tiempo VISTO del video, no por reloj */
       v.addEventListener('timeupdate', function(){
         if(v.currentTime >= SEGUNDOS_OFERTA) mostrarCta(true);
       });
+    }
+
+    /* Embed externo: sacamos el tiempo real del reproductor.
+       Panda avisa por postMessage (panda_timeupdate). VTurb expone
+       window.smartplayer.instances[].video. Si ninguno responde, reloj. */
+    function escucharEmbed(wrap){
+      if(SEGUNDOS_OFERTA <= 0) return;
+      var fr = wrap.querySelector('iframe');
+      var conTiempo = false;
+
+      window.addEventListener('message', function(e){
+        if(fr && e.source !== fr.contentWindow) return;
+        var d = e.data;
+        if(typeof d === 'string'){ try{ d = JSON.parse(d); }catch(x){ return; } }
+        if(!d || typeof d !== 'object') return;
+        if(d.message === 'panda_timeupdate' && typeof d.currentTime === 'number'){
+          conTiempo = true;
+          if(d.currentTime >= SEGUNDOS_OFERTA) mostrarCta(true);
+        }
+      });
+
+      var reloj = setInterval(function(){
+        if(ctaShown) return clearInterval(reloj);
+        try{
+          var sp = window.smartplayer && window.smartplayer.instances && window.smartplayer.instances[0];
+          var t = sp && sp.video && sp.video.currentTime;
+          if(typeof t === 'number'){
+            conTiempo = true;
+            if(t >= SEGUNDOS_OFERTA) mostrarCta(true);
+          }
+        }catch(x){}
+      }, 1000);
+
+      /* Respaldo: si a los 30 s ningún reproductor informó su tiempo,
+         el botón vuelve al reloj común (lo maneja el setTimeout de armCta). */
+      setTimeout(function(){ if(!conTiempo) clearInterval(reloj); }, 30000);
     }
 
     /* Muestra el botón (una sola vez) */

@@ -1,3 +1,12 @@
+## 2026-10-26 (noche, 2) — Herrero de Finde: el producto completo, 1.205 planos y los 12 bonus
+
+- **Dos devoluciones de clientes:** faltaban los instructivos y "el xls de conversión de medidas para cortes", y que la publicación promete 1.200 planos y 12 bonus. Se ajustó el producto a las dos cosas.
+- **La biblioteca pasó de 115 a 1.205 planos**, con las cantidades exactas por categoría que dice la landing (180 · 145 · 120 · 210 · 165 · 95 · 180 · 110). Se parametrizaron las 60 familias del generador (`expansion.py`): cada una produce todas las medidas, y los 115 planos curados conservan su código original.
+- **Partido en archivos:** una guía con el índice general y ocho archivos de categoría, para abrir en el celular solo lo que estás fabricando.
+- **Los 12 bonus, hechos:** la **Planilla de Cortes en Excel** (lista de cortes con barras necesarias, conversor mm ↔ pulgadas con fracción, presupuesto y factor único de actualización de precios; cero errores de fórmula verificados con un evaluador), seis instructivos escritos, el ranking de márgenes generado de los datos, tres packs de planos extra (120 + 150 + 10, ninguno repetido) y el Catálogo para Clientes con una ficha por trabajo.
+- **Total: 21 archivos, 1.485 planos, 6.143 páginas, 189 MB** en `~/Desktop/herrero-de-finde/productos/`.
+- **Lo único que falta es el curso de soldadura en video (Bonus 8):** se entrega el manual escrito con el mismo nombre. Queda la decisión de producirlo o cambiar ese texto de la landing ([[herrero-de-finde]]).
+
 ## 2026-10-26 — Tai Chi Fit: revive la oferta, con quiz nuevo
 
 - Santiago: *"tuve una oferta de Tai Chi, Tai Chi Fit, que me generó muchísimo dinero… la idea es revivirla, pero tengo que hacer mejores embudos, mejores anuncios"*. Mandó el ad de **Calistenia Militar Femenina** para copiarle el quiz (*"cortito, simple y directo"*) y adaptarlo a Tai Chi.

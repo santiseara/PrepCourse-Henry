@@ -219,16 +219,16 @@ def catalogo(ruta, planos):
             x = ML + col*(cw+16)
             yy = A4H - 66 - fil*ch
             c.setFillColor(CREMA); c.roundRect(x, yy-ch+14, cw, ch-14, 4, stroke=0, fill=1)
-            dibujar_iso(c, p.piezas, (x+8, yy-ch+56, cw-16, ch-82), pad=6)
+            dibujar_iso(c, p.piezas, (x+8, yy-ch+72, cw-16, ch-98), pad=6)
             c.setFont('BC', 10); c.setFillColor(NARANJA)
-            c.drawString(x+14, yy-ch+38, p.codigo)
+            c.drawString(x+14, yy-ch+54, p.codigo)
             c.setFont('BM', 11); c.setFillColor(TINTA)
             nom = p.nombre
             while c.stringWidth(nom, 'BM', 11) > cw-28 and len(nom) > 6: nom = nom[:-2]
-            c.drawString(x+14, yy-ch+24, nom)
+            c.drawString(x+14, yy-ch+38, nom)
             W, D, H = p.medidas()
             c.setFont('B', 8); c.setFillColor(GRIS)
-            c.drawString(x+14, yy-ch+12, '%d x %d x %d mm  ·  %s' % (W, D, H, p.variante.split(' · ')[-1] if ' · ' in p.variante else p.nivel))
+            c.drawString(x+14, yy-ch+24, '%d x %d x %d mm  ·  %s' % (W, D, H, p.variante.split(' · ')[-1] if ' · ' in p.variante else p.nivel))
         linea(c, ML, 52, A4W-MR, GRIS_CL, 0.5)
         c.setFont('BCM', 7); c.setFillColor(GRIS)
         c.drawString(ML, 42, 'Herrero de Finde · Catálogo para clientes')

@@ -1,3 +1,11 @@
+## 2026-10-26 (tarde) — Protocolo Chía 28D: los 6 videos armados
+
+- Santiago: *"vamos con esos, armame los videos"* y *"acordate de ir variando los clips, la edición la quiero similar a la original"*.
+- **Voces**: AI Studio, Gemini 3.1 Flash TTS Preview, voz **Sulafat**, Pace Natural, Audio Profile de mujer latinoamericana de 35 en español neutro. Las 6 salieron de **una sola carga de página** (el modelo ya deja repetir) y se verificaron con `revisar_voz.py`: las 6 dicen su guion.
+- **Editor nuevo `OUTPUTS/scripts-vsl/edit_chia.py`** (copia de `edit_herrero.py` con la estética del VSL): verde #1F6B47 en el hook, los chips y el botón, subtítulo de 3 palabras con la palabra activa en **amarillo**, chips de fase en el V6, barra de progreso verde, destello cada 4 cortes. Planes: `gen_chia_plans.py` con `usage.json` compartido para que no se repita ningún recorte entre los seis.
+- **Entregados** en `~/Desktop/protocolo-chia-28d/anuncios/`: `CHIA-V1-vaso-antes-de-comer` (42 s), `V2-tres-frascos` (42 s), `V3-chia-seca` (42 s), `V4-antojo-de-la-noche` (40 s), `V5-no-es-una-pastilla` (37 s) y `V6-cuatro-semanas` (40 s), 1080x1920.
+- Correcciones del camino: el plato final se enganchaba al *"cuando toca el agua"* del medio del guion (se pasó a `occ` 1); dos clips estaban mal nombrados (**c12 es un frasco de chía y c13 la animación 3D del intestino**, que ahora va donde se habla del estómago); y se saltearon los primeros segundos de `c10` porque se ve el envase de una marca de yogur.
+
 ## 2026-10-26 (noche, 2) — Herrero de Finde: el producto completo, 1.205 planos y los 12 bonus
 
 - **Dos devoluciones de clientes:** faltaban los instructivos y "el xls de conversión de medidas para cortes", y que la publicación promete 1.200 planos y 12 bonus. Se ajustó el producto a las dos cosas.

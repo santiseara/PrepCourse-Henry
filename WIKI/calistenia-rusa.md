@@ -17,7 +17,7 @@
 | Precio | **$17.990 ARS**, tachado $47.990 (62% OFF), 3 cuotas de $5.997 |
 | Checkout | `https://calistenia-rusa.impultienda.ar/checkout` *(a confirmar)* |
 | Coach | Coach Santi |
-| Paleta | **Rojo #C8102E + grafito #101418 sobre blanco** (el original es azul iOS) |
+| Paleta | **Verde oscuro #1F6B47 + grafito #101418 sobre blanco** (el original es azul iOS) |
 | Tipografía | Oswald (display) + Inter |
 
 ## El original: Calistenia Asiática H40+
@@ -46,15 +46,29 @@
 | 13 | Peso actual (medidor) |
 | 14 | Peso deseado (medidor) |
 
-Después: **pantalla de análisis → perfil (IMC + testosterona + chips + gráfico de previsión) → VSL con la oferta oculta**.
+Después: **pantalla de análisis → perfil → VSL con la oferta oculta**.
+
+El perfil se acortó a pedido de Santiago (*"la slide que muestra el resumen tiene mucha info, se hace muy larga"*): pasó de 2.200 px a 1.234 px. Quedó **una** tarjeta con las dos barras (IMC y testosterona) y un solo aviso, **4 chips** en vez de 6, y el gráfico de previsión con **3 logros** en vez de 5. Se fueron el aviso de riesgos del IMC, el título largo de testosterona y la línea del 83,7%.
 
 **Se fueron:** los 2 muros de texto del método, el bridge de bienvenida, partes del cuerpo, sentadilla, flexibilidad, día típico, biotipo (+ su pantalla de resultado), bridge de dolores, bridge de intensidad, agua, sueño, alimentación, energía, bridge de testosterona, "¿estás listo?", "plan casi listo" y la segunda página de venta duplicada.
 
+## Paleta
+**Verde oscuro #1F6B47** + grafito #101418 sobre blanco. El primer armado salió en rojo soviético y Santiago lo cambió: *"los colores reemplaza el rojo por un verde que quede bien, medio oscurito"*. Es el mismo verde de [[secreto-de-la-insulina]]. Las barras de riesgo (IMC, testosterona) **no** usan el verde de marca en el extremo malo: van de verde a rojo #B3261E, y el aviso de cupos también queda en rojo, para que el color siga significando lo mismo.
+
 ## Imágenes
-- **29 reusadas del original** (ninguna tiene marca ni texto): portada antes/después, las 3 del objetivo, las 4 del cuerpo actual, las 3 del cuerpo deseado, las 2 de zonas con dolor, los 4 antes/después de testimonios, 5 caras, los medios de pago y el sello "Empresa recomendada 2025".
-- **Portada recoloreada:** la flecha del antes/después venía azul (paleta del original) y se pasó a rojo con Pillow, mapeando el matiz azul a rojo y conservando saturación y luminosidad. La foto queda idéntica.
-- **Mockup nuevo con Higgsfield** (gpt_image_2, 1k, High, 1:1): celular negro flotando con la app en modo oscuro, estrella roja, "CALISTENIA RUSA", progreso "Día 8 de 28" y botón rojo. Salió bien al primer intento.
-- **Descartadas:** todas las fotos del Maestro Kaito (asiático, rodete) y los mockups de la app con la marca vieja.
+Primer armado: 29 reusadas del quiz original. Santiago: *"las imágenes son muy malas, busca otros quiz de calistenia militar que tengan mejores fotos, y usa esas"*.
+
+**De dónde salieron las nuevas**
+- **Menletics** (`menletics.com`, "#1 Military Calisthenics Home Workout App for Men", anunciante *Military Calisthenics HQ* en la Biblioteca con ~22 ads activos en AR). Se llega por la Biblioteca de Anuncios → el ad muestra el dominio. Sus imágenes están en `funnelmedia.flmng.live/cdn-cgi/image/width=1200,.../menletics/landing/…` y se bajan directo del HTML de `/start` y de la home. De ahí: **las 3 fotos del selector de edad** (hombres de 35, 45 y 58, fondo negro, luz de estudio), la **foto de flexiones** y las de método y entrenamiento.
+- **Muscle Booster** (`musclebooster.welltech.com`, redirige desde `musclebooster.fitness`): sus imágenes están en `/_astro/`. Ojo: hay que pedirlas al host final, en `musclebooster.fitness` devuelven vacío.
+- **`quiz.calistenia.app`** (Desafío de Calistenia Militar, ES): tiene las siluetas de tipo físico con nombres clarísimos (`cali-slim-man`, `cali-overweight-man`, `cali-obese-man`), pero **las sirve a 96×96**. No sirven.
+
+**Lo que se arregló de las originales**
+- Las siluetas de cuerpo actual y cuerpo deseado eran **WebP con alfa y basura en los píxeles transparentes** (bandas de colores) y medían 342 px. Se recortaron al bounding box del alfa (umbral 24), se montaron sobre una **tarjeta cuadrada de 600 px con un degradé gris muy suave** y quedaron todas iguales. Es el arreglo que más cambió la percepción.
+- La flecha del antes/después pasó de azul a verde de marca con Pillow, **mapeando solo el matiz azul** (0,55–0,70). Un segundo pase sobre rojo le había pintado la cara al modelo: el recoloreo se hace **siempre desde el original y en un solo pase**.
+- Las tres fotos del paso "objetivo" no tenían reemplazo bueno, así que **esa pregunta pasó a lista con íconos**.
+
+**Generadas con Higgsfield** (gpt_image_2, 1k, High, 1:1): el **mockup del celular** con la app en verde, y el **retrato del hombre de 65** que faltaba para el rango +60 (el set de Menletics llega hasta ~58). Se pidió con el mismo encuadre, fondo negro y remera verde oliva, y entra en el set sin que se note.
 
 ## Estado
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/calistenia-rusa/`.

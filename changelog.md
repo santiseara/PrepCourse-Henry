@@ -1,3 +1,13 @@
+## 2026-10-26 (noche, 3) — Calistenia Rusa: fotos de competidores, verde y resumen corto
+
+- Tres correcciones de Santiago: *"las imágenes son muy malas, busca otros quiz de calistenia militar que tengan mejores fotos, y usa esas"*, *"la slide que muestra el resumen tiene mucha info, se hace muy larga"* y *"los colores reemplaza el rojo por un verde que quede bien, medio oscurito"*.
+- **Fotos nuevas de competidores reales**, encontrados por la Biblioteca de Anuncios: **Menletics** (app de calistenia militar para hombres, ~22 ads en AR) dio el selector de edad, las flexiones y las fotos de gimnasio; **Muscle Booster** dio material de apoyo. Descartados: `quiz.calistenia.app` (sirve las siluetas a 96×96), `retomilitar21d.com` (caído), `calisteniatactica.com` (solo mujeres) y los funnels detrás de un "acepto términos" o de un token de API.
+- **Las siluetas de cuerpo se arreglaron, no se reemplazaron:** eran WebP con alfa sucio y 342 px. Se recortaron al bounding box del alfa y se montaron en tarjetas de 600 px con degradé suave. Son las que más cambiaron.
+- **Paleta a verde #1F6B47** (el mismo de [[secreto-de-la-insulina]]). Las barras de riesgo y el aviso de cupos quedan en rojo para que el verde no signifique "mal".
+- **Resumen de 2.200 px a 1.234 px:** una tarjeta con las dos barras, 4 chips y 3 logros.
+- Dos generaciones con Higgsfield: el mockup del celular en verde y el retrato del hombre de 65 que faltaba en el set de edades.
+- Reglas nuevas en [[quizzes-reglas-de-armado]] §4 y §5. Ficha actualizada en [[calistenia-rusa]].
+
 ## 2026-10-26 (noche, 2) — Calistenia Rusa: oferta nueva y quiz armado
 
 - Santiago: *"se me acaba de ocurrir un nuevo producto, Calistenia Rusa del Coach Santi, cuando todos venden calistenia militar, nosotros nos diferenciamos ahi, quiero que hagamos un quiz simple, porque va a tener vsl"*.

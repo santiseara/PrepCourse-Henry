@@ -32,9 +32,11 @@ window.CONFIG = {
   IMG: {
     portada:      "../imagenes/portada.webp",
     metodo:       "../imagenes/metodo.webp",
-    objPanza:     "../imagenes/obj-panza.webp",
-    objFuerza:    "../imagenes/obj-fuerza.webp",
-    objSalud:     "../imagenes/obj-salud.webp",
+    flexiones:    "../imagenes/flexiones.webp",
+    edad2:        "../imagenes/edad-2.webp",
+    edad3:        "../imagenes/edad-3.webp",
+    edad4:        "../imagenes/edad-4.webp",
+    edad5:        "../imagenes/edad-5.webp",
     cuerpo1:      "../imagenes/cuerpo-1.webp",
     cuerpo2:      "../imagenes/cuerpo-2.webp",
     cuerpo3:      "../imagenes/cuerpo-3.webp",
@@ -76,9 +78,9 @@ window.CONFIG = {
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
   :root{
-    --red:#C8102E;          /* rojo: acento */
-    --red-d:#8E0A20;
-    --red-l:#F0304C;
+    --grn:#1F6B47;          /* verde oscuro: acento */
+    --grn-d:#14492F;
+    --grn-l:#2C8E5E;
     --ink:#101418;          /* grafito: tinta */
     --ink-2:#2A3138;
     --steel:#5B6670;        /* acero: texto secundario */
@@ -100,15 +102,15 @@ window.CONFIG = {
   .wrap{max-width:620px;margin:0 auto;padding:0 20px}
   img{max-width:100%;display:block}
   .hidden{display:none!important}
-  .co{color:var(--red)}
+  .co{color:var(--grn)}
 
   /* ====== botones ====== */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;
     font-family:'Oswald';font-weight:600;font-size:1.12rem;text-transform:uppercase;letter-spacing:.03em;
-    color:#fff;background:var(--red);padding:17px 28px;border-radius:8px;text-decoration:none;
-    box-shadow:0 6px 0 var(--red-d);transition:transform .08s,box-shadow .08s,background .2s}
-  .btn:hover{background:var(--red-d)}
-  .btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--red-d)}
+    color:#fff;background:var(--grn);padding:17px 28px;border-radius:8px;text-decoration:none;
+    box-shadow:0 6px 0 var(--grn-d);transition:transform .08s,box-shadow .08s,background .2s}
+  .btn:hover{background:var(--grn-d)}
+  .btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--grn-d)}
   .btn.block{display:flex;width:100%}
   .btn.pulse{animation:pulse 1.9s infinite}
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
@@ -116,12 +118,12 @@ window.CONFIG = {
   /* ====== chapita / sello ====== */
   .patch{display:inline-flex;align-items:center;gap:7px;font-family:'Oswald';font-weight:600;font-size:.72rem;
     letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:7px 13px;border-radius:4px}
-  .patch.red{background:var(--red)}
-  .star{color:var(--red);font-size:1.05em;line-height:0}
+  .patch.red{background:var(--grn)}
+  .star{color:var(--grn);font-size:1.05em;line-height:0}
 
   /* ====== logo ====== */
   .logo{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald';font-weight:700;text-transform:uppercase}
-  .logo .mark{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff;font-size:15px}
+  .logo .mark{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--grn);display:grid;place-items:center;color:#fff;font-size:15px}
   .logo .nm{font-size:1.1rem;letter-spacing:.06em;line-height:1}
   .logo .nm small{display:block;font-family:'Inter';font-weight:600;font-size:.56rem;letter-spacing:.22em;color:var(--steel);text-transform:uppercase;margin-top:3px}
 
@@ -133,13 +135,15 @@ window.CONFIG = {
   .lw .sub{font-size:.95rem;font-weight:500;color:var(--steel);max-width:420px;margin:10px 0 16px}
   .lw .hero{width:100%;max-width:400px;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:18px}
   .lw .ask{font-family:'Oswald';font-size:1.18rem;font-weight:600;margin-bottom:12px}
-  .lw .ask small{display:block;font-family:'Inter';font-weight:500;font-size:.8rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:6px}
-  .ages{display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px}
-  .age{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1.5px solid var(--line);
-    border-radius:10px;padding:16px 18px;cursor:pointer;font-weight:700;font-size:1.02rem;transition:.15s;box-shadow:var(--shadow-s)}
-  .age:hover{border-color:var(--red);background:#FFF5F6;transform:translateY(-1px)}
-  .age .arr{color:var(--red);font-size:1.2rem;line-height:0}
-  .lnote{margin-top:16px;background:var(--bg-2);border-left:3px solid var(--red);border-radius:6px;padding:12px 14px;
+  .lw .ask small{display:block;font-family:'Inter';font-weight:500;font-size:.8rem;letter-spacing:.14em;color:var(--grn);text-transform:uppercase;margin-bottom:6px}
+  .ages{display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%;max-width:420px}
+  .age{display:flex;flex-direction:column;background:var(--card);border:1.5px solid var(--line);border-radius:11px;
+    padding:0;overflow:hidden;cursor:pointer;transition:.15s;box-shadow:var(--shadow-s)}
+  .age img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;background:#15181B}
+  .age .lab{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;font-weight:700;font-size:.95rem}
+  .age .lab i{color:var(--grn);font-style:normal;font-size:1.15rem;line-height:0}
+  .age:hover{border-color:var(--grn);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .lnote{margin-top:16px;background:var(--bg-2);border-left:3px solid var(--grn);border-radius:6px;padding:12px 14px;
     font-size:.86rem;color:var(--ink-2);text-align:left;max-width:400px}
   .lfine{margin-top:14px;font-size:.72rem;color:var(--steel);max-width:400px}
   .lfine b{display:block;color:var(--green);margin-bottom:4px}
@@ -151,7 +155,7 @@ window.CONFIG = {
   .back{background:none;border:none;cursor:pointer;color:var(--steel);font-size:1.3rem;line-height:1;padding:4px 8px}
   .cnt{font-family:'JetBrains Mono';font-size:.76rem;color:var(--steel);letter-spacing:.06em}
   .bar{height:4px;background:var(--line)}
-  .bar i{display:block;height:100%;background:var(--red);width:0;transition:width .35s}
+  .bar i{display:block;height:100%;background:var(--grn);width:0;transition:width .35s}
   .qbody{max-width:620px;margin:0 auto;padding:26px 20px 0}
   .q-slide{animation:slide .28s ease}
   @keyframes slide{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
@@ -162,13 +166,13 @@ window.CONFIG = {
   .opts.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .opt{display:flex;align-items:center;gap:13px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;
     padding:14px 16px;cursor:pointer;font-weight:600;font-size:.97rem;text-align:left;transition:.15s;box-shadow:var(--shadow-s);position:relative}
-  .opt:hover{border-color:var(--red);background:#FFF5F6}
-  .opt.on{border-color:var(--red);background:#FFF5F6;box-shadow:0 0 0 3px rgba(200,16,46,.12)}
+  .opt:hover{border-color:var(--grn);background:#F1F7F3}
+  .opt.on{border-color:var(--grn);background:#F1F7F3;box-shadow:0 0 0 3px rgba(31,107,71,.14)}
   .opt .ic{font-size:1.32rem;line-height:1;flex:0 0 auto}
   .opt .tx{flex:1}
   .opt .tx small{display:block;font-weight:500;color:var(--steel);font-size:.8rem;margin-top:2px}
   .opt .ck{width:21px;height:21px;flex:0 0 21px;border:2px solid var(--line);border-radius:5px;display:grid;place-items:center;color:#fff;font-size:12px}
-  .opt.on .ck{background:var(--red);border-color:var(--red)}
+  .opt.on .ck{background:var(--grn);border-color:var(--grn)}
   /* opciones con foto */
   .opt.ph{flex-direction:column;align-items:stretch;padding:0;overflow:hidden;gap:0}
   .opt.ph img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;background:var(--bg-2)}
@@ -182,14 +186,14 @@ window.CONFIG = {
   .metric .big{text-align:center;font-family:'Oswald';font-size:3rem;font-weight:700;line-height:1;color:var(--ink)}
   .metric .big span{font-size:1.1rem;color:var(--steel);margin-left:4px}
   .metric input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);margin-top:20px;outline:none}
-  .metric input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
-  .metric input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+  .metric input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--grn);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+  .metric input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--grn);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
   .metric .ends{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:.72rem;color:var(--steel);margin-top:8px}
 
   /* feedback del coach */
-  .q-fb{display:none;margin-top:18px;background:#FFF5F6;border:1px solid #F5C9D1;border-left:3px solid var(--red);border-radius:8px;padding:13px 15px;font-size:.9rem}
+  .q-fb{display:none;margin-top:18px;background:#F1F7F3;border:1px solid #CADFD2;border-left:3px solid var(--grn);border-radius:8px;padding:13px 15px;font-size:.9rem}
   .q-fb.on{display:block;animation:slide .3s ease}
-  .q-fb .who{display:block;font-family:'Oswald';font-size:.76rem;letter-spacing:.1em;color:var(--red);margin-bottom:4px}
+  .q-fb .who{display:block;font-family:'Oswald';font-size:.76rem;letter-spacing:.1em;color:var(--grn);margin-bottom:4px}
   .q-next{margin-top:18px}
   .q-note{text-align:center;font-size:.76rem;color:var(--steel);margin-top:14px}
 
@@ -197,7 +201,7 @@ window.CONFIG = {
   #qload{display:none;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:30px 20px}
   #qload .in{max-width:380px;width:100%}
   .ldbar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:22px 0 10px}
-  .ldbar i{display:block;height:100%;width:0;background:var(--red);transition:width .25s}
+  .ldbar i{display:block;height:100%;width:0;background:var(--grn);transition:width .25s}
   .ldpc{font-family:'Oswald';font-size:2.4rem;font-weight:700}
   .ldsteps{text-align:left;margin-top:22px;display:flex;flex-direction:column;gap:11px}
   .ldstep{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--steel);opacity:.4;transition:.3s}
@@ -216,7 +220,7 @@ window.CONFIG = {
   .gauge{margin-top:16px}
   .gauge .lb{display:flex;justify-content:space-between;align-items:baseline;font-size:.84rem;color:var(--steel);margin-bottom:7px}
   .gauge .lb b{font-family:'Oswald';font-size:1.02rem;color:var(--ink);text-transform:none}
-  .gauge .tr{position:relative;height:9px;border-radius:99px;background:linear-gradient(90deg,#2BA86A 0%,#E3C000 42%,#E38300 68%,#C8102E 100%)}
+  .gauge .tr{position:relative;height:9px;border-radius:99px;background:linear-gradient(90deg,#2BA86A 0%,#E3C000 42%,#E38300 68%,#B3261E 100%)}
   .gauge .dot{position:absolute;top:50%;width:19px;height:19px;border-radius:50%;background:#fff;border:4px solid var(--ink);transform:translate(-50%,-50%);transition:left .8s ease}
   .gauge .sc{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:.66rem;color:var(--steel);margin-top:7px}
   .warn{margin-top:16px;background:#FFF6E8;border:1px solid #F2DCB4;border-left:3px solid var(--amber);border-radius:8px;padding:12px 14px;font-size:.86rem}
@@ -242,7 +246,7 @@ window.CONFIG = {
   .sound-gate{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;
     background:rgba(10,12,14,.72);color:#fff;cursor:pointer;text-align:center;padding:24px}
   .sound-gate.on{display:flex}
-  .sound-gate .ic{width:68px;height:68px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:30px;animation:pulse 1.6s infinite}
+  .sound-gate .ic{width:68px;height:68px;border-radius:50%;background:var(--grn);display:grid;place-items:center;font-size:30px;animation:pulse 1.6s infinite}
   .sound-gate b{font-family:'Oswald';font-size:1.22rem;letter-spacing:.04em}
   .wait{text-align:center;color:var(--steel);font-size:.84rem;margin-top:16px}
 
@@ -258,13 +262,13 @@ window.CONFIG = {
   .mailnote{margin-top:30px;background:var(--bg-2);border-left:3px solid var(--green);border-radius:8px;padding:13px 15px;font-size:.87rem;color:var(--ink-2)}
   .cta-box{margin-top:30px}
   .cta-box .seal{text-align:center;font-size:.78rem;color:var(--steel);margin-top:11px}
-  .vacantes{text-align:center;font-size:.84rem;color:var(--red);font-weight:700;margin-top:12px}
+  .vacantes{text-align:center;font-size:.84rem;color:#B3261E;font-weight:700;margin-top:12px}
 
   .blk{margin-top:44px}
   .blk > .ttl{text-align:center;margin-bottom:18px}
   .recibis{display:flex;flex-direction:column;gap:14px}
   .recibis li{list-style:none;display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 16px;box-shadow:var(--shadow-s)}
-  .recibis .ic{flex:0 0 36px;width:36px;height:36px;border-radius:9px;background:#FFF0F2;display:grid;place-items:center;font-size:18px}
+  .recibis .ic{flex:0 0 36px;width:36px;height:36px;border-radius:9px;background:#E9F2EC;display:grid;place-items:center;font-size:18px}
   .recibis b{display:block;font-family:'Oswald';font-size:1rem;text-transform:none;line-height:1.25;margin-bottom:4px}
   .recibis p{font-size:.88rem;color:var(--steel);line-height:1.55}
 
@@ -275,13 +279,13 @@ window.CONFIG = {
   .testi .t .hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .testi .t .hd img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:0 0 38px}
   .testi .t .hd b{font-family:'Oswald';font-size:1rem;text-transform:none;line-height:1.2}
-  .testi .t .hd small{display:block;color:var(--red);font-weight:700;font-size:.78rem}
+  .testi .t .hd small{display:block;color:var(--grn);font-weight:700;font-size:.78rem}
   .testi .t p{font-size:.9rem;color:var(--ink-2);line-height:1.6}
   .stars{color:#F5A623;font-size:.84rem;letter-spacing:2px}
 
   .bonos{display:flex;flex-direction:column;gap:12px}
   .bono{display:flex;gap:13px;background:var(--ink);color:#fff;border-radius:10px;padding:15px 16px}
-  .bono .n{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-family:'Oswald';font-weight:700;font-size:.95rem}
+  .bono .n{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--grn);display:grid;place-items:center;font-family:'Oswald';font-weight:700;font-size:.95rem}
   .bono b{display:block;font-family:'Oswald';font-size:.95rem;line-height:1.25;margin-bottom:4px}
   .bono p{font-size:.85rem;color:#B9C2CA;line-height:1.55}
 
@@ -292,14 +296,14 @@ window.CONFIG = {
 
   .semanas{display:flex;flex-direction:column;gap:12px}
   .semana{display:flex;gap:13px;background:var(--bg-2);border-radius:10px;padding:14px 16px}
-  .semana .n{flex:0 0 34px;width:34px;height:34px;border-radius:9px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
+  .semana .n{flex:0 0 34px;width:34px;height:34px;border-radius:9px;background:var(--grn);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
   .semana b{display:block;font-family:'Oswald';font-size:.96rem;text-transform:none;margin-bottom:3px}
   .semana p{font-size:.87rem;color:var(--steel);line-height:1.55}
 
   .faq details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:var(--card)}
   .faq summary{cursor:pointer;list-style:none;padding:15px 17px;font-weight:700;font-size:.95rem;display:flex;justify-content:space-between;gap:12px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--red);font-family:'Oswald';font-size:1.3rem;line-height:1}
+  .faq summary::after{content:"+";color:var(--grn);font-family:'Oswald';font-size:1.3rem;line-height:1}
   .faq details[open] summary::after{content:"–"}
   .faq .a{padding:0 17px 16px;font-size:.9rem;color:var(--steel);line-height:1.65}
 
@@ -314,7 +318,7 @@ window.CONFIG = {
     padding:10px 13px;box-shadow:0 12px 30px -14px rgba(16,20,24,.5);font-size:.8rem}
   .toast.on{display:flex;animation:tin .4s ease}
   @keyframes tin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  .toast .av{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
+  .toast .av{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--grn);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
   .toast b{display:block;font-size:.84rem}
   .toast small{color:var(--steel);font-size:.72rem}
 
@@ -324,7 +328,7 @@ window.CONFIG = {
   .sticky .in{max-width:620px;margin:0 auto;display:flex;align-items:center;gap:12px}
   .sticky .px{flex:1;font-size:.76rem;color:var(--steel);line-height:1.3}
   .sticky .px b{display:block;font-family:'Oswald';font-size:1.05rem;color:var(--ink)}
-  .sticky .btn{padding:13px 20px;font-size:.92rem;box-shadow:0 4px 0 var(--red-d)}
+  .sticky .btn{padding:13px 20px;font-size:.92rem;box-shadow:0 4px 0 var(--grn-d)}
 
   footer{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);text-align:center;font-size:.72rem;color:var(--steel)}
 
@@ -348,10 +352,10 @@ window.CONFIG = {
     <div class="hero"><img src="" alt="Antes y después" data-img="portada"></div>
     <div class="ask"><small>Empezá ahora 👇</small>Plan de Calistenia Rusa según tu edad</div>
     <div class="ages" id="ageOpts">
-      <button class="age" data-v="30 a 39 años">30 – 39 años <span class="arr">›</span></button>
-      <button class="age" data-v="40 a 49 años">40 – 49 años <span class="arr">›</span></button>
-      <button class="age" data-v="50 a 59 años">50 – 59 años <span class="arr">›</span></button>
-      <button class="age" data-v="más de 60 años">+ 60 años <span class="arr">›</span></button>
+      <button class="age" data-v="30 a 39 años"><img src="" data-img="edad2" alt=""><span class="lab">30 – 39 años <i>›</i></span></button>
+      <button class="age" data-v="40 a 49 años"><img src="" data-img="edad3" alt=""><span class="lab">40 – 49 años <i>›</i></span></button>
+      <button class="age" data-v="50 a 59 años"><img src="" data-img="edad4" alt=""><span class="lab">50 – 59 años <i>›</i></span></button>
+      <button class="age" data-v="más de 60 años"><img src="" data-img="edad5" alt=""><span class="lab">+ 60 años <i>›</i></span></button>
     </div>
     <div class="lnote">Hacé este test y recibí un plan específico para tu edad y tu objetivo. Al final, recibís tu diagnóstico gratis.</div>
     <div class="lfine"><b>✅ Test de 49 segundos</b>🔒 Tus respuestas son privadas y están protegidas. Usamos tus datos solo para armar tu plan.</div>
@@ -387,65 +391,55 @@ window.CONFIG = {
   </div>
 </div>
 
-<!-- ============ PERFIL + PREVISIÓN ============ -->
+<!-- ============ PERFIL + PREVISIÓN (corto) ============ -->
 <div id="perfil">
   <div class="wrap">
-    <div class="logo" style="margin-bottom:18px"><span class="mark">★</span><span class="nm">Calistenia Rusa<small>Coach Santi</small></span></div>
+    <div class="logo" style="margin-bottom:16px"><span class="mark">★</span><span class="nm">Calistenia Rusa<small>Coach Santi</small></span></div>
     <span class="patch">Diagnóstico listo</span>
     <h2 class="ttl" style="margin-top:12px;font-size:1.5rem">Tu perfil está listo</h2>
     <p class="lead">Te voy a ser directo: así como estás, tu cuerpo te está frenando. Pero se puede cambiar, y más rápido de lo que pensás.</p>
 
     <div class="card sec">
-      <div class="ttl" style="font-size:1.1rem">⚠️ Tu IMC muestra señales de <span class="co" id="imcLabel">sobrepeso</span></div>
       <div class="gauge">
-        <div class="lb"><span>Índice de masa corporal</span><b id="imcVal">27,4</b></div>
+        <div class="lb"><span>Tu IMC marca <b class="co" id="imcLabel">sobrepeso</b></span><b id="imcVal">27,4</b></div>
         <div class="tr"><span class="dot" id="imcDot" style="left:0%"></span></div>
         <div class="sc"><span>Bajo</span><span>Saludable</span><span>Sobrepeso</span><span>Obesidad</span></div>
       </div>
-      <div class="warn">⚠️ <b>Riesgos de un IMC poco saludable:</b> presión alta, más riesgo de infarto y ACV, diabetes tipo 2 y dolor crónico en la espalda y las articulaciones.</div>
-    </div>
-
-    <div class="card">
-      <div class="ttl" style="font-size:1.1rem">Tu testosterona puede estar hasta un <span class="co">54% por debajo</span> de lo ideal para un hombre de <span id="tEdad">40 a 49 años</span></div>
-      <div class="gauge">
-        <div class="lb"><span>Nivel estimado de testosterona</span><b>Por debajo</b></div>
-        <div class="tr" style="background:linear-gradient(90deg,#C8102E 0%,#E38300 35%,#E3C000 60%,#2BA86A 100%)"><span class="dot" style="left:28%"></span></div>
+      <div class="gauge" style="margin-top:22px">
+        <div class="lb"><span>Testosterona estimada</span><b>Por debajo</b></div>
+        <div class="tr" style="background:linear-gradient(90deg,#B3261E 0%,#E38300 35%,#E3C000 60%,#2BA86A 100%)"><span class="dot" style="left:28%"></span></div>
         <div class="sc"><span>Crítico</span><span>Bajo</span><span>Normal</span><span>Óptimo</span></div>
       </div>
-      <div class="warn">⚠️ <b>Con la testosterona baja</b>, la grasa abdominal se acumula hasta 3× más rápido, la masa muscular cae hasta un 17% al año y la libido se apaga. Y empeora cada año que pasa.</div>
+      <div class="warn">⚠️ Con la testosterona baja, la grasa abdominal se acumula hasta <b>3× más rápido</b> y la masa muscular cae hasta un 17% al año. Y empeora cada año que pasa.</div>
     </div>
 
     <div class="chips" id="chips"></div>
 
     <div class="card sec">
-      <div class="ttl" style="font-size:1.1rem">Según tus respuestas, este es el resultado que tu plan puede darte</div>
-      <p class="lead" id="metaTxt">Estimamos que llegás a tu meta de <b>78 kg</b> en hasta <b>28 días</b>.</p>
+      <div class="ttl" style="font-size:1.08rem" id="metaTxt">Llegás a tu meta de <b>78 kg</b> en hasta <b>28 días</b></div>
       <div class="chart">
         <svg viewBox="0 0 320 150" preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#C8102E" stop-opacity=".22"/>
-              <stop offset="100%" stop-color="#C8102E" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#1F6B47" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="#1F6B47" stop-opacity="0"/>
             </linearGradient>
           </defs>
           <line x1="0" y1="130" x2="320" y2="130" stroke="#DDE2E7" stroke-width="1"/>
           <line x1="0" y1="88" x2="320" y2="88" stroke="#EEF1F4" stroke-width="1"/>
           <line x1="0" y1="46" x2="320" y2="46" stroke="#EEF1F4" stroke-width="1"/>
           <path d="M10,22 C80,26 120,40 160,62 C200,84 250,112 310,124 L310,130 L10,130 Z" fill="url(#gfill)"/>
-          <path d="M10,22 C80,26 120,40 160,62 C200,84 250,112 310,124" fill="none" stroke="#C8102E" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="10" cy="22" r="5" fill="#C8102E"/>
-          <circle cx="310" cy="124" r="6" fill="#fff" stroke="#C8102E" stroke-width="3"/>
+          <path d="M10,22 C80,26 120,40 160,62 C200,84 250,112 310,124" fill="none" stroke="#1F6B47" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="10" cy="22" r="5" fill="#1F6B47"/>
+          <circle cx="310" cy="124" r="6" fill="#fff" stroke="#1F6B47" stroke-width="3"/>
         </svg>
         <div class="xl"><span>Hoy</span><span>7 días</span><span>14 días</span><span>28 días</span></div>
       </div>
       <ul class="wins">
         <li><i>✅</i><span id="winKg">Pérdida de grasa abdominal</span></li>
-        <li><i>✅</i>Energía y libido más altas ya en los primeros 7 días</li>
-        <li><i>✅</i>Testosterona activada de forma natural</li>
+        <li><i>✅</i>Testosterona y energía activadas de forma natural</li>
         <li><i>✅</i>Se terminan los dolores al moverte</li>
-        <li><i>✅</i>Fuerza y músculo de vuelta, sin gimnasio</li>
       </ul>
-      <p class="lead" style="font-size:.84rem;color:var(--steel);margin-top:16px">Nuestras encuestas internas muestran que el 83,7% de los alumnos alcanza su meta de peso en 28 días.</p>
     </div>
 
     <button class="btn block pulse" id="toVSL" style="margin-top:26px">Ver mi plan ▸</button>
@@ -558,13 +552,13 @@ window.CONFIG = {
         <div class="garantia">
           <svg width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true">
             <circle cx="60" cy="60" r="58" fill="#101418"/>
-            <circle cx="60" cy="60" r="51" fill="none" stroke="#C8102E" stroke-width="2"/>
+            <circle cx="60" cy="60" r="51" fill="none" stroke="#1F6B47" stroke-width="2"/>
             <path id="garPath" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
-            <text fill="#C8102E" font-family="Oswald,sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.8">
+            <text fill="#1F6B47" font-family="Oswald,sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.8">
               <textPath href="#garPath" startOffset="50%" text-anchor="middle">GARANTÍA INCONDICIONAL</textPath>
             </text>
             <text x="60" y="64" text-anchor="middle" fill="#fff" font-family="Oswald,sans-serif" font-size="32" font-weight="700">30</text>
-            <text x="60" y="80" text-anchor="middle" fill="#C8102E" font-family="Oswald,sans-serif" font-size="13" font-weight="600" letter-spacing="2">DÍAS</text>
+            <text x="60" y="80" text-anchor="middle" fill="#1F6B47" font-family="Oswald,sans-serif" font-size="13" font-weight="600" letter-spacing="2">DÍAS</text>
             <text x="60" y="94" text-anchor="middle" fill="#8A939C" font-family="Oswald,sans-serif" font-size="6.8" font-weight="500" letter-spacing="1.1">DEVOLUCIÓN 100%</text>
           </svg>
           <div class="ttl">Garantía de 30 días con devolución del 100%</div>
@@ -673,11 +667,11 @@ window.CONFIG = {
       sub:'No necesitás experiencia: el 75% de nuestros alumnos empieza de cero.',
       opts:[ {v:'Sí, ya practiqué'}, {v:'Escuché hablar'}, {v:'Nunca hice, pero me interesa'} ] },
 
-    { id:'objetivo', type:'single', layout:'ph3',
+    { id:'objetivo', type:'single',
       h:'¿Qué objetivo es <span class="co">más importante</span> para vos hoy?',
-      opts:[ {v:'Bajar de peso y marcar la panza', img:'objPanza'},
-             {v:'Ganar fuerza y músculo', img:'objFuerza'},
-             {v:'Tener más salud y energía', img:'objSalud'} ] },
+      opts:[ {v:'Bajar de peso y marcar la panza', ic:'🔥'},
+             {v:'Ganar fuerza y músculo', ic:'💪'},
+             {v:'Tener más salud y energía', ic:'⚡'} ] },
 
     { id:'cuerpo', type:'single', layout:'ph4',
       h:'¿Cómo describirías tu cuerpo <span class="co">actual</span>?',
@@ -706,7 +700,7 @@ window.CONFIG = {
       opts:[ {v:'Todos los días', ic:'🔥'}, {v:'Algunas veces por semana', ic:'💪'},
              {v:'Algunas veces por mes', ic:'🚶'}, {v:'Nunca', ic:'🛋️'} ] },
 
-    { id:'flexiones', type:'single',
+    { id:'flexiones', type:'single', img:'flexiones',
       h:'¿Cuántas flexiones podés hacer seguidas?',
       sub:'Es el test que usamos para calibrar tu nivel de arranque.',
       opts:[ {v:'No puedo hacer flexiones'}, {v:'1 – 10 flexiones'},
@@ -894,19 +888,16 @@ window.CONFIG = {
     q('#imcLabel').textContent = lbl;
     q('#imcVal').textContent = imc.toFixed(1).replace('.', ',');
     setTimeout(function(){ q('#imcDot').style.left = pos + '%'; }, 220);
-    q('#tEdad').textContent = S.edad || '40 a 49 años';
 
     var kg = Math.max(0, Math.round(w - meta));
-    q('#metaTxt').innerHTML = 'Estimamos que llegás a tu meta de <b>' + meta + ' kg</b> en hasta <b>28 días</b>.';
+    q('#metaTxt').innerHTML = 'Llegás a tu meta de <b>' + meta + ' kg</b> en hasta <b>28 días</b>';
     q('#winKg').textContent = kg > 0 ? ('Pérdida de ' + kg + ' kg de grasa abdominal') : 'Panza firme y cintura más marcada';
 
     var dolores = (S.dolor || []).filter(function(x){ return x !== 'Ninguna de estas'; });
     var chips = [
       ['🎯 Objetivo', S.objetivo || '—'],
-      ['🏋️ Intensidad', S.intensidad || '—'],
-      ['⚖️ Peso actual', w + ' kg'],
-      ['🔥 Meta de peso', meta + ' kg'],
       ['💪 Nivel de arranque', S.flexiones || '—'],
+      ['⚖️ Peso actual → meta', w + ' → ' + meta + ' kg'],
       ['🩹 Zonas a proteger', dolores.length ? dolores.join(' · ') : 'Ninguna']
     ];
     q('#chips').innerHTML = chips.map(function(c){

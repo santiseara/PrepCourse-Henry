@@ -141,15 +141,18 @@ Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.
 - **Carpeta:** `~/Desktop/herrero-de-finde/productos/` — 21 archivos.
 - **Generador:** `OUTPUTS/scripts-producto/`. Se rehace entero con `python3 armar_todo.py <carpeta>` en menos de 3 minutos.
 
-### Qué se entrega
+### Qué se entrega (13 archivos)
 | Archivo | Qué es |
 |---|---|
-| `00 - Guia de la biblioteca` | Portada, qué hay en la descarga, cómo se lee un plano, tabla de la casa de hierros, cómo cobrar, control antes de cortar, **índice de los 1.205 planos** y los 40 que más dejan |
-| `01` a `08` | Un archivo por categoría, con las cantidades exactas de la landing: trailers 180 · parrillas 145 · gimnasio 120 · portones de campo 210 · taller 165 · camioneta 95 · muebles 180 · estructuras 110 |
+| `Herrero de Finde - Biblioteca de Planos (1205 planos).pdf` | **Un solo PDF con todo: 4.866 páginas, 144 MB.** Portada, qué hay en la descarga, cómo se lee un plano, tabla de la casa de hierros, cómo cobrar, control antes de cortar, **índice de los 1.205 planos con su página**, un separador por categoría y los planos con sus cuatro hojas. Cierra con los 40 que más dejan. |
 | `BONUS 01` | **La Planilla de Cortes (.xlsx)**: cargás las piezas y te dice las barras, el conversor mm ↔ pulgadas con fracción en dieciseisavos, el presupuesto y un factor único para actualizar precios |
 | `BONUS 02` a `08` | Los instructivos escritos: Cobralo Bien, Checklist Cero Errores, Terminación de Taller, El Taller de $500.000, Los que Dejan Plata, Vendé lo que Fabricás y el manual Soldá como un Pro |
 | `BONUS 09` a `11` | Packs de planos extra: 120 escaleras y barandas, 150 portones y cercos, 10 estructuras de patio (**280 planos más**, ninguno repetido de la biblioteca) |
-| `BONUS 12` | El Catálogo para Clientes: una ficha con imagen por cada trabajo distinto, sin precios, para que el cliente señale |
+| `BONUS 12` | El Catálogo para Clientes: 114 páginas, una ficha con imagen por cada trabajo distinto, sin precios, para que el cliente señale |
+
+**Cantidades por categoría, las de la landing:** trailers 180 · parrillas 145 · gimnasio 120 · portones de campo 210 · taller 165 · camioneta 95 · muebles 180 · estructuras 110.
+
+**Santiago (2026-10-26):** *"quiero el pdf y cada bono"*. La biblioteca va en **un archivo único**, no partida por categoría; los bonus sí, cada uno por separado. El generador puede hacer las dos formas (`libro.construir_unico` y `libro.construir_categoria`).
 
 ### Cómo está armado cada plano (4 hojas, igual que promete la landing)
 1. **El trabajo:** isométrico sombreado del trabajo terminado, tiempo, nivel, hierro que lleva, la lista de compra de la casa de hierros (barras enteras) y el precio de venta sugerido con la cuenta a la vista.

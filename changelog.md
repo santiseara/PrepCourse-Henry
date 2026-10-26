@@ -1,3 +1,10 @@
+## 2026-10-26 (noche, 3) — Herrero de Finde: la biblioteca en un solo PDF
+
+- Santiago: *"subime el pdf con toda la información, saca todo lo demás, quiero el pdf y cada bono"*.
+- La biblioteca dejó de estar partida en nueve archivos: ahora es **un PDF único de 4.866 páginas y 144 MB** con la guía, el índice de los 1.205 planos con su número de página, un separador por categoría y los planos. Los 12 bonus quedan cada uno en su archivo.
+- En la carpeta quedan **13 archivos, 188 MB**. Los nueve archivos partidos se retiraron.
+- `libro.construir_unico()` arma el PDF entero; `libro.construir_categoria()` sigue existiendo por si en algún momento conviene volver a partirlo.
+
 ## 2026-10-26 (tarde) — Protocolo Chía 28D: los 6 videos armados
 
 - Santiago: *"vamos con esos, armame los videos"* y *"acordate de ir variando los clips, la edición la quiero similar a la original"*.

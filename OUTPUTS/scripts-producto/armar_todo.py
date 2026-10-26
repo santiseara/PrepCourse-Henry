@@ -22,14 +22,10 @@ def main(destino):
     salidas = []
 
     planos = expansion.generar()
-    info = libro.paginar_categoria(planos)
-    for cat, nom, sub in engine.CATS:
-        ruta = os.path.join(destino, libro.NOMBRES_ARCHIVO[cat] + ' (%d planos).pdf' % len(info[cat][2]))
-        total = libro.construir_categoria(cat, info, ruta)
-        salidas.append((ruta, total))
-    guia = os.path.join(destino, '00 - Guia de la biblioteca (empeza por aca).pdf')
-    salidas.insert(0, (guia, libro.construir_guia(planos, guia)))
-    print('biblioteca lista · %.0f s' % (time.time()-t0))
+    ruta = os.path.join(destino, 'Herrero de Finde - Biblioteca de Planos (1205 planos).pdf')
+    total = libro.construir_unico(planos, ruta)
+    salidas.append((ruta, total))
+    print('biblioteca lista · %d páginas · %.0f s' % (total, time.time()-t0))
 
     # --- bonus 1: la planilla
     ruta = os.path.join(destino, 'BONUS 01 - La Planilla de Cortes.xlsx')

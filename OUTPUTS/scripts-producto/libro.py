@@ -51,7 +51,7 @@ def portada(c, planos, n):
     c.setFont('BCM', 11); c.setFillColor(HexColor('#9AA2AB'))
     c.drawString(ML, A4H-272, 'Cada uno con sus tres vistas, su lista de cortes, su orden de soldadura')
     c.drawString(ML, A4H-287, 'y un precio de venta sugerido. En milímetros y en pulgadas.')
-    c.drawString(ML, A4H-307, 'Esta es la guía: los planos están en los 8 archivos de categoría.')
+    c.drawString(ML, A4H-307, 'Todo en un archivo. Los 12 bonus vienen aparte.')
 
     piezas = []
     for cod in ('BQ-090', 'TR-018'):
@@ -409,7 +409,7 @@ def paginar_indice(filas, alto_cat=30.0, alto_pl=13.2, alto_util=600.0):
     if actual: paginas_.append(actual)
     return paginas_
 
-def hoja_indice(c, bloque, n, primera, general=True, titulo_pag=None):
+def hoja_indice(c, bloque, n, primera, general=True, titulo_pag=None, con_archivo=True):
     cabecera_simple(c, 'Índice', titulo_pag or 'los 1.205 planos')
     y = A4H - 84
     if primera:
@@ -430,7 +430,7 @@ def hoja_indice(c, bloque, n, primera, general=True, titulo_pag=None):
             c.drawString(ML+238, y, 'MEDIDA'); c.drawString(ML+322, y, 'HORAS')
             c.drawString(ML+356, y, 'NIVEL')
             c.drawRightString(ML+452, y, 'HIERRO'); c.drawRightString(ML+494, y, 'VENTA')
-            c.drawRightString(A4W-MR, y, 'ARCHIVO Y PÁG.' if general else 'PÁG.')
+            c.drawRightString(A4W-MR, y, 'ARCHIVO Y PÁG.' if (general and con_archivo) else 'PÁG.')
             y -= 11
         else:
             p = f[1]
@@ -448,7 +448,7 @@ def hoja_indice(c, bloque, n, primera, general=True, titulo_pag=None):
             c.drawRightString(ML+452, y, pesos(p.costo_material()))
             c.setFillColor(VERDE); c.drawRightString(ML+494, y, pesos(p.precio_venta()[0]))
             c.setFont('BM', 8); c.setFillColor(TINTA)
-            c.drawRightString(A4W-MR, y, ('%02d · %d' % (p.archivo, p.pagina)) if general else ('%d' % p.pagina))
+            c.drawRightString(A4W-MR, y, ('%02d · %d' % (p.archivo, p.pagina)) if (general and con_archivo) else ('%d' % p.pagina))
             linea(c, ML, y-3.4, A4W-MR, HexColor('#EDEFF1'), 0.4)
             y -= 13.2
     pie_simple(c, n, 'Índice')
@@ -567,30 +567,30 @@ NOMBRES_ARCHIVO = {
 NUM_ARCHIVO = {'TR': 1, 'BQ': 2, 'GY': 3, 'FM': 4, 'SH': 5, 'TK': 6, 'FN': 7, 'ST': 8}
 
 BONUS = [
- ('01', 'La Planilla de Cortes', 'Planilla (Excel, Google Sheets o Numbers)',
-  'Cargás las piezas y te dice cuántas barras comprar. Con conversor y presupuesto.'),
+ ('01', 'La Planilla de Cortes', 'Planilla Excel',
+  'Las barras que comprás, el conversor y el presupuesto.'),
  ('02', 'Cobralo Bien', 'PDF',
-  'La fórmula para presupuestar y las tres frases para que no te regateen.'),
+  'La fórmula para presupuestar y cómo frenar el regateo.'),
  ('03', 'El Checklist Cero Errores', 'PDF',
-  'Una hoja para imprimir y colgar arriba del banco de trabajo.'),
+  'Para imprimir y colgar arriba del banco de trabajo.'),
  ('04', 'Terminación de Taller', 'PDF',
-  'Fondo, antióxido y esmalte: qué usar en cada trabajo y cuánto aguanta.'),
+  'Qué pintura usar en cada trabajo y cuánto aguanta.'),
  ('05', 'El Taller de $500.000', 'PDF',
-  'Qué herramienta comprar y en qué orden, y qué saltearte.'),
+  'Qué herramienta comprar, en qué orden y qué saltearte.'),
  ('06', 'Los que Dejan Plata', 'PDF',
-  'Los 40 trabajos con la mayor diferencia entre el hierro y la venta.'),
+  'Los 40 trabajos con el mejor margen de la biblioteca.'),
  ('07', 'Vendé lo que Fabricás', 'PDF',
-  'El plan de 30 días para pasar del primer trabajo al primer cobro.'),
+  'El plan de 30 días hasta el primer cobro.'),
  ('08', 'Soldá como un Pro', 'PDF',
-  'Manual desde cero: máquina, amperaje, posiciones y defectos del cordón.'),
+  'Manual desde cero: máquina, amperaje y posiciones.'),
  ('09', 'Escaleras, Barandas y Pasamanos', 'PDF de planos',
-  '120 planos extra: escaleras rectas, barandas, pasamanos y escaleras de gato.'),
+  '120 planos extra de escaleras, barandas y pasamanos.'),
  ('10', 'Portones, Cercos y Pérgolas', 'PDF de planos',
-  '150 planos extra: portones, puertas peatonales, paneles de cerco y pérgolas.'),
+  '150 planos extra de portones, cercos y pérgolas.'),
  ('11', 'El Pack de Estructuras para el Patio', 'PDF de planos',
-  '10 estructuras completas: cocheras, invernaderos, aleros y pérgolas grandes.'),
+  '10 estructuras: cocheras, invernaderos y aleros.'),
  ('12', 'El Catálogo para Clientes', 'PDF',
-  'La imagen de cada trabajo para que el cliente señale lo que quiere.'),
+  'La imagen de cada trabajo, para que el cliente señale.'),
 ]
 
 def como_esta_organizado(c, planos, n):
@@ -599,22 +599,26 @@ def como_esta_organizado(c, planos, n):
     c.setFont('BC', 22); c.setFillColor(TINTA)
     c.drawString(ML, y, 'QUÉ HAY EN LA DESCARGA')
     y -= 18
-    y = parrafo(c, 'La biblioteca viene partida en archivos para que puedas abrir en el celular solo la categoría que '
-                   'estás fabricando. Este archivo que estás leyendo es la guía: acá están el índice completo, las '
-                   'tablas y las cuentas. Los planos están en los ocho archivos de categoría.',
+    y = parrafo(c, 'Todo lo que compraste está en este archivo: las tablas, las cuentas, el índice completo y los '
+                   '%s planos, uno atrás del otro y ordenados por categoría. Los 12 bonus vienen aparte, cada uno '
+                   'en su propio archivo.' % ('{:,}'.format(len(planos)).replace(',', '.')),
                 ML, y, ANCHO, 'B', 9, 12) - 18
 
     cuenta = {}
     for p in planos: cuenta[p.cat] = cuenta.get(p.cat, 0) + 1
-    y = seccion(c, ML, y, 'Los planos')
+    y = seccion(c, ML, y, 'Las 8 categorías de este archivo')
     for cat, nom, sub in CATS:
+        ps = [p for p in planos if p.cat == cat]
         c.setFillColor(CREMA); c.roundRect(ML, y-5, ANCHO, 17, 2, stroke=0, fill=1)
-        c.setFont('BC', 8.6); c.setFillColor(NARANJA); c.drawString(ML+8, y, '%02d' % NUM_ARCHIVO[cat])
+        c.setFont('BC', 8.6); c.setFillColor(NARANJA); c.drawString(ML+8, y, cat)
         c.setFont('BM', 9); c.setFillColor(TINTA)
-        c.drawString(ML+30, y, NOMBRES_ARCHIVO[cat][5:])
-        c.setFont('B', 8); c.setFillColor(GRIS); c.drawString(ML+290, y, sub)
+        c.drawString(ML+34, y, nom)
+        c.setFont('B', 8); c.setFillColor(GRIS)
+        txt = sub
+        while c.stringWidth(txt, 'B', 8) > 150 and len(txt) > 6: txt = txt[:-2]
+        c.drawString(ML+280, y, txt)
         c.setFont('BC', 9); c.setFillColor(TINTA)
-        c.drawRightString(A4W-MR-8, y, '%d planos' % cuenta.get(cat, 0))
+        c.drawRightString(A4W-MR-8, y, '%d planos · pág. %d' % (len(ps), ps[0].pagina - 1 if ps else 0))
         y -= 20
     y -= 6
     y = seccion(c, ML, y, 'Los 12 bonus')
@@ -632,9 +636,9 @@ def como_esta_organizado(c, planos, n):
     c.setFillColor(TINTA); c.roundRect(ML, y-104, ANCHO, 100, 4, stroke=0, fill=1)
     c.setFont('BC', 11); c.setFillColor(NARANJA)
     c.drawString(ML+16, y-26, 'TRES COSAS PARA EMPEZAR BIEN')
-    tips = ['Guardá los nueve archivos en una carpeta del celular. En la casa de hierros vas a abrir el de la categoría que estés fabricando.',
+    tips = ['Es un archivo grande: guardalo en el celular una vez y abrilo desde ahí, no desde el mail.',
             'De cada plano, la hoja que te conviene imprimir es la 3: es la lista de cortes y el aprovechamiento de las barras.',
-            'Buscá siempre por código (TR-018, BQ-053). El código es el mismo en el índice general y adentro de cada archivo.']
+            'Buscá por código (TR-018, BQ-053) o por el número de página que te da el índice.']
     yy = y - 46
     for t in tips:
         c.setFillColor(NARANJA); c.circle(ML+22, yy+2.6, 2, stroke=0, fill=1)
@@ -727,6 +731,75 @@ def construir_guia(planos, salida):
     antes_de_cortar(c, n); c.showPage(); n += 1
     for i, b in enumerate(bloques):
         hoja_indice(c, b, n, i == 0, general=True); c.showPage(); n += 1
+    mejores_margenes(c, planos, n); c.showPage(); n += 1
+    cierre(c, n); c.showPage(); n += 1
+    c.save()
+    return n - 1
+
+
+def separador_categoria(c, cat, planos, n):
+    nom = dict((x[0], x[1]) for x in CATS)[cat]
+    sub = dict((x[0], x[2]) for x in CATS)[cat]
+    ps = [p for p in planos if p.cat == cat]
+    c.setFillColor(TINTA); c.rect(0, 0, A4W, A4H, stroke=0, fill=1)
+    c.setFillColor(NARANJA); c.rect(0, A4H-14, A4W, 14, stroke=0, fill=1)
+    c.setFont('BC', 13); c.setFillColor(NARANJA)
+    c.drawString(ML, A4H-62, 'HERRERO DE FINDE · BIBLIOTECA DE PLANOS')
+    c.setFont('BCM', 9.5); c.setFillColor(HexColor('#9AA2AB'))
+    c.drawString(ML, A4H-78, 'CATEGORÍA %s' % cat)
+    c.setFont('MB', 30); c.setFillColor(PAPEL)
+    y = A4H - 140
+    for l in envolver(c, nom.upper(), 'MB', 30, ANCHO):
+        c.drawString(ML, y, l); y -= 36
+    c.setFillColor(NARANJA); c.rect(ML, y+8, 120, 5, stroke=0, fill=1)
+    c.setFont('BCM', 14); c.setFillColor(HexColor('#D7DBDF'))
+    c.drawString(ML, y-18, '%d planos · %s' % (len(ps), sub))
+    muestra = max(ps[:40], key=lambda p: len(p.piezas))
+    dibujar_iso(c, muestra.piezas, (ML-10, 250, ANCHO+20, 260), pad=10,
+                base=HexColor('#B6BDC4'), contorno=False)
+    c.setFont('BCM', 9); c.setFillColor(HexColor('#9AA2AB'))
+    c.drawCentredString(A4W/2, 226, muestra.codigo + ' · ' + muestra.nombre)
+    c.setFillColor(HexColor('#22262B')); c.roundRect(ML, 110, ANCHO, 78, 4, stroke=0, fill=1)
+    c.setFont('BC', 10); c.setFillColor(NARANJA)
+    c.drawString(ML+16, 166, 'DESDE ACÁ HASTA LA PÁGINA %d' % (ps[-1].pagina + 3))
+    c.setFont('B', 8.6); c.setFillColor(PAPEL)
+    c.drawString(ML+16, 148, 'Del %s al %s. Cada plano son cuatro hojas: el trabajo, el dibujo,' % (ps[0].codigo, ps[-1].codigo))
+    c.drawString(ML+16, 134, 'la lista de cortes y el armado paso por paso.')
+    c.setFont('B', 8.6); c.setFillColor(HexColor('#9AA2AB'))
+    c.drawString(ML+16, 120, 'El índice completo está en la página 9.')
+    c.setFillColor(NARANJA); c.rect(0, 0, A4W, 14, stroke=0, fill=1)
+
+def construir_unico(planos, salida):
+    """Un solo PDF con todo: guía, índice y los planos."""
+    filas = filas_indice(planos)
+    bloques = paginar_indice(filas)
+    n_front = 7 + len(bloques)          # portada, bienvenida, descarga, cómo se lee, casa (2), cobrar, cortar
+    n_front += 1                        # 'antes de cortar' va aparte de los 7 anteriores
+    pag = n_front + 1
+    for cat, nom, sub in CATS:
+        pag += 1                        # separador
+        for p in [x for x in planos if x.cat == cat]:
+            p.archivo = 0; p.pagina = pag; pag += 4
+    c = rl_canvas.Canvas(salida, pagesize=(A4W, A4H))
+    c.setTitle('Herrero de Finde · Biblioteca de planos')
+    c.setAuthor('Herrero de Finde')
+    c.setSubject('%d planos de herrería listos para fabricar, con lista de cortes, orden de soldadura y precio sugerido' % len(planos))
+    n = 1
+    portada(c, planos, n); c.showPage(); n += 1
+    bienvenida(c, planos, n); c.showPage(); n += 1
+    como_esta_organizado(c, planos, n); c.showPage(); n += 1
+    como_leer(c, n); c.showPage(); n += 1
+    n = casa_hierros(c, n); c.showPage(); n += 1
+    como_cobrar(c, n); c.showPage(); n += 1
+    antes_de_cortar(c, n); c.showPage(); n += 1
+    for i, b in enumerate(bloques):
+        hoja_indice(c, b, n, i == 0, general=True, con_archivo=False); c.showPage(); n += 1
+    if n != n_front + 1:
+        sys.stderr.write('OJO: paginación del frente %d vs %d\n' % (n, n_front + 1))
+    for cat, nom, sub in CATS:
+        separador_categoria(c, cat, planos, n); c.showPage(); n += 1
+        for p in [x for x in planos if x.cat == cat]:
+            paginas.hojas(c, p); n += 4
     mejores_margenes(c, planos, n); c.showPage(); n += 1
     cierre(c, n); c.showPage(); n += 1
     c.save()

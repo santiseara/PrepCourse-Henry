@@ -4,7 +4,7 @@
 - **Fichas nuevas generadas desde el producto** (`anuncios/work/stills/mk_fichas.py`): el número que se dice en el guion es el mismo que se ve en pantalla. Se sumaron tres páginas reales del PDF como stills (hoja 1 con el precio, hoja 2 con las tres vistas, y una página del catálogo para clientes).
 - **`gen4.py` valida las anclas** contra el texto de voz antes de renderizar: atajó `comprar.` por `compre.`.
 - **Dos clips de B-roll vetados** después de mirar los frames: uno con cartel en inglés y otro con la marca de otra herrería. Reglas anotadas en [[herrero-de-finde]].
-- **Faltan V32 y V33:** la extensión de Chrome perdió la pestaña seis veces y no se pudieron grabar las dos voces que quedaban. Los guiones, los planes y las fichas ya están hechos: es solo grabar y renderizar.
+- **V32 y V33 terminados en el segundo intento:** la extensión de Chrome estaba desconectada, no colgada. `select_browser` con el deviceId devolvió la pestaña original con todo configurado. Los seis videos de la tanda quedaron listos.
 - Regla nueva de Santiago: **mutear las páginas que uso** ([[como-trabajar-con-santiago]]).
 
 ## 2026-10-26 (tarde, 3) — Herrero de Finde: 3 variables y 3 de bizop

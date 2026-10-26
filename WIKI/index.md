@@ -92,6 +92,9 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Guiones piedras v26 BIZOP](../OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md) — 3 variables EN + ES: el consumible que vuelve solo, cobrás antes de fabricar y la barrera de entrada de cualquier otro oficio · ver [[guiones-y-anuncios]]
+- [2026-10-26 — Guiones piedras v27 orgánicos (TikTok)](../OUTPUTS/2026-10-26-guiones-piedras-v27-organicos.md) — 3 guiones con eje bizop contados desde una escena real: ronda de reposición, "este mueble es toda mi fábrica" y volcá una tanda conmigo · ver [[guiones-y-anuncios]]
+- [2026-10-26 — Natives piedras: 10 situaciones de resultado](../OUTPUTS/2026-10-26-natives-piedras-10-situaciones-resultado.md) — el objeto de apertura es la prueba de algo bueno que ya pasó (regalos, feria agotada, deuda cerrada, 19 pedidos sin leer) · ver [[natives-ganadoras]]
 - [2026-10-25 — Guiones Herrero de Finde, tanda V13–V21](../OUTPUTS/2026-10-25-guiones-herrero-de-finde-tanda-v13-v21.md) — 6 guiones: 3 variables de la DNA del V7 (ganador con CPA de 1 USD) y 3 de ganadores del competidor sin avatar · ver [[herrero-de-finde]]
 - [2026-10-24 — Caza: renda extra + emagrecimento black (Brasil)](../OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md) — 11 fanpages auditadas en la Biblioteca: el subnicho de **adesivos para panos de prato** (R$ 10, 106 días corriendo, 4/4 en el score) y el stack de ofertas de R$ 10 por oficio de Maria Alice · ver [[caza-de-ofertas]]
 - [2026-10-24 — Protocolo Chía 28D: análisis del VSL competidor y plan](../OUTPUTS/2026-10-24-protocolo-chia-28d-analisis-y-plan-vsl.md) — estructura minuto a minuto del VSL de Protocolo Chía 4S, inventario de b-rolls, placas y plan de clonado para LATAM · ver [[protocolo-chia-28d]]

@@ -1,3 +1,10 @@
+## 2026-10-26 — Piedras: 6 guiones nuevos y la regla de qué es una native
+
+- **Guiones v26 (26/10 - 1 a 3), bizop duro:** el consumible que vuelve solo (el aroma se agota y te repiten), cobrás antes de fabricar (cero riesgo de mercadería) y la barrera de entrada de cualquier otro oficio contra una noche. `OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md`.
+- **Guiones v27 (26/10 - 4 a 6), orgánicos tipo TikTok** a pedido suyo: ronda de reposición en tres locales, "este mueble es toda mi fábrica" y volcá una tanda conmigo + cómo apareció el primer pedido. Abren con una acción y muestran el margen en vez de declararlo. `OUTPUTS/2026-10-26-guiones-piedras-v27-organicos.md`.
+- **Corrección grande sobre natives:** rechazó las 10 situaciones con eje de mecanismo (florería, iglesia, consignación, "local makers wanted"): *"la idea de una native es transmitir algún resultado bueno"*. La feria es el ángulo más ganador que tuvo la oferta y el otro validado es la madre que pudo comprarle los regalos a los hijos. Regla nueva en [[natives-ganadoras]].
+- **Lista nueva de 10 situaciones de resultado:** regalos en el placard, mesa de feria agotada a las once, resumen con "PAID IN FULL", los 19 mensajes del lunes, la foto de la boda, las pilas de efectivo rotuladas, la credencial de la feria grande, la compra del mes, la hermana que ahora cobra y el viaje a la costa. `OUTPUTS/2026-10-26-natives-piedras-10-situaciones-resultado.md`.
+
 ## 2026-10-26 (madrugada) — Herrero de Finde: el V7 es el ganador y sale la tanda de 6
 
 - Santiago pasó el dato: el **V7 ("Un rollo de alambre tubular…") hizo 6 ventas en el día con CPA de 1 USD**. La tanda 1 entera había hecho 7 ventas a 10,94 de promedio.

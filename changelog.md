@@ -1,3 +1,19 @@
+## 2026-10-26 (tarde, 3) — Herrero de Finde: 3 variables y 3 de bizop
+
+- **Guiones 28 a 30 (variables de la DNA del V7):** electrodos → el precio de venta sugerido (BQ-090), media chapa de 3 mm → las tres vistas con cada medida (FN-107) y el flete → la lista de compras sumada en barras (TK-024). Cada uno con cuerpo propio, una sola hoja del plano explicada y una ficha real.
+- **Guiones 31 a 33 (bizop, generar ingresos):** el único laburo que arrancás sin poner un peso (el adelanto del 50 % paga el hierro, FM-068), la cuenta de cuatro sábados (BQ-007 + BQ-075 + FM-068) y la objeción "¿a quién se lo vendo?" (Marketplace, el catálogo para clientes y el vecino del cliente, FN-022).
+- **Los números salen del producto nuevo**, no del banco de fichas viejo: son los que el comprador ve adentro del PDF.
+- `OUTPUTS/2026-10-26-guiones-herrero-v28-v33.md`. De 59 a 69 segundos cada uno.
+
+## 2026-10-26 (tarde) — 365 Actividades Imprimibles: análisis del competidor y 6 videos
+
+- Santiago trajo su landing (`365-actividades-imprimibles.impultienda.ar`, US$ 15,99) y la biblioteca de **Croba** (page id 550882744784458) para modelar los ganadores.
+- Relevados los **33 anuncios activos** de la página con `scrape.py`: es un vendedor multi-oferta y **15 son del kit de chicos, corriendo desde el 6 de agosto**. Los 33 videos se bajaron y transcribieron con Whisper.
+- Hallazgo: **un solo texto principal en los 15 ads** (el que varía es el video) y **15 familias de hook** distintas, todas anotadas en [[365-actividades-imprimibles]] junto con la DNA del cuerpo y su formato de edición (montaje rápido, subtítulo de 1-3 palabras resaltadas, tapa del producto insertada).
+- **6 guiones** en español neutro, uno por familia ganadora, con los números de nuestra oferta: `OUTPUTS/2026-10-26-guiones-365-actividades-imprimibles.md`.
+- **6 videos** en `~/Desktop/365-actividades-imprimibles/anuncios/`: voz de AI Studio (Gacrux, mamá latina neutra) y edición con `OUTPUTS/scripts-vsl/edit_365.py` (azul #1D4ED8, subtítulo de 2 palabras con la activa en amarillo, cortes de 2 s, tapas del producto como placas). B-roll: 30 clips gratis de Mixkit + 16 imágenes de la landing. **Cero créditos gastados.**
+- Nota de AI Studio: el botón de descarga del player es chico y un clic 20 px a la derecha no hace nada y **no avisa**; hay que verificar la fecha del WAV bajado antes de usarlo (se colaron audios viejos de Downloads hasta que se detectó).
+
 ## 2026-10-26 (tarde, 2) — Herrero de Finde: renovaciones del ganador
 
 - Pasó los números del día: **CJTO 5 (el rollo de alambre, V7) con 5 ventas y CPA 3,10** y **CJTO 6 (si nunca cobraste, V10) con 4 ventas y CPA 3,71**, los dos a 40 USD por día. Los seis conjuntos nuevos del 26/10 todavía están en 450 a 890 de alcance. Frecuencia de 1,04 a 1,20: no hay saturación.

@@ -1,3 +1,9 @@
+## 2026-10-26 (noche, 5) — Calistenia Rusa: portada sin foto
+
+- Santiago: *"saca la foto del principio, la del antes y despues"*.
+- La portada arranca directo con el titular y las 4 tarjetas de edad, que ahora entran casi enteras en la primera pantalla. La bajada que apuntaba a la foto se reformuló.
+- Regla nueva en [[quizzes-reglas-de-armado]] §4: si la primera pregunta ya tiene opciones con imagen, la portada va sin foto.
+
 ## 2026-10-26 (noche, 4) — Calistenia Rusa: dos pasos sin foto
 
 - Santiago: *"esta imagen quedó muy mal, no quiero imagen ahí, y la del tipo durmiendo que pones desp tmb sacala"*.

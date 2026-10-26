@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
+- 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.

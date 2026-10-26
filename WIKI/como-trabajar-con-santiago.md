@@ -51,7 +51,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - **Variar un ganador:** primero diagnosticar por qué funciona y después variar en las 6 categorías de [[guiones-de-video-ads]].
 - **Largo máximo: 1:30 por video** (regla fija del 2026-10-22), unas 225 palabras. Vale aunque el ganador que modelamos corra videos de 2 o 3 minutos ([[guiones-y-anuncios]]).
 - **Tamaño de tanda: máximo 6 videos, nunca más** (regla fija del 2026-10-22). Si el análisis da más ángulos, elijo los 6 mejores y el resto queda como banco al final del archivo. Para llenar un conjunto V3 se completa con natives o renovaciones de hook, no con más guiones ([[metodo-v3]], [[guiones-y-anuncios]]).
-- **"Renovar" un ganador** = 20 a 50 hooks sobre el mismo cuerpo, no un guión nuevo ([[renovacion-de-creativos]]).
+- **"Renovar" un ganador** = hooks nuevos sobre el mismo cuerpo, no un guión nuevo. **Se entrega como 6 guiones completos** (hook nuevo + cuerpo validado), nunca como una lista larga de hooks sueltos; el resto queda de banco (regla del 2026-10-26, [[renovacion-de-creativos]]).
 - **Prompts de video:** reglas fijas de UGC por defecto (9:16, handheld, sin subtítulos, sin música). Testimonios de 14 s y 35–40 palabras ([[ugc-y-video-generativo]]).
 - **Upsells y bonus: solo PDF** (ebook, checklist, plantillas, swipe). Nada de videocursos, porque no los graba ([[biblioteca-de-prompts]]).
 - **Volumen:** el ritmo de testeo es de ~10 creativos por día. Si pide "más", entregar tandas que alcancen para eso, con formatos rotados.

@@ -1,0 +1,34 @@
+Guion 22
+
+Lo que gastás en electrodos en un mes te sale más caro que esto. Y los electrodos se queman: a fin de mes no te queda nada en la mano. Esto te queda para siempre. Son más de 1.200 planos de herrería, ordenados en diez carpetas: portones, rejas, parrillas, fogoneros, trailers, racks, mesas, escaleras, cocheras y muebles de hierro. Cada uno abre con el dibujo completo, las medidas en milímetros, la lista de compras, la lista de cortes y el orden de soldadura numerado. Abajo de todo, dos números: cuánto te sale el hierro y cuánto se cobra el trabajo terminado. Eso es lo que cambia todo. Porque dibujar, probar y volver a cortar es lo que te come el finde y el material. Con el plano abierto en el celular, cortás una vez y soldás derecho. Un fogonero cuadrado te lleva de cuatro a seis horas; el plano te dice que lo cobres entre 415 y 535 mil pesos. Y te quedan mil ciento noventa y nueve planos más esperando. Lo descargás ahora, te llega al mail en segundos y lo abrís en el taller y en tu casa. Es baratísimo, un solo pago, y el primer trabajo que armás ya te lo devolvió. Tocá Más información y bajalo hoy, así el sábado ya estás cortando.
+
+
+Guion 23
+
+El flete que pagás cada vez que te traen las barras te sale más que esto. Y el flete lo pagás en cada compra. Esto lo pagás una sola vez y es tuyo. Son más de 1.200 planos de herrería, ordenados en diez carpetas: portones, rejas, parrillas, fogoneros, trailers, racks, mesas, escaleras, cocheras y muebles de hierro. Cada uno abre con el dibujo completo, las medidas en milímetros, la lista de compras, la lista de cortes y el orden de soldadura numerado. Abajo de todo, dos números: cuánto te sale el hierro y cuánto se cobra el trabajo terminado. Eso es lo que cambia todo. Porque dibujar, probar y volver a cortar es lo que te come el finde y el material. Con el plano abierto en el celular, cortás una vez y soldás derecho. Un fogonero cuadrado te lleva de cuatro a seis horas; el plano te dice que lo cobres entre 415 y 535 mil pesos. Y te quedan mil ciento noventa y nueve planos más esperando. Lo descargás ahora, te llega al mail en segundos y lo abrís en el taller y en tu casa. Es baratísimo, un solo pago, y el primer trabajo que armás ya te lo devolvió. Tocá Más información y bajalo hoy, así el sábado ya estás cortando.
+
+
+Guion 24
+
+Media chapa de tres milímetros te sale más que esto. Y esa chapa se te termina en un solo trabajo. Esto no se te termina nunca. Son más de 1.200 planos de herrería, ordenados en diez carpetas: portones, rejas, parrillas, fogoneros, trailers, racks, mesas, escaleras, cocheras y muebles de hierro. Cada uno abre con el dibujo completo, las medidas en milímetros, la lista de compras, la lista de cortes y el orden de soldadura numerado. Abajo de todo, dos números: cuánto te sale el hierro y cuánto se cobra el trabajo terminado. Eso es lo que cambia todo. Porque dibujar, probar y volver a cortar es lo que te come el finde y el material. Con el plano abierto en el celular, cortás una vez y soldás derecho. Un fogonero cuadrado te lleva de cuatro a seis horas; el plano te dice que lo cobres entre 415 y 535 mil pesos. Y te quedan mil ciento noventa y nueve planos más esperando. Lo descargás ahora, te llega al mail en segundos y lo abrís en el taller y en tu casa. Es baratísimo, un solo pago, y el primer trabajo que armás ya te lo devolvió. Tocá Más información y bajalo hoy, así el sábado ya estás cortando.
+
+
+Guion 25
+
+Una careta nueva te sale más que esto. La careta te cuida los ojos; esto te cuida el bolsillo. Y tampoco se gasta. Son más de 1.200 planos de herrería, ordenados en diez carpetas: portones, rejas, parrillas, fogoneros, trailers, racks, mesas, escaleras, cocheras y muebles de hierro. Cada uno abre con el dibujo completo, las medidas en milímetros, la lista de compras, la lista de cortes y el orden de soldadura numerado. Abajo de todo, dos números: cuánto te sale el hierro y cuánto se cobra el trabajo terminado. Eso es lo que cambia todo. Porque dibujar, probar y volver a cortar es lo que te come el finde y el material. Con el plano abierto en el celular, cortás una vez y soldás derecho. Un fogonero cuadrado te lleva de cuatro a seis horas; el plano te dice que lo cobres entre 415 y 535 mil pesos. Y te quedan mil ciento noventa y nueve planos más esperando. Lo descargás ahora, te llega al mail en segundos y lo abrís en el taller y en tu casa. Es baratísimo, un solo pago, y el primer trabajo que armás ya te lo devolvió. Tocá Más información y bajalo hoy, así el sábado ya estás cortando.
+
+
+Guion 26
+
+Nadie te va a encargar un portón si nunca te vieron soldar nada. Por eso el primero que tenés que fabricar es el más fácil de todos: un fogonero cuadrado. 170 mil pesos de hierro, de cuatro a seis horas de laburo, y se vende entre 415 y 535 mil. Lo hacés un sábado, lo subís a Marketplace con una foto de noche con el fuego prendido y se va en la semana. Con esa primera venta pagás el hierro del siguiente y te sobra. Esa es la escalera: el primero te saca el miedo, el tercero ya te lo encargan sin que lo publiques y el décimo te lo pide el vecino de tu cliente. Lo único que necesitás es que alguien te diga qué cortar, en qué orden soldarlo y cuánto cobrarlo. Eso son estos más de 1.200 planos: el dibujo con cada medida en milímetros, la lista de compras, los cortes y el precio de venta. Nada de teoría ni de clases. Empezás por el más fácil y vas subiendo. Tocá Más información, elegí tu primer trabajo y armalo este finde.
+
+
+Guion 27
+
+Dejá el portón para el mes que viene. Para empezar a cobrar este finde te alcanza con un fogonero cuadrado. 170 mil pesos de hierro, de cuatro a seis horas de laburo, y se vende entre 415 y 535 mil. Lo hacés un sábado, lo subís a Marketplace con una foto de noche con el fuego prendido y se va en la semana. Con esa primera venta pagás el hierro del siguiente y te sobra. Esa es la escalera: el primero te saca el miedo, el tercero ya te lo encargan sin que lo publiques y el décimo te lo pide el vecino de tu cliente. Lo único que necesitás es que alguien te diga qué cortar, en qué orden soldarlo y cuánto cobrarlo. Eso son estos más de 1.200 planos: el dibujo con cada medida en milímetros, la lista de compras, los cortes y el precio de venta. Nada de teoría ni de clases. Empezás por el más fácil y vas subiendo. Tocá Más información, elegí tu primer trabajo y armalo este finde.
+
+
+BANCO (no producir ahora)
+
+Hooks para el cuerpo del CJTO 5, sin usar: el juego de mechas del mes pasado, un metro de caño de 100 por 100, la lija y el antióxido de un portón, lo que te cobra el tornero por una pieza, un tubo de alambre y dos puntas de contacto.
+Hooks para el cuerpo del CJTO 6, sin usar: un sábado y cuatro chapas, antes de salir a buscar clientes fabricá uno para mostrar, el trabajo que se vende el mismo finde que lo fabricás.

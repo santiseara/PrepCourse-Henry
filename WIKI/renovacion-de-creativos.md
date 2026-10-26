@@ -74,6 +74,18 @@ Los tres elementos, según la lección dedicada: **B-rolls, hooks y guiones**.
 | Ganador estable | Escalar ([[escalado-en-meta-ads]]) |
 | Ángulo entero agotado | Buscar ángulo nuevo ([[angulos-publicitarios]]) |
 
+## Cómo se entrega una renovación (regla de Santiago, 2026-10-26)
+
+> **Una renovación se entrega como 6 guiones completos, no como una lista de 20 a 50 hooks sueltos.**
+
+Santiago, sobre una entrega de 40 hooks numerados para Herrero de Finde: *"Porque pusiste muchos números, son 6 renovaciones las que hay que hacer. Dame 6 guiones."*
+
+- El volumen de 20 a 50 que pide la formación es **cuántas variantes termina habiendo**, no cuántas se entregan de una. La tanda sigue siendo de **6 como máximo** ([[como-trabajar-con-santiago]]).
+- Cada renovación se entrega **completa y lista para grabar**: hook nuevo + el cuerpo validado pegado abajo, con el formato de guion de siempre (`Guion N` y nada más). Que él tenga que armar el guion pegando un hook con un cuerpo es trabajo que no corresponde pasarle.
+- El resto de los hooks va al **banco al final del archivo**, en una línea cada uno, sin convertirlos en guiones.
+- El cuerpo se copia **textual** del guion que está corriendo, sin retocarlo. Si hay algo del cuerpo que conviene cambiar, se avisa aparte y lo decide él.
+
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

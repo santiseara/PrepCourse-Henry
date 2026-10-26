@@ -1,3 +1,10 @@
+## 2026-10-26 (tarde, 2) — Herrero de Finde: renovaciones del ganador
+
+- Pasó los números del día: **CJTO 5 (el rollo de alambre, V7) con 5 ventas y CPA 3,10** y **CJTO 6 (si nunca cobraste, V10) con 4 ventas y CPA 3,71**, los dos a 40 USD por día. Los seis conjuntos nuevos del 26/10 todavía están en 450 a 890 de alcance. Frecuencia de 1,04 a 1,20: no hay saturación.
+- Primera entrega equivocada: 40 hooks sueltos numerados. **Corrección de Santiago:** *"Porque pusiste muchos números, son 6 renovaciones las que hay que hacer. Dame 6 guiones."* Regla nueva en [[renovacion-de-creativos]] y en [[como-trabajar-con-santiago]]: una renovación se entrega como **6 guiones completos** (hook nuevo + cuerpo validado), nunca como lista de hooks; el resto va al banco.
+- **Entregados los Guiones 22 a 27:** cuatro sobre el cuerpo del CJTO 5 (electrodos, el flete del hierro, media chapa de 3 mm, la careta nueva) y dos sobre el del CJTO 6 (nadie te encarga un portón si no te vieron soldar / dejá el portón para el mes que viene). `OUTPUTS/2026-10-26-renovaciones-herrero-v22-v27.md`.
+- Se evitaron los consumibles ya en el aire: alambre tubular (V7), caja de discos (V13), tubo de mezcla (V14), recortes (V15) y nafta (V6).
+
 ## 2026-10-26 (noche, 3) — Herrero de Finde: la biblioteca en un solo PDF
 
 - Santiago: *"subime el pdf con toda la información, saca todo lo demás, quiero el pdf y cada bono"*.

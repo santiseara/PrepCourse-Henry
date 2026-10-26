@@ -1,3 +1,10 @@
+## 2026-10-26 — Protocolo Chía 28D: los primeros 6 anuncios
+
+- Santiago: *"vamos a hacer anuncios para la oferta de chia, metete en la pagina original que te mande y armemos variables, no los quiero igual a la competencia, quiero variables bien hechas, que no me los rechacen"*. Dejó 13 clips de recetas de chía como visuales.
+- Revisada la página viva (`protocolo-chia-28d.impultienda.ar`) y su checkout. **6 guiones** en español neutro: `OUTPUTS/2026-10-26-guiones-protocolo-chia-28d.md` + 3 textos principales para rotar.
+- Los 13 clips quedaron renombrados en `~/Desktop/protocolo-chia-28d/anuncios/broll/` con `INVENTARIO.md` (qué clip va en cada guion, cuáles van mudos, cuál tiene subtítulo quemado).
+- Reglas anti-bloqueo del nicho de peso anotadas en [[protocolo-chia-28d]], con el aviso de que el titular de la landing ("Baja hasta más de 20 kilos con el Mounjaro de chía") es el mayor riesgo de rechazo.
+
 ## 2026-10-26 (noche) — Herrero de Finde: el producto, generado por código
 
 - Santiago pidió **el producto de la oferta de herrería**, completo y solo el PDF terminado en la carpeta.

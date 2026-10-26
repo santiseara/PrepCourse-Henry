@@ -92,6 +92,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Keywords para cazar ingresos (BR + AR)](../OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md) — banco de keywords por 6 ejes (footprints de checkout nuevos, mecánica de entrega, oficio + vender, atajos sin oficio) + las que no usar porque traen marca personal · ver [[caza-de-ofertas]]
 - [2026-10-26 — Guiones piedras v26 BIZOP](../OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md) — 3 variables EN + ES: el consumible que vuelve solo, cobrás antes de fabricar y la barrera de entrada de cualquier otro oficio · ver [[guiones-y-anuncios]]
 - [2026-10-26 — Guiones piedras v27 orgánicos (TikTok)](../OUTPUTS/2026-10-26-guiones-piedras-v27-organicos.md) — 3 guiones con eje bizop contados desde una escena real: ronda de reposición, "este mueble es toda mi fábrica" y volcá una tanda conmigo · ver [[guiones-y-anuncios]]
 - [2026-10-26 — Natives piedras: 10 situaciones de resultado](../OUTPUTS/2026-10-26-natives-piedras-10-situaciones-resultado.md) — el objeto de apertura es la prueba de algo bueno que ya pasó (regalos, feria agotada, deuda cerrada, 19 pedidos sin leer) · ver [[natives-ganadoras]]

@@ -1,3 +1,10 @@
+## 2026-10-26 (tarde) — Banco de keywords para cazar ingresos en BR y AR
+
+- Pidió palabras clave no comunes para la Biblioteca de Anuncios, nicho generar ingresos, Brasil y Argentina: que no caigan marcas personales ni las ofertas que ve todo el mundo.
+- **Banco nuevo en 6 ejes** con ~180 keywords, sin repetir las 12 de la caza del 24/10: footprints de checkout poco usados (cakto, kirvano, greenn, hubla, tribopay, doppus, celetus, mpago.la), mecánica de entrega, oficio + vender, oficios concretos, **atajos sin oficio** (lista de fornecedores, precificação, CV, cobrar en dólares) y empaquetado/precio. Más la lista negra de términos de gurú. `OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md`.
+- Reglas técnicas anotadas: `keyword_exact_phrase` para frases de 2-3 palabras y `country=ALL` antes de filtrar por país.
+- 20 keywords de arranque al portapapeles.
+
 ## 2026-10-26 — Piedras: 6 guiones nuevos y la regla de qué es una native
 
 - **Guiones v26 (26/10 - 1 a 3), bizop duro:** el consumible que vuelve solo (el aroma se agota y te repiten), cobrás antes de fabricar (cero riesgo de mercadería) y la barrera de entrada de cualquier otro oficio contra una noche. `OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md`.

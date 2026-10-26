@@ -174,6 +174,15 @@ Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil,
 - **El volumen engaña sin la fecha.** Un anunciante con cientos de ads puede llevar 9 días; otro con 97 puede llevar 106. El conteo por API **ordena mal** si no se cruza con las fechas del navegador.
 - **Subnicho > nicho.** El término genérico ("renda extra") devuelve miles de anunciantes atomizados que mueren en una semana. El término de oficio ("crochê", "artesanato para vender") destapa las ofertas con 34 y 65 días corriendo.
 
+## Banco de keywords (26/10/2026)
+
+Las keywords no se improvisan en cada caza: hay un banco por mercado y por eje en
+`OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md` (BR + AR, ~180 términos en 6 ejes, con la lista negra de términos de gurú).
+
+Dos reglas técnicas que salieron de armarlo:
+- **`search_type=keyword_exact_phrase`** para las frases de 2-3 palabras. Con `keyword_unordered` entra ruido de otros nichos.
+- **El eje más virgen del nicho de ingresos no es el oficio, son los atajos**: listas de proveedores/fornecedores, planillas de precificación, CV editable, cobrar en dólares. Son ofertas de "generar ingresos" que no prometen plata, así que ningún gurú compite por esas palabras.
+
 ## Preguntas abiertas
 - ¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50? (la formación diría 10–15; la skill no contempla el caso)
 - ¿Guardar un registro acumulado de cazas para la segunda pasada a los 2–3 días (subió/bajó el número de ads), como pide [[funnel-hacking]]?

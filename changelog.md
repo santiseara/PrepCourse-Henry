@@ -1,3 +1,9 @@
+## 2026-10-26 (noche, 4) — Calistenia Rusa: dos pasos sin foto
+
+- Santiago: *"esta imagen quedó muy mal, no quiero imagen ahí, y la del tipo durmiendo que pones desp tmb sacala"*.
+- Se sacaron la foto del gimnasio oscuro de *"¿Ya probaste la calistenia rusa?"* y la del hombre sentado en la cama de *"¿Cuándo fue la última vez que sentiste orgullo de tu cuerpo?"*. Con las de objetivo, son tres pasos que quedan solo con opciones.
+- Regla nueva en [[quizzes-reglas-de-armado]] §4: la foto de un paso va solo si muestra la opción o el test; la decorativa se saca.
+
 ## 2026-10-26 (noche, 3) — Calistenia Rusa: fotos de competidores, verde y resumen corto
 
 - Tres correcciones de Santiago: *"las imágenes son muy malas, busca otros quiz de calistenia militar que tengan mejores fotos, y usa esas"*, *"la slide que muestra el resumen tiene mucha info, se hace muy larga"* y *"los colores reemplaza el rojo por un verde que quede bien, medio oscurito"*.

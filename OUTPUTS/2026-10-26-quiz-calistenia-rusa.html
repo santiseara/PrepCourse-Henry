@@ -31,7 +31,6 @@ window.CONFIG = {
   /* Imágenes. Pegá la URL de ImpulTienda de cada una (o dejá el archivo local). */
   IMG: {
     portada:      "../imagenes/portada.webp",
-    metodo:       "../imagenes/metodo.webp",
     flexiones:    "../imagenes/flexiones.webp",
     edad2:        "../imagenes/edad-2.webp",
     edad3:        "../imagenes/edad-3.webp",
@@ -44,7 +43,6 @@ window.CONFIG = {
     meta1:        "../imagenes/meta-1.webp",
     meta2:        "../imagenes/meta-2.webp",
     meta3:        "../imagenes/meta-3.webp",
-    orgullo:      "../imagenes/orgullo.webp",
     dolorEspalda: "../imagenes/dolor-espalda.webp",
     dolorRodillas:"../imagenes/dolor-rodillas.webp",
     alivioEspalda:"../imagenes/alivio-espalda.webp",
@@ -662,7 +660,7 @@ window.CONFIG = {
   /* ===== PREGUNTAS ===== */
   var S = {};   /* respuestas */
   var STEPS = [
-    { id:'experiencia', type:'single', img:'metodo',
+    { id:'experiencia', type:'single',
       h:'¿Ya probaste la calistenia rusa?',
       sub:'No necesitás experiencia: el 75% de nuestros alumnos empieza de cero.',
       opts:[ {v:'Sí, ya practiqué'}, {v:'Escuché hablar'}, {v:'Nunca hice, pero me interesa'} ] },
@@ -707,7 +705,7 @@ window.CONFIG = {
              {v:'11 – 20 flexiones'}, {v:'Más de 20 flexiones'} ],
       fb:'Perfecto, con esto ya sé por dónde arrancar tu progresión. Nadie empieza por donde no puede.' },
 
-    { id:'orgullo', type:'single', img:'orgullo',
+    { id:'orgullo', type:'single',
       h:'¿Cuándo fue la última vez que sentiste <span class="co">orgullo</span> de tu cuerpo?',
       opts:[ {v:'Hace menos de 1 año'}, {v:'Hace 1 – 3 años'},
              {v:'Hace más de 3 años'}, {v:'Ni me acuerdo'} ] },

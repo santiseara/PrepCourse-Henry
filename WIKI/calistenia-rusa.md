@@ -68,6 +68,8 @@ Primer armado: 29 reusadas del quiz original. Santiago: *"las imágenes son muy 
 - La flecha del antes/después pasó de azul a verde de marca con Pillow, **mapeando solo el matiz azul** (0,55–0,70). Un segundo pase sobre rojo le había pintado la cara al modelo: el recoloreo se hace **siempre desde el original y en un solo pase**.
 - Las tres fotos del paso "objetivo" no tenían reemplazo bueno, así que **esa pregunta pasó a lista con íconos**.
 
+**Pasos sin foto.** Santiago sacó dos imágenes que no sumaban: la del hombre en el gimnasio oscuro en *"¿Ya probaste la calistenia rusa?"* (*"esta imagen quedó muy mal, no quiero imagen ahí"*) y la del hombre sentado en la cama en *"¿Cuándo fue la última vez que sentiste orgullo de tu cuerpo?"*. Con las de objetivo, son **tres pasos que quedaron solo con opciones**: una pregunta clara no necesita foto, y una foto de relleno hace más daño que ninguna.
+
 **Generadas con Higgsfield** (gpt_image_2, 1k, High, 1:1): el **mockup del celular** con la app en verde, y el **retrato del hombre de 65** que faltaba para el rango +60 (el set de Menletics llega hasta ~58). Se pidió con el mismo encuadre, fondo negro y remera verde oliva, y entra en el set sin que se note.
 
 ## Estado

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CALISTENIA RUSA — Test de 1 minuto</title>
+
+<!-- ==========================================================================
+     CALISTENIA RUSA (Coach Santi) — QUIZ + VSL  ·  bloque de configuración
+     Todo lo que se toca está acá. El resto no hace falta tocarlo.
+     ========================================================================== -->
+<script>
+window.CONFIG = {
+
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL. */
+  LINK_CHECKOUT: "https://calistenia-rusa.impultienda.ar/checkout",
+
+  /* Pixel de Meta. Dejalo vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos de VSL VISTOS antes de que aparezca la oferta.
+     OJO: tiene que ser el segundo exacto en que NUESTRO VSL dice el precio.
+     230 = 3:50 · 960 = 16:00   (hoy está en 230 de prueba) */
+  SEGUNDOS_OFERTA: 230,
+
+  /* VSL propio: pegá acá la URL del MP4 (720x1280, faststart).
+     Si lo dejás vacío usa el embed de <template id="vsl-template"> de más abajo,
+     y si tampoco hay embed muestra el recuadro de prueba. */
+  VIDEO_URL: "",
+
+  /* Imágenes. Pegá la URL de ImpulTienda de cada una (o dejá el archivo local). */
+  IMG: {
+    portada:      "../imagenes/portada.webp",
+    metodo:       "../imagenes/metodo.webp",
+    objPanza:     "../imagenes/obj-panza.webp",
+    objFuerza:    "../imagenes/obj-fuerza.webp",
+    objSalud:     "../imagenes/obj-salud.webp",
+    cuerpo1:      "../imagenes/cuerpo-1.webp",
+    cuerpo2:      "../imagenes/cuerpo-2.webp",
+    cuerpo3:      "../imagenes/cuerpo-3.webp",
+    cuerpo4:      "../imagenes/cuerpo-4.webp",
+    meta1:        "../imagenes/meta-1.webp",
+    meta2:        "../imagenes/meta-2.webp",
+    meta3:        "../imagenes/meta-3.webp",
+    orgullo:      "../imagenes/orgullo.webp",
+    dolorEspalda: "../imagenes/dolor-espalda.webp",
+    dolorRodillas:"../imagenes/dolor-rodillas.webp",
+    alivioEspalda:"../imagenes/alivio-espalda.webp",
+    alivioRodillas:"../imagenes/alivio-rodillas.webp",
+    entrenando:   "../imagenes/entrenando.webp",
+    mockup:       "../imagenes/mockup.png",
+    premio:       "../imagenes/premio.webp",
+    testi1:       "../imagenes/testi-1.webp",
+    testi2:       "../imagenes/testi-2.webp",
+    testi3:       "../imagenes/testi-3.webp",
+    testi4:       "../imagenes/testi-4.webp",
+    cara1:        "../imagenes/cara-1.webp",
+    cara2:        "../imagenes/cara-2.webp",
+    cara3:        "../imagenes/cara-3.webp",
+    cara4:        "../imagenes/cara-4.webp",
+    cara5:        "../imagenes/cara-5.webp",
+    pagos:        "../imagenes/pagos.webp"
+  },
+
+  /* Precios. Si cambia el precio hay que cambiarlo también en el FAQ. */
+  PRECIO:        "17.990",
+  PRECIO_VIEJO:  "47.990",
+  DESCUENTO:     "62",
+  CUOTAS:        "3",
+  CUOTA_VALOR:   "5.997"
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root{
+    --red:#C8102E;          /* rojo: acento */
+    --red-d:#8E0A20;
+    --red-l:#F0304C;
+    --ink:#101418;          /* grafito: tinta */
+    --ink-2:#2A3138;
+    --steel:#5B6670;        /* acero: texto secundario */
+    --line:#DDE2E7;
+    --bg:#FFFFFF;
+    --bg-2:#F3F5F8;
+    --card:#FFFFFF;
+    --green:#1B9E57;
+    --amber:#E39300;
+    --shadow:0 20px 44px -22px rgba(16,20,24,.45);
+    --shadow-s:0 10px 24px -16px rgba(16,20,24,.4);
+    --r:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,.osw{font-family:'Oswald',sans-serif;line-height:1.08;text-transform:uppercase;letter-spacing:.005em;font-weight:600}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .wrap{max-width:620px;margin:0 auto;padding:0 20px}
+  img{max-width:100%;display:block}
+  .hidden{display:none!important}
+  .co{color:var(--red)}
+
+  /* ====== botones ====== */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;
+    font-family:'Oswald';font-weight:600;font-size:1.12rem;text-transform:uppercase;letter-spacing:.03em;
+    color:#fff;background:var(--red);padding:17px 28px;border-radius:8px;text-decoration:none;
+    box-shadow:0 6px 0 var(--red-d);transition:transform .08s,box-shadow .08s,background .2s}
+  .btn:hover{background:var(--red-d)}
+  .btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--red-d)}
+  .btn.block{display:flex;width:100%}
+  .btn.pulse{animation:pulse 1.9s infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+
+  /* ====== chapita / sello ====== */
+  .patch{display:inline-flex;align-items:center;gap:7px;font-family:'Oswald';font-weight:600;font-size:.72rem;
+    letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:#fff;padding:7px 13px;border-radius:4px}
+  .patch.red{background:var(--red)}
+  .star{color:var(--red);font-size:1.05em;line-height:0}
+
+  /* ====== logo ====== */
+  .logo{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald';font-weight:700;text-transform:uppercase}
+  .logo .mark{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff;font-size:15px}
+  .logo .nm{font-size:1.1rem;letter-spacing:.06em;line-height:1}
+  .logo .nm small{display:block;font-family:'Inter';font-weight:600;font-size:.56rem;letter-spacing:.22em;color:var(--steel);text-transform:uppercase;margin-top:3px}
+
+  /* ============ PORTADA ============ */
+  #landing{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 0 30px;text-align:center}
+  .lw{max-width:560px;width:100%;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center}
+  .lw .patch{margin:12px 0 14px}
+  .lw h1{font-size:1.72rem;font-weight:700;line-height:1.1}
+  .lw .sub{font-size:.95rem;font-weight:500;color:var(--steel);max-width:420px;margin:10px 0 16px}
+  .lw .hero{width:100%;max-width:400px;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:18px}
+  .lw .ask{font-family:'Oswald';font-size:1.18rem;font-weight:600;margin-bottom:12px}
+  .lw .ask small{display:block;font-family:'Inter';font-weight:500;font-size:.8rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:6px}
+  .ages{display:flex;flex-direction:column;gap:10px;width:100%;max-width:400px}
+  .age{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1.5px solid var(--line);
+    border-radius:10px;padding:16px 18px;cursor:pointer;font-weight:700;font-size:1.02rem;transition:.15s;box-shadow:var(--shadow-s)}
+  .age:hover{border-color:var(--red);background:#FFF5F6;transform:translateY(-1px)}
+  .age .arr{color:var(--red);font-size:1.2rem;line-height:0}
+  .lnote{margin-top:16px;background:var(--bg-2);border-left:3px solid var(--red);border-radius:6px;padding:12px 14px;
+    font-size:.86rem;color:var(--ink-2);text-align:left;max-width:400px}
+  .lfine{margin-top:14px;font-size:.72rem;color:var(--steel);max-width:400px}
+  .lfine b{display:block;color:var(--green);margin-bottom:4px}
+
+  /* ============ QUIZ ============ */
+  #quiz{display:none;min-height:100vh;padding-bottom:40px}
+  .qtop{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .qtop .in{max-width:620px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .back{background:none;border:none;cursor:pointer;color:var(--steel);font-size:1.3rem;line-height:1;padding:4px 8px}
+  .cnt{font-family:'JetBrains Mono';font-size:.76rem;color:var(--steel);letter-spacing:.06em}
+  .bar{height:4px;background:var(--line)}
+  .bar i{display:block;height:100%;background:var(--red);width:0;transition:width .35s}
+  .qbody{max-width:620px;margin:0 auto;padding:26px 20px 0}
+  .q-slide{animation:slide .28s ease}
+  @keyframes slide{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+  .q-h{font-family:'Oswald';font-size:1.42rem;font-weight:600;line-height:1.14;text-align:center;text-transform:none}
+  .q-sub{text-align:center;color:var(--steel);font-size:.9rem;margin-top:8px}
+  .q-img{margin:16px auto 0;max-width:330px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  .opts{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+  .opts.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .opt{display:flex;align-items:center;gap:13px;background:var(--card);border:1.5px solid var(--line);border-radius:10px;
+    padding:14px 16px;cursor:pointer;font-weight:600;font-size:.97rem;text-align:left;transition:.15s;box-shadow:var(--shadow-s);position:relative}
+  .opt:hover{border-color:var(--red);background:#FFF5F6}
+  .opt.on{border-color:var(--red);background:#FFF5F6;box-shadow:0 0 0 3px rgba(200,16,46,.12)}
+  .opt .ic{font-size:1.32rem;line-height:1;flex:0 0 auto}
+  .opt .tx{flex:1}
+  .opt .tx small{display:block;font-weight:500;color:var(--steel);font-size:.8rem;margin-top:2px}
+  .opt .ck{width:21px;height:21px;flex:0 0 21px;border:2px solid var(--line);border-radius:5px;display:grid;place-items:center;color:#fff;font-size:12px}
+  .opt.on .ck{background:var(--red);border-color:var(--red)}
+  /* opciones con foto */
+  .opt.ph{flex-direction:column;align-items:stretch;padding:0;overflow:hidden;gap:0}
+  .opt.ph img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;background:var(--bg-2)}
+  .opt.ph .lab{padding:11px 10px;text-align:center;font-size:.9rem;line-height:1.25}
+  .opts.ph3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+  .opts.ph4{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+  .opts.ph2{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+
+  /* medidor (altura / peso) */
+  .metric{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:20px 18px;margin-top:22px}
+  .metric .big{text-align:center;font-family:'Oswald';font-size:3rem;font-weight:700;line-height:1;color:var(--ink)}
+  .metric .big span{font-size:1.1rem;color:var(--steel);margin-left:4px}
+  .metric input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);margin-top:20px;outline:none}
+  .metric input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+  .metric input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--red);border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+  .metric .ends{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:.72rem;color:var(--steel);margin-top:8px}
+
+  /* feedback del coach */
+  .q-fb{display:none;margin-top:18px;background:#FFF5F6;border:1px solid #F5C9D1;border-left:3px solid var(--red);border-radius:8px;padding:13px 15px;font-size:.9rem}
+  .q-fb.on{display:block;animation:slide .3s ease}
+  .q-fb .who{display:block;font-family:'Oswald';font-size:.76rem;letter-spacing:.1em;color:var(--red);margin-bottom:4px}
+  .q-next{margin-top:18px}
+  .q-note{text-align:center;font-size:.76rem;color:var(--steel);margin-top:14px}
+
+  /* ============ ANÁLISIS ============ */
+  #qload{display:none;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:30px 20px}
+  #qload .in{max-width:380px;width:100%}
+  .ldbar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:22px 0 10px}
+  .ldbar i{display:block;height:100%;width:0;background:var(--red);transition:width .25s}
+  .ldpc{font-family:'Oswald';font-size:2.4rem;font-weight:700}
+  .ldsteps{text-align:left;margin-top:22px;display:flex;flex-direction:column;gap:11px}
+  .ldstep{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--steel);opacity:.4;transition:.3s}
+  .ldstep.on{opacity:1;color:var(--ink);font-weight:600}
+  .ldstep .d{width:20px;height:20px;flex:0 0 20px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:11px;color:#fff}
+  .ldstep.on .d{background:var(--green);border-color:var(--green)}
+
+  /* ============ PERFIL / PREVISIÓN ============ */
+  #perfil{display:none;padding:28px 0 46px}
+  .sec{margin-top:30px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:var(--shadow-s)}
+  .card + .card{margin-top:16px}
+  .ttl{font-family:'Oswald';font-size:1.3rem;font-weight:600;text-transform:none;line-height:1.16}
+  .ttl.c{text-align:center}
+  .lead{color:var(--ink-2);font-size:.96rem;margin-top:10px}
+  .gauge{margin-top:16px}
+  .gauge .lb{display:flex;justify-content:space-between;align-items:baseline;font-size:.84rem;color:var(--steel);margin-bottom:7px}
+  .gauge .lb b{font-family:'Oswald';font-size:1.02rem;color:var(--ink);text-transform:none}
+  .gauge .tr{position:relative;height:9px;border-radius:99px;background:linear-gradient(90deg,#2BA86A 0%,#E3C000 42%,#E38300 68%,#C8102E 100%)}
+  .gauge .dot{position:absolute;top:50%;width:19px;height:19px;border-radius:50%;background:#fff;border:4px solid var(--ink);transform:translate(-50%,-50%);transition:left .8s ease}
+  .gauge .sc{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:.66rem;color:var(--steel);margin-top:7px}
+  .warn{margin-top:16px;background:#FFF6E8;border:1px solid #F2DCB4;border-left:3px solid var(--amber);border-radius:8px;padding:12px 14px;font-size:.86rem}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+  .chip{background:var(--bg-2);border:1px solid var(--line);border-radius:9px;padding:11px 13px;font-size:.8rem;color:var(--steel)}
+  .chip b{display:block;font-family:'Oswald';font-size:1rem;color:var(--ink);text-transform:none;margin-top:3px;line-height:1.2}
+  .chart{margin-top:18px}
+  .chart svg{width:100%;height:170px;overflow:visible}
+  .chart .xl{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:.68rem;color:var(--steel);margin-top:8px;padding:0 4px}
+  .wins{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+  .wins li{display:flex;gap:9px;font-size:.92rem;align-items:flex-start}
+  .wins li i{color:var(--green);font-style:normal;flex:0 0 auto}
+
+  /* ============ PASO FINAL: VSL + OFERTA ============ */
+  #final{display:none;padding:22px 0 60px}
+  .vsl-head{text-align:center;max-width:520px;margin:0 auto 16px}
+  .vsl-head .ttl{font-size:1.34rem}
+  .vsl-head p{color:var(--steel);font-size:.92rem;margin-top:8px}
+  .vsl-frame{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;background:#000;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .vsl-frame video,.vsl-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+  .vsl-ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#8A939C;font-family:'Oswald';font-size:1.1rem;padding:24px;line-height:1.5}
+  .vsl-ph small{display:block;font-family:'Inter';font-size:.76rem;font-weight:400;margin-top:10px;line-height:1.6}
+  .sound-gate{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    background:rgba(10,12,14,.72);color:#fff;cursor:pointer;text-align:center;padding:24px}
+  .sound-gate.on{display:flex}
+  .sound-gate .ic{width:68px;height:68px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:30px;animation:pulse 1.6s infinite}
+  .sound-gate b{font-family:'Oswald';font-size:1.22rem;letter-spacing:.04em}
+  .wait{text-align:center;color:var(--steel);font-size:.84rem;margin-top:16px}
+
+  #oferta-wrap{display:none;margin-top:38px}
+  .timer{background:var(--ink);color:#fff;border-radius:12px;padding:16px;text-align:center}
+  .timer .t{font-family:'Oswald';font-size:.78rem;letter-spacing:.14em;color:#B9C2CA}
+  .timer .n{font-family:'JetBrains Mono';font-weight:700;font-size:2.1rem;line-height:1.1;margin-top:5px}
+  .cuotas{margin-top:30px;background:#fff;border:2px solid var(--line);border-radius:12px;padding:18px;text-align:center;box-shadow:var(--shadow-s)}
+  .cuotas .mp{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;letter-spacing:.08em;color:#0B7ABF;text-transform:uppercase}
+  .cuotas .v{font-family:'Oswald';font-size:2.1rem;font-weight:700;line-height:1.1;margin-top:6px}
+  .cuotas .v small{font-size:.9rem;color:var(--steel);font-weight:500}
+  .cuotas .u{font-size:.84rem;color:var(--steel);margin-top:4px}
+  .mailnote{margin-top:30px;background:var(--bg-2);border-left:3px solid var(--green);border-radius:8px;padding:13px 15px;font-size:.87rem;color:var(--ink-2)}
+  .cta-box{margin-top:30px}
+  .cta-box .seal{text-align:center;font-size:.78rem;color:var(--steel);margin-top:11px}
+  .vacantes{text-align:center;font-size:.84rem;color:var(--red);font-weight:700;margin-top:12px}
+
+  .blk{margin-top:44px}
+  .blk > .ttl{text-align:center;margin-bottom:18px}
+  .recibis{display:flex;flex-direction:column;gap:14px}
+  .recibis li{list-style:none;display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 16px;box-shadow:var(--shadow-s)}
+  .recibis .ic{flex:0 0 36px;width:36px;height:36px;border-radius:9px;background:#FFF0F2;display:grid;place-items:center;font-size:18px}
+  .recibis b{display:block;font-family:'Oswald';font-size:1rem;text-transform:none;line-height:1.25;margin-bottom:4px}
+  .recibis p{font-size:.88rem;color:var(--steel);line-height:1.55}
+
+  .testi{display:flex;flex-direction:column;gap:20px}
+  .testi .t{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-s)}
+  .testi .t img{width:100%}
+  .testi .t .bd{padding:16px}
+  .testi .t .hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .testi .t .hd img{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:0 0 38px}
+  .testi .t .hd b{font-family:'Oswald';font-size:1rem;text-transform:none;line-height:1.2}
+  .testi .t .hd small{display:block;color:var(--red);font-weight:700;font-size:.78rem}
+  .testi .t p{font-size:.9rem;color:var(--ink-2);line-height:1.6}
+  .stars{color:#F5A623;font-size:.84rem;letter-spacing:2px}
+
+  .bonos{display:flex;flex-direction:column;gap:12px}
+  .bono{display:flex;gap:13px;background:var(--ink);color:#fff;border-radius:10px;padding:15px 16px}
+  .bono .n{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-family:'Oswald';font-weight:700;font-size:.95rem}
+  .bono b{display:block;font-family:'Oswald';font-size:.95rem;line-height:1.25;margin-bottom:4px}
+  .bono p{font-size:.85rem;color:#B9C2CA;line-height:1.55}
+
+  .garantia{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center;box-shadow:var(--shadow-s)}
+  .garantia svg{display:block;margin:0 auto 14px}
+  .garantia .ttl{font-size:1.2rem}
+  .garantia p{font-size:.92rem;color:var(--ink-2);margin-top:12px}
+
+  .semanas{display:flex;flex-direction:column;gap:12px}
+  .semana{display:flex;gap:13px;background:var(--bg-2);border-radius:10px;padding:14px 16px}
+  .semana .n{flex:0 0 34px;width:34px;height:34px;border-radius:9px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
+  .semana b{display:block;font-family:'Oswald';font-size:.96rem;text-transform:none;margin-bottom:3px}
+  .semana p{font-size:.87rem;color:var(--steel);line-height:1.55}
+
+  .faq details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:var(--card)}
+  .faq summary{cursor:pointer;list-style:none;padding:15px 17px;font-weight:700;font-size:.95rem;display:flex;justify-content:space-between;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--red);font-family:'Oswald';font-size:1.3rem;line-height:1}
+  .faq details[open] summary::after{content:"–"}
+  .faq .a{padding:0 17px 16px;font-size:.9rem;color:var(--steel);line-height:1.65}
+
+  .prueba{background:var(--bg-2);border-radius:12px;padding:20px;text-align:center}
+  .prueba .n{font-family:'Oswald';font-size:1.7rem;font-weight:700;line-height:1.1}
+  .prueba .n small{font-size:.9rem;color:var(--steel);font-weight:500;text-decoration:line-through;display:block}
+  .pagos{max-width:300px;margin:18px auto 0;opacity:.85}
+
+  /* notificaciones discretas */
+  .toast{position:fixed;left:14px;bottom:14px;z-index:90;display:none;align-items:center;gap:10px;max-width:300px;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:10px;
+    padding:10px 13px;box-shadow:0 12px 30px -14px rgba(16,20,24,.5);font-size:.8rem}
+  .toast.on{display:flex;animation:tin .4s ease}
+  @keyframes tin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .toast .av{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Oswald';font-weight:700}
+  .toast b{display:block;font-size:.84rem}
+  .toast small{color:var(--steel);font-size:.72rem}
+
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:11px 16px;box-shadow:0 -8px 24px -18px rgba(16,20,24,.6)}
+  .sticky.on{display:block}
+  .sticky .in{max-width:620px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  .sticky .px{flex:1;font-size:.76rem;color:var(--steel);line-height:1.3}
+  .sticky .px b{display:block;font-family:'Oswald';font-size:1.05rem;color:var(--ink)}
+  .sticky .btn{padding:13px 20px;font-size:.92rem;box-shadow:0 4px 0 var(--red-d)}
+
+  footer{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);text-align:center;font-size:.72rem;color:var(--steel)}
+
+  @media(max-width:420px){
+    .lw h1{font-size:1.5rem}
+    .q-h{font-size:1.24rem}
+    .opts.ph3{grid-template-columns:repeat(3,1fr);gap:7px}
+    .opt.ph .lab{font-size:.78rem;padding:9px 5px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PORTADA = 1ª PREGUNTA (edad) ============ -->
+<div id="landing">
+  <div class="lw">
+    <div class="logo"><span class="mark">★</span><span class="nm">Calistenia Rusa<small>Coach Santi</small></span></div>
+    <span class="patch red">⏱ Test de 1 minuto</span>
+    <h1>Eliminá los dolores, <span class="co">adelgazá</span> y recuperá el músculo después de los 40 con calistenia rusa en casa, sin equipo</h1>
+    <p class="sub">Mirá los resultados desde los primeros días.</p>
+    <div class="hero"><img src="" alt="Antes y después" data-img="portada"></div>
+    <div class="ask"><small>Empezá ahora 👇</small>Plan de Calistenia Rusa según tu edad</div>
+    <div class="ages" id="ageOpts">
+      <button class="age" data-v="30 a 39 años">30 – 39 años <span class="arr">›</span></button>
+      <button class="age" data-v="40 a 49 años">40 – 49 años <span class="arr">›</span></button>
+      <button class="age" data-v="50 a 59 años">50 – 59 años <span class="arr">›</span></button>
+      <button class="age" data-v="más de 60 años">+ 60 años <span class="arr">›</span></button>
+    </div>
+    <div class="lnote">Hacé este test y recibí un plan específico para tu edad y tu objetivo. Al final, recibís tu diagnóstico gratis.</div>
+    <div class="lfine"><b>✅ Test de 49 segundos</b>🔒 Tus respuestas son privadas y están protegidas. Usamos tus datos solo para armar tu plan.</div>
+  </div>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<div id="quiz">
+  <div class="qtop">
+    <div class="in">
+      <button class="back" id="qBack">‹</button>
+      <div class="logo"><span class="mark">★</span><span class="nm">Calistenia Rusa</span></div>
+      <span class="cnt"><span id="qNum">1</span>/<span id="qTot">14</span></span>
+    </div>
+    <div class="bar"><i id="qBar"></i></div>
+  </div>
+  <div class="qbody"><div class="q-slide" id="qSlide"></div></div>
+</div>
+
+<!-- ============ ANÁLISIS ============ -->
+<div id="qload">
+  <div class="in">
+    <div class="logo" style="justify-content:center;margin-bottom:18px"><span class="mark">★</span><span class="nm">Calistenia Rusa</span></div>
+    <div class="ttl c" id="ldTtl">Armando tu plan de 28 días…</div>
+    <div class="ldpc" id="ldPc">0%</div>
+    <div class="ldbar"><i id="ldBar"></i></div>
+    <div class="ldsteps">
+      <div class="ldstep" data-s="0"><span class="d">✓</span>Analizando tus respuestas</div>
+      <div class="ldstep" data-s="1"><span class="d">✓</span>Calculando tu IMC y tu nivel</div>
+      <div class="ldstep" data-s="2"><span class="d">✓</span>Adaptando los movimientos a tus molestias</div>
+      <div class="ldstep" data-s="3"><span class="d">✓</span>Generando tu protocolo de 28 días</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PERFIL + PREVISIÓN ============ -->
+<div id="perfil">
+  <div class="wrap">
+    <div class="logo" style="margin-bottom:18px"><span class="mark">★</span><span class="nm">Calistenia Rusa<small>Coach Santi</small></span></div>
+    <span class="patch">Diagnóstico listo</span>
+    <h2 class="ttl" style="margin-top:12px;font-size:1.5rem">Tu perfil está listo</h2>
+    <p class="lead">Te voy a ser directo: así como estás, tu cuerpo te está frenando. Pero se puede cambiar, y más rápido de lo que pensás.</p>
+
+    <div class="card sec">
+      <div class="ttl" style="font-size:1.1rem">⚠️ Tu IMC muestra señales de <span class="co" id="imcLabel">sobrepeso</span></div>
+      <div class="gauge">
+        <div class="lb"><span>Índice de masa corporal</span><b id="imcVal">27,4</b></div>
+        <div class="tr"><span class="dot" id="imcDot" style="left:0%"></span></div>
+        <div class="sc"><span>Bajo</span><span>Saludable</span><span>Sobrepeso</span><span>Obesidad</span></div>
+      </div>
+      <div class="warn">⚠️ <b>Riesgos de un IMC poco saludable:</b> presión alta, más riesgo de infarto y ACV, diabetes tipo 2 y dolor crónico en la espalda y las articulaciones.</div>
+    </div>
+
+    <div class="card">
+      <div class="ttl" style="font-size:1.1rem">Tu testosterona puede estar hasta un <span class="co">54% por debajo</span> de lo ideal para un hombre de <span id="tEdad">40 a 49 años</span></div>
+      <div class="gauge">
+        <div class="lb"><span>Nivel estimado de testosterona</span><b>Por debajo</b></div>
+        <div class="tr" style="background:linear-gradient(90deg,#C8102E 0%,#E38300 35%,#E3C000 60%,#2BA86A 100%)"><span class="dot" style="left:28%"></span></div>
+        <div class="sc"><span>Crítico</span><span>Bajo</span><span>Normal</span><span>Óptimo</span></div>
+      </div>
+      <div class="warn">⚠️ <b>Con la testosterona baja</b>, la grasa abdominal se acumula hasta 3× más rápido, la masa muscular cae hasta un 17% al año y la libido se apaga. Y empeora cada año que pasa.</div>
+    </div>
+
+    <div class="chips" id="chips"></div>
+
+    <div class="card sec">
+      <div class="ttl" style="font-size:1.1rem">Según tus respuestas, este es el resultado que tu plan puede darte</div>
+      <p class="lead" id="metaTxt">Estimamos que llegás a tu meta de <b>78 kg</b> en hasta <b>28 días</b>.</p>
+      <div class="chart">
+        <svg viewBox="0 0 320 150" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C8102E" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="#C8102E" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="0" y1="130" x2="320" y2="130" stroke="#DDE2E7" stroke-width="1"/>
+          <line x1="0" y1="88" x2="320" y2="88" stroke="#EEF1F4" stroke-width="1"/>
+          <line x1="0" y1="46" x2="320" y2="46" stroke="#EEF1F4" stroke-width="1"/>
+          <path d="M10,22 C80,26 120,40 160,62 C200,84 250,112 310,124 L310,130 L10,130 Z" fill="url(#gfill)"/>
+          <path d="M10,22 C80,26 120,40 160,62 C200,84 250,112 310,124" fill="none" stroke="#C8102E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="10" cy="22" r="5" fill="#C8102E"/>
+          <circle cx="310" cy="124" r="6" fill="#fff" stroke="#C8102E" stroke-width="3"/>
+        </svg>
+        <div class="xl"><span>Hoy</span><span>7 días</span><span>14 días</span><span>28 días</span></div>
+      </div>
+      <ul class="wins">
+        <li><i>✅</i><span id="winKg">Pérdida de grasa abdominal</span></li>
+        <li><i>✅</i>Energía y libido más altas ya en los primeros 7 días</li>
+        <li><i>✅</i>Testosterona activada de forma natural</li>
+        <li><i>✅</i>Se terminan los dolores al moverte</li>
+        <li><i>✅</i>Fuerza y músculo de vuelta, sin gimnasio</li>
+      </ul>
+      <p class="lead" style="font-size:.84rem;color:var(--steel);margin-top:16px">Nuestras encuestas internas muestran que el 83,7% de los alumnos alcanza su meta de peso en 28 días.</p>
+    </div>
+
+    <button class="btn block pulse" id="toVSL" style="margin-top:26px">Ver mi plan ▸</button>
+  </div>
+</div>
+
+<!-- ============ PASO FINAL: VSL ARRIBA + OFERTA OCULTA ============ -->
+<div id="final">
+  <div class="wrap">
+    <div class="vsl-head">
+      <div class="logo" style="margin-bottom:14px"><span class="mark">★</span><span class="nm">Calistenia Rusa<small>Coach Santi</small></span></div>
+      <h2 class="ttl">¡Tu plan de Calistenia Rusa está listo!</h2>
+      <p>Mirá el video de abajo y fijate exactamente cómo funciona.</p>
+    </div>
+
+    <div class="vsl-frame" id="vslFrame">
+      <div class="sound-gate" id="soundGate">
+        <div class="ic">🔊</div>
+        <b>Tocá para activar el sonido</b>
+      </div>
+    </div>
+    <template id="vsl-template"></template>
+    <p class="wait" id="vslWait">⏳ El botón para acceder a tu plan aparece en unos minutos, cuando el video llegue a esa parte.</p>
+
+    <!-- ====== OFERTA: aparece sola cuando el VSL llega a SEGUNDOS_OFERTA ====== -->
+    <div id="oferta-wrap">
+
+      <div class="timer">
+        <div class="t">Tu descuento termina en</div>
+        <div class="n" id="tmr">15:00</div>
+      </div>
+
+      <div class="cuotas">
+        <span class="mp">💳 Mercado Pago · hasta 3 cuotas</span>
+        <div class="v"><span id="cN">3</span> cuotas de $<span id="cV">5.997</span></div>
+        <div class="u">o <b>$<span id="pU">17.990</span></b> en un pago · pesos (ARS)</div>
+      </div>
+
+      <div class="mailnote">📩 Apenas pagás te llega el acceso al instante, por e-mail y al WhatsApp que cargues en el checkout.</div>
+
+      <div class="cta-box">
+        <a class="btn block pulse go" href="#">Obtener mi plan personalizado ahora</a>
+        <div class="seal">🔒 Compra 100% segura · 30 días de garantía incondicional</div>
+        <div class="vacantes">⚠️ Quedan solo <span id="cupos">6</span> cupos a este precio</div>
+      </div>
+
+      <!-- LO QUE VAS A RECIBIR -->
+      <div class="blk">
+        <h3 class="ttl c">Lo que vas a recibir</h3>
+        <ul class="recibis">
+          <li><span class="ic">🎯</span><div><b>Plan personalizado de Calistenia Rusa</b><p>Entrenamientos de solo 7 minutos por día, adaptados a tu nivel y al objetivo que elegiste en el test.</p></div></li>
+          <li><span class="ic">🧬</span><div><b>Protocolo de activación de las fibras profundas</b><p>Los movimientos de la escuela rusa para recuperar fuerza, movilidad y firmeza sin entrenamientos largos ni agotadores.</p></div></li>
+          <li><span class="ic">📅</span><div><b>Desafío completo de 28 días</b><p>Un cronograma diario, simple y progresivo, que te dice exactamente qué clase hacer en cada etapa.</p></div></li>
+          <li><span class="ic">🍽️</span><div><b>Plan alimentario personalizado</b><p>Comidas prácticas basadas en lo que te gusta comer, para bajar la panza sin dietas imposibles de sostener.</p></div></li>
+          <li><span class="ic">🦵</span><div><b>Protocolo de recuperación articular</b><p>Ejercicios suaves y de bajo impacto para fortalecer el cuerpo sin sobrecargar rodillas, espalda y hombros.</p></div></li>
+          <li><span class="ic">🔥</span><div><b>Protocolo de vitalidad masculina</b><p>Estrategias para mejorar el sueño, la recuperación, la energía y las ganas durante todo el proceso.</p></div></li>
+        </ul>
+      </div>
+
+      <!-- APP -->
+      <div class="blk">
+        <h3 class="ttl c">Una app fácil, hecha para principiantes</h3>
+        <img src="" data-img="mockup" alt="App Calistenia Rusa" style="max-width:340px;margin:0 auto;border-radius:14px">
+        <img src="" data-img="premio" alt="Empresa recomendada 2025" style="max-width:300px;margin:18px auto 0;border-radius:10px">
+      </div>
+
+      <div class="cta-box">
+        <a class="btn block go" href="#">Obtener mi plan personalizado ahora</a>
+        <div class="seal">🔒 Compra 100% segura · 30 días de garantía incondicional</div>
+      </div>
+
+      <!-- TESTIMONIOS -->
+      <div class="blk">
+        <h3 class="ttl c"><span class="stars">★★★★★</span><br>Resultados que nos llenan de orgullo</h3>
+        <div class="testi">
+          <div class="t"><img src="" data-img="testi1" alt="Antes y después">
+            <div class="bd"><div class="hd"><img src="" data-img="cara1" alt=""><div><b>Roberto</b><small>−3 kg y cuerpo firme en 21 días</small></div></div>
+            <p>No estaba muy pasado de peso, pero mi cuerpo había perdido la forma y me sentía blando. Con la Calistenia Rusa, la activación de las fibras profundas cambió todo. En 21 días perdí 3 kg de grasa y la panza empezó a ponerse firme. Volví a sentirme bien conmigo mismo.</p></div></div>
+          <div class="t"><img src="" data-img="testi2" alt="Antes y después">
+            <div class="bd"><div class="hd"><img src="" data-img="cara2" alt=""><div><b>Carlos</b><small>−13 kg en 21 días</small></div></div>
+            <p>Estaba acabado, sin energía y con vergüenza de sacarme la remera. Pensaba que iba a necesitar horas de gimnasio, pero esto cambió todo. Recuperé mi fuerza entrenando adentro de mi propia pieza. Hoy me siento otro hombre, más seguro y 13 kg más liviano en apenas 3 semanas.</p></div></div>
+          <div class="t"><img src="" data-img="testi3" alt="Antes y después">
+            <div class="bd"><div class="hd"><img src="" data-img="cara3" alt=""><div><b>Sergio, 58 años</b><small>−8 kg en 21 días</small></div></div>
+            <p>Después de los 50, esa panza no se iba por nada y la espalda me vivía doliendo. Los movimientos de bajo impacto fueron mi salvación. Los dolores bajaron y bajé 8 kg en 21 días. Por fin veo la panza achicarse, sin forzar el cuerpo.</p></div></div>
+          <div class="t"><img src="" data-img="testi4" alt="Antes y después">
+            <div class="bd"><div class="hd"><img src="" data-img="cara4" alt=""><div><b>Antonio</b><small>−4 kg en 14 días</small></div></div>
+            <p>Siempre fui desconfiado con las promesas rápidas, pero las fotos no mienten. En apenas dos semanas la activación de las fibras profundas me secó la panza como ningún abdominal lo había logrado. Si en 14 días ya estoy así, imaginate al final del protocolo.</p></div></div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <a class="btn block go" href="#">Obtener mi plan personalizado ahora</a>
+        <div class="seal">🔒 Compra 100% segura · 30 días de garantía incondicional</div>
+      </div>
+
+      <!-- BONOS -->
+      <div class="blk">
+        <h3 class="ttl c">🎁 + Bonos exclusivos</h3>
+        <p style="text-align:center;color:var(--steel);font-size:.9rem;margin:-8px 0 18px">Materiales que aceleran tu resultado. Incluidos hoy, sin costo adicional.</p>
+        <div class="bonos">
+          <div class="bono"><span class="n">1</span><div><b>Protocolo anti-cortisol nocturno</b><p>Una secuencia de 3 minutos antes de dormir que baja el cortisol y mejora tu sueño. Es durante el sueño profundo cuando tu cuerpo más produce testosterona.</p></div></div>
+          <div class="bono"><span class="n">2</span><div><b>Menú antiinflamatorio masculino</b><p>Recetas simples del día a día del hombre argentino, hechas para bajar el cortisol y acelerar la quema de grasa, sin perder fuerza y sin contar calorías.</p></div></div>
+          <div class="bono"><span class="n">3</span><div><b>Guía del rendimiento sexual</b><p>El paso a paso para transformar el aumento de testosterona en más energía, más libido y más confianza en la cama.</p></div></div>
+          <div class="bono"><span class="n">4</span><div><b>Soporte con el equipo del Coach Santi, todos los días</b><p>Un equipo listo para sacarte las dudas y ayudarte en el camino. No vas a hacer esto solo.</p></div></div>
+        </div>
+      </div>
+
+      <!-- GARANTÍA -->
+      <div class="blk">
+        <div class="garantia">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <circle cx="60" cy="60" r="58" fill="#101418"/>
+            <circle cx="60" cy="60" r="51" fill="none" stroke="#C8102E" stroke-width="2"/>
+            <path id="garPath" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
+            <text fill="#C8102E" font-family="Oswald,sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.8">
+              <textPath href="#garPath" startOffset="50%" text-anchor="middle">GARANTÍA INCONDICIONAL</textPath>
+            </text>
+            <text x="60" y="64" text-anchor="middle" fill="#fff" font-family="Oswald,sans-serif" font-size="32" font-weight="700">30</text>
+            <text x="60" y="80" text-anchor="middle" fill="#C8102E" font-family="Oswald,sans-serif" font-size="13" font-weight="600" letter-spacing="2">DÍAS</text>
+            <text x="60" y="94" text-anchor="middle" fill="#8A939C" font-family="Oswald,sans-serif" font-size="6.8" font-weight="500" letter-spacing="1.1">DEVOLUCIÓN 100%</text>
+          </svg>
+          <div class="ttl">Garantía de 30 días con devolución del 100%</div>
+          <p>Confío en que podés lograr resultados visibles con la Calistenia Rusa. Si no notás ningún resultado y podés demostrar que seguiste tu plan al pie de la letra, te devolvemos todo tu dinero al instante.</p>
+        </div>
+      </div>
+
+      <!-- 28 DÍAS -->
+      <div class="blk">
+        <h3 class="ttl c">Qué esperar en los próximos 28 días</h3>
+        <div class="semanas">
+          <div class="semana"><span class="n">1</span><div><b>Activación de las fibras profundas</b><p>Tu cuerpo despierta la musculatura interna dormida y ya sentís menos rigidez al moverte.</p></div></div>
+          <div class="semana"><span class="n">2</span><div><b>Desinflamación</b><p>Las articulaciones reciben menos sobrecarga, los dolores bajan y tu energía empieza a volver.</p></div></div>
+          <div class="semana"><span class="n">3</span><div><b>Definición muscular</b><p>Aparece el tono, la panza empieza a ponerse firme y la postura mejora a la vista.</p></div></div>
+          <div class="semana"><span class="n">4</span><div><b>Reprogramación metabólica</b><p>Tu cuerpo quema grasa con más eficiencia y la testosterona se estabiliza en un nuevo nivel.</p></div></div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="blk faq">
+        <h3 class="ttl c">Preguntas frecuentes</h3>
+        <details open><summary>Nunca hice calistenia, ¿es para principiantes?</summary><div class="a">Sí. Las clases fueron creadas para principiantes. Los movimientos son simples, explicados paso a paso en video y enfocados en resultados, no en filosofía complicada.</div></details>
+        <details><summary>¿Cuánto tiempo necesito para ver resultados?</summary><div class="a">Con pocos minutos por día empezás a sentir menos dolores y más energía ya en la primera semana. A partir de la segunda, los resultados en el cuerpo empiezan a notarse.</div></details>
+        <details><summary>¿Necesito algún equipo?</summary><div class="a">No. Solo un espacio chico en tu casa, una silla y unos pocos minutos de tu día.</div></details>
+        <details><summary>¿Cómo voy a recibir las clases?</summary><div class="a">Apenas te inscribís recibís el acceso al instante, por e-mail y al número de WhatsApp que cargaste en el pago, con todas las instrucciones para entrar a tu área de miembros.</div></details>
+        <details><summary>¿Es una suscripción?</summary><div class="a">No. Es un pago único de $<span class="pu">17.990</span> (o 3 cuotas de $<span class="cv">5.997</span>) y el acceso es tuyo. No se renueva ni se cobra de nuevo.</div></details>
+        <details><summary>¿Y si tengo alguna duda sobre los ejercicios?</summary><div class="a">Podés escribirle a nuestro soporte todas las veces que quieras para aclarar cualquier duda.</div></details>
+      </div>
+
+      <!-- CIERRE -->
+      <div class="blk">
+        <div class="prueba">
+          <div class="n"><small>$<span class="po">47.990</span></small>$<span class="pu">17.990</span></div>
+          <p style="font-size:.88rem;color:var(--steel);margin-top:6px">Pago único · acceso completo al programa · <b><span class="dc">62</span>% OFF solo hoy</b></p>
+          <a class="btn block go" href="#" style="margin-top:16px">Quiero mi plan personalizado ▸</a>
+          <div class="seal" style="margin-top:11px">🛡️ Tu inversión está protegida: 30 días de garantía con reembolso total.</div>
+          <img class="pagos" src="" data-img="pagos" alt="Medios de pago">
+        </div>
+        <p style="text-align:center;font-family:'Oswald';font-size:1.05rem;margin-top:18px">Asegurá ahora tu plan de Calistenia Rusa 👆<br><span style="font-family:'Inter';font-size:.85rem;color:var(--steel);font-weight:500">No es suscripción: pagás una sola vez.</span></p>
+      </div>
+
+      <footer>© 2026 Calistenia Rusa · Coach Santi — Todos los derechos reservados.<br>Términos de Uso · Política de Privacidad</footer>
+    </div>
+  </div>
+</div>
+
+<!-- notificación discreta -->
+<div class="toast" id="toast"><div class="av" id="toastAv">C</div><div><b id="toastName">Claudio R. de Rosario</b><small id="toastSub">hace 2 min · quedan 6 cupos con descuento</small></div></div>
+
+<!-- barra fija -->
+<div class="sticky" id="sticky">
+  <div class="in">
+    <div class="px"><b>$<span class="pu">17.990</span></b>o 3 cuotas de $<span class="cv">5.997</span></div>
+    <a class="btn go" href="#">Quiero mi plan</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var CFG = window.CONFIG || {};
+  function q(s,r){ return (r||document).querySelector(s); }
+  function qa(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+  function safe(n,fn){ try{ fn(); }catch(e){ if(window.console) console.warn('[cr] '+n+':',e); } }
+
+  /* ===== Pixel de Meta ===== */
+  safe('pixel',function(){
+    if(!CFG.PIXEL_ID) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',CFG.PIXEL_ID); fbq('track','PageView');
+  });
+  function px(ev,d){ safe('px',function(){ if(window.fbq) fbq('track',ev,d||{}); }); }
+
+  /* ===== Imágenes, precios y botones ===== */
+  function imgSrc(k){ return (CFG.IMG && CFG.IMG[k]) || ''; }
+  qa('[data-img]').forEach(function(el){
+    var s = imgSrc(el.getAttribute('data-img'));
+    if(s) el.setAttribute('src', s); else el.style.display='none';
+  });
+  qa('.pu').forEach(function(e){ e.textContent = CFG.PRECIO; });
+  qa('.po').forEach(function(e){ e.textContent = CFG.PRECIO_VIEJO; });
+  qa('.cv').forEach(function(e){ e.textContent = CFG.CUOTA_VALOR; });
+  qa('.dc').forEach(function(e){ e.textContent = CFG.DESCUENTO; });
+  if(q('#pU')) q('#pU').textContent = CFG.PRECIO;
+  if(q('#cN')) q('#cN').textContent = CFG.CUOTAS;
+  if(q('#cV')) q('#cV').textContent = CFG.CUOTA_VALOR;
+
+  function checkoutURL(){
+    var base = CFG.LINK_CHECKOUT || '#';
+    var here = window.location.search.replace(/^\?/,'');
+    if(!here) return base;
+    return base + (base.indexOf('?')>-1 ? '&' : '?') + here;
+  }
+  qa('.go').forEach(function(a){
+    a.setAttribute('href', checkoutURL());
+    a.addEventListener('click', function(){ px('InitiateCheckout'); });
+  });
+
+  /* ===== PREGUNTAS ===== */
+  var S = {};   /* respuestas */
+  var STEPS = [
+    { id:'experiencia', type:'single', img:'metodo',
+      h:'¿Ya probaste la calistenia rusa?',
+      sub:'No necesitás experiencia: el 75% de nuestros alumnos empieza de cero.',
+      opts:[ {v:'Sí, ya practiqué'}, {v:'Escuché hablar'}, {v:'Nunca hice, pero me interesa'} ] },
+
+    { id:'objetivo', type:'single', layout:'ph3',
+      h:'¿Qué objetivo es <span class="co">más importante</span> para vos hoy?',
+      opts:[ {v:'Bajar de peso y marcar la panza', img:'objPanza'},
+             {v:'Ganar fuerza y músculo', img:'objFuerza'},
+             {v:'Tener más salud y energía', img:'objSalud'} ] },
+
+    { id:'cuerpo', type:'single', layout:'ph4',
+      h:'¿Cómo describirías tu cuerpo <span class="co">actual</span>?',
+      opts:[ {v:'Flaco', img:'cuerpo1'}, {v:'Flaco con panza', img:'cuerpo2'},
+             {v:'Un poco pasado de peso', img:'cuerpo3'}, {v:'Bastante pasado de peso', img:'cuerpo4'} ] },
+
+    { id:'meta', type:'single', layout:'ph3',
+      h:'¿Y qué cuerpo <span class="co">querés tener</span>?',
+      opts:[ {v:'Flaco', img:'meta1'}, {v:'Definido', img:'meta2'}, {v:'Fuerte y voluminoso', img:'meta3'} ] },
+
+    { id:'molestia', type:'multi',
+      h:'¿Cuál de estas situaciones <span class="co">más te molesta</span> hoy?',
+      sub:'Seleccioná todas las que apliquen.',
+      note:'🔒 Tus datos son 100% confidenciales y están protegidos.',
+      opts:[ {v:'Estoy pasado de peso hace bastante', ic:'⚖️'},
+             {v:'Mi cuerpo vive dolorido y duro', ic:'🤕'},
+             {v:'Vivo cansado y sin energía', ic:'🥱'},
+             {v:'Bajó mi rendimiento sexual', ic:'😮‍💨'},
+             {v:'Duermo muy mal', ic:'🌙'},
+             {v:'Mi mente no para', ic:'😤'},
+             {v:'Solo quiero cuidar mi salud', ic:'🙂', solo:true} ],
+      fb:'Todo eso tiene el mismo origen: la musculatura interna dormida y la testosterona por el piso. Las dos cosas se arreglan con el mismo protocolo.' },
+
+    { id:'frecuencia', type:'single',
+      h:'¿Con qué frecuencia te ejercitás?',
+      opts:[ {v:'Todos los días', ic:'🔥'}, {v:'Algunas veces por semana', ic:'💪'},
+             {v:'Algunas veces por mes', ic:'🚶'}, {v:'Nunca', ic:'🛋️'} ] },
+
+    { id:'flexiones', type:'single',
+      h:'¿Cuántas flexiones podés hacer seguidas?',
+      sub:'Es el test que usamos para calibrar tu nivel de arranque.',
+      opts:[ {v:'No puedo hacer flexiones'}, {v:'1 – 10 flexiones'},
+             {v:'11 – 20 flexiones'}, {v:'Más de 20 flexiones'} ],
+      fb:'Perfecto, con esto ya sé por dónde arrancar tu progresión. Nadie empieza por donde no puede.' },
+
+    { id:'orgullo', type:'single', img:'orgullo',
+      h:'¿Cuándo fue la última vez que sentiste <span class="co">orgullo</span> de tu cuerpo?',
+      opts:[ {v:'Hace menos de 1 año'}, {v:'Hace 1 – 3 años'},
+             {v:'Hace más de 3 años'}, {v:'Ni me acuerdo'} ] },
+
+    { id:'dolor', type:'multi', layout:'ph2',
+      h:'¿Sentís alguna molestia o dolor en estas zonas?',
+      sub:'Vamos a proteger las zonas lesionadas y, al mismo tiempo, armar un plan para recuperar tu cuerpo.',
+      opts:[ {v:'Espalda / lumbar', img:'dolorEspalda'}, {v:'Rodillas / piernas', img:'dolorRodillas'} ],
+      extra:{v:'Ninguna de estas', ic:'✅', solo:true} },
+
+    { id:'intensidad', type:'single',
+      h:'¿Y cómo preferís empezar tu entrenamiento?',
+      sub:'Podés cambiar esto después.',
+      opts:[ {v:'Bien suave', ic:'🌱'}, {v:'Intermedio', ic:'🔸'},
+             {v:'Más activo', ic:'⚡'}, {v:'Que decida el Coach Santi', ic:'✅'} ] },
+
+    { id:'altura', type:'metric', unit:'cm', min:140, max:210, def:175,
+      h:'¿Cuánto medís?',
+      note:'☝️ Tu altura nos sirve para adaptar la amplitud de cada movimiento.' },
+
+    { id:'pesoActual', type:'metric', unit:'kg', min:50, max:180, def:88,
+      h:'¿Cuál es tu peso actual?' },
+
+    { id:'pesoMeta', type:'metric', unit:'kg', min:50, max:180, def:78,
+      h:'¿Y a qué peso querés llegar?' }
+  ];
+
+  var TOTAL = STEPS.length + 1;   /* + la edad de la portada */
+  var idx = 0;
+  var slide = q('#qSlide');
+
+  if(q('#qTot')) q('#qTot').textContent = TOTAL;
+
+  function paintTop(){
+    q('#qNum').textContent = idx + 2;
+    q('#qBar').style.width = ((idx+2)/TOTAL*100) + '%';
+    q('#qBack').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  }
+
+  function optHTML(o, st, on){
+    if(o.img){
+      return '<button class="opt ph'+(on?' on':'')+'" data-v="'+o.v+'">'+
+             '<img src="'+imgSrc(o.img)+'" alt=""><span class="lab">'+o.v+'</span></button>';
+    }
+    var ck = st.type === 'multi' ? '<span class="ck">✓</span>' : '';
+    var ic = o.ic ? '<span class="ic">'+o.ic+'</span>' : '';
+    return '<button class="opt'+(on?' on':'')+'" data-v="'+o.v+'">'+ic+'<span class="tx">'+o.v+'</span>'+ck+'</button>';
+  }
+
+  function render(){
+    var st = STEPS[idx];
+    paintTop();
+    var h = '<div class="q-h">'+st.h+'</div>';
+    if(st.sub) h += '<div class="q-sub">'+st.sub+'</div>';
+    if(st.img) h += '<div class="q-img"><img src="'+imgSrc(st.img)+'" alt=""></div>';
+
+    if(st.type === 'metric'){
+      var v = S[st.id] || st.def;
+      h += '<div class="metric"><div class="big"><span id="mv">'+v+'</span><span>'+st.unit+'</span></div>'+
+           '<input type="range" id="mr" min="'+st.min+'" max="'+st.max+'" value="'+v+'">'+
+           '<div class="ends"><span>'+st.min+' '+st.unit+'</span><span>'+st.max+' '+st.unit+'</span></div></div>';
+      h += '<button class="btn block q-next" id="qnext">Siguiente paso ▸</button>';
+    } else {
+      var sel = S[st.id];
+      var cls = 'opts' + (st.layout ? ' '+st.layout : '');
+      h += '<div class="'+cls+'">';
+      st.opts.forEach(function(o){
+        var on = st.type === 'multi' ? (sel||[]).indexOf(o.v) > -1 : sel === o.v;
+        h += optHTML(o, st, on);
+      });
+      h += '</div>';
+      if(st.extra){
+        var onx = (sel||[]).indexOf(st.extra.v) > -1;
+        h += '<div class="opts" style="margin-top:10px">'+optHTML(st.extra, st, onx)+'</div>';
+      }
+      if(st.fb) h += '<div class="q-fb" id="qfb"><span class="who">★ Coach Santi</span><p>'+st.fb+'</p></div>';
+      if(st.type === 'multi') h += '<button class="btn block q-next" id="qnext">Continuar ▸</button>';
+    }
+    if(st.note) h += '<div class="q-note">'+st.note+'</div>';
+
+    slide.innerHTML = h;
+    slide.style.animation = 'none'; void slide.offsetWidth; slide.style.animation = '';
+    bind(st);
+    window.scrollTo(0,0);
+  }
+
+  function bind(st){
+    if(st.type === 'metric'){
+      var r = q('#mr'), o = q('#mv');
+      r.addEventListener('input', function(){ o.textContent = r.value; S[st.id] = +r.value; });
+      S[st.id] = +r.value;
+      q('#qnext').addEventListener('click', next);
+      return;
+    }
+    var all = st.extra ? st.opts.concat([st.extra]) : st.opts;
+    qa('.opt', slide).forEach(function(b){
+      b.addEventListener('click', function(){
+        var v = b.getAttribute('data-v');
+        var def = all.filter(function(o){ return o.v === v; })[0] || {};
+        if(st.type === 'multi'){
+          var cur = S[st.id] || [];
+          if(def.solo){
+            cur = cur.indexOf(v) > -1 ? [] : [v];
+          } else {
+            cur = cur.filter(function(x){
+              var d = all.filter(function(o){ return o.v === x; })[0] || {};
+              return !d.solo;
+            });
+            cur = cur.indexOf(v) > -1 ? cur.filter(function(x){ return x !== v; }) : cur.concat([v]);
+          }
+          S[st.id] = cur;
+          qa('.opt', slide).forEach(function(x){
+            x.classList.toggle('on', cur.indexOf(x.getAttribute('data-v')) > -1);
+          });
+          var fb = q('#qfb'); if(fb && cur.length) fb.classList.add('on');
+        } else {
+          S[st.id] = v;
+          qa('.opt', slide).forEach(function(x){ x.classList.remove('on'); });
+          b.classList.add('on');
+          var f2 = q('#qfb');
+          if(f2){ f2.classList.add('on'); slide.style.pointerEvents='none'; setTimeout(function(){ slide.style.pointerEvents=''; next(); }, 1400); }
+          else { slide.style.pointerEvents='none'; setTimeout(function(){ slide.style.pointerEvents=''; next(); }, 190); }
+        }
+      });
+    });
+    var nb = q('#qnext'); if(nb) nb.addEventListener('click', next);
+  }
+
+  function next(){ if(idx < STEPS.length - 1){ idx++; render(); } else finish(); }
+  q('#qBack').addEventListener('click', function(){ if(idx > 0){ idx--; render(); } });
+
+  /* ===== PORTADA (edad) → quiz ===== */
+  qa('#ageOpts .age').forEach(function(b){
+    b.addEventListener('click', function(){
+      S.edad = b.getAttribute('data-v');
+      px('Lead', {content_name:'quiz_start'});
+      q('#landing').style.display = 'none';
+      q('#quiz').style.display = 'block';
+      idx = 0; render();
+    });
+  });
+
+  /* ===== FIN DEL QUIZ → análisis → perfil ===== */
+  function finish(){
+    q('#quiz').style.display = 'none';
+    var ld = q('#qload'); ld.style.display = 'flex';
+    window.scrollTo(0,0);
+    var p = 0, steps = qa('.ldstep');
+    var iv = setInterval(function(){
+      p += Math.random() * 7 + 3;
+      if(p >= 100){ p = 100; clearInterval(iv); setTimeout(showPerfil, 420); }
+      q('#ldPc').textContent = Math.round(p) + '%';
+      q('#ldBar').style.width = p + '%';
+      steps.forEach(function(s,i){ s.classList.toggle('on', p >= (i+1) * 22); });
+    }, 180);
+  }
+
+  function showPerfil(){
+    buildPerfil();
+    q('#qload').style.display = 'none';
+    q('#perfil').style.display = 'block';
+    window.scrollTo(0,0);
+    px('ViewContent', {content_name:'perfil'});
+  }
+
+  /* ===== PERFIL ===== */
+  function buildPerfil(){
+    var h = (S.altura || 175) / 100, w = S.pesoActual || 88, meta = S.pesoMeta || 78;
+    var imc = w / (h*h);
+    var lbl = imc < 18.5 ? 'bajo peso' : imc < 25 ? 'peso saludable' : imc < 30 ? 'sobrepeso' : 'obesidad';
+    /* posición coherente con la etiqueta: 0–18,5 → 0-18% · 18,5–25 → 18-45% · 25–30 → 45-72% · 30+ → 72-96% */
+    var pos;
+    if(imc < 18.5)      pos = Math.max(4, imc/18.5*18);
+    else if(imc < 25)   pos = 18 + (imc-18.5)/6.5*27;
+    else if(imc < 30)   pos = 45 + (imc-25)/5*27;
+    else                pos = Math.min(96, 72 + (imc-30)/10*24);
+
+    q('#imcLabel').textContent = lbl;
+    q('#imcVal').textContent = imc.toFixed(1).replace('.', ',');
+    setTimeout(function(){ q('#imcDot').style.left = pos + '%'; }, 220);
+    q('#tEdad').textContent = S.edad || '40 a 49 años';
+
+    var kg = Math.max(0, Math.round(w - meta));
+    q('#metaTxt').innerHTML = 'Estimamos que llegás a tu meta de <b>' + meta + ' kg</b> en hasta <b>28 días</b>.';
+    q('#winKg').textContent = kg > 0 ? ('Pérdida de ' + kg + ' kg de grasa abdominal') : 'Panza firme y cintura más marcada';
+
+    var dolores = (S.dolor || []).filter(function(x){ return x !== 'Ninguna de estas'; });
+    var chips = [
+      ['🎯 Objetivo', S.objetivo || '—'],
+      ['🏋️ Intensidad', S.intensidad || '—'],
+      ['⚖️ Peso actual', w + ' kg'],
+      ['🔥 Meta de peso', meta + ' kg'],
+      ['💪 Nivel de arranque', S.flexiones || '—'],
+      ['🩹 Zonas a proteger', dolores.length ? dolores.join(' · ') : 'Ninguna']
+    ];
+    q('#chips').innerHTML = chips.map(function(c){
+      return '<div class="chip">' + c[0] + '<b>' + c[1] + '</b></div>';
+    }).join('');
+  }
+
+  q('#toVSL').addEventListener('click', function(){
+    q('#perfil').style.display = 'none';
+    q('#final').style.display = 'block';
+    window.scrollTo(0,0);
+    mountPlayer();
+  });
+
+  /* ===== PASO FINAL: VSL ===== */
+  var SEG = +(CFG.SEGUNDOS_OFERTA || 230);
+  var shown = false;
+
+  function showOffer(){
+    if(shown) return; shown = true;
+    q('#oferta-wrap').style.display = 'block';
+    q('#vslWait').style.display = 'none';
+    q('#sticky').classList.add('on');
+    startTimer(); startToasts();
+    px('ViewContent', {content_name:'oferta'});
+  }
+
+  function mountPlayer(){
+    var frame = q('#vslFrame');
+    var tpl = q('#vsl-template');
+    var embed = tpl ? tpl.innerHTML.trim() : '';
+    var backup = setTimeout(showOffer, SEG * 1000);   /* respaldo por reloj */
+
+    if(CFG.VIDEO_URL){
+      var v = document.createElement('video');
+      v.src = CFG.VIDEO_URL; v.playsInline = true; v.setAttribute('playsinline','');
+      v.preload = 'auto'; v.controls = false;
+      frame.insertBefore(v, frame.firstChild);
+      v.addEventListener('timeupdate', function(){
+        if(v.currentTime >= SEG){ clearTimeout(backup); showOffer(); }
+      });
+      /* arranca CON sonido; si el navegador lo rechaza, mute + cartel */
+      v.muted = false;
+      var p = v.play();
+      if(p && p.catch){
+        p.catch(function(){
+          v.muted = true; v.play();
+          var g = q('#soundGate'); g.classList.add('on');
+          g.addEventListener('click', function(){ v.muted = false; v.play(); g.classList.remove('on'); });
+        });
+      }
+      return;
+    }
+
+    if(embed){
+      frame.insertAdjacentHTML('afterbegin', embed);
+      /* Panda informa el tiempo por postMessage; VTurb por su API */
+      window.addEventListener('message', function(e){
+        var d = e.data;
+        if(d && d.message === 'panda_timeupdate' && d.currentTime >= SEG){ clearTimeout(backup); showOffer(); }
+      });
+      setInterval(function(){
+        safe('vturb', function(){
+          var i = window.smartplayer && window.smartplayer.instances && window.smartplayer.instances[0];
+          if(i && i.video && i.video.currentTime >= SEG){ clearTimeout(backup); showOffer(); }
+        });
+      }, 1000);
+      return;
+    }
+
+    var ph = document.createElement('div');
+    ph.className = 'vsl-ph';
+    ph.innerHTML = 'VSL acá<small>Pegá la URL del MP4 en CONFIG.VIDEO_URL<br>o el embed en &lt;template id="vsl-template"&gt;<br><br>La oferta aparece igual a los ' + SEG + ' s</small>';
+    frame.insertBefore(ph, frame.firstChild);
+  }
+
+  /* ===== cuenta regresiva ===== */
+  function startTimer(){
+    var left = 15 * 60, el = q('#tmr');
+    setInterval(function(){
+      if(left > 0) left--;
+      var m = Math.floor(left/60), s = left % 60;
+      el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    }, 1000);
+  }
+
+  /* ===== notificaciones discretas (los cupos solo bajan) ===== */
+  var NOMBRES = ['Claudio R. de Rosario','Marcelo G. de Córdoba','Daniel P. de La Plata','Jorge M. de Mendoza',
+                 'Alberto S. de Mar del Plata','Rubén T. de Salta','Oscar L. de Tucumán','Fabián C. de Quilmes',
+                 'Gustavo A. de Neuquén','Héctor V. de Santa Fe'];
+  function startToasts(){
+    var i = 0, cupos = 6, t = q('#toast');
+    function tick(){
+      var n = NOMBRES[i % NOMBRES.length]; i++;
+      if(cupos > 2 && i % 2 === 0) cupos--;
+      qa('#cupos').forEach(function(e){ e.textContent = cupos; });
+      q('#toastAv').textContent = n.charAt(0);
+      q('#toastName').textContent = n;
+      q('#toastSub').textContent = 'hace ' + (2 + (i % 7)) + ' min · quedan ' + cupos + ' cupos con descuento';
+      t.classList.add('on');
+      setTimeout(function(){ t.classList.remove('on'); }, 4500);
+    }
+    setTimeout(tick, 4000);
+    setInterval(tick, 16000);
+  }
+
+  /* debug */
+  window.__cr = { state:S, go:function(i){ idx=i; q('#landing').style.display='none'; q('#quiz').style.display='block'; render(); },
+                  oferta:function(){ q('#perfil').style.display='none'; q('#final').style.display='block'; showOffer(); } };
+})();
+</script>
+</body>
+</html>

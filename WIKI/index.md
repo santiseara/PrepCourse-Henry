@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
@@ -94,6 +95,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Quiz de Calistenia Rusa](../OUTPUTS/2026-10-26-quiz-calistenia-rusa.html) — el quiz de Calistenia Asiática H40+ recortado de 21 preguntas a 14, tema ruso (rojo + grafito), perfil con IMC y previsión, VSL arriba y oferta oculta · ver [[calistenia-rusa]]
 - [2026-10-26 — Quiz de Tai Chi Fit](../OUTPUTS/2026-10-26-quiz-tai-chi-fit.html) — clon del quiz de Calistenia Militar Femenina adaptado a Tai Chi: 10 pasos, VSL arriba y oferta oculta, $14.990 con cuotas de Mercado Pago · ver [[tai-chi-fit]]
 - [2026-10-26 — Producto de Herrero de Finde](../OUTPUTS/scripts-producto/) — generador: 1.205 planos en 8 categorías + 280 en packs extra + los 12 bonus (planilla de cortes en Excel incluida) · ver [[herrero-de-finde]]
 - [2026-10-26 — Keywords para cazar ingresos (BR + AR)](../OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md) — banco de keywords por 6 ejes (footprints de checkout nuevos, mecánica de entrega, oficio + vender, atajos sin oficio) + las que no usar porque traen marca personal · ver [[caza-de-ofertas]]

@@ -1,3 +1,15 @@
+## 2026-10-26 (noche, 2) — Calistenia Rusa: oferta nueva y quiz armado
+
+- Santiago: *"se me acaba de ocurrir un nuevo producto, Calistenia Rusa del Coach Santi, cuando todos venden calistenia militar, nosotros nos diferenciamos ahi, quiero que hagamos un quiz simple, porque va a tener vsl"*.
+- **Modelo:** su propio quiz de `calisteniaasiaticahombres.impultienda.ar` (Calistenia Asiática H40+, Maestro Kaito). Es ImpulTienda con `custom_html` pero adentro trae un **funnel de InLead exportado sin cifrar** en `window.FUNNEL`: se bajó con `curl` y se parseó entero (38 pasos, 92 imágenes).
+- **Recorte elegido por Santiago (opción media): de 21 preguntas a 14.** Se fueron los 9 bridges de texto, el biotipo, el bloque de hábitos (agua, sueño, alimentación, energía) y la segunda página de venta duplicada.
+- **Tema ruso:** rojo #C8102E + grafito sobre blanco (el original es azul iOS), Oswald + Inter, estrella roja, Coach Santi en lugar del Maestro Kaito.
+- **Imágenes:** 29 reusadas del original (ninguna con marca), la flecha azul del antes/después recoloreada a rojo con Pillow, y un **mockup nuevo** del celular con la app hecho en Higgsfield (gpt_image_2, 1k, High, 1:1).
+- **Probado paso por paso en Chrome:** las 14 preguntas, los multi-select con opción excluyente, los tres medidores, el IMC con la bolita coherente con la etiqueta, el gráfico de previsión y la oferta con el orden de siempre (cuenta regresiva → cuotas → aviso de mail → botón).
+- Entregables en `~/Desktop/calistenia-rusa/` (`landing/`, `imagenes/`) + copia en `OUTPUTS/2026-10-26-quiz-calistenia-rusa.html`.
+- Reglas nuevas en [[quizzes-reglas-de-armado]]: cómo se saca un InLead exportado dentro de ImpulTienda, cómo se recorta un quiz cuando el embudo lleva VSL, el texto curvo de los sellos solo en el arco de arriba, y el recoloreo de imágenes reusadas cuando cambia la paleta.
+- Página nueva: [[calistenia-rusa]].
+
 ## 2026-10-26 (noche) — 365 Actividades: visuales de TikTok y voz más rápida
 
 - Santiago: *"quiero que saques visuales de tiktok, más alineado a lo que vendemos… recordá que sean sin subtítulos… no uses mucho de stock"* + *"metele un poquito de velocidad a la voz"*.

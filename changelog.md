@@ -1,3 +1,11 @@
+## 2026-10-26 (noche) — 365 Actividades: visuales de TikTok y voz más rápida
+
+- Santiago: *"quiero que saques visuales de tiktok, más alineado a lo que vendemos… recordá que sean sin subtítulos… no uses mucho de stock"* + *"metele un poquito de velocidad a la voz"*.
+- **44 clips de TikTok bajados sin marca de agua** con tikwm (la búsqueda de TikTok tira error en el navegador: se entra por el perfil del creador). Se usan 27 de **@dccraftlab** y **@healthy.mum.and.b**; los **2 que pidió sí o sí** quedaron anclados en los seis videos.
+- Filtrados a mano: carteles quemados, la cara del creador hablando a cámara y **dos clips con capturas de TikTok Studio** que se habían colado en el primer render. Del stock quedaron 5 clips, solo para caras de chicos.
+- Voz de **1.22 a 1.30**. Los seis videos quedaron de 36 a 43 s (antes 38 a 46).
+- Reglas nuevas en [[guiones-y-anuncios]]: de dónde salen las visuales y cómo se filtran, y la velocidad de la voz.
+
 ## 2026-10-26 (tarde, 4) — Herrero de Finde: 4 de los 6 videos de la tanda V28–V33
 
 - **Producidos y listos para subir:** `HF-V28-electrodos`, `HF-V29-media-chapa`, `HF-V30-el-flete` y `HF-V31-sin-poner-un-peso`, de 46 a 57 segundos.

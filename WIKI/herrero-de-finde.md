@@ -108,6 +108,20 @@
 - Santiago pidió 6 aunque su regla de variables es 3. Se le marcó que son 6 apuestas sobre un dato de un solo día y que lo prudente sería subir 3 y esperar la confirmación del V7.
 - Faltan las voces y el render.
 
+## Tanda V28–V33 (2026-10-26)
+
+- **Guiones:** `OUTPUTS/2026-10-26-guiones-herrero-v28-v33.md`. Tres variables de la DNA del V7 (electrodos → el precio sugerido · media chapa → las tres vistas · el flete → la lista de compras) y tres de bizop (arrancar sin poner un peso · la cuenta de cuatro sábados · a quién le vendo).
+- **Antes, 6 renovaciones** (Guiones 22 a 27) sobre los cuerpos del CJTO 5 y del CJTO 6: `OUTPUTS/2026-10-26-renovaciones-herrero-v22-v27.md`.
+- **Material nuevo para los videos, con los números del producto:** `anuncios/work/stills/mk_fichas.py` genera una ficha por plano (isométrico + hierro + precio + horas) importando el generador del producto, así el número que se dice coincide con el que se ve. Se sumaron además tres páginas reales exportadas del PDF: `hoja-trabajo.png` (hoja 1 de BQ-090, con el precio), `hoja-vistas.png` (hoja 2 de FN-107) y `catalogo-clientes.png` (del Bonus 12).
+- **Planes:** `anuncios/work/plans/gen4.py`, con **validación propia de anclas**: compara cada ancla y cada overlay contra el `.txt` de voz, corrige la forma exacta (tildes incluidas) y corta la generación si una palabra no existe. Atajó el error de `comprar.` por `compre.` antes de renderizar.
+- **Voces:** Knox + el Style argentino de siempre. V28 a V31 grabadas; **V32 y V33 quedaron pendientes porque la extensión de Chrome perdió la pestaña cinco veces seguidas**.
+### Tres cosas que salieron de este render (reglas)
+- **Dos clips más del B-roll quedaron vetados.** `B` (7253123425676365083) lleva el cartel en inglés *"Watch us build our custom fire pit"* **de 0 a 9 s**: en `gen4.py` está `DESDE = {'B': 10.5}`. `c` (7691053148219198752) cierra con la **placa de marca de otra herrería** ("Edouane SB Welding") desde el segundo 256: `LIMITE = {'Y': 96, 'c': 254}`. Los dos se colaron en el primer render y se vieron recién al mirar los frames del video terminado.
+- **Las etiquetas del hook van con tilde.** Salieron "MAS CARO", "MAS QUE MEDIA CHAPA" y "MAS BARATO" en pantalla. El hook es texto que se dibuja, no se transcribe: hay que escribirlo bien a mano.
+- **No renderizar dos videos al mismo tiempo.** Dos procesos a la vez sobre la carpeta del Escritorio dieron `Operation timed out` al concatenar los segmentos (ffmpeg error 196) y perdieron dos renders. De a uno.
+
+- **Ojo con la cuenta de Google:** cuando la extensión abre una ventana nueva, AI Studio puede cargar con otra cuenta del navegador (apareció `damianmartinaguilar@…` en vez de `searasantiago58@…`). Verificar la cuenta del pie izquierdo antes de generar.
+
 ## Banco de fichas verificadas (2026-10-25)
 Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes de poner un número en un guion, sale de acá.**
 

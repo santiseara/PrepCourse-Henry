@@ -1,3 +1,12 @@
+## 2026-10-26 (tarde, 4) — Herrero de Finde: 4 de los 6 videos de la tanda V28–V33
+
+- **Producidos y listos para subir:** `HF-V28-electrodos`, `HF-V29-media-chapa`, `HF-V30-el-flete` y `HF-V31-sin-poner-un-peso`, de 46 a 57 segundos.
+- **Fichas nuevas generadas desde el producto** (`anuncios/work/stills/mk_fichas.py`): el número que se dice en el guion es el mismo que se ve en pantalla. Se sumaron tres páginas reales del PDF como stills (hoja 1 con el precio, hoja 2 con las tres vistas, y una página del catálogo para clientes).
+- **`gen4.py` valida las anclas** contra el texto de voz antes de renderizar: atajó `comprar.` por `compre.`.
+- **Dos clips de B-roll vetados** después de mirar los frames: uno con cartel en inglés y otro con la marca de otra herrería. Reglas anotadas en [[herrero-de-finde]].
+- **Faltan V32 y V33:** la extensión de Chrome perdió la pestaña seis veces y no se pudieron grabar las dos voces que quedaban. Los guiones, los planes y las fichas ya están hechos: es solo grabar y renderizar.
+- Regla nueva de Santiago: **mutear las páginas que uso** ([[como-trabajar-con-santiago]]).
+
 ## 2026-10-26 (tarde, 3) — Herrero de Finde: 3 variables y 3 de bizop
 
 - **Guiones 28 a 30 (variables de la DNA del V7):** electrodos → el precio de venta sugerido (BQ-090), media chapa de 3 mm → las tres vistas con cada medida (FN-107) y el flete → la lista de compras sumada en barras (TK-024). Cada uno con cuerpo propio, una sola hoja del plano explicada y una ficha real.

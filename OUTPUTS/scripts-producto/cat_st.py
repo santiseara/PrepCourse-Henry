@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ pérgola
-def pergola(cod, L, A, H=2400):
+def pergola(L, A, H=2400):
     pz = []
     for (x, y) in [(50, 50), (L-50, 50), (50, A-50), (L-50, A-50)]:
         pz.append(vz('columna', 'columna', 'TC100', 0, H, x, y))
@@ -36,11 +36,9 @@ def pergola(cod, L, A, H=2400):
        'Nunca sueldes las vigas de arriba con las columnas solo apuntaladas de un lado: ponelas a plomo en los dos '
        'sentidos y recién ahí soldá.'],
       variante='%d x %d x %d mm · 7 listones' % (L, A, H))
-P.append(('ST-015', pergola('ST-015', 3000, 3000)))
-P.append(('ST-022', pergola('ST-022', 4000, 3000)))
 
 # ------------------------------------------------------------------ cochera
-def cochera(cod, L, A, alto_bajo=2300, alto_alto=2750):
+def cochera(L, A, alto_bajo=2300, alto_alto=2750):
     pz = []
     for x in (60, L-60):
         pz.append(vz('columna', 'columna alta', 'TC100', 0, alto_alto, x, 60))
@@ -73,11 +71,9 @@ def cochera(cod, L, A, alto_bajo=2300, alto_alto=2750):
       ['La pendiente mínima es 5 %. Con menos, el agua se queda, entra por los tornillos y te llaman por goteras.',
        'Nunca trabajes solo levantando cabios de 5 metros. Es el momento en que pasan los accidentes.'],
       variante='%d x %d mm · un agua, pendiente de %d mm' % (L, A, alto_alto - alto_bajo))
-P.append(('ST-038', cochera('ST-038', 3000, 5500)))
-P.append(('ST-046', cochera('ST-046', 5500, 5500, 2400, 3000)))
 
 # ------------------------------------------------------------------ escalera recta
-def escalera(cod, H, L, n):
+def escalera(H, L, n):
     paso = L/float(n)
     alza = H/float(n)
     pz = []
@@ -114,8 +110,6 @@ def escalera(cod, H, L, n):
        'Las dos zancas se marcan juntas. Si marcás una y después la otra, los peldaños te quedan torcidos y se ve de lejos.'],
       dims=[dict(vista='frente', tipo='v', a=0, b=alza, ref=paso*0.5, off=-16, lado=-1, txt='alzada %d mm' % int(alza))],
       variante='%d mm de alto · %d escalones · ancho 900 mm' % (H, n))
-P.append(('ST-064', escalera('ST-064', 2800, 3200, 14)))
-P.append(('ST-071', escalera('ST-071', 2200, 2500, 11)))
 
 # ------------------------------------------------------------------ baranda de galería
 def baranda_galeria(L=3000, H=1000):
@@ -143,18 +137,9 @@ def baranda_galeria(L=3000, H=1000):
       ['La separación entre barrotes no pasa de 110 mm. Es seguridad, y es lo primero que mira un arquitecto.',
        'Hacete la plantilla de posición de barrotes. Diez metros de baranda a ojo se nota en la primera foto.'],
       variante='%d x %d mm · barrotes cada 110 mm' % (L, H))
-P.append(('ST-029', baranda_galeria()))
-P.append(('ST-033', baranda_galeria(2000)))
-P.append(('ST-036', baranda_galeria(4000, 1100)))
-P.append(('ST-008', pergola('ST-008', 5000, 3000, 2500)))
-P.append(('ST-011', pergola('ST-011', 2500, 2500, 2300)))
-P.append(('ST-042', cochera('ST-042', 3000, 6000, 2400, 2900)))
-P.append(('ST-059', escalera('ST-059', 3400, 3900, 17)))
-P.append(('ST-061', escalera('ST-061', 1800, 2000, 9)))
 
 # ------------------------------------------------------------------ alero de entrada
-def alero():
-    L, A, H = 2000, 1200, 2400
+def alero(L=2000, A=1200, H=2400):
     pz = [vx('muro', 'perfil contra el muro', 'C100', 0, L, 0, H)]
     for x in (40, L-40):
         pz.append(Pz('cabio', 'cabio', 'TR6040', (x, 0, H), (x, A, H-180), corte='en ángulo'))
@@ -172,7 +157,7 @@ def alero():
       ('Pintá todo antes de techar.', ['correa']),
       ('Amurá la chapa o el policarbonato con tornillos y arandela de goma.', ['correa']),
     ]
-    return Plano('ST', 'Alero de entrada de 2 m', pz, pasos, (6, 9), 'Intermedio',
+    return Plano('ST', 'Alero de entrada de %s' % metros(L), pz, pasos, (6, 9), 'Intermedio',
       'Alero en voladizo de 1,20 m sobre la puerta: tres cabios, dos tensores en diagonal y tres correas. '
       'Todo el secreto está en el amure al muro y en los tensores.',
       'Casas, locales, entradas de edificio y accesos de galpón. Es un trabajo chico que resuelve un problema evidente: '
@@ -180,12 +165,10 @@ def alero():
       HERR_PLUS + ['nivel de burbuja', 'brocas de 12', 'escalera'],
       ['Amurá a ladrillo macizo u hormigón. En ladrillo hueco hay que pasar de lado a lado con varilla roscada, no con tarugo.',
        'Sin los tensores diagonales, el alero se vence hacia abajo en el primer año. No los saques "porque se ven".'],
-      variante='2.000 x 1.200 mm · voladizo con tensores')
-P.append(('ST-053', alero()))
+      variante='%d x %d mm · voladizo con tensores' % (L, A))
 
 # ------------------------------------------------------------------ invernadero
-def invernadero():
-    L, A, H, Hc = 6000, 3000, 2000, 2600
+def invernadero(L=6000, A=3000, H=2000, Hc=2600):
     pz = []
     for x in reparto(0, L, 5):
         pz += [vz('columna', 'columna', 'TC50', 0, H, x, 25),
@@ -209,7 +192,7 @@ def invernadero():
       ('Soldá la cruz de San Andrés en un lateral.', ['cruz']),
       ('Pintá todo de blanco: el blanco refleja y el nylon dura el doble que sobre hierro negro al sol.', ['cruz']),
     ]
-    return Plano('ST', 'Invernadero de 6 x 3 m', pz, pasos, (20, 28), 'Intermedio',
+    return Plano('ST', 'Invernadero de %s' % med2(L, A), pz, pasos, (20, 28), 'Intermedio',
       'Estructura de invernadero a dos aguas de 6 x 3 m, con diez columnas, cabios, cumbrera y correas. Se cubre con '
       'nylon de 150 micrones, que compra el cliente.',
       'Quintas, viveros, escuelas rurales y huertas familiares. Es un trabajo de muchas piezas iguales: hacete la '
@@ -217,12 +200,10 @@ def invernadero():
       HERR_BASE + ['nivel de burbuja', 'escuadra grande'],
       ['Pintá de blanco y lijá cualquier filo. El nylon se corta en el primer punto de soldadura que quedó con rebaba.',
        'Dejá los extremos previstos para poner la puerta antes de cerrar: después del nylon no se corrige nada.'],
-      variante='6.000 x 3.000 mm · dos aguas · 10 columnas')
-P.append(('ST-080', invernadero()))
+      variante='%d x %d mm · dos aguas' % (L, A))
 
 # ------------------------------------------------------------------ escalera de gato
-def escalera_gato():
-    H, A = 3500, 500
+def escalera_gato(H=3500, A=500):
     pz = [vz('larguero', 'larguero', 'TC50', 0, H, 0, 0),
           vz('larguero', 'larguero', 'TC50', 0, H, 0, A)]
     for z in reparto(300, H-200, 12):
@@ -238,7 +219,7 @@ def escalera_gato():
       ('Rematá el cordón alrededor de cada peldaño: acá se cuelga una persona.', ['peldaño']),
       ('Amurá con brocas de 12, separada 200 mm de la pared para que entre el pie.', ['amure']),
     ]
-    return Plano('ST', 'Escalera de gato de 3,50 m', pz, pasos, (4, 6), 'Principiante',
+    return Plano('ST', 'Escalera de gato de %s' % metros(H), pz, pasos, (4, 6), 'Principiante',
       'Escalera fija de pared con doce peldaños de redondo de 20 y soportes de amure. Para subir al techo, al tanque '
       'o al entrepiso sin andar buscando la escalera de mano.',
       'Galpones, talleres, consorcios y casas con tanque alto. Es un trabajo chico, rápido, y lo piden cuando ya se '
@@ -246,5 +227,4 @@ def escalera_gato():
       HERR_PLUS,
       ['Separada 200 mm de la pared. Al ras, no entra el pie y la escalera no sirve.',
        'El peldaño de redondo se suelda con cordón completo alrededor. Medio cordón se parte justo cuando hay alguien arriba.'],
-      variante='3.500 mm de alto · 12 peldaños · ancho 500 mm')
-P.append(('ST-087', escalera_gato()))
+      variante='%d mm de alto · 12 peldaños · ancho %d mm' % (H, A))

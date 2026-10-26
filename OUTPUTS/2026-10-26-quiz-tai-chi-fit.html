@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAI CHI FIT — Transformá tu cuerpo en 28 días</title>
+
+<!-- ==========================================================================
+     TAI CHI FIT — QUIZ + VSL  ·  bloque de configuración
+     Todo lo que se toca está acá. El resto no hace falta tocarlo.
+     ========================================================================== -->
+<script>
+window.CONFIG = {
+
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL. */
+  LINK_CHECKOUT: "https://tai-chi-fit.impultienda.ar/checkout",
+
+  /* Pixel de Meta. Dejalo vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos de VSL vistos antes de que aparezca la oferta.
+     OJO: tiene que ser el segundo exacto en que NUESTRO VSL dice el precio.
+     230 = 3:50 · 960 = 16:00 */
+  SEGUNDOS_OFERTA: 230,
+
+  /* VSL propio: pegá acá la URL del MP4 (720x1280, faststart).
+     Si lo dejás vacío usa el embed de <template id="vsl-template"> de más abajo,
+     y si tampoco hay embed muestra el recuadro de prueba. */
+  VIDEO_URL: "",
+
+  /* Imágenes. Pegá la URL de ImpulTienda de cada una (o dejá el archivo local). */
+  IMG: {
+    portada:   "../imagenes/portada-transformaciones.jpg",
+    hero:      "../imagenes/hero-maestra.png",
+    maestra:   "../imagenes/maestra-valentina.png",
+    resultado1:"../imagenes/resultado-1.jpg",
+    resultado2:"../imagenes/resultado-2.webp",
+    resultado3:"../imagenes/resultado-3.webp",
+    resultado4:"../imagenes/resultado-4.webp",
+    rodillas:  "../imagenes/zona-rodillas.webp",
+    munecas:   "../imagenes/zona-munecas.webp",
+    hombros:   "../imagenes/zona-hombros.webp",
+    cuello:    "../imagenes/zona-cuello.webp",
+    espalda:   "../imagenes/zona-espalda.webp"
+  },
+
+  /* Precios. Si cambia el precio hay que cambiarlo en los 4 lugares. */
+  PRECIO:        "14.990",
+  PRECIO_VIEJO:  "49.990",
+  DESCUENTO:     "70",
+  CUOTAS:        "3",
+  CUOTA_VALOR:   "4.997"
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root{
+    --jade:#1E3328;        /* verde jade oscuro: base */
+    --jade-2:#33503E;
+    --bamboo:#93A86E;      /* verde bambú claro */
+    --bamboo-d:#6F8A52;
+    --cinnabar:#E2552B;    /* bermellón: acento */
+    --cinnabar-d:#BE3C15;
+    --red:#C8232B;         /* rojo alerta */
+    --red-d:#92121A;
+    --blush:#F4C9B4;
+    --sand:#EDE3D0;        /* papel de arroz: fondo */
+    --sand-2:#DFD2B9;
+    --rice:#FCF7EC;        /* superficie cards */
+    --ink:#1C2419;
+    --muted:#6E7458;
+    --shadow:0 18px 44px -20px rgba(20,35,27,.55);
+    --shadow-s:0 10px 26px -16px rgba(20,35,27,.5);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--sand);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,.osw{font-family:'Oswald',sans-serif;line-height:1.02;text-transform:uppercase;letter-spacing:.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  img{max-width:100%}
+  .hidden{display:none!important}
+
+  /* topo background */
+  .topo{position:fixed;inset:0;z-index:-2;opacity:.5;pointer-events:none}
+  .topo svg{width:100%;height:100%}
+  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.04;background-image:radial-gradient(var(--jade) 1px,transparent 1px);background-size:5px 5px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;
+    font-family:'Oswald';font-weight:600;font-size:1.18rem;text-transform:uppercase;letter-spacing:.04em;
+    color:#fff;background:var(--cinnabar);padding:18px 30px;border-radius:4px;text-decoration:none;
+    box-shadow:0 7px 0 var(--cinnabar-d);transition:transform .08s,box-shadow .08s,background .2s;position:relative}
+  .btn:hover{background:var(--cinnabar-d)}
+  .btn:active{transform:translateY(6px);box-shadow:0 1px 0 var(--cinnabar-d)}
+  .btn.block{display:flex;width:100%}
+  .btn.ghost{background:transparent;color:var(--jade);box-shadow:inset 0 0 0 2px var(--jade)}
+  .btn.ghost:hover{background:var(--jade);color:#fff}
+  .btn .arr{font-size:1.3rem;line-height:0}
+
+  /* tactical label / patch */
+  .patch{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald';font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--jade);color:var(--bamboo);padding:7px 14px;border-radius:3px;border:1px solid rgba(147,168,110,.4)}
+  .patch.alt{background:var(--cinnabar);color:#fff;border-color:transparent}
+  .tags{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+
+  /* ============ SCREEN: LANDING ============ */
+  #landing{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 0;text-align:center}
+  .landing-wrap{max-width:560px;width:100%;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center}
+  .landing-wrap .patch{margin-bottom:12px}
+  .landing-wrap h1{font-size:2.1rem;font-weight:700;color:var(--jade);line-height:1.04}
+  .landing-wrap h1 .co{color:var(--cinnabar)}
+  .landing-sub{font-size:1rem;font-weight:700;color:var(--muted);max-width:380px;margin:9px 0 16px}
+  .landing-ba{position:relative;width:100%;max-width:360px;margin:0 auto 16px}
+  .ba-single{display:block;max-width:100%;max-height:53vh;width:auto;height:auto;margin:0 auto;border-radius:14px;border:2px solid var(--jade);box-shadow:var(--shadow)}
+  /* CTA destacado: verde pulsante */
+  /* CTA principal do funil — botao classico 3D em verde choque.
+     Especificidade de id vence o .btn base (border:none / radius 4px / hover coral). */
+  #startBtn2{background:linear-gradient(180deg,#3BE06A 0%,#12C742 52%,#0BA836 100%);
+    border:1px solid #0A8C2C;border-radius:9px;text-shadow:0 1px 1px rgba(0,0,0,.32);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -2px 0 rgba(0,0,0,.16),0 6px 0 #077A26,0 10px 18px -6px rgba(7,122,38,.55);
+    animation:ctaPulse 1.25s ease-in-out infinite;will-change:transform}
+  #startBtn2:hover{background:linear-gradient(180deg,#45E874 0%,#16D44B 52%,#0DB93C 100%)}
+  #startBtn2:active{transform:translateY(5px);animation:none;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 0 #077A26}
+  /* pulso so no transform: animar box-shadow brigaria com as 4 sombras acima */
+  @keyframes ctaPulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.045)}
+  }
+  .landing-note{font-family:'JetBrains Mono';font-size:.74rem;color:var(--muted);letter-spacing:.04em;margin-top:14px}
+  /* capa = 1ª pergunta do quiz (2026-10-15): cartões creme do quiz, grandes e 2 por linha (pedido do Matheus) */
+  #landing .landing-wrap h1{font-size:1.9rem;line-height:1.08;text-wrap:balance}
+  #landing .landing-sub{color:var(--jade-2);font-size:1.02rem;margin:8px 0 18px}
+  .landing-ficha{width:100%;max-width:440px}
+  .landing-ficha .q-title{font-size:1.45rem;margin-bottom:12px}
+  .landing-ficha .opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .landing-ficha .opt{position:relative;flex-direction:column;justify-content:center;align-items:center;gap:0;min-height:112px;padding:16px 10px;text-align:center}
+  .landing-ficha .opt .ck{position:absolute;top:9px;right:9px;width:22px;height:22px}
+  .landing-ficha .opt .tx{flex:none;font-family:'Oswald';font-weight:600;font-size:1.9rem;line-height:1;color:var(--jade)}
+  .landing-ficha .opt .tx small{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+  .landing-ficha .opt:focus-visible{outline:3px solid var(--cinnabar);outline-offset:2px}
+
+  /* ============ SCREEN: QUIZ ============ */
+  #quiz{min-height:100vh;display:none;flex-direction:column;padding-bottom:40px}
+  .quiz-top{max-width:620px;margin:0 auto;width:100%;padding:20px 22px 10px}
+  .quiz-bar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .quiz-bar-head .lab{font-family:'Oswald';font-weight:600;letter-spacing:.12em;font-size:.84rem;color:var(--jade)}
+  .quiz-bar-head .cnt{font-family:'JetBrains Mono';font-size:.74rem;color:var(--cinnabar-d);font-weight:700}
+  .chevrons{display:flex;gap:4px}
+  .chevrons i{flex:1;height:8px;background:var(--sand-2);clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%);transition:background .3s}
+  .chevrons i.on{background:var(--cinnabar)}
+  .chevrons i:first-child{clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%)}
+
+  .quiz-stage{flex:1;display:flex;align-items:center;justify-content:center;padding:10px 0;position:relative}
+  .q-slide{max-width:560px;width:100%;margin:0 auto;padding:0 22px;opacity:0;transform:translateX(36px);transition:opacity .42s ease,transform .42s ease}
+  .q-slide.in{opacity:1;transform:none}
+  /* pointer-events:none — sem isto o slide fica invisível (opacity:0) mas ainda recebe
+     toque durante os ~300ms do swap, e o clique é engolido (dead click no Clarity). */
+  .q-slide.out{opacity:0!important;transform:translateX(-36px)!important;pointer-events:none}
+  .q-eyebrow{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.14em;color:var(--cinnabar-d);text-transform:uppercase;margin-bottom:8px}
+  .q-title{font-family:'Oswald';font-weight:600;font-size:2rem;color:var(--jade);line-height:1.05;margin-bottom:6px;text-transform:none}
+  .q-help{color:var(--muted);font-weight:700;font-size:.92rem;margin-bottom:22px}
+  .opts{display:flex;flex-direction:column;gap:11px}
+  .opt{display:flex;align-items:center;gap:14px;background:var(--rice);border:2px solid transparent;border-radius:8px;padding:16px 18px;cursor:pointer;font-weight:800;font-size:1.02rem;transition:border-color .15s,transform .08s,background .15s;box-shadow:var(--shadow-s)}
+  .opt:hover{border-color:var(--bamboo)}
+  .opt:active{transform:scale(.99)}
+  .opt.sel{border-color:var(--cinnabar);background:#fff}
+  .opt .ck{width:26px;height:26px;border-radius:5px;border:2px solid var(--sand-2);flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;transition:all .15s}
+  .opt.sel .ck{background:var(--cinnabar);border-color:var(--cinnabar)}
+  .opt .em{font-size:1.4rem}
+  .opt .opt-img{width:48px;height:48px;flex:none;border-radius:7px;object-fit:cover;border:2px solid var(--sand-2);background:var(--sand-2)}
+  .opt.sel .opt-img{border-color:var(--cinnabar)}
+  .opt .tx{flex:1}
+  .opt .tx small{display:block;font-weight:700;color:var(--muted);font-size:.78rem}
+  /* opciones en grid 2 columnas con foto grande (p. ej. molestias) */
+  .opts.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .opts.grid .opt{position:relative;flex-direction:column;align-items:stretch;text-align:center;padding:0;gap:0;overflow:hidden}
+  .opts.grid .opt .ck{position:absolute;top:9px;right:9px;z-index:2;background:rgba(251,246,234,.85)}
+  .opts.grid .opt.sel .ck{background:var(--cinnabar)}
+  .opts.grid{gap:9px}
+  .opts.grid .opt .opt-img{width:100%;height:auto;aspect-ratio:5/2;border:0;border-radius:0}
+  .opts.grid .opt .em{font-size:1.4rem;padding:7px 0}
+  .opts.grid .opt .tx{flex:none;padding:6px 5px;font-size:.8rem}
+  /* mini aviso central al seleccionar */
+
+  /* sliders peso/altura */
+  .metric{background:var(--rice);border-radius:10px;padding:22px;box-shadow:var(--shadow-s);margin-bottom:14px}
+  .metric .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .metric .row .k{font-family:'Oswald';font-weight:600;letter-spacing:.06em;color:var(--jade)}
+  .metric .row .v{font-family:'JetBrains Mono';font-weight:700;font-size:1.5rem;color:var(--cinnabar-d)}
+  input[type=range]{-webkit-appearance:none;width:100%;height:8px;border-radius:10px;background:linear-gradient(90deg,var(--cinnabar) var(--p,50%),var(--sand-2) var(--p,50%));outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--jade);border:3px solid #fff;cursor:pointer;box-shadow:0 3px 8px rgba(20,35,27,.4)}
+  input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--jade);border:3px solid #fff;cursor:pointer}
+  .q-input{width:100%;background:var(--rice);border:2px solid var(--sand-2);border-radius:8px;padding:18px;font-family:'Oswald';font-size:1.4rem;color:var(--jade);text-align:center;text-transform:uppercase;letter-spacing:.04em;box-shadow:var(--shadow-s)}
+  .q-input:focus{outline:none;border-color:var(--cinnabar)}
+  .q-next{margin-top:20px}
+  .q-feedback{max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .35s ease,margin .4s ease;background:var(--jade);border-radius:8px;border-left:4px solid var(--cinnabar);padding:0 16px;margin-top:0}
+  .q-feedback.show{max-height:340px;opacity:1;padding:14px 16px;margin-top:16px}
+  .q-feedback .writer.mini{margin-top:4px}
+  .q-feedback .coach{font-family:'JetBrains Mono';font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cinnabar)}
+  .q-feedback p{color:#eef3e6;font-weight:700;font-size:.96rem;margin-top:5px}
+
+  /* loading recluta */
+  #qload{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:22px}
+  /* === Cap. Valentina anotando tu plan: planilha + lápiz escribiendo === */
+  .writer{--T:2.4s;--n:5;--sw:112px;position:relative;width:236px;margin:0 auto 26px;filter:drop-shadow(0 16px 30px rgba(20,35,27,.3))}
+  .writer .clip{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:62px;height:15px;background:var(--bamboo-d);border-radius:5px;z-index:4;box-shadow:inset 0 -2px 0 rgba(0,0,0,.22)}
+  .writer .clip::after{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:30px;height:6px;background:var(--jade);border-radius:3px}
+  .writer .board{background:var(--jade);border:1px solid rgba(147,168,110,.4);border-radius:12px;padding:15px 12px 16px;box-shadow:var(--shadow-s)}
+  .writer .sheet{background:var(--rice);border-radius:6px;padding:12px 13px 14px;position:relative}
+  .sheet-head{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono';font-weight:700;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cinnabar-d);padding-bottom:8px;margin-bottom:11px;border-bottom:1.5px solid var(--sand-2)}
+  .sheet-rows{position:relative;display:flex;flex-direction:column;gap:12px}
+  .srow{display:flex;align-items:center;gap:9px}
+  .srow .rk{flex:none;width:24%;height:6px;border-radius:3px;background:var(--sand-2)}
+  .srow .rl{position:relative;flex:1;height:6px;border-radius:3px;background:var(--sand-2);overflow:hidden}
+  .srow .rl::after{content:"";position:absolute;inset:0;background:var(--cinnabar);border-radius:3px;transform:scaleX(0);transform-origin:left;animation:ink var(--T) linear infinite;animation-delay:calc(var(--i) * var(--T) / var(--n))}
+  @keyframes ink{0%{transform:scaleX(0)}16%{transform:scaleX(1)}100%{transform:scaleX(1)}}
+  .pencil{position:absolute;right:16px;top:0;width:16px;height:0;z-index:5;animation:travelY var(--T) linear infinite}
+  @keyframes travelY{0%{top:4%;opacity:0}6%{opacity:1}92%{opacity:1}100%{top:100%;opacity:0}}
+  .pencil .nib{position:absolute;bottom:0;left:0;animation:sweepX calc(var(--T) / var(--n)) ease-in-out infinite}
+  @keyframes sweepX{0%,100%{transform:translateX(calc(-1 * var(--sw)))}50%{transform:translateX(-4px)}}
+  .pencil .nib svg{display:block;transform-origin:50% 100%;animation:scribble .22s ease-in-out infinite}
+  @keyframes scribble{0%,100%{transform:rotate(-28deg)}50%{transform:rotate(-35deg)}}
+  /* variante compacta dentro de las respuestas de la coach */
+  .writer.mini{--T:1.8s;--n:3;--sw:78px;width:146px;margin:2px auto 13px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+  .writer.mini .sheet{padding:12px 11px 11px}
+  .writer.mini .sheet-rows{gap:11px}
+  .writer.mini .pencil{right:14px}
+  /* loading del plan: barra de progreso + checklist */
+  .ld-card{width:100%;max-width:380px;margin:0 auto;background:var(--rice);border-radius:20px;padding:30px 26px 26px;box-shadow:var(--shadow);text-align:center}
+  .ld-icon{width:84px;height:84px;border-radius:50%;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:rgba(226,85,43,.14);color:var(--cinnabar);animation:ldGlow 1.6s ease-in-out infinite}
+  .ld-icon svg{width:34px;height:34px}
+  @keyframes ldGlow{0%,100%{box-shadow:0 0 0 0 rgba(226,85,43,.4)}50%{box-shadow:0 0 0 14px rgba(226,85,43,0)}}
+  .ld-title{font-family:'Oswald';font-weight:700;font-style:italic;font-size:1.7rem;color:var(--jade);text-transform:uppercase;line-height:1.05}
+  .ld-title span{color:var(--cinnabar)}
+  .ld-sub{font-weight:700;color:var(--muted);font-size:.92rem;margin:8px 0 20px}
+  .ld-bar{height:12px;border-radius:8px;background:var(--sand-2);overflow:hidden;margin-bottom:22px}
+  .ld-fill{display:block;height:100%;width:6%;border-radius:8px;background:linear-gradient(90deg,var(--cinnabar),var(--cinnabar-d));transition:width 3s ease-out}
+  .ld-steps{list-style:none;display:flex;flex-direction:column;gap:13px;text-align:left}
+  .ld-step{display:flex;align-items:center;gap:11px;font-family:'Oswald';font-weight:600;font-size:.95rem;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);opacity:.5;transition:opacity .35s ease,color .35s ease}
+  .ld-step.active,.ld-step.done{opacity:1;color:var(--jade)}
+  .ld-ck{width:24px;height:24px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:transparent;background:var(--sand-2);border:2px solid var(--sand-2);transition:background .3s ease,border-color .3s ease,transform .3s ease}
+  .ld-step.active .ld-ck{background:transparent;border-color:var(--cinnabar);color:var(--cinnabar);transform:scale(1.12);animation:ckPulse .9s ease-in-out infinite}
+  .ld-step.done .ld-ck{background:var(--bamboo-d);border-color:var(--bamboo-d);color:#fff;transform:scale(1)}
+  @keyframes ckPulse{0%,100%{box-shadow:0 0 0 0 rgba(226,85,43,.5)}50%{box-shadow:0 0 0 8px rgba(226,85,43,0)}}
+  .ld-foot{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px;opacity:.85}
+
+  /* ============ SCREEN: RESULT ============ */
+  #result{display:none}
+  .briefing{background:var(--jade);color:#fff;padding:40px 0 46px;position:relative;overflow:hidden}
+  .briefing::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 22px);pointer-events:none}
+  .briefing .wrap{position:relative;z-index:1}
+  .briefing .patch{background:var(--cinnabar);color:#fff;border:0}
+  .briefing h1{font-size:2.8rem;font-weight:700;margin:16px 0 6px}
+  .briefing h1 .co{color:var(--cinnabar)}
+  .briefing .sub{color:#d8e2cc;font-weight:700;max-width:480px}
+  .dossier-out{background:rgba(0,0,0,.18);border:1px solid rgba(147,168,110,.3);border-radius:8px;padding:18px;margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .dossier-out .f{display:flex;flex-direction:column}
+  .dossier-out .f .k{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.1em;color:var(--bamboo);text-transform:uppercase}
+  .dossier-out .f .val{font-family:'Oswald';font-weight:600;font-size:1.2rem;color:#fff;text-transform:none}
+  .rank-line{display:flex;align-items:center;gap:12px;margin-top:20px;background:var(--cinnabar);border-radius:6px;padding:12px 16px}
+  .rank-line .ic{font-size:1.8rem}
+  .rank-line .t{font-family:'Oswald';font-weight:600;text-transform:none}
+  .rank-line .t small{display:block;font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.1em;color:rgba(255,255,255,.85);text-transform:uppercase}
+
+  .sec-head{text-align:center;max-width:560px;margin:0 auto 30px}
+  .sec-head h2{font-size:2.2rem;font-weight:700;color:var(--jade);margin-top:12px}
+  .sec-head h2 .co{color:var(--cinnabar)}
+  .sec-head p{color:var(--muted);font-weight:700;margin-top:8px}
+
+  /* problem cards */
+  .pains{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:600px;margin:0 auto}
+  .pain{background:var(--rice);border-radius:8px;padding:18px;box-shadow:var(--shadow-s);border-left:4px solid var(--cinnabar)}
+  .pain .em{font-size:1.6rem}
+  .pain p{font-weight:800;font-size:.96rem;margin-top:8px}
+
+  /* mechanism phases */
+  .phases{display:flex;flex-direction:column;gap:14px;max-width:600px;margin:0 auto}
+  .phase{display:flex;gap:18px;align-items:flex-start;background:var(--rice);border-radius:8px;padding:20px;box-shadow:var(--shadow-s)}
+  .phase .nn{font-family:'Oswald';font-weight:700;font-size:2.4rem;color:var(--cinnabar);line-height:1;flex:none;width:54px}
+  .phase h3{font-size:1.3rem;color:var(--jade);text-transform:none;font-weight:600}
+  .phase p{color:var(--muted);font-weight:700;font-size:.94rem;margin-top:3px}
+  .phase .days{font-family:'JetBrains Mono';font-size:.66rem;letter-spacing:.08em;color:var(--cinnabar-d);text-transform:uppercase;margin-top:6px}
+
+  /* ============ APP showcase (cuartel digital) ============ */
+  .appwrap{display:flex;flex-direction:column;gap:24px;align-items:center;max-width:600px;margin:0 auto}
+  .phone{width:248px;flex:none;background:var(--jade);border-radius:32px;padding:10px;box-shadow:var(--shadow);position:relative}
+  .phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:64px;height:6px;border-radius:4px;background:rgba(255,255,255,.18);z-index:3}
+  .phone .scr{background:var(--rice);border-radius:24px;overflow:hidden;padding-top:10px}
+  .phone .ph-top{display:flex;justify-content:space-between;align-items:center;padding:8px 16px 4px;font-family:'Oswald';font-weight:700;font-size:.72rem;letter-spacing:.1em;color:var(--jade)}
+  .phone .ph-sig{color:var(--bamboo);letter-spacing:.18em;font-size:.6rem}
+  .phone .ph-hd{padding:6px 16px 12px;border-bottom:1px solid var(--sand-2)}
+  .phone .ph-hd-t{font-family:'Oswald';font-weight:700;font-size:1.12rem;color:var(--jade)}
+  .phone .ph-prog{height:7px;border-radius:4px;background:var(--sand-2);margin:8px 0 6px;overflow:hidden}
+  .phone .ph-prog span{display:block;height:100%;background:var(--cinnabar);border-radius:4px}
+  .phone .ph-hd-s{font-family:'JetBrains Mono';font-size:.58rem;letter-spacing:.04em;color:var(--muted)}
+  .appday{display:flex;gap:11px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--sand-2)}
+  .appday:last-child{border-bottom:0}
+  .appday .nn{font-family:'Oswald';font-weight:700;font-size:1.5rem;line-height:1;color:var(--cinnabar);flex:none;width:30px;text-align:center}
+  .appday.lock .nn{color:var(--sand-2)}
+  .appday .ad-tx{flex:1}
+  .appday .ad-tx b{display:block;font-family:'Oswald';font-weight:600;font-size:.92rem;color:var(--jade);text-transform:none}
+  .appday .ad-tx small{font-family:'JetBrains Mono';font-size:.56rem;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+  .appday.now .ad-tx small{color:var(--cinnabar-d)}
+  .appday .ad-ic{flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sand)}
+  .appday.done .ad-ic{background:rgba(110,128,67,.18)}
+  .appday.now .ad-ic{background:rgba(226,85,43,.16)}
+  .appday.lock{opacity:.6}
+  .appfeats{display:flex;flex-direction:column;gap:14px;width:100%}
+  .appfeat{display:flex;gap:14px;background:var(--rice);border-radius:10px;padding:18px;box-shadow:var(--shadow-s)}
+  .appfeat .ico{flex:none}
+  .appfeat h3{font-family:'Oswald';font-weight:600;font-size:1.1rem;color:var(--jade);text-transform:none}
+  .appfeat p{color:var(--muted);font-weight:700;font-size:.9rem;margin-top:3px}
+  .chatprev{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+  .chatprev .cb{font-size:.82rem;font-weight:700;padding:8px 12px;border-radius:13px;max-width:92%}
+  .chatprev .cb.me{align-self:flex-end;background:var(--sand-2);color:var(--ink);border-bottom-right-radius:4px}
+  .chatprev .cb.co{align-self:flex-start;display:flex;align-items:center;gap:8px;background:var(--jade);color:#fff;border-bottom-left-radius:4px}
+  .chatprev .cb.co .av{width:22px;height:22px;border-radius:50%;background:var(--cinnabar);color:#fff;font-family:'Oswald';font-weight:700;font-size:.7rem;display:flex;align-items:center;justify-content:center;flex:none}
+  .commavs{margin-top:12px;display:flex;align-items:center}
+  .commavs .av{width:30px;height:30px;border-radius:50%;background:var(--jade);color:var(--bamboo);font-family:'Oswald';font-weight:700;font-size:.78rem;display:flex;align-items:center;justify-content:center;border:2px solid var(--rice);margin-left:-8px}
+  .commavs .av:first-child{margin-left:0}
+  .commavs b{margin-left:10px;font-family:'JetBrains Mono';font-size:.66rem;letter-spacing:.04em;color:var(--cinnabar-d)}
+  @media(min-width:640px){.appwrap{flex-direction:row;align-items:flex-start}.appfeats{flex:1}}
+
+  /* transformaciones — grid 2x2 (sales page) */
+  .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:540px;margin:0 auto}
+  .tcell{position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-s);border:2px solid var(--jade);background:var(--sand-2)}
+  .tcell img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tcell .tbadge{position:absolute;left:8px;bottom:8px;z-index:2;font-family:'Oswald';font-weight:600;font-size:.7rem;letter-spacing:.06em;color:#fff;background:var(--cinnabar);padding:4px 10px;border-radius:3px}
+  .tcell .tcode{position:absolute;left:8px;top:8px;z-index:2;font-family:'JetBrains Mono';font-weight:700;font-size:.58rem;letter-spacing:.1em;color:#fff;background:rgba(20,35,27,.75);padding:3px 8px;border-radius:3px}
+  .tnote{text-align:center;font-family:'JetBrains Mono';font-size:.72rem;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+
+  /* testimonials */
+  .testi{display:flex;flex-direction:column;gap:14px;max-width:600px;margin:0 auto}
+  .tcard{background:var(--rice);border-radius:8px;padding:18px 20px;box-shadow:var(--shadow-s)}
+  .tcard .h{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .tcard .av{width:42px;height:42px;border-radius:6px;background:var(--jade);color:var(--bamboo);font-family:'Oswald';font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex:none}
+  .tcard .nm{font-weight:900;font-size:.96rem}
+  .tcard .rk{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.08em;color:var(--cinnabar-d);text-transform:uppercase}
+  .tcard .st{margin-left:auto;color:var(--cinnabar);font-size:.9rem;letter-spacing:1px}
+  .tcard p{font-weight:700;font-size:.96rem}
+
+  /* offer */
+  .offer{background:var(--rice);border:3px solid var(--jade);border-radius:10px;padding:30px 24px;max-width:560px;margin:0 auto;text-align:center;box-shadow:var(--shadow);position:relative}
+  .offer .ribbon{display:inline-block;background:var(--cinnabar);color:#fff;font-family:'Oswald';font-weight:600;letter-spacing:.1em;font-size:.8rem;padding:7px 16px;border-radius:3px;margin-bottom:14px}
+  .offer h2{font-size:1.9rem;color:var(--jade)}
+  .offer .scar{font-family:'JetBrains Mono';font-size:.78rem;color:var(--cinnabar-d);font-weight:700;margin-top:10px;letter-spacing:.04em}
+  .offer .price{font-family:'Oswald';font-weight:700;font-size:3.6rem;color:var(--cinnabar);line-height:1;margin-top:8px}
+  .offer .price .old{font-size:1.3rem;color:var(--muted);text-decoration:line-through;margin-right:8px;font-weight:500}
+  .offer .pay{font-family:'JetBrains Mono';font-size:.78rem;color:var(--muted);margin:2px 0 18px;letter-spacing:.04em}
+  .offer .incl{text-align:left;display:flex;flex-direction:column;gap:9px;margin:0 0 20px}
+  .offer .incl li{list-style:none;display:flex;gap:10px;font-weight:800;font-size:.94rem}
+  .offer .incl .c{color:var(--bamboo-d);font-weight:900}
+
+  .guarantee{display:flex;gap:16px;align-items:center;background:var(--sand-2);border-radius:8px;padding:20px;max-width:560px;margin:18px auto 0}
+  .guarantee .s{font-size:2.6rem}
+  .guarantee h3{font-size:1.2rem;color:var(--jade);text-transform:none;font-weight:600}
+  .guarantee p{color:var(--muted);font-weight:700;font-size:.9rem;margin-top:2px}
+  .secure{text-align:center;font-family:'JetBrains Mono';font-size:.74rem;color:var(--muted);margin-top:18px;letter-spacing:.04em}
+
+  /* sticky */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(30,51,40,.95);backdrop-filter:blur(8px);padding:12px 16px;transform:translateY(120%);transition:transform .3s}
+  .sticky.show{transform:translateY(0)}
+  .sticky .inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:14px}
+  .sticky .ps{font-family:'Oswald';font-weight:700;font-size:1.6rem;color:#fff;white-space:nowrap}
+  .sticky .ps .cur{font-size:.9rem;color:var(--cinnabar)}
+  .sticky .btn{font-size:1rem;padding:13px 18px}
+
+  /* result hero photo + blackhat ui */
+  .result-hero{position:relative;width:100%;height:62vh;min-height:420px;max-height:600px;overflow:hidden;background:var(--sand-2)}
+  .result-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .result-hero .rh-ph{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Oswald';font-weight:600;font-size:1.1rem;color:var(--jade-2);background:repeating-linear-gradient(45deg,#e0d4bb,#e0d4bb 16px,#d3c6ab 16px,#d3c6ab 32px)}
+  .result-hero .rh-ph span{font-family:'JetBrains Mono';font-size:.66rem;font-weight:500;color:var(--muted);margin-top:8px;text-transform:none}
+  .result-hero .rh-tag{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:46px 22px 18px;background:linear-gradient(to top,rgba(30,51,40,.92),transparent);color:#fff;font-family:'Oswald';font-weight:600;letter-spacing:.04em;font-size:1.05rem}
+  .result-hero .rh-tag span{color:var(--cinnabar)}
+  .hold-bar{background:var(--cinnabar);color:#fff;text-align:center;font-family:'Oswald';font-weight:500;letter-spacing:.03em;font-size:.92rem;padding:10px 16px;border-radius:6px;margin-bottom:18px}
+  .hold-bar b{font-family:'JetBrains Mono';font-weight:700}
+  .pcallout{background:var(--jade);color:#eef3e6;border-left:4px solid var(--cinnabar);border-radius:8px;padding:16px 18px;margin:18px auto 0;font-weight:700;font-size:.96rem;max-width:600px}
+  .pcallout b{color:var(--cinnabar)}
+  .cdwrap{font-family:'Oswald';font-weight:500;color:var(--jade);background:var(--sand-2);border-radius:6px;padding:9px 14px;display:inline-block;margin-top:10px;font-size:.92rem}
+  .cdwrap b{font-family:'JetBrains Mono';font-weight:700;color:var(--cinnabar-d)}
+  .of-pers{color:var(--muted);font-weight:700;font-size:.95rem;margin-top:8px}
+  .offer .scar b{color:#fff;background:var(--cinnabar-d);padding:1px 8px;border-radius:4px}
+  .toast{position:fixed;left:14px;bottom:86px;z-index:70;background:#fff;border-left:4px solid var(--bamboo-d);border-radius:8px;box-shadow:var(--shadow);padding:11px 14px 11px 11px;max-width:280px;display:flex;gap:10px;align-items:center;font-size:.84rem;transform:translateX(-130%);transition:transform .5s cubic-bezier(.16,.8,.3,1)}
+  .toast.show{transform:none}
+  .toast .ti{width:34px;height:34px;border-radius:6px;background:var(--jade);color:var(--bamboo);display:flex;align-items:center;justify-content:center;font-size:1rem;flex:none}
+  .toast b{font-weight:900}
+  .toast small{display:block;color:var(--muted);font-family:'JetBrains Mono';font-size:.64rem;margin-top:1px}
+  .cdSmall{font-family:'JetBrains Mono';font-size:.78rem;color:var(--cinnabar);white-space:nowrap}
+  .cdSmall b{color:#fff}
+  .reveal{}
+  .rise{opacity:0;transform:translateY(24px);transition:opacity .85s cubic-bezier(.16,.8,.3,1),transform .85s cubic-bezier(.16,.8,.3,1)}
+  .rise.in{opacity:1;transform:none}
+
+  /* ============ SALES: PRESENTACIÓN ============ */
+  .authbar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+  .authchip{display:flex;align-items:center;gap:7px;background:var(--rice);border:1px solid var(--sand-2);border-radius:6px;padding:8px 13px;font-family:'Oswald';font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--jade);box-shadow:var(--shadow-s)}
+  .term{font-family:'JetBrains Mono';font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);text-align:center;margin-top:16px}
+  .term::after{content:"_";animation:blink 1s step-end infinite}
+  .present{display:flex;gap:14px;align-items:center;background:var(--rice);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow-s);max-width:560px;margin:0 auto;border-left:4px solid var(--cinnabar);text-align:left}
+  .present img{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid var(--cinnabar);flex:none}
+  .present .role{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+  .present .who{font-family:'Oswald';font-weight:700;font-size:1.16rem;color:var(--jade)}
+  .present .spec{font-weight:700;font-size:.8rem;color:var(--cinnabar-d)}
+  .lead{text-align:center;max-width:560px;margin:20px auto 0;font-weight:800;font-size:1.04rem}
+  .lead b{color:var(--cinnabar-d)}
+  .lead.mini{font-size:.94rem;color:var(--muted);margin-top:12px}
+
+  /* ============ SALES: ACCESO / OFERTA ============ */
+  .access{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--bamboo-d);color:#fff;font-family:'Oswald';font-weight:600;letter-spacing:.14em;font-size:.78rem;text-transform:uppercase;padding:10px 16px;border-radius:4px;max-width:520px;margin:0 auto 12px}
+  .access i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.25s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+  .ocard{max-width:520px;margin:0 auto;background:var(--rice);border:3px solid var(--jade);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;text-align:center}
+  .ocard .oc-top{background:var(--jade);color:#cfdcc0;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:9px}
+  .ocard .oc-body{padding:24px 22px}
+  .ocard .oc-pre{font-family:'Oswald';font-weight:600;font-size:.78rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+  .ocard h3{font-family:'Oswald';font-weight:700;font-size:1.7rem;color:var(--jade);line-height:1.05;margin-bottom:16px}
+  .oprice{display:flex;align-items:flex-start;justify-content:center;gap:5px;line-height:.9}
+  .oprice .cur{font-family:'Oswald';font-weight:600;font-size:1.5rem;color:var(--cinnabar);margin-top:9px}
+  .oprice .num{font-family:'Oswald';font-weight:700;font-size:4.2rem;color:var(--cinnabar)}
+  .oold{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:'JetBrains Mono';font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
+  .oold b{background:var(--red);color:#fff;padding:3px 9px;border-radius:3px;letter-spacing:.12em}
+  .olife{display:inline-flex;align-items:center;gap:7px;margin:14px 0 18px;background:var(--sand-2);border-radius:20px;padding:7px 15px;font-weight:800;font-size:.85rem;color:var(--jade)}
+  .ofeats{display:flex;flex-direction:column;gap:9px;text-align:left;margin-bottom:20px}
+  .ofeat{display:flex;align-items:center;gap:12px;background:var(--sand);border-radius:8px;padding:11px 13px;font-weight:800;font-size:.92rem}
+  .ofeat .e{flex:none;width:34px;height:34px;border-radius:8px;background:var(--rice);display:flex;align-items:center;justify-content:center;font-size:1.05rem;box-shadow:var(--shadow-s)}
+  .oscar{font-family:'JetBrains Mono';font-size:.72rem;color:var(--red);font-weight:700;margin:-6px 0 14px}
+  .oscar b{background:var(--red);color:#fff;padding:1px 7px;border-radius:3px}
+  .ofoot{display:flex;justify-content:center;gap:18px;margin-top:14px;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+  /* ============ SALES: APP STATS ============ */
+  .appstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:600px;margin:0 auto 22px}
+  .astat{background:var(--rice);border-radius:9px;padding:13px 6px;text-align:center;box-shadow:var(--shadow-s)}
+  .astat .e{font-size:1.2rem}
+  .astat b{display:block;font-family:'Oswald';font-weight:700;font-size:1.02rem;color:var(--cinnabar);line-height:1.1;margin-top:3px}
+  .astat span{font-family:'JetBrains Mono';font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+  /* ============ SALES: SIN DOLOR ============ */
+  .painfix{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:600px;margin:0 auto}
+  .pfx{display:flex;gap:11px;align-items:center;background:var(--rice);border-radius:9px;padding:14px;box-shadow:var(--shadow-s);border-left:3px solid var(--bamboo-d);font-weight:800;font-size:.9rem}
+  .pfx .e{font-size:1.4rem;flex:none}
+  .pfx small{display:block;font-weight:700;font-size:.74rem;color:var(--muted);margin-top:2px}
+
+  /* ============ SALES: VS ANÁLISIS TÁCTICO ============ */
+  .vs{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:9px}
+  .vshead{display:grid;grid-template-columns:1fr 32px 1fr;gap:8px;font-family:'JetBrains Mono';font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:2px}
+  .vsrow{display:grid;grid-template-columns:1fr 32px 1fr;gap:8px}
+  .vsrow .c{display:flex;align-items:center;gap:9px;border-radius:8px;padding:13px;font-weight:800;font-size:.84rem;box-shadow:var(--shadow-s)}
+  .vsrow .c.bad{background:#F1E1DA;color:#8A3D24;border-left:3px solid #C0472A}
+  .vsrow .c.good{background:var(--rice);color:var(--ink);border-left:3px solid var(--bamboo-d)}
+  .vsrow .c .ic{flex:none;font-weight:900;font-size:.9rem}
+  .vsrow .c.good .ic{color:var(--bamboo-d)}
+  .vsrow .mid{display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;font-size:.74rem;color:var(--muted)}
+
+  /* ============ SALES: REALIDAD ACTUAL ============ */
+  .reality{max-width:600px;margin:0 auto;background:var(--rice);border-radius:10px;padding:8px 22px;box-shadow:var(--shadow-s);border-left:4px solid #C0472A}
+  .reality li{list-style:none;display:flex;gap:11px;font-weight:800;font-size:.95rem;padding:14px 0;border-bottom:1px dashed var(--sand-2)}
+  .reality li:last-child{border-bottom:0}
+  .reality .x{color:#C0472A;font-weight:900;flex:none}
+
+  /* ============ SALES: LA VERDAD BRUTAL ============ */
+  .truth{max-width:600px;margin:0 auto;background:var(--jade);color:#eef3e6;border-radius:10px;padding:28px 24px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}
+  .truth::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 22px);pointer-events:none}
+  .truth p{position:relative;z-index:1;font-weight:800;font-size:1.02rem}
+  .truth .big{position:relative;z-index:1;display:block;font-family:'Oswald';font-weight:700;font-size:1.7rem;color:var(--cinnabar);text-transform:uppercase;margin-top:12px;line-height:1.08}
+
+  /* ============ SALES: BONOS ============ */
+  .bonus{display:flex;flex-direction:column;gap:12px;max-width:600px;margin:0 auto}
+  .bcard{display:flex;gap:14px;background:var(--rice);border-radius:10px;padding:18px;box-shadow:var(--shadow-s)}
+  .bcard .bi{flex:none;width:46px;height:46px;border-radius:8px;background:var(--sand-2);display:flex;align-items:center;justify-content:center;font-size:1.45rem}
+  .bcard h3{font-family:'Oswald';font-weight:600;font-size:1.06rem;color:var(--jade);text-transform:none}
+  .bcard p{color:var(--muted);font-weight:700;font-size:.88rem;margin-top:3px}
+  .bcard .val{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px;background:var(--bamboo-d);border-radius:7px;padding:9px 12px;box-shadow:0 3px 0 #52683C}
+  .bcard .val b{font-family:'Oswald';font-weight:700;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+  .bcard .val s{font-family:'JetBrains Mono';font-weight:700;font-size:.68rem;letter-spacing:.02em;color:#DCE8CC}
+  .btotal{max-width:600px;margin:16px auto 0;background:var(--jade);color:#fff;border-radius:8px;padding:18px;text-align:center;font-weight:800;font-size:.96rem}
+  .btotal s{color:#cfdcc0;font-weight:600}
+  .btotal b{display:block;font-family:'Oswald';font-weight:700;font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cinnabar);margin-top:6px}
+
+  /* ============ SALES: FAQ ============ */
+  .faq{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+  .fq{background:var(--rice);border-radius:8px;box-shadow:var(--shadow-s);overflow:hidden}
+  .fq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;font-family:'Oswald';font-weight:600;font-size:1rem;color:var(--jade)}
+  .fq summary::-webkit-details-marker{display:none}
+  .fq summary::after{content:"+";margin-left:auto;font-family:'Oswald';font-weight:700;font-size:1.5rem;line-height:1;color:var(--cinnabar);transition:transform .2s}
+  .fq[open] summary::after{transform:rotate(45deg)}
+  .fq p{padding:0 18px 17px;color:var(--muted);font-weight:700;font-size:.91rem}
+
+  /* CTA intermedios */
+  .ctablock{max-width:560px;margin:26px auto 0;text-align:center}
+  .ctablock .btn{max-width:420px;margin:0 auto}
+  .ctablock .mini{font-family:'JetBrains Mono';font-size:.7rem;letter-spacing:.06em;color:var(--muted);margin-top:11px}
+
+  @media(max-width:680px){
+    .landing-wrap h1{font-size:1.92rem}
+    .landing-sub{font-size:.98rem}
+    .briefing h1{font-size:2.1rem}
+    .q-title{font-size:1.6rem}
+    .pains{grid-template-columns:1fr}
+    .dossier-out{grid-template-columns:1fr}
+    .vsrow,.vshead{grid-template-columns:1fr 20px 1fr;gap:6px}
+    .vsrow .c{font-size:.76rem;padding:11px 9px;gap:7px}
+    .truth .big{font-size:1.35rem}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.rise,.q-slide{opacity:1!important;transform:none!important}}
+
+  #landing{justify-content:flex-start;padding-top:0}
+  .landing-top{width:calc(100% + 40px);margin:0 -20px 14px;padding:0 0 14px;display:flex;flex-direction:column;align-items:center;
+    background:var(--jade);border-bottom:4px solid var(--cinnabar)}
+  .landing-top .tf{display:block;width:100%;height:auto}
+  .landing-top .patch{margin:12px 0 8px}
+  #landing .landing-top h1{color:#fff;font-size:1.5rem;padding:0 20px}
+  #landing .landing-top .landing-sub{color:#e9ecd9;font-size:.95rem;margin:6px 0 0;padding:0 20px}
+  #landing .landing-ficha .q-title{font-size:1.35rem;margin-bottom:10px}
+  .landing-ficha .opt{min-height:96px}
+
+  /* ============ PASO FINAL: VSL ============ */
+  #final{display:none;min-height:100vh;padding:18px 0 30px}
+  .vsl-wrap{max-width:470px;width:100%;margin:0 auto;padding:0 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .vsl-alert{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--red);color:#fff;font-family:'Oswald';font-weight:700;font-size:.86rem;letter-spacing:.03em;text-transform:uppercase;padding:11px 12px;border-radius:6px;margin-bottom:14px;box-shadow:0 5px 0 var(--red-d),0 12px 26px -12px rgba(200,35,43,.8);animation:alertPulse 1.6s ease-in-out infinite}
+  .vsl-alert i{width:9px;height:9px;border-radius:50%;background:#fff;flex:none;animation:blink 1s infinite}
+  @keyframes alertPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+  .vsl-wrap .patch{margin-bottom:12px}
+  .vsl-patch-red{background:var(--red);color:#fff;border-color:transparent}
+  .vsl-wrap h1{font-size:1.52rem;font-weight:700;color:#141414;line-height:1.12;letter-spacing:.005em;text-transform:none}
+  .vsl-wrap h1 .co{color:var(--cinnabar)}
+  .vsl-wrap h1 .rd{color:var(--red)}
+  .vsl-wrap h1 .mark{color:var(--red);text-decoration:underline;text-decoration-color:rgba(200,35,43,.45);text-underline-offset:5px;text-decoration-thickness:2px}
+  .vsl-sub{font-size:.88rem;font-weight:800;color:#3A3A36;max-width:380px;margin:12px 0 14px}
+  .vsl-sub b{color:var(--red)}
+  @media(max-width:400px){.vsl-wrap h1{font-size:1.32rem}.vsl-alert{font-size:.76rem}}
+  .vsl-frame{position:relative;width:min(400px,92vw);border-radius:12px;overflow:hidden;border:2px solid var(--jade);box-shadow:var(--shadow);background:#000;margin:0 auto 18px}
+  .vsl-frame video,.vsl-frame iframe{display:block;width:100%;height:auto;aspect-ratio:9/16;border:0}
+  .vsl-note{font-family:'JetBrains Mono';font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-top:4px}
+  /* cartel de sonido: solo aparece si el navegador bloquea el audio */
+  .sound-gate{position:absolute;inset:0;z-index:5;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(28,36,25,.82);color:#fff;cursor:pointer;padding:20px;text-align:center}
+  .sound-gate.on{display:flex}
+  .sound-gate .sg-ic{width:76px;height:76px;border-radius:50%;background:var(--cinnabar);display:flex;align-items:center;justify-content:center;font-size:2.1rem;box-shadow:0 0 0 0 rgba(226,85,43,.6);animation:ldGlow 1.5s ease-in-out infinite}
+  .sound-gate b{font-family:'Oswald';font-weight:700;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.15}
+  /* recuadro de prueba mientras no esté cargado el VSL */
+  .vsl-ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#cfdcc0;background:repeating-linear-gradient(45deg,#1E3328,#1E3328 16px,#26402F 16px,#26402F 32px);font-family:'Oswald';font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:20px;text-align:center}
+  .vsl-ph small{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.06em;text-transform:none;color:var(--bamboo);line-height:1.5}
+
+  /* la oferta entera, oculta hasta SEGUNDOS_OFERTA */
+  #oferta-wrap{display:none}
+  #oferta-wrap.show{display:block;animation:ofIn .6s ease both}
+  @keyframes ofIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  /* ============ CUOTAS MERCADO PAGO + AVISO DE MAIL ============ */
+  .mp-box{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--sand-2);border-radius:10px;padding:13px 15px;margin:14px 0 10px;text-align:left;box-shadow:var(--shadow-s)}
+  .mp-box .mp-ic{flex:none;width:44px;height:30px;border-radius:5px;background:#009EE3;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;font-size:.72rem;letter-spacing:.06em}
+  .mp-box .mp-tx{font-weight:800;font-size:.9rem;color:var(--ink);line-height:1.35}
+  .mp-box .mp-tx b{color:var(--cinnabar-d)}
+  .mp-box .mp-tx small{display:block;font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.06em;color:var(--muted);margin-top:3px;text-transform:uppercase}
+  .mailnote{display:flex;align-items:center;gap:10px;background:var(--sand);border-radius:8px;padding:11px 13px;margin-bottom:14px;text-align:left;font-weight:700;font-size:.84rem;color:var(--muted)}
+  .mailnote .e{font-size:1.1rem;flex:none}
+
+  /* porcentaje off */
+  .ooff{display:inline-block;background:var(--bamboo-d);color:#fff;font-family:'Oswald';font-weight:700;font-size:.78rem;letter-spacing:.1em;padding:4px 10px;border-radius:3px;margin-left:6px}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#93A86E" stroke-width="1.2">
+      <circle cx="400" cy="400" r="70"/>
+      <circle cx="400" cy="400" r="130"/>
+      <circle cx="400" cy="400" r="196"/>
+      <circle cx="400" cy="400" r="268"/>
+      <circle cx="400" cy="400" r="346"/>
+      <circle cx="400" cy="400" r="430"/>
+      <path d="M-50,150 Q200,70 400,150 T850,130"/>
+      <path d="M-50,660 Q200,580 400,660 T850,640"/>
+      <path d="M-50,730 Q210,650 410,730 T850,710"/>
+    </g>
+  </svg>
+</div>
+<div class="grain"></div>
+
+<!-- ============ PORTADA = 1ª PREGUNTA (edad) ============ -->
+<div id="landing">
+  <div class="landing-wrap">
+    <div class="landing-top">
+      <img class="tf" data-img="portada" alt="Antes y después de alumnas" loading="eager">
+      <span class="patch alt">♀ Solo para mujeres</span>
+      <h1>Transformá tu cuerpo en <span class="co">menos de un mes</span> con una activación oriental secreta</h1>
+    </div>
+    <div class="landing-ficha">
+      <div class="q-eyebrow">// Ficha de ingreso</div>
+      <h2 class="q-title">¿En qué rango de edad estás?</h2>
+      <div class="opts" id="ageOpts">
+        <div class="opt" data-i="0" role="button" tabindex="0"><span class="ck">✓</span><span class="tx">18–29<small>años</small></span></div>
+        <div class="opt" data-i="1" role="button" tabindex="0"><span class="ck">✓</span><span class="tx">30–39<small>años</small></span></div>
+        <div class="opt" data-i="2" role="button" tabindex="0"><span class="ck">✓</span><span class="tx">40–49<small>años</small></span></div>
+        <div class="opt" data-i="3" role="button" tabindex="0"><span class="ck">✓</span><span class="tx">50 o más<small>años</small></span></div>
+      </div>
+    </div>
+    <span class="landing-note">// 60 segundos · respondé y recibí tu plan</span>
+  </div>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<div id="quiz">
+  <div class="quiz-top">
+    <div class="quiz-bar-head">
+      <span class="lab">Evaluación de ingreso</span>
+      <span class="cnt"><span id="qNum">1</span>/<span id="qTot">10</span></span>
+    </div>
+    <div class="chevrons" id="chevrons"></div>
+  </div>
+  <div class="quiz-stage">
+    <div class="q-slide" id="qSlide"></div>
+  </div>
+</div>
+
+<!-- ============ PANTALLA DE ANÁLISIS ============ -->
+<div id="qload">
+  <div class="ld-card">
+    <div class="ld-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+    <h2 class="ld-title">Calculando tu <span>potencial</span>…</h2>
+    <p class="ld-sub">Armando tu plan personalizado</p>
+    <div class="ld-bar"><span class="ld-fill"></span></div>
+    <ul class="ld-steps">
+      <li class="ld-step" style="--d:.2s"><span class="ld-ck">✓</span> Analizando tus respuestas</li>
+      <li class="ld-step" style="--d:.9s"><span class="ld-ck">✓</span> Preparando los 28 días</li>
+      <li class="ld-step" style="--d:1.7s"><span class="ld-ck">✓</span> Calculando tu potencial</li>
+      <li class="ld-step" style="--d:2.5s"><span class="ld-ck">✓</span> ¡Casi listo!</li>
+    </ul>
+  </div>
+  <p class="ld-foot">Preparando tu plan personalizado</p>
+</div>
+
+<!-- ============ PASO FINAL: VSL ARRIBA + OFERTA OCULTA ============ -->
+<div id="final">
+
+  <div class="vsl-wrap">
+    <div class="vsl-alert"><i></i> ¡No cierres esta página! Tu plan se está reservando…</div>
+    <span class="patch vsl-patch-red">⚠️ Informe reservado · Evaluación completada</span>
+    <h1>Maestra de Tai Chi revela el <span class="mark">"secreto de las abuelas chinas"</span> para quemar kilos de grasa en <span class="rd">28 días</span> sin pisar un gimnasio</h1>
+    <p class="vsl-sub">Mirá el video de abajo <b>antes de continuar</b> — te muestro exactamente cómo funciona en tu cuerpo.</p>
+
+    <div class="vsl-frame" id="vslFrame">
+      <div class="sound-gate" id="soundGate">
+        <span class="sg-ic">🔊</span>
+        <b>Tocá para activar<br>el sonido</b>
+      </div>
+    </div>
+
+    <span class="vsl-note">// oferta válida solo en esta sesión</span>
+  </div>
+
+  <!-- Embed de Panda / VTurb. Si usás MP4 propio (CONFIG.VIDEO_URL) dejá esto vacío. -->
+  <template id="vsl-template"></template>
+
+  <!-- ====== OFERTA: aparece sola a los SEGUNDOS_OFERTA ====== -->
+  <div id="oferta-wrap">
+
+    <div class="result-hero">
+      <img data-img="hero" alt="Tu instructora de Tai Chi Fit" loading="lazy">
+      <div class="rh-tag">📋 <span id="rhName">Guerrera</span>, tu reto de <span>28 días</span></div>
+    </div>
+
+    <!-- 0 · TU RESULTADO -->
+    <section class="briefing">
+      <div class="wrap">
+        <span class="patch">📜 Informe de evaluación</span>
+        <h1>Listo, <span class="co" id="rName">Guerrera</span></h1>
+        <p class="sub">Tu plan de 28 días quedó calibrado con tus respuestas. Este es tu informe.</p>
+
+        <div class="dossier-out" id="dossierOut"></div>
+
+        <div class="rank-line">
+          <span class="ic">☯️</span>
+          <div class="t" id="rankT">Nivel inicial: Aprendiz<small>// lista para subir de nivel en 28 días</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · PRESENTACIÓN -->
+    <section class="reveal" style="padding:34px 0 44px">
+      <div class="wrap">
+        <div class="authbar rise">
+          <span class="authchip">★ Maestra de Tai Chi</span>
+          <span class="authchip">🛡️ Instructora certificada</span>
+        </div>
+        <p class="term rise">&gt; Método ancestral revelado</p>
+
+        <div class="sec-head rise" style="margin-bottom:20px">
+          <span class="patch alt">☯️ Presentamos: el método</span>
+          <h2>Tai Chi <span class="co">Fit</span></h2>
+        </div>
+
+        <div class="present rise">
+          <img data-img="maestra" alt="Maestra Valentina" loading="lazy">
+          <div>
+            <div class="role">// Tu instructora</div>
+            <div class="who">Maestra Valentina</div>
+            <div class="spec">+10 años · 50.000+ alumnas transformadas</div>
+          </div>
+        </div>
+
+        <p class="lead rise" id="pLead">El único programa de Tai Chi que te saca del "cero resultado" y construye un cuerpo firme y liviano en <b>28 días</b>, usando solo el peso de tu cuerpo.</p>
+        <p class="lead mini rise">Este método no se trata de "terminar reventada". Se trata de volverte fuerte.</p>
+      </div>
+    </section>
+
+    <!-- 2 · ACCESO -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="access rise"><i></i> Acceso concedido</div>
+        <div class="ocard rise">
+          <div class="oc-top">Manuscrito #8821</div>
+          <div class="oc-body">
+            <div class="oc-pre">Método</div>
+            <h3>Tai Chi Fit</h3>
+            <div class="oprice"><span class="cur">$</span><span class="num" data-precio>14.990</span></div>
+            <div class="oold"><b>Oferta</b> <s>$<span data-precio-viejo>49.990</span></s><span class="ooff"><span data-descuento>70</span>% OFF</span></div>
+            <div class="olife">♾️ Acceso de por vida</div>
+
+            <div class="mp-box">
+              <span class="mp-ic">MP</span>
+              <div class="mp-tx">Hasta <b><span data-cuotas>3</span> cuotas sin interés de $<span data-cuota-valor>4.997</span></b>
+                <small>Mercado Pago · tarjeta de débito o crédito</small></div>
+            </div>
+            <div class="mailnote"><span class="e">📩</span> Te llega el acceso por e-mail apenas termina el pago.</div>
+
+            <a href="#" class="btn block" data-cta>Empezar mi camino <span class="arr">▸</span></a>
+
+            <div class="ofeats" style="margin-top:20px;margin-bottom:0">
+              <div class="ofeat"><span class="e">☯️</span> Plan de práctica (28 días)</div>
+              <div class="ofeat"><span class="e">🎥</span> Videos demostrativos</div>
+              <div class="ofeat"><span class="e">🎮</span> Sistema de niveles</div>
+              <div class="ofeat"><span class="e">📡</span> Soporte prioritario</div>
+              <div class="ofeat"><span class="e">🛡️</span> Garantía de 30 días</div>
+            </div>
+            <div class="ofoot"><span>🔒 Compra segura</span><span>ID: 99-28-X</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · LOS DOS CAMINOS -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch">☯️ VS</span>
+          <h2>Los dos <span class="co">caminos</span></h2>
+        </div>
+        <div class="vs stagger">
+          <div class="vshead"><span>Sin método</span><span></span><span>Tai Chi Fit</span></div>
+          <div class="vsrow"><div class="c bad"><span class="ic">😵‍💫</span> Entrenar sin rumbo</div><div class="mid">VS</div><div class="c good"><span class="ic">🎯</span> Práctica guiada</div></div>
+          <div class="vsrow"><div class="c bad"><span class="ic">😔</span> Entrenar sola</div><div class="mid">VS</div><div class="c good"><span class="ic">🏮</span> Comunidad "La Escuela"</div></div>
+          <div class="vsrow"><div class="c bad"><span class="ic">📉</span> Sin progresión</div><div class="mid">VS</div><div class="c good"><span class="ic">📈</span> Método adaptado</div></div>
+          <div class="vsrow"><div class="c bad"><span class="ic">🐌</span> Resultados lentos</div><div class="mid">VS</div><div class="c good"><span class="ic">⚡</span> Resultados en 28 días</div></div>
+          <div class="vsrow"><div class="c bad"><span class="ic">💸</span> Gimnasio caro</div><div class="mid">VS</div><div class="c good"><span class="ic">🏠</span> Practicás en casa</div></div>
+        </div>
+        <div class="pcallout" id="pMech">Tu progresión está calibrada — sin saltos y sin lesiones, paso a paso.</div>
+      </div>
+    </section>
+
+    <!-- 4 · RESULTADOS -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <h2>Resultados <span class="co">reales</span></h2>
+        </div>
+        <div class="tgrid stagger">
+          <figure class="tcell"><img data-img="resultado1" alt="Transformación real 1" loading="lazy"><span class="tcode">ALUMNA 01</span><figcaption class="tbadge">18 DÍAS</figcaption></figure>
+          <figure class="tcell"><img data-img="resultado2" alt="Transformación real 2" loading="lazy"><span class="tcode">ALUMNA 02</span><figcaption class="tbadge">28 DÍAS</figcaption></figure>
+          <figure class="tcell"><img data-img="resultado3" alt="Transformación real 3" loading="lazy"><span class="tcode">ALUMNA 03</span><figcaption class="tbadge">33 DÍAS</figcaption></figure>
+          <figure class="tcell"><img data-img="resultado4" alt="Transformación real 4" loading="lazy"><span class="tcode">ALUMNA 04</span><figcaption class="tbadge">45 DÍAS</figcaption></figure>
+        </div>
+        <p class="tnote">// LOS RESULTADOS INDIVIDUALES PUEDEN VARIAR //</p>
+      </div>
+    </section>
+
+    <!-- 5 · REALIDAD ACTUAL -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch">✕ Realidad actual</span>
+          <h2>No fue falta de <span class="co">ganas</span></h2>
+          <p id="pFreno"></p>
+        </div>
+        <ul class="reality rise">
+          <li><span class="x">✕</span> ¿Entrenás duro pero tu cuerpo sigue flácido y estancado?</li>
+          <li><span class="x">✕</span> ¿Probaste de todo y tu cuerpo simplemente no responde?</li>
+          <li><span class="x">✕</span> ¿Estás cansada de esforzarte sin ver resultados reales?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 · LA VERDAD -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch alt">⚡ La verdad</span>
+        </div>
+        <div class="truth rise">
+          <p>La mayoría de los entrenamientos está pensada para <s>quemar calorías</s>.</p>
+          <span class="big">El Tai Chi Fit está<br>diseñado para reconstruir<br>tu cuerpo desde adentro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · SIN DOLOR -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch alt">🩹 Práctica sin dolor</span>
+          <h2>Entrenar <span class="co">no debe doler</span></h2>
+          <p id="pDolor">Cada movimiento tiene una versión adaptada. Si algo te molesta, practicás igual — sin forzar la zona.</p>
+        </div>
+        <div class="painfix stagger">
+          <div class="pfx"><span class="e">🦵</span><div>Rodillas<small>Posturas sin impacto</small></div></div>
+          <div class="pfx"><span class="e">🔙</span><div>Espalda baja<small>Core que descomprime</small></div></div>
+          <div class="pfx"><span class="e">🤲</span><div>Muñecas<small>Movimientos de mano abierta</small></div></div>
+          <div class="pfx"><span class="e">💆‍♀️</span><div>Cuello y hombros<small>Movilidad antes de cada sesión</small></div></div>
+        </div>
+        <div class="pcallout" id="pc1">🎯 Empezamos por respiración y movilidad: primero sacamos la molestia, después subimos la exigencia.</div>
+      </div>
+    </section>
+
+    <!-- 8 · LA APP -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch">📱 Tu escuela personal</span>
+          <h2>Toda la escuela <span class="co">en tu bolsillo</span></h2>
+          <p>Interfaz simple y clara. Todo lo que necesitás para tu transformación en un solo lugar.</p>
+        </div>
+        <div class="appstats stagger">
+          <div class="astat"><span class="e">☯️</span><b>+100</b><span>movimientos</span></div>
+          <div class="astat"><span class="e">🎥</span><b>HD</b><span>videos</span></div>
+          <div class="astat"><span class="e">♾️</span><b>Acceso</b><span>de por vida</span></div>
+          <div class="astat"><span class="e">👥</span><b>Escuela</b><span>comunidad VIP</span></div>
+        </div>
+        <div class="appwrap">
+          <div class="phone rise">
+            <div class="scr">
+              <div class="ph-top"><span>TAI CHI FIT</span><span class="ph-sig">▮▮▮</span></div>
+              <div class="ph-hd">
+                <div class="ph-hd-t">Plan de 28 días</div>
+                <div class="ph-prog"><span style="width:32%"></span></div>
+                <div class="ph-hd-s">Día 3 de 28 · seguí así, guerrera</div>
+              </div>
+              <div class="ph-days">
+                <div class="appday done">
+                  <span class="nn">01</span>
+                  <div class="ad-tx"><b>Raíz · Tren inferior</b><small>Completado</small></div>
+                  <span class="ad-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#6F8A52" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4 4 10-10"/></svg></span>
+                </div>
+                <div class="appday now">
+                  <span class="nn">02</span>
+                  <div class="ad-tx"><b>Fluir · Core y glúteo</b><small>Hoy · 18 min</small></div>
+                  <span class="ad-ic"><svg viewBox="0 0 24 24" width="18" height="18" fill="#E2552B"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                </div>
+                <div class="appday lock">
+                  <span class="nn">03</span>
+                  <div class="ad-tx"><b>Grulla · Cuerpo completo</b><small>Mañana</small></div>
+                  <span class="ad-ic"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#9a9a86" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="tnote">📱 Entrás desde el celular, la tablet o la compu, apenas pagás</p>
+      </div>
+    </section>
+
+    <!-- 9 · BONOS -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <span class="patch alt">🎁 Solo hoy</span>
+          <h2>5 bonos, hoy <span class="co">gratis</span></h2>
+          <p>Se suman a tu método sin costo adicional — solo en esta sesión.</p>
+        </div>
+        <div class="bonus stagger">
+          <div class="bcard">
+            <span class="bi">🌬️</span>
+            <div>
+              <h3>Guía de Respiración y Recuperación</h3>
+              <p>Recuperate como una maestra: respiración, descanso activo y los movimientos para evitar lesiones y sostener el ritmo.</p>
+              <div class="val"><b>🎁 Ahora GRATIS</b> <s>antes $19.900</s></div>
+            </div>
+          </div>
+          <div class="bcard">
+            <span class="bi">🩹</span>
+            <div>
+              <h3>Alivio Oriental — rodillas y espalda</h3>
+              <p>Rutina de 6 minutos para descomprimir la espalda baja y calmar rodillas y hombros. Usala los días que amanecés con molestia.</p>
+              <div class="val"><b>🎁 Ahora GRATIS</b> <s>antes $29.900</s></div>
+            </div>
+          </div>
+          <div class="bcard">
+            <span class="bi">🍵</span>
+            <div>
+              <h3>Té Termogénico del Monasterio</h3>
+              <p>La receta con ingredientes naturales que se toma antes de la práctica para sostener la energía y acelerar el metabolismo.</p>
+              <div class="val"><b>🎁 Ahora GRATIS</b> <s>antes $39.900</s></div>
+            </div>
+          </div>
+          <div class="bcard">
+            <span class="bi">🚀</span>
+            <div>
+              <h3>Nivel Maestra — avanzado</h3>
+              <p>Formas exclusivas para resistencia, definición total y evolución constante cuando termines los 28 días.</p>
+              <div class="val"><b>🎁 Ahora GRATIS</b> <s>antes $58.000</s></div>
+            </div>
+          </div>
+          <div class="bcard">
+            <span class="bi">🗺️</span>
+            <div>
+              <h3>Mapa de los 28 Días</h3>
+              <p>Tu hoja de ruta diaria: vas a saber exactamente qué practicar y cómo seguir tu evolución día por día.</p>
+              <div class="val"><b>🎁 Ahora GRATIS</b> <s>antes $19.900</s></div>
+            </div>
+          </div>
+        </div>
+        <div class="btotal rise">💰 Valor total de los bonos: <s>$167.600</s><b>Hoy: GRATIS 🎁</b></div>
+        <div class="ctablock rise">
+          <a href="#" class="btn block" data-cta>🔥 Asegurá tus bonos ahora</a>
+          <p class="mini">// pago único de $<span data-precio>14.990</span> · acceso inmediato</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · TESTIMONIOS -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <h2>Lo que dicen las que ya <span class="co">empezaron</span></h2>
+          <p>Mirá los resultados de las que siguieron el método</p>
+        </div>
+        <div class="testi stagger">
+          <div class="tcard">
+            <div class="h"><div class="av">V</div><div><div class="nm">Valeria</div><div class="rk">34 años · Practicante</div></div><div class="st">★★★★★</div></div>
+            <p><b>"¡Valió la pena probar!"</b><br>"Siempre hice gimnasio, pero una amiga me habló del Tai Chi y decidí probar. Ahora practico en casa, a mi ritmo, y avanzo sin necesitar pesas."</p>
+          </div>
+          <div class="tcard">
+            <div class="h"><div class="av">C</div><div><div class="nm">Carolina</div><div class="rk">41 años · Aprendiz</div></div><div class="st">★★★★★</div></div>
+            <p><b>"¡Increíble y sin dolor!"</b><br>"Probé de todo, pero esto fue lo único que no me dejó dolorida ni me lastimó las rodillas. Bajé 6 kilos en 4 semanas. Lo recomiendo muchísimo."</p>
+          </div>
+          <div class="tcard">
+            <div class="h"><div class="av">D</div><div><div class="nm">Daniela</div><div class="rk">29 años · Discípula</div></div><div class="st">★★★★★</div></div>
+            <p><b>"Firme sin pisar un gimnasio"</b><br>"Lo mejor no es el espejo: es sentirme fuerte y capaz. Terminé los 28 días completos por primera vez en mi vida."</p>
+          </div>
+        </div>
+        <div class="ctablock rise">
+          <a href="#" class="btn block" data-cta>🔥 Quiero empezar ahora</a>
+          <p class="mini">// +18.000 alumnas ya están adentro</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · FAQ -->
+    <section class="reveal" style="padding:0 0 46px">
+      <div class="wrap">
+        <div class="sec-head rise">
+          <h2>Preguntas <span class="co">frecuentes</span></h2>
+        </div>
+        <div class="faq stagger">
+          <details class="fq"><summary>¿Necesito equipo?</summary><p>No. Todo el método usa el peso de tu propio cuerpo. Solo necesitás el espacio de una toalla.</p></details>
+          <details class="fq"><summary>¿Sirve si nunca hice Tai Chi?</summary><p>Sí. Las 3 fases suben la dificultad de a poco y cada movimiento tiene versión adaptada. Si nunca practicaste, empezás por la Fase Raíz.</p></details>
+          <details class="fq"><summary>¿Cuánto dura cada práctica?</summary><p>Entre 10 y 20 minutos por día. Pensado para entrar en una rutina real.</p></details>
+          <details class="fq"><summary>¿Sirve si tengo dolor de rodillas o espalda?</summary><p>Sí. Hay variaciones de bajo impacto para rodillas, muñecas, hombros y espalda baja, más el bono de Alivio Oriental. Y podés preguntarle a tu instructora adentro de la app.</p></details>
+          <details class="fq"><summary>¿Cómo recibo el acceso?</summary><p>Apenas termina el pago te llega por e-mail. Entrás desde el celular, la tablet o la computadora.</p></details>
+          <details class="fq"><summary>¿Y si no me gusta?</summary><p>Tenés 30 días de garantía. Si no te sentís más fuerte y más liviana, escribís y te devolvemos cada peso.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 · OFERTA FINAL -->
+    <section id="oferta" class="reveal" style="padding:0 0 30px">
+      <div class="wrap">
+        <div class="access rise"><i></i> Acceso concedido</div>
+        <div class="ocard rise">
+          <div class="oc-top">Manuscrito #8821</div>
+          <div class="oc-body">
+            <div class="oc-pre">Método</div>
+            <h3 id="offerH">Tai Chi Fit</h3>
+            <div class="cdwrap" style="margin:0 0 14px">⏳ Tu reserva vence en <b data-cd>15:00</b></div>
+            <div class="oprice"><span class="cur">$</span><span class="num" data-precio>14.990</span></div>
+            <div class="oold"><b>Oferta</b> <s>$<span data-precio-viejo>49.990</span></s><span class="ooff"><span data-descuento>70</span>% OFF</span></div>
+            <p class="oscar">🔥 Solo quedan <b data-cupos>7</b> lugares a este precio</p>
+
+            <div class="mp-box">
+              <span class="mp-ic">MP</span>
+              <div class="mp-tx">Hasta <b><span data-cuotas>3</span> cuotas sin interés de $<span data-cuota-valor>4.997</span></b>
+                <small>Mercado Pago · tarjeta de débito o crédito</small></div>
+            </div>
+            <div class="mailnote"><span class="e">📩</span> Te llega el acceso por e-mail apenas termina el pago.</div>
+
+            <a href="#" class="btn block" data-cta>Entrar al método <span class="arr">▸</span></a>
+
+            <div class="ofeats" style="margin-top:20px;margin-bottom:0">
+              <div class="ofeat"><span class="e">☯️</span> Plan de práctica (28 días)</div>
+              <div class="ofeat"><span class="e">🎥</span> Videos demostrativos</div>
+              <div class="ofeat"><span class="e">🎮</span> Sistema de niveles</div>
+              <div class="ofeat"><span class="e">📡</span> Soporte prioritario</div>
+              <div class="ofeat"><span class="e">🎁</span> 5 bonos exclusivos ($167.600)</div>
+              <div class="ofeat"><span class="e">🛡️</span> Garantía de 30 días</div>
+            </div>
+            <div class="ofoot"><span>🔒 Compra segura</span><span>ID: 99-28-X</span></div>
+          </div>
+        </div>
+        <p class="of-pers" id="ofPers" style="text-align:center;max-width:520px;margin:14px auto 0"></p>
+
+        <div class="guarantee rise">
+          <span class="s">🛡️</span>
+          <div><h3>Garantía de 30 días</h3><p>Hacé el reto. Si en 30 días no te sentís más fuerte y más liviana, te devolvemos cada peso. Sin preguntas.</p></div>
+        </div>
+        <p class="secure">🔒 Compra segura · acceso inmediato · garantía 30 días</p>
+      </div>
+    </section>
+
+    <div style="height:90px"></div>
+  </div><!-- /#oferta-wrap -->
+</div><!-- /#final -->
+
+<!-- prueba social -->
+<div class="toast" id="toast"><div class="ti">☯️</div><div><b id="toastName">Valeria de Rosario</b><small>acaba de entrar · hace instantes</small></div></div>
+
+<!-- barra fija -->
+<div class="sticky" id="sticky">
+  <div class="inner">
+    <span class="cdSmall">⏳ <b data-cd>15:00</b></span>
+    <div class="ps"><span class="cur">$</span> <span data-precio>14.990</span></div>
+    <a href="#" class="btn block" data-cta>Quiero empezar ▸</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var CFG = window.CONFIG || {};
+  function each(list,fn){ if(!list) return; var a=Array.prototype.slice.call(list); for(var i=0;i<a.length;i++) fn(a[i],i); }
+  function setCls(el,cls,on){ if(!el) return; if(on) el.classList.add(cls); else el.classList.remove(cls); }
+  function q(sel,root){ return (root||document).querySelector(sel); }
+  function qa(sel,root){ return (root||document).querySelectorAll(sel); }
+  function hasAncestor(el,cls){ for(var n=el;n;n=n.parentElement){ if(n.classList&&n.classList.contains(cls)) return true; } return false; }
+  function safe(name,fn){ try{ fn(); }catch(e){ if(window.console&&console.warn) console.warn('[tcf] '+name+':',e); } }
+
+  /* ===== Pixel de Meta ===== */
+  safe('pixel',function(){
+    if(!CFG.PIXEL_ID) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',CFG.PIXEL_ID); fbq('track','PageView');
+  });
+  function px(ev,data){ safe('px',function(){ if(window.fbq) fbq('track',ev,data||{}); }); }
+
+  /* ===== Imágenes, precios y botones ===== */
+  safe('imgs',function(){
+    var M=CFG.IMG||{};
+    each(qa('[data-img]'),function(el){ var k=el.getAttribute('data-img'); if(M[k]) el.src=M[k]; });
+  });
+  safe('precios',function(){
+    function put(sel,val){ each(qa(sel),function(e){ if(val) e.textContent=val; }); }
+    put('[data-precio]',CFG.PRECIO);
+    put('[data-precio-viejo]',CFG.PRECIO_VIEJO);
+    put('[data-descuento]',CFG.DESCUENTO);
+    put('[data-cuotas]',CFG.CUOTAS);
+    put('[data-cuota-valor]',CFG.CUOTA_VALOR);
+  });
+  /* checkout + UTMs de la URL */
+  function checkoutURL(){
+    var base=CFG.LINK_CHECKOUT||'#', qs=location.search.replace(/^\?/,'');
+    if(!qs) return base;
+    return base + (base.indexOf('?')>-1 ? '&' : '?') + qs;
+  }
+  safe('ctas',function(){
+    each(qa('[data-cta]'),function(a){
+      a.href=checkoutURL();
+      a.addEventListener('click',function(){ px('InitiateCheckout'); });
+    });
+  });
+
+  var reduce=false;
+  safe('matchMedia',function(){ reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); });
+
+  var quiz=document.getElementById('quiz'), qload=document.getElementById('qload'), finalEl=document.getElementById('final');
+
+  /* ===== PREGUNTAS ===== */
+  var STEPS=[
+    {id:'edad',type:'single',eyebrow:'Ficha de ingreso',q:'¿En qué rango de edad estás?',opts:[
+      {l:'18–29'},{l:'30–39'},{l:'40–49'},{l:'50 o más'}]},
+    {id:'nivel',type:'single',eyebrow:'Estado físico',q:'¿Cuál es tu nivel ahora mismo?',opts:[
+      {e:'🌱',l:'Nunca entrené',s:'empiezo de cero',fb:'Perfecto. Las que empiezan de cero son las que más se sorprenden con el Tai Chi. Vamos paso a paso.'},
+      {e:'🕰️',l:'Entrené hace tiempo',s:'quiero retomar',fb:'Tu cuerpo tiene memoria — vas a retomar más rápido de lo que creés.'},
+      {e:'💪',l:'Entreno a veces',s:'sin constancia',fb:'Lo que te falta no es esfuerzo, es un método con orden. Eso lo arreglamos hoy.'},
+      {e:'🔥',l:'Estoy activa',s:'quiero algo nuevo',fb:'¡Excelente base! El Tai Chi te va a dar justo lo que al gimnasio le falta.'}]},
+    {id:'equilibrio',type:'single',eyebrow:'Prueba de equilibrio',q:'¿Cuánto podés quedarte parada en un pie sin apoyarte?',help:'Probalo ahora, en serio. Es el test que usamos para calibrar tu plan.',opts:[
+      {e:'0️⃣',l:'Casi nada, me tambaleo',fb:'Tranquila. En 28 días esto cambia — el equilibrio es lo primero que despierta.'},
+      {e:'🥉',l:'Unos 5 segundos',fb:'Buen punto de partida. Las progresiones multiplican eso rapidísimo.'},
+      {e:'🥈',l:'Entre 10 y 20 segundos',fb:'Base sólida. Vamos a llevarte al siguiente nivel.'},
+      {e:'🥇',l:'Más de 30 segundos',fb:'Impresionante. Preparate para las formas que sí te van a desafiar.'}]},
+    {id:'objetivo',type:'single',eyebrow:'Tu objetivo',q:'¿Cuál es tu objetivo principal?',opts:[
+      {e:'🔥',l:'Bajar grasa',fb:'El Tai Chi quema sin machacar articulaciones. Plan ideal para eso.'},
+      {e:'✨',l:'Tonificar y firmar',fb:'Tu propio peso es la mejor herramienta para firmar. Te va a encantar.'},
+      {e:'🌬️',l:'Ganar energía y flexibilidad',fb:'Objetivo de energía activado. Lo vas a sentir en la primera semana.'},
+      {e:'🍑',l:'Glúteo y piernas',fb:'Enfocamos el tren inferior con posturas específicas.'}]},
+    {id:'zona',type:'single',eyebrow:'Zona a trabajar',q:'¿Dónde querés poner el foco?',opts:[
+      {e:'⬇️',l:'Abdomen y cintura',fb:'Core fuerte = postura firme y cintura definida. Gran objetivo.'},
+      {e:'🍑',l:'Glúteo y piernas',fb:'Vamos a despertar y firmar esa zona sin tocar una pesa.'},
+      {e:'💪',l:'Brazos y espalda',fb:'Tren superior fuerte — y de paso, postura de maestra.'},
+      {e:'🎯',l:'Todo el cuerpo',fb:'Enfoque integral: la mejor opción para resultados parejos.'}]},
+    {id:'dolor',type:'multi',grid:true,eyebrow:'Parte médico',q:'¿Sentís alguna molestia o dolor?',help:'Podés elegir varias. Adaptamos cada movimiento.',opts:[
+      {img:'rodillas',l:'Rodillas'},
+      {img:'munecas',l:'Muñecas'},
+      {img:'hombros',l:'Hombros'},
+      {img:'cuello',l:'Cuello'},
+      {img:'espalda',l:'Espalda baja'},
+      {e:'✅',l:'Ninguno'}]},
+    {id:'tiempo',type:'single',eyebrow:'Logística',q:'¿Cuánto tiempo podés practicar por día?',opts:[
+      {e:'⏱️',l:'10 minutos',fb:'Alcanza. El secreto es la constancia, no las horas.'},
+      {e:'⌛',l:'15–20 minutos',fb:'El punto justo. Con eso logramos muchísimo.'},
+      {e:'🕐',l:'30 minutos',fb:'Tiempo de sobra para resultados acelerados.'},
+      {e:'🚀',l:'Más de 30',fb:'Con esa disponibilidad vas a avanzar rapidísimo.'}]},
+    {id:'base',type:'single',eyebrow:'Tu espacio',q:'¿Dónde vas a practicar?',opts:[
+      {e:'🏠',l:'En casa',fb:'Cero excusas de gimnasio. Armamos todo para tu espacio.'},
+      {e:'🌳',l:'Al aire libre',fb:'El mejor lugar para practicar es gratis y está afuera.'},
+      {e:'🪴',l:'En el patio o la terraza',fb:'Con dos metros cuadrados alcanza y sobra.'},
+      {e:'🔀',l:'Donde se pueda',fb:'Flexible y constante: combinación ganadora.'}]},
+    {id:'freno',type:'single',eyebrow:'Diagnóstico',q:'¿Qué te frenó hasta hoy?',opts:[
+      {e:'🗓️',l:'Falta de tiempo',fb:'Por eso las prácticas son de 10 a 20 minutos. Sin robarte el día.'},
+      {e:'❓',l:'No sé por dónde empezar',fb:'Ese problema se termina hoy: te damos el orden exacto.'},
+      {e:'😴',l:'Me aburro entrenando sola',fb:'El sistema de niveles te mantiene enganchada. Vas a ver.'},
+      {e:'🤕',l:'Miedo a lesionarme',fb:'Cada movimiento tiene técnica guiada. Seguridad primero.'}]},
+    {id:'medidas',type:'metrics',eyebrow:'Ficha de ingreso',q:'Tus medidas actuales',help:'Solo para calibrar tu plan. Movés los controles y listo.',
+      fb:'Con esto calibramos la intensidad justa para vos — ni de más, ni de menos.'}
+  ];
+
+  var state={}, idx=0, qlock=false;
+  safe('qTot',function(){ var e=document.getElementById('qTot'); if(e) e.textContent=STEPS.length; });
+
+  var chev=document.getElementById('chevrons');
+  safe('chevrons',function(){ if(chev) each(STEPS,function(){var i=document.createElement('i');chev.appendChild(i);}); });
+  function paintChev(){ if(!chev) return; each(chev.querySelectorAll('i'),function(c,i){ setCls(c,'on',i<=idx); }); }
+
+  var slide=document.getElementById('qSlide');
+  function lockTaps(on){ if(slide) slide.style.pointerEvents = on ? 'none' : ''; }
+  function imgSrc(k){ return (CFG.IMG&&CFG.IMG[k])||''; }
+
+  function render(){
+    qlock=false; lockTaps(false);
+    var step=STEPS[idx];
+    var n=document.getElementById('qNum'); if(n) n.textContent=idx+1;
+    paintChev();
+    var html='<div class="q-eyebrow">// '+step.eyebrow+'</div><h2 class="q-title">'+step.q+'</h2>';
+    if(step.help)html+='<p class="q-help">'+step.help+'</p>';
+
+    if(step.type==='single'||step.type==='multi'){
+      html+='<div class="opts'+(step.grid?' grid':'')+'">';
+      each(step.opts,function(o,i){
+        var sel = step.type==='multi' ? ((state[step.id]||[]).indexOf(i)>-1) : (state[step.id]===i);
+        html+='<div class="opt'+(sel?' sel':'')+'" data-i="'+i+'">'+
+          '<span class="ck">✓</span>'+
+          (o.img?'<img class="opt-img" src="'+imgSrc(o.img)+'" alt="" loading="lazy">':(o.e?'<span class="em">'+o.e+'</span>':''))+
+          '<span class="tx">'+o.l+(o.s?'<small>'+o.s+'</small>':'')+'</span></div>';
+      });
+      html+='</div>';
+      html+='<div class="q-feedback" id="qfb"><span class="coach">☯️ Maestra Valentina</span><p id="qfbtx"></p></div>';
+      html+='<button class="btn block q-next" id="qnext"'+(step.type==='single'?' style="display:none"':'')+'>Continuar ▸</button>';
+    }
+    else if(step.type==='metrics'){
+      var w=state.peso||62, h=state.altura||162;
+      html+='<div class="metric"><div class="row"><span class="k">Peso</span><span class="v"><span id="wv">'+w+'</span> kg</span></div>'+
+        '<input type="range" id="wr" min="40" max="120" value="'+w+'"></div>'+
+        '<div class="metric"><div class="row"><span class="k">Altura</span><span class="v"><span id="hv">'+h+'</span> cm</span></div>'+
+        '<input type="range" id="hr" min="140" max="195" value="'+h+'"></div>'+
+        '<div class="q-feedback show"><span class="coach">☯️ Maestra Valentina</span><p>'+step.fb+'</p></div>'+
+        '<button class="btn block q-next">Ver mi plan ▸</button>';
+    }
+    swap(html,step);
+  }
+
+  function swap(html,step){
+    if(!slide) return;
+    slide.classList.add('out');
+    lockTaps(true);
+    var delay=reduce?0:300;
+    setTimeout(function(){
+      slide.innerHTML=html;
+      slide.classList.remove('out');
+      void slide.offsetWidth;
+      slide.classList.add('in');
+      lockTaps(false);
+      try{ bind(step); }catch(e){ if(window.console&&console.error) console.error('[tcf] bind:',e); }
+    },delay);
+  }
+
+  function bind(step){
+    if(step.type==='single'){
+      each(slide.querySelectorAll('.opt'),function(el){
+        el.addEventListener('click',function(){
+          if(qlock)return; qlock=true; lockTaps(true);
+          var i=+el.getAttribute('data-i');
+          state[step.id]=i;
+          each(slide.querySelectorAll('.opt'),function(x){x.classList.remove('sel');});
+          el.classList.add('sel');
+          setTimeout(next,180);
+        });
+      });
+    }
+    if(step.type==='multi'){
+      var mfb=slide.querySelector('#qfb'),mtx=slide.querySelector('#qfbtx'),mnx=slide.querySelector('#qnext');
+      function refresh(){
+        var arr=state[step.id]||[];
+        each(slide.querySelectorAll('.opt'),function(x){ setCls(x,'sel',arr.indexOf(+x.getAttribute('data-i'))>-1); });
+        if(arr.length){
+          var none=arr.some(function(i){return step.opts[i].l.toLowerCase().indexOf('ninguno')>-1;});
+          if(mtx) mtx.textContent= none ? 'Sin molestias: practicamos a fondo y sin límites. 🔥' : 'Anotado. Adaptamos cada movimiento para cuidar esas zonas.';
+          if(mfb) mfb.classList.add('show'); if(mnx) mnx.style.display='';
+        } else { if(mfb) mfb.classList.remove('show'); if(mnx) mnx.style.display='none'; }
+      }
+      each(slide.querySelectorAll('.opt'),function(el){
+        el.addEventListener('click',function(){
+          var i=+el.getAttribute('data-i');
+          var arr=state[step.id]||[];
+          var none=step.opts[i].l.toLowerCase().indexOf('ninguno')>-1;
+          if(none){arr=[i];}
+          else{var p=arr.indexOf(i);if(p>-1)arr.splice(p,1);else arr.push(i);
+            each(step.opts,function(o,oi){if(o.l.toLowerCase().indexOf('ninguno')>-1){var pp=arr.indexOf(oi);if(pp>-1)arr.splice(pp,1);}});
+          }
+          state[step.id]=arr; refresh();
+        });
+      });
+      if(mnx) mnx.addEventListener('click',function(){ next(); });
+      refresh();
+    }
+    if(step.type==='metrics'){
+      var wr=slide.querySelector('#wr'),hr=slide.querySelector('#hr'),wv=slide.querySelector('#wv'),hv=slide.querySelector('#hv');
+      function upd(r){ if(!r) return; var pct=(r.value-r.min)/(r.max-r.min)*100;r.style.setProperty('--p',pct+'%');}
+      upd(wr);upd(hr);
+      if(wr) wr.addEventListener('input',function(){if(wv)wv.textContent=wr.value;state.peso=+wr.value;upd(wr);});
+      if(hr) hr.addEventListener('input',function(){if(hv)hv.textContent=hr.value;state.altura=+hr.value;upd(hr);});
+      if(wr) state.peso=+wr.value; if(hr) state.altura=+hr.value;
+      var mb=slide.querySelector('.q-next'); if(mb) mb.addEventListener('click',finish);
+    }
+  }
+
+  function next(){ if(idx<STEPS.length-1){idx++;render();} else finish(); }
+
+  /* ===== PORTADA (edad) → quiz ===== */
+  var landing=document.getElementById('landing');
+  var ageLock=false;
+  function pickAge(el){
+    if(ageLock) return; ageLock=true;
+    var i=+el.getAttribute('data-i');
+    state.edad=i;
+    each(qa('#ageOpts .opt'),function(x){x.classList.remove('sel');});
+    el.classList.add('sel');
+    setTimeout(function(){
+      if(landing) landing.style.display='none';
+      if(quiz) quiz.style.display='flex';
+      window.scrollTo(0,0);
+      idx=1;render();
+    },180);
+  }
+  each(qa('#ageOpts .opt'),function(el){
+    el.addEventListener('click',function(){ pickAge(el); });
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pickAge(el); } });
+  });
+
+  /* ===== FIN DEL QUIZ → análisis → VSL ===== */
+  function finish(){
+    px('Lead',{content_name:'quiz_completo'});
+    safe('qload',function(){
+      if(quiz) quiz.style.display='none';
+      if(qload) qload.style.display='flex';
+      window.scrollTo(0,0);
+      var fill=q('#qload .ld-fill');
+      var steps=[].slice.call(qa('#qload .ld-step'));
+      each(steps,function(s){s.classList.remove('active','done');});
+      if(fill){fill.style.width='6%'; void fill.offsetWidth; fill.style.width='100%';}
+      var times=[200,900,1700,2500];
+      each(steps,function(st,i){
+        setTimeout(function(){
+          if(i>0){steps[i-1].classList.remove('active');steps[i-1].classList.add('done');}
+          st.classList.add('active');
+        },times[i]);
+      });
+      setTimeout(function(){each(steps,function(s){s.classList.remove('active');s.classList.add('done');});},3150);
+    });
+    setTimeout(showVSL,3300);
+  }
+
+  /* ===== PASO FINAL: VSL ===== */
+  var offerShown=false;
+  function showVSL(){
+    if(qload) qload.style.display='none';
+    if(quiz) quiz.style.display='none';
+    if(landing) landing.style.display='none';
+    if(finalEl) finalEl.style.display='block';
+    window.scrollTo(0,0);
+    safe('buildResult',buildResult);
+    safe('player',mountPlayer);
+    /* reloj de respaldo: si el video no informa su tiempo, la oferta igual aparece */
+    setTimeout(showOffer,(CFG.SEGUNDOS_OFERTA||230)*1000);
+  }
+
+  function showOffer(){
+    if(offerShown) return; offerShown=true;
+    var w=document.getElementById('oferta-wrap');
+    if(w) w.classList.add('show');
+    safe('initResult',initResult);
+    px('ViewContent',{content_name:'oferta'});
+  }
+
+  function mountPlayer(){
+    var frame=document.getElementById('vslFrame');
+    var gate=document.getElementById('soundGate');
+    if(!frame) return;
+    var SEG=CFG.SEGUNDOS_OFERTA||230;
+
+    /* 1 · MP4 propio: arranca solo, con sonido, sin controles */
+    if(CFG.VIDEO_URL){
+      var v=document.createElement('video');
+      v.src=CFG.VIDEO_URL; v.playsInline=true; v.setAttribute('playsinline','');
+      v.setAttribute('webkit-playsinline',''); v.preload='auto'; v.controls=false;
+      frame.insertBefore(v,gate);
+      v.addEventListener('timeupdate',function(){ if(v.currentTime>=SEG) showOffer(); });
+      v.addEventListener('contextmenu',function(e){e.preventDefault();});
+      var p=v.play();
+      if(p&&p.catch) p.catch(function(){
+        v.muted=true; v.play();
+        if(gate) gate.classList.add('on');
+      });
+      if(gate) gate.addEventListener('click',function(){
+        v.muted=false; v.play(); gate.classList.remove('on');
+      });
+      return;
+    }
+
+    /* 2 · Embed de Panda / VTurb */
+    var tpl=document.getElementById('vsl-template');
+    if(tpl && tpl.innerHTML.trim()){
+      frame.insertAdjacentHTML('afterbegin',tpl.innerHTML);
+      each(frame.querySelectorAll('script'),function(old){
+        var s=document.createElement('script');
+        each(old.attributes,function(a){ s.setAttribute(a.name,a.value); });
+        s.text=old.text; old.parentNode.replaceChild(s,old);
+      });
+      /* Panda informa el tiempo por postMessage */
+      window.addEventListener('message',function(ev){
+        var d=ev.data; if(!d) return;
+        if(d.message==='panda_timeupdate' && d.currentTime>=SEG) showOffer();
+      });
+      /* VTurb: se consulta el tiempo real del player */
+      var iv=setInterval(function(){
+        try{
+          var sp=window.smartplayer && window.smartplayer.instances && window.smartplayer.instances[0];
+          if(sp && sp.video && sp.video.currentTime>=SEG){ showOffer(); clearInterval(iv); }
+        }catch(e){}
+      },1000);
+      return;
+    }
+
+    /* 3 · Sin VSL todavía: recuadro de prueba */
+    var ph=document.createElement('div');
+    ph.className='vsl-ph';
+    ph.innerHTML='VSL acá<small>Pegá la URL del MP4 en CONFIG.VIDEO_URL<br>o el embed en &lt;template id="vsl-template"&gt;<br><br>La oferta aparece igual a los '+SEG+'s</small>';
+    frame.insertBefore(ph,gate);
+  }
+
+  /* ===== RESULTADO PERSONALIZADO ===== */
+  function label(stepId,fallback){
+    var s=STEPS.filter(function(x){return x.id===stepId;})[0];
+    var v=state[stepId];
+    if(s&&s.type==='single'&&typeof v==='number')return s.opts[v].l;
+    return fallback;
+  }
+
+  function buildResult(){
+    function setH(id,h){var e=document.getElementById(id);if(e)e.innerHTML=h;}
+    function setT(id,t){var e=document.getElementById(id);if(e)e.textContent=t;}
+    var name=state.nombre||'Guerrera';
+    setT('rName',name);
+
+    var lvl=(state.nivel||0)+(state.equilibrio||0);
+    var rank = lvl<=1?'Aprendiz' : lvl<=3?'Practicante' : lvl<=5?'Discípula':'Maestra';
+    setH('rankT','Nivel inicial: '+rank+'<small>// lista para subir de nivel en 28 días</small>');
+
+    var zona=label('zona','Todo el cuerpo');
+    var obj=label('objetivo','Tonificar y firmar');
+    var tiempo=label('tiempo','15–20 minutos');
+    var dolorStep=STEPS.filter(function(x){return x.id==='dolor';})[0];
+    var dolor=(state.dolor&&state.dolor.length)? state.dolor.map(function(i){return dolorStep.opts[i].l;}).join(', '):'Ninguno';
+    var medidas=(state.peso&&state.altura)? state.peso+' kg · '+state.altura+' cm':'—';
+
+    var out=[
+      ['Objetivo',obj],['Zona foco',zona],
+      ['Tiempo/día',tiempo],['Adaptado a',dolor],
+      ['Medidas',medidas],['Nivel',label('nivel','Principiante')]
+    ];
+    setH('dossierOut', out.map(function(f){
+      return '<div class="f"><span class="k">'+f[0]+'</span><span class="val">'+f[1]+'</span></div>';
+    }).join(''));
+
+    var freno=label('freno','la falta de constancia');
+    setT('rhName',name);
+    setH('pLead', name+', el único programa de Tai Chi que te saca del "cero resultado" y construye un cuerpo firme y liviano en <b>28 días</b> — con foco en <b>'+zona.toLowerCase()+'</b>, usando solo el peso de tu cuerpo.');
+    setH('pFreno', name+', dijiste que lo que más te frena es «'+freno.toLowerCase()+'». No es falta de ganas — es falta de un método con orden. Y eso se termina en esta página.');
+    var sinDolor = dolor.toLowerCase().indexOf('ninguno')>-1;
+    setH('pDolor', sinDolor
+      ? 'No marcaste molestias — igual practicamos con técnica guiada para que sigas así: sin dolor y sin lesiones.'
+      : 'Marcaste molestia en <b>'+dolor.toLowerCase()+'</b>. Cada movimiento tiene una versión adaptada para esa zona: practicás igual, sin forzarla.');
+    setH('pc1','🎯 Tu plan ya está armado: foco en <b>'+zona+'</b>, objetivo <b>'+obj+'</b>, en solo <b>'+tiempo+'</b> por día. Sin gimnasio y sin equipo.');
+    setH('pMech','Tu progresión está calibrada para <b>'+zona+'</b> — sin saltos y sin lesiones, paso a paso.');
+    setH('ofPers','Para vos, '+name+': 28 días con foco en '+zona.toLowerCase()+'. O empezás hoy… o lo dejás para "algún día" que nunca llega.');
+  }
+
+  function revealAll(){
+    each(qa('#oferta-wrap .rise'),function(el){el.classList.add('in');});
+    each(qa('#oferta-wrap .stagger'),function(g){ each(g.children,function(ch){ if(ch.nodeType===1) ch.classList.add('in'); }); });
+  }
+
+  function initResult(){
+    safe('reveals',function(){
+      each(qa('#oferta-wrap .stagger'),function(group){
+        each(group.children,function(ch,i){
+          if(ch.nodeType===1){ch.classList.add('rise');ch.style.transitionDelay=(i*0.11)+'s';}
+        });
+      });
+      if(typeof IntersectionObserver==='undefined'){ revealAll(); return; }
+      var io=new IntersectionObserver(function(es){each(es,function(e){if(e.isIntersecting){
+        if(e.target.classList.contains('stagger')){each(e.target.children,function(ch){if(ch.nodeType===1)ch.classList.add('in');});}
+        else{e.target.classList.add('in');}
+        io.unobserve(e.target);
+      }});},{threshold:.16,rootMargin:'0px 0px -30px 0px'});
+      each(qa('#oferta-wrap .stagger'),function(g){io.observe(g);});
+      each(qa('#oferta-wrap .rise'),function(el){ if(!hasAncestor(el.parentElement,'stagger')) io.observe(el); });
+    });
+
+    safe('sticky',function(){
+      var sticky=document.getElementById('sticky');
+      var offers=[].slice.call(qa('#oferta-wrap .ocard'));
+      if(!sticky) return;
+      window.addEventListener('scroll',function(){
+        var visible=offers.some(function(o){var r=o.getBoundingClientRect();return r.top<window.innerHeight-100 && r.bottom>0;});
+        setCls(sticky,'show', window.scrollY>700 && !visible);
+      },{passive:true});
+    });
+
+    /* la cuenta regresiva arranca recién cuando aparece la oferta */
+    safe('countdown',function(){
+      var cdt=15*60;
+      function fmtcd(s){var m=Math.floor(s/60),x=s%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+      function tickCd(){var t=fmtcd(cdt);each(qa('[data-cd]'),function(e){e.textContent=t;});if(cdt>0)cdt--;}
+      tickCd();setInterval(tickCd,1000);
+    });
+
+    /* lugares: solo bajan, de 7 a 2 */
+    safe('cupos',function(){
+      var cupos=7;
+      setTimeout(function drop(){if(cupos>2){cupos--;each(qa('[data-cupos]'),function(e){e.textContent=cupos;});}setTimeout(drop,(20+Math.random()*22)*1000);},18000);
+    });
+
+    safe('toast',function(){
+      var people=[['Valeria','Rosario'],['Camila','Córdoba'],['Daniela','La Plata'],['Sofía','Mendoza'],['Antonella','Mar del Plata'],['Luciana','Tucumán'],['Paula','Salta'],['Mariana','CABA']];
+      var toast=document.getElementById('toast'),tName=document.getElementById('toastName');
+      if(!toast) return;
+      function pop(){var p=people[Math.floor(Math.random()*people.length)];if(tName)tName.textContent=p[0]+' de '+p[1];toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},4500);setTimeout(pop,(9+Math.random()*8)*1000);}
+      setTimeout(pop,6000);
+    });
+  }
+
+  /* atajo para probar: agregá ?oferta=1 a la URL y ves la oferta directo */
+  if(/[?&]oferta=1/.test(location.search)){ showVSL(); showOffer(); }
+})();
+</script>
+</body>
+</html>

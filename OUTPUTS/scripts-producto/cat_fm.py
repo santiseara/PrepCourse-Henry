@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ hoja de portón de campo
-def porton_campo(cod, L, H=1150, nhoriz=5):
+def porton_campo(L, H=1150, nhoriz=5):
     pz = marco_xz('marco', 'marco de la hoja', 'TC50', 0, L, 0, H, 0)
     for z in interiores(0, H, nhoriz-2):
         pz.append(vx('horiz', 'travesaño horizontal', 'TR4020', 25, L-25, 0, z))
@@ -34,13 +34,9 @@ def porton_campo(cod, L, H=1150, nhoriz=5):
        'Soldá la hoja apoyada sobre la mesa o sobre cuatro caballetes nivelados. Si la armás en el piso de tierra, sale alabeada.'],
       dims=[dict(vista='frente', tipo='v', a=0, b=H, ref=L*0.5, off=18, lado=1)],
       variante='%d x %d mm · marco de 50 x 50' % (L, H))
-P.append(('FM-068', porton_campo('FM-068', 3660)))
-P.append(('FM-031', porton_campo('FM-031', 2440)))
-P.append(('FM-084', porton_campo('FM-084', 4270, 1200, 6)))
 
 # ------------------------------------------------------------------ portón corredizo
-def porton_corredizo():
-    L, H = 3000, 1800
+def porton_corredizo(L=3000, H=1800):
     pz = marco_xz('marco', 'marco del portón', 'TC60', 0, L, 0, H, 0)
     for x in interiores(0, L, 3):
         pz.append(vz('parante', 'parante vertical', 'TC40', 30, H-30, x, 0))
@@ -60,7 +56,7 @@ def porton_corredizo():
       ('Puntéa la chapa de cierre cada 200 mm, siempre alternando lados para que no se arquee.', ['chapa']),
       ('Pintá con antióxido los dos lados y probá el corrido completo antes de entregarlo.', ['chapa']),
     ]
-    return Plano('FM', 'Portón corredizo de 3 m', pz, pasos, (10, 14), 'Intermedio',
+    return Plano('FM', 'Portón corredizo de %s' % metros(L), pz, pasos, (10, 14), 'Intermedio',
       'Portón corredizo de 3 x 1,80 m con marco de caño 60, diagonales en V, riel de perfil C abajo y chapa de cierre. '
       'El voladizo es lo que mata a los portones corredizos: por eso las diagonales van en V y no sueltas.',
       'Casas de barrio, galpones y quintas. Es un trabajo de presupuesto medio que casi siempre viene con el cerco, '
@@ -68,8 +64,7 @@ def porton_corredizo():
       HERR_CHAPA + ['nivel de burbuja'],
       ['El riel abajo tiene que quedar recto como una regla. Soldalo con puntos alternados y nunca de corrido: se arquea.',
        'Si la chapa de cierre la soldás de un solo lado y de corrido, el portón se dobla como una banana. Puntos cortos, cruzados.'],
-      variante='3.000 x 1.800 mm · con riel y carros')
-P.append(('FM-102', porton_corredizo()))
+      variante='%d x %d mm · con riel y carros' % (L, H))
 
 # ------------------------------------------------------------------ tranquera
 def tranquera(L=3000, H=1200):
@@ -97,15 +92,9 @@ def tranquera(L=3000, H=1200):
        'y soldá el aplastado: es lo que se hace en el campo.',
        'Dejá los parantes 60 mm más largos abajo: así la tranquera no raspa el piso cuando el terreno se asienta.'],
       variante='%d x %d mm · caño redondo' % (L, H))
-P.append(('FM-045', tranquera()))
-P.append(('FM-051', tranquera(4000, 1300)))
-P.append(('FM-038', tranquera(2500, 1100)))
-P.append(('FM-015', porton_campo('FM-015', 3000)))
-P.append(('FM-023', porton_campo('FM-023', 2000, 1100, 4)))
-P.append(('FM-090', porton_campo('FM-090', 5000, 1250, 6)))
 
 # ------------------------------------------------------------------ comedero para hacienda
-def comedero(cod, L, A, H):
+def comedero(L, A, H):
     pz = []
     t = 30
     pz.append(chapa_h('fondo', 'fondo de la canoa', 'CH3', 0, L, 120, A-120, H))
@@ -140,12 +129,9 @@ def comedero(cod, L, A, H):
       ['Los agujeros de drenaje van sí o sí. Un comedero que junta agua pudre el alimento y te lo devuelven.',
        'Soldá por adentro y rematá los cordones: cualquier filo o poro ahí adentro lastima al animal y junta suciedad.'],
       variante='%d x %d mm · canoa de 260 mm de hondo' % (L, A))
-P.append(('FM-120', comedero('FM-120', 3000, 600, 500)))
-P.append(('FM-127', comedero('FM-127', 2000, 500, 450)))
 
 # ------------------------------------------------------------------ panel de corral
-def panel_corral():
-    L, H = 3000, 1600
+def panel_corral(L=3000, H=1600):
     pz = [vz('parante', 'parante', 'CR50', 0, H, 40, 0),
           vz('parante', 'parante', 'CR50', 0, H, L-40, 0)]
     for z in reparto(200, H-100, 5):
@@ -160,7 +146,7 @@ def panel_corral():
       ('Soldá las dos orejas de unión de un lado: son las que enganchan con el panel siguiente.', ['oreja']),
       ('Pintá o galvanizá en frío. Estos paneles viven afuera y se golpean todo el tiempo.', ['oreja']),
     ]
-    return Plano('FM', 'Panel de corral de 3 m', pz, pasos, (3, 5), 'Principiante',
+    return Plano('FM', 'Panel de corral de %s' % metros(L), pz, pasos, (3, 5), 'Principiante',
       'Panel de corral de caño redondo, 3 x 1,60 m, con orejas de unión para engancharlos entre sí. Se hacen todos '
       'iguales y se venden por cantidad: el margen está en la repetición.',
       'Campos, remates, ferias y corrales de encierre. Es el trabajo ideal para hacer en serie en un galpón: una '
@@ -168,12 +154,10 @@ def panel_corral():
       HERR_BASE,
       ['Hacete la plantilla antes del primer panel. Diez paneles sin plantilla te llevan el doble de tiempo y salen distintos.',
        'Las orejas van todas del mismo lado y a la misma altura. Si no, los paneles no enganchan entre sí.'],
-      variante='3.000 x 1.600 mm · 5 caños · se enganchan entre sí')
-P.append(('FM-056', panel_corral()))
+      variante='%d x %d mm · 5 caños · se enganchan entre sí' % (L, H))
 
 # ------------------------------------------------------------------ puerta peatonal
-def puerta_peatonal():
-    L, H = 1000, 2000
+def puerta_peatonal(L=1000, H=2000):
     pz = marco_xz('marco', 'marco de la hoja', 'TC40', 0, L, 0, H, 0)
     pz += [vx('medio', 'travesaño del medio', 'TC40', 20, L-20, 0, H*0.45)]
     for x in interiores(0, L, 4):
@@ -189,7 +173,7 @@ def puerta_peatonal():
       ('Soldá las dos orejas de bisagra y el refuerzo de la cerradura.', ['oreja','cerradura']),
       ('Desbastá todo lo que se ve, pintá y recién ahí amurá la cerradura.', ['cerradura']),
     ]
-    return Plano('FM', 'Puerta peatonal de cerco', pz, pasos, (4, 6), 'Principiante',
+    return Plano('FM', 'Puerta peatonal de %d x %d' % (L, H), pz, pasos, (4, 6), 'Principiante',
       'Puerta de 1 x 2 m con chapa abajo y barrotes arriba: la combinación que más se pide porque da privacidad sin '
       'parecer una celda. Marco de caño 40 y refuerzo de cerradura ya previsto.',
       'Cercos de frente, entradas de patio y accesos de servicio. Siempre va junto con el portón o el cerco: '
@@ -197,12 +181,10 @@ def puerta_peatonal():
       HERR_CHAPA,
       ['Dejá previsto el refuerzo de la cerradura antes de pintar. Agujerear y soldar después arruina la pintura.',
        'Medí el vano dos veces y descontá 15 mm por lado. Una puerta que entra justa no entra.'],
-      variante='1.000 x 2.000 mm · chapa abajo y barrotes arriba')
-P.append(('FM-073', puerta_peatonal()))
+      variante='%d x %d mm · chapa abajo y barrotes arriba' % (L, H))
 
 # ------------------------------------------------------------------ portón de dos hojas
-def porton_dos_hojas():
-    L, H = 3600, 1900
+def porton_dos_hojas(L=3600, H=1900):
     pz = []
     for off in (0, L/2.0 + 20):
         hw = L/2.0 - 20
@@ -220,7 +202,7 @@ def porton_dos_hojas():
       ('Apoyá las dos hojas juntas en el piso y controlá que cierren parejas antes de soldar las orejas.', ['oreja']),
       ('Soldá las orejas de bisagra en espejo y pintá las dos hojas al mismo tiempo, para que queden del mismo tono.', ['oreja']),
     ]
-    return Plano('FM', 'Portón de dos hojas de 3,60 m', pz, pasos, (12, 16), 'Intermedio',
+    return Plano('FM', 'Portón de dos hojas de %s' % metros(L), pz, pasos, (12, 16), 'Intermedio',
       'Dos hojas de 1,78 x 1,90 m con chapa abajo y barrotes arriba. Entra una camioneta y se abre a mano sin motor. '
       'Las dos hojas se arman una sobre la otra para que cierren justas.',
       'Frentes de casa, quintas y galpones. Es el trabajo más caro que podés hacer sin herramientas especiales, y el '
@@ -229,7 +211,5 @@ def porton_dos_hojas():
       ['Armá la segunda hoja apoyada sobre la primera. Si las hacés por separado, en el cierre te vas a encontrar con '
        'una luz de 15 mm que no hay forma de disimular.',
        'Pintá las dos hojas el mismo día y del mismo tarro. Dos tonos distintos en un portón se ven desde la vereda.'],
-      variante='3.600 x 1.900 mm · dos hojas')
-P.append(('FM-095', porton_dos_hojas()))
+      variante='%d x %d mm · dos hojas' % (L, H))
 
-P.append(('FM-134', comedero('FM-134', 4000, 700, 550)))

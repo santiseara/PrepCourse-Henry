@@ -111,7 +111,7 @@ class Pz(object):
     """Una pieza. Viga/cano: eje p1->p2 con perfil. Chapa: caja por sus 3 extensiones."""
     __slots__ = ('tag','rol','mat','p1','p2','kind','w','h','corte','paso','marca','extra','lados','ref')
     def __init__(self, tag, rol, mat, p1, p2, kind='viga', w=None, h=None, corte='recto', marca=True,
-                 extra=None, lados=16, ref=None):
+                 extra=None, lados=12, ref=None):
         self.tag, self.rol, self.mat = tag, rol, mat
         self.p1, self.p2 = tuple(float(v) for v in p1), tuple(float(v) for v in p2)
         self.kind, self.corte, self.marca, self.extra = kind, corte, marca, extra or {}
@@ -320,7 +320,10 @@ class Plano(object):
                     l1, l2 = round(p.largo), round(max(p.w, p.h))
                 k = (p.mat, l1, l2, 'chapa')
             else:
-                k = (p.mat, round(p.largo), 0, p.corte)
+                corte = p.corte
+                if round(p.largo) > M[p.mat].get('barra', 6000):
+                    corte = corte + ' · se empalma'
+                k = (p.mat, round(p.largo), 0, corte)
             grupos.setdefault(k, []).append(p)
         orden = sorted(grupos.items(), key=lambda kv: (-kv[0][1], kv[0][0]))
         letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -348,7 +351,13 @@ class Plano(object):
                 area = (it['largo']/1000.0) * (it['ancho']/1000.0) * it['cant']
                 porm2[it['mat']] = porm2.get(it['mat'], 0.0) + area
             else:
-                porbarra.setdefault(it['mat'], []).extend([it['largo']]*it['cant'])
+                barra = M[it['mat']].get('barra', 6000)
+                largo = it['largo']
+                if largo > barra:
+                    partes = int(math.ceil(largo/float(barra)))
+                    porbarra.setdefault(it['mat'], []).extend([largo/float(partes)]*(partes*it['cant']))
+                else:
+                    porbarra.setdefault(it['mat'], []).extend([largo]*it['cant'])
         filas = []; nest = []
         for mat, largos in sorted(porbarra.items(), key=lambda kv: -M[kv[0]]['precio']):
             barras = acomodar(largos, M[mat]['barra'])
@@ -520,7 +529,7 @@ def dibujar_vista(c, piezas, vista, box, pad=6.0, lw=0.55, relleno=PAPEL, borde=
     return mk
 
 def dibujar_iso(c, piezas, box, pad=6.0, mk=None, resaltar=None, grises=None, lw=0.3,
-                base=ACERO, luz=(0.35,-0.55,0.76)):
+                base=ACERO, luz=(0.35,-0.55,0.76), contorno=True):
     """Isometrico sombreado. resaltar: tags en naranja. grises: tags en gris claro."""
     resaltar = set(resaltar or []); grises = set(grises or [])
     mk = mk or marco_para(piezas, 'iso', box, pad)
@@ -542,7 +551,7 @@ def dibujar_iso(c, piezas, box, pad=6.0, mk=None, resaltar=None, grises=None, lw
                 d = dot(cen, cam)
                 hondo = d if hondo is None else max(hondo, d)
                 caras.append((d, sq, col, sh, 'f'))
-            caras.append((hondo + 1e-6, quad, col, sh, 'l'))
+            if contorno: caras.append((hondo + 1e-6, quad, col, sh, 'l'))
     caras.sort(key=lambda t: t[0])
     for _, quad, col, sh, modo in caras:
         path = c.beginPath()
@@ -558,7 +567,7 @@ def dibujar_iso(c, piezas, box, pad=6.0, mk=None, resaltar=None, grises=None, lw
             c.setLineWidth(lw); c.drawPath(path, stroke=1, fill=0)
     return mk
 
-def trocear(quad, maxlado=85.0):
+def trocear(quad, maxlado=115.0):
     """Parte una cara grande en sub-cuadros para ordenar bien por profundidad."""
     if len(quad) != 4: return [quad]
     a, b, c_, d = quad

@@ -1,12 +1,13 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-24.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-26.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
+- 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
@@ -92,6 +93,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Quiz de Tai Chi Fit](../OUTPUTS/2026-10-26-quiz-tai-chi-fit.html) — clon del quiz de Calistenia Militar Femenina adaptado a Tai Chi: 10 pasos, VSL arriba y oferta oculta, $14.990 con cuotas de Mercado Pago · ver [[tai-chi-fit]]
 - [2026-10-26 — Biblioteca de Planos de Herrero de Finde](../OUTPUTS/scripts-producto/) — generador del producto: 115 planos, 472 páginas A4, dibujos, listas de cortes y precios por código · ver [[herrero-de-finde]]
 - [2026-10-26 — Keywords para cazar ingresos (BR + AR)](../OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md) — banco de keywords por 6 ejes (footprints de checkout nuevos, mecánica de entrega, oficio + vender, atajos sin oficio) + las que no usar porque traen marca personal · ver [[caza-de-ofertas]]
 - [2026-10-26 — Guiones piedras v26 BIZOP](../OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md) — 3 variables EN + ES: el consumible que vuelve solo, cobrás antes de fabricar y la barrera de entrada de cualquier otro oficio · ver [[guiones-y-anuncios]]

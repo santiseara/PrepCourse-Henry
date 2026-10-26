@@ -1,3 +1,12 @@
+## 2026-10-26 — Tai Chi Fit: revive la oferta, con quiz nuevo
+
+- Santiago: *"tuve una oferta de Tai Chi, Tai Chi Fit, que me generó muchísimo dinero… la idea es revivirla, pero tengo que hacer mejores embudos, mejores anuncios"*. Mandó el ad de **Calistenia Militar Femenina** para copiarle el quiz (*"cortito, simple y directo"*) y adaptarlo a Tai Chi.
+- El original resultó ser **HTML propio** (no InLead): se bajó entero con `curl` de `calisteniafeminina.site`, con sus 10 pasos, su `vsl.html` y su sales page.
+- **Quiz armado y probado paso por paso**: 10 pasos, pantalla de análisis, VSL arriba del último paso y la oferta oculta hasta `SEGUNDOS_OFERTA`. Español con voseo, $14.990 con cuotas de Mercado Pago y checkout de ImpulTienda. Entregables en `~/Desktop/tai-chi-fit/` y copia en `OUTPUTS/2026-10-26-quiz-tai-chi-fit.html`.
+- Imágenes: 10 reusadas del original (sin marca) y 2 nuevas con Higgsfield (hero de Tai Chi al amanecer y retrato de la Maestra Valentina), porque las del original tenían la marca FEMME FORCE y ropa militar.
+- Páginas nuevas/actualizadas: [[tai-chi-fit]] (nueva), [[quizzes-reglas-de-armado]] (cómo sacar el contenido de un quiz en HTML propio + regla de cómo se cambia el **tema** de un quiz modelado sin tocar sus pasos) e índice.
+- **Pendiente:** el VSL (Santiago va a mandar la página de calistenia asiática para hombres de donde sale el guion) y confirmar el link de checkout.
+
 ## 2026-10-26 — Protocolo Chía 28D: los primeros 6 anuncios
 
 - Santiago: *"vamos a hacer anuncios para la oferta de chia, metete en la pagina original que te mande y armemos variables, no los quiero igual a la competencia, quiero variables bien hechas, que no me los rechacen"*. Dejó 13 clips de recetas de chía como visuales.

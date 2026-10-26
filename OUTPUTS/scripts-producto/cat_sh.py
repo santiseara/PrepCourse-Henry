@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ mesa de soldar
-def mesa_soldar(cod, L, A, H, tapa, horas, nivel='Principiante'):
+def mesa_soldar(L, A, H, tapa, horas, nivel='Principiante'):
     w = 50
     pz = mesa('TC50', L, A, H, tapa=tapa, est_z=200, mat_est='TC40',
               n_trav=2 if L > 1300 else 1, mat_trav='TC40', rol_tapa='tapa de la mesa')
@@ -34,14 +34,9 @@ def mesa_soldar(cod, L, A, H, tapa, horas, nivel='Principiante'):
             dict(vista='lateral', tipo='v', a=0, b=H, ref=-A*0.5, off=14, lado=-1)],
       variante='%d x %d x %d mm · tapa de %s' % (L, A, H, M[tapa]['corto']))
 
-P.append(('SH-004', mesa_soldar('SH-004', 1220, 760, 900, 'CH6', (5, 7))))
-P.append(('SH-012', mesa_soldar('SH-012', 1500, 750, 900, 'CH6', (6, 8))))
-P.append(('SH-019', mesa_soldar('SH-019', 900, 600, 850, 'CH47', (4, 6))))
-P.append(('SH-026', mesa_soldar('SH-026', 1800, 900, 900, 'CH6', (7, 10), 'Intermedio')))
 
 # ------------------------------------------------------------------ mesa de fabricación pesada
-def mesa_pesada():
-    L, A, H = 3000, 1200, 900
+def mesa_pesada(L=3000, A=1200, H=900):
     pz = marco_xy('marco', 'marco de arriba', 'TC80', 0, L, 0, A, H-40)
     pz += patas('TC80', L, A, H-80, rol='pata')
     for x in interiores(0, L, 4):
@@ -62,7 +57,7 @@ def mesa_pesada():
       ('Soldá todo, dalo vuelta de nuevo y apoyá la chapa.', ['tapa']),
       ('Fijá la chapa con puntos de 25 mm cada 250 mm, siempre en cruz y nunca seguido.', ['tapa']),
     ]
-    return Plano('SH', 'Mesa de fabricación 3 x 1,20', pz, pasos, (10, 14), 'Intermedio',
+    return Plano('SH', 'Mesa de fabricación %s' % med2(L, A), pz, pasos, (10, 14), 'Intermedio',
       'La mesa grande del taller: 3 metros de chapa de 6 mm sobre caño de 80 x 80. Es la que te permite armar un portón '
       'entero arriba de la mesa, en vez de en el piso con dos caballetes y la espalda rota.',
       'El taller que ya trabaja y está cansado de armar en el suelo. También se vende muy bien a herrerías que están '
@@ -71,11 +66,10 @@ def mesa_pesada():
       ['No la armes sobre un piso que no esté nivelado: la mesa toma la forma del piso y después no hay forma de enderezarla.',
        'La chapa de 6 mm de 3 metros pesa más de 140 kg. Conseguite una mano antes de apoyarla, no la levantes solo.'],
       dims=[dict(vista='frente', tipo='v', a=0, b=250, ref=L*0.5, off=-14, lado=-1, txt='250 mm')],
-      variante='3.000 x 1.200 x 900 mm · tapa de 6 mm')
-P.append(('SH-128', mesa_pesada()))
+      variante='%d x %d x %d mm · tapa de 6 mm' % (L, A, H))
 
 # ------------------------------------------------------------------ banco de trabajo
-def banco_trabajo(cod, L, A, H):
+def banco_trabajo(L, A, H):
     pz = mesa('TC40', L, A, H, tapa='FEN18', est_z=250, mat_est='TC30', n_trav=1, mat_trav='TC30',
               rol_tapa='tapa de fenólico')
     pz.append(chapa_h('estch', 'piso del estante', 'FEN18', 40, L-40, 40, A-40, 265))
@@ -97,14 +91,9 @@ def banco_trabajo(cod, L, A, H):
       ['El fenólico se amura desde abajo, con tornillos de 1/4 y arandela, nunca soldado ni clavado por arriba.',
        'Si vas a poner la morsa, reforzá esa esquina con un pedazo de planchuela abajo de la tapa: sin eso, el fenólico se hunde.'],
       variante='%d x %d x %d mm · tapa de fenólico' % (L, A, H))
-P.append(('SH-030', mesa_soldar('SH-030', 1200, 600, 900, 'CH47', (4, 6))))
-P.append(('SH-033', banco_trabajo('SH-033', 1500, 600, 900)))
-P.append(('SH-037', banco_trabajo('SH-037', 1200, 600, 900)))
-P.append(('SH-041', banco_trabajo('SH-041', 1800, 700, 900)))
 
 # ------------------------------------------------------------------ caballete
-def caballete():
-    L, A, H = 900, 600, 750
+def caballete(L=900, A=600, H=750):
     pz = [vx('viga', 'viga de arriba', 'TC50', 0, L, A/2.0, H-25)]
     for y, s in ((0, 1), (A, -1)):
         for x in (60, L-60):
@@ -119,7 +108,7 @@ def caballete():
       ('Sumá los dos travesaños que atan las patas: sin eso, se abre con el peso.', ['trav']),
       ('Repetí todo para el segundo caballete. Un caballete solo no sirve para nada.', ['trav']),
     ]
-    return Plano('SH', 'Caballete de taller (el par)', pz, pasos, (3, 4), 'Principiante',
+    return Plano('SH', 'Caballete de taller de %d mm' % H, pz, pasos, (3, 4), 'Principiante',
       'El caballete que aguanta un portón arriba sin moverse. Viga de caño 50 x 50 y patas abiertas de caño 40, '
       'con travesaño para que no se cierren. El plano es para uno: cortá todo por dos y hacé el par de una.',
       'Se vende siempre de a dos y es la venta más fácil que vas a tener: cualquier herrero, carpintero o albañil '
@@ -127,12 +116,10 @@ def caballete():
       HERR_BASE,
       ['Las cuatro patas tienen que abrir igual. Cortá la primera, controlala apoyada y recién ahí cortá las otras tres con esa de plantilla.',
        'Si lo soldás sobre un piso desparejo, el caballete queda rengo para siempre. Armalo sobre la mesa o sobre una chapa plana.'],
-      variante='900 x 600 x 750 mm · se hacen de a dos')
-P.append(('SH-052', caballete()))
+      variante='%d x %d x %d mm · se hacen de a dos' % (L, A, H))
 
 # ------------------------------------------------------------------ carro de herramientas
-def carro_herramientas():
-    L, A, H = 760, 460, 850
+def carro_herramientas(L=760, A=460, H=850):
     pz = []
     for z in (120, 420, H-25):
         pz += marco_xy('band%d' % z, 'marco de bandeja', 'TC30', 0, L, 0, A, z)
@@ -153,7 +140,7 @@ def carro_herramientas():
       ('Doblá o armá la manija y soldala a las dos patas del frente.', ['manija','manija2']),
       ('Apoyá las tres chapas de los pisos y puntealas cada 150 mm.', ['piso120','piso420','piso825']),
     ]
-    return Plano('SH', 'Carro de herramientas de 3 bandejas', pz, pasos, (5, 7), 'Principiante',
+    return Plano('SH', 'Carro de herramientas %s' % med2(L, A), pz, pasos, (5, 7), 'Principiante',
       'Carro rodante de tres bandejas con chapa de 1,6 mm y manija de caño. Entra abajo del banco, se lleva las '
       'herramientas al trabajo y no se vuelca cuando lo cargás de un lado.',
       'Lo compran talleres mecánicos, gomerías y herreros. Es un trabajo chico, barato de material y de venta rápida: '
@@ -161,11 +148,10 @@ def carro_herramientas():
       HERR_CHAPA, 
       ['Las ruedas giratorias van adelante, las fijas atrás. Al revés, el carro se te va solo en cualquier pendiente.',
        'La chapa de 1,6 mm se deforma si le das cordón corrido. Puntos de 15 mm cada 150 y listo.'],
-      variante='760 x 460 x 850 mm · 4 ruedas de 100')
-P.append(('SH-061', carro_herramientas()))
+      variante='%d x %d x %d mm · 3 bandejas y 4 ruedas' % (L, A, H))
 
 # ------------------------------------------------------------------ estantería de taller
-def estanteria(cod, L, A, H, n):
+def estanteria(L, A, H, n):
     pz = patas('TC40', L, A, H, rol='parante')
     alturas = reparto(150, H-60, n)
     for i, z in enumerate(alturas):
@@ -197,14 +183,9 @@ def estanteria(cod, L, A, H, n):
        'Si la vas a amurar a la pared, dejá la cruz del fondo igual: la pared te sostiene, pero no te escuadra.'],
       dims=[dict(vista='frente', tipo='v', a=150, b=alturas[1], ref=L*0.5, off=-16, lado=-1)],
       variante='%d x %d x %d mm · %d estantes' % (L, A, H, n))
-P.append(('SH-073', estanteria('SH-073', 1800, 600, 1800, 4)))
-P.append(('SH-079', estanteria('SH-079', 1200, 450, 1800, 5)))
-P.append(('SH-082', estanteria('SH-082', 1500, 500, 2000, 5)))
-P.append(('SH-090', estanteria('SH-090', 900, 400, 1500, 4)))
 
 # ------------------------------------------------------------------ rack de barras
-def rack_barras():
-    L, H, A = 3000, 2000, 500
+def rack_barras(L=3000, H=2000, A=500):
     pz = []
     for x in (100, L/2.0, L-100):
         pz.append(vz('parante', 'parante', 'TC80', 0, H, x, 60))
@@ -221,19 +202,17 @@ def rack_barras():
       ('Repetí con los otros dos parantes y soldá todo a fondo.', ['brazo','escuadra']),
       ('Amurá los tres parantes a la pared con brocas de 10, usando el nivel. Nunca lo dejes parado solo.', ['base']),
     ]
-    return Plano('SH', 'Rack de barras de pared', pz, pasos, (6, 8), 'Intermedio',
+    return Plano('SH', 'Rack de barras de pared de %s' % metros(L), pz, pasos, (6, 8), 'Intermedio',
       'Tres parantes de caño 80 x 80 con cinco brazos cada uno para guardar las barras de 6 m apoyadas, separadas por '
       'perfil. Se termina el "todo el hierro tirado en un rincón" y dejás de cortar en el lugar equivocado por no ver qué tenés.',
       'Lo compran herrerías, casas de hierros chicas y talleres que venden perfiles. También carpinterías, para tablas y varillas.',
       HERR_BASE + ['agujereadora', 'brocas de 10', 'nivel de burbuja'],
       ['Va amurado a una pared de material, nunca a durlock ni a chapa. Cada parante aguanta más de 200 kg colgados.',
        'Las escuadras de abajo del brazo no son adorno: sin ellas el brazo se dobla hacia abajo con la primera barra de 6 m llena.'],
-      variante='3.000 x 2.000 mm · 5 niveles · se amura a la pared')
-P.append(('SH-085', rack_barras()))
+      variante='%d x %d mm · 5 niveles · se amura a la pared' % (L, H))
 
 # ------------------------------------------------------------------ mesa para motos
-def mesa_moto():
-    L, A, H = 2130, 760, 600
+def mesa_moto(L=2130, A=760, H=600):
     pz = mesa('TC50', L, A, H, tapa='CH3', est_z=150, mat_est='TC40', n_trav=3, mat_trav='TC40',
               rol_tapa='tapa de la mesa')
     pz += [Pz('rampa', 'larguero de la rampa', 'TC40', (L, 180, H-50), (L+700, 180, 20), corte='en ángulo'),
@@ -251,7 +230,7 @@ def mesa_moto():
       ('Repartí los travesaños de la rampa cada 170 mm.', ['escrampa']),
       ('Soldá el tope de la rueda delantera al frente de la tapa y rematá todos los cordones.', ['tope']),
     ]
-    return Plano('SH', 'Mesa de trabajo para motos 2,13 m', pz, pasos, (10, 14), 'Intermedio',
+    return Plano('SH', 'Mesa de trabajo para motos de %s' % metros(L), pz, pasos, (10, 14), 'Intermedio',
       'Mesa baja de 600 mm con tapa de chapa de 3 mm, rampa de acceso y tope para la rueda. Subís la moto, trabajás parado '
       'y dejás de arrodillarte en el piso. El estante de abajo se lleva las herramientas y las piezas que vas sacando.',
       'Talleres de motos, gomerías y el que arregla motos en el fondo de la casa. Es un trabajo que se cotiza alto porque '
@@ -259,12 +238,10 @@ def mesa_moto():
       HERR_BASE + ['nivel de burbuja'],
       ['La rampa tiene que entrar justo al ras de la tapa. Si queda un escalón de 10 mm, la rueda lo engancha al subir.',
        'No la hagas más angosta de 760 mm: con la moto arriba necesitás lugar para apoyar el pie y las herramientas.'],
-      variante='2.130 x 760 x 600 mm · con rampa')
-P.append(('SH-148', mesa_moto()))
+      variante='%d x %d x %d mm · con rampa' % (L, A, H))
 
 # ------------------------------------------------------------------ escuadra de armado
-def escuadra_armado():
-    L = 600
+def escuadra_armado(L=600):
     pz = [chapa_h('base', 'chapa base', 'CH6', 0, L, 0, L, 0, extra={'sin_vista': ('planta',)}),
           vx('ala', 'ala fija', 'TC50', 0, L, 25, 31),
           vy('alab', 'ala fija', 'TC50', 50, L, 25, 31),
@@ -278,7 +255,7 @@ def escuadra_armado():
       ('Sumá los dos refuerzos en diagonal: son los que mantienen los 90 grados cuando la plantilla se calienta.', ['refu']),
       ('Soldá por abajo y por afuera, nunca por adentro del rincón: ahí es donde apoya la pieza.', ['ala','alab']),
     ]
-    return Plano('SH', 'Escuadra de armado de 600 mm', pz, pasos, (2, 3), 'Principiante',
+    return Plano('SH', 'Escuadra de armado de %d mm' % L, pz, pasos, (2, 3), 'Principiante',
       'La plantilla de 90 grados que reemplaza las tres manos que no tenés. Apoyás las dos piezas contra las alas, '
       'puntéas y sale a escuadra siempre. Es la herramienta que más veces vas a usar de toda la biblioteca.',
       'Esta no se vende: se usa. Igual, el herrero que te ve trabajar con dos de estas te las pide. Hacé cuatro: '
@@ -286,12 +263,10 @@ def escuadra_armado():
       HERR_BASE + ['escuadra de albañil'],
       ['Nunca sueldes la pieza del cliente a la plantilla. Un punto de más y arrancás los 90 grados a la amoladora.',
        'Si la plantilla se calienta mucho, se mueve. Dejala enfriar entre armado y armado y controlala cada tanto.'],
-      variante='600 x 600 mm · chapa de 6 mm')
-P.append(('SH-101', escuadra_armado()))
+      variante='%d x %d mm · chapa de 6 mm' % (L, L))
 
 # ------------------------------------------------------------------ banco de morsa
-def banco_morsa():
-    L, A, H = 700, 550, 900
+def banco_morsa(L=700, A=550, H=900):
     pz = mesa('TC50', L, A, H, tapa='CH6', est_z=250, mat_est='TC40', n_trav=1, mat_trav='TC40',
               rol_tapa='tapa de la mesa')
     pz += [chapa_h('refu', 'refuerzo abajo de la morsa', 'CH6', 60, 360, 60, 360, H-6),
@@ -304,7 +279,7 @@ def banco_morsa():
       ('Apoyá la tapa y puntéala en cruz desde el centro hacia afuera.', ['tapa']),
       ('Marcá los cuatro agujeros de la morsa con la morsa apoyada, agujereá y amurala con bulones de 12.', ['tapa','refu']),
     ]
-    return Plano('SH', 'Banco de morsa', pz, pasos, (4, 6), 'Principiante',
+    return Plano('SH', 'Banco de morsa %s' % med2(L, A), pz, pasos, (4, 6), 'Principiante',
       'Banco chico y macizo, pensado para que la morsa quede arriba de una pata y no se mueva cuando martillás. '
       'Tapa de 6 mm con refuerzo abajo y estante para las limas y los machos.',
       'El herrero que tiene la morsa amurada al banco de madera y la ve bailar con cada golpe. También carpinterías '
@@ -312,5 +287,4 @@ def banco_morsa():
       HERR_BASE + ['agujereadora', 'mechas de 12'],
       ['La morsa va sobre una pata. Si la ponés en el medio de la tapa, el banco se hamaca con cada golpe de maza.',
        'Antes de agujerear, apoyá la morsa y marcá los agujeros con la morsa puesta: los planos de la morsa mienten.'],
-      variante='700 x 550 x 900 mm · tapa de 6 mm')
-P.append(('SH-110', banco_morsa()))
+      variante='%d x %d x %d mm · tapa de 6 mm' % (L, A, H))

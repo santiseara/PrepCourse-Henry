@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ fogonero hexagonal
-def fogonero_hex(cod, across, alto, mat_pared, horas):
+def fogonero_hex(across, alto, mat_pared, horas):
     R = across/2.0
     V = [(R*math.cos(math.radians(60*i)), R*math.sin(math.radians(60*i))) for i in range(6)]
     t = M[mat_pared]['t']
@@ -46,12 +46,9 @@ def fogonero_hex(cod, across, alto, mat_pared, horas):
        'de 4 mm por donde se escapa la ceniza.',
        'La chapa fina se quema. De 3 mm para abajo, el fogonero dura dos temporadas; con 4,75 mm dura años.'],
       variante='%d mm entre puntas · %d mm de alto · %s' % (across, alto, M[mat_pared]['corto']))
-P.append(('BQ-028', fogonero_hex('BQ-028', 1220, 400, 'CH47', (6, 9))))
-P.append(('BQ-012', fogonero_hex('BQ-012', 900, 350, 'CH3', (4, 6))))
 
 # ------------------------------------------------------------------ fogonero cuadrado
-def fogonero_cuad():
-    L, alto = 700, 350
+def fogonero_cuad(L=700, alto=350):
     pz = []
     for (x1, x2, y) in [(0, L, 0), (0, L, L)]:
         pz.append(chapa_v('pared', 'panel del lateral', 'CH3', x1, x2, y, 0, alto))
@@ -71,7 +68,7 @@ def fogonero_cuad():
       ('Dalo vuelta y soldá las cuatro patas.', ['pata']),
       ('Armá la parrilla suelta de planchuela y hacé dos o tres agujeros de 12 mm en el piso para que drene el agua.', ['parrilla']),
     ]
-    return Plano('BQ', 'Fogonero cuadrado de 70 cm', pz, pasos, (3, 5), 'Principiante',
+    return Plano('BQ', 'Fogonero cuadrado de %d cm' % (L/10), pz, pasos, (3, 5), 'Principiante',
       'El fogonero más simple de la biblioteca: cuatro chapas, un piso, un aro de ángulo y cuatro patas. Es el trabajo '
       'ideal para la primera venta, porque sale en media jornada y no tiene ningún corte difícil.',
       'Casas con patio, quinchos y campings. En otoño se vende solo. Hacé dos o tres y tenelos armados: este se vende '
@@ -79,12 +76,10 @@ def fogonero_cuad():
       HERR_CHAPA,
       ['Acordate de los agujeros de drenaje en el piso. Sin eso, junta agua de lluvia y se pudre desde adentro.',
        'Soldá por dentro, no por fuera: el cordón a la vista en un fogonero se oxida primero y se ve mal.'],
-      variante='700 x 700 x 350 mm · chapa de 3 mm')
-P.append(('BQ-007', fogonero_cuad()))
-P.append(('BQ-019', fogonero_hex('BQ-019', 1500, 450, 'CH47', (8, 11))))
+      variante='%d x %d x %d mm · chapa de 3 mm' % (L, L, alto))
 
 # ------------------------------------------------------------------ parrilla argentina con carro
-def parrilla_carro(cod, L, A, H, horas, nivel='Intermedio'):
+def parrilla_carro(L, A, H, horas, nivel='Intermedio'):
     altoc = 300
     pz = marco_xy('marco', 'marco de la caja', 'TC50', 0, L, 0, A, H-25)
     pz += patas('TC50', L, A, H-50, rol='pata')
@@ -120,12 +115,9 @@ def parrilla_carro(cod, L, A, H, horas, nivel='Intermedio'):
        'El piso de la caja va de 4,75 mm como mínimo. Con 2 mm, a la tercera parrillada está deformado como una batea.'],
       dims=[dict(vista='lateral', tipo='v', a=H, b=H+altoc, ref=-A*0.5, off=16, lado=-1)],
       variante='%d x %d mm · caja de %d mm de alto' % (L, A, altoc))
-P.append(('BQ-090', parrilla_carro('BQ-090', 1830, 760, 850, (12, 16))))
-P.append(('BQ-058', parrilla_carro('BQ-058', 1200, 600, 850, (9, 12), 'Principiante')))
 
 # ------------------------------------------------------------------ parrilla santa maría
-def santa_maria():
-    L, A, H = 1520, 700, 900
+def santa_maria(L=1520, A=700, H=900):
     pz = marco_xy('marco', 'marco de la caja', 'TC50', 0, L, 0, A, H-25)
     pz += patas('TC50', L, A, H-50, rol='pata')
     pz.append(chapa_h('piso', 'piso de la caja', 'CH6', 0, L, 0, A, H, extra={'sin_vista': ('planta',)}))
@@ -151,7 +143,7 @@ def santa_maria():
       ('Soldá el travesaño de arriba y el eje de la manivela.', ['travesaño','manivela']),
       ('Probá todo el recorrido con la parrilla vacía antes de pintar. Tiene que subir y bajar con una sola mano.', ['manivela']),
     ]
-    return Plano('BQ', 'Parrilla Santa María de 1,52 m', pz, pasos, (14, 18), 'Avanzado',
+    return Plano('BQ', 'Parrilla Santa María de %s' % metros(L), pz, pasos, (14, 18), 'Avanzado',
       'La parrilla con altura regulable: dos columnas con cremallera, bastidor que sube y baja con manivela y caja de '
       'chapa de 6 mm. Es el trabajo más caro que podés hacer en un fin de semana largo.',
       'Quinchos, casas de campo y restaurantes chicos. Es la parrilla que se publica en las revistas y la que el cliente '
@@ -160,13 +152,10 @@ def santa_maria():
       ['Las dos columnas tienen que estar a plomo y paralelas. Soldalas con una varilla provisoria arriba que las ate, '
        'y sacala recién al final.',
        'La parrilla sube con el peso de la carne arriba. Probá el mecanismo cargado con 20 kg antes de entregarla.'],
-      variante='1.520 x 700 mm · altura regulable con manivela')
-P.append(('BQ-046', parrilla_carro('BQ-046', 1500, 700, 850, (10, 14))))
-P.append(('BQ-053', santa_maria()))
+      variante='%d x %d mm · altura regulable con manivela' % (L, A))
 
 # ------------------------------------------------------------------ ahumador offset
-def ahumador_offset():
-    D, L = 560, 1520
+def ahumador_offset(D=560, L=1520):
     pz = [Pz('tambor', 'tambor de 200 L', 'CH3', (0, 0, 700), (L, 0, 700), kind='cil', w=D, h=D,
              extra={'no_lista': True})]
     fx, fy, fz, fl = L+20, 0, 200, 500
@@ -191,7 +180,7 @@ def ahumador_offset():
       ('Soldá la chimenea en la punta opuesta, con la boca a la altura de la rejilla, no arriba del todo.', ['chimenea']),
       ('Soldá las placas de las ruedas y armá la rejilla de varillas apoyada adentro.', ['rueda','rejilla']),
     ]
-    pl = Plano('BQ', 'Ahumador offset de tambor', pz, pasos, (18, 26), 'Avanzado',
+    pl = Plano('BQ', 'Ahumador offset de tambor de %s' % metros(L), pz, pasos, (18, 26), 'Avanzado',
       'Ahumador de tambor con caja de fuego al costado y chimenea opuesta. El humo entra por abajo, recorre el tambor y '
       'sale por la chimenea: esa es toda la magia, y depende de que las tres bocas estén a la altura correcta.',
       'Es el trabajo de los que ya están metidos en el asado y buscan otra cosa. Se cotiza caro, se vende por foto y se '
@@ -203,13 +192,11 @@ def ahumador_offset():
       extras=[('Tambor de 200 L de chapa (usado, de alimentos)', '1 unidad', 85000),
               ('Bisagras, manijas de madera y termómetro', 'juego', 42000),
               ('Dos ruedas de 200 mm con freno', '2 unidades', 58000)],
-      variante='tambor de 560 x 1.520 mm · caja de fuego de 500 mm')
+      variante='tambor de %d x %d mm · caja de fuego de 500 mm' % (D, L))
     return pl
-P.append(('BQ-069', ahumador_offset()))
 
 # ------------------------------------------------------------------ ahumador vertical
-def ahumador_vertical():
-    L, A, H = 600, 600, 1500
+def ahumador_vertical(L=600, A=600, H=1500):
     pz = patas('AN40', L, A, 250, rol='pata')
     pz += marco_xy('marcoa', 'marco del gabinete', 'AN40', 0, L, 0, A, 250)
     pz += marco_xy('marcob', 'marco del gabinete', 'AN40', 0, L, 0, A, H)
@@ -233,7 +220,7 @@ def ahumador_vertical():
       ('Soldá las cuatro guías de bandeja enfrentadas, a la misma altura: usá un nivel apoyado entre las dos.', ['guia']),
       ('Armá la puerta con su marco, amurá las bisagras y la manija, y soldá la chimenea arriba.', ['puerta','chimenea']),
     ]
-    return Plano('BQ', 'Ahumador vertical de 4 bandejas', pz, pasos, (14, 20), 'Avanzado',
+    return Plano('BQ', 'Ahumador vertical %s' % med2(L, A), pz, pasos, (14, 20), 'Avanzado',
       'Ahumador vertical tipo gabinete: estructura de ángulo de 40, paredes de chapa de 3 mm, piso de fuego de 4,75 y '
       'cuatro niveles de bandejas. Ocupa 60 x 60 cm de piso y ahúma para veinte personas.',
       'Rotiserías, parrillas chicas y el fanático del ahumado que ya tiene parrilla. Es un trabajo de muchas horas: '
@@ -244,8 +231,7 @@ def ahumador_vertical():
        'La puerta tiene que cerrar con un burlete de fibra o apoyar sobre un marco de ángulo. Si entra aire, no ahúma: se quema.'],
       extras=[('Bisagras, manija de madera, pestillo y termómetro', 'juego', 48000),
               ('Cuatro bandejas de parrilla de 520 x 520', '4 unidades', 72000)],
-      variante='600 x 600 x 1.500 mm · 4 bandejas')
-P.append(('BQ-130', ahumador_vertical()))
+      variante='%d x %d x %d mm · 4 bandejas' % (L, A, H))
 
 # ------------------------------------------------------------------ disco de arado
 def disco_arado():
@@ -277,11 +263,9 @@ def disco_arado():
        'Las patas abren hacia afuera. Si las hacés rectas, el disco se vuelca con el peso de la comida de un lado.'],
       extras=[('Disco de arado de 16" usado', '1 unidad', 38000)],
       variante='disco de 16" · 700 mm de alto')
-P.append(('BQ-035', disco_arado()))
 
 # ------------------------------------------------------------------ parrilla portátil
-def parrilla_portatil():
-    L, A, H = 600, 400, 300
+def parrilla_portatil(L=600, A=400, H=300):
     pz = [chapa_v('pared', 'pared de la caja', 'CH3', 0, L, 0, 0, H),
           chapa_v('pared', 'pared de la caja', 'CH3', 0, L, A-3, 0, H),
           chapa_vy('pared', 'pared de la caja', 'CH3', 0, A, 0, 0, H),
@@ -301,7 +285,7 @@ def parrilla_portatil():
       ('Soldá las dos manijas de redondo a los costados.', ['manija']),
       ('Soldá o abuloná las cuatro patas. Si las abulonás con mariposa, se desarman y entra en el baúl.', ['pata']),
     ]
-    return Plano('BQ', 'Parrilla portátil de 60 x 40', pz, pasos, (3, 5), 'Principiante',
+    return Plano('BQ', 'Parrilla portátil de %d x %d' % (L/10, A/10), pz, pasos, (3, 5), 'Principiante',
       'Parrilla chica de chapa de 3 mm con patas desmontables, para llevar al río o al camping. Entra en el baúl de '
       'cualquier auto y pesa menos de 12 kg.',
       'Se vende en primavera y en verano, y se vende de a muchas: campings, cabañas, y el que sale de pesca. '
@@ -309,12 +293,10 @@ def parrilla_portatil():
       HERR_CHAPA,
       ['Si las patas van abulonadas, usá mariposas y no tuercas comunes: el cliente no lleva llave al río.',
        'Agujereá el piso para que ventile. Sin aire por abajo, el carbón no prende y te devuelven la parrilla.'],
-      variante='600 x 400 x 300 mm · patas desmontables')
-P.append(('BQ-101', parrilla_portatil()))
+      variante='%d x %d x %d mm · patas desmontables' % (L, A, H))
 
 # ------------------------------------------------------------------ mesa auxiliar de parrilla
-def mesa_parrilla():
-    L, A, H = 1100, 600, 900
+def mesa_parrilla(L=1100, A=600, H=900):
     pz = mesa('TC40', L, A, H-30, tapa=None, est_z=250, mat_est='TC30', n_trav=1, mat_trav='TC30')
     pz.append(chapa_h('tapa', 'tapa de chapa', 'CH3', 0, L, 0, A, H-30, extra={'sin_vista': ('planta',)}))
     pz.append(chapa_h('tabla', 'tabla de picar', 'MAD25', 40, 600, 60, A-60, H-27))
@@ -331,7 +313,7 @@ def mesa_parrilla():
       ('Soldá las placas y amurá dos ruedas con freno.', ['rueda']),
       ('Pintá, apoyá la chapa del estante y amurá la tabla de picar de madera.', ['estante','tabla']),
     ]
-    return Plano('BQ', 'Mesa auxiliar de parrilla', pz, pasos, (5, 7), 'Principiante',
+    return Plano('BQ', 'Mesa auxiliar de parrilla %s' % med2(L, A), pz, pasos, (5, 7), 'Principiante',
       'La mesa que va al lado de la parrilla: tapa de chapa, tabla de picar de madera, estante abajo, barral de ganchos '
       'arriba y dos ruedas. Se vende junto con cualquier parrilla y suma la mitad del trabajo otra vez.',
       'El mismo cliente al que le hacés la parrilla. Ofrecela siempre en el mismo presupuesto, como opcional: '
@@ -339,5 +321,4 @@ def mesa_parrilla():
       HERR_CHAPA,
       ['La tabla de madera va amurada con tornillos desde abajo, nunca pegada ni soldada con grampas a la vista.',
        'Las ruedas van del lado de la manija. Si las ponés en diagonal, la mesa se mueve sola cuando la cargás.'],
-      variante='1.100 x 600 x 900 mm · con ruedas y ganchos')
-P.append(('BQ-075', mesa_parrilla()))
+      variante='%d x %d x %d mm · con ruedas y ganchos' % (L, A, H))

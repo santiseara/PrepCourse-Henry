@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ rack overland
-def rack_caja(cod, L, A, H):
+def rack_caja(L, A, H):
     pz = []
     for (x, y) in [(40, 40), (L-40, 40), (40, A-40), (L-40, A-40)]:
         pz.append(vz('columna', 'columna', 'TC40', 0, H, x, y))
@@ -40,11 +40,9 @@ def rack_caja(cod, L, A, H):
        'óxido en la camioneta del cliente.',
        'Medí la caja con la camioneta cargada y descargada: la caja de algunas camionetas se abre 10 mm con peso.'],
       variante='%d x %d x %d mm · parrilla y baranda' % (L, A, H))
-P.append(('TK-024', rack_caja('TK-024', 2440, 1500, 700)))
-P.append(('TK-031', rack_caja('TK-031', 1800, 1400, 650)))
 
 # ------------------------------------------------------------------ protector de cabina
-def protector_cabina(cod, L, H, con_luces):
+def protector_cabina(L, H, con_luces):
     pz = marco_xz('marco', 'marco del protector', 'TC50', 0, L, 0, H, 0)
     for x in interiores(0, L, 3):
         pz.append(vz('parante', 'parante vertical', 'TC40', 25, H-25, x, 0))
@@ -75,14 +73,9 @@ def protector_cabina(cod, L, H, con_luces):
        'y te deja un reclamo seguro.',
        'La malla va puntéada por detrás, no por delante: así no se ven los puntos desde atrás del auto.'],
       variante='%d x %d mm%s' % (L, H, ' · con barral de luces' if con_luces else ''))
-P.append(('TK-038', rack_caja('TK-038', 2000, 1450, 680)))
-P.append(('TK-082', protector_cabina('TK-082', 1700, 950, False)))
-P.append(('TK-076', protector_cabina('TK-076', 1500, 900, False)))
-P.append(('TK-089', protector_cabina('TK-089', 1700, 950, True)))
 
 # ------------------------------------------------------------------ bandeja plana
-def bandeja_plana():
-    L, A = 2740, 2030
+def bandeja_plana(L=2740, A=2030):
     pz = []
     for y in (60, A-60):
         pz.append(vx('larguero', 'larguero principal', 'TR10050', 0, L, y, 50))
@@ -105,7 +98,7 @@ def bandeja_plana():
       ('Pintá con antióxido por abajo antes de montarla: después no llegás nunca más.', ['piso']),
       ('Montala sobre el chasis con los soportes originales y bulones de 12.', ['frente']),
     ]
-    return Plano('TK', 'Bandeja plana 2,74 x 2,03', pz, pasos, (20, 28), 'Avanzado',
+    return Plano('TK', 'Bandeja plana %s' % med2(L, A), pz, pasos, (20, 28), 'Avanzado',
       'Bandeja de carga completa: tres largueros de caño 100 x 50, ocho travesaños, piso antideslizante y baranda '
       'perimetral. Reemplaza la caja original y te deja la camioneta lista para trabajar.',
       'Corralones, agro, forestales y servicios. Es uno de los trabajos más caros de toda la biblioteca y el que más '
@@ -114,12 +107,10 @@ def bandeja_plana():
       ['Pintá toda la parte de abajo antes de montarla. Una vez arriba del chasis, esa cara no la pintás nunca más y '
        'es la que se pudre.',
        'No sueldes nada al chasis de la camioneta. La bandeja se monta con los soportes de goma y bulones originales.'],
-      variante='2.740 x 2.030 mm · piso antideslizante')
-P.append(('TK-060', bandeja_plana()))
+      variante='%d x %d mm · piso antideslizante' % (L, A))
 
 # ------------------------------------------------------------------ barras de techo
-def barras_techo():
-    L, A = 1300, 1200
+def barras_techo(L=1300, A=1200):
     pz = []
     for y in (0, A):
         pz.append(vx('barra', 'barra', 'TR6040', 0, L, y, 60))
@@ -135,7 +126,7 @@ def barras_techo():
       ('Desbastá todo: este trabajo va arriba del auto y se ve de cerca.', ['cruz']),
       ('Pintá y amurá con bulones de 8, con goma entre el pie y el techo.', ['pie']),
     ]
-    return Plano('TK', 'Barras de techo universales', pz, pasos, (3, 4), 'Principiante',
+    return Plano('TK', 'Barras de techo de %s' % metros(L), pz, pasos, (3, 4), 'Principiante',
       'Dos barras de caño rectangular con pies de amure y travesaños de unión. Para escalera, caños o tablones arriba '
       'de cualquier utilitario.',
       'Electricistas, plomeros, pintores y albañiles con utilitario. Es un trabajo de media jornada que se cobra bien '
@@ -143,12 +134,10 @@ def barras_techo():
       HERR_BASE + ['agujereadora'],
       ['Siempre goma entre el pie y la chapa del techo. Sin eso, en un invierno el techo está oxidado.',
        'No excedas 80 kg repartidos. Si el cliente va a cargar más, el refuerzo tiene que ir al parante de la carrocería, no al techo.'],
-      variante='1.300 x 1.200 mm · dos barras')
-P.append(('TK-045', barras_techo()))
+      variante='%d x %d mm · dos barras' % (L, A))
 
 # ------------------------------------------------------------------ portabicis de enganche
-def portabicis():
-    L, A, H = 1200, 600, 500
+def portabicis(L=1200, A=600, H=500):
     pz = [vy('lanza', 'lanza del enganche', 'TC50', -A, 0, L/2.0, 100)]
     pz += [vx('cruz', 'travesaño', 'TC50', 0, L, 0, 100),
            vx('cruz', 'travesaño', 'TC50', 0, L, 0, H)]
@@ -166,7 +155,7 @@ def portabicis():
       ('Soldá los tres soportes de rueda, repartidos.', ['soporte']),
       ('Probalo cargado con tres bicicletas antes de entregarlo, moviendo con la mano.', ['soporte']),
     ]
-    return Plano('TK', 'Portabicis de enganche para 3', pz, pasos, (4, 6), 'Intermedio',
+    return Plano('TK', 'Portabicis de enganche de %d mm' % L, pz, pasos, (4, 6), 'Intermedio',
       'Portabicis que entra en el enganche de 2" con tres soportes de rueda. Todo el trabajo está en la unión de la '
       'lanza con el travesaño: ahí es donde se rompen los comprados.',
       'Familias, ciclistas y gente que sale de fin de semana. Es un trabajo chico con un precio de venta que sorprende, '
@@ -174,12 +163,10 @@ def portabicis():
       HERR_BASE + ['agujereadora'],
       ['La unión lanza-travesaño va con escuadras sí o sí. Sin ellas, con el movimiento del camino se fisura en meses.',
        'Dejá previsto el agujero del perno del enganche antes de soldar nada: después no entra la mecha.'],
-      variante='1.200 x 600 x 500 mm · enganche de 2"')
-P.append(('TK-053', portabicis()))
+      variante='%d x %d x %d mm · enganche de 2"' % (L, A, H))
 
 # ------------------------------------------------------------------ jaula de caja
-def jaula_caja():
-    L, A, H = 2200, 1400, 600
+def jaula_caja(L=2200, A=1400, H=600):
     pz = []
     for x in reparto(50, L-50, 4):
         pz += [vz('parante', 'parante', 'TC40', 0, H, x, 30),
@@ -202,7 +189,7 @@ def jaula_caja():
       ('Puntéa la malla del frente por detrás.', ['malla']),
       ('Pintá y amurá con bulones de 10 y goma entre el hierro y la chapa de la caja.', ['pie']),
     ]
-    return Plano('TK', 'Jaula de barandas para caja', pz, pasos, (6, 9), 'Principiante',
+    return Plano('TK', 'Jaula de barandas %s' % med2(L, A), pz, pasos, (6, 9), 'Principiante',
       'Barandas altas con malla al frente para llevar carga suelta: escombro, bolsas, leña o animales chicos. '
       'Desmontable, con cuatro pies atornillados.',
       'Fleteros, corralones, criadores y el que usa la camioneta para todo. Se vende por necesidad, no por gusto: '
@@ -210,5 +197,4 @@ def jaula_caja():
       HERR_CHAPA + ['agujereadora'],
       ['Hacela desmontable. Una jaula soldada a la caja le baja el valor de reventa a la camioneta y el cliente lo sabe.',
        'La baranda del medio no es decorativa: sin ella, la carga empuja los parantes y se abren hacia afuera.'],
-      variante='2.200 x 1.400 x 600 mm · desmontable')
-P.append(('TK-070', jaula_caja()))
+      variante='%d x %d x %d mm · desmontable' % (L, A, H))

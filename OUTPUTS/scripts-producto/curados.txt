@@ -1,0 +1,115 @@
+BQ-028 | fogonero_hex | 1220, 400, 'CH47', (6, 9)
+BQ-012 | fogonero_hex | 900, 350, 'CH3', (4, 6)
+BQ-007 | fogonero_cuad | 
+BQ-019 | fogonero_hex | 1500, 450, 'CH47', (8, 11)
+BQ-090 | parrilla_carro | 1830, 760, 850, (12, 16)
+BQ-058 | parrilla_carro | 1200, 600, 850, (9, 12), 'Principiante'
+BQ-046 | parrilla_carro | 1500, 700, 850, (10, 14)
+BQ-053 | santa_maria | 
+BQ-069 | ahumador_offset | 
+BQ-130 | ahumador_vertical | 
+BQ-035 | disco_arado | 
+BQ-101 | parrilla_portatil | 
+BQ-075 | mesa_parrilla | 
+FM-068 | porton_campo | 3660
+FM-031 | porton_campo | 2440
+FM-084 | porton_campo | 4270, 1200, 6
+FM-102 | porton_corredizo | 
+FM-045 | tranquera | 
+FM-051 | tranquera | 4000, 1300
+FM-038 | tranquera | 2500, 1100
+FM-015 | porton_campo | 3000
+FM-023 | porton_campo | 2000, 1100, 4
+FM-090 | porton_campo | 5000, 1250, 6
+FM-120 | comedero | 3000, 600, 500
+FM-127 | comedero | 2000, 500, 450
+FM-056 | panel_corral | 
+FM-073 | puerta_peatonal | 
+FM-095 | porton_dos_hojas | 
+FM-134 | comedero | 4000, 700, 550
+FN-022 | mesa_x | 2440, 1020, 760
+FN-031 | mesa_x | 1800, 900, 760
+FN-038 | mesa_x | 2000, 1000, 760
+FN-045 | mesa_recta | 1600, 800, 760
+FN-049 | mesa_recta | 1800, 900, 760
+FN-052 | mesa_recta | 1400, 700, 750
+FN-060 | banqueta | 380, 380, 750
+FN-064 | banqueta | 400, 400, 650
+FN-067 | banqueta | 400, 400, 450
+FN-055 | mesa_recta | 1200, 600, 750
+FN-071 | estanteria_ind | 
+FN-078 | mesa_ratona | 
+FN-107 | isla_cocina | 
+FN-139 | botellero | 
+FN-085 | cama | 1900, 1400, 'Cama de dos plazas con respaldo'
+FN-091 | cama | 1900, 900, 'Cama de una plaza con respaldo'
+FN-088 | cama | 1900, 1600, 'Cama king con respaldo'
+FN-096 | perchero | 
+FN-115 | escritorio | 
+FN-124 | banco_jardin | 
+GY-020 | jaula | 1320, 1520, 2440
+GY-028 | jaula | 1200, 1200, 2150, 'TC60'
+GY-096 | rig | 
+GY-013 | jaula | 1100, 1100, 2100, 'TC60'
+GY-034 | banco_plano | False
+GY-041 | banco_plano | True
+GY-052 | rack_discos | 
+GY-060 | squat_stand | 
+GY-068 | dominadas_pared | 
+GY-077 | torre_mancuernas | 
+SH-004 | mesa_soldar | 1220, 760, 900, 'CH6', (5, 7)
+SH-012 | mesa_soldar | 1500, 750, 900, 'CH6', (6, 8)
+SH-019 | mesa_soldar | 900, 600, 850, 'CH47', (4, 6)
+SH-026 | mesa_soldar | 1800, 900, 900, 'CH6', (7, 10), 'Intermedio'
+SH-128 | mesa_pesada | 
+SH-030 | mesa_soldar | 1200, 600, 900, 'CH47', (4, 6)
+SH-033 | banco_trabajo | 1500, 600, 900
+SH-037 | banco_trabajo | 1200, 600, 900
+SH-041 | banco_trabajo | 1800, 700, 900
+SH-052 | caballete | 
+SH-061 | carro_herramientas | 
+SH-073 | estanteria | 1800, 600, 1800, 4
+SH-079 | estanteria | 1200, 450, 1800, 5
+SH-082 | estanteria | 1500, 500, 2000, 5
+SH-090 | estanteria | 900, 400, 1500, 4
+SH-085 | rack_barras | 
+SH-148 | mesa_moto | 
+SH-101 | escuadra_armado | 
+SH-110 | banco_morsa | 
+ST-015 | pergola | 3000, 3000
+ST-022 | pergola | 4000, 3000
+ST-038 | cochera | 3000, 5500
+ST-046 | cochera | 5500, 5500, 2400, 3000
+ST-064 | escalera | 2800, 3200, 14
+ST-071 | escalera | 2200, 2500, 11
+ST-029 | baranda_galeria | 
+ST-033 | baranda_galeria | 2000
+ST-036 | baranda_galeria | 4000, 1100
+ST-008 | pergola | 5000, 3000, 2500
+ST-011 | pergola | 2500, 2500, 2300
+ST-042 | cochera | 3000, 6000, 2400, 2900
+ST-059 | escalera | 3400, 3900, 17
+ST-061 | escalera | 1800, 2000, 9
+ST-053 | alero | 
+ST-080 | invernadero | 
+ST-087 | escalera_gato | 
+TK-024 | rack_caja | 2440, 1500, 700
+TK-031 | rack_caja | 1800, 1400, 650
+TK-038 | rack_caja | 2000, 1450, 680
+TK-082 | protector_cabina | 1700, 950, False
+TK-076 | protector_cabina | 1500, 900, False
+TK-089 | protector_cabina | 1700, 950, True
+TK-060 | bandeja_plana | 
+TK-045 | barras_techo | 
+TK-053 | portabicis | 
+TK-070 | jaula_caja | 
+TR-018 | trailer_util | 1800, 1200
+TR-026 | trailer_util | 2000, 1250, 450
+TR-034 | trailer_util | 2400, 1500, 500
+TR-072 | trailer_rampa | 
+TR-011 | trailer_util | 1500, 1100, 350
+TR-029 | trailer_util | 2600, 1600, 500
+TR-041 | carro_quinta | 
+TR-129 | porta_autos | 
+TR-117 | trailer_lancha | 
+TR-055 | zorra | 

@@ -6,7 +6,7 @@ from comun import *
 P = []
 
 # ------------------------------------------------------------------ mesa de comedor patas en X
-def mesa_x(cod, L, A, H, mat='TC60', tapa='MAD25'):
+def mesa_x(L, A, H, mat='TC60', tapa='MAD25'):
     w = M[mat]['w']
     pz = []
     for y in (w/2.0, A-w/2.0):
@@ -37,11 +37,9 @@ def mesa_x(cod, L, A, H, mat='TC60', tapa='MAD25'):
       ['El ángulo de las ocho piezas tiene que ser el mismo. Si cortás una por una "a ojo", la mesa queda torcida y no hay forma de arreglarla.',
        'La tapa de madera trabaja con la humedad: amurala con agujeros ovalados o con tornillo y arandela floja, nunca rígida en los cuatro puntos.'],
       variante='%d x %d x %d mm · tapa de madera maciza' % (L, A, H))
-P.append(('FN-022', mesa_x('FN-022', 2440, 1020, 760)))
-P.append(('FN-031', mesa_x('FN-031', 1800, 900, 760)))
 
 # ------------------------------------------------------------------ mesa de patas rectas
-def mesa_recta(cod, L, A, H, tapa='MAD25', mat='TC50'):
+def mesa_recta(L, A, H, tapa='MAD25', mat='TC50'):
     pz = mesa(mat, L, A, H-25, tapa=None, n_trav=1 if L > 1400 else 0, mat_trav='TC40')
     pz.append(chapa_h('tapa', 'tapa de madera', tapa, -40, L+40, -40, A+40, H-25, extra={'sin_vista': ('planta',)}))
     pz += [Pz('escuadra', 'escuadra de la pata', 'PL38', (25, 100, H-100), (120, 25, H-100), corte='en ángulo')
@@ -63,13 +61,9 @@ def mesa_recta(cod, L, A, H, tapa='MAD25', mat='TC50'):
       ['Las patas van por dentro del marco. Si las soldás por fuera, se ven los cordones desde afuera y el mueble pierde la mitad del valor.',
        'Antes de pintar, pasá disco de láminas por todos los cordones que quedan a la vista. En un mueble, la terminación es el producto.'],
       variante='%d x %d x %d mm · tapa con 40 mm de vuelo' % (L, A, H))
-P.append(('FN-038', mesa_x('FN-038', 2000, 1000, 760)))
-P.append(('FN-045', mesa_recta('FN-045', 1600, 800, 760)))
-P.append(('FN-049', mesa_recta('FN-049', 1800, 900, 760)))
-P.append(('FN-052', mesa_recta('FN-052', 1400, 700, 750)))
 
 # ------------------------------------------------------------------ banqueta alta
-def banqueta(cod, L, A, H):
+def banqueta(L, A, H):
     pz = marco_xy('marco', 'marco del asiento', 'TC30', 0, L, 0, A, H-15)
     pz += patas('TC30', L, A, H-30, rol='pata')
     pz += [vx('apoyo', 'apoyapiés', 'TC25', 15, L-15, 15, 250),
@@ -94,14 +88,9 @@ def banqueta(cod, L, A, H):
       ['Hacé una plantilla con dos pedazos de ángulo antes de la primera: si vas a hacer seis, la plantilla te ahorra una hora por banqueta.',
        'El apoyapiés a 250 mm no es capricho: más abajo no se usa y más arriba te tapa el asiento.'],
       variante='%d x %d x %d mm · asiento de madera' % (L, A, H))
-P.append(('FN-060', banqueta('FN-060', 380, 380, 750)))
-P.append(('FN-064', banqueta('FN-064', 400, 400, 650)))
-P.append(('FN-067', banqueta('FN-067', 400, 400, 450)))
-P.append(('FN-055', mesa_recta('FN-055', 1200, 600, 750)))
 
 # ------------------------------------------------------------------ estantería industrial
-def estanteria_ind():
-    L, A, H, n = 900, 350, 1800, 5
+def estanteria_ind(L=900, A=350, H=1800, n=5):
     pz = patas('TC40', L, A, H, rol='parante')
     alturas = reparto(250, H-100, n)
     for z in alturas:
@@ -117,7 +106,7 @@ def estanteria_ind():
       ('Soldá la diagonal del fondo y rematá todo.', ['cruz']),
       ('Pintá y apoyá las cinco tablas: van sueltas, con 15 mm de vuelo por lado.', ['tabla']),
     ]
-    return Plano('FN', 'Estantería industrial de 5 estantes', pz, pasos, (6, 8), 'Principiante',
+    return Plano('FN', 'Estantería industrial %s' % med2(L, A), pz, pasos, (6, 8), 'Principiante',
       'Estantería de caño y madera, 1,80 m de alto y 5 estantes. Es el mueble "industrial" que más se publica y el que '
       'más rápido se vende, porque entra en cualquier pared de 90 cm.',
       'Casas, locales de ropa, cafeterías y depósitos. Si la hacés en serie con dos o tres medidas fijas, podés tener '
@@ -125,12 +114,10 @@ def estanteria_ind():
       HERR_BASE + ['agujereadora'],
       ['La diagonal del fondo es lo único que impide que se vaya de costado. No la saques "porque se ve": va contra la pared.',
        'Las tablas van apoyadas, no soldadas ni atornilladas: así el cliente las lija o las cambia de color cuando quiere.'],
-      variante='900 x 350 x 1.800 mm · 5 tablas de madera')
-P.append(('FN-071', estanteria_ind()))
+      variante='%d x %d x %d mm · %d tablas de madera' % (L, A, H, n))
 
 # ------------------------------------------------------------------ mesa ratona
-def mesa_ratona():
-    L, A, H = 1100, 600, 450
+def mesa_ratona(L=1100, A=600, H=450):
     pz = mesa('TC40', L, A, H-25, tapa=None, n_trav=0)
     pz += [vx('bajo', 'travesaño bajo', 'TC30', 20, L-20, 20, 120),
            vx('bajo', 'travesaño bajo', 'TC30', 20, L-20, A-20, 120)]
@@ -144,7 +131,7 @@ def mesa_ratona():
       ('Pintá en negro mate: en una mesa ratona la terminación es la mitad del precio.', ['marco']),
       ('Apoyá la tapa con vuelo y el estante de abajo.', ['tapa','est']),
     ]
-    return Plano('FN', 'Mesa ratona con estante', pz, pasos, (3, 5), 'Principiante',
+    return Plano('FN', 'Mesa ratona %s' % med2(L, A), pz, pasos, (3, 5), 'Principiante',
       'Mesa baja de living con tapa de madera y estante abajo para revistas. Poco hierro, pocas horas y un precio de '
       'venta que no tiene nada que ver con lo que te costó.',
       'Se vende por Marketplace todo el año y es el mueble que la gente compra por impulso. Hacela en negro mate y con '
@@ -152,12 +139,10 @@ def mesa_ratona():
       HERR_BASE,
       ['Las patas cortas marcan cualquier diferencia de medida. Cortá las cuatro juntas, con tope en la sierra.',
        'Pintá antes de poner la madera. Si pintás después, salpicás la tapa y perdés el trabajo.'],
-      variante='1.100 x 600 x 450 mm · tapa y estante de madera')
-P.append(('FN-078', mesa_ratona()))
+      variante='%d x %d x %d mm · tapa y estante de madera' % (L, A, H))
 
 # ------------------------------------------------------------------ isla de cocina
-def isla_cocina():
-    L, A, H = 2130, 910, 900
+def isla_cocina(L=2130, A=910, H=900):
     pz = mesa('TC50', L, A, H-30, tapa=None, est_z=200, mat_est='TC40', n_trav=2, mat_trav='TC40')
     pz.append(chapa_h('tapa', 'tapa de madera maciza', 'MAD25', -40, L+40, -40, A+40, H-30, extra={'sin_vista': ('planta',)}))
     pz.append(chapa_h('estante', 'estante de madera', 'MAD25', 50, L-50, 50, A-50, 215))
@@ -170,7 +155,7 @@ def isla_cocina():
       ('Rematá todos los cordones a la vista y pintá.', ['toalla']),
       ('Apoyá la tapa con 40 mm de vuelo y el estante de abajo. Amurá desde abajo.', ['tapa','estante']),
     ]
-    return Plano('FN', 'Estructura de isla de cocina 2,13 x 0,91', pz, pasos, (10, 13), 'Intermedio',
+    return Plano('FN', 'Estructura de isla de cocina %s' % med2(L, A), pz, pasos, (10, 13), 'Intermedio',
       'La estructura de hierro de una isla de cocina, lista para que el cliente le ponga la tapa de madera, de mármol '
       'o de granito. Estante abajo, barral lateral y altura de mesada estándar.',
       'Es el trabajo que te cae cuando alguien está reformando la cocina, y el que mejor se paga de los muebles: '
@@ -178,12 +163,10 @@ def isla_cocina():
       HERR_BASE + ['nivel de burbuja'],
       ['Preguntá qué tapa van a poner antes de cortar. El granito necesita apoyo continuo, la madera no: cambia el marco.',
        'La altura final la da la tapa. Si la tapa es de 40 mm, la estructura va 40 mm más baja que la mesada que quieren.'],
-      variante='2.130 x 910 x 900 mm · altura de mesada')
-P.append(('FN-107', isla_cocina()))
+      variante='%d x %d x %d mm · altura de mesada' % (L, A, H))
 
 # ------------------------------------------------------------------ botellero
-def botellero():
-    L, A, H = 900, 400, 1800
+def botellero(L=900, A=400, H=1800):
     pz = patas('TC30', L, A, H, rol='parante')
     for z in reparto(300, H-120, 5):
         pz += [vx('est', 'travesaño del estante', 'TC25', 0, L, 15, z),
@@ -200,7 +183,7 @@ def botellero():
       ('Desbastá bien: este mueble se toca con la mano, no puede tener filos.', ['divi']),
       ('Pintá y apoyá las tablas de cada nivel.', ['tabla']),
     ]
-    return Plano('FN', 'Botellero de 5 niveles', pz, pasos, (6, 8), 'Intermedio',
+    return Plano('FN', 'Botellero %s' % med2(L, A), pz, pasos, (6, 8), 'Intermedio',
       'Botellero alto de caño 30 con separadores de redondo y tablas de madera. Entra en 90 cm de pared y guarda '
       '30 botellas acostadas.',
       'Vinotecas, cervecerías, parrillas y casas con quincho. Es un mueble de catálogo: lo mostrás y te lo piden en '
@@ -208,11 +191,10 @@ def botellero():
       HERR_BASE,
       ['Los separadores se sueldan por abajo de la tabla, no por arriba: si quedan a la vista, se ve el punto y queda sucio.',
        'Respetá los 100 mm entre separadores. Más junto no entra la botella de espumante, que es la más gorda.'],
-      variante='900 x 400 x 1.800 mm · 30 botellas')
-P.append(('FN-139', botellero()))
+      variante='%d x %d x %d mm · 5 niveles' % (L, A, H))
 
 # ------------------------------------------------------------------ cama
-def cama(cod, L, A, nombre):
+def cama(L, A, nombre):
     H = 350
     pz = marco_xy('marco', 'marco de la cama', 'TR6040', 0, L, 0, A, H-30)
     pz += patas('TC50', L, A, H-60, rol='pata')
@@ -243,13 +225,9 @@ def cama(cod, L, A, nombre):
       ['Medí el colchón real antes de cortar. Las medidas "de una plaza" cambian entre marcas hasta 40 mm.',
        'La pata del medio no es opcional en dos plazas: sin ella el larguero se arquea en seis meses.'],
       variante='colchón de %d x %d mm · respaldo de 650 mm' % (L, A))
-P.append(('FN-085', cama('FN-085', 1900, 1400, 'Cama de dos plazas con respaldo')))
-P.append(('FN-091', cama('FN-091', 1900, 900, 'Cama de una plaza con respaldo')))
-P.append(('FN-088', cama('FN-088', 1900, 1600, 'Cama king con respaldo')))
 
 # ------------------------------------------------------------------ perchero
-def perchero():
-    L, A, H = 1200, 500, 1700
+def perchero(L=1200, A=500, H=1700):
     pz = []
     for y in (30, A-30):
         pz += [vz('parante', 'parante', 'TC30', 0, H, 30, y),
@@ -271,7 +249,7 @@ def perchero():
       ('Rematá, desbastá y pintá.', ['barral']),
       ('Apoyá el estante de madera arriba.', ['estante']),
     ]
-    return Plano('FN', 'Perchero de pie con estante', pz, pasos, (4, 6), 'Principiante',
+    return Plano('FN', 'Perchero de pie %s' % med2(L, A), pz, pasos, (4, 6), 'Principiante',
       'Perchero industrial de pie, con barral de caño y estante de madera arriba. Se arma en una tarde y es de los '
       'muebles de hierro con mejor relación precio de venta contra material.',
       'Locales de ropa, dormitorios sin placard y alquileres temporarios. Si lo vendés a un local, te piden tres o cuatro '
@@ -279,12 +257,10 @@ def perchero():
       HERR_BASE,
       ['Sin las diagonales el perchero se bambolea apenas le colgás cuatro camperas. No las saques.',
        'El barral va de caño redondo, no de caño cuadrado: la percha tiene que poder correrse.'],
-      variante='1.200 x 500 x 1.700 mm · barral y estante')
-P.append(('FN-096', perchero()))
+      variante='%d x %d x %d mm · barral y estante' % (L, A, H))
 
 # ------------------------------------------------------------------ escritorio
-def escritorio():
-    L, A, H = 1400, 700, 750
+def escritorio(L=1400, A=700, H=750):
     pz = mesa('TC40', L, A, H-25, tapa=None, n_trav=1, mat_trav='TC30')
     pz.append(chapa_h('tapa', 'tapa de madera', 'MAD25', -25, L+25, -25, A+25, H-25, extra={'sin_vista': ('planta',)}))
     pz += [vx('pasa', 'travesaño pasacables', 'TC30', 40, L-40, A-60, H-150),
@@ -298,7 +274,7 @@ def escritorio():
       ('Rematá, desbastá y pintá en negro mate.', ['diag']),
       ('Amurá la tapa desde abajo con tornillos y arandela.', ['tapa']),
     ]
-    return Plano('FN', 'Escritorio industrial 1,40 x 0,70', pz, pasos, (4, 6), 'Principiante',
+    return Plano('FN', 'Escritorio industrial %s' % med2(L, A), pz, pasos, (4, 6), 'Principiante',
       'Escritorio de caño 40 con tapa de madera y travesaño pasacables en el fondo. Es el mueble que más se vendió '
       'desde que todo el mundo trabaja en casa.',
       'Oficinas chicas, estudios y gente que armó el escritorio en el living. Se vende muy bien de a dos, para parejas '
@@ -306,12 +282,10 @@ def escritorio():
       HERR_BASE + ['agujereadora'],
       ['Dejá el travesaño del fondo bien abajo: si lo ponés al ras de la tapa, no entran las rodillas.',
        'La tapa tiene que volar 25 mm por lado. Al ras se ve barato; con vuelo se ve de mueblería.'],
-      variante='1.400 x 700 x 750 mm · con pasacables')
-P.append(('FN-115', escritorio()))
+      variante='%d x %d x %d mm · con pasacables' % (L, A, H))
 
 # ------------------------------------------------------------------ banco de jardín
-def banco_jardin():
-    L, A, H = 1500, 600, 850
+def banco_jardin(L=1500, A=600, H=850):
     pz = []
     for x in (60, L-60):
         pz += [vz('pata', 'pata trasera', 'TC40', 0, H, x, A-20),
@@ -333,7 +307,7 @@ def banco_jardin():
       ('Rematá todo, desbastá y pintá con esmalte para intemperie.', ['resp']),
       ('Amurá las tablas del asiento y del respaldo desde abajo y por atrás, con tornillos de bronce.', ['tabla','tablar']),
     ]
-    return Plano('FN', 'Banco de jardín de 1,50 m', pz, pasos, (5, 7), 'Principiante',
+    return Plano('FN', 'Banco de jardín de %s' % metros(L), pz, pasos, (5, 7), 'Principiante',
       'Banco de plaza con estructura de caño y tablas de madera: asiento a 450 mm y respaldo inclinado hacia atrás. '
       'Aguanta a la intemperie si lo pintás bien.',
       'Municipios, countries, quintas y casas con jardín. Si conseguís un cliente que necesita seis bancos iguales, '
@@ -341,5 +315,4 @@ def banco_jardin():
       HERR_BASE + ['agujereadora'],
       ['Usá tornillos de bronce o inoxidables. Con tornillos comunes, en un año la madera queda manchada de óxido.',
        'La pata trasera sube hasta el respaldo de una sola pieza: si la empalmás, el respaldo se afloja con el uso.'],
-      variante='1.500 x 600 x 850 mm · asiento a 450 mm')
-P.append(('FN-124', banco_jardin()))
+      variante='%d x %d x %d mm · asiento a 450 mm' % (L, A, H))

@@ -21,7 +21,7 @@ def chasis_base(L, A, mat_larg='TR10050', mat_trav='TR6040', z=250, ntrav=6, lan
     return pz
 
 # ------------------------------------------------------------------ trailer utilitario
-def trailer_util(cod, L, A, alto_baranda=400):
+def trailer_util(L, A, alto_baranda=400):
     z = 250
     pz = chasis_base(L, A, z=z)
     pz.append(chapa_h('piso', 'piso de fenólico', 'FEN18', 0, L, 0, A, z+50, extra={'sin_vista': ('planta',)}))
@@ -56,13 +56,9 @@ def trailer_util(cod, L, A, alto_baranda=400):
               ('Kit de luces, chapa patente y cableado', '1 juego', 95000),
               ('Enganche, cuplín y rueda de apoyo', '1 juego', 140000)],
       variante='%d x %d mm · barandas de %d mm' % (L, A, alto_baranda))
-P.append(('TR-018', trailer_util('TR-018', 1800, 1200)))
-P.append(('TR-026', trailer_util('TR-026', 2000, 1250, 450)))
-P.append(('TR-034', trailer_util('TR-034', 2400, 1500, 500)))
 
 # ------------------------------------------------------------------ trailer con rampa
-def trailer_rampa():
-    L, A, z = 4880, 2080, 300
+def trailer_rampa(L=4880, A=2080, z=300):
     pz = chasis_base(L, A, 'TR12060', 'TR6040', z=z, ntrav=9, lanza=1200)
     pz.append(chapa_h('piso', 'piso de fenólico', 'FEN18', 0, L, 0, A, z+60, extra={'sin_vista': ('planta',)}))
     for y in (30, A-30):
@@ -82,7 +78,7 @@ def trailer_rampa():
       ('Pintá todo con antióxido, abajo primero.', ['rampa']),
       ('Amurá el piso de fenólico con tornillos autoperforantes y arandela, cada 300 mm.', ['piso']),
     ]
-    return Plano('TR', 'Trailer con rampa 2,08 x 4,88', pz, pasos, (28, 34), 'Avanzado',
+    return Plano('TR', 'Trailer con rampa %s' % med2(L, A), pz, pasos, (28, 34), 'Avanzado',
       'Trailer largo con rampa trasera para subir cuatriciclo, moto o un carrito: chasis de 120 x 60, nueve travesaños, '
       'barandas bajas y rampa abatible. Es el trailer de trabajo pesado.',
       'Talleres, productores, gente de fierros. Es el trabajo más caro de la biblioteca después del porta autos, '
@@ -96,12 +92,10 @@ def trailer_rampa():
               ('Dos ruedas con cubierta', '2 unidades', 380000),
               ('Kit de luces, chapa patente y cableado', '1 juego', 95000),
               ('Enganche, cuplín, rueda de apoyo y bisagras de rampa', '1 juego', 180000)],
-      variante='4.880 x 2.080 mm · rampa de 1.400 mm')
-P.append(('TR-072', trailer_rampa()))
+      variante='%d x %d mm · rampa de 1.400 mm' % (L, A))
 
 # ------------------------------------------------------------------ carro de arrastre
-def carro_quinta():
-    L, A, z = 2000, 1200, 500
+def carro_quinta(L=2000, A=1200, z=500):
     pz = [vx('larguero', 'larguero del chasis', 'TR8040', 0, L, 50, z),
           vx('larguero', 'larguero del chasis', 'TR8040', 0, L, A-50, z)]
     for x in reparto(40, L-40, 5):
@@ -126,7 +120,7 @@ def carro_quinta():
       ('Puntéa la chapa de las barandas por dentro.', ['chapa']),
       ('Pintá y soldá el piso de chapa de 3 mm con puntos alternados.', ['piso']),
     ]
-    return Plano('TR', 'Carro de arrastre para quinta', pz, pasos, (12, 16), 'Intermedio',
+    return Plano('TR', 'Carro de arrastre %s' % med2(L, A), pz, pasos, (12, 16), 'Intermedio',
       'Carro de arrastre sin patente: chasis de 80 x 40, piso de chapa de 3 mm y barandas de 400 mm. Es para adentro '
       'del campo o de la quinta, no para la ruta.',
       'Quintas, viveros, criaderos y campos chicos. Se vende rápido porque es barato de hacer y resuelve un problema '
@@ -135,14 +129,10 @@ def carro_quinta():
       ['Este carro no se patenta ni sale a la ruta. Dejáselo claro al cliente por escrito en el presupuesto.',
        'El piso de chapa soldado de corrido se arquea con el sol. Puntos de 25 mm cada 250, alternando.'],
       extras=[('Eje recto con bujes y dos ruedas de 13"', '1 juego', 290000)],
-      variante='2.000 x 1.200 mm · piso de chapa')
-P.append(('TR-011', trailer_util('TR-011', 1500, 1100, 350)))
-P.append(('TR-029', trailer_util('TR-029', 2600, 1600, 500)))
-P.append(('TR-041', carro_quinta()))
+      variante='%d x %d mm · piso de chapa' % (L, A))
 
 # ------------------------------------------------------------------ porta autos
-def porta_autos():
-    L, A, z = 6100, 2440, 400
+def porta_autos(L=6100, A=2440, z=400):
     pz = [vx('larguero', 'larguero principal', 'C120', 0, L, 160, z),
           vx('larguero', 'larguero principal', 'C120', 0, L, A-160, z)]
     for x in reparto(60, L-60, 11):
@@ -168,7 +158,7 @@ def porta_autos():
       ('Armá las dos rampas y probalas con un auto antes de pintar.', ['rampa']),
       ('Pintá todo, abajo primero, y montá luces, guardabarros y malacate.', ['rodera']),
     ]
-    return Plano('TR', 'Porta autos de doble eje 6,10 m', pz, pasos, (45, 60), 'Avanzado',
+    return Plano('TR', 'Porta autos de doble eje de %s' % metros(L), pz, pasos, (45, 60), 'Avanzado',
       'Trailer porta autos con largueros de perfil C 120, once travesaños, doble eje, roderas de chapa antideslizante '
       'y dos rampas. Es el trabajo más grande de toda la biblioteca.',
       'Talleres, compra-venta de autos, auxilios y pistas de carrera. Un solo porta autos bien hecho te paga un mes '
@@ -181,12 +171,10 @@ def porta_autos():
               ('Cuatro ruedas con cubierta', '4 unidades', 760000),
               ('Kit de luces, chapa patente, cableado y guardabarros', '1 juego', 220000),
               ('Enganche, cuplín reforzado, rueda de apoyo y malacate', '1 juego', 420000)],
-      variante='6.100 x 2.440 mm · doble eje')
-P.append(('TR-129', porta_autos()))
+      variante='%d x %d mm · doble eje' % (L, A))
 
 # ------------------------------------------------------------------ trailer para lancha
-def trailer_lancha():
-    L, A, z = 5500, 1800, 420
+def trailer_lancha(L=5500, A=1800, z=420):
     pz = [vx('espina', 'espina central', 'TR12060', 0, L, A/2.0, z)]
     for x in reparto(400, L-200, 6):
         pz.append(vy('trav', 'travesaño', 'TR6040', 200, A-200, x, z))
@@ -211,7 +199,7 @@ def trailer_lancha():
       ('Armá la torre del malacate con su escuadra.', ['torre']),
       ('Pintá con antióxido y esmalte marino: este trailer entra al agua todas las veces.', ['torre']),
     ]
-    return Plano('TR', 'Trailer para lancha de 6,7 m', pz, pasos, (27, 33), 'Avanzado',
+    return Plano('TR', 'Trailer para lancha de %s' % metros(L), pz, pasos, (27, 33), 'Avanzado',
       'Trailer de espina central con brazos de apoyo, soportes de rodillo y torre de malacate, para lanchas de hasta '
       '6,7 m. La espina central deja el casco apoyado en los rodillos y no en el chasis.',
       'Náutica, clubes y gente con lancha. Es un trabajo de nicho que se paga muy bien porque hay pocos que lo hagan '
@@ -223,12 +211,10 @@ def trailer_lancha():
               ('Dos ruedas con cubierta', '2 unidades', 360000),
               ('Ocho rodillos de goma con eje', '8 unidades', 240000),
               ('Malacate, cable, luces y chapa patente', '1 juego', 290000)],
-      variante='5.500 x 1.800 mm · espina central y rodillos')
-P.append(('TR-117', trailer_lancha()))
+      variante='%d x %d mm · espina central y rodillos' % (L, A))
 
 # ------------------------------------------------------------------ zorra de taller
-def zorra():
-    L, A, H = 1200, 700, 400
+def zorra(L=1200, A=700, H=400):
     pz = marco_xy('marco', 'marco de la plataforma', 'TC50', 0, L, 0, A, H-25)
     pz += [vy('trav', 'travesaño', 'TC40', 25, A-25, x, H-25) for x in interiores(0, L, 3)]
     pz.append(chapa_h('piso', 'piso de chapa', 'CH3', 0, L, 0, A, H, extra={'sin_vista': ('planta',)}))
@@ -245,7 +231,7 @@ def zorra():
       ('Puntéa el piso de chapa cada 200 mm.', ['piso']),
       ('Cargala con 300 kg antes de entregarla: si una rueda se traba, es ahora y no en lo del cliente.', ['piso']),
     ]
-    return Plano('TR', 'Zorra de taller de 1,20 x 0,70', pz, pasos, (5, 7), 'Principiante',
+    return Plano('TR', 'Zorra de taller %s' % med2(L, A), pz, pasos, (5, 7), 'Principiante',
       'Carro plano de cuatro ruedas con manija: la zorra que mueve el motor, la caja de herramientas o las barras '
       'de 6 m dentro del taller.',
       'Talleres, depósitos, corralones y herrerías. Es un trabajo chico que se vende por necesidad y se hace en una '
@@ -254,5 +240,4 @@ def zorra():
       ['Ruedas giratorias adelante, fijas atrás. Las cuatro giratorias hacen que la zorra se vaya sola con cualquier pendiente.',
        'Las placas de las ruedas van soldadas abajo de la pata y con cuatro bulones, no con dos: con dos, en seis meses se aflojan.'],
       extras=[('Cuatro ruedas de 125 mm (dos giratorias con freno)', '1 juego', 96000)],
-      variante='1.200 x 700 x 400 mm · 4 ruedas')
-P.append(('TR-055', zorra()))
+      variante='%d x %d x %d mm · 4 ruedas' % (L, A, H))

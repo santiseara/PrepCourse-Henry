@@ -1,3 +1,11 @@
+## 2026-10-26 (noche) — Herrero de Finde: el producto, generado por código
+
+- Santiago pidió **el producto de la oferta de herrería**, completo y solo el PDF terminado en la carpeta.
+- Se leyó la landing entera para mapear cada promesa (4 hojas por plano, mm + pulgadas, lista de cortes sumada en barras de 6 m, orden de soldadura con dibujo, precio de venta sugerido, 8 categorías) y se armó un **motor propio en Python + reportlab**: `OUTPUTS/scripts-producto/` (geometría 3D, isométrico sombreado, tres vistas a la misma escala, cotas en mm y pulgadas, lista de cortes automática, nesting en barras de 6 m, costos y precio sugerido).
+- **Entregable:** `~/Desktop/herrero-de-finde/productos/Herrero de Finde - Biblioteca de planos - Volumen 1.pdf` — **472 páginas, 115 planos, 16 MB**, todo vectorial. Portada, cómo se lee un plano, tabla de la casa de hierros, cómo cobrar, control previo al corte, índice con página y los 30 trabajos que más dejan.
+- Los códigos que ya se usaron en los ads (BQ-028, BQ-053, TR-072, TR-129, FM-068, SH-148, TK-082, ST-015, ST-064, GY-020, GY-096, FN-022, FN-107…) existen adentro con el trabajo que les corresponde.
+- Anotado en [[herrero-de-finde]]: los precios del producto son más bajos que los del banco de fichas (que venían de convertir dólares ×1.000) y el PDF dice 115 planos, no 1.200.
+
 ## 2026-10-26 (tarde) — Banco de keywords para cazar ingresos en BR y AR
 
 - Pidió palabras clave no comunes para la Biblioteca de Anuncios, nicho generar ingresos, Brasil y Argentina: que no caigan marcas personales ni las ofertas que ve todo el mundo.

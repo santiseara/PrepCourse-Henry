@@ -11,7 +11,7 @@
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
-- 🆕 [[herrero-de-finde]] — Oferta nueva AR ($14.990): 1.200 planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga en ImpulTienda traducida y localizada.
+- 🆕 [[herrero-de-finde]] — Oferta AR ($14.990): planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga, V7 ganador con CPA de 1 USD y **producto propio: Biblioteca de Planos de 472 páginas generada por código**.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
@@ -92,6 +92,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Biblioteca de Planos de Herrero de Finde](../OUTPUTS/scripts-producto/) — generador del producto: 115 planos, 472 páginas A4, dibujos, listas de cortes y precios por código · ver [[herrero-de-finde]]
 - [2026-10-26 — Keywords para cazar ingresos (BR + AR)](../OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md) — banco de keywords por 6 ejes (footprints de checkout nuevos, mecánica de entrega, oficio + vender, atajos sin oficio) + las que no usar porque traen marca personal · ver [[caza-de-ofertas]]
 - [2026-10-26 — Guiones piedras v26 BIZOP](../OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md) — 3 variables EN + ES: el consumible que vuelve solo, cobrás antes de fabricar y la barrera de entrada de cualquier otro oficio · ver [[guiones-y-anuncios]]
 - [2026-10-26 — Guiones piedras v27 orgánicos (TikTok)](../OUTPUTS/2026-10-26-guiones-piedras-v27-organicos.md) — 3 guiones con eje bizop contados desde una escena real: ronda de reposición, "este mueble es toda mi fábrica" y volcá una tanda conmigo · ver [[guiones-y-anuncios]]

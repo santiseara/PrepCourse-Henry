@@ -97,7 +97,9 @@ def banco_trabajo(cod, L, A, H):
       ['El fenólico se amura desde abajo, con tornillos de 1/4 y arandela, nunca soldado ni clavado por arriba.',
        'Si vas a poner la morsa, reforzá esa esquina con un pedazo de planchuela abajo de la tapa: sin eso, el fenólico se hunde.'],
       variante='%d x %d x %d mm · tapa de fenólico' % (L, A, H))
+P.append(('SH-030', mesa_soldar('SH-030', 1200, 600, 900, 'CH47', (4, 6))))
 P.append(('SH-033', banco_trabajo('SH-033', 1500, 600, 900)))
+P.append(('SH-037', banco_trabajo('SH-037', 1200, 600, 900)))
 P.append(('SH-041', banco_trabajo('SH-041', 1800, 700, 900)))
 
 # ------------------------------------------------------------------ caballete
@@ -197,6 +199,8 @@ def estanteria(cod, L, A, H, n):
       variante='%d x %d x %d mm · %d estantes' % (L, A, H, n))
 P.append(('SH-073', estanteria('SH-073', 1800, 600, 1800, 4)))
 P.append(('SH-079', estanteria('SH-079', 1200, 450, 1800, 5)))
+P.append(('SH-082', estanteria('SH-082', 1500, 500, 2000, 5)))
+P.append(('SH-090', estanteria('SH-090', 900, 400, 1500, 4)))
 
 # ------------------------------------------------------------------ rack de barras
 def rack_barras():

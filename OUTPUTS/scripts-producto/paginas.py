@@ -90,18 +90,21 @@ def hoja_1(c, pl):
     c.drawRightString(A4W-MR, y, 'PRECIO')
     y -= 4
     linea(c, ML, y, A4W-MR, GRIS_CL, 0.4); y -= 12
+    nfilas = len(filas) + len(pl.extras)
+    paso = min(13.5, max(9.2, (y - 252.0) / max(nfilas, 1)))
+    fs = 8.2 if paso > 11.5 else 7.4
     for f in filas:
-        c.setFont('B', 8.2); c.setFillColor(TINTA)
+        c.setFont('B', fs); c.setFillColor(TINTA)
         c.drawString(ML, y, M[f['mat']]['nom'])
-        c.setFont('BM', 8.2); c.drawString(ML+300, y, f['cant'])
-        c.setFillColor(GRIS); c.setFont('B', 7.6); c.drawString(ML+400, y, f['detalle'])
-        c.setFont('BM', 8.2); c.setFillColor(TINTA); c.drawRightString(A4W-MR, y, pesos(f['precio']))
-        y -= 13.5
+        c.setFont('BM', fs); c.drawString(ML+300, y, f['cant'])
+        c.setFillColor(GRIS); c.setFont('B', fs-0.6); c.drawString(ML+400, y, f['detalle'])
+        c.setFont('BM', fs); c.setFillColor(TINTA); c.drawRightString(A4W-MR, y, pesos(f['precio']))
+        y -= paso
     for (desc, cant, precio) in pl.extras:
-        c.setFont('B', 8.2); c.setFillColor(TINTA); c.drawString(ML, y, desc)
-        c.setFont('BM', 8.2); c.drawString(ML+300, y, cant)
+        c.setFont('B', fs); c.setFillColor(TINTA); c.drawString(ML, y, desc)
+        c.setFont('BM', fs); c.drawString(ML+300, y, cant)
         c.drawRightString(A4W-MR, y, pesos(precio))
-        y -= 13.5
+        y -= paso
     linea(c, ML, y+4, A4W-MR, TINTA, 0.8); y -= 9
     c.setFont('BC', 10); c.setFillColor(TINTA)
     c.drawString(ML, y, 'LO QUE PAGÁS EN EL MOSTRADOR')
@@ -111,7 +114,7 @@ def hoja_1(c, pl):
     sobra = pl.costo_compra() - pl.costo_material()
     c.drawString(ML, y, 'Este trabajo consume %s. Los %s que sobran quedan en recortes que te sirven para el próximo.'
                  % (pesos(pl.costo_material()), pesos(max(sobra, 0))))
-    y -= 20
+    y = 212
 
     # ---- precio sugerido
     alto_caja = 96
@@ -139,16 +142,14 @@ def hoja_1(c, pl):
     c.setFont('B', 7); c.setFillColor(GRIS)
     c.drawString(hx, y-alto_caja+10, 'Precios de referencia de octubre de 2026. Si el hierro se movió, '
                  'cambiá el valor de la barra y el resto se acomoda solo.')
-    y -= alto_caja + 18
-
     # ---- herramientas
-    y = seccion(c, ML, y, 'Con esto alcanza')
+    y = seccion(c, ML, 96, 'Con esto alcanza')
     x = ML
     for h in pl.herramientas:
         w = chip(c, x, y-8, h.upper(), bg=HexColor('#ECEFF2'), fg=TINTA2, size=6.4, alto=12)
         x += w + 5
         if x > A4W - MR - 90:
-            x = ML; y -= 16
+            x = ML; y -= 15
 
 # ----------------------------------------------------------------- hoja 2
 def hoja_2(c, pl):
@@ -192,9 +193,12 @@ def hoja_2(c, pl):
             cota_v(c, mk, d['a'], d['b'], d['ref'], txt, off=d.get('off', 14), lado=d.get('lado', 1))
 
     # ---- detalle ampliado
-    det = pl.detalle or dict(vista='frente', cx=x1 + 0.13*(x2-x1), cy=z2 - 0.10*(z2-z1),
-                             r=0.11*max(x2-x1, z2-z1),
-                             nota='La unión de arriba a la izquierda. Si esta esquina está a escuadra, el resto se acomoda.')
+    if pl.detalle:
+        det = pl.detalle
+    else:
+        cx, cy, rr_ = nudo(pl.piezas, 'frente')
+        det = dict(vista='frente', cx=cx, cy=cy, r=rr_,
+                   nota='La unión que manda en este trabajo. Si acá está a escuadra, el resto se acomoda solo.')
     mkv = marcos[det['vista']]
     cen = mkv((det['cx'], det['cy'])); rr = det['r']*k
     c.setStrokeColor(NARANJA); c.setLineWidth(1.0); c.setFillColor(PAPEL)

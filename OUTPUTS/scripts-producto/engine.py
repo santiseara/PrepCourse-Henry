@@ -109,11 +109,14 @@ FACTOR_ALTO = 1.30       # techo del rango de venta
 # ============================================================================= PIEZAS
 class Pz(object):
     """Una pieza. Viga/cano: eje p1->p2 con perfil. Chapa: caja por sus 3 extensiones."""
-    __slots__ = ('tag','rol','mat','p1','p2','kind','w','h','corte','paso','marca','extra')
-    def __init__(self, tag, rol, mat, p1, p2, kind='viga', w=None, h=None, corte='recto', marca=True, extra=None):
+    __slots__ = ('tag','rol','mat','p1','p2','kind','w','h','corte','paso','marca','extra','lados','ref')
+    def __init__(self, tag, rol, mat, p1, p2, kind='viga', w=None, h=None, corte='recto', marca=True,
+                 extra=None, lados=16, ref=None):
         self.tag, self.rol, self.mat = tag, rol, mat
         self.p1, self.p2 = tuple(float(v) for v in p1), tuple(float(v) for v in p2)
         self.kind, self.corte, self.marca, self.extra = kind, corte, marca, extra or {}
+        self.lados = lados
+        self.ref = ref
         d = M[mat]
         self.w = w if w is not None else d.get('w', 10)
         self.h = h if h is not None else d.get('h', 10)
@@ -123,18 +126,21 @@ class Pz(object):
     def ejes(self):
         """(dir, u, v) del perfil."""
         d = norm(sub(self.p2, self.p1))
-        ref = (0.0, 0.0, 1.0)
-        if abs(d[2]) > 0.92: ref = (0.0, 1.0, 0.0)
+        if self.ref is not None:
+            ref = norm(self.ref)
+        else:
+            ref = (0.0, 0.0, 1.0)
+            if abs(d[2]) > 0.92: ref = (0.0, 1.0, 0.0)
         u = norm(cross(d, ref)); v = norm(cross(u, d))
         return d, u, v
     def caja(self):
         """Vertices del prisma de la pieza."""
         if self.kind == 'cil':
             d, u, v = self.ejes()
-            r = self.w/2.0
+            r = self.w/2.0; nl = self.lados
             pts = []
-            for i in range(16):
-                a = 2*math.pi*i/16.0
+            for i in range(nl):
+                a = 2*math.pi*i/nl
                 off = add(mul(u, r*math.cos(a)), mul(v, r*math.sin(a)))
                 pts.append(add(self.p1, off)); pts.append(add(self.p2, off))
             return pts
@@ -153,7 +159,7 @@ class Pz(object):
         """Lista de (4 vertices, normal) del prisma."""
         if self.kind == 'cil':
             d, u, v = self.ejes()
-            r = self.w/2.0; n = 16
+            r = self.w/2.0; n = self.lados
             aro_a = []; aro_b = []
             for i in range(n):
                 ang = 2*math.pi*i/n
@@ -301,10 +307,18 @@ class Plano(object):
         if self._cl is not None: return self._cl
         grupos = {}
         for p in self.piezas:
-            if p.kind == 'chapa':
-                (x1,y1,z1),(x2,y2,z2) = p.p1, p.p2
-                lados = sorted([abs(x2-x1), abs(y2-y1), abs(z2-z1)], reverse=True)
-                k = (p.mat, round(lados[0]), round(lados[1]), 'chapa')
+            if p.extra.get('no_lista'): continue
+            if p.extra.get('lista'):
+                l1, l2 = p.extra['lista']
+                k = (p.mat, round(l1), round(l2), 'chapa')
+            elif M[p.mat].get('por') == 'm2':
+                if p.kind == 'chapa':
+                    (x1,y1,z1),(x2,y2,z2) = p.p1, p.p2
+                    lados = sorted([abs(x2-x1), abs(y2-y1), abs(z2-z1)], reverse=True)
+                    l1, l2 = round(lados[0]), round(lados[1])
+                else:
+                    l1, l2 = round(p.largo), round(max(p.w, p.h))
+                k = (p.mat, l1, l2, 'chapa')
             else:
                 k = (p.mat, round(p.largo), 0, p.corte)
             grupos.setdefault(k, []).append(p)
@@ -522,10 +536,13 @@ def dibujar_iso(c, piezas, box, pad=6.0, mk=None, resaltar=None, grises=None, lw
             if dot(n, cam) <= 0.02: continue
             sh = 0.60 + 0.40*max(0.0, dot(n, luz))
             trozos = trocear(quad)
+            hondo = None
             for sq in trozos:
                 cen = mul(reduce_add(sq), 1.0/len(sq))
-                caras.append((dot(cen, cam), sq, col, sh, 'f'))
-            caras.append((max(dot(v, cam) for v in quad), quad, col, sh, 'l'))
+                d = dot(cen, cam)
+                hondo = d if hondo is None else max(hondo, d)
+                caras.append((d, sq, col, sh, 'f'))
+            caras.append((hondo + 1e-6, quad, col, sh, 'l'))
     caras.sort(key=lambda t: t[0])
     for _, quad, col, sh, modo in caras:
         path = c.beginPath()
@@ -541,12 +558,13 @@ def dibujar_iso(c, piezas, box, pad=6.0, mk=None, resaltar=None, grises=None, lw
             c.setLineWidth(lw); c.drawPath(path, stroke=1, fill=0)
     return mk
 
-def trocear(quad, maxlado=140.0):
+def trocear(quad, maxlado=85.0):
     """Parte una cara grande en sub-cuadros para ordenar bien por profundidad."""
+    if len(quad) != 4: return [quad]
     a, b, c_, d = quad
     l1 = max(dist(a,b), dist(d,c_)); l2 = max(dist(b,c_), dist(a,d))
-    nu = max(1, min(8, int(math.ceil(l1/maxlado))))
-    nv = max(1, min(8, int(math.ceil(l2/maxlado))))
+    nu = max(1, min(14, int(math.ceil(l1/maxlado))))
+    nv = max(1, min(14, int(math.ceil(l2/maxlado))))
     if nu == 1 and nv == 1: return [quad]
     out = []
     for i in range(nu):
@@ -652,3 +670,25 @@ def letras_iso(c, pl, box, mk=None, pad=6.0):
         c.setFont('BC', 7); c.setFillColor(PAPEL)
         c.drawCentredString(x, y-2.4, it['letra'])
     return mk
+
+
+def nudo(piezas, vista='frente'):
+    """Devuelve (cx, cy, r) de la zona con mas uniones, para el detalle ampliado."""
+    pts = []
+    for p in piezas:
+        if p.extra.get('no_lista'): continue
+        pts.append(proy(p.p1, vista)); pts.append(proy(p.p2, vista))
+    if not pts: return None
+    xs = [q[0] for q in pts]; ys = [q[1] for q in pts]
+    dim = max(max(xs)-min(xs), max(ys)-min(ys))
+    r = dim*0.085
+    mejor = None
+    for q in pts:
+        cerca = [w for w in pts if abs(w[0]-q[0]) < r and abs(w[1]-q[1]) < r]
+        peso = (len(cerca), q[1])
+        if mejor is None or peso > mejor[0]:
+            mejor = (peso, cerca)
+    cerca = mejor[1]
+    cx = sum(w[0] for w in cerca)/float(len(cerca))
+    cy = sum(w[1] for w in cerca)/float(len(cerca))
+    return cx, cy, max(r*1.15, dim*0.06)

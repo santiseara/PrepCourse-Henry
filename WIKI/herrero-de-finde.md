@@ -134,8 +134,36 @@ Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes 
 
 Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.000–$765.000), FN-139 botellero ($327.000 → $885.000–$1.150.000), FM-068 hoja de portón 3,66 ($883.000 → $1.480.000–$1.925.000), ST-064 escalera ($1.322.000 → $2.440.000–$3.170.000), ST-015 pérgola ($1.429.000 → $2.605.000–$3.385.000) y el fogonero cuadrado ($170.000 → $415.000–$535.000).
 
+## El producto: la Biblioteca de Planos (2026-10-26)
+
+> Resuelve la pregunta abierta de "¿de dónde sale la biblioteca de planos en español?". **El producto está hecho, generado por código, y es propio: no hay nada del competidor adentro.**
+
+- **Entregable:** `~/Desktop/herrero-de-finde/productos/Herrero de Finde - Biblioteca de planos - Volumen 1.pdf`. **472 páginas A4, 115 planos completos, 16 MB**, todo vectorial (se imprime a cualquier tamaño sin pixelarse).
+- **Generador:** `OUTPUTS/scripts-producto/` (motor + catálogo + maquetación). Se vuelve a generar entero con `python3 libro.py salida.pdf` en 11 segundos. Agregar un plano nuevo es escribir una función de 30 líneas: el dibujo, la lista de cortes, el aprovechamiento de barras y los precios salen solos.
+
+### Cómo está armado cada plano (4 hojas, igual que promete la landing)
+1. **El trabajo:** isométrico sombreado del trabajo terminado, tiempo, nivel, hierro que lleva, la lista de compra de la casa de hierros (barras enteras) y el precio de venta sugerido con la cuenta a la vista.
+2. **El dibujo:** frente, lateral y planta **a la misma escala**, con cotas en **mm y pulgadas**, más un **detalle ampliado** que el motor ubica solo buscando el nudo con más uniones.
+3. **La lista de cortes:** cada pieza con su letra, largo, pulgadas y tipo de corte; **diagrama de aprovechamiento** en barras de 6 m con 3 mm de sierra y el sobrante; un isométrico con las letras marcadas y el control previo al primer corte.
+4. **El armado:** hasta 12 pasos, **cada uno con su propio isométrico** donde lo que se suma en ese paso va en naranja y lo ya armado en gris. Más los dos errores que arruinan ese trabajo y la terminación.
+
+### El motor (qué sabe hacer)
+- Geometría 3D de vigas, chapas inclinadas (`ref=`) y cilindros (`kind='cil'`, con `lados` para hexágonos), proyección isométrica con pintor por caras subdivididas y vistas ortogonales con silueta.
+- **Lista de cortes automática** agrupando por material + largo + corte, letras A, B, C… y nesting *first-fit decreasing* en barras de 6 m.
+- **Costos:** tabla de 48 materiales con precio por barra de 6 m o por m². Distingue **lo que pagás en el mostrador** (barras enteras) de **lo que consume el trabajo** (metros usados + 8 % de desperdicio), que es lo que entra en el precio.
+- **Precio sugerido:** material × 1,12 (insumos) + horas × $48.000, y el techo del rango es eso × 1,30. Es la misma fórmula del banco de fichas, explicada adentro del PDF en la página 7.
+
+### Las 8 categorías (115 planos)
+Trailers y carros 10 · Parrillas, ahumadores y fogoneros 13 · Gimnasio y racks 10 · Portones de campo, comederos y corrales 16 · Herramientas y mesas de taller 19 · Racks y bandejas para camioneta 10 · Muebles industriales 20 · Cocheras, estructuras y techos 17.
+
+Los códigos que ya salieron en los ads y en la landing existen adentro con el trabajo que les corresponde: **BQ-028** fogonero hexagonal de 122 cm, **BQ-053** Santa María, **BQ-090** parrilla argentina, **TR-072** trailer con rampa, **TR-129** porta autos, **FM-068** hoja de portón de 3,66, **SH-148** mesa para motos, **TK-024** rack overland, **TK-082** protector de cabina, **ST-015** pérgola, **ST-064** escalera, **FN-022** mesa de patas en X, **FN-107** isla de cocina, **GY-020** jaula, **GY-096** rig.
+
+### Dos cosas para tener presentes
+- **Los precios del PDF son más bajos que los del banco de fichas de arriba.** Las fichas viejas salieron de convertir los dólares del original ×1.000; las del producto salen de una tabla de materiales coherente entre sí (una mesa de soldar de 1,22 m: $190.000 de hierro contra los $140.000 de la landing; un porta autos: $3,5 M contra los $7,9 M de la ficha). **Para guiones nuevos conviene usar los números del PDF**, que es lo que el comprador va a ver adentro.
+- El PDF dice **115 planos, Volumen 1**, no 1.200. La landing promete más de 1.200 y planos nuevos todos los meses: hasta que el volumen crezca, o se suman familias al generador (cada una da 3 o 4 medidas) o se baja el número de la landing.
+
 ## Preguntas abiertas
-- **Producto:** ¿de dónde sale la biblioteca de planos en español? Las 8 páginas del carrusel "Abrí un plano" son del original y están en inglés.
+- **Producto:** resuelto el 2026-10-26 con la Biblioteca de Planos generada por código (ver arriba). Falta rehacer con el generador las 8 páginas del carrusel "Abrí un plano" de la landing, que todavía son del original y están en inglés.
 - Imágenes con algo de texto en inglés que quedaron: `planilla-impresa` ("CUT LIST – WELDING BENCH"), la nota manuscrita de la tapa del bonus 2 y los carteles chicos de `casa-de-hierros`.
 - ¿Garantía de 60 días o 7, como en otras ofertas?
 - Upsells del checkout: falta analizarlos y armarlos.

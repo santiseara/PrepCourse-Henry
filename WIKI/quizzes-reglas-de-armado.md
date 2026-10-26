@@ -70,6 +70,13 @@
 - **Los cupos tienen que ser coherentes: solo bajan** (ej. 8 → 7 → 6 … hasta un mínimo de 2). Nunca "3 cupos" y después "7 cupos". Corrección del 2026-10-12.
 - Frecuencia: cada ~16 s, visibles ~4,5 s.
 
+## 7b. El VSL dentro del quiz (2026-10-25)
+- **Player propio por defecto, no embed.** Un `<video>` nuestro con el MP4 servido desde nuestro hosting: arranca solo apenas la persona llega al último paso, `playsinline`, **sin controles ni barra de progreso** para que no puedan adelantar hasta la oferta.
+- **"El video tiene que arrancar de una."** Como el último paso se llega siempre después de clics (el quiz), hay activación de usuario: se intenta `play()` **con sonido** y, solo si el navegador lo rechaza, se pasa a `muted` y se muestra un cartel grande a toda pantalla **"TOCA PARA ACTIVAR EL SONIDO"**. Nunca arrancar en silencio de entrada.
+- **El botón se desbloquea por el tiempo VISTO del video** (`timeupdate` + `currentTime`), no por un reloj: si pausan o se les corta, el botón espera. Se deja igual un `setTimeout` de respaldo con el mismo número, por si el video no informa su tiempo (embed externo o error de carga).
+- **MP4 para web**: 720x1280, CRF 25, AAC 96k, `-movflags +faststart`. 17 minutos quedan en ~146 MB. El hosting tiene que aceptar *Range requests* o el video no puede ir cargando mientras se reproduce (`python3 -m http.server` **no** las acepta: sirve para probar que arranca, no para probar el salto de tiempo).
+- VTurb/Panda queda como alternativa: `VIDEO_URL` vacío y el embed adentro del `<template id="vsl-template">`. Con embed externo el botón vuelve a salir por reloj.
+
 ## 8. Entrega (siempre)
 > Desde el 2026-10-22, todo va dentro de `~/Desktop/<oferta>/` (`landing/`, `imagenes/`, `anuncios/`), no suelto en el Escritorio ([[como-trabajar-con-santiago]]).
 
@@ -111,6 +118,7 @@
 | 2026-10-14 | Mounjaro Humilde | Imagen "Todavía no sé" con marca de agua | §4 marcas de agua |
 | 2026-10-14 | Mounjaro Humilde | El IMC decía "Sobrepeso" con la barra en "Saludable" | §4b barra del IMC |
 | 2026-10-14 | Mounjaro Humilde | Peso y altura con medidor | §4b medidor |
+| 2026-10-25 | Protocolo Chía 28D | "Poneme el vsl en el quiz, y quiero que el botón de cta aparezca a los 16 minutos, el video tiene que arrancar de una" | §7b: player propio con autoplay con sonido y botón por tiempo visto del video |
 | 2026-10-14 | Mounjaro Humilde | Sacar la pantalla de "¿Dónde preferís recibir tu plan? WhatsApp / E-mail" | No incluir el paso de elegir canal |
 | 2026-10-15 | Mounjaro Humilde | Sacar también el paso del e-mail: "en el checkout se lo pedimos también" | **No pedir e-mail ni WhatsApp en el quiz**: los datos de contacto se piden en el checkout |
 | 2026-10-14 | Mounjaro Humilde | "¿Por qué tardás tanto?" | §3 rapidez: armar desde el JSON, sin recorrido completo ni IA de más |

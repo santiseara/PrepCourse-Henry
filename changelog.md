@@ -1,3 +1,12 @@
+## 2026-10-25 (noche) — El VSL adentro del quiz, con botón a los 16 minutos
+
+- Santiago: *"poneme el vsl en el quiz, y quiero que el botón de cta aparezca a los 16 minutos, el video tiene que arrancar de una"*.
+- Se armó **`landing/Protocolo-Chia-28D-VSL-web.mp4`**: 720x1280, CRF 25, AAC 96k, `+faststart`. 17:16 en **146 MB** (del master de 1,0 GB).
+- El `<template id="vsl-template">` dejó de ser un hueco para el embed: ahora tiene **player propio** sin controles ni barra de progreso, que arranca solo al llegar al último paso e intenta reproducir **con sonido**; si el navegador lo rechaza, pasa a silencio y muestra "TOCA PARA ACTIVAR EL SONIDO".
+- **El botón sale a los 960 s del video, no del reloj** (`timeupdate` + `currentTime`), con respaldo por reloj para el caso de embed externo. Antes eran 795 s de reloj.
+- Probado de punta a punta en Chrome sobre un server local: el video arranca solo y sin silencio, y el botón aparece cuando el video cruza el umbral (se verificó con una copia de prueba en 8 s).
+- Regla nueva en [[quizzes-reglas-de-armado]] §7b.
+
 ## 2026-10-25 — Protocolo Chía 28D: voz nueva (Achernar) y render 50 veces más rápido
 
 - Santiago: *"la voz de la experta no me gustó nada"* → se eligió **Achernar** de las 3 pruebas y se rehízo el VSL entero con esa voz.

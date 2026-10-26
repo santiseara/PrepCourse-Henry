@@ -75,7 +75,8 @@
 - **"El video tiene que arrancar de una."** Como el último paso se llega siempre después de clics (el quiz), hay activación de usuario: se intenta `play()` **con sonido** y, solo si el navegador lo rechaza, se pasa a `muted` y se muestra un cartel grande a toda pantalla **"TOCA PARA ACTIVAR EL SONIDO"**. Nunca arrancar en silencio de entrada.
 - **El botón se desbloquea por el tiempo VISTO del video** (`timeupdate` + `currentTime`), no por un reloj: si pausan o se les corta, el botón espera. Se deja igual un `setTimeout` de respaldo con el mismo número, por si el video no informa su tiempo (embed externo o error de carga).
 - **MP4 para web**: 720x1280, CRF 25, AAC 96k, `-movflags +faststart`. 17 minutos quedan en ~146 MB. El hosting tiene que aceptar *Range requests* o el video no puede ir cargando mientras se reproduce (`python3 -m http.server` **no** las acepta: sirve para probar que arranca, no para probar el salto de tiempo).
-- VTurb/Panda queda como alternativa: `VIDEO_URL` vacío y el embed adentro del `<template id="vsl-template">`. Con embed externo el botón vuelve a salir por reloj.
+- VTurb/Panda: `VIDEO_URL` vacío y el embed adentro del `<template id="vsl-template">`. El botón **sigue saliendo por tiempo real del video**: Panda lo informa por `panda_timeupdate` y VTurb por `window.smartplayer.instances[0].video.currentTime`; el reloj queda solo de respaldo.
+- **Panda arranca en silencio.** Por más que el embed traiga `allow="autoplay"`, el player sale mudo con su propio cartel ("Pulse aquí para activar el sonido"). Eso se configura en el panel de Panda, no desde el HTML: si Santiago pide que arranque con sonido o que el cartel hable como el resto del quiz, hay que tocarlo ahí. Confirmado en Protocolo Chía 28D el 2026-10-25.
 
 ## 8. Entrega (siempre)
 > Desde el 2026-10-22, todo va dentro de `~/Desktop/<oferta>/` (`landing/`, `imagenes/`, `anuncios/`), no suelto en el Escritorio ([[como-trabajar-con-santiago]]).

@@ -9,10 +9,12 @@
      PRECIO           : US$ 17
      PIXEL_ID         : lo pone la tienda (ya está en el template de ImpulTienda)
      SEGUNDOS_OFERTA  : 960  (16:00 del video, no del reloj)
-     VSL              : Protocolo-Chia-28D-VSL-web.mp4 (720x1280, 146 MB, 17:16).
-                        Player propio, sin barra de progreso: arranca solo al
-                        llegar al último paso y no se puede adelantar.
-                        La dirección del archivo se pone en VIDEO_URL.
+     VSL              : embed de Panda Video (id d96e9c95-796d-4deb-ad81-ae68f42c23ad),
+                        dentro de <template id="vsl-template">. Arranca solo al
+                        llegar al último paso. El botón se desbloquea con el
+                        tiempo real del player (panda_timeupdate).
+                        VIDEO_URL queda vacío; si alguna vez se vuelve al MP4
+                        propio, se pone ahí la dirección y listo.
      IMAGENES         : (las mismas del quiz original, ya subidas)
        logo          https://i.postimg.cc/VkfDb3y3/logo.webp
        antes-mujer   https://i.postimg.cc/t49pnCCD/19-3.webp
@@ -177,13 +179,7 @@
      Si algún día lo pasás a VTurb o Panda: dejá VIDEO_URL vacío y pegá el
      embed de ellos acá adentro, reemplazando el <div class="qz__player">. -->
 <template id="vsl-template">
-  <div class="qz__player" id="qzPlayer">
-    <video id="qzVideo" playsinline webkit-playsinline preload="auto" x5-playsinline disablepictureinpicture controlslist="nodownload noplaybackrate"></video>
-    <button class="qz__unmute is-off" id="qzUnmute" type="button">
-      <span class="qz__unmute-ic">🔊</span>
-      <span>Tu video ya empezó<br><b>TOCA PARA ACTIVAR EL SONIDO</b></span>
-    </button>
-  </div>
+  <div style="max-width:400px;margin:0 auto;"><div style="position:relative;padding-top:177.77777777777777%;"><iframe id="panda-d96e9c95-796d-4deb-ad81-ae68f42c23ad" src="https://player-vz-c3e8527f-c25.tv.pandavideo.com/embed/?v=d96e9c95-796d-4deb-ad81-ae68f42c23ad" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div></div>
 </template>
 
 <style>
@@ -315,7 +311,7 @@
              (el VSL dura 17:16, dice el precio a las 12:59 y cierra a las 15:51)
      LINK_CHECKOUT  : checkout de ImpulTienda; se le suman los UTMs de la URL
      ========================================================= */
-  var VIDEO_URL       = 'https://REEMPLAZAR/Protocolo-Chia-28D-VSL-web.mp4';   // <-- poné acá la dirección del MP4 subido
+  var VIDEO_URL       = '';   // vacío = se usa el embed de Panda de abajo
   var SEGUNDOS_OFERTA = 960;
   var LINK_CHECKOUT   = '/checkout';
 

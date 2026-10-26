@@ -1,3 +1,11 @@
+## 2026-10-25 (noche, 2) — El VSL de Panda ya está pegado en el quiz
+
+- Santiago subió el VSL a **Panda Video** (`d96e9c95-796d-4deb-ad81-ae68f42c23ad`) y pasó el embed.
+- Embed puesto dentro de `<template id="vsl-template">` y `VIDEO_URL` vacío: el quiz usa el camino de reproductor externo.
+- Probado de punta a punta: el player **arranca solo** al llegar al último paso y llegan los `panda_timeupdate`, así que **el botón de los 16:00 sale por el tiempo real del video**. Verificado con una copia de prueba en 8 s.
+- Panda arranca **en silencio** con su propio cartel azul "Pulse aquí para activar el sonido". Eso se configura en el panel de Panda, no en el HTML.
+- El MP4 propio (`landing/Protocolo-Chia-28D-VSL-web.mp4`, 146 MB) queda guardado como alternativa: alcanza con poner su dirección en `VIDEO_URL`.
+
 ## 2026-10-25 (noche) — El VSL adentro del quiz, con botón a los 16 minutos
 
 - Santiago: *"poneme el vsl en el quiz, y quiero que el botón de cta aparezca a los 16 minutos, el video tiene que arrancar de una"*.

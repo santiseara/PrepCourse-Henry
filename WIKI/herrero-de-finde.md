@@ -157,6 +157,10 @@ Editor nuevo: `OUTPUTS/scripts-vsl/edit_herrero_v3.py` (copia de `edit_herrero.p
 - `J` (7468781029281533230) lleva el cartel en inglés *"Trailer Build Part 4: Mobility"* **de 0 a 5 s**. Se coló en el primer render del V36. En `gen5.py` quedó `DESDE = {'B': 10.5, 'J': 5.5}`. Vetos acumulados: `LIMITE = {'Y': 96, 'c': 254}` y `DESDE = {'B': 10.5, 'J': 5.5}`.
 - Se encontró con la hoja de contactos del video terminado a 1 cuadro cada 2 s, que es la regla que salió de 100 Paper Squishies: mirar el render, no solo los clips.
 
+### El pool repetía la misma fuente (2026-10-27)
+- Después de vetar el tramo sucio, el V36 abrió con **tres planos seguidos del mismo clip** (el trailer): al mover el veto, los recortes nuevos de ese clip quedaban con `usage` en cero y el puntaje los elegía igual. En `edit_herrero_v3.py` la penalización por repetir fuente dentro del mismo video pasó de `×3` a **`×30`** (y de 6 a 12 la de repetir el clip anterior). Con eso cada fuente entra una sola vez por video.
+- Regla práctica: cuando se veta un tramo y se regenera el pool, hay que **volver a mirar la hoja de contactos**: cambia la repartición de todos los planos, no solo la del clip vetado.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

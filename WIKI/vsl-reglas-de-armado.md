@@ -83,6 +83,11 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **Avatar: HeyGen** (decisión del 2026-10-12, en lugar de Higgsfield). Lo usa Santiago desde su sesión en Chrome.
 - La experta de Pilates Hormonal es la **Maestra Caro**: mujer asiática, foto en `~/Downloads/WhatsApp Image 2026-10-09 at 13.26.36 (1).jpeg`.
 - **Dos tomas del mismo personaje: una por bloque** (2026-10-26). Cuando Santiago pasa dos fotos "por si querés intercalar", se crean los dos avatares y se usa **uno por bloque de HeyGen** (sentado para diagnóstico y mecanismo, parado para oferta y cierre). Da variedad en el corte justo en el pivote del VSL y no cuesta un render extra.
+- ⛔ **2026-10-27 · La voz masculina argentina NO se elige en HeyGen.** El VSL de Calistenia Rusa salió con **Agustín**, que HeyGen lista como *Spanish (Argentina)*, y Santiago lo rechazó: *"Tiene acento gallego, te dije que era argentino, me gastaste créditos al pedo, usá siempre las voces que te digo que sirven, no innoves una nueva cada vez"*. Reglas:
+  1. **La etiqueta de idioma de HeyGen no garantiza el acento.** Ninguna de sus cuatro "Spanish (Argentina)" masculinas suena rioplatense.
+  2. **Voz de hombre argentino = Knox en Google AI Studio** con el Style de [[herrero-de-finde]] (*"Argentine man around 40/45 from Buenos Aires… Rioplatense Spanish with a natural Argentine accent (sh sound for ll and y, voseo)… no announcer tone"*), y HeyGen solo pone la cara con el lipsync del §0c. Es gratis y ya está validada en 12 videos.
+  3. **No se estrena una voz en una entrega.** Si hace falta una voz nueva, primero una **muestra de 20 s gratis** y recién con el OK se gasta un crédito.
+
 - **Voces argentinas en HeyGen:** en el selector, filtro *Idioma → Spanish (Argentina)*. Hay cuatro masculinas: **Agustín** (Middle Aged, Engaging, Podcasts — la que mejor calza con un coach a cámara), Casual Fernando, Narrator Mateo y Mateo Plácido.
 - **Avatar IV en vertical cuesta más de lo calculado** (2026-10-26): dos bloques de 3.710 y 2.942 caracteres salieron **66 y 56 créditos** (122 en total), contra los ~80 que daba la cuenta de 17 créditos por minuto. Para presupuestar, usar **~25 créditos por minuto**.
 - La voz tiene que sonar **muy real**, combinar con la avatar y sincronizar bien los labios. Acento rioplatense.

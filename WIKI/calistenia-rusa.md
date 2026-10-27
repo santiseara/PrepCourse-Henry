@@ -84,7 +84,7 @@ Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion,
 - "Técnica milenaria asiática de 800 años" → **"la escuela rusa de preparación física, la que formó a los atletas soviéticos durante más de ochenta años"**.
 
 **Avatar.** Santiago pasó dos tomas del Coach Santi en un jardín (sentada y parada). Ya existía un avatar "COACH SANTI" en HeyGen pero con otro set (podcast con micrófono), así que se crearon dos nuevos: `COACH SANTI jardin sentado` y `COACH SANTI jardin parado`. **Se intercalan por bloque** —sentado para el diagnóstico y el mecanismo, parado para la oferta y el cierre—, que es la forma de usar las dos tomas sin pagar un render extra.
-- Voz: **Agustín** (HeyGen, Spanish Argentina, "Middle Aged, Engaging, Podcasts"). El filtro de idioma del selector tiene Spanish (Argentina) y trae cuatro voces masculinas: Narrator Mateo, Casual Fernando, Agustín y Mateo Plácido.
+- Voz: ⛔ la primera versión salió con **Agustín** (HeyGen, Spanish Argentina) y **sonaba gallega**: Santiago la rechazó el 27/10. La voz vigente es **Knox en AI Studio** con el Style rioplatense, y HeyGen solo hace el lipsync (§0c de [[vsl-reglas-de-armado]]). Dato que queda: El filtro de idioma del selector tiene Spanish (Argentina) y trae cuatro voces masculinas: Narrator Mateo, Casual Fernando, Agustín y Mateo Plácido.
 - **Avatar IV**, 9:16, 1080p. Costó **122 créditos** los dos bloques (66 + 56), no los 80 estimados: el cálculo de ~17 créditos por minuto se queda corto para Avatar IV en vertical.
 
 **B-rolls.** Se copiaron los 17 momentos del original gastando solo **25 créditos de Higgsfield**:

@@ -41,6 +41,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).
+- **No se estrena nada en una entrega.** (2026-10-27, voz gallega del VSL de Calistenia Rusa: *"usá siempre las voces que te digo que sirven, no innoves una nueva cada vez que hacemos otro"*.) Voz, avatar o herramienta: si ya hay una validada para ese perfil, se usa esa. Si hace falta una nueva, primero una **muestra gratis** y recién con su OK se gastan créditos.
 - Antes de mandar una tanda larga a renderizar, **calcular el costo y avisarle**. Si el saldo no alcanza para todo, avisar primero y no quemar el saldo en el primer bloque.
 
 ## Prioridad de reglas

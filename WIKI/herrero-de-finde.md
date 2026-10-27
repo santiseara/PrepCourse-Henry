@@ -123,6 +123,18 @@
 
 - **Ojo con la cuenta de Google:** cuando la extensión abre una ventana nueva, AI Studio puede cargar con otra cuenta del navegador (apareció `damianmartinaguilar@…` en vez de `searasantiago58@…`). Verificar la cuenta del pie izquierdo antes de generar.
 
+## El embudo del 2026-10-26 (diagnóstico)
+
+Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.
+
+- **El embudo no está roto, está mal repartido.** La conversión total (4,75%) duplica el objetivo de 2,5–3% y el cierre del checkout (51,56%) duplica el KPI de 25–30%. El que flojea es **landing → checkout: 9,21%**, zona de perdedor según [[lectura-de-resultados]] (ganadores ~15, neutros ~12,5).
+- **Un cierre del 51% es síntoma, no suerte:** a la pasarela solo llega el que ya decidió del todo. La landing sobre-filtra.
+- **Cuánto vale:** cada punto de landing → checkout son 3,6 ventas por día. Pasar de 9,21 a 12% da +30% de ventas con el mismo gasto; a 15%, +64%.
+- **Lo medido en la landing publicada:** 21.706 px de alto (29 pantallas de celular), 8 botones, el primero al 8% y el segundo al **32%** — siete pantallas sin salida a comprar justo donde está lo que más persuade. **No hay barra sticky ni contador.** LCP de 7,4 s con el H1 esperando la fuente de Google (medido con sesión de admin encima: falta medirlo limpio).
+- **Message match:** el V7 ganador vende una herramienta de taller barata ("un rollo de alambre tubular te sale más caro que esto") y el hero abre con "Hacé tu primer $1.000.000" más dos tablas de proyección de ingresos. Son dos niveles de conciencia distintos.
+- **Paso 0 antes de tocar la landing:** mirar el landing → checkout **por anuncio**. Hoy subió tanda nueva (V22–V33) y la causa 6 de [[diagnostico-de-checkout]] es que el ratio se cae por los creativos, no por el funnel.
+- **Lo que no se toca:** el checkout, el precio y la oferta.
+
 ## Banco de fichas verificadas (2026-10-25)
 Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes de poner un número en un guion, sale de acá.**
 
@@ -199,7 +211,7 @@ Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.
 - ImpulTienda con un HTML de 2,5 MB: si no lo acepta, subir la carpeta de imágenes y pasar a URLs.
 
 ## Relacionado
-[[infinity-3d]] · [[bachas-de-concreto]] · [[landings-funnels-y-upsells]] · [[quizzes-reglas-de-armado]] · [[internacionalizacion]]
+[[infinity-3d]] · [[bachas-de-concreto]] · [[landings-funnels-y-upsells]] · [[quizzes-reglas-de-armado]] · [[internacionalizacion]] · [[diagnostico-de-checkout]] · [[lectura-de-resultados]] · [[pagina-de-ventas]]
 
 ## Fuentes
 - Biblioteca de anuncios de Meta, page id 964653193405481 (2026-10-22)

@@ -1,3 +1,11 @@
+## 2026-10-26 (noche, 6) — Herrero de Finde: diagnóstico del embudo
+
+- Santiago pasó el embudo del día: **695 landing → 64 checkout (9,21%) → 33 compras (51,56%)**, conversión total 4,75%, order bumps 0%. Pregunta: cómo hacer que llegue más gente al checkout.
+- **Lectura:** el embudo está mal repartido, no roto. La conversión total duplica el objetivo y el cierre del checkout duplica el KPI; el único ratio malo es landing → checkout. Un cierre del 51% es la firma de una landing que sobre-filtra.
+- **Medido en la landing publicada:** 21.706 px (29 pantallas), primer botón al 8% y el segundo al 32% (siete pantallas sin CTA), sin barra sticky, sin contador, LCP de 7,4 s con el H1 esperando la webfont.
+- **Message match:** el V7 ganador vende una herramienta barata de taller y el hero abre con "Hacé tu primer $1.000.000". Dos niveles de conciencia distintos.
+- Nuevo: `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`. Actualizados [[herrero-de-finde]] (sección del embudo) y el índice.
+
 ## 2026-10-26 (noche, 5) — Calistenia Rusa: portada sin foto
 
 - Santiago: *"saca la foto del principio, la del antes y despues"*.

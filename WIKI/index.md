@@ -95,6 +95,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-26 — Embudo de Herrero de Finde: diagnóstico](../OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md) — landing → checkout en 9,21% con un cierre del 51,56%: la landing sobre-filtra. El desierto de CTA entre el 8% y el 32% de la página, el message match con el V7 y cuánto vale cada punto · ver [[herrero-de-finde]]
 - [2026-10-26 — Quiz de Calistenia Rusa](../OUTPUTS/2026-10-26-quiz-calistenia-rusa.html) — el quiz de Calistenia Asiática H40+ recortado de 21 preguntas a 14, tema ruso (rojo + grafito), perfil con IMC y previsión, VSL arriba y oferta oculta · ver [[calistenia-rusa]]
 - [2026-10-26 — Quiz de Tai Chi Fit](../OUTPUTS/2026-10-26-quiz-tai-chi-fit.html) — clon del quiz de Calistenia Militar Femenina adaptado a Tai Chi: 10 pasos, VSL arriba y oferta oculta, $14.990 con cuotas de Mercado Pago · ver [[tai-chi-fit]]
 - [2026-10-26 — Producto de Herrero de Finde](../OUTPUTS/scripts-producto/) — generador: 1.205 planos en 8 categorías + 280 en packs extra + los 12 bonus (planilla de cortes en Excel incluida) · ver [[herrero-de-finde]]

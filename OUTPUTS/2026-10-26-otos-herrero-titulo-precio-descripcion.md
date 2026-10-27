@@ -1,6 +1,6 @@
 OTO 1
 
-Título: Adaptá cualquier plano a la medida que te pida el cliente
+Título: El Sistema de Planos a Medida™ 📐💰
 
 Precio: $24.990
 
@@ -10,7 +10,7 @@ El cliente nunca te pide la medida que está en el plano. Te pide el mismo port�
 
 OTO 2
 
-Título: Chat 1 a 1 con un herrero experto, las 24 horas
+Título: Asistente Personalizado 1 a 1 🤖✨
 
 Precio: $29.990
 
@@ -20,7 +20,7 @@ Le escribís como a un compañero de taller y te contesta al momento, con los 1.
 
 OTO 3
 
-Título: Comprá el hierro al precio del distribuidor
+Título: El Sistema del Hierro al Costo™ 🔩💰
 
 Precio: $12.990
 
@@ -30,11 +30,11 @@ El plano te dice cuánto hierro comprar. Nadie te dice a cuánto. Y el hierro so
 
 DOWNSELLS (la pantalla que aparece si rechaza)
 
-Downsell 1 — Adaptá cualquier plano a la medida que te pidan — $12.990
+Downsell 1 — El Sistema de Planos a Medida™ 📐 — $12.990
 El sistema para rehacer cualquier plano en la medida que te pidan, sin los tres planos hechos por nosotros.
 
-Downsell 2 — Chat 1 a 1 con un herrero experto — $14.990
-El mismo herrero disponible a toda hora, por la mitad y solo desde esta pantalla.
+Downsell 2 — Asistente Personalizado 1 a 1 🤖 — $14.990
+El mismo asistente disponible a toda hora, por la mitad y solo desde esta pantalla.
 
-Downsell 3 — Comprá el hierro más barato — $6.990
+Downsell 3 — El Sistema del Hierro al Costo™ 🔩 — $6.990
 El manual del mostrador y la planilla de materiales. Lo que sale una barra de caño, y te queda para siempre.

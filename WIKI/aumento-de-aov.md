@@ -168,18 +168,27 @@ El copy del downsell es un buen ejemplo del registro que usa — empatía explí
 Hay prompts dedicados a generar estas piezas: `prompt-crear-upsells` (ecosistema de productos encadenados) y `prompt-vsl-oto-post-purchase` (guion de video para el OTO, estructura de 8 puntos). Ver [[biblioteca-de-prompts]].
 
 
-### Los títulos de los OTO describen, no bautizan (2026-10-26)
-Corrección de Santiago sobre los OTO de [[herrero-de-finde]]: *"los titulos tienen que describir de que trata el pos pago, por ejemplo, el herrero de guardia, en ningun momento se entiende que es un chat 1 a 1 personalizado"*.
+### Cómo se titula un OTO (2026-10-26)
+Corrección de Santiago sobre los OTO de [[herrero-de-finde]]: primero *"los titulos tienen que describir de que trata el pos pago, por ejemplo, el herrero de guardia, en ningun momento se entiende que es un chat 1 a 1 personalizado"*, y después, mostrando la pantalla de upsells de [[scented-stones]] en Impultienda: *"son de otra oferta, pero asi son los titulos"*.
 
-**Regla:** el título de un OTO o de un order bump dice **qué es y qué hace**, en la lengua del cliente. Un nombre de marca ("El Herrero de Guardia", "El Hierro al Costo") no se entiende en la pantalla del post-pago, donde la persona decide en segundos y no hay nadie que le explique. El nombre lindo, si se quiere conservar, va dentro de la descripción.
+**Regla:** el título es un **nombre de producto que se entiende solo**. Ni un nombre de marca que haya que explicar, ni una frase suelta. La fórmula que corre en sus ofertas:
+
+> `El/La + [qué es] + ™ + 2 emojis`
+
+Títulos reales de la pantalla de Scented Stones: *The First Customer Blueprint™ 🚀💰*, *Personalized 1-on-1 Assistant 🤖✨*, *The Scented Stone Marketing System™ 📈✨*, *The Holiday Profit System™ 🚀💰*.
+
+- **Sustantivo de formato al final:** Sistema, Blueprint, Assistant, Kit, Plan. Es lo que dice qué se lleva.
+- **™ en los que son un sistema o método**, no en los de servicio o asistente.
+- **Dos emojis al final**, no más. Dinero y despegue para los de plata, robot y chispas para el asistente.
+- Si el título no se entiende sin la descripción, está mal: en la pantalla del post-pago se decide en segundos.
 
 | En vez de | Va |
 |---|---|
-| El Herrero de Guardia | Chat 1 a 1 con un herrero experto, las 24 horas |
-| A Tu Medida | Adaptá cualquier plano a la medida que te pida el cliente |
-| El Hierro al Costo | Comprá el hierro al precio del distribuidor |
+| El Herrero de Guardia | Asistente Personalizado 1 a 1 🤖✨ |
+| A Tu Medida | El Sistema de Planos a Medida™ 📐💰 |
+| El Hierro al Costo | El Sistema del Hierro al Costo™ 🔩💰 |
 
-Es la misma lógica de la descripción del order bump: lo que convierte es que se entienda qué se lleva, no el título.
+Es la misma lógica de la descripción del order bump: lo que convierte es que se entienda qué se lleva.
 
 ## Front y backend son variables independientes
 

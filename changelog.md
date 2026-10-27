@@ -1,3 +1,10 @@
+## 2026-10-26 (noche, 10) — La fórmula de los títulos de OTO
+
+- Santiago mandó la pantalla de upsells de Scented Stones: *"son de otra oferta, pero asi son los titulos"* (*The First Customer Blueprint™ 🚀💰*, *Personalized 1-on-1 Assistant 🤖✨*…).
+- Queda la fórmula: **nombre de producto que se entiende solo + ™ + dos emojis**, con el sustantivo de formato al final (Sistema, Blueprint, Assistant). Ni nombre de marca a explicar ni frase suelta.
+- Los tres de Herrero quedaron: **El Sistema de Planos a Medida™ 📐💰**, **Asistente Personalizado 1 a 1 🤖✨** y **El Sistema del Hierro al Costo™ 🔩💰**.
+- Se reescribió la regla del changelog anterior en [[aumento-de-aov]], que había quedado a medias ("describen, no bautizan"): el punto no era sacar el nombre, era que el nombre diga qué es.
+
 ## 2026-10-26 (noche, 9) — Los títulos de los OTO describen, no bautizan
 
 - Santiago: *"los titulos tienen que describir de que trata el pos pago, por ejemplo, el herrero de guardia, en ningun momento se entiende que es un chat 1 a 1 personalizado"*.

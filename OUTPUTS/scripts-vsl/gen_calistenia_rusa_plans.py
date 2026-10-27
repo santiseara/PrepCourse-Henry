@@ -51,7 +51,7 @@ stickers1 = [
 
 # ───────────────────────── BLOQUE 2 ─────────────────────────
 plan2 = [
-    ['testimonio',   'Ahora mirá lo que me mandó',   'en veintiún días.',          0.3, 'split'],
+    ['wpp-testimonio', 'Ahora mirá lo que me mandó', 'en veintiún días.',          0.0, 'full'],   # captura del chat de WhatsApp
     ['entrenando',   'Todo hombre de más de cuarenta', 'empezá ahora.',            1.5, 'split'],
     ['comida',       'menú antiinflamatorio masculino', 'sin pasar hambre.',       1.0, 'full'],
     ['app',          'el método, el plan alimentario', 'acceso es para siempre.',  0.3, 'split'],

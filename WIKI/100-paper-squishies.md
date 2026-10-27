@@ -61,3 +61,7 @@ hook de una línea → el pivote ("mejor le imprimo cien") → qué es ("un libr
 
 ## Fuentes
 - Landing propia y biblioteca de anuncios de Hora de Papel (relevadas el 2026-10-27)
+
+## Ajustes posteriores
+
+- **27/10 (noche):** los 6 videos pasaron a llevar **la misma cama musical** (`bed_B`, la del V4 "He came home with three he did not make"). Se borro `usage.json` antes de re-renderizar para no mover el reparto de clips; el pool resultante es identico al anterior. Ver la regla en [[guiones-y-anuncios]].

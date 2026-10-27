@@ -1,3 +1,10 @@
+## 2026-10-27 (noche) - 100 Paper Squishies: una sola cama musical en la tanda 1
+
+- Santiago pidio que los 6 videos lleven la musica del V4 ("He came home with three he did not make"), que era el bed B.
+- `gen_squishies_plans.py`: `MUS` pasa de `{1:A, 2:B, 3:C, 4:B, 5:A, 6:C}` a bed B en los seis.
+- Se borro `usage.json` antes de re-renderizar para que el reparto de clips saliera identico; se verifico contra el backup y coincide. Mismos planos, mismas duraciones (21.5 / 17.5 / 15.0 / 15.8 / 16.7 / 24.3 s), solo cambia el audio de fondo.
+- Regla nueva en `WIKI/guiones-y-anuncios.md`: una sola cama musical por tanda.
+
 ## 2026-10-27 (noche 2) — Herrero de Finde: renovaciones V34–V39 y edición nueva
 
 - **Las renovaciones V22–V27 no funcionaron.** Diagnóstico anotado en [[herrero-de-finde]] y [[renovacion-de-creativos]]: 4 de 6 eran el mismo hook con otro objeto, la edición era idéntica a la del ganador y el cuerpo no coincidía con la promesa de la landing (el `landing → checkout` de 9,21 % del 26/10).

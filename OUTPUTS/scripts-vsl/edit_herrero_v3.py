@@ -127,7 +127,7 @@ for n in range(len(cuts) - 1):
         here = {}
         for p in plan: here[p[0][:1]] = here.get(p[0][:1], 0) + 1     # misma fuente = misma letra inicial
         def score(s):
-            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:1], 0) * 9 + (6 if s[0] in prev else 0)
+            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:1], 0) * 30 + (12 if s[0] in prev else 0)
                     + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
         seg = min(cand, key=score)
     sid = f'{seg[0]}@{seg[1]}'; used.add(sid)

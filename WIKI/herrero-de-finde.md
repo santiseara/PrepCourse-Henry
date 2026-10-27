@@ -153,6 +153,10 @@ Editor nuevo: `OUTPUTS/scripts-vsl/edit_herrero_v3.py` (copia de `edit_herrero.p
 - **Clips nuevos de pantalla**: `anuncios/work/stills/mk_demo.py` arma `demo-hojas.mp4` y `demo-scroll.mp4`, el plano real abierto en un celular pasando las cuatro hojas y scrolleando. Entran solo donde están ancladas, nunca se espejan (tienen texto).
 - **Ritmo distinto**: voz a 1,30, cortes de 2,2 a 3,2 s (antes 1,9–2,4) y destello cada 4 cortes (antes cada 3).
 
+### Un clip más vetado (2026-10-27)
+- `J` (7468781029281533230) lleva el cartel en inglés *"Trailer Build Part 4: Mobility"* **de 0 a 5 s**. Se coló en el primer render del V36. En `gen5.py` quedó `DESDE = {'B': 10.5, 'J': 5.5}`. Vetos acumulados: `LIMITE = {'Y': 96, 'c': 254}` y `DESDE = {'B': 10.5, 'J': 5.5}`.
+- Se encontró con la hoja de contactos del video terminado a 1 cuadro cada 2 s, que es la regla que salió de 100 Paper Squishies: mirar el render, no solo los clips.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

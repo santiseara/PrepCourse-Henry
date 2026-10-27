@@ -1,3 +1,12 @@
+## 2026-10-26 (noche, 8) — Herrero de Finde: los 3 OTO post-pago
+
+- Santiago pidió los dos OTO que faltaban (el 2, el chat 1 a 1, ya lo tenía decidido), con la condición de que no se pisen con el producto ni con los 12 bonus.
+- Se mapeó primero lo cubierto (qué fabricar, cortar, soldar, terminar, cobrar, vender, qué herramientas) para encontrar los sectores vírgenes: **la medida que el cliente pide y no existe** y **el precio al que compra el hierro**.
+- Escalera: **A Tu Medida $24.990 → El Herrero de Guardia $29.990 → El Hierro al Costo $12.990**, con el ticket más alto segundo y downsells al ~50%. AOV proyectado $28.335 (ratio 1,89).
+- El OTO 1 se apoya en `expansion.py` del generador, que ya re-escala las 60 familias paramétricas: costo marginal casi cero.
+- Marcado: el post-pago no corre en Shopify con Mercado Pago, hace falta ImpulTienda.
+- Nuevo: `OUTPUTS/2026-10-26-upsells-herrero-de-finde.md`. Actualizados [[herrero-de-finde]] y el índice.
+
 ## 2026-10-26 (noche, 7) — Herrero de Finde: CTA en el tramo muerto
 
 - Santiago: *"vamos a hacer el ajuste de los cta, quiero que la landing quede exactamente igual, pero sumale los cta que me dijiste, actualizame el txt"*.

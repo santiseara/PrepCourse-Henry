@@ -142,6 +142,22 @@ Primer ajuste del diagnóstico de arriba. La landing queda igual; solo se suman 
 - Aplicado a los tres archivos: `herrero-de-finde-shopify.liquid`, `herrero-de-finde-landing.txt` y `herrero-de-finde-PRUEBA.html`. Copias previas en `landing/.backup-26oct/`.
 - **Ojo:** la versión publicada en Shopify tiene los botones con `href="/cart/{variante}:1"` (va directo al checkout) y **no** trae el JS que los manda a `/cart`. El archivo local sí. Si se sube el archivo local tal cual, el botón pasa a abrir el carrito y cambia el embudo justo mientras se mide.
 
+## Los 3 OTO post-pago (2026-10-26)
+
+Escalera propuesta sobre el front de $14.990. Detalle en `OUTPUTS/2026-10-26-upsells-herrero-de-finde.md`.
+
+| | Producto | Precio | Downsell |
+|---|---|---|---|
+| OTO 1 | **A Tu Medida** — el plano que el cliente pide y no está en la biblioteca | $24.990 | $12.990 |
+| OTO 2 | **El Herrero de Guardia** — chat 1 a 1 (decidido por Santiago) | $29.990 | $14.990 |
+| OTO 3 | **El Hierro al Costo** — comprar el material como mayorista | $12.990 | $6.990 |
+
+- **Sectores vírgenes que se eligieron:** la medida que no existe en la biblioteca y el precio del hierro. Los 12 bonus cubren qué fabricar, cómo cortarlo, cómo soldarlo, cómo terminarlo, cuánto cobrar, qué conviene y cómo venderlo; **nadie toca a cuánto comprar el material ni cómo adaptar un plano a otra medida**.
+- **El OTO 1 lo habilita el generador:** `expansion.py` ya re-escala cualquiera de las 60 familias paramétricas, así que el entregable tiene costo marginal casi cero.
+- **El ticket más alto va segundo**, como pide [[embudo-vsl-post-pago]]. AOV proyectado $28.335 con take rates de 25/15/20 → ratio 1,89 sobre el front (KPI 1,5).
+- **Banco si se cambia alguno:** Colgalo Derecho (transporte e instalación), Que Te Paguen (seña, inflación, el que no paga) y Herrería Fina (inoxidable, aluminio, forja).
+- ⚠️ **No corre en Shopify con Mercado Pago:** Checkout Pro no devuelve a una página propia. Para el post-pago hace falta ImpulTienda ([[shopify-y-checkout]]).
+
 ## Banco de fichas verificadas (2026-10-25)
 Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes de poner un número en un guion, sale de acá.**
 

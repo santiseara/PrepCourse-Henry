@@ -41,6 +41,12 @@ Cuando la voz de HeyGen no gusta, la voz se hace en **Google AI Studio** (gratis
 - "Te paso el VSL de una oferta mía. Usá **exactamente el mismo guion**, adaptado a la oferta nueva, con acento **rioplatense**, para el público de la oferta."
 - Se entrega **terminado**: avatar con labios sincronizados, B-rolls, subtítulos y edición, a **velocidad 1.3x**, en una carpeta del escritorio. **No se mete en el quiz** hasta que lo pida.
 
+## 1b. Bajar el VSL original de Panda Video (2026-10-26)
+El embed del quiz da el id: `player-vz-XXXX.tv.pandavideo.com/embed/?v=<uuid>`. El HLS sale **sin autenticación** en `https://b-vz-XXXX.tv.pandavideo.com/<uuid>/playlist.m3u8` (master con 360p, 480p y 720p). Con el 360p alcanza:
+- audio para transcribir: `ffmpeg -i .../360p/video.m3u8 -vn -ac 1 -ar 16000 vsl.wav` y después faster-whisper (`small`, `language='es'`) con los tiempos por segmento;
+- video para el mapa de B-rolls: `-c copy` y una hoja de contactos con `fps=1/5`. En una sola imagen se ve el minuto exacto de cada B-roll, cada placa y el estilo de los subtítulos.
+- ffmpeg en la Mac de Santiago está en `~/bin/ffmpeg` (symlink al binario de `imageio_ffmpeg`); no hay ffmpeg de sistema ni Homebrew.
+
 ## 2. Guion
 - **Estructura 1 a 1 con el original**: los mismos bloques en el mismo orden (hook, presentación, diagnóstico por el test, empatía, mecanismo, trampa, solución, producto, testimonio, bonos, anclaje, precio, escasez, garantía y cierre).
 - **Alinear todo a la oferta y al quiz**: precio y tachado, bonos, minutos por día, garantía, nombre del método, entregables. El VSL no puede contradecir al quiz.
@@ -57,6 +63,9 @@ Cuando la voz de HeyGen no gusta, la voz se hace en **Google AI Studio** (gratis
 ## 3. Avatar y voz
 - **Avatar: HeyGen** (decisión del 2026-10-12, en lugar de Higgsfield). Lo usa Santiago desde su sesión en Chrome.
 - La experta de Pilates Hormonal es la **Maestra Caro**: mujer asiática, foto en `~/Downloads/WhatsApp Image 2026-10-09 at 13.26.36 (1).jpeg`.
+- **Dos tomas del mismo personaje: una por bloque** (2026-10-26). Cuando Santiago pasa dos fotos "por si querés intercalar", se crean los dos avatares y se usa **uno por bloque de HeyGen** (sentado para diagnóstico y mecanismo, parado para oferta y cierre). Da variedad en el corte justo en el pivote del VSL y no cuesta un render extra.
+- **Voces argentinas en HeyGen:** en el selector, filtro *Idioma → Spanish (Argentina)*. Hay cuatro masculinas: **Agustín** (Middle Aged, Engaging, Podcasts — la que mejor calza con un coach a cámara), Casual Fernando, Narrator Mateo y Mateo Plácido.
+- **Avatar IV en vertical cuesta más de lo calculado** (2026-10-26): dos bloques de 3.710 y 2.942 caracteres salieron **66 y 56 créditos** (122 en total), contra los ~80 que daba la cuenta de 17 créditos por minuto. Para presupuestar, usar **~25 créditos por minuto**.
 - La voz tiene que sonar **muy real**, combinar con la avatar y sincronizar bien los labios. Acento rioplatense.
 
 - **Las Tres Conexiones (Argentina, crianza):** experta **Juliana Alves**, mujer de unos 45 años con anteojos. La avatar se creó en HeyGen el 2026-10-13 desde la foto `~/Downloads/ChatGPT Image 13 oct 2026, 15_53_13.png` ("Crear un personaje virtual" → "Subir foto"), con la misma voz "voz roma". Precio $15.990, anclaje "sesiones de doscientos mil pesos", garantía de 30 días. Guion: `OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md`.
@@ -69,6 +78,12 @@ Cuando la voz de HeyGen no gusta, la voz se hace en **Google AI Studio** (gratis
 - Referencia de precios (página de precios de Higgsfield, 2026-10-12): Kling 3.0 a 1080p ~8,75 por clip de 5 s · Kling 3.0 a 720p ~7/5 s · Seedance 2.0 Fast a 720p ~12/5 s · Seedance 2.0 a 720p ~22/5 s. Lipsync: Kling Speak a 720p ~1 crédito por segundo.
 - **Los más baratos para B-roll (~5 créditos por clip de 5 s):** Kling 2.6 sin sonido, Wan 2.6 a 480p, Kling Omni 3 (referencia de imagen o primer y último frame) a 720p. Siguen Grok Video y Wan 2.6 a 720p (~7). Siempre **sin sonido** y a **5 s**.
 - Mezcla sugerida para 12 B-rolls: 2–3 en Kling 3.0 (hook, anatomía 3D) y el resto en Kling 2.6 o Wan 2.6. Son unos 65 créditos en lugar de 105.
+
+## 3b-bis. B-rolls sin quemar créditos (2026-10-26, Calistenia Rusa)
+Con 49 créditos de Higgsfield se cubrieron los 17 momentos de B-roll de un VSL de 6 minutos gastando **25**:
+- **Solo se generan los planos que no existen en ningún lado**: las anatomías 3D (cortisol, testosterona, fibras profundas, grasa). Modelo `cinematic_studio_video_v2`, `mode: std`, 5 s, `sound: off`, 9:16 → **5 créditos cada uno** (verificar con `get_cost: true` antes de la tanda). Si el prompt parece un preset, el server devuelve `preset_recommendation`: se reenvía con `declined_preset_id`.
+- **Todo lo demás sale de fotos que ya tenemos** (las del quiz, las de los competidores) convertidas en clips de 5 s con un **zoom lento de ffmpeg**: `scale=2160:-2,zoompan=z='min(1.0012^on,1.18)':d=150:s=1080x1920:fps=30`. Alternar zoom in y out entre clips. Cuestan cero y en el corte no se distinguen de un B-roll filmado.
+- Pedir siempre **"full body in frame"** en las anatomías: sin eso salen torsos flotantes recortados que parecen maniquíes.
 
 ## 3c. Créditos de HeyGen por modelo (medido el 2026-10-24, Protocolo Chía 28D)
 - ⛔ **REGLA FIJA (2026-10-24): en HeyGen se usa SIEMPRE Avatar IV.** Santiago, después de que el primer bloque del VSL de chía se llevara 231 de 237 créditos con Avatar 6 Pro: *"Usa el avatar IV siempre, me gastaste todos los creditos"*. Nunca Avatar 6 (Pro ni Turbo) ni ningún modelo nuevo que venga por defecto, aunque gesticule mejor. **Antes de enviar, revisar qué modelo está elegido en Creación rápida** (el selector vuelve solo al modelo caro).

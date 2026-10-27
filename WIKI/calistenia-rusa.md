@@ -72,6 +72,31 @@ Primer armado: 29 reusadas del quiz original. Santiago: *"las imágenes son muy 
 
 **Generadas con Higgsfield** (gpt_image_2, 1k, High, 1:1): el **mockup del celular** con la app en verde, y el **retrato del hombre de 65** que faltaba para el rango +60 (el set de Menletics llega hasta ~58). Se pidió con el mismo encuadre, fondo negro y remera verde oliva, y entra en el set sin que se note.
 
+## El VSL
+Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion, obviamente adaptado a lo mio, y brolls iguales o similares adaptados a lo mio"*.
+
+**El original.** Está en el paso 36 del funnel, como embed de **Panda Video** (`player-vz-8830213c-ec4.tv.pandavideo.com/embed/?v=c44229b3-…`). El HLS sale sin autenticación en `b-vz-8830213c-ec4.tv.pandavideo.com/<id>/playlist.m3u8`, así que se baja con ffmpeg y se transcribe con faster-whisper. Dura **6:11** y tiene **1.205 palabras** (195 ppm).
+
+**Guion nuevo:** 1.162 palabras, mismos bloques en el mismo orden. Cuatro cambios, todos avisados:
+- El claim de que el reemplazo hormonal *"crea dependencia para toda la vida"* se cambió por dietas extremas y pastillas milagrosas ([[vsl-reglas-de-armado]] §2).
+- La garantía pasó de 7 a **30 días**, para no contradecir al quiz.
+- El testimonio lo lee el Coach Santi y es el de **Sergio (58, −8 kg)** que ya está en el quiz; no se fabrica uno nuevo.
+- "Técnica milenaria asiática de 800 años" → **"la escuela rusa de preparación física, la que formó a los atletas soviéticos durante más de ochenta años"**.
+
+**Avatar.** Santiago pasó dos tomas del Coach Santi en un jardín (sentada y parada). Ya existía un avatar "COACH SANTI" en HeyGen pero con otro set (podcast con micrófono), así que se crearon dos nuevos: `COACH SANTI jardin sentado` y `COACH SANTI jardin parado`. **Se intercalan por bloque** —sentado para el diagnóstico y el mecanismo, parado para la oferta y el cierre—, que es la forma de usar las dos tomas sin pagar un render extra.
+- Voz: **Agustín** (HeyGen, Spanish Argentina, "Middle Aged, Engaging, Podcasts"). El filtro de idioma del selector tiene Spanish (Argentina) y trae cuatro voces masculinas: Narrator Mateo, Casual Fernando, Agustín y Mateo Plácido.
+- **Avatar IV**, 9:16, 1080p. Costó **122 créditos** los dos bloques (66 + 56), no los 80 estimados: el cálculo de ~17 créditos por minuto se queda corto para Avatar IV en vertical.
+
+**B-rolls.** Se copiaron los 17 momentos del original gastando solo **25 créditos de Higgsfield**:
+- **4 anatomías 3D generadas** (cinematic_studio_video_v2, std, 5 s, sin sonido, 5 créditos cada una): testosterona, cortisol, fibras profundas y grasa abdominal. La de grasa salió como un torso flotante y hubo que rehacerla pidiendo **"complete standing male figure, full body in frame"**.
+- **10 B-rolls hechos con Ken Burns** sobre fotos que ya teníamos (zoompan de 5 s a 1080×1920): hombre con panza, hombre cansado, espejo, testimonio, entrenando, flexiones, app, dos hombres, comida y balanza. Cuestan cero.
+
+**Placas** (`OUTPUTS/scripts-vsl/gfx_calistenia_rusa.py`): tilde, los 3 bonos con 🎁, precio tachado con flecha, anclaje de $50.000, stack, "7 minutos por día" y el sello de garantía. Todas en el verde de la marca.
+
+**Planes de edición** (`OUTPUTS/scripts-vsl/gen_calistenia_rusa_plans.py`): `plan{1,2}.json`, `heads{1,2}.json` y `stickers{1,2}.json`, con un verificador que confirma que cada frase ancla exista en su bloque del guion.
+
+**Duración.** HeyGen habla más rápido que el locutor del original: el crudo da 5:13 y con silencios recortados 4:42. **No se le aplica el 1.3x de la regla general** porque quedaría en 3:37 y se siente atropellado.
+
 ## Estado
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/calistenia-rusa/`.
 - ⏳ **Falta el VSL.** Es el próximo paso.

@@ -1,3 +1,13 @@
+## 2026-10-26 (noche, 6) — Calistenia Rusa: el VSL
+
+- Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion, obviamente adaptado a lo mio, y brolls iguales o similares"*, con el avatar del Coach Santi que pasó en dos tomas.
+- **El VSL original se bajó de Panda Video**: el HLS sale sin autenticación en `b-vz-XXXX.tv.pandavideo.com/<uuid>/playlist.m3u8`. Transcripto con faster-whisper (6:11, 1.205 palabras) y mapeado cuadro por cuadro para copiar los 17 B-rolls y las placas.
+- **Guion adaptado de 1.162 palabras** con cuatro cambios avisados: el claim falso del reemplazo hormonal, la garantía de 7 a 30 días (para no contradecir al quiz), el testimonio leído por el Coach Santi en vez de fabricado, y el origen asiático milenario cambiado por la escuela rusa de preparación física.
+- **Dos avatares nuevos en HeyGen** desde las fotos del jardín, intercalados por bloque (sentado = diagnóstico, parado = oferta). Voz Agustín (Spanish Argentina). Avatar IV, 9:16: **122 créditos** los dos bloques, más que los ~80 estimados.
+- **B-rolls con 25 créditos de Higgsfield**: solo las 4 anatomías 3D se generaron; los otros 10 salieron de fotos que ya teníamos, animadas con zoompan.
+- Placas, planes de edición y música generados con scripts nuevos en `OUTPUTS/scripts-vsl/`.
+- Reglas nuevas en [[vsl-reglas-de-armado]]: §1b bajar un VSL de Panda, dos tomas una por bloque, voces argentinas de HeyGen, el costo real de Avatar IV y §3b-bis cómo cubrir los B-rolls casi sin créditos.
+
 ## 2026-10-26 (noche, 10) — La fórmula de los títulos de OTO
 
 - Santiago mandó la pantalla de upsells de Scented Stones: *"son de otra oferta, pero asi son los titulos"* (*The First Customer Blueprint™ 🚀💰*, *Personalized 1-on-1 Assistant 🤖✨*…).

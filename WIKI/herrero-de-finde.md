@@ -123,6 +123,36 @@
 
 - **Ojo con la cuenta de Google:** cuando la extensión abre una ventana nueva, AI Studio puede cargar con otra cuenta del navegador (apareció `damianmartinaguilar@…` en vez de `searasantiago58@…`). Verificar la cuenta del pie izquierdo antes de generar.
 
+## Las renovaciones V22–V27 no funcionaron (2026-10-27)
+
+Santiago: *"no funcionaron las que hicimos, hay que hacer mejores, creo que deberíamos variar la edición, guiones más llamativos, alineados a la landing"*.
+
+**Por qué no movieron la aguja (diagnóstico):**
+1. **Cuatro de las seis eran el mismo hook.** V22 a V25 son la misma familia del V7 (un consumible del taller contra esto: electrodos, flete, media chapa, careta). Cambiar el objeto no es cambiar el hook: el público que ya vio el V7 ve lo mismo. La propia [[renovacion-de-creativos]] pide cambiar el **formato** del hook, no solo su contenido.
+2. **La edición era idéntica a la del ganador.** Misma etiqueta naranja, mismo chip oscuro, mismos subtítulos amarillos, mismo ritmo. Para Meta es la misma huella creativa y cae en el mismo segmento saturado ([[guiones-y-anuncios]]: iterar solo el hook sube el CPM).
+3. **No había message match con la landing.** El cuerpo vendía una herramienta barata de taller y la landing abre con "Hacé tu primer $1.000.000". Es la causa del `landing → checkout` de 9,21 % del 26/10.
+
+**Qué se hace distinto en la tanda V34–V39:** un formato de hook distinto por video, el cuerpo apuntado a la promesa de la landing y una edición nueva (abajo).
+
+## Tanda V34–V39: renovaciones alineadas a la landing (2026-10-27)
+
+- **Guiones:** `OUTPUTS/2026-10-27-renovaciones-herrero-v34-v39.md`. Seis formatos de hook distintos: la frase de la landing (*"No te falta mano. Te faltan números"*), demo de pantalla (*"un plano abierto en el celular"*), la pregunta del cliente (*"el que tira el número se lleva el trabajo"*), lista de los cuatro números, ROI (*"el primer trabajo lo paga diez veces"*) y la escalera del principiante (*"la soldadora ya está paga"*).
+- **Alineación con la landing:** cada guion usa las frases del hero y del cuerpo de la página — "con la soldadora que ya tenés", "te faltan números: qué cortar, cuánto hierro comprar, en qué orden soldarlo y cuánto cobrar", "un solo trabajo lo paga diez veces", "60 días de garantía". El que hace clic encuentra la misma promesa escrita igual.
+- **Los números salen del producto**, no del banco viejo convertido de dólares: FM-068 portón de campo (124 mil → 475–620 mil), BQ-090 parrilla argentina (406 mil → 1,030–1,340 M), FN-022 mesa de comedor (235 mil → 645–840 mil), SH-148 mesa para motos (241 mil → 750–975 mil), TK-024 rack (122 mil → 520–675 mil) y BQ-007 fogonero de 70 cm (143 mil → 305–395 mil).
+- **Voces:** Knox + el Style argentino de siempre, las seis en AI Studio (50 a 62 s en crudo), con las páginas muteadas.
+
+### La edición v3 (estética de la landing)
+Editor nuevo: `OUTPUTS/scripts-vsl/edit_herrero_v3.py` (copia de `edit_herrero.py`), planes en `anuncios/work/plans/gen5.py`.
+- **Paleta de la landing** en lugar de la del competidor: rust `#E2561B`, ámbar `#F2A33C`, ink `#F7F3EE`, fondo `#0F0D0B` y verde `#5FC97E`.
+- **Placa de apertura tipo hero**: eyebrow "HERRERO DE FINDE" en rust y el hook en ink sobre panel oscuro, igual que el encabezado de la página (antes: caja naranja llena).
+- **Etiquetas tipo plano**: panel blueprint con grilla fina y filete rust al costado.
+- **Cotización** en panel oscuro con filete rust: hierro en ink → precio de venta en verde.
+- **Regla de medidas arriba** (ticks de milímetros) en lugar de la barra de progreso lisa; la barra rust avanza por debajo.
+- **Subtítulos de 3 palabras** con la palabra activa en ámbar (antes 2 palabras en amarillo).
+- **Cierre con la marca**: "HERRERO DE **FINDE**", chip verde "+1.200 PLANOS · 12 BONUS", botón rust "Tocá Más información" y "60 DÍAS DE GARANTÍA · UN SOLO PAGO".
+- **Clips nuevos de pantalla**: `anuncios/work/stills/mk_demo.py` arma `demo-hojas.mp4` y `demo-scroll.mp4`, el plano real abierto en un celular pasando las cuatro hojas y scrolleando. Entran solo donde están ancladas, nunca se espejan (tienen texto).
+- **Ritmo distinto**: voz a 1,30, cortes de 2,2 a 3,2 s (antes 1,9–2,4) y destello cada 4 cortes (antes cada 3).
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

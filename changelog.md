@@ -1,3 +1,11 @@
+## 2026-10-27 (noche 2) — Herrero de Finde: renovaciones V34–V39 y edición nueva
+
+- **Las renovaciones V22–V27 no funcionaron.** Diagnóstico anotado en [[herrero-de-finde]] y [[renovacion-de-creativos]]: 4 de 6 eran el mismo hook con otro objeto, la edición era idéntica a la del ganador y el cuerpo no coincidía con la promesa de la landing (el `landing → checkout` de 9,21 % del 26/10).
+- **Tanda nueva V34–V39** (`OUTPUTS/2026-10-27-renovaciones-herrero-v34-v39.md`): seis formatos de hook distintos (frase de la landing, demo de pantalla, la pregunta del cliente, los cuatro números, ROI y la escalera del principiante), con las frases del hero repetidas tal cual y los números sacados del producto (FM-068, BQ-090, FN-022, SH-148, TK-024, BQ-007).
+- **Edición v3 con la estética de la landing:** `OUTPUTS/scripts-vsl/edit_herrero_v3.py` + `anuncios/work/plans/gen5.py`. Paleta rust/ámbar/ink, placa de apertura tipo hero, etiquetas blueprint, cotización en panel oscuro, regla de medidas arriba, subtítulos de 3 palabras con la palabra activa en ámbar y cierre con la marca y la garantía.
+- **Material nuevo:** `anuncios/work/stills/mk_demo.py` genera `demo-hojas.mp4` y `demo-scroll.mp4` — el plano real abierto en un celular. Voces Knox en AI Studio con las páginas muteadas.
+- **Reglas nuevas** en [[guiones-y-anuncios]] (el ad se escribe contra la landing; renovar también es cambiar la edición) y en [[renovacion-de-creativos]] (checklist de por qué una renovación no mueve nada).
+
 ## 2026-10-27 (noche) — 100 Paper Squishies: oferta nueva y tanda 1 de 6 videos
 
 - **Oferta nueva:** `100-paper-squishies.impultienda.ar` (US$ 16,99, **en inglés**), ebook de 100 diseños imprimibles de squishies de papel para chicos, con 3 bonos. Página nueva: [[100-paper-squishies]].

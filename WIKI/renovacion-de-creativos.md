@@ -86,6 +86,15 @@ Santiago, sobre una entrega de 40 hooks numerados para Herrero de Finde: *"Porqu
 - El cuerpo se copia **textual** del guion que está corriendo, sin retocarlo. Si hay algo del cuerpo que conviene cambiar, se avisa aparte y lo decide él.
 
 
+## Una renovación que no mueve nada se diagnostica así (2026-10-27)
+
+Herrero de Finde: seis renovaciones del V7 (V22–V27) no movieron el CPA. Santiago: *"no funcionaron las que hicimos, hay que hacer mejores"*. Lo que estaba mal, y queda como checklist antes de entregar una renovación:
+
+- **Cuatro de las seis eran el mismo hook con otro objeto** (electrodos, flete, media chapa, careta: todas "un consumible del taller cuesta más que esto"). Cambiar el objeto no es cambiar el hook. **En una tanda de 6 renovaciones van 6 formatos distintos** de los de arriba (declaración, demo de pantalla, pregunta del cliente, lista, ROI, escalera), no seis versiones del formato que ya corría.
+- **La edición era la misma del ganador.** Si el video se ve igual, el segmento saturado lo vuelve a recibir igual. Una renovación en serio cambia también **la estética**: paleta, placas, ritmo de corte y tipo de material (acá entraron clips de pantalla del producto). Vale la regla de [[guiones-y-anuncios]]: iterar solo el hook sube el CPM.
+- **El ad y la landing tienen que prometer lo mismo.** El cuerpo validado vendía una herramienta barata de taller y la landing abría con "Hacé tu primer $1.000.000": dos niveles de conciencia distintos y un `landing → checkout` de 9,21 %. Cuando la renovación no mueve el CPA, mirar el **message match** antes de escribir otro hook ([[diagnostico-de-checkout]], [[herrero-de-finde]]).
+- **El cuerpo "no se toca" vale mientras el ganador siga vendiendo.** Si ya se renovó una vez sin resultado, el siguiente paso es apuntar el cuerpo a la promesa de la landing, escribir cada guion con sus propias palabras y avisarlo.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

@@ -1,3 +1,10 @@
+## 2026-10-27 — Piedras: tanda v28 (6 guiones bizop) + natives 31 y 32
+
+- **6 guiones bizop duro** (`OUTPUTS/2026-10-27-guiones-piedras-v28-bizop.md`), nombres `27/10 - 1` a `27/10 - 6`. Seis angulos nuevos, ninguno de la v23 a la v27: velocidad al primer peso, la fabricacion que pasa mientras dormis, el cliente que regala en vez de revender, nadie compra una sola (caja), el negocio sin algoritmo y los difusores de auto. EN + ES voseo, un solo numero por guion, CTA con accion y fecha.
+- **5 opciones de native con eje RESULTADO** (`OUTPUTS/2026-10-27-natives-piedras-5-opciones-resultado.md`), una sola de feria. Eligio la 1 y la 4.
+- **Natives 31 y 32 escritas completas** (`OUTPUTS/2026-10-27-natives-piedras-31-y-32.md`): el delantal del turno del sabado que sigue colgado (dejo el segundo trabajo) y el ticket de la cena de los 80 de su madre pagado por ella. Las dos sin un solo monto de dinero y con la brecha contada como **timing**, no como ingredientes.
+- Sin reglas nuevas: la tanda aplica las del 24, 25 y 26/10 (bizop duro para video, resultado para native).
+
 ## 2026-10-27
 - **Calistenia Rusa · la voz del VSL salió gallega.** Agustín (HeyGen, etiquetado "Spanish (Argentina)") no suena rioplatense. Regla nueva en [[vsl-reglas-de-armado]] §3: la voz de hombre argentino es **Knox en AI Studio** con el Style de Herrero de Finde + lipsync en HeyGen; la etiqueta de idioma de HeyGen no garantiza el acento; y no se estrena una voz en una entrega (muestra gratis primero). Misma regla general en [[como-trabajar-con-santiago]].
 - La voz definitiva la eligió él: **"damian"**, que ya tenía clonada en Mis voces de HeyGen. Queda como voz predeterminada de los dos avatares del Coach. Knox + AI Studio sigue siendo la regla para voz en off sin avatar.

@@ -169,3 +169,11 @@
 
 ## Fuentes
 - Conversación del 2026-10-12 (quiz de Pilates Hormonal, modelado de Sana Pilates). Entregable: `OUTPUTS/2026-10-12-quiz-pilates-hormonal.html`
+
+## 2026-10-27 · Entregar el quiz para ImpulTienda
+
+- El entregable es **un solo `.txt` autocontenido** que se pega en el `custom_html`: `OUTPUTS/scripts-vsl/inline_quiz.py <quiz.html> <salida.txt>` mete cada imagen de `CONFIG.IMG` como data URI.
+- **Pasar todo a webp con tope de 1000 px de ancho.** Sin eso, un `mockup.png` de 1,1 MB se vuelve 1,5 MB en base64 y el archivo entero pasa de 2,4 MB. Con la conversión quedan 858 KB sin pérdida visible.
+- **El embed de un VSL va dentro de `<template id="vsl-template">` y solo el `<iframe>`**, sin el `<div>` envoltorio que dan Panda o VTurb: el marco del quiz ya resuelve el 9:16.
+- **Si el pedido es "que el botón aparezca a los X minutos", el disparador es el reloj**, no el `timeupdate` del reproductor: con el tiempo del video, el que adelanta se saltea la espera. El reloj arranca cuando se monta el player, o sea cuando entran a la última slide.
+- Antes de entregar, probar con una copia de `SEGUNDOS_OFERTA` chiquito y verificar que la oferta aparece sola.

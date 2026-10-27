@@ -113,9 +113,13 @@ lo fundamental, sino me mareo"), con `OUTPUTS/scripts-vsl/ordenar_carpeta_vsl.py
 - **`SEGUNDOS_OFERTA = 295`** (4:55), medido sobre este corte.
 - Créditos: HeyGen gastó **114** en los dos bloques (47 + 67); quedaban 351 antes.
 
+### El VSL ya está en el quiz (2026-10-27)
+- Santiago subió el VSL a **Panda Video** y pasó el embed: pull zone `vz-c3e8527f-c25`, video `20ef2ca8-8859-462e-9f58-e70b76132dc9`. Va dentro de `<template id="vsl-template">`, **solo el `<iframe>`**: el `<div>` con `padding-top:177%` que da Panda sobra, porque `.vsl-frame` ya tiene `aspect-ratio:9/16` y posiciona el iframe en `inset:0`.
+- **El botón de CTA sale por reloj, no por el tiempo del video.** Pedido textual: *"quiero que el botón de cta para acceder aparezca a los 4 minutos y 50 segundos desde que llegaron a la última slide"*. Así que `SEGUNDOS_OFERTA: 290` y el único disparador es el `setTimeout` que arranca en `mountPlayer()`. Se sacaron el listener de `panda_timeupdate` y el poll de VTurb: con ellos, alguien que adelanta el video se saltaba la espera.
+- Probado en el navegador con una copia de `SEGUNDOS_OFERTA: 5`: la oferta aparece sola a los 5,1 s.
+
 ### Lo que falta (de Santiago)
-1. Subir el `-web.mp4` a un hosting con Range requests y pegar la URL en `VIDEO_URL`.
-2. Confirmar el checkout (`calistenia-rusa.impultienda.ar/checkout`).
+1. Confirmar el checkout (`calistenia-rusa.impultienda.ar/checkout`).
 
 ## Estado
 - ✅ Quiz entero armado y probado: `~/Desktop/calistenia-rusa/` (`landing/`, `imagenes/`).

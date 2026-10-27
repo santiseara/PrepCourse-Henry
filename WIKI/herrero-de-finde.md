@@ -148,14 +148,15 @@ Escalera propuesta sobre el front de $14.990. Detalle en `OUTPUTS/2026-10-26-ups
 
 | | Producto | Precio | Downsell |
 |---|---|---|---|
-| OTO 1 | **A Tu Medida** — el plano que el cliente pide y no está en la biblioteca | $24.990 | $12.990 |
-| OTO 2 | **El Herrero de Guardia** — chat 1 a 1 (decidido por Santiago) | $29.990 | $14.990 |
-| OTO 3 | **El Hierro al Costo** — comprar el material como mayorista | $12.990 | $6.990 |
+| OTO 1 | *Adaptá cualquier plano a la medida que te pida el cliente* | $24.990 | $12.990 |
+| OTO 2 | *Chat 1 a 1 con un herrero experto, las 24 horas* | $29.990 | $14.990 |
+| OTO 3 | *Comprá el hierro al precio del distribuidor* | $12.990 | $6.990 |
 
 - **Sectores vírgenes que se eligieron:** la medida que no existe en la biblioteca y el precio del hierro. Los 12 bonus cubren qué fabricar, cómo cortarlo, cómo soldarlo, cómo terminarlo, cuánto cobrar, qué conviene y cómo venderlo; **nadie toca a cuánto comprar el material ni cómo adaptar un plano a otra medida**.
 - **El OTO 1 lo habilita el generador:** `expansion.py` ya re-escala cualquiera de las 60 familias paramétricas, así que el entregable tiene costo marginal casi cero.
 - **El ticket más alto va segundo**, como pide [[embudo-vsl-post-pago]]. AOV proyectado $28.335 con take rates de 25/15/20 → ratio 1,89 sobre el front (KPI 1,5).
 - **Banco si se cambia alguno:** Colgalo Derecho (transporte e instalación), Que Te Paguen (seña, inflación, el que no paga) y Herrería Fina (inoxidable, aluminio, forja).
+- **Los títulos de los OTO describen el producto, no lo bautizan** (corrección del 2026-10-26, ver abajo). Títulos, precios y descripciones listos en `OUTPUTS/2026-10-26-otos-herrero-titulo-precio-descripcion.md`.
 - ⚠️ **No corre en Shopify con Mercado Pago:** Checkout Pro no devuelve a una página propia. Para el post-pago hace falta ImpulTienda ([[shopify-y-checkout]]).
 
 ## Banco de fichas verificadas (2026-10-25)

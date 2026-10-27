@@ -167,6 +167,20 @@ El copy del downsell es un buen ejemplo del registro que usa — empatía explí
 
 Hay prompts dedicados a generar estas piezas: `prompt-crear-upsells` (ecosistema de productos encadenados) y `prompt-vsl-oto-post-purchase` (guion de video para el OTO, estructura de 8 puntos). Ver [[biblioteca-de-prompts]].
 
+
+### Los títulos de los OTO describen, no bautizan (2026-10-26)
+Corrección de Santiago sobre los OTO de [[herrero-de-finde]]: *"los titulos tienen que describir de que trata el pos pago, por ejemplo, el herrero de guardia, en ningun momento se entiende que es un chat 1 a 1 personalizado"*.
+
+**Regla:** el título de un OTO o de un order bump dice **qué es y qué hace**, en la lengua del cliente. Un nombre de marca ("El Herrero de Guardia", "El Hierro al Costo") no se entiende en la pantalla del post-pago, donde la persona decide en segundos y no hay nadie que le explique. El nombre lindo, si se quiere conservar, va dentro de la descripción.
+
+| En vez de | Va |
+|---|---|
+| El Herrero de Guardia | Chat 1 a 1 con un herrero experto, las 24 horas |
+| A Tu Medida | Adaptá cualquier plano a la medida que te pida el cliente |
+| El Hierro al Costo | Comprá el hierro al precio del distribuidor |
+
+Es la misma lógica de la descripción del order bump: lo que convierte es que se entienda qué se lleva, no el título.
+
 ## Front y backend son variables independientes
 
 Idea que abre una palanca que mucha gente no ve:

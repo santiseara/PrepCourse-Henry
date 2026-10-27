@@ -1,3 +1,10 @@
+## 2026-10-26 (noche, 9) — Los títulos de los OTO describen, no bautizan
+
+- Santiago: *"los titulos tienen que describir de que trata el pos pago, por ejemplo, el herrero de guardia, en ningun momento se entiende que es un chat 1 a 1 personalizado"*.
+- Los tres títulos pasaron de nombre de marca a descripción: *Adaptá cualquier plano a la medida que te pida el cliente*, *Chat 1 a 1 con un herrero experto, las 24 horas* y *Comprá el hierro al precio del distribuidor*. Descripciones también más cortas.
+- Regla nueva en [[aumento-de-aov]]: en la pantalla del post-pago la persona decide en segundos y no hay quién le explique, así que el título dice qué es y qué hace; el nombre de marca va dentro de la descripción.
+- Entregable en `OUTPUTS/2026-10-26-otos-herrero-titulo-precio-descripcion.md`.
+
 ## 2026-10-26 (noche, 8) — Herrero de Finde: los 3 OTO post-pago
 
 - Santiago pidió los dos OTO que faltaban (el 2, el chat 1 a 1, ya lo tenía decidido), con la condición de que no se pisen con el producto ni con los 12 bonus.

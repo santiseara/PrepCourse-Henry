@@ -15,10 +15,10 @@ plan1 = [
     # diagnóstico
     ['anat-testosterona', 'Por el resultado de tu test',   'pero muy común en hombres', 0.3, 'split'],
     ['hombre-panza',      'La caída de testosterona',      'sobre todo en la panza.',   0.5, 'split'],
-    ['balanza',           'aunque hagas ejercicio',        'como querrías.',            0.5, 'full'],
-    ['espejo-antes',      'Si sentís mucho cansancio',     'y la libido baja',          0.5, 'split'],
+    ['balanza',           'aunque hagas ejercicio',        'el peso no baja',           0.5, 'full'],
+    ['espejo-antes',      'Si sentís mucho cansancio',     'y tenés dos o más',         0.5, 'split'],
     # empatía
-    ['hombre-cansado',    'Sé que es frustrante',          'al sacarse fotos.',         0.5, 'split'],
+    ['hombre-cansado',    'Algunos alumnos me contaron',   'al sacarse fotos.',         0.5, 'split'],
     # mecanismo
     ['anat-cortisol',     'Todo entrenamiento largo',      'hormona del estrés.',       0.3, 'full'],
     ['anat-grasa',        'La grasa se empieza a acumular','medio de la panza.',        0.3, 'full'],
@@ -35,7 +35,7 @@ plan1 = [
 ]
 
 heads1 = [
-    ['Mis felicitaciones',            '',                 'ding',   1.0],
+    ['felicitaciones llegaste al final', '',              'ding',   1.0],
     ['la testosterona más baja',      'TESTOSTERONA BAJA','pop',    2.2],
     ['adormecimiento de las fibras',  'FIBRAS PROFUNDAS\nDORMIDAS', 'pop', 2.4],
     ['No es falta de fuerza de voluntad', '',             'pop',    1.0],
@@ -45,41 +45,41 @@ heads1 = [
 ]
 
 stickers1 = [
-    ['Mis felicitaciones',      G + 'check.png', 1.6, 0,  -240, 1080, 'pop'],
+    ['felicitaciones llegaste al final', G + 'check.png', 1.6, 0, -240, 1080, 'pop'],
     ['Movimientos sin impacto', G + 'siete.png', 2.4, 0,  -120, 1080, 'pop'],
 ]
 
 # ───────────────────────── BLOQUE 2 ─────────────────────────
 plan2 = [
     ['wpp-testimonio', 'Ahora mirá lo que me mandó', 'en veintiún días.',          0.0, 'full'],   # captura del chat de WhatsApp
-    ['entrenando',   'Todo hombre de más de cuarenta', 'empezá ahora.',            1.5, 'split'],
+    ['entrenando',   'Todo hombre de más de cuarenta', 'empezá ahora.',             1.5, 'split'],
     ['comida',       'menú antiinflamatorio masculino', 'sin pasar hambre.',       1.0, 'full'],
     ['app',          'el método, el plan alimentario', 'acceso es para siempre.',  0.3, 'split'],
-    ['flexiones',    'se puede resolver con siete minutos', 'Ahora pensalo bien',  1.0, 'split'],
+    ['flexiones',    'se puede resolver con',         'Ahora pensalo bien',        1.0, 'split'],
     ['hombre-cansado','Podés cerrar este video',      'frustración de siempre.',   0.5, 'split'],
     ['testimonio',   'O podés empezar hoy',           'gustándote lo que ves.',    1.5, 'split'],
 ]
 
 heads2 = [
-    ['Bono uno',                  '',          'pop',      1.2],
-    ['Bono dos',                  '',          'pop',      1.2],
-    ['Bono tres',                 '',          'pop',      1.2],
-    ['pagarías más de cincuenta mil', '',      'buzzer',   1.2],
-    ['normalmente cuesta cuarenta y siete', '','buzzer',   1.2],
-    ['por solo diecisiete mil',   '',          'chaching', 1.4],
+    ['nocturno para dormir mejor', '',         'pop',      1.2],
+    ['menú antiinflamatorio masculino', '',    'pop',      1.2],
+    ['guía del rendimiento sexual', '',        'pop',      1.2],
+    ['pagarías más de',           '',          'buzzer',   1.2],
+    ['normalmente cuesta',        '',          'buzzer',   1.2],
+    ['el acompañamiento y los',   '',          'chaching', 1.4],
     ['te llevás todo',            '',          'whoosh',   1.0],
     ['te devuelvo cada peso',     '',          'sello',    1.2],
-    ['por diecisiete mil',        '',          'chaching', 1.4],
+    ['una sola vez ahora',        '',          'chaching', 1.4],
     ['hacé clic en el botón',     '',          'whoosh',   1.0],
 ]
 
 stickers2 = [
-    ['Bono uno',                      G + 'bono1.png',    2.6, 0, -120, 1080, 'pop'],
-    ['Bono dos',                      G + 'bono2.png',    2.6, 0, -120, 1080, 'pop'],
-    ['Bono tres',                     G + 'bono3.png',    2.6, 0, -120, 1080, 'pop'],
-    ['pagarías más de cincuenta mil', G + 'anclaje.png',  2.4, 0, -160, 1080, 'pop'],
+    ['nocturno para dormir mejor',    G + 'bono1.png',    2.6, 0, -120, 1080, 'pop'],
+    ['menú antiinflamatorio masculino', G + 'bono2.png',  2.6, 0, -120, 1080, 'pop'],
+    ['guía del rendimiento sexual',   G + 'bono3.png',    2.6, 0, -120, 1080, 'pop'],
+    ['pagarías más de',               G + 'anclaje.png',  2.4, 0, -160, 1080, 'pop'],
     ['te llevás todo',                G + 'stack.png',    3.0, 0, -120, 1080, 'pop'],
-    ['por solo diecisiete mil',       G + 'precio.png',   3.2, 0, -140, 1080, 'pop'],
+    ['el acompañamiento y los',       G + 'precio.png',   3.2, 0, -140, 1080, 'pop'],
     ['te devuelvo cada peso',         G + 'garantia.png', 2.8, 0, -120, 1080, 'pop'],
 ]
 

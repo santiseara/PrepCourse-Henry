@@ -63,6 +63,8 @@ Antes de lanzar la edición hay que correr un verificador contra el **`words0.js
 
 Chequear solo que la frase esté en el guion **no alcanza** y da falsos OK.
 
+🆕 **2026-10-27 · Chequear contra `words0.json` tampoco alcanza.** El editor no busca las anclas ni en el guion ni en la transcripción cruda: alinea las dos con `difflib` y **reemplaza las palabras de Whisper por las del guion** donde el opcode es `equal` o `replace` del mismo largo. Lo que queda es una lista mezclada — casi todo el guion, pero con lo que Whisper oyó distinto en los tramos donde la alineación no calza (los números, sobre todo). Validar contra `words0.json` me hizo "arreglar" cuatro anclas que ya estaban bien y romper una (`empezá ahora.` pasó a `y empieza ahora`, que no existe en la lista final). El validador bueno es **`OUTPUTS/scripts-vsl/validar_anclas.py <work> <n> <guion.txt>`**, que reproduce los tres pasos del editor (sacar inventadas → unir guiones sueltos → reemplazar por el guion) y después busca. Regla práctica: **las anclas se escriben con las palabras del guion**, salvo donde hay números, que van con lo que diga Whisper o directamente se evitan.
+
 **Whisper escribe los números en cifras.** El guion dice "veintiocho días", "siete minutos", "diecisiete mil novecientos noventa" y la transcripción dice **"28 días"**, **"7 minutos"**, **"17.990"** — y a veces una sí y otra no en el mismo video. La regla: **las anclas no llevan números**. Se ancla en las palabras de al lado ("En mi aplicación vas a tener", "fue creado exactamente", "Movimientos sin impacto").
 
 ## 1d. Mirar cada B-roll antes de montarlo (2026-10-27, Calistenia Rusa)

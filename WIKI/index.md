@@ -9,6 +9,7 @@
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
+- 🆕 [[100-paper-squishies]] — Oferta propia **en inglés** (US$ 16,99): ebook de 100 diseños imprimibles de squishies de papel, modelada sobre Hora de Papel (94 ads activos en 12 días, ES/IT/DE). Sus 7 familias de hook, la DNA de sus videos de 9 a 25 s y la tanda 1 de 6 videos.
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
@@ -95,6 +96,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-27 — Guiones de 100 Paper Squishies, tanda 1](../OUTPUTS/2026-10-27-guiones-100-paper-squishies.md) — 6 guiones en inglés y español con voseo, uno por familia ganadora de Hora de Papel (el precio del kiosco, el squishy que habla, la pedida en la caja, el canje del recreo, el cumple de ocho nenes y las cinco etapas de la mamá) + el texto principal único · ver [[100-paper-squishies]]
 - [2026-10-26 — Los 3 OTO de Herrero de Finde](../OUTPUTS/2026-10-26-upsells-herrero-de-finde.md) — A Tu Medida ($24.990), el chat 1 a 1 ($29.990) y El Hierro al Costo ($12.990): los dos sectores que no tocan el producto ni los 12 bonus · ver [[herrero-de-finde]]
 - [2026-10-26 — Embudo de Herrero de Finde: diagnóstico](../OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md) — landing → checkout en 9,21% con un cierre del 51,56%: la landing sobre-filtra. El desierto de CTA entre el 8% y el 32% de la página, el message match con el V7 y cuánto vale cada punto · ver [[herrero-de-finde]]
 - [2026-10-26 — Quiz de Calistenia Rusa](../OUTPUTS/2026-10-26-quiz-calistenia-rusa.html) — el quiz de Calistenia Asiática H40+ recortado de 21 preguntas a 14, tema ruso (rojo + grafito), perfil con IMC y previsión, VSL arriba y oferta oculta · ver [[calistenia-rusa]]

@@ -1,3 +1,12 @@
+## 2026-10-27 (noche) — 100 Paper Squishies: oferta nueva y tanda 1 de 6 videos
+
+- **Oferta nueva:** `100-paper-squishies.impultienda.ar` (US$ 16,99, **en inglés**), ebook de 100 diseños imprimibles de squishies de papel para chicos, con 3 bonos. Página nueva: [[100-paper-squishies]].
+- **Competidor relevado: Hora de Papel** (page 1114598271746718). **94 anuncios activos en 12 días** (arrancó el 15/10), en español rioplatense, italiano y alemán. Videos de **9 a 25 s**, un solo texto principal por idioma y la variación en el video. Se bajaron y transcribieron los 77 videos.
+- **7 familias de hook** mapeadas; la más escalada es el precio del kiosco ("$5.000 un squishy y a los dos días, roto", ~18 ads, relanzada hoy).
+- **Tanda 1: 6 videos de 15 a 24 s**, uno por familia ganadora, en `~/Desktop/100-paper-squishies/anuncios/`. Guiones en inglés y español con voseo + texto principal: `OUTPUTS/2026-10-27-guiones-100-paper-squishies.md`.
+- **Producción sin créditos:** voz Sulafat en AI Studio (mamá estadounidense de 35, speed 1.30), b-roll de 21 clips de TikTok del tag `#papersquishy` bajados con tikwm, stills de la landing. Editor nuevo `OUTPUTS/scripts-vsl/edit_squishies.py` (rojo #EA203A de la tapa).
+- **Regla nueva en [[guiones-y-anuncios]]:** revisar los clips de TikTok con una hoja de contactos de 1 cuadro cada 2 s y mirar también la del video renderizado; con 6 cuadros por clip se colaron tres sucios y hubo que rehacer el render tres veces.
+
 ## 2026-10-27 (tarde) — Segunda pasada de caza: cazar por fecha, no por volumen
 
 - **Corrección de Santiago** ("la mayoría con menos de 20 ads, todos iguales y con bajas impresiones"): tenía razón, 4 de 5 candidatas no pasaban ni el filtro propio. El error de método era contar ads activos como proxy de gasto.

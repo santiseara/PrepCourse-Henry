@@ -177,3 +177,11 @@
 - **El embed de un VSL va dentro de `<template id="vsl-template">` y solo el `<iframe>`**, sin el `<div>` envoltorio que dan Panda o VTurb: el marco del quiz ya resuelve el 9:16.
 - **Si el pedido es "que el botón aparezca a los X minutos", el disparador es el reloj**, no el `timeupdate` del reproductor: con el tiempo del video, el que adelanta se saltea la espera. El reloj arranca cuando se monta el player, o sea cuando entran a la última slide.
 - Antes de entregar, probar con una copia de `SEGUNDOS_OFERTA` chiquito y verificar que la oferta aparece sola.
+
+## 2026-10-27 · La marca del logo tiene que significar algo
+
+Santiago, sobre la estrella del encabezado de Calistenia Rusa: *"no me gusta la estrella, hay dos opciones, o ponés algo más relacionado a la calistenia, o nada"*. Reglas:
+- **Una estrella genérica no es un logo**: no dice nada de la oferta. O la marca es del tema, o va solo el texto.
+- A **30 px** casi nada se lee. De cuatro intentos (dominada, brazo flexionado, bandera humana, anillas) solo sobrevivieron las **anillas de gimnasia**: dos círculos colgando de una barra, trazo 2.3 sobre un SVG de 19 px. El brazo flexionado quedó como mancha y la bandera humana se lee como una bandera común.
+- Antes de elegir, **renderizar los candidatos al tamaño real** (30 px) en una página aparte con Chrome headless y mirarlos. A 60 px todos parecen buenos y después no se entiende ninguno.
+- Dejar el texto solo es una opción perfectamente válida y a veces la mejor.

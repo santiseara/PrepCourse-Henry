@@ -6,6 +6,7 @@
 - Sin reglas nuevas: la tanda aplica las del 24, 25 y 26/10 (bizop duro para video, resultado para native).
 
 ## 2026-10-27
+- La estrella del logo del quiz pasó a ser un par de **anillas de gimnasia** (SVG, 19 px). Regla nueva en [[quizzes-reglas-de-armado]]: la marca tiene que significar algo y hay que mirarla al tamaño real.
 - **El VSL entró al quiz.** Embed de Panda en el `<template>`, `SEGUNDOS_OFERTA: 290` (4:50 por reloj desde la última slide) y entrega autocontenida de 858 KB en `calistenia-rusa-quiz.txt`. Script nuevo: `inline_quiz.py`.
 - **VSL de Calistenia Rusa rehecho entero (6:17).** Voz "damian", testimonio como chat de WhatsApp, avatar parado sin barras blancas y carpeta ordenada con `material/`. `SEGUNDOS_OFERTA = 295`.
 - `validar_anclas.py`: valida contra la lista de palabras que arma el editor (transcripción alineada contra el guion), que no es ni el guion ni `words0.json`.

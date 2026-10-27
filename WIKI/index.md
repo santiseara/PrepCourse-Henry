@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-26.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-27.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -100,6 +100,7 @@
 - [2026-10-26 — Quiz de Calistenia Rusa](../OUTPUTS/2026-10-26-quiz-calistenia-rusa.html) — el quiz de Calistenia Asiática H40+ recortado de 21 preguntas a 14, tema ruso (rojo + grafito), perfil con IMC y previsión, VSL arriba y oferta oculta · ver [[calistenia-rusa]]
 - [2026-10-26 — Quiz de Tai Chi Fit](../OUTPUTS/2026-10-26-quiz-tai-chi-fit.html) — clon del quiz de Calistenia Militar Femenina adaptado a Tai Chi: 10 pasos, VSL arriba y oferta oculta, $14.990 con cuotas de Mercado Pago · ver [[tai-chi-fit]]
 - [2026-10-26 — Producto de Herrero de Finde](../OUTPUTS/scripts-producto/) — generador: 1.205 planos en 8 categorías + 280 en packs extra + los 12 bonus (planilla de cortes en Excel incluida) · ver [[herrero-de-finde]]
+- [2026-10-27 — Keywords BR: IA, renda extra y manifestação](../OUTPUTS/2026-10-27-keywords-br-ia-renda-extra-manifestacao.md) — banco por nicho para Brasil: paquete de prompts y transformación de fotos en IA, IA por oficio, servicio local y proveedores por ciudad en renda extra, y los tres sub-mercados de manifestación (lei da atração / espiritualidade prática / cristão) · ver [[caza-de-ofertas]]
 - [2026-10-26 — Keywords para cazar ingresos (BR + AR)](../OUTPUTS/2026-10-26-keywords-caza-ingresos-br-ar.md) — banco de keywords por 6 ejes (footprints de checkout nuevos, mecánica de entrega, oficio + vender, atajos sin oficio) + las que no usar porque traen marca personal · ver [[caza-de-ofertas]]
 - [2026-10-26 — Guiones piedras v26 BIZOP](../OUTPUTS/2026-10-26-guiones-piedras-v26-bizop.md) — 3 variables EN + ES: el consumible que vuelve solo, cobrás antes de fabricar y la barrera de entrada de cualquier otro oficio · ver [[guiones-y-anuncios]]
 - [2026-10-26 — Guiones piedras v27 orgánicos (TikTok)](../OUTPUTS/2026-10-26-guiones-piedras-v27-organicos.md) — 3 guiones con eje bizop contados desde una escena real: ronda de reposición, "este mueble es toda mi fábrica" y volcá una tanda conmigo · ver [[guiones-y-anuncios]]

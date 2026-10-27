@@ -183,6 +183,11 @@ Dos reglas técnicas que salieron de armarlo:
 - **`search_type=keyword_exact_phrase`** para las frases de 2-3 palabras. Con `keyword_unordered` entra ruido de otros nichos.
 - **El eje más virgen del nicho de ingresos no es el oficio, son los atajos**: listas de proveedores/fornecedores, planillas de precificación, CV editable, cobrar en dólares. Son ofertas de "generar ingresos" que no prometen plata, así que ningún gurú compite por esas palabras.
 
+**Bancos por nicho (27/10/2026)** — `OUTPUTS/2026-10-27-keywords-br-ia-renda-extra-manifestacao.md`: Brasil, nichos IA, renda extra (tanda nueva, sin repetir la del 26/10) y manifestación. Tres aprendizajes de armarlo:
+- **En IA, el eje virgen es "IA por oficio"** (IA para corretor de imóveis, plano de aula com IA, roteiro de pregação com IA). "Inteligência artificial", "ChatGPT" y "curso de IA" son tierra de gurús de high ticket.
+- **Manifestación no es un nicho, son tres mercados que no comparten copy**: lei da atração/quântico, espiritualidade prática (simpatia, banho, tarô, numerologia) y cristão/evangélico (oração, salmo, jejum, devocional). Buscar solo "lei da atração" deja afuera los dos que más venden low ticket.
+- **Cuidado de política en manifestación:** promesas de curar o amarrar tumban cuentas. Se modela el ángulo (identidad, ritual), nunca la garantía de resultado sobrenatural.
+
 ## Preguntas abiertas
 - ¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50? (la formación diría 10–15; la skill no contempla el caso)
 - ¿Guardar un registro acumulado de cazas para la segunda pasada a los 2–3 días (subió/bajó el número de ads), como pide [[funnel-hacking]]?

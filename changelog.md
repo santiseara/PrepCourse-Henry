@@ -1,3 +1,11 @@
+## 2026-10-27 — Keywords para cazar en Brasil: IA, renda extra y manifestação
+
+- **Banco nuevo por nicho** (`OUTPUTS/2026-10-27-keywords-br-ia-renda-extra-manifestacao.md`): ~210 términos en portugués, por ejes, con top 10 de arranque y lista negra por nicho.
+- **IA**: paquete de prompts, transformación de fotos (bebê/pet/3D), "sin aparecer / sin saber mexer", IA por oficio (el eje virgen) y producto digital hecho con IA.
+- **Renda extra**: tanda que no repite el banco del 26/10 — servicio local, proveedores por ciudad, cobrar/precificar, capital cero.
+- **Manifestação**: separado en los tres sub-mercados que no comparten copy (lei da atração, espiritualidade prática, cristão/evangélico) + aviso de política de Meta.
+- Actualizados `WIKI/caza-de-ofertas.md` (sección Banco de keywords) y `WIKI/index.md` (Outputs).
+
 ## 2026-10-27 — Piedras: tanda v28 (6 guiones bizop) + natives 31 y 32
 
 - **6 guiones bizop duro** (`OUTPUTS/2026-10-27-guiones-piedras-v28-bizop.md`), nombres `27/10 - 1` a `27/10 - 6`. Seis angulos nuevos, ninguno de la v23 a la v27: velocidad al primer peso, la fabricacion que pasa mientras dormis, el cliente que regala en vez de revender, nadie compra una sola (caja), el negocio sin algoritmo y los difusores de auto. EN + ES voseo, un solo numero por guion, CTA con accion y fecha.

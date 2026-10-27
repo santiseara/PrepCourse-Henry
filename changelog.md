@@ -1,3 +1,11 @@
+## 2026-10-27 (tarde) — Segunda pasada de caza: cazar por fecha, no por volumen
+
+- **Corrección de Santiago** ("la mayoría con menos de 20 ads, todos iguales y con bajas impresiones"): tenía razón, 4 de 5 candidatas no pasaban ni el filtro propio. El error de método era contar ads activos como proxy de gasto.
+- **Regla madre nueva en [[caza-de-ofertas]]**: cazar con `start_date[min]/[max]` + `sort_data[mode]=total_impressions`, y filtrar por fecha del ad más viejo y por escalera de fechas antes que por volumen.
+- **Candidata real: Menopausa Cancelada** (ID 106449212160487) — 22 ads activos, uno corriendo desde junio de 2024 (873 días), escalera de 873/76/74/69/57 días más lote de hoy, sin marca personal, funnel de WhatsApp.
+- **Por qué bajar de peso devuelve siempre caras:** en emagrecimento todo lo que lleva años es marca personal (Zanon Macedo, drvictorcutait, Géssica Andrade). En ese nicho la cara es la oferta; la excepción lo resuelve con WhatsApp.
+- Informe ampliado en `OUTPUTS/2026-10-27-caza-ingresos-extra-y-bajar-de-peso.md` y copiado a `~/Desktop/calendario-cristiano/`.
+
 ## 2026-10-27 — Caza en Brasil: ingresos extra y bajar de peso
 
 - **Caza nueva con criterio corregido** (`OUTPUTS/2026-10-27-caza-ingresos-extra-y-bajar-de-peso.md`): 16 keywords, barrido mundial, 14 fanpages contadas con `page_ids`, 2 verificadas en el navegador.

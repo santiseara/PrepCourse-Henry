@@ -174,6 +174,30 @@ Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil,
 - **El volumen engaña sin la fecha.** Un anunciante con cientos de ads puede llevar 9 días; otro con 97 puede llevar 106. El conteo por API **ordena mal** si no se cruza con las fechas del navegador.
 - **Subnicho > nicho.** El término genérico ("renda extra") devuelve miles de anunciantes atomizados que mueren en una semana. El término de oficio ("crochê", "artesanato para vender") destapa las ofertas con 34 y 65 días corriendo.
 
+## Cazar por fecha, no por volumen (regla madre, 27/10/2026)
+
+**Corrección de Santiago:** *"la mayoría con menos de 20 ads, todos los ads son iguales y con bajas impresiones"*. El error era usar **cantidad de ads activos** como proxy de gasto: en Brasil, con R$ 20 por día cualquiera duplica 50 ads idénticos. No prueba nada.
+
+Dos parámetros de la Biblioteca que hay que usar siempre:
+
+| Parámetro | Qué hace |
+|---|---|
+| `start_date[min]` / `start_date[max]` | devuelve ads que **estuvieron activos en esa ventana**. Con una ventana de hace 4–5 meses y `active_status=active`, lo que cae son ads que siguen vivos hoy y ya corrían entonces |
+| `sort_data[mode]=total_impressions` | ordena por **impresiones totales**, de mayor a menor |
+
+URL base (cambiar KEYWORD y la ventana):
+
+```
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=KEYWORD&search_type=keyword_unordered&media_type=all&start_date[min]=2026-05-01&start_date[max]=2026-08-01&sort_data[mode]=total_impressions&sort_data[direction]=desc
+```
+
+**El filtro nuevo, en este orden:**
+1. **Fecha del ad activo más viejo.** 45+ días = nivel 3; 90+ días = no hay discusión.
+2. **Escalera de fechas:** ads vivos repartidos en muchas fechas distintas (ej. 873 / 76 / 69 / 57 días *más* un lote de hoy) = renueva creativos todos los meses porque gana plata.
+3. **Recién después, el volumen.** 22 ads con dos años de historia valen más que 150 lanzados hoy.
+
+**Por qué el nicho de bajar de peso devuelve siempre marcas personales (hallazgo del 27/10).** Ordenado por impresiones, todo lo que lleva años corriendo en emagrecimento tiene cara: Zanon Macedo (15 meses), drvictorcutait (2 años y 4 meses), Géssica Andrade, Dr. Fabiano, Clínica Monteze. En ese nicho **la cara es la oferta**: el avatar le compra al médico, no al PDF. No es que se busque mal, es como está armado el mercado en Brasil. La única página sin cara que sobrevive años es **Menopausa Cancelada** (ID 106449212160487, un ad activo desde junio de 2024), y lo esquiva con **funnel de WhatsApp**: el chat reemplaza la confianza que daría la cara. Ese es el mecanismo a copiar, y es el mismo de Viver é Cristo.
+
 ## Correcciones de Santiago sobre la caza
 
 **27/10/2026 — "las últimas que me diste fueron malísimas, las conoce todo el mundo y encima la mayoría eran marcas personales".** Reglas que salen de ahí, obligatorias en toda caza:

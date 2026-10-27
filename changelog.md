@@ -6,6 +6,9 @@
 - Sin reglas nuevas: la tanda aplica las del 24, 25 y 26/10 (bizop duro para video, resultado para native).
 
 ## 2026-10-27
+- **VSL de Calistenia Rusa rehecho entero (6:17).** Voz "damian", testimonio como chat de WhatsApp, avatar parado sin barras blancas y carpeta ordenada con `material/`. `SEGUNDOS_OFERTA = 295`.
+- `validar_anclas.py`: valida contra la lista de palabras que arma el editor (transcripción alineada contra el guion), que no es ni el guion ni `words0.json`.
+- ⚠️ El disco de Santiago está al 97% (194 de 228 GB). El primer render murió con "No space left on device".
 - **Calistenia Rusa · la voz del VSL salió gallega.** Agustín (HeyGen, etiquetado "Spanish (Argentina)") no suena rioplatense. Regla nueva en [[vsl-reglas-de-armado]] §3: la voz de hombre argentino es **Knox en AI Studio** con el Style de Herrero de Finde + lipsync en HeyGen; la etiqueta de idioma de HeyGen no garantiza el acento; y no se estrena una voz en una entrega (muestra gratis primero). Misma regla general en [[como-trabajar-con-santiago]].
 - La voz definitiva la eligió él: **"damian"**, que ya tenía clonada en Mis voces de HeyGen. Queda como voz predeterminada de los dos avatares del Coach. Knox + AI Studio sigue siendo la regla para voz en off sin avatar.
 - También: el testimonio pasa a ser una **captura de chat de WhatsApp** hecha con Chrome headless, y el avatar parado se destara de las barras blancas que mete HeyGen.

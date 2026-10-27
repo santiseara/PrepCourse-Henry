@@ -97,6 +97,26 @@ Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion,
 
 **Duración.** HeyGen habla más rápido que el locutor del original: el crudo da 5:13 y con silencios recortados 4:42. **No se le aplica el 1.3x de la regla general** porque quedaría en 3:37 y se siente atropellado.
 
+## Estado del VSL (2026-10-27, versión 2)
+
+**`~/Desktop/calistenia-rusa/vsl/`** — `CALISTENIA-RUSA-VSL.mp4` (1080×1920, **6:17**, 1,1 GB) y
+`CALISTENIA-RUSA-VSL-web.mp4` (720×1280, 64 MB, faststart). Al lado, la hoja de contactos y el `LEEME.txt`.
+Todo el material de trabajo quedó en `material/` ("sacame todo lo que no me sirve de la carpeta, quiero solo
+lo fundamental, sino me mareo"), con `OUTPUTS/scripts-vsl/ordenar_carpeta_vsl.py`, que mueve, no borra.
+
+- **Voz: "damian"** (Mis voces de HeyGen), puesta como predeterminada en los dos avatares del Coach.
+  La primera versión salió con Agustín y sonaba gallega.
+- **Testimonio: captura de chat de WhatsApp** a pantalla completa (210–230 s), hecha con Chrome headless.
+- **Avatar parado sin barras blancas**, destarado con `prep_avatar_calistenia_rusa.py`.
+- Composición: parte 1 210,7 s (14 b-rolls, 7 headlines) + parte 2 167,1 s (7, 10). SPEED 1.0, sin acelerar:
+  damian ya habla a buen ritmo y el corte queda en 6:17, casi igual que el original (6:11).
+- **`SEGUNDOS_OFERTA = 295`** (4:55), medido sobre este corte.
+- Créditos: HeyGen gastó **114** en los dos bloques (47 + 67); quedaban 351 antes.
+
+### Lo que falta (de Santiago)
+1. Subir el `-web.mp4` a un hosting con Range requests y pegar la URL en `VIDEO_URL`.
+2. Confirmar el checkout (`calistenia-rusa.impultienda.ar/checkout`).
+
 ## Estado
 - ✅ Quiz entero armado y probado: `~/Desktop/calistenia-rusa/` (`landing/`, `imagenes/`).
 - ✅ **VSL terminado: `~/Desktop/calistenia-rusa/vsl/CALISTENIA-RUSA-VSL.mp4`**, 6:11, 1080×1920, con la versión web de 720×1280 lista para subir.

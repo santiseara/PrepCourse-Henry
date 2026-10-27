@@ -98,17 +98,17 @@ Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion,
 **Duración.** HeyGen habla más rápido que el locutor del original: el crudo da 5:13 y con silencios recortados 4:42. **No se le aplica el 1.3x de la regla general** porque quedaría en 3:37 y se siente atropellado.
 
 ## Estado
-- ✅ Quiz entero armado y probado paso por paso: `~/Desktop/calistenia-rusa/`.
-- ⏳ **Falta el VSL.** Es el próximo paso.
-- ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.
-- ⏳ Falta confirmar el link de checkout y decidir la cara del Coach Santi.
-- ⏳ Los anuncios quedan para después del VSL.
+- ✅ Quiz entero armado y probado: `~/Desktop/calistenia-rusa/` (`landing/`, `imagenes/`).
+- ✅ **VSL terminado: `~/Desktop/calistenia-rusa/vsl/CALISTENIA-RUSA-VSL.mp4`**, 6:11, 1080×1920, con la versión web de 720×1280 lista para subir.
+- ✅ **`SEGUNDOS_OFERTA = 287`** (4:47). Es el segundo en que el VSL dice el precio, más 3 s de aire, medido sobre el video final ya editado.
+- ⏳ Falta subir el MP4 a un hosting que acepte *Range requests* y pegar su URL en `VIDEO_URL` del quiz.
+- ⏳ Falta confirmar el link de checkout.
+- ⏳ Los anuncios quedan para después.
 
 ## Preguntas abiertas
-- ¿El Coach Santi es Santiago (foto real) o un personaje generado?
+- ~~¿El Coach Santi es Santiago o un personaje?~~ Santiago pasó las dos fotos del personaje el 2026-10-26.
 - ¿El checkout es `calistenia-rusa.impultienda.ar`?
 - ¿El precio queda en $17.990 como el de Calistenia Asiática?
-- ¿El VSL va con MP4 propio (player nuestro) o con Panda?
 
 ## Relacionado
 [[quizzes-reglas-de-armado]] · [[vsl-reglas-de-armado]] · [[tai-chi-fit]] · [[quiz-funnel]] · [[ofertas]] · [[shopify-y-checkout]]

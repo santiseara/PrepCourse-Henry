@@ -1,3 +1,11 @@
+## 2026-10-27 — Calistenia Rusa: VSL terminado
+
+- **`CALISTENIA-RUSA-VSL.mp4`: 6:11, 1080×1920**, el mismo largo que el original. Más la versión web de 720×1280 (66 MB, faststart) para el quiz.
+- **`SEGUNDOS_OFERTA = 287`** (4:47), medido sobre el video final con los silencios recortados y el 1,12x aplicados.
+- 21 cortes de B-roll, 17 headlines, 26 efectos, subtítulos palabra por palabra y la música mezclada con ducking.
+- **Dos errores encontrados al revisar la hoja de contactos y corregidos**: un B-roll que mostraba al coach del competidor con texto en español, y un plato de pan justo en el bloque del menú para bajar la panza. El plano de la balanza del VSL viejo no se pudo reusar porque trae el subtítulo quemado, así que se generó (5 créditos).
+- Reglas nuevas en [[vsl-reglas-de-armado]]: §1c verificar las anclas contra la transcripción antes de renderizar (que existan, que el fin vaya después del inicio y que sean únicas; y nunca anclar en números, que Whisper escribe en cifras) y §1d mirar cada B-roll a tamaño real antes de montarlo.
+
 ## 2026-10-26 (noche, 6) — Calistenia Rusa: el VSL
 
 - Santiago: *"quiero que sea el mismo vsl que el de esta pagina… el mismo guion, obviamente adaptado a lo mio, y brolls iguales o similares"*, con el avatar del Coach Santi que pasó en dos tomas.

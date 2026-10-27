@@ -13,7 +13,7 @@ G = 'gfx/'
 # ───────────────────────── BLOQUE 1 ─────────────────────────
 plan1 = [
     # diagnóstico
-    ['anat-testosterona', 'Por el resultado de tu test',   'de más de cuarenta.',       0.3, 'split'],
+    ['anat-testosterona', 'Por el resultado de tu test',   'pero muy común en hombres', 0.3, 'split'],
     ['hombre-panza',      'La caída de testosterona',      'sobre todo en la panza.',   0.5, 'split'],
     ['balanza',           'aunque hagas ejercicio',        'como querrías.',            0.5, 'full'],
     ['espejo-antes',      'Si sentís mucho cansancio',     'y la libido baja',          0.5, 'split'],
@@ -27,10 +27,10 @@ plan1 = [
     ['entrenando',        'El gimnasio y el correr',       'no sostiene.',              0.5, 'split'],
     # la solución
     ['dos-hombres',       'Una técnica de la escuela rusa','control del cuerpo.',       0.5, 'split'],
-    ['anat-fibras',       'las fibras profundas despiertan','como si tuvieras veinte años.', 2.0, 'full'],
+    ['anat-fibras',       'las fibras profundas despiertan','vuelve a quemar grasa',     2.0, 'full'],
     # el producto
-    ['flexiones',         'entrenamientos de siete minutos','reactivar la testosterona.', 0.5, 'gs'],
-    ['app',               'El desafío de veintiocho días', 'sin vueltas.',              0.3, 'split'],
+    ['flexiones',         'En mi aplicación vas a tener',  'reactivar la testosterona.', 0.5, 'gs'],
+    ['app',               'fue creado exactamente',        'sin vueltas.',              0.3, 'split'],
     ['comida',            'un plan alimentario personalizado', 'te gusta comer',        0.5, 'full'],
 ]
 
@@ -41,12 +41,12 @@ heads1 = [
     ['No es falta de fuerza de voluntad', '',             'pop',    1.0],
     ['activación de las fibras profundas', '',            'whoosh', 1.0],
     ['método simple que llamé',       '',                 'whoosh', 1.0],
-    ['siete minutos por día',         '',                 'pop',    1.0],
+    ['Movimientos sin impacto',       '',                 'pop',    1.0],
 ]
 
 stickers1 = [
     ['Mis felicitaciones',      G + 'check.png', 1.6, 0,  -240, 1080, 'pop'],
-    ['siete minutos por día',   G + 'siete.png', 2.4, 0,  -120, 1080, 'pop'],
+    ['Movimientos sin impacto', G + 'siete.png', 2.4, 0,  -120, 1080, 'pop'],
 ]
 
 # ───────────────────────── BLOQUE 2 ─────────────────────────
@@ -55,7 +55,7 @@ plan2 = [
     ['entrenando',   'Todo hombre de más de cuarenta', 'empezá ahora.',            1.5, 'split'],
     ['comida',       'menú antiinflamatorio masculino', 'sin pasar hambre.',       1.0, 'full'],
     ['app',          'el método, el plan alimentario', 'acceso es para siempre.',  0.3, 'split'],
-    ['flexiones',    'se puede resolver con siete minutos', 'una sola vez.',       1.0, 'split'],
+    ['flexiones',    'se puede resolver con siete minutos', 'Ahora pensalo bien',  1.0, 'split'],
     ['hombre-cansado','Podés cerrar este video',      'frustración de siempre.',   0.5, 'split'],
     ['testimonio',   'O podés empezar hoy',           'gustándote lo que ves.',    1.5, 'split'],
 ]

@@ -47,6 +47,25 @@ El embed del quiz da el id: `player-vz-XXXX.tv.pandavideo.com/embed/?v=<uuid>`. 
 - video para el mapa de B-rolls: `-c copy` y una hoja de contactos con `fps=1/5`. En una sola imagen se ve el minuto exacto de cada B-roll, cada placa y el estilo de los subtítulos.
 - ffmpeg en la Mac de Santiago está en `~/bin/ffmpeg` (symlink al binario de `imageio_ffmpeg`); no hay ffmpeg de sistema ni Homebrew.
 
+## 1c. Verificar las anclas ANTES de renderizar (2026-10-26, Calistenia Rusa)
+Un `plan.json` con una frase mal elegida tira abajo todo el render después de 10 minutos de trabajo: ffmpeg corta con `Value -4700000.000000 for parameter 'durationi' out of range`, que es un B-roll con **duración negativa**. Pasa porque `find()` devuelve **la primera** aparición de la frase en la transcripción, así que si el ancla de fin también existe antes del inicio, el clip sale al revés.
+
+Antes de lanzar la edición hay que correr un verificador contra el **`words0.json` ya transcripto** (no contra el guion) que chequee las tres cosas:
+1. que la frase **exista en la transcripción**;
+2. que el **fin caiga después del inicio**;
+3. que el ancla sea **única** — si aparece más de una vez, avisar.
+
+Chequear solo que la frase esté en el guion **no alcanza** y da falsos OK.
+
+**Whisper escribe los números en cifras.** El guion dice "veintiocho días", "siete minutos", "diecisiete mil novecientos noventa" y la transcripción dice **"28 días"**, **"7 minutos"**, **"17.990"** — y a veces una sí y otra no en el mismo video. La regla: **las anclas no llevan números**. Se ancla en las palabras de al lado ("En mi aplicación vas a tener", "fue creado exactamente", "Movimientos sin impacto").
+
+## 1d. Mirar cada B-roll antes de montarlo (2026-10-27, Calistenia Rusa)
+Dos planos se colaron en el primer render y recién aparecieron en la hoja de contactos del final:
+- **Una imagen del competidor con su coach y texto en español** (un diagrama de "Más energía / Menos estrés / ALIMENTACIÓN" con el Maestro Kaito en el medio). Vino de mapear mal el número de archivo del set del quiz. **Cada B-roll se mira a tamaño real antes de cargarlo al plan**, no solo en una miniatura de contacto.
+- **Un plato de pan** en el momento del menú antiinflamatorio para bajar la panza. El B-roll no solo tiene que ser del tema: **no puede contradecir la promesa**.
+
+**Reusar un plano del VSL viejo: revisar el subtítulo quemado.** El plano de la balanza del original servía (es oferta propia, §4d lo permite), pero trae el subtítulo **"BAJA COMO QUERRÍAS"** incrustado y la fuente es 360p, así que recortarlo lo dejaba borroso. Salió más barato y mejor **generarlo de nuevo** (5 créditos) que pelearse con el original. Antes de reusar un tramo, extraer un cuadro y mirarlo.
+
 ## 2. Guion
 - **Estructura 1 a 1 con el original**: los mismos bloques en el mismo orden (hook, presentación, diagnóstico por el test, empatía, mecanismo, trampa, solución, producto, testimonio, bonos, anclaje, precio, escasez, garantía y cierre).
 - **Alinear todo a la oferta y al quiz**: precio y tachado, bonos, minutos por día, garantía, nombre del método, entregables. El VSL no puede contradecir al quiz.

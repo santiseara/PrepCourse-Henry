@@ -1,6 +1,7 @@
 ## 2026-10-27
 - **Calistenia Rusa · la voz del VSL salió gallega.** Agustín (HeyGen, etiquetado "Spanish (Argentina)") no suena rioplatense. Regla nueva en [[vsl-reglas-de-armado]] §3: la voz de hombre argentino es **Knox en AI Studio** con el Style de Herrero de Finde + lipsync en HeyGen; la etiqueta de idioma de HeyGen no garantiza el acento; y no se estrena una voz en una entrega (muestra gratis primero). Misma regla general en [[como-trabajar-con-santiago]].
-- Muestra de 20 s en `~/Desktop/calistenia-rusa/vsl/MUESTRA-VOZ-knox-argentino.mp3`, esperando su OK para rehacer el VSL.
+- La voz definitiva la eligió él: **"damian"**, que ya tenía clonada en Mis voces de HeyGen. Queda como voz predeterminada de los dos avatares del Coach. Knox + AI Studio sigue siendo la regla para voz en off sin avatar.
+- También: el testimonio pasa a ser una **captura de chat de WhatsApp** hecha con Chrome headless, y el avatar parado se destara de las barras blancas que mete HeyGen.
 
 ## 2026-10-27 — Calistenia Rusa: VSL terminado
 

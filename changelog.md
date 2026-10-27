@@ -14,6 +14,7 @@
 - Sin reglas nuevas: la tanda aplica las del 24, 25 y 26/10 (bizop duro para video, resultado para native).
 
 ## 2026-10-27
+- Arreglado el CTA de abajo del VSL: en teléfono la etiqueta se parte en dos líneas y la segunda quedaba a la izquierda. Falta `text-align:center` en `.btn`; `justify-content` solo no alcanza.
 - **El logo del quiz quedó sin marca**: solo "CALISTENIA RUSA · Coach Santi". Probé cuatro íconos de calistenia y después las anillas ya puestas; eligió sacar todo. Regla nueva en [[quizzes-reglas-de-armado]].
 - **El VSL entró al quiz.** Embed de Panda en el `<template>`, `SEGUNDOS_OFERTA: 290` (4:50 por reloj desde la última slide) y entrega autocontenida de 858 KB en `calistenia-rusa-quiz.txt`. Script nuevo: `inline_quiz.py`.
 - **VSL de Calistenia Rusa rehecho entero (6:17).** Voz "damian", testimonio como chat de WhatsApp, avatar parado sin barras blancas y carpeta ordenada con `material/`. `SEGUNDOS_OFERTA = 295`.

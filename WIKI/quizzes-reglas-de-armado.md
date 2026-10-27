@@ -185,3 +185,13 @@ Santiago, sobre la estrella del encabezado de Calistenia Rusa: *"no me gusta la 
 - A **30 px** casi nada se lee. De cuatro intentos (dominada, brazo flexionado, bandera humana, anillas) solo sobrevivieron las **anillas de gimnasia**: dos círculos colgando de una barra, trazo 2.3 sobre un SVG de 19 px. El brazo flexionado quedó como mancha y la bandera humana se lee como una bandera común.
 - Antes de elegir, **renderizar los candidatos al tamaño real** (30 px) en una página aparte con Chrome headless y mirarlos. A 60 px todos parecen buenos y después no se entiende ninguno.
 - **Terminó eligiendo el texto solo.** Le mostré las anillas ya puestas y respondió: *"no, sacale el logo, dejá solo lo de calistenia rusa coach santi"*. Es la segunda vez en la misma tarea que prefiere quitar antes que agregar (ya había sacado dos fotos de pasos y la del encabezado). Regla: **cuando duda entre una marca y nada, la respuesta es nada** — y conviene ofrecer esa opción primero en vez de presentar un ícono nuevo.
+
+## 2026-10-27 · Un botón en flex no centra el texto que se parte en dos líneas
+
+Santiago: *"el botón de cta del final está alineado a la izquierda"*. Era el CTA de abajo del VSL, el que aparece con la oferta: en pantalla de teléfono "Obtener mi plan personalizado ahora" se parte en dos renglones y **el segundo quedaba pegado a la izquierda**.
+
+La causa: `.btn` es `display:flex` con `justify-content:center`. Eso centra la **caja** del texto dentro del botón, pero adentro de esa caja el texto sigue alineado según `text-align`, que hereda `start`. Con una sola línea no se nota; con dos, sí. El CTA del cierre no mostraba el problema porque está dentro de `.prueba`, que ya tiene `text-align:center`.
+
+**Regla: todo `.btn` lleva `text-align:center` además del `justify-content:center`.** Y al revisar un quiz, mirar los botones **en ancho de teléfono**, que es donde las etiquetas largas se parten.
+
+**Cómo revisar en ancho real sin salir del navegador:** Chrome headless con `--window-size=390,...` **no aplica el viewport** (maqueta ancho y recorta, y parece que hubiera desborde cuando no lo hay). Lo que sí funciona es cargar la página en un **`<iframe>` de 390 px** dentro de una pestaña ya abierta: ahí el viewport es real, corren las media queries y se puede medir con `getBoundingClientRect()` sobre `contentDocument`.

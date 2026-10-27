@@ -174,6 +174,17 @@ Aprendido corriendo la primera caza real (renda extra + emagrecimento en Brasil,
 - **El volumen engaña sin la fecha.** Un anunciante con cientos de ads puede llevar 9 días; otro con 97 puede llevar 106. El conteo por API **ordena mal** si no se cruza con las fechas del navegador.
 - **Subnicho > nicho.** El término genérico ("renda extra") devuelve miles de anunciantes atomizados que mueren en una semana. El término de oficio ("crochê", "artesanato para vender") destapa las ofertas con 34 y 65 días corriendo.
 
+## Correcciones de Santiago sobre la caza
+
+**27/10/2026 — "las últimas que me diste fueron malísimas, las conoce todo el mundo y encima la mayoría eran marcas personales".** Reglas que salen de ahí, obligatorias en toda caza:
+
+- **La marca personal se descarta ANTES de contar el arsenal**, no después. Si el `page_name` es un nombre propio, un @usuario o lleva título (Dra., Chef, Nutricionista, Coach), se tira sin mirar cuántos ads tiene. En la caza del 27/10 eso eliminó 12 de las ~20 candidatas de la primera pantalla. Lo que sirve es la **página-marca**: Viver é Cristo, Fazendo a Nossa Festa, Prosperando Hoje, Doces Lucrativos.
+- **Nunca arrancar por la keyword del nicho.** "renda extra", "emagrecer", "cardápio" devuelven lo que ve todo el mundo. El arranque es por **footprint de checkout** (cakto, kirvano), **precio en el texto** ("apenas R$ 9,90") y **mecánica de entrega** ("moldes em PDF", "arquivo em PDF"). Eso filtra solo a quien vende un PDF de 10 reales.
+- **Decir cuando un nicho no da.** El 27/10 bajar de peso no devolvió un solo winner duro en PDF: lo honesto es decirlo y no rellenar la shortlist con testers de hoy.
+- **Volumen sin antigüedad no es winner.** Livera tenía 154 ads activos y los 154 estaban en circulación desde ese mismo día. Es un lote de testeo con presupuesto. Se anota el ángulo y se vuelve a mirar a los 3 días.
+
+**Dónde viven las ofertas escondidas (hallazgo del 27/10):** el cruce **fe + souvenir imprimible**. Mismo PDF vendido con cuatro usos a la vez (regalo, souvenir para la iglesia, decoración, catequesis), funnel de WhatsApp y el ángulo **"pagás solo después de recibir todo"** — riesgo cero, cero marca personal y ningún gurú compitiendo por esas palabras. Ver `OUTPUTS/2026-10-27-caza-ingresos-extra-y-bajar-de-peso.md`.
+
 ## Banco de keywords (26/10/2026)
 
 Las keywords no se improvisan en cada caza: hay un banco por mercado y por eje en

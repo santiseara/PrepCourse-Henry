@@ -1,3 +1,11 @@
+## 2026-10-27 — Caza en Brasil: ingresos extra y bajar de peso
+
+- **Caza nueva con criterio corregido** (`OUTPUTS/2026-10-27-caza-ingresos-extra-y-bajar-de-peso.md`): 16 keywords, barrido mundial, 14 fanpages contadas con `page_ids`, 2 verificadas en el navegador.
+- **Candidata A: Viver é Cristo** — 55 ads activos sobre una sola oferta, el más viejo con 24 días, 44 copias del mismo creativo, sin marca personal. Calendário Cristão 2027 en moldes PDF, vendido por WhatsApp con el ángulo "pague só depois de receber tudo".
+- **Bajar de peso: descartado por ahora** en PDF low ticket. En 8 keywords no apareció un anunciante que pase el filtro; lo que hay son nutricionistas con cara, suplementos y testers de hoy.
+- **Livera (154 ads) no pasa**: todos en circulación desde el mismo día. Se guardó el ángulo del "teste da pinça de 5 segundos" y queda para revisar el 30/10.
+- **Reglas nuevas en [[caza-de-ofertas]]** por su corrección ("las conoce todo el mundo y eran marcas personales"): descartar marca personal antes de contar el arsenal, arrancar por footprint de checkout y precio en vez de la keyword del nicho, decir cuando un nicho no da, y volumen sin antigüedad no es winner.
+
 ## 2026-10-27 — Keywords para cazar en Brasil: IA, renda extra y manifestação
 
 - **Banco nuevo por nicho** (`OUTPUTS/2026-10-27-keywords-br-ia-renda-extra-manifestacao.md`): ~210 términos en portugués, por ejes, con top 10 de arranque y lista negra por nicho.

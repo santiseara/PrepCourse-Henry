@@ -145,6 +145,15 @@ Comprate = (inicio de checkout ÷ landing page views) × (compras ÷ inicio de c
 
 Si el primero está bien (>10%) y el segundo mal, el problema **no es la landing**: es el checkout o la oferta. Ver [[diagnostico-de-checkout]].
 
+
+### Densidad de CTA: el desierto de botones (2026-10-26)
+Regla que sale de medir la landing de [[herrero-de-finde]] (landing → checkout en 9,21%): **en una landing larga no puede haber más de dos pantallas seguidas sin un botón de compra**. Ahí tenía el primero al 8% de la página y el segundo al 32%: siete pantallas sin salida a comprar, justo donde estaban las secciones que más convencen.
+
+Cómo se arregla sin tocar el resto de la página:
+- Botones intercalados **al final de cada bloque que convence** (la prueba, el demo del producto, la comparativa), no solo después del bloque de precio.
+- **Barra de compra fija** abajo, con el precio a la izquierda. Que aparezca recién cuando el primer CTA quedó arriba y que **se esconda sola cuando hay otro botón en pantalla**: así nunca tapa ni compite con los CTA de la página.
+- El botón nuevo se copia del que ya está (misma clase, mismo `href`), para no tocar el JS del carrito ni el tracking.
+
 ## Diagnóstico por métrica
 
 | Síntoma | Dónde mirar |

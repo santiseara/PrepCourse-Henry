@@ -1,3 +1,11 @@
+## 2026-10-26 (noche, 7) — Herrero de Finde: CTA en el tramo muerto
+
+- Santiago: *"vamos a hacer el ajuste de los cta, quiero que la landing quede exactamente igual, pero sumale los cta que me dijiste, actualizame el txt"*.
+- **Dos botones nuevos** en el tramo 8%–32% (quedan al 17% y al 22%): debajo de la foto del portón vendido y debajo de *"¿Por qué no 5.000 planos?"*. Mismo markup y mismas clases que los existentes.
+- **Barra de compra fija** con el precio y el botón, que aparece al pasar el primer CTA y se esconde sola cuando hay cualquier botón en pantalla. Probada en 10 posiciones de la página: nunca se superpone con un CTA ni tapa el footer.
+- Aplicado a los tres archivos de `~/Desktop/herrero-de-finde/landing/` (liquid, txt y PRUEBA.html), con copias previas en `.backup-26oct/`. Actualizada también la copia de `OUTPUTS/2026-10-22-landing-herrero-de-finde.html`.
+- Regla nueva en [[pagina-de-ventas]]: nunca más de dos pantallas seguidas sin botón de compra, y cómo montar la barra fija sin que compita con los CTA.
+
 ## 2026-10-26 (noche, 6) — Herrero de Finde: diagnóstico del embudo
 
 - Santiago pasó el embudo del día: **695 landing → 64 checkout (9,21%) → 33 compras (51,56%)**, conversión total 4,75%, order bumps 0%. Pregunta: cómo hacer que llegue más gente al checkout.

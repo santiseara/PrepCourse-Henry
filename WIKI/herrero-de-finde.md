@@ -135,6 +135,13 @@ Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, 
 - **Paso 0 antes de tocar la landing:** mirar el landing → checkout **por anuncio**. Hoy subió tanda nueva (V22–V33) y la causa 6 de [[diagnostico-de-checkout]] es que el ratio se cae por los creativos, no por el funnel.
 - **Lo que no se toca:** el checkout, el precio y la oferta.
 
+### Los CTA del tramo muerto (2026-10-26)
+Primer ajuste del diagnóstico de arriba. La landing queda igual; solo se suman salidas a comprar.
+- **Dos botones nuevos** en el tramo que iba del 8% al 32% sin ninguno: uno debajo de la foto del portón vendido (cierre de *"Esto es para vos si…"*) y otro debajo de *"¿Por qué no 5.000 planos?"*, al cerrar el visor de planos. Quedan al **17% y al 22%**. Mismo markup y mismas clases que los que ya estaban (`a.btn.rv` con `href="/checkout"`), así heredan el JS del carrito sin tocarlo.
+- **Barra de compra fija** (`.stickycta`, antes del cierre del `body`, fuera del `footer`): precio a la izquierda y botón a la derecha. Aparece recién cuando el primer CTA quedó arriba y **se esconde sola cuando hay cualquier botón en pantalla**, así no tapa nada ni se superpone con los CTA existentes. Verificada en 10 posiciones de la página.
+- Aplicado a los tres archivos: `herrero-de-finde-shopify.liquid`, `herrero-de-finde-landing.txt` y `herrero-de-finde-PRUEBA.html`. Copias previas en `landing/.backup-26oct/`.
+- **Ojo:** la versión publicada en Shopify tiene los botones con `href="/cart/{variante}:1"` (va directo al checkout) y **no** trae el JS que los manda a `/cart`. El archivo local sí. Si se sube el archivo local tal cual, el botón pasa a abrir el carrito y cambia el embudo justo mientras se mide.
+
 ## Banco de fichas verificadas (2026-10-25)
 Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes de poner un número en un guion, sale de acá.**
 

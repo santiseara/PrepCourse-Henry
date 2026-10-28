@@ -31,6 +31,12 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Antes de armar o editar uno, leer [[quizzes-reglas-de-armado]] y recorrer su checklist.
 - Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
+## Lo que se manda a elegir va solo (regla fija, 2026-10-28)
+Santiago: *"quedó todo hecho un desorden, vos tenés que subirme solo 3 voces, en una carpeta que sea voces, yo te digo cuál usar y listo, no me tenés que subir absolutamente todo"*.
+- Cuando tiene que **elegir** (voces, hooks, imágenes, cortes), se le entregan **solo las opciones**, numeradas `1 - …`, `2 - …`, `3 - …`, en **una carpeta propia con nombre claro** dentro de `~/Desktop/<oferta>/` (por ejemplo `anuncios/voces/`). Tres opciones, nada más.
+- **Nunca se le abre una carpeta de trabajo.** Todo lo intermedio (crudos, bloques cortados, json de alineación, versiones) queda en `work/` y no se muestra.
+- Las opciones se entregan **como van a sonar o verse en el video final** (la voz ya con su velocidad y sus pausas), no en crudo.
+
 ## Trabajar en la compu de Santiago (regla fija, 2026-10-25)
 - **Todo el laburo se hace en su Mac, siempre.** Santiago: *"acordate de laburar en mi compu SIEMPRE"*. Voces, renders, descargas, imágenes y archivos van a su disco, no a un entorno remoto ni a una carpeta temporal del sistema.
 - En la práctica: las voces se graban con su Chrome en AI Studio, los videos se renderizan con los scripts locales de `OUTPUTS/scripts-vsl/`, y los entregables terminan en `~/Desktop/<oferta>/` según la regla de carpetas de arriba.

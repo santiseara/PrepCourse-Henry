@@ -39,8 +39,9 @@ def norm(w): return re.sub(r'[^\w]', '', w.lower())
 
 # 1) voz: recorte de silencios + velocidad, palabras alineadas al guion
 sp = P.get('speed', 1.15)
+sd, ss = P.get('silence', [0.6, 0.35])   # 2026-10-28: los ads de voz en off van con [0.26, 0.12] (regla del 24/10)
 run([FF, '-v', 'error', '-y', '-i', F(P['vo']), '-af',
-     'silenceremove=start_periods=1:start_threshold=-55dB:stop_periods=-1:stop_duration=0.6:stop_threshold=-55dB:stop_silence=0.35,'
+     f'silenceremove=start_periods=1:start_threshold=-55dB:stop_periods=-1:stop_duration={sd}:stop_threshold=-55dB:stop_silence={ss},'
      f'atempo={sp:.4f},aresample=48000,afade=t=in:d=0.02', '-ac', '2', f'{tmp}/vo.wav'])   # solo acorta pausas largas (antes cortaba colas de palabras)
 model = WhisperModel('small', device='cpu', compute_type='int8')
 segs, _ = model.transcribe(f'{tmp}/vo.wav', language=P.get('lang', 'en'), word_timestamps=True)

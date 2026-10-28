@@ -34,6 +34,7 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 ## Trabajar en la compu de Santiago (regla fija, 2026-10-25)
 - **Todo el laburo se hace en su Mac, siempre.** Santiago: *"acordate de laburar en mi compu SIEMPRE"*. Voces, renders, descargas, imágenes y archivos van a su disco, no a un entorno remoto ni a una carpeta temporal del sistema.
 - En la práctica: las voces se graban con su Chrome en AI Studio, los videos se renderizan con los scripts locales de `OUTPUTS/scripts-vsl/`, y los entregables terminan en `~/Desktop/<oferta>/` según la regla de carpetas de arriba.
+- **Reconfirmada el 2026-10-28:** *"Trabaja en mi compu SIEMPRE, guardalo como regla eso"*. Vale también para las herramientas por navegador: HeyGen, AI Studio y Higgsfield se usan desde **su Chrome, con sus sesiones iniciadas** (la cuenta de HeyGen que usamos es la de **Juan**, sesión ya abierta), y todo lo que se genera se baja a su disco.
 - Los archivos intermedios que no son entregables van al scratchpad de la sesión, nunca sueltos en el Escritorio ni en `/tmp`.
 
 - **Mutear las páginas que uso (regla fija, 2026-10-26).** Santiago: *"y mutea las paginas que uses"*. Antes de generar nada en AI Studio (o en cualquier página que reproduzca audio), inyectar: mute de todos los `<audio>`/`<video>` con un MutationObserver para los que aparezcan después, y un Proxy sobre `AudioContext` que mande la salida por un gain en 0 (AI Studio reproduce por WebAudio, así que mutear el `<audio>` solo no alcanza). Se reinyecta en cada pestaña nueva.

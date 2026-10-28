@@ -1,3 +1,13 @@
+## 2026-10-28 (noche) — Energía Vital: oferta nueva para LATAM, 6 videos
+
+- **Oferta nueva:** Guía de Autocuración Energética (Digital World, AR), que Santiago lanza a **LATAM en español neutro a US$ 9,99**. Ficha completa en `WIKI/energia-vital.md`.
+- **Análisis del ganador:** 54 ads activos en AR desde el 6/10. Se bajaron y transcribieron 4 de sus videos: hay **3 familias de hook** (el trabajo que afecta la salud, atención terapeutas de reiki, no es el típico libro espiritual) y **2 DNA de cuerpo** (esotérica dura y terapeuta a terapeuta).
+- **6 guiones en español neutro, sin voseo**, uno por ángulo y con CTA propio: `OUTPUTS/2026-10-28-guiones-energia-vital-latam.md`. Escritos contra el hero de la landing ("raíz espiritual, no el síntoma", "recetas de 3.000 años", "lo aplicas en minutos", garantía de 30 días).
+- **6 videos renderizados** de 39 a 44 s en `~/Desktop/energia-vital/anuncios/EV-V1…EV-V6`, con voz **Achernar** de AI Studio (3 opciones entregadas, eligió la 3), `speed 1.30` y `silence [0.26, 0.12]`.
+- **Edición propia:** `OUTPUTS/scripts-vsl/edit_energia.py` + `gen_energia_plans.py`, con la paleta violeta y dorada de la tapa y la placa final de 80 fichas + 8 bonos. Se le agregó al editor que el recorte de silencios sea configurable y que el título de la placa final se achique hasta entrar en 1080 px.
+- **B-roll de TikTok:** 110 clips bajados con tikwm de 4 tags del nicho; **solo 19 quedaron limpios**. Se descartaron dos ya renderizados (marca de `@usuario` que cambia de lugar) al mirar la hoja de contactos de los videos terminados.
+- **Reglas nuevas en `WIKI/guiones-y-anuncios.md`:** oferta de AR que sale a LATAM va en neutro (guion y voz), cómo bajar y transcribir el video de un ad de la Biblioteca de Anuncios, y que el primer clic en Run de AI Studio no dispara.
+
 ## 2026-10-28 (tarde) — Herrero: las tres de voz en off de la tanda
 
 - **V40–V42 renderizadas**: `HF-V40-nunca-mas-el-carton.mp4` (48 s), `HF-V41-el-cliente-senala-la-foto.mp4` (43 s) y `HF-V42-lo-que-cobra-un-dibujante.mp4` (44 s), en `~/Desktop/herrero-de-finde/anuncios/`. Completan la tanda del día: 3 con avatar + 3 de voz en off.

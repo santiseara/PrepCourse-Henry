@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-27.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-28.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -9,6 +9,7 @@
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
+- 🆕 [[energia-vital]] — Oferta propia que ya corre en AR (Digital World, 54 ads) y se lanza a **LATAM en neutro a US$ 9,99**: Guía de Autocuración Energética, 80 fichas de raíz emocional + cristales y hierbas. Sus 3 familias de hook, las 2 DNA de cuerpo transcriptas y la tanda 1 de 6 videos.
 - 🆕 [[100-paper-squishies]] — Oferta propia **en inglés** (US$ 16,99): ebook de 100 diseños imprimibles de squishies de papel, modelada sobre Hora de Papel (94 ads activos en 12 días, ES/IT/DE). Sus 7 familias de hook, la DNA de sus videos de 9 a 25 s y la tanda 1 de 6 videos.
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
@@ -104,6 +105,7 @@
 - [2026-10-28 — Natives de piedras 33 y 34](../OUTPUTS/2026-10-28-natives-piedras-33-y-34.md) — la mesa del comedor tomada por cajas hace seis meses (la demanda la desborda) y la caja de las falladas que una mujer compró entera en la feria, las dos con el error de negocio admitido y dos P.S. · ver [[natives-ganadoras]]
 - [2026-10-28 — Natives de piedras: 5 opciones eje resultado v2](../OUTPUTS/2026-10-28-natives-piedras-5-opciones-resultado-v2.md) — pasada de natives de imagen del nicho (la arquitectura de Iris Caldwell con el molde manchado y el error de negocio admitido, y la familia en segunda persona de Plaster Bloom) + 5 objetos nuevos: la mesa tomada por cajas, su piedra que volvió en un regalo ajeno, la caja de las falladas, dos abrigos en un gancho y la lista con la letra del marido · ver [[natives-ganadoras]]
 - [2026-10-28 — Guiones de piedras v29 (modelados sobre el mercado inglés)](../OUTPUTS/2026-10-28-guiones-piedras-v29-mercado-ingles.md) — mapa de los 4 competidores de piedras en inglés (el whale de 45 días en ImpulTienda y el que escala con 83 ads en 3 idiomas) + 3 guiones nuevos: el negocio del que nadie se dio cuenta, qué comprar es lo difícil y el consumible que vuelve · ver [[scented-stones]]
+- [2026-10-28 — Guiones de Energía Vital, tanda 1 LATAM](../OUTPUTS/2026-10-28-guiones-energia-vital-latam.md) — 6 guiones en español neutro, uno por ángulo (energía pesada, terapeutas de reiki, no es el típico libro, el mapa cuerpo-emoción, las recetas de la abuela y la rueda del síntoma) · texto principal en [2026-10-28 — Texto principal](../OUTPUTS/2026-10-28-texto-principal-energia-vital.md) · ver [[energia-vital]]
 - [2026-10-27 — Guiones de 100 Paper Squishies, tanda 1](../OUTPUTS/2026-10-27-guiones-100-paper-squishies.md) — 6 guiones en inglés y español con voseo, uno por familia ganadora de Hora de Papel (el precio del kiosco, el squishy que habla, la pedida en la caja, el canje del recreo, el cumple de ocho nenes y las cinco etapas de la mamá) + el texto principal único · ver [[100-paper-squishies]]
 - [2026-10-27 — Prompt del banner de Facebook de Calistenia Rusa](../OUTPUTS/2026-10-27-prompt-banner-facebook-calistenia-rusa.md) — dos prompts 16:9 (atleta en push-up y versión tipográfica sobre hormigón) con la paleta verde #1F6B47 + grafito, textos exactos y zonas seguras de la portada · ver [[calistenia-rusa]]
 - [2026-10-27 — Descripción para los ads de Calistenia Rusa](../OUTPUTS/2026-10-27-descripcion-calistenia-rusa.md) — primary text con emojis alineado al quiz y al VSL (escuela rusa, 7 minutos, fibras profundas, los 3 bonos, 30 días de garantía) y CTA al test de 1 minuto · ver [[calistenia-rusa]]

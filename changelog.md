@@ -1,3 +1,13 @@
+## 2026-10-28 (noche 4) — Atlas de Cortes: los 3 videos de la tanda bizop
+
+- **AT-V16, AT-V17 y AT-V18** listos en `~/Desktop/atlas-cortes/anuncios/` (31,7 / 32,5 / 39,1 s, 9:16, voz Sulafat), revisados con hoja de contactos a 1 cuadro cada 2 s.
+- **AI Studio cambió de UI:** se entra por *Create new dialog*, la voz se busca en **Speaker settings** y la escena va en el desplegable **Style**; el modelo es Gemini 3.8 Flash TTS y el audio se baja con el botón del reproductor. ⚠️ Si se descarga antes de que cambie la duración del player, baja el audio anterior (me pasó con el V18: el archivo era el V17 con el mismo MD5).
+- **`edit_atlas.py` ahora respeta `silence` del plan.** Esta tanda corre con `speed 1.30` y `silence [0.26, 0.12]`: la regla de voz en off del 24 y 26/10, que este editor venía ignorando con 0.6/0.35 fijo.
+- **Primeras placas con el producto real:** `P_wolf`, `P_hush` y `P_butterfly` son las páginas 41, 35 y 34 del PDF, no el mockup con fotos. El V18 abre nombrando esos tres cortes y mostrando sus mapas.
+- **Dos correcciones antes de entregar:** el emoji `⏱️` del hook del V17 salía como cuadraditos vacíos (se cambió por 💸) y su primer chip repetía el texto del hook (se cambió por "It's not slow hands").
+- **Sobre el navegador:** la extensión me había enganchado al Chrome del socio de Santiago y por eso se caía la pestaña. Se reconectó a "MacBook Air de Santiago" y recién ahí salieron las voces.
+- Wiki: `atlas-de-cortes.md` (sección *Tanda v16 a v18*, con los cambios de pipeline).
+
 ## 2026-10-28 (noche 3) — Atlas de Cortes: 3 variables en ángulo bizop
 
 - **Pedido de Santiago:** *"tenemos que hacer 3 variables de esa oferta… apuntando al ángulo de bizop"*.

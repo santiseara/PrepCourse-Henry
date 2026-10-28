@@ -80,6 +80,13 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - Largos de 46 a 55 s, el rango del formato bizop. EN + ES voseo completos.
 - `OUTPUTS/2026-10-28-guiones-atlas-cortes-v16-v18-bizop.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v16-v18-bizop.md`. Nombres para subir: 28/10 - 1, 2 y 3.
 - ⚠️ Son el test del ángulo: si estos tres vuelven a dar $22 como V4 y V5, el bizop queda cerrado para esta oferta y se vuelve a fricción en el sillón.
+- **Videos listos (28/10):** `~/Desktop/atlas-cortes/anuncios/AT-V16.mp4` (31,7 s, 13 planos), `AT-V17.mp4` (32,5 s, 13) y `AT-V18.mp4` (39,1 s, 16), 9:16, voz Sulafat, revisados con hoja de contactos a 1 cuadro cada 2 s.
+- **Cambios de pipeline de esta tanda:**
+  - 🆕 **AI Studio cambió de UI.** Ya no hay "Scene" ni el textarea 2: se entra por *Create new dialog* → la voz se elige en **Speaker settings** (buscador "Sulafat") y el prompt de escena va en el desplegable **Style**. El modelo hoy es **Gemini 3.8 Flash TTS**. El audio **se baja con el botón de descarga del reproductor** (cae en `~/Downloads` como `Generated Audio <fecha>.wav`); el receptor local ya no hace falta, aunque sigue en `material/recv.py`. ⚠️ Si se aprieta descargar antes de que el player cambie de duración, baja **el audio anterior**: hay que verificar la duración o el MD5 de cada archivo.
+  - 🆕 **`edit_atlas.py` ahora lee `silence` del plan** (antes 0.6/0.35 fijo). La tanda va con `speed 1.30` y `silence [0.26, 0.12]`, la regla de voz en off del 24 y 26/10, que hasta ahora este editor no cumplía.
+  - 🆕 **Stills del producto real:** `P_wolf`, `P_hush` y `P_butterfly` salen de las páginas 41, 35 y 34 del PDF (`producto/fuente/preview.py`), compuestas sobre fondo berenjena en 1080x1920. Son las primeras placas de la oferta que muestran **el producto que se recibe** y no el mockup con fotos.
+  - 🆕 **Emojis sin glifo en el hook.** `⏱️` (U+23F1) sale como dos cuadraditos vacíos en la tarjeta del hook. Antes de entregar hay que mirar el primer cuadro; los que sí rinden son los del bloque 1F4xx (💰 💸) y ✂️.
+  - 🆕 **El chip no repite el hook.** El primer chip del V17 decía lo mismo que la tarjeta del hook y los dos quedaban en pantalla juntos. Se cambió por "It's not slow hands" sobre otra palabra.
 
 ## Detalles / notas
 - Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.

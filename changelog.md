@@ -1,3 +1,11 @@
+## 2026-10-28 (tarde) — Herrero: las tres de voz en off de la tanda
+
+- **V40–V42 renderizadas**: `HF-V40-nunca-mas-el-carton.mp4` (48 s), `HF-V41-el-cliente-senala-la-foto.mp4` (43 s) y `HF-V42-lo-que-cobra-un-dibujante.mp4` (44 s), en `~/Desktop/herrero-de-finde/anuncios/`. Completan la tanda del día: 3 con avatar + 3 de voz en off.
+- **Hooks y fichas nuevas**, no renovación de los viejos: el cartón que no se dibuja más (portón de dos hojas FM-004), el cliente que señala una foto del catálogo (jaula de potencia GY-013) y lo que cobra un dibujante por un solo plano (invernadero ST-012). Guiones en `OUTPUTS/2026-10-28-renovaciones-herrero-v40-v42.md`.
+- **Las fichas salen del motor del producto** (`mk_fichas.py` + `expansion.py`), con los números verificados por transcripción contra lo que dice la voz.
+- **Voz Enzo** (la que eligió Santiago en la tanda con avatar) a 1,30, grabada en AI Studio con el Chrome muteado.
+- **Bug viejo arreglado:** la línea `QUÉ CORTAR · CUÁNTO HIERRO · CUÁNTO COBRAR` de la placa final venía cortada desde la V34 porque no entraba en 1080 px. Ahora `edit_herrero_v3.py` y `edit_herrero_avatar.py` la achican hasta que entre.
+
 ## 2026-10-28 (mediodía) — Herrero: los tres primeros videos con avatar
 
 - **Tanda A1–A3 terminada y renderizada**: `HF-A1-no-me-faltaba-mano.mp4` (51 s), `HF-A2-nunca-le-avise.mp4` (50 s) y `HF-A3-la-soldadora-juntaba-polvo.mp4` (46 s), en `~/Desktop/herrero-de-finde/anuncios/`. Son los guiones 34, 36 y 39 **reescritos en primera persona**; los otros tres de la tanda (35, 37, 38) siguen en voz en off.

@@ -96,6 +96,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-28 — Herrero: renovaciones de voz en off V40–V42](../OUTPUTS/2026-10-28-renovaciones-herrero-v40-v42.md) — las otras tres de la tanda del día, con hooks y fichas nuevas: el cartón que no se dibuja más (portón de dos hojas), el cliente que señala una foto del catálogo (jaula de potencia) y lo que cobra un dibujante por un solo plano (invernadero) · ver [[herrero-de-finde]]
 - [2026-10-28 — Guiones de Herrero con avatar A1–A3](../OUTPUTS/2026-10-28-guiones-herrero-avatar-A1-A3.md) — los guiones 34, 36 y 39 reescritos en primera persona para el avatar: la confesión primero y el producto después · ver [[herrero-de-finde]]
 - [2026-10-28 — Prompt del avatar de Herrero de Finde](../OUTPUTS/2026-10-28-prompt-avatar-herrero-de-finde.md) — las dos tomas del herrero (parado en la puerta del taller y sentado en el banco), casual y en pleno gesto · ver [[ugc-y-video-generativo]]
 - [2026-10-28 — Atlas de Cortes: tanda v16 a v18 (ángulo bizop)](../OUTPUTS/2026-10-28-guiones-atlas-cortes-v16-v18-bizop.md) — 3 variables de plata sin desglose de cuentas: la clienta que vuelve en seis semanas, las dos horas que cobrás como una y los turnos de wolf cut que nadie de tu zona toma · ver [[atlas-de-cortes]]

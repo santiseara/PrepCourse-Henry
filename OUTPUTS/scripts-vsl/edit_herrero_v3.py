@@ -350,8 +350,10 @@ def png_end(o, path):
     fg = font(66, BC); g2 = o.get('sub', '+1.200 PLANOS · 12 BONUS'); gw = d.textlength(g2, font=fg) + 70
     rrect(d, ((W - gw) / 2, y, (W + gw) / 2, y + 96), 10, GREEN + (255,))
     d.text((W / 2, y + 12), g2, font=fg, fill=(8, 26, 14, 255), anchor='mt')
-    fs = font(40, MX); s2 = o.get('sub2', 'QUÉ CORTAR · CUÁNTO HIERRO · CUÁNTO COBRAR')
-    d.text((W / 2, y + 128), s2, font=fs, fill=BPI + (255,), anchor='mt')
+    s2 = o.get('sub2', 'QUÉ CORTAR · CUÁNTO HIERRO · CUÁNTO COBRAR'); ss = 40
+    while ss > 22 and d.textlength(s2, font=font(ss, MX)) > W - 90: ss -= 2
+    fs = font(ss, MX)
+    d.text((W / 2, y + 128 + (40 - ss) // 2), s2, font=fs, fill=BPI + (255,), anchor='mt')
     body, emo = split_emoji(o.get('cta', 'Tocá Más información')); fc = font(66, MX)
     em = emoji_img(emo, 58) if emo else None
     cw = d.textlength(body, font=fc) + (em.width + 14 if em else 0); bw = cw + 90

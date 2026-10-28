@@ -179,6 +179,20 @@ Primera tanda con cara. Sale del conteo de la sección *El avatar del competidor
 - **Al generar varias voces seguidas, verificar cuál se bajó.** De tres descargas seguidas una no se guardó y las otras dos quedaron con nombres por minuto. Se identifican transcribiendo los primeros 8 segundos, no por el orden.
 - **En los cortes, el que manda es el nuevo.** Si un corte pisa al anterior, se acorta el anterior; y si al anterior le quedarían menos de 0,6 s, se cae el anterior. Antes se ignoraba el nuevo y se perdía la placa final en dos de los tres videos.
 
+## Tanda de voz en off V40–V42 (2026-10-28)
+
+Las otras tres de la tanda del día, en el formato de siempre (voz en off + B-roll + fichas, edición v3). No son renovaciones de hooks viejos: **hooks nuevos y fichas nuevas**, porque las seis de la V34–V39 ya habían rotado las mismas seis fichas dos veces.
+
+- **Guiones:** `OUTPUTS/2026-10-28-renovaciones-herrero-v40-v42.md`. V40 *"Nunca más dibujar en un cartón"* (portón de dos hojas FM-004), V41 *"El cliente señala una foto y vos ya tenés el plano"* (jaula de potencia GY-013, con el Catálogo para Clientes adentro) y V42 *"Lo que cobra un dibujante por un solo plano"* (invernadero ST-012, ancla de precio contra lo que cuesta un plano a pedido).
+- **Fichas nuevas, sacadas del motor del producto** con `anuncios/work/stills/mk_fichas.py` (que lee `OUTPUTS/scripts-producto/expansion.py`): FM-004 portón de dos hojas de 2,60 m (188 mil → 785 mil–1,020 M, 12–16 h), GY-013 jaula de potencia 1,10 × 1,10 (155 mil → 655–850 mil, 10–14 h) y ST-012 invernadero de 4 × 3 m (372 mil → 1,375–1,790 M, 20–28 h). Verificadas por transcripción contra lo que dice la voz.
+- **Voz: Enzo**, la que eligió Santiago en la tanda con avatar, con el Style de siempre y la voz a 1,30. Antes se usaba Knox en los de voz en off.
+- **Planes:** `anuncios/work/plans/gen6.py` (copia de `gen5.py` con `MUS = {40: 'A', 41: 'B', 42: 'C'}`).
+- **Entregables:** `HF-V40-nunca-mas-el-carton.mp4` (48 s), `HF-V41-el-cliente-senala-la-foto.mp4` (43 s) y `HF-V42-lo-que-cobra-un-dibujante.mp4` (44 s).
+
+### Dos cosas que salieron de esta tanda (reglas)
+- **La línea de abajo de la placa final venía cortada en todos los videos.** `QUÉ CORTAR · CUÁNTO HIERRO · CUÁNTO COBRAR` a 40 px mide más de 1080 px: salía sin la "Q" ni la "R" desde la V34. Ahora `edit_herrero_v3.py` y `edit_herrero_avatar.py` **achican la tipografía hasta que entre** (de 40 a 22 px, margen de 90 px). Los videos anteriores a hoy siguen con la placa cortada; si se vuelven a subir, conviene re-renderizarlos.
+- **Las fichas no se repiten más de dos tandas.** El motor del producto genera cualquiera de los 1.205 planos con sus números reales, así que no hay motivo para volver a mostrar el mismo portón. Antes de escribir una tanda, sacar fichas nuevas con `mk_fichas.py`.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.
@@ -238,6 +252,8 @@ Precios leídos de las imágenes de `anuncios/work/stills/plan-*.webp`. **Antes 
 | TR-117 | Trailer para lancha de 6,7 m | $3.543.000 | $5.015.000–$6.520.000 | 27–33 |
 | TR-129 | Porta autos 2,44 x 6,10 doble eje | $7.946.000 | $11.275.000–$14.660.000 | 45–60 |
 | TR-148 | Base para tiny house 2,44 x 7,32 | $11.165.000 | $15.560.000–$20.225.000 | 50–70 |
+
+**Fichas nuevas del 2026-10-28** (sacadas del motor, van en la V40–V42): FM-004 portón de dos hojas de 2,60 m ($188.000 → $785.000–$1.020.000, 12–16 h), GY-013 jaula de potencia 1,10 × 1,10 ($155.000 → $655.000–$850.000, 10–14 h) y ST-012 invernadero de 4 × 3 m ($372.000 → $1.375.000–$1.790.000, 20–28 h).
 
 Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.000–$765.000), FN-139 botellero ($327.000 → $885.000–$1.150.000), FM-068 hoja de portón 3,66 ($883.000 → $1.480.000–$1.925.000), ST-064 escalera ($1.322.000 → $2.440.000–$3.170.000), ST-015 pérgola ($1.429.000 → $2.605.000–$3.385.000) y el fogonero cuadrado ($170.000 → $415.000–$535.000).
 

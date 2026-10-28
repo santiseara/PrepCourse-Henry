@@ -77,6 +77,17 @@ Ver [[stack-de-herramientas]].
 
 ## Complementos prácticos
 
+### Cómo se pide la foto de un avatar (regla, 2026-10-28)
+Santiago rechazó un prompt que pedía **estudio, fondo gris liso, cuerpo entero, pose rígida y boca cerrada**: *"me hizo cualquier cosa, la idea es hacer uno que sea casual, algo más normal, me hizo a un hombre parado nomás"*. La referencia que sí sirve son las dos tomas del Coach Santi de [[calistenia-rusa]].
+
+- **Casual y en entorno real**, nunca estudio: el lugar donde ese personaje estaría de verdad (el jardín de su casa, la puerta de su taller), con desorden propio del lugar y profundidad de fondo.
+- **En plena frase**: boca abierta hablando, mirada a la cámara y **las manos arriba en pleno gesto**. Una foto de alguien parado, quieto y callado no sirve.
+- **Luz natural** de la tarde, nada de softbox ni fondo liso. Que parezca un cuadro sacado de un video de celular.
+- **Plano medio**, de la cabeza a medio muslo, con aire arriba y a los costados para el recorte a 9:16.
+- **Dos tomas del mismo personaje** (parado y sentado), que después se intercalan por bloque sin pagar render extra.
+- Cara despejada: sin gorra, sin anteojos, sin nada tapándola. Ropa sin marcas ni estampas.
+- Costo: la foto no cuesta créditos y el video sí. Si la primera sale con piel plástica o manos raras, se tira otra antes de subirla a HeyGen.
+
 ### Avatar de VSL en HeyGen
 - Imagen base: pedirle a ChatGPT **varias poses o variantes de la misma persona**, que mejoran la consistencia del personaje. **Prueba de autoridad en la imagen:** diplomas, fotos familiares de fondo, vestuario y joyas acordes al personaje, e instrucciones anti-IA explícitas.
 - En HeyGen: personaje virtual con **3–5 fotos en 9:16**.

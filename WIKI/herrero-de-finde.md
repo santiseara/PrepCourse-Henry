@@ -26,7 +26,7 @@
 ## Análisis de sus ads (2026-10-22)
 - **Muestra:** 334 tarjetas activas (660 anuncios contando copias) y 180 videos únicos. 170 en inglés y 9 en italiano. Todo bajado y transcripto en `~/Desktop/herrero-de-finde/anuncios/work/` (`videos/`, `transcripts.json`, `rows.json`).
 - **Señales de ganador que usé:** copias del mismo video (lo duplican en varios conjuntos), cuántas versiones nuevas sacan del mismo hook (lo siguen iterando) y que siga activo semanas después de lanzado. No elegí por fecha de arranque.
-- **Estilos:** avatar de IA del herrero (gorra gris, camisa), podcast de dos herreros, dibujos animados (Buck), UGC de chicas, y **voz en off sobre B-roll de soldadura + fichas de planos**. Para nosotros, solo el último.
+- **Estilos (contados uno por uno el 2026-10-28):** voz en off sobre B-roll + fichas **122 videos (67,8 %, 406 copias)**, **avatar de IA a cámara 32 (17,8 %, 120 copias)**, UGC con persona 12 (6,7 %), podcast de dos herreros 8 (4,4 %), dibujos animados (Buck) 6 (3,3 %). Hasta ahora nosotros usamos solo el primero. Detalle en la sección *El avatar del competidor* de más abajo.
 - **Familias de hooks más iteradas:**
   1. **"Dos trailers por mes, paga la cuota de la camioneta"** (+25 versiones, avatar y B-roll). El video 003 en B-roll tiene 20 copias (el segundo más copiado).
   2. **"$X en materiales, $Y por el [trabajo], un finde"** (11 versiones: portón, parrilla, rack, fogonero…). Video 005 y 027 con 9 copias.
@@ -263,6 +263,17 @@ Las usadas en guiones anteriores: TK-082 protector de cabina ($283.000 → $590.
 - **El curso de soldadura en video (Bonus 8) no está.** Se entrega el manual escrito con el mismo nombre. La landing lo promete en video y en el hero ("No son solo PDFs"). Hay que decidir: producirlo aparte o cambiar ese texto de la landing.
 - **Los precios del producto son más bajos que los del banco de fichas** de arriba. Las fichas viejas salían de convertir los dólares del original ×1.000; las del producto salen de una tabla de materiales coherente entre sí. **Para guiones nuevos conviene usar los números del PDF**, que es lo que el comprador ve adentro.
 - **Muchos planos son la misma familia en otra medida.** Es como está armado cualquier pack de 1.200 planos del mercado y cada variante trae su propia lista de cortes y su propio precio, pero conviene saberlo antes de prometer "1.200 trabajos distintos": trabajos distintos hay 451, medidas hay 1.205.
+
+## El avatar del competidor: cuánto lo usan y para qué (2026-10-28)
+
+Pregunta de Santiago: *"la página original usa muchos videos con avatar, ¿no?"*. Conteo completo en `OUTPUTS/2026-10-28-herrero-avatar-vs-voz-en-off.md`.
+
+- **Usan avatar, pero es el segundo formato, no el principal:** 32 de 180 videos (17,8 %) y 120 de 631 copias (19 %). El nuestro —voz en off sobre B-roll y fichas— sigue siendo el 64 % de sus copias.
+- **El video más copiado de toda la muestra es avatar:** el 002, con **21 copias**. Del top 10 por copias, 6 llevan avatar.
+- **Es a donde están migrando:** en los 30 videos más nuevos (150–179) hay 9 con avatar, el 30 %. Y suman **personajes nuevos**: el herrero de camisa oscura de siempre, un pelirrojo con delantal de cuero (151, 168, 179) y dos mujeres (139, 153). Así renuevan formato sin inventar ángulos nuevos.
+- **El formato exacto no es un talking head:** es el **avatar recortado sin fondo, parado en la mitad inferior, presente todo el video**, con el B-roll cambiando atrás y subtítulos de una sola palabra (002, 040, 046, 051, 056, 062, 079, 140, 149). Para nosotros es barato: el fondo ya lo producimos, solo se suma la capa del avatar.
+- **Lo que el avatar habilita y la voz en off no:** la **primera persona**. 24 de 31 guiones de avatar (77 %) arrancan con una confesión del herrero ("yo cotizaba a ojo y perdía plata en la mitad de los trabajos"), contra el 24 % del resto. Una confesión necesita una cara que se haga cargo: sin ella queda sin dueño, que es lo que pasó con el V1 (anécdota, único conjunto con cero ventas).
+- **Por qué importa ahora:** la V22–V27 falló por repetir formato y la V34–V39 cambió la edición pero sigue siendo voz en off. El avatar es el cambio de formato más grande disponible y el único validado con plata por el competidor. Tanda propuesta de 3 (A1 el V7 en primera persona, A2 "yo cotizaba a ojo" de su 004, A3 "¿qué más sabés hacer?" de su 011), con **Avatar IV** y la voz **"damian"** de HeyGen, editor derivado de `edit_atlas_avatar.py` ([[atlas-de-cortes]]). **Pendiente de decisión de Santiago.**
 
 ## Preguntas abiertas
 - **Producto:** resuelto el 2026-10-26 con la Biblioteca de Planos generada por código (ver arriba). Falta rehacer con el generador las 8 páginas del carrusel "Abrí un plano" de la landing, que todavía son del original y están en inglés.

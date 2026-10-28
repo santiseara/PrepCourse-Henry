@@ -1,3 +1,12 @@
+## 2026-10-28 (noche 2) — Herrero: el avatar del competidor, contado
+
+- **Pregunta de Santiago:** *"la página original usa muchos videos con avatar, ¿no?"*. Se clasificaron **los 180 videos únicos** uno por uno (hojas de contacto de `anuncios/work/frames/` cruzadas con las copias de `rows.json`).
+- **Respuesta:** avatar usan, pero es el **segundo** formato: 32 videos (17,8 %) y 120 de 631 copias (19 %). El principal sigue siendo el nuestro, voz en off sobre B-roll y fichas (122 videos, 64 % de las copias).
+- **Tres cosas que lo vuelven importante igual:** el video **más copiado de toda la muestra es avatar** (002, 21 copias, y 6 del top 10); en los **30 videos más nuevos** el avatar es el 30 % y suman personajes nuevos (un pelirrojo con delantal, dos mujeres); y **el 77 % de los guiones de avatar arrancan en primera persona** contra el 24 % del resto — el avatar les habilita la confesión del herrero, que con voz en off anónima queda sin dueño (nuestro V1).
+- **El formato que copian no es un talking head:** avatar recortado sin fondo, parado en la mitad inferior, presente todo el video, con el B-roll cambiando atrás y subtítulos de una palabra.
+- **Propuesta pendiente de decisión:** tanda de 3 con avatar (el V7 en primera persona, "yo cotizaba a ojo" de su 004 y "¿qué más sabés hacer?" de su 011), Avatar IV + voz "damian", editor derivado de `edit_atlas_avatar.py`. No se gastó ningún crédito.
+- Análisis en `OUTPUTS/2026-10-28-herrero-avatar-vs-voz-en-off.md`; wiki: `herrero-de-finde.md` (sección nueva *El avatar del competidor*).
+
 ## 2026-10-28 (noche) — Natives 33 y 34, y la ganadora propia de 67 días
 
 - **Emma Carter y scentedstone.com son marcas de Santiago**, no competidores. La página Emma Carter corre desde el 22/08 (**67 días, 4 ads con el mismo texto**): es la **pieza con más gasto sostenido de toda la oferta**. DNA desarmada entera en `natives-ganadoras.md` — hook de reacción de un tercero con autoridad cotidiana (la agente inmobiliaria), escrita como diálogo con silencios, misma mesada antes y después, y cierre binario. ⚠️ Usa montos fuertes y funciona: contradice lo anotado el 23/10 a partir de Thrift AI. Lectura nueva: la cifra funciona cuando la trae la reacción de un tercero, no cuando abre sola.

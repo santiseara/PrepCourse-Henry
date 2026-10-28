@@ -1,3 +1,11 @@
+## 2026-10-28 (noche) — Natives 33 y 34, y la ganadora propia de 67 días
+
+- **Emma Carter y scentedstone.com son marcas de Santiago**, no competidores. La página Emma Carter corre desde el 22/08 (**67 días, 4 ads con el mismo texto**): es la **pieza con más gasto sostenido de toda la oferta**. DNA desarmada entera en `natives-ganadoras.md` — hook de reacción de un tercero con autoridad cotidiana (la agente inmobiliaria), escrita como diálogo con silencios, misma mesada antes y después, y cierre binario. ⚠️ Usa montos fuertes y funciona: contradice lo anotado el 23/10 a partir de Thrift AI. Lectura nueva: la cifra funciona cuando la trae la reacción de un tercero, no cuando abre sola.
+- **Natives 33 y 34** (`OUTPUTS/2026-10-28-natives-piedras-33-y-34.md`), elegidas de las 5 opciones del 28/10: la mesa del comedor tomada por cajas hace seis meses (demanda que la desborda, 1.553 palabras) y la caja de las falladas que una mujer compró entera en la feria (1.327 palabras).
+- Las dos estrenan los **upgrades del 28/10** sacados de la native de Iris Caldwell: el error admitido es de **negocio** (regalar el packaging de un pedido de 120; tirar producto propio y disculparse por el defecto antes de que lo noten), cierre que vuelve al objeto por boca de un tercero y **dos P.S.**, el segundo con un consejo práctico regalado. Brechas casero/vendible distintas entre las dos a propósito (yeso y peso / fragancia y sellado del dorso).
+- Sin montos de dinero en ninguna de las dos: riesgo cero con Meta y la FTC.
+- **Pendiente:** variables de la native de 67 días. Terceros con autoridad cotidiana sin usar: el contador, el del banco, el del crédito del auto, la maestra, el dueño del local.
+
 ## 2026-10-28 (tarde) — Natives de piedras: DNA del nicho y 5 opciones
 
 - **scentedstone.com es la marca de Santiago**, no un competidor. Corregido en el mapa de competidores de `scented-stones.md`: no se cuenta nunca en el veredicto de competencia.

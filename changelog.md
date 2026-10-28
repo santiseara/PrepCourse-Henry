@@ -1,3 +1,11 @@
+## 2026-10-28 — Piedras: investigación del mercado inglés y guiones v29
+
+- **Los guiones v23–v28 (bizop duro) no están funcionando.** Santiago pidió analizar qué está corriendo de verdad en habla inglesa en el nicho de generar ingresos.
+- **Barrido en la Biblioteca de Anuncios** (`ads_library_search` + lectura del copy real de cada snapshot en Chrome). Cuatro competidores sobre la misma oferta: **SCENT & STONE Studio** (60 ads activos, el más viejo del 13/09 → 45 días de gasto sostenido, corre en ImpulTienda), **Iris Caldwell Aroma Stones** (83 ads arrancados el 26/10, escalando de cero y ya en inglés, japonés y chino), **Plaster & Bloom** (murió en 22 h) y **The Scented Stone Method** (recién arrancado).
+- **Hallazgo central:** ninguno de los que gasta en serio vende con margen pelado, cuentas ni CTA con fecha. El ad que le dio 45 días al whale no menciona plata ni una vez. Venden mecanismo del producto, entregables con nombre propio, lista de "no" (incluido "no MLM") y la demanda que ya existe y nadie abastece.
+- **Tanda v29** (`OUTPUTS/2026-10-28-guiones-piedras-v29-mercado-ingles.md`): 3 guiones en inglés y español con voseo, uno por ganador distinto — el negocio del que casi nadie se dio cuenta, lo difícil es saber qué comprar, y el consumible que vuelve.
+- **WIKI:** mapa del mercado inglés en `scented-stones.md`, registro del 28/10 con las reglas nuevas en `guiones-y-anuncios.md`, entrada en `index.md`.
+
 ## 2026-10-27 (noche) - 100 Paper Squishies: una sola cama musical en la tanda 1
 
 - Santiago pidio que los 6 videos lleven la musica del V4 ("He came home with three he did not make"), que era el bed B.

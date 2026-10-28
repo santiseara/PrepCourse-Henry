@@ -96,6 +96,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-28 — Guiones de piedras v29 (modelados sobre el mercado inglés)](../OUTPUTS/2026-10-28-guiones-piedras-v29-mercado-ingles.md) — mapa de los 4 competidores de piedras en inglés (el whale de 45 días en ImpulTienda y el que escala con 83 ads en 3 idiomas) + 3 guiones nuevos: el negocio del que nadie se dio cuenta, qué comprar es lo difícil y el consumible que vuelve · ver [[scented-stones]]
 - [2026-10-27 — Guiones de 100 Paper Squishies, tanda 1](../OUTPUTS/2026-10-27-guiones-100-paper-squishies.md) — 6 guiones en inglés y español con voseo, uno por familia ganadora de Hora de Papel (el precio del kiosco, el squishy que habla, la pedida en la caja, el canje del recreo, el cumple de ocho nenes y las cinco etapas de la mamá) + el texto principal único · ver [[100-paper-squishies]]
 - [2026-10-27 — Prompt del banner de Facebook de Calistenia Rusa](../OUTPUTS/2026-10-27-prompt-banner-facebook-calistenia-rusa.md) — dos prompts 16:9 (atleta en push-up y versión tipográfica sobre hormigón) con la paleta verde #1F6B47 + grafito, textos exactos y zonas seguras de la portada · ver [[calistenia-rusa]]
 - [2026-10-27 — Descripción para los ads de Calistenia Rusa](../OUTPUTS/2026-10-27-descripcion-calistenia-rusa.md) — primary text con emojis alineado al quiz y al VSL (escuela rusa, 7 minutos, fibras profundas, los 3 bonos, 30 días de garantía) y CTA al test de 1 minuto · ver [[calistenia-rusa]]

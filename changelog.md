@@ -1,3 +1,12 @@
+## 2026-10-28 (tarde) — Natives de piedras: DNA del nicho y 5 opciones
+
+- **scentedstone.com es la marca de Santiago**, no un competidor. Corregido en el mapa de competidores de `scented-stones.md`: no se cuenta nunca en el veredicto de competencia.
+- **Pasada de natives de imagen del nicho** (browser con `media_type=image`, porque la tool del conector no devuelve el cuerpo del anuncio). Dos arquitecturas nuevas documentadas en `natives-ganadoras.md`:
+  - **Iris Caldwell** (la que escala con 83 ads): objeto de apertura = herramienta humilde o error (el molde manchado que no lava desde marzo), el **error admitido es de negocio** (casi regala un descuento por cantidad antes de que se lo pidan), cierre que vuelve al objeto con una frase de un tercero y **dos P.S.**, el segundo con un consejo práctico regalado. Headline: "4 on a bathroom shelf. 120 for a wedding."
+  - **Plaster Bloom**: familia de natives en segunda persona, una por falla del oficio, cada una con **un test que el lector puede hacer esta noche**. Sin validar (<100 impresiones). Le habla a quien ya hace piedras → banco de remarketing, no público frío de ingresos.
+- **5 opciones nuevas eje RESULTADO** (`OUTPUTS/2026-10-28-natives-piedras-5-opciones-resultado-v2.md`), ningún objeto repetido de las natives 1 a 32. Pendiente que Santiago elija.
+- **A verificar:** página "Emma Carter" corriendo desde el 22/08 (67 días, 4 ads con el mismo texto) con la native de la agente inmobiliaria. O es la native que más aguantó de la oferta, o es alguien usando la persona.
+
 ## 2026-10-28 — Piedras: investigación del mercado inglés y guiones v29
 
 - **Los guiones v23–v28 (bizop duro) no están funcionando.** Santiago pidió analizar qué está corriendo de verdad en habla inglesa en el nicho de generar ingresos.

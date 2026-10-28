@@ -71,6 +71,16 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - **Descarga desde HeyGen:** `fetch` al src del `<video>` falla por CORS. Se baja con el botón de descarga de la tarjeta (icono ↓ → "Descargar") y el archivo cae en `~/Downloads` como `Vídeo de Avatar_1080p (N).mp4`.
 - Producción: V10 y V12 con el pipeline de siempre (voz Sulafat en AI Studio + `edit_atlas.py`, planes nuevos en `work/plans/gen.py`). El receptor local del Atlas corre en el **puerto 8768**, porque el 8765 queda tomado por otras ofertas.
 
+## 🎬 Tanda v16 a v18 (28/10) — ángulo bizop
+> Santiago pidió 3 variables apuntando al **ángulo de bizop**. Se le avisó que es el ángulo que peor rindió en la cuenta (V5 $22,61 y V4 $22,38 contra $11–17 de los de fricción) y decidió ir igual. Se entregó con dos salvaguardas: **cero desglose de cuentas** (lo que hundía a V4 y V5) y el desculpabilizante "no es tu técnica" intacto en los tres.
+- **V16 "The rebook"** — el eje es el *lifetime value*, no el margen: la que ama su corte vuelve en seis semanas, la que lo ve caerse reserva en otro lado. Mecanismo: cortes que crecen bien. Número único: "six weeks".
+- **V17 "The chair"** — la hora que regalás: dos horas en un corte que cobrás como una, porque hacés y decidís el corte al mismo tiempo. Mecanismo: la secuencia numerada decidida antes de agarrar la tijera. Cierra en negocio ("lugar para una clienta más"), no en técnica como el V8.
+- **V18 "The bookings nobody takes"** — **demanda escondida**: piden wolf cut, butterfly y hush cut por nombre y los sillones de la zona no toman esos turnos. Trae lo aprendido el 28/10 en el mercado inglés: lista de "no" con **"nada a lo que anotarte y nadie arriba tuyo"** y entregables con nombre propio (25 Cut Maps, el error a evitar). Número único: "veinticinco".
+- Los tres repiten frases del hero de la landing (*losing clients and money*, Cut Maps, sectioning / elevation / guide section, *in seconds*, *more cuts on your menu*) por la regla del 27/10.
+- Largos de 46 a 55 s, el rango del formato bizop. EN + ES voseo completos.
+- `OUTPUTS/2026-10-28-guiones-atlas-cortes-v16-v18-bizop.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v16-v18-bizop.md`. Nombres para subir: 28/10 - 1, 2 y 3.
+- ⚠️ Son el test del ángulo: si estos tres vuelven a dar $22 como V4 y V5, el bizop queda cerrado para esta oferta y se vuelve a fricción en el sillón.
+
 ## Detalles / notas
 - Descripciones para ads (3, EN + ES, cortas con emojis, sin precio): `OUTPUTS/2026-10-21-descripciones-ads-atlas-cortes.md`.
 - **Descripción definitiva (2026-10-22):** una sola, EN + ES, para acompañar los 6 videos (el competidor usa el mismo copy en todos sus ads). Junta el hook más duplicado ("saber ≠ recordar"), la duda a mitad del corte, los bullets del producto, los 5 bonus y el desactivador de objeción. `OUTPUTS/2026-10-22-descripcion-ads-atlas-cortes.md` y `~/Desktop/atlas-cortes/descripcion-ads.md`.

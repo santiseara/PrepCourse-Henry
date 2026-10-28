@@ -1,3 +1,12 @@
+## 2026-10-28 (noche 3) — Atlas de Cortes: 3 variables en ángulo bizop
+
+- **Pedido de Santiago:** *"tenemos que hacer 3 variables de esa oferta… apuntando al ángulo de bizop"*.
+- **Se le avisó primero:** en esta cuenta el ángulo de plata es el que **peor** rindió (V5 $22,61 y V4 $22,38 contra $11–17 de los de fricción en el sillón). Decidió ir igual, así que se entregó con dos salvaguardas: **cero desglose de cuentas** (lo que hundía a V4 y V5, por la regla del bizop duro del 25/10) y el desculpabilizante *"no es tu técnica, es memoria"* intacto en los tres, porque está en los cuatro que venden.
+- **Los tres ejes, todos nuevos para la cuenta:** **V16 "The rebook"** (lifetime value: la que ama su corte vuelve en seis semanas, la que lo ve caerse reserva en otro lado) · **V17 "The chair"** (la hora regalada: dos horas en un corte que cobrás como una, porque hacés y decidís el corte al mismo tiempo) · **V18 "The bookings nobody takes"** (demanda escondida: piden wolf cut, butterfly y hush cut por nombre y los sillones de la zona no los toman, con la lista de "no" y "nadie arriba tuyo" que salió del mercado inglés el 28/10).
+- Un solo número por guion, 46 a 55 s, EN + ES voseo completos, y las frases fuertes del hero de la landing repetidas tal cual (regla del 27/10).
+- ⚠️ Queda como **test del ángulo**: si estos tres vuelven a dar $22, el bizop se cierra para esta oferta.
+- `OUTPUTS/2026-10-28-guiones-atlas-cortes-v16-v18-bizop.md` + `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v16-v18-bizop.md`; wiki: `atlas-de-cortes.md` (sección nueva *Tanda v16 a v18*).
+
 ## 2026-10-28 (noche 2) — Herrero: el avatar del competidor, contado
 
 - **Pregunta de Santiago:** *"la página original usa muchos videos con avatar, ¿no?"*. Se clasificaron **los 180 videos únicos** uno por uno (hojas de contacto de `anuncios/work/frames/` cruzadas con las copias de `rows.json`).

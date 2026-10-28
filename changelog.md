@@ -1,3 +1,13 @@
+## 2026-10-28 (mediodía) — Herrero: los tres primeros videos con avatar
+
+- **Tanda A1–A3 terminada y renderizada**: `HF-A1-no-me-faltaba-mano.mp4` (51 s), `HF-A2-nunca-le-avise.mp4` (50 s) y `HF-A3-la-soldadora-juntaba-polvo.mp4` (46 s), en `~/Desktop/herrero-de-finde/anuncios/`. Son los guiones 34, 36 y 39 **reescritos en primera persona**; los otros tres de la tanda (35, 37, 38) siguen en voz en off.
+- **Avatar "HERRERO" con dos looks** (parado y sentado) creado en HeyGen desde dos fotos de Santiago, con el prompt de `OUTPUTS/2026-10-28-prompt-avatar-herrero-de-finde.md`. Los looks se alternan cortando el guion en dos bloques: mismo costo que un render entero.
+- **La voz no gasta créditos:** Avatar IV acepta subir el audio, así que la voz salió de AI Studio. Santiago eligió **Enzo** entre tres opciones (Knox, Daro, Enzo).
+- **41 créditos los seis bloques**, de 600. Un bloque de 13 s cuesta 4.
+- **Editor nuevo** `OUTPUTS/scripts-vsl/edit_herrero_avatar.py` + `gen_herrero_avatar_plans.py`: el avatar es la base y se corta a fichas, hojas y B-roll solo en las palabras marcadas.
+- **Reglas nuevas** en `herrero-de-finde.md`: el audio se acelera antes de subirlo a HeyGen; mutear AI Studio suspendiendo el AudioContext cuelga el botón Run; verificar por transcripción qué voz se bajó; y cuando dos cortes se pisan manda el nuevo.
+- **Regla de entrega** (`como-trabajar-con-santiago.md`): lo que Santiago tiene que elegir va numerado en una carpeta propia con solo las opciones; nunca se le abre una carpeta de trabajo.
+
 ## 2026-10-28 (noche 4) — Atlas de Cortes: los 3 videos de la tanda bizop
 
 - **AT-V16, AT-V17 y AT-V18** listos en `~/Desktop/atlas-cortes/anuncios/` (31,7 / 32,5 / 39,1 s, 9:16, voz Sulafat), revisados con hoja de contactos a 1 cuadro cada 2 s.

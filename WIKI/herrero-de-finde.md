@@ -161,6 +161,24 @@ Editor nuevo: `OUTPUTS/scripts-vsl/edit_herrero_v3.py` (copia de `edit_herrero.p
 - Después de vetar el tramo sucio, el V36 abrió con **tres planos seguidos del mismo clip** (el trailer): al mover el veto, los recortes nuevos de ese clip quedaban con `usage` en cero y el puntaje los elegía igual. En `edit_herrero_v3.py` la penalización por repetir fuente dentro del mismo video pasó de `×3` a **`×30`** (y de 6 a 12 la de repetir el clip anterior). Con eso cada fuente entra una sola vez por video.
 - Regla práctica: cuando se veta un tramo y se regenera el pool, hay que **volver a mirar la hoja de contactos**: cambia la repartición de todos los planos, no solo la del clip vetado.
 
+## Tanda con avatar A1–A3 (2026-10-28)
+
+Primera tanda con cara. Sale del conteo de la sección *El avatar del competidor*: es el cambio de formato más grande disponible y el único que el competidor valida con plata. Los otros tres de la tanda (35, 37 y 38) quedan en voz en off.
+
+- **Guiones:** `OUTPUTS/2026-10-28-guiones-herrero-avatar-A1-A3.md`. Son los **34, 36 y 39 reescritos en primera persona**, que es el registro que el avatar habilita: A1 "a mí no me faltaba mano, me faltaban números" (portón FM-068), A2 "le dije que le avisaba, nunca le avisé" (mesa FN-022) y A3 "mi soldadora estuvo dos años juntando polvo" (fogonero BQ-007). Cada uno abre con la confesión y recién después muestra el producto.
+- **El avatar:** un solo personaje de HeyGen, **"HERRERO"**, con **dos looks** (parado en la puerta del taller y sentado en el banco), creados desde dos fotos que hizo Santiago. El prompt de las fotos está en `OUTPUTS/2026-10-28-prompt-avatar-herrero-de-finde.md` y la regla de cómo se pide en [[ugc-y-video-generativo]].
+- **La voz no gasta créditos:** Avatar IV acepta **subir el audio** (pestaña *Audio* en vez de *Guion*), así que la voz sale de AI Studio como siempre. Voz elegida por Santiago: **Enzo** (antes probamos Knox y Daro), con el Style rioplatense reforzado.
+- **Los dos looks se alternan sin pagar render extra:** el guion se corta en dos bloques (confesión parado / explicación sentado), se sube un audio por bloque y se concatenan. Total de segundos igual, mismo costo.
+- **Costo real: 41 créditos los seis bloques** (de 600 en la cuenta de Juan). Un bloque de 13 s salió 4 créditos: ~18 por minuto, la mitad de lo que calculamos con el dato de Calistenia.
+- **Editor nuevo:** `OUTPUTS/scripts-vsl/edit_herrero_avatar.py` (copia de `edit_herrero_v3.py` con la base cambiada). El avatar es el plano por defecto y se corta a fichas, hojas del plano, el plano en el celular y B-roll **solo en las palabras marcadas** (`cutaways`: palabra, ocurrencia, clip, segundo, duración). La voz sale del propio video: no se recortan silencios ni se cambia la velocidad, porque rompería el lipsync. Planes en `OUTPUTS/scripts-vsl/gen_herrero_avatar_plans.py`.
+- **Entregables:** `~/Desktop/herrero-de-finde/anuncios/HF-A1-no-me-faltaba-mano.mp4` (51 s), `HF-A2-nunca-le-avise.mp4` (50 s) y `HF-A3-la-soldadora-juntaba-polvo.mp4` (46 s).
+
+### Cuatro cosas que salieron de esta tanda (reglas)
+- **El audio se acelera antes de subirlo a HeyGen, no después.** Se le aplica el mismo `silenceremove` + `atempo` de los ads de voz en off (acá 1,15) y HeyGen sincroniza los labios con ese audio. Después del render no se puede tocar la velocidad sin romper el lipsync.
+- **Mutear AI Studio con `AudioContext.suspend()` cuelga el Run.** El botón queda gris hasta que el audio "termina de sonar", y un contexto suspendido no avanza nunca. La forma correcta de mutear es **rutear lo que se conecta a `destination` por un gain en 0**: suena en silencio pero el reproductor avanza. Para no esperar los 50 s, se hace clic al final de la barra del reproductor.
+- **Al generar varias voces seguidas, verificar cuál se bajó.** De tres descargas seguidas una no se guardó y las otras dos quedaron con nombres por minuto. Se identifican transcribiendo los primeros 8 segundos, no por el orden.
+- **En los cortes, el que manda es el nuevo.** Si un corte pisa al anterior, se acorta el anterior; y si al anterior le quedarían menos de 0,6 s, se cae el anterior. Antes se ignoraba el nuevo y se perdía la placa final en dos de los tres videos.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

@@ -1,3 +1,10 @@
+## 2026-10-29 — Skool AI: los 4 videos de testimonio producidos
+- **4 avatares creados en HeyGen** (Rachel, Frank, Diane y Paul "Skool AI") desde las fotos de Santiago, con las voces ya validadas **Annie - Lifelike** y **Orson - Firm & Measured**. Avatar IV, 1080p vertical, **29 créditos** en total (quedan 326).
+- **Velocidad resuelta dentro de HeyGen** con "Un poco más rápido" en el paso de entrega de voz: los cuatro quedaron en **25,4 a 27,6 s** sin tocar el lipsync.
+- **Editor nuevo `OUTPUTS/scripts-vsl/edit_skool.py`**, copia de la edición del ganador: hook en caja blanca, subtítulo de una palabra, PIP abajo a la derecha con otro de los personajes y placa final de marca. Sin música ni efectos.
+- Videos en `~/Desktop/skool-ai/anuncios/SK-V1.mp4` … `SK-V4.mp4`.
+- Dos trampas anotadas en [[skool-ai]]: Chrome bloquea la segunda descarga de HeyGen en la misma pestaña (una pestaña nueva por video) y el CDN de HeyGen es CloudFront firmado, así que `curl` directo no sirve.
+
 ## 2026-10-29 — Skool AI: nombre, tanda 1 de testimonios y prompts de avatar
 - La oferta se llama **Skool AI** (decisión de Santiago). `WIKI/master-ai-7-dias.md` renombrada a `WIKI/skool-ai.md`.
 - **4 guiones de testimonio** (EN + ES con voseo) en `OUTPUTS/2026-10-29-guiones-skool-ai-testimonios.md`: contadora 49, dueño de taller 57, abogada 56 y reinvención a los 52. De 92 a 106 palabras → 24 a 26 s, el rango del ganador.

@@ -1,3 +1,22 @@
+## 2026-10-29 (noche 2) — Atlas de Cortes: natives 6 y 7
+
+- **Pedido:** *"Vamos con la oferta de pelo, vamos con 2 natives"*.
+- `OUTPUTS/2026-10-29-natives-atlas-cortes-6-y-7.md` (copia en `~/Desktop/atlas-cortes/anuncios/natives/2026-10-29-natives-tanda-3.md`).
+- **6 · "The hand mirror"** — Dulcie Rayburn, 56, Jonesboro AR, 1.848 palabras. Ángulo nuevo: **el minuto del espejo**, no el del corte. El "no, I love it" de compromiso y la clienta que no se queja y no vuelve (Rosalind, el butterfly que terminó haciéndole otra).
+- **7 · "Three pairs of shears, two of them nearly new"** — Verna Lee Stockard, 58, Owensboro KY, 1.600 palabras. Ángulo: el corte que se come el día (territorio del AT-V8). Dos horas diez en un hush cut bueno le costó dos clientas; el tiempo se va en recordar, no en cortar.
+- Las dos **sin una palabra de plata ni de cuentas**: el ángulo de negocio rinde la mitad en esta oferta (V4 y V5 a $22 contra $11–17 de los de fricción).
+- Arquitectura del nicho de pelo completa (número contado + objeto, credencial con dirección exacta, clienta-tragedia, el producto lo trae un tercero más joven, el mapa dice NO antes de decir SÍ, checklist de 5 criterios, tres P.S., cierre que vuelve a la foto). Narradoras, ciudades y objetos nuevos respecto de las natives 1 a 5.
+- Faltan las imágenes: espera el OK para no gastar créditos.
+
+## 2026-10-29 (mañana) — Herrero: los tres VSL de post-pago, producidos
+
+- **Pedido:** *"Bien, armame los 3 vsl"*.
+- Los tres videos quedaron en `~/Desktop/herrero-de-finde/pospagos/`: **`HF-OTO1-planos-a-medida.mp4` (4:53)**, **`HF-OTO2-asistente-1-a-1.mp4` (4:22)** y **`HF-OTO3-hierro-al-costo.mp4` (3:26)**. Duración decreciente, como pide la regla del embudo.
+- Voz **Enzo** de Google AI Studio en seis bloques (dos por VSL), cada uno verificado por transcripción y por md5. Avatar **HERRERO** de HeyGen en **Avatar IV 1080p** con el audio ya acelerado a `atempo=1.12`. **204 créditos** de 600, por debajo de los ~230 avisados.
+- **Dos errores encontrados por hoja de contactos y corregidos antes de entregar** (VSL 3): la placa de precio de $7.990 salía **a los 24 segundos** porque el ancla `siete` enganchaba el "seis o siete de cada diez pesos" de más arriba; y la placa de hook y el sello de garantía caían encima de capturas. Se re-renderizó el 3.
+- `pospagos/work/plans/gen_oto.py` ahora **avisa toda ancla repetida** con la posición de cada aparición, así no vuelve a pasar. Regla nueva en `WIKI/vsl-reglas-de-armado.md`.
+- Producción documentada en `WIKI/herrero-de-finde.md`. Queda pendiente: los tres downsells con ruleta y rehacer las hojas genéricas `hoja-*.png`, que muestran números de otro plano.
+
 ## 2026-10-29 (noche) — Piedras: natives 35 y 36 escritas
 
 - Santiago eligió **la 2 y la 3** de las 6 opciones. Escritas completas en `OUTPUTS/2026-10-29-natives-piedras-35-y-36.md` (prompt de imagen 3:4 + descripción larga en inglés).

@@ -81,6 +81,8 @@
 - **2026-10-14 · Chupetines: "mejores y sin tanto rollo".** Después de la v7 (guiones de ~50 s con historia larga y una explicación larga de cada uno) pidió guiones más cortos y directos. Después, a la v8 de 25-30 s le dijo "son muy cortos". Regla para chupetines: el largo del ganador (unos 45 s), con su estructura completa, pero sin relleno ni historias de costado. En la respuesta va poco texto fuera de los guiones. Ver `OUTPUTS/2026-10-14-guiones-chupetines-v9.md`.
 - **2026-10-16 · Piedras: le gustó la "receta gratis" en video.** Del Guion 1 de la v10 dijo "ese me gustó, esa onda". Es el ángulo de la native ganadora pasado a video: regalar la receta básica (harina, sal, agua tibia, aceite esencial), la parte honesta (así sale casera y nadie paga 12), lo que no sabías (blancas, sin rajarse, flores que no se ponen marrones, aroma que dura, packaging), la guía de 27 recuperada con un set de 40, y "probá la receta gratis primero". Variables en `OUTPUTS/2026-10-16-guiones-piedras-v11-receta-gratis.md`.
 
+- **2026-10-29 · Cero fotos en el video: todo B-roll de TikTok.** Después de la tanda V43–V48 de [[herrero-de-finde]]: *"seguís poniendo fotos, tienen que ser todos de tiktok"*. Regla: en un ad de voz en off **ningún plano es una foto fija**, ni las propias (fichas, hojas del producto, mockups, catálogos) ni las grabaciones de pantalla. El visual es **100 % clip de TikTok del nicho**; el producto y los números se sostienen con la **voz** y con **placas de texto encima del video**. Si el pool no alcanza para cubrir el guion entero, se bajan más clips, no se tapa con fotos.
+
 ## Relacionado
 [[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 

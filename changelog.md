@@ -1,3 +1,9 @@
+## 2026-10-29 — Herrero de Finde: la tanda V43–V48 rehecha sin una sola foto
+- Santiago: *"seguís poniendo fotos, tienen que ser todos de tiktok"*. **Regla nueva**: en un ad de voz en off ningún plano es una foto fija (ni fichas, ni hojas del producto, ni grabaciones de pantalla). El visual es 100 % B-roll de TikTok y el producto lo sostienen la voz y las placas de texto. Anotada en `WIKI/guiones-y-anuncios.md` y en `WIKI/herrero-de-finde.md`.
+- `anuncios/work/plans/gen8.py` y **`gen9.py`**: pool solo de TikTok, `anchors: []`, sin stills ni demos de pantalla. Cada video pasó de ~6 fotos + 7 clips a **12–14 clips seguidos**.
+- **Revisión completa del pool** (hoja de contactos de los 25 clips + `cropdetect`): fuera `V` entero (bandas negras), `T` hasta 36 s (bandas y cara a cámara), `M` hasta 73 s (logo de CapCut), `X` de 4,5 a 45 s (cartel "MESA PA SOLDAR" y "GRACIAS POR VER"), y huecos en `U`, `Z` (cartel "¿Qué dice la tuertita papá?"), `e`, `b` y `d`. Quedan 336 recortes sobre 24 clips.
+- Los 6 entregables re-renderizados con los mismos nombres (43,1 · 44,3 · 43,5 · 45,0 · 41,2 · 41,3 s) y verificados frame por frame. Costo cero.
+
 ## 2026-10-29 — Skool AI: los 2 de voz en off rehechos con B-roll real de TikTok
 - Santiago rechazó las visuales fijas. Se relevaron **1.381 links de 11 tags** y se bajaron 104 clips con tikwm; **7 quedaron limpios** y son los que se usan (`anuncios/work/tiktoks/`).
 - Hallazgo: los tags de IA son inservibles (creador hablando a cámara); el material bueno está en los tags del oficio que nombra el guion: `#accountinglife`, `#paperwork`, `#excel`.

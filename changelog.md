@@ -1,3 +1,10 @@
+## 2026-10-29 — Herrero de Finde: 6 renovaciones de voz en off (V43–V48) con edición v4
+- **Seis formatos de hook nuevos**, ninguno repetido de la V34–V42, todos escritos contra el objetivo de la landing (primer millón con la soldadora que ya tenés, armarlo el sábado y venderlo antes de fin de mes): cronología, la cuenta del primer millón, el curso de soldadura incluido, los planos gratis que se cortan en el paso difícil, la proyección del martes cobrado y la garantía invertida. Guiones en `OUTPUTS/2026-10-29-renovaciones-herrero-v43-v48.md`.
+- **Fichas nuevas** sacadas del motor del producto (ninguna de las dos tandas anteriores): BQ-009, FM-001, SH-001, ST-005, FN-014 y ST-004.
+- **Edición v4, más simple**: `OUTPUTS/scripts-vsl/edit_herrero_v4.py` — apertura sin panel (el hook sobre el video), sin regla de medidas ni destellos, subtítulos sin palabra resaltada, cortes de 3,0 a 4,0 s, zoom suave y dos placas por video. Planes en `anuncios/work/plans/gen7.py`, una sola cama musical para la tanda.
+- **Voces Enzo** en AI Studio (Gemini 3.8 Flash TTS, porque Enzo no está en el 3.1), las seis de una sola carga y verificadas por transcripción.
+- **Clip `Y` vetado hasta el segundo 8,5** (cartel en inglés "Step by step instructions on how to build a Firepit").
+
 ## 2026-10-29 — Skool AI: los 2 ads de voz en off
 - **V5 "el índice de la guía"** (23,5 s) y **V6 "dónde está esta guía"** (28,2 s), modelados de los dos formatos de voz en off del ganador. Guiones EN + ES en `OUTPUTS/2026-10-29-guiones-skool-ai-voz-en-off.md`.
 - Voces de AI Studio (gratis): **Orus** y **Sulafat**, las dos ya validadas. `speed 1.30`, `silence [0.26, 0.12]`.

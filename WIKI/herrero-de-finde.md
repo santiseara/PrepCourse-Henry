@@ -193,6 +193,30 @@ Las otras tres de la tanda del día, en el formato de siempre (voz en off + B-ro
 - **La línea de abajo de la placa final venía cortada en todos los videos.** `QUÉ CORTAR · CUÁNTO HIERRO · CUÁNTO COBRAR` a 40 px mide más de 1080 px: salía sin la "Q" ni la "R" desde la V34. Ahora `edit_herrero_v3.py` y `edit_herrero_avatar.py` **achican la tipografía hasta que entre** (de 40 a 22 px, margen de 90 px). Los videos anteriores a hoy siguen con la placa cortada; si se vuelven a subir, conviene re-renderizarlos.
 - **Las fichas no se repiten más de dos tandas.** El motor del producto genera cualquiera de los 1.205 planos con sus números reales, así que no hay motivo para volver a mostrar el mismo portón. Antes de escribir una tanda, sacar fichas nuevas con `mk_fichas.py`.
 
+## Tanda de voz en off V43–V48 (2026-10-29)
+
+Seis renovaciones pedidas por Santiago: *"todo voz en off, pero hagamos un poco más simple la edición, tampoco tanto, para variar, hagamos buenas variables, que apunten al objetivo de mi landing"*.
+
+- **Guiones:** `OUTPUTS/2026-10-29-renovaciones-herrero-v43-v48.md`. Seis formatos de hook nuevos, ninguno repetido de la V34–V42: V43 cronología (*"Viernes lo bajás. Martes te lo pagan"*), V44 la cuenta del primer millón (*"tu primer millón es un portón corredizo"*), V45 objeción + bonus (*"si todavía soldás flojo, adentro viene el curso"*), V46 enemigo (*"los planos gratis se cortan en el paso difícil"*), V47 proyección (*"el martes a la noche, cobrada"*) y V48 garantía invertida (*"o fabricás y cobrás, o te devuelven la plata"*).
+- **El objetivo de la landing adentro de cada guion:** "tu primer millón con la soldadora que ya tenés", "lo armás el sábado, lo vendés antes de fin de mes", "no te falta mano, te faltan números", el curso de soldadura en video incluido, "por qué no 5.000 planos" (V46) y los 60 días con los archivos de regalo (V48). Todas frases que el que hace clic vuelve a leer en la página.
+- **Fichas nuevas** (ninguna repetida de las dos tandas anteriores, con `mk_fichas.py`): BQ-009 parrilla argentina con carro (229 mil → 690–895 mil), FM-001 portón corredizo de 2,50 m (338 mil → 860 mil–1,120 M), SH-001 mesa de soldar (124 mil → 330–430 mil), ST-005 escalera recta de 8 escalones (342 mil → 1,150–1,495 M), FN-014 isla de cocina (219 mil → 725–940 mil) y ST-004 cochera a un agua 3 x 5 m (659 mil → 1,600–2,080 M).
+- **Voces: Enzo**, con el Style rioplatense de siempre y la voz a 1,30. En **Gemini 3.8 Flash TTS**, porque Enzo no existe en el 3.1 Flash TTS Preview; las seis salieron de una sola carga de página y verificadas por transcripción.
+- **Planes:** `anuncios/work/plans/gen7.py`, con una sola cama musical (`bed_A`) para los seis.
+- **Entregables:** `HF-V43-viernes-bajas-martes-cobras.mp4` (43 s), `HF-V44-tu-primer-millon.mp4` (44 s), `HF-V45-el-curso-viene-adentro.mp4` (43 s), `HF-V46-los-planos-gratis.mp4` (45 s), `HF-V47-el-martes-cobrada.mp4` (41 s) y `HF-V48-o-fabricas-o-te-devuelven.mp4` (41 s).
+
+### La edición v4 (más simple)
+Editor nuevo: `OUTPUTS/scripts-vsl/edit_herrero_v4.py` (copia de la v3 con tres cosas parametrizadas).
+- **Apertura sin panel:** el hook va en ink sobre el propio video, con sombra y un filete rust abajo, en lugar de la placa hero con eyebrow.
+- **Sin regla de medidas arriba** (`progress: False`), **sin destellos ni whooshes** (`flash: 0`, `whoosh: []`).
+- **Subtítulos de 3 palabras sin palabra resaltada ni saltito** (`hi` en ink, `pop: False`).
+- **Cortes más largos**: 3,0 a 4,0 s (antes 2,2–3,2) y **golpe de zoom suave** en cada corte (`punch: 0.07`, antes 0,16).
+- **Dos placas por video** (etiqueta del trabajo + cotización) más el cierre de marca, en vez de las cuatro o cinco de la v3.
+- Lo que no cambia: paleta de la landing, fichas del motor del producto, hojas reales del PDF, el celular con las diez carpetas y la placa final con el CTA.
+
+### Un clip más vetado (2026-10-29)
+- `Y` (7566063571134680350) lleva el cartel en inglés *"Step by step instructions on how to build a Firepit"* **de 0 a 8 s**. Apareció en el primer render del V43 porque el pool nuevo (recortes de 3,4 s) empezaba el clip en 4,9 s. En `gen7.py` quedó `DESDE = {'B': 10.5, 'J': 5.5, 'Y': 8.5}`. Vetos acumulados: `LIMITE = {'Y': 96, 'c': 254}` y ese `DESDE`.
+- Confirma la regla: **cuando cambia el largo de los recortes del pool, hay que volver a mirar la hoja de contactos del render**, porque los tramos sucios que antes no entraban pasan a entrar.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

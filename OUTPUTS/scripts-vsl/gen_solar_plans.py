@@ -116,7 +116,7 @@ for v in VIDEOS:
             ovs.append(o)
     P = dict(vo=f"vo/SIP-V{v['n']}.wav", script=f"vo/SIP-V{v['n']}.txt", lang='en',
              speed=1.30, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], flash=4, words=2,
-             music='music/bed_A.wav', music_db=-11,
+             music='music/bed_herrero.wav', music_db=-8,
              seed=v['seed'], usage='usage.json', hook=v['hook'], hook_until=v['hook_until'],
              first=v['first'], anchors=v['anchors'], clips=clips, pool=pool, overlays=ovs)
     json.dump(P, open(f"{WK}/V{v['n']}.json", 'w'), ensure_ascii=False, indent=1)

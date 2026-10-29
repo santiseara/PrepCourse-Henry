@@ -171,6 +171,14 @@ Con 49 créditos de Higgsfield se cubrieron los 17 momentos de B-roll de un VSL 
   Unos 10 en total. **No llenarlo de efectos.** Se sintetizan con `sfx.py`.
 - Los efectos van en el momento exacto de la palabra: se transcribe el video final con Whisper y se ubica cada uno sobre la palabra.
 
+### 🆕 2026-10-29 · La cama musical por defecto es la de Herrero, a -8 dB
+- Santiago, sobre la tanda 1 de Solar Installer Pro: *"pone la misma musica que pones en la de herrero, un poquito mas alta, te quedo muy baja, tampoco tan alta"*.
+- **Cama por defecto para los ads de voz en off:** `herrero-de-finde/anuncios/work/music/bed_A.wav` (93 s, no necesita loop). Se copia a la carpeta de la oferta como `music/bed_herrero.wav`.
+- **Volumen: `music_db: -8`.** Es el valor de los ads de Herrero v13–v21 y el nuevo piso para todas las ofertas. **-11 quedó muy baja** (era lo que tenía la tanda 1 de Solar). No pasarse de -8: a -6 ya tapa la voz.
+  - Recordar que `music_db` es **relativo al RMS de la voz** (el editor normaliza la cama contra la voz antes de aplicarlo), así que el valor sirve igual con cualquier pista.
+- Sigue valiendo **una sola cama por tanda**. Separar la música del anuncio del competidor con demucs es un buen punto de partida, pero si no suena mejor que la de Herrero, va la de Herrero.
+- **Para re-renderizar una tanda que a Santiago ya le gustó y solo cambiarle la música:** resetear `work/usage.json` a `{}` y renderizar V1→V6 **en el mismo orden**. El pool se elige con `random.Random(seed)` + el estado de `usage.json`, así que desde cero y en orden salen **exactamente los mismos planos**. Respaldar antes los MP4 y los `all.txt` de cada `*_tmp` para comparar.
+
 ## 4d. Reusar tramos del VSL original (testimonios, app, checkout) (2026-10-24, Protocolo Chía 28D)
 - Cuando la oferta original **es de Santiago**, los testimonios y las capturas de la app y del checkout **se reusan tal cual** del MP4 viejo en vez de grabarlos de nuevo. Preguntar antes: si el original es de un competidor, no se tocan.
 - Un tramo con **voz propia** (testimonios) no entra por `plan.json`: `plan.json` solo pone b-rolls mudos encima de la avatar. El bloque se arma aparte y se **inserta** en el render final con `OUTPUTS/scripts-vsl/insertar_bloque.py base.mp4 bloque.mp4 <segundo> salida.mp4`. El segundo se calcula sobre la línea del guion donde la avatar lo presenta.

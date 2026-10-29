@@ -1,3 +1,10 @@
+## 2026-10-29 — Skool AI: los 2 ads de voz en off
+- **V5 "el índice de la guía"** (23,5 s) y **V6 "dónde está esta guía"** (28,2 s), modelados de los dos formatos de voz en off del ganador. Guiones EN + ES en `OUTPUTS/2026-10-29-guiones-skool-ai-voz-en-off.md`.
+- Voces de AI Studio (gratis): **Orus** y **Sulafat**, las dos ya validadas. `speed 1.30`, `silence [0.26, 0.12]`.
+- **`gfx_skool_vo.py`**: páginas con el badge naranja "PAGE NN" (la firma del formato índice del ganador) y los planos del libro recortados de las fotos de los avatares por debajo del mentón, sin ninguna cara. Costo cero.
+- **`edit_skool_vo.py`**: planos del producto encadenados, cada uno anclado a una palabra del guion, con la misma estética y la cama de Herrero a −8 dB.
+- La tanda 1 queda completa: `~/Desktop/skool-ai/anuncios/SK-V1.mp4` … `SK-V6.mp4`.
+
 ## 2026-10-29 — Skool AI: los 4 testimonios rehechos con cortes de producto y música
 - **Fuera el PIP con otra persona** (corrección de Santiago) y **dos cortes de 2 s a una página de la guía** en su lugar, que es lo que realmente mete el ganador en el medio: páginas internas y chips de herramientas, nunca otra cara.
 - **`OUTPUTS/scripts-vsl/gfx_skool.py`**: dibuja las cuatro páginas (la fórmula maestra, la ruta de 7 días, con qué herramientas funciona y los prompts de ejemplo) con la paleta de la tapa. Costo cero, sin tocar los 19 créditos que quedan en Higgsfield.

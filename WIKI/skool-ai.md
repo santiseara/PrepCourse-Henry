@@ -67,6 +67,17 @@ Primero los 4 de HeyGen; los 2 de voz en off van después.
 - 🆕 **Chrome bloquea la segunda descarga de HeyGen en la misma pestaña.** El `fetch` + blob + `<a download>` funciona la primera vez y después se come las descargas sin avisar. El `curl` directo al CDN tampoco sirve: `files2.heygen.ai` es CloudFront firmado y devuelve `MissingKey` de 146 bytes. Lo que funciona: **una pestaña nueva por cada video**, bajar y cerrarla.
 - **Videos listos:** `~/Desktop/skool-ai/anuncios/SK-V1.mp4` … `SK-V4.mp4`, 9:16 1080x1920, de 25,4 a 27,6 s. Nombres para subir: `29/10 - 1` a `29/10 - 4`.
 
+## Tanda 1, los 2 de voz en off (2026-10-29)
+- Guiones: `OUTPUTS/2026-10-29-guiones-skool-ai-voz-en-off.md`. **V5 el índice de la guía** (modelado del único ad en inglés del ganador) y **V6 dónde está esta guía** (modelado de su ad de universalidad de 39 s).
+- **Videos:** `SK-V5.mp4` (23,5 s, 6 planos) y `SK-V6.mp4` (28,2 s, 8 planos).
+- **Voces de AI Studio** (Gemini 3.8 Flash TTS, gratis): V5 con **Orus** (la de [[solar-installer-pro]]) y V6 con **Sulafat** (la de [[atlas-de-cortes]]). Crudos de 36,9 s y 38,2 s, MD5 verificados distintos; en la edición van a `speed 1.30` con `silence [0.26, 0.12]`.
+- **Editor: `OUTPUTS/scripts-vsl/edit_skool_vo.py`.** Misma estética que el de avatar, pero la línea de tiempo son planos del producto encadenados: cada plano arranca en una palabra del guion y dura hasta el siguiente. Acá **sí** se recortan los silencios, porque la voz no tiene labios que sincronizar.
+- **Visuales: `OUTPUTS/scripts-vsl/gfx_skool_vo.py`.**
+  - 🆕 **Páginas con badge de número de página.** Es la firma del formato índice del ganador: la página a pantalla completa con un chip naranja **"PAGE 18"** arriba a la derecha y un headline sobre barra azul. Cuatro: `ix_18` (tus propios archivos), `ix_24` (el mail), `ix_38` (plantillas) e `ix_07` (desde cero).
+  - 🆕 **El libro en el lugar de trabajo, recortado de las fotos de los avatares.** En vez de generar un mockup, se recorta cada foto **por debajo del mentón y pegado al borde derecho**: entra el libro entero con su entorno real (escritorio, taller, oficina, estudio) y no entra ninguna cara. Cuatro planos a costo cero: `bk_desk`, `bk_counter`, `bk_office`, `bk_law`. El `top` se ajusta por foto (0,39 a 0,45) mirando el resultado.
+  - `cl_terms`: la placa de pago único, descarga inmediata y garantía de 7 días, la que el ganador pone antes del CTA.
+- **Un plano de menos de 1,5 s no se lee**: si el ancla cae muy cerca de la siguiente, se saca el plano y el anterior se estira (pasó con `tools` en V6).
+
 ## Lo que hace que aguante 43 días
 - **Vende tiempo y vigencia, nunca plata.** Cero montos de ingreso, cero "cambiá tu vida", cero bizop. Lo que promete es *"resolvé en minutos lo que hoy te lleva horas"* y *"no te quedes afuera"*. Es el mismo patrón anti-bloqueo de [[profesional-digital]] y [[solar-installer-pro]].
 - **El miedo es a quedarse atrás, no a la pobreza.** "Te va a reemplazar alguien que aprendió a usarla."

@@ -132,6 +132,30 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - Las narradoras son tres y distintas (Rhonda en Fort Wayne, Gina en Erie, Lorraine en Tucson): nada de una Emma única como en [[scented-stones]], porque en el nicho de pelo cada native ganadora usa otro nombre y otro pueblo.
 - La imagen es foto de celular 3:4 **sin caras**, con un objeto que hace de prueba: el cajón del sillón con hojas laminadas pegadas por dentro, dos montoncitos de pelo distintos en el piso al barrer, el celular apoyado en el espejo con un mapa abierto al lado de la tijera. Los tres objetos son coherentes con el producto real (páginas vectoriales, no fotos).
 
+## 🌐 Landing nueva en ImpulTienda (leída entera el 2026-10-29)
+> `https://women-s-cutting-atlas.impultienda.ar/`. Reemplaza a la de Lovable. Se bajó con `curl` y se limpió el HTML: la herramienta de fetch corta la página a mitad y se niega a transcribir literal, así que para citar frases hay que bajarla.
+- **Hero:** "The Women's Cutting Atlas — Check It, Then Cut With Confidence" · "Stop losing clients and money over a cut you're not sure how to do — and start cutting with confidence today, even if you're not an expert yet" · "Check the sectioning, the elevation and the guide section in seconds, without digging through a long video mid-service".
+- ⭐ **El hook bizop ya estaba en la página:** "How many cuts are you turning down because you can't remember the right sequence?".
+- **Los 5 beneficios, con sus títulos:** Real confidence · An answer in seconds · Less reworking · **More cuts on your menu** · Time back.
+- **Los 5 dolores, con sus títulos:** The cut you don't do often (el nudo en el estómago) · The video you can't find · The doubt halfway through the cut · Always the same few cuts · The doubt after the service.
+- **Mapas que muestra de muestra:** Modern Shag, Kitty Cut, The Basic Four-Section Parting, Hush Cut, Bixie, Elevation angles 0/45/90 y Long Bob / Lob. Cada uno con Technical data (Technique · Angle · Guide · Distribution · Length), Ideal for, Common mistake, 8 pasos, Final check y Pro tip.
+- **Los 5 bonus, con nombre propio y valor:** The Visual Guide to Fringes & Bangs ($15) · Visual Diagnosis of Cutting Mistakes ($13) · The Visual Guide to Shears & Tools ($18) · The Visual Guide to Seamless Layers · The Visual Guide to Cuts for Every Face Shape ($19).
+- **Oferta:** $27 (valor regular $177, "you save $150"), pago único, contador de 15 minutos, garantía de 7 días, acceso instantáneo por email. Botones: "I want the Atlas →" y "I want the full pack 🔥".
+- **Acceso en 3 pasos:** "You open it, you look at the map, you cut. That simple. It takes you 3 minutes."
+- **6 testimonios en formato chat** (Megan T., Priya S., Charlotte R., Danielle M., Aisling B., Taryn W.) con frases muy usables: *"She rebooked before she left"* · *"It was never the scissors"* · *"My apprentice has basically stolen it"* · *"Three cuts I used to quietly talk people out of are back on my menu"*.
+- ⚠️ El bonus 4 es el único sin valor a la vista. El ancla cierra bien ($177 − $27 = $150).
+
+## 🎬 Guiones v25 a v30 (29/10) — BIZOP DURO, 6 opciones para elegir 3
+> La v19–v24 fue **rechazada entera** (*"muy malos, no me generan nada de interés… acordate que el ángulo que busco es el de bizop"*). Eran de fricción en el sillón y escritas sin plata a propósito. **El ángulo de esta oferta es bizop, fijo**, aunque la cuenta diga que rinde la mitad (regla nueva del 29/10 en [[guiones-y-anuncios]]).
+- `OUTPUTS/2026-10-29-guiones-atlas-cortes-v25-v30-bizop.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v25-v30-bizop.md`. Formato bizop duro: oportunidad en crudo en la primera línea, segunda persona, **un solo número por guion**, el negocio en tres verbos, CTA con acción y fecha. 106–135 palabras.
+- **V25 "Same chair, two prices"** — la misma hora de sillón vale dos precios y lo decide el corte que podés ejecutar. CTA: poner uno en la carta esta noche y cobrar distinto el sábado.
+- **V26 "You have three services switched off"** — el testimonio de Taryn convertido en oportunidad: tres servicios que sabés hacer y de los que corrés a la clienta. "No es falta de oficio, es mercadería guardada."
+- **V27 "One copy, the whole salon"** — el único apuntado a **dueñas de salón**: una copia entrena a todas las manos y no cerrás un día ni pagás un curso. Público nuevo dentro del nicho.
+- **V28 "Every free fix is a slot you gave away"** — cada corrección gratis es un turno pago regalado. Cierra con "less reworking" y "time back" de la página.
+- **V29 "The price of one haircut"** — compara contra la alternativa real (curso con fecha, viaje, sillón vacío, modelo) y justifica el precio sin nombrarlo.
+- **V30 "Three minutes from now"** — velocidad al primer uso, y usa textual la pregunta de la landing ("How many cuts are you turning down…").
+- Recomendados: 25, 30 y 27 (el 27 abre público de dueñas).
+
 ## 🎬 Guiones v19 a v24 (29/10) — 6 opciones para elegir 3
 > Santiago pidió 3 videos y elegir él. Se entregaron 6 guiones: `OUTPUTS/2026-10-29-guiones-atlas-cortes-v19-v24.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v19-v24.md`.
 - Los seis vuelven al territorio que **sí vende** (fricción durante el servicio con la clienta presente), **sin una palabra de plata**: el ángulo de negocio ya se testea con V16–V18 y rinde la mitad acá. Cada uno con estructura y CTA propios y con las frases del hero (Cut Maps, sectioning / elevation / guide section, in seconds, more cuts on your menu, the mistake to avoid). 118 a 140 palabras.

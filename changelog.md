@@ -1,3 +1,12 @@
+## 2026-10-29 (noche 4) — Atlas de Cortes: rechazo de la v19–v24 y tanda bizop v25–v30
+
+- **Rechazo:** *"muy malos, no me generan nada de interés. Te mando mi landing para que la veas y me hagas mejores guiones… acordate que el ángulo que busco es el de bizop"*.
+- **Lo que hice mal:** escribí los seis **sin una palabra de plata a propósito**, apoyado en que el dato de la cuenta dice que el bizop rinde la mitad en esta oferta, cuando él ya había pedido bizop el 28/10. **Regla nueva en `WIKI/guiones-y-anuncios.md`:** el ángulo que fija Santiago manda sobre el dato; el dato se dice una vez y se ejecuta igual.
+- **Landing nueva leída entera:** `women-s-cutting-atlas.impultienda.ar` (bajada con `curl` y limpiada, porque la herramienta de fetch corta la página y no transcribe literal). Ficha completa en `WIKI/atlas-de-cortes.md`: hero, los 5 dolores y los 5 beneficios con sus títulos, los 7 mapas de muestra, los 5 bonus con nombre y valor, el precio y los 6 testimonios.
+- ⭐ **El hook bizop estaba escrito en su propia landing:** "How many cuts are you turning down because you can't remember the right sequence?". Otra regla nueva: antes de escribir una tanda, bajar y leer la landing entera y buscar ahí el hook.
+- **Tanda v25–v30** (`OUTPUTS/2026-10-29-guiones-atlas-cortes-v25-v30-bizop.md`), 6 opciones para elegir 3, bizop duro, 106–135 palabras, EN + ES voseo: el mismo sillón con dos precios · tres servicios apagados · una copia para todo el salón (dueñas) · cada arreglo gratis es un turno regalado · el precio de un corte contra un curso con viaje · a tres minutos de acá.
+- Recomendados 25, 30 y 27. Falta la elección para producir.
+
 ## 2026-10-29 (noche 3) — Atlas de Cortes: 6 guiones (v19 a v24) para elegir 3
 
 - **Pedido:** *"Vamos con 3 videos para pelo. Dame guiones y yo elijo"* → 6 opciones, elige 3.

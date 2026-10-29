@@ -1,6 +1,6 @@
-# Master AI in 7 Days (oferta en inglés)
+# Skool AI (oferta en inglés)
 
-> Clon para el mercado inglés de **Domina la IA en 7 Días**, de **Udemia.IA / UDAMIA**: guía low ticket para aprender a usar la IA desde cero en 7 días, 15 minutos por día, para gente de +45 que siente que se está quedando atrás. **Ángulo fijado por Santiago el 2026-10-29: IA en general, no una herramienta específica como Claude.** (fuente: Biblioteca de Anuncios de Meta, page id 1187693011097208, relevada el 2026-10-29)
+> **Skool AI** (nombre fijado por Santiago el 2026-10-29). Clon para el mercado inglés de **Domina la IA en 7 Días**, de **Udemia.IA / UDAMIA**: guía low ticket para aprender a usar la IA desde cero en 7 días, 15 minutos por día, para gente de +45 que siente que se está quedando atrás. **Ángulo fijado por Santiago el 2026-10-29: IA en general, no una herramienta específica como Claude.** (fuente: Biblioteca de Anuncios de Meta, page id 1187693011097208, relevada el 2026-10-29)
 
 ## El ganador que modelamos — Udemia.IA (whale)
 - **~960 anuncios activos.** Se relevaron los **225 de más impresiones**: 216 creativos distintos. Renovación brutal de creativos, casi ninguno repetido.
@@ -44,6 +44,17 @@ Sin cara. Tres sub-formatos que valen:
 *"Soy abogada, tengo 56 años y hoy reviso un contrato de 40 páginas en 10 minutos con IA. Y la tecnología nunca fue lo mío… Hice un test de 3 minutos, elegí mi profesión y recibí mi plan de IA para abogados."* CTA: **"Toca el botón, hacé el test de 3 minutos y recibí tu plan de IA para tu profesión."** Mismo guion calcado con médico (58), contador (61), arquitecto, docente, fábrica de muebles (57), pymes.
 - Es un **quiz funnel**, lo que Santiago ya sabe armar ([[quiz-funnel]], [[quizzes-reglas-de-armado]]). Queda de banco para la tanda 2.
 
+## Tanda 1 (2026-10-29): 4 testimonios con avatar
+Primero los 4 de HeyGen; los 2 de voz en off van después.
+- Guiones (EN + ES con voseo): `OUTPUTS/2026-10-29-guiones-skool-ai-testimonios.md`, copia en `~/Desktop/skool-ai/anuncios/guiones-testimonios.md`.
+  1. Contadora, 49 — "arranca de cero, pero de cero en serio" · 2. Dueño de un taller de muebles, 57 — "no soy de la computadora" · 3. Abogada, 56 — la tarde entera en diez minutos · 4. Reinvención a los 52 — "no son más inteligentes que vos, aprendieron a pedir".
+- Largos: 96, 99, 92 y 106 palabras → **24 a 26 s** editados, el mismo rango que el ganador.
+- **Prompts de avatar:** `OUTPUTS/2026-10-29-prompts-avatares-skool-ai.md`. Formato **selfie a brazo extendido** (no el plano medio de pie de la regla del 28/10, porque la DNA del ganador es selfie), con la guía espiralada en la otra mano a la altura del pecho, entorno de trabajo real, luz natural de la tarde, cara despejada y aire para el recorte 9:16.
+- **Voces (ya validadas, no se estrena ninguna):** V1 **Annie - Lifelike** (la de [[atlas-de-cortes]]), V2 y V4 **Orson - Firm & Measured** (la de [[bachas-de-concreto]]), V3 **voz roma**. Verificar primero qué hay en *Mis voces*.
+- **Render:** HeyGen **Avatar IV**, vertical 1080p, Creación rápida. Estimado **~45 créditos** para los cuatro (~25 créditos por minuto, ~1,7 min en total).
+- **Velocidad y lipsync:** la voz sale del propio video, así que **no se recortan silencios**; video y audio se aceleran juntos a `speed 1.08` en la edición, como en `edit_atlas_avatar.py`. Acelerar después del render rompe el lipsync.
+- **Edición (copiada del original):** `edit_ugc_pip.py` — hook quemado arriba en caja blanca, subtítulo palabra por palabra abajo al centro, **PIP chico abajo a la derecha**, logo y placa final.
+
 ## Lo que hace que aguante 43 días
 - **Vende tiempo y vigencia, nunca plata.** Cero montos de ingreso, cero "cambiá tu vida", cero bizop. Lo que promete es *"resolvé en minutos lo que hoy te lleva horas"* y *"no te quedes afuera"*. Es el mismo patrón anti-bloqueo de [[profesional-digital]] y [[solar-installer-pro]].
 - **El miedo es a quedarse atrás, no a la pobreza.** "Te va a reemplazar alguien que aprendió a usarla."
@@ -57,7 +68,8 @@ Sin cara. Tres sub-formatos que valen:
 - La marca "Udamia" nombrada en el guion (regla: no nombrar al experto).
 
 ## Preguntas abiertas
-- Nombre y precio definitivos de nuestra oferta (propuesta: **Master AI in 7 Days**, US$ 17 o US$ 27 con ancla).
+- Precio definitivo (propuesta: US$ 17 con ancla US$ 34). El nombre ya está: **Skool AI**.
+- ⚠️ **Skool.com** es una plataforma de comunidades muy conocida en el nicho de infoproductos. Riesgo de confusión de marca y de rechazo en Meta. Santiago lo decidió igual el 29/10.
 - ¿Clonamos también el quiz por profesión en la tanda 2?
 - ¿Hay OTO post-pago? Las dos landings no muestran bumps.
 

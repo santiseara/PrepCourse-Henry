@@ -1,3 +1,10 @@
+## 2026-10-29 — Skool AI: nombre, tanda 1 de testimonios y prompts de avatar
+- La oferta se llama **Skool AI** (decisión de Santiago). `WIKI/master-ai-7-dias.md` renombrada a `WIKI/skool-ai.md`.
+- **4 guiones de testimonio** (EN + ES con voseo) en `OUTPUTS/2026-10-29-guiones-skool-ai-testimonios.md`: contadora 49, dueño de taller 57, abogada 56 y reinvención a los 52. De 92 a 106 palabras → 24 a 26 s, el rango del ganador.
+- **4 prompts de avatar** en `OUTPUTS/2026-10-29-prompts-avatares-skool-ai.md`, en formato selfie con la guía en la mano, como el original. Los arma Santiago y después van a HeyGen.
+- Carpeta `~/Desktop/skool-ai/` creada con `imagenes/`, `landing/` y `anuncios/`.
+- Voces decididas entre las ya validadas (Annie - Lifelike, Orson - Firm & Measured, voz roma), Avatar IV, ~45 créditos estimados, `speed 1.08` sin recorte de silencios para no romper el lipsync.
+
 ## 2026-10-29 — Master AI in 7 Days: análisis del ganador para el mercado inglés
 - Relevados los **225 anuncios de más impresiones** de **Udemia.IA** (page id 1187693011097208, ~960 activos): 216 creativos distintos, 8 idiomas, el más viejo del **16/09 = 43 días**, casi todas las landings en ImpulTienda.
 - **18 videos bajados y transcriptos** con faster-whisper + hoja de contactos de los 225 thumbnails para clasificar formato.

@@ -76,7 +76,14 @@ Primero los 4 de HeyGen; los 2 de voz en off van después.
   - 🆕 **Páginas con badge de número de página.** Es la firma del formato índice del ganador: la página a pantalla completa con un chip naranja **"PAGE 18"** arriba a la derecha y un headline sobre barra azul. Cuatro: `ix_18` (tus propios archivos), `ix_24` (el mail), `ix_38` (plantillas) e `ix_07` (desde cero).
   - 🆕 **El libro en el lugar de trabajo, recortado de las fotos de los avatares.** En vez de generar un mockup, se recorta cada foto **por debajo del mentón y pegado al borde derecho**: entra el libro entero con su entorno real (escritorio, taller, oficina, estudio) y no entra ninguna cara. Cuatro planos a costo cero: `bk_desk`, `bk_counter`, `bk_office`, `bk_law`. El `top` se ajusta por foto (0,39 a 0,45) mirando el resultado.
   - `cl_terms`: la placa de pago único, descarga inmediata y garantía de 7 días, la que el ganador pone antes del CTA.
-- **Un plano de menos de 1,5 s no se lee**: si el ancla cae muy cerca de la siguiente, se saca el plano y el anterior se estira (pasó con `tools` en V6).
+- **Un plano de menos de 1,5 s no se lee**: si el ancla cae muy cerca de la siguiente, se saca el plano y el anterior se estira (pasó con `tools`, `ix_18` y `cl_terms`).
+- 🆕 **2026-10-29 · Las visuales son B-roll de TikTok, no placas.** Primera versión entregada con páginas y fotos fijas; Santiago: *"las visuales tenés que sacar buenas de TikTok, que se vean reales, que atraigan, esas son todas fotos"*. Se rehicieron los dos con clips reales. Lo aprendido en la búsqueda:
+  - **Los tags de IA no sirven.** `#aitools`, `#chatgpttips` y `#aiproductivity` son casi todo **creador joven hablando a cámara con texto quemado**: de 65 clips de la primera ronda quedaron 3. `#desksetup` da escritorios bonitos pero con estética gamer y luces RGB, que no es el avatar de +45.
+  - ⭐ **Lo que sí funciona es buscar el trabajo que nombra el guion, no el producto**: `#accountinglife`, `#paperwork`, `#excel`. De ahí salieron los planos buenos: la planilla real en pantalla, las pilas de formularios, la contadora con papeles en una oficina de verdad.
+  - **7 clips limpios de 18 candidatos.** Se descartan igual que siempre: cartel quemado en el centro (`officelife_039`, "another day another deadline"), cara hablando a cámara, *day in the life* y, nuevo en este nicho, **papercraft y origami**, que es la mitad de `#paperwork`.
+  - Los carteles de arriba se recortan con `zoom 1.22–1.26` y `ybias 1.0` (`accounting_005`, `typing_035`).
+  - De un clip largo salen **dos planos distintos** cambiando `ss` (`excel_033` a 4 s y 18 s, `accounting_002` a 8 s y 22 s). Clips usados: `anuncios/work/tiktoks/`.
+  - Quedan **dos páginas con badge** (`ix_18` e `ix_38`) en V5: ésas sí las usa el ganador y son las que explican el mecanismo del índice. El resto es material real.
 
 ## Lo que hace que aguante 43 días
 - **Vende tiempo y vigencia, nunca plata.** Cero montos de ingreso, cero "cambiá tu vida", cero bizop. Lo que promete es *"resolvé en minutos lo que hoy te lleva horas"* y *"no te quedes afuera"*. Es el mismo patrón anti-bloqueo de [[profesional-digital]] y [[solar-installer-pro]].

@@ -1,3 +1,9 @@
+## 2026-10-29 — Skool AI: los 2 de voz en off rehechos con B-roll real de TikTok
+- Santiago rechazó las visuales fijas. Se relevaron **1.381 links de 11 tags** y se bajaron 104 clips con tikwm; **7 quedaron limpios** y son los que se usan (`anuncios/work/tiktoks/`).
+- Hallazgo: los tags de IA son inservibles (creador hablando a cámara); el material bueno está en los tags del oficio que nombra el guion: `#accountinglife`, `#paperwork`, `#excel`.
+- `edit_skool_vo.py` ahora acepta **clips de video además de imágenes** en `pages`, con `ss`, `zoom` e `ybias` por plano.
+- `SK-V5.mp4` (23,5 s, 6 planos) y `SK-V6.mp4` (28,2 s, 7 planos) re-renderizados. Costo cero.
+
 ## 2026-10-29 — Herrero de Finde: 6 renovaciones de voz en off (V43–V48) con edición v4
 - **Seis formatos de hook nuevos**, ninguno repetido de la V34–V42, todos escritos contra el objetivo de la landing (primer millón con la soldadora que ya tenés, armarlo el sábado y venderlo antes de fin de mes): cronología, la cuenta del primer millón, el curso de soldadura incluido, los planos gratis que se cortan en el paso difícil, la proyección del martes cobrado y la garantía invertida. Guiones en `OUTPUTS/2026-10-29-renovaciones-herrero-v43-v48.md`.
 - **Fichas nuevas** sacadas del motor del producto (ninguna de las dos tandas anteriores): BQ-009, FM-001, SH-001, ST-005, FN-014 y ST-004.

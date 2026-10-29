@@ -82,13 +82,28 @@ print('planos:', ' '.join(f'{k}:{t1-t0:.1f}s' for t0, t1, k in shots))
 parts = []
 for n, (t0, t1, key) in enumerate(shots):
     d_ = t1 - t0; pc = f'{tmp}/s{n:02d}.mp4'
-    z = f"(1+0.07*t/{d_:.3f})" if n % 2 == 0 else f"(1.07-0.07*t/{d_:.3f})"
-    vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
-          f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,"
-          f"scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p")
-    run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d_:.3f}', '-i', F(P['pages'][key]),
-         '-filter_complex', vf, '-t', f'{d_:.3f}', '-r', str(FPS),
-         '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
+    c = P['pages'][key]
+    if isinstance(c, str): c = {'src': c}
+    src = F(c['src'])
+    if src.lower().endswith(('.png', '.jpg', '.jpeg')):      # imagen fija: zoom lento
+        z = f"(1+0.07*t/{d_:.3f})" if n % 2 == 0 else f"(1.07-0.07*t/{d_:.3f})"
+        vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
+              f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,"
+              f"scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p")
+        run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d_:.3f}', '-i', src,
+             '-filter_complex', vf, '-t', f'{d_:.3f}', '-r', str(FPS),
+             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
+    else:                                                     # clip de TikTok: tramo real, sin zoom falso
+        ss = c.get('ss', 0.0)
+        avail = max(0.3, dur(src) - ss)
+        slow = max(1.0, d_ / avail)                           # si el tramo es corto, se estira apenas
+        z0 = c.get('zoom', 1.0); yb = c.get('ybias', 0.5)
+        vf = (f"setpts={slow:.4f}*(PTS-STARTPTS),fps={FPS},"
+              f"scale=w='ceil(max({W}/iw,{H}/ih)*iw*{z0}/2)*2':h=-2:flags=lanczos,"
+              f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},setsar=1,format=yuv420p")
+        run([FF, '-v', 'error', '-y', '-ss', str(ss), '-t', f'{min(avail, d_ / slow) + 0.1:.3f}', '-i', src,
+             '-an', '-vf', vf, '-t', f'{d_:.3f}',
+             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
     parts.append(pc)
 open(f'{tmp}/all.txt', 'w').write(''.join(f"file '{p}'\n" for p in parts))
 run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/all.txt', '-c', 'copy', f'{tmp}/cat.mp4'])

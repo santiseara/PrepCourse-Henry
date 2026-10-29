@@ -1,3 +1,15 @@
+## 2026-10-29 (tarde) — Piedras: la v30 se cayó por flojа y salió la v31 con promesa fuerte
+
+- **Rechazo de Santiago a la v30:** *"muy flojos, tienen que ser más llamativos, más prometedores"*.
+- **Diagnóstico:** apliqué el aprendizaje del 28/10 (mecanismo y entregables, la plata al final y suave) también a la **apertura**, y ahí se murió. El Guion 1 abría con lo que sale mal, el 2 con el retrato de dos personas y el 3 con una lista de negaciones. Ninguno prometía nada hasta la mitad.
+- **Regla nueva en `WIKI/guiones-y-anuncios.md`:** la promesa concreta y visual va en la **primera línea** siempre; el mecanismo, los entregables y la plata vienen después. "Suave" no es tibio.
+- **Tanda v31** (`OUTPUTS/2026-10-29-guiones-piedras-v31-promesa-fuerte.md`), 3 guiones en inglés y español con voseo, 141–157 palabras:
+  1. **Una bolsa de yeso se convierte en cuarenta cosas que un local paga a precio pleno.**
+  2. **Cobrás antes de poner un peso tuyo** (el pedido paga el material; novias con la mitad adelantada, locales contra entrega, hoteles con caja mensual).
+  3. **Las próximas seis semanas son las únicas que importan** (noviembre y diciembre compran por caja; en febrero te dicen que vuelvas el año que viene).
+- Cifras enmarcadas en primera persona o como precio de mercado, no como ingreso prometido, para no comerse un bloqueo.
+- La v30 queda marcada como rechazada en `WIKI/scented-stones.md` con sus tres ángulos ya usados. Entregado en bloque de código, guardado en `OUTPUTS/` y copiado al portapapeles en RTF.
+
 ## 2026-10-29 — Piedras: tanda v30, tres ángulos del banco del mercado inglés
 
 - **Pedido de Santiago:** "vamos con más guiones para piedras". Variables de algo que ya corre → **3 guiones** (regla del 24/10).

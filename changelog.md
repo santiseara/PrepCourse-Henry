@@ -1,3 +1,12 @@
+## 2026-10-29 (noche 7) — Brasil: banco de keywords de 4 nichos para cazar
+
+- `OUTPUTS/2026-10-29-keywords-brasil-4-nichos.md`: ~250 keywords en portugués para la Biblioteca de Anuncios, ninguna repetida de los bancos del 26/10 y 27/10.
+- **Renda extra, capa 3:** se sale de "faca e venda" y entra a los cuatro mercados que nadie modela — negativado/score, dinero dormido y del Estado (valores a receber, FGTS, BPC), empleo formal (currículo, vagas, concurso) y marketplace sin stock (Shopee, ML, TikTok Shop), más leilão y gig economy.
+- **Emagrecimento (nuevo):** la regla es que "emagrecer" no sirve para cazar. Ejes por síntoma (inchaço, compulsão, intestino), por hormona y edad (+40, menopausa, tireoide), por formato (cardápio en PDF, airfryer, sopa de 7 días) y la ola caliente del **mounjaro natural / ozempic caseiro**.
+- **Manifestação, capa 2:** los dos sub-mercados que faltaban en el banco del 27/10 — el **católico popular** (Santo Expedito, Santa Edwiges, novena, terço) y el de **señales y símbolos** (horas espelhadas, sueños, numerología del nombre), más objeto/gesto, audio subliminal y calendario.
+- **Relacionamentos (nuevo):** cuatro sub-mercados que no se mezclan — reconquista y post-ruptura, pareja casada en crisis, el juego de a dos (el PDF de R$ 10 del nicho) y el masculino de conquista, más el eje cristiano.
+- Cada nicho con sus 10 de arranque, su lista de **las que no usar** (las que traen marca personal o high ticket) y el aviso de política de Meta donde corresponde.
+
 ## 2026-10-29 (noche 6) — Solar Installer Pro: oferta nueva, 6 ads para el mercado inglés
 
 - Oferta nueva: **Solar Installer Pro** (US$ 47, `solar-installer-pro.impultienda.ar`), curso de instalación solar en 20 días. Ficha completa, el ganador desarmado y la tanda en `WIKI/solar-installer-pro.md`.

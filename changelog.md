@@ -1,3 +1,9 @@
+## 2026-10-29 — Skool AI: los 4 testimonios rehechos con cortes de producto y música
+- **Fuera el PIP con otra persona** (corrección de Santiago) y **dos cortes de 2 s a una página de la guía** en su lugar, que es lo que realmente mete el ganador en el medio: páginas internas y chips de herramientas, nunca otra cara.
+- **`OUTPUTS/scripts-vsl/gfx_skool.py`**: dibuja las cuatro páginas (la fórmula maestra, la ruta de 7 días, con qué herramientas funciona y los prompts de ejemplo) con la paleta de la tapa. Costo cero, sin tocar los 19 créditos que quedan en Higgsfield.
+- **Cama de Herrero a −8 dB** en los cuatro, medida entre −10 y −12 dB por debajo de la voz.
+- Dos reglas nuevas en [[guiones-y-anuncios]]: el corte de un testimonio va al producto y nunca a otra persona, y el UGC con avatar tampoco se entrega pelado (dos cortes + música).
+
 ## 2026-10-29 — Skool AI: los 4 videos de testimonio producidos
 - **4 avatares creados en HeyGen** (Rachel, Frank, Diane y Paul "Skool AI") desde las fotos de Santiago, con las voces ya validadas **Annie - Lifelike** y **Orson - Firm & Measured**. Avatar IV, 1080p vertical, **29 créditos** en total (quedan 326).
 - **Velocidad resuelta dentro de HeyGen** con "Un poco más rápido" en el paso de entrega de voz: los cuatro quedaron en **25,4 a 27,6 s** sin tocar el lipsync.

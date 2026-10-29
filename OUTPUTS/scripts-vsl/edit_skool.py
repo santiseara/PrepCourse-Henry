@@ -65,21 +65,53 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
         vw += [(s0 + k * st, s0 + (k + 1) * st, sw[j1 + k]) for k in range(j2 - j1)]
 print(f'{len(vw)} palabras alineadas sobre {L:.1f}s')
 
-# 3) PIP: la foto de otro personaje con zoom lento, en las ventanas del plan
-pip = P.get('pip')
-vid = f'{tmp}/av.mp4'
-if pip:
-    z = f"min(1.0012^on,1.14)"
-    run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{L:.2f}', '-i', F(pip['src']), '-filter_complex',
-         f"[0:v]scale={PIP_W*3}:-2,crop={PIP_W*3}:{PIP_H*3},fps={FPS},"
-         f"zoompan=z='{z}':d=1:s={PIP_W}x{PIP_H}:fps={FPS},setsar=1,"
-         f"pad={PIP_W+8}:{PIP_H+8}:4:4:color=white[v]", '-map', '[v]',
-         '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', f'{tmp}/pip.mp4'])
-    en = '+'.join(f"between(t,{t0:.2f},{t0+d:.2f})" for t0, d in pip['at'])
-    run([FF, '-v', 'error', '-y', '-i', vid, '-i', f'{tmp}/pip.mp4', '-filter_complex',
-         f"[0:v][1:v]overlay={PIP_X-4}:{PIP_Y-4}:enable='{en}'[v]", '-map', '[v]', '-an',
-         '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', '-t', f'{L:.2f}', f'{tmp}/pipped.mp4'])
-    vid = f'{tmp}/pipped.mp4'
+# 3) cortes del medio: se corta a una PAGINA DEL LIBRO con zoom lento, nunca a otra persona
+# (2026-10-29, Santiago: "si está hablando una persona, de la nada otra persona en la edición, no sirve")
+AVL = dur(f'{tmp}/av.mp4')
+def wt(word, occ=0):
+    ts_ = [w for w in vw if norm(w[2]) == norm(word)]
+    if occ >= len(ts_): print(f'aviso: "{word}" n.º {occ} no aparece'); return None
+    return ts_[occ]
+cw = []
+for word, occ, key, d_ in P.get('cutaways', []):
+    w = wt(word, occ)
+    if not w: continue
+    t0 = max(0.0, w[0] - 0.10)
+    cw.append([t0, min(L, t0 + d_), key])
+cw.sort()
+cut = []
+for c in cw:
+    if cut and c[0] < cut[-1][1] + 0.6:
+        print(f'aviso: el corte a {c[2]} pisa al anterior, se ignora'); continue
+    cut.append(c)
+segments, pos = [], 0.0
+for t0, t1, key in cut:
+    if t0 - pos > 0.5: segments.append(('av', pos, t0, None))
+    elif t0 > pos: t0 = pos
+    segments.append(('pg', t0, t1, key)); pos = t1
+if L - pos > 0.3: segments.append(('av', pos, L, None))
+if not segments: segments = [('av', 0.0, L, None)]
+print('planos:', ' '.join(f'{s[3] or "AVATAR"}:{s[2]-s[1]:.1f}s' for s in segments))
+
+parts = []
+for n, (kind, t0, t1, key) in enumerate(segments):
+    d_ = t1 - t0; pc = f'{tmp}/s{n:02d}.mp4'
+    if kind == 'av':
+        run([FF, '-v', 'error', '-y', '-ss', f'{t0:.3f}', '-t', f'{min(d_, max(0.1, AVL - t0)):.3f}',
+             '-i', f'{tmp}/av.mp4', '-an', '-vf', f'fps={FPS},setsar=1,format=yuv420p', '-t', f'{d_:.3f}',
+             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
+    else:
+        z = f"(1+0.08*t/{d_:.3f})" if n % 2 == 0 else f"(1.08-0.08*t/{d_:.3f})"
+        vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
+              f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,"
+              f"scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p")
+        run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d_:.3f}', '-i', F(P['pages'][key]),
+             '-filter_complex', vf, '-t', f'{d_:.3f}', '-r', str(FPS),
+             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
+    parts.append(pc)
+open(f'{tmp}/all.txt', 'w').write(''.join(f"file '{p}'\n" for p in parts))
+run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/all.txt', '-c', 'copy', f'{tmp}/cat.mp4'])
+vid = f'{tmp}/cat.mp4'
 
 # 4) placas en PNG: el hook de arriba y la placa final
 def font(sz, path=FONT_BLACK): return ImageFont.truetype(path, sz)
@@ -190,6 +222,25 @@ run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/ov.txt
 run([FF, '-v', 'error', '-y', '-i', vid, '-i', f'{tmp}/ov.mov', '-filter_complex',
      f"[0:v][1:v]overlay=0:0:format=auto[ov];[ov]ass={tmp}/subs.ass[v]", '-map', '[v]',
      '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-t', f'{L:.2f}', f'{tmp}/video.mp4'])
-run([FF, '-v', 'error', '-y', '-i', f'{tmp}/video.mp4', '-i', f'{tmp}/vo.wav', '-map', '0:v', '-map', '1:a',
+# 7) cama musical: la de Herrero, normalizada contra la voz y a music_db (regla del 29/10)
+if P.get('music'):
+    import numpy as np, soundfile as sf
+    m_, sr_ = sf.read(F(P['music'])); v_, _ = sf.read(f'{tmp}/vo.wav')
+    if m_.ndim == 1: m_ = np.stack([m_, m_], 1)
+    need = int((L + 0.5) * sr_); xf = int(1.0 * sr_)
+    while len(m_) < need:      # loop con fundido de 1 s desde el segundo 4
+        a2 = m_[int(4 * sr_):]; r_ = np.linspace(0, 1, xf)[:, None]
+        m_ = np.concatenate([m_[:-xf], m_[-xf:] * (1 - r_) + a2[:xf] * r_, a2[xf:]])
+    m_ = m_[:need]
+    rv = np.sqrt(np.mean(v_[v_.any(1) if v_.ndim > 1 else v_ != 0] ** 2)); rm = np.sqrt(np.mean(m_ ** 2))
+    m_ = m_ * (rv / rm) * 10 ** (P.get('music_db', -8) / 20)
+    sf.write(f'{tmp}/music.wav', np.clip(m_, -1, 1), sr_)
+    run([FF, '-v', 'error', '-y', '-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav', '-filter_complex',
+         f"[1:a]aresample=48000,afade=t=in:d=0.6,afade=t=out:st={max(0, L - 1.2):.2f}:d=1.2[m];"
+         f"[0:a][m]amix=inputs=2:duration=first:normalize=0[a]", '-map', '[a]', '-t', f'{L:.2f}', f'{tmp}/mix.wav'])
+    AUD = f'{tmp}/mix.wav'
+else:
+    AUD = f'{tmp}/vo.wav'
+run([FF, '-v', 'error', '-y', '-i', f'{tmp}/video.mp4', '-i', AUD, '-map', '0:v', '-map', '1:a',
      '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-t', f'{L:.2f}', '-movflags', '+faststart', OUT])
 print(f'OK {OUT} {L:.1f}s')

@@ -335,7 +335,16 @@ Los tres post-pagos ya están cargados en ImpulTienda como "Solo post-compra", *
 - **Los números salen del motor del producto, verificados el 28/10:** el portón de campo de 3,40 m **no existe** en la biblioteca (están el de 3,00 y el de 3,66), y es el ejemplo del VSL 1; el Escalador da $117.000 de hierro → $370.000-$480.000 para esa medida; la parrilla con carro BQ-090 ($406.000 → $1.030.000-$1.340.000) es el presupuesto que arma el asistente en el VSL 2; y los $124.000 de hierro del portón FM-068 son la base de la cuenta del 20 % del VSL 3.
 - **Garantía: 60 días** en los tres, la misma de la landing (la regla pide 30+).
 - **Dos entregables por VSL**, sin bono sorpresa, como pide la regla del 15/10.
-- Falta producirlos: avatar **HERRERO** de HeyGen (los dos looks) con voz **Enzo** de AI Studio, y los tres downsells con ruleta.
+- **Producidos el 29/10**, en `~/Desktop/herrero-de-finde/pospagos/`:
+
+| | Archivo | Duración | Planos |
+|---|---|---|---|
+| 1 | `HF-OTO1-planos-a-medida.mp4` | **4:53** | 32 |
+| 2 | `HF-OTO2-asistente-1-a-1.mp4` | **4:22** | 31 |
+| 3 | `HF-OTO3-hierro-al-costo.mp4` | **3:26** | 29 |
+
+- **Cómo se produjeron:** voz **Enzo** de Google AI Studio, grabada en seis bloques (dos por VSL, cortados en `Esto no está en la página` / `Dos cosas te llevás.` / `Eso es el Sistema del Hierro al Costo`) para no pasarse del límite del TTS; cada bloque verificado por transcripción y por md5. Avatar **HERRERO** de HeyGen en **Avatar IV 1080p**, subiendo el audio ya acelerado (`atempo=1.12`, no 1,2-1,3: Enzo ya habla rápido). **204 créditos** de HeyGen para los seis bloques. Edición con `OUTPUTS/scripts-vsl/edit_herrero_avatar.py` y los planes de `pospagos/work/plans/gen_oto.py`.
+- Falta: los tres downsells con ruleta.
 
 ## Relacionado
 [[infinity-3d]] · [[bachas-de-concreto]] · [[landings-funnels-y-upsells]] · [[quizzes-reglas-de-armado]] · [[internacionalizacion]] · [[diagnostico-de-checkout]] · [[lectura-de-resultados]] · [[pagina-de-ventas]]

@@ -31,8 +31,9 @@
 - **Pedido:** *"Bien, armame los 3 vsl"*.
 - Los tres videos quedaron en `~/Desktop/herrero-de-finde/pospagos/`: **`HF-OTO1-planos-a-medida.mp4` (4:53)**, **`HF-OTO2-asistente-1-a-1.mp4` (4:22)** y **`HF-OTO3-hierro-al-costo.mp4` (3:26)**. Duración decreciente, como pide la regla del embudo.
 - Voz **Enzo** de Google AI Studio en seis bloques (dos por VSL), cada uno verificado por transcripción y por md5. Avatar **HERRERO** de HeyGen en **Avatar IV 1080p** con el audio ya acelerado a `atempo=1.12`. **204 créditos** de 600, por debajo de los ~230 avisados.
-- **Dos errores encontrados por hoja de contactos y corregidos antes de entregar** (VSL 3): la placa de precio de $7.990 salía **a los 24 segundos** porque el ancla `siete` enganchaba el "seis o siete de cada diez pesos" de más arriba; y la placa de hook y el sello de garantía caían encima de capturas. Se re-renderizó el 3.
-- `pospagos/work/plans/gen_oto.py` ahora **avisa toda ancla repetida** con la posición de cada aparición, así no vuelve a pasar. Regla nueva en `WIKI/vsl-reglas-de-armado.md`.
+- **Bug de fondo encontrado revisando por hoja de contactos: el generador de planes y el editor normalizaban las palabras distinto** (el generador dejaba la puntuación, el editor la saca toda). Entonces `'pantalla:'` era única para el validador y **una de cinco** para el editor, que agarraba la primera. Resultado: el corte al celular del VSL 1 salía **a los 11 s** en vez de a 3:08, el chip de las 72 horas a 1:11 en vez de a 3:09, un corte del VSL 2 treinta segundos antes, y en el VSL 3 la placa de precio de $7.990 **a los 24 segundos**. Los tres renders decían "OK". **Se re-renderizaron los tres.**
+- También: el sello que cae justo en el borde de un corte quedaba con duración negativa y **desaparecía en silencio**. `OUTPUTS/scripts-vsl/edit_herrero_avatar.py` ahora avisa cuando una placa queda con menos de 0,4 s.
+- `pospagos/work/plans/gen_oto.py` ahora usa **el mismo `norm()` que el editor**, traduce el índice del ancla al que cuenta el editor, e imprime a qué palabra cayó cada una. Reglas nuevas en `WIKI/vsl-reglas-de-armado.md`.
 - Producción documentada en `WIKI/herrero-de-finde.md`. Queda pendiente: los tres downsells con ruleta y rehacer las hojas genéricas `hoja-*.png`, que muestran números de otro plano.
 
 ## 2026-10-29 (noche) — Piedras: natives 35 y 36 escritas

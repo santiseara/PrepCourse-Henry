@@ -351,6 +351,9 @@ for k, o in enumerate(P.get('overlays', [])):
         u = wt(o['until'], o.get('until_occ', 0)); t1 = u[1] + 0.2 if u else t0 + o.get('dur', 2.2)
     else: t1 = t0 + o.get('dur', 2.2)
     if o['type'] == 'stamp': t1 = min(t1, min([c for c in cuts if c > t0 + 0.1] or [L]) - 0.02)   # el sello no pasa al plano siguiente
+    if t1 - t0 < 0.4:
+        print(f'aviso: {o["type"]} "{o.get("word")}" cae en el corte (t0={t0:.2f} t1={t1:.2f}), no se ve. Movelo a una palabra mas adentro del plano.')
+        continue
     ovs.append((pth, t0, t1, o['type'] != 'end'))
 
 # 5) subtítulos (3 palabras, DIN condensada, la que suena en naranja); se ocultan bajo la placa final

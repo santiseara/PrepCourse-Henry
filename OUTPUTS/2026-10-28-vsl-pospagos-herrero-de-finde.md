@@ -71,7 +71,7 @@ Hablemos del precio. Un herrero con oficio, parado al lado tuyo diciéndote qué
 
 Y va con los mismos sesenta días de garantía. Lo usás todo lo que quieras durante ese tiempo y, si no te resultó, pedís la devolución y listo.
 
-Mirá la diferencia. Hasta hoy, cuando se te trababa un trabajo, el trabajo esperaba. A partir de ahora, pregunta y seguís cortando. Esa es toda la diferencia entre el que entrega el lunes y el que entrega "la semana que viene, dale".
+Mirá la diferencia. Hasta hoy, cuando se te trababa un trabajo, el trabajo esperaba. A partir de ahora, preguntás y seguís cortando. Esa es toda la diferencia entre el que entrega el lunes y el que entrega "la semana que viene, dale".
 
 Tocá el botón de abajo y sumalo. Y quedate un segundo más, que me falta contarte una sola cosa.
 

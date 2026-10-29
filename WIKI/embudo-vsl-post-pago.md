@@ -141,6 +141,7 @@ El upsell post-pago exige **checkout en dólares** — Shopify Payments, Stripe 
 - **Los VSL tienen que estar encadenados entre sí** (correlación: cada uno retoma al anterior) y **no repetir fórmulas ni frases**, para que no suene a IA.
 - **Duración:** el OTO 1 dura 4–5 min (quedó en 4:15 y "quedó bien"). **Cada OTO siguiente, un poco más corto** (2026-10-15): OTO 2 ~3:45 (~750 palabras), OTO 3 ~3:15 (~650), OTO 4 ~2:45 (~550).
 - **Velocidad: exportar a 1.2–1.3x** (2026-10-15: "acordate de ponerle 1.2 o 1.3 a la velocidad del video, así se ve mejor"). Se hace con `SPEED=1.2` en `edit_vsl_quiz.py`. El guion tiene que ser más largo para compensar (~1.000 palabras para 4 min a 1.2x).
+- **Cuánto texto es un OTO de 3 a 5 minutos** (medido el 2026-10-28 contra las voces ya rendidas de Herrero: 167 palabras = 48 s a 1,3x). La cuenta que sirve es **0,28 s por palabra a 1,3x** y **0,31 a 1,2x**, con los silencios ya recortados. O sea: **1.000 palabras ≈ 4:45 a 1,3x**. Santiago (2026-10-28): *"quiero videos de entre 3 y 5 minutos"*, así que la tanda sale en **1.030 / 960 / 800 palabras**.
 - **Entregables: solo 2 por OTO** (2026-10-15: "poné solo 2 cosas como entregable"). Sin listas largas ni regalo sorpresa.
 - Avatar: la misma experta del front (Nutri Mounjaro). Los B-rolls se pueden repetir, se crean nuevos si hace falta, y la edición va con formatos variados (split, full, green screen, pip).
 - Escalera de Mounjaro Humilde: Anti-Antojos $14.990 → Nutri Luana 24 h (GPT) $29.990 → Rostro Desinflamado $9.990 → Reafirmante Casero $6.990.

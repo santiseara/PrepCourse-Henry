@@ -317,6 +317,26 @@ Pregunta de Santiago: *"la página original usa muchos videos con avatar, ¿no?"
 - Upsells del checkout: falta analizarlos y armarlos.
 - ImpulTienda con un HTML de 2,5 MB: si no lo acepta, subir la carpeta de imágenes y pasar a URLs.
 
+## Los VSL de los post-pago (2026-10-28)
+
+Los tres post-pagos ya están cargados en ImpulTienda como "Solo post-compra", **en este orden y con estos precios** (captura que pasó Santiago, 2026-10-28), que son los que dicen los guiones:
+
+| | Producto (tal cual el botón) | Precio | Tachado |
+|---|---|---|---|
+| 1 | **El Sistema de Planos a Medida™ 📐💰** | $24.990 | $98.990 |
+| 2 | **Asistente Personalizado 1 a 1 🤖✨** | $15.990 | $59.990 |
+| 3 | **El Sistema del Hierro al Costo™ 🔩💰** | $7.990 | $29.990 |
+
+⚠️ Con estos precios la escalera queda **descendente** (24.990 → 15.990 → 7.990) y ya no cumple la regla de [[embudo-vsl-post-pago]] de que **el ticket más alto va segundo**. Los guiones funcionan igual, pero si se quiere probar la regla alcanza con subir el precio del Asistente y retocar dos frases del VSL 2.
+
+- **Guiones:** `OUTPUTS/2026-10-28-vsl-pospagos-herrero-de-finde.md` (copia en `~/Desktop/herrero-de-finde/pospagos/guiones-vsl-pospagos.md`). 1.030 / 958 / 804 palabras → **4:50 · 4:30 · 3:46 a 1,3x**. Duración decreciente, como pide la regla.
+- **Encadenados, no independientes:** se felicita **solo en el 1**; el 2 abre retomando ("recién te hablé de las medidas que no están en la biblioteca") y el 3 abre avisando que es la última pantalla. El hilo escala: la biblioteca dice **qué fabricar** → el 1 suma **cualquier medida** → el 2 es **el que contesta cuando el papel no alcanza** → el 3 es el número del otro lado, **a cuánto comprás el hierro**. El 1 y el 2 cierran empujando a la pantalla siguiente ("y seguimos", "quedate un segundo más").
+- **Cada uno con otra estructura**, para que no suene a plantilla repetida: el 1 va problema → escena → mecanismo; el 2 va escena nocturna → qué NO es → casos; el 3 va cuenta de plata → por qué pasa → manual.
+- **Los números salen del motor del producto, verificados el 28/10:** el portón de campo de 3,40 m **no existe** en la biblioteca (están el de 3,00 y el de 3,66), y es el ejemplo del VSL 1; el Escalador da $117.000 de hierro → $370.000-$480.000 para esa medida; la parrilla con carro BQ-090 ($406.000 → $1.030.000-$1.340.000) es el presupuesto que arma el asistente en el VSL 2; y los $124.000 de hierro del portón FM-068 son la base de la cuenta del 20 % del VSL 3.
+- **Garantía: 60 días** en los tres, la misma de la landing (la regla pide 30+).
+- **Dos entregables por VSL**, sin bono sorpresa, como pide la regla del 15/10.
+- Falta producirlos: avatar **HERRERO** de HeyGen (los dos looks) con voz **Enzo** de AI Studio, y los tres downsells con ruleta.
+
 ## Relacionado
 [[infinity-3d]] · [[bachas-de-concreto]] · [[landings-funnels-y-upsells]] · [[quizzes-reglas-de-armado]] · [[internacionalizacion]] · [[diagnostico-de-checkout]] · [[lectura-de-resultados]] · [[pagina-de-ventas]]
 

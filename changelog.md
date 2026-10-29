@@ -1,3 +1,13 @@
+## 2026-10-28 (noche 2) — Herrero: los guiones de los 3 VSL post-pago
+
+- **Pedido de Santiago:** VSL para los post-pagos, *"los guiones tienen que tener relación con el orden de los pospagos, por ejemplo, no podemos decir felicitación en todos"*, de 3 a 5 minutos.
+- **Tres guiones encadenados** en `OUTPUTS/2026-10-28-vsl-pospagos-herrero-de-finde.md`: Sistema de Planos a Medida ($24.990), Asistente Personalizado 1 a 1 ($15.990) y Sistema del Hierro al Costo ($7.990). **1.030 / 958 / 804 palabras → 4:50 · 4:30 · 3:46 a 1,3x**, duración decreciente.
+- **Se felicita solo en el primero.** El 2 abre retomando el 1 y el 3 avisa que es la última pantalla. El hilo escala: qué fabricar → cualquier medida → quién te contesta → a cuánto comprás el hierro. El 1 y el 2 empujan a la pantalla siguiente.
+- **Precios tal cual ImpulTienda** (captura de Santiago), tachados incluidos. ⚠️ Quedan descendentes: ya no se cumple *el ticket más alto va segundo* de `embudo-vsl-post-pago.md`.
+- **Todos los números verificados contra el motor del producto:** el portón de 3,40 m no existe en la biblioteca (hay 3,00 y 3,66), el Escalador da $117.000 → $370.000-$480.000, la parrilla BQ-090 $406.000 → $1.030.000-$1.340.000 y el portón FM-068 lleva $124.000 de hierro.
+- **Regla nueva medida** en `embudo-vsl-post-pago.md`: 0,28 s por palabra a 1,3x (1.000 palabras ≈ 4:45), sacada de las voces ya rendidas de Herrero (167 palabras = 48 s).
+- Falta producirlos: avatar HERRERO en HeyGen con voz Enzo, y los downsells con ruleta.
+
 ## 2026-10-28 (noche) — Energía Vital: oferta nueva para LATAM, 6 videos
 
 - **Oferta nueva:** Guía de Autocuración Energética (Digital World, AR), que Santiago lanza a **LATAM en español neutro a US$ 9,99**. Ficha completa en `WIKI/energia-vital.md`.

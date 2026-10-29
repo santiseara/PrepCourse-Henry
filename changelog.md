@@ -1,3 +1,14 @@
+## 2026-10-29 (noche 6) — Solar Installer Pro: oferta nueva, 6 ads para el mercado inglés
+
+- Oferta nueva: **Solar Installer Pro** (US$ 47, `solar-installer-pro.impultienda.ar`), curso de instalación solar en 20 días. Ficha completa, el ganador desarmado y la tanda en `WIKI/solar-installer-pro.md`.
+- **Ganador modelado:** Mundo en Digital (page id 314381038431811), 4 ads activos, el más viejo **en circulación desde el 24 de agosto: 66 días**. Los 4 videos bajados de la Biblioteca y transcriptos: son **2 cuerpos** y los dos venden **claridad, no plata** (cero montos, cero plazos, prueba social de 3.200 y CTA suave). Mismo patrón anti-bloqueo que [[profesional-digital]], sostenido 66 días.
+- **6 guiones** en inglés y español con voseo (`OUTPUTS/2026-10-29-guiones-solar-installer-pro.md`), cada uno con hook, cuerpo y CTA propios y la promesa en la primera línea: el orden que nadie te da · los instaladores son el cuello de botella · te dejan apuntes vs. una cotización · dimensionar es todo el oficio · la otra mitad arranca cuando dicen que sí · del día uno al día veinte.
+- **6 videos de 27 a 35 s**, 9:16, en `~/Desktop/solar-installer-pro/anuncios/SIP-V1…V6.mp4`. Nombres para subir: 29/10 - 1 a 29/10 - 6.
+- **Voz:** AI Studio (Gemini 3.1 Flash TTS Preview), voz **Orus**, Pace Natural, audio profile de instalador estadounidense de 40. Los seis WAV verificados con Whisper contra su guion.
+- **Música:** la cama del propio ganador separada con demucs (`bed_A`), la misma para los seis.
+- **B-roll:** 132 TikToks bajados con tikwm de 4 tags de instalación solar; **21 limpios y usados**. Cero stock, cero créditos.
+- 🆕 **Regla nueva en `WIKI/vsl-reglas-de-armado.md`:** en AI Studio, después de escribir el guion por JS **el primer clic en Run no dispara** (pasó en 3 de 6). Hay que comparar la duración del player contra la generación anterior antes de bajar, o el Download baja el audio viejo sin avisar.
+
 ## 2026-10-29 (noche 5) — Atlas de Cortes: producidos los 3 videos bizop elegidos
 
 - Santiago eligió el **27, 28 y 29**. Listos en `~/Desktop/atlas-cortes/anuncios/`: **AT-V27** (29,9 s), **AT-V28** (26,2 s) y **AT-V29** (29,8 s), 9:16 1080x1920.

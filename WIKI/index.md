@@ -13,6 +13,7 @@
 - 🆕 [[100-paper-squishies]] — Oferta propia **en inglés** (US$ 16,99): ebook de 100 diseños imprimibles de squishies de papel, modelada sobre Hora de Papel (94 ads activos en 12 días, ES/IT/DE). Sus 7 familias de hook, la DNA de sus videos de 9 a 25 s y la tanda 1 de 6 videos.
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
+- 🆕 [[solar-installer-pro]] — Oferta nueva **en inglés** (US$ 47): curso de instalación solar en 20 días, clon de De Cero a Instalador Solar Profesional (Mundo en Digital, 66 días en circulación). Sus 2 cuerpos de video, el patrón **vende claridad, no plata** y la tanda 1 de 6 videos.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
@@ -97,6 +98,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-29 — Guiones de Solar Installer Pro, tanda 1](../OUTPUTS/2026-10-29-guiones-solar-installer-pro.md) — 6 guiones EN + ES para el mercado inglés, uno por ángulo (el orden que nadie te da, los instaladores son el cuello de botella, te dejan apuntes vs. una cotización, dimensionar es el oficio, la otra mitad arranca cuando dicen que sí, y del día uno al día veinte) · ver [[solar-installer-pro]]
 - [VSL de los 3 post-pago de Herrero de Finde (2026-10-28)](../OUTPUTS/2026-10-28-vsl-pospagos-herrero-de-finde.md) — los tres guiones encadenados, 4:50 / 4:30 / 3:46, con los precios reales de ImpulTienda
 - [2026-10-28 — Herrero: renovaciones de voz en off V40–V42](../OUTPUTS/2026-10-28-renovaciones-herrero-v40-v42.md) — las otras tres de la tanda del día, con hooks y fichas nuevas: el cartón que no se dibuja más (portón de dos hojas), el cliente que señala una foto del catálogo (jaula de potencia) y lo que cobra un dibujante por un solo plano (invernadero) · ver [[herrero-de-finde]]
 - [2026-10-28 — Guiones de Herrero con avatar A1–A3](../OUTPUTS/2026-10-28-guiones-herrero-avatar-A1-A3.md) — los guiones 34, 36 y 39 reescritos en primera persona para el avatar: la confesión primero y el producto después · ver [[herrero-de-finde]]

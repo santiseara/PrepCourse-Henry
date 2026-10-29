@@ -1,3 +1,12 @@
+## 2026-10-29 (noche 3) — Atlas de Cortes: 6 guiones (v19 a v24) para elegir 3
+
+- **Pedido:** *"Vamos con 3 videos para pelo. Dame guiones y yo elijo"* → 6 opciones, elige 3.
+- `OUTPUTS/2026-10-29-guiones-atlas-cortes-v19-v24.md` (copia en la carpeta de la oferta). EN + ES voseo completos, 118–140 palabras, 9:16.
+- Los seis en el territorio que vende (fricción durante el servicio con la clienta presente) y **sin una palabra de plata**: V16–V18 ya están testeando el bizop y acá rinde la mitad.
+- **V19** el minuto del espejo ("no, I love it" con el no adelante) · **V20** nunca fue la tijera (el corte de dos horas te cuesta la clienta de las cuatro) · **V21** "ese no es lo mío" (la carta que se achica) · **V22** el remolino que descubrís al secar · **V23** "lo que te parezca" · **V24** la de 24 que lee una página antes de cada corte, variable del sleeper V6.
+- V19 y V20 son los ángulos de las natives 6 y 7 pasados a video: el ad y la native cuentan lo mismo.
+- Recomendados 19, 20 y 24. Falta la elección para producir.
+
 ## 2026-10-29 (noche 2) — Atlas de Cortes: natives 6 y 7
 
 - **Pedido:** *"Vamos con la oferta de pelo, vamos con 2 natives"*.

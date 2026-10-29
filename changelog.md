@@ -1,3 +1,14 @@
+## 2026-10-29 — Piedras: tanda v30, tres ángulos del banco del mercado inglés
+
+- **Pedido de Santiago:** "vamos con más guiones para piedras". Variables de algo que ya corre → **3 guiones** (regla del 24/10).
+- **Tanda v30** (`OUTPUTS/2026-10-29-guiones-piedras-v30-mercado-ingles.md`): 3 guiones completos en inglés y español con voseo, los tres ángulos salidos del banco de la v29 y ninguno usado de la v23 a la v29:
+  1. **La primera tanda que se vea comprable** — gris, burbujas, rajadura y borde flojo, cada uno con su causa y su arreglo, con la *Troubleshooting Guide* como entregable (es el ángulo con el que el whale renovó el 27/10).
+  2. **El doble avatar en un mismo guion** (modelo Iris Caldwell), abierto por el lado del cobro: la que quiere un sábado propio y la que quiere el ingreso terminan en el mismo lugar.
+  3. **"Esto no es algo a lo que te sumás, es algo que hacés"** — lista de "no" con el *no MLM* adentro y los entregables por nombre (fórmula base, 100+ mezclas, calculadora de precios, camino al primer pedido).
+- **Siguen las reglas del 28/10:** mecanismo y especificidad en vez de cuentas, entregables con nombre propio, la plata al final y suave. Estructura, bajada de producto y CTA propios en cada guion, sin una frase repetida entre ellos ni con la v29. 151–163 palabras (el rango de la v29).
+- Entregado en bloque de código, guardado en `OUTPUTS/` y copiado al portapapeles en RTF.
+- **Wiki:** ángulos usados anotados en `WIKI/scented-stones.md` y output enlazado en `WIKI/index.md`. Sin reglas nuevas (no hubo corrección).
+
 ## 2026-10-28 (noche 2) — Herrero: los guiones de los 3 VSL post-pago
 
 - **Pedido de Santiago:** VSL para los post-pagos, *"los guiones tienen que tener relación con el orden de los pospagos, por ejemplo, no podemos decir felicitación en todos"*, de 3 a 5 minutos.

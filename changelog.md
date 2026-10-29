@@ -1,3 +1,11 @@
+## 2026-10-29 (noche) — Piedras: natives 35 y 36 escritas
+
+- Santiago eligió **la 2 y la 3** de las 6 opciones. Escritas completas en `OUTPUTS/2026-10-29-natives-piedras-35-y-36.md` (prompt de imagen 3:4 + descripción larga en inglés).
+- **35 · "The letter has been on my table for nine days"** — Imogene Bratcher, 60, Washington IN, 1.341 palabras. Deuda de 2019 cerrada en siete meses sin dejar la línea de empaque. Brecha: superficie y desmolde temprano. Error de negocio: tres meses comprando moldes en vez de separar una parte fija ("no estaba invirtiendo, estaba comprando").
+- **36 · "Two suitcases by the door and one of them is new"** — Loveda Spain, 61, Gaffney SC, 1.108 palabras. Viajó a Tacoma a conocer a su nieto de 2 años. Brecha: el gris (agua) y la flor marrón (secado y momento). Error de negocio: frenó de tomar pedidos antes del viaje en vez de poner la fecha de vuelta.
+- Sin montos de ingreso, sin precio del producto, sin URL en el cuerpo, sin caras, dos P.S. cada una con el segundo regalando un consejo práctico.
+- Quedan sin generar las imágenes: espera el OK para no gastar créditos.
+
 ## 2026-10-29 (tarde 2) — Piedras: 6 opciones de native para elegir
 
 - **Pedido:** *"Vamos con las native, dame 6 y elijo"*.

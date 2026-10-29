@@ -1,0 +1,70 @@
+# Master AI in 7 Days (oferta en inglés)
+
+> Clon para el mercado inglés de **Domina la IA en 7 Días**, de **Udemia.IA / UDAMIA**: guía low ticket para aprender a usar la IA desde cero en 7 días, 15 minutos por día, para gente de +45 que siente que se está quedando atrás. **Ángulo fijado por Santiago el 2026-10-29: IA en general, no una herramienta específica como Claude.** (fuente: Biblioteca de Anuncios de Meta, page id 1187693011097208, relevada el 2026-10-29)
+
+## El ganador que modelamos — Udemia.IA (whale)
+- **~960 anuncios activos.** Se relevaron los **225 de más impresiones**: 216 creativos distintos. Renovación brutal de creativos, casi ninguno repetido.
+- **El más viejo: 16 de septiembre de 2026 = 43 días.** Los 16 ads de esa fecha van **todos** a la landing de **IA genérica** (`py4igp-yn.myshopify.com/products/domina-la-ia-en-7-dias`). La línea de **Claude** arrancó recién el **12 de octubre**. El ángulo que pidió Santiago (IA en general) es el más viejo y el más probado.
+- **Corre en 8 idiomas** con landing propia por mercado, casi todas en **ImpulTienda** (el mismo proveedor que usa Santiago): ES (AR, MX, Sudamérica), PT, IT, DE, FR, PL, CS, HU.
+- 🎯 **El mercado inglés está prácticamente vacío.** De 225 ads, **uno solo** en inglés (`master-claude-india.impultienda.ar`, apuntado a India). Cero US, UK, CA, AU, NZ. Es la oportunidad.
+
+### Las dos landings del competidor
+| | ES — IA genérica | EN — Claude (India) |
+|---|---|---|
+| Precio | $24.990 ARS (ancla $49.980, −50%) | US$ 27 (ancla US$ 54) |
+| Promesa | "Aprendé a usar IA desde cero en 7 días y resolvé en minutos lo que hoy te lleva horas" | "Learn to use Claude from scratch in 7 days and get an assistant that does the work for you" |
+| Esfuerzo | 15 min por día | 30 min por día |
+| Entregables | Guía + 101 prompts + videos paso a paso + plataforma | 86 páginas + 60 prompts + guía por profesión |
+| Garantía | 7 días | 7 días |
+| Prueba social | ★4,9 · +6.000 personas · +1.458 usándola | — |
+| Urgencia | contador 15:00 + "alguien compró hace 2 min" | "launch price" |
+
+## Los 3 formatos de video que corre
+Proporción real sobre los 225 relevados: **~85% testimonio, ~15% voz en off**, más una línea nueva de quiz.
+
+### 1. Testimonio UGC con avatar (el que escala) — 24 a 26 s
+Selfie vertical, brazo extendido, persona de **48 a 61 años** en su oficina, escritorio o estudio, **sosteniendo el libro espiralado mientras habla**. Hook quemado arriba en caja blanca, subtítulo palabra-por-palabra abajo, PIP chico abajo a la derecha con un segundo personaje. Estructura:
+1. **Resultado personal + la edad, en la primera línea.** "Aprender IA a mis 49 años fue lo mejor que me pasó en mucho tiempo." · "Reinventé mi carrera profesional usando IA a mis 48." · "Así logré reinventarme a mis 52."
+2. Atribución a la guía ("todo se lo debo a esta guía creada por los chicos de Udamia").
+3. Qué hace: "no solo te da un paso a paso, sino que entendés todas las herramientas básicas que se están usando hoy y cómo implementarlas".
+4. **Objeción de edad resuelta:** "yo pensaba que a mi edad era imposible".
+5. Prueba social con número (589 / 1.123 / 1.133 / 1.454 personas — **inconsistente entre videos**).
+6. Urgencia: "solo por hoy está con 50% de descuento y te llega en el momento".
+7. CTA: "les dejo el botón abajo para descargarla".
+- **El cuerpo se repite casi literal entre videos; lo que cambia es el hook.** Según la regla del 22/10, nosotros tomamos el ángulo y escribimos cuerpos propios.
+
+### 2. Voz en off sobre producto o infografía — 27 a 49 s
+Sin cara. Tres sub-formatos que valen:
+- **Dato + objeción** (27 s): *"El 87% de las personas mayores a 45 años quieren aprender a usar la IA a su favor, pero no saben por dónde empezar. Sienten que ya es tarde…"* → "para eso creamos esta guía" → 15 min/día → CTA.
+- **Universalidad** (39 s): *"Esta guía está en la cocina de una contadora, en el mostrador de una empresa chica y en la mesa de un señor de 55 años que pensaba que esto no era para él."* → arranca de cero → entregables → pago único, garantía 7 días → CTA.
+- ⭐ **Índice del libro** (49 s, y es **el único que ya corre en inglés**): *"¿Querés que responda preguntas sobre tus propios archivos? Página 18. ¿Tu Excel? Página 46. ¿Eso que repetís cada mes? Página 38. ¿Nunca usaste IA? Página 7. Hay un camino que empieza en una página."* Vende el libro mostrando el índice, no la transformación.
+- **Profecía** (40 s, híbrido): *"En 2030 no te va a reemplazar la IA, te va a reemplazar alguien que aprendió a usarla."* Abre en voz en off y cierra en testimonio.
+
+### 3. Quiz por profesión (línea nueva, del 25 al 27 de octubre)
+*"Soy abogada, tengo 56 años y hoy reviso un contrato de 40 páginas en 10 minutos con IA. Y la tecnología nunca fue lo mío… Hice un test de 3 minutos, elegí mi profesión y recibí mi plan de IA para abogados."* CTA: **"Toca el botón, hacé el test de 3 minutos y recibí tu plan de IA para tu profesión."** Mismo guion calcado con médico (58), contador (61), arquitecto, docente, fábrica de muebles (57), pymes.
+- Es un **quiz funnel**, lo que Santiago ya sabe armar ([[quiz-funnel]], [[quizzes-reglas-de-armado]]). Queda de banco para la tanda 2.
+
+## Lo que hace que aguante 43 días
+- **Vende tiempo y vigencia, nunca plata.** Cero montos de ingreso, cero "cambiá tu vida", cero bizop. Lo que promete es *"resolvé en minutos lo que hoy te lleva horas"* y *"no te quedes afuera"*. Es el mismo patrón anti-bloqueo de [[profesional-digital]] y [[solar-installer-pro]].
+- **El miedo es a quedarse atrás, no a la pobreza.** "Te va a reemplazar alguien que aprendió a usarla."
+- **La edad es el ángulo, no el obstáculo.** Todos los avatares dicen su edad en voz alta (48, 49, 51, 52, 53, 55, 56, 57, 58, 59, 60, 61). El target es +45 y el hook se lo dice en la cara.
+- **"No hace falta saber nada de tecnología"** aparece en casi todos.
+- **Sin cursos largos:** "no deberían ser cursos largos y complejos que nunca terminás".
+
+## Lo que no copiamos
+- El **número de compradores inventado** (589, 1.123, 1.133, 1.454 en la misma semana). En inglés es riesgo de cuenta.
+- El **"50% de descuento solo por hoy"** dicho en el video.
+- La marca "Udamia" nombrada en el guion (regla: no nombrar al experto).
+
+## Preguntas abiertas
+- Nombre y precio definitivos de nuestra oferta (propuesta: **Master AI in 7 Days**, US$ 17 o US$ 27 con ancla).
+- ¿Clonamos también el quiz por profesión en la tanda 2?
+- ¿Hay OTO post-pago? Las dos landings no muestran bumps.
+
+## Relacionado
+[[solar-installer-pro]] · [[profesional-digital]] · [[guiones-y-anuncios]] · [[ugc-y-video-generativo]] · [[quiz-funnel]] · [[funnel-hacking]] · [[internacionalizacion]] · [[testeo-de-creativos]]
+
+## Fuentes
+- Biblioteca de Anuncios de Meta, page id 1187693011097208 (225 ads relevados y 18 videos transcriptos el 2026-10-29)
+- https://py4igp-yn.myshopify.com/products/domina-la-ia-en-7-dias (leída el 2026-10-29)
+- https://master-claude-india.impultienda.ar/ (leída el 2026-10-29)

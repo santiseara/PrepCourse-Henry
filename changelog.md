@@ -1,3 +1,9 @@
+## 2026-10-29 — Master AI in 7 Days: análisis del ganador para el mercado inglés
+- Relevados los **225 anuncios de más impresiones** de **Udemia.IA** (page id 1187693011097208, ~960 activos): 216 creativos distintos, 8 idiomas, el más viejo del **16/09 = 43 días**, casi todas las landings en ImpulTienda.
+- **18 videos bajados y transcriptos** con faster-whisper + hoja de contactos de los 225 thumbnails para clasificar formato.
+- Nueva página `WIKI/master-ai-7-dias.md`: los 3 formatos (85% testimonio UGC de 24-26 s, 15% voz en off, y la línea nueva de quiz por profesión), la DNA de cada uno, el patrón **vende tiempo y vigencia, nunca plata**, y el hallazgo de que **el mercado inglés está vacío** (1 solo ad en inglés, apuntado a India).
+- Copia del análisis en `OUTPUTS/2026-10-29-analisis-udemia-ia-mercado-ingles.md`. Índice actualizado.
+
 ## 2026-10-29 (noche 7) — Brasil: banco de keywords de 4 nichos para cazar
 
 - `OUTPUTS/2026-10-29-keywords-brasil-4-nichos.md`: ~250 keywords en portugués para la Biblioteca de Anuncios, ninguna repetida de los bancos del 26/10 y 27/10.

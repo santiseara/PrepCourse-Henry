@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-28.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-29.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -14,6 +14,7 @@
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[solar-installer-pro]] — Oferta nueva **en inglés** (US$ 47): curso de instalación solar en 20 días, clon de De Cero a Instalador Solar Profesional (Mundo en Digital, 66 días en circulación). Sus 2 cuerpos de video, el patrón **vende claridad, no plata** y la tanda 1 de 6 videos.
+- 🆕 [[master-ai-7-dias]] — Oferta nueva **en inglés**: Master AI in 7 Days, clon de Udemia.IA (~960 ads activos, 8 idiomas, 43 días el más viejo). Ángulo **IA en general**, no Claude. Sus 3 formatos de video (85% testimonio / 15% voz en off + quiz por profesión) y el mercado inglés vacío.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
@@ -98,6 +99,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-29 · Análisis de Udemia.IA y el mercado inglés de IA](../OUTPUTS/2026-10-29-analisis-udemia-ia-mercado-ingles.md) — 225 ads relevados, 18 videos transcriptos, los 3 formatos y la oportunidad en inglés.
 - [2026-10-29 — Keywords de Brasil: renda extra, emagrecimento, manifestação y relacionamentos](../OUTPUTS/2026-10-29-keywords-brasil-4-nichos.md) — 4 bancos para la Biblioteca de Anuncios: la capa 3 de renda extra (negativado, dinero dormido, empleo, marketplace, leilão), emagrecimento por síntoma y la ola del mounjaro natural, la capa católica y de señales de manifestação, y el banco nuevo de relacionamentos (reconquista, pareja en crisis, juego de a dos, masculino) · ver [[caza-de-ofertas]]
 - [2026-10-29 — Guiones de Solar Installer Pro, tanda 1](../OUTPUTS/2026-10-29-guiones-solar-installer-pro.md) — 6 guiones EN + ES para el mercado inglés, uno por ángulo (el orden que nadie te da, los instaladores son el cuello de botella, te dejan apuntes vs. una cotización, dimensionar es el oficio, la otra mitad arranca cuando dicen que sí, y del día uno al día veinte) · ver [[solar-installer-pro]]
 - [VSL de los 3 post-pago de Herrero de Finde (2026-10-28)](../OUTPUTS/2026-10-28-vsl-pospagos-herrero-de-finde.md) — los tres guiones encadenados, 4:50 / 4:30 / 3:46, con los precios reales de ImpulTienda

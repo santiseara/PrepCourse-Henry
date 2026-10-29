@@ -1,3 +1,12 @@
+## 2026-10-29 (noche 5) — Atlas de Cortes: producidos los 3 videos bizop elegidos
+
+- Santiago eligió el **27, 28 y 29**. Listos en `~/Desktop/atlas-cortes/anuncios/`: **AT-V27** (29,9 s), **AT-V28** (26,2 s) y **AT-V29** (29,8 s), 9:16 1080x1920.
+- Voces grabadas en AI Studio desde su Chrome (Gemini 3.8 Flash TTS, voz **Sulafat**, página muteada), bajadas y verificadas por duración y MD5: los tres audios distintos (38,6 / 33,6 / 38,6 s crudos).
+- Editados con `edit_atlas.py`, `speed 1.30` y `silence [0.26, 0.12]`. Planes nuevos en `material/plans/gen.py` (seeds 270, 280, 290).
+- **Revisión con hoja de contactos** a 1 cuadro cada 2 s: limpios, sin texto quemado ajeno ni caras a cámara.
+- 🆕 **Dos trampas del editor anotadas en `WIKI/atlas-de-cortes.md`:** un `occ` inexistente descarta la placa en silencio (le pasó al V29, que quedó sin la página del mapa hasta que se corrigió), y un anchor sobre la última frase pierde contra la placa final.
+- Nombres para subir: 29/10 - 1, 2 y 3.
+
 ## 2026-10-29 (noche 4) — Atlas de Cortes: rechazo de la v19–v24 y tanda bizop v25–v30
 
 - **Rechazo:** *"muy malos, no me generan nada de interés. Te mando mi landing para que la veas y me hagas mejores guiones… acordate que el ángulo que busco es el de bizop"*.

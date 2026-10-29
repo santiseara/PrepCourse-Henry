@@ -145,6 +145,16 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - **6 testimonios en formato chat** (Megan T., Priya S., Charlotte R., Danielle M., Aisling B., Taryn W.) con frases muy usables: *"She rebooked before she left"* · *"It was never the scissors"* · *"My apprentice has basically stolen it"* · *"Three cuts I used to quietly talk people out of are back on my menu"*.
 - ⚠️ El bonus 4 es el único sin valor a la vista. El ancla cierra bien ($177 − $27 = $150).
 
+## 🎬 Videos AT-V27, V28 y V29 (29/10) — los 3 elegidos de la tanda bizop
+> Santiago eligió el **27, 28 y 29** de las seis opciones. Producidos con el pipeline de siempre.
+- **`~/Desktop/atlas-cortes/anuncios/AT-V27.mp4`** (29,9 s · 12 planos) — una copia, todo el salón.
+- **`AT-V28.mp4`** (26,2 s · 10 planos) — cada arreglo gratis es un turno regalado.
+- **`AT-V29.mp4`** (29,8 s · 12 planos) — el precio de un corte.
+- Los tres 9:16 1080x1920, voz **Sulafat** de AI Studio (Gemini 3.8 Flash TTS), `speed 1.30` y `silence [0.26, 0.12]`, editados con `edit_atlas.py`. Planes en `material/plans/gen.py` (seeds 270, 280, 290) y voces en `material/vo/V27–V29.wav` (los tres MD5 verificados distintos).
+- **Revisados con hoja de contactos** a 1 cuadro cada 2 s (`material/sheets/AT-V2*-sheet.jpg`): sin texto quemado ajeno, sin caras hablando a cámara, chips y placa final correctos.
+- 🆕 **Trampa nueva del editor:** un anchor con `occ` que no existe se descarta en silencio con el aviso `"page" n.º 1 no aparece`, y esa placa de producto **no entra en el video**. Pasó con el V29 (P_pixie). Y un anchor que cae sobre la última frase **choca con la placa final y se ignora** (la placa final gana). Antes de renderizar, contar las ocurrencias reales de cada palabra y no anclar placas en la frase del CTA.
+- Nombres para subir: **29/10 - 1** (V27), **29/10 - 2** (V28), **29/10 - 3** (V29).
+
 ## 🎬 Guiones v25 a v30 (29/10) — BIZOP DURO, 6 opciones para elegir 3
 > La v19–v24 fue **rechazada entera** (*"muy malos, no me generan nada de interés… acordate que el ángulo que busco es el de bizop"*). Eran de fricción en el sillón y escritas sin plata a propósito. **El ángulo de esta oferta es bizop, fijo**, aunque la cuenta diga que rinde la mitad (regla nueva del 29/10 en [[guiones-y-anuncios]]).
 - `OUTPUTS/2026-10-29-guiones-atlas-cortes-v25-v30-bizop.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v25-v30-bizop.md`. Formato bizop duro: oportunidad en crudo en la primera línea, segunda persona, **un solo número por guion**, el negocio en tres verbos, CTA con acción y fecha. 106–135 palabras.

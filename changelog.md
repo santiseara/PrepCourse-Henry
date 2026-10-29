@@ -1,3 +1,11 @@
+## 2026-10-29 (tarde 2) — Piedras: 6 opciones de native para elegir
+
+- **Pedido:** *"Vamos con las native, dame 6 y elijo"*.
+- **6 opciones** en `OUTPUTS/2026-10-29-natives-piedras-6-opciones-resultado.md`, con la arquitectura del nicho relevada el 28/10 y el eje resultado del 26/10: el teléfono con 9 pedidos sin contestar, la carta del banco con "PAID IN FULL", dos valijas en la puerta, el cartel de feria dado vuelta con "SOLD OUT - TAKING ORDERS", el aire acondicionado nuevo y los dos juegos de moldes de la hermana que no le creía.
+- Cada una con objeto, voz con dirección exacta, resultado, prueba visible, número único, **error de negocio admitido** y cierre con frase de un tercero. Ninguna repite objeto con las natives 1 a 34; una sola es de feria.
+- Aplicado el reclamo de hoy a los guiones: el resultado tiene que **entenderse sin leer** la descripción. Las más llamativas de un vistazo son la 1 y la 4; la 2, 3, 4 y 6 no llevan ninguna cifra de plata.
+- Quedan sin escribir: espera la elección de Santiago para las completas (prompt 3:4 + descripción de 1.000 a 1.500 palabras, solo en inglés).
+
 ## 2026-10-29 (tarde) — Piedras: la v30 se cayó por flojа y salió la v31 con promesa fuerte
 
 - **Rechazo de Santiago a la v30:** *"muy flojos, tienen que ser más llamativos, más prometedores"*.

@@ -155,6 +155,25 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **Trampa nueva del editor:** un anchor con `occ` que no existe se descarta en silencio con el aviso `"page" n.º 1 no aparece`, y esa placa de producto **no entra en el video**. Pasó con el V29 (P_pixie). Y un anchor que cae sobre la última frase **choca con la placa final y se ignora** (la placa final gana). Antes de renderizar, contar las ocurrencias reales de cada palabra y no anclar placas en la frase del CTA.
 - Nombres para subir: **29/10 - 1** (V27), **29/10 - 2** (V28), **29/10 - 3** (V29).
 
+## 📊 Testeo del 30/10 (captura de Santiago) y variables v31–v33
+> Cinco conjuntos activos en aprendizaje, $30 diarios cada uno (el CJTO 10, $10). Una compra por conjunto: muestra chica, pero la dirección es clara.
+
+| CJTO | Pieza | CPA | ROAS | Valor |
+|---|---|---|---|---|
+| 8 | NATIVE 11 | **$6,97** | **16,14** | $112,50 |
+| 9 | NATIVE 10 | **$7,37** | 3,66 | $27 |
+| 1 | "Are you" | $14,04 | 1,92 | $27 |
+| 6 | "One copy" (V27) | $14,83 | 1,82 | $27 |
+| 10 | NATIVE 9 | — | — | — |
+
+- ⭐ **Las natives valen el doble que los videos**: $7 contra $14 por compra. Y el CJTO 8 trajo una compra de **$112,50** (ahí hay bump u OTO tomado), contra los $27 pelados de las otras tres.
+- ⚠️ **Natives 9, 10 y 11 no están mapeadas**: nuestras natives del Atlas van de la 1 a la 7 (`OUTPUTS/2026-10-23-natives-atlas-cortes.md`, `…-28-natives-atlas-cortes-4-y-5.md`, `…-29-natives-atlas-cortes-6-y-7.md`). Hay que pedirle a Santiago cuál es cada una para poder variarlas, que es donde está la palanca.
+- **Reconocidos de la captura:** "One copy" = V27 "One copy, the whole salon" (tanda bizop del 29/10, público de dueñas de salón) · "Are you" = el hook de la landing "How many cuts are you turning down because you can't remember the right sequence?", el viejo V4.
+- **Variables entregadas (30/10):** `OUTPUTS/2026-10-30-guiones-atlas-cortes-v31-v33.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v31-v33.md`. Bizop duro, EN + ES voseo, nombres para subir **30/10 - 1, 2 y 3**.
+  - **V31 "Your apprentice is the cheapest capacity you will ever buy"** — variable de One copy por el lado de la aprendiza (sale del testimonio "my apprentice has basically stolen it"): capacidad nueva sin contratar, sin cerrar un día y sin curso con fecha.
+  - **V32 "Which chair she gets"** — variable de One copy por el lado de la agenda: tres sillones con tres cartas distintas, la recepción deja de ofrecer lo que un sillón no puede hacer. Número único: 25 cortes en todos los sillones.
+  - **V33 "She takes her colour with her"** — variable de "Are you": el corte rechazado no es un corte, es la clienta entera (color, brushing y rebook) y se la queda el salón de al lado.
+
 ## 🎬 Guiones v25 a v30 (29/10) — BIZOP DURO, 6 opciones para elegir 3
 > La v19–v24 fue **rechazada entera** (*"muy malos, no me generan nada de interés… acordate que el ángulo que busco es el de bizop"*). Eran de fricción en el sillón y escritas sin plata a propósito. **El ángulo de esta oferta es bizop, fijo**, aunque la cuenta diga que rinde la mitad (regla nueva del 29/10 en [[guiones-y-anuncios]]).
 - `OUTPUTS/2026-10-29-guiones-atlas-cortes-v25-v30-bizop.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v25-v30-bizop.md`. Formato bizop duro: oportunidad en crudo en la primera línea, segunda persona, **un solo número por guion**, el negocio en tres verbos, CTA con acción y fecha. 106–135 palabras.

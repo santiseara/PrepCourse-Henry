@@ -1,3 +1,9 @@
+## 2026-10-30 — Atlas de Cortes: testeo del 30/10 y variables v31–v33
+- Captura de Santiago con 5 conjuntos en aprendizaje. **Las natives rinden el doble que los videos**: NATIVE 11 a $6,97 con ROAS 16,14 (una compra de $112,50, con bump u OTO) y NATIVE 10 a $7,37, contra $14,04 de "Are you" y $14,83 de "One copy".
+- Reconocidos: "One copy" = V27 de la tanda bizop del 29/10 · "Are you" = el hook de la landing "How many cuts are you turning down…". **Natives 9, 10 y 11 no están mapeadas** (las nuestras van de la 1 a la 7): se le pidió el dato.
+- Tres variables nuevas en bizop duro: la aprendiza como capacidad barata, el sillón que le toca a la clienta y el corte rechazado que se lleva color, brushing y rebook.
+- `OUTPUTS/2026-10-30-guiones-atlas-cortes-v31-v33.md`, copia en `~/Desktop/atlas-cortes/anuncios/guiones/`, portapapeles en RTF. `WIKI/atlas-de-cortes.md` actualizada con la tabla del testeo.
+
 ## 2026-10-30 — Piedras: natives 37 y 38
 - Escritas las dos opciones que habían quedado marcadas como las más llamativas de un vistazo en la lista del 29/10: el teléfono con nueve pedidos sin contestar (la demanda la desborda) y el cartel de feria dado vuelta con "SOLD OUT - TAKING ORDERS" a las 11:40.
 - Brechas casero/vendible **nuevas**, sin repetir las natives 27 a 36: el peso de la piedra y el alcance del aroma (37), que las doce piezas salgan hermanas y el amarilleo de ciertas fragancias (38).

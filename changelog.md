@@ -1,3 +1,9 @@
+## 2026-10-30 — Piedras: tanda v32, tres guiones de promesa fuerte
+- Pedido: "vamos con más guiones para piedras". Variable de algo que ya corre, así que van **3** (regla del 24/10).
+- Se sigue la línea aprobada de la v31: **promesa concreta en la primera línea**, después el mecanismo del producto, los entregables con nombre y cierre con ventana de tiempo. La plata, como precio de mercado o en primera persona.
+- Ángulos nuevos (7, 8 y 9): el pedido de casamiento de 150 piezas como un solo cliente grande, el aroma que se apaga a las seis semanas como reposición que vuelve sola, y la objeción "yo no sé vender" resuelta por el propio producto.
+- Entregado en `OUTPUTS/2026-10-30-guiones-piedras-v32-promesa-fuerte.md`, en inglés y español con voseo, y copiado al portapapeles en RTF. `WIKI/scented-stones.md` actualizada con la v32 y el banco restante.
+
 ## 2026-10-30 — Skool AI: los 2 de voz en off sin una sola foto
 - Santiago: *"no me gusta que tenga los B-rolls de imágenes… sacá todas las imágenes, quiero que todo sea B-roll, todo video. Los que pusiste están muy bien, quiero más de ese estilo"*. Fuera las páginas dibujadas (`ix_18`, `ix_38`), la placa de condiciones y los recortes del libro.
 - **El índice pasó a ser una placa de texto encima del clip**: caja blanca con el titular y la pastilla naranja `PAGE NN` pisando la esquina (`png_badge` en `edit_skool_vo.py`). Sin número, sale solo la frase. **El editor ahora corta con error si un plano apunta a un `.png`/`.jpg`.**

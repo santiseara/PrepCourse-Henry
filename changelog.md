@@ -1,3 +1,10 @@
+## 2026-10-30 — Piedras: tanda v33, "más, mejores, más potentes"
+- Pedido después de la v32: *"Dame mas, mejores, mas potentes"*. Van 3 guiones nuevos (10, 11 y 12).
+- Diagnóstico: la v32 ya abría con la promesa, pero la promesa **describía el negocio**. La v33 abre con una **afirmación que choca** y se explica en la línea siguiente.
+- Ángulos: cada piedra vendida es un vendedor en la casa de otro · no te pagan por la piedra, te pagan por ocho semanas de aroma · todo el negocio entra en una caja de zapatos.
+- Regla nueva anotada en `WIKI/guiones-y-anuncios.md` (registro del 30/10). `WIKI/scented-stones.md` actualizada con la v33 y el banco.
+- Entregado en `OUTPUTS/2026-10-30-guiones-piedras-v33-mas-potentes.md`, inglés y español con voseo, copiado al portapapeles en RTF.
+
 ## 2026-10-30 — Piedras: tanda v32, tres guiones de promesa fuerte
 - Pedido: "vamos con más guiones para piedras". Variable de algo que ya corre, así que van **3** (regla del 24/10).
 - Se sigue la línea aprobada de la v31: **promesa concreta en la primera línea**, después el mecanismo del producto, los entregables con nombre y cierre con ventana de tiempo. La plata, como precio de mercado o en primera persona.

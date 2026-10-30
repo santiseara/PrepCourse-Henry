@@ -155,6 +155,13 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **Trampa nueva del editor:** un anchor con `occ` que no existe se descarta en silencio con el aviso `"page" n.º 1 no aparece`, y esa placa de producto **no entra en el video**. Pasó con el V29 (P_pixie). Y un anchor que cae sobre la última frase **choca con la placa final y se ignora** (la placa final gana). Antes de renderizar, contar las ocurrencias reales de cada palabra y no anclar placas en la frase del CTA.
 - Nombres para subir: **29/10 - 1** (V27), **29/10 - 2** (V28), **29/10 - 3** (V29).
 
+## 🎬 Guiones v34 a v36 (30/10) — bizop a la estilista, no al salón
+> Corrección de Santiago a la v31–v33: *"anda más por el bizop, dejá de hablar de enseñarle a tus empleadas, o cosas así"*. **Se caen el V31 (la aprendiza) y el V32 (los tres sillones).** El público de dueña de salón y todo lo que suene a capacitar o entrenar a alguien queda afuera de esta oferta: el ad le habla a la estilista como dueña de su propia agenda. El V33 se mantiene (le habla a ella y a la plata).
+- **V34 "The highest paying six weeks of your year"** — la ventana de diciembre: todas quieren un cambio antes de las fiestas y lo piden por nombre; si no están en tu carta, hacés mantenimiento a precio de mantenimiento. Número único: seis semanas.
+- **V35 "Full chair, flat money"** — problema de carta, no de clientas: la semana llena de despuntes y retoques, que es lo más barato que hace; los cortes con nombre pagan el doble y son los que esquiva por memoria.
+- **V36 "The only advertising you get for free"** — el corte de transformación se publica y te etiqueta, el despunte no: cada corte rechazado es una clienta perdida dos veces.
+- `OUTPUTS/2026-10-30-guiones-atlas-cortes-v34-v36.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v34-v36.md`. Nombres para subir: **30/10 - 1, 2 y 3**.
+
 ## 📊 Testeo del 30/10 (captura de Santiago) y variables v31–v33
 > Cinco conjuntos activos en aprendizaje, $30 diarios cada uno (el CJTO 10, $10). Una compra por conjunto: muestra chica, pero la dirección es clara.
 

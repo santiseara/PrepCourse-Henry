@@ -1,3 +1,9 @@
+## 2026-10-30 — Atlas de Cortes: v34–v36, bizop a la estilista
+- Santiago corrigió la v31–v33: *"anda más por el bizop, dejá de hablar de enseñarle a tus empleadas, o cosas así"*. Se caen el V31 (la aprendiza) y el V32 (los tres sillones del salón); el V33 queda en pie.
+- Tres guiones nuevos, todos a ella y a su plata: la ventana de seis semanas de diciembre, el sillón lleno con la plata planchada (problema de carta) y el corte de transformación como la única publicidad gratis.
+- Regla nueva en `WIKI/guiones-y-anuncios.md`: el bizop le habla al que compra, nunca a su jefe ni al negocio visto desde arriba.
+- `OUTPUTS/2026-10-30-guiones-atlas-cortes-v34-v36.md`, copia en la carpeta de la oferta, portapapeles en RTF.
+
 ## 2026-10-30 — Atlas de Cortes: testeo del 30/10 y variables v31–v33
 - Captura de Santiago con 5 conjuntos en aprendizaje. **Las natives rinden el doble que los videos**: NATIVE 11 a $6,97 con ROAS 16,14 (una compra de $112,50, con bump u OTO) y NATIVE 10 a $7,37, contra $14,04 de "Are you" y $14,83 de "One copy".
 - Reconocidos: "One copy" = V27 de la tanda bizop del 29/10 · "Are you" = el hook de la landing "How many cuts are you turning down…". **Natives 9, 10 y 11 no están mapeadas** (las nuestras van de la 1 a la 7): se le pidió el dato.

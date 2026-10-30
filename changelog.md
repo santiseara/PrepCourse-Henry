@@ -1,3 +1,9 @@
+## 2026-10-30 — Piedras: natives 37 y 38
+- Escritas las dos opciones que habían quedado marcadas como las más llamativas de un vistazo en la lista del 29/10: el teléfono con nueve pedidos sin contestar (la demanda la desborda) y el cartel de feria dado vuelta con "SOLD OUT - TAKING ORDERS" a las 11:40.
+- Brechas casero/vendible **nuevas**, sin repetir las natives 27 a 36: el peso de la piedra y el alcance del aroma (37), que las doce piezas salgan hermanas y el amarilleo de ciertas fragancias (38).
+- Errores de negocio: producir de a un pedido por vez en vez de juntar la bandeja y dar fecha (37), y llevar todo suelto sin una sola caja de regalo (38).
+- Sin montos de ingreso, sin precio, sin URL en el cuerpo, sin caras, solo en inglés. `OUTPUTS/2026-10-30-natives-piedras-37-y-38.md`, copiadas al portapapeles en RTF. `WIKI/natives-ganadoras.md` actualizada.
+
 ## 2026-10-30 — Piedras: tanda v33, "más, mejores, más potentes"
 - Pedido después de la v32: *"Dame mas, mejores, mas potentes"*. Van 3 guiones nuevos (10, 11 y 12).
 - Diagnóstico: la v32 ya abría con la promesa, pero la promesa **describía el negocio**. La v33 abre con una **afirmación que choca** y se explica en la línea siguiente.

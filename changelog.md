@@ -1,3 +1,8 @@
+## 2026-10-30 — Atlas de Cortes: natives 8, 9 y 10 (variables de las ganadoras leídas de la cuenta)
+- Se identificó por MCP la cuenta de escalado de la oferta de pelo (`1791862825108056`, "Cuenta en Ingles 2", portfolio Reset FIT) y las tres natives que hoy puso en POCKET: **NATIVE 3 = nuestra native 1** (Rhonda, las once hojas), **NATIVE 8 = nuestra native 5** (Darlene, el maniquí) y **NATIVE 1 = una native corta de ~700 palabras que no es nuestra** (escena en el sillón, con precio y bonus).
+- `OUTPUTS/2026-10-30-natives-atlas-cortes-8-9-10.md` + `~/Desktop/atlas-cortes/anuncios/natives/2026-10-30-natives-tanda-4.md`: una variable de cada una (las 640 fotos de nucas; el difusor todavía en la bolsa; la corta del hush cut un martes a las 9:40).
+- Reglas nuevas en `WIKI/natives-ganadoras.md` y `WIKI/atlas-de-cortes.md`: en la oferta de pelo la native **corta** también vende (la tanda puede mezclar 2 largas + 1 corta) y el MCP sí lee la cuenta de escalado (lo del 23/10 valía para la de testeo, que sigue sin identificar).
+
 ## 2026-10-30 — Atlas de Cortes: producidos AT-V37, V38 y V39
 - Tres videos 9:16 con voz Sulafat y B-roll de TikTok: 34,0 s / 32,6 s / 28,4 s, en `~/Desktop/atlas-cortes/anuncios/`.
 - Dos trampas nuevas anotadas en `WIKI/atlas-de-cortes.md`: el anchor de la placa final con una palabra repetida **corta el video a la mitad sin avisar** (le pasó al V38 con "is"), y el techo real de un chip es ~28 caracteres (dos se salieron del borde y hubo que rehacer V38 y V39).

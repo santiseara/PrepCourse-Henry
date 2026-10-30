@@ -85,6 +85,19 @@ Primero los 4 de HeyGen; los 2 de voz en off van después.
   - De un clip largo salen **dos planos distintos** cambiando `ss` (`excel_033` a 4 s y 18 s, `accounting_002` a 8 s y 22 s). Clips usados: `anuncios/work/tiktoks/`.
   - Quedan **dos páginas con badge** (`ix_18` e `ix_38`) en V5: ésas sí las usa el ganador y son las que explican el mecanismo del índice. El resto es material real.
 
+### Sin una sola foto: los 2 de voz en off, versión final (2026-10-30)
+Santiago, viendo la tanda anterior: *"no me gusta que tenga los B-rolls de imágenes… sacá todas las imágenes, quiero que todo sea B-roll, todo video, atractivos. Los que pusiste están muy bien, quiero más de ese estilo"*.
+- **Ningún plano es foto.** Fuera las páginas dibujadas del índice (`ix_18`, `ix_38`), la placa de condiciones (`cl_terms`) y los recortes del libro sobre las fotos de los avatares (`bk_*`). `gfx_skool_vo.py` queda sin uso para estos dos.
+- **El índice ahora es una placa de texto encima del clip.** `edit_skool_vo.py` dibuja la caja blanca con el titular y la **pastilla naranja `PAGE NN`** pisando la esquina, y la superpone al plano que le toca. Es la firma del ganador en ese formato, pero sobre video real. Con `badge` suelto (sin número) sale solo la frase: así se resuelve "It starts at zero" en el V6.
+- **El editor ya no acepta fotos:** si un plano apunta a un `.png`/`.jpg`, corta con error. La regla queda cerrada en el código, no en la cabeza.
+- **Pool nuevo: 745 links de 7 tags, 70 clips bajados, 10 limpios.** Lo que sirvió: `#bookkeeping` (oficina de contabilidad real, planilla en inglés), `#adminwork` (escritorio con agenda y teclado, mostrador, oficina), `#invoice` (talonarios de facturas que se hojean), `#filing` (carpetas colgantes con separadores rotulados). Lo que **no** sirvió y no hay que volver a buscar: `#taxseason` (100% sketches con cartel quemado), `#officedesk` (showroom de muebles y desk setups gamer) y `#shopowner` (pibes de marcas de ropa armando pedidos).
+- **Dos descartes finos:** `excel_033` y `accounting_005` tienen la interfaz y el cartel **en español** ("La vida de un contador", "Precio COSTO"), y el ad es para mercado inglés. Se reemplazaron por `bookkeeping_002` (Google Sheets en inglés) y `filing_061`.
+- **`bookkeeping_002` va recortado `zoom 1.45` + `ybias 0.0`**: el subtítulo quemado vive abajo de todo, así se va entero.
+- **V5** (23,5 s, 6 planos): talonario de facturas → oficina con papeles `PAGE 18` → teclado y agenda `PAGE 24` → archivo colgante `PAGE 38` → persona tecleando `PAGE 7` → pila de papeles.
+- **V6** (28,2 s, 7 planos): manos con papel → mostrador → escritorio → agenda *"It starts at zero"* → separadores rotulados → oficina → talonario.
+- Planes en `OUTPUTS/scripts-vsl/gen_skool_vo_plans.py` (el pool y los dos guiones de planos en un solo archivo, para re-barajar rápido). Clips en `anuncios/work/tiktoks/`.
+- Higgsfield no se tocó: sigue en **19,35 créditos**.
+
 ## Lo que hace que aguante 43 días
 - **Vende tiempo y vigencia, nunca plata.** Cero montos de ingreso, cero "cambiá tu vida", cero bizop. Lo que promete es *"resolvé en minutos lo que hoy te lleva horas"* y *"no te quedes afuera"*. Es el mismo patrón anti-bloqueo de [[profesional-digital]] y [[solar-installer-pro]].
 - **El miedo es a quedarse atrás, no a la pobreza.** "Te va a reemplazar alguien que aprendió a usarla."

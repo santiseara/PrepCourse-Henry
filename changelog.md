@@ -1,3 +1,10 @@
+## 2026-10-30 — Skool AI: los 2 de voz en off sin una sola foto
+- Santiago: *"no me gusta que tenga los B-rolls de imágenes… sacá todas las imágenes, quiero que todo sea B-roll, todo video. Los que pusiste están muy bien, quiero más de ese estilo"*. Fuera las páginas dibujadas (`ix_18`, `ix_38`), la placa de condiciones y los recortes del libro.
+- **El índice pasó a ser una placa de texto encima del clip**: caja blanca con el titular y la pastilla naranja `PAGE NN` pisando la esquina (`png_badge` en `edit_skool_vo.py`). Sin número, sale solo la frase. **El editor ahora corta con error si un plano apunta a un `.png`/`.jpg`.**
+- Pool nuevo: **745 links de 7 tags, 70 clips bajados, 10 limpios**. Sirvieron `#bookkeeping`, `#adminwork`, `#invoice` y `#filing`. No sirvieron `#taxseason` (sketches), `#officedesk` (showrooms y desk setups) ni `#shopowner`.
+- Se cayeron `excel_033` y `accounting_005`: interfaz y cartel **en español** en un ad para mercado inglés. Regla nueva anotada en `WIKI/guiones-y-anuncios.md`.
+- `SK-V5.mp4` (23,5 s, 6 planos) y `SK-V6.mp4` (28,2 s, 7 planos) re-renderizados, 100 % video. Planes en `OUTPUTS/scripts-vsl/gen_skool_vo_plans.py`. Costo cero, Higgsfield intacto (19,35).
+
 ## 2026-10-29 — Herrero de Finde: la tanda V43–V48 rehecha sin una sola foto
 - Santiago: *"seguís poniendo fotos, tienen que ser todos de tiktok"*. **Regla nueva**: en un ad de voz en off ningún plano es una foto fija (ni fichas, ni hojas del producto, ni grabaciones de pantalla). El visual es 100 % B-roll de TikTok y el producto lo sostienen la voz y las placas de texto. Anotada en `WIKI/guiones-y-anuncios.md` y en `WIKI/herrero-de-finde.md`.
 - `anuncios/work/plans/gen8.py` y **`gen9.py`**: pool solo de TikTok, `anchors: []`, sin stills ni demos de pantalla. Cada video pasó de ~6 fotos + 7 clips a **12–14 clips seguidos**.

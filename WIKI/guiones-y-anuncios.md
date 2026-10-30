@@ -83,6 +83,9 @@
 
 - **2026-10-29 · Cero fotos en el video: todo B-roll de TikTok.** Después de la tanda V43–V48 de [[herrero-de-finde]]: *"seguís poniendo fotos, tienen que ser todos de tiktok"*. Regla: en un ad de voz en off **ningún plano es una foto fija**, ni las propias (fichas, hojas del producto, mockups, catálogos) ni las grabaciones de pantalla. El visual es **100 % clip de TikTok del nicho**; el producto y los números se sostienen con la **voz** y con **placas de texto encima del video**. Si el pool no alcanza para cubrir el guion entero, se bajan más clips, no se tapa con fotos.
 
+- **2026-10-30 · El índice del producto se cuenta con una placa, no con una hoja dibujada.** En [[skool-ai]], después de sacar las fotos: el ad de voz en off del ganador muestra páginas numeradas del libro, y la tentación es dibujarlas. No. Va una **caja de texto con el titular y la pastilla naranja `PAGE NN` encima del clip de TikTok**: se entiende igual, y el fondo sigue siendo material real. Vale para cualquier oferta con un producto que no se puede filmar.
+- **2026-10-30 · Idioma del material: el cartel y la interfaz también hablan.** Un clip con la planilla en español o con el cartel *"La vida de un contador"* no entra en un ad para mercado inglés, aunque el plano sea perfecto. Se revisa el **idioma de lo que se lee en pantalla**, no solo que no haya carteles tapando.
+
 ## Relacionado
 [[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 

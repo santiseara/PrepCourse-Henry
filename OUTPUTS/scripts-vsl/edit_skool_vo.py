@@ -1,13 +1,15 @@
 """Ads de VOZ EN OFF de Skool AI (2026-10-29). Misma estetica que edit_skool.py (hook en caja blanca,
 subtitulo de una palabra, placa final, cama de Herrero a -8 dB), pero sin avatar: la linea de tiempo
-son planos del producto encadenados, como los de voz en off del ganador.
+son clips de TikTok encadenados. NO entra ni una foto fija (regla del 29/10): lo que antes era una
+hoja dibujada del producto ahora es una PLACA DE TEXTO con el numero de pagina ENCIMA del clip.
 A diferencia del de avatar, aca SI se recortan los silencios y la voz va a speed 1.30 (regla del 26/10).
 Uso: python3 edit_skool_vo.py plan.json salida.mp4
 plan.json:
  "vo": "vo/V5.wav", "script": "V5.txt", "speed": 1.30, "silence": [0.26, 0.12], "lang": "en",
  "hook": "...", "hook_dur": 3.5,
- "pages": {"ix_18": "vo_pages/ix_18.png", ...},
- "shots": [[null, 0, "bk_desk"], ["files", 0, "ix_18"], ...],   # palabra de arranque, ocurrencia, imagen
+ "pages": {"excel": {"src": "tt/cand/excel_033.mp4", "ss": 4.0, "zoom": 1.2, "ybias": 1.0}, ...},
+ "shots": [[null, 0, "desk"], ["files", 0, "excel", {"badge": 18, "head": "Ask about your own files"}], ...]
+   # palabra de arranque, ocurrencia, clip y (opcional) la placa de pagina que va encima de ese plano
  "end": {"sub": "...", "cta": "..."}, "music": "...", "music_db": -8, "capy": 1430
 """
 import os, re, sys, json, subprocess, difflib, math
@@ -65,45 +67,41 @@ def wt(word, occ=0):
 
 # 3) los planos: cada uno arranca en su palabra y dura hasta el siguiente
 marks = []
-for word, occ, key in P['shots']:
-    if word is None: marks.append([0.0, key]); continue
+for sh in P['shots']:
+    word, occ, key = sh[0], sh[1], sh[2]
+    badge = sh[3] if len(sh) > 3 else None
+    if word is None: marks.append([0.0, key, badge]); continue
     w = wt(word, occ)
     if not w: continue
-    marks.append([max(0.0, w[0] - 0.12), key])
+    marks.append([max(0.0, w[0] - 0.12), key, badge])
 marks.sort(key=lambda m: m[0])
 shots = []
-for i, (t0, key) in enumerate(marks):
+for i, (t0, key, badge) in enumerate(marks):
     t1 = marks[i + 1][0] if i + 1 < len(marks) else L
     if t1 - t0 < 0.5:
         print(f'aviso: el plano {key} dura {t1-t0:.2f}s, se saltea'); continue
-    shots.append((t0, t1, key))
-print('planos:', ' '.join(f'{k}:{t1-t0:.1f}s' for t0, t1, k in shots))
+    shots.append((t0, t1, key, badge))
+print('planos:', ' '.join(f'{k}:{t1-t0:.1f}s' for t0, t1, k, _ in shots))
 
 parts = []
-for n, (t0, t1, key) in enumerate(shots):
+for n, (t0, t1, key, _b) in enumerate(shots):
     d_ = t1 - t0; pc = f'{tmp}/s{n:02d}.mp4'
     c = P['pages'][key]
     if isinstance(c, str): c = {'src': c}
     src = F(c['src'])
-    if src.lower().endswith(('.png', '.jpg', '.jpeg')):      # imagen fija: zoom lento
-        z = f"(1+0.07*t/{d_:.3f})" if n % 2 == 0 else f"(1.07-0.07*t/{d_:.3f})"
-        vf = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},"
-              f"scale=w='{2*W}*{z}':h=-2:eval=frame:flags=bicubic,crop={2*W}:{2*H}:(iw-{2*W})/2:(ih-{2*H})/2,"
-              f"scale={W}:{H}:flags=lanczos,setsar=1,format=yuv420p")
-        run([FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d_:.3f}', '-i', src,
-             '-filter_complex', vf, '-t', f'{d_:.3f}', '-r', str(FPS),
-             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
-    else:                                                     # clip de TikTok: tramo real, sin zoom falso
-        ss = c.get('ss', 0.0)
-        avail = max(0.3, dur(src) - ss)
-        slow = max(1.0, d_ / avail)                           # si el tramo es corto, se estira apenas
-        z0 = c.get('zoom', 1.0); yb = c.get('ybias', 0.5)
-        vf = (f"setpts={slow:.4f}*(PTS-STARTPTS),fps={FPS},"
-              f"scale=w='ceil(max({W}/iw,{H}/ih)*iw*{z0}/2)*2':h=-2:flags=lanczos,"
-              f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},setsar=1,format=yuv420p")
-        run([FF, '-v', 'error', '-y', '-ss', str(ss), '-t', f'{min(avail, d_ / slow) + 0.1:.3f}', '-i', src,
-             '-an', '-vf', vf, '-t', f'{d_:.3f}',
-             '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
+    if src.lower().endswith(('.png', '.jpg', '.jpeg')):
+        # regla 29/10: en voz en off no entra ni una foto fija, todo es B-roll de TikTok
+        raise SystemExit(f'ERROR: "{key}" es una foto ({os.path.basename(src)}). Los planos son clips, no fotos.')
+    ss = c.get('ss', 0.0)
+    avail = max(0.3, dur(src) - ss)
+    slow = max(1.0, d_ / avail)                           # si el tramo es corto, se estira apenas
+    z0 = c.get('zoom', 1.0); yb = c.get('ybias', 0.5)
+    vf = (f"setpts={slow:.4f}*(PTS-STARTPTS),fps={FPS},"
+          f"scale=w='ceil(max({W}/iw,{H}/ih)*iw*{z0}/2)*2':h=-2:flags=lanczos,"
+          f"crop={W}:{H}:(iw-{W})/2:(ih-{H})*{yb},setsar=1,format=yuv420p")
+    run([FF, '-v', 'error', '-y', '-ss', str(ss), '-t', f'{min(avail, d_ / slow) + 0.1:.3f}', '-i', src,
+         '-an', '-vf', vf, '-t', f'{d_:.3f}',
+         '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', pc])
     parts.append(pc)
 open(f'{tmp}/all.txt', 'w').write(''.join(f"file '{p}'\n" for p in parts))
 run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/all.txt', '-c', 'copy', f'{tmp}/cat.mp4'])
@@ -136,6 +134,33 @@ def png_hook(txt, path):
         d.text(((W - lw[i]) / 2, y0 + 22 + i * 74), l, font=f, fill=NAVY)
     im.save(path)
 
+def png_badge(num, head, path):
+    """La placa de pagina del ganador, pero ENCIMA del clip: caja blanca con el titulo y
+    una pastilla naranja 'PAGE NN' pisando la esquina. Reemplaza a la hoja dibujada (29/10)."""
+    im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im); f = font(54, FONT_B)
+    words, lines, cur = head.upper().split(), [], ''
+    for w_ in words:
+        t_ = (cur + ' ' + w_).strip()
+        if d.textlength(t_, font=f) > 760 and cur: lines.append(cur); cur = w_
+        else: cur = t_
+    lines.append(cur)
+    lw = [d.textlength(l, font=f) for l in lines]
+    top = 46 if num else 20                      # con badge, la primera linea arranca mas abajo
+    bw, bh = max(max(lw) + 72, 620), len(lines) * 70 + top + 24
+    x0, y0 = (W - bw) / 2, 258
+    d.rounded_rectangle((x0 + 7, y0 + 10, x0 + bw + 7, y0 + bh + 10), 18, fill=(0, 0, 0, 110))
+    d.rounded_rectangle((x0, y0, x0 + bw, y0 + bh), 18, fill=(255, 255, 255, 248))
+    for i, l in enumerate(lines):
+        d.text(((W - lw[i]) / 2, y0 + top + i * 70), l, font=f, fill=NAVY)
+    if not num: im.save(path); return            # placa sin numero: solo la frase
+    fb = font(44); t = f'PAGE {num}'
+    pw = d.textlength(t, font=fb) + 62
+    px, py = x0 + bw - pw + 16, y0 - 42      # la pastilla pisa el borde, nunca el texto
+    d.rounded_rectangle((px + 5, py + 8, px + pw + 5, py + 88), 40, fill=(0, 0, 0, 120))
+    d.rounded_rectangle((px, py, px + pw, py + 80), 40, fill=ORANGE + (255,))
+    d.text((px + 31, py + 17), t, font=fb, fill=NAVY)
+    im.save(path)
+
 def png_end(o, path):
     im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im)
     d.rectangle((0, 0, W, H), fill=NAVY + (242,))
@@ -165,6 +190,11 @@ def png_end(o, path):
 ovs = []
 if P.get('hook'):
     png_hook(P['hook'], f'{tmp}/o_hook.png'); ovs.append((f'{tmp}/o_hook.png', 0.0, P.get('hook_dur', 3.5)))
+for n, (t0, t1, key, b) in enumerate(shots):          # las placas de pagina, encima del clip que les toca
+    if not b: continue
+    pth = f'{tmp}/o_bg{n}.png'; png_badge(b.get('badge'), b['head'], pth)
+    ovs.append((pth, t0 + 0.10, max(t0 + 0.9, t1 - 0.10)))
+
 END = P.get('end'); end_t = L
 if END:
     end_t = max(0.0, L - P.get('end_dur', 2.4))

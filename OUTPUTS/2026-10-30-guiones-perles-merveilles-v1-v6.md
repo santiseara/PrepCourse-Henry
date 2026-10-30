@@ -47,3 +47,12 @@ Some families bring out the same nativity every December for thirty years. This 
 Guion 6 - espanol
 
 Hay familias que sacan el mismo pesebre cada diciembre durante treinta anos. Este son doce figuras en mostacillas: el nino en su pesebre, Maria, Jose, los tres reyes magos, el pastor, la oveja, el burro, el buey, la estrella y el establo. Y lo haces una sola vez. Cada figura esta explicada igual que todas las demas: pasos numerados, las cuentas contadas y el recorrido de los dos hilos, con puntos de control para que la forma se sostenga antes de seguir. El pesebre viene gratis adentro de la edicion especial de Perles Merveilles 3D, junto con sesenta animales en mostacillas y el resto de los modelos de Navidad. Hacelo este ano y tu mesa lo tiene los proximos veinte. Mira la edicion especial aca abajo.
+
+Producidos el 30/10 en ~/Desktop/perles-merveilles-3d/anuncios/ (9:16, voz Sulafat a 1,30, B-roll 100% TikTok)
+
+PM-V1-start-with-the-snail.mp4 - 39,0 s - 12 planos
+PM-V2-it-was-on-the-paper.mp4 - 41,6 s - 13 planos
+PM-V3-why-are-you-still-buying.mp4 - 35,4 s - 11 planos
+PM-V4-the-step-nobody-explains.mp4 - 33,4 s - 11 planos
+PM-V5-not-sold-in-any-shop.mp4 - 34,7 s - 10 planos
+PM-V6-the-nativity-that-comes-back.mp4 - 35,8 s - 12 planos

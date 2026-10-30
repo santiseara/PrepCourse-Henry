@@ -1,3 +1,11 @@
+## 2026-10-30 — Perles Merveilles 3D: tanda 1 producida (6 videos)
+- Oferta nueva en inglés (83 figuras en mostacillas 3D, US$ 24,65). Guiones V1-V6 del 30/10 llevados a video: `PM-V1-start-with-the-snail.mp4` a `PM-V6-the-nativity-that-comes-back.mp4` en `~/Desktop/perles-merveilles-3d/anuncios/`, de 33 a 42 s, 9:16.
+- Voz **Sulafat** (AI Studio, Gemini 3.1 Flash TTS Preview, Pace Natural), los 6 MD5 distintos; `speed 1.30`, `silence [0.26, 0.12]`.
+- Visual **100% clips de TikTok**: 28 bajados, 24 en el pool después de descartar 4 (subtítulos quemados, cajas de comentarios y marca de agua ajena).
+- Editor nuevo `OUTPUTS/scripts-vsl/edit_perles.py` (paleta rojo/dorado/verde pino, placa final PERLES MERVEILLES 3D) y planes en `anuncios/work/plans/gen.py`.
+- Página nueva `WIKI/perles-merveilles-3d.md` con la oferta, la DNA del original francés y **dos trampas nuevas**: el pool se come la tanda si no se topea por clip (ahora hay tope de 8 recortes y familias visuales) y la marca de agua que no se ve en la hoja de contactos chica.
+- También: los intermedios del editor ya no se escriben en el Escritorio (iCloud le cortaba la lectura a ffmpeg con "Operation timed out"); van al scratchpad con `VSL_TMP`.
+
 ## 2026-10-30 — Herrero de Finde: variables V52-V54 (segunda vuelta)
 - Tres variables más sobre los mismos tres cuerpos ganadores, con el segundo hook de cada uno: `OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md`.
 - Producidos `HF-V52-cada-auto-en-la-calle.mp4`, `HF-V53-esa-cocina-no-discute.mp4` y `HF-V54-ese-te-aviso.mp4` con `gen11.py` y voz Enzo a 1,30.

@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-29.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-30.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -20,6 +20,7 @@
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
 - 🆕 [[herrero-de-finde]] — Oferta AR ($14.990): planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga, V7 ganador con CPA de 1 USD y **producto propio: 1.485 planos y 12 bonus generados por código (un PDF de 4.866 páginas + 12 archivos)**.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
+- 🆕 [[perles-merveilles-3d]] — Oferta nueva **en inglés** (US$ 24,65): 83 figuras en mostacillas 3D con el patrón explicado paso a paso, clon de una oferta francesa con 6 ads. Ángulo fuerte de temporada: Navidad y el pesebre de 12 figuras. Tanda 1 de 6 videos producida.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
@@ -99,6 +100,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-30 — Perles Merveilles 3D: tanda 1, guiones V1-V6 y los 6 videos](../OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md) — inglés y español con voseo, con los seis mp4 producidos (33 a 42 s) · ver [[perles-merveilles-3d]]
 - [2026-10-30 — Herrero: variables V52-V54 (segunda vuelta sobre los mismos cuerpos)](../OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md) — el segundo hook de cada cuerpo ganador: la demanda a la vista en la cuadra, quién paga la isla de cocina y el "te aviso" que se va a otro lado · ver [[herrero-de-finde]]
 - [2026-10-30 — Herrero: variables V49-V51 sobre los tres cuerpos que vendieron](../OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md) — los cuerpos del V48 (cochera), V47 (isla de cocina) y V46 (escalera) textuales, con hook nuevo, más el banco de hooks y la lectura del testeo del 30/10 · ver [[herrero-de-finde]]
 - [2026-10-29 · Análisis de Udemia.IA y el mercado inglés de IA (Skool AI)](../OUTPUTS/2026-10-29-analisis-udemia-ia-mercado-ingles.md) — 225 ads relevados, 18 videos transcriptos, los 3 formatos y la oportunidad en inglés.

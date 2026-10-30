@@ -1,3 +1,9 @@
+## 2026-10-30 — Herrero de Finde: testeo del 30/10 y variables V49-V51
+- Lectura de la captura de Meta: de la tanda V43-V48 vendieron tres conjuntos el primer día — **CJTO 5 (V47 isla, 2 compras a 4,00)**, CJTO 6 (V48 cochera, 1 a 5,53) y CJTO 4 (V46 escalera, 1 a 6,85). Los tres que no vendieron abren con promesa de ingreso o con la objeción del principiante.
+- `OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md`: tres variables con el **cuerpo textual** de los tres que vendieron y **hook nuevo** (pedido de Santiago), más banco de hooks. Edición v4, la misma de la tanda que corrió.
+- Producidos `HF-V49-la-maquina-mas-cara.mp4`, `HF-V50-200-mil-en-900-mil.mp4` y `HF-V51-no-te-pagan-por-soldar.mp4` en `~/Desktop/herrero-de-finde/anuncios/`, con `anuncios/work/plans/gen10.py` y voz Enzo a 1,30.
+- Reglas nuevas: en `WIKI/renovacion-de-creativos.md`, **dónde termina el hook y empieza el cuerpo validado** (la frase que explica el hook se va con el hook; la bisagra se mira siempre); en `WIKI/vsl-reglas-de-armado.md`, **Gemini 3.8 Flash TTS da una sola generación por carga de página** (Run queda `aria-disabled`, hay que recargar y rehacer voz + Style).
+
 ## 2026-10-30 — Atlas de Cortes: natives 8, 9 y 10 (variables de las ganadoras leídas de la cuenta)
 - Se identificó por MCP la cuenta de escalado de la oferta de pelo (`1791862825108056`, "Cuenta en Ingles 2", portfolio Reset FIT) y las tres natives que hoy puso en POCKET: **NATIVE 3 = nuestra native 1** (Rhonda, las once hojas), **NATIVE 8 = nuestra native 5** (Darlene, el maniquí) y **NATIVE 1 = una native corta de ~700 palabras que no es nuestra** (escena en el sillón, con precio y bonus).
 - `OUTPUTS/2026-10-30-natives-atlas-cortes-8-9-10.md` + `~/Desktop/atlas-cortes/anuncios/natives/2026-10-30-natives-tanda-4.md`: una variable de cada una (las 640 fotos de nucas; el difusor todavía en la bolsa; la corta del hush cut un martes a las 9:40).

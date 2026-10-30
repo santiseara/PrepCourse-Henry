@@ -99,6 +99,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-30 — Herrero: variables V49-V51 sobre los tres cuerpos que vendieron](../OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md) — los cuerpos del V48 (cochera), V47 (isla de cocina) y V46 (escalera) textuales, con hook nuevo, más el banco de hooks y la lectura del testeo del 30/10 · ver [[herrero-de-finde]]
 - [2026-10-29 · Análisis de Udemia.IA y el mercado inglés de IA (Skool AI)](../OUTPUTS/2026-10-29-analisis-udemia-ia-mercado-ingles.md) — 225 ads relevados, 18 videos transcriptos, los 3 formatos y la oportunidad en inglés.
 - [2026-10-29 — Keywords de Brasil: renda extra, emagrecimento, manifestação y relacionamentos](../OUTPUTS/2026-10-29-keywords-brasil-4-nichos.md) — 4 bancos para la Biblioteca de Anuncios: la capa 3 de renda extra (negativado, dinero dormido, empleo, marketplace, leilão), emagrecimento por síntoma y la ola del mounjaro natural, la capa católica y de señales de manifestação, y el banco nuevo de relacionamentos (reconquista, pareja en crisis, juego de a dos, masculino) · ver [[caza-de-ofertas]]
 - [2026-10-29 — Guiones de Solar Installer Pro, tanda 1](../OUTPUTS/2026-10-29-guiones-solar-installer-pro.md) — 6 guiones EN + ES para el mercado inglés, uno por ángulo (el orden que nadie te da, los instaladores son el cuello de botella, te dejan apuntes vs. una cotización, dimensionar es el oficio, la otra mitad arranca cuando dicen que sí, y del día uno al día veinte) · ver [[solar-installer-pro]]

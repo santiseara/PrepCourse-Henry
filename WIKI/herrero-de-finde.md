@@ -234,6 +234,28 @@ Al sacar las fotos, el B-roll pasó a cubrir el 100 % del video y aparecieron tr
 - Quedan **336 recortes** de 3,4 s sobre 24 clips, para 12–14 planos por video.
 - **Regla:** el `cropdetect` encuentra las bandas negras solo; los carteles quemados y las caras hay que mirarlos. Las dos cosas se revisan **antes** de renderizar, no después, y la hoja de contactos de cada clip se guarda con el tiempo estampado para poder vetar tramos exactos.
 
+## El testeo del 30/10 y las variables V49-V51
+
+Los seis de la V43-V48 corrieron como CJTO 1 a 6 del 30/10, ABO a 10 dólares (el 5 a 20), con 5 a 8 dólares gastados cada uno. Captura que pasó Santiago:
+
+| Conjunto | Guion | Compras | CPA | Gastado |
+|---|---|---|---|---|
+| CJTO 5 · "Pensá en…" | V47 isla de cocina | **2** | **4,00** | 7,99 |
+| CJTO 6 · "Te lo…" | V48 garantía invertida | 1 | 5,53 | 5,53 |
+| CJTO 4 · "Los planos…" | V46 planos gratis | 1 | 6,85 | 6,85 |
+| CJTO 3 · "Y si…" | V45 el curso adentro | — | — | 6,14 |
+| CJTO 2 · "Tu primer…" | V44 primer millón | — | — | 5,41 |
+| CJTO 1 · "Viernes a…" | V43 cronología | — | — | 5,34 |
+
+- **Vendieron tres de seis el primer día**, con frecuencia de 1,07 a 1,13 y alcance de ~1.000 por conjunto: son señales de un día, no de un ganador confirmado, pero alcanzan para elegir qué cuerpo renovar.
+- **Lo que separa a los tres que vendieron:** los tres muestran **un trabajo caro y concreto** (isla 725-940 mil, cochera 1,6-2,08 M, escalera 1,15-1,495 M) y meten la objeción adentro (garantía, "los planos gratis se cortan"). Los tres que no vendieron abren con **promesa de ingreso** (primer millón, viernes-martes) o con la **objeción del principiante** (el curso incluido): prometen plata antes de mostrar por qué.
+- **Variables del 30/10 (V49-V51):** Santiago pidió *"respetemos los cuerpos de los ganadores, de aquellos que vendieron, y cambiemos solamente hooks"*. Tres variables, una por cuerpo, con la **misma edición v4** de la tanda anterior (él aclaró que los ajustes de edición que había mandado eran de otro chat: *"tomá el primer video que me mandaste con esa edición"*).
+- **Guiones:** `OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md`. V49 = cuerpo del V48 con *"la máquina más cara que tenés en tu casa se la pasa soldando rejas de veinte mil pesos"*; V50 = cuerpo del V47 con *"doscientos mil pesos de hierro se convierten en novecientos mil en dos días de laburo"*; V51 = cuerpo del V46 con *"nadie te paga un millón y medio por soldar, te lo paga por saber en qué ángulo va la zanca"*. Los tres siguen la regla del 30/10 de [[guiones-y-anuncios]]: la primera línea afirma algo que suena imposible y recién la segunda lo explica.
+- **Dónde empieza el cuerpo validado:** en la ficha del trabajo ("Esta es una cochera…", "Esto es una isla…", "Esta es una escalera…") y de ahí al CTA va **textual**. Lo único que se sacó fue la apertura vieja y, en el V46, su segunda frase (*"el dibujo llega hasta la mitad…"*), que era parte del hook enemigo y sin él quedaba sin referencia.
+- **Voces:** Enzo otra vez, mismo Style rioplatense, 1,30. **Con Gemini 3.8 Flash TTS ahora va una sola generación por carga de página:** después de la primera, el botón Run queda con `aria-disabled="true"` y ni el clic ni `cmd+Return` disparan. Hay que **recargar y rehacer voz + Style para cada guion**. (En la tanda del 29/10 habían salido seis de una sola carga.)
+- **Planes:** `anuncios/work/plans/gen10.py` (copia de `gen9.py` con los tres planes nuevos), mismo pool limpio de 336 recortes, misma cama `bed_A` y `usage.json` compartido para no repetir recortes con la tanda anterior (backup en `usage_pre_v49.json`).
+- **Entregables:** `HF-V49-la-maquina-mas-cara.mp4`, `HF-V50-200-mil-en-900-mil.mp4`, `HF-V51-no-te-pagan-por-soldar.mp4`.
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

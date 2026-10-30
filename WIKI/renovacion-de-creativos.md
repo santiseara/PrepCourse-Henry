@@ -95,6 +95,14 @@ Herrero de Finde: seis renovaciones del V7 (V22–V27) no movieron el CPA. Santi
 - **El ad y la landing tienen que prometer lo mismo.** El cuerpo validado vendía una herramienta barata de taller y la landing abría con "Hacé tu primer $1.000.000": dos niveles de conciencia distintos y un `landing → checkout` de 9,21 %. Cuando la renovación no mueve el CPA, mirar el **message match** antes de escribir otro hook ([[diagnostico-de-checkout]], [[herrero-de-finde]]).
 - **El cuerpo "no se toca" vale mientras el ganador siga vendiendo.** Si ya se renovó una vez sin resultado, el siguiente paso es apuntar el cuerpo a la promesa de la landing, escribir cada guion con sus propias palabras y avisarlo.
 
+## Dónde termina el hook y empieza el cuerpo (2026-10-30)
+
+Herrero de Finde, variables V49-V51 sobre los tres cuerpos que vendieron el 30/10.
+
+- **El hook no son "los primeros 5 segundos" contados con cronómetro: es la apertura completa**, incluida la frase que la explica. En el V46 el hook era *"los planos gratis de internet se cortan justo en el paso difícil"* **más** *"el dibujo llega hasta la mitad y la unión que no sabés hacer queda afuera"*: la segunda frase solo existe para sostener la primera, y si se deja pegada a un hook nuevo queda hablando de algo que nadie dijo.
+- **El cuerpo validado arranca donde arranca el producto**, que en esta oferta es la ficha del trabajo ("Esta es una cochera a un agua de tres por cinco metros…"). De ahí al CTA se copia **textual**.
+- **La frase bisagra se mira siempre.** El V48 abría con la garantía y seguía con *"con eso en la mano, mirá lo que hay adentro"*: esa bisagra se va con el hook viejo. Si una variable obliga a tocar más de la bisagra, se avisa aparte.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

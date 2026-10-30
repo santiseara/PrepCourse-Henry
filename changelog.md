@@ -1,3 +1,9 @@
+## 2026-10-30 — Atlas de Cortes: producidos AT-V37, V38 y V39
+- Tres videos 9:16 con voz Sulafat y B-roll de TikTok: 34,0 s / 32,6 s / 28,4 s, en `~/Desktop/atlas-cortes/anuncios/`.
+- Dos trampas nuevas anotadas en `WIKI/atlas-de-cortes.md`: el anchor de la placa final con una palabra repetida **corta el video a la mitad sin avisar** (le pasó al V38 con "is"), y el techo real de un chip es ~28 caracteres (dos se salieron del borde y hubo que rehacer V38 y V39).
+- AI Studio volvió a bajar el audio anterior en el tercero; se detectó por MD5 y se regeneró.
+- Hojas de contactos revisadas a 1 cuadro cada 2 s: limpias.
+
 ## 2026-10-30 — Atlas de Cortes: v37–v39, hooks reescritos
 - Rechazo de la v34–v36 por hooks débiles. Aperturas nuevas que chocan: "sos la cosa más cara de tu salón y hacés el trabajo más barato", "el corte que te pidió tiene nombre, lista de espera y precio, vos la mandaste con capas largas" y "nadie subió nunca la foto de un despunte".
 - Regla nueva en `WIKI/guiones-y-anuncios.md`: hook débil = primera línea que describe; la buena afirma algo casi imposible y se explica en la línea siguiente. Es la misma corrección que la de piedras de hoy, ahora generalizada.

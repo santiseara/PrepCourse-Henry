@@ -155,6 +155,16 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **Trampa nueva del editor:** un anchor con `occ` que no existe se descarta en silencio con el aviso `"page" n.º 1 no aparece`, y esa placa de producto **no entra en el video**. Pasó con el V29 (P_pixie). Y un anchor que cae sobre la última frase **choca con la placa final y se ignora** (la placa final gana). Antes de renderizar, contar las ocurrencias reales de cada palabra y no anclar placas en la frase del CTA.
 - Nombres para subir: **29/10 - 1** (V27), **29/10 - 2** (V28), **29/10 - 3** (V29).
 
+## 🎬 Videos AT-V37, V38 y V39 (30/10) — producidos
+- **`~/Desktop/atlas-cortes/anuncios/AT-V37.mp4`** (34,0 s · 14 planos) — "the cheapest work in your salon".
+- **`AT-V38.mp4`** (32,6 s · 13 planos) — "she never booked again".
+- **`AT-V39.mp4`** (28,4 s · 12 planos) — "nobody ever posted a trim".
+- Los tres 9:16, voz **Sulafat** (AI Studio, Gemini 3.8 Flash TTS, los tres MD5 verificados distintos: 43,8 / 41,8 / 36,6 s de crudo), `speed 1.30`, `silence [0.26, 0.12]`, `edit_atlas.py`, planes en `material/plans/gen.py` (seeds 370, 380, 390). Hojas de contactos a 1 cuadro cada 2 s revisadas: sin texto quemado ajeno, sin caras hablando a cámara, chips dentro del borde y placa final con su CTA propio.
+- 🆕 **Trampa nueva del editor (30/10): el anchor de la placa final con una palabra repetida corta el video a la mitad, sin aviso.** El V38 cerraba con `END('is.')` y "is" también aparecía en "that money **is** remembering": la placa final se ancló ahí y el editor hizo `cuts = cuts[:n+1]`, dejando el video en **8 planos de 4,1 s** y sin una sola página del producto. No da error, solo salen menos planos. Regla: la palabra del `END` tiene que ser **única en el guion** (verificarlo con el texto normalizado, no a ojo), y si no lo es, va con `occ`.
+- 🆕 **El techo real de un chip es ~28 caracteres, no 30.** "She never complains. She leaves." (32) y "Checked in seconds, mid-service" (31) se salían del borde derecho; quedaron "No complaint. She just goes." (28) y "In seconds, mid-service" (23). "Hush · wolf · butterfly · bixie" (31) entra porque los separadores son angostos.
+- 🆕 **En AI Studio el botón de descarga vuelve a bajar el audio anterior** si se aprieta apenas termina: el V39 bajó el mismo WAV que el V38 (MD5 idéntico). Lo que lo detecta sin escuchar: comparar la **duración** del player contra la del audio anterior antes de descargar, y el MD5 contra todos los de la tanda.
+- Nombres para subir: **30/10 - 1** (V37), **30/10 - 2** (V38), **30/10 - 3** (V39).
+
 ## 🎬 Guiones v37 a v39 (30/10) — los hooks reescritos
 > Santiago rechazó la v34–v36: *"esos hooks son muy débiles, armame más interesantes, más llamativos"*. Las tres aperturas **describían** una situación. Las nuevas **afirman algo que choca** y se explican recién en la línea siguiente; la sustancia bizop entra después del golpe.
 - **V37 "You are the most expensive thing in your salon, and you spend the whole day doing the cheapest work in it"** — el cuerpo del V35 (carta barata contra cortes con nombre) con la apertura que le faltaba.

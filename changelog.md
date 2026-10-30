@@ -1,3 +1,8 @@
+## 2026-10-30 — Herrero de Finde: variables V52-V54 (segunda vuelta)
+- Tres variables más sobre los mismos tres cuerpos ganadores, con el segundo hook de cada uno: `OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md`.
+- Producidos `HF-V52-cada-auto-en-la-calle.mp4`, `HF-V53-esa-cocina-no-discute.mp4` y `HF-V54-ese-te-aviso.mp4` con `gen11.py` y voz Enzo a 1,30.
+- Regla nueva en `WIKI/herrero-de-finde.md`: si el hook nombra el trabajo, el ancla del TAG va con `occ=1` o la placa pisa la apertura.
+
 ## 2026-10-30 — Herrero de Finde: testeo del 30/10 y variables V49-V51
 - Lectura de la captura de Meta: de la tanda V43-V48 vendieron tres conjuntos el primer día — **CJTO 5 (V47 isla, 2 compras a 4,00)**, CJTO 6 (V48 cochera, 1 a 5,53) y CJTO 4 (V46 escalera, 1 a 6,85). Los tres que no vendieron abren con promesa de ingreso o con la objeción del principiante.
 - `OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md`: tres variables con el **cuerpo textual** de los tres que vendieron y **hook nuevo** (pedido de Santiago), más banco de hooks. Edición v4, la misma de la tanda que corrió.

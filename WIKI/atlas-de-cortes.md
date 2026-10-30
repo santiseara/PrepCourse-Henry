@@ -155,6 +155,13 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **Trampa nueva del editor:** un anchor con `occ` que no existe se descarta en silencio con el aviso `"page" n.º 1 no aparece`, y esa placa de producto **no entra en el video**. Pasó con el V29 (P_pixie). Y un anchor que cae sobre la última frase **choca con la placa final y se ignora** (la placa final gana). Antes de renderizar, contar las ocurrencias reales de cada palabra y no anclar placas en la frase del CTA.
 - Nombres para subir: **29/10 - 1** (V27), **29/10 - 2** (V28), **29/10 - 3** (V29).
 
+## 🎬 Guiones v37 a v39 (30/10) — los hooks reescritos
+> Santiago rechazó la v34–v36: *"esos hooks son muy débiles, armame más interesantes, más llamativos"*. Las tres aperturas **describían** una situación. Las nuevas **afirman algo que choca** y se explican recién en la línea siguiente; la sustancia bizop entra después del golpe.
+- **V37 "You are the most expensive thing in your salon, and you spend the whole day doing the cheapest work in it"** — el cuerpo del V35 (carta barata contra cortes con nombre) con la apertura que le faltaba.
+- **V38 "The cut she asked for has a name, a waiting list and a price. You sent her home with long layers"** — fusiona el V33 (la clienta entera que se va: color, brushing y rebook) con la demanda por nombre del V18. Cierra con "a dos cuadras ya le están diciendo que sí".
+- **V39 "Nobody in the history of the world has ever posted a photo of a trim"** — el corte de transformación como la única publicidad gratis, ahora con hook corto y punzante. Número único: 200 mujeres.
+- `OUTPUTS/2026-10-30-guiones-atlas-cortes-v37-v39.md` y `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v37-v39.md`. Nombres para subir: **30/10 - 1, 2 y 3**.
+
 ## 🎬 Guiones v34 a v36 (30/10) — bizop a la estilista, no al salón
 > Corrección de Santiago a la v31–v33: *"anda más por el bizop, dejá de hablar de enseñarle a tus empleadas, o cosas así"*. **Se caen el V31 (la aprendiza) y el V32 (los tres sillones).** El público de dueña de salón y todo lo que suene a capacitar o entrenar a alguien queda afuera de esta oferta: el ad le habla a la estilista como dueña de su propia agenda. El V33 se mantiene (le habla a ella y a la plata).
 - **V34 "The highest paying six weeks of your year"** — la ventana de diciembre: todas quieren un cambio antes de las fiestas y lo piden por nombre; si no están en tu carta, hacés mantenimiento a precio de mantenimiento. Número único: seis semanas.

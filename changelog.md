@@ -1,3 +1,8 @@
+## 2026-10-30 — Atlas de Cortes: v37–v39, hooks reescritos
+- Rechazo de la v34–v36 por hooks débiles. Aperturas nuevas que chocan: "sos la cosa más cara de tu salón y hacés el trabajo más barato", "el corte que te pidió tiene nombre, lista de espera y precio, vos la mandaste con capas largas" y "nadie subió nunca la foto de un despunte".
+- Regla nueva en `WIKI/guiones-y-anuncios.md`: hook débil = primera línea que describe; la buena afirma algo casi imposible y se explica en la línea siguiente. Es la misma corrección que la de piedras de hoy, ahora generalizada.
+- `OUTPUTS/2026-10-30-guiones-atlas-cortes-v37-v39.md`, copia en la carpeta de la oferta, portapapeles en RTF.
+
 ## 2026-10-30 — Atlas de Cortes: v34–v36, bizop a la estilista
 - Santiago corrigió la v31–v33: *"anda más por el bizop, dejá de hablar de enseñarle a tus empleadas, o cosas así"*. Se caen el V31 (la aprendiza) y el V32 (los tres sillones del salón); el V33 queda en pie.
 - Tres guiones nuevos, todos a ella y a su plata: la ventana de seis semanas de diciembre, el sillón lleno con la plata planchada (problema de carta) y el corte de transformación como la única publicidad gratis.

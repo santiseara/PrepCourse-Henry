@@ -26,6 +26,18 @@
 - **Riesgo de cuenta.** El original interpela directo ("¿Tenés Parkinson?"), que es justo lo que la política de **atributos personales** de Meta castiga. En nuestros guiones el mismo ángulo se dice sin señalar al espectador: el Parkinson como sujeto ("lo que el Parkinson te va sacando"), la escena, o la primera persona. Nada de prometer frenar, revertir o curar ([[problemas-de-cuentas-meta]], [[profesional-digital]]).
 - Material del competidor descargado en `~/Desktop/vence-al-parkinson/anuncios/work/ganadores/` (30 MP4 + `transcripciones.md` + hojas de contacto).
 
+## Producción de la tanda 1 (1/11/2026)
+- **Guiones:** 6, uno por familia ganadora del competidor, en voseo. `OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md`.
+- **Voces:** Google AI Studio, Gemini 3.1 Flash TTS Preview, Pace Natural, acento dirigido desde el Audio Profile ("Argentine woman from Buenos Aires, rioplatense, sh en ll/y, voseo, nunca locutora"). Se le pasaron 3 opciones y eligió **dos**: **Sulafat** (mujer cálida de ~52) y **Gacrux** (mujer de ~60, serena). Van alternadas: V1, V3 y V5 con Sulafat; V2, V4 y V6 con Gacrux. Plan a `speed 1.30` con `silence [0.26, 0.12]`.
+- **Edición:** `OUTPUTS/scripts-vsl/edit_parkinson.py` (copia de `edit_energia.py`) con la paleta de la landing (terracota #B0563A, dorado #D9A441, verde #3E8E5A) y un tipo de overlay nuevo, **`card`**: placa blanca con esquinas redondeadas, texto negro en mayúscula y la palabra clave en dorado, que es exactamente el look del ganador. Las placas van a `y=900` para no chocar con el subtítulo (`capy 1420`).
+- **Planes:** `OUTPUTS/scripts-vsl/gen_parkinson_plans.py`. Corte de plano 1,9–2,9 s, sin destellos (`flash: 0`), una sola cama musical a `-8`.
+- **Parche al editor:** el reparto del pool usaba *la primera letra del nombre del clip* como "fuente", así que `fisio_*` contaba como una sola. Ahora usa el campo **`fam`** del plan (creador), que es lo que pide la regla del 30/10 de [[guiones-y-anuncios]].
+
+## B-roll de TikTok
+- Tags barridos: `#parkinsons`, `#fisioterapianeurologica`, `#adultomayor`, `#cuidadordeadultomayor` → 145 clips bajados con tikwm. **Rendimiento bajísimo: el nicho es contenido educativo, casi todo viene con subtítulo quemado o con el creador hablando a cámara.** De los 145 quedaron 12 limpios.
+- Lo que sí rinde: entrar por el **perfil de los creadores** cuyos clips pasaron el filtro (`@temblandosinmiedo`, `@grandmas.caregiver`, `@plataformavedius`, `@fysiokriss`, `@neuroevolutiongdl`), que publican el mismo tipo de material sin carteles.
+- **Ojo con el portugués:** `@plataformavedius` es brasilero y mete una placa en portugués al final de cada clip ("4 EXERCÍCIOS PARA pacientes com AVE"). La ventana se corta antes.
+
 ## Preguntas abiertas
 - ¿Se testea también el formato UGC con la presentadora sosteniendo el libro impreso (el ad 10 del competidor), o solo voz en off?
 - ¿Hay versión en inglés de la landing para salir después a US/CA/AU/UK?

@@ -45,6 +45,14 @@ Santiago: *"quedó todo hecho un desorden, vos tenés que subirme solo 3 voces, 
 
 - **Mutear las páginas que uso (regla fija, 2026-10-26).** Santiago: *"y mutea las paginas que uses"*. Antes de generar nada en AI Studio (o en cualquier página que reproduzca audio), inyectar: mute de todos los `<audio>`/`<video>` con un MutationObserver para los que aparezcan después, y un Proxy sobre `AudioContext` que mande la salida por un gain en 0 (AI Studio reproduce por WebAudio, así que mutear el `<audio>` solo no alcanza). Se reinyecta en cada pestaña nueva.
 
+## Voces fijas (REGLA FIJA, 2026-11-01)
+Santiago: *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es mujer usa mujer, no quiero una nueva por cada oferta, si la quisiera te lo voy a decir."*
+- **Mujer → Sulafat** (AI Studio, Warm). **Hombre → Orus** (AI Studio, Firm, lower middle pitch).
+- **No se eligen voces por oferta y no se le mandan 3 opciones a elegir.** La decisión que queda de mi lado es solo **si la voz va de hombre o de mujer**, según el avatar de la oferta. Lo demás ya está decidido.
+- El acento, la edad y el tono se dirigen desde el **Style** de AI Studio, no cambiando de voz.
+- Solo se estrena una voz nueva **si él la pide**. Extiende la regla del 27/10 ("usá siempre las voces que te digo que sirven, no innoves una nueva cada vez") a todas las ofertas y herramientas.
+
+
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).

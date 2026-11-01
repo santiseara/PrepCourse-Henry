@@ -4,6 +4,10 @@
 - Tanda 1 de 6 guiones, uno por familia ganadora, cada uno con cuerpo y cierre propios: `OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md`.
 - Nueva página `WIKI/vence-al-parkinson.md` con la DNA del ganador, su edición plano por plano y el riesgo de atributos personales de Meta.
 - Material en `~/Desktop/vence-al-parkinson/anuncios/work/ganadores/` (30 MP4, transcripciones y hojas de contacto).
+- **Voces:** 3 opciones en AI Studio (Sulafat cálida, Algieba hombre, Gacrux mujer grande). Eligió la **1 y la 3** y pidió alternarlas: V1/V3/V5 con Sulafat, V2/V4/V6 con Gacrux.
+- **B-roll:** 145 clips de TikTok de 4 tags + 76 de los perfiles de los creadores que pasaron el filtro. **Rendimiento bajísimo** (el nicho es educativo: casi todo con subtítulo quemado o cara a cámara): quedaron 16 limpios.
+- **Videos:** 6 renders de voz en off con `edit_parkinson.py` (nuevo), con el look del ganador: placas blancas con la palabra clave en dorado. Parche al editor: el reparto del pool ahora usa `fam` (creador) y no la primera letra del nombre del archivo.
+- Regla nueva en `WIKI/vsl-reglas-de-armado.md`: en AI Studio, **después de bajar un audio el primer Run no dispara** (el Download vuelve a traer el anterior con el mismo md5).
 
 ## 2026-11-01 — BarberPro MegaPack: oferta nueva, análisis del competidor y tanda 1
 - Oferta nueva en inglés. Landing propia `barber-pro.impultienda.ar` bajada con curl y leída entera; competidor "Barbería Online" (page 544737342047119) relevado: 58 ads activos, 28 en inglés.

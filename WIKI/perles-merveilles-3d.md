@@ -1,6 +1,6 @@
 # Perles Merveilles 3D
 
-> Oferta nueva **en inglés** (US$ 24,65 desde 74): 83 figuras en mostacillas 3D explicadas paso a paso —60 animales en 6 familias + 23 modelos de Halloween y Navidad + el pesebre completo de 12 figuras—. Clon en inglés de una oferta francesa que ya corre con 6 ads. Tanda 1 producida el 30/10: 6 videos de voz en off sobre B-roll de TikTok.
+> Oferta nueva **en inglés** (US$ 24,65 desde 74): 83 figuras en mostacillas 3D explicadas paso a paso —60 animales en 6 familias + 23 modelos de Halloween y Navidad + el pesebre completo de 12 figuras—. Clon en inglés de una oferta francesa que ya corre con 6 ads. Tanda 1 producida el 30/10: 6 videos de voz en off sobre B-roll de TikTok. Tanda 2 el 31/10: 3 variables (V7-V9) con guiones nuevos.
 
 ## La oferta
 - **Producto:** colección de patrones de mostacillas en 3D. El mecanismo que vende no es "hacer animalitos", es **poder leer el patrón**: filas numeradas, cuentas contadas, el recorrido de los **dos hilos** dibujado y **puntos de control** para comparar la pieza antes de seguir.
@@ -30,6 +30,19 @@ Guiones en `OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md` (inglés y es
 | V5 | Lo que hacés con tus manos no se vende en ningún local | `PM-V5-not-sold-in-any-shop.mp4` |
 | V6 | Un pesebre que vuelve cada diciembre por veinte años | `PM-V6-the-nativity-that-comes-back.mp4` |
 
+## Tanda 2 (31/10) — 3 variables, guiones nuevos
+Guiones en `OUTPUTS/2026-10-31-guiones-perles-merveilles-v7-v9.md` (inglés y español con voseo) y copia en `anuncios/guiones/`. Las tres cambian hook, ángulo y emoción respecto de la tanda 1, no solo la apertura.
+
+| # | Ángulo | Archivo |
+|---|---|---|
+| V7 | La reacción del tercero: te pregunta de qué local es | `PM-V7-which-shop-is-it-from.mp4` |
+| V8 | Un pesebre y un delfín son el mismo movimiento: lo que cambia es la cuenta | `PM-V8-same-two-movements.mp4` |
+| V9 | Cuarenta minutos en el teléfono no dejan nada; cuarenta con un hilo dejan una tortuga | `PM-V9-forty-minutes.mp4` |
+
+Largos: 37,4 s (12 planos), 43,2 s (13) y 44,9 s (14).
+
+Planes en `anuncios/work/plans/gen2.py` y render con `render2.sh` (mismo editor y misma paleta; `usage.json` es compartido con la tanda 1, así que no se repiten recortes).
+
 ## Producción (pipeline, 30/10)
 - **Voz:** Google AI Studio, **Gemini 3.1 Flash TTS Preview**, voz **Sulafat**, Pace **Natural**. Audio Profile: mujer estadounidense de 40 y pico que hace mostacillas en la mesa de la cocina, hablándole a otras, sin tono de locutora. Crudos de 43 a 55 s, los 6 con MD5 distinto, en `anuncios/work/vo/`. En la edición van a `speed 1.30` con `silence [0.26, 0.12]`.
 - **Visual: 100% clips de TikTok** (regla del 29/10), ni una foto fija ni captura. 28 clips bajados a `work/tiktoks/`, revisados con hoja de contactos de 12 cuadros cada uno.
@@ -41,7 +54,7 @@ Guiones en `OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md` (inglés y es
 
 ## Preguntas abiertas
 - ¿Qué países y presupuesto para el testeo? Por defecto, lo de [[testeo-de-creativos]]: US/CA/AU/UK/NZ, ABO US$ 10 por conjunto.
-- Falta la **descripción de ads** y las **natives** de esta oferta.
+- Las **descripciones de ads** ya están: `OUTPUTS/2026-10-30-descripciones-ads-perles-merveilles.md` (3 en inglés + 3 en español con voseo, sin precio y con CTA "Tap Learn More"). Faltan las **natives**.
 - El ángulo Halloween ya pasó; en enero hay que reemplazar los 4 guiones navideños (V3 a V6) por ángulos de todo el año.
 
 ## Relacionado
@@ -51,3 +64,5 @@ Guiones en `OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md` (inglés y es
 - ~/Desktop/perles-merveilles-3d/landing/index.html
 - ~/Desktop/perles-merveilles-3d/anuncios/work/ref/ (6 ads del original en francés, con transcripción)
 - OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md
+- OUTPUTS/2026-10-30-descripciones-ads-perles-merveilles.md
+- OUTPUTS/2026-10-31-guiones-perles-merveilles-v7-v9.md

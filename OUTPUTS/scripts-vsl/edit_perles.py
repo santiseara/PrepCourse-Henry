@@ -147,7 +147,8 @@ def emoji_img(ch, h):
         im = im.crop(im.getbbox()); return im.resize((int(im.width * h / im.height), h), Image.LANCZOS)
     except Exception: return None
 def split_emoji(txt):
-    m = re.search(r'\s*([\U0001F300-\U0001FAFF☀-➿]️?)\s*$', txt)
+    # 31/10: ⏱ y los demas simbolos del bloque 2300-23FA quedaban fuera y salian como cuadradito
+    m = re.search(r'\s*([\U0001F300-\U0001FAFF⌚-⏺☀-➿]️?)\s*$', txt)
     return (txt[:m.start()], m.group(1)) if m else (txt, None)
 def rrect(d, box, r, fill, outline=None, width=0): d.rounded_rectangle(box, r, fill=fill, outline=outline, width=width)
 
@@ -172,11 +173,18 @@ def png_hook(txt, path):
     im.save(path)
 
 def png_chip(txt, icon, path):
-    im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im); f = font(50)
-    t_ = txt.upper(); fi = font(52, ICONF)
-    emo = emoji_img(icon, 56) if icon and ord(icon[0]) > 0x1F000 else None
-    iw = (emo.width + 16) if emo else ((d.textlength(icon, font=fi) + 16) if icon else 0)
-    tw = d.textlength(t_, font=f) + iw; bw, bh = tw + 70, 96
+    im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im)
+    t_ = txt.upper()
+    # la pastilla se achica sola si no entra en el cuadro (31/10: una placa larga salia cortada a los dos lados)
+    cuerpo = 50
+    while cuerpo > 30:
+        f = font(cuerpo); fi = font(cuerpo + 2, ICONF)
+        emo = emoji_img(icon, cuerpo + 6) if icon and ord(icon[0]) > 0x1F000 else None
+        iw = (emo.width + 16) if emo else ((d.textlength(icon, font=fi) + 16) if icon else 0)
+        tw = d.textlength(t_, font=f) + iw
+        if tw + 70 <= W - 80: break
+        cuerpo -= 2
+    bw, bh = tw + 70, 96
     x0, y0 = (W - bw) / 2, 560
     rrect(d, (x0, y0, x0 + bw, y0 + bh), 48, ORANGE + (255,))
     if emo: im.alpha_composite(emo, (int(x0 + 35), int(y0 + 20)))

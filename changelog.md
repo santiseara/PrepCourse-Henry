@@ -1,3 +1,10 @@
+## 2026-10-31 — Perles Merveilles 3D: tanda 2, 3 variables producidas
+- Tres guiones nuevos (no solo hooks nuevos: cambian ángulo y emoción): `OUTPUTS/2026-10-31-guiones-perles-merveilles-v7-v9.md`, inglés y español con voseo.
+- Producidos `PM-V7-which-shop-is-it-from.mp4`, `PM-V8-same-two-movements.mp4` y `PM-V9-forty-minutes.mp4` en `~/Desktop/perles-merveilles-3d/anuncios/`, 9:16, voz Sulafat a 1,30 y B-roll 100% de TikTok.
+- Planes en `anuncios/work/plans/gen2.py` con `usage.json` compartido con la tanda 1, así que ningún recorte se repite entre las dos tandas.
+- Dos reglas nuevas en `WIKI/vsl-reglas-de-armado.md`, las dos arregladas en `edit_perles.py`: una placa de más de 24 caracteres salía cortada a los dos lados (ahora se le achica el cuerpo hasta que entra) y un emoji fuera del rango `1F300-1FAFF`/`2600-27BF` salía como cuadradito en el hook (ahora entran también los relojes, `231A-23FA`).
+- La WIKI de la oferta queda con las dos tandas y con las descripciones de ads enlazadas (faltan las natives).
+
 ## 2026-10-31 — Piedras: guiones v35 "más potentes" (16 a 18)
 - Segunda tanda del día, en inglés y español con voseo: `OUTPUTS/2026-10-31-guiones-piedras-v35-mas-potentes.md`, 50 a 55 s. Con la v34 queda cerrado el tope de 6 videos del día.
 - Ángulos nuevos: los cuatro gramos de agua (competencia técnica, la línea del whale de 45 días), el stock que no se puede echar a perder y "no hace falta una gota de talento manual", que cubre la objeción "I'm not crafty" que figuraba sin explorar.

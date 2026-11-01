@@ -23,3 +23,9 @@ Forty minutes on your phone tonight, and tomorrow there is nothing to show for i
 Guion 9 - español
 
 Cuarenta minutos en el teléfono esta noche y mañana no te queda nada. Cuarenta minutos con un hilo y un puñado de mostacillas y queda una tortuga apoyada en el estante. Esa es la diferencia real, y es por eso que termina siendo el rato del día que esperás: las manos ocupadas, una fila por vez, sin pantalla, y algo terminado al final. Funciona porque nunca te trabás. Cada modelo tiene las filas numeradas, las cuentas contadas, el recorrido de los dos hilos dibujado y puntos de control para comparar tu pieza mientras avanzás, así no te pasás la noche adivinando. Unas cuantas noches por semana de acá a diciembre y el árbol queda lleno de cosas que hiciste vos. Perles Merveilles 3D son sesenta animales en seis familias, más los modelos de Navidad y el pesebre completo. Descarga al instante, link acá abajo.
+
+Producidos el 31/10 en ~/Desktop/perles-merveilles-3d/anuncios/ (9:16, voz Sulafat a 1,30, B-roll 100% TikTok)
+
+PM-V7-which-shop-is-it-from.mp4 - 37,4 s - 12 planos
+PM-V8-same-two-movements.mp4 - 43,2 s - 13 planos
+PM-V9-forty-minutes.mp4 - 44,9 s - 14 planos

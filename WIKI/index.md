@@ -21,6 +21,7 @@
 - 🆕 [[herrero-de-finde]] — Oferta AR ($14.990): planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga, V7 ganador con CPA de 1 USD y **producto propio: 1.485 planos y 12 bonus generados por código (un PDF de 4.866 páginas + 12 archivos)**.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
 - 🆕 [[perles-merveilles-3d]] — Oferta nueva **en inglés** (US$ 24,65): 83 figuras en mostacillas 3D con el patrón explicado paso a paso, clon de una oferta francesa con 6 ads. Ángulo fuerte de temporada: Navidad y el pesebre de 12 figuras. Tanda 1 de 6 videos producida.
+- 🆕 [[vence-al-parkinson]] — Vence al Parkinson (5 tomos + 4 bonos, 1.395 págs ilustradas, $16.999 ARS, Argentina): clon del whale "Tom Miller". Sus 30 ads activos transcriptos: un solo cuerpo y 21 hooks rotando; 7 familias de hook y tanda 1 de 6 guiones en voseo.
 - 🆕 [[barber-pro]] — BarberPro MegaPack ($19.99, landing propia en inglés): curso de barbería en +100 clases, clon de "Barbería Online". 28 ads en inglés del competidor transcriptos, 6 familias de hook y tanda 1 de 6 guiones.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
@@ -101,6 +102,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-01 — Vence al Parkinson: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md) — las 7 familias de hook de sus 30 ads y los 6 guiones nuestros en voseo · ver [[vence-al-parkinson]]
 - [2026-11-01 — BarberPro: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-barber-pro-v1-v6.md) — las 6 familias de hook de sus 28 ads en inglés y los 6 guiones nuestros, EN + ES · ver [[barber-pro]]
 - [2026-10-31 — Atlas de Cortes: natives 11 y 12](../OUTPUTS/2026-10-31-natives-atlas-cortes-11-y-12.md) — la agenda con la palabra "trim" nueve años seguidos, y la corta del sillón en formato validado · ver [[atlas-de-cortes]]
 - [2026-10-31 — Atlas de Cortes: renovaciones v40-v42 + los 3 videos](../OUTPUTS/2026-10-31-renovaciones-atlas-cortes-v40-v42.md) — hook nuevo sobre los tres cuerpos que valida la cuenta, producidos como AT-V40, V41 y V42 · ver [[atlas-de-cortes]]

@@ -1,3 +1,10 @@
+## 2026-11-01 — Vence al Parkinson: oferta nueva, análisis del competidor y tanda 1
+- Oferta nueva para **Argentina** (Santiago lo confirmó: "es para Argentina", así que va todo en voseo). Landing propia `vence-al-parkinson.impultienda.ar` bajada con curl y leída entera.
+- Competidor: página **Tom Miller**, misma plataforma (ImpulTienda). **30 ads activos**, el más viejo del 5/10 (27 días). Los 30 videos bajados de la Biblioteca de Anuncios y transcriptos con faster-whisper: **un solo cuerpo repetido palabra por palabra y 21 hooks distintos**. El hook campeón (7 copias) es el miedo a que la familia tenga que hacer por vos lo que hoy hacés solo; el más viejo (4 copias) es el stack de síntomas.
+- Tanda 1 de 6 guiones, uno por familia ganadora, cada uno con cuerpo y cierre propios: `OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md`.
+- Nueva página `WIKI/vence-al-parkinson.md` con la DNA del ganador, su edición plano por plano y el riesgo de atributos personales de Meta.
+- Material en `~/Desktop/vence-al-parkinson/anuncios/work/ganadores/` (30 MP4, transcripciones y hojas de contacto).
+
 ## 2026-11-01 — BarberPro MegaPack: oferta nueva, análisis del competidor y tanda 1
 - Oferta nueva en inglés. Landing propia `barber-pro.impultienda.ar` bajada con curl y leída entera; competidor "Barbería Online" (page 544737342047119) relevado: 58 ads activos, 28 en inglés.
 - Los 28 ads en inglés bajados y transcriptos con faster-whisper: **un solo cuerpo repetido palabra por palabra y 28 hooks distintos**. Seis familias de hook, la de "replay / lo ves una sola vez" es la ganadora (los 3 ads del 1/11 son de esa).

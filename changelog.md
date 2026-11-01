@@ -1,3 +1,9 @@
+## 2026-11-01 — Atlas de Cortes: natives 13 y 14
+- Tanda 6 de natives, solo en inglés: `OUTPUTS/2026-11-01-natives-atlas-cortes-13-y-14.md`. Una larga (1.940 palabras) y una corta (641), las dos en ángulo bizop y emparejadas con los videos de hoy.
+- 13: Earlene Pankey (59, Bluefield WV) y el rollo de papel de la registradora con los once nombres que mandó a otro lado en diciembre — el AT-V43 pasado a native.
+- 14: la clienta para la que vas a trabajar gratis esta semana — el AT-V45 en el formato corto que escala, con bonus y garantía y sin precio.
+- Copia en `~/Desktop/atlas-cortes/anuncios/natives/2026-11-01-natives-tanda-6.md`. `WIKI/atlas-de-cortes.md` y `WIKI/index.md` al día.
+
 ## 2026-11-01 — Atlas de Cortes: renovaciones v43–v45
 - Tres renovaciones (hook nuevo sobre cuerpo validado), ángulo bizop fijo: `OUTPUTS/2026-11-01-renovaciones-atlas-cortes-v43-v45.md`, EN + ES voseo.
 - Cuerpos elegidos: los tres que no se renovaron ayer — V34 (ventana de las fiestas, que arranca hoy), V39/V36 (la única publicidad gratis) y V28 (la corrección gratis como turno regalado).

@@ -2,7 +2,9 @@
 - Tres renovaciones (hook nuevo sobre cuerpo validado), ángulo bizop fijo: `OUTPUTS/2026-11-01-renovaciones-atlas-cortes-v43-v45.md`, EN + ES voseo.
 - Cuerpos elegidos: los tres que no se renovaron ayer — V34 (ventana de las fiestas, que arranca hoy), V39/V36 (la única publicidad gratis) y V28 (la corrección gratis como turno regalado).
 - Hooks con la regla del 30/10 (la primera línea afirma algo que choca y se explica recién en la siguiente), un solo número por guion y Cut Maps con nombre propio.
-- Copia en `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v43-v45.md`. Nombres para subir: 1/11 - 1, 2 y 3. Videos pendientes.
+- Copia en `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v43-v45.md`. Nombres para subir: 1/11 - 1, 2 y 3.
+- **Videos producidos:** `AT-V43.mp4` (34,8 s), `AT-V44.mp4` (35,7 s) y `AT-V45.mp4` (35,2 s) en `~/Desktop/atlas-cortes/anuncios/`, 9:16, voz Sulafat a 1,30, los tres con hoja de contactos revisada.
+- Dos trampas nuevas en `WIKI/atlas-de-cortes.md`: una palabra repetida ("week", 3 veces) ancló la placa final a los 15 s y dejó el V45 en un solo plano, y dos chips a menos de 1 s se pisaron en pantalla.
 
 ## 2026-11-01 — Piedras: guiones v36 "potentes y de bizop" (19 a 21)
 - Tanda de 3 variables, inglés y español con voseo: `OUTPUTS/2026-11-01-guiones-piedras-v36-potentes-bizop.md`, 50 a 55 s.

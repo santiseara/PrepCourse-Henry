@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-30.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-31.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -100,6 +100,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-31 — Piedras: guiones v34 "más potentes" (13 a 15)](../OUTPUTS/2026-10-31-guiones-piedras-v34-mas-potentes.md) — el cliente que regala y no revende, el molde como activo que no se gasta y la capacidad de una mesa contra los locales del barrio · ver [[scented-stones]]
 - [2026-10-30 — Perles Merveilles 3D: tanda 1, guiones V1-V6 y los 6 videos](../OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md) — inglés y español con voseo, con los seis mp4 producidos (33 a 42 s) · ver [[perles-merveilles-3d]]
 - [2026-10-30 — Herrero: variables V52-V54 (segunda vuelta sobre los mismos cuerpos)](../OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md) — el segundo hook de cada cuerpo ganador: la demanda a la vista en la cuadra, quién paga la isla de cocina y el "te aviso" que se va a otro lado · ver [[herrero-de-finde]]
 - [2026-10-30 — Herrero: variables V49-V51 sobre los tres cuerpos que vendieron](../OUTPUTS/2026-10-30-renovaciones-herrero-v49-v51.md) — los cuerpos del V48 (cochera), V47 (isla de cocina) y V46 (escalera) textuales, con hook nuevo, más el banco de hooks y la lectura del testeo del 30/10 · ver [[herrero-de-finde]]

@@ -1,3 +1,9 @@
+## 2026-10-31 — Piedras: guiones v34 "más potentes" (13 a 15)
+- Tres guiones nuevos de Scented Stones en inglés y español con voseo: `OUTPUTS/2026-10-31-guiones-piedras-v34-mas-potentes.md`, 50 a 55 s.
+- Ángulos sacados del banco: mi mejor cliente nunca revendió ni una (inmobiliarias, clínicas y hoteles que compran para regalar), no hay nada en este negocio que se gaste (el molde como activo) y te vas a quedar sin capacidad antes de quedarte sin clientes.
+- Se mantiene la regla del 30/10: primera línea que afirma algo imposible, mecanismo del producto como prueba, un solo número de plata como precio de mercado y cierre con una acción concreta de esta semana.
+- `WIKI/scented-stones.md` y `WIKI/index.md` al día con la tanda y el banco restante.
+
 ## 2026-10-30 — Perles Merveilles 3D: tanda 1 producida (6 videos)
 - Oferta nueva en inglés (83 figuras en mostacillas 3D, US$ 24,65). Guiones V1-V6 del 30/10 llevados a video: `PM-V1-start-with-the-snail.mp4` a `PM-V6-the-nativity-that-comes-back.mp4` en `~/Desktop/perles-merveilles-3d/anuncios/`, de 33 a 42 s, 9:16.
 - Voz **Sulafat** (AI Studio, Gemini 3.1 Flash TTS Preview, Pace Natural), los 6 MD5 distintos; `speed 1.30`, `silence [0.26, 0.12]`.

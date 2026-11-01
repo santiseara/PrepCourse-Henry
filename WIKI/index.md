@@ -100,6 +100,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-31 — Piedras: guiones v35 "más potentes" (16 a 18)](../OUTPUTS/2026-10-31-guiones-piedras-v35-mas-potentes.md) — los cuatro gramos de agua que separan una piedra que te pagan de una que no, el stock que no se puede echar a perder y el talento manual que no hace falta · ver [[scented-stones]]
 - [2026-10-31 — Piedras: guiones v34 "más potentes" (13 a 15)](../OUTPUTS/2026-10-31-guiones-piedras-v34-mas-potentes.md) — el cliente que regala y no revende, el molde como activo que no se gasta y la capacidad de una mesa contra los locales del barrio · ver [[scented-stones]]
 - [2026-10-30 — Perles Merveilles 3D: tanda 1, guiones V1-V6 y los 6 videos](../OUTPUTS/2026-10-30-guiones-perles-merveilles-v1-v6.md) — inglés y español con voseo, con los seis mp4 producidos (33 a 42 s) · ver [[perles-merveilles-3d]]
 - [2026-10-30 — Herrero: variables V52-V54 (segunda vuelta sobre los mismos cuerpos)](../OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md) — el segundo hook de cada cuerpo ganador: la demanda a la vista en la cuadra, quién paga la isla de cocina y el "te aviso" que se va a otro lado · ver [[herrero-de-finde]]

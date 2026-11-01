@@ -1,3 +1,8 @@
+## 2026-10-31 — Piedras: guiones v35 "más potentes" (16 a 18)
+- Segunda tanda del día, en inglés y español con voseo: `OUTPUTS/2026-10-31-guiones-piedras-v35-mas-potentes.md`, 50 a 55 s. Con la v34 queda cerrado el tope de 6 videos del día.
+- Ángulos nuevos: los cuatro gramos de agua (competencia técnica, la línea del whale de 45 días), el stock que no se puede echar a perder y "no hace falta una gota de talento manual", que cubre la objeción "I'm not crafty" que figuraba sin explorar.
+- `WIKI/scented-stones.md` y `WIKI/index.md` al día con la tanda y el banco restante.
+
 ## 2026-10-31 — Piedras: guiones v34 "más potentes" (13 a 15)
 - Tres guiones nuevos de Scented Stones en inglés y español con voseo: `OUTPUTS/2026-10-31-guiones-piedras-v34-mas-potentes.md`, 50 a 55 s.
 - Ángulos sacados del banco: mi mejor cliente nunca revendió ni una (inmobiliarias, clínicas y hoteles que compran para regalar), no hay nada en este negocio que se gaste (el molde como activo) y te vas a quedar sin capacidad antes de quedarte sin clientes.

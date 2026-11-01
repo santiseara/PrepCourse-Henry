@@ -100,6 +100,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-10-31 — Atlas de Cortes: natives 11 y 12](../OUTPUTS/2026-10-31-natives-atlas-cortes-11-y-12.md) — la agenda con la palabra "trim" nueve años seguidos, y la corta del sillón en formato validado · ver [[atlas-de-cortes]]
 - [2026-10-31 — Atlas de Cortes: renovaciones v40-v42 + los 3 videos](../OUTPUTS/2026-10-31-renovaciones-atlas-cortes-v40-v42.md) — hook nuevo sobre los tres cuerpos que valida la cuenta, producidos como AT-V40, V41 y V42 · ver [[atlas-de-cortes]]
 - [2026-10-31 — Piedras: guiones v35 "más potentes" (16 a 18)](../OUTPUTS/2026-10-31-guiones-piedras-v35-mas-potentes.md) — los cuatro gramos de agua que separan una piedra que te pagan de una que no, el stock que no se puede echar a perder y el talento manual que no hace falta · ver [[scented-stones]]
 - [2026-10-31 — Piedras: guiones v34 "más potentes" (13 a 15)](../OUTPUTS/2026-10-31-guiones-piedras-v34-mas-potentes.md) — el cliente que regala y no revende, el molde como activo que no se gasta y la capacidad de una mesa contra los locales del barrio · ver [[scented-stones]]

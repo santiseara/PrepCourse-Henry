@@ -5,6 +5,10 @@
 - Dos reglas nuevas en `WIKI/vsl-reglas-de-armado.md`, las dos arregladas en `edit_perles.py`: una placa de más de 24 caracteres salía cortada a los dos lados (ahora se le achica el cuerpo hasta que entra) y un emoji fuera del rango `1F300-1FAFF`/`2600-27BF` salía como cuadradito en el hook (ahora entran también los relojes, `231A-23FA`).
 - La WIKI de la oferta queda con las dos tandas y con las descripciones de ads enlazadas (faltan las natives).
 
+## 2026-10-31 — Atlas de Cortes: natives 11 y 12
+- Tanda 5 de natives: `OUTPUTS/2026-10-31-natives-atlas-cortes-11-y-12.md`. La 11 es larga (Charlene Ostrander, Bucyrus OH, la columna de la agenda que dice "trim" nueve años seguidos) y la 12 es corta (651 palabras), en el formato que la cuenta ya escala y que no era nuestro.
+- Las dos con prompt de imagen 3:4 sin caras ni texto legible, solo en inglés, sin precio.
+
 ## 2026-10-31 — Atlas de Cortes: renovaciones v40-v42 producidas
 - Tres renovaciones (hook nuevo sobre cuerpo validado) de los ángulos que ya rinden: "Are you"/V33, V37 y V38. `OUTPUTS/2026-10-31-renovaciones-atlas-cortes-v40-v42.md`.
 - Videos `AT-V40.mp4` (39,0 s), `AT-V41.mp4` (31,9 s) y `AT-V42.mp4` (34,1 s) en `~/Desktop/atlas-cortes/anuncios/`, voz Sulafat, speed 1,30, los tres MD5 distintos y hojas de contactos revisadas.

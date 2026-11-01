@@ -1,3 +1,9 @@
+## 2026-11-01 — Piedras: guiones v36 "potentes y de bizop" (19 a 21)
+- Tanda de 3 variables, inglés y español con voseo: `OUTPUTS/2026-11-01-guiones-piedras-v36-potentes-bizop.md`, 50 a 55 s.
+- Misma apertura "afirmación que suena imposible" de la v33–v35, con el cuerpo entero empujado al bizop: velocidad al primer peso (martes/sábado), el lavadero de autos como cliente mensual (la piedra como consumible, no como decoración) y el catálogo que son solo tres aromas.
+- Un solo número de plata por guion y como precio de mercado; la plata que se nombra es la de la persona que mira el anuncio, no la de un negocio visto desde arriba (regla del 30/10).
+- `WIKI/scented-stones.md` y `WIKI/index.md` al día con la tanda y el banco restante. Sin reglas nuevas: no hubo correcciones.
+
 ## 2026-10-31 — Perles Merveilles 3D: tanda 2, 3 variables producidas
 - Tres guiones nuevos (no solo hooks nuevos: cambian ángulo y emoción): `OUTPUTS/2026-10-31-guiones-perles-merveilles-v7-v9.md`, inglés y español con voseo.
 - Producidos `PM-V7-which-shop-is-it-from.mp4`, `PM-V8-same-two-movements.mp4` y `PM-V9-forty-minutes.mp4` en `~/Desktop/perles-merveilles-3d/anuncios/`, 9:16, voz Sulafat a 1,30 y B-roll 100% de TikTok.

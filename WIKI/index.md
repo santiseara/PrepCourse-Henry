@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-10-31.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-01.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -21,6 +21,7 @@
 - 🆕 [[herrero-de-finde]] — Oferta AR ($14.990): planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga, V7 ganador con CPA de 1 USD y **producto propio: 1.485 planos y 12 bonus generados por código (un PDF de 4.866 páginas + 12 archivos)**.
 - 🆕 [[infinity-3d]] — Oferta en inglés de planos para mesas infinitas ($27). Videos de voz en off con su edición (hook en caja, etiquetas naranjas, placa final) sobre TikToks + fotos de la landing.
 - 🆕 [[perles-merveilles-3d]] — Oferta nueva **en inglés** (US$ 24,65): 83 figuras en mostacillas 3D con el patrón explicado paso a paso, clon de una oferta francesa con 6 ads. Ángulo fuerte de temporada: Navidad y el pesebre de 12 figuras. Tanda 1 de 6 videos producida.
+- 🆕 [[barber-pro]] — BarberPro MegaPack ($19.99, landing propia en inglés): curso de barbería en +100 clases, clon de "Barbería Online". 28 ads en inglés del competidor transcriptos, 6 familias de hook y tanda 1 de 6 guiones.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
@@ -100,6 +101,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-01 — BarberPro: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-barber-pro-v1-v6.md) — las 6 familias de hook de sus 28 ads en inglés y los 6 guiones nuestros, EN + ES · ver [[barber-pro]]
 - [2026-10-31 — Atlas de Cortes: natives 11 y 12](../OUTPUTS/2026-10-31-natives-atlas-cortes-11-y-12.md) — la agenda con la palabra "trim" nueve años seguidos, y la corta del sillón en formato validado · ver [[atlas-de-cortes]]
 - [2026-10-31 — Atlas de Cortes: renovaciones v40-v42 + los 3 videos](../OUTPUTS/2026-10-31-renovaciones-atlas-cortes-v40-v42.md) — hook nuevo sobre los tres cuerpos que valida la cuenta, producidos como AT-V40, V41 y V42 · ver [[atlas-de-cortes]]
 - [2026-11-01 — Atlas de Cortes: natives 13 y 14](../OUTPUTS/2026-11-01-natives-atlas-cortes-13-y-14.md) — la larga de los once nombres en el rollo de la registradora (la ventana de diciembre) y la corta de la clienta para la que trabajás gratis · ver [[atlas-de-cortes]]

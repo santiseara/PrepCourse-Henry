@@ -26,6 +26,19 @@
 | Humblebrag con edad | Fitness |
 | Recuperación de identidad | Fitness |
 
+## 🎬 Estándar de producción de video (REGLA FIJA — no hace falta repetirla)
+> Consolidado el 2026-11-01 a pedido de Santiago: *"Acordate de agarrar de TikTok si no tenés. No quiero videos de stock. Eso ponerlo siempre en las reglas para que no lo tenga que repetir todo el tiempo."* Vale para **toda** oferta, siempre, sin que lo pida.
+
+- **El visual es 100 % clip de TikTok del nicho.** Se buscan las escenas concretas que nombra el guion (el oficio, no el producto) y se bajan sin marca de agua con tikwm (`curl "https://www.tikwm.com/api/?hd=1&url=<link>"` → campo `hdplay`). La búsqueda de TikTok falla en el navegador: se entra por el perfil del creador (`tiktok.com/@usuario`).
+- **Prohibido el stock** (Mixkit, Pexels y similares). Solo se usa para lo que TikTok no da, y se avisa cuál y por qué.
+- **Prohibida la foto fija**: ni mockups, ni fichas, ni hojas del producto, ni capturas de pantalla. El producto y los números se cuentan con **placas de texto encima del video**. Si el pool no alcanza, se bajan más clips, nunca se tapa con fotos.
+- **Clips limpios:** nada de subtítulos o carteles quemados, nada de caras hablando a cámara, nada en otro idioma que el del ad. Revisión obligatoria con **hoja de contactos a 1 cuadro cada 2 s** + **un cuadro grande (≥330 px) de la mitad inferior** de cada clip (ahí viven las marcas de agua). Si hay marca arriba: `zoom 1.30` con `ybias 1.0`.
+- **Topes del pool:** máximo 8 recortes por clip, repartidos a lo largo del clip, y `fam` por creador para que un mismo autor no se coma la tanda.
+- **Velocidad:** voz en off siempre a `speed 1.30` con `silence [0.26, 0.12]` y cortes de plano de 1,9 a 2,9 s. Nada de videos lentos ni con silencios. (UGC con avatar es la excepción: `speed 1.08`, sin recorte de silencios, porque rompe el lipsync.)
+- **Voz:** la voz validada de esa oferta, nunca una nueva por capricho. Se entregan 3 opciones numeradas solo cuando él tiene que elegir.
+- **Música:** una sola cama musical para toda la tanda, `music_db` alrededor de -8.
+- **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
+
 ## 🔁 Variación real (ver [[angulos-publicitarios]])
 - Una variable cuenta solo si cambia el hook, el mecanismo, el ángulo, la objeción, la emoción, el nivel de conciencia o la forma de presentar el producto. Cambiar palabras no cuenta.
 - Proporción: 90% variables del ganador y 10% ángulos nuevos, con ángulos totalmente nuevos 2 o 3 veces por semana.

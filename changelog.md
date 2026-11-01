@@ -1,3 +1,10 @@
+## 2026-11-01 — BarberPro MegaPack: oferta nueva, análisis del competidor y tanda 1
+- Oferta nueva en inglés. Landing propia `barber-pro.impultienda.ar` bajada con curl y leída entera; competidor "Barbería Online" (page 544737342047119) relevado: 58 ads activos, 28 en inglés.
+- Los 28 ads en inglés bajados y transcriptos con faster-whisper: **un solo cuerpo repetido palabra por palabra y 28 hooks distintos**. Seis familias de hook, la de "replay / lo ves una sola vez" es la ganadora (los 3 ads del 1/11 son de esa).
+- Tanda 1 de 6 guiones, EN + ES voseo, cada uno con cuerpo propio: `OUTPUTS/2026-11-01-guiones-barber-pro-v1-v6.md` y `~/Desktop/barber-pro/anuncios/guiones/`.
+- Tres opciones de voz masculina (Arlo, Daro, Enzo) en `~/Desktop/barber-pro/anuncios/voces/`, ya a speed 1.30, para que elija.
+- Nueva página `WIKI/barber-pro.md`. **Regla nueva en `WIKI/guiones-y-anuncios.md`: "Estándar de producción de video"** — visuales 100% de TikTok, prohibido el stock y la foto fija, clips limpios, velocidad y revisión obligatoria. Queda fija para no repetirla.
+
 ## 2026-11-01 — Atlas de Cortes: natives 13 y 14
 - Tanda 6 de natives, solo en inglés: `OUTPUTS/2026-11-01-natives-atlas-cortes-13-y-14.md`. Una larga (1.940 palabras) y una corta (641), las dos en ángulo bizop y emparejadas con los videos de hoy.
 - 13: Earlene Pankey (59, Bluefield WV) y el rollo de papel de la registradora con los once nombres que mandó a otro lado en diciembre — el AT-V43 pasado a native.

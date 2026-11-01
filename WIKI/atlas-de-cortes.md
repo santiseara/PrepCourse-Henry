@@ -165,6 +165,17 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **En AI Studio el botón de descarga vuelve a bajar el audio anterior** si se aprieta apenas termina: el V39 bajó el mismo WAV que el V38 (MD5 idéntico). Lo que lo detecta sin escuchar: comparar la **duración** del player contra la del audio anterior antes de descargar, y el MD5 contra todos los de la tanda.
 - Nombres para subir: **30/10 - 1** (V37), **30/10 - 2** (V38), **30/10 - 3** (V39).
 
+## 🎬 Renovaciones v40 a v42 (31/10) — hooks nuevos sobre los cuerpos ganadores, producidos
+> Santiago: *"vamos a meter 3 renovaciones de video de pelo, seguimos por los ángulos ganadores"*. Renovación en el sentido de la regla del 26/10: **hook nuevo sobre el cuerpo validado**, entregado como guion completo.
+- **V40 "The most expensive sentence in your salon is: honestly, with your texture I would go a little softer"** — cuerpo de **"Are you" / V33** (el corte rechazado es la clienta entera: color, brushing y rebook, cada seis semanas). El hook sale de la frase-identidad que usan las natives ganadoras ("con tu textura yo iría más suave").
+- **V41 "That price list on your wall is not a price list, it is a list of the cuts you can remember"** — cuerpo del **V37 / V35** (la carta barata contra los cortes con nombre, que pagan el doble).
+- **V42 "Somewhere in your town there is a woman walking around with the exact haircut she asked you for"** — cuerpo del **V38** (el corte pedido tiene nombre, lista de espera y precio; once años de clienta que deja de reservar sin quejarse).
+- `OUTPUTS/2026-10-31-renovaciones-atlas-cortes-v40-v42.md` y `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v40-v42.md`. EN + ES voseo completos.
+- **Videos listos:** `~/Desktop/atlas-cortes/anuncios/AT-V40.mp4` (39,0 s · 15 planos), `AT-V41.mp4` (31,9 s · 13) y `AT-V42.mp4` (34,1 s · 14), 9:16, voz **Sulafat** (AI Studio, Gemini 3.8 Flash TTS; crudos de 50,3 / 41,3 / 43,8 s, los tres MD5 verificados distintos), `speed 1.30`, `silence [0.26, 0.12]`, `edit_atlas.py`, planes con seeds 400/410/420. Hojas de contactos revisadas.
+- 🆕 **Trampa del material (31/10): el clip D tenía texto quemado en español en varios tramos.** El primer plano del V40 abría con *"Estos cortes yo siempre recomiendo arriba del hombro"* espejado, que es exactamente lo que prohíbe la regla del 30/10 (idioma de lo que se lee en pantalla). Se sacaron del pool de `D` los tramos [36,42], [63,66], [78,84] y [90,96] y se rehicieron los tres videos. **Antes de sumar un clip al pool hay que mirar un frame de cada tramo, no solo del principio.**
+- 🆕 **Anchors de placas demasiado juntos se pierden en silencio.** En el V42, "Twenty-five", "Maps," y "standing" caían a menos de 2,4 s unos de otros y el editor fue descartando las placas de producto. Con pocos anchors y bien espaciados entraron las tres (tapa, Hush cut y Diagonal Forward Line).
+- Nombres para subir: **31/10 - 1** (V40), **31/10 - 2** (V41), **31/10 - 3** (V42).
+
 ## 🎬 Guiones v37 a v39 (30/10) — los hooks reescritos
 > Santiago rechazó la v34–v36: *"esos hooks son muy débiles, armame más interesantes, más llamativos"*. Las tres aperturas **describían** una situación. Las nuevas **afirman algo que choca** y se explican recién en la línea siguiente; la sustancia bizop entra después del golpe.
 - **V37 "You are the most expensive thing in your salon, and you spend the whole day doing the cheapest work in it"** — el cuerpo del V35 (carta barata contra cortes con nombre) con la apertura que le faltaba.

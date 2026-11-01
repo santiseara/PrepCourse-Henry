@@ -165,6 +165,14 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **En AI Studio el botón de descarga vuelve a bajar el audio anterior** si se aprieta apenas termina: el V39 bajó el mismo WAV que el V38 (MD5 idéntico). Lo que lo detecta sin escuchar: comparar la **duración** del player contra la del audio anterior antes de descargar, y el MD5 contra todos los de la tanda.
 - Nombres para subir: **30/10 - 1** (V37), **30/10 - 2** (V38), **30/10 - 3** (V39).
 
+## 🎬 Renovaciones v43 a v45 (1/11) — hooks nuevos sobre los tres cuerpos que faltaban
+> Santiago: *"vamos con las 3 renovaciones de pelo, sigamos con el ángulo de bizop"*. Renovación en el sentido de la regla del 26/10 (hook nuevo sobre cuerpo validado, entregado como guion completo) y bizop a la estilista, no al salón visto desde arriba (regla del 30/10). Los cuerpos elegidos son los tres que **no** se renovaron ayer.
+- **V43 "The same hour in your chair is worth double between now and New Year's Eve, and you are about to sell it at trim prices"** — cuerpo del **V34** (la ventana de las fiestas: todas piden un cambio por nombre y, si no está en la carta, es mantenimiento a precio de mantenimiento). La ventana arranca justo hoy, así que es el momento del año de este cuerpo.
+- **V44 "Your best advertising is not on your phone, it is walking around this town on somebody else's head"** — cuerpo del **V39 / V36** (el corte de transformación como única publicidad gratis; el despunte nunca sale de la habitación). El hook agrega el giro de que ese alcance hoy está caminando en cabezas cortadas en otro lado.
+- **V45 "There is a woman in your book this week that you are going to work for free"** — cuerpo del **V28** (cada corrección gratis es un turno pago regalado; menos rehacer y tiempo recuperado). Suma la línea de la plata que nadie cuenta: no aparece como pérdida, aparece como una semana llena que pagó como una floja.
+- `OUTPUTS/2026-11-01-renovaciones-atlas-cortes-v43-v45.md` y `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v43-v45.md`. EN + ES voseo completos, un solo número por guion, entregables con nombre propio (25 Cut Maps, sectioning, elevation, guide section).
+- Nombres para subir: **1/11 - 1** (V43), **1/11 - 2** (V44), **1/11 - 3** (V45). ⏳ Videos pendientes de producir.
+
 ## 🎬 Renovaciones v40 a v42 (31/10) — hooks nuevos sobre los cuerpos ganadores, producidos
 > Santiago: *"vamos a meter 3 renovaciones de video de pelo, seguimos por los ángulos ganadores"*. Renovación en el sentido de la regla del 26/10: **hook nuevo sobre el cuerpo validado**, entregado como guion completo.
 - **V40 "The most expensive sentence in your salon is: honestly, with your texture I would go a little softer"** — cuerpo de **"Are you" / V33** (el corte rechazado es la clienta entera: color, brushing y rebook, cada seis semanas). El hook sale de la frase-identidad que usan las natives ganadoras ("con tu textura yo iría más suave").

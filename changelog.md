@@ -1,3 +1,9 @@
+## 2026-11-01 — Atlas de Cortes: renovaciones v43–v45
+- Tres renovaciones (hook nuevo sobre cuerpo validado), ángulo bizop fijo: `OUTPUTS/2026-11-01-renovaciones-atlas-cortes-v43-v45.md`, EN + ES voseo.
+- Cuerpos elegidos: los tres que no se renovaron ayer — V34 (ventana de las fiestas, que arranca hoy), V39/V36 (la única publicidad gratis) y V28 (la corrección gratis como turno regalado).
+- Hooks con la regla del 30/10 (la primera línea afirma algo que choca y se explica recién en la siguiente), un solo número por guion y Cut Maps con nombre propio.
+- Copia en `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v43-v45.md`. Nombres para subir: 1/11 - 1, 2 y 3. Videos pendientes.
+
 ## 2026-11-01 — Piedras: guiones v36 "potentes y de bizop" (19 a 21)
 - Tanda de 3 variables, inglés y español con voseo: `OUTPUTS/2026-11-01-guiones-piedras-v36-potentes-bizop.md`, 50 a 55 s.
 - Misma apertura "afirmación que suena imposible" de la v33–v35, con el cuerpo entero empujado al bizop: velocidad al primer peso (martes/sábado), el lavadero de autos como cliente mensual (la piedra como consumible, no como decoración) y el catálogo que son solo tres aromas.

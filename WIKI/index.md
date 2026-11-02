@@ -6,6 +6,7 @@
 
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
+- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento editable por módulo, referencia la School de Bilbao. Módulo 1 (búsqueda de ofertas ganadoras) entregado.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
@@ -102,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-01 — Mentoría, Módulo 1: búsqueda de ofertas ganadoras](../OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md) — el documento de clase completo: Biblioteca de Anuncios paso a paso, señales, scorecard, auditoría del competidor y plantillas · ver [[mentoria]]
 - [2026-11-01 — Vence al Parkinson: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md) — las 7 familias de hook de sus 30 ads y los 6 guiones nuestros en voseo · ver [[vence-al-parkinson]]
 - [2026-11-01 — BarberPro: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-barber-pro-v1-v6.md) — las 6 familias de hook de sus 28 ads en inglés y los 6 guiones nuestros, EN + ES · ver [[barber-pro]]
 - [2026-10-31 — Atlas de Cortes: natives 11 y 12](../OUTPUTS/2026-10-31-natives-atlas-cortes-11-y-12.md) — la agenda con la palabra "trim" nueve años seguidos, y la corta del sillón en formato validado · ver [[atlas-de-cortes]]

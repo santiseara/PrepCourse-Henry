@@ -36,6 +36,7 @@
 ## B-roll de TikTok
 - Tags barridos: `#parkinsons`, `#fisioterapianeurologica`, `#adultomayor`, `#cuidadordeadultomayor` → 145 clips bajados con tikwm. **Rendimiento bajísimo: el nicho es contenido educativo, casi todo viene con subtítulo quemado o con el creador hablando a cámara.** De los 145 quedaron 12 limpios.
 - Lo que sí rinde: entrar por el **perfil de los creadores** cuyos clips pasaron el filtro (`@temblandosinmiedo`, `@grandmas.caregiver`, `@plataformavedius`, `@fysiokriss`, `@neuroevolutiongdl`), que publican el mismo tipo de material sin carteles.
+- **De los 221 clips bajados quedaron 16.** Los que se cayeron en la revisión del render (no en la hoja de contactos): `fisio_359173` y `fisio_181078` traen subtítulo quemado de punta a punta, y `fisio_990533` tiene un logo redondo arriba a la derecha que solo se saca con `zoom 1.30` + `ybias 1.0`.
 - **Ojo con el portugués:** `@plataformavedius` es brasilero y mete una placa en portugués al final de cada clip ("4 EXERCÍCIOS PARA pacientes com AVE"). La ventana se corta antes.
 
 ## Preguntas abiertas

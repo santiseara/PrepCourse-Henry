@@ -102,7 +102,7 @@ VIDEOS = [
          overlays=[('UN PROTOCOLO PARA DESTRABAR EL PASO', 'protocolo', 'DESTRABAR'),
                    ('FREEZING · MARCHA · EQUILIBRIO · RESPIRACIÓN', 'freezing', None),
                    ('HOY SALGO SOLA', 'salgo', 'SOLA')],
-         fin='El'),
+         fin='link'),
     dict(n=6, slug='lo-ayudas-o-lo-frenas', voz='3 mujer grande', seed=66,
          hook='¿LO AYUDÁS O LO ESTÁS FRENANDO?', hook_until='frenando',
          first=['cuida_485125', 6.0],

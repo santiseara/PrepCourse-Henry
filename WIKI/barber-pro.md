@@ -63,13 +63,17 @@ Las 6 familias de hook, por volumen:
 - Frases de la landing repetidas en los guiones (regla del 27/10): *it's not your skill, it's the order* · *master the clean fade from your very next cut* · *no in-person courses, no years of practice, straight from your phone* · *one extra fade a week* · *colour: the highest-priced service in your shop* · *7-day guarantee*.
 - Nombres para subir: **1/11 - 1** a **1/11 - 6**.
 
-## 🎙️ Voz (pendiente de elección)
-Tres opciones masculinas de AI Studio (Gemini 3.8 Flash TTS), ya a `speed 1.30` como van a sonar en el video, en `~/Desktop/barber-pro/anuncios/voces/`:
-1. **Arlo** — confident and clear, deep pitch
-2. **Daro** — confident and clear, low pitch
-3. **Enzo** — crisp and eager, low pitch
+## 🎙️ Voz
+**Orus**, la voz masculina fija de la casa (AI Studio, Gemini 3.8 Flash TTS), la misma de [[solar-installer-pro]], [[infinity-3d]] y el V5 de [[skool-ai]].
+> El 1/11 le pasé tres opciones nuevas a elegir y Santiago cortó eso: *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es mujer usa mujer, no quiero una nueva por cada oferta, si la quisiera te lo voy a decir."* Regla en [[como-trabajar-con-santiago]]: **mujer = Sulafat, hombre = Orus**, y lo único que se decide por oferta es el género según el avatar.
 
 Style usado: *"An American barber in his late twenties recording a voiceover for a TikTok ad, talking straight to other barbers. Confident, grounded, a bit blunt, conversational. No announcer tone, no hype."*
+
+## 🎬 Cómo se arma un video
+1. **Voz:** AI Studio, Gemini 3.8 Flash TTS, voz **Orus**, con el Style de arriba. Crudos de 29 a 35 s en `anuncios/work/vo/V1–V6.wav`, los seis con MD5 verificado distinto. En la edición van a `speed 1.30` con `silence [0.26, 0.12]`.
+2. **Editor: `OUTPUTS/scripts-vsl/edit_barber.py`** (copia de `edit_solar.py` con la paleta de la landing): caja de hook **ámbar #F59E0B con texto negro** arriba, subtítulos de 2 palabras con la activa en ámbar, chips negros con check verde y placa final BARBERPRO MEGAPACK + chip ámbar + botón "Tap Learn more".
+3. **Planes: `OUTPUTS/scripts-vsl/gen_barber_plans.py`** → `V1.json`–`V6.json` en `anuncios/work/`. Pool con **tope de 8 recortes por clip** y `fam` por creador. `cut [1.9, 2.4, 2.9]`, una sola cama musical (`music/bed.wav`, la de [[herrero-de-finde]]) a `music_db -8`.
+4. **Revisión:** hoja de contactos del render a 1 cuadro cada 2 s en `work/sheets/`.
 
 ## 🎞️ B-roll
 - ⚠️ **Casi todo el material hispano de barbería viene con texto quemado** ("El Fade mid está pasando de moda", "marco la línea con la patillera"): no entra en un ad en inglés (regla del 30/10). Hay que buscar en tags y perfiles en inglés.

@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-01.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-02.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-02 — Atlas de Cortes: tanda v46–v48 (vuelta a la DNA validada)](../OUTPUTS/2026-11-02-guiones-atlas-cortes-v46-v48.md) — fricción en el sillón en el hook y la plata al final: el "no, me encanta" de compromiso, el congelamiento a mitad del corte y la que lo lee antes · ver [[atlas-de-cortes]]
 - [Módulo 1 de la mentoría — guía de clase](../OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md) — la versión con la que da la clase (la teoría completa quedó como respaldo) · ver [[mentoria]]
 - [2026-11-01 — BarberPro: descripción para ads](../OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md) — una principal y una corta, en inglés, sin precio y sin certificados · ver [[barber-pro]]
 - [2026-11-01 — Mentoría, Módulo 1: búsqueda de ofertas ganadoras](../OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md) — el documento de clase completo: Biblioteca de Anuncios paso a paso, señales, scorecard, auditoría del competidor y plantillas · ver [[mentoria]]

@@ -1,3 +1,12 @@
+## 2026-11-02 — Atlas de Cortes: tanda v46–v48, vuelta a la DNA que validó la cuenta
+
+- **Pedido de Santiago:** *"vamos con ads para pelo, no están funcionando los que hicimos, repasá las cosas que te dije que funcionaron en la oferta, y armemos 3 nuevos."*
+- **Diagnóstico:** de la V25 a la V45 todo fue bizop (el ángulo que fijó el 28/10). Lo que la cuenta validó dos veces es **fricción durante el servicio con la clienta sentada** + *"no es tu técnica, es memoria"*: V2 $18,61 (5 compras), V3 $17,47 (6 compras), V8 y los dos ads ajenos de $11. Los dos peores de la cuenta son los dos de plata en el hook (V4 $22,38 y V5 $22,61). El sleeper V6 (la carpetita, $13,39 con volumen) seguía sin explotar desde el 23/10.
+- **3 guiones nuevos** con el hook en territorio validado y el bizop al final y suave: **V46** el "no, I love it" de compromiso (territorio V2 + minuto del espejo), **V47** el congelamiento a mitad del corte (territorio V3, el de más volumen) y **V48** "she just reads it first" (el V6 / la carpetita, permiso y prueba social, la línea que ya corre en las natives que escalan). EN + ES voseo, nombres **2/11 - 1, 2 y 3**.
+- **Regla nueva en `WIKI/guiones-y-anuncios.md` (2026-11-02):** *"no están funcionando" = volver a lo validado, no a otra variable del mismo eje*. El ángulo que él fija no se tira: baja al final del guion, sin cifras. Modula la regla del 29/10.
+- Entregado en `OUTPUTS/2026-11-02-guiones-atlas-cortes-v46-v48.md`, `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v46-v48.md` y al portapapeles.
+- Sin archivos de RAW procesados.
+
 ## 2026-11-01 — Mentoría: Módulo 1 pasado a formato guía (corrección de Santiago)
 
 - **Corrección de Santiago sobre el formato de los documentos de la mentoría:** *"Quedó muy bien, pero fuiste demasiado al detalle. Los títulos, el orden, los cuadros están genial, pero ir súper detallado en las explicaciones no me gustó tanto, porque eso me da poco margen para improvisar y hablar, entonces solo termino leyendo. Hacelo más como guía, que tenga lo más importante."*

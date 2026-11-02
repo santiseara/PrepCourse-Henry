@@ -1,3 +1,10 @@
+## 2026-11-02 (noche) — Caza de VSL en Brasil: salud y renta extra
+
+- Pedido de Santiago: *"usemos la skill de cazar y quiero que encontremos únicamente ofertas con VSL … validadas, que no sean de marcas personales, que tengan más de 50 anuncios y dame mínimo 3 … nicho de salud o de renta extra en Brasil"*.
+- Barrido con el conector oficial de Meta (`ads_library_search`) + verificación visual de cada candidato en la Biblioteca de Anuncios y de las landings en Chrome. **No hay 3 que cumplan todo:** de los que pasan 50+ anuncios activos en esos nichos, solo **Venda Sem Estoque** (~110 ads, `site.marcelowedrop.com`, "A aula está liberada", 6 semanas sin pausar) tiene VSL. **LIQUIDZ** (~670 ads, activos desde ago 2025) es e-commerce y **DRM Plus** (~130 ads, zumbido/sueño, $5) manda a WhatsApp, igual que la flota de 16 fanpages de **Dra. Caroline Townsend**.
+- Hallazgo de mercado: en Brasil el gasto grande de salud migró a embudos de WhatsApp; el cluster de VSL de salud con 50+ ads no existe hoy.
+- Output: `OUTPUTS/2026-11-02-caza-vsl-brasil-salud-renta-extra.md` (tabla de descartados con número, veredicto y los footprints de búsqueda que sí trajeron VSL), enlazado en `WIKI/index.md`.
+
 ## 2026-11-02 (tarde) — Herrero LATAM: una sola cama musical (`bed_B`) en los 10
 
 - Santiago escucho los 10 videos de la tanda LATAM: *"Ajusta la musica, en algunos se escucha muy mal, quiero todos con la musica del que empieza con: Piensan..."*. Ese es el **L3** ("Piensa en el martes en la noche..."), que llevaba `bed_B`; los otros nueve iban con `bed_A` y `bed_C` rotados.

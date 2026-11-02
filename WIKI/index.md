@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-02 — Atlas de Cortes: natives 15 y 16](../OUTPUTS/2026-11-02-natives-atlas-cortes-15-y-16.md) — la foto descolorida pegada al espejo (un corte que nunca pudo repetir) y la corta del "no, me encanta" de compromiso · ver [[atlas-de-cortes]]
 - [2026-11-02 — Atlas de Cortes: tanda v46–v48 (vuelta a la DNA validada)](../OUTPUTS/2026-11-02-guiones-atlas-cortes-v46-v48.md) — fricción en el sillón en el hook y la plata al final: el "no, me encanta" de compromiso, el congelamiento a mitad del corte y la que lo lee antes · ver [[atlas-de-cortes]]
 - [Módulo 1 de la mentoría — guía de clase](../OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md) — la versión con la que da la clase (la teoría completa quedó como respaldo) · ver [[mentoria]]
 - [2026-11-01 — BarberPro: descripción para ads](../OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md) — una principal y una corta, en inglés, sin precio y sin certificados · ver [[barber-pro]]

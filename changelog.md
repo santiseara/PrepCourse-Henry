@@ -5,6 +5,7 @@
 - **3 guiones nuevos** con el hook en territorio validado y el bizop al final y suave: **V46** el "no, I love it" de compromiso (territorio V2 + minuto del espejo), **V47** el congelamiento a mitad del corte (territorio V3, el de más volumen) y **V48** "she just reads it first" (el V6 / la carpetita, permiso y prueba social, la línea que ya corre en las natives que escalan). EN + ES voseo, nombres **2/11 - 1, 2 y 3**.
 - **Regla nueva en `WIKI/guiones-y-anuncios.md` (2026-11-02):** *"no están funcionando" = volver a lo validado, no a otra variable del mismo eje*. El ángulo que él fija no se tira: baja al final del guion, sin cifras. Modula la regla del 29/10.
 - **Los 3 videos producidos:** `AT-V46.mp4` (40,6 s), `AT-V47.mp4` (37,5 s) y `AT-V48.mp4` (37,1 s), voz Sulafat, `speed 1.30`, hojas de contactos revisadas.
+- **Natives, tanda 7 (15 y 16):** una larga (Dell Hausman, Muscatine IA, la foto descolorida del espejo — el AT-V47 en native) y una corta (el "no, me encanta" de compromiso — el AT-V46 en native), las dos en el territorio validado. `OUTPUTS/2026-11-02-natives-atlas-cortes-15-y-16.md`.
 - Entregado en `OUTPUTS/2026-11-02-guiones-atlas-cortes-v46-v48.md`, `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v46-v48.md` y al portapapeles.
 - Sin archivos de RAW procesados.
 

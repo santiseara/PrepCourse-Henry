@@ -6,7 +6,7 @@
 
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
-- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento editable por módulo, referencia la School de Bilbao. Módulo 1 (búsqueda de ofertas ganadoras) entregado.
+- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulo 1 entregado.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [Módulo 1 de la mentoría — guía de clase](../OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md) — la versión con la que da la clase (la teoría completa quedó como respaldo) · ver [[mentoria]]
 - [2026-11-01 — BarberPro: descripción para ads](../OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md) — una principal y una corta, en inglés, sin precio y sin certificados · ver [[barber-pro]]
 - [2026-11-01 — Mentoría, Módulo 1: búsqueda de ofertas ganadoras](../OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md) — el documento de clase completo: Biblioteca de Anuncios paso a paso, señales, scorecard, auditoría del competidor y plantillas · ver [[mentoria]]
 - [2026-11-01 — Vence al Parkinson: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md) — las 7 familias de hook de sus 30 ads y los 6 guiones nuestros en voseo · ver [[vence-al-parkinson]]

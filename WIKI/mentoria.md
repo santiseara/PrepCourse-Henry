@@ -6,12 +6,19 @@ Referencia declarada: **la School de Santiago Bilbao** (la formación que está 
 
 ## Cómo se entregan los módulos (regla fija, 2026-11-01)
 
-- **Un documento por módulo**, súper detallado, ordenado y lindo de ver. Él lo edita después según lo que más le gusta.
+- ⭐ **El documento es una GUÍA, no un ensayo.** Corrección de Santiago del 2026-11-01, después de leer la primera versión del Módulo 1:
+  > «Quedó muy bien, pero fuiste demasiado al detalle. Los títulos, el orden, los cuadros están genial, pero ir súper detallado en las explicaciones no me gustó tanto, porque eso me da poco margen para improvisar y hablar, entonces solo termino leyendo. Hacelo más como guía, que tenga lo más importante.»
+
+  Lo que se mantiene: **títulos, orden y cuadros** (eso le gustó). Lo que cambia: las explicaciones van en **viñetas cortas con el dato clave**, no en párrafos desarrollados. Él habla alrededor de la viñeta; el documento no habla por él.
+
+  Medida práctica: **~2.000–2.500 palabras por módulo**, no 7.000. Si una sección necesita tres párrafos para explicarse, va como tres viñetas con el número o el caso adentro.
+- **Un documento por módulo**, ordenado y lindo de ver. Él lo edita después según lo que más le gusta.
 - Se entrega en **tres formatos a la vez**:
   1. **Claude Doc** (editable online, comentable, exporta a Word / Google Docs / PDF) — es el entregable principal.
   2. **`.docx`** en `~/Desktop/Mentoria/` para subir a su Drive y editar en Word.
   3. **Copia en `OUTPUTS/`** en markdown, para el cerebro.
-- El documento lleva **toda la teoría**. Los ejemplos y la práctica los pone él en vivo sobre la pantalla, así que el documento no depende de capturas.
+- El documento lleva **los puntos que hay que decir sí o sí**, no toda la teoría desarrollada. Los ejemplos y la práctica los pone él en vivo sobre la pantalla, así que el documento no depende de capturas.
+- Si hace falta la teoría larga, va en un **doc de respaldo aparte** (no es el que se usa para dar la clase).
 - Cada módulo cierra con **tarea + criterio de aprobación** antes de pasar al siguiente.
 - **No hay documento de introducción** (decisión del 2026-11-01): el video de intro va sin doc. Se arranca directo en el Módulo 1.
 
@@ -31,9 +38,14 @@ El orden sale de la jerarquía del método: **1. Mercado → 2. Anuncios → 3. 
 
 ## Módulo 1 — Búsqueda de ofertas ganadoras
 
-Entregado el 2026-11-01. Doc: https://claude.ai/artifact/9q5Vd2ZNRXVuyXKMfdpRMm · `OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md` · `~/Desktop/Mentoria/Modulo 1 - Busqueda de ofertas ganadoras.docx`
+Entregado el 2026-11-01 en dos versiones, después de la corrección de formato:
 
-Secciones: por qué es el Módulo 1 · qué es una oferta ganadora (las 5 condiciones) · el principio (modelar ≠ clonar, nunca en el mismo mercado, mercado fuente → destino) · la Biblioteca de Anuncios paso a paso (URLs, `country=ALL`, `start_date`, `sort_data`, los 4 ejes de keywords) · las señales (la fecha antes que el volumen, la regla de los 3 días, escalera de certeza, descartes automáticos) · las otras plataformas · mapa de nichos y mercados · auditoría del competidor en 5 pasos · scorecard de 4 señales y veredicto de competencia · los errores que matan la cacería · rutina y plantillas · tarea.
+| Versión | Para qué | Dónde |
+|---|---|---|
+| **Guía de clase** (la que se usa) | Dar la clase hablando, ~2.400 palabras | https://claude.ai/artifact/41sAqcCnPCRasmRxmyo75U · `OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md` · `~/Desktop/Mentoria/Modulo 1 - Guia de clase.docx` |
+| **Teoría completa** (respaldo) | Consultar un detalle, ~7.000 palabras | https://claude.ai/artifact/9q5Vd2ZNRXVuyXKMfdpRMm · `OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md` · `~/Desktop/Mentoria/Modulo 1 - Busqueda de ofertas ganadoras.docx` |
+
+Secciones de la guía (9): el punto del módulo (jerarquía mercado → anuncios → funnel → producto) · qué es una oferta ganadora (5 señales + qué no cuenta) · la Biblioteca de Anuncios (`country=ALL`, las 2 URLs listas, los 4 caminos de búsqueda) · cómo se lee si vende (fecha antes que volumen, regla de los 3 días, escalera de certeza, descartes) · las otras plataformas · nichos y mercados (3 big niches, subnichos, fuente → destino) · auditar al competidor en 5 pasos · el scorecard y la ficha de oferta · errores, rutina y tarea.
 
 ## Preguntas abiertas
 - ¿Confirmamos el orden y los nombres de los módulos 2 a 6?
@@ -45,4 +57,6 @@ Secciones: por qué es el Módulo 1 · qué es una oferta ganadora (las 5 condic
 
 ## Fuentes
 - Pedido de Santiago del 2026-11-01 (armado de los módulos de su mentoría)
-- OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md
+- OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md (teoría completa)
+- OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md (la guía con la que se da la clase)
+- Corrección de Santiago del 2026-11-01 sobre el formato de los documentos

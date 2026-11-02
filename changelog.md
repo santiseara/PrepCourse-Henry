@@ -1,3 +1,12 @@
+## 2026-11-01 — Mentoría: Módulo 1 pasado a formato guía (corrección de Santiago)
+
+- **Corrección de Santiago sobre el formato de los documentos de la mentoría:** *"Quedó muy bien, pero fuiste demasiado al detalle. Los títulos, el orden, los cuadros están genial, pero ir súper detallado en las explicaciones no me gustó tanto, porque eso me da poco margen para improvisar y hablar, entonces solo termino leyendo. Hacelo más como guía, que tenga lo más importante."*
+- **Regla nueva (queda en `WIKI/mentoria.md`):** el documento de cada módulo es una **guía, no un ensayo**. Se mantienen títulos, orden y cuadros; las explicaciones van en viñetas cortas con el dato clave adentro. Medida práctica: **~2.000–2.500 palabras por módulo**, no 7.000. Si hace falta teoría larga, va en un doc de respaldo aparte.
+- **Módulo 1 reescrito como guía de clase** (2.438 palabras, 9 secciones, de 7.058 que tenía): el punto del módulo · qué es una oferta ganadora · la Biblioteca de Anuncios · cómo se lee si vende · las otras plataformas · nichos y mercados · auditar al competidor · el scorecard y la ficha · errores, rutina y tarea. Se conservaron los dos cuadros de URLs listas y la ficha de oferta en ASCII.
+- Entregado en los tres formatos: Claude Doc https://claude.ai/artifact/41sAqcCnPCRasmRxmyo75U · `~/Desktop/Mentoria/Modulo 1 - Guia de clase.docx` · `OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md`.
+- El doc detallado anterior **no se borró**: pasó a llamarse *"Módulo 1 — Teoría completa (respaldo, no para dar la clase)"* (mismo link, https://claude.ai/artifact/9q5Vd2ZNRXVuyXKMfdpRMm).
+- Sin archivos de RAW procesados.
+
 ## 2026-11-01 — BarberPro: los 6 videos producidos + regla de voces fijas
 - **Regla nueva (Santiago): las voces son fijas.** *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es mujer usa mujer, no quiero una nueva por cada oferta, si la quisiera te lo voy a decir."* **Mujer = Sulafat, hombre = Orus.** No se mandan opciones a elegir; lo único que se decide por oferta es el género del avatar. Queda en `WIKI/como-trabajar-con-santiago.md` y `WIKI/vsl-reglas-de-armado.md`.
 - Los 6 ads producidos con **Orus**: `~/Desktop/barber-pro/anuncios/BP-V1.mp4` a `BP-V6.mp4` (22,8 a 27,6 s, 9:16, 9 a 12 planos), `speed 1.30`, `silence [0.26, 0.12]`.

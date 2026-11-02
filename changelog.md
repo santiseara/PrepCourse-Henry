@@ -7,6 +7,7 @@
 - **Los 3 videos producidos:** `AT-V46.mp4` (40,6 s), `AT-V47.mp4` (37,5 s) y `AT-V48.mp4` (37,1 s), voz Sulafat, `speed 1.30`, hojas de contactos revisadas.
 - **Natives, tanda 7 (15 y 16):** una larga (Dell Hausman, Muscatine IA, la foto descolorida del espejo — el AT-V47 en native) y una corta (el "no, me encanta" de compromiso — el AT-V46 en native), las dos en el territorio validado. `OUTPUTS/2026-11-02-natives-atlas-cortes-15-y-16.md`.
 - Entregado en `OUTPUTS/2026-11-02-guiones-atlas-cortes-v46-v48.md`, `~/Desktop/atlas-cortes/anuncios/guiones/guiones-v46-v48.md` y al portapapeles.
+- **Regla nueva (Santiago, 2/11):** *"Dame los prompt y descripciones, no me sirve que me las mandes así"*. Las natives se entregan con **el prompt de imagen y la descripción completos en bloques de código en el chat**, no con un resumen y el link al archivo. Queda en `WIKI/como-trabajar-con-santiago.md`.
 - Sin archivos de RAW procesados.
 
 ## 2026-11-01 — Mentoría: Módulo 1 pasado a formato guía (corrección de Santiago)

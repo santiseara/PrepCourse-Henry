@@ -66,7 +66,7 @@ VIDEOS = [
     dict(n=4, hook='CLASS STARTS WHEN YOU HIT PLAY', hook_until='play', first=['F', 0], seed=440,
          overlays=[dict(type='chip', text='NO CAMPUS · NO COMMUTE', icon='✓', word='commute', dur=2.4),
                    dict(type='chip', text='ASK ON WHATSAPP', icon='✓', word='WhatsApp', dur=2.4),
-                   dict(FIN=1, word='tonight')]),
+                   dict(FIN=1, word='practice')]),   # 'tonight' era la ultima palabra: la placa final no llegaba a entrar
     dict(n=5, hook='THEY SIT FOR FREE. NOBODY PAYS.', hook_until='yet', first=['G', 0], seed=550,
          overlays=[dict(type='chip', text='WHAT TO CHARGE PER CUT', icon='✓', word='charge', dur=2.4),
                    dict(type='chip', text='YOUR PRICE LIST, DONE', icon='✓', word='Instagram', dur=2.4),

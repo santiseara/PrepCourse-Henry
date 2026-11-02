@@ -75,10 +75,32 @@ Style usado: *"An American barber in his late twenties recording a voiceover for
 3. **Planes: `OUTPUTS/scripts-vsl/gen_barber_plans.py`** → `V1.json`–`V6.json` en `anuncios/work/`. Pool con **tope de 8 recortes por clip** y `fam` por creador. `cut [1.9, 2.4, 2.9]`, una sola cama musical (`music/bed.wav`, la de [[herrero-de-finde]]) a `music_db -8`.
 4. **Revisión:** hoja de contactos del render a 1 cuadro cada 2 s en `work/sheets/`.
 
+## 🎬 Videos listos (1/11)
+`~/Desktop/barber-pro/anuncios/`, 9:16 1080x1920, voz **Orus**, `speed 1.30`, `silence [0.26, 0.12]`, `edit_barber.py`:
+| Archivo | Largo | Planos | Hook en pantalla |
+|---|---|---|---|
+| BP-V1.mp4 | 25,1 s | 11 | SHOWN ONCE. AT FULL SPEED. |
+| BP-V2.mp4 | 27,6 s | 12 | YOU PAID. YOU STILL LEAVE LINES. |
+| BP-V3.mp4 | 24,6 s | 11 | ONE EXTRA FADE A WEEK |
+| BP-V4.mp4 | 24,4 s | 10 | CLASS STARTS WHEN YOU HIT PLAY |
+| BP-V5.mp4 | 22,8 s | 9 | THEY SIT FOR FREE. NOBODY PAYS. |
+| BP-V6.mp4 | 23,9 s | 10 | NOBODY SAYS IT. THEY JUST GO. |
+
+Hojas de contactos revisadas a 1 cuadro cada 2 s: sin texto quemado ajeno, sin caras hablando a cámara, chips dentro del borde y los seis cierran con la placa final.
+
+**Trampas de esta tanda (sirven para cualquier oferta):**
+- 🆕 **El `first` del plan tiene que existir en el pool.** V3 arrancaba en `['B', 0]` pero la ventana de B empieza en el segundo 4, y V6 en `['C', 20]` cuando los tramos van de 4,5 en 4,5: los dos cortaron con `StopIteration`. `gen_barber_plans.py` ahora valida el primer plano antes de escribir el JSON y, si no está, imprime los tramos disponibles de ese clip.
+- 🆕 **La placa final no entra si se ancla en la última palabra del guion.** El V4 cerraba con `END('tonight')` ("Press play tonight") y el video terminaba sin placa, sin dar ningún error. Se movió a `practice`, tres palabras antes. Complementa la regla del 30/10 de [[atlas-de-cortes]] (la palabra del END tiene que ser única) con una segunda condición: **que no sea la última**.
+- 🆕 **Para verificar la placa final hay que sacar el cuadro por timestamp absoluto.** `ffmpeg -sseof -1.2` devuelve un cuadro de varios segundos antes y hace creer que el video termina sin placa: hay que leer la duración y pedir `-ss <dur-0.4>`.
+- 🆕 **Un clip borrado a mitad de un render lo hace fallar** con `AttributeError: 'NoneType' object has no attribute 'groups'` al medir la duración. Si hay un render corriendo, primero se lo deja terminar y después se toca el pool.
+
 ## 🎞️ B-roll
 - ⚠️ **Casi todo el material hispano de barbería viene con texto quemado** ("El Fade mid está pasando de moda", "marco la línea con la patillera"): no entra en un ad en inglés (regla del 30/10). Hay que buscar en tags y perfiles en inglés.
 - tikwm sigue sirviendo para bajar (`api/?hd=1&url=…`), pero **su buscador está detrás de Cloudflare**: los links se sacan de `tiktok.com/tag/<tag>` en el navegador, que sí carga y da 80+ links por tag.
-- Clips limpios ya revisados: `7524696667791101240` (tijera, barbería, sin texto) y `7606775155330780438` (manos y tijera, barbería blanca).
+- **Pool final: 9 clips limpios** en `anuncios/work/tiktoks/` (A 7524696, B 7606775, C 7597515, E 7700312, F 7698172, G 7699929, H 7662865, J 7579245, K 7602321), con tope de 8 recortes por clip y `fam` por creador.
+- **Descartados por texto quemado (11):** 7391055, 7532994, 7550833, 7657013 (carteles en español), 7646883, 7694093, 7685863, 7691755 (subtítulos en español), 7677652 y 7609889 (subtítulos en inglés), 7700332 ("Assume everything will work out").
+- ⚠️ **Dos clips pasaron la primera revisión y se colaron en el render:** `7645113` y `7656605` tienen el cartel **"LEVER OPEN"** que aparece recién pasado el minuto o en una segunda vuelta. Los agarró la hoja de contactos del video renderizado, no la de los clips. Es la regla del 27/10 de [[100-paper-squishies]] otra vez: **la revisión que vale es la del render**.
+- Los creadores que no queman texto son la mejor veta: entrando por su perfil (`tiktok.com/@fadedculture__`, `@andresrsantamaria`) salen 3 o 4 clips limpios de una.
 
 ## Relacionado
 [[atlas-de-cortes]] · [[guiones-y-anuncios]] · [[renovacion-de-creativos]] · [[testeo-de-creativos]]

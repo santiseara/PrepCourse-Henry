@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-01 — BarberPro: descripción para ads](../OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md) — una principal y una corta, en inglés, sin precio y sin certificados · ver [[barber-pro]]
 - [2026-11-01 — Mentoría, Módulo 1: búsqueda de ofertas ganadoras](../OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md) — el documento de clase completo: Biblioteca de Anuncios paso a paso, señales, scorecard, auditoría del competidor y plantillas · ver [[mentoria]]
 - [2026-11-01 — Vence al Parkinson: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-vence-al-parkinson-v1-v6.md) — las 7 familias de hook de sus 30 ads y los 6 guiones nuestros en voseo · ver [[vence-al-parkinson]]
 - [2026-11-01 — BarberPro: análisis del competidor y tanda 1 (6 guiones)](../OUTPUTS/2026-11-01-guiones-barber-pro-v1-v6.md) — las 6 familias de hook de sus 28 ads en inglés y los 6 guiones nuestros, EN + ES · ver [[barber-pro]]

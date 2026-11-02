@@ -1,3 +1,11 @@
+## 2026-11-01 — BarberPro: los 6 videos producidos + regla de voces fijas
+- **Regla nueva (Santiago): las voces son fijas.** *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es mujer usa mujer, no quiero una nueva por cada oferta, si la quisiera te lo voy a decir."* **Mujer = Sulafat, hombre = Orus.** No se mandan opciones a elegir; lo único que se decide por oferta es el género del avatar. Queda en `WIKI/como-trabajar-con-santiago.md` y `WIKI/vsl-reglas-de-armado.md`.
+- Los 6 ads producidos con **Orus**: `~/Desktop/barber-pro/anuncios/BP-V1.mp4` a `BP-V6.mp4` (22,8 a 27,6 s, 9:16, 9 a 12 planos), `speed 1.30`, `silence [0.26, 0.12]`.
+- Editor nuevo `OUTPUTS/scripts-vsl/edit_barber.py` (paleta negro + ámbar de la landing) y generador `OUTPUTS/scripts-vsl/gen_barber_plans.py` (valida que el primer plano exista en el pool).
+- Pool de 9 clips de TikTok limpios; 11 descartados por texto quemado y 2 más cazados en la hoja del render ("LEVER OPEN").
+- Descripción para ads (principal y corta, en inglés): `OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md`.
+- Trampas nuevas anotadas en `WIKI/barber-pro.md` y `WIKI/vsl-reglas-de-armado.md`: el Run de AI Studio queda bloqueado hasta que el audio termina de sonar, el Style se come el texto si el desplegable está abierto, la placa final no entra si se ancla en la última palabra, y el cuadro final hay que sacarlo por timestamp absoluto.
+
 ## 2026-11-01 — Mentoría: Módulo 1 (búsqueda de ofertas ganadoras)
 - Santiago arranca su propia **mentoría** de infoproductos low ticket, tomando como referencia la School de Santiago Bilbao. Un documento detallado y editable por módulo; da la clase con el documento en pantalla y los ejemplos en vivo.
 - **No hay documento de introducción** (lo pidió explícito): el video de intro va sin doc y se arranca directo en el Módulo 1.

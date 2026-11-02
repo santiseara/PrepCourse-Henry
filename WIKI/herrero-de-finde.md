@@ -309,7 +309,8 @@ Santiago pasó una clave de Google AI Studio: *"para que no tengas que usar mi c
 - **Los números con punto de miles se leen bien** ("1.070" → "mil setenta"), así que se escriben con punto en el `.txt` y sirven de ancla.
 
 ### Dos cosas de armado
-- **Planes:** `anuncios/work/plans/gen12.py`, mismo pool limpio de 336 recortes de TikTok, tres camas musicales rotadas y `usage.json` compartido (backup en `usage_pre_latam.json`).
+- **Planes:** `anuncios/work/plans/gen12.py`, mismo pool limpio de 336 recortes de TikTok y `usage.json` compartido (backup en `usage_pre_latam.json`).
+- **Música: `bed_B` en los diez** (`music_db: -9`). La primera pasada salió con los beds rotados A/B/C y Santiago los escuchó: *"en algunos se escucha muy mal, quiero todos con la musica del que empieza con: Piensan..."* — el L3, que llevaba `bed_B`. `MUS` en `gen12.py` quedó en `bed_B` fijo y los diez se re-renderizaron el 2/11 restaurando `usage_pre_latam.json` y rehaciendo L1→L10 en orden: **mismos clips, mismos subtítulos, solo cambia la cama** (verificado cuadro a cuadro y comparando el `usage.json` final con el de la primera pasada). `bed_A` y `bed_C` quedan descartados para esta voz. Regla en [[guiones-y-anuncios]].
 - **Cuando el guión no termina en "Toca Más información", el ancla del cierre es otra.** El L7 cierra con *"Elige uno y ármalo…"* y el L10 con *"Tus herramientas ya están listas…"*: el `END` va anclado a esas palabras. La validación de `gen12.py` lo avisó antes de renderizar.
 
 ### Lo que falta del lado del embudo

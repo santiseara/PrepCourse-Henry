@@ -1,3 +1,10 @@
+## 2026-11-02 (tarde) — Herrero LATAM: una sola cama musical (`bed_B`) en los 10
+
+- Santiago escucho los 10 videos de la tanda LATAM: *"Ajusta la musica, en algunos se escucha muy mal, quiero todos con la musica del que empieza con: Piensan..."*. Ese es el **L3** ("Piensa en el martes en la noche..."), que llevaba `bed_B`; los otros nueve iban con `bed_A` y `bed_C` rotados.
+- `MUS` en `anuncios/work/plans/gen12.py` pasa a **`bed_B` fijo** para los diez. Los 10 videos re-renderizados restaurando `usage_pre_latam.json` y rehaciendo L1->L10 en orden: **mismos clips y mismos subtitulos, solo cambia la cama**. Verificado comparando un cuadro de cada video antes/despues (los 10 identicos) y el `usage.json` final con el de la primera pasada (identico). Correlacion del arranque de cada mezcla contra las tres camas: los 10 dan `bed_B`.
+- `bed_A` y `bed_C` quedan descartados para esta voz. La costura del loop de `bed_B` (44 s) revisada en los videos de mas de 44 s: sin salto de nivel.
+- WIKI: regla nueva en `guiones-y-anuncios.md` (**el generador de planes no rota beds nunca**, refuerzo de la del 27/10), cama por defecto de Herrero actualizada en `vsl-reglas-de-armado.md` y nota de armado en `herrero-de-finde.md`.
+
 ## 2026-11-02 — Herrero: salto a LATAM con "Herrero de Ocio", 10 videos en español neutro
 
 - **Pedido de Santiago:** *"vamos a poner los anuncios para LATAM … un idioma con acento neutro … acordate lo que funcionó … replicámoslos … mismo anuncio, mismos visuales, mismo guión … armame 10 videos"*, más un ad de la biblioteca para replicar y su clave de API de Google AI Studio.

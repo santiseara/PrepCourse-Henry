@@ -184,6 +184,7 @@ Con 49 créditos de Higgsfield se cubrieron los 17 momentos de B-roll de un VSL 
 ### 🆕 2026-10-29 · La cama musical por defecto es la de Herrero, a -8 dB
 - Santiago, sobre la tanda 1 de Solar Installer Pro: *"pone la misma musica que pones en la de herrero, un poquito mas alta, te quedo muy baja, tampoco tan alta"*.
 - **Cama por defecto para los ads de voz en off:** `herrero-de-finde/anuncios/work/music/bed_A.wav` (93 s, no necesita loop). Se copia a la carpeta de la oferta como `music/bed_herrero.wav`.
+  - **Para Herrero, desde el 2/11 la cama es `bed_B`, no `bed_A`.** Santiago escuchó los 10 de LATAM: *"en algunos se escucha muy mal, quiero todos con la musica del que empieza con: Piensan..."* (el L3, que llevaba `bed_B`). `bed_B` (45 s, loopea con fundido de 1 s) a `music_db: -9`. Y **una sola cama por tanda, sin rotar A/B/C**, la regla del 27/10 de [[guiones-y-anuncios]] reforzada el 2/11.
 - **Volumen: `music_db: -8`.** Es el valor de los ads de Herrero v13–v21 y el nuevo piso para todas las ofertas. **-11 quedó muy baja** (era lo que tenía la tanda 1 de Solar). No pasarse de -8: a -6 ya tapa la voz.
   - Recordar que `music_db` es **relativo al RMS de la voz** (el editor normaliza la cama contra la voz antes de aplicarlo), así que el valor sirve igual con cualquier pista.
 - Sigue valiendo **una sola cama por tanda**. Separar la música del anuncio del competidor con demucs es un buen punto de partida, pero si no suena mejor que la de Herrero, va la de Herrero.

@@ -265,7 +265,23 @@ Santiago: *"vamos a poner los anuncios para LATAM … un idioma con acento neutr
 - **La tanda es el banco de ganadores, no guiónes nuevos.** Los diez son los que vendieron en AR, pasados a neutro: V7 (CPA 1,00) → **L2**, V47 (4,00) → **L3**, V48 (5,53) → **L4**, V46 (6,85) → **L5**, V6 (7,05) → **L6**, V2 (8,70) → **L10**, V3 (10,71) → **L9**, V5 (11,39) → **L7**, V4 (13,56) → **L8**. El décimo (**L1**) es la réplica del ad del competidor que mandó Santiago. Los que no vendieron (V1, V43, V44, V45) no entran.
 - **Son 10 y no 6:** lo pidió explícito ("10 testeos"). Se le marcó que la regla de tanda es 6; acá no son seis apuestas nuevas sino nueve creativos ya validados en AR más una réplica, así que el riesgo es otro.
 - **Guiónes:** `OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md` (copia en `anuncios/guiones-latam-L1-L10.md`).
-- **Entregables:** `~/Desktop/herrero-de-finde/anuncios/latam/HF-L1…HF-L10`.
+- **Entregables** (`~/Desktop/herrero-de-finde/anuncios/latam/`, los diez renderizados el 2/11):
+
+| | Archivo | Duración | Ficha |
+|---|---|---|---|
+| L1 | `HF-L1-acero-a-precio-trailer.mp4` | 0:36 | TR-013 trailer con rampa 3,60 x 1,80 (US$2.175 → 3.780-4.915) |
+| L2 | `HF-L2-el-rollo-de-alambre.mp4` | 1:02 | BQ-007 brasero cuadrado 70 cm (US$143 → 305-395) |
+| L3 | `HF-L3-el-martes-cobrado.mp4` | 0:46 | FN-014 isla de cocina (US$219 → 725-940) |
+| L4 | `HF-L4-o-fabricas-o-te-devuelven.mp4` | 0:44 | ST-004 cochera a un agua (US$659 → 1.600-2.080) |
+| L5 | `HF-L5-los-planos-gratis.mp4` | 0:49 | ST-005 escalera de 8 escalones (US$342 → 1.150-1.495) |
+| L6 | `HF-L6-menos-que-un-tanque.mp4` | 0:46 | — (comparación de costo, sin ficha) |
+| L7 | `HF-L7-tres-cosas-que-pagan.mp4` | 0:37 | FM-068 / BQ-007 / TR-013 |
+| L8 | `HF-L8-cinco-trabajos-800.mp4` | 0:30 | FN-022 / GY-020 / BQ-053 / BQ-069 / ST-004 |
+| L9 | `HF-L9-la-parrilla-santa-maria.mp4` | 0:32 | BQ-053 parrilla Santa María (US$338 → 1.050-1.365) |
+| L10 | `HF-L10-suma-lo-del-taller.mp4` | 0:31 | BQ-007 brasero cuadrado 70 cm |
+
+- **Verificado sobre el render terminado** (no sobre los clips): hoja de contactos completa del L1, el L2 y el L7, más la hoja de los diez hooks y la de los diez cierres. Los diez cierran con **HERRERO DE OCIO** y la línea de abajo entera, los chips de cotización caen en la palabra, los hooks llevan las tildes (DIFÍCIL, DÍAS) y ninguno de los tramos vetados del pool se coló. Cero avisos de ancla en los diez logs.
+- **El L2 quedó en 1:02**, el más largo de todas las tandas: el V7 tiene 214 palabras y esta voz habla más lento. Entra en el máximo de 1:30 pero es el candidato a recortar si el retention cae.
 
 ### El ad del competidor que pidió replicar (ad library 1705765621113551)
 - Es de **The Weekend Fabricator** (la página original en inglés), en circulación desde el **30 oct 2026**, 34 s, primary text *"Pick one. Build it this weekend 👇"*. Bajado y transcripto.

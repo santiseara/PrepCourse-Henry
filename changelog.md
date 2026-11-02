@@ -7,7 +7,8 @@
 - **Las voces salen por API, no por el navegador.** `OUTPUTS/scripts-vsl/tts_gemini.py` + `gemini-2.5-flash-preview-tts` + voz **Orus**: las diez en una corrida, sin pestañas ni el límite de una generación por carga. Los TTS 3.x **recitan las instrucciones de estilo** por API, así que no sirven. La clave vive en `~/.config/herrero/gemini.env`, fuera del repo.
 - **10 y no 6:** lo pidió explícito; se le marcó que la regla de tanda es 6, pero acá son nueve creativos ya validados más una réplica.
 - **Pendiente del embudo:** la landing y el checkout siguen en pesos y con Mercado Pago, que no vende multipaís. Los ads no dicen precio, así que no bloquean el testeo.
-- Entregado en `OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md`, `~/Desktop/herrero-de-finde/anuncios/guiones-latam-L1-L10.md`, videos en `~/Desktop/herrero-de-finde/anuncios/latam/` y al portapapeles. Planes en `anuncios/work/plans/gen12.py`.
+- **Los 10 videos producidos** en `~/Desktop/herrero-de-finde/anuncios/latam/`, de 0:30 a 1:02 (el L2, que es el V7, es el más largo). Verificados sobre el render: los diez cierres dicen HERRERO DE OCIO, los hooks con tilde, los chips en la palabra, sin tramos vetados ni avisos de ancla.
+- Entregado en `OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md`, `~/Desktop/herrero-de-finde/anuncios/guiones-latam-L1-L10.md` y al portapapeles. Planes en `anuncios/work/plans/gen12.py`.
 - Sin archivos de RAW procesados.
 
 ## 2026-11-02 — Atlas de Cortes: tanda v46–v48, vuelta a la DNA que validó la cuenta

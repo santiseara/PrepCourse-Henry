@@ -1,9 +1,10 @@
 BARBER PRO MEGAPACK - DESCRIPCION PARA ADS (primary text)
-Una sola, en ingles, para acompañar los 6 videos (el competidor usa el mismo copy en todos sus ads).
+Mercado ingles. El competidor usa el mismo copy en sus 28 ads: una sola principal para los 6 videos.
+Sin precio, sin prometer certificados (la landing no los ofrece).
 
 
 =========================
-PRINCIPAL
+PRINCIPAL (la que va)
 =========================
 
 If you practise and the blend still comes out with lines, it is not your skill. 💈
@@ -31,3 +32,42 @@ Pause it, replay it, use it on the next head that sits down.
 WhatsApp support included and a pricing calculator that tells you what to charge.
 
 One payment, yours for life, 7-day guarantee. 👇
+
+
+=========================
+HEADLINES (30 caracteres, para el campo Titular)
+=========================
+
+The fade order, step by step
+100+ lessons. One payment.
+Learn the fade from your phone
+
+
+=========================
+ESPANOL (referencia, no va al ad)
+=========================
+
+PRINCIPAL
+
+Si practicás y el degradé te sigue saliendo con líneas, no es falta de talento. 💈
+
+Nadie te explicó el orden: dónde se abre la primera guía, qué número viene después y el punto exacto en el que dejás de cortar y empezás a difuminar.
+
+Eso es lo que resuelve el BarberPro MegaPack:
+✂️ Más de 100 clases en video de degradés, color, barba, cejas, tijera y diseños freestyle
+📱 Lo ves, lo pausás y lo repetís desde el celular, con el cliente sentado
+💬 Preguntás por WhatsApp cuando una técnica no te cierra
+💰 La Calculadora de Precios del Barbero: cuánto cobrar por corte y tu lista de precios, lista
+🎁 3 ebooks incluidos: los 7 fundamentos de un degradé perfecto, los 10 errores de tu degradé y lo que calladito te está espantando clientes
+
+Un solo pago, acceso de por vida, garantía de 7 días. Menos que una cena. 👇
+
+CORTA
+
+Sin curso presencial. Sin años de práctica. El orden del degradé, desde el celular. 💈
+
+Más de 100 clases: degradés, color, barba, cejas, tijera y diseños.
+Pausalo, repetilo y usalo en la próxima cabeza que se siente.
+Soporte por WhatsApp incluido y una calculadora que te dice cuánto cobrar.
+
+Un solo pago, tuyo para siempre, garantía de 7 días. 👇

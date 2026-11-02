@@ -3,7 +3,7 @@
 - Los 6 ads producidos con **Orus**: `~/Desktop/barber-pro/anuncios/BP-V1.mp4` a `BP-V6.mp4` (22,8 a 27,6 s, 9:16, 9 a 12 planos), `speed 1.30`, `silence [0.26, 0.12]`.
 - Editor nuevo `OUTPUTS/scripts-vsl/edit_barber.py` (paleta negro + ámbar de la landing) y generador `OUTPUTS/scripts-vsl/gen_barber_plans.py` (valida que el primer plano exista en el pool).
 - Pool de 9 clips de TikTok limpios; 11 descartados por texto quemado y 2 más cazados en la hoja del render ("LEVER OPEN").
-- Descripción para ads (principal y corta, en inglés): `OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md`.
+- Descripción para ads: `OUTPUTS/2026-11-01-descripcion-ads-barber-pro.md` (principal + corta en inglés, 3 titulares de 30 caracteres y la versión en español de referencia). Copia en `~/Desktop/barber-pro/anuncios/descripcion-ads.md`.
 - Trampas nuevas anotadas en `WIKI/barber-pro.md` y `WIKI/vsl-reglas-de-armado.md`: el Run de AI Studio queda bloqueado hasta que el audio termina de sonar, el Style se come el texto si el desplegable está abierto, la placa final no entra si se ancla en la última palabra, y el cuadro final hay que sacarlo por timestamp absoluto.
 
 ## 2026-11-01 — Mentoría: Módulo 1 (búsqueda de ofertas ganadoras)

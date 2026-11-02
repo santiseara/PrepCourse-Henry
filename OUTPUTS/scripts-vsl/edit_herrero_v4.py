@@ -339,7 +339,7 @@ def png_end(o, path):
     im.alpha_composite(g)
     im.alpha_composite(Image.new('RGBA', (W, H), BGD + (205,)))
     fl = font(130, BC); y = 420
-    t1, t2 = 'HERRERO DE ', 'FINDE'
+    t1, t2 = o.get('brand1', 'HERRERO DE '), o.get('brand2', 'FINDE')
     w1, w2 = d.textlength(t1, font=fl), d.textlength(t2, font=fl)
     x = (W - w1 - w2) / 2
     d.text((x, y), t1, font=fl, fill=INK + (255,)); d.text((x + w1, y), t2, font=fl, fill=ORANGE + (255,))

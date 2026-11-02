@@ -54,6 +54,13 @@ Santiago: *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es
 - Solo se estrena una voz nueva **si él la pide**. Extiende la regla del 27/10 ("usá siempre las voces que te digo que sirven, no innoves una nueva cada vez") a todas las ofertas y herramientas.
 
 
+## La voz en off sale por API, no por el navegador (regla fija, 2026-11-02)
+Santiago pasó su clave de Google AI Studio: *"para que no tengas que usar mi compu y puedas trabajar mucho más rápido"*.
+- **`OUTPUTS/scripts-vsl/tts_gemini.py`** con `GEMINI_API_KEY` (guardada en `~/.config/herrero/gemini.env`, fuera del repo). Modelo **`gemini-2.5-flash-preview-tts`**: los TTS 3.x **leen en voz alta las instrucciones de estilo** cuando se usan por API, así que no sirven.
+- Las voces fijas no cambian (hombre → **Orus**, mujer → **Sulafat**); el acento y la edad se dirigen desde el Style, que va como párrafo arriba del guión y cierra con *"Lee únicamente el texto que viene a continuación:"*.
+- Esto **no levanta** la regla de trabajar en su Mac: los archivos, los renders y los entregables siguen cayendo en su disco. Lo que desaparece es el navegador (pestañas perdidas, una generación por carga de página, muteos).
+- **El acento se verifica**: se le manda el wav a Gemini y se le pregunta qué variedad de español escucha. Es gratis y evita renderizar una tanda entera con el acento equivocado.
+
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).

@@ -1,3 +1,15 @@
+## 2026-11-02 — Herrero: salto a LATAM con "Herrero de Ocio", 10 videos en español neutro
+
+- **Pedido de Santiago:** *"vamos a poner los anuncios para LATAM … un idioma con acento neutro … acordate lo que funcionó … replicámoslos … mismo anuncio, mismos visuales, mismo guión … armame 10 videos"*, más un ad de la biblioteca para replicar y su clave de API de Google AI Studio.
+- **La tanda es el banco de ganadores, no guiónes nuevos:** V7 (CPA 1,00) → L2, V47 (4,00) → L3, V48 (5,53) → L4, V46 (6,85) → L5, V6 (7,05) → L6, V2 (8,70) → L10, V3 (10,71) → L9, V5 (11,39) → L7, V4 (13,56) → L8. Los que no vendieron (V1, V43, V44, V45) quedaron afuera.
+- **L1 es la réplica del ad que mandó** (ad library 1705765621113551, 30/10, 34 s): *"$2,400 in steel. $4,730 for the camping trailer. Two weekends"*. Es la plantilla más duplicada de la cuenta — aparece en 10 de los 180 videos de la muestra — y la página pasó de 367 a **447 anuncios activos** desde el 22/10.
+- **Lo que cambia de AR a LATAM:** acento latino neutro con tuteo (verificado mandándole el wav a Gemini: *"latino neutro, sin marcas regionales"*, 9/10), **números en dólares** (los pesos eran los dólares del original ×1.000), léxico neutro (fin de semana, dinero, gasolina, esmeriladora, tronzadora, ferretería, acero, brasero) y la marca del cierre pasa a **HERRERO DE OCIO**.
+- **Las voces salen por API, no por el navegador.** `OUTPUTS/scripts-vsl/tts_gemini.py` + `gemini-2.5-flash-preview-tts` + voz **Orus**: las diez en una corrida, sin pestañas ni el límite de una generación por carga. Los TTS 3.x **recitan las instrucciones de estilo** por API, así que no sirven. La clave vive en `~/.config/herrero/gemini.env`, fuera del repo.
+- **10 y no 6:** lo pidió explícito; se le marcó que la regla de tanda es 6, pero acá son nueve creativos ya validados más una réplica.
+- **Pendiente del embudo:** la landing y el checkout siguen en pesos y con Mercado Pago, que no vende multipaís. Los ads no dicen precio, así que no bloquean el testeo.
+- Entregado en `OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md`, `~/Desktop/herrero-de-finde/anuncios/guiones-latam-L1-L10.md`, videos en `~/Desktop/herrero-de-finde/anuncios/latam/` y al portapapeles. Planes en `anuncios/work/plans/gen12.py`.
+- Sin archivos de RAW procesados.
+
 ## 2026-11-02 — Atlas de Cortes: tanda v46–v48, vuelta a la DNA que validó la cuenta
 
 - **Pedido de Santiago:** *"vamos con ads para pelo, no están funcionando los que hicimos, repasá las cosas que te dije que funcionaron en la oferta, y armemos 3 nuevos."*

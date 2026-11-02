@@ -258,6 +258,48 @@ Los seis de la V43-V48 corrieron como CJTO 1 a 6 del 30/10, ABO a 10 dólares (e
 - **Segunda vuelta el mismo día (V52-V54):** Santiago pidió *"armame 3 más, variables completas ahora"*. Mismos tres cuerpos, **dos hooks por cuerpo**, con formatos que no se habían usado en la V49-V51: V52 la demanda a la vista (*"cada auto que duerme en la calle en tu cuadra es un millón y medio esperándote"*), V53 quién paga (*"nadie que esté reformando la cocina discute novecientos mil pesos: ya gastó cinco veces eso en los muebles de al lado"*) y V54 la pregunta del cliente (*"te preguntan cuánto sale una escalera y contestás te aviso: ese te aviso es un millón y medio que se va a otro lado"*). Guiones en `OUTPUTS/2026-10-30-renovaciones-herrero-v52-v54.md`, planes en `gen11.py`, entregables `HF-V52-cada-auto-en-la-calle.mp4`, `HF-V53-esa-cocina-no-discute.mp4` y `HF-V54-ese-te-aviso.mp4`.
 - **Trampa del ancla cuando el hook nombra el trabajo:** en el V52 y el V54 la palabra del TAG ("cochera", "escalera") aparece **primero en el hook**, así que con `occ=0` la placa del trabajo salía encima de la placa de apertura. Van con `occ=1`. Regla general: si el hook nuevo nombra el trabajo, hay que correr la ocurrencia del ancla.
 
+## Tanda LATAM L1–L10: "Herrero de Ocio" (2026-11-02)
+
+Santiago: *"vamos a poner los anuncios para LATAM … un idioma con acento neutro … no importa lo que hayas hecho, acordate lo que funcionó … replicámoslos para LATAM. Mismo anuncio, mismos visuales, mismo guión"*. Primera salida de la oferta fuera de Argentina, con la página **Herrero de Ocio**.
+
+- **La tanda es el banco de ganadores, no guiónes nuevos.** Los diez son los que vendieron en AR, pasados a neutro: V7 (CPA 1,00) → **L2**, V47 (4,00) → **L3**, V48 (5,53) → **L4**, V46 (6,85) → **L5**, V6 (7,05) → **L6**, V2 (8,70) → **L10**, V3 (10,71) → **L9**, V5 (11,39) → **L7**, V4 (13,56) → **L8**. El décimo (**L1**) es la réplica del ad del competidor que mandó Santiago. Los que no vendieron (V1, V43, V44, V45) no entran.
+- **Son 10 y no 6:** lo pidió explícito ("10 testeos"). Se le marcó que la regla de tanda es 6; acá no son seis apuestas nuevas sino nueve creativos ya validados en AR más una réplica, así que el riesgo es otro.
+- **Guiónes:** `OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md` (copia en `anuncios/guiones-latam-L1-L10.md`).
+- **Entregables:** `~/Desktop/herrero-de-finde/anuncios/latam/HF-L1…HF-L10`.
+
+### El ad del competidor que pidió replicar (ad library 1705765621113551)
+- Es de **The Weekend Fabricator** (la página original en inglés), en circulación desde el **30 oct 2026**, 34 s, primary text *"Pick one. Build it this weekend 👇"*. Bajado y transcripto.
+- Guión: *"$2,400 in steel. $4,730 for the camping trailer. Two weekends"* + el cuerpo estándar de la cuenta (*"It's 1,200 ready-to-build metal plans all in one place… pick a plan, build it in your garage and turn it into money… every plan tells you exactly what to charge"*).
+- **Es su plantilla más duplicada:** en la muestra de 180 videos esa misma estructura aparece en 027, 013, 059, 061, 066, 080, 078/088, 131/162, 056 y 170 — solo cambian el trabajo y los dos números. Nuestro V3 y nuestro L1/L9 son esa plantilla.
+- **Su visual es la hoja real del plano**: etiqueta naranja "STEEL SHOPPING LIST", la página de la lista de compras en pantalla y chip oscuro "$2,400 IN STEEL"; después el isométrico con el sello "SOLD", el celular con las carpetas, B-roll de trailers/cocheras/soldadura y cierre con "$27 ONE TIME".
+- **Nosotros lo hicimos sin fotos**, porque la regla del 29/10 (*"tienen que ser todos de tiktok"*) es más nueva: el número lo sostienen la voz y las placas (etiqueta del trabajo + chip de cotización), que es justo lo que esa regla prevé. **Si quiere la hoja en pantalla como ellos, hay que levantar esa regla para este guión.**
+- Contexto de la cuenta: **447 anuncios activos** el 2/11 (eran 367 el 22/10). Siguen sacando versiones nuevas de esta plantilla.
+
+### Lo que cambia al pasar de AR a LATAM
+- **Acento:** español latino neutro, tuteo, sin voseo. Verificado con Gemini escuchando el audio: *"latino neutro, sin marcas regionales"*, confianza 9/10.
+- **Moneda: dólares.** Los pesos de la versión AR eran los dólares del original ×1.000, así que dividir por mil devuelve exactamente los números que el competidor valida en EE.UU. Además [[internacionalizacion]] pide todo en USD para que el post-pago se vea en todos los países.
+- **Léxico neutro:** finde → fin de semana · plata → dinero · nafta → gasolina · amoladora → esmeriladora · sensitiva → tronzadora · casa de hierros → ferretería · hierro → acero · fogonero → brasero · garage → taller · "Tocá" → "Toca".
+- **Marca en el cierre: "HERRERO DE OCIO"** (en AR decía "HERRERO DE FINDE", que además es argentinismo). `edit_herrero_v4.py` ahora toma `brand1`/`brand2` del plan, con FINDE por defecto, así que las tandas viejas no cambian.
+- **Pie del cierre:** "QUÉ CORTAR · CUÁNTO ACERO · CUÁNTO COBRAR".
+- **El V48 perdió la mención al curso de soldadura en video** (el Bonus 8 todavía se entrega como manual escrito).
+
+### Las voces salen por API, no por el navegador (2026-11-02)
+Santiago pasó una clave de Google AI Studio: *"para que no tengas que usar mi compu y puedas trabajar mucho más rápido"*.
+- **Guión:** `OUTPUTS/scripts-vsl/tts_gemini.py` — `python3 tts_gemini.py guion.txt salida.wav style.txt` con `GEMINI_API_KEY`, `TTS_MODEL` y `TTS_VOICE` en el entorno. La clave está en `~/.config/herrero/gemini.env` (fuera del repo, 600).
+- **Modelo: `gemini-2.5-flash-preview-tts`.** Es el más barato y el único que obedece el Style sin leerlo en voz alta. `gemini-3.8-flash-tts` y `3.1-flash-tts-preview` **recitan las instrucciones de estilo** (no aceptan `systemInstruction`: *"Developer instruction is not enabled for this model"*), así que por API no sirven.
+- **Voz: Orus**, la fija de hombre. El acento se dirige desde el Style, que va como párrafo arriba del guión y termina en *"Lee únicamente el texto que viene a continuación:"*. El Style neutro quedó en `anuncios/work/vo/style-latam.txt`.
+- **Las diez voces en una corrida de 8 minutos, sin pestañas, sin perder el grupo de Chrome y sin el límite de una generación por carga de página.** Reemplaza al flujo del navegador para todo lo que sea voz en off.
+- **Ritmo:** esta voz habla más lento que Enzo en 3.8 (116–150 palabras por minuto en crudo). A 1,30 los guiónes de 160–180 palabras quedan en 40–45 s, igual que antes; el de 214 palabras (L2, el V7) queda en ~58 s.
+- **Los números con punto de miles se leen bien** ("1.070" → "mil setenta"), así que se escriben con punto en el `.txt` y sirven de ancla.
+
+### Dos cosas de armado
+- **Planes:** `anuncios/work/plans/gen12.py`, mismo pool limpio de 336 recortes de TikTok, tres camas musicales rotadas y `usage.json` compartido (backup en `usage_pre_latam.json`).
+- **Cuando el guión no termina en "Toca Más información", el ancla del cierre es otra.** El L7 cierra con *"Elige uno y ármalo…"* y el L10 con *"Tus herramientas ya están listas…"*: el `END` va anclado a esas palabras. La validación de `gen12.py` lo avisó antes de renderizar.
+
+### Lo que falta del lado del embudo
+La landing y el checkout siguen siendo los de Argentina, en pesos y con Mercado Pago. Para cobrar en LATAM hace falta la tienda en USD ([[internacionalizacion]], [[shopify-y-checkout]]): **Mercado Pago no vende multiidioma ni multipaís**. Los ads no dicen el precio, así que no bloquean el testeo, pero el click cae hoy en una página en pesos argentinos. También los PDF del producto traen los precios en ARS.
+
+
 ## El embudo del 2026-10-26 (diagnóstico)
 
 Datos del día: **landing 695 → checkout 64 (9,21%) → compra 33 (51,56%)**, conversión total 4,75%, order bumps 0%. Análisis completo en `OUTPUTS/2026-10-26-embudo-herrero-diagnostico.md`.

@@ -33,6 +33,9 @@
 - **Planes:** `OUTPUTS/scripts-vsl/gen_parkinson_plans.py`. Corte de plano 1,9–2,9 s, sin destellos (`flash: 0`), una sola cama musical a `-8`.
 - **Parche al editor:** el reparto del pool usaba *la primera letra del nombre del clip* como "fuente", así que `fisio_*` contaba como una sola. Ahora usa el campo **`fam`** del plan (creador), que es lo que pide la regla del 30/10 de [[guiones-y-anuncios]].
 
+- **Entregables (1/11):** `~/Desktop/vence-al-parkinson/anuncios/VP-V1…V6-<slug>.mp4`, de 33 a 40 s, 14 a 18 planos cada uno. Nombres de anuncio: `1/11 - 1` a `1/11 - 6`.
+- **Dos trampas del render:** (1) el ancla de la placa final se matchea por palabra suelta, así que una palabra corta como "El" cae en la primera aparición y la placa se dispara a los 10 s (pasó en el V5; se arregló anclando a "link"). (2) Si quedan **dos renders corriendo en paralelo** sobre el mismo `usage.json`, se pisan los archivos y las hojas de contacto mezclan tomas de los dos; hay que cortar uno y rehacer desde cero.
+
 ## B-roll de TikTok
 - Tags barridos: `#parkinsons`, `#fisioterapianeurologica`, `#adultomayor`, `#cuidadordeadultomayor` → 145 clips bajados con tikwm. **Rendimiento bajísimo: el nicho es contenido educativo, casi todo viene con subtítulo quemado o con el creador hablando a cámara.** De los 145 quedaron 12 limpios.
 - Lo que sí rinde: entrar por el **perfil de los creadores** cuyos clips pasaron el filtro (`@temblandosinmiedo`, `@grandmas.caregiver`, `@plataformavedius`, `@fysiokriss`, `@neuroevolutiongdl`), que publican el mismo tipo de material sin carteles.

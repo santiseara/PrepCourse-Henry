@@ -1,3 +1,14 @@
+## 2026-11-03 (noche, 3ª pasada) — Piedras aromáticas: los 4 anuncios clonados al polaco
+
+- Santiago: *"Ahora hacemelos en polaco"*, sobre los cuatro anuncios de piedras que el 2/11 se habían pasado al ruso.
+- **Los cuatro entregados con la misma imagen, la misma cama musical y la duración exacta del original**: PL1 40,27 s · PL2 50,43 s · PL3 42,50 s · PL4 63,07 s. En `~/Desktop/scented-stones-ad/anuncios/polaco/`.
+- **El tercer idioma salió en minutos porque no se rehizo nada del video:** las bandas ya limpias de subtítulos (`band.mp4`) y los stems de demucs del pase ruso no dependen del idioma, así que esta tanda fue solo guion + voz + subtítulos. Regla nueva en [[internacionalizacion]], más las fuentes y la cama guardadas en `~/Desktop/scented-stones-ad/anuncios/_assets/`.
+- **Localizado, no traducido:** złoty en lugar de dólares (8.000 zł/mes, piedra a menos de 3 zł, se vende a 25–50), **OLX** en lugar de WhatsApp Business, **imieniny** en la lista de ocasiones y el CTA con el texto real del botón de Meta en polaco (*Dowiedz się więcej*). Polonia además se targetea directo, a diferencia de Rusia.
+- **Hallazgo de producción: el tempo lo manda el Style, no el largo del texto.** PL2 y PL4 obligaban a acelerar 1.45 (el ruso había quedado en 1.38 como techo). Agregando *"mów bardzo szybko, w tempie reklamy, bez pauz między zdaniami"* al Style, el mismo texto bajó de 73 s a 56 s y de 91 s a 72 s: tempo final **1.12 y 1.14**. Recortar el guion antes había movido casi nada (PL4 recortado 5 % salió igual de largo).
+- **Glifos verificados antes de renderizar:** Bitter, Montserrat ExtraBold y Nunito tienen `ą ć ę ł ń ó ś ź ż`; ninguna dibuja tofu. Es la regla de los emojis de [[guiones-y-anuncios]] aplicada a idiomas.
+- Voz Sulafat por API con `gemini-3.1-flash-tts-preview` (el `2.5` volvió a dar 429), verificada con Gemini: nativa polaca, sin acento extranjero, sin leer el Style en voz alta.
+- Output: `OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md`. Script: `~/Desktop/scented-stones-ad/anuncios/polaco/work/render_pl.py`.
+
 ## 2026-11-03 (noche, 2ª pasada) — The Drawing World: landing propia leída y los 6 videos renderizados
 
 - Santiago pasó su landing: *"te mando mi pagina por si queres ajustar algo: https://drawing-world.impultienda.ar/. Haceme los videos"*.

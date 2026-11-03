@@ -249,7 +249,17 @@ Pedido de Santiago: *"haceme estos mismos anuncios pero en ruso, todo igual"*. E
 
 Cuidado con el *timeline* de la capa de subtítulos: hay que armarla con **instantes absolutos**, no acumulando duraciones, o el solape de cada línea corre los subtítulos varios segundos.
 
+### Correcciones acumuladas
+
+- **2026-11-03 · Del segundo idioma en adelante, no se rehace nada del video.** Las bandas ya limpias (`tmpN/band.mp4`) y los stems de demucs **no dependen del idioma**: se copian del pase anterior y el idioma nuevo pasa a ser solo **guion + voz + subtítulos**. El pase polaco de piedras salió en minutos porque reusó todo el material del pase ruso. Guardar siempre `band.mp4`, los stems y las fuentes al terminar una tanda (`~/Desktop/<oferta>/anuncios/_assets/`).
+- **2026-11-03 · El tempo del VO tiene techo: ~1.35**, y se mide **antes** de renderizar (`duración del wav ÷ duración del video`). Si se pasa, el arreglo que más rinde **no es recortar el guion sino pedirle ritmo al Style**: agregar *"mów bardzo szybko, w tempie reklamy, bez pauz między zdaniami"* (hablá muy rápido, en tempo de publicidad, sin pausas entre frases) bajó PL2 de 73 s a 56 s y PL4 de 91 s a 72 s **con el mismo texto** — de tempo 1.45 a 1.12 y 1.14. Recortar el guion es el segundo recurso.
+- **2026-11-03 · La misma toma de TTS varía muchísimo.** PL4 con texto recortado un 5 % salió igual de largo que el original (91,3 s vs 90,9 s): la diferencia la hace el ritmo de esa toma, no el largo del texto. Conviene **generar, medir y quedarse con la toma más corta** antes de renderizar, nunca asumir que el recorte alcanzó.
+- **2026-11-03 · Verificar los glifos del idioma antes de renderizar**, igual que con los emojis ([[guiones-y-anuncios]]). Se renderizan `ą ć ę ł ń ó ś ź ż` (o el set del idioma) con cada fuente y se compara con el tofu de un carácter que seguro falta; si coinciden, la fuente no tiene el glifo y dibujaría cuadraditos. Bitter, Montserrat ExtraBold y Nunito tienen cirílico **y** polaco.
+- **2026-11-03 · Localizar moneda y plataformas, no solo el idioma.** En polaco: **złoty** (no dólares, que matan la credibilidad), **OLX** en lugar de WhatsApp Business, e **imieniny** (onomástico) en la lista de ocasiones junto a fiestas y bodas. El CTA usa el texto real del botón de Meta en ese idioma (*Dowiedz się więcej*).
+- **2026-11-03 · Polonia se targetea directo**, a diferencia de Rusia (que necesita Worldwide + idioma ruso).
+
 ## Fuentes
+- OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md
 - OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md
 - RAW/2026-10-10-wiki-previa/internacionalizacion.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/contexto-chatgpt.md, RAW/formacion/lecciones/multiidioma.md, RAW/formacion/lecciones/escalar-en-otras-cuentas-publicitarias-testear-varias-cuentas-publicitarias-para-relojear-el-cpm.md, RAW/youtube/_indice.md

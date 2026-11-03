@@ -105,6 +105,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-03 — Piedras aromáticas: los 4 anuncios en polaco](../OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md) — el tercer idioma del mismo winner, reusando las bandas limpias y la cama musical del pase ruso; localizado a złoty, OLX e imieniny · ver [[internacionalizacion]]
 - [2026-11-03 — Lumea Desenului: análisis completo del competidor a modelar en inglés](../OUTPUTS/2026-11-03-analisis-lumea-desenului.md) — 430 ads en 13 días, 9 mercados con un subdominio cada uno, las 5 familias de guion y los agujeros de su funnel · ver [[drawing-world]]
 - [2026-11-03 — The Drawing World: tanda 1 de 6 guiones y 6 videos](../OUTPUTS/2026-11-03-guiones-draw-in-21.md) — día por día, anti-YouTube, el talento es práctica que no viste, nunca es tarde, el error nº1 y la cara que te sabés de memoria · EN + ES voseo · ver [[drawing-world]]
 - [2026-11-03 — Academia del Trazo: análisis de los 80 ads del original](../OUTPUTS/2026-11-03-analisis-academia-dibujo-creativo.md) — 38 videos + 42 imágenes, dos copies para todo, el formato único de voz en off con manos dibujando y por qué su landing es el punto débil · ver [[academia-del-trazo]]

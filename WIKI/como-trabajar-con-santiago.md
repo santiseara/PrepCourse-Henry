@@ -60,6 +60,7 @@ Santiago pasó su clave de Google AI Studio: *"para que no tengas que usar mi co
 - Las voces fijas no cambian (hombre → **Orus**, mujer → **Sulafat**); el acento y la edad se dirigen desde el Style, que va como párrafo arriba del guión y cierra con *"Lee únicamente el texto que viene a continuación:"*.
 - Esto **no levanta** la regla de trabajar en su Mac: los archivos, los renders y los entregables siguen cayendo en su disco. Lo que desaparece es el navegador (pestañas perdidas, una generación por carga de página, muteos).
 - **El acento se verifica**: se le manda el wav a Gemini y se le pregunta qué variedad de español escucha. Es gratis y evita renderizar una tanda entera con el acento equivocado.
+- **Si `gemini-2.5-flash-preview-tts` devuelve 429 (cuota), el reemplazo es `gemini-3.1-flash-tts-preview`** (registro del 2026-11-02, tanda rusa de piedras): con la misma voz Sulafat **no leyó las instrucciones de estilo en voz alta**. Verificar igual el primer wav antes de renderizar la tanda. `gemini-2.5-pro-preview-tts` comparte la cuota y también da 429.
 
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.

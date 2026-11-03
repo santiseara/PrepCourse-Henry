@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-02 — Piedras aromáticas: los 4 anuncios en ruso](../OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md) — los mismos cuatro anuncios en inglés pasados a ruso sin tocar imagen ni música, y la receta para clonar un ganador a cualquier idioma · ver [[internacionalizacion]]
 - [2026-11-02 — Caza: infoproductos con VSL en inglés (3ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md) — las tres que cumplen todo (SSAcademy 4/4, V Shred, 30 Second Clients) y la regla de que en salud la VSL es producto físico · ver [[caza-de-ofertas]]
 - [2026-11-02 — Caza: infoproductos con VSL en Brasil (2ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md) — la VSL está extinta en Meta Brasil y el infoproducto low ticket topea en ~48 ads por fanpage; footprints que sirven y la trampa del display link falso · ver [[caza-de-ofertas]]
 - [2026-11-02 — Caza: VSL en Brasil (salud y renta extra)](../OUTPUTS/2026-11-02-caza-vsl-brasil-salud-renta-extra.md) — solo una VSL real con 50+ ads (Venda Sem Estoque); los grandes de salud en Brasil se fueron a WhatsApp y a e-commerce

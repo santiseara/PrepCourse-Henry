@@ -1,3 +1,11 @@
+## 2026-11-02 (noche, 4ª pasada) — Los 4 anuncios de piedras, clonados al ruso
+
+- Santiago pasó cuatro anuncios suyos en inglés (`Im 58…`, `In the next 30`, `My accountant…`, `Ok I need`) y pidió *"estos mismos anuncios pero en ruso, todo igual"*.
+- Se entregaron los cuatro con **la misma imagen, la misma cama musical y la misma duración exacta**: solo cambia la voz (Sulafat en ruso) y los subtítulos, rehechos con la misma tipografía, color de caja y posición que el original.
+- Pipeline nuevo y reutilizable: transcribir con Gemini → separar la música con demucs → guion ruso medido → voz por API → borrar los subtítulos ingleses por inpainting → quemar los rusos. Documentado en `WIKI/internacionalizacion.md` y guardado en `~/Desktop/scented-stones-ad/anuncios/ruso/work/render_ru.py`.
+- **Regla nueva:** si el TTS `gemini-2.5-flash-preview-tts` devuelve 429, el reemplazo es `gemini-3.1-flash-tts-preview` (no lee el Style en voz alta). En `WIKI/como-trabajar-con-santiago.md`.
+- Output: `OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md`. Videos en `~/Desktop/scented-stones-ad/anuncios/ruso/`.
+
 ## 2026-11-02 (noche, 3ª pasada) — La misma caza en inglés: tres que cumplen todo
 
 - Santiago eligió **mantener la VSL y cambiar de mercado**. Con los criterios intactos (infoproducto digital + VSL + 50+ ads + no marca personal + salud/renta extra), en EE.UU. salieron **tres en la primera pasada**, contra cero en Brasil.

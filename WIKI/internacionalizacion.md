@@ -237,6 +237,19 @@ Relacionado: [[modelo-low-ticket]] · [[shopify-y-checkout]] · [[metricas-y-kpi
 - **"Si no agarra, no le insistas":** es lo que hiciste con el alemán ([[guiones-y-anuncios]]).
 - **Mercado Pago no permite multiidioma.** Para AR hace falta una tienda aparte.
 
+## Clonar un anuncio ganador a otro idioma sin rehacerlo (2026-11-02, tanda rusa de piedras)
+Pedido de Santiago: *"haceme estos mismos anuncios pero en ruso, todo igual"*. El resultado es el **mismo video** (misma imagen, misma música, misma duración), solo cambia el idioma. Receta, en `OUTPUTS/scripts-vsl/` + `~/Desktop/<oferta>/anuncios/<idioma>/work/render_ru.py`:
+
+1. **Transcribir el original** con Gemini (`gemini-3.5-transcribe`) y preguntarle género, edad y si hay música.
+2. **Separar la pista con demucs** (`--two-stems=vocals`): se tira la voz vieja y **se conserva la cama musical original**. Es lo que hace que suene igual y no haga falta buscar música.
+3. **Guion traducido y medido**: se escribe ~15 % más corto que el inglés (el ruso es más largo) y se ajusta el tempo al final para que la voz calce **exacto** con el largo del video, así ningún plano se corre.
+4. **Voz** con la voz fija de siempre (mujer → Sulafat) y el acento dirigido desde el Style ([[como-trabajar-con-santiago]]).
+5. **Subtítulos quemados**: se borran los del idioma original por *inpainting* de la banda (OpenCV TELEA, máscara = blanco + color de la caja + borde negro) y se escriben los nuevos con **la misma tipografía, el mismo color de caja y la misma posición**, medidos del original. Para fuentes con cirílico: Bitter Black (serif pesada), Montserrat ExtraBold y Nunito (sans).
+6. **Nivel de voz**: se iguala el `mean_volume` de la voz separada del original, para no romper la mezcla.
+
+Cuidado con el *timeline* de la capa de subtítulos: hay que armarla con **instantes absolutos**, no acumulando duraciones, o el solape de cada línea corre los subtítulos varios segundos.
+
 ## Fuentes
+- OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md
 - RAW/2026-10-10-wiki-previa/internacionalizacion.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/contexto-chatgpt.md, RAW/formacion/lecciones/multiidioma.md, RAW/formacion/lecciones/escalar-en-otras-cuentas-publicitarias-testear-varias-cuentas-publicitarias-para-relojear-el-cpm.md, RAW/youtube/_indice.md

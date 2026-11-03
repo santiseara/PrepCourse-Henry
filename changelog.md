@@ -1,3 +1,14 @@
+## 2026-11-03 (noche) — Lumea Desenului: análisis completo y tanda 1 en inglés (Draw in 21)
+
+- Santiago pasó la Biblioteca de `lumea-desenului-pl.impultienda.ar`: *"Vamos a armar ads para una oferta, la vamos a tirar en ingles… vamos a hacer un analisis completo y despues armamos los ads"*. Durante el trabajo fijó: **la experta es Juliana Alves** y el **costo 19,99**.
+- **430 ads leídos** de la fanpage **Elena Popescu** (217 activos, 213 pausados), todos lanzados en **13 días** desde el 21/10. Una sola fanpage, un solo producto y **9 mercados en paralelo** con un subdominio de ImpulTienda cada uno: PL 32, IT 32, RO 17, CZ 9, FR 8, **ZA en inglés 8**, PT 3, GR 1, TR 1.
+- **El hallazgo:** el inglés lo probó recién el 30/10 y solo en Sudáfrica. US/CA/AU/UK/NZ están vacíos, y el nicho exacto también (en inglés solo hay arte digital con marca personal —FunWithDrawing/Charly Clements, Procreate— y libros de 21-Draw).
+- **Es el mismo PLR que [[academia-del-trazo]]**: en un video se ve la tablet con las tapas en español *"Naturaleza Muerta"* y *"Academia de Dibujo Creativo"*. Y usa **nuestro mismo stack**: ImpulTienda con los comentarios del HTML en español, Stripe en USD, `/checkout?upsells=2` con dos upsells pre-tildados y exit-intent anti-YouTube del 15%.
+- **10 videos transcriptos** con Gemini. La familia que más duplica es el **día por día (Day 1 → Day 21)** con un resultado concreto por día y el remate *"la mayoría no le sale porque empieza por el día 24"*; después el **orden/anti-YouTube**, el **talento es práctica que no viste**, el **se aprende dibujando y no es la edad** y el **error nº1 de saltarse la esfera**.
+- **Sus agujeros**: checkout con labels en español sobre contenido en inglés, 74 lecciones en los ads contra 54 en la landing, garantía de 10 días en la página y 7 en el video, prueba social del molde (*"only in South Africa"*).
+- **Tanda 1 de 6 guiones** (oferta nueva = 6), uno por familia ganadora, EN + ES voseo, con garantía de 30 días, entregables con nombre y el mecanismo bautizado **Shape-First Order**. Carpeta nueva `~/Desktop/draw-in-21/`.
+- Outputs: `OUTPUTS/2026-11-03-analisis-lumea-desenului.md`, `OUTPUTS/2026-11-03-guiones-draw-in-21.md`. Página nueva: `WIKI/draw-in-21.md`.
+
 ## 2026-11-03 (tarde) — Academia del Trazo: landing propia + análisis de los 80 ads del original
 
 - Santiago pasó la Biblioteca de la página 1153035077882881 (Academia de Dibujo Creativo / Universo Creativo, de Valentina Restrepo) para modelarla en Argentina: *"la landing no me gusta mucho… tratemos de mejorar eso. Primero armemos la landing y después vamos con los anuncios."*

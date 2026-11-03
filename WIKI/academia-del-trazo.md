@@ -12,7 +12,7 @@
 ## Nuestra oferta
 - **Nombre:** Academia del Trazo. **Mecanismo:** Método de las 3 Capas (forma → volumen → piel).
 - **Promesa:** "Dibujá tu primer retrato realista en 21 días, aunque hoy no te salga ni un círculo."
-- Front **$19.900 ARS**, tachado $64.400, "te ahorrás $44.500". Un solo producto, sin bundles.
+- Front **$16.990 ARS** (decidido el 3/11, antes $19.900), tachado $64.400, "te ahorrás $47.410", 3 cuotas de $5.664. Un solo producto, sin bundles.
 - 4 bonus en PDF (50 láminas de referencia, Anatomía Express, plantillas de encaje, checklist de los 7 errores), valor declarado $45.600.
 - **Garantía 30 días** (contra los 7 del original).
 

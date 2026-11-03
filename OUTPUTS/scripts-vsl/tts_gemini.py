@@ -4,7 +4,7 @@ KEY = os.environ["GEMINI_API_KEY"]
 MODEL = os.environ.get("TTS_MODEL", "gemini-3.8-flash-tts")
 VOICE = os.environ.get("TTS_VOICE", "Orus")
 
-def gen(text, out, style=None, temperature=1.0):
+def gen(text, out, style=None, temperature=float(os.environ.get("TTS_TEMP", 1.0))):
     prompt = (style.rstrip() + "\n\n" + text) if style else text
     body = {
         "contents": [{"parts": [{"text": prompt}]}],

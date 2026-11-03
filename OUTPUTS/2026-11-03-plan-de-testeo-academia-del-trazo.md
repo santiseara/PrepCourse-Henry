@@ -22,9 +22,9 @@ Formato idéntico para los seis: **voz en off mujer (Sulafat, speed 1.30) + clip
 
 | Nombre en Meta | Archivo | Dur. | Ángulo | Qué testea |
 |---|---|---|---|---|
-| 3/11 - 1 | `ADT-V1-las-tres-capas.mp4` | 42 s | Las 3 capas | El mecanismo propio. Es el que define si el diferencial se entiende |
-| 3/11 - 2 | `ADT-V2-el-cuaderno-en-el-cajon.mp4` | 45 s | El cuaderno en el cajón | Dolor de abandono + plan de 21 días como solución |
-| 3/11 - 3 | `ADT-V3-copio-bien-de-la-nada-no.mp4` | 46 s | Copio bien, de la nada no me sale | Objeción que ellos no tocan |
+| 3/11 - 1 | `ADT-V1-las-tres-capas-calma.mp4` | 42 s | Las 3 capas | El mecanismo propio. Es el que define si el diferencial se entiende |
+| 3/11 - 2 | `ADT-V2-el-cuaderno-en-el-cajon-calma.mp4` | 45 s | El cuaderno en el cajón | Dolor de abandono + plan de 21 días como solución |
+| 3/11 - 3 | `ADT-V3-copio-bien-de-la-nada-no-calma.mp4` | 46 s | Copio bien, de la nada no me sale | Objeción que ellos no tocan |
 | 3/11 - 4 | `ADT-V4-el-retrato-como-regalo.mp4` | 44 s | El retrato como regalo | Ángulo de uso, no de aprendizaje. Es el hueco más grande que dejan |
 | 3/11 - 5 | `ADT-V5-veinte-minutos-sin-pantalla.mp4` | 45 s | 20 minutos sin pantalla | Beneficio emocional, no técnico. Abre público más joven |
 | 3/11 - 6 | `ADT-V6-dia-1-vs-dia-21.mp4` | 40 s | Día 1 vs día 21 | Prueba de progreso. El formato que más retiene en nichos de habilidad |
@@ -32,9 +32,16 @@ Formato idéntico para los seis: **voz en off mujer (Sulafat, speed 1.30) + clip
 Los seis están renderizados en `~/Desktop/dibujo-creativo/anuncios/`. Guiones completos en
 `OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`.
 
+**La música es la segunda variable de la tanda.** Los tres primeros van con la cama tranquila
+(`music_calma.py`: piano de fieltro + pad, 64 BPM, Am–F–C–G, sin percusión) y los tres últimos con la
+cama de Herrero (`music/bed.wav`), más brillante y con más ritmo. Es la única diferencia entre los dos
+grupos además del ángulo, así que si uno de los dos tercios rinde parejo mejor, la cama es candidata a
+quedar fija para la oferta. Excepción consciente a la regla de una sola cama por tanda
+([[guiones-y-anuncios]]), pedida por Santiago el 3/11.
+
 **Cómo se hicieron:** voz Sulafat por API (`gemini-2.5-flash-preview-tts`, Style en voseo), `speed 1.30`
 con `silence [0.26, 0.12]`, cortes de 1,9–2,9 s, pool de 101 recortes de **15 clips de TikTok** de manos
-dibujando (ni una foto fija, ni stock), una sola cama musical a -8 dB, caja de hook ocre, chips con check
+dibujando (ni una foto fija, ni stock), dos camas musicales a -8 dB repartidas 3 y 3 (ver abajo), caja de hook ocre, chips con check
 y placa final ACADEMIA DEL TRAZO. Scripts: `OUTPUTS/scripts-vsl/gen_trazo_plans.py` y `edit_trazo.py`.
 
 ## Estructura en Meta (V3)

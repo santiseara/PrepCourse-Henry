@@ -26,7 +26,9 @@
 - `tts_gemini.py` acepta ahora `TTS_TEMP` para bajar la temperatura.
 - **Cama musical tranquila.** *"Haceme 3 con una música más tranquila"*: script nuevo
   `OUTPUTS/scripts-vsl/music_calma.py` (piano de fieltro + pad, 64 BPM, Am–F–C–G, sin percusión,
-  reverb corta) y V1, V2 y V3 re-renderizados como `…-calma.mp4` con los mismos planos.
+  reverb corta) y V1, V2 y V3 re-renderizados como `…-calma.mp4` con los mismos planos. La tanda quedó
+  **3 y 3** (V1–V3 tranquila, V4–V6 Herrero): la cama pasa a ser la segunda variable del test y es una
+  excepción consciente a la regla de una sola cama por tanda.
 
 ## 2026-11-03 (noche) — Lumea Desenului: análisis completo y tanda 1 en inglés (Draw in 21)
 

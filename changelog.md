@@ -1,3 +1,14 @@
+## 2026-11-03 — Atlas de Cortes: 3 renovaciones (V49–V51) con la cuenta leída antes
+
+- Santiago: *"Vamos con 3 renovaciones para pelo, fijate que esta funcionando y armemos"*.
+- **Se leyó la cuenta de escalado por MCP (`1791862825108056`, 7 días):** la que manda es **NATIVE 1**, la native **corta** ($16 de CPA, $11,87 en su mejor conjunto, 25 compras); **NATIVE 6** confirma el formato ($17,50, dos conjuntos abajo de $12,50); **NATIVE 3 (nuestra native 1, la larga) se cayó a $45** y toca renovarla. CTR de 32 a 47 % en todas: el problema no es el enganche, es el CPA.
+- **La cuenta donde se testean los videos de pelo sigue sin poder leerse** (las dos candidatas del portfolio Reset FIT están fuera del MCP o sin liquidar): de los V37 al V51 no hay CPA propio. Quedó como gap número 1 en `WIKI/index.md`.
+- **Entregadas las renovaciones V49–V51**: hooks nuevos sobre los tres cuerpos del 2/11 (los únicos en la DNA validada), en tres formatos distintos — declaración de mecanismo (el brushing dura cuatro días), lista (los cortes que esquiva, hook sacado del testimonio de la landing) y UGC en primera persona (el formato de la native que escala). EN + ES voseo.
+- **Videos listos:** `AT-V49.mp4` (36,2 s), `AT-V50.mp4` (35,6 s) y `AT-V51.mp4` (39,0 s), voz Sulafat **por API** (primera tanda del Atlas sin AI Studio) y verificación de que no lee el Style con `gemini-3.5-transcribe`.
+- **Pool renovado sin bajar un clip:** el clip principal dura 8:21 y solo se usaban 2:33; revisando a 1 cuadro por segundo entraron 15 recortes nuevos (87 → 102) y se vetaron tres tramos con texto quemado, un frasco de producto y una placa final en vietnamita.
+- Reglas nuevas: *"fijate qué está funcionando" = leer la cuenta por MCP antes de escribir* (`WIKI/guiones-y-anuncios.md`) y *una renovación se ve distinta aunque no bajes un clip nuevo* (`WIKI/renovacion-de-creativos.md`).
+- Output: `OUTPUTS/2026-11-03-renovaciones-atlas-cortes-v49-v51.md`. Videos y guiones en `~/Desktop/atlas-cortes/anuncios/`.
+
 ## 2026-11-02 (noche, 4ª pasada) — Los 4 anuncios de piedras, clonados al ruso
 
 - Santiago pasó cuatro anuncios suyos en inglés (`Im 58…`, `In the next 30`, `My accountant…`, `Ok I need`) y pidió *"estos mismos anuncios pero en ruso, todo igual"*.

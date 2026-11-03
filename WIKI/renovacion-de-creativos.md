@@ -103,6 +103,12 @@ Herrero de Finde, variables V49-V51 sobre los tres cuerpos que vendieron el 30/1
 - **El cuerpo validado arranca donde arranca el producto**, que en esta oferta es la ficha del trabajo ("Esta es una cochera a un agua de tres por cinco metros…"). De ahí al CTA se copia **textual**.
 - **La frase bisagra se mira siempre.** El V48 abría con la garantía y seguía con *"con eso en la mano, mirá lo que hay adentro"*: esa bisagra se va con el hook viejo. Si una variable obliga a tocar más de la bisagra, se avisa aparte.
 
+## Una renovación se ve distinta aunque no bajes un clip nuevo (2026-11-03)
+
+Atlas de Cortes, V49–V51. El checklist del 27/10 pide cambiar también la **estética**, y la tentación es dar eso por imposible cuando el pool ya está armado. No lo es: el clip principal de esa oferta dura **8:21** y solo se usaban los primeros 2:33. Revisando a **1 cuadro por segundo** aparecieron 15 recortes nuevos y limpios en tres de los clips que ya estaban (y tres tramos vetados por texto quemado, un frasco de producto y una placa final en vietnamita). El pool pasó de 87 a 102 recortes y los tres videos salieron con planos que no estaban en la tanda anterior, sin descargar nada.
+- **Regla: antes de bajar material nuevo, mirar cuánto queda sin usar de los clips que ya pasaron la revisión.** Es más rápido y el material ya está validado.
+- La revisión fina es a 1 cuadro por segundo, no a 1 cada 2 s: los carteles quemados duran 2 o 3 segundos y la hoja gruesa los saltea.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

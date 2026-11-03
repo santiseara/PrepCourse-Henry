@@ -165,6 +165,40 @@ De la v10–v15 se eligieron 3 para producir, por qué cada uno:
 - 🆕 **En AI Studio el botón de descarga vuelve a bajar el audio anterior** si se aprieta apenas termina: el V39 bajó el mismo WAV que el V38 (MD5 idéntico). Lo que lo detecta sin escuchar: comparar la **duración** del player contra la del audio anterior antes de descargar, y el MD5 contra todos los de la tanda.
 - Nombres para subir: **30/10 - 1** (V37), **30/10 - 2** (V38), **30/10 - 3** (V39).
 
+## 📊 Lo que está funcionando hoy (leído del MCP el 3/11, últimos 7 días)
+> Cuenta de escalado de pelo: **`1791862825108056` ("Cuenta en Ingles 2", portfolio Reset FIT)**. Solo corre **natives**: no hay un solo video activo ahí. La cuenta donde se testean los videos sigue sin poder leerse (las dos candidatas del portfolio, `26622432187349085` "Reset FIT" y `1853361722706238` "Cuenta English", están fuera del MCP o sin liquidar), así que **de los V40 a V48 no hay números propios**: la lectura de abajo es de natives.
+
+| Pieza | Gasto 7 d | Compras | CPA | Mejor conjunto |
+|---|---|---|---|---|
+| **NATIVE 1** (POCKET 30/10 + COSTCAP) | $400 | 25 | **$16** | CJTO 2 BID 13 a **$11,87** (8 compras) |
+| **NATIVE 6** (POCKET 31/10) | $157 | 9 | **$17,50** | CJTO 5 a **$11,74** y CJTO 4 a $12,40 |
+| NATIVE 8 | $156 | 7 | $22,26 | CJTO 2 a $12,03 |
+| NATIVE 3 (= nuestra native 1) | $136 | 3 | $45,27 | — (pausada en POCKET) |
+| NATIVE 10 y 11 | $75 | 1 | $56 / — | pausadas |
+
+**Qué enseña, y con qué se escribió la tanda del 3/11:**
+- ⭐ **La que manda es NATIVE 1**, la **corta** (unas 650–700 palabras, presente, escena en el sillón, sin bio ni credencial, con los bonus y la garantía adentro). Es la que más gasta, la que más vende y la que mejor CPA saca. **El formato corto es el ganador de la oferta**, no el largo de 1.500–2.000 palabras.
+- ⭐ **NATIVE 6 confirma lo mismo** y entra segunda con muestra chica: dos conjuntos abajo de $12,50.
+- ❌ **NATIVE 3 (nuestra native 1, la larga de Dell) se cayó a $45** después de haber sido una de las dos que la cuenta puso a escalar el 30/10. Es saturación de segmento, no del texto: es la que toca renovar primero del lado de natives.
+- 📈 **CTR de 32 % a 47 %** en todas las natives activas y frecuencia 1,02–1,10: el problema de esta oferta no es el enganche, es el precio por compra.
+- ⚠️ **Nota de método:** los creativos de esta cuenta son del **método catálogo** (`{{product.name}}` / `{{product.description}}`), así que el texto de cada NATIVE vive en el producto del catálogo y no se puede leer desde el ad. Para cerrar el mapeo de **NATIVE 6** hace falta el catálogo de la tienda de pelo ([[subir-ads-con-metodo-catalogo]]).
+
+## 🎬 Renovaciones v49 a v51 (3/11) — hooks nuevos sobre los tres cuerpos del 2/11
+> Santiago: *"Vamos con 3 renovaciones para pelo, fijate que esta funcionando y armemos"*. Renovación en el sentido de la regla del 26/10 (hook nuevo sobre cuerpo validado, entregado como guion completo) y con la cuenta leída antes de escribir.
+- **Los cuerpos elegidos son los del 2/11 (V46, V47, V48)**, que son los únicos escritos sobre la DNA que la cuenta validó dos veces (fricción con la clienta sentada + "no es tu técnica, es memoria") y la misma que sostiene a las natives que escalan hoy. Cero plata en el hook; la consecuencia de plata queda al final y suave.
+- **Tres formatos de hook distintos**, como pide el checklist del 27/10 (no tres versiones del mismo formato):
+  - **V49 "A blow dry has a shelf life of about four days"** — cuerpo del **V46**. Formato: declaración de mecanismo físico. El objeto nuevo es el brushing con fecha de vencimiento: el corte parece bien hasta el cuarto lavado, que es la única reseña honesta que recibe.
+  - **V50 "There is a short list of cuts you quietly steer women away from"** — cuerpo del **V47**. Formato: lista. Sale del testimonio de la propia landing (*"Three cuts I used to quietly talk people out of are back on my menu"*), regla del 29/10 de buscar el hook en la landing. Sin numeral, para no romper la regla del número único (veinticinco).
+  - **V51 "I have been behind a chair since before anyone searched a haircut on their phone"** — cuerpo del **V48**. Formato: UGC en primera persona, la confesión de la que sí lee. Es el formato de NATIVE 1, el que escala.
+- **Cambios de cuerpo, avisados:** en el V49 el cierre del V46 era un callback al hook viejo ("esta vez lo dice mirándolo de frente") y pasó a ser el callback del hook nuevo ("sigue siendo el mismo corte cuatro lavados después"). En el V51 el párrafo del mecanismo pasó a primera persona porque el hook lo es; los tres párrafos finales (desculpabilizante, 25 Cut Maps, CTA) van textuales.
+- `OUTPUTS/2026-11-03-renovaciones-atlas-cortes-v49-v51.md` y `~/Desktop/atlas-cortes/anuncios/guiones/renovaciones-v49-v51.md`. EN + ES voseo completos, 134 a 165 palabras. Nombres para subir: **3/11 - 1** (V49), **3/11 - 2** (V50), **3/11 - 3** (V51).
+- **Videos listos (3/11):** `~/Desktop/atlas-cortes/anuncios/AT-V49.mp4` (36,2 s · 15 planos), `AT-V50.mp4` (35,6 s · 14) y `AT-V51.mp4` (39,0 s · 15), 9:16, voz **Sulafat**, `speed 1.30`, `silence [0.26, 0.12]`, `edit_atlas.py`, planes con seeds 490/500/510. Hojas de contactos a 1 cuadro cada 2 s revisadas: sin texto quemado ajeno, sin caras hablando a cámara, chips dentro del borde y los tres cierran con la placa final y su CTA propio.
+- Hooks en pantalla: **A blow dry lasts four days 💨** · **The cuts you steer around ✂️** · **I still read before I cut 📱**. CTAs de la placa final: *Check the page* · *Open the map* · *Read it first*.
+- 🆕 **La voz salió por API, no por AI Studio.** Primera tanda del Atlas con `OUTPUTS/scripts-vsl/tts_gemini.py` (`TTS_VOICE=Sulafat`, `TTS_MODEL=gemini-2.5-flash-preview-tts`) y el Style de la oferta en `material/vo/style_atlas.txt`. Crudos de 46,4 / 45,7 / 50,1 s, los tres MD5 distintos. Se desaparecen las dos trampas del navegador (bajar el audio anterior y la pestaña perdida).
+- 🆕 **El chequeo de que la voz no lee el Style se hace con `gemini-3.5-transcribe`.** Se le manda el primer tramo del wav y devuelve la transcripción literal: los tres arrancaron con la primera frase del guion. Ojo: **`gemini-2.5-flash` ya no se puede usar con esta clave** ("no longer available to new users"), así que el verificador va con `gemini-3.5-transcribe`.
+- 🆕 **Material nuevo en el pool, sin bajar un clip más.** El clip `D` (7673220051054382343) dura **8:21** y solo usábamos hasta el minuto 2:33. Revisado a 1 cuadro por segundo, el tramo **300–324 s** está limpio (en 327 entra texto en español). También entraron **B 78–84 y 90–105** (vetados 84–90 por el cartel "DIFFUSE" y 93–96 por el frasco Redken) y **A 54–57** (vetado 58–60, placa final "Anh Ấy" en vietnamita). Son 15 recortes nuevos: el pool pasó de 87 a 102 y los tres videos se ven con planos que no estaban en el V46–V48. **Antes de bajar material nuevo, mirar cuánto queda sin usar de los clips que ya están.**
+- 🆕 **La tarjeta del hook se come el espacio antes del emoji.** En el V51 quedó "cut📱" pegado y agregar un segundo espacio en el texto no lo arregla: el renderizador los colapsa. El glifo se ve bien, pero si hace falta aire hay que separarlo con un carácter visible (`·`), no con espacios.
+
 ## 🎬 Tanda v46 a v48 (2/11) — vuelta a la DNA validada, con la plata al final
 > Santiago: *"vamos con ads para pelo, no estan funcionando los que hicimos, repasa las cosas que te dije que funcionaron en la oferta, y armemos 3 nuevos"*. Las dos semanas anteriores (V25 a V45) fueron **todas bizop**, el ángulo que él fijó el 28/10. Lo que la cuenta validó dos veces es otra cosa, y él pidió repasarlo.
 - **Lo que esta oferta confirmó que vende** (y es con lo que se escribió esta tanda): momento de **fricción durante el servicio con la clienta sentada** + el desculpabilizante *"no es tu técnica, es memoria"*. Es la DNA del **V2** ($18,61 · 5 compras), del **V3** ($17,47 · 6 compras, el de más volumen), del V8 y de los dos ads ajenos de $11. Es también la DNA de las dos natives que la cuenta puso a escalar (NATIVE 3 = nuestra 1, NATIVE 8 = nuestra 5).

@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-02.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-03.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-03 — Atlas de Cortes: renovaciones v49–v51](../OUTPUTS/2026-11-03-renovaciones-atlas-cortes-v49-v51.md) — hooks nuevos sobre los tres cuerpos del 2/11 (el brushing que dura cuatro días, la lista de cortes que esquiva y la confesión en primera persona), con la cuenta de escalado leída antes de escribir · ver [[atlas-de-cortes]]
 - [2026-11-02 — Piedras aromáticas: los 4 anuncios en ruso](../OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md) — los mismos cuatro anuncios en inglés pasados a ruso sin tocar imagen ni música, y la receta para clonar un ganador a cualquier idioma · ver [[internacionalizacion]]
 - [2026-11-02 — Caza: infoproductos con VSL en inglés (3ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md) — las tres que cumplen todo (SSAcademy 4/4, V Shred, 30 Second Clients) y la regla de que en salud la VSL es producto físico · ver [[caza-de-ofertas]]
 - [2026-11-02 — Caza: infoproductos con VSL en Brasil (2ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md) — la VSL está extinta en Meta Brasil y el infoproducto low ticket topea en ~48 ads por fanpage; footprints que sirven y la trampa del display link falso · ver [[caza-de-ofertas]]
@@ -264,7 +265,8 @@
 - 2026-10-12 — [Quiz de Pilates Hormonal](../OUTPUTS/2026-10-12-quiz-pilates-hormonal.html) (modelado de Sana Pilates) para ImpulTienda: 19 pasos, VSL con oferta oculta 2:40, checkout de ImpulTienda. Reglas en [[quizzes-reglas-de-armado]].
 
 ## Top 3 gaps (qué añadir)
-1. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
-2. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
-3. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
-4. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.
+1. **No se puede leer la cuenta donde se testean los videos de pelo.** El MCP lee la de escalado (`1791862825108056`, solo natives) pero las dos candidatas del portfolio Reset FIT están fuera (`26622432187349085` sin MCP, `1853361722706238` sin liquidar): de los V37 al V51 no tenemos un solo CPA propio y las renovaciones se escriben a ciegas. 👉 Pedirle a Santiago en qué cuenta corre el testeo de pelo, o una captura de los conjuntos ([[atlas-de-cortes]], [[claude-con-meta-ads]]).
+2. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
+3. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
+4. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+5. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.

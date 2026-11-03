@@ -65,7 +65,7 @@ VIDEOS = [
                    dict(type='chip', text='20 MINUTES A DAY · 7 HOURS TOTAL', icon='✓', word='hours', dur=2.4),
                    dict(FIN=1, word='Tap')]),
     dict(n=2, hook='200 TUTORIALS AND STILL NO FACE', hook_until='hand', first=['C', 0],
-         overlays=[dict(type='chip', text='BASICS → LINE → SHADOW → FORM', icon='✓', word='order', dur=2.4),
+         overlays=[dict(type='chip', text='BASICS · LINE · SHADOW · FORM', icon='✓', word='order', dur=2.4),
                    dict(type='chip', text='4 WORKING PDFs INCLUDED', icon='✓', word='guides', dur=2.4),
                    dict(FIN=1, word='Tap')]),
     dict(n=3, hook='TALENT IS PRACTICE YOU NEVER SAW', hook_until='volume', first=['H', 0],

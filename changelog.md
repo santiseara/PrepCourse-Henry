@@ -6,6 +6,8 @@
 - **6 videos renderizados** (`DW-V1` a `DW-V6`, ~60 s cada uno) en `~/Desktop/drawing-world/anuncios/`: voz **Sulafat por API** con Style de mujer norteamericana, `speed 1.30`, `silence [0.26, 0.12]`, una sola cama a -8, subtítulos de 2 palabras con la activa en ámbar, chips azules y placa final THE DRAWING WORLD con botón ámbar.
 - **Sin bajar un clip nuevo:** se reutilizó el pool de 15 clips de TikTok de manos dibujando de [[academia-del-trazo]], con las mismas ventanas y vetos ya revisados.
 - Scripts nuevos reutilizables: `OUTPUTS/scripts-vsl/gen_dw_plans.py` y `OUTPUTS/scripts-vsl/edit_dw.py` (paleta azul #1D3F78 + ámbar #F59E0B de la landing propia).
+- **Duraciones finales:** V1 61,7 s · V2 52,4 s · V3 51,8 s · V4 46,7 s · V5 50,1 s · V6 47,4 s (19 a 25 planos, promedio 2,4–2,5 s por plano).
+- **Corrección vista en la hoja de contactos del render:** el chip de V2 llevaba flechas `→`, que BarlowCondensed no tiene y salían como cuadraditos. Se cambiaron por `·` y se rehízo solo ese video. Regla nueva en [[guiones-y-anuncios]].
 - **Nota de producción:** el TTS `gemini-2.5-flash-preview-tts` volvió a dar 429 y se usó `gemini-3.1-flash-tts-preview`, que con Sulafat no leyó el Style en voz alta (verificado con Gemini: acento americano, sin instrucciones leídas).
 
 ## 2026-11-03 (noche) — Academia del Trazo: precio a $16.990 y tanda 1 de 6 videos

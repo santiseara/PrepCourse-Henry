@@ -238,7 +238,7 @@ Relacionado: [[modelo-low-ticket]] · [[shopify-y-checkout]] · [[metricas-y-kpi
 - **Mercado Pago no permite multiidioma.** Para AR hace falta una tienda aparte.
 
 ## Clonar un anuncio ganador a otro idioma sin rehacerlo (2026-11-02, tanda rusa de piedras)
-Pedido de Santiago: *"haceme estos mismos anuncios pero en ruso, todo igual"*. El resultado es el **mismo video** (misma imagen, misma música, misma duración), solo cambia el idioma. Receta, en `OUTPUTS/scripts-vsl/` + `~/Desktop/<oferta>/anuncios/<idioma>/work/render_ru.py`:
+Pedido de Santiago: *"haceme estos mismos anuncios pero en ruso, todo igual"*. El resultado es el **mismo video** (misma imagen, misma música, misma duración), solo cambia el idioma. Receta, en `OUTPUTS/scripts-vsl/` + `OUTPUTS/scripts-vsl/render_idioma.py` (copia de trabajo en `~/Desktop/<oferta>/anuncios/<idioma>/work/render_ru.py`):
 
 1. **Transcribir el original** con Gemini (`gemini-3.5-transcribe`) y preguntarle género, edad y si hay música.
 2. **Separar la pista con demucs** (`--two-stems=vocals`): se tira la voz vieja y **se conserva la cama musical original**. Es lo que hace que suene igual y no haga falta buscar música.

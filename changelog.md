@@ -1,3 +1,11 @@
+## 2026-11-02 (noche, 3ª pasada) — La misma caza en inglés: tres que cumplen todo
+
+- Santiago eligió **mantener la VSL y cambiar de mercado**. Con los criterios intactos (infoproducto digital + VSL + 50+ ads + no marca personal + salud/renta extra), en EE.UU. salieron **tres en la primera pasada**, contra cero en Brasil.
+- **SSAcademy** (124 ads, 52 días sin pausar, VSL 1:46–2:57, ClickFunnels, renta extra, faceless) es **4/4 y candidata A**. Atrás: **V Shred** (440 ads en US, 3,5 meses, quiz→VSL, infoproducto de fitness) y **30 Second Clients** (151 ads, VSL 1:01–2:09, renta extra), ambas 3/4.
+- **Regla nueva a la WIKI:** en salud la VSL es casi siempre **producto físico** — las dos mejores VSL de salud en inglés venden una crema (Sciatica Center, 184 ads) y una máscara térmica (Sinus Relief Insider, 97 ads, activa desde el 25/05). El infoproducto con VSL vive en renta extra.
+- Footprints en inglés que funcionaron: `instant access` (infoproducto digital), `faceless` (renta extra sin cara), `free presentation` (VSL). El discriminador universal sigue siendo la duración del creativo en el UI: 1:00–3:00 = VSL.
+- Output: `OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md`, registro en `WIKI/caza-de-ofertas.md`, enlazado en `WIKI/index.md`.
+
 ## 2026-11-02 (noche, 2ª pasada) — Caza de infoproductos con VSL en Brasil: la celda vacía
 
 - Santiago rechazó la primera pasada: *"ninguno es un infoproducto, ademas, son marcas personales o marcas reconocidas, son productos fisicos, no es nada de lo que te pedi, hace bien la busqueda, tarda lo que tengas que tardar"*. Tenía razón: LIQUIDZ y DRM Plus son producto físico y Venda Sem Estoque es marca personal.

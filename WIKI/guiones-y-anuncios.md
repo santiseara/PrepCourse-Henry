@@ -36,6 +36,7 @@
 - **Topes del pool:** máximo 8 recortes por clip, repartidos a lo largo del clip, y `fam` por creador para que un mismo autor no se coma la tanda.
 - **Velocidad:** voz en off siempre a `speed 1.30` con `silence [0.26, 0.12]` y cortes de plano de 1,9 a 2,9 s. Nada de videos lentos ni con silencios. (UGC con avatar es la excepción: `speed 1.08`, sin recorte de silencios, porque rompe el lipsync.)
 - **Voz:** la voz validada de esa oferta, nunca una nueva por capricho. Se entregan 3 opciones numeradas solo cuando él tiene que elegir.
+- **Modelo de TTS:** `gemini-2.5-flash-preview-tts` y ninguno más. Los TTS 3.x (`gemini-3.8-flash-tts`) **leen el Style en voz alta** — el 3/11 la primera tanda de Academia del Trazo salió con 22 s de instrucciones habladas y hubo que rehacer las seis voces. El free tier son **10 requests por día y por modelo**, así que no se gastan en pruebas: una voz de control, se transcribe con Whisper para confirmar que arranca por la primera palabra del guion, y recién ahí el resto.
 - **Música:** una sola cama musical para toda la tanda, `music_db` alrededor de -8.
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 

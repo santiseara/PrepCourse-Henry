@@ -22,6 +22,7 @@
 - **Las imágenes de la landing son placeholders del CDN del original y hay que reemplazarlas todas** (el mockup y el sello llevan la marca vieja). Los testimonios también son del original y van reemplazados por propios.
 - Tanda 1 de 6 guiones y 2 descripciones: `OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`. Ángulos nuevos: las 3 capas, el cuaderno en el cajón, copio bien pero de la nada no me sale, el retrato como regalo, 20 minutos sin pantalla, día 1 vs día 21.
 - Voz: mujer → **Sulafat**, speed 1.30 ([[como-trabajar-con-santiago]]). Visuales: clips de TikTok de manos dibujando, nada de fotos fijas.
+- **Tanda 1 renderizada el 3/11** en `~/Desktop/dibujo-creativo/anuncios/` (`ADT-V1…ADT-V6`, 40–46 s). Pool de 101 recortes de 15 clips de TikTok (se bajaron 30 y se descartaron 15 por subtítulos quemados, logo, cara hablando a cámara o dibujo a color). Scripts: `OUTPUTS/scripts-vsl/gen_trazo_plans.py` + `edit_trazo.py` (copia de `edit_barber.py` con la paleta ocre de la landing).
 
 ## Preguntas abiertas
 - ¿Qué link de checkout va en `LINK_CHECKOUT`? ¿ImpulTienda o Shopify propio?

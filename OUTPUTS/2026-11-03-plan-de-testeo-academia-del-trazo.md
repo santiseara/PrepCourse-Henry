@@ -13,22 +13,29 @@ Modelado de Academia de Dibujo Creativo / Universo Creativo. Análisis completo 
 | Ángulos | Talento, contrafáctico, miedo, edad | **Cuaderno abandonado, copiar vs. ver, regalo, 20 minutos sin pantalla, día 1 vs día 21** |
 | Descuento en el video | "50% OFF" dicho en el audio | **Fuera.** Sin precio y sin porcentaje en el ad |
 | Landing | Hero de características, sin dolores, sin bonus, 2 bundles, garantía 7 días | Promesa con número, dolores, mecanismo, bonus x4, un solo producto, garantía 30 días |
-| Ahorro | "50% de descuento" | "Te ahorrás $44.500" |
+| Precio | $16.856 / $19.921 ARS en dos bundles | **$16.990 ARS**, uno solo |
+| Ahorro | "50% de descuento" | "Te ahorrás $47.410" |
 
 ## Tanda 1 — 6 videos (3/11)
 
 Formato idéntico para los seis: **voz en off mujer (Sulafat, speed 1.30) + clips de TikTok de manos dibujando** (nada de fotos fijas ni stock), subtítulos palabra por palabra, piano suave, 9:16, 60–70 s, placa final sin precio.
 
-| Nombre | Ángulo | Qué testea |
-|---|---|---|
-| 3/11 - 1 | Las 3 capas | El mecanismo propio. Es el que define si el diferencial se entiende |
-| 3/11 - 2 | El cuaderno en el cajón | Dolor de abandono + plan de 21 días como solución |
-| 3/11 - 3 | Copio bien, de la nada no me sale | Objeción que ellos no tocan |
-| 3/11 - 4 | El retrato como regalo | Ángulo de uso, no de aprendizaje. Es el hueco más grande que dejan |
-| 3/11 - 5 | 20 minutos sin pantalla | Beneficio emocional, no técnico. Abre público más joven |
-| 3/11 - 6 | Día 1 vs día 21 | Prueba de progreso. El formato que más retiene en nichos de habilidad |
+| Nombre en Meta | Archivo | Dur. | Ángulo | Qué testea |
+|---|---|---|---|---|
+| 3/11 - 1 | `ADT-V1-las-tres-capas.mp4` | 42 s | Las 3 capas | El mecanismo propio. Es el que define si el diferencial se entiende |
+| 3/11 - 2 | `ADT-V2-el-cuaderno-en-el-cajon.mp4` | 45 s | El cuaderno en el cajón | Dolor de abandono + plan de 21 días como solución |
+| 3/11 - 3 | `ADT-V3-copio-bien-de-la-nada-no.mp4` | 46 s | Copio bien, de la nada no me sale | Objeción que ellos no tocan |
+| 3/11 - 4 | `ADT-V4-el-retrato-como-regalo.mp4` | 44 s | El retrato como regalo | Ángulo de uso, no de aprendizaje. Es el hueco más grande que dejan |
+| 3/11 - 5 | `ADT-V5-veinte-minutos-sin-pantalla.mp4` | 45 s | 20 minutos sin pantalla | Beneficio emocional, no técnico. Abre público más joven |
+| 3/11 - 6 | `ADT-V6-dia-1-vs-dia-21.mp4` | 40 s | Día 1 vs día 21 | Prueba de progreso. El formato que más retiene en nichos de habilidad |
 
-Guiones completos en `OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`.
+Los seis están renderizados en `~/Desktop/dibujo-creativo/anuncios/`. Guiones completos en
+`OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`.
+
+**Cómo se hicieron:** voz Sulafat por API (`gemini-2.5-flash-preview-tts`, Style en voseo), `speed 1.30`
+con `silence [0.26, 0.12]`, cortes de 1,9–2,9 s, pool de 101 recortes de **15 clips de TikTok** de manos
+dibujando (ni una foto fija, ni stock), una sola cama musical a -8 dB, caja de hook ocre, chips con check
+y placa final ACADEMIA DEL TRAZO. Scripts: `OUTPUTS/scripts-vsl/gen_trazo_plans.py` y `edit_trazo.py`.
 
 ## Estructura en Meta (V3)
 

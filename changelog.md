@@ -1,3 +1,18 @@
+## 2026-11-03 (noche) — Academia del Trazo: precio a $16.990 y tanda 1 de 6 videos
+
+- **Precio.** Front de $19.900 → **$16.990 ARS** en la landing (`landing.html`, `PRUEBA.html`,
+  `landing-impultienda.txt`): ahorro $47.410, 3 cuotas de $5.664. Actualizado también en
+  `WIKI/academia-del-trazo.md` y en el plan de testeo.
+- **Los 6 videos de la tanda 1**, renderizados en `~/Desktop/dibujo-creativo/anuncios/`
+  (`ADT-V1-las-tres-capas` … `ADT-V6-dia-1-vs-dia-21`, 40–46 s cada uno). Voz Sulafat por API,
+  speed 1.30, pool de 101 recortes de **15 clips de TikTok** de manos dibujando, placa final
+  ACADEMIA DEL TRAZO. Nuevos scripts: `OUTPUTS/scripts-vsl/gen_trazo_plans.py` y `edit_trazo.py`.
+- **Corrección de método registrada:** el modelo `gemini-3.8-flash-tts` **recita el Style en voz alta**
+  (la primera tanda de voces salió con 22 s de instrucciones habladas). El que obedece es
+  `gemini-2.5-flash-preview-tts`, como ya decía la memoria. Además el free tier es de
+  **10 requests por día y por modelo**: conviene no quemarlas en pruebas.
+- `tts_gemini.py` acepta ahora `TTS_TEMP` para bajar la temperatura.
+
 ## 2026-11-03 (noche) — Lumea Desenului: análisis completo y tanda 1 en inglés (Draw in 21)
 
 - Santiago pasó la Biblioteca de `lumea-desenului-pl.impultienda.ar`: *"Vamos a armar ads para una oferta, la vamos a tirar en ingles… vamos a hacer un analisis completo y despues armamos los ads"*. Durante el trabajo fijó: **la experta es Juliana Alves** y el **costo 19,99**.

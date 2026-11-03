@@ -210,6 +210,16 @@ Relacionado: [[segmentos-de-mercado]] · [[seleccion-y-modelado-de-oferta]] · [
 - **Emma Carter es una persona sin cara** (manos, POV): encaja con buscar cuentas faceless y no depender de una marca personal.
 - **Defensa:** con un solo winner, repartir los anuncios en varias fanpages y dominios hace que te modelen menos. El cloaking (Ghost Ads) tiene riesgo de cuenta ([[contingencia-de-cuentas]]).
 
+
+## 2026-11-03 · No se bajan todos los ads del competidor
+
+Santiago, a mitad de un análisis: *"No descargues absolutamente todos los ads, ya te dije eso"*.
+
+- Para analizar una cuenta **no hace falta bajar los 80 videos**. Se carga la Biblioteca entera y se leen de la página: fecha de alta, duración, cuántos ads usan el mismo contenido, primary text y dominio de destino. Eso ya da la línea de tiempo, el patrón de gasto y cuántos copies corren.
+- De video solo se baja una **muestra de ~10** elegida para cubrir todas las fechas y todas las duraciones (el control más viejo, el más corto, el más largo y la tanda más reciente). Con eso se ve el formato y los ángulos; el resto son variaciones del mismo molde.
+- La muestra va al scratchpad de la sesión, nunca al Escritorio ni a Descargas, y se borra al terminar.
+- Encaja con la regla de [[seleccion-y-modelado-de-oferta]]: *"No descargues sus ads — usá la misma comunicación mejorada, pero no cambies el formato"*. Los creativos del competidor se estudian, no se guardan.
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/funnel-hacking.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/funnel-hacking.md, RAW/formacion/lecciones/seleccion-de-la-oferta.md, RAW/formacion/lecciones/como-burlar-a-tu-competencia-para-que-no-te-copien.md

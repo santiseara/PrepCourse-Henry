@@ -1,3 +1,13 @@
+## 2026-11-03 (tarde) — Academia del Trazo: landing propia + análisis de los 80 ads del original
+
+- Santiago pasó la Biblioteca de la página 1153035077882881 (Academia de Dibujo Creativo / Universo Creativo, de Valentina Restrepo) para modelarla en Argentina: *"la landing no me gusta mucho… tratemos de mejorar eso. Primero armemos la landing y después vamos con los anuncios."*
+- **Leídos los 80 ads activos** uno por uno desde la Biblioteca: 38 videos únicos + 42 imágenes, dos primary text para todo, línea de tiempo completa (control del 14/7, 48 ads del 15 al 22/9, tanda nueva el 27/10).
+- **9 videos transcriptos y analizados** con Gemini (`gemini-3.5-flash`, video inline). Formato único: voz en off femenina + b-roll de manos dibujando, 9:16, subtítulos palabra por palabra, piano, 40–57 s. Cuatro de nueve son el mismo ángulo ("el talento no existe").
+- **Corrección de Santiago en el momento:** *"No descargues absolutamente todos los ads, ya te dije eso"*. Se cortó la bajada y se quedó una muestra de 10 que cubre todas las fechas y duraciones. Regla sumada a `WIKI/funnel-hacking.md`.
+- **Landing nueva armada y probada en Chrome**, en `~/Desktop/dibujo-creativo/landing/`: promesa con número, dolores, mecanismo propio (Método de las 3 Capas), producto, bonus x4, oferta con contador y cuotas, garantía de 30 días, barra de compra fija y notificaciones discretas. Un solo producto, sin bundles, y el ahorro en pesos en vez de "50% OFF".
+- **Tanda 1 de 6 guiones + 2 descripciones** con ángulos que el original no corre, y plan de testeo V3 para Argentina.
+- Outputs: `OUTPUTS/2026-11-03-analisis-academia-dibujo-creativo.md`, `OUTPUTS/2026-11-03-plan-de-testeo-academia-del-trazo.md`, `OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`. Página nueva: `WIKI/academia-del-trazo.md`.
+
 ## 2026-11-03 — Atlas de Cortes: 3 renovaciones (V49–V51) con la cuenta leída antes
 
 - Santiago: *"Vamos con 3 renovaciones para pelo, fijate que esta funcionando y armemos"*.

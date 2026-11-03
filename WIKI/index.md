@@ -50,6 +50,7 @@
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
 - ✅ [[aumento-de-aov]] — Backend: order bumps, upsells pre y post compra, KPIs y los 5 bumps que no se pisan.
 - 🆕 [[pan-sin-picos]] — Recetario de panes para diabéticos (AR), modelado de Mesa y Sabor. Quiz propio de 11 preguntas, personalizado y con receta de regalo.
+- 🆕 [[academia-del-trazo]] — Dibujo desde cero paso a paso (AR), modelada de Academia de Dibujo Creativo. Método de las 3 Capas, landing propia y los 6 ángulos que el original no corre.
 - 🆕 [[group-work-playbook]] — +150 dinámicas grupales en PDF (USD 27, mercado inglés), modelada de Talleres Listos. 6 módulos, 5 bonos y la DNA de sus ~160 ads.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
@@ -103,6 +104,9 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-03 — Academia del Trazo: análisis de los 80 ads del original](../OUTPUTS/2026-11-03-analisis-academia-dibujo-creativo.md) — 38 videos + 42 imágenes, dos copies para todo, el formato único de voz en off con manos dibujando y por qué su landing es el punto débil · ver [[academia-del-trazo]]
+- [2026-11-03 — Academia del Trazo: plan de testeo y tanda 1](../OUTPUTS/2026-11-03-plan-de-testeo-academia-del-trazo.md) — qué se copia y qué no, los 6 ángulos nuevos y el conjunto V3 para Argentina · ver [[academia-del-trazo]]
+- [2026-11-03 — Academia del Trazo: 6 guiones y 2 descripciones](../OUTPUTS/2026-11-03-guiones-academia-del-trazo.md) — las 3 capas, el cuaderno en el cajón, copio bien pero de la nada no me sale, el regalo, 20 minutos sin pantalla y día 1 vs día 21 · ver [[academia-del-trazo]]
 - [2026-11-03 — Atlas de Cortes: renovaciones v49–v51](../OUTPUTS/2026-11-03-renovaciones-atlas-cortes-v49-v51.md) — hooks nuevos sobre los tres cuerpos del 2/11 (el brushing que dura cuatro días, la lista de cortes que esquiva y la confesión en primera persona), con la cuenta de escalado leída antes de escribir · ver [[atlas-de-cortes]]
 - [2026-11-02 — Piedras aromáticas: los 4 anuncios en ruso](../OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md) — los mismos cuatro anuncios en inglés pasados a ruso sin tocar imagen ni música, y la receta para clonar un ganador a cualquier idioma · ver [[internacionalizacion]]
 - [2026-11-02 — Caza: infoproductos con VSL en inglés (3ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md) — las tres que cumplen todo (SSAcademy 4/4, V Shred, 30 Second Clients) y la regla de que en salud la VSL es producto físico · ver [[caza-de-ofertas]]

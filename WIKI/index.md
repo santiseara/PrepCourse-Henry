@@ -103,6 +103,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-02 — Caza: infoproductos con VSL en Brasil (2ª pasada)](../OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md) — la VSL está extinta en Meta Brasil y el infoproducto low ticket topea en ~48 ads por fanpage; footprints que sirven y la trampa del display link falso · ver [[caza-de-ofertas]]
 - [2026-11-02 — Caza: VSL en Brasil (salud y renta extra)](../OUTPUTS/2026-11-02-caza-vsl-brasil-salud-renta-extra.md) — solo una VSL real con 50+ ads (Venda Sem Estoque); los grandes de salud en Brasil se fueron a WhatsApp y a e-commerce
 - [2026-11-02 — Atlas de Cortes: natives 15 y 16](../OUTPUTS/2026-11-02-natives-atlas-cortes-15-y-16.md) — la foto descolorida pegada al espejo (un corte que nunca pudo repetir) y la corta del "no, me encanta" de compromiso · ver [[atlas-de-cortes]]
 - [Guiones Herrero LATAM L1-L10 (2026-11-02)](../OUTPUTS/2026-11-02-guiones-herrero-latam-L1-L10.md) — los nueve que vendieron en AR + la réplica del ad más repetido del competidor, en español neutro y en dólares

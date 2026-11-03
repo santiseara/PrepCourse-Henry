@@ -1,3 +1,12 @@
+## 2026-11-02 (noche, 2ª pasada) — Caza de infoproductos con VSL en Brasil: la celda vacía
+
+- Santiago rechazó la primera pasada: *"ninguno es un infoproducto, ademas, son marcas personales o marcas reconocidas, son productos fisicos, no es nada de lo que te pedi, hace bien la busqueda, tarda lo que tengas que tardar"*. Tenía razón: LIQUIDZ y DRM Plus son producto físico y Venda Sem Estoque es marca personal.
+- Segunda pasada apuntada solo a **infoproducto digital con VSL**: ~40 búsquedas y ~2.000 anuncios escaneados. **No existe ninguna oferta que cumpla los cuatro criterios a la vez** (infoproducto + VSL + 50 ads + no marca personal, en salud o renta extra en Brasil).
+- **El hallazgo:** la VSL está prácticamente extinta en Meta Brasil — de 321 anuncios de video activos muestreados, solo 4 anunciantes pasan los 110 s y ninguno tiene volumen. El mercado corre creativo corto → WhatsApp / Instagram / checkout directo. Y el filtro de 50+ ads por fanpage excluye por construcción al infoproducto low ticket, que rota decenas de fanpages con 1–48 ads cada una.
+- Mejor oferta del perfil pedido: **Arquivos que encantam** (48 ads, 18 días, Kit Lembrancinhas a R$10, página no personal), sin VSL. Cluster "que encantam": 194 ads activos.
+- WIKI: registro largo en `caza-de-ofertas.md` con los footprints que aíslan infoproducto (`kiwify`, `hotmart`, precio en el link title), el que aísla VSL (duración del creativo en el UI), los que solo traen ruido en Brasil, y la trampa del **display link falso** de la Biblioteca de Anuncios. Queda resuelta la pregunta abierta del umbral de ads para nichos chicos.
+- Output: `OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md`, enlazado en `WIKI/index.md`.
+
 ## 2026-11-02 (noche) — Caza de VSL en Brasil: salud y renta extra
 
 - Pedido de Santiago: *"usemos la skill de cazar y quiero que encontremos únicamente ofertas con VSL … validadas, que no sean de marcas personales, que tengan más de 50 anuncios y dame mínimo 3 … nicho de salud o de renta extra en Brasil"*.

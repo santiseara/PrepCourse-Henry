@@ -223,8 +223,19 @@ Dos reglas técnicas que salieron de armarlo:
 - **Manifestación no es un nicho, son tres mercados que no comparten copy**: lei da atração/quântico, espiritualidade prática (simpatia, banho, tarô, numerologia) y cristão/evangélico (oração, salmo, jejum, devocional). Buscar solo "lei da atração" deja afuera los dos que más venden low ticket.
 - **Cuidado de política en manifestación:** promesas de curar o amarrar tumban cuentas. Se modela el ángulo (identidad, ritual), nunca la garantía de resultado sobrenatural.
 
+**Registro 2026-11-02 — cazar infoproducto con VSL en Brasil: la celda vacía.** Santiago pidió *"únicamente ofertas con VSL … validadas, que no sean de marcas personales, que tengan más de 50 anuncios … nicho de salud o de renta extra en Brasil"*. Tras ~40 búsquedas y ~2.000 anuncios escaneados, **no existe ninguna oferta que cumpla los cuatro criterios a la vez**. Lo que salió, que vale para toda caza futura en Brasil:
+
+- **La VSL está prácticamente extinta en Meta Brasil.** Barrido del universo de video activo (query `você`, `media_type=video`, 321 anuncios): anunciantes con creativo de **+110 s = 4**, ninguno con volumen. El mercado corre **creativo corto (8–60 s) → WhatsApp, Instagram o checkout directo**. Si el requisito no negociable es VSL, hay que cazar en **inglés**, no en portugués.
+- **El filtro de "50+ ads en una fanpage" excluye por construcción al infoproducto low ticket brasileño.** Ese mercado **rota decenas de fanpages con 1–48 ads cada una** (cuentas sucias de afiliado). Verificado: Receitas para Diabéticos 6, Pack De Achadinhos Shopee 1, Homens com Propósito 5, Fundação UniHealth 22, Insta Criativo 16. El techo real de ese perfil es **~48 ads**, no 50+. → responde la pregunta abierta de qué umbral usar: en infoproducto BR, **20–48 ads ya es winner**.
+- **Quién sí tiene 50+ en Brasil, y por qué no sirve:** nutra física → WhatsApp (DRM Plus 130, Dra. Caroline Townsend con 16 fanpages clonadas), e-commerce/revenda (LIQUIDZ 670, activos desde ago 2025), y lanzadores con VSL pero **marca personal** (Venda Sem Estoque 110 → `site.marcelowedrop.com`, único con VSL verificada).
+- **Footprints que aíslan infoproducto de verdad:** `kiwify` y `hotmart` como `search_terms` (el de kiwify devuelve 15.800 ads, puro infoproducto) y el **precio en el link title** (`Apenas R$10`, `por R$ 17,90`, `De R$197 por R$35`).
+- **Footprint que aísla VSL:** `media_type=video` en el UI **+ filtrar por la duración del creativo** (el texto de la Biblioteca trae `0:00 / 2:00`). Es el discriminador más limpio que hay para separar embudo de VSL de creativo corto.
+- **Solo traen ruido en Brasil:** `renda extra`, `emagrecer`, `antes de dormir`, `por apenas R$`, `aula gratuita`, `assista ao vídeo`. Los invade el comercio local, las apps de microdrama y los coaches de marca personal.
+- **Trampa técnica:** el dominio que muestra la Biblioteca de Anuncios es el **display link y suele ser falso** (no resuelve en DNS: `kitrevistinhasdecolorir.com`, `secajejumturbo.com.br`, `receitasproteicaspobre.com.br`). **No se puede verificar una landing por ahí** — hay que entrar por el ad.
+- **Mejor oferta del perfil pedido (sin VSL):** `Arquivos que encantam` (page_id 216603914872916) — 48 ads activos, 18 días, Kit Lembrancinhas de revistinhas para colorir a **R$10**, página no personal, con el creativo `🚨Apenas R$10 🚨` duplicado ~45 veces. El cluster "que encantam" suma **194 ads activos**. Ver `OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md`.
+
 ## Preguntas abiertas
-- ¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50? (la formación diría 10–15; la skill no contempla el caso)
+- ~~¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50?~~ **Resuelto el 2/11/2026:** en infoproducto low ticket brasileño el techo por fanpage es ~48 ads, así que ahí 20–48 ya es winner (registro de arriba).
 - ¿Guardar un registro acumulado de cazas para la segunda pasada a los 2–3 días (subió/bajó el número de ads), como pide [[funnel-hacking]]?
 
 ## Relacionado
@@ -234,3 +245,4 @@ Dos reglas técnicas que salieron de armarlo:
 - RAW/2026-10-24-skill-cazar.md (la skill, cargada por Santiago el 24/10/2026)
 - OUTPUTS/2026-10-24-caza-renda-extra-y-emagrecimento-brasil.md (primera caza real: de ahí salen las notas de comportamiento de la herramienta)
 - Criterios de selección dictados por Santiago en la conversación del 24/10/2026
+- OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md (la caza de infoproducto con VSL en Brasil: de ahí salen los footprints, la trampa del display link y el techo de 48 ads)

@@ -22,6 +22,9 @@
   `gemini-2.5-flash-preview-tts`, como ya decía la memoria. Además el free tier es de
   **10 requests por día y por modelo**: conviene no quemarlas en pruebas.
 - `tts_gemini.py` acepta ahora `TTS_TEMP` para bajar la temperatura.
+- **Cama musical tranquila.** *"Haceme 3 con una música más tranquila"*: script nuevo
+  `OUTPUTS/scripts-vsl/music_calma.py` (piano de fieltro + pad, 64 BPM, Am–F–C–G, sin percusión,
+  reverb corta) y V1, V2 y V3 re-renderizados como `…-calma.mp4` con los mismos planos.
 
 ## 2026-11-03 (noche) — Lumea Desenului: análisis completo y tanda 1 en inglés (Draw in 21)
 

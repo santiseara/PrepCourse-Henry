@@ -23,6 +23,7 @@
 - Tanda 1 de 6 guiones y 2 descripciones: `OUTPUTS/2026-11-03-guiones-academia-del-trazo.md`. Ángulos nuevos: las 3 capas, el cuaderno en el cajón, copio bien pero de la nada no me sale, el retrato como regalo, 20 minutos sin pantalla, día 1 vs día 21.
 - Voz: mujer → **Sulafat**, speed 1.30 ([[como-trabajar-con-santiago]]). Visuales: clips de TikTok de manos dibujando, nada de fotos fijas.
 - **Tanda 1 renderizada el 3/11** en `~/Desktop/dibujo-creativo/anuncios/` (`ADT-V1…ADT-V6`, 40–46 s). Pool de 101 recortes de 15 clips de TikTok (se bajaron 30 y se descartaron 15 por subtítulos quemados, logo, cara hablando a cámara o dibujo a color). Scripts: `OUTPUTS/scripts-vsl/gen_trazo_plans.py` + `edit_trazo.py` (copia de `edit_barber.py` con la paleta ocre de la landing).
+- **Cama musical.** La tanda salió con la cama de Herrero (`music/bed.wav`). Santiago pidió *"3 con una música más tranquila"*: se generó una cama propia con `OUTPUTS/scripts-vsl/music_calma.py` (piano de fieltro + pad, 64 BPM, Am–F–C–G, sin percusión, centroide 872 Hz contra 2.148 Hz de la de Herrero) y se re-renderizaron V1, V2 y V3 como `…-calma.mp4`. Mismos planos y mismos subtítulos: los planes no llevan `usage`, así que con el mismo seed el reparto sale idéntico y lo único que cambia es la música.
 
 ## Preguntas abiertas
 - ¿Qué link de checkout va en `LINK_CHECKOUT`? ¿ImpulTienda o Shopify propio?

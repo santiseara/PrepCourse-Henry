@@ -39,6 +39,15 @@
   - Generar **desde texto** cuando se pueda. Subir una referencia obliga a aceptar el "Media upload agreement", y eso **requiere el OK de Santiago**.
   - La imagen final se descarga del CDN cambiando `_min.webp` por `.png` (1024×1024).
 - **Mockup del producto: celular con la app, potente y premium.** Nada de libros sueltos ("parecen libros sueltos y se ve horrible", 2026-10-12). Un iPhone flotando con la UI de la app (logo, video de la clase, progreso del reto, accesos), fondo cálido de estudio y luz suave.
+- **CTA temprano en el hero, que NO va al checkout (2026-11-03, "sino queda re abajo el botón para comprar").** Debajo de los chips del hero va un botón que **ancla a la sección de "qué vas a recibir"** (`href="#incluye"`), no al checkout: el que recién llega ve toda la oferta antes de decidir. No lleva la clase `js-cta` (si la lleva, el JS le pisa el `href` con el link de pago y además dispara `AddToCart`), y la sección destino necesita `scroll-margin-top` porque la barra de urgencia es sticky.
+- **La caja de oferta se presenta completa, estilo "launch promotion" (2026-11-03, "quedó re peruano, necesito que sea más completo, con toda la información de lo que se lleva, el producto, los bonos").** Una caja de precio con solo tachado + precio + botón se ve barata. El layout que pidió Santiago (referencia: `scentedstone.lovable.app`, bloque *Launch Promotion*), de arriba abajo:
+  1. chapita ocre **★ PRECIO DE LANZAMIENTO ★** montada sobre el borde de la tarjeta
+  2. **nombre del producto** grande en la serif display + bajada del mecanismo en mayúsculas chicas
+  3. **precio tachado**, chapita verde con el **ahorro en pesos**, **precio de hoy** gigante y la línea de cuotas
+  4. caja crema **"Todo lo que te llevás"**: un ✓ por ítem del producto (sin precio al lado), y el **acceso de por vida destacado aparte** en una tarjeta blanca
+  5. caja de **borde punteado con 🎁**: "+ N regalos incluidos, sin costo", el valor tachado y una chapita verde **HOY: GRATIS**
+  6. botón ancho, y abajo la micro-confianza (pago seguro · acceso por mail en 2 minutos)
+  Los precios salen de los `data-` del CONFIG (`data-old`, `data-new`, `data-ahorro`, `data-valorbonus`, `data-cuotas`), nunca hardcodeados. Ojo con heredar `display:block` en los `<b>` de adentro: parte el "Valor $45.600" en tres líneas.
 - **Los atributos `width`/`height` del `<img>` llevan las dimensiones REALES del archivo (2026-11-03, "la foto queda cortada y no se ve lo del costado").** En la landing de [[academia-del-trazo]] el mockup estaba declarado `width="460" height="460"` siendo 1122×1402: cualquier plantilla que respete esos atributos mete la foto en un box cuadrado y le come los costados (se perdía el badge "+ CURSO EN VIDEO"). Se miden con `PIL` antes de escribir el tag, y la imagen del hero se blinda para que ninguna plataforma la recorte:
   ```css
   .hero-img{width:100%;max-width:520px;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
@@ -120,6 +129,8 @@
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-03 | Landing Academia del Trazo | "Quiero que pongas un botón de cta entre medio de esos textos, porque sino queda re abajo el botón para comprar… que no lleve al checkout, sino que lleve a la presentación de la oferta" | §4: botón en el hero anclado a la sección de "qué vas a recibir", sin `js-cta` |
+| 2026-11-03 | Landing Academia del Trazo | "Esto quedó re peruano, necesito que sea más completo, con toda la información de lo que se lleva, el producto, los bonos" | §4: caja de oferta completa estilo *launch promotion* (chapita, nombre, precio, lista de ✓, acceso de por vida destacado, caja punteada de regalos con valor tachado, botón y micro-confianza) |
 | 2026-11-03 | Landing Academia del Trazo | "Fijate que la foto queda cortada y no se ve lo del costado" | §4: `width`/`height` del `<img>` con las dimensiones reales del archivo + blindaje `height:auto!important;aspect-ratio:auto!important;object-fit:contain!important` en el mockup del hero |
 | 2026-10-26 | Calistenia Rusa | "Sacá la foto del principio, la del antes y después" | §4: si la primera pregunta ya tiene opciones con imagen, la portada va sin foto. Revisar los textos que la referencien |
 | 2026-10-26 | Calistenia Rusa | "Esta imagen quedó muy mal, no quiero imagen ahí, y la del tipo durmiendo que ponés después también sacala" | §4: la foto de un paso solo va si muestra la opción o el test. La decorativa se saca |

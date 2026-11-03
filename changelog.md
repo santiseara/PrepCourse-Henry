@@ -1,3 +1,13 @@
+## 2026-11-03 (noche, 5ª pasada) — Academia del Trazo: CTA en el hero y caja de oferta completa
+
+- Santiago: *"Quiero que pongas un botón de cta entre medio de esos textos, porque sino queda re abajo el botón para comprar… que no lleve al checkout, sino que lleve a la presentación de la oferta, para que vean todo lo que incluye"*.
+- **Botón nuevo en el hero**, debajo de los chips: **VER TODO LO QUE INCLUYE** → ancla a la sección "Qué vas a recibir" (`#incluye`), que es la que lista los 6 módulos y desemboca en la caja de precio. **No lleva `js-cta`**, así que el JS no le pisa el href con el checkout ni dispara `AddToCart`.
+- Después: *"Esto quedó re peruano, necesito que sea más completo, con toda la información de lo que se lleva, el producto, los bonos"*, con referencia propia: el bloque *Launch Promotion* de `scentedstone.lovable.app`.
+- **Caja de oferta rehecha con ese layout** (adaptada a la paleta ocre y al voseo): chapita ★ PRECIO DE LANZAMIENTO ★ montada sobre el borde → nombre del producto en Fraunces + "El método de las 3 capas" → $64.400 tachado → chapita verde del ahorro → **$16.990** gigante → cuotas de Mercado Pago → caja crema **"Todo lo que te llevás"** con un ✓ por módulo y el **acceso de por vida destacado aparte** → caja punteada con 🎁 "+ 4 regalos incluidos, sin costo · Valor $45.600 · HOY: GRATIS" → botón ancho → pago seguro y acceso por mail.
+- Todos los precios salen de los `data-` del CONFIG; se sumó `data-cuotas` (antes las cuotas se escribían solo en `#mp-cuotas`, un id único que no se podía repetir).
+- **Verificado en el navegador:** el botón del hero apunta a una sección que existe y no al checkout, y la caja no desborda a 350, 420, 560 ni 720 px de contenedor.
+- Dos reglas nuevas en [[quizzes-reglas-de-armado]]. Archivos actualizados y copiados al portapapeles.
+
 ## 2026-11-03 (noche, 4ª pasada) — Academia del Trazo: el mockup del hero ya no se corta
 
 - Santiago: *"Ajustame esto de la landing de dibujo creativo, fijate que la foto queda cortada y no se ve lo del costado"*.

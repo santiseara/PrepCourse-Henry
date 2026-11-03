@@ -1,3 +1,12 @@
+## 2026-11-03 (noche, 4ª pasada) — Academia del Trazo: el mockup del hero ya no se corta
+
+- Santiago: *"Ajustame esto de la landing de dibujo creativo, fijate que la foto queda cortada y no se ve lo del costado"*.
+- **Causa:** el `<img>` del mockup estaba declarado `width="460" height="460"` siendo el archivo **1122×1402**. Con esos atributos, cualquier plantilla que los respete mete la foto en un box cuadrado y le recorta los costados: se perdía el cuarto badge, **"+ CURSO EN VIDEO"**.
+- **Arreglo:** dimensiones reales en el tag y blindaje CSS del hero (`width:100%;max-width:520px;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important`). De paso la foto pasó de 460 a **520 px**, así los cuatro badges se leen.
+- **Verificado en el navegador:** ratio renderizado 0.8 = ratio natural a 300, 350, 520 y 720 px de contenedor, y aguanta CSS hostil (`img{height:520px;aspect-ratio:1/1;object-fit:cover}`) sin recortarse.
+- Actualizados `landing.html`, `PRUEBA.html` y `landing-impultienda.txt` en `~/Desktop/dibujo-creativo/landing/`, y copiado al portapapeles. Regla nueva en [[quizzes-reglas-de-armado]].
+- **Dos cosas avisadas:** el mockup sigue siendo el **del competidor** (dice *Universo Creativo* y *Academia de Dibujo Creativo*), y `dibujo-creativo.impultienda.ar` tiene publicada **otra landing** ("29 cursos de dibujo", garantía de 7 días, otro mockup), no la de Academia del Trazo.
+
 ## 2026-11-03 (noche, 3ª pasada) — Piedras aromáticas: los 4 anuncios clonados al polaco
 
 - Santiago: *"Ahora hacemelos en polaco"*, sobre los cuatro anuncios de piedras que el 2/11 se habían pasado al ruso.

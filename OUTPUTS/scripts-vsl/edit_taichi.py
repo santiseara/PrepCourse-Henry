@@ -22,7 +22,7 @@ def _corregir_con_guion():
     """Reemplaza lo que oyo Whisper por las palabras del guion (difflib), como el editor de la wiki."""
     import difflib
     gui = []
-    for b in ["b1","b2a","b2b","b3"]:
+    for b in ["v1","v2","v3a","v3b","v4"]:
         f = W + "/vo/" + b + ".txt"
         if os.path.exists(f): gui += open(f, encoding="utf-8").read().split()
     if not gui: return
@@ -59,10 +59,10 @@ BROLLS = [
     ("c08", "y tenes dos caminos", 4.0),
 ]
 PLACAS = [
-    ("bono1", "la guia de respiracion", 3.6), ("bono2", "alivio oriental", 3.6),
+    ("bono1", "la guia de respiracion", 3.6), ("bono2", "para descomprimir la espalda", 3.6),
     ("bono3", "el te termogenico", 3.6), ("bono4", "el nivel maestra", 3.6),
     ("bono5", "tu hoja de ruta", 3.6), ("total", "los cinco juntos son", 4.0),
-    ("precio", "pero hoy en esta pagina", 5.0), ("garantia", "y el riesgo lo", 4.2),
+    ("precio", "en esta pagina entras por", 5.0), ("garantia", "y el riesgo lo", 4.2),
     ("cta", "te esta esperando", 4.5),
 ]
 USO = {}   # tramo distinto cada vez que se repite un clip
@@ -144,8 +144,8 @@ def render(args):
         ss = min(item["ss"], max(0.5, duracion(cl) - dur - 0.5))
         cmd = [FF,"-y","-ss",str(a),"-t",str(dur),"-i",BASE,"-ss",str(ss),"-t",str(dur),"-stream_loop","-1","-i",cl,
                "-filter_complex",
-               "[1:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,"
-               "fade=t=in:st=0:d=0.25,fade=t=out:st=%.2f:d=0.25[v];[v]ass=%s[o]" % (dur-0.25, sub),
+               "[1:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1[v];"
+               "[v]ass=%s[o]" % (sub,),
                "-map","[o]","-an"]
     elif item and item["tipo"] == "placa":
         g = GFX + "/" + item["gfx"] + ".png"

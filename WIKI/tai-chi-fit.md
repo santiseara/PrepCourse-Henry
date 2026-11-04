@@ -66,15 +66,15 @@ El VSL que corre detrás de ese mismo quiz está en `calisteniafeminina.site/vsl
 ## Estado
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/tai-chi-fit/`.
 - ✅ **Guion del VSL escrito** (2026-11-03): `OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md` y `~/Desktop/tai-chi-fit/vsl/`. Santiago lo pidió de **8 minutos** ("así es más completo"), no de 4–6.
-- ✅ **VSL terminado (2026-11-04): `~/Desktop/tai-chi-fit/vsl/Tai-Chi-Fit-VSL.mp4`**, 8:51, 1080x1920, 155 MB.
+- ✅ **VSL terminado (2026-11-04): `~/Desktop/tai-chi-fit/vsl/Tai-Chi-Fit-VSL.mp4`**, 8:43, 1080x1920, 154 MB.
   - **Avatar "Maestra Valentina"** creado en HeyGen desde `imagenes/avatar-maestra-valentina.png` (9:16 exacto, sin barras blancas).
-  - **Voz Sulafat** por API en cuatro bloques, procesada antes de subir (recorte de silencios + 1.3x): 12:19 de voz cruda quedaron en 8:51 de video.
+  - **Voz Sulafat** por API en cinco bloques, **todos con el mismo modelo** (`gemini-2.5-flash-preview-tts`) y **todos igualados a 210 palabras por minuto**, cada uno con su propio atempo.
   - **63 créditos de HeyGen en total** con "Sincronización de labios" ([[vsl-reglas-de-armado]] §3d), contra los ~210 que habría costado Avatar 6.
   - **14 B-rolls, todos clips reales de TikTok** (nada de stock ni de imágenes fijas), bajados con `yt_dlp` y recortados para sacarles el texto quemado y las marcas de otros.
   - **9 placas** (5 bonos con su valor, el total de $167.600, el precio, el sello de 30 días y el CTA) en jade y bermellón con borde dorado.
   - **Subtítulos** de 2 palabras en mayúscula, blanco con borde negro y la palabra clave en amarillo, al estilo del VSL original. Alineados contra el guion, no contra Whisper.
   - Música: la cama `bed_B` de [[herrero-de-finde]] a -8 dB con ducking.
-- ⏳ **Falta:** fijar `SEGUNDOS_OFERTA` en el quiz con el segundo real en que el VSL dice el precio (**7:34**, o sea 454 s), subirlo a Panda y confirmar el checkout.
+- ⏳ **Falta:** fijar `SEGUNDOS_OFERTA` en el quiz en **438** (7:18, el segundo en que el VSL dice el precio), subirlo a Panda y confirmar el checkout.
 - ⚠️ **La foto de la Maestra Valentina para el avatar.** La del quiz (`imagenes/maestra-valentina.png`) es 1:1 y HeyGen le pondría barras blancas. La v1 salió en cuerpo entero (rechazada por artificial) y la v2 con el fondo cargado. **La buena: asiática, unos 50 años, sentada, plano medio, pared lisa y vacía, look de foto de celular** ([[vsl-reglas-de-armado]] §3).
 - **El guion quedó alineado con el quiz** en seis puntos que no coincidían: el manuscrito, el puente entre "tu raíz" y la Fase Raíz, Fluir como **core y glúteo** (no cadera), el espacio de una toalla, "no se trata de terminar reventada" y la versión adaptada de cada movimiento.
 - ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.

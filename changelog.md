@@ -1,3 +1,11 @@
+## 2026-11-04 (2ª pasada) — Tai Chi Fit: la voz rehecha pareja, y tres bonos que se habían perdido
+
+- Santiago: *"Porque usas voces distintas todo el tiempo? … encima cambia el tono cada dos minutos, le queda muy mal esa voz"*. La voz era Sulafat en todos los bloques, pero **dos salieron con un modelo de TTS y dos con otro** porque se agotó la cuota a mitad de tanda: mismo nombre de voz, otro timbre y otro ritmo (156 vs 132 ppm), justo en el medio del VSL.
+- **Rehecho:** cinco bloques parejos (450–500 palabras), **todos con el mismo modelo**, y **todos igualados a 210 ppm** calculando el atempo de cada uno después del recorte de silencios (con el 1.3x fijo quedaban entre 199 y 235).
+- **Hallazgo grave en el camino:** el bloque de los bonos **decía el primero y saltaba al quinto**. Se perdían Alivio Oriental, el Té del Monasterio y el Nivel Maestra. El conteo de palabras de `revisar_voz.py` no lo detectaba (los números en cifras tapan la diferencia): ahora se verifica con una **lista de frases obligatorias por bloque**. La lista de bonos quedó en un bloque propio y corto.
+- **Otro:** un bloque retomado desde un borrador de HeyGen **perdió la selección de modelo** y salió con Avatar 6 (32 créditos contra 16). Rehecho con el modelo barato.
+- Reglas nuevas en [[vsl-reglas-de-armado]] §0b. Entregable actualizado: **8:43**, `SEGUNDOS_OFERTA` pasa a **438**.
+
 ## 2026-11-04 — Tai Chi Fit: el VSL entero, armado y editado
 
 - Santiago: *"Arma el video para que quede bien, hace toda la edicion, no quiero videos de stock"*. Entregado: **`~/Desktop/tai-chi-fit/vsl/Tai-Chi-Fit-VSL.mp4`, 8:51, 1080x1920, 155 MB**.

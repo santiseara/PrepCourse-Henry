@@ -1,3 +1,12 @@
+## 2026-11-04 (6ª pasada) — El ad brasileño de pilates, destripado frame por frame
+
+- Santiago dejó un ad de Brasil (88 s, pilates 50+) y pidió analizarlo entero *"para que cuando yo pida un video con IA se entienda que quiero de esto… la onda de los videos de IA"*.
+- **No hay ffmpeg en la Mac.** Se armó un cliente propio en Swift + AVFoundation (`scratchpad/bin/vid`) para metadata, detección de cortes, hojas de contactos, recortes ampliados y exportación de audio. Transcripción con Gemini 3.6 Flash (los 2.5/3.8 dan 404 o 503).
+- **Hallazgo principal: el ad es 100 % IA y se puede probar.** Los 11 planos miden entre 6,3 y 8,2 s (clips de 8 s); los 8 planos de la presentadora arrancan en la misma pose porque **todos salen de la misma imagen de referencia**; y el "DIA 01 / DIA 49" es el mismo plano regenerado —en el día 49 aparece una manta en el sofá que antes no estaba—.
+- **Guion medido:** 270 palabras, **185 ppm**, voz el **99 %** del tiempo, un solo freno antes de la prueba y cierre a 290 ppm. Subtítulos karaoke de 2-4 palabras cada 1,1-1,3 s. Una sola transición (flash de 0,4 s). Fotos reales del testimonio a pantalla completa con el avatar en PiP hablando.
+- **Lip sync medido:** visemas coherentes cuadro a cuadro y correlación boca/audio con pico en −100 ms: sin desfase grosero.
+- Página nueva [[estilo-de-video-ia]] (las 8 reglas de oro + estructura de 90 s + checklist de control) y despiece completo en `OUTPUTS/2026-11-04-analisis-ad-pilates-brasil.md`. El video y las hojas de contactos quedaron en `~/Desktop/referencias-video-ia/pilates-brasil/`.
+
 ## 2026-11-04 (5ª pasada) — APIMart instalada en el segundo cerebro
 
 - Santiago: *"Quiero que instales apimart en mi segundo cerebro, utiliza claude in chrome y instalalo vos"*.

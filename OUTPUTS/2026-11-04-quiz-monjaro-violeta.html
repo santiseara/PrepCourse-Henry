@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MONJARO VIOLETA JAPONÉS — Tu receta personalizada</title>
+
+<!-- ==========================================================================
+     MONJARO VIOLETA JAPONÉS — QUIZ + VSL  ·  bloque de configuración
+     Todo lo que se toca está acá. El resto no hace falta tocarlo.
+     ========================================================================== -->
+<script>
+window.CONFIG = {
+
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL. */
+  LINK_CHECKOUT: "https://monjaro-violeta.impultienda.ar/checkout",
+
+  /* Pixel de Meta. Dejalo vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos de VSL vistos antes de que aparezca la oferta.
+     OJO: tiene que ser el segundo exacto en que NUESTRO VSL dice el precio.
+     230 = 3:50 · 438 = 7:18 · 960 = 16:00 */
+  SEGUNDOS_OFERTA: 230,
+
+  /* Video corto de la Abuela Mei en el paso 12 (opcional).
+     Si no hay embed en <template id="vsl-mei">, el paso se saltea solo. */
+  SEGUNDOS_BOTON_MEI: 30,
+
+  /* VSL propio: pegá acá la URL del MP4 (720x1280, faststart).
+     Si lo dejás vacío usa el embed de <template id="vsl-template"> de más abajo,
+     y si tampoco hay embed muestra el recuadro de prueba. */
+  VIDEO_URL: "",
+
+  /* Imágenes. Pegá la URL de ImpulTienda de cada una (o dejá el archivo local). */
+  IMG: {
+    hero:        "../imagenes/hero-monjaro.webp",
+    generoM:     "../imagenes/genero-mujer.webp",
+    generoH:     "../imagenes/genero-hombre.webp",
+    zonaM:       "../imagenes/zona-mujer.webp",
+    zonaH:       "../imagenes/zona-hombre.webp",
+    edad1:       "../imagenes/edad-18-29.webp",
+    edad2:       "../imagenes/edad-30-39.webp",
+    edad3:       "../imagenes/edad-40-49.webp",
+    edad4:       "../imagenes/edad-50-mas.webp",
+    kilos1:      "../imagenes/kilos-5-10.webp",
+    kilos2:      "../imagenes/kilos-15-20.webp",
+    kilos3:      "../imagenes/kilos-mas-20.webp",
+    kilos4:      "../imagenes/kilos-no-se.webp",
+    limon:       "../imagenes/fruta-limon.webp",
+    naranja:     "../imagenes/fruta-naranja.webp",
+    banana:      "../imagenes/fruta-banana.webp",
+    manzana:     "../imagenes/fruta-manzana.webp",
+    frutilla:    "../imagenes/fruta-frutilla.webp",
+    anana:       "../imagenes/fruta-anana.webp",
+    mei:         "../imagenes/abuela-mei.webp",
+    testimonio:  "../imagenes/testimonio-antes-despues.webp",
+    avatarTest:  "../imagenes/avatar-testimonio.webp",
+    transform:   "../imagenes/transformacion.webp",
+    compMahora:  "../imagenes/compara-mujer-ahora.webp",
+    compMobj:    "../imagenes/compara-mujer-objetivo.webp",
+    compHahora:  "../imagenes/compara-hombre-ahora.webp",
+    compHobj:    "../imagenes/compara-hombre-objetivo.webp"
+  },
+
+  /* Precios. Si cambia el precio hay que cambiarlo en los 5 lugares. */
+  PRECIO:        "14.990",
+  PRECIO_VIEJO:  "49.990",
+  DESCUENTO:     "70",
+  CUOTAS:        "3",
+  CUOTA_VALOR:   "4.997",
+  AHORRO:        "35.000",
+  VALOR_BONOS:   "73.500"
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+  :root{
+    --void:#190727;        /* fondo general */
+    --plum:#260F3C;        /* superficies */
+    --plum-2:#33144F;
+    --violet:#8A1FC4;      /* primario */
+    --violet-d:#5F0E8C;
+    --neon:#C44DFF;        /* acento claro */
+    --magenta:#E626C8;     /* acento fuerte */
+    --lime:#16A34A;        /* confirmación (el verde del original) */
+    --lime-d:#0E7A36;
+    --red:#E0343F;         /* alerta y riesgo */
+    --amber:#F6A609;
+    --ink:#F6EEFC;
+    --muted:#BCA3D2;
+    --line:rgba(196,77,255,.22);
+    --shadow:0 20px 48px -22px rgba(0,0,0,.85);
+    --shadow-s:0 10px 26px -16px rgba(0,0,0,.8);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--void);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,.disp{font-family:'Archivo Black','Inter',sans-serif;line-height:1.08;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  .hidden{display:none!important}
+  .wrap{max-width:560px;margin:0 auto;padding:0 18px}
+  .glow{position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(60% 40% at 50% 0%,rgba(138,31,196,.42),transparent 70%),
+               radial-gradient(50% 35% at 90% 85%,rgba(230,38,200,.18),transparent 70%)}
+
+  /* ====== BOTONES ====== */
+  .btn{display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;width:100%;
+    border:none;cursor:pointer;font-family:'Inter';font-weight:800;font-size:1.06rem;letter-spacing:.01em;
+    color:#fff;background:linear-gradient(180deg,var(--lime),var(--lime-d));padding:17px 22px;border-radius:14px;
+    text-decoration:none;box-shadow:0 8px 0 #0a5a27,0 18px 30px -18px rgba(0,0,0,.9);
+    transition:transform .08s,box-shadow .08s,filter .2s}
+  .btn:hover{filter:brightness(1.06)}
+  .btn:active{transform:translateY(5px);box-shadow:0 3px 0 #0a5a27}
+  .btn.violet{background:linear-gradient(180deg,var(--violet),var(--violet-d));box-shadow:0 8px 0 #3d0760,0 18px 30px -18px rgba(0,0,0,.9)}
+  .btn.violet:active{box-shadow:0 3px 0 #3d0760}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .pulse{animation:pulse 1.9s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+  @media (prefers-reduced-motion: reduce){.pulse{animation:none}}
+
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;background:rgba(196,77,255,.14);color:var(--neon);padding:7px 13px;border-radius:999px;
+    border:1px solid var(--line)}
+  .chip.red{background:rgba(224,52,63,.16);color:#FF8A91;border-color:rgba(224,52,63,.35)}
+
+  /* ====== BARRA DE PROGRESO ====== */
+  #topbar{position:sticky;top:0;z-index:30;background:rgba(25,7,39,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);display:none}
+  #topbar .inner{max-width:560px;margin:0 auto;padding:11px 18px 10px;display:flex;align-items:center;gap:12px}
+  #topbar .mark{font-family:'Archivo Black';font-size:.82rem;letter-spacing:.02em;color:var(--ink);white-space:nowrap}
+  #topbar .mark i{color:var(--magenta);font-style:normal}
+  #topbar .cnt{margin-left:auto;font-size:.76rem;font-weight:700;color:var(--muted);white-space:nowrap}
+  .pbar{height:5px;background:rgba(255,255,255,.09);border-radius:99px;overflow:hidden;flex:1}
+  .pbar i{display:block;height:100%;width:3%;border-radius:99px;
+    background:linear-gradient(90deg,var(--violet),var(--magenta));transition:width .45s ease}
+
+  /* ====== PORTADA ====== */
+  #cover{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:18px 0 34px;text-align:center}
+  #cover .hero{width:100%;max-width:560px;margin:0 auto 4px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .lockup{margin:-6px 0 0}
+  .lockup .l1{font-family:'Archivo Black';font-size:clamp(2.3rem,13vw,3.3rem);color:#fff;letter-spacing:.01em;
+    text-shadow:0 0 22px rgba(196,77,255,.75),0 4px 0 rgba(0,0,0,.35)}
+  .lockup .l2{font-family:'Archivo Black';font-size:clamp(2.1rem,12vw,3rem);letter-spacing:.01em;
+    background:linear-gradient(180deg,#F3B8FF,#C44DFF 55%,#8A1FC4);-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 16px rgba(196,77,255,.6))}
+  .lockup .l3{display:inline-block;font-family:'Archivo Black';font-size:clamp(1.25rem,7vw,1.8rem);color:#fff;
+    background:linear-gradient(90deg,transparent,rgba(230,38,200,.95) 12%,rgba(230,38,200,.95) 88%,transparent);
+    padding:3px 26px;margin-top:4px;transform:skewX(-6deg)}
+  #cover h1{font-size:clamp(1.12rem,5.1vw,1.42rem);margin:16px 0 10px;line-height:1.26}
+  #cover h1 .hl{color:var(--magenta)}
+  #cover .sub{color:var(--muted);font-size:.99rem;margin-bottom:20px}
+  #cover .sub b{color:var(--ink)}
+  .tiktok{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.86rem;color:#fff;margin-top:14px;opacity:.95}
+  .tiktok span{width:28px;height:28px;border-radius:999px;border:1px solid rgba(255,255,255,.35);
+    display:flex;align-items:center;justify-content:center;font-size:.95rem}
+  .cover-note{font-size:.76rem;color:var(--muted);margin-top:14px;letter-spacing:.04em}
+
+  /* ====== QUIZ ====== */
+  #quiz{display:none;min-height:100svh;padding:22px 0 46px}
+  .q-eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--neon);margin-bottom:9px}
+  .q-title{font-size:clamp(1.24rem,5.6vw,1.56rem);margin-bottom:8px;line-height:1.22}
+  .q-title .hl{color:var(--magenta)}
+  .q-help{color:var(--muted);font-size:.93rem;margin-bottom:18px}
+  .q-slide{opacity:1;transform:translateY(0);transition:opacity .26s ease,transform .26s ease}
+  .q-slide.out{opacity:0;transform:translateY(12px)}
+
+  .opts{display:flex;flex-direction:column;gap:11px;margin-top:16px}
+  .opts.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .opt{position:relative;display:flex;align-items:center;gap:13px;cursor:pointer;
+    background:var(--plum);border:1.5px solid var(--line);border-radius:16px;padding:15px 16px;
+    transition:border-color .16s,background .16s,transform .1s;overflow:hidden}
+  .opt:hover{border-color:rgba(196,77,255,.5);background:var(--plum-2)}
+  .opt:active{transform:scale(.985)}
+  .opt.sel{border-color:var(--magenta);background:linear-gradient(180deg,rgba(230,38,200,.16),rgba(138,31,196,.1))}
+  .opt .ck{width:23px;height:23px;flex:0 0 23px;border-radius:7px;border:2px solid rgba(255,255,255,.26);
+    display:flex;align-items:center;justify-content:center;font-size:.76rem;color:transparent;transition:.16s}
+  .opt.sel .ck{background:var(--lime);border-color:var(--lime);color:#fff}
+  .opt .em{font-size:1.5rem;line-height:1;flex:0 0 auto}
+  .opt .tx{font-weight:700;font-size:1rem;line-height:1.3}
+  .opt .tx small{display:block;font-weight:500;font-size:.82rem;color:var(--muted);margin-top:3px}
+  .opts.grid .opt{flex-direction:column;align-items:center;text-align:center;gap:9px;padding:14px 10px}
+  .opts.grid .opt .ck{position:absolute;top:9px;right:9px}
+  .opts.grid .opt .tx{font-size:.93rem}
+  .opt-img{width:100%;max-width:150px;height:auto;border-radius:12px}
+  .opts.grid .opt-img{max-width:128px}
+  .opt-img.tile{background:#fff;padding:6px}
+  .opt-img.sm{max-width:74px}
+
+  .q-feedback{display:none;margin-top:16px;background:rgba(138,31,196,.14);border:1px solid var(--line);
+    border-left:3px solid var(--magenta);border-radius:12px;padding:13px 15px}
+  .q-feedback.show{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .q-feedback .coach{display:block;font-size:.73rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--neon);margin-bottom:4px}
+  .q-feedback p{font-size:.93rem;color:var(--ink)}
+  .q-next{margin-top:18px}
+
+  .field{width:100%;background:var(--plum);border:1.5px solid var(--line);border-radius:14px;padding:16px;
+    color:var(--ink);font-family:'Inter';font-size:1.05rem;font-weight:600;margin-top:16px}
+  .field:focus{outline:none;border-color:var(--magenta)}
+  .field::placeholder{color:#7D6391}
+
+  /* medidores */
+  .metric{background:var(--plum);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px}
+  .metric .row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+  .metric .k{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .metric .v{font-family:'Archivo Black';font-size:2rem;color:var(--ink)}
+  .metric .v small{font-size:.9rem;color:var(--muted);margin-left:3px;font-family:'Inter';font-weight:700}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:99px;outline:none;
+    background:linear-gradient(90deg,var(--magenta) var(--p,50%),rgba(255,255,255,.12) var(--p,50%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;
+    background:#fff;border:5px solid var(--magenta);cursor:grab;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+  input[type=range]::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:#fff;border:5px solid var(--magenta);cursor:grab}
+  .ruler{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:9px;font-weight:600}
+
+  /* placa "cómo funciona" */
+  .flow{background:var(--plum);border:1px solid var(--line);border-radius:18px;padding:20px 18px;margin-top:16px}
+  .flow .step{display:flex;gap:14px;align-items:flex-start;padding:13px 0}
+  .flow .step+.step{border-top:1px dashed rgba(196,77,255,.2)}
+  .flow .n{flex:0 0 36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-family:'Archivo Black';font-size:1rem;color:#fff;background:linear-gradient(180deg,var(--violet),var(--violet-d))}
+  .flow .t b{display:block;font-size:1rem;margin-bottom:2px}
+  .flow .t span{font-size:.9rem;color:var(--muted)}
+
+  /* testimonio */
+  .quote{background:var(--plum);border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:16px}
+  .quote .stars{color:var(--amber);font-size:.98rem;letter-spacing:2px;margin-bottom:8px}
+  .quote p{font-size:.98rem;line-height:1.62}
+  .quote .who{display:flex;align-items:center;gap:11px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+  .quote .who img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:top}
+  .quote .who b{display:block;font-size:.95rem}
+  .quote .who span{font-size:.82rem;color:var(--muted)}
+  .shot{border-radius:16px;margin-top:14px;border:1px solid var(--line);width:100%}
+
+  /* pantalla de carga */
+  #qload{display:none;min-height:100svh;flex-direction:column;align-items:center;justify-content:center;padding:30px 18px;text-align:center}
+  .ld-card{width:100%;max-width:420px;background:var(--plum);border:1px solid var(--line);border-radius:22px;padding:30px 22px;box-shadow:var(--shadow)}
+  .ld-ring{width:62px;height:62px;margin:0 auto 18px;border-radius:50%;border:4px solid rgba(196,77,255,.2);
+    border-top-color:var(--magenta);animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .ld-title{font-size:1.3rem;margin-bottom:6px}
+  .ld-title span{color:var(--magenta)}
+  .ld-sub{color:var(--muted);font-size:.93rem;margin-bottom:20px}
+  .ld-bar{height:9px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden}
+  .ld-fill{display:block;height:100%;width:4%;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--magenta));transition:width 3s linear}
+  .ld-pct{font-family:'Archivo Black';font-size:1.1rem;margin-top:12px}
+  .ld-steps{list-style:none;margin-top:18px;text-align:left}
+  .ld-step{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--muted);padding:5px 0;opacity:.35;transition:.3s}
+  .ld-step.active,.ld-step.done{opacity:1;color:var(--ink)}
+  .ld-ck{width:21px;height:21px;border-radius:50%;border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;
+    justify-content:center;font-size:.68rem;color:transparent;flex:0 0 21px}
+  .ld-step.done .ld-ck{background:var(--lime);border-color:var(--lime);color:#fff}
+
+  /* ====== RESULTADO (IMC) ====== */
+  .imc{background:var(--plum);border:1px solid var(--line);border-radius:18px;padding:20px 18px;margin-top:16px}
+  .imc .head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+  .imc .head span{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .imc .head b{font-family:'Archivo Black';font-size:1.9rem}
+  .imc .track{position:relative;height:13px;border-radius:99px;
+    background:linear-gradient(90deg,#3B82F6,#16A34A 32%,#F6A609 62%,#E0343F)}
+  .imc .dot{position:absolute;top:50%;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:#fff;
+    border:4px solid var(--plum);box-shadow:0 3px 10px rgba(0,0,0,.7);transform:translateY(-50%);transition:left .9s cubic-bezier(.2,.8,.2,1)}
+  .imc .legend{display:flex;justify-content:space-between;font-size:.67rem;color:var(--muted);margin-top:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+  .imc .verdict{margin-top:14px;font-weight:800;font-size:1rem}
+  .alert{background:rgba(224,52,63,.1);border:1px solid rgba(224,52,63,.35);border-radius:18px;padding:18px;margin-top:16px}
+  .alert h3{font-size:1.04rem;margin-bottom:10px;color:#FF9AA0;line-height:1.3}
+  .alert ul{list-style:none;margin:10px 0}
+  .alert li{font-size:.94rem;padding:4px 0;color:var(--ink)}
+  .alert .fix{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(224,52,63,.3);font-size:.95rem}
+  .alert .fix b{color:var(--neon)}
+
+  /* comparativa antes / objetivo */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .cc{background:var(--plum);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .cc .lab{font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:9px;text-align:center}
+  .cc.now .lab{background:rgba(224,52,63,.2);color:#FF9AA0}
+  .cc.goal .lab{background:rgba(22,163,74,.2);color:#6EE7A0}
+  .cc img{width:100%}
+  .cc .cap{font-size:.84rem;color:var(--muted);padding:11px 12px;line-height:1.45}
+  .cc .meter{height:7px;background:rgba(255,255,255,.1);margin:0 12px 12px;border-radius:99px;overflow:hidden}
+  .cc .meter i{display:block;height:100%;border-radius:99px}
+  .cc.now .meter i{background:var(--red);width:15%}
+  .cc.goal .meter i{background:var(--lime);width:90%}
+
+  /* ====== PASO FINAL: VSL + OFERTA ====== */
+  #final{display:none}
+  .vsl-wrap{padding:16px 0 10px;text-align:center}
+  .vsl-alert{display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(224,52,63,.14);
+    border:1px solid rgba(224,52,63,.4);color:#FF9AA0;font-size:.82rem;font-weight:800;padding:9px 14px;border-radius:12px;margin-bottom:12px}
+  .vsl-alert i{width:9px;height:9px;border-radius:50%;background:var(--red);animation:blink 1.1s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  #final h1{font-size:clamp(1.2rem,5.4vw,1.55rem);margin:12px 0 8px;line-height:1.26}
+  #final h1 .hl{color:var(--magenta)}
+  .vsl-sub{color:var(--muted);font-size:.94rem;margin-bottom:14px}
+  .vsl-sub b{color:var(--ink)}
+  .vsl-frame{position:relative;width:100%;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .vsl-frame>div{width:100%}
+  .vsl-frame video{width:100%;display:block}
+  .vsl-ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    color:var(--muted);font-weight:800;font-size:1rem;text-align:center;padding:24px;
+    background:repeating-linear-gradient(45deg,#1b0a2a,#1b0a2a 12px,#220e33 12px,#220e33 24px)}
+  .vsl-ph small{font-weight:500;font-size:.8rem;line-height:1.6}
+  .sound-gate{display:none;position:absolute;inset:0;z-index:5;background:rgba(10,2,18,.82);
+    flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;color:#fff;text-align:center}
+  .sound-gate.on{display:flex}
+  .sound-gate .sg-ic{font-size:2.6rem}
+  .sound-gate b{font-size:1.1rem;line-height:1.3}
+  .vsl-note{display:block;font-size:.74rem;color:var(--muted);margin-top:10px;letter-spacing:.04em}
+
+  #cta-vsl{display:none;margin-top:16px}
+  #cta-vsl.show{display:block;animation:fade .45s ease}
+  #cta-vsl .mini{text-align:center;font-size:.78rem;color:var(--muted);margin-top:9px}
+
+  #oferta-wrap{display:none}
+  #oferta-wrap.show{display:block;animation:fade .5s ease}
+
+  .sec{padding:34px 0}
+  .sec-head{text-align:center;margin-bottom:20px}
+  .sec-head h2{font-size:clamp(1.3rem,6vw,1.75rem);margin-top:11px}
+  .sec-head h2 .hl{color:var(--magenta)}
+  .rise{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .rise.in{opacity:1;transform:none}
+
+  /* ficha del resultado */
+  .dossier{background:var(--plum);border:1px solid var(--line);border-radius:18px;padding:6px 18px;margin-top:16px}
+  .dossier .f{display:flex;justify-content:space-between;gap:14px;padding:12px 0;font-size:.94rem}
+  .dossier .f+.f{border-top:1px solid rgba(196,77,255,.14)}
+  .dossier .k{color:var(--muted);font-weight:600;white-space:nowrap}
+  .dossier .val{font-weight:800;text-align:right}
+
+  /* caja de oferta estilo launch promotion */
+  .promo{position:relative;background:linear-gradient(180deg,var(--plum-2),var(--plum));border:1.5px solid var(--neon);
+    border-radius:22px;padding:30px 18px 22px;margin-top:30px;box-shadow:0 0 44px -14px rgba(196,77,255,.55)}
+  .promo .tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;
+    background:linear-gradient(90deg,var(--amber),#FFC95C);color:#3B2200;font-family:'Archivo Black';font-size:.76rem;
+    letter-spacing:.09em;padding:8px 18px;border-radius:999px;box-shadow:0 7px 18px -8px rgba(0,0,0,.8)}
+  .promo .pname{font-family:'Archivo Black';font-size:clamp(1.45rem,7vw,1.95rem);text-align:center;line-height:1.1}
+  .promo .pname span{color:var(--magenta)}
+  .promo .pmech{text-align:center;font-size:.74rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--muted);margin:9px 0 20px}
+  .pricebox{text-align:center;margin-bottom:22px}
+  .pricebox .old{font-size:1rem;color:var(--muted)}
+  .pricebox .old s{opacity:.8}
+  .pricebox .save{display:inline-block;background:rgba(22,163,74,.2);color:#6EE7A0;font-weight:800;font-size:.8rem;
+    padding:5px 12px;border-radius:999px;border:1px solid rgba(22,163,74,.4);margin-left:7px}
+  .pricebox .now{font-family:'Archivo Black';font-size:clamp(2.7rem,15vw,3.7rem);line-height:1;margin:9px 0 3px;
+    background:linear-gradient(180deg,#fff,#E6B9FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .pricebox .cur{font-size:.42em;vertical-align:super;margin-right:2px}
+  .pricebox .inst{font-size:.95rem;color:var(--muted)}
+  .pricebox .inst b{color:var(--ink)}
+  .incl{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:16px;padding:17px 16px;margin-bottom:14px}
+  .incl h4{font-size:.78rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);margin-bottom:12px}
+  .incl .it{display:flex;gap:10px;font-size:.95rem;padding:6px 0;line-height:1.45}
+  .incl .it i{color:var(--lime);font-style:normal;font-weight:900;flex:0 0 auto}
+  .lifetime{background:#fff;color:#2A0F42;border-radius:14px;padding:13px 15px;margin-top:13px;text-align:center;font-weight:800;font-size:.97rem}
+  .lifetime small{display:block;font-weight:600;font-size:.82rem;color:#6B4A85;margin-top:2px}
+  .gifts{border:2px dashed rgba(246,166,9,.55);border-radius:16px;padding:17px 16px;margin-bottom:18px;background:rgba(246,166,9,.07)}
+  .gifts h4{font-size:1rem;margin-bottom:11px;text-align:center}
+  .gifts .g{display:flex;justify-content:space-between;gap:12px;font-size:.93rem;padding:7px 0;line-height:1.4}
+  .gifts .g+.g{border-top:1px dashed rgba(246,166,9,.25)}
+  .gifts .g s{color:var(--muted);white-space:nowrap}
+  .gifts .tot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:12px;
+    border-top:1px dashed rgba(246,166,9,.4);font-weight:800;font-size:.95rem}
+  .gifts .free{background:var(--lime);color:#fff;font-size:.78rem;font-weight:900;padding:5px 12px;border-radius:999px;letter-spacing:.06em}
+  .micro{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:13px}
+  .mp-box{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.055);border:1px solid var(--line);
+    border-radius:14px;padding:13px 15px;margin-bottom:12px}
+  .mp-ic{flex:0 0 42px;height:30px;border-radius:7px;background:#00A9E0;color:#fff;font-weight:900;font-size:.76rem;
+    display:flex;align-items:center;justify-content:center;letter-spacing:.04em}
+  .mp-tx{font-size:.9rem;line-height:1.4}
+  .mp-tx small{display:block;color:var(--muted);font-size:.8rem}
+  .mailnote{display:flex;align-items:center;gap:9px;font-size:.87rem;color:var(--muted);margin-bottom:16px}
+
+  .cd{display:flex;align-items:center;justify-content:center;gap:11px;background:rgba(224,52,63,.14);
+    border:1px solid rgba(224,52,63,.4);border-radius:14px;padding:12px;margin-bottom:18px;font-size:.9rem;font-weight:700;color:#FF9AA0}
+  .cd b{font-family:'Archivo Black';font-size:1.3rem;color:#fff;letter-spacing:.02em}
+
+  .vs{margin-top:8px}
+  .vsrow{display:grid;grid-template-columns:1fr auto 1fr;gap:9px;align-items:stretch;margin-bottom:9px}
+  .vsrow .c{background:var(--plum);border:1px solid var(--line);border-radius:13px;padding:12px;font-size:.88rem;font-weight:600;line-height:1.35}
+  .vsrow .c.bad{opacity:.72}
+  .vsrow .c.good{border-color:rgba(22,163,74,.45);background:rgba(22,163,74,.1)}
+  .vsrow .mid{align-self:center;font-size:.7rem;font-weight:900;color:var(--muted)}
+
+  .faq{margin-top:10px}
+  .faq details{background:var(--plum);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+  .faq summary{cursor:pointer;padding:15px 16px;font-weight:700;font-size:.97rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';color:var(--magenta);font-weight:900;font-size:1.2rem;line-height:1}
+  .faq details[open] summary::after{content:'–'}
+  .faq .a{padding:0 16px 15px;font-size:.93rem;color:var(--muted);line-height:1.6}
+
+  .guar{background:var(--plum);border:1px solid var(--line);border-radius:20px;padding:26px 20px;text-align:center;margin-top:16px}
+  .guar .seal{width:118px;height:118px;margin:0 auto 14px}
+  .guar h3{font-size:1.2rem;margin-bottom:9px}
+  .guar p{font-size:.94rem;color:var(--muted);line-height:1.62}
+
+  /* sticky + notificaciones */
+  #sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:11px 16px calc(11px + env(safe-area-inset-bottom));
+    background:rgba(25,7,39,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);
+    transform:translateY(130%);transition:transform .35s ease}
+  #sticky.show{transform:none}
+  #sticky .in{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  #sticky .pr{font-family:'Archivo Black';font-size:1.15rem;white-space:nowrap}
+  #sticky .pr small{display:block;font-family:'Inter';font-size:.68rem;font-weight:600;color:var(--muted)}
+  #sticky .btn{flex:1;padding:14px 16px;font-size:.95rem}
+  #toast{position:fixed;left:14px;bottom:88px;z-index:45;max-width:290px;background:rgba(255,255,255,.96);color:#241038;
+    border-radius:14px;padding:11px 13px;box-shadow:0 14px 34px -14px rgba(0,0,0,.75);display:flex;gap:10px;align-items:center;
+    opacity:0;transform:translateY(14px);transition:.35s ease;pointer-events:none}
+  #toast.show{opacity:1;transform:none}
+  #toast .av{width:33px;height:33px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--magenta));
+    color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;flex:0 0 33px;font-size:.9rem}
+  #toast .tx{font-size:.8rem;line-height:1.34}
+  #toast .tx b{display:block;font-size:.84rem}
+  #toast .tx small{color:#6B4A85}
+  [id^="anc-"]{scroll-margin-top:84px}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<!-- ============ BARRA DE PROGRESO ============ -->
+<div id="topbar">
+  <div class="inner">
+    <span class="mark">MONJARO <i>VIOLETA</i></span>
+    <div class="pbar"><i id="pfill"></i></div>
+    <span class="cnt"><span id="qNum">1</span>/<span id="qTot">30</span></span>
+  </div>
+</div>
+
+<!-- ============ PORTADA ============ -->
+<div id="cover">
+  <div class="wrap">
+    <img class="hero" data-img="hero" alt="Monjaro Violeta Japonés" loading="eager">
+    <div class="lockup">
+      <div class="l1">MONJARO</div>
+      <div class="l2">VIOLETA</div>
+      <div class="l3">JAPONÉS</div>
+    </div>
+    <h1>Hacé esta receta del Monjaro Violeta Japonés en tu casa y <span class="hl">bajá 10 kg en 30 días</span></h1>
+    <p class="sub">Hacé la evaluación de <b>1 minuto</b> y llevate tu receta personalizada 👇</p>
+    <button class="btn pulse" id="start">¡QUIERO LA RECETA!</button>
+    <div class="tiktok"><span>♪</span> La están haciendo en todo TikTok</div>
+    <div class="cover-note">// 1 minuto · 100% gratis</div>
+  </div>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<div id="quiz">
+  <div class="wrap">
+    <div class="q-slide" id="qSlide"></div>
+  </div>
+</div>
+
+<!-- ============ PANTALLA DE CARGA ============ -->
+<div id="qload">
+  <div class="ld-card">
+    <div class="ld-ring"></div>
+    <h2 class="ld-title" id="ldTitle">Analizando<span>…</span></h2>
+    <p class="ld-sub" id="ldSub">Estamos analizando tus respuestas…</p>
+    <div class="ld-bar"><span class="ld-fill" id="ldFill"></span></div>
+    <div class="ld-pct" id="ldPct">0%</div>
+    <ul class="ld-steps" id="ldSteps"></ul>
+  </div>
+</div>
+
+<!-- ============ PASO FINAL: VSL ARRIBA + OFERTA OCULTA ============ -->
+<div id="final">
+  <div class="wrap">
+
+    <div class="vsl-wrap">
+      <div class="vsl-alert"><i></i> ¡No cierres esta página! Tu receta se está reservando…</div>
+      <span class="chip">📜 Evaluación completada</span>
+      <h1 id="fTitle">Mirá el video y llevate tu receta del <span class="hl">Monjaro Violeta Japonés</span> en un minuto</h1>
+      <p class="vsl-sub">La Abuela Mei te explica <b>exactamente</b> cómo se prepara y por qué funciona en tu cuerpo.</p>
+
+      <div class="vsl-frame" id="vslFrame">
+        <div class="sound-gate" id="soundGate">
+          <span class="sg-ic">🔊</span>
+          <b>Tocá para activar<br>el sonido</b>
+        </div>
+      </div>
+
+      <span class="vsl-note">// tu receta queda reservada solo en esta sesión</span>
+    </div>
+
+    <!-- CTA directo al checkout, debajo del VSL (aparece junto con la oferta) -->
+    <div id="cta-vsl">
+      <a href="#" class="btn pulse" data-cta>🔥 Quiero mi receta ahora</a>
+      <p class="mini">// pago único de $<span data-precio>14.990</span> · acceso inmediato</p>
+    </div>
+
+    <!-- Embed de Panda / VTurb del VSL principal. Pegá SOLO el <iframe> acá adentro. -->
+    <template id="vsl-template"></template>
+
+    <!-- Embed del video corto de la Abuela Mei (paso 12). Si queda vacío, el paso se saltea. -->
+    <template id="vsl-mei"></template>
+
+    <!-- ====== OFERTA: aparece sola a los SEGUNDOS_OFERTA ====== -->
+    <div id="oferta-wrap">
+
+      <section class="sec">
+        <div class="sec-head rise">
+          <span class="chip">📋 Tu evaluación</span>
+          <h2>Listo, <span class="hl" id="rName">Che</span></h2>
+        </div>
+        <p class="rise" style="text-align:center;color:var(--muted)">Tu protocolo de 30 días quedó calibrado con tus respuestas. Esta es tu ficha.</p>
+        <div class="dossier rise" id="dossierOut"></div>
+      </section>
+
+      <section class="sec" style="padding-top:0">
+        <div class="cd rise">⏳ Tu descuento vence en <b data-cd>15:00</b></div>
+
+        <div class="promo rise">
+          <div class="tag">★ PRECIO DE LANZAMIENTO ★</div>
+          <div class="pname">Monjaro <span>Violeta</span> Japonés</div>
+          <div class="pmech">El protocolo de 30 días de la Abuela Mei</div>
+
+          <div class="pricebox">
+            <div class="old"><s>$<span data-precio-viejo>49.990</span></s>
+              <span class="save">Ahorrás $<span data-ahorro>35.000</span></span></div>
+            <div class="now"><span class="cur">$</span><span data-precio>14.990</span></div>
+            <div class="inst">pesos (ARS) · hasta <b><span data-cuotas>3</span> cuotas sin interés de $<span data-cuota-valor>4.997</span></b></div>
+          </div>
+
+          <div class="mp-box">
+            <span class="mp-ic">MP</span>
+            <div class="mp-tx">Pagás con <b>Mercado Pago</b>
+              <small>Tarjeta de débito, crédito o dinero en cuenta</small></div>
+          </div>
+          <div class="mailnote"><span>📩</span> Te llega el acceso por e-mail apenas termina el pago.</div>
+
+          <a href="#" class="btn pulse" data-cta>QUIERO MI RECETA AHORA</a>
+
+          <div class="incl" style="margin-top:20px">
+            <h4>Todo lo que te llevás</h4>
+            <div class="it"><i>✓</i> La receta original del Monjaro Violeta Japonés, paso a paso</div>
+            <div class="it"><i>✓</i> El protocolo de 30 días, día por día</div>
+            <div class="it"><i>✓</i> Las 12 variantes de la receta (para no aburrirte nunca)</div>
+            <div class="it"><i>✓</i> La tabla de horarios: cuándo tomarla para que trabaje de noche</div>
+            <div class="it"><i>✓</i> La lista de compras con todo lo que conseguís en la verdulería</div>
+            <div class="it"><i>✓</i> Adaptaciones si tenés alguna condición de salud</div>
+            <div class="lifetime">♾️ Acceso de por vida<small>Lo comprás una vez y es tuyo para siempre, con las actualizaciones incluidas</small></div>
+          </div>
+
+          <div class="gifts">
+            <h4>🎁 + 5 regalos incluidos, sin costo</h4>
+            <div class="g"><span>Las 7 infusiones de la Abuela Mei</span> <s>$18.900</s></div>
+            <div class="g"><span>Plan anti-ansiedad de las 7 de la tarde</span> <s>$14.900</s></div>
+            <div class="g"><span>Desinflamación en 72 horas</span> <s>$12.900</s></div>
+            <div class="g"><span>30 cenas livianas en 15 minutos</span> <s>$16.900</s></div>
+            <div class="g"><span>Mapa de porciones sin pesar nada</span> <s>$9.900</s></div>
+            <div class="tot"><span>Valor total de los regalos: <s>$<span data-valorbonus>73.500</span></s></span>
+              <span class="free">HOY: GRATIS</span></div>
+          </div>
+
+          <div class="micro"><span>🔒 Pago seguro</span><span>📩 Acceso por mail en 2 minutos</span><span>🛡️ 30 días de garantía</span></div>
+        </div>
+      </section>
+
+      <section class="sec" style="padding-top:0">
+        <div class="sec-head rise">
+          <span class="chip">⚖️ Los dos caminos</span>
+          <h2>Con receta o <span class="hl">a ciegas</span></h2>
+        </div>
+        <div class="vs rise">
+          <div class="vsrow"><div class="c bad">Dietas que te dejan con hambre</div><div class="mid">VS</div><div class="c good">Una bebida que te saca el hambre</div></div>
+          <div class="vsrow"><div class="c bad">Pagar un nutricionista por mes</div><div class="mid">VS</div><div class="c good">Lo comprás una vez y es tuyo</div></div>
+          <div class="vsrow"><div class="c bad">Ingredientes raros y caros</div><div class="mid">VS</div><div class="c good">Todo de la verdulería del barrio</div></div>
+          <div class="vsrow"><div class="c bad">Empezar el lunes y abandonar</div><div class="mid">VS</div><div class="c good">30 días marcados día por día</div></div>
+          <div class="vsrow"><div class="c bad">Efecto rebote</div><div class="mid">VS</div><div class="c good">Un hábito que te queda</div></div>
+        </div>
+      </section>
+
+      <section class="sec" style="padding-top:0">
+        <div class="guar rise">
+          <svg class="seal" viewBox="0 0 120 120" fill="none">
+            <circle cx="60" cy="60" r="56" stroke="#F6A609" stroke-width="2.5"/>
+            <circle cx="60" cy="60" r="48" stroke="#F6A609" stroke-width="1.2" stroke-dasharray="3 4"/>
+            <circle cx="60" cy="60" r="40" fill="rgba(246,166,9,.12)"/>
+            <path id="arc" d="M 25,60 A 35,35 0 0 1 95,60" fill="none"/>
+            <text fill="#F6A609" font-family="Inter" font-size="8.6" font-weight="800" letter-spacing="1.5">
+              <textPath href="#arc" startOffset="50%" text-anchor="middle">GARANTÍA TOTAL</textPath>
+            </text>
+            <text x="60" y="66" text-anchor="middle" fill="#fff" font-family="Archivo Black" font-size="27">30</text>
+            <text x="60" y="80" text-anchor="middle" fill="#F6A609" font-family="Inter" font-size="9" font-weight="800" letter-spacing="1.2">DÍAS</text>
+          </svg>
+          <h3>Probala 30 días. Si no, te devuelvo todo.</h3>
+          <p>Preparás la receta, seguís el protocolo y mirás qué pasa. Si en 30 días no ves un cambio real en la balanza y en cómo te sentís, escribís un mail y te devuelvo el 100%. Sin preguntas y sin vueltas. El riesgo lo corro yo.</p>
+        </div>
+      </section>
+
+      <section class="sec" style="padding-top:0">
+        <div class="sec-head rise">
+          <span class="chip">❓ Dudas</span>
+          <h2>Lo que <span class="hl">siempre</span> me preguntan</h2>
+        </div>
+        <div class="faq rise">
+          <details><summary>¿Qué recibo exactamente?</summary><div class="a">El protocolo completo en formato digital: la receta original, las 12 variantes, el plan de 30 días, la tabla de horarios y los 5 regalos. Te llega por e-mail apenas pagás y lo abrís desde el celular o la computadora.</div></details>
+          <details><summary>¿Los ingredientes se consiguen acá?</summary><div class="a">Sí. Todo lo que lleva la receta lo conseguís en cualquier verdulería o supermercado de Argentina. No hay nada importado ni nada que tengas que encargar.</div></details>
+          <details><summary>¿Tengo que dejar de comer lo que me gusta?</summary><div class="a">No. El protocolo no te saca comidas: acomoda los horarios y suma la bebida. Por eso la gente lo sostiene.</div></details>
+          <details><summary>¿Sirve si tengo una condición de salud?</summary><div class="a">El material trae adaptaciones para los casos más comunes. De todos modos, si tomás medicación o estás en tratamiento, mostrale la receta a tu médico antes de empezar.</div></details>
+          <details><summary>¿Es un pago único?</summary><div class="a">Sí. Pago único de $<span data-precio>14.990</span>, o hasta <span data-cuotas>3</span> cuotas sin interés de $<span data-cuota-valor>4.997</span> con Mercado Pago. No hay suscripción ni cobros después.</div></details>
+          <details><summary>¿Y si no me funciona?</summary><div class="a">Tenés 30 días de garantía. Escribís un mail y te devuelvo todo, sin preguntas.</div></details>
+        </div>
+      </section>
+
+      <section class="sec" style="padding:0 0 110px">
+        <div class="promo rise">
+          <div class="tag">★ ÚLTIMO AVISO ★</div>
+          <div class="pname">Monjaro <span>Violeta</span> Japonés</div>
+          <div class="pmech">Protocolo de 30 días + 5 regalos</div>
+          <div class="pricebox">
+            <div class="old"><s>$<span data-precio-viejo>49.990</span></s>
+              <span class="save"><span data-descuento>70</span>% OFF</span></div>
+            <div class="now"><span class="cur">$</span><span data-precio>14.990</span></div>
+            <div class="inst">o <b><span data-cuotas>3</span> cuotas sin interés de $<span data-cuota-valor>4.997</span></b></div>
+          </div>
+          <a href="#" class="btn pulse" data-cta>EMPEZAR AHORA</a>
+          <p id="ofPers" style="text-align:center;font-size:.88rem;color:var(--muted);margin-top:14px"></p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- barra fija + notificación -->
+<div id="sticky">
+  <div class="in">
+    <div class="pr">$<span data-precio>14.990</span><small><span data-cuotas>3</span>x $<span data-cuota-valor>4.997</span></small></div>
+    <a href="#" class="btn" data-cta>Quiero mi receta</a>
+  </div>
+</div>
+<div id="toast"><div class="av" id="toastAv">V</div><div class="tx"><b id="toastName">Valeria de Rosario</b><small>hace 3 min · quedan <span data-cupos>7</span> cupos con descuento</small></div></div>
+
+<script>
+(function(){
+  var CFG = window.CONFIG || {};
+  function each(l,f){ if(!l) return; var a=Array.prototype.slice.call(l); for(var i=0;i<a.length;i++) f(a[i],i); }
+  function q(s,r){ return (r||document).querySelector(s); }
+  function qa(s,r){ return (r||document).querySelectorAll(s); }
+  function setCls(e,c,on){ if(!e) return; if(on) e.classList.add(c); else e.classList.remove(c); }
+  function hasAnc(el,c){ for(var n=el;n;n=n.parentElement){ if(n.classList&&n.classList.contains(c)) return true; } return false; }
+  function safe(n,f){ try{ f(); }catch(e){ if(window.console&&console.warn) console.warn('[mvj] '+n+':',e); } }
+  function esc(s){ return String(s).replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];}); }
+
+  /* ===== Pixel ===== */
+  safe('pixel',function(){
+    if(!CFG.PIXEL_ID) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',CFG.PIXEL_ID); fbq('track','PageView');
+  });
+  function px(ev,d){ safe('px',function(){ if(window.fbq) fbq('track',ev,d||{}); }); }
+
+  /* ===== Imágenes, precios, CTAs ===== */
+  function imgSrc(k){ return (CFG.IMG&&CFG.IMG[k])||''; }
+  safe('imgs',function(){ each(qa('[data-img]'),function(el){ var s=imgSrc(el.getAttribute('data-img')); if(s) el.src=s; }); });
+  safe('precios',function(){
+    function put(sel,v){ each(qa(sel),function(e){ if(v) e.textContent=v; }); }
+    put('[data-precio]',CFG.PRECIO); put('[data-precio-viejo]',CFG.PRECIO_VIEJO);
+    put('[data-descuento]',CFG.DESCUENTO); put('[data-cuotas]',CFG.CUOTAS);
+    put('[data-cuota-valor]',CFG.CUOTA_VALOR); put('[data-ahorro]',CFG.AHORRO); put('[data-valorbonus]',CFG.VALOR_BONOS);
+  });
+  function checkoutURL(){
+    var b=CFG.LINK_CHECKOUT||'#', s=location.search.replace(/^\?/,'');
+    return s ? b+(b.indexOf('?')>-1?'&':'?')+s : b;
+  }
+  safe('ctas',function(){
+    each(qa('[data-cta]'),function(a){ a.href=checkoutURL(); a.addEventListener('click',function(){ px('InitiateCheckout'); }); });
+  });
+
+  var reduce=false;
+  safe('mm',function(){ reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches); });
+
+  var cover=q('#cover'), quiz=q('#quiz'), qload=q('#qload'), finalEl=q('#final'), topbar=q('#topbar'), slide=q('#qSlide');
+
+  /* =======================================================================
+     PASOS  (mismo orden y misma lógica que el original)
+     only:'f' → solo mujeres · only:'m' → solo hombres
+     ======================================================================= */
+  var STEPS=[
+    {id:'objetivo',type:'multi',eyebrow:'Paso 1',q:'¿Cuál es tu objetivo con tu cuerpo?',help:'Elegí todo lo que te interese:',opts:[
+      {l:'Bajar de peso rápido'},{l:'Quemar la grasa de la panza'},{l:'Reducir la hinchazón y la retención de líquidos'},
+      {l:'Acelerar el metabolismo naturalmente'},{l:'Cortar la ansiedad por comer'},{l:'Mejorar la autoestima y la confianza'},
+      {l:'Bajar el riesgo de diabetes e hipertensión'},{l:'Bajar el colesterol'}]},
+
+    {id:'genero',type:'single',grid:true,eyebrow:'Paso 2',q:'¿Cuál es tu género?',help:'Elegí abajo:',
+      foot:'Estos datos nos ayudan a ajustar tu protocolo del Monjaro Violeta Japonés según tu metabolismo.',opts:[
+      {img:'generoM',l:'',v:'f'},{img:'generoH',l:'',v:'m'}]},
+
+    {id:'zona',type:'multi',eyebrow:'Paso 3',q:'¿Dónde querés eliminar grasa primero?',help:'Elegí abajo:',pic:'zona',opts:[
+      {e:'💪',l:'Brazos'},{e:'👕',l:'Pecho'},{e:'🔥',l:'Abdomen'},{e:'🍑',l:'Cola'},{e:'🦵',l:'Piernas'}]},
+
+    {id:'edad',type:'single',grid:true,eyebrow:'Paso 4',q:'Vamos a armar tu camino para bajar de peso con el Monjaro Violeta Japonés',help:'¿Qué edad tenés?',opts:[
+      {img:'edad1',l:'18 a 25'},{img:'edad2',l:'26 a 35'},{img:'edad3',l:'36 a 45'},{img:'edad4',l:'46 o más'}]},
+
+    {id:'kilos',type:'single',grid:true,eyebrow:'Paso 5',q:'¿Cuántos kilos querés bajar?',help:'El protocolo del Monjaro Violeta Japonés puede eliminar grasa de forma acelerada.',opts:[
+      {img:'kilos1',l:'5 a 10 kg',tile:true},{img:'kilos2',l:'15 a 20 kg',tile:true},
+      {img:'kilos3',l:'Más de 20 kg',tile:true},{img:'kilos4',l:'No sé, solo quiero adelgazar',tile:true}]},
+
+    {id:'nombre',type:'field',eyebrow:'Paso 6',q:'¿Cómo te llamás?',ph:'Escribí tu nombre…',btn:'Continuar'},
+
+    {id:'tipocuerpoF',only:'f',type:'single',eyebrow:'Paso 7',q:'{{nombre}}, ¿cuál es tu tipo de cuerpo hoy?',opts:[
+      {e:'🙂',l:'Normal',s:'me veo bien, quiero cuidarme'},
+      {e:'😕',l:'Con flacidez',s:'el peso está, pero falta firmeza'},
+      {e:'😣',l:'Con sobrepeso',s:'hay kilos de más para sacar'}]},
+    {id:'tipocuerpoM',only:'m',type:'single',eyebrow:'Paso 7',q:'{{nombre}}, ¿cuál es tu tipo de cuerpo hoy?',opts:[
+      {e:'🙂',l:'Normal',s:'me veo bien, quiero cuidarme'},
+      {e:'😕',l:'Pancita',s:'la panza es lo único que molesta'},
+      {e:'😣',l:'Con sobrepeso',s:'hay kilos de más para sacar'}]},
+
+    {id:'afectaF',only:'f',type:'multi',eyebrow:'Paso 8',q:'{{nombre}}, ¿cómo te afecta el peso en tu vida?',opts:[
+      {l:'Me da vergüenza sacarme fotos'},{l:'Mi pareja está preocupada por mi salud'},
+      {l:'Evito las juntadas porque no me siento bien conmigo'},{l:'Ninguna de las opciones'}]},
+    {id:'afectaM',only:'m',type:'multi',eyebrow:'Paso 8',q:'{{nombre}}, ¿cómo te afecta el peso en tu vida?',opts:[
+      {l:'Me da vergüenza sacarme fotos'},{l:'Mi pareja está preocupada por mi salud'},
+      {l:'Evito las juntadas porque no me siento bien conmigo'},{l:'Ninguna de las opciones'}]},
+
+    {id:'conformeF',only:'f',type:'single',eyebrow:'Paso 9',q:'¿Estás conforme con cómo te ves hoy?',opts:[
+      {l:'No, porque me siento pasada de peso'},{l:'Sí, pero sé que puedo mejorar mi salud'},
+      {l:'No, me gustaría bajar de peso para sentirme mejor'}]},
+    {id:'conformeM',only:'m',type:'single',eyebrow:'Paso 9',q:'¿Estás conforme con cómo te ves hoy?',opts:[
+      {l:'No, porque me siento pasado de peso'},{l:'Sí, pero sé que puedo mejorar mi salud'},
+      {l:'No, me gustaría bajar de peso para sentirme mejor'}]},
+
+    {id:'dificultad',type:'multi',eyebrow:'Paso 10',q:'¿Se te complica algo del día a día por el peso?',opts:[
+      {e:'🪜',l:'Subir escaleras'},{e:'🪑',l:'Sentarme cómodo'},{e:'🏋️',l:'Agacharme'},
+      {e:'🛏️',l:'Acostarme en la cama'},{e:'🚶',l:'Caminar distancias largas'},{e:'✅',l:'Ninguna de las opciones'}]},
+
+    {id:'videomei',type:'video',eyebrow:'Paso 11',q:'{{nombre}}, mirá el video de la Abuela Mei y entendé cómo va a funcionar todo'},
+
+    {id:'impide',type:'single',eyebrow:'Paso 12',q:'¿Qué es lo que más te impide bajar de peso?',opts:[
+      {e:'⏰',l:'Falta de tiempo',s:'la rutina es un vértigo'},
+      {e:'🍫',l:'Autocontrol',s:'me cuesta resistir las tentaciones'},
+      {e:'💸',l:'Lo económico',s:'comer sano me sale más caro que la comida procesada'}]},
+
+    {id:'comofunciona',type:'flow',eyebrow:'Paso 13',q:'¡Nuestro protocolo te resuelve eso!',
+      help:'El Monjaro Violeta Japonés actúa mientras dormís, quemando grasa de forma acelerada.',btn:'Continuar'},
+
+    {id:'beneficios',type:'multi',eyebrow:'Paso 14',q:'{{nombre}}, ¿cuáles de estos beneficios te gustaría tener?',
+      help:'Vamos a personalizar tu fórmula para sacarle el máximo resultado.',opts:[
+      {l:'Dormir más profundo'},{l:'Menos dolores e inflamación'},{l:'Más energía durante todo el día'},
+      {l:'Menos estrés y ansiedad'},{l:'Más autoestima y confianza'},{l:'Protección contra enfermedades metabólicas'},
+      {l:'Adelgazar sin esfuerzo y sin efecto rebote'}]},
+
+    {id:'testimonio',type:'quote',eyebrow:'Paso 15',q:'🔥 Historias reales de transformación',help:'📍 Mariela Benítez — Rosario, Santa Fe',btn:'Continuar'},
+
+    {id:'peso',type:'slider',eyebrow:'Paso 16',q:'¿Cuánto pesás hoy?',help:'Ya casi estamos. Vamos a ajustar tu plan a tu cuerpo.',
+      k:'Peso',unit:'kg',min:40,max:160,def:82,foot:'Con esto ajustamos la dosis ideal para los mejores resultados.',btn:'Continuar'},
+    {id:'altura',type:'slider',eyebrow:'Paso 17',q:'¿Cuánto medís?',help:'Tu altura también influye en el metabolismo.',
+      k:'Altura',unit:'cm',min:140,max:210,def:165,foot:'Esto nos ayuda a calcular la cantidad exacta del Monjaro Violeta Japonés para tu cuerpo.',btn:'Continuar'},
+    {id:'pesoDeseado',type:'slider',eyebrow:'Paso 18',q:'¿Cuál es tu peso deseado?',help:'Ya casi estamos. Vamos a ajustar tu plan a tu cuerpo.',
+      k:'Peso deseado',unit:'kg',min:40,max:160,def:68,foot:'Con esto ajustamos la dosis ideal para los mejores resultados.',btn:'Continuar'},
+
+    {id:'rutina',type:'multi',eyebrow:'Paso 19',q:'¿Cómo es tu día a día?',help:'Tu rutina también hace la diferencia.',opts:[
+      {e:'🏢',l:'Trabajo afuera y tengo una rutina a mil'},{e:'🏠',l:'Trabajo en casa y tengo horarios flexibles'},
+      {e:'👨‍👩‍👧',l:'Estoy en casa cuidando a la familia'},{e:'🔀',l:'Otra'}]},
+
+    {id:'sueno',type:'single',eyebrow:'Paso 20',q:'¿Cuántas horas dormís por noche?',help:'La calidad del sueño impacta directo en que bajes de peso.',opts:[
+      {e:'😵',l:'Menos de 5 horas'},{e:'😐',l:'Entre 5 y 7 horas'},{e:'🙂',l:'Entre 7 y 9 horas'},{e:'😴',l:'Más de 9 horas'}]},
+
+    {id:'agua',type:'single',eyebrow:'Paso 21',q:'¿Cuántos vasos de agua tomás por día?',help:'Tu nivel de hidratación también influye en la pérdida de peso.',opts:[
+      {e:'☕',l:'Solo tomo café o mate'},{e:'💧',l:'1 a 2 vasos por día'},{e:'💦',l:'2 a 6 vasos por día'},{e:'🌊',l:'Más de 6 vasos'}]},
+
+    {id:'frutas',type:'multi',grid:true,eyebrow:'Paso 22',q:'¿Cuáles de estas frutas comés más seguido?',help:'Tus gustos también ayudan en el proceso.',opts:[
+      {img:'limon',l:'Limón',sm:true},{img:'naranja',l:'Naranja',sm:true},{img:'banana',l:'Banana',sm:true},
+      {img:'manzana',l:'Manzana',sm:true},{img:'frutilla',l:'Frutilla',sm:true},{img:'anana',l:'Ananá',sm:true}]},
+
+    {id:'load1',type:'loading',title:'Analizando…',sub:'Estamos analizando tus respuestas…',
+      list:['Leyendo tus respuestas','Cruzando tu metabolismo','Eligiendo tu fórmula','¡Casi listo!']},
+
+    {id:'resultado',type:'result',eyebrow:'Tu diagnóstico',q:'{{nombre}}, mirá cómo está tu cuerpo hoy',btn:'Continuar'},
+
+    {id:'salud',type:'single',eyebrow:'Paso 23',q:'¿Tenés alguna condición de salud?',help:'Antes de terminar necesitamos un dato más.',
+      foot:'Esto garantiza que tu fórmula sea 100% segura para vos.',opts:[
+      {e:'✋',l:'Sí'},{e:'👍',l:'No'}]},
+
+    {id:'cual',type:'field',eyebrow:'Paso 24',q:'¿Cuál de estos problemas? 👇',
+      help:'Diabetes, hipertensión, enfermedades cardiovasculares, presión alta, menopausia, hipotiroidismo, depresión, ansiedad, colon irritable, problemas digestivos como reflujo o gastritis y otros…',
+      ph:'Escribí tu problema acá',btn:'Continuar',needs:function(st){ return st.salud===0; }},
+
+    {id:'load2',type:'loading',title:'Cargando…',sub:'Analizando…',list:['Revisando tu caso','Adaptando la receta','Listo'],
+      needs:function(st){ return st.salud===0; }},
+
+    {id:'tranqui',type:'calm',eyebrow:'Paso 25',q:'Quedate tranquilo',needs:function(st){ return st.salud===0; },btn:'Continuar'},
+
+    {id:'suenosF',only:'f',type:'single',grid:true,eyebrow:'Paso 26',q:'¿Cuál es el cuerpo de tus sueños?',help:'Elegí la opción de abajo:',opts:[
+      {e:'🌿',l:'Natural',s:'quiero verme sana y liviana'},{e:'🔥',l:'En forma',s:'quiero marcar y tonificar'}]},
+    {id:'suenosM',only:'m',type:'single',grid:true,eyebrow:'Paso 26',q:'¿Cuál es el cuerpo de tus sueños?',help:'Elegí la opción de abajo:',opts:[
+      {e:'🌿',l:'Natural',s:'quiero verme sano y liviano'},{e:'🔥',l:'En forma',s:'quiero marcar y tonificar'}]},
+
+    {id:'load3',type:'loading',title:'Analizando…',sub:'Generando tu plan personalizado…',
+      list:['Armando tu protocolo de 30 días','Ajustando los horarios','Sumando tus regalos','¡Listo!']},
+
+    {id:'comparativa',type:'compare',eyebrow:'Tu transformación',q:'{{nombre}}, ¿estás listo para transformar tu cuerpo y tu salud?',btn:'¡Sí, quiero empezar ahora!'}
+  ];
+
+  var state={}, idx=0, qlock=false;
+
+  function visible(s){
+    if(s.only && s.only!==(state.gen||'f')) return false;
+    if(s.needs && !s.needs(state)) return false;
+    if(s.id==='videomei'){ var t=q('#vsl-mei'); if(!t || !t.innerHTML.trim()) return false; }
+    return true;
+  }
+  function vSteps(){ return STEPS.filter(visible); }
+  function tpl(t){ return String(t||'').replace(/\{\{nombre\}\}/g, esc(state.nombre||'Che')); }
+
+  function progreso(){
+    var vs=vSteps(), pos=vs.indexOf(STEPS[idx]);
+    if(pos<0) pos=0;
+    var n=q('#qNum'), t=q('#qTot'), f=q('#pfill');
+    if(n) n.textContent=pos+1;
+    if(t) t.textContent=vs.length;
+    if(f) f.style.width=Math.max(3,Math.round((pos+1)/vs.length*100))+'%';
+  }
+
+  /* ===== render ===== */
+  function render(){
+    qlock=false;
+    var s=STEPS[idx];
+    if(!visible(s)){ return next(); }
+    if(s.type==='loading'){ progreso(); return runLoading(s); }
+    if(qload) qload.style.display='none';
+    if(quiz) quiz.style.display='block';
+    progreso();
+
+    var h='';
+    if(s.eyebrow) h+='<div class="q-eyebrow">'+s.eyebrow+'</div>';
+    h+='<h2 class="q-title">'+tpl(s.q)+'</h2>';
+    if(s.help) h+='<p class="q-help">'+tpl(s.help)+'</p>';
+
+    if(s.type==='single'||s.type==='multi'){
+      if(s.pic){ var k=s.pic+(state.gen==='m'?'H':'M');
+        h+='<img class="shot" src="'+imgSrc(k)+'" alt="" loading="lazy" style="max-width:260px;margin:0 auto">'; }
+      h+='<div class="opts'+(s.grid?' grid':'')+'">';
+      each(s.opts,function(o,i){
+        var sel = s.type==='multi' ? ((state[s.id]||[]).indexOf(i)>-1) : (state[s.id]===i);
+        h+='<div class="opt'+(sel?' sel':'')+'" data-i="'+i+'" role="button" tabindex="0"><span class="ck">✓</span>'+
+           (o.img?'<img class="opt-img'+(o.tile?' tile':'')+(o.sm?' sm':'')+'" src="'+imgSrc(o.img)+'" alt="" loading="lazy">':(o.e?'<span class="em">'+o.e+'</span>':''))+
+           (o.l?'<span class="tx">'+o.l+(o.s?'<small>'+o.s+'</small>':'')+'</span>':'')+'</div>';
+      });
+      h+='</div>';
+      if(s.foot) h+='<p class="q-help" style="margin-top:16px;text-align:center">'+s.foot+'</p>';
+      if(s.type==='multi') h+='<button class="btn q-next" id="qnext" style="display:none">Continuar</button>';
+    }
+    else if(s.type==='field'){
+      h+='<input class="field" id="qf" type="text" placeholder="'+(s.ph||'')+'" autocomplete="off">'+
+         '<button class="btn q-next" id="qnext" disabled>'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='slider'){
+      var v=state[s.id]||s.def;
+      h+='<div class="metric"><div class="row"><span class="k">'+s.k+'</span>'+
+         '<span class="v"><span id="sv">'+v+'</span><small>'+s.unit+'</small></span></div>'+
+         '<input type="range" id="sr" min="'+s.min+'" max="'+s.max+'" value="'+v+'">'+
+         '<div class="ruler"><span>'+s.min+' '+s.unit+'</span><span>'+s.max+' '+s.unit+'</span></div></div>'+
+         '<p class="q-help" style="margin-top:14px">'+s.foot+'</p>'+
+         '<button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='video'){
+      h+='<div class="vsl-frame" id="meiFrame"></div>'+
+         '<button class="btn q-next" id="qnext" disabled>Continuar</button>';
+    }
+    else if(s.type==='flow'){
+      h+='<div class="flow">'+
+         '<div class="step"><span class="n">1</span><span class="t"><b>Lo preparás en 3 minutos</b><span>Con lo que ya tenés en casa y se consigue en cualquier verdulería.</span></span></div>'+
+         '<div class="step"><span class="n">2</span><span class="t"><b>Lo tomás en el horario exacto</b><span>Ese es el secreto: a esa hora tu cuerpo lo usa para quemar y no para guardar.</span></span></div>'+
+         '<div class="step"><span class="n">3</span><span class="t"><b>Trabaja mientras dormís</b><span>Te despertás menos hinchado, con menos ansiedad y con más energía.</span></span></div>'+
+         '</div><button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='quote'){
+      h+='<div class="quote"><div class="stars">★★★★★</div>'+
+         '<p>Ya había probado de todo para adelgazar y nada me funcionaba. Desde que sumé la fórmula del Monjaro Violeta Japonés a mi rutina bajé 16 kilos sin cambiar nada de lo que como. Lo más increíble es que el hambre y la ansiedad me bajaron solas.</p>'+
+         '<div class="who"><img src="'+imgSrc('avatarTest')+'" alt="" loading="lazy"><div><b>Mariela Benítez</b><span>Rosario, Santa Fe</span></div></div></div>'+
+         '<img class="shot" src="'+imgSrc('testimonio')+'" alt="Antes y después" loading="lazy">'+
+         '<button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='result'){
+      h+=resultHTML()+'<button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='calm'){
+      var p=esc(state.cual||'eso');
+      h+='<div class="q-feedback show" style="margin-top:0"><span class="coach">❤️ Abuela Mei</span>'+
+         '<p>'+esc(state.nombre||'Che')+', decís que tenés: <b>'+p+'</b>. Quedate tranquilo que vamos a adaptar las recetas para que quemes grasa de forma simple y segura.</p></div>'+
+         '<button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    else if(s.type==='compare'){
+      var m=state.gen==='m';
+      h+='<div class="compare">'+
+         '<div class="cc now"><div class="lab">Ahora</div><img src="'+imgSrc(m?'compHahora':'compMahora')+'" alt="" loading="lazy">'+
+         '<div class="cap">Así estás antes de tomar el Monjaro Violeta Japonés. Tu metabolismo está lento y te sentís sin energía.</div><div class="meter"><i></i></div></div>'+
+         '<div class="cc goal"><div class="lab">Tu objetivo</div><img src="'+imgSrc(m?'compHobj':'compMobj')+'" alt="" loading="lazy">'+
+         '<div class="cap">Y así vas a estar después. Tu metabolismo trabajando a full y los kilos bajando.</div><div class="meter"><i></i></div></div></div>'+
+         '<button class="btn q-next pulse" id="qnext">'+(s.btn||'Continuar')+'</button>';
+    }
+    swap(h,s);
+  }
+
+  function swap(h,s){
+    if(!slide) return;
+    slide.classList.add('out');
+    setTimeout(function(){
+      slide.innerHTML=h; slide.classList.remove('out'); window.scrollTo(0,0);
+      safe('bind',function(){ bind(s); });
+    }, reduce?0:260);
+  }
+
+  function bind(s){
+    var nx=q('#qnext',slide);
+    if(s.type==='single'){
+      each(qa('.opt',slide),function(el){
+        function pick(){
+          if(qlock) return; qlock=true;
+          var i=+el.getAttribute('data-i');
+          state[s.id]=i;
+          if(s.id==='genero') state.gen=s.opts[i].v;
+          each(qa('.opt',slide),function(x){x.classList.remove('sel');});
+          el.classList.add('sel');
+          setTimeout(next,190);
+        }
+        el.addEventListener('click',pick);
+        el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();} });
+      });
+    }
+    if(s.type==='multi'){
+      function refresh(){
+        var arr=state[s.id]||[];
+        each(qa('.opt',slide),function(x){ setCls(x,'sel',arr.indexOf(+x.getAttribute('data-i'))>-1); });
+        if(nx) nx.style.display = arr.length ? '' : 'none';
+      }
+      each(qa('.opt',slide),function(el){
+        el.addEventListener('click',function(){
+          var i=+el.getAttribute('data-i'), arr=(state[s.id]||[]).slice();
+          var none=/ninguna|ninguno/i.test(s.opts[i].l);
+          if(none){ arr=[i]; }
+          else{
+            var p=arr.indexOf(i); if(p>-1) arr.splice(p,1); else arr.push(i);
+            arr=arr.filter(function(j){ return !/ninguna|ninguno/i.test(s.opts[j].l); });
+          }
+          state[s.id]=arr; refresh();
+        });
+      });
+      if(nx) nx.addEventListener('click',next);
+      refresh();
+    }
+    if(s.type==='field'){
+      var f=q('#qf',slide);
+      if(f){
+        f.value=state[s.id]||'';
+        if(nx) nx.disabled=!f.value.trim();
+        f.addEventListener('input',function(){ state[s.id]=f.value; if(nx) nx.disabled=!f.value.trim(); });
+        f.addEventListener('keydown',function(e){ if(e.key==='Enter'&&f.value.trim()) next(); });
+        setTimeout(function(){ try{ f.focus(); }catch(e){} },340);
+      }
+      if(nx) nx.addEventListener('click',function(){ if(!nx.disabled) next(); });
+    }
+    if(s.type==='slider'){
+      var r=q('#sr',slide), vv=q('#sv',slide);
+      function paint(){ if(!r) return; r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%'); }
+      if(r){ state[s.id]=+r.value; paint();
+        r.addEventListener('input',function(){ if(vv) vv.textContent=r.value; state[s.id]=+r.value; paint(); }); }
+      if(nx) nx.addEventListener('click',next);
+    }
+    if(s.type==='video'){
+      var fr=q('#meiFrame',slide), t=q('#vsl-mei');
+      if(fr&&t){
+        fr.innerHTML=t.innerHTML;
+        var SEG=CFG.SEGUNDOS_BOTON_MEI||30;
+        window.addEventListener('message',function(ev){
+          var d=ev.data; if(d&&d.message==='panda_timeupdate'&&d.currentTime>=SEG&&nx) nx.disabled=false;
+        });
+        setTimeout(function(){ if(nx) nx.disabled=false; },SEG*1000);
+      } else if(nx){ nx.disabled=false; }
+      if(nx) nx.addEventListener('click',next);
+    }
+    if(s.type==='flow'||s.type==='quote'||s.type==='result'||s.type==='calm'||s.type==='compare'){
+      if(nx) nx.addEventListener('click',next);
+      if(s.type==='result') safe('imcdot',function(){
+        var d=q('#imcDot',slide); if(d) setTimeout(function(){ d.style.left=imc().pct+'%'; },120);
+      });
+    }
+  }
+
+  /* ===== IMC ===== */
+  function imc(){
+    var p=state.peso||82, a=(state.altura||165)/100;
+    var v=p/(a*a);
+    var pct, cat, color;
+    if(v<18.5){ pct=12; cat='Bajo peso'; }
+    else if(v<25){ pct=36; cat='Peso normal'; }
+    else if(v<30){ pct=66; cat='Sobrepeso'; }
+    else { pct=90; cat='Obesidad'; }
+    return {v:Math.round(v*10)/10, pct:pct, cat:cat};
+  }
+  function alertaHTML(){
+    var c=imc().cat, f=(state.gen==='m');
+    var titulo, lista, cierre;
+    if(c==='Bajo peso'||c==='Peso normal'){
+      titulo='⚠️ Tu metabolismo puede estar saboteándote sin que te des cuenta';
+      lista=['Metabolismo lento y dificultad para adelgazar','Cansancio constante y sensación de hinchazón','Grasa acumulada en zonas puntuales'];
+      cierre='Con el Monjaro Violeta Japonés tu cuerpo puede acelerar la quema de grasa de forma natural: la combinación justa de ingredientes activa el metabolismo, baja la retención de líquidos y te sube la energía.';
+    } else if(c==='Sobrepeso'){
+      titulo='⚠️ Tu cuerpo necesita un empujón natural para acelerar el descenso de peso';
+      lista=['Hinchazón y retención de líquidos','Metabolismo lento y dificultad para quemar grasa','Sensación de cansancio y falta de energía'];
+      cierre='Con la combinación correcta del Monjaro Violeta Japonés se puede acelerar el metabolismo, bajar la hinchazón y estimular la quema de grasa de forma saludable.';
+    } else {
+      titulo='⚠️ El exceso de peso puede estar impidiendo que tu cuerpo queme grasa de verdad';
+      lista=['Grasa acumulada y dificultad para bajar de peso','Retención de líquidos y sensación de hinchazón constante','Falta de energía y metabolismo lento'];
+      cierre='Pero podés acelerar ese proceso: con la combinación correcta del Monjaro Violeta Japonés es posible estimular la quema de grasa, bajar la hinchazón y acelerar tu metabolismo de forma natural y saludable.';
+    }
+    return '<div class="alert"><h3>'+titulo+'</h3><ul>'+
+      lista.map(function(x){return '<li>❌ '+x+'</li>';}).join('')+
+      '</ul><div class="fix">💡 <b>'+cierre+'</b></div></div>';
+  }
+  function resultHTML(){
+    var i=imc();
+    var baja=Math.max(0,(state.peso||82)-(state.pesoDeseado||68));
+    return '<div class="imc"><div class="head"><span>Índice de masa corporal</span><b>'+i.v+'</b></div>'+
+      '<div class="track"><span class="dot" id="imcDot" style="left:'+i.pct+'%"></span></div>'+
+      '<div class="legend"><span>Bajo</span><span>Normal</span><span>Sobrepeso</span><span>Obesidad</span></div>'+
+      '<div class="verdict">Tu resultado: <span style="color:'+(i.cat==='Peso normal'?'#6EE7A0':(i.cat==='Sobrepeso'?'#F6A609':'#FF9AA0'))+'">'+i.cat+'</span></div></div>'+
+      (baja>0?'<div class="q-feedback show"><span class="coach">🎯 Tu objetivo</span><p>Son <b>'+baja+' kilos</b> para llegar a tu peso deseado. Con el protocolo de 30 días es un objetivo realista.</p></div>':'')+
+      alertaHTML()+
+      '<img class="shot" src="'+imgSrc('transform')+'" alt="Transformación real" loading="lazy">'+
+      '<p class="q-help" style="margin-top:10px;text-align:center">Mirá la transformación de Gabriela 👆</p>';
+  }
+
+  /* ===== loading ===== */
+  function runLoading(s){
+    if(quiz) quiz.style.display='none';
+    if(qload) qload.style.display='flex';
+    window.scrollTo(0,0);
+    var t=q('#ldTitle'), sb=q('#ldSub'), fill=q('#ldFill'), pct=q('#ldPct'), ul=q('#ldSteps');
+    if(t) t.innerHTML=s.title.replace('…','<span>…</span>');
+    if(sb) sb.textContent=s.sub;
+    if(ul) ul.innerHTML=s.list.map(function(x){return '<li class="ld-step"><span class="ld-ck">✓</span>'+x+'</li>';}).join('');
+    var items=[].slice.call(qa('.ld-step',ul||document));
+    if(fill){ fill.style.transition='none'; fill.style.width='4%'; void fill.offsetWidth;
+      fill.style.transition='width 4.4s linear'; fill.style.width='100%'; }
+    var n=0, total=4400;
+    var iv=setInterval(function(){ n+=4; if(n>100)n=100; if(pct) pct.textContent=n+'%'; if(n>=100) clearInterval(iv); },total/25);
+    each(items,function(it,i){
+      setTimeout(function(){ if(i>0){items[i-1].classList.remove('active');items[i-1].classList.add('done');} it.classList.add('active'); }, 250+i*(total-700)/items.length);
+    });
+    setTimeout(function(){ each(items,function(x){x.classList.remove('active');x.classList.add('done');}); },total-250);
+    setTimeout(function(){ clearInterval(iv); next(); },total+200);
+  }
+
+  function next(){
+    if(idx<STEPS.length-1){ idx++; render(); }
+    else finish();
+  }
+
+  /* ===== portada → quiz ===== */
+  safe('start',function(){
+    var b=q('#start');
+    if(b) b.addEventListener('click',function(){
+      px('ViewContent',{content_name:'quiz_inicio'});
+      if(cover) cover.style.display='none';
+      if(topbar) topbar.style.display='block';
+      idx=0; render();
+    });
+  });
+
+  /* ===== fin del quiz → VSL ===== */
+  var offerShown=false;
+  function finish(){
+    px('Lead',{content_name:'quiz_completo'});
+    if(quiz) quiz.style.display='none';
+    if(qload) qload.style.display='none';
+    if(cover) cover.style.display='none';
+    if(topbar) topbar.style.display='none';
+    if(finalEl) finalEl.style.display='block';
+    window.scrollTo(0,0);
+    safe('buildResult',buildResult);
+    safe('player',mountPlayer);
+    setTimeout(showOffer,(CFG.SEGUNDOS_OFERTA||230)*1000);
+  }
+
+  function showOffer(){
+    if(offerShown) return; offerShown=true;
+    var w=q('#oferta-wrap'); if(w) w.classList.add('show');
+    var c=q('#cta-vsl'); if(c) c.classList.add('show');
+    safe('initResult',initResult);
+    px('ViewContent',{content_name:'oferta'});
+  }
+
+  function mountPlayer(){
+    var frame=q('#vslFrame'), gate=q('#soundGate');
+    if(!frame) return;
+    var SEG=CFG.SEGUNDOS_OFERTA||230;
+
+    if(CFG.VIDEO_URL){
+      var v=document.createElement('video');
+      v.src=CFG.VIDEO_URL; v.playsInline=true; v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+      v.preload='auto'; v.controls=false;
+      frame.insertBefore(v,gate);
+      v.addEventListener('timeupdate',function(){ if(v.currentTime>=SEG) showOffer(); });
+      v.addEventListener('contextmenu',function(e){e.preventDefault();});
+      var p=v.play();
+      if(p&&p.catch) p.catch(function(){ v.muted=true; v.play(); if(gate) gate.classList.add('on'); });
+      if(gate) gate.addEventListener('click',function(){ v.muted=false; v.play(); gate.classList.remove('on'); });
+      return;
+    }
+
+    var tpl2=q('#vsl-template');
+    if(tpl2 && tpl2.innerHTML.trim()){
+      frame.insertAdjacentHTML('afterbegin',tpl2.innerHTML);
+      each(qa('script',frame),function(old){
+        var s=document.createElement('script');
+        each(old.attributes,function(a){ s.setAttribute(a.name,a.value); });
+        s.text=old.text; old.parentNode.replaceChild(s,old);
+      });
+      window.addEventListener('message',function(ev){
+        var d=ev.data; if(!d) return;
+        if(d.message==='panda_timeupdate' && d.currentTime>=SEG) showOffer();
+      });
+      var iv=setInterval(function(){
+        try{
+          var sp=window.smartplayer && window.smartplayer.instances && window.smartplayer.instances[0];
+          if(sp && sp.video && sp.video.currentTime>=SEG){ showOffer(); clearInterval(iv); }
+        }catch(e){}
+      },1000);
+      return;
+    }
+
+    var ph=document.createElement('div');
+    ph.className='vsl-ph';
+    ph.innerHTML='VSL acá<small>Pegá la URL del MP4 en CONFIG.VIDEO_URL<br>o el embed en &lt;template id="vsl-template"&gt;<br><br>La oferta aparece igual a los '+SEG+'s</small>';
+    frame.insertBefore(ph,gate);
+  }
+
+  /* ===== ficha personalizada ===== */
+  function lbl(id,fb){
+    var s=STEPS.filter(function(x){return x.id===id;})[0], v=state[id];
+    if(s&&s.type==='single'&&typeof v==='number') return s.opts[v].l;
+    return fb;
+  }
+  function lblMulti(id,fb){
+    var s=STEPS.filter(function(x){return x.id===id;})[0], a=state[id];
+    if(s&&a&&a.length) return a.map(function(i){return s.opts[i].l;}).join(', ');
+    return fb;
+  }
+  function buildResult(){
+    var nombre=state.nombre||'Che';
+    var i=imc(), baja=Math.max(0,(state.peso||82)-(state.pesoDeseado||68));
+    var zona=lblMulti('zona','todo el cuerpo');
+    var obj=lblMulti('objetivo','bajar de peso');
+    var el=q('#rName'); if(el) el.textContent=nombre;
+    var out=[
+      ['Objetivo', obj.split(', ')[0]],
+      ['Zona de foco', zona],
+      ['Kilos a bajar', baja>0? baja+' kg' : lbl('kilos','a definir')],
+      ['IMC de hoy', i.v+' · '+i.cat],
+      ['Medidas', (state.peso||82)+' kg · '+(state.altura||165)+' cm'],
+      ['Lo que te frena', lbl('impide','la falta de tiempo')],
+      ['Protocolo', '30 días · Monjaro Violeta Japonés']
+    ];
+    var d=q('#dossierOut');
+    if(d) d.innerHTML=out.map(function(f){ return '<div class="f"><span class="k">'+f[0]+'</span><span class="val">'+esc(f[1])+'</span></div>'; }).join('');
+    var t=q('#fTitle');
+    if(t) t.innerHTML=esc(nombre)+', mirá el video y llevate tu receta del <span class="hl">Monjaro Violeta Japonés</span>';
+    var p=q('#ofPers');
+    if(p) p.textContent='Para vos, '+nombre+': 30 días con foco en '+zona.toLowerCase()+'. O empezás hoy… o lo dejás para "algún día" que nunca llega.';
+  }
+
+  function initResult(){
+    safe('reveals',function(){
+      if(typeof IntersectionObserver==='undefined'){ each(qa('#oferta-wrap .rise'),function(e){e.classList.add('in');}); return; }
+      var io=new IntersectionObserver(function(es){ each(es,function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },
+        {threshold:.14,rootMargin:'0px 0px -30px 0px'});
+      each(qa('#oferta-wrap .rise'),function(el){ io.observe(el); });
+    });
+    safe('sticky',function(){
+      var st=q('#sticky'), boxes=[].slice.call(qa('#oferta-wrap .promo'));
+      if(!st) return;
+      window.addEventListener('scroll',function(){
+        var vis=boxes.some(function(o){ var r=o.getBoundingClientRect(); return r.top<window.innerHeight-80 && r.bottom>0; });
+        setCls(st,'show', window.scrollY>600 && !vis);
+      },{passive:true});
+    });
+    safe('countdown',function(){
+      var t=15*60;
+      function fmt(s){ var m=Math.floor(s/60),x=s%60; return (m<10?'0':'')+m+':'+(x<10?'0':'')+x; }
+      function tick(){ var v=fmt(t); each(qa('[data-cd]'),function(e){e.textContent=v;}); if(t>0)t--; }
+      tick(); setInterval(tick,1000);
+    });
+    safe('cupos',function(){
+      var c=7;
+      setTimeout(function drop(){ if(c>2){ c--; each(qa('[data-cupos]'),function(e){e.textContent=c;}); } setTimeout(drop,(20+Math.random()*22)*1000); },18000);
+    });
+    safe('toast',function(){
+      var gente=[['Valeria','Rosario'],['Camila','Córdoba'],['Daniela','La Plata'],['Sofía','Mendoza'],['Antonella','Mar del Plata'],
+                 ['Luciana','Tucumán'],['Paula','Salta'],['Mariana','CABA'],['Gustavo','Quilmes'],['Marcelo','Neuquén']];
+      var t=q('#toast'), n=q('#toastName'), av=q('#toastAv');
+      if(!t) return;
+      function pop(){
+        var p=gente[Math.floor(Math.random()*gente.length)];
+        if(n) n.textContent=p[0]+' de '+p[1];
+        if(av) av.textContent=p[0][0];
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); },4500);
+        setTimeout(pop,(14+Math.random()*8)*1000);
+      }
+      setTimeout(pop,7000);
+    });
+  }
+
+  /* atajos para probar: ?oferta=1 va directo a la oferta · ?paso=N arranca en ese paso */
+  safe('atajos',function(){
+    var m=/[?&]paso=(\d+)/.exec(location.search);
+    if(/[?&]oferta=1/.test(location.search)){ state.nombre='Ana'; state.gen='f'; state.peso=86; state.altura=164; state.pesoDeseado=70; finish(); showOffer(); }
+    else if(m){ if(cover) cover.style.display='none'; if(topbar) topbar.style.display='block'; idx=Math.max(0,+m[1]-1); render(); }
+  });
+})();
+</script>
+</body>
+</html>

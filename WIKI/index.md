@@ -75,6 +75,7 @@
 - ✅ [[angulos-publicitarios]] — Variación real, niveles de conciencia, cómo encontrar ángulos, rotar formatos, 90/10.
 - ✅ [[psicologia-del-comprador]] — Confianza primero. Tres compradores (emocional, lógico, FOMO) y qué bloque de la landing le habla a cada uno.
 - ✅ [[renovacion-de-creativos]] — El ganador no muere, se satura su público. Cuerpo fijo y de 20 a 50 hooks nuevos, de 4 maneras.
+- 🆕 [[estilo-de-video-ia]] — ⭐ **La onda fija para cualquier video con IA (4/11)**: clips de 8 s desde una sola imagen de referencia, una voz a 185 ppm, cero silencio, subtítulos karaoke y la prueba adentro del plano. Sale del ad brasileño de pilates 50+.
 - ✅ [[ugc-y-video-generativo]] — Reglas fijas de UGC, avatares, testimonios para Sora 2 (14 s), Flow/VEO 3, avatar de VSL en HeyGen.
 - ✅ [[imagenes-y-mockups]] — NO FLAT COVERS, "Rules of $100K design", prompts de mockup e imagen, mockups transparentes para el checkout.
 - ✅ [[natives-ganadoras]] — Las 3 natives ganadoras de piedras (imagen + descripción de 900 a 1.200 palabras), sus 13 patrones y la plantilla para armar nuevas.
@@ -107,6 +108,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-04 — Análisis frame por frame del ad brasileño de pilates 50+](../OUTPUTS/2026-11-04-analisis-ad-pilates-brasil.md) — los 11 planos, el guion en portugués y en voseo, la prueba de que es IA y la receta para replicarlo · ver [[estilo-de-video-ia]]
 - [2026-11-04 — Tai Chi Fit: el VSL terminado](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 8:51 con avatar propio, voz Sulafat, 14 B-rolls de TikTok y 9 placas, por 63 créditos de HeyGen · ver [[tai-chi-fit]]
 - [2026-11-03 — Tai Chi Fit: guion del VSL de 8 minutos](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 1.730 palabras en dos bloques de HeyGen, destilado de los 18:33 del original: la raíz dormida como mecanismo, las tres fases del quiz y los 5 bonos · ver [[tai-chi-fit]]
 - [2026-11-03 — Tai Chi Fit: mapa del VSL original de Calistenia Militar](../OUTPUTS/2026-11-03-mapa-vsl-original-calistenia-militar.md) — 18:33 y 4.709 palabras desarmados en 20 bloques, qué entra en nuestros 5 minutos, qué sale y las alertas (soporte por WhatsApp, Ozempic, las "8.000 mujeres") · ver [[tai-chi-fit]]

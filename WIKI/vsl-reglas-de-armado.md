@@ -131,6 +131,35 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **No fabricar testimonios en video** de "clientas reales" con IA. Si el original tenía uno, la avatar lee un testimonio que ya existe en el funnel.
   - **Excepción decidida por Santiago (2026-10-14, Mounjaro Humilde):** si él lo pide, el testimonio en primera persona lo hace su avatar de HeyGen **"Karina testimonio"** (voz roma).
 
+### 🆕 2026-11-04 · ⭐ El atempo rejuvenece la voz: un personaje mayor tiene techo de ppm
+Medido en el VSL de [[monjaro-violeta]] sobre el mismo wav de la Abuela Mei (voz Vindemiatrix), preguntándole a Gemini qué edad escucha:
+
+| ppm | atempo | edad que se escucha |
+|---|---|---|
+| 134 (natural) | 1,00 | **60-70 años** |
+| 160 | 1,19 | 50-65 años |
+| 180 | 1,34 | 40-50 años |
+| 210 | 1,60 | (no se usó: el salto ya venía perdiendo 20 años) |
+
+- ⛔ **Los 210 ppm de Tai Chi Fit no son universales.** Esa regla salió de una maestra de mediana edad. Acelerar sube el tono percibido y **le saca años a la voz**: en una abuela de 72 destruye lo único que la hacía creíble.
+- **Regla: en un personaje mayor el objetivo de ppm se fija por la edad, no por el reloj.** Para una voz de 70, el techo es **160 ppm**. Si el VSL queda largo, se recorta guion, no se acelera la voz.
+- Las voces TTS lentas lo son por diseño: Vindemiatrix lee a 134 ppm naturales. Eso ya es la mitad de la actuación.
+- **El método para decidirlo es gratis:** se generan las dos o tres velocidades candidatas y se le manda cada wav a Gemini preguntando qué edad escucha. Cuesta cero y evita renderizar una tanda entera con el personaje equivocado.
+
+### 🆕 2026-11-04 · Voces femeninas de AI Studio, por edad que aparentan
+Medidas con el mismo texto y el mismo style (español rioplatense), para no volver a probar de cero:
+
+| Voz | Edad que se escucha | Uso |
+|---|---|---|
+| **Vindemiatrix** | 50-60, y **60-70** leyendo lento | Abuela, señora mayor |
+| **Gacrux** | 50-55 | Mujer de 50 y pico |
+| **Achernar** | 35-45 | Mujer de 40 |
+| **Sulafat** | 35-45 | La fija de la casa, sirve para 30-45 |
+
+- **Ninguna llega a sonar de 70 sin ayuda del ritmo.** Para más edad, voz clonada.
+- **El style no envejece una voz, la suaviza.** Un style forzado ("voz gastada, temblor, le falta el aire") sobre Gacrux la bajó de 50-60 a **40 años**. La edad se dirige con la **velocidad**, no con adjetivos.
+- **Dos personajes del mismo sexo en un mismo VSL no comparten voz**, aunque la fija de la casa sea una sola: si hablan uno atrás del otro, se cae el efecto.
+
 ### 🆕 2026-11-04 · Los vocativos del original no se traducen: se sacan
 Santiago, sobre el VSL de Monjaro Violeta clonado del brasileño: *"sacame lo de mi flor, queda raro eso, acordate que tiene que sonar con acento argentino, las cosas raras las sacamos"*.
 - **"Mi flor" es `minha flor` traducido literal.** Ninguna abuela argentina le dice eso a nadie. Salió de las dos puntas del guion (`Felicitaciones, mi flor` → `Felicitaciones`; `no nace en el gimnasio, mi flor` → `no nace en el gimnasio`).

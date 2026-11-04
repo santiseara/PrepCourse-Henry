@@ -1,3 +1,12 @@
+## 2026-11-04 (13ª pasada) — El producto pasa a llamarse Monjaro Rojo
+
+- Santiago: *"Cambiame el monjaro violeta, por el rojo"*.
+- **Quiz cambiado**: 22 apariciones por archivo, en los tres. Verificado en Chrome: cero "violeta" en pantalla, título y caja de oferta con el nombre nuevo.
+- **La palabra "ROJO" se repintó de violeta a rojo** en el lockup de portada y en la barra de progreso. Escrita en violeta se leía como un error. El resto del magenta del quiz quedó igual.
+- ⛔ **No se tocó el dominio del checkout** (`monjaro-violeta.impultienda.ar`): si la tienda sigue con ese nombre, cambiarlo rompe el pago. Falta que Santiago confirme.
+- ⛔ **El VSL sigue diciendo "Monjaro Violeta" 5 veces, en la voz de las avatares.** No se arregla editando: pide regenerar voces + 3 renders de HeyGen (~39 créditos) + montaje + Panda.
+- Páginas actualizadas: [[monjaro-violeta]].
+
 ## 2026-11-04 (14ª pasada) — DanceGo: de 35 pasos a 26, y sin el paso de los ritmos
 
 - Santiago: *"Lo de los estilos de musica sacalo te dije. El emoji de las baterias se ve muy mal. Saca algunas preguntas que esten de mas."*

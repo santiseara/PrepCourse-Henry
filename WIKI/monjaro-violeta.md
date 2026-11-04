@@ -9,6 +9,13 @@
 - **El quiz es largo: 68 pasos en el archivo = 34 reales**, duplicados en dos ramas (mujer / hombre) desde la pregunta de género. Nuestra versión son **27 pasos** para mujer (30 si declara una condición de salud).
 - **La oferta no está en el quiz.** El último paso del original es solo un VSL; el precio y el carrito viven detrás del player. En el nuestro, la oferta va **abajo del VSL y oculta** hasta `SEGUNDOS_OFERTA` ([[quizzes-reglas-de-armado]] §5).
 
+## ⚠️ Cambio de nombre: Monjaro Violeta → **Monjaro Rojo** (2026-11-04)
+Santiago: *"Cambiame el monjaro violeta, por el rojo"*. El producto pasa a llamarse **Monjaro Rojo Japonés**.
+- ✅ **El quiz ya está cambiado**: 22 apariciones en cada uno de los tres archivos. La palabra "ROJO" del lockup y de la barra de progreso se repintó de violeta a rojo (`#FFC2C2 → #FF4D4D → #B81C24`), porque "ROJO" escrito en violeta se lee como un error. El resto del esquema magenta del quiz no se tocó.
+- ⛔ **El VSL todavía dice "Monjaro Violeta", y no se arregla editando**: está en la voz de las dos avatares, **5 veces** (1 en el bloque de apertura, 3 en el testimonio de Mariela, 1 en el cierre). Cambiarlo pide regenerar las tres voces, los tres renders de HeyGen (**~39 créditos**) y volver a montar, editar y subir a Panda.
+- ⛔ **El dominio `monjaro-violeta.impultienda.ar` NO se tocó**: si la tienda sigue llamándose así, cambiarlo en `LINK_CHECKOUT` rompe el pago. Hay que confirmarlo antes.
+- Pendientes menores de renombre: la carpeta `~/Desktop/monjaro-violeta/`, los nombres de archivo del quiz y esta página de la WIKI. No se tocaron para no romper rutas con el trabajo en curso.
+
 ## Ficha de la oferta
 | | |
 |---|---|

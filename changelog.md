@@ -1,3 +1,9 @@
+## 2026-11-03 (noche, 9ª pasada) — Tai Chi Fit: la Maestra Valentina queda asiática y sentada
+
+- Santiago, sobre la v2 de la foto del avatar: *"Esta mejor, pero hacela un poco mas asiatica, y que este sentada, porque el fondo quedo medio raro"*.
+- **Regla nueva en [[vsl-reglas-de-armado]] §3:** el fondo de la foto de un avatar va **liso y vacío** (nada de ventanas, plantas ni muebles: son tres cosas más para que el generador se equivoque, y es lo primero que delata la imagen) y la avatar va **sentada**, que estabiliza la pose y deja la cara grande en el cuadro.
+- **Personaje definido** en [[tai-chi-fit]]: Maestra Valentina, asiática, unos 50 años, sentada, plano medio.
+
 ## 2026-11-03 (noche, 9ª pasada) — Las 7 skills de Launch Expert, bajadas e instaladas
 
 - Santiago: *"Quiero que abras todas y que las instales todas en el segundo cerebro, para que tengas absolutamente toda la informacion y trabajemos de la mejor manera"*, sobre `lp.santiagobilbao.com/sk`.

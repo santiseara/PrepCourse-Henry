@@ -136,6 +136,7 @@ Santiago, sobre la primera imagen de la Maestra Valentina para Tai Chi Fit: *"No
 - **El prompt tiene que pedir una foto, no una producción.** Lo que saca el look de IA: *candid snapshot taken on a phone, not a professional shoot* · piel con textura, poros y líneas finas de verdad · mechones de pelo sueltos · ropa de lino con arrugas de uso · luz plana de ventana · fondo simple sin desenfocar.
 - ⛔ **Palabras prohibidas en el prompt de un avatar:** `cinematic`, `photorealistic`, `85mm`, `shallow depth of field`, `soft studio light`, `8k`, `professional photography`. Todas empujan al render perfecto de stock, que es exactamente lo que se ve falso.
 - Vale la misma vara que los B-rolls (§6, 2026-10-14): *"que las visuales no sean tan IA, que no se note tanto"*.
+- 🆕 **El fondo de la foto va liso y vacío, y la avatar sentada.** Santiago, sobre la segunda versión: *"hacela un poco mas asiatica, y que este sentada, porque el fondo quedo medio raro"*. Un fondo con ventana, planta y objetos le da al generador tres cosas más para equivocarse (ventanas que no cierran, plantas derretidas, perspectivas imposibles) y es lo primero que delata la imagen. **Pared lisa, vacía, sin ventanas ni muebles.** Y **sentada**: estabiliza la pose, saca las piernas del problema y deja la cara grande en el cuadro.
 
 ## 3b. Créditos de Higgsfield: no usar siempre el mejor modelo (2026-10-12)
 - **Intercalar modelos baratos** para B-rolls e imágenes. "Si no, me consume todos los créditos."

@@ -36,6 +36,11 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 
 - 🆕 **2026-11-01 · Después de bajar un audio, el primer Run no dispara.** En la tanda de [[vence-al-parkinson]] pasó en 3 de los 6 guiones, siempre con el mismo patrón: se baja el WAV, se escribe el guion siguiente, se toca Run y **la duración del player no cambia**; el Download vuelve a bajar el audio anterior (mismo md5). El segundo clic sí genera. Regla práctica con Gemini 3.1 Flash TTS: **anotar la duración del player antes de cada Run y compararla después**; si es la misma, tocar Run otra vez. Es la versión "después de descargar" de lo del 29/10 y no se arregla recargando.
 
+
+- 🆕 **2026-11-04 · El TTS inventa diálogo cuando se le toca el Style para apurarlo.** En el bloque 2 del VSL de Tai Chi Fit se agregó al Style *"ritmo ágil y continuo, sin silencios largos"* con `TTS_TEMP=0.8`: a los dos minutos la voz **abandonó el guion y empezó a improvisar** (*"si se dan cuenta que soy una impostora"*, *"¿qué me contás, amiga?"*). Dijo 324 de 678 palabras. Reglas: **el Style no se toca para corregir el ritmo** (el ritmo se arregla después con el recorte de silencios y el atempo), y **ningún bloque pasa de ~550 palabras**: si uno sale lento o raro, se parte en dos y se regenera con el Style de siempre.
+- 🆕 **2026-11-04 · `revisar_voz.py` es obligatorio en cada bloque, no solo al final.** Fue lo que detectó la alucinación de arriba (324/678 palabras) y, en otro bloque, un ritmo de **106 palabras por minuto** contra 157 de los demás. Un bloque que no respeta el ppm de los otros se nota como un cambio de persona en el medio del VSL.
+- 🆕 **2026-11-04 · La cuota del TTS se agota y hay que esperar, no cambiar de modelo a mitad de tanda.** `gemini-2.5-flash-preview-tts` empezó a dar 429 seguidos; el reemplazo `gemini-3.1-flash-tts-preview` funciona con la misma voz Sulafat, pero **mezclar modelos entre bloques del mismo VSL cambia el timbre**. Si se puede, se espera (un reintento cada 100 s destraba) y recién si no hay forma se pasa toda la tanda al modelo nuevo.
+
 ## 0c. Voz propia en AI Studio + lipsync en HeyGen (2026-10-25, Protocolo Chía 28D)
 Cuando la voz de HeyGen no gusta, la voz se hace en **Google AI Studio** (gratis) y HeyGen solo pone la cara: en *Escena única* → "subir/grabar" → **Subir audio** el avatar sincroniza los labios con el WAV/MP3 que uno sube (hasta 100 MB). El costo es el mismo que por texto: **~56 créditos cada 3:30 de video con Avatar IV**.
 - **Límite nuevo de AI Studio (Gemini 3.1 Flash TTS): una sola generación por carga de página.** Después el botón Run queda con `aria-disabled="true"` y no se destraba con nada: hay que **recargar la página y volver a configurar** (escena, Audio Profile, Pace, voz). Por eso conviene partir el guion en **bloques de 550–600 palabras (~3:30 de audio)**, no en trozos chicos: un VSL de 2.950 palabras sale en 5 recargas.
@@ -160,6 +165,17 @@ Con 49 créditos de Higgsfield se cubrieron los 17 momentos de B-roll de un VSL 
 - **El cuadro de Creación rápida tiene un tope de 5.000 caracteres**: un VSL largo se encola en bloques de ~4.500 (unas 780 palabras, 4:45 de video) y se unen en la edición.
 - Si no alcanzan los créditos, los videos se encolan igual y quedan en Proyectos con el cartel "No tienes suficientes créditos": no se pierden créditos, pero hay que volver a enviarlos.
 
+
+## 3d. HeyGen: "Sincronización de labios" es el modelo barato de verdad (2026-11-04, Tai Chi Fit)
+En la Creación rápida nueva, **Elegir modelo** tiene tres opciones y la que viene marcada por defecto es **Turbo — "con tecnología de Avatar 6"**, que es justo la prohibida por §3c. La tercera, **"Sincronización de labios · Aplica solo la sincronización de labios"**, es la que corresponde cuando el audio lo subimos nosotros (§0c), y es **muchísimo más barata que la cuenta de ~25 créditos por minuto**: los cuatro bloques del VSL de Tai Chi Fit (2:59, 1:45, 1:41 y 2:24 = **8:49**) costaron **21, 13, 12 y 17 = 63 créditos**, o sea **~7 créditos por minuto**.
+- ⚠️ **El selector vuelve solo a Turbo en cada video.** Hay que abrir "Elegir modelo" y marcar Sincronización de labios **una vez por bloque**, sin excepción.
+- El paso de audio está en la pestaña **Audio** del paso 1 (en vez de Guion): se sube el MP3 y HeyGen muestra la transcripción para revisar antes de generar.
+
+## 3e. Procesar la voz ANTES de subirla a HeyGen (2026-11-04, Tai Chi Fit)
+El recorte de silencios y el 1.3x se aplicaban al final, sobre el video ya renderizado. Conviene al revés: **primero se procesa el WAV** (`silenceremove=stop_periods=-1:stop_duration=0.20:stop_threshold=-40dB:detection=peak,atempo=1.3`) y recién eso se sube a HeyGen.
+- El resultado suena igual, pero **HeyGen genera menos minutos**: 12:19 de voz cruda pasaron a **8:51**, y lo que se paga es el video final, no las pausas que después se tiran.
+- De paso, el video que baja ya está a velocidad final y **el editor no tiene que acelerar nada**, así que los subtítulos y las anclas calzan sin corrimientos.
+
 ## 4a. Edición del VSL de LATAM de crianza ("VSL Mama", 2026-10-13)
 - El original no tiene B-rolls ni placas: es la avatar a cámara con **subtítulos de a una palabra** (blanco con borde negro, fuente tipo Bangers, a la altura del pecho).
 - Para la versión argentina se copia esa edición y **solo se varían los B-rolls**. Pedido de Santiago: **"no pongas el tiktok entero, sino recortes en partes específicas"**, de 2 a 3 s cada uno y variados. Un recorte cada 10–15 s, y se alternan:
@@ -225,6 +241,17 @@ Santiago: *"ni en pedo vas a tardar de nuevo 8 horas… esto tiene que tardar co
 - **Resultado medido:** 318 segmentos en **7:21** + 2:12 la pasada de audio y música = **9 minutos** para 16 minutos de video, contra 8 horas. `REUSAR=1` reaprovecha los segmentos ya hechos.
 - Dos trampas al armarlo: en los segmentos con pantalla dividida las etiquetas del filtro se desfasaban (hay que usar el índice de la entrada como nombre, no un contador), y la lista del `concat` necesita **rutas absolutas** o no encuentra los segmentos.
 - Con esto, **corregir una placa o un ancla y volver a tirar cuesta minutos**, así que conviene revisar y re-renderizar en vez de parchear el video final.
+
+
+## 4g. Tres trampas del editor propio (2026-11-04, Tai Chi Fit)
+Las tres hicieron que el primer render saliera "OK" y estuviera mal. Valen para cualquier editor nuevo:
+1. **Al recortar el `.ass` por segmento hay que conservar el campo de estilo.** `linea.split(",", 4)` devuelve `[Dialogue, inicio, fin, estilo, resto]`: si se arma la línea nueva sin `f[3]`, el estilo queda vacío, **libass no dibuja nada** y el video sale entero sin subtítulos, sin un solo error en el log.
+2. **Un PNG de placa necesita `-loop 1 -t <dur>` antes del `-i`.** Sin eso es un frame único, el `fade` de alpha no tiene sobre qué correr y el segmento **falla entero** (quedan archivos de 261 bytes que el `concat` después saltea).
+3. **La placa tiene que contrastar con el fondo del avatar.** Las primeras salieron color papel sobre la pared beige del dojo: ilegibles. Van en **jade oscuro o bermellón, con sombra y borde dorado**.
+- Y en el mezclador de audio: una misma etiqueta (`[voz]`) **no se puede usar dos veces**; hay que `asplit=2` antes de mandarla al `sidechaincompress` y al `amix`.
+
+## 4h. Los subtítulos se alinean con el guion, siempre (2026-11-04)
+Quemar la transcripción cruda de Whisper deja errores a la vista: en Tai Chi Fit el sello de garantía salió con el subtítulo **"LO CORROYO."** (por *"lo corro yo"*). La alineación con `difflib` contra el guion arregla los casos de igual largo, pero **hay que agregar el caso de palabras pegadas o partidas**: si `"".join(whisper[i1:i2]) == "".join(guion[j1:j2])`, se escribe el texto del guion en la primera palabra y se vacían las demás.
 
 ## 4c. Entrega y Panda
 - El video final se **reemplaza** en `~/Desktop/<producto>-vsl/` con el mismo nombre.

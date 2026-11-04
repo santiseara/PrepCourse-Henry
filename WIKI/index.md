@@ -106,6 +106,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-04 — Tai Chi Fit: el VSL terminado](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 8:51 con avatar propio, voz Sulafat, 14 B-rolls de TikTok y 9 placas, por 63 créditos de HeyGen · ver [[tai-chi-fit]]
 - [2026-11-03 — Tai Chi Fit: guion del VSL de 8 minutos](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 1.730 palabras en dos bloques de HeyGen, destilado de los 18:33 del original: la raíz dormida como mecanismo, las tres fases del quiz y los 5 bonos · ver [[tai-chi-fit]]
 - [2026-11-03 — Tai Chi Fit: mapa del VSL original de Calistenia Militar](../OUTPUTS/2026-11-03-mapa-vsl-original-calistenia-militar.md) — 18:33 y 4.709 palabras desarmados en 20 bloques, qué entra en nuestros 5 minutos, qué sale y las alertas (soporte por WhatsApp, Ozempic, las "8.000 mujeres") · ver [[tai-chi-fit]]
 - [2026-11-03 — Piedras aromáticas: los 4 anuncios en polaco](../OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md) — el tercer idioma del mismo winner, reusando las bandas limpias y la cama musical del pase ruso; localizado a złoty, OLX e imieniny · ver [[internacionalizacion]]

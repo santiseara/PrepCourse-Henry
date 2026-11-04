@@ -1,3 +1,16 @@
+## 2026-11-04 — Tai Chi Fit: el VSL entero, armado y editado
+
+- Santiago: *"Arma el video para que quede bien, hace toda la edicion, no quiero videos de stock"*. Entregado: **`~/Desktop/tai-chi-fit/vsl/Tai-Chi-Fit-VSL.mp4`, 8:51, 1080x1920, 155 MB**.
+- **Avatar Maestra Valentina** creado en HeyGen con la foto que mandó (9:16 exacto, sin barras blancas). **Voz Sulafat** en cuatro bloques por API, gratis.
+- **63 créditos de HeyGen en total.** El selector de modelo venía en **Turbo (Avatar 6)**, el prohibido: se cambió a **"Sincronización de labios"** en cada bloque, que con el audio propio cuesta ~7 créditos por minuto en vez de ~25. Regla nueva en [[vsl-reglas-de-armado]] §3d.
+- **La voz se procesa antes de subirla** (recorte de silencios + 1.3x): 12:19 de voz cruda pasaron a 8:51 de video, así no se paga por pausas que después se tiran (§3e).
+- **Cero stock y cero imágenes fijas:** los 14 B-rolls son clips reales de TikTok bajados con `yt_dlp` (tikwm quedó detrás de Cloudflare). De 34 clips bajados, **la mayoría venían con texto quemado o la marca de otro anunciante**: se recortaron las franjas y se eligieron a ojo contra una hoja de contactos.
+- **Tres fallas del editor nuevo, documentadas en §4g:** el recorte del `.ass` se comía el campo de estilo (video entero sin subtítulos y sin un solo error en el log), las placas PNG sin `-loop 1 -t` hacían fallar el segmento completo, y las placas color papel eran ilegibles sobre la pared beige del dojo.
+- **El TTS alucinó** en un bloque al que le toqué el Style para apurarlo: se puso a improvisar diálogo y dijo 324 de 678 palabras. Regla nueva: el Style no se toca para corregir ritmo y ningún bloque pasa de ~550 palabras (§0b).
+- **Los subtítulos se alinean contra el guion**, con el caso de palabras pegadas incluido: Whisper escribía *"LO CORROYO"* por *"lo corro yo"* justo sobre el sello de garantía (§4h).
+- Script nuevo: `OUTPUTS/scripts-vsl/edit_taichi.py` (render por segmentos en paralelo, 46 segmentos).
+- Páginas actualizadas: [[tai-chi-fit]], [[vsl-reglas-de-armado]].
+
 ## 2026-11-03 (noche, 9ª pasada) — Tai Chi Fit: la Maestra Valentina queda asiática y sentada
 
 - Santiago, sobre la v2 de la foto del avatar: *"Esta mejor, pero hacela un poco mas asiatica, y que este sentada, porque el fondo quedo medio raro"*.

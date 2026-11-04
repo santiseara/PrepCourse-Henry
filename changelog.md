@@ -1,3 +1,12 @@
+## 2026-11-04 (7ª pasada) — El botón que "recargaba la landing": el link de la tienda no es el checkout
+
+- Santiago: *"cuando hago clic en el botón de CTA me manda al principio de la landing"*.
+- **Causa:** `https://dibujo-creativoo.impultienda.ar` **es la home de la tienda, y la home es la landing**. Al poner ese dominio en los botones, el clic recargaba la misma página. El checkout real es `<dominio>/checkout` (verificado: title "Checkout - Dibujo Creativo", con formulario de pago).
+- **Segundo hallazgo, bajando el HTML con `curl`:** la tienda tenía publicada una versión anterior de la landing (los 5 CTA en `href="#"`, `LINK_CHECKOUT` con el dominio, cero tokens). El txt corregido no se había pegado todavía.
+- Agregada una **red de seguridad** en el script: si un `.js-cta` carga con `href` vacío, `#` o un placeholder, se fuerza `/checkout`.
+- Verificado en Chrome: los 5 CTA resuelven a la ruta `/checkout` del origen donde esté publicada la página.
+- Páginas actualizadas: [[shopify-y-checkout]].
+
 ## 2026-11-04 (6ª pasada) — Monjaro Violeta: el acompañamiento vuelve al guion y la oferta del quiz no se toca
 
 - Dos correcciones de Santiago sobre el VSL:

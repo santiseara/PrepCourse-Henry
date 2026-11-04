@@ -172,7 +172,11 @@ Consecuencias al armar la landing:
 - **Las UTMs se arrastran sin tocar el destino.** El script toma el `href` que ya tiene el botón y le pega `window.location.search`; no reemplaza el link. Así sigue funcionando si Impultienda reescribe el destino.
 - **El href relativo no se puede probar en local**: `/checkout` apunta a la raíz del server de prueba. Lo que sí se verifica antes de subir: que todos los botones tengan la clase del CTA y `href="/checkout"`, que no quede ningún nodo de precio vacío y que la consola esté limpia.
 
-Caso de referencia: la landing de [[academia-del-trazo]] (dibujo creativo) se armó primero con un `LINK_CHECKOUT` apuntando al dominio de la tienda y los botones no entraban al checkout. Se arregló pasando a `/checkout` + tokens.
+> ⚠️ **El link que da el panel de Impultienda es la home de la tienda, y la home ES la landing.** Si se pega ese dominio en los botones, el clic recarga la misma página y el visitante aparece arriba de la landing: parece que "el botón no hace nada". El checkout vive en **`<dominio>/checkout`**. Antes de dar un link por bueno, abrirlo y mirar el `<title>`: si dice el nombre de la oferta es la landing; el checkout dice "Checkout — <tienda>".
+
+Caso de referencia: la landing de [[academia-del-trazo]] (dibujo creativo). Se armó con `LINK_CHECKOUT` = el dominio de la tienda, y los botones recargaban la landing. Se arregló con `href="/checkout"` + tokens. Diagnóstico que sirve para la próxima: **bajar con `curl` el HTML que sirve el dominio** y mirar cómo quedaron los `href` de los CTA. Ahí se vio de una que la tienda tenía publicada una versión anterior del HTML (botones en `href="#"`), o sea que el problema no era el archivo local sino que el pegado no se había hecho.
+
+Red de seguridad que conviene dejar en el script de la landing: si al cargar un `.js-cta` tiene `href` vacío, `#` o un placeholder sin reemplazar, forzarlo a `/checkout`.
 
 ## Por qué el post-pago no funciona en Argentina (con Shopify)
 

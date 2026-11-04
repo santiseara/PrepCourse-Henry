@@ -68,6 +68,14 @@ Santiago pasó su clave de Google AI Studio: *"para que no tengas que usar mi co
 - **No se estrena nada en una entrega.** (2026-10-27, voz gallega del VSL de Calistenia Rusa: *"usá siempre las voces que te digo que sirven, no innoves una nueva cada vez que hacemos otro"*.) Voz, avatar o herramienta: si ya hay una validada para ese perfil, se usa esa. Si hace falta una nueva, primero una **muestra gratis** y recién con su OK se gastan créditos.
 - Antes de mandar una tanda larga a renderizar, **calcular el costo y avisarle**. Si el saldo no alcanza para todo, avisar primero y no quemar el saldo en el primer bloque.
 
+### ⛔ 2026-11-04 · Las imágenes NO se generan con nada que cobre
+Santiago, después de que las fotos de avatar del VSL de Monjaro se sacaran en Higgsfield: *"Podes usar mi chatgpt, nano banana, o alguna gratuita, no uses nada que cobre"*.
+- **Higgsfield queda fuera para imágenes.** Gastó 4 de los 4,35 créditos que quedaban en cuatro fotos de avatar (GPT Image 2, calidad media, 1 crédito c/u; en alta son 3,5).
+- **El orden para cualquier imagen es:** 1) **su ChatGPT** desde Chrome, con su sesión (es lo que él usa: la foto buena de la Abuela Mei salió de ahí); 2) **Nano Banana en aistudio.google.com**, también por navegador; 3) cualquier otra gratuita. **Nunca** un servicio que descuente créditos sin que él lo pida.
+- ⛔ **La API de Gemini NO genera imágenes gratis.** Probado el 4/11 con `gemini-2.5-flash-image`, `gemini-3.1-flash-image`, `-lite` y `-preview`: los cuatro devuelven **429 con `limit: 0`** sobre `generate_content_free_tier_requests`. El tier gratis da cuota de texto y de **TTS** (por eso la voz sí sale por API), pero **cero** de imagen. Nano Banana solo sirve **desde el navegador**. El cliente quedó escrito igual por si algún día se habilita.
+- Vale para avatares, B-rolls, tapas, mockups y placas. Las placas y los chats de WhatsApp siguen saliendo por código + Chrome headless, que no cuesta nada.
+- **GPT Image 1.5 ya no existe en Higgsfield** (ahora GPT Image 2 y 2.5): los prompts de avatar viejos que lo nombran hay que leerlos como referencia de parámetros, no de modelo.
+
 ## Prioridad de reglas
 - **Cuando un prompt de `RAW/prompts/` choca con tus reglas personales, ganan tus reglas** ([[guiones-y-anuncios]]: no catastrófico, sin precio en el ad, natives sin cara, voseo). Del prompt tomo la estructura, no lo que contradice tus preferencias.
 

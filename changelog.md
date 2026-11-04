@@ -1,3 +1,14 @@
+## 2026-11-04 (8ª pasada) — Las imágenes no se pagan más: ChatGPT y Nano Banana, nunca Higgsfield
+
+- Santiago, después de que las fotos de avatar del VSL de Monjaro salieran de Higgsfield: *"Podes usar mi chatgpt, nano banana, o alguna gratuita, no uses nada que cobre"*.
+- **El gasto:** 4 de los 4,35 créditos que quedaban, en 4 fotos (GPT Image 2, calidad media, 1 crédito c/u). En alta son 3,5 y no entraban dos. **GPT Image 1.5 ya no existe** en Higgsfield: ahora son GPT Image 2 y 2.5.
+- ⛔ **Hallazgo: la API de Gemini no genera imágenes gratis.** `gemini-2.5-flash-image`, `gemini-3.1-flash-image`, `-lite` y `-preview` devuelven los cuatro **429 con `limit: 0`** sobre `generate_content_free_tier_requests`. El tier gratis cubre texto y **TTS** (por eso la voz sí sale por API) pero **cero** imagen. Nano Banana solo sirve **desde el navegador**. El cliente quedó escrito igual en `OUTPUTS/scripts-vsl/nano_banana.py`.
+- **Avatar de la Abuela Mei resuelto:** Santiago generó la foto con su ChatGPT desde el prompt entregado y quedó mejor que las de Higgsfield (más foto, menos render). Guardada como `~/Desktop/monjaro-violeta/vsl/avatar-abuela-mei.png` (942×1670, 9:16 exacto, no necesita reencuadre para HeyGen).
+- **Mariela (la testimonial):** prompt entregado y dos opciones generadas en `~/Desktop/monjaro-violeta/vsl/opciones-avatar/`. Falta que elija.
+- El guion quedó partido en `vsl/voz/bloque1-3.txt`: **50, 405 y 98 palabras**. El bloque 2 trae una enumeración (WhatsApp, grupo, menús, ejercicios), que es justo lo que el TTS se come: hay que verificarlo con `revisar_voz.py`.
+- ⏳ **Pendiente de decisión: la voz de Mariela.** La regla fija es mujer → Sulafat, pero la Abuela Mei también es mujer y hablan una atrás de la otra en el mismo VSL.
+- Páginas actualizadas: [[como-trabajar-con-santiago]].
+
 ## 2026-11-04 (7ª pasada) — El botón que "recargaba la landing": el link de la tienda no es el checkout
 
 - Santiago: *"cuando hago clic en el botón de CTA me manda al principio de la landing"*.

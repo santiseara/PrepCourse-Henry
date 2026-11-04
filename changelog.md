@@ -1,3 +1,15 @@
+## 2026-11-04 (14ª pasada) — DanceGo: de 35 pasos a 26, y sin el paso de los ritmos
+
+- Santiago: *"Lo de los estilos de musica sacalo te dije. El emoji de las baterias se ve muy mal. Saca algunas preguntas que esten de mas."*
+- ⚠️ **Corrección mía:** en la pasada anterior había pedido *"las del tipo de musica sacalas"* y le saqué **solo las imágenes**, dejando el paso con una tarjeta tipográfica. Quería el **paso entero**. Regla nueva en la WIKI: cuando pide sacar algo de un quiz, por defecto es el paso completo; si es solo la imagen, lo aclara.
+- 🆕 **Un emoji repetido no es un ícono.** Las 🔋 / 🔋🔋 / 🔋🔋🔋 del nivel de energía se veían amateur dentro de la chapita de 34 px. Regla: un emoji por opción, nunca una fila para representar una escala; si hace falta un nivel, va un medidor en CSS.
+- **9 pasos afuera, de 35 a 26:** estilos de música, el bloque de hábitos entero (agua, sueño, rutina de trabajo, qué tan activa, energía), "nivel en el baile" (duplicaba "¿probaste baile antes?"), la edad exacta (ya se pregunta en la portada) y "tu mejor cuerpo" (no personalizaba nada). Con energía se fue el emoji de pilas.
+- Al sacar el paso se barrió todo el código huérfano: el array `RITMOS`, la rama del `render`, la función `swipe()`, su CSS y el campo en `state`.
+- 🐛 **Un proceso ajeno estaba escuchando en el puerto 8777** (una página "relay" del propio Santiago): el servidor de prueba no levantaba y Chrome mostraba esa página en vez del quiz. Se pasó al 8911. Conviene chequear con `lsof -nP -iTCP:<puerto> -sTCP:LISTEN` antes de dar por bueno un 200.
+- 📁 Regenerado: `~/Desktop/dancego/dancego-quiz.txt` (713 KB, copiado al portapapeles), `dancego-PRUEBA.html`, `landing/dancego-quiz.html`. Copia en `OUTPUTS/2026-11-04-quiz-dancego.html`.
+- Recorrido entero verificado en un `<iframe>` de 390 px: 26 pasos, cero desborde, cero imágenes rotas.
+- Páginas actualizadas: [[dancego]], [[quizzes-reglas-de-armado]].
+
 ## 2026-11-04 (12ª pasada) — El VSL enchufado al quiz y el CTA a los 2:30
 
 - Santiago pasó el embed de Panda: *"quiero que lo metas al final del quiz, y que al minuto 2:30 aparezca el boton de cta"*.

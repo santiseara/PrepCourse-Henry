@@ -240,27 +240,6 @@ main{padding:26px 0 30px;min-height:calc(100vh - 70px)}
 .msg.me{align-self:flex-end;background:#DCF3E3;border-radius:12px 12px 3px 12px}
 .msg time{display:block;text-align:right;font-size:.66rem;color:var(--muted);margin-top:2px}
 
-/* ====== swipe de ritmos ====== */
-.sw{position:relative;min-height:220px;display:grid;place-items:center}
-.swc{width:100%;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
-  box-shadow:var(--shadow);animation:in .3s ease}
-/* Los ritmos van sin imagen: el original usaba carteles neón con el texto
-   quemado en portugués. Tarjeta tipográfica y listo. */
-.swc .bd{padding:30px 22px 32px;text-align:center}
-.swc .bd em{display:block;font-style:normal;font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:10px}
-.swc .bd h3{font-size:1.65rem;margin-bottom:12px;letter-spacing:-.02em}
-.swc .bd p{font-size:.9rem;color:var(--muted);line-height:1.6}
-.swbt{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:16px}
-.swbt button{border:1.5px solid var(--line-2);background:var(--card);border-radius:13px;padding:14px;cursor:pointer;
-  font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow-s)}
-.swbt .no{color:var(--ink-2)}
-.swbt .si{border-color:var(--green);color:var(--green);background:var(--green-s)}
-.swcount{text-align:center;margin-top:13px;font-size:.84rem;color:var(--muted)}
-.swdot{display:flex;justify-content:center;gap:5px;margin-bottom:16px}
-.swdot i{width:6px;height:6px;border-radius:50%;background:var(--line-2)}
-.swdot i.on{background:var(--accent);width:18px;border-radius:99px}
-
 /* ====== maqueta del celular, dibujada en HTML (no es una captura) ====== */
 .phone{width:248px;margin:0 auto;border-radius:34px;background:#1C1A19;padding:9px;box-shadow:0 26px 50px -26px rgba(28,26,25,.6)}
 .phone .scr{background:var(--paper);border-radius:26px;overflow:hidden;position:relative}
@@ -621,7 +600,7 @@ input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;bac
    DANCEGO · motor del quiz
    =========================================================================== */
 var C = window.CONFIG, IMG = C.IMG;
-var state = { nombre:'', ritmos:[], altura:165, peso:70, meta:65, edad:25 };
+var state = { nombre:'', altura:165, peso:70, meta:65 };
 var i = 0, hist = [];
 
 /* --- link de checkout con las UTMs de la URL --- */
@@ -657,161 +636,119 @@ function imcTag(v){
 var CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
 
-/* ===========================================================================
-   LOS 7 RITMOS
-   Localizados para Argentina: el sertanejo y el funk brasileño del original
-   no se escuchan acá, así que entran cumbia y cuarteto. Las tapas van
-   tipografiadas (nada de carteles neón) y todas con la misma paleta apagada.
-   =========================================================================== */
-var RITMOS = [
-  {k:'Flashback', n:'Pop de los 80 y 90', d:'Los clásicos que te hacen bailar sin pensarlo: Madonna, Michael Jackson, Culture Club…'},
-  {k:'Baile popular', n:'Cumbia', d:'El ritmo que todo el mundo canta y nadie se queda sentado. Para mover todo el cuerpo.'},
-  {k:'Córdoba capital', n:'Cuarteto', d:'Pura energía y mucho cardio sin que te des cuenta de que estás entrenando.'},
-  {k:'Ritmo latino', n:'Reggaetón y latino', d:'Lo más caliente de América Latina para mover la cadera: Bad Bunny, Karol G, J Balvin, Shakira…'},
-  {k:'Pareja o sola', n:'Salsa y bachata', d:'Pasos sencillos, cintura y coordinación. Se baila igual de bien sola en el living.'},
-  {k:'Lo que suena hoy', n:'Hits virales de TikTok', d:'Las canciones que explotan en los videos cortos y los desafíos de baile más populares.'},
-  {k:'Alta intensidad', n:'Cardio Dance', d:'Coreografías de alta energía pensadas para acelerar las pulsaciones y quemar muchas calorías.'}
-];
 
 /* ===========================================================================
-   LOS PASOS
+   LOS PASOS  ·  26 (el original tenía 35)
    Mismo orden, mismos textos y misma lógica que el original, pasados al
-   español argentino. Lo único que se sacó es el paso del e-mail: esos datos
-   se piden en el checkout.
+   español argentino. Lo que se sacó:
+     · el e-mail              -> esos datos se piden en el checkout
+     · los estilos de música  -> pedido de Santiago (2026-11-04)
+     · el bloque de hábitos   -> agua, sueño, rutina de trabajo, qué tan
+                                 activa y niveles de energía: no cambian
+                                 el resultado (y se va el emoji de pilas)
+     · "nivel en el baile"    -> duplicaba "¿probaste baile antes?"
+     · la edad exacta         -> ya se pregunta en la portada
+     · "tu mejor cuerpo"      -> no personalizaba nada
    =========================================================================== */
 var STEPS = [
 
-/* 1 */ {id:'edadRango', type:'cover', q:'TU PLAN DE BAILE<br><em>PERSONALIZADO</em>', help:'Según tu edad y tu perfil único', opts:[
+/*  1 */ {id:'edadRango', type:'cover', q:'TU PLAN DE BAILE<br><em>PERSONALIZADO</em>', help:'Según tu edad y tu perfil único', opts:[
           {l:'18 – 24 años', img:'edad1'},{l:'25 – 34 años', img:'edad2'},
           {l:'35 – 44 años', img:'edad3'},{l:'+ 45 años', img:'edad4'}]},
 
-/* 2 */ {id:'proof', type:'proof', q:'Ya somos + de <em>155 mil mujeres</em>', help:'bailando y divirtiéndonos con DanceGo', btn:'Continuar'},
+/*  2 */ {id:'proof', type:'proof', q:'Ya somos + de <em>155 mil mujeres</em>', help:'bailando y divirtiéndonos con DanceGo', btn:'Continuar'},
 
-/* 3 */ {id:'objetivo', type:'single', q:'¿Cuál es tu <em>principal objetivo</em>?', help:'Elegí tu meta principal', opts:[
+/*  3 */ {id:'objetivo', type:'single', q:'¿Cuál es tu <em>principal objetivo</em>?', help:'Elegí tu meta principal', opts:[
           {l:'PERDER LA GRASA LOCALIZADA'},{l:'TENER UNA CINTURA MÁS FINA'},
           {l:'TONIFICAR LA PANZA'},{l:'AFINAR LAS CADERAS'},{l:'TODAS LAS OPCIONES'}]},
 
-/* 4 */ {id:'fisico', type:'rowpick', q:'¿Cuál de estas imágenes describe <em>tu físico de hoy</em>?', opts:[
+/*  4 */ {id:'fisico', type:'rowpick', q:'¿Cuál de estas imágenes describe <em>tu físico de hoy</em>?', opts:[
           {l:'Flaca', img:'fisico1'},{l:'Mediana', img:'fisico2'},
           {l:'Plus size', img:'fisico3'},{l:'Con sobrepeso', img:'fisico4'}]},
 
-/* 5 */ {id:'suenos', type:'pick', q:'¿Cuál es el <em>cuerpo de tus sueños</em>?', opts:[
+/*  5 */ {id:'suenos', type:'pick', q:'¿Cuál es el <em>cuerpo de tus sueños</em>?', opts:[
           {l:'Tonificada', img:'suenos1'},{l:'Atlética', img:'suenos2'},
           {l:'Curvilínea', img:'suenos3'},{l:'Saludable', img:'suenos4'}]},
 
-/* 6 */ {id:'mejorCuerpo', type:'single', q:'¿Hace cuánto estuviste en el <em>mejor cuerpo de tu vida</em>?', opts:[
-          {l:'Hace menos de 1 año'},{l:'De 1 a 2 años atrás'},{l:'Hace más de 3 años'},{l:'Nunca estuve'}]},
-
-/* 7 */ {id:'metabolismo', type:'single', q:'¿Cómo describirías tu <em>metabolismo</em>?', opts:[
+/*  6 */ {id:'metabolismo', type:'single', q:'¿Cómo describirías tu <em>metabolismo</em>?', opts:[
           {e:'😰', l:'Subo de peso rápido pero bajo muy despacio'},
           {e:'🤗', l:'Subo y bajo de peso con facilidad'},
           {e:'😤', l:'Me cuesta muchísimo subir de peso o músculo'}]},
 
-/* 8 */ {id:'experiencia', type:'single', q:'¿Probaste alguna <em>actividad de baile</em> antes?', opts:[
+/*  7 */ {id:'experiencia', type:'single', q:'¿Probaste alguna <em>actividad de baile</em> antes?', opts:[
           {e:'😟', l:'Nunca bailé'},{e:'😊', l:'Tengo algo de experiencia'},{e:'🤪', l:'Ya probé de todo'}]},
 
-/* 9 */ {id:'bridge1', type:'bridge', q:'Olvidate de los <em>ejercicios aburridos</em> y repetitivos.',
+/*  8 */ {id:'bridge1', type:'bridge', q:'Olvidate de los <em>ejercicios aburridos</em> y repetitivos.',
           help:'La forma más divertida y comprobada de adelgazar en casa es bailando.',
           img:'enCasa', badge:'💫 AUNQUE NO SEPAS BAILAR',
           txt:'Clases con paso a paso: aunque nunca hayas bailado, vas a poder hacer todos los movimientos.',
           btn:'¡Increíble! Sigamos'},
 
-/* 10 */ {id:'frecuencia', type:'single', q:'¿Cuántas veces por semana te gustaría <em>bailar</em>?', opts:[
+/*  9 */ {id:'frecuencia', type:'single', q:'¿Cuántas veces por semana te gustaría <em>bailar</em>?', opts:[
           {l:'1 – 2 veces'},{l:'3 – 4 veces'},{l:'+ 5 veces'}]},
 
-/* 11 */ {id:'duracion', type:'single', q:'¿De cuánto querés que sean tus <em>sesiones de baile</em>?',
+/* 10 */ {id:'duracion', type:'single', q:'¿De cuánto querés que sean tus <em>sesiones de baile</em>?',
           help:'Si los bailes largos te dejan cansada, probá los más cortos. También son efectivos.', opts:[
           {l:'5 – 10 minutos'},{l:'15 – 20 minutos'},{l:'25 – 30 minutos'},{l:'35 minutos o más'}]},
 
-/* 12 */ {id:'lesiones', type:'multi', grid:true, q:'¿Tuviste alguna <em>lesión</em> hace poco?',
+/* 11 */ {id:'lesiones', type:'multi', grid:true, q:'¿Tuviste alguna <em>lesión</em> hace poco?',
           help:'Armamos tu plan según tu condición, así nada te frena para disfrutar los bailes.', opts:[
           {e:'✅', l:'Sin lesiones', solo:true},{e:'🦵', l:'Rodillas'},{e:'💪', l:'Hombros'},{e:'🗣️', l:'Cuello'},
           {e:'💪', l:'Brazos'},{e:'🤲', l:'Codos'},{e:'🦵', l:'Piernas'},{e:'🦶', l:'Pies'}], btn:'Continuar'},
 
-/* 13 */ {id:'trabajo', type:'single', q:'¿Cómo es tu <em>rutina de trabajo</em>?', opts:[
-          {l:'Trabajo de 09:00 a 17:00'},{l:'Mis horarios son flexibles'},{l:'Horarios nocturnos'},
-          {l:'No trabajo'},{l:'Jubilada'}]},
-
-/* 14 */ {id:'activa', type:'single', q:'¿Qué tan <em>activa</em> sos?', help:'Lo vamos a tener en cuenta para armar tu plan', opts:[
-          {l:'Sedentaria'},{l:'Poco activa'},{l:'Activa'},{l:'Muy activa'}]},
-
-/* 15 */ {id:'energia', type:'single', q:'¿Cómo están tus <em>niveles de energía</em> durante el día?',
-          help:'Lo vamos a tener en cuenta para armar tu plan', opts:[
-          {e:'🔋', l:'Bajos, me siento cansada todo el día'},
-          {e:'🔋🔋', l:'Me canso después del almuerzo'},
-          {e:'🔋🔋🔋', l:'Necesito café para mantenerme activa'},
-          {e:'🔋🔋🔋🔋', l:'Me siento activa todo el día'}]},
-
-/* 16 */ {id:'agua', type:'single', q:'¿Cuánta <em>agua</em> tomás por día?', opts:[
-          {l:'Tomo solamente café o mate'},{l:'Menos de un litro'},{l:'Hasta 2 litros'},{l:'Más de 2 litros'}]},
-
-/* 17 */ {id:'sueno', type:'single', grid:true, q:'¿Cuántas <em>horas</em> dormís por día?', opts:[
-          {l:'Menos de 5 horas'},{l:'De 5 a 6 horas'},{l:'Entre 7 y 8 horas'},{l:'Más de 8 horas'}]},
-
-/* 18 */ {id:'comunidad', type:'chat', q:'¡Sumate a una <em>comunidad exclusiva</em>!',
+/* 12 */ {id:'comunidad', type:'chat', q:'¡Sumate a una <em>comunidad exclusiva</em>!',
           help:'Además de usar la app, entrás a una comunidad exclusiva de WhatsApp con consejos diarios de entrenamiento y comida para acelerar tus resultados.',
           btn:'Continuar'},
 
-/* 19 */ {id:'nivel', type:'single', q:'Elegí tu <em>nivel en el baile</em>', help:'Vamos a adaptar tus bailes a medida que avances', opts:[
-          {d:'#A9B0B6', l:'Principiante', s:'quiero empezar a bailar'},
-          {d:'#C08A2E', l:'Intermedia', s:'ya tengo experiencia con el baile'},
-          {d:'#216B4F', l:'Avanzada', s:'soy profesional y tomo clases de baile'}]},
-
-/* 20 */ {id:'ritmos', type:'swipe', q:'Elegí tus <em>ritmos favoritos</em>', help:'Tocá “Me encanta” o “No va” en cada uno'},
-
-/* 21 */ {id:'bridge2', type:'app', q:'Elegí tu ritmo y <em>empezá a bailar</em>',
+/* 13 */ {id:'bridge2', type:'app', q:'Elegí tu ritmo y <em>empezá a bailar</em>',
           help:'El baile quema 140% más calorías que los ejercicios tradicionales y aburridos.',
           btn:'¡Increíble! Sigamos'},
 
-/* 22 */ {id:'eventos', type:'multi', q:'¿Alguno de estos <em>eventos</em> te hizo subir de peso últimamente?',
+/* 14 */ {id:'eventos', type:'multi', q:'¿Alguno de estos <em>eventos</em> te hizo subir de peso últimamente?',
           help:'Podés elegir más de uno', opts:[
           {e:'💼', l:'Presión en el trabajo'},{e:'🏠', l:'La vida en familia'},{e:'💔', l:'Divorcio o separación'},
           {e:'🐢', l:'Metabolismo lento'},{e:'🤰', l:'Embarazo o posparto'},{e:'💸', l:'Problemas económicos'},
           {e:'😷', l:'La pandemia'},{e:'❓', l:'Otros motivos'},{e:'✖️', l:'Ninguno de estos', solo:true}], btn:'Continuar'},
 
-/* 23 */ {id:'motivacion', type:'single', q:'¿Cuál es tu <em>mayor motivación</em> para bajar de peso?', opts:[
+/* 15 */ {id:'motivacion', type:'single', q:'¿Cuál es tu <em>mayor motivación</em> para bajar de peso?', opts:[
           {e:'🛡️', l:'Sentirme más segura'},{e:'💚', l:'Estar más sana y tener energía'},
           {e:'👶', l:'Volver a mi cuerpo después del embarazo'},{e:'✨', l:'Otra'}]},
 
-/* 24 */ {id:'nota', type:'news', q:'Mujeres de todo el país están cambiando de vida con <em>DanceGo</em>',
+/* 16 */ {id:'nota', type:'news', q:'Mujeres de todo el país están cambiando de vida con <em>DanceGo</em>',
           titular:'Madre e hija bajaron 83 kilos entre las dos con una clase de baile que quema 800 calorías',
           bajada:'¿Entrenar es aburrido? No para Rosalía y María, que encontraron en el baile un momento divertido en familia.',
           fuente:'Imagen: reproducción de Instagram', btn:'¡Suena bien!'},
 
-/* 25 */ {id:'altura', type:'slider', q:'¿Cuánto <em>medís</em>?', help:'Vamos a personalizar tus ejercicios según tu biotipo',
+/* 17 */ {id:'altura', type:'slider', q:'¿Cuánto <em>medís</em>?', help:'Vamos a personalizar tus ejercicios según tu biotipo',
           min:140, max:200, def:165, unit:'cm', key:'altura',
           tags:[[0,155,'Baja'],[155,172,'Media'],[172,999,'Alta']]},
 
-/* 26 */ {id:'peso', type:'slider', q:'¿Cuál es tu <em>peso actual</em>?', help:'Lo tenemos en cuenta para armar tu plan personalizado',
+/* 18 */ {id:'peso', type:'slider', q:'¿Cuál es tu <em>peso actual</em>?', help:'Lo tenemos en cuenta para armar tu plan personalizado',
           min:40, max:120, def:70, unit:'kg', key:'peso'},
 
-/* 27 */ {id:'meta', type:'slider', q:'¿Cuál es tu <em>meta de peso</em>?', help:'¿Cuál es el peso ideal al que querés llegar?',
+/* 19 */ {id:'meta', type:'slider', q:'¿Cuál es tu <em>meta de peso</em>?', help:'¿Cuál es el peso ideal al que querés llegar?',
           min:40, max:120, def:65, unit:'kg', key:'meta'},
 
-/* 28 */ {id:'load1', type:'loading', title:'Creando tu plan…', sub:'Esperá un momento',
+/* 20 */ {id:'load1', type:'loading', title:'Creando tu plan…', sub:'Esperá un momento',
           list:['Analizando tu perfil físico','Calculando tu plan ideal','Personalizando los ejercicios','Cerrando el diagnóstico'], ms:1500},
 
-/* 29 */ {id:'resultado', type:'result', btn:'Continuar con mi plan'},
+/* 21 */ {id:'resultado', type:'result', btn:'Continuar con mi plan'},
 
-/* 30 */ {id:'edadExacta', type:'slider', q:'¿Cuántos <em>años</em> tenés?', help:'Vamos a construir tu plan de acuerdo a eso',
-          min:18, max:80, def:25, unit:'años', key:'edad',
-          tags:[[0,30,'Joven adulta'],[30,45,'Adulta'],[45,60,'Adulta plena'],[60,999,'Adulta mayor']]},
-
-/* 31 */ {id:'evento', type:'single', q:'¿Algún <em>evento próximo</em> te motivó a bajar de peso ahora?',
+/* 22 */ {id:'evento', type:'single', q:'¿Algún <em>evento próximo</em> te motivó a bajar de peso ahora?',
           help:'Lo usamos como incentivo para personalizar tu plan', opts:[
           {e:'✈️', l:'Un viaje'},{e:'💍', l:'Un casamiento'},{e:'🏅', l:'Un evento deportivo'},{e:'☀️', l:'El verano'},
           {e:'🥂', l:'Una reunión con amigas'},{e:'🎂', l:'Un cumpleaños'},{e:'📅', l:'Otra ocasión'},
           {e:'💚', l:'Ninguno, solo quiero sentirme mejor'}]},
 
-/* 32 */ {id:'prevision', type:'forecast', q:'Podés llegar a los <em>{{meta}} kg</em> para el <em>{{fecha}}</em>', btn:'Continuar'},
+/* 23 */ {id:'prevision', type:'forecast', q:'Podés llegar a los <em>{{meta}} kg</em> para el <em>{{fecha}}</em>', btn:'Continuar'},
 
-/* 33 */ {id:'confianza', type:'single', q:'¿Qué tan <em>segura</em> estás de llegar a tu meta para el {{fecha}}?', opts:[
+/* 24 */ {id:'confianza', type:'single', q:'¿Qué tan <em>segura</em> estás de llegar a tu meta para el {{fecha}}?', opts:[
           {e:'🏆', l:'¡Creo que puedo hacerlo!'},{e:'⚡', l:'No estoy segura, pero lo voy a intentar'},
           {e:'😕', l:'No estoy tan segura'}]},
 
-/* 34 */ {id:'load2', type:'progress', title:'Cargando…', sub:'ESTAMOS ARMANDO TU PLAN DANCEGO', ms:4200},
+/* 25 */ {id:'load2', type:'progress', title:'Cargando…', sub:'ESTAMOS ARMANDO TU PLAN DANCEGO', ms:4200},
 
-/* 35 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu área de bailes (opcional)',
+/* 26 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu área de bailes (opcional)',
           ph:'Escribí tu nombre', btn:'Continuar', skip:'Saltear este paso'}
 ];
 
@@ -915,11 +852,6 @@ function render(){
       +  '<div class="msg me">¡Yo también! Tres semanas seguidas, nunca me había pasado 🙌<time>08:36</time></div>'
       +  '<div class="msg"><b>Camila · coach</b>Esa es la idea: que no se sienta como entrenar. A la noche subo la lista de comidas fáciles 🥗<time>08:40</time></div></div>';
     h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
-  }
-
-  /* ---------- swipe de ritmos ---------- */
-  else if(s.type === 'swipe'){
-    h += head + '<div id="sw"></div>';
   }
 
   /* ---------- maqueta de la app ---------- */
@@ -1127,42 +1059,6 @@ function bind(s){
       b.style.width = p + '%';
     }, s.ms / 32);
   }
-
-  /* swipe de ritmos */
-  if(s.type === 'swipe') swipe();
-}
-
-/* ---------- swipe ---------- */
-var swIdx = 0;
-function swipe(){
-  var box = document.getElementById('sw');
-  function draw(){
-    if(swIdx >= RITMOS.length){
-      box.innerHTML = '<div class="card" style="text-align:center;padding:34px 20px">'
-        + '<div style="font-size:2rem;margin-bottom:10px">🎉</div>'
-        + '<h3 style="font-family:Fraunces,serif;font-size:1.15rem;margin-bottom:6px">¡Listo! Ya valoraste todos los ritmos</h3>'
-        + '<p style="color:var(--muted);font-size:.88rem">Elegiste ' + state.ritmos.length + ' de ' + RITMOS.length + '.</p></div>'
-        + '<div class="foot"><button class="btn" id="swgo">Continuar con mis ritmos</button></div>';
-      document.getElementById('swgo').onclick = function(){ go(); };
-      return;
-    }
-    var r = RITMOS[swIdx];
-    var dots = '<div class="swdot">';
-    for(var k=0;k<RITMOS.length;k++) dots += '<i class="' + (k===swIdx?'on':'') + '"></i>';
-    dots += '</div>';
-    box.innerHTML = dots
-      + '<div class="sw"><div class="swc"><div class="bd">'
-      +   '<em>' + r.k + '</em><h3>' + r.n + '</h3><p>' + r.d + '</p></div></div></div>'
-      + '<div class="swbt"><button class="no" data-v="0">✕ No va</button><button class="si" data-v="1">♥ Me encanta</button></div>'
-      + '<p class="swcount">' + (state.ritmos.length ? state.ritmos.length + (state.ritmos.length===1?' ritmo elegido':' ritmos elegidos') : 'Ritmo ' + (swIdx+1) + ' de ' + RITMOS.length) + '</p>';
-    box.querySelectorAll('.swbt button').forEach(function(b){
-      b.onclick = function(){
-        if(b.dataset.v === '1') state.ritmos.push(r.n);
-        swIdx++; draw();
-      };
-    });
-  }
-  draw();
 }
 
 /* ===========================================================================

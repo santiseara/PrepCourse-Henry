@@ -174,9 +174,25 @@ Santiago, sobre las 4 fotos de edad de [[dancego]]: *"Las imagenes del principio
 
 Santiago pidió reusar imágenes de otras ofertas. Se revisaron las carpetas de `~/Desktop/` (Monjaro Violeta, Tai Chi Fit, Dibujo Creativo, Drawing World) y **no había ningún set de edades de mujeres** que sirviera: las de Monjaro son parejas (hombre + mujer) recortadas sobre negro a 300 px. Conviene **mirar primero y decirlo**, en vez de prometer un reuso que no existe. Una hoja de contactos con Pillow de todas las carpetas se arma en un minuto y responde la pregunta de una.
 
+
+## 2026-11-04 · "Sacalo" quiere decir el paso entero, no la imagen
+
+Santiago había pedido *"las del tipo de musica sacalas"*. Se interpretó como "sacales las imágenes" y quedó el paso con una tarjeta tipográfica. Tuvo que repetirlo: *"Lo de los estilos de musica sacalo te dije."*
+
+**Regla: cuando pide sacar algo de un quiz, por defecto es el paso completo.** Si de verdad lo que molesta es solo la imagen, lo dice ("sacale la foto a ese paso"). Ante la duda, preguntar antes de dejar media medida — una corrección repetida cuesta más que una pregunta.
+
+Y al sacar un paso hay que **barrer el código que queda huérfano**: el array de datos, la rama del `render`, la función del componente, su CSS, su campo en `state` y la llamada en `bind`. Si no, el archivo se llena de muerto.
+
+## 2026-11-04 · Un emoji repetido tres veces no es un ícono, es un borrón
+
+Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nivel de energía del original: 🔋 / 🔋🔋 / 🔋🔋🔋 / 🔋🔋🔋🔋 metidas en la chapita de 34 px. Un emoji solo funciona como ícono chico; **repetido para indicar cantidad se ve amateur** y además se desborda de la chapita.
+
+**Regla: un emoji por opción, nunca una fila de emojis para representar una escala.** Si hace falta mostrar un nivel, va un medidor dibujado en CSS (barritas) o se saca la pregunta. También conviene revisar que no se repita el mismo emoji en dos opciones del mismo paso: queda sucio.
+
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-04 | Quiz DanceGo | "Lo de los estilos de musica sacalo te dije. El emoji de las baterias se ve muy mal. Saca algunas preguntas que esten de mas" | Se fue el paso de ritmos **entero** (y su código), más el bloque de hábitos, "nivel en el baile", la edad exacta y "tu mejor cuerpo": de 35 pasos a **26**. El emoji de pilas se fue con la pregunta de energía |
 | 2026-11-04 | Quiz DanceGo | "Las imagenes del principio son muy malas, usa algunas que ya hayamos usado y que se vean mejor, hacelo mas llamativo, las del tipo de musica sacalas" | Las fotos estaban bien: el problema era el **encuadre**. Recorte apretado a la cara (zoom 1.95, 720×960), etiqueta sobre banda oscura encima de la foto, chapita de prueba social y titular más grande. Los 7 ritmos quedaron **sin imagen**: tarjeta tipográfica sola |
 | 2026-11-04 | Quiz DanceGo | "Mejoramelo, no quiero que se vea recontra colorido, quiero que las imagenes se vean bien" | §4: el problema era el **overlay de degradé** sobre fotos que ya estaban bien. Paleta de papel crema + tinta + un acento; tapas de ritmos y maqueta de celular rehechas en CSS; capturas de WhatsApp e Instagram pasadas a HTML; `img{height:auto}` global y chequeo de desborde a 390 px |
 | 2026-11-04 | Landing Academia del Trazo | "Esos botones también tienen que redirigir, TODOS LOS BOTONES" (captura de la chapita verde **HOY: GRATIS** de la caja de regalos) | §4: **todo lo que parece un botón lleva al checkout**, no solo los `.btn`. Una chapa de color con bordes redondeados (`.free`, pastillas de precio, sellos) se toca igual que un botón: o va dentro de un `<a class="js-cta">`, o el JS le pone `cursor:pointer` y un `click` a `/checkout` con las UTMs. Antes de entregar: listar en consola **todos** los `<a>` y `<button>` más los elementos con fondo opaco y `border-radius`, y revisar que ninguno quede muerto. El botón del hero (`VER TODO LO QUE INCLUYE`) **dejó de ser ancla** y también va al checkout |

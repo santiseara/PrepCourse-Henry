@@ -78,7 +78,7 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
 - ⛔ **La oferta del quiz NO se toca** (2026-11-04). Alineé la caja del quiz con lo que dice el VSL y Santiago cortó: *"Dejala así tal cual como está, no le cambies nada a lo que ofrece"*. La caja queda con sus **5 regalos y $73.500**. El VSL puede nombrar cosas que la caja no lista; la caja es la que manda y no se edita sin que lo pida.
 - **La entrega es por mail**, no por WhatsApp (el quiz no pide WhatsApp).
 - **La testimonial es la misma Mariela Benítez del quiz**, con los números alineados: 8 kilos en los primeros 15 días y 16 en total.
-- **`SEGUNDOS_OFERTA` = 101.** El precio se dice en la palabra 332, o sea el **1:37**. Se confirma con el video ya renderizado antes de dejarlo fijo.
+- ✅ **`SEGUNDOS_OFERTA` = 114, medido sobre el video terminado** (ya no es una cuenta de palabras): Mariela dice "catorce mil novecientos noventa pesos" en el segundo **114,10**, o sea el **1:54**. Ya está puesto en los tres archivos del quiz.
 - **Hacen falta dos avatares**, uno por personaje: `OUTPUTS/2026-11-04-prompt-avatar-abuela-mei.md` y `OUTPUTS/2026-11-04-prompt-avatar-mariela.md`. Los dos con fondo liso y vacío: la cocina del original entra por B-roll, no por la foto del avatar.
 - ⛔ **Sin "mi flor"** (2026-11-04). Era `minha flor` traducido literal del original; Santiago lo sacó: *"queda raro eso… las cosas raras las sacamos"*. Regla general en [[vsl-reglas-de-armado]].
 
@@ -95,7 +95,13 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
   - Probados: portada, multi-select, bifurcación por género, fotos de edad y kilos, campo de nombre con `{{nombre}}`, placa de cómo funciona, testimonio, los 3 medidores, la pantalla de carga, el **IMC con la bolita en la franja correcta** (82 kg / 1,65 m → 30,1 → Obesidad → bolita al 90%), la rama de condición de salud (campo → carga → mensaje personalizado), la comparativa y la oferta entera con contador, cupos y notificaciones.
   - **Textos sensibles al género** con el token `{{o}}`: "¿estás list**a**/list**o**?", "Quedate tranquil**a**/**o**", "List**a**/List**o**, Ana".
   - Atajos de prueba: `?oferta=1` va directo a la oferta y `?paso=N` arranca en el paso N.
-- ✅ **Guion del VSL escrito** (2026-11-04): 2:41 en tres bloques, ya sin "mi flor". **Avatar de la Abuela Mei listo** (`vsl/avatar-abuela-mei.png`, 942×1670, 9:16 exacto, generado por Santiago con su ChatGPT). **Voces en curso** con Vindemiatrix y Sulafat. Falta el avatar de Mariela y el render de HeyGen. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
+- ✅ **VSL TERMINADO** (2026-11-04): `~/Desktop/monjaro-violeta/vsl/VSL-monjaro-violeta.mp4`, **3:17, 1080×1920, 150,7 MB**.
+  - Tres bloques de HeyGen **Avatar IV**: Abuela Mei 0:18 → Mariela 2:23 → Abuela Mei 0:36. **Costó 39 créditos** de los 3.224 (~17 por minuto; la cuenta de 25/min sobrestimaba).
+  - **Los dos avatares los generó Santiago con su ChatGPT** desde los prompts entregados, y se recortaron a 9:16 exacto. En `vsl/avatar-abuela-mei.png` y `vsl/avatar-mariela.png`.
+  - **Voces de AI Studio con lipsync por audio subido**, no por texto: Abuela Mei con **Vindemiatrix a 160 ppm** (suena a 60-70 años) y Mariela con **Gacrux a 170 ppm** (50-55). Los wav crudos y los `-final` están en `vsl/voz/`.
+  - **Verificado:** las 405 palabras del bloque largo están (no se comió la enumeración del acompañamiento), los desfases video/audio son de 0,02 s, no hay silencios de más de 1,5 s y los cortes caen donde deben.
+  - A cada bloque se le devolvió el **WAV original** en lugar del MP3 que se subió para el lipsync.
+- ⏳ **Falta subirlo a Panda Video** y pegar el embed en `<template id="vsl-template">`. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

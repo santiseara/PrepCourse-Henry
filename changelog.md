@@ -1,3 +1,17 @@
+## 2026-11-04 (9ª pasada) — El VSL de Monjaro Violeta, terminado: 3:17 con dos personajes
+
+- **Entregado:** `~/Desktop/monjaro-violeta/vsl/VSL-monjaro-violeta.mp4`, **3:17, 1080×1920**. Abuela Mei 0:18 → Mariela 2:23 → Abuela Mei 0:36. **39 créditos** de HeyGen con Avatar IV (quedan ~3.185).
+- **Avatares:** los generó Santiago con su ChatGPT desde los prompts entregados. Recortados a 9:16 exacto para que HeyGen no meta barras blancas.
+- **Voces:** Abuela Mei con **Vindemiatrix a 160 ppm**, Mariela con **Gacrux a 170 ppm**. Santiago: *"una voz mayor de 40 años"* para la testimonial — Sulafat daba 35-45 y se cambió.
+- ⭐ **Hallazgo que cambia una regla: el atempo rejuvenece la voz.** Sobre el mismo wav, 134 ppm suena a 60-70 años y 180 ppm a 40-50. Los 210 ppm de Tai Chi Fit le habrían sacado 20 años a la abuela. **En un personaje mayor el ppm se fija por la edad, no por el reloj.**
+- ⭐ **El TTS bloqueaba el testimonio por `finishReason=SAFETY`** (cifras de descenso de peso). Con `safetySettings` en `BLOCK_NONE` salió al primer intento. Vale para toda oferta de salud o peso.
+- **HeyGen: cambiar de avatar resetea el modelo** a Avatar 6 Pro. Pasó dos veces y se agarró antes de generar las dos.
+- **`SEGUNDOS_OFERTA` = 114**, medido sobre el video terminado (el precio se dice en el 1:54). Ya está en los tres archivos del quiz.
+- **Sin "mi flor"**: era `minha flor` traducido literal del brasileño.
+- Scripts nuevos: `ritmo_monjaro.py`, `montar_monjaro.py`, `tts_gemini_safe.py`, `nano_banana.py`.
+- ⏳ Falta subir el VSL a Panda Video y pegar el embed en `<template id="vsl-template">`.
+- Páginas actualizadas: [[monjaro-violeta]], [[vsl-reglas-de-armado]], [[como-trabajar-con-santiago]].
+
 ## 2026-11-04 (9ª pasada) — "TODOS LOS BOTONES": lo que parece botón también va al checkout
 
 - Santiago pegó la versión corregida (verificado en vivo: los 5 CTA resuelven a `/checkout`, y el clic real en *QUIERO EMPEZAR A DIBUJAR* termina en "Checkout - Dibujo Creativo"). Pero mandó una captura de la caja de regalos: *"Esos botones también tienen que redirigir, TODOS LOS BOTONES"*.

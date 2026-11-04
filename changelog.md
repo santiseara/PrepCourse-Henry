@@ -1,3 +1,16 @@
+## 2026-11-04 (12ª pasada) — DanceGo: el quiz brasileño clonado, en voseo y despintado
+
+- Santiago: *"Quiero que me hagas este quiz, en español argentino… Mejoramelo, no quiero que se vea recontra colorido, quiero que las imagenes se vean bien."* (`funilv1.appdancego.com`)
+- ⭐ **El hallazgo: las fotos del original estaban bien, lo feo era el overlay.** Las 4 fotos de edad y las 8 de tipo de cuerpo son tomas de estudio, fondo gris, ropa deportiva neutra y mismo encuadre — se veían espantosas porque tenían encima un **degradé rosa/violeta/verde/naranja**. Reusadas sin el overlay, el set entero queda premium **sin generar una sola imagen con IA**.
+- **Paleta nueva:** papel crema `#FBF8F4` + tinta `#1C1A19` + **un** acento frambuesa `#B23A5B`. El verde `#216B4F` solo significa "bien"/comprar y el rojo solo "riesgo". Se fueron los títulos de cuatro colores palabra por palabra y el amarillo chillón de los botones.
+- **Lo que se rehízo en HTML en vez de copiar capturas:** el perfil de Instagram de las 155 mil seguidoras, el chat de la comunidad de WhatsApp, la maqueta del celular con la app (el original tenía la UI en portugués) y las **7 tapas de los ritmos**, que eran carteles neón de IA con el texto quemado.
+- **Localización:** sertanejo universitario y funk brasileño no se escuchan acá → **cumbia y cuarteto**; gospel → **salsa y bachata**. Se sacó el paso del e-mail (va en el checkout).
+- 🆕 **Dos bugs de maquetado que no se ven en el escritorio**, anotados en la WIKI: el atributo `height=""` del `<img>` **le gana al `aspect-ratio`** (el antes/después salía de 853 px de alto) y las grillas de dos columnas se desbordan 4 px a 373 px. Se chequea recorriendo el quiz entero por código dentro de un `<iframe>` de 390 px.
+- 🆕 **Lovable con Supabase propio:** si el bundle tiene `from("funnel_steps")` y panel de administración, el quiz **no** viaja en texto plano; se recorre en Chrome. Las imágenes sí están todas listadas (81 archivos en `/lovable-uploads/`) y conviene mirarlas juntas en una hoja de contactos.
+- 📁 **Entregado** en `~/Desktop/dancego/`: `dancego-quiz.txt` (718 KB, 16 imágenes embebidas, copiado al portapapeles), `dancego-PRUEBA.html`, `landing/dancego-quiz.html` e `imagenes/` (16 webp). Copia en `OUTPUTS/2026-11-04-quiz-dancego.html`.
+- ⏳ **Falta** el precio final, el link real de checkout y definir si lleva VSL. Los valores del `CONFIG` son provisorios ($14.990 / $49.990 / 3 cuotas).
+- Páginas nuevas o actualizadas: [[dancego]], [[quizzes-reglas-de-armado]], [[index]].
+
 ## 2026-11-04 (11ª pasada) — La música audible de verdad, y la carpeta del VSL limpia
 
 - Santiago: *"Subime un poco mas la musica, SOLO ESO… quiero que quede solo el vsl terminado, todo lo demas sacalo"*.

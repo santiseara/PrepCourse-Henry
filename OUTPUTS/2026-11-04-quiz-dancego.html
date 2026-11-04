@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DanceGo — Tu plan de baile personalizado</title>
+
+<!-- ==========================================================================
+     DANCEGO · QUIZ  —  bloque de configuración
+     Todo lo que se toca está acá arriba. El resto no hace falta tocarlo.
+     ========================================================================== -->
+<script>
+window.CONFIG = {
+
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL. */
+  LINK_CHECKOUT: "https://dancego.impultienda.ar/checkout",
+
+  /* Pixel de Meta. Dejalo vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos antes de que aparezca la oferta en el último paso.
+     0  = la oferta se ve de entrada (como el original, que no tiene VSL).
+     Si cargás un VSL en <template id="vsl-template">, poné acá el segundo
+     exacto en que el video dice el precio. 230 = 3:50 · 960 = 16:00        */
+  SEGUNDOS_OFERTA: 0,
+
+  /* Imágenes. Pegá acá la URL de ImpulTienda de cada una. */
+  IMG: {
+    edad1:   "../imagenes/edad-1.webp",
+    edad2:   "../imagenes/edad-2.webp",
+    edad3:   "../imagenes/edad-3.webp",
+    edad4:   "../imagenes/edad-4.webp",
+    fisico1: "../imagenes/fisico-1.webp",
+    fisico2: "../imagenes/fisico-2.webp",
+    fisico3: "../imagenes/fisico-3.webp",
+    fisico4: "../imagenes/fisico-4.webp",
+    suenos1: "../imagenes/suenos-1.webp",
+    suenos2: "../imagenes/suenos-2.webp",
+    suenos3: "../imagenes/suenos-3.webp",
+    suenos4: "../imagenes/suenos-4.webp",
+    enCasa:  "../imagenes/en-casa.webp",
+    nota:    "../imagenes/nota.webp",
+    antes:   "../imagenes/antes.webp",
+    despues: "../imagenes/despues.webp"
+  },
+
+  /* Precios. Si cambia el precio, cambiarlo en los 6 campos. */
+  PRECIO:        "14.990",
+  PRECIO_VIEJO:  "49.990",
+  DESCUENTO:     "70",
+  CUOTAS:        "3",
+  CUOTA_VALOR:   "4.997",
+  AHORRO:        "35.000",
+  VALOR_BONOS:   "38.900"
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+
+<style>
+/* ===========================================================================
+   PALETA  —  sobria a propósito: papel crema, tinta y UN acento.
+   Nada de degradés arcoíris. El color se usa para marcar, no para decorar.
+   =========================================================================== */
+:root{
+  --paper:#FBF8F4;       /* fondo */
+  --card:#FFFFFF;        /* tarjetas */
+  --ink:#1C1A19;         /* texto fuerte */
+  --ink-2:#4A4441;       /* texto medio */
+  --muted:#7D756F;       /* texto suave */
+  --line:#E8E1D8;        /* bordes */
+  --line-2:#D8CFC3;
+  --accent:#B23A5B;      /* acento de marca (frambuesa apagada) */
+  --accent-d:#8E2C47;
+  --accent-s:#FBEEF1;    /* acento al 6% */
+  --green:#216B4F;       /* "bien" / comprar */
+  --green-d:#17503A;
+  --green-s:#EAF3EE;
+  --amber:#B07A1F;
+  --amber-s:#FBF2E0;
+  --red:#AE3326;         /* riesgo y cupos, nunca decorativo */
+  --red-s:#FBEDEB;
+  --shadow:0 18px 40px -26px rgba(28,26,25,.45);
+  --shadow-s:0 8px 20px -14px rgba(28,26,25,.35);
+  --r:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* Los <img> llevan en width/height la medida REAL del archivo (lo pide la
+   plataforma), así que acá se neutraliza el alto para que nada se deforme. */
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit}
+.hidden{display:none!important}
+.wrap{max-width:540px;margin:0 auto;padding:0 18px}
+
+h1,h2,h3,.disp{font-family:'Fraunces','Georgia',serif;font-weight:700;line-height:1.14;letter-spacing:-.012em}
+
+/* ====== cabecera + progreso ====== */
+.top{position:sticky;top:0;z-index:40;background:rgba(251,248,244,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line)}
+.top-in{max-width:540px;margin:0 auto;padding:12px 18px 10px;display:flex;flex-direction:column;gap:10px}
+.brand{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;color:var(--ink)}
+.brand .mark{width:26px;height:26px;border-radius:50%;background:var(--accent);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:15px;height:15px}
+.brand .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.12rem;letter-spacing:-.02em}
+.brand .name i{font-style:normal;color:var(--accent)}
+.bar{height:5px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar>span{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.back{position:absolute;left:14px;top:14px;width:34px;height:34px;border:1px solid var(--line);background:var(--card);
+  border-radius:10px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2)}
+.back:disabled{opacity:0;pointer-events:none}
+
+/* ====== layout del paso ====== */
+main{padding:26px 0 30px;min-height:calc(100vh - 70px)}
+.step{animation:in .32s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-s);padding:5px 11px;border-radius:99px;margin-bottom:14px}
+.q{font-size:1.5rem;text-align:center;margin-bottom:10px}
+.q em{font-style:normal;color:var(--accent)}
+.help{text-align:center;color:var(--muted);font-size:.93rem;margin-bottom:24px;line-height:1.6}
+.q+.opts,.q+.grid{margin-top:24px}
+
+/* ====== opciones de lista ====== */
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--card);
+  border:1.5px solid var(--line);border-radius:var(--r);padding:16px 16px;cursor:pointer;
+  transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s)}
+.opt:hover{border-color:var(--line-2)}
+.opt:active{transform:scale(.993)}
+.opt.on{border-color:var(--accent);background:var(--accent-s);box-shadow:0 0 0 3px rgba(178,58,91,.09)}
+.opt .ic{width:34px;height:34px;flex:none;border-radius:9px;background:var(--paper);display:grid;place-items:center;
+  font-size:1.02rem;border:1px solid var(--line)}
+.opt.on .ic{background:#fff;border-color:rgba(178,58,91,.25)}
+.opt .tx{flex:1;min-width:0}
+.opt .tx b{display:block;font-weight:600;font-size:.98rem;line-height:1.35}
+.opt .tx small{display:block;color:var(--muted);font-size:.82rem;line-height:1.4;margin-top:2px}
+.opt .ar{color:var(--line-2);flex:none}
+.opt.on .ar{color:var(--accent)}
+.opt .chk{width:22px;height:22px;flex:none;border:1.5px solid var(--line-2);border-radius:7px;display:grid;place-items:center;color:#fff}
+.opt.on .chk{background:var(--accent);border-color:var(--accent)}
+.opt .chk svg{opacity:0}
+.opt.on .chk svg{opacity:1}
+
+/* ====== opciones con foto ====== */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* en dos columnas hay que apretar un poco, o a 373 px se desborda */
+.grid .opt{padding:13px 11px;gap:9px}
+.grid .opt .ic{width:28px;height:28px;font-size:.92rem}
+.grid .opt .tx b{font-size:.88rem}
+.grid .opt .ar{display:none}
+.pick{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;
+  padding:0;text-align:center;transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s)}
+.pick:active{transform:scale(.99)}
+.pick.on{border-color:var(--accent);box-shadow:0 0 0 3px rgba(178,58,91,.09)}
+.pick figure{position:relative;background:#F1ECE6}
+.pick img{width:100%;height:190px;object-fit:cover;object-position:top center}
+.pick .lb{padding:11px 8px;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+.pick.on .lb{color:var(--accent)}
+/* opciones con foto en fila (físico de hoy) */
+.rowpick{display:flex;align-items:center;gap:14px;width:100%;background:var(--card);border:1.5px solid var(--line);
+  border-radius:var(--r);padding:10px 14px 10px 10px;cursor:pointer;box-shadow:var(--shadow-s);
+  transition:border-color .15s,box-shadow .15s}
+.rowpick.on{border-color:var(--accent);background:var(--accent-s)}
+.rowpick img{width:94px;height:118px;object-fit:cover;object-position:top center;border-radius:11px;flex:none;background:#F1ECE6}
+.rowpick b{flex:1;text-align:left;font-weight:700;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase}
+
+/* ====== botones ====== */
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;gap:9px;width:100%;border:none;
+  cursor:pointer;font-weight:700;font-size:1.02rem;color:#fff;background:var(--accent);padding:16px 20px;
+  border-radius:13px;text-decoration:none;box-shadow:0 10px 24px -14px rgba(178,58,91,.8);
+  transition:filter .15s,transform .08s}
+.btn:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn.buy{background:var(--green);box-shadow:0 10px 24px -14px rgba(33,107,79,.85)}
+.btn.ghost{background:transparent;color:var(--ink-2);border:1.5px solid var(--line-2);box-shadow:none;font-weight:600}
+.skip{display:block;width:100%;background:none;border:none;color:var(--muted);font-size:.88rem;
+  text-decoration:underline;cursor:pointer;padding:14px;text-align:center}
+.foot{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(251,248,244,0),var(--paper) 36%);
+  padding:18px 0 14px;margin-top:26px}
+
+/* ====== tarjetas sueltas ====== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-s)}
+.note{background:var(--accent-s);border:1px solid rgba(178,58,91,.16);border-radius:13px;padding:14px 16px;
+  font-size:.9rem;color:var(--ink-2);line-height:1.6}
+.legal{margin-top:22px;font-size:.76rem;color:var(--muted);text-align:center;line-height:1.6}
+.legal a{color:var(--accent)}
+.media{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#F1ECE6}
+.media img{width:100%;height:auto}
+.cap{font-size:.78rem;color:var(--muted);text-align:center;margin-top:9px}
+
+/* ====== prueba social de Instagram (en HTML, no captura) ====== */
+.ig{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-s)}
+.ig-h{display:flex;align-items:center;gap:13px;padding:15px}
+.ig-av{width:52px;height:52px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:var(--accent);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem}
+.ig-n{font-weight:700;font-size:.95rem}
+.ig-n span{display:block;font-weight:400;font-size:.8rem;color:var(--muted)}
+.ig-st{display:flex;gap:18px;padding:0 15px 14px;font-size:.82rem;color:var(--muted)}
+.ig-st b{display:block;color:var(--ink);font-size:.95rem}
+.ig-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
+.ig-g img{width:100%;height:auto!important;aspect-ratio:1!important;object-fit:cover;background:var(--paper)}
+
+/* ====== chat de la comunidad (en HTML, no captura) ====== */
+.chat{background:#EFEAE3;border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;
+  flex-direction:column;gap:9px;box-shadow:var(--shadow-s)}
+.chat-h{display:flex;align-items:center;gap:10px;padding-bottom:11px;border-bottom:1px solid rgba(0,0,0,.07);margin-bottom:3px}
+.chat-h .av{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;
+  font-size:.82rem;font-weight:700;flex:none}
+.chat-h b{font-size:.9rem}
+.chat-h small{display:block;color:var(--muted);font-size:.74rem;font-weight:400}
+.msg{max-width:84%;background:#fff;border-radius:12px 12px 12px 3px;padding:9px 12px;font-size:.87rem;line-height:1.5;
+  box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.msg b{display:block;font-size:.76rem;color:var(--accent);margin-bottom:2px}
+.msg.me{align-self:flex-end;background:#DCF3E3;border-radius:12px 12px 3px 12px}
+.msg time{display:block;text-align:right;font-size:.66rem;color:var(--muted);margin-top:2px}
+
+/* ====== swipe de ritmos ====== */
+.sw{position:relative;min-height:330px;display:grid;place-items:center}
+.swc{width:100%;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:var(--shadow);animation:in .3s ease}
+.swc .cov{aspect-ratio:3/2;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;position:relative}
+.swc .cov::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 7px)}
+.swc .cov b{position:relative;z-index:1;font-family:'Fraunces',serif;font-size:1.72rem;line-height:1.05;letter-spacing:-.02em}
+.swc .cov em{position:relative;z-index:1;font-style:normal;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  opacity:.82;margin-bottom:6px}
+.swc .bd{padding:16px 18px 20px;text-align:center}
+.swc .bd h3{font-size:1.14rem;margin-bottom:6px}
+.swc .bd p{font-size:.88rem;color:var(--muted);line-height:1.55}
+.swbt{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:16px}
+.swbt button{border:1.5px solid var(--line-2);background:var(--card);border-radius:13px;padding:14px;cursor:pointer;
+  font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow-s)}
+.swbt .no{color:var(--ink-2)}
+.swbt .si{border-color:var(--green);color:var(--green);background:var(--green-s)}
+.swcount{text-align:center;margin-top:13px;font-size:.84rem;color:var(--muted)}
+.swdot{display:flex;justify-content:center;gap:5px;margin-bottom:16px}
+.swdot i{width:6px;height:6px;border-radius:50%;background:var(--line-2)}
+.swdot i.on{background:var(--accent);width:18px;border-radius:99px}
+
+/* ====== maqueta del celular, dibujada en HTML (no es una captura) ====== */
+.phone{width:248px;margin:0 auto;border-radius:34px;background:#1C1A19;padding:9px;box-shadow:0 26px 50px -26px rgba(28,26,25,.6)}
+.phone .scr{background:var(--paper);border-radius:26px;overflow:hidden;position:relative}
+.phone .nn{height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:.6rem;
+  color:var(--ink-2);background:var(--card)}
+.ph-hero{background:var(--accent);color:#fff;padding:13px 13px 14px;margin:8px;border-radius:14px}
+.ph-hero b{font-family:'Fraunces',serif;font-size:.95rem;display:block}
+.ph-hero small{font-size:.63rem;opacity:.85;display:block;line-height:1.4;margin-top:1px}
+.ph-days{display:flex;gap:5px;margin-top:10px}
+.ph-days i{flex:1;aspect-ratio:3/4;border-radius:7px;background:rgba(255,255,255,.2);font-style:normal;font-size:.52rem;
+  display:grid;place-items:center;color:#fff}
+.ph-days i.on{background:#fff;color:var(--accent);font-weight:700}
+.ph-cta{margin-top:10px;background:#fff;color:var(--accent);border-radius:8px;text-align:center;padding:7px;
+  font-size:.62rem;font-weight:800;letter-spacing:.06em}
+.ph-sec{margin:0 8px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.ph-sec>b{font-size:.68rem;display:block;margin-bottom:7px}
+.ph-row{display:flex;align-items:center;gap:7px;padding:5px 0;border-top:1px solid var(--line);font-size:.58rem;color:var(--ink-2)}
+.ph-row:first-of-type{border-top:none}
+.ph-row i{width:16px;height:16px;border-radius:5px;background:var(--accent-s);flex:none}
+.ph-row span{flex:1}
+.ph-row em{font-style:normal;color:var(--muted)}
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.ph-grid i{aspect-ratio:4/3;border-radius:7px;background:#EDE6DD;font-style:normal;display:grid;place-items:end start;
+  padding:5px;font-size:.5rem;color:var(--ink-2)}
+.ph-tab{display:flex;justify-content:space-around;padding:7px 0 9px;border-top:1px solid var(--line);background:var(--card)}
+.ph-tab i{width:14px;height:14px;border-radius:4px;background:var(--line-2);font-style:normal}
+.ph-tab i.on{background:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.78rem;
+  font-weight:600;color:var(--ink-2);box-shadow:var(--shadow-s)}
+.chip b{color:var(--accent)}
+
+/* ====== sliders ====== */
+.sl-val{text-align:center;margin:8px 0 4px}
+.sl-val b{font-family:'Fraunces',serif;font-size:3rem;line-height:1}
+.sl-val span{font-size:1.05rem;color:var(--muted);font-weight:600}
+.sl-tag{display:block;width:max-content;margin:8px auto 22px;font-size:.76rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--accent-s);color:var(--accent);padding:5px 12px;border-radius:99px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--card);
+  border:3px solid var(--accent);cursor:pointer;box-shadow:0 3px 10px -3px rgba(28,26,25,.4)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--card);
+  border:3px solid var(--accent);cursor:pointer}
+.sl-ends{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);margin-top:9px}
+.sl-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:14px}
+.unit{display:flex;gap:6px;justify-content:center;margin-bottom:6px}
+.unit button{border:1px solid var(--line);background:var(--card);border-radius:9px;padding:6px 15px;font-size:.82rem;
+  font-weight:600;cursor:pointer;color:var(--muted)}
+.unit button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* ====== pantalla de carga ====== */
+.load{text-align:center;padding:40px 0}
+.load .ring{width:54px;height:54px;margin:0 auto 22px;border:3px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load h2{font-size:1.35rem;margin-bottom:6px}
+.load>p{color:var(--muted);font-size:.9rem;margin-bottom:26px}
+.load ul{list-style:none;display:flex;flex-direction:column;gap:13px;max-width:330px;margin:0 auto;text-align:left}
+.load li{display:flex;align-items:center;gap:11px;font-size:.9rem;color:var(--muted);opacity:.45;transition:opacity .3s,color .3s}
+.load li.on{opacity:1;color:var(--ink-2)}
+.load li.ok{opacity:1;color:var(--ink-2)}
+.load li i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2);flex:none;display:grid;place-items:center;
+  font-style:normal;font-size:.65rem;color:#fff}
+.load li.ok i{background:var(--green);border-color:var(--green)}
+.load li.on i{border-color:var(--accent)}
+.pct{font-family:'Fraunces',serif;font-size:2.4rem;margin:16px 0 6px}
+
+/* ====== resultado ====== */
+.res-h{text-align:center;margin-bottom:22px}
+.res-h .tick{width:48px;height:48px;border-radius:50%;background:var(--green);display:grid;place-items:center;
+  margin:0 auto 14px;color:#fff}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px}
+.kpi div{background:var(--card);padding:15px 12px;text-align:center}
+.kpi b{display:block;font-family:'Fraunces',serif;font-size:1.65rem;line-height:1.1}
+.kpi small{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
+.kpi .go b{color:var(--green)}
+.delta{background:var(--green-s);border:1px solid rgba(33,107,79,.2);border-radius:13px;padding:14px;text-align:center;margin-bottom:22px}
+.delta b{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--green);display:block;line-height:1.1}
+.delta small{color:var(--ink-2);font-size:.84rem}
+.imc{margin-bottom:22px}
+.imc-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
+.imc-top b{font-family:'Fraunces',serif;font-size:1.25rem}
+.imc-tag{font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 11px;border-radius:99px}
+.imc-track{height:9px;border-radius:99px;position:relative;
+  background:linear-gradient(90deg,#4E86B8 0 18%,#2E7D5B 18% 46%,#C08A2E 46% 72%,#AE3326 72% 100%)}
+.imc-dot{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--ink);
+  transform:translate(-50%,-50%);transition:left .6s cubic-bezier(.4,0,.2,1)}
+.imc-sc{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-s);text-align:center}
+.plan h3{font-size:1.18rem;margin-bottom:6px}
+.plan p{font-size:.89rem;color:var(--muted);line-height:1.6}
+.plan .phone{margin:18px auto 4px}
+
+/* ====== gráfico de previsión ====== */
+.fc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow-s)}
+.fc-top{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-bottom:12px}
+.fc svg{width:100%;height:auto;display:block}
+.fc-legend{display:flex;justify-content:space-between;margin-top:12px;font-size:.78rem}
+.fc-legend b{display:block;font-family:'Fraunces',serif;font-size:1.1rem}
+.fc-legend .a{color:var(--red)}
+.fc-legend .b{color:var(--green);text-align:right}
+
+/* ====== notificaciones discretas ====== */
+#notif{position:fixed;left:14px;bottom:14px;z-index:70;max-width:290px;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--shadow);
+  display:flex;gap:10px;align-items:center;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;
+  pointer-events:none}
+#notif.on{opacity:1;transform:none}
+#notif .av{width:32px;height:32px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.85rem;flex:none}
+#notif p{font-size:.78rem;line-height:1.4}
+#notif small{display:block;color:var(--muted);font-size:.69rem;margin-top:1px}
+#notif small b{color:var(--red)}
+
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+#oferta{display:none}
+.urg{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;text-align:center;padding:10px 14px;
+  font-size:.82rem;font-weight:600;letter-spacing:.02em}
+.urg b{font-family:'Fraunces',serif;background:var(--accent);padding:3px 9px;border-radius:7px;margin-left:7px;
+  display:inline-block;font-size:.9rem}
+.vsl{border-radius:var(--r);overflow:hidden;background:#111;aspect-ratio:9/16;max-width:360px;margin:0 auto 22px;
+  box-shadow:var(--shadow)}
+.vsl iframe,.vsl video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+.vsl-ph{height:100%;display:grid;place-items:center;color:#8d8d8d;font-size:.85rem;text-align:center;padding:24px}
+.sec{padding:34px 0;border-top:1px solid var(--line)}
+.sec h2{font-size:1.45rem;text-align:center;margin-bottom:8px}
+.sec .sub{text-align:center;color:var(--muted);font-size:.92rem;margin-bottom:26px;line-height:1.6}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.ba figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#F1ECE6}
+/* height:auto manda sobre el atributo height="" del <img>, que lleva la
+   medida real del archivo. Sin esto la foto se estira a 853 px de alto. */
+.ba img{width:100%;height:auto!important;aspect-ratio:3/4!important;object-fit:cover}
+.ba figcaption{position:absolute;left:8px;bottom:8px;background:rgba(28,26,25,.82);color:#fff;font-size:.7rem;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.ba .go figcaption{background:var(--green)}
+.incl{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.incl li{display:flex;gap:12px;align-items:flex-start;list-style:none;background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:14px 15px;font-size:.92rem;line-height:1.55;box-shadow:var(--shadow-s)}
+.incl li i{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;
+  flex:none;font-style:normal;margin-top:1px}
+
+/* caja de oferta completa (estilo lanzamiento) */
+.promo{position:relative;background:var(--card);border:1.5px solid var(--line-2);border-radius:20px;padding:34px 20px 24px;
+  margin-top:28px;box-shadow:var(--shadow)}
+.promo .tagtop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:6px 15px;border-radius:99px;white-space:nowrap}
+.promo .pname{font-family:'Fraunces',serif;font-size:1.6rem;text-align:center;line-height:1.12}
+.promo .pmech{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-top:7px;margin-bottom:20px}
+.pmoney{text-align:center;margin-bottom:22px}
+.pmoney .old{font-size:1rem;color:var(--muted);text-decoration:line-through}
+.pmoney .save{display:inline-block;background:var(--green-s);color:var(--green);font-size:.76rem;font-weight:700;
+  padding:4px 11px;border-radius:99px;margin-left:8px}
+.pmoney .now{font-family:'Fraunces',serif;font-size:3.1rem;line-height:1;margin-top:10px}
+.pmoney .now sup{font-size:1.3rem;vertical-align:super;margin-right:2px}
+.pmoney .cur{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+.pmoney .inst{display:block;font-size:.92rem;color:var(--ink-2);margin-top:10px}
+.pmoney .inst b{color:var(--accent)}
+.plist{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:14px}
+.plist>b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.plist ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.plist li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
+.plist li i{color:var(--green);flex:none;font-style:normal;margin-top:2px}
+.lifetime{display:flex;gap:11px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;margin-top:13px}
+.lifetime b{display:block;font-size:.9rem}
+.lifetime small{display:block;color:var(--muted);font-size:.78rem}
+.gifts{border:1.5px dashed var(--line-2);border-radius:14px;padding:16px;margin-bottom:20px;text-align:center}
+.gifts .gt{font-size:.95rem;font-weight:700}
+.gifts .gv{font-size:.85rem;color:var(--muted);margin-top:5px}
+.gifts .gv s{margin-right:8px}
+.gifts .free{display:inline-block;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;
+  padding:4px 11px;border-radius:99px;cursor:pointer}
+.micro{text-align:center;font-size:.76rem;color:var(--muted);margin-top:13px;line-height:1.6}
+/* testimonios en HTML */
+.tst{display:flex;flex-direction:column;gap:13px}
+.tst article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
+.tst header{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.tst .av{width:38px;height:38px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.9rem;flex:none}
+.tst b{font-size:.9rem;display:block}
+.tst small{color:var(--muted);font-size:.76rem}
+.tst .st{color:var(--amber);font-size:.8rem;letter-spacing:.08em}
+.tst p{font-size:.9rem;line-height:1.65;color:var(--ink-2)}
+/* garantía */
+.gar{text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow-s)}
+.gar svg{margin:0 auto 14px;display:block}
+.gar h3{font-size:1.2rem;margin-bottom:8px}
+.gar p{font-size:.9rem;color:var(--muted);line-height:1.65;max-width:360px;margin:0 auto}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden}
+.faq summary{padding:15px 17px;font-weight:600;font-size:.93rem;cursor:pointer;list-style:none;display:flex;
+  justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.25rem;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 17px 16px;font-size:.88rem;color:var(--ink-2);line-height:1.68}
+.ftr{text-align:center;padding:26px 0 36px;font-size:.76rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--line)}
+
+@media(max-width:380px){
+  .q{font-size:1.32rem}
+  .pick img{height:160px}
+  .pmoney .now{font-size:2.7rem}
+}
+</style>
+</head>
+<body>
+
+<!-- El embed del VSL va acá adentro. Solo el <iframe>, sin el div de afuera.
+     Si queda vacío, el paso de la oferta no muestra video. -->
+<template id="vsl-template"></template>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#" onclick="return false">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+      <span class="name">Dance<i>Go</i></span>
+    </a>
+    <div class="bar"><span id="bar"></span></div>
+  </div>
+</header>
+
+<main><div class="wrap" id="app"></div></main>
+
+<!-- =========================================================================
+     OFERTA (último paso). Queda oculta hasta CONFIG.SEGUNDOS_OFERTA.
+     ========================================================================= -->
+<section id="oferta">
+  <div class="urg">La oferta especial termina en <b id="reloj">10:00</b></div>
+
+  <div class="wrap">
+    <div class="sec" style="border:none;padding-top:28px">
+      <h2 id="of-tit">Accedé ya a tu plan DanceGo</h2>
+      <p class="sub">Tu plan quedó armado con tus respuestas. Entrás hoy y empezás hoy.</p>
+
+      <!-- VSL: si hay embed en <template id="vsl-template"> aparece acá -->
+      <div class="vsl" id="vsl-box"></div>
+
+      <div class="ba">
+        <figure><img src="" id="img-antes" alt="Antes de empezar" width="640" height="853" loading="lazy"><figcaption>Vos hoy</figcaption></figure>
+        <figure class="go"><img src="" id="img-despues" alt="Después con DanceGo" width="640" height="853" loading="lazy"><figcaption>Con DanceGo</figcaption></figure>
+      </div>
+
+      <ul class="incl" id="incluye">
+        <li><i>✓</i>Más de 100 clases de baile con profes reales, con clases nuevas todas las semanas</li>
+        <li><i>✓</i>Desafío de 28 días adaptado a tu edad, tu tipo de cuerpo y tu IMC (perfecto para arrancar)</li>
+        <li><i>✓</i>Clases cortas pero efectivas: 10 minutos por día alcanzan para quemar grasa</li>
+        <li><i>✓</i>Entrenamientos variados y programas especiales para cada objetivo</li>
+        <li><i>✓</i>Podés hacerlo en cualquier lado y sin ningún equipamiento</li>
+        <li><i>✓</i>Los ritmos más populares: probá uno distinto cada día</li>
+      </ul>
+
+      <a class="btn buy js-cta" href="#">Quiero empezar ahora</a>
+    </div>
+
+    <!-- ---------- caja de oferta completa ---------- -->
+    <div class="sec">
+      <div class="promo">
+        <span class="tagtop">★ PRECIO DE LANZAMIENTO ★</span>
+        <div class="pname">DanceGo Completo</div>
+        <div class="pmech">Bailar 10 minutos por día · acceso de por vida</div>
+
+        <div class="pmoney">
+          <span class="old" id="p-old"></span><span class="save" id="p-save"></span>
+          <div class="now"><sup>$</sup><span id="p-now"></span></div>
+          <span class="cur">pesos (ARS) · pago único</span>
+          <span class="inst">o <b id="p-inst"></b></span>
+        </div>
+
+        <div class="plist">
+          <b>Todo lo que te llevás</b>
+          <ul>
+            <li><i>✓</i>+150 videos de baile fitness, con clases nuevas cada semana</li>
+            <li><i>✓</i>Desafío de 28 días personalizado</li>
+            <li><i>✓</i>Clases en vivo todas las semanas</li>
+            <li><i>✓</i>Registro de peso y seguimiento de tu evolución</li>
+            <li><i>✓</i>Puntos por cada clase terminada, para canjear por premios</li>
+          </ul>
+          <div class="lifetime"><i style="font-size:1.3rem">∞</i><div><b>Acceso de por vida</b><small>Pagás una sola vez. No hay mensualidad.</small></div></div>
+        </div>
+
+        <div class="gifts">
+          <div class="gt">🎁 + 2 regalos incluidos, sin costo</div>
+          <div class="gv">Comunidad de WhatsApp + Recetario de comidas fáciles<br>
+            <s>Valor $<span id="p-bonus"></span></s><span class="free js-cta">HOY: GRATIS</span></div>
+        </div>
+
+        <a class="btn buy js-cta" href="#">Comprar ahora</a>
+        <p class="micro">Pago seguro · Acceso por mail y WhatsApp en 2 minutos<br>Garantía de 7 días</p>
+      </div>
+    </div>
+
+    <!-- ---------- testimonios, en HTML nítido ---------- -->
+    <div class="sec">
+      <h2>Lo que dicen las alumnas</h2>
+      <p class="sub">Mensajes del grupo de WhatsApp</p>
+      <div class="tst">
+        <article><header><span class="av">RM</span><span><b>Romina M.</b><small>Rosario · hace 2 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Nunca en mi vida había podido sostener una rutina. Con esto bailo 10 minutos mientras se hace la cena y ya van tres semanas seguidas.</p></article>
+        <article><header><span class="av">VC</span><span><b>Vanina C.</b><small>La Plata · hace 1 mes</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Me daba vergüenza ir al gimnasio. Acá bailo en mi living, sin que nadie me mire, y bajé 4 kilos sin dejar de comer lo que me gusta.</p></article>
+        <article><header><span class="av">LP</span><span><b>Lucía P.</b><small>Córdoba · hace 3 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Lo mejor es que no se siente como entrenar. Mi hija de 9 se prende y lo hacemos juntas. Terminamos muertas de risa y transpirando.</p></article>
+      </div>
+    </div>
+
+    <!-- ---------- garantía ---------- -->
+    <div class="sec">
+      <div class="gar">
+        <svg width="92" height="92" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#C08A2E" stroke-width="2"/>
+          <circle cx="60" cy="60" r="48" fill="#FBF2E0" stroke="#C08A2E" stroke-width="1.5"/>
+          <path id="arco" d="M 60,18 A 42,42 0 0 1 60,18" fill="none"/>
+          <path id="arcoTxt" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
+          <text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#B07A1F">
+            <textPath href="#arcoTxt" startOffset="50%" text-anchor="middle">GARANTÍA TOTAL</textPath></text>
+          <text x="60" y="66" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="700" fill="#B07A1F">7</text>
+          <text x="60" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#B07A1F">DÍAS</text>
+        </svg>
+        <h3>Garantía de 7 días</h3>
+        <p>Probá todas las clases durante 7 días. Si no te gusta por el motivo que sea, pedís el reembolso dentro de ese plazo y te devolvemos el 100% de lo que pagaste.</p>
+      </div>
+    </div>
+
+    <!-- ---------- preguntas frecuentes ---------- -->
+    <div class="sec faq">
+      <h2>Preguntas frecuentes</h2>
+      <p class="sub">Lo que más nos consultan antes de entrar</p>
+      <details open><summary>¿Qué es DanceGo?</summary>
+        <p>Es un programa de baile pensado para mujeres que quieren adelgazar de una forma liviana, divertida y sin tener que ir al gimnasio. Con clases cortas y fáciles de seguir, bailás a tu ritmo en tu casa, aunque no tengas nada de experiencia.</p></details>
+      <details><summary>¿Cuántas clases tiene la app?</summary>
+        <p>Vas a tener más de 190 clases y desafíos exclusivos, con música variada y distintos estilos de baile. Hay contenido para todos los gustos y niveles, del principiante al avanzado.</p></details>
+      <details><summary>¿Cómo accedo a la app?</summary>
+        <p>Apenas se aprueba la compra recibís el acceso por WhatsApp y por mail. Es simple y rápido, y si necesitás ayuda nuestro equipo de soporte te guía paso a paso.</p></details>
+      <details><summary>¿Y si no me gusta?</summary>
+        <p>Tranquila: tenés 7 días de garantía. Si no te gusta por cualquier motivo, pedís el reembolso dentro de ese plazo y te devolvemos el 100% de tu dinero.</p></details>
+      <details><summary>¿Tiene paso a paso para principiantes?</summary>
+        <p>Sí. DanceGo está hecho justamente para vos, que nunca bailaste. Las clases tienen un ritmo fácil de seguir, con el paso a paso claro, explicaciones simples y mucho aliento.</p></details>
+      <details><summary>¿Es un pago único?</summary>
+        <p>Sí, es un pago único de $<span id="p-faq"></span>. No hay mensualidad ni renovación automática: pagás una vez y el acceso te queda de por vida.</p></details>
+      <div style="margin-top:22px"><a class="btn buy js-cta" href="#">Comprar ahora</a></div>
+    </div>
+
+    <p class="ftr">DanceGo — Todos los derechos reservados<br>Términos de uso · Política de privacidad · Contacto</p>
+  </div>
+</section>
+
+<div id="notif"><div class="av">M</div><p id="notif-tx"></p></div>
+
+<script>
+/* ===========================================================================
+   DANCEGO · motor del quiz
+   =========================================================================== */
+var C = window.CONFIG, IMG = C.IMG;
+var state = { nombre:'', ritmos:[], altura:165, peso:70, meta:65, edad:25 };
+var i = 0, hist = [];
+
+/* --- link de checkout con las UTMs de la URL --- */
+function checkout(){
+  var qs = location.search.replace(/^\?/,'');
+  if(!qs) return C.LINK_CHECKOUT;
+  return C.LINK_CHECKOUT + (C.LINK_CHECKOUT.indexOf('?')>-1 ? '&' : '?') + qs;
+}
+function track(ev){ if(window.fbq) try{ fbq('track', ev); }catch(e){} }
+
+/* --- utilidades --- */
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+function tok(s){
+  return String(s)
+    .replace(/\{\{nombre\}\}/g, state.nombre || 'Bailarina')
+    .replace(/\{\{meta\}\}/g, state.meta)
+    .replace(/\{\{peso\}\}/g, state.peso)
+    .replace(/\{\{dif\}\}/g, Math.max(0,(state.peso-state.meta)).toFixed(0))
+    .replace(/\{\{fecha\}\}/g, fechaMeta());
+}
+function fechaMeta(){
+  var d = new Date(); d.setDate(d.getDate()+21);
+  var m = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return d.getDate() + ' de ' + m[d.getMonth()];
+}
+function imc(){ var h = state.altura/100; return (state.peso/(h*h)); }
+function imcTag(v){
+  if(v<18.5) return {t:'Bajo peso', c:'#4E86B8', bg:'#EDF3F9', p:9};
+  if(v<25)   return {t:'Saludable', c:'var(--green)', bg:'var(--green-s)', p:32};
+  if(v<30)   return {t:'Sobrepeso', c:'var(--amber)', bg:'var(--amber-s)', p:59};
+  return {t:'Obesidad', c:'var(--red)', bg:'var(--red-s)', p:86};
+}
+var CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+/* ===========================================================================
+   LOS 7 RITMOS
+   Localizados para Argentina: el sertanejo y el funk brasileño del original
+   no se escuchan acá, así que entran cumbia y cuarteto. Las tapas van
+   tipografiadas (nada de carteles neón) y todas con la misma paleta apagada.
+   =========================================================================== */
+var RITMOS = [
+  {k:'Flashback', n:'Pop de los 80 y 90', bg:'#2E3A4B', d:'Los clásicos que te hacen bailar sin pensarlo: Madonna, Michael Jackson, Culture Club…'},
+  {k:'Baile popular', n:'Cumbia', bg:'#7A4A2B', d:'El ritmo que todo el mundo canta y nadie se queda sentado. Para mover todo el cuerpo.'},
+  {k:'Córdoba capital', n:'Cuarteto', bg:'#8A5A1E', d:'Pura energía y mucho cardio sin que te des cuenta de que estás entrenando.'},
+  {k:'Ritmo latino', n:'Reggaetón y latino', bg:'#5B3A5F', d:'Lo más caliente de América Latina para mover la cadera: Bad Bunny, Karol G, J Balvin, Shakira…'},
+  {k:'Pareja o sola', n:'Salsa y bachata', bg:'#1F5A55', d:'Pasos sencillos, cintura y coordinación. Se baila igual de bien sola en el living.'},
+  {k:'Lo que suena hoy', n:'Hits virales de TikTok', bg:'#3B3550', d:'Las canciones que explotan en los videos cortos y los desafíos de baile más populares.'},
+  {k:'Alta intensidad', n:'Cardio Dance', bg:'#7A2E3A', d:'Coreografías de alta energía pensadas para acelerar las pulsaciones y quemar muchas calorías.'}
+];
+
+/* ===========================================================================
+   LOS PASOS
+   Mismo orden, mismos textos y misma lógica que el original, pasados al
+   español argentino. Lo único que se sacó es el paso del e-mail: esos datos
+   se piden en el checkout.
+   =========================================================================== */
+var STEPS = [
+
+/* 1 */ {id:'edadRango', type:'cover', q:'TU PLAN DE BAILE<br><em>PERSONALIZADO</em>', help:'Según tu edad y tu perfil único', opts:[
+          {l:'18 – 24 años', img:'edad1'},{l:'25 – 34 años', img:'edad2'},
+          {l:'35 – 44 años', img:'edad3'},{l:'+ 45 años', img:'edad4'}]},
+
+/* 2 */ {id:'proof', type:'proof', q:'Ya somos + de <em>155 mil mujeres</em>', help:'bailando y divirtiéndonos con DanceGo', btn:'Continuar'},
+
+/* 3 */ {id:'objetivo', type:'single', q:'¿Cuál es tu <em>principal objetivo</em>?', help:'Elegí tu meta principal', opts:[
+          {l:'PERDER LA GRASA LOCALIZADA'},{l:'TENER UNA CINTURA MÁS FINA'},
+          {l:'TONIFICAR LA PANZA'},{l:'AFINAR LAS CADERAS'},{l:'TODAS LAS OPCIONES'}]},
+
+/* 4 */ {id:'fisico', type:'rowpick', q:'¿Cuál de estas imágenes describe <em>tu físico de hoy</em>?', opts:[
+          {l:'Flaca', img:'fisico1'},{l:'Mediana', img:'fisico2'},
+          {l:'Plus size', img:'fisico3'},{l:'Con sobrepeso', img:'fisico4'}]},
+
+/* 5 */ {id:'suenos', type:'pick', q:'¿Cuál es el <em>cuerpo de tus sueños</em>?', opts:[
+          {l:'Tonificada', img:'suenos1'},{l:'Atlética', img:'suenos2'},
+          {l:'Curvilínea', img:'suenos3'},{l:'Saludable', img:'suenos4'}]},
+
+/* 6 */ {id:'mejorCuerpo', type:'single', q:'¿Hace cuánto estuviste en el <em>mejor cuerpo de tu vida</em>?', opts:[
+          {l:'Hace menos de 1 año'},{l:'De 1 a 2 años atrás'},{l:'Hace más de 3 años'},{l:'Nunca estuve'}]},
+
+/* 7 */ {id:'metabolismo', type:'single', q:'¿Cómo describirías tu <em>metabolismo</em>?', opts:[
+          {e:'😰', l:'Subo de peso rápido pero bajo muy despacio'},
+          {e:'🤗', l:'Subo y bajo de peso con facilidad'},
+          {e:'😤', l:'Me cuesta muchísimo subir de peso o músculo'}]},
+
+/* 8 */ {id:'experiencia', type:'single', q:'¿Probaste alguna <em>actividad de baile</em> antes?', opts:[
+          {e:'😟', l:'Nunca bailé'},{e:'😊', l:'Tengo algo de experiencia'},{e:'🤪', l:'Ya probé de todo'}]},
+
+/* 9 */ {id:'bridge1', type:'bridge', q:'Olvidate de los <em>ejercicios aburridos</em> y repetitivos.',
+          help:'La forma más divertida y comprobada de adelgazar en casa es bailando.',
+          img:'enCasa', badge:'💫 AUNQUE NO SEPAS BAILAR',
+          txt:'Clases con paso a paso: aunque nunca hayas bailado, vas a poder hacer todos los movimientos.',
+          btn:'¡Increíble! Sigamos'},
+
+/* 10 */ {id:'frecuencia', type:'single', q:'¿Cuántas veces por semana te gustaría <em>bailar</em>?', opts:[
+          {l:'1 – 2 veces'},{l:'3 – 4 veces'},{l:'+ 5 veces'}]},
+
+/* 11 */ {id:'duracion', type:'single', q:'¿De cuánto querés que sean tus <em>sesiones de baile</em>?',
+          help:'Si los bailes largos te dejan cansada, probá los más cortos. También son efectivos.', opts:[
+          {l:'5 – 10 minutos'},{l:'15 – 20 minutos'},{l:'25 – 30 minutos'},{l:'35 minutos o más'}]},
+
+/* 12 */ {id:'lesiones', type:'multi', grid:true, q:'¿Tuviste alguna <em>lesión</em> hace poco?',
+          help:'Armamos tu plan según tu condición, así nada te frena para disfrutar los bailes.', opts:[
+          {e:'✅', l:'Sin lesiones', solo:true},{e:'🦵', l:'Rodillas'},{e:'💪', l:'Hombros'},{e:'🗣️', l:'Cuello'},
+          {e:'💪', l:'Brazos'},{e:'🤲', l:'Codos'},{e:'🦵', l:'Piernas'},{e:'🦶', l:'Pies'}], btn:'Continuar'},
+
+/* 13 */ {id:'trabajo', type:'single', q:'¿Cómo es tu <em>rutina de trabajo</em>?', opts:[
+          {l:'Trabajo de 09:00 a 17:00'},{l:'Mis horarios son flexibles'},{l:'Horarios nocturnos'},
+          {l:'No trabajo'},{l:'Jubilada'}]},
+
+/* 14 */ {id:'activa', type:'single', q:'¿Qué tan <em>activa</em> sos?', help:'Lo vamos a tener en cuenta para armar tu plan', opts:[
+          {l:'Sedentaria'},{l:'Poco activa'},{l:'Activa'},{l:'Muy activa'}]},
+
+/* 15 */ {id:'energia', type:'single', q:'¿Cómo están tus <em>niveles de energía</em> durante el día?',
+          help:'Lo vamos a tener en cuenta para armar tu plan', opts:[
+          {e:'🔋', l:'Bajos, me siento cansada todo el día'},
+          {e:'🔋🔋', l:'Me canso después del almuerzo'},
+          {e:'🔋🔋🔋', l:'Necesito café para mantenerme activa'},
+          {e:'🔋🔋🔋🔋', l:'Me siento activa todo el día'}]},
+
+/* 16 */ {id:'agua', type:'single', q:'¿Cuánta <em>agua</em> tomás por día?', opts:[
+          {l:'Tomo solamente café o mate'},{l:'Menos de un litro'},{l:'Hasta 2 litros'},{l:'Más de 2 litros'}]},
+
+/* 17 */ {id:'sueno', type:'single', grid:true, q:'¿Cuántas <em>horas</em> dormís por día?', opts:[
+          {l:'Menos de 5 horas'},{l:'De 5 a 6 horas'},{l:'Entre 7 y 8 horas'},{l:'Más de 8 horas'}]},
+
+/* 18 */ {id:'comunidad', type:'chat', q:'¡Sumate a una <em>comunidad exclusiva</em>!',
+          help:'Además de usar la app, entrás a una comunidad exclusiva de WhatsApp con consejos diarios de entrenamiento y comida para acelerar tus resultados.',
+          btn:'Continuar'},
+
+/* 19 */ {id:'nivel', type:'single', q:'Elegí tu <em>nivel en el baile</em>', help:'Vamos a adaptar tus bailes a medida que avances', opts:[
+          {d:'#A9B0B6', l:'Principiante', s:'quiero empezar a bailar'},
+          {d:'#C08A2E', l:'Intermedia', s:'ya tengo experiencia con el baile'},
+          {d:'#216B4F', l:'Avanzada', s:'soy profesional y tomo clases de baile'}]},
+
+/* 20 */ {id:'ritmos', type:'swipe', q:'Elegí tus <em>ritmos favoritos</em>', help:'Tocá “Me encanta” o “No va” en cada uno'},
+
+/* 21 */ {id:'bridge2', type:'app', q:'Elegí tu ritmo y <em>empezá a bailar</em>',
+          help:'El baile quema 140% más calorías que los ejercicios tradicionales y aburridos.',
+          btn:'¡Increíble! Sigamos'},
+
+/* 22 */ {id:'eventos', type:'multi', q:'¿Alguno de estos <em>eventos</em> te hizo subir de peso últimamente?',
+          help:'Podés elegir más de uno', opts:[
+          {e:'💼', l:'Presión en el trabajo'},{e:'🏠', l:'La vida en familia'},{e:'💔', l:'Divorcio o separación'},
+          {e:'🐢', l:'Metabolismo lento'},{e:'🤰', l:'Embarazo o posparto'},{e:'💸', l:'Problemas económicos'},
+          {e:'😷', l:'La pandemia'},{e:'❓', l:'Otros motivos'},{e:'✖️', l:'Ninguno de estos', solo:true}], btn:'Continuar'},
+
+/* 23 */ {id:'motivacion', type:'single', q:'¿Cuál es tu <em>mayor motivación</em> para bajar de peso?', opts:[
+          {e:'🛡️', l:'Sentirme más segura'},{e:'💚', l:'Estar más sana y tener energía'},
+          {e:'👶', l:'Volver a mi cuerpo después del embarazo'},{e:'✨', l:'Otra'}]},
+
+/* 24 */ {id:'nota', type:'news', q:'Mujeres de todo el país están cambiando de vida con <em>DanceGo</em>',
+          titular:'Madre e hija bajaron 83 kilos entre las dos con una clase de baile que quema 800 calorías',
+          bajada:'¿Entrenar es aburrido? No para Rosalía y María, que encontraron en el baile un momento divertido en familia.',
+          fuente:'Imagen: reproducción de Instagram', btn:'¡Suena bien!'},
+
+/* 25 */ {id:'altura', type:'slider', q:'¿Cuánto <em>medís</em>?', help:'Vamos a personalizar tus ejercicios según tu biotipo',
+          min:140, max:200, def:165, unit:'cm', key:'altura',
+          tags:[[0,155,'Baja'],[155,172,'Media'],[172,999,'Alta']]},
+
+/* 26 */ {id:'peso', type:'slider', q:'¿Cuál es tu <em>peso actual</em>?', help:'Lo tenemos en cuenta para armar tu plan personalizado',
+          min:40, max:120, def:70, unit:'kg', key:'peso'},
+
+/* 27 */ {id:'meta', type:'slider', q:'¿Cuál es tu <em>meta de peso</em>?', help:'¿Cuál es el peso ideal al que querés llegar?',
+          min:40, max:120, def:65, unit:'kg', key:'meta'},
+
+/* 28 */ {id:'load1', type:'loading', title:'Creando tu plan…', sub:'Esperá un momento',
+          list:['Analizando tu perfil físico','Calculando tu plan ideal','Personalizando los ejercicios','Cerrando el diagnóstico'], ms:1500},
+
+/* 29 */ {id:'resultado', type:'result', btn:'Continuar con mi plan'},
+
+/* 30 */ {id:'edadExacta', type:'slider', q:'¿Cuántos <em>años</em> tenés?', help:'Vamos a construir tu plan de acuerdo a eso',
+          min:18, max:80, def:25, unit:'años', key:'edad',
+          tags:[[0,30,'Joven adulta'],[30,45,'Adulta'],[45,60,'Adulta plena'],[60,999,'Adulta mayor']]},
+
+/* 31 */ {id:'evento', type:'single', q:'¿Algún <em>evento próximo</em> te motivó a bajar de peso ahora?',
+          help:'Lo usamos como incentivo para personalizar tu plan', opts:[
+          {e:'✈️', l:'Un viaje'},{e:'💍', l:'Un casamiento'},{e:'🏅', l:'Un evento deportivo'},{e:'☀️', l:'El verano'},
+          {e:'🥂', l:'Una reunión con amigas'},{e:'🎂', l:'Un cumpleaños'},{e:'📅', l:'Otra ocasión'},
+          {e:'💚', l:'Ninguno, solo quiero sentirme mejor'}]},
+
+/* 32 */ {id:'prevision', type:'forecast', q:'Podés llegar a los <em>{{meta}} kg</em> para el <em>{{fecha}}</em>', btn:'Continuar'},
+
+/* 33 */ {id:'confianza', type:'single', q:'¿Qué tan <em>segura</em> estás de llegar a tu meta para el {{fecha}}?', opts:[
+          {e:'🏆', l:'¡Creo que puedo hacerlo!'},{e:'⚡', l:'No estoy segura, pero lo voy a intentar'},
+          {e:'😕', l:'No estoy tan segura'}]},
+
+/* 34 */ {id:'load2', type:'progress', title:'Cargando…', sub:'ESTAMOS ARMANDO TU PLAN DANCEGO', ms:4200},
+
+/* 35 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu área de bailes (opcional)',
+          ph:'Escribí tu nombre', btn:'Continuar', skip:'Saltear este paso'}
+];
+
+/* ===========================================================================
+   RENDER
+   =========================================================================== */
+var app = document.getElementById('app');
+
+function go(n){
+  hist.push(i);
+  i = (n===undefined) ? i+1 : n;
+  if(i >= STEPS.length){ return abrirOferta(); }
+  render(); window.scrollTo({top:0, behavior:'instant'});
+}
+function volver(){ if(!hist.length) return; i = hist.pop(); render(); window.scrollTo({top:0}); }
+
+function progreso(){
+  document.getElementById('bar').style.width = Math.round(((i)/STEPS.length)*100) + '%';
+}
+
+function render(){
+  var s = STEPS[i];
+  progreso();
+  var h = '<div class="step">';
+  var head = '';
+  if(s.q) head += '<h2 class="q">' + tok(s.q) + '</h2>';
+  if(s.help) head += '<p class="help">' + tok(s.help) + '</p>';
+
+  /* ---------- portada con fotos ---------- */
+  if(s.type === 'cover'){
+    h += '<h1 class="q" style="font-size:1.72rem;letter-spacing:-.02em">' + tok(s.q) + '</h1>';
+    h += '<p class="help">' + s.help + '</p>';
+    h += '<div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="760" height="950" loading="' + (k<2?'eager':'lazy') + '"></figure><div class="lb">' + esc(o.l) + '</div></button>';
+    });
+    h += '</div><p class="legal">Al elegir tu edad y continuar, aceptás nuestros <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>.</p>';
+  }
+
+  /* ---------- opciones de lista ---------- */
+  else if(s.type === 'single' || s.type === 'multi'){
+    h += head + '<div class="' + (s.grid ? 'grid' : 'opts') + '">';
+    s.opts.forEach(function(o,k){
+      var on = s.type === 'multi' && (state[s.id]||[]).indexOf(k) > -1;
+      h += '<button class="opt' + (on?' on':'') + '" data-k="' + k + '">';
+      if(o.e) h += '<span class="ic">' + o.e + '</span>';
+      if(o.d) h += '<span class="ic" style="background:' + o.d + ';border-color:' + o.d + '"></span>';
+      h += '<span class="tx"><b>' + esc(o.l) + '</b>' + (o.s ? '<small>' + esc(o.s) + '</small>' : '') + '</span>';
+      h += (s.type === 'multi') ? '<span class="chk">' + CHK + '</span>' : ARR;
+      h += '</button>';
+    });
+    h += '</div>';
+    if(s.type === 'multi') h += '<div class="foot"><button class="btn" id="next"' + ((state[s.id]||[]).length?'':' disabled') + '>' + (s.btn||'Continuar') + '</button></div>';
+  }
+
+  /* ---------- opciones con foto en fila ---------- */
+  else if(s.type === 'rowpick'){
+    h += head + '<div class="opts">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="rowpick" data-k="' + k + '"><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="700" height="700" loading="lazy"><b>' + esc(o.l) + '</b>' + ARR + '</button>';
+    });
+    h += '</div>';
+  }
+
+  /* ---------- opciones con foto en grilla ---------- */
+  else if(s.type === 'pick'){
+    h += head + '<div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="700" height="700" loading="lazy"></figure><div class="lb">' + esc(o.l) + '</div></button>';
+    });
+    h += '</div>';
+  }
+
+  /* ---------- prueba social de Instagram, armada en HTML ---------- */
+  else if(s.type === 'proof'){
+    h += head;
+    h += '<div class="ig"><div class="ig-h"><div class="ig-av">DG</div><div class="ig-n">dancego.ar<span>Baile · App de entrenamiento</span></div></div>'
+      +  '<div class="ig-st"><span><b>198</b>publicaciones</span><span><b>155 mil</b>seguidoras</span><span><b>16</b>seguidos</span></div>'
+      +  '<div class="ig-g"><img src="' + IMG.enCasa + '" alt="Alumna bailando en su casa" loading="lazy">'
+      +  '<img src="' + IMG.nota + '" alt="Alumnas de DanceGo" loading="lazy">'
+      +  '<img src="' + IMG.despues + '" alt="Alumna de DanceGo" loading="lazy"></div></div>';
+    h += '<div class="note" style="margin-top:16px">Empezá a bailar y divertirte en casa, hoy mismo.</div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- puente con foto ---------- */
+  else if(s.type === 'bridge'){
+    h += head;
+    h += '<div class="media"><img src="' + IMG[s.img] + '" alt="Mujer bailando en su casa" width="900" height="675" loading="lazy"></div>';
+    h += '<p class="eyebrow" style="display:block;text-align:center;margin:20px auto 10px;width:max-content">' + s.badge + '</p>';
+    h += '<p class="help" style="margin-bottom:0">' + s.txt + '</p>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- comunidad de WhatsApp, armada en HTML ---------- */
+  else if(s.type === 'chat'){
+    h += head;
+    h += '<div class="chat"><div class="chat-h"><div class="av">DG</div><div><b>Alumnas DanceGo 🇦🇷</b><small>1.024 participantes</small></div></div>'
+      +  '<div class="msg"><b>Camila · coach</b>Buen día, chicas. Hoy toca el día 12: cumbia, 10 minutos. ¡Vamos que se puede! 💃<time>08:14</time></div>'
+      +  '<div class="msg"><b>Romina</b>Ya lo hice antes de llevar a los chicos al colegio. Terminé transpirando 😅<time>08:31</time></div>'
+      +  '<div class="msg me">¡Yo también! Tres semanas seguidas, nunca me había pasado 🙌<time>08:36</time></div>'
+      +  '<div class="msg"><b>Camila · coach</b>Esa es la idea: que no se sienta como entrenar. A la noche subo la lista de comidas fáciles 🥗<time>08:40</time></div></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- swipe de ritmos ---------- */
+  else if(s.type === 'swipe'){
+    h += head + '<div id="sw"></div>';
+  }
+
+  /* ---------- maqueta de la app ---------- */
+  else if(s.type === 'app'){
+    h += head + telefono();
+    h += '<div class="chips"><span class="chip"><b>+100</b> clases</span><span class="chip"><b>7</b> ritmos</span><span class="chip"><b>Profes</b> reales</span></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- nota periodística ---------- */
+  else if(s.type === 'news'){
+    h += head;
+    h += '<div class="card" style="padding:0;overflow:hidden">'
+      +  '<img src="' + IMG.nota + '" alt="Madre e hija después de bailar" width="598" height="599" loading="lazy">'
+      +  '<div style="padding:18px">'
+      +  '<p class="note" style="font-weight:600;color:var(--ink)">' + s.titular + '</p>'
+      +  '<p style="font-size:.86rem;color:var(--muted);line-height:1.65;margin-top:13px">' + s.bajada + '</p>'
+      +  '<p class="cap" style="text-align:left;margin-top:11px">' + s.fuente + '</p></div></div>';
+    h += '<div class="note" style="margin-top:16px;background:var(--green-s);border-color:rgba(33,107,79,.2)">'
+      +  '<b style="color:var(--green)">✓ El 93% de nuestras alumnas alcanzó su objetivo</b></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- medidor ---------- */
+  else if(s.type === 'slider'){
+    var v = state[s.key] || s.def;
+    h += head;
+    h += '<div class="sl-val"><b id="slv">' + v + '</b><span>' + s.unit + '</span></div>';
+    h += '<span class="sl-tag" id="sltag">' + sliderTag(s, v) + '</span>';
+    h += '<input type="range" id="sl" min="' + s.min + '" max="' + s.max + '" value="' + v + '" step="1">';
+    h += '<div class="sl-ends"><span>' + s.min + '</span><span>' + Math.round((s.min+s.max)/2) + '</span><span>' + s.max + '</span></div>';
+    h += '<p class="sl-hint">Deslizá para ajustar</p>';
+    h += '<div class="foot"><button class="btn" id="next">Continuar</button></div>';
+  }
+
+  /* ---------- carga con lista ---------- */
+  else if(s.type === 'loading'){
+    h += '<div class="load"><div class="ring"></div><h2>' + s.title + '</h2><p>' + s.sub + '</p><ul>';
+    s.list.forEach(function(t,k){ h += '<li data-k="' + k + '"><i>' + CHK + '</i>' + t + '…</li>'; });
+    h += '</ul></div>';
+  }
+
+  /* ---------- carga con porcentaje ---------- */
+  else if(s.type === 'progress'){
+    h += '<div class="load"><div class="ring"></div><h2>' + s.title + '</h2>'
+      +  '<div class="pct" id="pct">0%</div>'
+      +  '<div class="bar" style="max-width:300px;margin:0 auto 16px"><span id="pbar"></span></div>'
+      +  '<p style="color:var(--accent);font-size:.78rem;font-weight:700;letter-spacing:.1em">' + s.sub + '</p></div>';
+  }
+
+  /* ---------- resultado ---------- */
+  else if(s.type === 'result'){
+    var v = imc(), t = imcTag(v), dif = Math.max(0, state.peso - state.meta);
+    h += '<div class="res-h"><div class="tick"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>'
+      +  '<h2 class="q" style="margin-bottom:4px">¡Tu plan está listo!</h2><p class="help" style="margin-bottom:0">Armado con tus respuestas</p></div>';
+    h += '<div class="kpi"><div><b>' + state.peso + ' kg</b><small>Peso actual</small></div><div class="go"><b>' + state.meta + ' kg</b><small>Tu meta</small></div></div>';
+    h += '<div class="delta"><b>–' + dif.toFixed(0) + ' kg</b><small>en 3 semanas</small></div>';
+    h += '<div class="imc"><div class="imc-top"><b>Tu IMC: ' + v.toFixed(1) + '</b>'
+      +  '<span class="imc-tag" style="color:' + t.c + ';background:' + t.bg + '">' + t.t + '</span></div>'
+      +  '<div class="imc-track"><span class="imc-dot" style="left:' + t.p + '%"></span></div>'
+      +  '<div class="imc-sc"><span>Bajo peso</span><span>Saludable</span><span>Sobrepeso</span><span>Obesidad</span></div></div>';
+    h += '<div class="plan"><h3>Empezá por el Desafío de 28 días</h3>'
+      +  '<p>Una clase por día, durante 28 días, de apenas 10 minutos. Cada clase que terminás te da premios dentro de la app.</p>'
+      +  telefono() + '</div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- previsión ---------- */
+  else if(s.type === 'forecast'){
+    h += '<h2 class="q">' + tok(s.q) + '</h2>';
+    h += grafico();
+    h += '<p class="cap" style="margin-top:14px">Según los datos de otras alumnas de DanceGo con un perfil parecido al tuyo.</p>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- campo de texto ---------- */
+  else if(s.type === 'field'){
+    h += head;
+    h += '<input id="fld" type="text" placeholder="' + s.ph + '" value="' + esc(state.nombre) + '" autocomplete="given-name" '
+      +  'style="width:100%;padding:16px;border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-size:1rem;text-align:center;outline:none">';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button>'
+      +  '<button class="skip" id="skip">' + s.skip + '</button></div>';
+  }
+
+  h += '</div>';
+  app.innerHTML = h;
+  bind(s);
+}
+
+function sliderTag(s, v){
+  if(!s.tags) return s.unit === 'kg' ? 'Deslizá hasta tu peso' : '';
+  for(var k=0;k<s.tags.length;k++){ if(v >= s.tags[k][0] && v < s.tags[k][1]) return s.tags[k][2]; }
+  return '';
+}
+
+/* ---------- la maqueta del celular, dibujada en HTML (texto nítido y en castellano) ---------- */
+function telefono(){
+  return '<div class="phone"><div class="scr">'
+    + '<div class="nn"><span>9:41</span><span>app.dancego.ar</span></div>'
+    + '<div class="ph-hero"><b>Desafío de 28 días</b><small>Transformá tu cuerpo en 4 semanas</small>'
+    +   '<div class="ph-days"><i>Día 1</i><i class="on">Día 2</i><i>Día 3</i><i>Día 4</i></div>'
+    +   '<div class="ph-cta">EMPEZAR EL DESAFÍO</div></div>'
+    + '<div class="ph-sec"><b>🏆 Logros del desafío</b>'
+    +   '<div class="ph-row"><i></i><span>Primer paso</span><em>1/1</em></div>'
+    +   '<div class="ph-row"><i></i><span>Una semana entera</span><em>0/7</em></div>'
+    +   '<div class="ph-row"><i></i><span>Mitad del camino</span><em>0/14</em></div></div>'
+    + '<div class="ph-sec"><b>Clases cortas de 10 minutos</b>'
+    +   '<div class="ph-grid"><i>Cumbia · 10 min</i><i>Cardio · 10 min</i><i>Latino · 12 min</i><i>Glúteos · 8 min</i></div></div>'
+    + '<div class="ph-tab"><i class="on"></i><i></i><i></i><i></i><i></i></div>'
+    + '</div></div>';
+}
+
+/* ---------- gráfico de previsión ---------- */
+function grafico(){
+  var p = state.peso, m = state.meta;
+  return '<div class="fc"><div class="fc-top"><span>Hoy</span><span>En 3 semanas</span></div>'
+    + '<svg viewBox="0 0 320 130" preserveAspectRatio="none" aria-hidden="true">'
+    + '<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">'
+    +   '<stop offset="0%" stop-color="#AE3326"/><stop offset="100%" stop-color="#216B4F"/></linearGradient>'
+    +   '<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">'
+    +   '<stop offset="0%" stop-color="rgba(33,107,79,.14)"/><stop offset="100%" stop-color="rgba(33,107,79,0)"/></linearGradient></defs>'
+    + '<path d="M8,26 C110,30 150,78 312,104 L312,130 L8,130 Z" fill="url(#g2)"/>'
+    + '<path d="M8,26 C110,30 150,78 312,104" fill="none" stroke="url(#g1)" stroke-width="3.5" stroke-linecap="round"/>'
+    + '<circle cx="8" cy="26" r="5.5" fill="#AE3326"/><circle cx="312" cy="104" r="5.5" fill="#216B4F"/>'
+    + '</svg>'
+    + '<div class="fc-legend"><span class="a"><b>' + p + ' kg</b>Peso actual</span>'
+    +   '<span class="b"><b>' + m + ' kg</b>Meta alcanzada</span></div></div>';
+}
+
+/* ===========================================================================
+   EVENTOS DE CADA PASO
+   =========================================================================== */
+function bind(s){
+  /* elegir una opción */
+  app.querySelectorAll('.opt,.pick,.rowpick').forEach(function(el){
+    el.onclick = function(){
+      var k = +el.dataset.k;
+      if(s.type === 'multi'){
+        var arr = state[s.id] || [];
+        var solo = s.opts[k].solo;
+        if(solo){ arr = arr.indexOf(k) > -1 ? [] : [k]; }
+        else {
+          arr = arr.filter(function(x){ return !s.opts[x].solo; });
+          arr = arr.indexOf(k) > -1 ? arr.filter(function(x){ return x !== k; }) : arr.concat([k]);
+        }
+        state[s.id] = arr;
+        render();
+        return;
+      }
+      state[s.id] = k;
+      el.classList.add('on');
+      setTimeout(go, 190);
+    };
+  });
+
+  var nx = document.getElementById('next');
+  if(nx) nx.onclick = function(){
+    if(s.type === 'field'){ state.nombre = (document.getElementById('fld').value || '').trim(); }
+    go();
+  };
+  var sk = document.getElementById('skip');
+  if(sk) sk.onclick = function(){ state.nombre = ''; go(); };
+
+  /* medidor */
+  if(s.type === 'slider'){
+    var sl = document.getElementById('sl');
+    function pintar(){
+      var p = (sl.value - s.min) / (s.max - s.min) * 100;
+      sl.style.background = 'linear-gradient(90deg,var(--accent) ' + p + '%,var(--line) ' + p + '%)';
+    }
+    pintar();
+    sl.oninput = function(){
+      state[s.key] = +sl.value;
+      document.getElementById('slv').textContent = sl.value;
+      document.getElementById('sltag').textContent = sliderTag(s, +sl.value);
+      pintar();
+    };
+  }
+
+  /* campo de texto: Enter avanza */
+  if(s.type === 'field'){
+    var f = document.getElementById('fld');
+    f.onkeydown = function(e){ if(e.key === 'Enter'){ state.nombre = f.value.trim(); go(); } };
+  }
+
+  /* carga con lista */
+  if(s.type === 'loading'){
+    var lis = app.querySelectorAll('.load li'), k = 0;
+    lis[0].classList.add('on');
+    var t = setInterval(function(){
+      lis[k].classList.remove('on'); lis[k].classList.add('ok');
+      k++;
+      if(k >= lis.length){ clearInterval(t); setTimeout(go, 450); return; }
+      lis[k].classList.add('on');
+    }, s.ms);
+  }
+
+  /* carga con porcentaje */
+  if(s.type === 'progress'){
+    var p = 0, el = document.getElementById('pct'), b = document.getElementById('pbar');
+    var t2 = setInterval(function(){
+      p += Math.random() * 7 + 2;
+      if(p >= 100){ p = 100; clearInterval(t2); setTimeout(go, 500); }
+      el.textContent = Math.floor(p) + '%';
+      b.style.width = p + '%';
+    }, s.ms / 32);
+  }
+
+  /* swipe de ritmos */
+  if(s.type === 'swipe') swipe();
+}
+
+/* ---------- swipe ---------- */
+var swIdx = 0;
+function swipe(){
+  var box = document.getElementById('sw');
+  function draw(){
+    if(swIdx >= RITMOS.length){
+      box.innerHTML = '<div class="card" style="text-align:center;padding:34px 20px">'
+        + '<div style="font-size:2rem;margin-bottom:10px">🎉</div>'
+        + '<h3 style="font-family:Fraunces,serif;font-size:1.15rem;margin-bottom:6px">¡Listo! Ya valoraste todos los ritmos</h3>'
+        + '<p style="color:var(--muted);font-size:.88rem">Elegiste ' + state.ritmos.length + ' de ' + RITMOS.length + '.</p></div>'
+        + '<div class="foot"><button class="btn" id="swgo">Continuar con mis ritmos</button></div>';
+      document.getElementById('swgo').onclick = function(){ go(); };
+      return;
+    }
+    var r = RITMOS[swIdx];
+    var dots = '<div class="swdot">';
+    for(var k=0;k<RITMOS.length;k++) dots += '<i class="' + (k===swIdx?'on':'') + '"></i>';
+    dots += '</div>';
+    box.innerHTML = dots
+      + '<div class="sw"><div class="swc"><div class="cov" style="background:' + r.bg + '">'
+      +   '<em>' + r.k + '</em><b>' + r.n + '</b></div>'
+      +   '<div class="bd"><p>' + r.d + '</p></div></div></div>'
+      + '<div class="swbt"><button class="no" data-v="0">✕ No va</button><button class="si" data-v="1">♥ Me encanta</button></div>'
+      + '<p class="swcount">' + (state.ritmos.length ? state.ritmos.length + (state.ritmos.length===1?' ritmo elegido':' ritmos elegidos') : 'Ritmo ' + (swIdx+1) + ' de ' + RITMOS.length) + '</p>';
+    box.querySelectorAll('.swbt button').forEach(function(b){
+      b.onclick = function(){
+        if(b.dataset.v === '1') state.ritmos.push(r.n);
+        swIdx++; draw();
+      };
+    });
+  }
+  draw();
+}
+
+/* ===========================================================================
+   NOTIFICACIONES  —  discretas, abajo a la izquierda, y los cupos solo bajan
+   =========================================================================== */
+var NOMBRES = [['Claudia R.','Rosario'],['Vanina M.','La Plata'],['Lucía P.','Córdoba'],['Marina S.','Mendoza'],
+  ['Carla B.','Mar del Plata'],['Sofía T.','Salta'],['Noelia F.','Neuquén'],['Daniela G.','Tucumán']];
+var cupos = 9, notifTimer = null;
+function notificar(){
+  if(cupos > 2) cupos--;
+  var n = NOMBRES[Math.floor(Math.random()*NOMBRES.length)];
+  var box = document.getElementById('notif');
+  box.querySelector('.av').textContent = n[0][0];
+  document.getElementById('notif-tx').innerHTML = esc(n[0]) + ' de ' + esc(n[1]) + ' se sumó a DanceGo'
+    + '<small>hace ' + (2 + Math.floor(Math.random()*7)) + ' min · <b>Quedan ' + cupos + ' cupos con descuento</b></small>';
+  box.classList.add('on');
+  setTimeout(function(){ box.classList.remove('on'); }, 4500);
+}
+
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+function abrirOferta(){
+  document.querySelector('main').style.display = 'none';
+  document.querySelector('.top').style.display = 'none';
+  var of = document.getElementById('oferta');
+  of.style.display = 'block';
+  window.scrollTo({top:0});
+
+  /* título personalizado */
+  var n = state.nombre ? state.nombre.charAt(0).toUpperCase() + state.nombre.slice(1) : '';
+  document.getElementById('of-tit').innerHTML = n
+    ? esc(n) + ', accedé ya a tu plan DanceGo'
+    : 'Accedé ya a tu plan DanceGo';
+
+  /* fotos */
+  document.getElementById('img-antes').src = IMG.antes;
+  document.getElementById('img-despues').src = IMG.despues;
+
+  /* precios: todo sale del CONFIG, nada hardcodeado */
+  document.getElementById('p-old').textContent  = '$' + C.PRECIO_VIEJO;
+  document.getElementById('p-save').textContent = 'Ahorrás $' + C.AHORRO + ' (' + C.DESCUENTO + '% OFF)';
+  document.getElementById('p-now').textContent  = C.PRECIO;
+  document.getElementById('p-inst').textContent = C.CUOTAS + ' cuotas de $' + C.CUOTA_VALOR;
+  document.getElementById('p-bonus').textContent = C.VALOR_BONOS;
+  document.getElementById('p-faq').textContent  = C.PRECIO;
+
+  /* VSL: solo si hay embed cargado en el <template> */
+  var tpl = document.getElementById('vsl-template');
+  var box = document.getElementById('vsl-box');
+  if(tpl && tpl.innerHTML.trim()){ box.innerHTML = tpl.innerHTML; }
+  else { box.style.display = 'none'; }
+
+  /* la oferta aparece sola a los SEGUNDOS_OFERTA (0 = de entrada) */
+  var tapar = document.querySelectorAll('#oferta .sec:not(:first-of-type), #oferta .ba, #oferta .incl, #oferta .btn');
+  if(C.SEGUNDOS_OFERTA > 0){
+    tapar.forEach(function(e){ e.classList.add('hidden'); });
+    setTimeout(function(){
+      tapar.forEach(function(e){ e.classList.remove('hidden'); });
+      ligarCTAs(); arrancarReloj(); arrancarNotifs();
+    }, C.SEGUNDOS_OFERTA * 1000);
+  } else {
+    ligarCTAs(); arrancarReloj(); arrancarNotifs();
+  }
+  track('Lead');
+}
+
+/* Todo lo que parece un botón lleva al checkout: los .btn, los .js-cta y
+   cualquier chapa de color con bordes redondeados que se pueda tocar. */
+function ligarCTAs(){
+  var url = checkout();
+  document.querySelectorAll('#oferta a.btn, #oferta .js-cta').forEach(function(el){
+    if(el.tagName === 'A'){ el.href = url; }
+    else { el.style.cursor = 'pointer'; }
+    el.addEventListener('click', function(e){
+      track('AddToCart');
+      if(el.tagName !== 'A'){ e.preventDefault(); location.href = url; }
+    });
+  });
+}
+
+function arrancarReloj(){
+  var seg = 600, el = document.getElementById('reloj');
+  var t = setInterval(function(){
+    seg--;
+    if(seg <= 0){ seg = 0; clearInterval(t); }
+    el.textContent = String(Math.floor(seg/60)).padStart(2,'0') + ':' + String(seg%60).padStart(2,'0');
+  }, 1000);
+}
+function arrancarNotifs(){
+  setTimeout(notificar, 4000);
+  notifTimer = setInterval(notificar, 16000);
+}
+
+/* ===========================================================================
+   ARRANQUE
+   =========================================================================== */
+if(C.PIXEL_ID){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', C.PIXEL_ID); fbq('track','PageView');
+}
+render();
+</script>
+</body>
+</html>

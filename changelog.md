@@ -1,3 +1,13 @@
+## 2026-11-04 (12ª pasada) — El VSL enchufado al quiz y el CTA a los 2:30
+
+- Santiago pasó el embed de Panda: *"quiero que lo metas al final del quiz, y que al minuto 2:30 aparezca el boton de cta"*.
+- **Embed pegado** en `<template id="vsl-template">` de los tres archivos del quiz. Player `player-vz-c3e8527f-c25.tv.pandavideo.com`, video `0f41879a…`.
+- **Se pega el `<div>` envolvente además del `<iframe>`**: ese div trae el `padding-top:177.77%` que sostiene el 9:16. Verificado en el navegador: 522×928, ratio 0,563.
+- **`SEGUNDOS_OFERTA` = 150.** Es cuando la Abuela Mei dice "tocá el botón de acá abajo". Aviso dado: el precio se dice antes, en el 1:33, así que la oferta sale 57 s después del precio.
+- **Probado de verdad en Chrome:** a los 149 s oculta, a los 151 s aparecen la caja de oferta y el botón. Los 3 CTA resuelven a `/checkout` con las UTMs. Consola limpia.
+- ⚠️ **Anotado un falso negativo propio:** probar el disparo con `?oferta=1` no sirve, porque ese atajo ya llamó a `showOffer()` y la función tiene un guard `offerShown`. Hay que probar con una copia sin ese `showOffer()`.
+- Páginas actualizadas: [[monjaro-violeta]], [[quizzes-reglas-de-armado]].
+
 ## 2026-11-04 (13ª pasada) — DanceGo: la portada no necesitaba fotos nuevas, necesitaba un recorte
 
 - Santiago: *"Las imagenes del principio son muy malas, usa algunas que ya hayamos usado y que se vean mejor, hacelo mas llamativo, las del tipo de musica sacalas."*

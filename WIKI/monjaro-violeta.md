@@ -109,7 +109,11 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
   - Editor: `OUTPUTS/scripts-vsl/edit_monjaro.py`.
   - 🆕 **La música se subió a 18,6 dB bajo la voz** (2026-11-04). Santiago: *"Subime un poco mas la musica"*. Estaba a `volume=0.075`, que medido son **27 dB bajo la voz: inaudible**. Pasó a `0.19`. Ver la regla de medición en [[vsl-reglas-de-armado]].
 - 📁 **La carpeta `vsl/` quedó con el VSL terminado y nada más**, por pedido de Santiago. Todo lo demás (bloques de HeyGen, voces, avatares, B-rolls crudos, los VSL del original) está en **`~/Desktop/monjaro-violeta/vsl-fuentes/`**. No se borró: los bloques costaron 39 créditos y las voces, la cuota diaria del TTS.
-- ⏳ **Falta subirlo a Panda Video** y pegar el embed en `<template id="vsl-template">`. Sube la versión **EDITADA**. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
+- ✅ **El VSL ya está en el quiz** (2026-11-04). Santiago subió la versión editada a Panda y pasó el embed; quedó pegado en `<template id="vsl-template">` de los tres archivos.
+  - Player: `player-vz-c3e8527f-c25.tv.pandavideo.com`, video `0f41879a-9bdd-473e-958b-e9ab4ddc3948`.
+  - **Se pega el embed COMPLETO, con su `<div>` envolvente**, no solo el `<iframe>`: ese div es el que trae el `padding-top:177.77%` que da el 9:16, y el CSS del quiz ya lo contempla con `.vsl-frame>div{width:100%}`. Verificado en el navegador: el iframe mide 522×928, ratio 0,563 = 9:16 exacto.
+  - ⭐ **`SEGUNDOS_OFERTA` = 150 (2:30), por pedido de Santiago**: es cuando la Abuela Mei dice "tocá el botón de acá abajo". El VSL editado dura 2:40. **El precio se dice antes, en el 1:33**, así que la oferta aparece 57 s después del precio.
+  - **Probado en el navegador:** a los 149 s la oferta sigue oculta y a los 151 s aparecen la caja y el botón de CTA. Los 3 botones resuelven a `/checkout` con las UTMs pegadas. Sin errores de consola. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

@@ -2,6 +2,12 @@
 
 > Reglas y correcciones de Santiago para armar quiz funnels en HTML. **Leer completo antes de crear o editar cualquier quiz.** Cada corrección nueva se suma acá, con fecha. Si otro chat recibe esta carpeta, esta página alcanza para no repetir errores ya corregidos. La estrategia del formato (por qué funciona, métricas) está en [[quiz-funnel]].
 
+### 🆕 2026-11-04 · El embed de Panda va completo, y cómo se prueba el disparo de la oferta
+- **Se pega el `<div>` envolvente además del `<iframe>`.** El div trae `padding-top:177.77%`, que es lo que sostiene el 9:16; sin él el player colapsa. El CSS del quiz ya lo espera (`.vsl-frame>div{width:100%}`), aunque el comentario del template diga "pegá solo el iframe".
+- **El quiz ya escucha a Panda de dos maneras**: el `postMessage` con `panda_timeupdate` y, como respaldo, un sondeo de `window.smartplayer.instances[0]`. Además hay un `setTimeout` por tiempo de página, por si el player no reporta nunca.
+- ⚠️ **Para probar el disparo NO sirve `?oferta=1`:** ese atajo ya llama a `showOffer()`, y `showOffer` tiene un guard `if(offerShown) return`. Cualquier prueba posterior da falso negativo y parece que el código está roto.
+  - **Lo que sí funciona:** copiar el HTML al scratchpad, sacarle el `showOffer()` del atajo para llegar al final con la oferta oculta, servirlo, y disparar `window.postMessage({message:'panda_timeupdate', currentTime: N})` con un valor por debajo y otro por encima del umbral. Tiene que quedar oculta en el primero y aparecer en el segundo.
+
 ## Cómo usar esta página
 1. Antes de empezar un quiz, recorré la **checklist de entrega** (al final) y las reglas de cada sección.
 2. Si Santiago corrige algo que sirve para **futuros** quizzes, sumalo al **registro de correcciones** y, si corresponde, a la regla de su sección.

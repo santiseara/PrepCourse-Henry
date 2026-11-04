@@ -1,3 +1,13 @@
+## 2026-11-04 (8ª pasada) — Calendarios 2027: la tanda 1 de 6 ads en inglés, montada
+
+- Se retomó donde había quedado: guiones EN/ES listos, las 6 voces de Sulafat generadas y 17 clips de TikTok bajados.
+- **Los 17 clips no servían.** El tag `printablecalendar` trae impresión 3D (calendarios perpetuos en PLA, relojes flip) y hasta chicos bailando. Se barrió de nuevo por **escena** y no por producto: `popupcard`, `paperflowers`, `craftfair` y `epsonecotank`. De ~95 candidatos bajaron 71 y **quedaron 23 limpios**.
+- **Los 6 ads renderizados** en `~/Desktop/calendarios-2027-en/anuncios/`: CAL-V1 (0:30 feria), CAL-V2 (0:29 escuela), CAL-V3 (0:23 oferta), CAL-V4 (0:28 "61 años"), CAL-V5 (0:26 fin de semana) y CAL-V6 (0:57 Navidad).
+- **Paleta nueva** en `edit_cal.py`: ámbar #EFA93C (hook, botón y palabra que suena), verde hoja #15694A (chips) y crema #FBF7F0 (placa final).
+- **Tres reglas nuevas de b-roll** anotadas en [[guiones-y-anuncios]]: el tag se elige por la escena; tikwm rate-limitea y pisa archivos si se baja mientras se renderiza; y la hoja de contactos va a **1 cuadro cada 1,5 s**, porque a cada 3 s se cuelan los carteles de 2 segundos (pasó con el "20 cm x 20 cm" y el "14x14 cm sheet", que aparecieron recién en el primer render).
+- ⚠️ **La placa final dice `2027 CALENDAR PACK` con un nombre provisorio**: faltan nombre comercial, precio y checkout. Faltan también los 50 diseños propios y la landing.
+- Páginas nuevas/actualizadas: [[calendarios-2027]], [[guiones-y-anuncios]], [[index]].
+
 ## 2026-11-04 (8ª pasada) — Las imágenes no se pagan más: ChatGPT y Nano Banana, nunca Higgsfield
 
 - Santiago, después de que las fotos de avatar del VSL de Monjaro salieran de Higgsfield: *"Podes usar mi chatgpt, nano banana, o alguna gratuita, no uses nada que cobre"*.

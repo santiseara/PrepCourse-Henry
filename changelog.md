@@ -1,3 +1,12 @@
+## 2026-11-03 (noche, 6ª pasada) — Tai Chi Fit: el VSL del original, bajado y mapeado
+
+- Santiago: *"ahora tenemos que hacer el vsl, tiene que durar entre 4 y 6 minutos, que podemos hacer?"*. La página de calistenia asiática para hombres (de donde iba a salir el guion desde el 26/10) nunca llegó, así que el molde pasa a ser **el VSL que corre detrás del mismo quiz** de Calistenia Militar Femenina.
+- **Bajado entero:** el player VSLwave esconde un **A/B de dos VSL** detrás del `data-id` del HTML; se resuelve en `cdn.vslwave.site/c/<id>.json` y el master real necesita video id **+ media id**. 18:33, 4.709 palabras, 4:5.
+- **Hallazgos:** es un VSL brasileño traducido (dice *"Bloco uno"* en el 18:03 y termina cortado a mitad de frase); la edición está partida al medio (B-roll denso hasta 7:30, después **diez minutos de talking head** con toda la oferta); subtítulos sin franja negra con la palabra clave en amarillo.
+- **Mapa de los 20 bloques** con minutos, el destilado a ~1.000 palabras y las alertas (soporte por WhatsApp que no tenemos, las "8.000 mujeres", el Ozempic): `OUTPUTS/2026-11-03-mapa-vsl-original-calistenia-militar.md` + la transcripción con tiempos.
+- Plan propuesto y pendiente de su OK: estructura del original, largo y ritmo de nuestro molde propio (Pilates Hormonal / Calistenia Rusa), voz **Sulafat** por API, **Avatar IV** (~125 créditos) y B-rolls a **0 créditos** (TikTok + las imágenes del quiz con zoom).
+- Páginas actualizadas: [[tai-chi-fit]].
+
 ## 2026-11-03 (noche, 5ª pasada) — Academia del Trazo: CTA en el hero y caja de oferta completa
 
 - Santiago: *"Quiero que pongas un botón de cta entre medio de esos textos, porque sino queda re abajo el botón para comprar… que no lleve al checkout, sino que lleve a la presentación de la oferta, para que vean todo lo que incluye"*.

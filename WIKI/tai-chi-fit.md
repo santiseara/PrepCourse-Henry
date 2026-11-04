@@ -45,9 +45,19 @@
 - **Reusadas del original** (sin marca ni texto en otro idioma): portada antes/después, las 4 transformaciones y las 5 fotos de zonas con dolor.
 - **Nuevas, hechas con Higgsfield** (gpt_image_2, 1k, High, 1:1 — 3,5 créditos cada una): el hero de 3 mujeres practicando Tai Chi al amanecer y el retrato de la Maestra Valentina. Se rehicieron porque las del original tenían **la marca FEMME FORCE en el celular** y ropa militar.
 
+## El VSL del original (bajado y transcripto el 2026-11-03)
+El VSL que corre detrás de ese mismo quiz está en `calisteniafeminina.site/vsl.html` con un player de **VSLwave**. El `data-id` del HTML (`ko71du5bkg`) no es el video: es un **A/B de dos VSL** (`99iah5dfnf` y `731e0gpt30`, 50/50) que se resuelve en `https://cdn.vslwave.site/c/<id>.json`. El master real de cada variante vive en `https://cdn.vslwave.site/v/<video>/<media>/master.m3u8` y baja sin autenticación (el `<video>/master.m3u8` sin el media id da 404).
+- **Dura 18:33 y tiene 4.709 palabras**, en 4:5 (360x450 · 540x676 · 720x900). Nuestro VSL son ~1.000 palabras: entra el 21%, así que **no se clona 1 a 1, se destila**.
+- Es un **VSL brasileño traducido** a español neutro ("tú", "hermosa", "mi amor"): en el minuto 18:03 la locutora lee en voz alta *"Bloco uno"* y el video **termina cortado a mitad de frase**.
+- **La edición está partida al medio:** hasta ~7:30 B-roll denso (transformaciones, mujeres comunes, anatomía 3D, testimonios a cámara); de ahí al final son **diez minutos de talking head puro**, que es donde va toda la oferta. Esa mitad es la que hay que comprimir.
+- **Subtítulos:** mayúsculas, 2–3 palabras, **sin franja negra**, con la palabra clave en **amarillo** y el resto en blanco, a la altura del pecho. Distinto del nuestro (franja negra).
+- Mapa de los 20 bloques, qué entra, qué sale y por qué: `OUTPUTS/2026-11-03-mapa-vsl-original-calistenia-militar.md`. Transcripción con tiempos: `OUTPUTS/2026-11-03-transcripcion-vsl-calistenia-militar.txt`.
+- **Lo que no se copia:** el soporte por WhatsApp (nuestra oferta no lo tiene), las "8.000 mujeres" (el quiz dice 50.000+ alumnas), todo el Ozempic y la escasez por plazas de soporte.
+- Dato: la presentadora del original **también se llama Valentina** — de ahí salió nuestra Maestra Valentina en octubre.
+
 ## Estado
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/tai-chi-fit/`.
-- ⏳ **Falta el VSL.** El guion se va a modelar de la página de calistenia asiática para hombres que Santiago todavía no mandó.
+- ⏳ **Falta el VSL.** La página de calistenia asiática para hombres nunca llegó; el molde pasa a ser **el VSL del propio original**, ya bajado y mapeado (arriba). Largo objetivo: **4–6 min, ~1.000 palabras**.
 - ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.
 - ⏳ Falta confirmar el link de checkout.
 - ⏳ Los anuncios quedan para después del quiz.

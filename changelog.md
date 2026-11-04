@@ -1,3 +1,14 @@
+## 2026-11-04 (11ª pasada) — Calendarios 2027: los 6 ads rehechos con b-roll que sí muestra calendarios
+
+- ⭐ **Santiago rechazó la tanda entera:** *"usaste cualquier visual, no tienen nada q ver con lo que vendemos, son calendarios hechos a mano, no hay un puto calendario"*. Tenía razón: el pool estaba buscado por las **escenas del guion** (flores de papel, tijera, impresora, feria) y en ningún plano se veía un calendario.
+- **Regla corregida en `WIKI/guiones-y-anuncios.md`:** la de la pasada anterior ("el tag se elige por la escena, no por el nombre del producto") estaba **mal** y quedó reescrita. El tag se arma con el **nombre del producto**; la escena solo completa un pool que ya lo muestra. Primer filtro de todo clip: *¿se ve lo que vendemos?*
+- **Regla nueva:** si el producto lleva año impreso, un `2025`/`2026` legible mata el ad. Hay material **2027** en TikTok, hay que buscarlo.
+- **Pool v3:** tags `deskcalendar`, `diycalendar`, `papercalendar`, `handmadecalendar`. De 166 candidatos bajaron 147 y quedaron **17 ventanas de 15 clips** (`anuncios/work/tiktoks3/`).
+- **Los tres clips clave:** `7679474945889455380` (calendario de papel con forma de florero con ramo, en caballete, **2027** impreso — es el producto), `7585091358939942166` (tulipanes de papel parados sobre la base de un calendario) y `7466996351692295431` (calendarios chicos de escritorio con flores que se abren).
+- **Tres rondas de render** hasta limpiar: se cayeron `7684630906363006229` (cartel arriba *y* "DO NOT RE-UPLOAD" abajo, ningún zoom los saca, más una página 2026) y `7593073970606345494`; se subió el zoom de la HP a 1.6 y se partieron las ventanas de `7675332899951906056` (el "7cm x 11cm" del medio) y `7589850087459736863` (el "calendar for my bf" del principio).
+- **Entregado:** `~/Desktop/calendarios-2027-en/anuncios/CAL-V1..V6.mp4` (0:30 / 0:29 / 0:23 / 0:28 / 0:26 / 0:57).
+- ⏳ **Sigue faltando** el nombre comercial, el precio y el checkout: la placa final usa el provisorio `2027 CALENDAR PACK`.
+
 ## 2026-11-04 (10ª pasada) — El VSL de Monjaro, editado: 2:40 con B-rolls, música y headlines
 
 - Santiago: *"metele 1.23 de velocidad… una musica activa bajita… algunos brolls… subtitulos, efectos de sonido, algunos headlines… Ponele onda, no lo llenes de cosas"*.
@@ -11,17 +22,6 @@
 - Scripts nuevos: `edit_monjaro.py`, `music_activa.py`, `sfx_whoosh.py`.
 - ⏳ Falta subir a Panda Video la versión EDITADA y pegar el embed.
 - Páginas actualizadas: [[monjaro-violeta]], [[vsl-reglas-de-armado]].
-
-## 2026-11-04 (10ª pasada) — Calendarios 2027: los 6 ads rehechos con b-roll que sí muestra calendarios
-
-- ⭐ **Santiago rechazó la tanda entera:** *"usaste cualquier visual, no tienen nada q ver con lo que vendemos, son calendarios hechos a mano, no hay un puto calendario"*. Tenía razón: el pool estaba buscado por las **escenas del guion** (flores de papel, tijera, impresora, feria) y en ningún plano se veía un calendario.
-- **Regla corregida en `WIKI/guiones-y-anuncios.md`:** la de la pasada anterior ("el tag se elige por la escena, no por el nombre del producto") estaba **mal** y quedó reescrita. El tag se arma con el **nombre del producto**; la escena solo completa un pool que ya lo muestra. Primer filtro de todo clip: *¿se ve lo que vendemos?*
-- **Regla nueva:** si el producto lleva año impreso, un `2025`/`2026` legible mata el ad. Hay material **2027** en TikTok, hay que buscarlo.
-- **Pool v3:** tags `deskcalendar`, `diycalendar`, `papercalendar`, `handmadecalendar`. De 166 candidatos bajaron 147 y quedaron **17 ventanas de 15 clips** (`anuncios/work/tiktoks3/`).
-- **Los tres clips clave:** `7679474945889455380` (calendario de papel con forma de florero con ramo, en caballete, **2027** impreso — es el producto), `7585091358939942166` (tulipanes de papel parados sobre la base de un calendario) y `7466996351692295431` (calendarios chicos de escritorio con flores que se abren).
-- **Tres rondas de render** hasta limpiar: se cayeron `7684630906363006229` (cartel arriba *y* "DO NOT RE-UPLOAD" abajo, ningún zoom los saca, más una página 2026) y `7593073970606345494`; se subió el zoom de la HP a 1.6 y se partieron las ventanas de `7675332899951906056` (el "7cm x 11cm" del medio) y `7589850087459736863` (el "calendar for my bf" del principio).
-- **Entregado:** `~/Desktop/calendarios-2027-en/anuncios/CAL-V1..V6.mp4` (0:30 / 0:29 / 0:23 / 0:28 / 0:26 / 0:57).
-- ⏳ **Sigue faltando** el nombre comercial, el precio y el checkout: la placa final usa el provisorio `2027 CALENDAR PACK`.
 
 ## 2026-11-04 (9ª pasada) — El VSL de Monjaro Violeta, terminado: 3:17 con dos personajes
 

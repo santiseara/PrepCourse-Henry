@@ -107,6 +107,8 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
   - **5 B-rolls de ~3 s** de los que pasó Santiago, todos del tercer clip: remolacha, el agua a la licuadora, pelar remolacha, manzana y jengibre, el colado.
   - **4 headlines** en magenta sobre los números de la oferta, **subtítulos** de a dos palabras con clave en dorado, y **un whoosh** al entrar a cada B-roll (`sfx_whoosh.py`).
   - Editor: `OUTPUTS/scripts-vsl/edit_monjaro.py`.
+  - 🆕 **La música se subió a 18,6 dB bajo la voz** (2026-11-04). Santiago: *"Subime un poco mas la musica"*. Estaba a `volume=0.075`, que medido son **27 dB bajo la voz: inaudible**. Pasó a `0.19`. Ver la regla de medición en [[vsl-reglas-de-armado]].
+- 📁 **La carpeta `vsl/` quedó con el VSL terminado y nada más**, por pedido de Santiago. Todo lo demás (bloques de HeyGen, voces, avatares, B-rolls crudos, los VSL del original) está en **`~/Desktop/monjaro-violeta/vsl-fuentes/`**. No se borró: los bloques costaron 39 créditos y las voces, la cuota diaria del TTS.
 - ⏳ **Falta subirlo a Panda Video** y pegar el embed en `<template id="vsl-template">`. Sube la versión **EDITADA**. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.

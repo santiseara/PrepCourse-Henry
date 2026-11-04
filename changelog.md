@@ -1,3 +1,12 @@
+## 2026-11-04 (11ª pasada) — La música audible de verdad, y la carpeta del VSL limpia
+
+- Santiago: *"Subime un poco mas la musica, SOLO ESO… quiero que quede solo el vsl terminado, todo lo demas sacalo"*.
+- ⭐ **La música estaba a 27 dB bajo la voz, o sea inaudible.** `volume=0.075` parecía razonable pero nunca se había medido. Pasó a **`0.19` = 18,6 dB bajo la voz**, que es donde una cama musical se escucha sin tapar. La regla ahora es calcular el volumen, no tantearlo.
+- **Dos errores de medición propios, anotados para no repetirlos:** medir el RMS global de la mezcla no sirve (la voz lo domina y el número no se mueve), y medir "en un silencio" tampoco, porque este VSL **no tiene ni un hueco** de 0,45 s. Se mide la cola final, donde queda la música sola.
+- 🆕 **Cambiar solo el audio no pide re-renderizar el video:** se rehace la mezcla y se pega con `-c:v copy`. Segundos en vez de cuatro minutos.
+- 📁 **`~/Desktop/monjaro-violeta/vsl/` quedó con un solo archivo**: `VSL-monjaro-violeta.mp4` (2:40, 1080×1920, 174 MB). Todo lo demás se movió a **`vsl-fuentes/`** en vez de borrarse: los bloques de HeyGen costaron 39 créditos y las voces, la cuota diaria del TTS.
+- Páginas actualizadas: [[monjaro-violeta]], [[vsl-reglas-de-armado]].
+
 ## 2026-11-04 (11ª pasada) — Calendarios 2027: los 6 ads rehechos con b-roll que sí muestra calendarios
 
 - ⭐ **Santiago rechazó la tanda entera:** *"usaste cualquier visual, no tienen nada q ver con lo que vendemos, son calendarios hechos a mano, no hay un puto calendario"*. Tenía razón: el pool estaba buscado por las **escenas del guion** (flores de papel, tijera, impresora, feria) y en ningún plano se veía un calendario.

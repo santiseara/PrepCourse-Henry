@@ -139,6 +139,13 @@ Al editar el VSL de [[monjaro-violeta]] las cinco anclas de B-roll fallaron de e
 - **Método:** transcribir primero, volcar el texto corrido, buscar ahí la frase y recién entonces escribir el ancla. Un `grep` sobre el `words.json` lleva un minuto y evita un render entero al pedo.
 - El script falla fuerte (`SystemExit`) si un ancla no aparece, en vez de seguir y poner el B-roll en el segundo cero.
 
+### 🆕 2026-11-04 · ⭐ El volumen de la cama musical se calcula, no se tantea
+Santiago no escuchaba la música del VSL de Monjaro. Estaba en `volume=0.075`, que parecía razonable y **medido eran 27 dB por debajo de la voz: inaudible**.
+- **La cuenta:** se mide el RMS de la voz y el de la música cruda en el mismo tramo del medio, y se despeja el `volume` para el objetivo. `v = 10**((rms_voz - objetivo - rms_musica)/20)`.
+- **El objetivo que funciona es 18-20 dB bajo la voz.** En Monjaro quedó `volume=0.19` → 18,6 dB.
+- ⛔ **No medir el RMS global de la mezcla para comprobarlo:** la voz lo domina y el número no se mueve aunque la música cambie 6 dB. Tampoco sirve medir "en un silencio" si el VSL no tiene silencios: con las pausas ya recortadas, `silencedetect` no encuentra **ni un hueco** de 0,45 s. Se mide la **cola final**, después de la última palabra, donde queda la música sola.
+- 🆕 **Para cambiar solo el audio no hace falta re-renderizar el video.** Se rehace la mezcla y se pega con `-c:v copy`: **segundos en vez de cuatro minutos**. Script: el patrón está en `edit_monjaro.py` y el remix suelto en el scratchpad.
+
 ### 🆕 2026-11-04 · Dónde NO va un B-roll
 Criterio que quedó del VSL de Monjaro, sobre el pedido de Santiago de *"que no quede tan pelado… ponele onda, no lo llenes de cosas"*:
 - ⛔ **Nunca sobre el precio ni sobre el CTA final.** Son los dos momentos donde la cara vende; taparlos con una licuadora es regalar la conversión. En Monjaro quedó un hueco a propósito de **52 segundos** alrededor del precio.

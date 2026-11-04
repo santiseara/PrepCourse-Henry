@@ -31,7 +31,7 @@
 - ¿Se corre también la tanda de imágenes estáticas (ellos tienen 42)?
 
 ## Relacionado
-[[pagina-de-ventas]] · [[seleccion-y-modelado-de-oferta]] · [[metodo-v3]] · [[testeo-de-creativos]] · [[funnel-hacking]] · [[guiones-y-anuncios]]
+[[pagina-de-ventas]] · [[seleccion-y-modelado-de-oferta]] · [[metodo-v3]] · [[testeo-de-creativos]] · [[funnel-hacking]] · [[guiones-y-anuncios]] · [[shopify-y-checkout]]
 
 ## Fuentes
 - Biblioteca de anuncios, página 1153035077882881 (80 ads leídos el 2026-11-03)

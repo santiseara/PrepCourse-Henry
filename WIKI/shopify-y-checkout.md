@@ -151,6 +151,29 @@ Y se pueden combinar: multidivisa para el mundo **+ Mercado Pago targeteado a Ar
 - **Recupero de carrito por email masivo y por WhatsApp** (si la persona deja su teléfono)
 - Métricas por tienda: ticket promedio, visitantes en vivo
 
+### Custom HTML en Impultienda: las dos reglas que hay que respetar (2026-11-04)
+
+Cuando la landing se pega como **custom HTML dentro de Impultienda**, la plataforma la sirve y la procesa. Por eso **no** se pone el dominio de la tienda en los botones ni los precios a mano:
+
+- **Botón de compra:** `<a href="/checkout">Comprar</a>` o `<button data-checkout>Comprar</button>`. El link va **relativo** (`/checkout`), no `https://<tienda>.impultienda.ar`. Un href con el dominio completo no entra al checkout.
+- **Precios por token**, que Impultienda reemplaza sola por el importe formateado **en la moneda del comprador**:
+
+| Token | Qué pinta |
+|---|---|
+| `{{price}}` | Precio final |
+| `{{original_price}}` | Precio anterior / tachado |
+| `{{savings}}` | Cuánto ahorra |
+| `{{currency}}` | Código de moneda (ARS, USD…) |
+
+Consecuencias al armar la landing:
+
+- **Nada de precios calculados en JS.** Si un script escribe el `textContent` de los nodos de precio, le pisa el token y rompe la multidivisa. El JS solo puede actuar de **respaldo**: si el nodo todavía contiene `{{`, significa que la página se abrió fuera de Impultienda (prueba local) y ahí sí pinta el valor en ARS.
+- **Ningún monto derivado del precio.** Las cuotas ("3 cuotas de $5.664") no se pueden calcular: con otra moneda quedan mal. Va "hasta 3 cuotas con Mercado Pago", sin el importe.
+- **Las UTMs se arrastran sin tocar el destino.** El script toma el `href` que ya tiene el botón y le pega `window.location.search`; no reemplaza el link. Así sigue funcionando si Impultienda reescribe el destino.
+- **El href relativo no se puede probar en local**: `/checkout` apunta a la raíz del server de prueba. Lo que sí se verifica antes de subir: que todos los botones tengan la clase del CTA y `href="/checkout"`, que no quede ningún nodo de precio vacío y que la consola esté limpia.
+
+Caso de referencia: la landing de [[academia-del-trazo]] (dibujo creativo) se armó primero con un `LINK_CHECKOUT` apuntando al dominio de la tienda y los botones no entraban al checkout. Se arregló pasando a `/checkout` + tokens.
+
 ## Por qué el post-pago no funciona en Argentina (con Shopify)
 
 Explicación técnica de la limitación ya señalada en [[aumento-de-aov]]: la mayoría en Argentina paga con **Mercado Pago**, y su **Checkout Pro es una pantalla de pago externa**. Al confirmar el pago no devuelve al usuario a la página de gracias, así que **no hay dónde mostrar el upsell post-compra**.

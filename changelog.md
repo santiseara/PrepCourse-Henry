@@ -1,3 +1,15 @@
+## 2026-11-04 (6ª pasada) — Academia del Trazo: la landing enchufada al checkout de Impultienda
+
+- Santiago: *"me sigue sin dejar, todos los botones de cta tienen que redirigir al checkout"*, y pasó las instrucciones de Impultienda.
+- El error era poner el dominio de la tienda (`https://dibujo-creativoo.impultienda.ar`) en `LINK_CHECKOUT`. Dentro de Impultienda el botón va **relativo**: `href="/checkout"`.
+- **Los 5 CTA de `~/Desktop/dibujo-creativo/landing/` apuntan a `/checkout`** (hero de la oferta, "empezar hoy", oferta, cierre y la barra fija). El JS ya no reescribe el destino: solo le arrastra las UTMs y dispara el `AddToCart`.
+- **Precios por token de Impultienda**: `{{price}}`, `{{original_price}}` y `{{savings}}` en los 18 lugares donde había precio. El JS quedó solo como respaldo para cuando la página se abre fuera de Impultienda.
+- **Las cuotas ya no muestran importe** ("hasta 3 cuotas con Mercado Pago"): el monto dependía del precio en ARS y rompía la multidivisa.
+- Verificado en Chrome sobre un server local: 5 botones a `/checkout`, UTMs pegadas, ningún nodo de precio vacío, consola limpia.
+- Los tres archivos quedaron sincronizados: `landing-impultienda.txt` (el que se pega), `landing.html` y `PRUEBA.html`.
+- Pendiente: las imágenes siguen apuntando al CDN del competidor y `PIXEL_ID` está vacío.
+- Páginas actualizadas: [[shopify-y-checkout]].
+
 ## 2026-11-04 (5ª pasada) — Monjaro Violeta: el VSL del original, destripado y reescrito
 
 - Santiago: *"entrá de nuevo al quiz original, fijate que en la última slide hay un VSL, descargalo y armemos uno nuestro exactamente igual"*.

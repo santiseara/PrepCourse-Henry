@@ -13,7 +13,7 @@
 Santiago: *"Cambiame el monjaro violeta, por el rojo"*. El producto pasa a llamarse **Monjaro Rojo Japonés**.
 - ✅ **El quiz ya está cambiado**: 22 apariciones en cada uno de los tres archivos. La palabra "ROJO" del lockup y de la barra de progreso se repintó de violeta a rojo (`#FFC2C2 → #FF4D4D → #B81C24`), porque "ROJO" escrito en violeta se lee como un error. El resto del esquema magenta del quiz no se tocó.
 - ⛔ **El VSL todavía dice "Monjaro Violeta", y no se arregla editando**: está en la voz de las dos avatares, **5 veces** (1 en el bloque de apertura, 3 en el testimonio de Mariela, 1 en el cierre). Cambiarlo pide regenerar las tres voces, los tres renders de HeyGen (**~39 créditos**) y volver a montar, editar y subir a Panda.
-- ⛔ **El dominio `monjaro-violeta.impultienda.ar` NO se tocó**: si la tienda sigue llamándose así, cambiarlo en `LINK_CHECKOUT` rompe el pago. Hay que confirmarlo antes.
+- ✅ **Dominio del checkout confirmado por Santiago (4/11)**: `https://monjaro-rojo-japones.impultienda.ar/checkout`. Se cambió en `LINK_CHECKOUT` en los tres archivos del quiz. Los 4 botones de CTA (`[data-cta]`) salen todos de ahí, así que es una sola línea y arrastra los cuatro.
 - Pendientes menores de renombre: la carpeta `~/Desktop/monjaro-violeta/`, los nombres de archivo del quiz y esta página de la WIKI. No se tocaron para no romper rutas con el trabajo en curso.
 
 ## Ficha de la oferta
@@ -23,7 +23,7 @@ Santiago: *"Cambiame el monjaro violeta, por el rojo"*. El producto pasa a llama
 | Público | **Mujeres y hombres** (el quiz se bifurca por género, igual que el original) |
 | Idioma | Español argentino con voseo |
 | Precio | **$14.990 ARS**, tachado $49.990 (70% OFF), 3 cuotas de $4.997 *(a confirmar)* |
-| Checkout | `https://monjaro-violeta.impultienda.ar/checkout` *(a confirmar)* |
+| Checkout | `https://monjaro-rojo-japones.impultienda.ar/checkout` |
 | Avatar | **Abuela Mei** (Vovó Mei): señora japonesa, pelo gris, túnica violeta |
 | Mecanismo | La bebida de remolacha tomada en un horario exacto: "trabaja mientras dormís" |
 | Promesa | Bajar 10 kg en 30 días (la del original) |
@@ -129,7 +129,7 @@ La landing arranca con **"bajá 10 kg en 30 días"**, usa **antes y después** y
 
 ## Preguntas abiertas
 - ¿El producto se llama **Monjaro Violeta Japonés** o le ponemos otro nombre?
-- ¿El precio es $14.990 o va otro? ¿El checkout es `monjaro-violeta.impultienda.ar`?
+- ¿El precio es $14.990 o va otro?
 - ¿Metemos el video corto de la Abuela Mei en el paso 11 o lo dejamos fuera?
 - ¿Los 5 regalos quedan como están o los cambiamos antes de escribir el VSL?
 

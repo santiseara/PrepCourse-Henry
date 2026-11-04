@@ -1,3 +1,11 @@
+## 2026-11-04 (15ª pasada) — El checkout de Monjaro Rojo, confirmado
+
+- Santiago: *"Ajustame el txt, todos los botones de cta que aparecen al final, tienen que redirigir a este checkout: https://monjaro-rojo-japones.impultienda.ar/checkout"*.
+- **`LINK_CHECKOUT` cambiado** a `https://monjaro-rojo-japones.impultienda.ar/checkout` en los tres archivos del quiz (`.html`, `.txt` y `-PRUEBA.html`), que se mantienen idénticos.
+- Los **4 botones de CTA** (el de abajo del VSL, el de la caja de oferta, el del cierre y el del footer) no tienen el link escrito a mano: todos llevan `data-cta` y el script les pone `checkoutURL()`, que sale de `LINK_CHECKOUT` y le pega las UTMs de la URL. Una sola línea arrastra los cuatro.
+- Queda cerrado el pendiente del dominio. Lo único que sigue abierto del cambio de nombre es el **VSL, que todavía dice "Monjaro Violeta" 5 veces en la voz de las avatares**.
+- Páginas actualizadas: [[monjaro-violeta]].
+
 ## 2026-11-04 (13ª pasada) — El producto pasa a llamarse Monjaro Rojo
 
 - Santiago: *"Cambiame el monjaro violeta, por el rojo"*.

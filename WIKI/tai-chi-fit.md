@@ -55,9 +55,18 @@ El VSL que corre detrás de ese mismo quiz está en `calisteniafeminina.site/vsl
 - **Lo que no se copia:** el soporte por WhatsApp (nuestra oferta no lo tiene), las "8.000 mujeres" (el quiz dice 50.000+ alumnas), todo el Ozempic y la escasez por plazas de soporte.
 - Dato: la presentadora del original **también se llama Valentina** — de ahí salió nuestra Maestra Valentina en octubre.
 
+## El guion del VSL (2026-11-03)
+- **8 minutos, 1.730 palabras**, en dos bloques de HeyGen de 4.461 y 4.910 caracteres (tope 5.000).
+- **La tasa real de nuestro pipeline es ~205 palabras por minuto**, medida sobre dos VSL propios de duración conocida: Pilates Hormonal (1.503 palabras → 6:44) y Calistenia Rusa (1.162 → 6:00). La regla vieja de "850 palabras = 4–5 min" de [[vsl-reglas-de-armado]] §0 **subestima**: con esa cuenta este guion habría salido de 5 minutos.
+- **Mecanismo propio: "tu raíz"** — en lugar del "motor metabólico femenino" del original. Encaja con la Fase Raíz que el quiz ya promete y evita el claim del cortisol.
+- **El villano es el cuerpo que vive en alerta** (hombros que suben, cadera que se cierra, equilibrio que se va), no una hormona: no hay claim médico que defender.
+- **El open loop del original se mantiene** (el error de los primeros cinco minutos del día) y se cierra con una corrección real de tres minutos antes de levantarse de la cama.
+- Los **5 bonos del quiz con sus valores** y el total de $167.600, el precio $14.990 con las 3 cuotas y la garantía de 30 días: todo dicho **en palabras** para la voz.
+
 ## Estado
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/tai-chi-fit/`.
-- ⏳ **Falta el VSL.** La página de calistenia asiática para hombres nunca llegó; el molde pasa a ser **el VSL del propio original**, ya bajado y mapeado (arriba). Largo objetivo: **4–6 min, ~1.000 palabras**.
+- ✅ **Guion del VSL escrito** (2026-11-03): `OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md` y `~/Desktop/tai-chi-fit/vsl/`. Santiago lo pidió de **8 minutos** ("así es más completo"), no de 4–6.
+- ⏳ **Falta grabar el VSL.** Pendiente: avatar de HeyGen, voz y edición.
 - ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.
 - ⏳ Falta confirmar el link de checkout.
 - ⏳ Los anuncios quedan para después del quiz.

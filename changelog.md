@@ -1,3 +1,12 @@
+## 2026-11-03 (noche, 7ª pasada) — Tai Chi Fit: el guion del VSL, 8 minutos
+
+- Santiago: *"Hagamoslo de 8 minutos, asi es mas completo, armame el guion completo"*. Sube de los 4–6 que había pedido antes.
+- **Medida la tasa real del pipeline antes de escribir:** Pilates Hormonal 1.503 palabras → 6:44 y Calistenia Rusa 1.162 → 6:00, o sea **~205 palabras por minuto**. La regla de §0 de [[vsl-reglas-de-armado]] ("850 palabras = 4–5 min") subestima y habría dado un VSL de 5 minutos.
+- **Guion entregado:** 1.730 palabras en dos bloques de 4.461 y 4.910 caracteres, los dos por debajo del tope de 5.000 de la Creación rápida de HeyGen. `OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md` + `~/Desktop/tai-chi-fit/vsl/`.
+- **Decisiones de guion:** mecanismo propio **"tu raíz"** (en vez del "motor metabólico femenino"), villano **el cuerpo en alerta** en vez del cortisol (sin claim médico), se mantiene el open loop del error de los primeros cinco minutos del día, y entran los 5 bonos del quiz con sus valores, el precio con cuotas y la garantía, todo en palabras para la voz.
+- **Fuera, como estaba previsto:** el soporte por WhatsApp, el Ozempic, los dos testimonios largos y las "8.000 mujeres".
+- Páginas actualizadas: [[tai-chi-fit]].
+
 ## 2026-11-03 (noche, 6ª pasada) — Tai Chi Fit: el VSL del original, bajado y mapeado
 
 - Santiago: *"ahora tenemos que hacer el vsl, tiene que durar entre 4 y 6 minutos, que podemos hacer?"*. La página de calistenia asiática para hombres (de donde iba a salir el guion desde el 26/10) nunca llegó, así que el molde pasa a ser **el VSL que corre detrás del mismo quiz** de Calistenia Militar Femenina.

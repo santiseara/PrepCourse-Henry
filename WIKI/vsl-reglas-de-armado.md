@@ -131,6 +131,20 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **No fabricar testimonios en video** de "clientas reales" con IA. Si el original tenía uno, la avatar lee un testimonio que ya existe en el funnel.
   - **Excepción decidida por Santiago (2026-10-14, Mounjaro Humilde):** si él lo pide, el testimonio en primera persona lo hace su avatar de HeyGen **"Karina testimonio"** (voz roma).
 
+### 🆕 2026-11-04 · ⭐ El TTS bloquea los testimonios de peso por SAFETY: hay que bajar el umbral
+El bloque de Mariela (testimonio de descenso de peso con cifras) no salía: ocho intentos, y el único que no fue 429 devolvió **`finishReason=SAFETY`** con el candidato vacío — sin audio y sin mensaje de error claro.
+- **El síntoma engaña:** el script moría con `KeyError: 'content'`. Hay que imprimir `candidates[0].finishReason` antes de leer las partes, o se confunde con un problema de cuota.
+- **La causa:** "bajé ocho kilos en quince días", "dieciséis kilos", el nombre de un fármaco deformado. El filtro lo lee como consejo médico peligroso. **Es un falso positivo sobre un testimonio de marketing.**
+- ⭐ **La solución: `safetySettings` con `BLOCK_NONE`** en las cuatro categorías (`HARASSMENT`, `HATE_SPEECH`, `SEXUALLY_EXPLICIT`, `DANGEROUS_CONTENT`) dentro del body. Con eso **salió al primer intento**. El cliente quedó en `OUTPUTS/scripts-vsl/` con ese bloque puesto.
+- **No es determinístico:** el mismo texto con otra voz había salido entero antes. Por eso conviene mandar siempre los `safetySettings`, no esperar a que falle.
+- Vale para toda oferta de salud, peso o suplementos: [[monjaro-violeta]], [[protocolo-chia-28d]], [[pilates-hormonal]].
+
+### 🆕 2026-11-04 · Antes de dar por mala una palabra, transcribirla con el modelo grande
+`revisar_voz.py` (Whisper small) marcó "pesos" como **"piso"** dos veces, justo en el precio, y "Abuela" como "Huela". Los dos eran del transcriptor:
+- Al pasarle el fragmento a **Gemini 3.6 Flash** pidiéndole transcripción literal, dijo "catorce mil novecientos noventa **pesos**" y "ciento veinte mil **pesos**", bien.
+- **"La Abuela" suena "labuela" en rioplatense** (sinalefa normal) y el transcriptor la parte mal. No es un defecto de la voz.
+- **Regla: el reporte de `revisar_voz.py` es un detector, no un veredicto.** Lo que marca se confirma recortando esos segundos con ffmpeg y mandándolos a Gemini a transcribir. Es gratis y evita regenerar un bloque bueno.
+
 ### 🆕 2026-11-04 · ⭐ El atempo rejuvenece la voz: un personaje mayor tiene techo de ppm
 Medido en el VSL de [[monjaro-violeta]] sobre el mismo wav de la Abuela Mei (voz Vindemiatrix), preguntándole a Gemini qué edad escucha:
 

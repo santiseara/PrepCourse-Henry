@@ -1,3 +1,12 @@
+## 2026-11-04 (5ª pasada) — APIMart instalada en el segundo cerebro
+
+- Santiago: *"Quiero que instales apimart en mi segundo cerebro, utiliza claude in chrome y instalalo vos"*.
+- **Cuenta ya existía** (login con Google, creada hoy 10:36) con su clave por defecto, cuota ilimitada y acceso a todos los modelos.
+- **Clave guardada en `~/.config/apimart/env`** (chmod 600, fuera del repo). Se copió con el botón de la propia página al portapapeles y se escribió al archivo sin pasar por el chat.
+- **Cliente nuevo `scripts/apimart.sh`**: `saldo`, `avatar` (wan2.7-r2v con `reference_voice`), `broll` (grok-imagine-video), `video` crudo, `tarea` y `esperar` (baja el mp4 con `curl -C -`).
+- **Probado:** la autenticación funciona; la API responde 402 porque el saldo es **US$0,00**. Falta que Santiago cargue créditos en apimart.ai/es/pricing.
+- Página nueva [[apimart]] con endpoints, el flujo asíncrono y los precios al día. **Dos correcciones al Manual de Edición IA:** wan2.7-r2v hoy sale US$0,066/s y Omni Flash 720P US$0,088/s (el precio que el manual recordaba, US$0,036/s, hoy es el de 360P).
+
 ## 2026-11-04 (4ª pasada) — Tai Chi Fit: la oferta a los 4 minutos y un CTA pegado al video
 
 - Santiago: *"quiero que todo eso aparezca recién a los 4 minutos… y abajo del VSL ya les pongas un botón de CTA que los redirija directo a checkout, como para que no tengan que deslizar tanto"*. (Arrancó pidiendo sacar todo lo que hay debajo del video y se corrigió solo: *"No, dejalo, dejalo"*.)

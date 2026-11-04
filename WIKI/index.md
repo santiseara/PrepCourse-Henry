@@ -98,6 +98,7 @@
 - ✅ [[biblioteca-de-prompts]] — Los 23 prompts de producción, ✅ todos con texto en `RAW/prompts/`. Qué pide cada uno, qué devuelve y dónde choca con tus reglas o tiene riesgo.
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.
+- 🆕 [[apimart]] — ⭐ **APIMart instalada (4/11)**: clave en `~/.config/apimart/env`, cliente `scripts/apimart.sh`, endpoints de video asíncrono y precios al día de wan2.7-r2v, Omni Flash y Grok Imagine. Falta cargar saldo.
 
 ## Mentalidad
 - ⏳ [[mentalidad-y-habitos]] — visión a largo plazo, responsabilidad, metas

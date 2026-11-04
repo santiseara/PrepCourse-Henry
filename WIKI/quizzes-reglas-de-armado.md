@@ -129,6 +129,7 @@
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-04 | Tai Chi Fit | El apelativo por defecto seguía siendo **"Guerrera"** (del quiz militar original) y se veía 3 veces en el último paso | Cuando se cambia el **tema** de un quiz modelado (§2), el barrido no puede quedarse en los textos de las preguntas: hay que revisar también **el nombre por defecto** (`state.nombre||'...'`), los textos del mockup de la app y los comentarios del CSS. En Tai Chi Fit pasó a **"Aprendiz"**, que es el primer nivel del propio quiz |
 | 2026-11-03 | Landing Academia del Trazo | "Quiero que pongas un botón de cta entre medio de esos textos, porque sino queda re abajo el botón para comprar… que no lleve al checkout, sino que lleve a la presentación de la oferta" | §4: botón en el hero anclado a la sección de "qué vas a recibir", sin `js-cta` |
 | 2026-11-03 | Landing Academia del Trazo | "Esto quedó re peruano, necesito que sea más completo, con toda la información de lo que se lleva, el producto, los bonos" | §4: caja de oferta completa estilo *launch promotion* (chapita, nombre, precio, lista de ✓, acceso de por vida destacado, caja punteada de regalos con valor tachado, botón y micro-confianza) |
 | 2026-11-03 | Landing Academia del Trazo | "Fijate que la foto queda cortada y no se ve lo del costado" | §4: `width`/`height` del `<img>` con las dimensiones reales del archivo + blindaje `height:auto!important;aspect-ratio:auto!important;object-fit:contain!important` en el mockup del hero |

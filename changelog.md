@@ -1,3 +1,11 @@
+## 2026-11-04 (3ª pasada) — Tai Chi Fit: el VSL montado en el quiz
+
+- Santiago pasó el embed de Panda. Va dentro de `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` queda en 438** (7:18, cuando el VSL dice el precio).
+- **Probado paso por paso en el navegador:** el embed carga en 9:16 (396x704), la oferta arranca oculta (`display:none`), se destraba con un `panda_timeupdate` de 439 s —el camino real, no el reloj de respaldo— y los **5 CTAs** apuntan a `tai-chi-fit.impultienda.ar/checkout`.
+- **Resto del quiz militar encontrado:** el apelativo por defecto era **"Guerrera"** y se veía tres veces en el último paso ("Guerrera, tu reto de 28 días", "Listo, Guerrera", "seguí así, guerrera"). Pasó a **"Aprendiz"**, el primer nivel del propio quiz. También se limpiaron dos comentarios del CSS ("loading recluta", "cuartel digital"). Regla nueva en [[quizzes-reglas-de-armado]].
+- **Aviso:** el player de Panda arranca mudo con su cartel "Pulse aquí para activar el sonido". Eso se configura en el panel de Panda, no desde el HTML (§7).
+- Entregables actualizados: `~/Desktop/tai-chi-fit/landing/` (quiz.html, .txt y PRUEBA.html) y `OUTPUTS/2026-11-04-quiz-tai-chi-fit.html`.
+
 ## 2026-11-04 (2ª pasada) — Tai Chi Fit: la voz rehecha pareja, y tres bonos que se habían perdido
 
 - Santiago: *"Porque usas voces distintas todo el tiempo? … encima cambia el tono cada dos minutos, le queda muy mal esa voz"*. La voz era Sulafat en todos los bloques, pero **dos salieron con un modelo de TTS y dos con otro** porque se agotó la cuota a mitad de tanda: mismo nombre de voz, otro timbre y otro ritmo (156 vs 132 ppm), justo en el medio del VSL.

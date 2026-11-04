@@ -74,10 +74,12 @@ El VSL que corre detrás de ese mismo quiz está en `calisteniafeminina.site/vsl
   - **9 placas** (5 bonos con su valor, el total de $167.600, el precio, el sello de 30 días y el CTA) en jade y bermellón con borde dorado.
   - **Subtítulos** de 2 palabras en mayúscula, blanco con borde negro y la palabra clave en amarillo, al estilo del VSL original. Alineados contra el guion, no contra Whisper.
   - Música: la cama `bed_B` de [[herrero-de-finde]] a -8 dB con ducking.
-- ✅ **VSL montado en el quiz (2026-11-04).** Embed de Panda (`76429faa-953f-465b-a471-d49836a1c952`, player `vz-588b0437-276`) dentro de `<template id="vsl-template">` y **`SEGUNDOS_OFERTA: 438`** (7:18, el segundo en que el VSL dice el precio).
+- ✅ **VSL montado en el quiz (2026-11-04).** Embed de Panda (`76429faa-953f-465b-a471-d49836a1c952`, player `vz-588b0437-276`) dentro de `<template id="vsl-template">`. **`SEGUNDOS_OFERTA: 240`**: Santiago lo pidió a los **4 minutos** de llegar a la slide, no en el segundo del precio (7:18).
   - **Probado en el navegador**, los 10 pasos: el embed carga en 9:16 (396x704), la oferta arranca oculta, se destraba con `panda_timeupdate` a los 439 s y los 5 CTAs apuntan a `tai-chi-fit.impultienda.ar/checkout`.
   - De paso se corrigió un resto del quiz militar: el apelativo por defecto decía **"Guerrera"** y pasó a **"Aprendiz"**.
-- ⏳ **Falta:** que el player de Panda arranque con sonido (se configura en el panel de Panda, no en el HTML) y confirmar el checkout.
+  - **`#cta-vsl`: botón al checkout pegado abajo del video** (2026-11-04, pedido de Santiago: *"abajo del VSL ya les pongas un botón de CTA que los redirija directo a checkout, como para que no tengan que deslizar tanto"*). Aparece con el mismo disparador que la oferta y usa `data-cta`, así que hereda el link y los UTMs.
+- ⏳ **Falta:** que el player de Panda arranque con sonido (se configura en el panel de Panda, no en el HTML).
+- 🔴 **El checkout todavía no existe:** `https://tai-chi-fit.impultienda.ar/checkout` devuelve **"Tienda no encontrada | Impultienda Digital"**. Todos los CTAs del quiz apuntan ahí.
 - ⚠️ **La foto de la Maestra Valentina para el avatar.** La del quiz (`imagenes/maestra-valentina.png`) es 1:1 y HeyGen le pondría barras blancas. La v1 salió en cuerpo entero (rechazada por artificial) y la v2 con el fondo cargado. **La buena: asiática, unos 50 años, sentada, plano medio, pared lisa y vacía, look de foto de celular** ([[vsl-reglas-de-armado]] §3).
 - **El guion quedó alineado con el quiz** en seis puntos que no coincidían: el manuscrito, el puente entre "tu raíz" y la Fase Raíz, Fluir como **core y glúteo** (no cadera), el espacio de una toalla, "no se trata de terminar reventada" y la versión adaptada de cada movimiento.
 - ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.

@@ -21,7 +21,7 @@ window.CONFIG = {
   /* Segundos de VSL vistos antes de que aparezca la oferta.
      OJO: tiene que ser el segundo exacto en que NUESTRO VSL dice el precio.
      230 = 3:50 · 960 = 16:00 */
-  SEGUNDOS_OFERTA: 438,
+  SEGUNDOS_OFERTA: 240,
 
   /* VSL propio: pegá acá la URL del MP4 (720x1280, faststart).
      Si lo dejás vacío usa el embed de <template id="vsl-template"> de más abajo,
@@ -545,6 +545,12 @@ window.CONFIG = {
   .vsl-ph{aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#cfdcc0;background:repeating-linear-gradient(45deg,#1E3328,#1E3328 16px,#26402F 16px,#26402F 32px);font-family:'Oswald';font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:20px;text-align:center}
   .vsl-ph small{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.06em;text-transform:none;color:var(--bamboo);line-height:1.5}
 
+
+  /* CTA debajo del VSL: oculto hasta que aparece la oferta */
+  #cta-vsl{display:none;max-width:400px;width:min(400px,92vw);margin:0 auto 26px;text-align:center}
+  #cta-vsl.show{display:block;animation:ofIn .5s ease both}
+  #cta-vsl .mini{font-family:'JetBrains Mono';font-size:.7rem;letter-spacing:.06em;color:var(--muted);margin-top:10px}
+
   /* la oferta entera, oculta hasta SEGUNDOS_OFERTA */
   #oferta-wrap{display:none}
   #oferta-wrap.show{display:block;animation:ofIn .6s ease both}
@@ -652,6 +658,13 @@ window.CONFIG = {
     </div>
 
     <span class="vsl-note">// oferta válida solo en esta sesión</span>
+  </div>
+
+
+  <!-- CTA directo al checkout, debajo del VSL (aparece junto con la oferta) -->
+  <div id="cta-vsl">
+    <a href="#" class="btn block" data-cta>🔥 Quiero empezar ahora</a>
+    <p class="mini">// pago único de $<span data-precio>14.990</span> · acceso inmediato</p>
   </div>
 
   <!-- Embed de Panda / VTurb. Si usás MP4 propio (CONFIG.VIDEO_URL) dejá esto vacío. -->
@@ -1303,13 +1316,15 @@ window.CONFIG = {
     safe('buildResult',buildResult);
     safe('player',mountPlayer);
     /* reloj de respaldo: si el video no informa su tiempo, la oferta igual aparece */
-    setTimeout(showOffer,(CFG.SEGUNDOS_OFERTA||438)*1000);
+    setTimeout(showOffer,(CFG.SEGUNDOS_OFERTA||240)*1000);
   }
 
   function showOffer(){
     if(offerShown) return; offerShown=true;
     var w=document.getElementById('oferta-wrap');
     if(w) w.classList.add('show');
+    var cv=document.getElementById('cta-vsl');
+    if(cv) cv.classList.add('show');
     safe('initResult',initResult);
     px('ViewContent',{content_name:'oferta'});
   }
@@ -1318,7 +1333,7 @@ window.CONFIG = {
     var frame=document.getElementById('vslFrame');
     var gate=document.getElementById('soundGate');
     if(!frame) return;
-    var SEG=CFG.SEGUNDOS_OFERTA||438;
+    var SEG=CFG.SEGUNDOS_OFERTA||240;
 
     /* 1 · MP4 propio: arranca solo, con sonido, sin controles */
     if(CFG.VIDEO_URL){

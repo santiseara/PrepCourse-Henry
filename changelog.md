@@ -1,3 +1,12 @@
+## 2026-11-04 (4ª pasada) — Tai Chi Fit: la oferta a los 4 minutos y un CTA pegado al video
+
+- Santiago: *"quiero que todo eso aparezca recién a los 4 minutos… y abajo del VSL ya les pongas un botón de CTA que los redirija directo a checkout, como para que no tengan que deslizar tanto"*. (Arrancó pidiendo sacar todo lo que hay debajo del video y se corrigió solo: *"No, dejalo, dejalo"*.)
+- **`SEGUNDOS_OFERTA` pasa de 438 a 240.** Ya no se ata al segundo en que el VSL dice el precio (7:18), sino a los 4 minutos redondos que pidió.
+- **Bloque nuevo `#cta-vsl`**: botón "🔥 Quiero empezar ahora" + "pago único de $14.990 · acceso inmediato", a 40 px debajo del player. Aparece con el mismo disparador que la oferta y lleva `data-cta`, así que hereda el checkout y los UTMs como los otros cinco.
+- **Probado en el navegador:** los dos arrancan ocultos y aparecen juntos con un `panda_timeupdate` de 241 s.
+- 🔴 **Hallazgo:** `tai-chi-fit.impultienda.ar/checkout` devuelve **"Tienda no encontrada"**. Los seis CTAs del quiz apuntan ahí.
+- Reglas nuevas en [[quizzes-reglas-de-armado]].
+
 ## 2026-11-04 (3ª pasada) — Tai Chi Fit: el VSL montado en el quiz
 
 - Santiago pasó el embed de Panda. Va dentro de `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` queda en 438** (7:18, cuando el VSL dice el precio).

@@ -192,6 +192,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-04 | Quiz DanceGo | "todos los botones de cta de la ultima slide, tienen que redirigir a este checkout" | Un solo `ligarCTAs()` con selector ancho (`#oferta a.btn, #oferta button.btn, #oferta .js-cta`), la URL siempre desde `CONFIG.LINK_CHECKOUT`, llamado **también en el arranque** para que los `href` estén puestos desde que carga, e **idempotente** (`dataset.cta`) para no sumar dos listeners y disparar dos `AddToCart` por clic. Se verifica en el navegador listando los CTAs con su `href`, y con `?utm_source=` para ver que arrastre los UTM |
 | 2026-11-04 | Quiz DanceGo | "Lo de los estilos de musica sacalo te dije. El emoji de las baterias se ve muy mal. Saca algunas preguntas que esten de mas" | Se fue el paso de ritmos **entero** (y su código), más el bloque de hábitos, "nivel en el baile", la edad exacta y "tu mejor cuerpo": de 35 pasos a **26**. El emoji de pilas se fue con la pregunta de energía |
 | 2026-11-04 | Quiz DanceGo | "Las imagenes del principio son muy malas, usa algunas que ya hayamos usado y que se vean mejor, hacelo mas llamativo, las del tipo de musica sacalas" | Las fotos estaban bien: el problema era el **encuadre**. Recorte apretado a la cara (zoom 1.95, 720×960), etiqueta sobre banda oscura encima de la foto, chapita de prueba social y titular más grande. Los 7 ritmos quedaron **sin imagen**: tarjeta tipográfica sola |
 | 2026-11-04 | Quiz DanceGo | "Mejoramelo, no quiero que se vea recontra colorido, quiero que las imagenes se vean bien" | §4: el problema era el **overlay de degradé** sobre fotos que ya estaban bien. Paleta de papel crema + tinta + un acento; tapas de ritmos y maqueta de celular rehechas en CSS; capturas de WhatsApp e Instagram pasadas a HTML; `img{height:auto}` global y chequeo de desborde a 390 px |
@@ -282,3 +283,14 @@ La causa: `.btn` es `display:flex` con `justify-content:center`. Eso centra la *
 **Regla: todo `.btn` lleva `text-align:center` además del `justify-content:center`.** Y al revisar un quiz, mirar los botones **en ancho de teléfono**, que es donde las etiquetas largas se parten.
 
 **Cómo revisar en ancho real sin salir del navegador:** Chrome headless con `--window-size=390,...` **no aplica el viewport** (maqueta ancho y recorta, y parece que hubiera desborde cuando no lo hay). Lo que sí funciona es cargar la página en un **`<iframe>` de 390 px** dentro de una pestaña ya abierta: ahí el viewport es real, corren las media queries y se puede medir con `getBoundingClientRect()` sobre `contentDocument`.
+
+## 2026-11-04 · Los CTA del último paso: uno solo los engancha a todos
+
+Santiago, sobre DanceGo: *"todos los botones de cta de la ultima slide, tienen que redirigir a este checkout"*. Reglas fijas para la slide de la oferta:
+
+- **Un único lugar con la URL: `CONFIG.LINK_CHECKOUT`.** Nunca un `href` hardcodeado botón por botón: con tres o cuatro CTAs en la misma slide, el día que cambia el checkout uno queda viejo y manda tráfico pagado a la nada.
+- **Un solo `ligarCTAs()` que barre toda la sección**, con selector ancho: `#oferta a.btn, #oferta button.btn, #oferta .js-cta`. Así entran también las chapas que no son `<a>` (la de "HOY: GRATIS", por ejemplo), que se enganchan con `cursor:pointer` + `location.href`.
+- **Llamarlo también en el arranque**, no solo al renderizar la oferta: así los `href` ya están puestos desde que carga la página y el botón sirve aunque el paso de la oferta nunca se monte o algo falle antes.
+- **Tiene que ser idempotente**: marcar cada elemento con `dataset.cta` y saltearlo si ya estaba. Si no, al llamarlo dos veces (arranque + oferta, o la oferta que se destapa con `SEGUNDOS_OFERTA`) se suman dos listeners y el pixel dispara **dos `AddToCart` por clic**, que infla la métrica y ensucia la optimización.
+- Los `<a>` del checkout llevan `rel="noopener"`.
+- **Verificar en el navegador, no leyendo el código**: saltar al último paso y listar `#oferta a, #oferta button, #oferta .js-cta` con su `href`. Si algún CTA sale con `href="#"`, no se enganchó. Probar también con `?utm_source=...` en la URL y confirmar que el `href` final arrastra los UTM.

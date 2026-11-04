@@ -1126,13 +1126,17 @@ function abrirOferta(){
   track('Lead');
 }
 
-/* Todo lo que parece un botón lleva al checkout: los .btn, los .js-cta y
-   cualquier chapa de color con bordes redondeados que se pueda tocar. */
+/* Todo lo que parece un botón en la oferta lleva al checkout: los .btn, los
+   .js-cta y cualquier chapa de color que se pueda tocar. La URL sale siempre
+   de CONFIG.LINK_CHECKOUT (nada hardcodeado) y arrastra los UTM.
+   Se puede llamar las veces que sea: no engancha dos veces el mismo botón. */
 function ligarCTAs(){
   var url = checkout();
-  document.querySelectorAll('#oferta a.btn, #oferta .js-cta').forEach(function(el){
-    if(el.tagName === 'A'){ el.href = url; }
+  document.querySelectorAll('#oferta a.btn, #oferta button.btn, #oferta .js-cta').forEach(function(el){
+    if(el.tagName === 'A'){ el.href = url; el.rel = 'noopener'; }
     else { el.style.cursor = 'pointer'; }
+    if(el.dataset.cta) return;          /* ya estaba enganchado */
+    el.dataset.cta = '1';
     el.addEventListener('click', function(e){
       track('AddToCart');
       if(el.tagName !== 'A'){ e.preventDefault(); location.href = url; }
@@ -1163,6 +1167,8 @@ if(C.PIXEL_ID){
   fbq('init', C.PIXEL_ID); fbq('track','PageView');
 }
 render();
+ligarCTAs();   /* los href del checkout quedan puestos desde el arranque,
+                  aunque la oferta todavia no se haya mostrado */
 </script>
 </body>
 </html>

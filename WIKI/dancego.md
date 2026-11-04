@@ -24,7 +24,7 @@
 - **Stack del original: Lovable + Supabase propio.** El bundle (`assets/index-*.js`) trae el panel de administración y las imágenes, pero **el contenido del quiz vive en la base** (`funnel_steps`, `funnel_elements`, `products`…): no está en texto plano. Se saca recorriendo el quiz en Chrome y leyendo `img.src`/`alt` paso a paso.
 - Las 81 imágenes cuelgan de `/lovable-uploads/<uuid>.png` y **están todas listadas en el bundle**: se bajan de una y se miran juntas en una hoja de contactos.
 - Precio nuestro (provisorio, en el `CONFIG`): **$14.990**, tachado $49.990, 70% OFF, 3 cuotas de $4.997, bonos por $38.900.
-- Checkout provisorio: `https://dancego.impultienda.ar/checkout`.
+- **Checkout confirmado por Santiago el 2026-11-04: `https://dancego.impultienda.ar/checkout`.** Los 4 CTAs del último paso (los tres botones "Comprar ahora"/"Quiero empezar ahora" y la chapita **HOY: GRATIS**) salen todos de ahí, con los UTM pegados. Ver la regla del 2026-11-04 en [[quizzes-reglas-de-armado]].
 - El quiz **no lleva VSL** por ahora: `SEGUNDOS_OFERTA: 0` y la oferta se ve de entrada, como el original. Si se le carga un VSL en `<template id="vsl-template">`, con poner los segundos la oferta se esconde sola.
 
 ## Portada (2ª versión, 2026-11-04)
@@ -45,7 +45,7 @@ Quedan los que **personalizan el resultado** (objetivo, físico de hoy, cuerpo d
 
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?
-- ¿Precio final y link real de checkout?
+- ¿Precio final? (el link de checkout ya está confirmado)
 - ¿Va VSL en el último paso? Si va, cambia `SEGUNDOS_OFERTA`.
 - ¿Se recorta el bloque de hábitos (agua, sueño, rutina de trabajo, qué tan activa, energía)? Son 5 pasos que el quiz podría no necesitar.
 

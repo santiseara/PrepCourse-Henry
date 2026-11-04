@@ -1,3 +1,15 @@
+## 2026-11-04 (16ª pasada) — Los CTA de DanceGo, blindados al checkout
+
+- Santiago: *"Ajustame algo del quiz, todos los botones de cta de la ultima slide, tienen que redirigir a este checkout: https://dancego.impultienda.ar/checkout"*.
+- El link **ya era ese** (`CONFIG.LINK_CHECKOUT`, línea 16) y los 4 CTAs del último paso ya salían de ahí. Lo que se hizo fue sacarle los puntos flojos:
+  - **Selector más ancho** en `ligarCTAs()`: entra también cualquier `button.btn` que se agregue más adelante, además de los `a.btn` y los `.js-cta`.
+  - **`ligarCTAs()` también en el arranque**: los `href` quedan puestos desde que carga la página, no recién cuando se monta la oferta.
+  - **Idempotente** (`dataset.cta`): antes, si se llamaba dos veces (arranque + oferta, o la oferta destapada por `SEGUNDOS_OFERTA`), se sumaban dos listeners y el pixel disparaba **dos `AddToCart` por clic**.
+  - `rel="noopener"` en los `<a>` del checkout.
+- **Verificado en Chrome** sobre el último paso: los 4 CTAs (3 botones + la chapita **HOY: GRATIS**) van al checkout, ninguno quedó con `href="#"`, y con `?utm_source=fb&utm_campaign=x1` en la URL el link final arrastra los dos parámetros.
+- Entregable regenerado: `~/Desktop/dancego/dancego-quiz.txt` (713 KB, 16 imágenes embebidas), más `dancego-PRUEBA.html` y `OUTPUTS/2026-11-04-quiz-dancego.html`. Copiado al portapapeles.
+- WIKI: regla nueva del 2026-11-04 en [[quizzes-reglas-de-armado]] (los CTA del último paso: uno solo los engancha a todos) + fila en el registro de correcciones; en [[dancego]] el checkout pasa de provisorio a **confirmado**.
+
 ## 2026-11-04 (15ª pasada) — El checkout de Monjaro Rojo, confirmado
 
 - Santiago: *"Ajustame el txt, todos los botones de cta que aparecen al final, tienen que redirigir a este checkout: https://monjaro-rojo-japones.impultienda.ar/checkout"*.

@@ -1,3 +1,13 @@
+## 2026-11-04 (9ª pasada) — "TODOS LOS BOTONES": lo que parece botón también va al checkout
+
+- Santiago pegó la versión corregida (verificado en vivo: los 5 CTA resuelven a `/checkout`, y el clic real en *QUIERO EMPEZAR A DIBUJAR* termina en "Checkout - Dibujo Creativo"). Pero mandó una captura de la caja de regalos: *"Esos botones también tienen que redirigir, TODOS LOS BOTONES"*.
+- **Lo que tocó no era un botón:** la chapa verde **"HOY: GRATIS"** es un `<i class="free">` decorativo. Parece botón (fondo verde, `border-radius:999px`) y no hacía nada. Lo mismo la caja de regalos entera.
+- **Cambios:** el botón del hero `VER TODO LO QUE INCLUYE` deja de ser ancla a `#incluye` y pasa a `js-cta` → `/checkout` (eran 5 CTA, ahora son **6**); y una **red de seguridad 2** en el JS le pone `cursor:pointer` y un clic al checkout a `.regalos`, `.free` y cualquier `[data-checkout]` que no esté dentro de un `<a>`, sin duplicar el evento cuando un padre ya lo cubre.
+- **Verificado contra la página publicada**, parcheando el DOM en vivo con el mismo código: los 6 botones resuelven a `/checkout` arrastrando las UTMs, y el clic en la chapita "hoy: gratis" termina en `/checkout?utm_source=…`.
+- El `.txt` queda en **38.081 bytes**, los tres archivos sincronizados y copiado al portapapeles.
+- ⚠️ Avisado, no tocado: los 4 links del pie (Términos, Privacidad, Reembolsos, Contacto) siguen en `href="#"`. No son botones de compra, así que no se mandan al checkout; hay que apuntarlos a las páginas de la tienda.
+- Páginas actualizadas: [[quizzes-reglas-de-armado]].
+
 ## 2026-11-04 (8ª pasada) — La landing corregida sigue sin pegarse, y el alcance de un arreglo
 
 - Se perdió el contexto de la terminal; se reconstruyó el estado desde el `changelog.md`, los `OUTPUTS/` y los archivos del Escritorio.

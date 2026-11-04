@@ -161,6 +161,26 @@ main{padding:26px 0 30px;min-height:calc(100vh - 70px)}
 .pick img{width:100%;height:190px;object-fit:cover;object-position:top center}
 .pick .lb{padding:11px 8px;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
 .pick.on .lb{color:var(--accent)}
+/* Portada: la foto va a sangre y la edad encima, sobre una banda oscura.
+   Sin la banda el texto blanco se pierde contra el fondo claro del estudio. */
+.pick.ov figure{position:relative}
+.pick.ov img{height:auto!important;aspect-ratio:3/4!important}
+.pick.ov figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 13px;color:#fff;
+  font-size:.92rem;font-weight:800;letter-spacing:.04em;text-align:center;
+  background:linear-gradient(180deg,rgba(23,22,26,0) 0%,rgba(23,22,26,.58) 45%,rgba(23,22,26,.88) 100%)}
+.pick.ov::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .15s}
+.pick.ov.on::after{box-shadow:inset 0 0 0 3px var(--accent)}
+.pick.ov{position:relative}
+.cover-head{text-align:center;margin-bottom:20px}
+.cover-badge{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;font-size:.68rem;
+  font-weight:800;letter-spacing:.11em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:16px}
+.cover-badge i{width:6px;height:6px;border-radius:50%;background:#5BD08C;font-style:normal;
+  box-shadow:0 0 0 3px rgba(91,208,140,.25)}
+.cover-head h1{font-size:2.05rem;line-height:1.08;letter-spacing:-.025em}
+.cover-head h1 em{font-style:normal;color:var(--accent)}
+.cover-head p{color:var(--muted);font-size:.95rem;margin-top:10px}
+@media(max-width:380px){.cover-head h1{font-size:1.78rem}}
 /* opciones con foto en fila (físico de hoy) */
 .rowpick{display:flex;align-items:center;gap:14px;width:100%;background:var(--card);border:1.5px solid var(--line);
   border-radius:var(--r);padding:10px 14px 10px 10px;cursor:pointer;box-shadow:var(--shadow-s);
@@ -221,18 +241,16 @@ main{padding:26px 0 30px;min-height:calc(100vh - 70px)}
 .msg time{display:block;text-align:right;font-size:.66rem;color:var(--muted);margin-top:2px}
 
 /* ====== swipe de ritmos ====== */
-.sw{position:relative;min-height:330px;display:grid;place-items:center}
+.sw{position:relative;min-height:220px;display:grid;place-items:center}
 .swc{width:100%;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
   box-shadow:var(--shadow);animation:in .3s ease}
-.swc .cov{aspect-ratio:3/2;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;position:relative}
-.swc .cov::after{content:"";position:absolute;inset:0;background:
-  repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 7px)}
-.swc .cov b{position:relative;z-index:1;font-family:'Fraunces',serif;font-size:1.72rem;line-height:1.05;letter-spacing:-.02em}
-.swc .cov em{position:relative;z-index:1;font-style:normal;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
-  opacity:.82;margin-bottom:6px}
-.swc .bd{padding:16px 18px 20px;text-align:center}
-.swc .bd h3{font-size:1.14rem;margin-bottom:6px}
-.swc .bd p{font-size:.88rem;color:var(--muted);line-height:1.55}
+/* Los ritmos van sin imagen: el original usaba carteles neón con el texto
+   quemado en portugués. Tarjeta tipográfica y listo. */
+.swc .bd{padding:30px 22px 32px;text-align:center}
+.swc .bd em{display:block;font-style:normal;font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px}
+.swc .bd h3{font-size:1.65rem;margin-bottom:12px;letter-spacing:-.02em}
+.swc .bd p{font-size:.9rem;color:var(--muted);line-height:1.6}
 .swbt{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:16px}
 .swbt button{border:1.5px solid var(--line-2);background:var(--card);border-radius:13px;padding:14px;cursor:pointer;
   font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow-s)}
@@ -631,7 +649,7 @@ function fechaMeta(){
 }
 function imc(){ var h = state.altura/100; return (state.peso/(h*h)); }
 function imcTag(v){
-  if(v<18.5) return {t:'Bajo peso', c:'#4E86B8', bg:'#EDF3F9', p:9};
+  if(v<18.5) return {t:'Bajo peso', c:'#4E86B8', p:9};
   if(v<25)   return {t:'Saludable', c:'var(--green)', bg:'var(--green-s)', p:32};
   if(v<30)   return {t:'Sobrepeso', c:'var(--amber)', bg:'var(--amber-s)', p:59};
   return {t:'Obesidad', c:'var(--red)', bg:'var(--red-s)', p:86};
@@ -646,13 +664,13 @@ var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none
    tipografiadas (nada de carteles neón) y todas con la misma paleta apagada.
    =========================================================================== */
 var RITMOS = [
-  {k:'Flashback', n:'Pop de los 80 y 90', bg:'#2E3A4B', d:'Los clásicos que te hacen bailar sin pensarlo: Madonna, Michael Jackson, Culture Club…'},
-  {k:'Baile popular', n:'Cumbia', bg:'#7A4A2B', d:'El ritmo que todo el mundo canta y nadie se queda sentado. Para mover todo el cuerpo.'},
-  {k:'Córdoba capital', n:'Cuarteto', bg:'#8A5A1E', d:'Pura energía y mucho cardio sin que te des cuenta de que estás entrenando.'},
-  {k:'Ritmo latino', n:'Reggaetón y latino', bg:'#5B3A5F', d:'Lo más caliente de América Latina para mover la cadera: Bad Bunny, Karol G, J Balvin, Shakira…'},
-  {k:'Pareja o sola', n:'Salsa y bachata', bg:'#1F5A55', d:'Pasos sencillos, cintura y coordinación. Se baila igual de bien sola en el living.'},
-  {k:'Lo que suena hoy', n:'Hits virales de TikTok', bg:'#3B3550', d:'Las canciones que explotan en los videos cortos y los desafíos de baile más populares.'},
-  {k:'Alta intensidad', n:'Cardio Dance', bg:'#7A2E3A', d:'Coreografías de alta energía pensadas para acelerar las pulsaciones y quemar muchas calorías.'}
+  {k:'Flashback', n:'Pop de los 80 y 90', d:'Los clásicos que te hacen bailar sin pensarlo: Madonna, Michael Jackson, Culture Club…'},
+  {k:'Baile popular', n:'Cumbia', d:'El ritmo que todo el mundo canta y nadie se queda sentado. Para mover todo el cuerpo.'},
+  {k:'Córdoba capital', n:'Cuarteto', d:'Pura energía y mucho cardio sin que te des cuenta de que estás entrenando.'},
+  {k:'Ritmo latino', n:'Reggaetón y latino', d:'Lo más caliente de América Latina para mover la cadera: Bad Bunny, Karol G, J Balvin, Shakira…'},
+  {k:'Pareja o sola', n:'Salsa y bachata', d:'Pasos sencillos, cintura y coordinación. Se baila igual de bien sola en el living.'},
+  {k:'Lo que suena hoy', n:'Hits virales de TikTok', d:'Las canciones que explotan en los videos cortos y los desafíos de baile más populares.'},
+  {k:'Alta intensidad', n:'Cardio Dance', d:'Coreografías de alta energía pensadas para acelerar las pulsaciones y quemar muchas calorías.'}
 ];
 
 /* ===========================================================================
@@ -824,11 +842,11 @@ function render(){
 
   /* ---------- portada con fotos ---------- */
   if(s.type === 'cover'){
-    h += '<h1 class="q" style="font-size:1.72rem;letter-spacing:-.02em">' + tok(s.q) + '</h1>';
-    h += '<p class="help">' + s.help + '</p>';
+    h += '<div class="cover-head"><span class="cover-badge"><i></i>+155 mil mujeres bailando</span>'
+      +  '<h1>' + tok(s.q) + '</h1><p>' + s.help + '</p></div>';
     h += '<div class="grid">';
     s.opts.forEach(function(o,k){
-      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="760" height="950" loading="' + (k<2?'eager':'lazy') + '"></figure><div class="lb">' + esc(o.l) + '</div></button>';
+      h += '<button class="pick ov" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="720" height="960" loading="' + (k<2?'eager':'lazy') + '"><figcaption>' + esc(o.l) + '</figcaption></figure></button>';
     });
     h += '</div><p class="legal">Al elegir tu edad y continuar, aceptás nuestros <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>.</p>';
   }
@@ -1133,9 +1151,8 @@ function swipe(){
     for(var k=0;k<RITMOS.length;k++) dots += '<i class="' + (k===swIdx?'on':'') + '"></i>';
     dots += '</div>';
     box.innerHTML = dots
-      + '<div class="sw"><div class="swc"><div class="cov" style="background:' + r.bg + '">'
-      +   '<em>' + r.k + '</em><b>' + r.n + '</b></div>'
-      +   '<div class="bd"><p>' + r.d + '</p></div></div></div>'
+      + '<div class="sw"><div class="swc"><div class="bd">'
+      +   '<em>' + r.k + '</em><h3>' + r.n + '</h3><p>' + r.d + '</p></div></div></div>'
       + '<div class="swbt"><button class="no" data-v="0">✕ No va</button><button class="si" data-v="1">♥ Me encanta</button></div>'
       + '<p class="swcount">' + (state.ritmos.length ? state.ritmos.length + (state.ritmos.length===1?' ritmo elegido':' ritmos elegidos') : 'Ritmo ' + (swIdx+1) + ' de ' + RITMOS.length) + '</p>';
     box.querySelectorAll('.swbt button').forEach(function(b){

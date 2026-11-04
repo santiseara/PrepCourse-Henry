@@ -1,3 +1,14 @@
+## 2026-11-04 (13ª pasada) — DanceGo: la portada no necesitaba fotos nuevas, necesitaba un recorte
+
+- Santiago: *"Las imagenes del principio son muy malas, usa algunas que ya hayamos usado y que se vean mejor, hacelo mas llamativo, las del tipo de musica sacalas."*
+- ⭐ **Las 4 fotos de edad eran buenas; el encuadre era malo.** Retratos de estudio de 1024×1024 en los que la persona ocupaba un tercio de la tarjeta y el resto era gris vacío: a 170 px las cuatro parecían **la misma mujer**. Con un recorte apretado a la cara (zoom 1.95, centro vertical 0.26, salida 720×960 en 3:4) se ven las arrugas, el pelo cano y la edad de cada una. **Cero imágenes nuevas, cero créditos.**
+- **Portada más llamativa sin volver a lo colorido:** chapita oscura *+155 mil mujeres bailando* con punto verde, titular a 2.05rem y las fotos **a sangre** con la edad encima, sobre una banda oscura, en vez de una franja blanca debajo. En un teléfono de 390 px entra todo en la primera pantalla (677 px de 798).
+- **Los 7 ritmos quedaron sin imagen**, como pidió: tarjeta tipográfica sola (eyebrow + nombre en la serif + descripción).
+- 🔎 **Se buscó un set de edades mejor en las otras ofertas y no existe:** las de [[monjaro-violeta]] son parejas (hombre + mujer) recortadas sobre negro a 300 px. Queda anotado que conviene mirar antes de prometer un reuso.
+- 📁 Regenerado: `~/Desktop/dancego/dancego-quiz.txt` (719 KB, copiado al portapapeles), `dancego-PRUEBA.html`, `landing/dancego-quiz.html`, `imagenes/edad-1..4.webp`. Copia en `OUTPUTS/2026-11-04-quiz-dancego.html`.
+- Recorrido entero verificado en un `<iframe>` de 390 px: cero desborde, cero imágenes rotas.
+- Páginas actualizadas: [[dancego]], [[quizzes-reglas-de-armado]].
+
 ## 2026-11-04 (12ª pasada) — DanceGo: el quiz brasileño clonado, en voseo y despintado
 
 - Santiago: *"Quiero que me hagas este quiz, en español argentino… Mejoramelo, no quiero que se vea recontra colorido, quiero que las imagenes se vean bien."* (`funilv1.appdancego.com`)

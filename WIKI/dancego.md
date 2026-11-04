@@ -12,8 +12,8 @@
 | | Original | Nuestro |
 |---|---|---|
 | Paleta | degradé rosa→violeta→amarillo en barra, títulos palabra por palabra de 4 colores, botones amarillo chillón | papel crema `#FBF8F4`, tinta `#1C1A19`, **un** acento frambuesa `#B23A5B`; verde `#216B4F` solo para "bien"/comprar, rojo solo para riesgo |
-| Fotos de edad | las mismas fotos, tapadas con un overlay de degradé rosa/violeta/verde/naranja | **las mismas fotos sin overlay** (son buenas: estudio, fondo gris, ropa deportiva neutra) |
-| Tapas de los 7 ritmos | carteles neón hechos con IA, con el texto quemado en portugués | tarjetas **tipográficas en CSS**, color plano apagado, nítidas y editables |
+| Fotos de edad | las mismas fotos, tapadas con un overlay de degradé rosa/violeta/verde/naranja | las mismas fotos **sin overlay y con recorte apretado a la cara** (720×960, 3:4), con la edad sobre una banda oscura encima de la foto |
+| Tapas de los 7 ritmos | carteles neón hechos con IA, con el texto quemado en portugués | **sin imagen**: tarjeta tipográfica sola (Santiago, 2026-11-04: *"las del tipo de musica sacalas"*) |
 | Comunidad de WhatsApp y perfil de Instagram | capturas de pantalla pixeladas | **armadas en HTML** (burbujas de chat y ficha de perfil) |
 | Maqueta de la app | captura del celular con la UI en portugués | **el celular dibujado en HTML/CSS**, con los textos en castellano |
 | Ritmos | Sertanejo universitario, Funk brasileño, Gospel | **Cumbia, Cuarteto, Salsa y bachata** (los otros 4 quedan) |
@@ -28,6 +28,12 @@ Pop de los 80 y 90 · Cumbia · Cuarteto · Reggaetón y latino · Salsa y bacha
 - Precio nuestro (provisorio, en el `CONFIG`): **$14.990**, tachado $49.990, 70% OFF, 3 cuotas de $4.997, bonos por $38.900.
 - Checkout provisorio: `https://dancego.impultienda.ar/checkout`.
 - El quiz **no lleva VSL** por ahora: `SEGUNDOS_OFERTA: 0` y la oferta se ve de entrada, como el original. Si se le carga un VSL en `<template id="vsl-template">`, con poner los segundos la oferta se esconde sola.
+
+## Portada (2ª versión, 2026-11-04)
+- Chapita oscura **+155 mil mujeres bailando** con un punto verde, titular a 2.05rem y las 4 fotos a sangre con la edad encima.
+- Las 4 fotos son las mismas del original, **recortadas apretado**: antes la persona ocupaba un tercio de la tarjeta y las cuatro parecían la misma mujer. Ahora se distinguen las edades.
+- Se revisaron las carpetas de las otras ofertas buscando un set de edades mejor y **no hay**: las de [[monjaro-violeta]] son parejas sobre negro a 300 px.
+- En un teléfono de 390 px, la portada entera (chapita + titular + las 4 fotos) entra en la primera pantalla: 677 px de 798.
 
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?

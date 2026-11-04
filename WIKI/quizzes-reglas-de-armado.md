@@ -150,9 +150,28 @@ y, donde importa de verdad, el blindaje completo: `height:auto!important;aspect-
 
 **Cómo se chequea, de una sola pasada:** se carga el quiz en un `<iframe>` de 390 px dentro de una pestaña abierta y se recorre **entero por código** (clickear `.opt/.pick/.rowpick`, el `♥` del swipe y `#next`), midiendo en cada paso `scrollWidth - clientWidth`. Devuelve la lista de pasos que se desbordan y en cuántos píxeles. Al final, verificar que todos los `.btn` tengan `text-align:center`.
 
+
+## 2026-11-04 · Una foto de portada mala casi siempre es un recorte malo
+
+Santiago, sobre las 4 fotos de edad de [[dancego]]: *"Las imagenes del principio son muy malas."* Eran retratos de estudio **buenos** (1024×1024, fondo gris parejo, misma ropa, misma luz) y se veían espantosos por el encuadre: la persona ocupaba un tercio de la tarjeta y el resto era gris vacío. A 170 px de ancho las cuatro parecían **la misma mujer**, y el rango de edad no se leía.
+
+**El arreglo no fue cambiar la foto, fue apretar el recorte.** Zoom ~1.95 sobre el alto, centro vertical en 0.26–0.27 (la cara arriba, porque abajo va la banda), salida 720×960 en 3:4. Con la cara llenando la tarjeta se ven de una las arrugas, el pelo cano y la edad de cada una: pasan a ser cuatro personas distintas.
+
+**Reglas:**
+- Antes de salir a buscar o generar fotos nuevas, **probar el recorte apretado de las que ya hay** y mirarlas al tamaño real. Es gratis y resuelve la mayoría de los casos.
+- En una tarjeta de opción, **el sujeto tiene que llenar el encuadre**. Si hay más fondo que persona, el recorte está mal.
+- Cuando la opción es un **rango de edad**, lo que tiene que entrar en el recorte es la **cara**, no el cuerpo: la edad se lee ahí. Para tipo de cuerpo es al revés.
+- **La etiqueta va encima de la foto**, sobre una banda oscura (`linear-gradient` de transparente a `rgba(23,22,26,.88)`), no debajo en una franja blanca: la tarjeta gana alto de imagen y se ve más llamativa. Sin la banda, el texto blanco se pierde contra el fondo claro del estudio.
+- "Más llamativo" **sin volver a lo colorido** se consigue con jerarquía, no con color: chapita oscura arriba con la prueba social, titular más grande (2.05rem) y foto a sangre.
+
+## 2026-11-04 · Antes de decir "usemos una que ya tengamos", mirar si existe
+
+Santiago pidió reusar imágenes de otras ofertas. Se revisaron las carpetas de `~/Desktop/` (Monjaro Violeta, Tai Chi Fit, Dibujo Creativo, Drawing World) y **no había ningún set de edades de mujeres** que sirviera: las de Monjaro son parejas (hombre + mujer) recortadas sobre negro a 300 px. Conviene **mirar primero y decirlo**, en vez de prometer un reuso que no existe. Una hoja de contactos con Pillow de todas las carpetas se arma en un minuto y responde la pregunta de una.
+
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-04 | Quiz DanceGo | "Las imagenes del principio son muy malas, usa algunas que ya hayamos usado y que se vean mejor, hacelo mas llamativo, las del tipo de musica sacalas" | Las fotos estaban bien: el problema era el **encuadre**. Recorte apretado a la cara (zoom 1.95, 720×960), etiqueta sobre banda oscura encima de la foto, chapita de prueba social y titular más grande. Los 7 ritmos quedaron **sin imagen**: tarjeta tipográfica sola |
 | 2026-11-04 | Quiz DanceGo | "Mejoramelo, no quiero que se vea recontra colorido, quiero que las imagenes se vean bien" | §4: el problema era el **overlay de degradé** sobre fotos que ya estaban bien. Paleta de papel crema + tinta + un acento; tapas de ritmos y maqueta de celular rehechas en CSS; capturas de WhatsApp e Instagram pasadas a HTML; `img{height:auto}` global y chequeo de desborde a 390 px |
 | 2026-11-04 | Landing Academia del Trazo | "Esos botones también tienen que redirigir, TODOS LOS BOTONES" (captura de la chapita verde **HOY: GRATIS** de la caja de regalos) | §4: **todo lo que parece un botón lleva al checkout**, no solo los `.btn`. Una chapa de color con bordes redondeados (`.free`, pastillas de precio, sellos) se toca igual que un botón: o va dentro de un `<a class="js-cta">`, o el JS le pone `cursor:pointer` y un `click` a `/checkout` con las UTMs. Antes de entregar: listar en consola **todos** los `<a>` y `<button>` más los elementos con fondo opaco y `border-radius`, y revisar que ninguno quede muerto. El botón del hero (`VER TODO LO QUE INCLUYE`) **dejó de ser ancla** y también va al checkout |
 | 2026-11-04 | Landing Academia del Trazo | "Si la página ya estaba terminada, no tenías que cambiar nada más que los botones de CTA redirijan al checkout" | **Alcance:** un arreglo puntual sobre una página ya terminada toca **solo eso**. Las imágenes del CDN del original, el `PIXEL_ID` vacío y cualquier otro pendiente anotado **se avisan en una línea y se esperan**; estar en el `changelog.md` no los autoriza. Ver [[como-trabajar-con-santiago]] |

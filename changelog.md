@@ -1,3 +1,10 @@
+## 2026-11-03 (noche, 8ª pasada) — Tai Chi Fit: el guion contra el quiz y la foto del avatar
+
+- Santiago: *"Fijate que el mecanismo coincida con lo que decimos en el quiz"*. Tenía razón: **seis cosas no coincidían**. El quiz promete un **manuscrito** y el guion no lo nombraba; **Fluir** es *core y glúteo* y el guion decía "cadera"; faltaban **el espacio de una toalla**, el *"no se trata de terminar reventada, se trata de volverte fuerte"* y la **versión adaptada** de cada movimiento; y **"tu raíz"** (el mecanismo) chocaba con la **Fase Raíz** sin que nadie explicara la relación. Arreglados los seis.
+- El guion quedó en **1.830 palabras (~8:55)** y se repartió en **tres bloques** de 3.335, 3.641 y 2.929 caracteres: con los ajustes, dos bloques ya no entraban en el tope de 5.000 de HeyGen.
+- Santiago, sobre la foto del avatar: *"no quiero que sea cuerpo completo, se ve super IA, nada organico, muy mala"*. **Regla nueva en [[vsl-reglas-de-armado]] §3:** la foto de un avatar va en **plano medio**, el único requisito duro es el 9:16, el prompt pide una foto casual de celular y quedan **prohibidas** las palabras `cinematic`, `photorealistic`, `85mm`, `shallow depth of field` y `professional photography`. Lo de "full body in frame" era una confusión con la regla de los B-rolls de anatomía.
+- Páginas actualizadas: [[vsl-reglas-de-armado]], [[tai-chi-fit]].
+
 ## 2026-11-03 (noche, 7ª pasada) — Tai Chi Fit: el guion del VSL, 8 minutos
 
 - Santiago: *"Hagamoslo de 8 minutos, asi es mas completo, armame el guion completo"*. Sube de los 4–6 que había pedido antes.

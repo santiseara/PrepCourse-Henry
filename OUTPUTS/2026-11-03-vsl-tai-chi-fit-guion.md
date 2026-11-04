@@ -10,7 +10,7 @@ Soy la Maestra Valentina. Hace más de diez años que enseño Tai Chi y pasé po
 
 Pero escuchame, lo que más me impactó no fue el equilibrio. Fue que ella no se esforzaba. No apretaba los dientes. Estaba tranquila... como si el piso la sostuviera a ella.
 
-Y ahí entendí algo que me cambió la vida entera. El Tai Chi no entrena músculos. Despierta algo que toda mujer tiene adentro y que con los años se va durmiendo, callado, sin avisar. Yo lo llamo tu raíz.
+Esa mujer me enseñó durante meses, y antes de que me volviera me dejó un manuscrito con las formas ordenadas, en el orden exacto en que hay que practicarlas. Y ahí entendí algo que me cambió la vida entera. El Tai Chi no entrena músculos. Despierta algo que toda mujer tiene adentro y que con los años se va durmiendo, callado, sin avisar. Yo lo llamo tu raíz.
 
 Tu raíz es lo que te sostiene. Lo que hace que te pares, que te agaches, que gires para atrás sin miedo. Y esto es lo importante: tu raíz no se pierde con la edad. Se duerme. Y una raíz dormida se puede despertar. En los próximos minutos vas a entender cómo.
 
@@ -26,6 +26,8 @@ Pero antes, mirame bien, porque yo sé lo que estás viviendo. Te mirás al espe
 
 Y vivís así, amiga. Cansada de parecer entera por fuera y sentirte oxidada por dentro. Cansada de empezar el lunes y abandonar el jueves.
 
+Bloque 2
+
 Escuchame bien, porque esto es verdad. No te estás poniendo vieja. No te estás poniendo floja. Y no te estás quedando sin solución. Hay algo adentro tuyo que dejó de recibir el estímulo correcto. Y el día que entiendas eso, vas a dejar de pelear contra tu propio cuerpo.
 
 Y antes de que pienses "a otras les funcionó, pero yo soy distinta", dejame explicarte por qué todo lo que probaste hasta hoy estaba hecho para fallar con vos.
@@ -36,17 +38,15 @@ Y el gimnasio tampoco. La clase de zumba, la cinta, la hora de cardio. Salís tr
 
 Y caminar está buenísimo, pero caminar no te enseña a sostenerte en un pie, no te abre la cadera y no te devuelve el hombro. Volvés con el mismo cuerpo duro con el que saliste.
 
-Bloque 2
-
 El Tai Chi lleva cuatrocientos años haciendo exactamente lo contrario. Nosotras lo ordenamos en tres fases, y el orden es todo.
 
-La primera se llama Raíz. Piernas, tobillos, plantas de los pies. Lentísimo, sin saltar, sin peso, sin impacto. ¿Te imaginás levantarte de una silla sin apoyar las manos en ningún lado? ¿Bajar una escalera sin ir mirando cada escalón? Eso es tener raíz.
+La primera se llama Raíz, y se llama así por lo que te dije al principio: es la que despierta la tuya. Tren inferior. Piernas, tobillos, plantas de los pies. Lentísimo, sin saltar, sin peso, sin impacto. ¿Te imaginás levantarte de una silla sin apoyar las manos en ningún lado? ¿Bajar una escalera sin ir mirando cada escalón? Eso es tener raíz.
 
-La segunda se llama Fluir: el centro y la cadera, que es donde el cuerpo de la mujer guarda años de tensión. ¿Te imaginás ponerte ese pantalón que hace dos años no te cerraba... y que cierre?
+La segunda se llama Fluir: el centro y el glúteo, que es donde el cuerpo de la mujer guarda años de tensión. ¿Te imaginás ponerte ese pantalón que hace dos años no te cerraba... y que cierre?
 
-Y la tercera se llama Grulla: cuerpo entero, brazos, columna, respiración. ¿Te imaginás levantar los brazos por encima de la cabeza y que el hombro no te avise? ¿Y terminar con más energía de la que tenías cuando empezaste?
+Y la tercera se llama Grulla: cuerpo completo. Brazos, columna, respiración. ¿Te imaginás levantar los brazos por encima de la cabeza y que el hombro no te avise? ¿Y terminar con más energía de la que tenías cuando empezaste? Porque esto no se trata de terminar reventada. Se trata de volverte fuerte.
 
-Diez a veinte minutos por día. En tu casa, descalza, en el living. Sin pesas, sin máquinas y sin que nadie te mire.
+Diez a veinte minutos por día. En tu casa, descalza, con el espacio de una toalla. Todo con el peso de tu propio cuerpo: sin pesas, sin máquinas y sin que nadie te mire.
 
 ¿Y el error que te prometí? Es este: levantarte de golpe. Abrís los ojos, agarrás el celular, ponés los pies en el piso y salís disparada con el cuerpo duro de la noche. Se despertó en alerta, y vos lo mandás directo a resolver. Así arranca el día... y así arrancan los años.
 
@@ -54,7 +54,9 @@ La corrección son tres minutos. Antes de levantarte, todavía en la cama: respi
 
 Y la mejor parte es que no vas a hacer nada de esto sola. No tenés que adivinar qué toca hoy ni cuántos minutos. Está todo organizado, día por día, en un plan de veintiocho días hecho para una mujer con una vida real como la tuya.
 
-Se llama Tai Chi Fit. Abrís el celular a la mañana, tocás el día que te toca, y practicás conmigo. Cada movimiento filmado desde el ángulo correcto, para que veas dónde va el pie y dónde va la mano. Y vas subiendo de nivel: entrás como Aprendiz y al día veintiocho salís Maestra.
+Se llama Tai Chi Fit. Abrís el celular a la mañana, tocás el día que te toca, y practicás conmigo. Cada movimiento filmado desde el ángulo correcto, para que veas dónde va el pie y dónde va la mano. Las tres fases suben la dificultad de a poco y cada movimiento tiene su versión adaptada, así que si nunca practicaste, empezás por la Fase Raíz y listo. Y vas subiendo de nivel: entrás como Aprendiz y al día veintiocho salís Maestra.
+
+Bloque 3
 
 Y te voy a dar cinco regalos más. No son adornos: son las piezas que cierran lo que el método solo no cierra.
 

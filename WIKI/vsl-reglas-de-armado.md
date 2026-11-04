@@ -128,6 +128,15 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **Las Tres Conexiones (Argentina, crianza):** experta **Juliana Alves**, mujer de unos 45 años con anteojos. La avatar se creó en HeyGen el 2026-10-13 desde la foto `~/Downloads/ChatGPT Image 13 oct 2026, 15_53_13.png` ("Crear un personaje virtual" → "Subir foto"), con la misma voz "voz roma". Precio $15.990, anclaje "sesiones de doscientos mil pesos", garantía de 30 días. Guion: `OUTPUTS/2026-10-13-vsl-tres-conexiones-argentina-guion.md`.
 - **Subir archivos a HeyGen o Higgsfield desde Claude:** el botón abre el selector nativo de archivos. Antes de hacer clic se intercepta `HTMLInputElement.prototype.click` para los `type=file` y después se usa `file_upload` sobre el input. El archivo tiene que estar en el scratchpad o en el proyecto.
 
+
+### 🆕 2026-11-03 · La foto del avatar va en plano medio y tiene que parecer una foto real
+Santiago, sobre la primera imagen de la Maestra Valentina para Tai Chi Fit: *"No me gusto la foto que me hizo, no quiero que sea cuerpo completo, se ve super IA, nada organico, muy mala"*.
+- ⛔ **Nunca cuerpo entero.** Va **plano medio, de la cintura para arriba**, con la cara grande en el cuadro. El cuerpo entero aleja la cara, y es justo donde se nota que la imagen es generada.
+- **El único requisito duro es el 9:16** (si no, HeyGen rellena con blanco, §0d). Pedir "full body in frame" era una confusión con la regla de los B-rolls de anatomía de §3b-bis, que no aplica a un avatar.
+- **El prompt tiene que pedir una foto, no una producción.** Lo que saca el look de IA: *candid snapshot taken on a phone, not a professional shoot* · piel con textura, poros y líneas finas de verdad · mechones de pelo sueltos · ropa de lino con arrugas de uso · luz plana de ventana · fondo simple sin desenfocar.
+- ⛔ **Palabras prohibidas en el prompt de un avatar:** `cinematic`, `photorealistic`, `85mm`, `shallow depth of field`, `soft studio light`, `8k`, `professional photography`. Todas empujan al render perfecto de stock, que es exactamente lo que se ve falso.
+- Vale la misma vara que los B-rolls (§6, 2026-10-14): *"que las visuales no sean tan IA, que no se note tanto"*.
+
 ## 3b. Créditos de Higgsfield: no usar siempre el mejor modelo (2026-10-12)
 - **Intercalar modelos baratos** para B-rolls e imágenes. "Si no, me consume todos los créditos."
 - El modelo caro solo va en los planos que más se ven (el hook o un plano clave). El resto, en el modelo más barato que se vea bien.

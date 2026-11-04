@@ -67,6 +67,8 @@ El VSL que corre detrás de ese mismo quiz está en `calisteniafeminina.site/vsl
 - ✅ Quiz entero armado y probado paso por paso: `~/Desktop/tai-chi-fit/`.
 - ✅ **Guion del VSL escrito** (2026-11-03): `OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md` y `~/Desktop/tai-chi-fit/vsl/`. Santiago lo pidió de **8 minutos** ("así es más completo"), no de 4–6.
 - ⏳ **Falta grabar el VSL.** Pendiente: avatar de HeyGen, voz y edición.
+- ⚠️ **La foto de la Maestra Valentina hay que rehacerla.** La del quiz (`imagenes/maestra-valentina.png`) es 1:1 y HeyGen le pondría barras blancas; la primera versión 9:16 que se probó salió en cuerpo entero y Santiago la rechazó por artificial. Va **plano medio y con look de foto real** ([[vsl-reglas-de-armado]] §3).
+- **El guion quedó alineado con el quiz** en seis puntos que no coincidían: el manuscrito, el puente entre "tu raíz" y la Fase Raíz, Fluir como **core y glúteo** (no cadera), el espacio de una toalla, "no se trata de terminar reventada" y la versión adaptada de cada movimiento.
 - ⏳ `SEGUNDOS_OFERTA` está en 230 de prueba: se fija con el segundo exacto en que **nuestro** VSL dice el precio.
 - ⏳ Falta confirmar el link de checkout.
 - ⏳ Los anuncios quedan para después del quiz.

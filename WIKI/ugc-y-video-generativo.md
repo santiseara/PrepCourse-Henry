@@ -109,6 +109,24 @@ Relacionado: [[guiones-de-video-ads]] · [[imagenes-y-mockups]] · [[biblioteca-
 - **El "escéptico convertido"** del pack de testimonios es la estructura de la contadora del guión 3. Da para una versión de testimonio de 14 segundos.
 - **Decisión pendiente sobre Emma Carter:** hoy es una persona **sin cara** (natives con manos, [[guiones-y-anuncios]]). Convertirla en avatar de HeyGen con cara le daría un "personaje de autoridad" reutilizable, pero cambia la estética. Te toca decidir.
 
+## La skill `edicion-ia` (3/11/2026)
+
+Desde el 3/11 está instalado el Manual de Edición IA de Launch Expert como skill **`edicion-ia`** ([[skills-launch-expert]]). Es el manual de producción completo: rutas de modelo con costo, generación sin tirar plata, detección de defectos y control final.
+
+**Lo que suma a esta página:**
+- **Rutas por tipo de video, con costo:** wan2.7-r2v por ApiMart con `reference_voice` (~US$0,06/s) para avatar con voz fija · Omni Flash 1.1 ext (~US$0,036/s) si se acepta que la voz varíe · Veo 3.1 Lite para diálogo corto con buena boca · Grok Imagine (US$0,05-0,11 por toma de 6 s) para B-roll · Kling 2.5/2.6 i2v (~US$0,17) para B-roll de calidad, **nunca con texto en pantalla porque deforma letras** · HeyGen Video Translation para doblar dejando la edición idéntica.
+- **Lo que no funciona:** Kling con audio, Seedance con audio (~US$1 por 8 s), Veo 3.1 completo (~32 créditos/clip), Veo por Kie con fotos de personas, Omni completo.
+- **Del guion a los clips:** una frase por clip (ads ~18-20 palabras, VSL hasta ~22), cortar **solo en coma o punto**, nada de clips de menos de 6 palabras, cifras en letras, y pedir en el prompt que termine la última palabra y se quede callada.
+- **Ritmos medidos:** wan2.7 español = palabras/4,1 + 0,6 s · ElevenLabs ~161 ppm · HeyGen a speed 1,05 ~175 ppm.
+- **Filtro de seguridad:** los modelos bloquean frases de presión de venta, y los bloqueos **no se cobran**. Tabla de reemplazos: "a un precio que no vas a volver a ver" → "solo en esta página"; "por un único pago de X" → "por X, en un solo pago". Si un clip falla 4 veces, cambiar el gesto o el prompt.
+- **Nunca regenerar porque falló la descarga:** re-bajar con `curl -C -`. Regenerar cobra dos veces. Guardar el ID de cada tarea apenas se manda.
+- **Defectos que hay que buscar siempre**, con su detección: ignora la foto de referencia (hasta ~45 % en Omni; correlación del primer cuadro, corte en 0,93), corte o zoom interno (diferencia entre cuadros > 6× la mediana), subtítulos quemados (OCR sobre la mitad inferior; detectar bordes no sirve), sílabas sueltas (alineación forzada + transcribir el clip **ya recortado y aislado**), tartamudeos (Whisper **medium**, el small no los oye), voz que cambia de tono (medir F0, regenerar lo que se sale ±8 %).
+- **Falsos positivos de Whisper:** confunde siglas y marcas y alucina "subtítulos de Amara.org" o "suscribite" en los silencios. Revisar a mano antes de "arreglar".
+- **Montaje:** bordes por alineación forzada (0,10 s de aire antes de la primera palabra, 0,16 s después de la última) y pausas internas **por energía del audio**, no por los tiempos de Whisper. Ads → SP 1,0-1,15 · GAP 0,60 s · KEEP 0,20 s. VSL → SP 1,12-1,15 · GAP 0,30 s · KEEP 0,14 s. Acelerar voz y video juntos. Audio final a **−14 LUFS**, música 0,05-0,08 con ducking.
+- **Control final en orden**, y el paso que se suele saltear: el MP4 entero **no** ve las sílabas sueltas de los bordes, por eso hay que transcribir cada clip recortado por separado. Y mirar el video completo con auriculares: ningún script reemplaza escucharlo.
+
+⚠️ **Dónde choca con lo tuyo y manda lo tuyo:** el manual elige la voz **por país** y la toma de una muestra de referencia; vos tenés voces fijas por género (**Sulafat** mujer, **Orus** hombre) generadas en **Google AI Studio por API**. El manual arma el visual con clips generados; vos usás **clip de TikTok, ni una foto fija**. Y tus ads de voz en off van a **speed 1.30**. Lo del manual que sí entra sin discusión es el control de calidad: los defectos, la detección y el orden del control final.
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/ugc-y-video-generativo.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/contexto-chatgpt.md, RAW/prompts/prompt-testimonios-sora-2.md, RAW/formacion/lecciones/vsl-con-heygen.md

@@ -192,6 +192,20 @@ Relacionado: [[aumento-de-aov]] · [[guiones-de-video-ads]] · [[ugc-y-video-gen
 | 2026-10-15 | Mounjaro Humilde | "Que vayan siendo un poco más cortos" y "poné solo 2 cosas como entregable" | Duración decreciente; 2 entregables |
 | 2026-10-15 | Mounjaro Humilde | "No tenemos que felicitar siempre; que tengan correlación entre sí y no repitan cosas como si fuera una IA"; 4–5 min | Reglas de Santiago para los VSL de OTO |
 
+## La skill `embudo-post-compra` (3/11/2026)
+
+Desde el 3/11 está instalado el Manual del Embudo Post-Compra de Launch Expert como skill **`embudo-post-compra`** ([[skills-launch-expert]]). Confirma la escalera y el delay del botón que ya estaban acá, y agrega:
+
+- **Antes de diseñar, espiar el backend del competidor.** Comprar su front (mail aparte y tarjeta virtual), recorrer el post-compra **rechazando cada OTO** para ver también los downsells, grabar la pantalla y anotar en una tabla: nombre, precio, promesa en una línea, largo de la VSL, segundo del botón, tipo de downsell y %, y qué entrega. Lo que se repite en todos los competidores es lo validado; lo que nadie ofrece es la oportunidad. Recién si ninguno tiene backend se diseña desde cero.
+- **Regla de oro del recorrido:** cada DS salta al OTO siguiente **en las dos ramas** (acepte o rechace). Si no, quien rechaza el OTO1 nunca ve el 2, el 3 ni el 4. En Impultienda esto se hace **a mano** en la pestaña de upsells ("Conectar a una existente"), el conector por chat deja los DS sin salida.
+- **Las ruletas llevan descuentos distintos: 50 / 53 / 47 / 55 %.** Cuatro pantallas al 50 % delatan que está arreglado. En la DS1 el premio es el valor más alto de su rueda; en las DS2-4 la rueda tiene valores más altos (65, 70, 75) que nunca tocan y la porción ganadora cambia de lugar. **Nunca resaltar el número ganador.** Precio del DS redondeado hacia abajo.
+- **Las 8 páginas se generan desde una tabla única** (`config.py` con nombre, precio, delay, id del video y textos + un `build.py` que escribe `OTO1..4.txt` y `DS1..4.txt`). Así el tachado del downsell nunca se desincroniza del precio del OTO.
+- **El script del botón, con el detalle que importa:** la plataforma re-pinta el HTML después de cargar, así que no se guardan referencias a elementos (se buscan en cada tick) y el estado vive en `window`; se lee `currentTime` cada 500 ms con respaldo por reloj solo si el video nunca arrancó; `localStorage` para no hacer esperar en la recarga; **probar siempre en incógnito**.
+- **Mapeo de ejes:** los order bumps son el mapa y los OTOs el vehículo. Si el bump es "más diseños", ningún OTO puede ser "más diseños". El hueco más grande que la VSL del front abre y no cierra va de **OTO1, al precio más alto**.
+- **Tasas de toma realistas antes de prometerse un número:** 10-15 % en OTO1 y OTO2, downsell ~50 %.
+- **Entregables:** PDFs con Chrome headless dejando fluir el contenido con `@page` (nada de divs de alto fijo), un dataset que alimenta varios productos, el asistente IA como Gem compartido (link verificado en incógnito, sin material de otros OTOs en la base) y planillas entregadas con link `/copy`.
+- **Antes de cerrar:** comparar cada promesa de cada VSL contra el entregable. Si dice "300 mockups" y hay 21, se cambia el guion o se completa el producto.
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/embudo-vsl-post-pago.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/creando-embudo-vsl-post-pago-criminal.md, RAW/formacion/lecciones/vsl-con-heygen.md, RAW/prompts/prompt-vsl-oto-post-purchase.md, RAW/formacion/lecciones/crea-un-gpt-personalizado-para-sumar-a-tu-oferta.md

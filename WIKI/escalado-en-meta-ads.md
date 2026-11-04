@@ -378,6 +378,16 @@ Relacionado: [[testeo-de-creativos]] · [[metricas-y-kpis]] · [[setup-de-campan
 - **"Valor más alto" necesita backend.** Hasta que Scented Stones tenga post-pago ([[embudo-vsl-post-pago]]), el bid automático por volumen es el que corresponde.
 - Referencia para cuando quieras escalar (no ahora): con un front de $27, el CPA medio es ~$13,5. Una aislada iría a ~$40 por conjunto y el bid central de una CostCap a ~$13,5.
 
+## Las skills de escalado de Launch Expert (3/11/2026)
+
+Desde el 3/11 hay tres skills instaladas que cubren esta página ([[skills-launch-expert]]):
+
+- **`manejo-cbo`** — el surfeo vertical y la expansión horizontal a mano, con los números: nunca más de 30 % por vez, cada 3-4 h si la CBO está debajo de 500 USD/día y una vez por día si está arriba; el techo de la cuenta se detecta cuando el ROAS se cae al subir y no se fuerza, se abren cuentas. Detalle en [[metodo-v3]].
+- **`pujas-search-scale`** (bot, ⏳ sin desplegar) — Cost Cap y Bid Cap con los winners en **cuentas aisladas** donde la oferta no corre, una para cada tipo. Cruza el gasto por hora de Meta con las ventas por hora para encontrar los picos, saca los 8 ganadores (no entra el que tiene menos de 2 CPA de gasto), crea todo **en pausa** y mueve la puja en escalera cada 30 minutos avisando por Telegram o WhatsApp. Cost Cap inicial = CPA real de los winners · Bid Cap = front × 1,3.
+- **`surfing-scale`** (bot, ⏳ sin desplegar) — surfea el presupuesto de las CBO ±30 % en los horarios en que la oferta vende, con el ROAS **solo de Impultienda** (Utmify queda afuera: llega 20 minutos tarde) y confirmación **SI n / NO n** por WhatsApp antes de mover un dólar.
+
+Los dos bots corren en un servidor de US$6/mes o en la Mac prendida, y necesitan token de Meta en `.env`, nunca en el chat.
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/escalado-en-meta-ads.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/tipos-de-escala.md, RAW/formacion/lecciones/clase-mas-importante-como-testear-y-escalar.md, RAW/formacion/lecciones/set-up-campana-desde-0.md, RAW/contexto-chatgpt.md

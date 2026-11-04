@@ -220,6 +220,10 @@ Santiago, a mitad de un análisis: *"No descargues absolutamente todos los ads, 
 - La muestra va al scratchpad de la sesión, nunca al Escritorio ni a Descargas, y se borra al terminar.
 - Encaja con la regla de [[seleccion-y-modelado-de-oferta]]: *"No descargues sus ads — usá la misma comunicación mejorada, pero no cambies el formato"*. Los creativos del competidor se estudian, no se guardan.
 
+## La skill `caza-de-ofertas` (3/11/2026)
+
+Desde el 3/11 está instalada la skill **`caza-de-ofertas`** ([[skills-launch-expert]]), que es este mismo trabajo con el marco de **arbitraje de sofisticación** escrito: espiar en el mercado fuente (Brasil, EE.UU./anglo) y lanzar en el destino, midiendo el nivel de sofisticación (1 a 5) de cada uno. Su piso es 40+ anuncios activos durante más de una semana, pero **manda la regla madre del 27/10**: fecha e impresiones antes que volumen, y la marca personal se descarta antes de contar nada ([[caza-de-ofertas]]).
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/funnel-hacking.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/funnel-hacking.md, RAW/formacion/lecciones/seleccion-de-la-oferta.md, RAW/formacion/lecciones/como-burlar-a-tu-competencia-para-que-no-te-copien.md

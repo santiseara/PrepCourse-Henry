@@ -42,7 +42,7 @@
 
 ## Oferta y producto
 - ✅ [[segmentos-de-mercado]] — Salud, dinero y relaciones (urgencia de compra), patrón de segmento y matriz nicho × mercado.
-- 🆕 [[caza-de-ofertas]] — La skill `cazar`: barrido mundial en la Ads Library, filtro madre de 50+ ads con 3+ días, escalera de certeza hasta WHALE, score de 4 señales y veredicto. **Qué oferta busca Santiago: low ticket, escondida, sin marca personal, ya vendiendo.**
+- 🆕 [[caza-de-ofertas]] — Las skills `cazar` (barrido mundial, 50+ ads con 3+ días) y `caza-de-ofertas` (el método largo con arbitraje de sofisticación). Escalera de certeza hasta WHALE, score de 4 señales y veredicto. **Manda la regla madre del 27/10: fecha e impresiones antes que volumen, y la marca personal se descarta antes de contar nada.**
 - ✅ [[funnel-hacking]] — Cómo espiar y filtrar ofertas que escalan (3 días, mismo URL, sin marcas personales) y cómo defenderte.
 - ✅ [[seleccion-y-modelado-de-oferta]] — Modelar de otro mercado, nunca del mismo. Tres errores, proceso en 24 h, bonus y stack 1 + 5.
 - ✅ [[validacion-de-oferta]] — MVP, 100 USD y una semana por oferta, oferta validada contra creativo validado, después: backend → escalar.
@@ -94,6 +94,7 @@
 
 ## Herramientas y método
 - ⏳ [[stack-de-herramientas]] — inventario completo, marcado entre lo que está en uso y lo evaluado
+- 🆕 [[skills-launch-expert]] — ⭐ **Las 7 skills de Launch Expert instaladas en `~/.claude/skills/`** (3/11): edición IA, embudo post-compra, caza de ofertas, manejo de la CBO, los dos bots de pujas y surfeo, y disputas. Qué agrega cada una, dónde choca con tus reglas y qué falta para que estén operativas.
 - ✅ [[biblioteca-de-prompts]] — Los 23 prompts de producción, ✅ todos con texto en `RAW/prompts/`. Qué pide cada uno, qué devuelve y dónde choca con tus reglas o tiene riesgo.
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.
@@ -275,8 +276,9 @@
 - 2026-10-12 — [Quiz de Pilates Hormonal](../OUTPUTS/2026-10-12-quiz-pilates-hormonal.html) (modelado de Sana Pilates) para ImpulTienda: 19 pasos, VSL con oferta oculta 2:40, checkout de ImpulTienda. Reglas en [[quizzes-reglas-de-armado]].
 
 ## Top 3 gaps (qué añadir)
-1. **No se puede leer la cuenta donde se testean los videos de pelo.** El MCP lee la de escalado (`1791862825108056`, solo natives) pero las dos candidatas del portfolio Reset FIT están fuera (`26622432187349085` sin MCP, `1853361722706238` sin liquidar): de los V37 al V51 no tenemos un solo CPA propio y las renovaciones se escriben a ciegas. 👉 Pedirle a Santiago en qué cuenta corre el testeo de pelo, o una captura de los conjuntos ([[atlas-de-cortes]], [[claude-con-meta-ads]]).
-2. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
-3. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
-4. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
-5. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.
+1. **Tres de las 7 skills de Launch Expert están instaladas pero no operativas.** `pujas-search-scale` y `surfing-scale` necesitan carpeta de trabajo, token de Meta en `.env`, el webhook de Impultienda (la 06 saca el ROAS solo de ahí), un servidor de US$6/mes y OK explícito para prender; `disputas` necesita las claves de Whop y Mercado Pago y su sección 8 completada con las carpetas de entrega y la política de reembolsos. 👉 Decidir si se despliegan los bots y, si sí, arrancar por `disputas` que no toca presupuesto ([[skills-launch-expert]]).
+2. **No se puede leer la cuenta donde se testean los videos de pelo.** El MCP lee la de escalado (`1791862825108056`, solo natives) pero las dos candidatas del portfolio Reset FIT están fuera (`26622432187349085` sin MCP, `1853361722706238` sin liquidar): de los V37 al V51 no tenemos un solo CPA propio y las renovaciones se escriben a ciegas. 👉 Pedirle a Santiago en qué cuenta corre el testeo de pelo, o una captura de los conjuntos ([[atlas-de-cortes]], [[claude-con-meta-ads]]).
+3. **Los documentos de investigación de Scented Stones (Avatar Sheet, Offer Brief, deep research, creencias).** **11 de tus 23 prompts los piden** (upsells, mockups, ángulos, guiones 30 s, HTML, primary text, imágenes, modelar ofertas, testimonios…). Es el cuello de botella número 1. 👉 Con la URL de la landing los genero con deep research ([[investigacion-de-mercado]]).
+4. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
+5. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
+6. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.

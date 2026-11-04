@@ -246,6 +246,42 @@ Dos reglas técnicas que salieron de armarlo:
 - ~~¿Qué umbral de ads usar cuando el nicho es chico y nadie llega a 50?~~ **Resuelto el 2/11/2026:** en infoproducto low ticket brasileño el techo por fanpage es ~48 ads, así que ahí 20–48 ya es winner (registro de arriba).
 - ¿Guardar un registro acumulado de cazas para la segunda pasada a los 2–3 días (subió/bajó el número de ads), como pide [[funnel-hacking]]?
 
+## La skill `caza-de-ofertas`: el método largo del manual (3/11/2026)
+
+Desde el 3/11 está instalada también la skill **`caza-de-ofertas`**, el Manual de Caza de Ofertas de Launch Expert ([[skills-launch-expert]]). No reemplaza a `cazar`: es el método largo, con el marco de **arbitraje de sofisticación** que acá faltaba escrito.
+
+**Mercado fuente → mercado destino:** se espía donde el público ya vio todo (Brasil, EE.UU. y el mundo anglo; en algunas verticales Corea y Japón) y se lanza donde ese mecanismo todavía no llegó (LATAM hispana, España, Europa no anglo, y el anglo cuando la fuente es Brasil).
+
+**Los 5 niveles de sofisticación**, que se leen mirando los anuncios:
+
+| Nivel | Qué ves | Qué funciona |
+|---|---|---|
+| 1 Virgen | Casi nadie vende eso, anuncios simples | La promesa directa |
+| 2 Promesa ampliada | Misma promesa, cada uno más grande | Promesa más fuerte, más rápida o más específica |
+| 3 Mecanismo | Aparecen el "cómo" y el "por qué" | Un mecanismo con nombre |
+| 4 Mecanismo ampliado | Muchos mecanismos compitiendo | Mecanismo más nuevo, más simple o más completo |
+| 5 Identificación | Público saturado, desconfía de todo | Historias, identidad, avatar muy específico, quizzes |
+
+En la **fuente** se buscan ofertas de nivel 3-5. En el **destino** se mide el nivel de los competidores locales: si están en 1-2, un mecanismo de nivel 3-4 traído de afuera se ve nuevo y gana. **No subir de más el nivel:** en un mercado de nivel 2, un mensaje de nivel 5 confunde.
+
+**Ahora son tres filtros que conviven:**
+
+| | Skill `cazar` | Manual (`caza-de-ofertas`) | Tu regla madre del 27/10 |
+|---|---|---|---|
+| Ads activos | 50+ | **40+** (piso) | el volumen va **último** |
+| Antigüedad | 3+ días | **más de una semana** | 45+ días = nivel 3; 90+ = no hay discusión |
+| Orden de lectura | volumen | volumen y después landing | **fecha e impresiones primero** |
+| Marca personal | descartar | descartar al filtrar falsos positivos | descartar **antes** de contar el arsenal |
+
+**Manda tu regla madre del 27/10** (sección de arriba): fecha antes que volumen, ordenar por impresiones y tirar la marca personal antes de contar nada. El 40+ durante más de una semana del manual queda como **piso mínimo**, no como criterio de selección.
+
+**Lo demás del manual que suma acá:**
+- **Palabras de búsqueda por 4 ejes:** formato del producto (guía, método, protocolo, kit, plantillas), disparadores de compra impulsiva (secreto, paso a paso, en 7 días, sin gimnasio), huellas técnicas (dominios de pago y de quiz) y el nicho traducido. Coincide con tu hallazgo del 27/10 de arrancar por footprint de checkout y no por la keyword del nicho.
+- **Verificar el hueco** buscando el **nombre del mecanismo** en el idioma del destino: cero resultados = no existe ahí todavía.
+- **Un ángulo está probado** cuando 3+ anunciantes distintos lo corren 14+ días.
+- **Si ya aparecen testers con anuncios de pocos días en el destino, la ventana se está cerrando.**
+- **Puntaje de 4 señales:** longevidad 45+ días · 80+ anuncios · mismo creativo 10+ veces · hueco de arbitraje. 4/4 = candidata A, 3/4 = B, 2 o menos = observar.
+
 ## Relacionado
 [[funnel-hacking]] · [[seleccion-y-modelado-de-oferta]] · [[validacion-de-oferta]] · [[investigacion-de-mercado]] · [[claude-con-meta-ads]] · [[internacionalizacion]] · [[modelo-low-ticket]] · [[angulos-publicitarios]] · [[como-trabajar-con-santiago]]
 

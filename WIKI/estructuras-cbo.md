@@ -57,6 +57,10 @@ Relacionado: [[metodo-v3]] · [[escalado-en-meta-ads]] · [[testeo-de-creativos]
 - **Regla 4:** nunca mezclar imagen y video en la misma CBO de testeo. Las natives ([[guiones-y-anuncios]]) y los guiones de video van en campañas separadas.
 - **Regla 7:** Scented Stones apunta a mujeres. Si filtrás por género, apagá Advantage+ Audience.
 
+## La skill `manejo-cbo` (3/11/2026)
+
+El Manual de Manejo de la CBO de Launch Expert está instalado como skill **`manejo-cbo`** ([[skills-launch-expert]]). Sus reglas fijas sobre estructura, que confirman este mapa: **una campaña por cuenta publicitaria** (nunca dos campañas iguales en la misma cuenta: para crecer a lo ancho se abren **otras cuentas**), la CBO se lee **a nivel campaña** y que un conjunto no gaste no es un problema, Meta eligió. Los números exactos de presupuesto, renovaciones y surfeo están en [[metodo-v3]].
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/estructuras-cbo.md (página de la wiki previa, actualizada el 2026-09-24)
 - Fuentes originales citadas (todavía no están en este cerebro): operación real en Meta Ads, septiembre 2026; material de escalado de la formación

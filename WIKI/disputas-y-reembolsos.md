@@ -48,6 +48,26 @@ Relacionado: [[procesadores-de-pago]] · [[llc-banca-y-fiscal]] · [[email-y-aut
 - **Esta carpeta es el "segundo cerebro" que menciona la Postura 2.** Para pelear disputas desde acá hay que conectar Stripe o MercadoPago. En esta sesión en la nube no están conectados.
 - Hotmart reembolsa casi sin preguntar: contalo en el margen de las ofertas que cobres por Hotmart.
 
+## La skill `disputas` (3/11/2026)
+
+Desde el 3/11 está instalada la skill **`disputas`** de Launch Expert ([[skills-launch-expert]]), que es la versión armada de lo que acá estaba como "pelearlas con Claude Code". Viene con scripts propios (`estado.py`, `whop_responder.py`, `whop_contracargos.py`, JS para el panel y tools en Swift para los PDF) y contesta en una sola pasada los reclamos y contracargos de **Whop / Impul Pay** y de **Mercado Pago** de una tienda de Impultienda.
+
+**De dónde saca la prueba:** del panel de Impultienda, que corre sobre Supabase (`sb.impultienda.ar/rest/v1/`), consultado desde la pestaña con la sesión iniciada. Tablas `orders`, `email_events` (accepted / delivered / opened / failed), `download_logs` y `order_items`.
+
+**Sus reglas duras:**
+- Solo hechos verificables: nada de descargas, llamadas o contactos inventados.
+- **Si el mail de entrega falló** (casilla llena, rebote, casilla inexistente), **no se declara la entrega**: primero se reenvía o se pide otro mail, y se dice la verdad.
+- Las descargas con user-agent `node`, `bot`, `python` o `curl` son de servidor y **no se le atribuyen al comprador**.
+- El `recommended_action` de la API de Whop **es publicidad y se ignora**.
+- **Nunca** se toca "Devolver el dinero", `accept` ni `refund` sin orden explícita.
+- Si la landing ofrece garantía, dentro del plazo no se escribe "no reembolsable": se responde con hechos del producto y se ofrece ayuda.
+- Los upsells son órdenes hijas (`parent_order_id`), cada una con su pago y su hora: es el argumento contra "no autoricé" y "me cobran de más".
+- La base guarda **UTC**; al comprador se le escribe en su hora local (AR = UTC−3).
+- **El chat de MP rechaza el PDF**: el informe de actividad de la orden se sube como JPG.
+- Si MP pide verificar el inicio de sesión, **lo hace Santiago**: la skill no ingresa contraseñas ni códigos.
+
+**Falta para usarla:** cargar `~/.claude/skills/disputas/.env` con las claves de Whop y de Mercado Pago, y completar su **sección 8** con las carpetas de entrega reales y la política de reembolsos de cada oferta.
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/disputas-y-reembolsos.md (página de la wiki previa, actualizada el 2026-09-24)
 - Fuentes originales citadas (todavía no están en este cerebro): clases de la formación y experiencias de la comunidad, agosto–septiembre 2026

@@ -108,6 +108,23 @@ Relacionado: [[biblioteca-de-prompts]] · [[stack-de-herramientas]] · [[creacio
 - **Documentos como memoria:** Scented Stones todavía no tiene Avatar Sheet, Offer Brief, deep research ni documento de creencias. Varios prompts no generan nada sin ellos ([[biblioteca-de-prompts]]).
 - **"Verdad, no consuelo"** (`prompt-educar-chatgpt`): lo aplico también acá. Te señalo puntos ciegos y contradicciones, como los choques entre reglas marcados en la WIKI.
 
+## Las skills instaladas (3/11/2026)
+
+En `~/.claude/skills/` hay **8 skills propias** cargadas, que Claude activa solo cuando la tarea las toca (no hay que pegar nada en el chat):
+
+| Skill | Para qué |
+|---|---|
+| `cazar` | Barrido rápido de winners en la Ads Library ([[caza-de-ofertas]]) |
+| `caza-de-ofertas` | El método largo de caza con arbitraje de sofisticación |
+| `edicion-ia` | Producción y control de calidad de anuncios y VSL con avatar IA |
+| `embudo-post-compra` | Backend: 4 OTOs, downsells con ruleta, montaje en Impultienda |
+| `manejo-cbo` | Armar, leer, escalar y cortar la CBO con el método V3 |
+| `pujas-search-scale` | Bot de Cost Cap / Bid Cap cada 30 min (⏳ sin desplegar) |
+| `surfing-scale` | Bot de surfeo de CBO ±30 % con OK por WhatsApp (⏳ sin desplegar) |
+| `disputas` | Reclamos y contracargos de Whop y Mercado Pago (⏳ falta `.env`) |
+
+Las 7 últimas vienen de la Biblioteca de Launch Expert: qué agrega cada una y qué falta para que estén operativas, en [[skills-launch-expert]].
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/ia-en-el-flujo-de-trabajo.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/masterclass-ia.md, RAW/formacion/lecciones/intro-a-las-apps-de-ia.md, RAW/formacion/lecciones/como-comunicarle-tu-idea-a-google-antigravity-y-setear-la-app.md, RAW/prompts/_indice.md, RAW/youtube/_indice.md

@@ -271,6 +271,10 @@ Relacionado: [[modelo-low-ticket]] · [[metricas-y-kpis]] · [[shopify-y-checkou
   5. Toolkit: proveedores de moldes y aceites, y una calculadora de precios.
 - **Plataformas:** acá el backend se arma con **Shopify + SellEasy + Aftersell** (o Impultienda en AR) y order bumps en **Hotmart**. En [[perfil-y-negocio]] figuran Hotmart, Kiwify, Monetizze y Lovable. ¿Qué checkout usa Scented Stones?
 
+## La skill `embudo-post-compra` (3/11/2026)
+
+El Manual del Embudo Post-Compra de Launch Expert está instalado como skill **`embudo-post-compra`** ([[skills-launch-expert]]). Lo que aporta a esta página: **los order bumps son el mapa y los OTOs el vehículo** — se mapean los ejes que ya ocupan el front y los bumps y se prohíben en los OTOs. Tasas de toma realistas para hacer la cuenta del ticket promedio: **10-15 % en OTO1 y OTO2**, downsell ~50 %. El detalle de la escalera, las ruletas y el montaje está en [[embudo-vsl-post-pago]].
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/aumento-de-aov.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/formacion/lecciones/luego-de-validar-la-oferta-crearas-un-backend-que-aumente-el-roas.md, RAW/formacion/lecciones/upselling-previo-a-la-compra-selleasy.md, RAW/formacion/lecciones/upselling-post-compra-one-clic-upsell.md, RAW/formacion/lecciones/rokt-after-sell.md, RAW/formacion/lecciones/tu-deber-es-aumentar-el-ticket-promedio.md, RAW/contexto-chatgpt.md

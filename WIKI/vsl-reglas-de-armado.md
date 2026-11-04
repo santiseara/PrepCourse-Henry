@@ -369,6 +369,20 @@ Santiago: *"ni en pedo vas a tardar de nuevo 8 horas… esto tiene que tardar co
 ## Preguntas abiertas
 - ¿Qué plan de HeyGen hay y cuál es el largo máximo por video?
 
+## La skill `edicion-ia` (3/11/2026)
+
+Desde el 3/11 está instalada la skill **`edicion-ia`** (Manual de Edición IA de Launch Expert, ver [[skills-launch-expert]]) con el detalle técnico de edición que esta página no cubre. Lo que aplica a un VSL:
+
+- **Parámetros de montaje para VSL:** SP (velocidad) 1,12-1,15 · GAP (silencio mínimo a recortar) 0,30 s · KEEP (aire a cada lado) 0,14 s. Cortar silencios saca ~11-14 % del bruto. Audio final a **−14 LUFS**.
+- **Los bordes de cada clip salen de alineación forzada contra el guion, nunca de Whisper**, que pone la primera palabra en 0,00 s y arrastra sílabas sueltas.
+- **HeyGen: el límite es de 5.000 bytes por render**, no caracteres: con tildes hay que cortar en **~4.300 caracteres**. Partir la VSL en la transición a la oferta, que ahí la costura queda invisible.
+- **B-roll cada 3-5 s** en los tramos explicativos, full screen ~3 s, pegado al empalme entre clips. Punch-in en cada cambio de plano. Captura real del checkout para el tramo de compra.
+- **Subtítulos karaoke de tamaño moderado**: si son enormes, cansan.
+- **Delay del botón = el segundo exacto en que el video YA EDITADO dice el precio**, medido después del render, nunca sobre el guion.
+- **Control final:** transcribir cada clip recortado **aislado** (el MP4 entero no ve las sílabas sueltas de los bordes), re-renderizar antes de analizar y mirar el video completo con auriculares.
+
+⚠️ **Manda lo tuyo:** voz **Sulafat / Orus** por API de Google AI Studio, **Avatar IV** en HeyGen, B-roll de **clips de TikTok** y **speed 1.30**. Del manual se toma el control de calidad y los parámetros de corte, no la elección de herramientas.
+
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]
 

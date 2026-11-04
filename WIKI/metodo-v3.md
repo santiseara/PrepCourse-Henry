@@ -108,6 +108,23 @@ Relacionado: [[estructuras-cbo]] · [[nomenclatura-del-metodo]] · [[testeo-de-c
 - **Advantage+ y género:** piedras le habla a mujeres, pero no es un producto exclusivo. Por defecto Advantage+ queda activado. Solo se apaga si decidís un filtro duro.
 - **Un solo interruptor + verificar el estado real** coincide con la regla de [[claude-con-meta-ads]].
 
+## Los números exactos del manual (3/11/2026)
+
+Desde el 3/11 está instalada la skill **`manejo-cbo`**, el Manual de Manejo de la CBO de Launch Expert ([[skills-launch-expert]]). Confirma toda esta página y le pone números a lo que acá estaba en palabras:
+
+- **Objetivo de la V3, con número:** la mayor cantidad de conjuntos con **más de 50 ventas en menos de 7 días**. Por eso no se toca el conjunto que viene bien.
+- **Con cuánto arrancar, en tickets:** oferta nueva lento **2-3 tickets** · oferta nueva rápido **10-15** · oferta validada en cuentas nuevas **2-3** (5-10 con confianza). Una oferta ya validada se lanza directo en **3 cuentas**.
+- **Los primeros 3 días:** día 1 con ROAS negativo → **bajar 30 %** y seguir bajando de a 30 % hasta encontrar el equilibrio de la cuenta · día 2 flojo → **sumar renovaciones** · con ROAS **positivo no se apagan anuncios** (saca al conjunto del aprendizaje); con ROAS negativo sí se puede.
+- **El gasto mínimo de la renovación:** **1 ticket por día** (o 5-10 % de la CBO), **durante 3 días, y después se saca**, venda o no. Los mínimos activos no deberían pasar el **~20 % de la CBO**, y si bajás la CBO hay que revisar que no queden mínimos viejos trabando el presupuesto.
+- **Ritmo del surfeo atado al presupuesto** (acá decía "cada ~2 horas"): CBO **debajo de 500 USD/día → +30 % cada 3-4 h** · **arriba de 500 USD/día → +30 % una vez por día**, porque a partir de ahí cada 30 % ya son más de 100 USD.
+- **La tabla ayer/hoy:** ayer bueno (2+) y hoy bien → **+30 %** · ayer bajo y hoy mejor → **quieta, ni subir ni bajar** · ayer bajo y hoy mal → **−30 %** (tirarle la oreja) · los dos muy buenos (2,5-4) → surfeo agresivo y volver a mirar en 3-4 h.
+- **El techo de la cuenta:** si a 2.000 USD/día rinde y a 2.600 el ROAS se cae, el techo está cerca de 2.000. No se fuerza esa cuenta, se abren otras.
+- **Pujas manuales con oferta súper validada:** presupuesto **20-30 tickets** · Cost Cap inicial = **front ÷ 2 + 30 %** · Bid Cap inicial = **front × 1,3** · si quema sin ventas, **−1 USD y esperar 2 h**; si no gasta, **+1 USD y esperar 2 h**. Siempre en cuentas nuevas.
+- **Leer los números:** ROAS de ventas **aprobadas** (las pendientes de tarjeta que siguen pendientes son checkouts abandonados), con comisiones cargadas (~8-10 % → el equilibrio real queda en ROAS ~1,10). El ROAS del pixel viene inflado: sirve para ordenar, no como valor.
+- **Cuenta master por producto:** subir los videos y armar los anuncios en una sola cuenta y clonarlos en las demás por ID de publicación, para conservar la prueba social.
+
+El bot que automatiza este surfeo es la skill **`surfing-scale`** (±30 %, horarios por oferta, confirmación SI/NO por WhatsApp, ROAS solo de Impultienda) — ver [[skills-launch-expert]].
+
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/metodo-v3.md (página de la wiki previa, actualizada el 2026-09-24)
 - Fuentes originales citadas (todavía no están en este cerebro): operación real en Meta Ads, septiembre 2026; estructura V3 de Grupo Firgon

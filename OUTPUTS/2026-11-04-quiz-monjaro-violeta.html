@@ -507,7 +507,7 @@ window.CONFIG = {
       <section class="sec">
         <div class="sec-head rise">
           <span class="chip">📋 Tu evaluación</span>
-          <h2>Listo, <span class="hl" id="rName">Che</span></h2>
+          <h2><span id="rLis">Lista</span>, <span class="hl" id="rName">Che</span></h2>
         </div>
         <p class="rise" style="text-align:center;color:var(--muted)">Tu protocolo de 30 días quedó calibrado con tus respuestas. Esta es tu ficha.</p>
         <div class="dossier rise" id="dossierOut"></div>
@@ -789,7 +789,7 @@ window.CONFIG = {
     {id:'load2',type:'loading',title:'Cargando…',sub:'Analizando…',list:['Revisando tu caso','Adaptando la receta','Listo'],
       needs:function(st){ return st.salud===0; }},
 
-    {id:'tranqui',type:'calm',eyebrow:'Paso 25',q:'Quedate tranquilo',needs:function(st){ return st.salud===0; },btn:'Continuar'},
+    {id:'tranqui',type:'calm',eyebrow:'Paso 25',q:'Quedate tranquil{{o}}',needs:function(st){ return st.salud===0; },btn:'Continuar'},
 
     {id:'suenosF',only:'f',type:'single',grid:true,eyebrow:'Paso 26',q:'¿Cuál es el cuerpo de tus sueños?',help:'Elegí la opción de abajo:',opts:[
       {e:'🌿',l:'Natural',s:'quiero verme sana y liviana'},{e:'🔥',l:'En forma',s:'quiero marcar y tonificar'}]},
@@ -799,7 +799,7 @@ window.CONFIG = {
     {id:'load3',type:'loading',title:'Analizando…',sub:'Generando tu plan personalizado…',
       list:['Armando tu protocolo de 30 días','Ajustando los horarios','Sumando tus regalos','¡Listo!']},
 
-    {id:'comparativa',type:'compare',eyebrow:'Tu transformación',q:'{{nombre}}, ¿estás listo para transformar tu cuerpo y tu salud?',btn:'¡Sí, quiero empezar ahora!'}
+    {id:'comparativa',type:'compare',eyebrow:'Tu transformación',q:'{{nombre}}, ¿estás list{{o}} para transformar tu cuerpo y tu salud?',btn:'¡Sí, quiero empezar ahora!'}
   ];
 
   var state={}, idx=0, qlock=false;
@@ -811,7 +811,8 @@ window.CONFIG = {
     return true;
   }
   function vSteps(){ return STEPS.filter(visible); }
-  function tpl(t){ return String(t||'').replace(/\{\{nombre\}\}/g, esc(state.nombre||'Che')); }
+  function gen_o(){ return state.gen==='m' ? 'o' : 'a'; }
+  function tpl(t){ return String(t||'').replace(/\{\{nombre\}\}/g, esc(state.nombre||'Che')).replace(/\{\{o\}\}/g, gen_o()); }
 
   function progreso(){
     var vs=vSteps(), pos=vs.indexOf(STEPS[idx]);
@@ -888,7 +889,7 @@ window.CONFIG = {
     else if(s.type==='calm'){
       var p=esc(state.cual||'eso');
       h+='<div class="q-feedback show" style="margin-top:0"><span class="coach">❤️ Abuela Mei</span>'+
-         '<p>'+esc(state.nombre||'Che')+', decís que tenés: <b>'+p+'</b>. Quedate tranquilo que vamos a adaptar las recetas para que quemes grasa de forma simple y segura.</p></div>'+
+         '<p>'+esc(state.nombre||'Che')+', decís que tenés: <b>'+p+'</b>. Quedate tranquil'+gen_o()+' que vamos a adaptar las recetas para que quemes grasa de forma simple y segura.</p></div>'+
          '<button class="btn q-next" id="qnext">'+(s.btn||'Continuar')+'</button>';
     }
     else if(s.type==='compare'){
@@ -1154,6 +1155,7 @@ window.CONFIG = {
     var zona=lblMulti('zona','todo el cuerpo');
     var obj=lblMulti('objetivo','bajar de peso');
     var el=q('#rName'); if(el) el.textContent=nombre;
+    var lis=q('#rLis'); if(lis) lis.textContent=(state.gen==='m'?'Listo':'Lista');
     var out=[
       ['Objetivo', obj.split(', ')[0]],
       ['Zona de foco', zona],

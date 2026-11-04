@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-03.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-04.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -9,6 +9,7 @@
 - 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulo 1 entregado.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
+- 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
 - 🆕 [[energia-vital]] — Oferta propia que ya corre en AR (Digital World, 54 ads) y se lanza a **LATAM en neutro a US$ 9,99**: Guía de Autocuración Energética, 80 fichas de raíz emocional + cristales y hierbas. Sus 3 familias de hook, las 2 DNA de cuerpo transcriptas y la tanda 1 de 6 videos.
 - 🆕 [[100-paper-squishies]] — Oferta propia **en inglés** (US$ 16,99): ebook de 100 diseños imprimibles de squishies de papel, modelada sobre Hora de Papel (94 ads activos en 12 días, ES/IT/DE). Sus 7 familias de hook, la DNA de sus videos de 9 a 25 s y la tanda 1 de 6 videos.
@@ -108,6 +109,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-04 — Quiz Monjaro Violeta Japonés (AR)](../OUTPUTS/2026-11-04-quiz-monjaro-violeta.html) — clon del quiz de Vovó Mei (`monja-roxo.lovable.app`, Lovable con el funnel en texto plano): 27 pasos con rama mujer/hombre, IMC con alerta, 3 medidores, textos con voseo y género variable, y la oferta oculta hasta el VSL · ver [[monjaro-violeta]]
 - [2026-11-04 — Análisis frame por frame del ad brasileño de pilates 50+](../OUTPUTS/2026-11-04-analisis-ad-pilates-brasil.md) — los 11 planos, el guion en portugués y en voseo, la prueba de que es IA y la receta para replicarlo · ver [[estilo-de-video-ia]]
 - [2026-11-04 — Tai Chi Fit: el VSL terminado](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 8:51 con avatar propio, voz Sulafat, 14 B-rolls de TikTok y 9 placas, por 63 créditos de HeyGen · ver [[tai-chi-fit]]
 - [2026-11-03 — Tai Chi Fit: guion del VSL de 8 minutos](../OUTPUTS/2026-11-03-vsl-tai-chi-fit-guion.md) — 1.730 palabras en dos bloques de HeyGen, destilado de los 18:33 del original: la raíz dormida como mecanismo, las tres fases del quiz y los 5 bonos · ver [[tai-chi-fit]]

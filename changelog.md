@@ -1,3 +1,17 @@
+## 2026-11-04 (4ª pasada) — Monjaro Violeta Japonés: el quiz entero, clonado del brasileño
+
+- Santiago pasó la Biblioteca de Anuncios de **Vovó Mei** (~37 ads activos): oferta brasileña de "Mounjaro Roxo Japonês", una bebida de remolacha con protocolo de 30 días. Destino real `monja-roxo.lovable.app`. Va para **Argentina**.
+- **El funnel salió sin abrir el navegador:** Lovable deja el quiz en texto plano en `assets/routes-*.js`. Son **68 pasos = 34 reales**, duplicados en rama mujer/hombre desde la pregunta de género.
+- **Entregado: quiz de 27 pasos** (30 si declara una condición de salud) en `~/Desktop/monjaro-violeta/`, con rama por género, IMC con barra y alerta por franja, 3 medidores, pantallas de carga, comparativa antes/objetivo y la oferta oculta hasta `SEGUNDOS_OFERTA`.
+- **Sacados los 4 pasos de WhatsApp y e-mail** (regla fija: los datos de contacto se piden en el checkout).
+- **Imágenes: 27 webp, 458 KB; el `.txt` embebido pesa 679 KB.** La portada se recortó y se le puso un alfa en diagonal para sacarle el cartel en portugués, y el lockup "MONJARO VIOLETA JAPONÉS" se rehízo en HTML. Las chapas `MULHER`/`HOMEM` se repintaron a `MUJER`/`HOMBRE` con Pillow. La infografía "COMO FUNCIONA" pasó a una placa de 3 pasos en HTML.
+- **Las siluetas de tipo de cuerpo del original son de 96×80 px y no existen más grandes** (probados todos los sufijos de tamaño de InLead): esas dos preguntas quedaron con tarjetas de emoji y descripción.
+- **Token `{{o}}`** para que los textos concuerden con el género ("¿estás lista?", "Quedate tranquila", "Lista, Ana").
+- **Probado paso por paso en el navegador**, sin errores de consola, incluida la rama de condición de salud y la oferta completa con contador, cupos y notificaciones.
+- ⏳ Falta el VSL (`SEGUNDOS_OFERTA` en 230 de prueba), el video corto de la Abuela Mei del paso 11 —si el `<template>` queda vacío el paso se saltea solo— y confirmar nombre, precio y checkout.
+- ⚠️ **Aviso anti-bloqueo:** la portada promete "10 kg en 30 días", hay antes/después y el nombre de un fármaco deformado. Es lo que en [[protocolo-chia-28d]] hizo rechazar anuncios aunque el guion estuviera limpio.
+- Páginas nuevas/actualizadas: [[monjaro-violeta]], [[quizzes-reglas-de-armado]] (§3 InLead dentro de Lovable, §4 portada y chapas, §4b concordancia de género), [[index]].
+
 ## 2026-11-04 (6ª pasada) — El ad brasileño de pilates, destripado frame por frame
 
 - Santiago dejó un ad de Brasil (88 s, pilates 50+) y pidió analizarlo entero *"para que cuando yo pida un video con IA se entienda que quiero de esto… la onda de los videos de IA"*.

@@ -35,10 +35,11 @@ Seis videos de voz en off, en `~/Desktop/calendarios-2027-en/anuncios/`:
 
 ## El pool de TikTok (lo que sirvió y lo que no)
 
-- **Primer intento fallido:** se barrió el tag `printablecalendar` y la mitad de lo que trae es **impresión 3D** (calendarios perpetuos impresos en PLA, relojes flip) más chicos bailando. De esos 17 clips no se usó ninguno.
-- **Lo que sí funciona para esta oferta:** `popupcard`, `paperflowers`, `craftfair` y `epsonecotank`. Las escenas que pide el guion son *flores de papel armándose en la mano*, *tijera sobre cartulina*, *la impresora escupiendo hojas* y *el puesto de feria*.
-- De ~95 candidatos bajaron 71 y **quedaron 23 limpios** (`anuncios/work/tiktoks2/`).
-- **tikwm rate-limitea:** en paralelo de a 5 fallan 7 de cada 10. De a uno con `sleep 1.2` anda. Y si corre una segunda tanda mientras se renderiza, **pisa un .mp4 a medio bajar y el render muere** con `AttributeError: 'NoneType' ... Duration`.
+- **Dos intentos fallidos antes de acertar.** Primero se barrió el tag `printablecalendar`: la mitad es **impresión 3D** (calendarios perpetuos en PLA, relojes flip) más chicos bailando. Después se buscó por las *escenas del guion* (`popupcard`, `paperflowers`, `craftfair`, `epsonecotank`) y salieron 23 clips lindos de flores de papel, tijera y feria **en los que no se veía un solo calendario**. Santiago lo cortó en seco: *"no hay un puto calendario"*. Los dos pools se tiraron enteros.
+- **Lo que sí funciona:** `deskcalendar`, `diycalendar`, `papercalendar` y `handmadecalendar`. De 166 candidatos bajaron 147 y **quedaron 17 ventanas de 15 clips** (`anuncios/work/tiktoks3/`).
+- **Los hallazgos:** `7679474945889455380` es un calendario de papel con forma de **florero con un ramo**, en caballete, con **2027** impreso — es el producto. `7585091358939942166` son tulipanes de papel parados sobre la base de un calendario. `7466996351692295431` son calendarios chicos de escritorio con flores que se abren. Esos tres son la espina dorsal de los seis ads.
+- **Hay material 2027 en TikTok** (`7682732880446934292`, `7688575999272963336`, `7685253422047825172`, `7674237279988174100`): conviene buscarlo antes que conformarse con 2026, porque un año viejo quemado en el producto mata el ad.
+- **tikwm rate-limitea:** en paralelo de a 5 fallan 7 de cada 10. De a uno con `sleep 1.6` anda. Y si corre una segunda tanda mientras se renderiza, **pisa un .mp4 a medio bajar y el render muere** con `AttributeError: 'NoneType' ... Duration`.
 
 ## Preguntas abiertas
 

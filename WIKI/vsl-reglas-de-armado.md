@@ -131,6 +131,22 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **No fabricar testimonios en video** de "clientas reales" con IA. Si el original tenía uno, la avatar lee un testimonio que ya existe en el funnel.
   - **Excepción decidida por Santiago (2026-10-14, Mounjaro Humilde):** si él lo pide, el testimonio en primera persona lo hace su avatar de HeyGen **"Karina testimonio"** (voz roma).
 
+### 🆕 2026-11-04 · Las anclas se escriben como habla el transcriptor, no como habla el guion
+Al editar el VSL de [[monjaro-violeta]] las cinco anclas de B-roll fallaron de entrada, todas por lo mismo: **el TTS dice los números en letras y el transcriptor los escribe en dígitos.**
+- `lo haces en tres minutos` → en la transcripción es **`lo haces en 3 minutos`**.
+- `baje ocho kilos` → **`baje 8 kilos`**. `si en treinta dias` → **`si en 30 dias`**.
+- Y además se come palabras: el guion dice "ingredientes que ya tenía en casa" y el transcriptor escribe **"ingredientes que ya tenían casa"**.
+- **Método:** transcribir primero, volcar el texto corrido, buscar ahí la frase y recién entonces escribir el ancla. Un `grep` sobre el `words.json` lleva un minuto y evita un render entero al pedo.
+- El script falla fuerte (`SystemExit`) si un ancla no aparece, en vez de seguir y poner el B-roll en el segundo cero.
+
+### 🆕 2026-11-04 · Dónde NO va un B-roll
+Criterio que quedó del VSL de Monjaro, sobre el pedido de Santiago de *"que no quede tan pelado… ponele onda, no lo llenes de cosas"*:
+- ⛔ **Nunca sobre el precio ni sobre el CTA final.** Son los dos momentos donde la cara vende; taparlos con una licuadora es regalar la conversión. En Monjaro quedó un hueco a propósito de **52 segundos** alrededor del precio.
+- ⛔ **Nunca dos cortes a menos de 8 segundos** uno del otro: parece error de montaje.
+- ✅ **B-roll solo cuando la voz nombra lo que se ve.** Si ella habla de lo que sintió y se ve una zanahoria, es relleno y se nota.
+- **Los B-rolls de WhatsApp vienen en 464×832** y hay que escalarlos 2,3x hasta 1080×1920: se ven más blandos que el avatar. En cortes de 3 segundos pasa; en planos largos, no.
+- **Mirar la hoja de contactos antes de elegir:** de los tres que pasó Santiago, uno tenía un cartel en inglés quemado en el centro casi todo el clip y otro mostraba a un hombre a cámara, que rompe el relato de dos mujeres.
+
 ### 🆕 2026-11-04 · ⭐ El TTS bloquea los testimonios de peso por SAFETY: hay que bajar el umbral
 El bloque de Mariela (testimonio de descenso de peso con cifras) no salía: ocho intentos, y el único que no fue 429 devolvió **`finishReason=SAFETY`** con el candidato vacío — sin audio y sin mensaje de error claro.
 - **El síntoma engaña:** el script moría con `KeyError: 'content'`. Hay que imprimir `candidates[0].finishReason` antes de leer las partes, o se confunde con un problema de cuota.

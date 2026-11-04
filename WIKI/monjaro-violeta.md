@@ -101,7 +101,13 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
   - **Voces de AI Studio con lipsync por audio subido**, no por texto: Abuela Mei con **Vindemiatrix a 160 ppm** (suena a 60-70 años) y Mariela con **Gacrux a 170 ppm** (50-55). Los wav crudos y los `-final` están en `vsl/voz/`.
   - **Verificado:** las 405 palabras del bloque largo están (no se comió la enumeración del acompañamiento), los desfases video/audio son de 0,02 s, no hay silencios de más de 1,5 s y los cortes caen donde deben.
   - A cada bloque se le devolvió el **WAV original** en lugar del MP3 que se subió para el lipsync.
-- ⏳ **Falta subirlo a Panda Video** y pegar el embed en `<template id="vsl-template">`. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
+- ✅ **Versión editada** (2026-11-04): `vsl/VSL-monjaro-violeta-EDITADO.mp4`, **2:40, 1080×1920, 166 MB**. Pedido de Santiago: *"metele 1.23 de velocidad… una musica activa bajita… algunos brolls… subtitulos, efectos de sonido, algunos headlines… Ponele onda, no lo llenes de cosas"*.
+  - **1,23x** (3:17 → 2:40). Medido: la abuela baja de 45-55 a **40-50 años**. Compensar el tono lo empeora (35-45), así que va con `atempo` limpio.
+  - **Música propia activa** (`OUTPUTS/scripts-vsl/music_activa.py`): 96 BPM, shaker, kick, marimba y pad, sin melodía. A **-24 dBFS con sidechain**: baja sola bajo la voz.
+  - **5 B-rolls de ~3 s** de los que pasó Santiago, todos del tercer clip: remolacha, el agua a la licuadora, pelar remolacha, manzana y jengibre, el colado.
+  - **4 headlines** en magenta sobre los números de la oferta, **subtítulos** de a dos palabras con clave en dorado, y **un whoosh** al entrar a cada B-roll (`sfx_whoosh.py`).
+  - Editor: `OUTPUTS/scripts-vsl/edit_monjaro.py`.
+- ⏳ **Falta subirlo a Panda Video** y pegar el embed en `<template id="vsl-template">`. Sube la versión **EDITADA**. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

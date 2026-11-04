@@ -1,3 +1,12 @@
+## 2026-11-04 (8ª pasada) — La landing corregida sigue sin pegarse, y el alcance de un arreglo
+
+- Se perdió el contexto de la terminal; se reconstruyó el estado desde el `changelog.md`, los `OUTPUTS/` y los archivos del Escritorio.
+- **Verificado con `curl` sobre `dibujo-creativoo.impultienda.ar`: la tienda sigue sirviendo la versión vieja.** Los 5 CTA están en `href="#"`, el JS todavía hace `a.href = C.LINK_CHECKOUT` con `LINK_CHECKOUT: "https://dibujo-creativoo.impultienda.ar"` (la home, que es la landing) y hay un solo `{{price}}`. Es exactamente el "me manda al principio de la landing".
+- **El archivo local está correcto y sincronizado** (mismo md5 en `landing.html`, `landing-impultienda.txt` y `PRUEBA.html`, 37.346 bytes): 5 CTA a `/checkout`, 18 tokens de precio, red de seguridad en el JS. Copiado al portapapeles para que lo pegue Santiago.
+- **Hallazgo sobre las imágenes del CDN del original** (avisado, no tocado): el `mockup` lleva la marca del competidor (**UNIVERSO CREATIVO**) y la URL de `materiales` **hoy devuelve otra foto** (una selfie en una cocina), así que la página publicada la está mostrando. Las 7 quedaron bajadas y optimizadas en `~/Desktop/dibujo-creativo/imagenes/web/` (506 KB) por si se decide reemplazarlas.
+- **Corrección de Santiago:** *"Si la página ya estaba terminada, no tenías que cambiar nada más que los botones de CTA redirijan al checkout"*. Regla nueva: un arreglo puntual toca solo eso; lo que se encuentre de paso se avisa en una línea y se espera, aunque figure como pendiente en el changelog.
+- Páginas actualizadas: [[como-trabajar-con-santiago]] (sección nueva), [[quizzes-reglas-de-armado]] (registro de correcciones).
+
 ## 2026-11-04 (8ª pasada) — Calendarios 2027: la tanda 1 de 6 ads en inglés, montada
 
 - Se retomó donde había quedado: guiones EN/ES listos, las 6 voces de Sulafat generadas y 17 clips de TikTok bajados.

@@ -32,6 +32,13 @@ Experto en **ofertas de infoproductos low ticket** y **anuncios de direct respon
 - Antes de armar o editar uno, leer [[quizzes-reglas-de-armado]] y recorrer su checklist.
 - Cada corrección suya que sirva para el futuro se anota ahí **en el momento** (registro con fecha + regla), sin que lo pida. Después, commit y push.
 
+## Una página terminada se toca solo donde duele (regla fija, 2026-11-04)
+Santiago: *"Si la página ya estaba terminada, no tenías que cambiar nada más que los botones de CTA redirijan al checkout"*.
+- Cuando pide **arreglar una cosa** de una landing o un quiz que ya dio por terminado, se arregla **esa cosa y nada más**. No se aprovecha el viaje para cambiar imágenes, textos, precios ni secciones.
+- Lo que uno encuentre de paso (un pendiente viejo, un recurso roto, una mejora) **se le avisa en una línea y se espera**. No se ejecuta solo.
+- Vale igual para los pendientes anotados en el `changelog.md`: estar anotados no los autoriza.
+- Hermana de la regla de [[monjaro-violeta]]: *lo que tiene una oferta no se deduce, se pregunta*.
+
 ## Lo que se manda a elegir va solo (regla fija, 2026-10-28)
 Santiago: *"quedó todo hecho un desorden, vos tenés que subirme solo 3 voces, en una carpeta que sea voces, yo te digo cuál usar y listo, no me tenés que subir absolutamente todo"*.
 - Cuando tiene que **elegir** (voces, hooks, imágenes, cortes), se le entregan **solo las opciones**, numeradas `1 - …`, `2 - …`, `3 - …`, en **una carpeta propia con nombre claro** dentro de `~/Desktop/<oferta>/` (por ejemplo `anuncios/voces/`). Tres opciones, nada más.

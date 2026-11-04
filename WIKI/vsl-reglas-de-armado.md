@@ -211,6 +211,7 @@ Con 49 créditos de Higgsfield se cubrieron los 17 momentos de B-roll de un VSL 
 
 ## 3c. Créditos de HeyGen por modelo (medido el 2026-10-24, Protocolo Chía 28D)
 - ⛔ **REGLA FIJA (2026-10-24): en HeyGen se usa SIEMPRE Avatar IV.** Santiago, después de que el primer bloque del VSL de chía se llevara 231 de 237 créditos con Avatar 6 Pro: *"Usa el avatar IV siempre, me gastaste todos los creditos"*. Nunca Avatar 6 (Pro ni Turbo) ni ningún modelo nuevo que venga por defecto, aunque gesticule mejor. **Antes de enviar, revisar qué modelo está elegido en Creación rápida** (el selector vuelve solo al modelo caro).
+  - 🆕 **2026-11-04 · El disparador exacto: cambiar de avatar resetea el modelo.** En *Escena única*, al elegir otro avatar el selector vuelve solo de Avatar IV a **Avatar 6 · Pro (Beta)**, sin avisar. El orden correcto es **avatar primero, modelo después**, y mirar el selector una vez más justo antes de darle a generar. Cambiar el audio NO lo resetea.
 - **Avatar 6 · Pro (Beta): ~48 créditos por minuto.** Un bloque de 4.489 caracteres salió en 4:48 y costó **231 créditos**. Hace gestos con las manos y expresiones guiadas por el guion: es lo más parecido al original con avatar real.
 - **Avatar IV: ~17 créditos por minuto** (los videos "CHIA G2/G3" de 1:02 costaron 17 cada uno). Movimiento genérico, sin gesto de manos.
 - Un VSL de 18 minutos cuesta unos **870 créditos con Avatar 6 Pro** y unos **300 con Avatar IV**. Antes de arrancar un VSL largo, calcular esto y avisarle a Santiago.

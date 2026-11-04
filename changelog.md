@@ -1,3 +1,14 @@
+## 2026-11-04 (5ª pasada) — Monjaro Violeta: el VSL del original, destripado y reescrito
+
+- Santiago: *"entrá de nuevo al quiz original, fijate que en la última slide hay un VSL, descargalo y armemos uno nuestro exactamente igual"*.
+- **Los dos videos bajados.** El player es de **ConverteAI/VTurb**: el `player.js` trae el id del video y el master vive en `cdn.converteai.net/<cuenta>/<video>/main.m3u8`, sin autenticación. VSL final: **2:29**. Video corto del paso 11: **1:39**.
+- **El VSL dura 2:30 y tiene 431 palabras.** Lo hablan **dos personajes**: la Abuela Mei abre (11 s) y cierra (30 s), y el **70% del medio es el testimonio de otra mujer filmado en su cocina real, formato UGC**. Eso es lo que hay que replicar: no es un VSL de experta a cámara.
+- **Guion nuestro escrito: 2:35, 530 palabras, tres bloques de HeyGen**, con los 10 beats del testimonio en el mismo orden.
+- **Se sacó todo lo que no tenemos** (soporte por WhatsApp, grupo, menús, ejercicios, consultoría individual) y entraron los entregables reales del quiz y los 5 regalos. El anclaje pasa de "una consulta sale R$ 700" al valor de los regalos.
+- **`SEGUNDOS_OFERTA` queda en 92**: el precio se dice en el 1:28.
+- **Prompt del avatar de la Abuela Mei** listo, con las reglas del 3/11: sentada, plano medio, fondo liso y vacío, look de foto de celular y sin las palabras que empujan al render de stock.
+- Páginas actualizadas: [[monjaro-violeta]], [[index]].
+
 ## 2026-11-04 (4ª pasada) — Monjaro Violeta Japonés: el quiz entero, clonado del brasileño
 
 - Santiago pasó la Biblioteca de Anuncios de **Vovó Mei** (~37 ads activos): oferta brasileña de "Mounjaro Roxo Japonês", una bebida de remolacha con protocolo de 30 días. Destino real `monja-roxo.lovable.app`. Va para **Argentina**.

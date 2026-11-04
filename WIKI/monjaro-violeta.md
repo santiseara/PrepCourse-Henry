@@ -51,12 +51,40 @@
 - **Rehechas con Pillow:** las chapas verdes de género (`MULHER` → **MUJER**, `HOMEM` → **HOMBRE**), con Arial Black sobre el mismo verde #039E00.
 - **La portada** (`hero-monjaro.webp`) es el arte del original **sin el cartel en portugués**: se recortó la banda de arriba (jugo, remolachas, torii y la cara de la Abuela) y se le puso un **alfa en diagonal** que la funde con el fondo de la página. El lockup "MONJARO / VIOLETA / JAPONÉS" se rehízo **en HTML con CSS**, así queda nítido y editable.
 
+## El VSL del original (bajado y transcripto el 2026-11-04)
+Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d2f60-1b53-4b39-8198-42435c3310fd`). El `player.js` de cada uno trae el **id del video** adentro, y el master está en `https://cdn.converteai.net/<cuenta>/<video>/main.m3u8`, sin autenticación. Bajan con ffmpeg y `-c copy`.
+| | Player | Video | Dura |
+|---|---|---|---|
+| VSL del último paso | `6ab046138aae747f61704d5e` | `6ab045f46b009725a74f6379` | **2:29** · 404x720 |
+| Video corto del paso 11 | `6ab0462b14e8c28e3b7cd846` | `6ab046178aae747f61704d70` | **1:39** · 202x360 |
+
+- **El VSL es cortísimo: 2:30 y 431 palabras** (~172 ppm). Nada que ver con los 18 minutos del VSL de Calistenia Militar: acá la venta entera entra en dos minutos y medio.
+- **Lo hablan dos personajes, y el 70% del video no es la experta:**
+  1. **0:00–0:11 · Abuela Mei** (la experta) felicita y dice que el plan personalizado ya está armado con las respuestas del quiz. Es el puente desde el quiz.
+  2. **0:11–1:58 · la testimonial**, una mujer rubia de unos 50 con anteojos, filmada en **su cocina real lavando los platos**, formato UGC casero. Todo el cuerpo del VSL es su testimonio.
+  3. **1:58–2:30 · vuelve la Abuela Mei** para la garantía, la frase bandera y el CTA.
+- **Los 10 beats del testimonio:** la panza que no se iba · conoció el método hecho a medida · ingredientes que ya tenía en casa y 8 kg en 15 días · la autoestima · "pensé que era complicado y se hace en minutos" · "estaba con el pie atrás, ya había caído en promesas falsas" · qué incluye · precio único y sin mensualidad · el anclaje de la consultoría · la lista de alimentos que frenan el metabolismo.
+- **Visual:** la experta en una cocina rústica con estantes de frascos de barro, delantal marrón y colgante de jade, con el vaso de jugo y la remolacha sobre la mesada. B-rolls de la bebida sirviéndose, limón, ananá, jengibre y clips reales de antes/después. **Subtítulos de una sola palabra, en amarillo con borde negro, a la altura del pecho** (igual que el VSL de Calistenia Militar: amarillo sobre blanco, sin franja).
+- **El CTA es una placa amarilla con una flecha roja** que baja: *"PEGAR MEU PLANO"*.
+- **El video corto del paso 11 (1:39)** es la presentación de la experta: nombre, credencial de medicina tradicional japonesa, las seguidoras, por qué hay que contestar las preguntas (no existe la misma receta para dos mujeres distintas) y el mecanismo (el "fuego digestivo", drenar líquidos, desinflamar el intestino).
+- Transcripciones completas: `OUTPUTS/2026-11-04-transcripcion-vsl-monjaro-original.txt` y `OUTPUTS/2026-11-04-transcripcion-mei-corto-original.txt`. Los MP4 quedaron en `~/Desktop/monjaro-violeta/vsl/`.
+
+## Nuestro VSL (2026-11-04)
+- **2:35 y 530 palabras**, en tres bloques de HeyGen: Abuela Mei (50 palabras) → Mariela, la testimonial (382) → Abuela Mei (98). Guion: `OUTPUTS/2026-11-04-vsl-monjaro-violeta-guion.md`.
+- **Mismo esqueleto que el original, beat por beat**, con la oferta nuestra adentro.
+- **Lo que NO se copia** (no lo tenemos): el acompañamiento por WhatsApp, el grupo exclusivo, los menús personalizados, los ejercicios y la consultoría individual con la experta. En su lugar van los entregables reales del quiz: el protocolo de 30 días, las 12 variantes, la tabla de horarios, la lista de compras, las adaptaciones y los 5 regalos de $73.500.
+- **El anclaje cambia:** el original ancla con "una consulta con ella sale más de R$ 700"; el nuestro ancla con el valor de los regalos.
+- **La entrega es por mail**, no por WhatsApp (el quiz no pide WhatsApp).
+- **La testimonial es la misma Mariela Benítez del quiz**, con los números alineados: 8 kilos en los primeros 15 días y 16 en total.
+- **`SEGUNDOS_OFERTA` = 92.** El precio se dice en la palabra 302, o sea el **1:28**. Se confirma con el video ya renderizado antes de dejarlo fijo.
+- **Hacen falta dos avatares**, uno por personaje. Prompt de la Abuela Mei: `OUTPUTS/2026-11-04-prompt-avatar-abuela-mei.md`.
+
 ## Estado
 - ✅ **Quiz entero armado y probado en el navegador** (2026-11-04): `~/Desktop/monjaro-violeta/`.
   - Probados: portada, multi-select, bifurcación por género, fotos de edad y kilos, campo de nombre con `{{nombre}}`, placa de cómo funciona, testimonio, los 3 medidores, la pantalla de carga, el **IMC con la bolita en la franja correcta** (82 kg / 1,65 m → 30,1 → Obesidad → bolita al 90%), la rama de condición de salud (campo → carga → mensaje personalizado), la comparativa y la oferta entera con contador, cupos y notificaciones.
   - **Textos sensibles al género** con el token `{{o}}`: "¿estás list**a**/list**o**?", "Quedate tranquil**a**/**o**", "List**a**/List**o**, Ana".
   - Atajos de prueba: `?oferta=1` va directo a la oferta y `?paso=N` arranca en el paso N.
-- ⏳ **Falta el VSL** (lo hacemos después): el embed de Panda va en `<template id="vsl-template">` y `SEGUNDOS_OFERTA` queda en **230 de prueba** hasta saber el segundo exacto en que nuestro VSL dice el precio.
+- ✅ **Guion del VSL escrito** (2026-11-04): 2:35 en tres bloques. Falta grabarlo. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 92**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

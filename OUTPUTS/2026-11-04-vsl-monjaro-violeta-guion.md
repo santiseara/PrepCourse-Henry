@@ -1,6 +1,6 @@
 BLOQUE 1 — ABUELA MEI
 
-Felicitaciones, mi flor. Con tus respuestas ya quedó armado tu plan personalizado del Monjaro Violeta Japonés, calibrado para tu edad, para tu tipo de cuerpo y para la vida que tenés hoy. Antes de que entres, quiero que escuches a Mariela. Ella arrancó igual que vos, respondiendo estas mismas preguntas.
+Felicitaciones. Con tus respuestas ya quedó armado tu plan personalizado del Monjaro Violeta Japonés, calibrado para tu edad, para tu tipo de cuerpo y para la vida que tenés hoy. Antes de que entres, quiero que escuches a Mariela. Ella arrancó igual que vos, respondiendo estas mismas preguntas.
 
 
 BLOQUE 2 — MARIELA (la testimonial)
@@ -32,7 +32,7 @@ BLOQUE 3 — ABUELA MEI
 
 Yo confío tanto en mi método que te lo pongo por escrito: si en treinta días no ves un cambio visible, me escribís un mail, te devuelvo hasta el último peso y te quedás igual con todo el material. El riesgo lo corro yo.
 
-La panza chata que tanto soñás no nace en el gimnasio, mi flor. Nace en tu cocina.
+La panza chata que tanto soñás no nace en el gimnasio. Nace en tu cocina.
 
 Aprendé hoy mismo a combinar los ingredientes correctos y a preparar tu Monjaro Violeta Japonés en tu casa.
 

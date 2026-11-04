@@ -80,13 +80,22 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
 - **La testimonial es la misma Mariela Benítez del quiz**, con los números alineados: 8 kilos en los primeros 15 días y 16 en total.
 - **`SEGUNDOS_OFERTA` = 101.** El precio se dice en la palabra 332, o sea el **1:37**. Se confirma con el video ya renderizado antes de dejarlo fijo.
 - **Hacen falta dos avatares**, uno por personaje: `OUTPUTS/2026-11-04-prompt-avatar-abuela-mei.md` y `OUTPUTS/2026-11-04-prompt-avatar-mariela.md`. Los dos con fondo liso y vacío: la cocina del original entra por B-roll, no por la foto del avatar.
+- ⛔ **Sin "mi flor"** (2026-11-04). Era `minha flor` traducido literal del original; Santiago lo sacó: *"queda raro eso… las cosas raras las sacamos"*. Regla general en [[vsl-reglas-de-armado]].
+
+### Voces del VSL (elegidas el 2026-11-04)
+| Personaje | Voz | Modelo | Por qué |
+|---|---|---|---|
+| **Abuela Mei** (bloques 1 y 3) | **Vindemiatrix** | `gemini-2.5-flash-preview-tts` | Elegida por Santiago entre tres muestras maduras. Son **dos mujeres hablando una atrás de la otra**, así que no podían compartir voz. |
+| **Mariela**, la testimonial (bloque 2) | **Sulafat** | idem | La voz femenina fija de la casa. |
+- **El style no envejece una voz.** Se probó un style forzado ("voz gastada, temblor, le falta el aire") sobre Gacrux y el oyente la bajó de 50-60 a **40 años**: el motor la hace más suave, no más vieja. Con el TTS de AI Studio **50-60 es el techo** para una abuela de 72; para más hay que ir a voz clonada.
+- Descartadas: **Gacrux** (grave y pausada, la segunda mejor) y **Achernar** (suave y aireada). Las tres dieron rioplatense limpio y ninguna leyó el style en voz alta.
 
 ## Estado
 - ✅ **Quiz entero armado y probado en el navegador** (2026-11-04): `~/Desktop/monjaro-violeta/`.
   - Probados: portada, multi-select, bifurcación por género, fotos de edad y kilos, campo de nombre con `{{nombre}}`, placa de cómo funciona, testimonio, los 3 medidores, la pantalla de carga, el **IMC con la bolita en la franja correcta** (82 kg / 1,65 m → 30,1 → Obesidad → bolita al 90%), la rama de condición de salud (campo → carga → mensaje personalizado), la comparativa y la oferta entera con contador, cupos y notificaciones.
   - **Textos sensibles al género** con el token `{{o}}`: "¿estás list**a**/list**o**?", "Quedate tranquil**a**/**o**", "List**a**/List**o**, Ana".
   - Atajos de prueba: `?oferta=1` va directo a la oferta y `?paso=N` arranca en el paso N.
-- ✅ **Guion del VSL escrito** (2026-11-04): 2:35 en tres bloques. Falta grabarlo. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
+- ✅ **Guion del VSL escrito** (2026-11-04): 2:41 en tres bloques, ya sin "mi flor". **Avatar de la Abuela Mei listo** (`vsl/avatar-abuela-mei.png`, 942×1670, 9:16 exacto, generado por Santiago con su ChatGPT). **Voces en curso** con Vindemiatrix y Sulafat. Falta el avatar de Mariela y el render de HeyGen. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

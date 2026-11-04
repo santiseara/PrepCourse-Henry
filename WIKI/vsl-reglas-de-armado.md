@@ -131,6 +131,13 @@ Dos planos se colaron en el primer render y recién aparecieron en la hoja de co
 - **No fabricar testimonios en video** de "clientas reales" con IA. Si el original tenía uno, la avatar lee un testimonio que ya existe en el funnel.
   - **Excepción decidida por Santiago (2026-10-14, Mounjaro Humilde):** si él lo pide, el testimonio en primera persona lo hace su avatar de HeyGen **"Karina testimonio"** (voz roma).
 
+### 🆕 2026-11-04 · Los vocativos del original no se traducen: se sacan
+Santiago, sobre el VSL de Monjaro Violeta clonado del brasileño: *"sacame lo de mi flor, queda raro eso, acordate que tiene que sonar con acento argentino, las cosas raras las sacamos"*.
+- **"Mi flor" es `minha flor` traducido literal.** Ninguna abuela argentina le dice eso a nadie. Salió de las dos puntas del guion (`Felicitaciones, mi flor` → `Felicitaciones`; `no nace en el gimnasio, mi flor` → `no nace en el gimnasio`).
+- ⛔ **Regla: al clonar de otro idioma, los vocativos y las muletillas del original se borran, no se traducen.** Si el personaje necesita un trato cercano, se usa el del mercado destino (en AR el voseo ya alcanza, y si hace falta algo más va "che" o el nombre propio). Lo mismo con `minha querida`, `meu bem`, `mi niña`, `bendición`.
+- **El filtro:** leer el guion en voz alta preguntándose si alguien de ese país lo diría así. Lo que suena a traducción, afuera. No alcanza con que esté gramaticalmente bien en español.
+- El acento se verifica igual en el wav (§0c), pero **el acento no arregla una palabra que nadie usa**: eso se arregla en el guion, antes de gastar una generación.
+
 ## 3. Avatar y voz
 - **Avatar: HeyGen** (decisión del 2026-10-12, en lugar de Higgsfield). Lo usa Santiago desde su sesión en Chrome.
 - La experta de Pilates Hormonal es la **Maestra Caro**: mujer asiática, foto en `~/Downloads/WhatsApp Image 2026-10-09 at 13.26.36 (1).jpeg`.

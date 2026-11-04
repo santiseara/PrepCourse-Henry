@@ -13,22 +13,24 @@ Usé ingredientes que ya tenía en casa, cosas de la verdulería de la esquina, 
 
 Pensé que iba a ser un quilombo prepararlo y es al revés: lo hacés en tres minutos y lo tomás en el horario que te marcan. Ese es todo el secreto.
 
-Y te voy a ser sincera: yo llegué con el pie atrás. Ya había probado de todo y me había comido varias promesas falsas de internet. Sabés cómo es. Con la Abuela Mei fue otra historia.
+Y te voy a ser sincera: yo llegué con el pie atrás. Ya había probado de todo y me había comido varias promesas falsas de internet. Sabés cómo es. Con la Abuela Mei y su equipo fue otra historia.
 
-Además de la receta original, me llevé el protocolo de los treinta días marcado día por día, las doce variantes para no aburrirme nunca, la tabla de horarios, la lista de compras con todo lo que conseguís acá, y las adaptaciones por si tenés alguna condición de salud. Yo tengo hipotiroidismo y lo seguí igual, sin pasar hambre y sin pisar un gimnasio, que es algo que detesto.
+Además de la receta del Monjaro Violeta, me llevé un seguimiento individual por WhatsApp, un grupo cerrado para sacarme todas las dudas, los menús armados para mí y hasta ejercicios para hacer en casa. Yo detesto el gimnasio, así que eso para mí fue clave: todo fácil de seguir y a mi propio ritmo.
 
-¿Y sabés qué fue lo que más me sorprendió? Que pagué un solo pago de catorce mil novecientos noventa pesos por todo eso. Un pago y listo, sin cuota mensual, sin nada que se renueve. Yo lo hice en tres cuotas sin interés de cuatro mil novecientos noventa y siete.
+Esa personalización y el soporte de casi veinticuatro horas, que me contestaban rapidísimo, hicieron toda la diferencia. Eso me dio la seguridad de que el método era confiable de verdad.
 
-Y encima venían cinco regalos: las siete infusiones de la Abuela Mei, el plan anti ansiedad de las siete de la tarde, la desinflamación en setenta y dos horas, treinta cenas livianas de quince minutos y el mapa de porciones sin pesar nada. Solamente los regalos valen setenta y tres mil quinientos pesos, y van sin costo.
+¿Y sabés qué fue lo que más me sorprendió? Que pagué un solo pago de catorce mil novecientos noventa pesos para tener acceso a todo eso. Un pago y listo, sin cuota mensual, sin nada que se renueve. Yo lo hice en tres cuotas sin interés de cuatro mil novecientos noventa y siete.
 
-Ahí adentro está también la lista de los alimentos que te frenan el metabolismo. Muchos de esos los tenemos en la alacena todos los días, y nadie te lo cuenta.
+Y encima me gané una consultoría con la propia Abuela Mei para revisar mis resultados. Una consulta con ella sale más de ciento veinte mil pesos. Me pasó unos ajustes con los que bajé tres kilos más en una semana, y hasta se me acomodó el dolor de espalda.
+
+Me llevé también la lista de los alimentos que son los verdaderos villanos del descenso de peso. Muchos de ellos los tenemos en la alacena todos los días, acá en Argentina, y son los que te frenan el metabolismo.
 
 Si estás dudando, confiá. Vale muchísimo la pena.
 
 
 BLOQUE 3 — ABUELA MEI
 
-Yo confío tanto en mi método que te lo pongo por escrito: si en treinta días no ves un cambio real, me escribís un mail, te devuelvo hasta el último peso y te quedás igual con todo el material. El riesgo lo corro yo.
+Yo confío tanto en mi método que te lo pongo por escrito: si en treinta días no ves un cambio visible, me escribís un mail, te devuelvo hasta el último peso y te quedás igual con todo el material. El riesgo lo corro yo.
 
 La panza chata que tanto soñás no nace en el gimnasio, mi flor. Nace en tu cocina.
 

@@ -1,3 +1,12 @@
+## 2026-11-04 (6ª pasada) — Monjaro Violeta: el acompañamiento vuelve al guion y la oferta del quiz no se toca
+
+- Dos correcciones de Santiago sobre el VSL:
+  1. *"Si tenemos todo eso que sacaste, no lo saques, lo tenemos"*. Yo había sacado el soporte por WhatsApp, el grupo, los menús, los ejercicios y la consultoría aplicando la regla de Tai Chi. **Vuelven todos al guion**, con el anclaje del original convertido: la consulta con la Abuela Mei "sale más de ciento veinte mil pesos". Regla nueva: **lo que tiene una oferta no se deduce de otra oferta, se pregunta**.
+  2. *"Dejala así tal cual como está, no le cambies nada a lo que ofrece"*. Había alineado la caja de oferta del quiz con el VSL (sumando el acompañamiento y dos regalos más, $205.400). **Revertido entero**: la caja vuelve a sus 5 regalos y $73.500. La caja de oferta no se edita si no lo pide.
+- El guion queda en **2:41 y 553 palabras** y **`SEGUNDOS_OFERTA` pasa a 101** (el precio se dice en el 1:37).
+- **Prompt del avatar de Mariela** (la testimonial, 52 años, canas y anteojos) escrito: `OUTPUTS/2026-11-04-prompt-avatar-mariela.md`. Son dos avatares, uno por personaje.
+- ⚠️ Queda por definir quién atiende la consultoría que promete la Abuela Mei, que es un avatar.
+
 ## 2026-11-04 (6ª pasada) — Academia del Trazo: la landing enchufada al checkout de Impultienda
 
 - Santiago: *"me sigue sin dejar, todos los botones de cta tienen que redirigir al checkout"*, y pasó las instrucciones de Impultienda.

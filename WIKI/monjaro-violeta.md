@@ -70,21 +70,23 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
 - Transcripciones completas: `OUTPUTS/2026-11-04-transcripcion-vsl-monjaro-original.txt` y `OUTPUTS/2026-11-04-transcripcion-mei-corto-original.txt`. Los MP4 quedaron en `~/Desktop/monjaro-violeta/vsl/`.
 
 ## Nuestro VSL (2026-11-04)
-- **2:35 y 530 palabras**, en tres bloques de HeyGen: Abuela Mei (50 palabras) → Mariela, la testimonial (382) → Abuela Mei (98). Guion: `OUTPUTS/2026-11-04-vsl-monjaro-violeta-guion.md`.
+- **2:41 y 553 palabras**, en tres bloques de HeyGen: Abuela Mei (50 palabras) → Mariela, la testimonial (382) → Abuela Mei (98). Guion: `OUTPUTS/2026-11-04-vsl-monjaro-violeta-guion.md`.
 - **Mismo esqueleto que el original, beat por beat**, con la oferta nuestra adentro.
-- **Lo que NO se copia** (no lo tenemos): el acompañamiento por WhatsApp, el grupo exclusivo, los menús personalizados, los ejercicios y la consultoría individual con la experta. En su lugar van los entregables reales del quiz: el protocolo de 30 días, las 12 variantes, la tabla de horarios, la lista de compras, las adaptaciones y los 5 regalos de $73.500.
-- **El anclaje cambia:** el original ancla con "una consulta con ella sale más de R$ 700"; el nuestro ancla con el valor de los regalos.
+- **El acompañamiento se mantiene, porque Santiago lo tiene** (2026-11-04). En la primera versión lo saqué por la regla de Tai Chi ("el soporte por WhatsApp no lo tenemos") y él corrigió: *"Si tenemos todo eso que sacaste, no lo saques, lo tenemos"*. Vuelven el **seguimiento individual por WhatsApp**, el **grupo cerrado**, los **menús personalizados**, los **ejercicios en casa** y la **consultoría con la Abuela Mei**. Regla: lo que tiene una oferta no se deduce de otra oferta — se pregunta.
+- **El anclaje es el mismo que el del original**, convertido: "una consulta con ella sale más de **ciento veinte mil pesos**" (en el original, R$ 700).
+- ⚠️ **Pendiente de confirmar:** la consultoría la promete **la Abuela Mei**, que es un avatar. Hay que definir si la atiende el equipo (y entonces el texto dice "con el equipo de la Abuela Mei") o si Santiago la hace él.
+- ⛔ **La oferta del quiz NO se toca** (2026-11-04). Alineé la caja del quiz con lo que dice el VSL y Santiago cortó: *"Dejala así tal cual como está, no le cambies nada a lo que ofrece"*. La caja queda con sus **5 regalos y $73.500**. El VSL puede nombrar cosas que la caja no lista; la caja es la que manda y no se edita sin que lo pida.
 - **La entrega es por mail**, no por WhatsApp (el quiz no pide WhatsApp).
 - **La testimonial es la misma Mariela Benítez del quiz**, con los números alineados: 8 kilos en los primeros 15 días y 16 en total.
-- **`SEGUNDOS_OFERTA` = 92.** El precio se dice en la palabra 302, o sea el **1:28**. Se confirma con el video ya renderizado antes de dejarlo fijo.
-- **Hacen falta dos avatares**, uno por personaje. Prompt de la Abuela Mei: `OUTPUTS/2026-11-04-prompt-avatar-abuela-mei.md`.
+- **`SEGUNDOS_OFERTA` = 101.** El precio se dice en la palabra 332, o sea el **1:37**. Se confirma con el video ya renderizado antes de dejarlo fijo.
+- **Hacen falta dos avatares**, uno por personaje: `OUTPUTS/2026-11-04-prompt-avatar-abuela-mei.md` y `OUTPUTS/2026-11-04-prompt-avatar-mariela.md`. Los dos con fondo liso y vacío: la cocina del original entra por B-roll, no por la foto del avatar.
 
 ## Estado
 - ✅ **Quiz entero armado y probado en el navegador** (2026-11-04): `~/Desktop/monjaro-violeta/`.
   - Probados: portada, multi-select, bifurcación por género, fotos de edad y kilos, campo de nombre con `{{nombre}}`, placa de cómo funciona, testimonio, los 3 medidores, la pantalla de carga, el **IMC con la bolita en la franja correcta** (82 kg / 1,65 m → 30,1 → Obesidad → bolita al 90%), la rama de condición de salud (campo → carga → mensaje personalizado), la comparativa y la oferta entera con contador, cupos y notificaciones.
   - **Textos sensibles al género** con el token `{{o}}`: "¿estás list**a**/list**o**?", "Quedate tranquil**a**/**o**", "List**a**/List**o**, Ana".
   - Atajos de prueba: `?oferta=1` va directo a la oferta y `?paso=N` arranca en el paso N.
-- ✅ **Guion del VSL escrito** (2026-11-04): 2:35 en tres bloques. Falta grabarlo. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 92**.
+- ✅ **Guion del VSL escrito** (2026-11-04): 2:35 en tres bloques. Falta grabarlo. Cuando esté, el embed de Panda va en `<template id="vsl-template">` y **`SEGUNDOS_OFERTA` pasa de 230 a 101**.
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 

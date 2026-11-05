@@ -1,3 +1,9 @@
+## 2026-11-05 (21ª pasada) — En la carpeta de entrega va un archivo por pieza
+
+- Santiago: *"Porque tengo muchos videos, dejame solo los que van"*. Había dejado los renders crudos (`V1.mp4`…`V6.mp4`) junto a las copias numeradas (`5-11 - 1.mp4`…): doce archivos para seis videos.
+- Se borraron los duplicados y los `_tmp` del editor. La carpeta pasó de **949 MB a 219 MB** y quedan los 6 videos y el `.md` de los guiones.
+- Regla nueva en [[como-trabajar-con-santiago]]: el render se **mueve**, no se copia; en lo que él abre va un solo archivo por pieza, con el nombre de tanda.
+
 ## 2026-11-05 (20ª pasada) — Los 6 videos de Your First Wooden Automaton
 
 - Santiago: *"Dale, haceme los videos, son 6 videos los que necesito"*.

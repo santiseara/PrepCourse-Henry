@@ -45,6 +45,12 @@ Santiago: *"quedó todo hecho un desorden, vos tenés que subirme solo 3 voces, 
 - **Nunca se le abre una carpeta de trabajo.** Todo lo intermedio (crudos, bloques cortados, json de alineación, versiones) queda en `work/` y no se muestra.
 - Las opciones se entregan **como van a sonar o verse en el video final** (la voz ya con su velocidad y sus pausas), no en crudo.
 
+## En la carpeta de entrega van solo los archivos que van (regla fija, 2026-11-05)
+Santiago, al ver los 6 videos de [[orzzen-automatas]] duplicados: *"Porque tengo muchos videos, dejame solo los que van"*.
+- Yo había dejado los renders con nombre de trabajo (`V1.mp4` … `V6.mp4`) **al lado** de las copias numeradas (`5-11 - 1.mp4` …): doce archivos para seis videos.
+- Regla: el render crudo se **mueve**, no se copia. En la carpeta que él abre queda **un archivo por pieza**, con el nombre de tanda `DD-M - N`, y nada más. Los `_tmp` del editor se borran apenas termina el render.
+- Es la misma idea que "lo que se manda a elegir va solo": él no tiene que decidir cuál de dos archivos iguales es el bueno.
+
 ## Trabajar en la compu de Santiago (regla fija, 2026-10-25)
 - **Todo el laburo se hace en su Mac, siempre.** Santiago: *"acordate de laburar en mi compu SIEMPRE"*. Voces, renders, descargas, imágenes y archivos van a su disco, no a un entorno remoto ni a una carpeta temporal del sistema.
 - En la práctica: las voces se graban con su Chrome en AI Studio, los videos se renderizan con los scripts locales de `OUTPUTS/scripts-vsl/`, y los entregables terminan en `~/Desktop/<oferta>/` según la regla de carpetas de arriba.

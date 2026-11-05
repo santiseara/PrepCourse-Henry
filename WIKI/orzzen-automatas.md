@@ -42,6 +42,9 @@ Dos cosas que el editor obligó a resolver:
 - **Los inserts necesitan margen.** El zoom de las fotos fijas va de 1.0 a 1.14 más un golpe de 1.16 en cada corte: un gráfico de 1080×1920 justo pierde la cabecera y el pie. Se entregan sobre un lienzo **1.20×** con el sobrante desenfocado. Con 1.41× entraban enteros pero quedaban ilegibles en el teléfono.
 - **El cierre se fuerza, no se ancla.** Anclar la tapa a la palabra del CTA no alcanza: en los videos largos entran planos después y el botón queda sobre un clip cualquiera. Se agregó `last` al plan, que fija el clip del último plano.
 
+### La descripción del ad (5/11)
+Un **solo copy para los 6 videos**, igual que hace Orzzen con sus 32 ads (ellos testean creativo, no copy). Molde de oferta directa en inglés: golpe en la primera línea (*"It's wood. No motor, no battery, no electronics"*), bullets de mecanismo, entregables con nombre (app simuladora, +20 mecanismos, 18 lecciones, los proyectos), prueba social +1.400 y 4.9★, garantía de 30 días y acceso de por vida, un solo pago **sin precio**, CTA *Tap Learn More* con la promesa de tiempo (5 a 7 días, 1 a 2 h por día). Las dos versiones completas en `OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md`.
+
 ### Lo que se cayó del pool y por qué
 - Caras hablando a cámara (`craftsmm`) y marcas de agua **centradas** (`CRAFTSMM`): el zoom no las saca.
 - Texto quemado que vuelve a aparecer más tarde en el clip: el de los camarones dice *"link in bio"* a los 8 s, mucho después del bloque de subtítulos del principio. **Se cayó entero.**
@@ -64,4 +67,5 @@ Dos cosas que el editor obligó a resolver:
 - Biblioteca de Anuncios de Meta, búsqueda `orzzen.impultienda.ar` (5 nov. 2026, 32 ads activos, 14 videos transcriptos)
 - Landing `orzzen.impultienda.ar`
 - OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md
+- OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md
 - OUTPUTS/scripts-vsl/gen_automata_plans.py · OUTPUTS/scripts-vsl/edit_automata.py · OUTPUTS/scripts-vsl/tts_gemini_multi.py

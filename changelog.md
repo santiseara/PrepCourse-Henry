@@ -1,3 +1,11 @@
+## 2026-11-05 (24ª pasada) — Descripción para los ads de Your First Wooden Automaton
+
+- Santiago: *"Dame una descripcion para los ads de la oferta de madera que hicimos recien"*.
+- Un **solo copy para los 6 videos** de la tanda del 5/11, en **inglés y español con voseo** (la oferta corre en el mercado inglés), siguiendo el molde de oferta directa de [[group-work-playbook]] y [[herrero-de-finde]].
+- Contenido alineado a la landing de Orzzen: el golpe de "es madera y no tiene motor", el mecanismo pieza por pieza, la **app simuladora**, la biblioteca de **+20 mecanismos**, las 18 lecciones, los proyectos con nombre, **+1.400 compradores y 4.9★**, garantía de 30 días, acceso de por vida, **sin precio**, y CTA a *Más información* con la promesa de 5 a 7 días.
+- Guardada en `OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md`, copiada a `~/Desktop/wooden-automaton/anuncios/descripcion-ads.md` y al portapapeles.
+- Actualizadas: [[orzzen-automatas]], [[index]].
+
 ## 2026-11-05 (23ª pasada) — Stitched Fits: la ballena de arreglos de ropa para Argentina
 
 - Santiago: *"Quiero que analices esta oferta… la voy a tirar en argentina, la idea es clonar sus mejores anuncios, clonando guiones y edicion, las visuales vamos a tener que usar de tiktok, pero quiero que utilices las mismas o muy similares"*.

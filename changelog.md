@@ -1,3 +1,12 @@
+## 2026-11-05 (27ª pasada) — El módulo de Meta Ads, en tres documentos
+
+- Santiago: *"ahora quiero que me armes un documento para la clase de Meta Ads… vamos a dividir el módulo de Meta Ads en varios videos"*. Quedaron **3 videos y 3 documentos**: (1) introducción + campañas de testeo, (2) cómo leer las métricas para saber si la oferta está validada, (3) campañas de escalado. El de métricas va **en el medio** a propósito: no se escala nada antes de saber leer.
+- **Meta Ads 1** (https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R): ABO = presupuesto en el conjunto, CBO = en la campaña y se lee **siempre a nivel campaña**; la notación 1-1-1 / 1-1-5 / 1-3-1 / 1-8-1; el ajuste de **"compartir hasta un 20 %"** que convierte una ABO en CBO; la **ABO 1-1-1 con 5 a 10 USD por conjunto** (tabla por ticket) y el setup completo; la **CBO de testeo post-Andrómeda** (3 conceptos, contenido flexible, 35 USD y 4 campañas/día); el **CPA medio = ticket ÷ 2** con los tres modos y la regla de corte; y la cuenta con **solo dos campañas fijas**.
+- **Meta Ads 2** (https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A): costo por visita contra revenue por visita, el **CPA break-even**, los **100 USD y una semana** contra el **mínimo de 20 anuncios**, oferta validada contra creativo validado (5 conversiones), los KPIs con los números de Bilbao (hook >50 %, retention >10 %, comprate 2,5 %), y el **orden de diagnóstico de 6 pasos** con los datos reales (los ganadores llevan ~15 de cada 100 al pago, los perdedores ~10).
+- **Meta Ads 3** (https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G): el surfeo **+30 %** con el ritmo atado al presupuesto y la tabla ayer/hoy, el techo de la cuenta, puja manual contra automática y la **regla de reparto** (todo en manual no se puede), **Cost Cap** de 7 conjuntos con bids escalonados y 4 revisiones por día, **Bid Cap** acelerada (front × 1,3), la **intrapuja** y su atajo, y las **dos Pocket** (1-8-1 al 75 % del front y Launch Pocket 1-10-N a 3-5×).
+- Estaba todo en el cerebro: no hizo falta pedirle ninguna estructura. **Pocket incluida** ([[estructuras-cbo]], [[escalado-en-meta-ads]]).
+- Actualizadas: [[mentoria]] (tabla de módulos y la decisión de partir Meta Ads en 3), [[index]].
+
 ## 2026-11-05 (25ª pasada) — A Tu Medida: cama musical activa
 
 - Santiago: *"Estan muy bien, pero no pongas mas esa musica, necesito una musica mas activa, cambiale solo eso"*.

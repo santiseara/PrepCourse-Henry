@@ -31,11 +31,27 @@ Referencia declarada: **la School de Santiago Bilbao** (la formación que está 
 | 2 | Modelado de la oferta (mecanismo único, stack 1+5, bonus, nombre) | pendiente |
 | 3 | Creativos y guiones | pendiente |
 | 4 | Landing, checkout y upsells | pendiente |
-| 5 | Campañas y validación | pendiente |
-| 6 | Escalado y backend | pendiente |
-| **7** | **Impuestos: Argentina y vender afuera** | ✅ entregado 2026-11-05 (número a confirmar) |
+| **5** | **Meta Ads 1 — ABO, CBO y las dos formas de testear** | ✅ entregado 2026-11-05 |
+| **6** | **Meta Ads 2 — Cómo saber si la oferta está validada** | ✅ entregado 2026-11-05 |
+| **7** | **Meta Ads 3 — Campañas de escalado: Cost Cap, Bid Cap y Pocket** | ✅ entregado 2026-11-05 |
+| **8** | **Impuestos: Argentina y vender afuera** | ✅ entregado 2026-11-05 (número a confirmar) |
 
 El orden sale de la jerarquía del método: **1. Mercado → 2. Anuncios → 3. Funnel → 4. Producto** ([[modelo-low-ticket]]). Los módulos 2 en adelante todavía no están confirmados con Santiago.
+
+
+## El módulo de Meta Ads va en tres videos (decisión del 2026-11-05)
+
+Pedido de Santiago: *"vamos a dividir el módulo de Meta Ads en varios videos"*. Quedó así, y **cada video tiene su documento**:
+
+| # | Video | Qué resuelve | Documento |
+|---|---|---|---|
+| 1 | **Introducción + campañas de testeo** | Que la persona sepa la diferencia entre ABO y CBO y **las dos formas de testear** que tiene | [Claude Doc](https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R) · `OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md` |
+| 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
+| 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
+
+El orden es deliberado: **no se escala nada antes de saber leer si la oferta está validada**, así que el módulo de métricas va en el medio.
+
+Lo que Santiago fijó para el primero: en ABO se testea **1-1-1** (una campaña y un conjunto por anuncio) y el presupuesto va **entre 5 y 10 USD por conjunto**. Lo demás salió de la formación de Bilbao volcada en [[estructuras-cbo]], [[testeo-de-creativos]], [[setup-de-campanas]], [[metodo-v3]], [[metricas-y-kpis]], [[validacion-de-oferta]], [[lectura-de-resultados]] y [[escalado-en-meta-ads]] — incluida la CBO de testeo post-Andrómeda, las dos Pocket y la intrapuja, que estaban todas en el cerebro.
 
 ## Módulo 1 — Búsqueda de ofertas ganadoras
 

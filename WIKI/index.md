@@ -6,7 +6,7 @@
 
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
-- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1 y 7 (impositivo) entregados.
+- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1, los 3 de Meta Ads y el impositivo entregados.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
@@ -115,6 +115,9 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-05 — Mentoría, Meta Ads 1: ABO, CBO y las dos formas de testear](../OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md) — dónde va el presupuesto en cada una, la ABO 1-1-1 con el setup completo y 5 a 10 USD por conjunto, la CBO de testeo post-Andrómeda, el CPA medio y la regla de corte · ver [[mentoria]]
+- [2026-11-05 — Mentoría, Meta Ads 2: cómo saber si la oferta está validada](../OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md) — costo por visita contra revenue por visita, el CPA break-even, los 100 USD y los 20 anuncios, los KPIs con sus números y el orden de diagnóstico de 6 pasos · ver [[mentoria]]
+- [2026-11-05 — Mentoría, Meta Ads 3: campañas de escalado](../OUTPUTS/2026-11-05-meta-ads-3-escalado.md) — el surfeo del +30 %, puja manual contra automática, Cost Cap de 7 conjuntos, Bid Cap acelerada, la intrapuja y las dos Pocket · ver [[mentoria]]
 - [2026-11-05 — Mentoría, Módulo 7: impuestos (guía de clase)](../OUTPUTS/2026-11-05-modulo-7-guia-de-clase.md) — la versión corta que se usa en clase, ~500 palabras: facturás, Ingresos Brutos todos los meses, exento de IVA por vender libros, responsable inscripto sin techo, Whop/Stripe afuera y contador desde la primera venta · ver [[mentoria]]
 - [2026-11-05 — Módulo 7: la versión larga, de respaldo](../OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md) — la tabla de monotributo de agosto 2026, el Dictamen 70/2010 del IVA de libros, retenciones, el Form 5472 y la renta mundial argentina · ver [[impuestos-en-argentina]]
 - [2026-11-05 — Stitched Fits / Arreglá Tu Ropa: radiografía y plan para Argentina](../OUTPUTS/2026-11-05-analisis-stitched-fits-arreglos-de-ropa.md) — ballena de ~340 ads con creativos de hace 6 meses activos, las 8 familias de guion, su edición clonable (subtítulos karaoke con un color por creativo, inserto = grabación de pantalla) y la competencia vacía en AR · ver [[arreglos-de-ropa]]

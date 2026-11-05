@@ -1,3 +1,12 @@
+## 2026-11-05 (17ª pasada) — Descripción para los ads de Tai Chi Fit
+
+- Santiago: *"Bien, dame una descripcion para los ads"* (después de corregir el checkout del quiz).
+- **Una sola descripción** para toda la tanda, con el molde de la casa para quiz funnel en Argentina (el de [[monjaro-violeta]] y Mounjaro Humilde): mecanismo en la primera línea, 4 bullets de beneficio, bloque de lo que incluye con la garantía, y CTA al test gratis de 1 minuto.
+- **La promesa es la del Tai Chi, no la de las dietas:** energía, equilibrio y flexibilidad, "tu raíz" como mecanismo y el cuerpo que vive en alerta como villano — igual que el VSL. Sin kilos con plazo, sin precio ("baratísimo") y sin claim médico.
+- Lo que incluye se leyó de la caja de oferta del quiz y del guion del VSL: plan día por día, movimientos filmados con su versión adaptada, las tres fases (Raíz, Fluir, Grulla), Aprendiz → Maestra, soporte prioritario y la garantía de 30 días. **No se menciona WhatsApp**: esta oferta no lo tiene.
+- Entregada en `OUTPUTS/2026-11-05-descripcion-ads-tai-chi-fit.md`, en `~/Desktop/tai-chi-fit/anuncios/descripcion-ads.txt` y al portapapeles.
+- Páginas actualizadas: [[index]].
+
 ## 2026-11-05 (17ª pasada) — El checkout de Tai Chi Fit, corregido en todos los CTAs
 
 - Santiago: *"Actualizame el txt del quiz de taichi, quiero que todos los botones del cta de la ultima slide redirijan a este checkout: https://taichi-fit.impultienda.ar/checkout"*.

@@ -133,3 +133,88 @@ PROXIMO PASO
 ====================================================================
 Abrir la landing y el checkout de Maria Paula (132 ads) y de la flota de cuidador de idosos.
 Hasta ver precio y producto no se recomienda ninguna: el Manual lo pide en el paso 7.
+
+====================================================================
+LINKS DE LAS PAGINAS ENCONTRADAS (05/11/2026)
+====================================================================
+Cada link abre la biblioteca de esa pagina, pais = todos, solo activos.
+
+--- CANDIDATAS (pasan o rozan el filtro de 40+) ---
+
+Maria Paula - 132 ads - drenaje/piernas - page_id 702881226395611
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=702881226395611&search_type=page&media_type=all
+creativo mas duplicado: https://www.facebook.com/ads/library/?id=1007014104993731
+
+Beatriz Rocha - 38 ads - cuidador de idosos (cabecera de la flota) - page_id 225094174018170
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=225094174018170&search_type=page&media_type=all
+creativo: https://www.facebook.com/ads/library/?id=1401849145353609
+
+Los 3 fronts de la misma oferta (todos con el titulo "CLIQUE AQUI"):
+Ana Silva - 1374965609030463
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1374965609030463&search_type=page&media_type=all
+Patricia Oliveira - 106392272225786
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=106392272225786&search_type=page&media_type=all
+Carla Matos - 1345753608614921
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1345753608614921&search_type=page&media_type=all
+
+--- PRECIO LOW TICKET CONFIRMADO EN EL CREATIVO ---
+
+Atlas de Auriculoterapia - "100 Mapas | R$19,90" - 3 ads - page_id 1417575098105970
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1417575098105970&search_type=page&media_type=all
+el ad con el precio: https://www.facebook.com/ads/library/?id=1825185508830583
+
+Instituto Toque Essencial - "Catalogo Digital de Auriculoterapia" - page_id 1448288151692476
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1448288151692476&search_type=page&media_type=all
+
+Alessandra Santtos - "Jejum de Daniel · 21 dias · R$37" - page_id 1857571544462850
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1857571544462850&search_type=page&media_type=all
+el ad con el precio: https://www.facebook.com/ads/library/?id=2679476045824987
+
+--- SALUD: ESCALANDO, NO LLEGAN A 40 ---
+
+Vera Lucia - "Dormir Bem Nunca Foi Tao Facil 5.0" - page_id 305284256006251
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=305284256006251&search_type=page&media_type=all
+
+VibraFit - 15 ads USD - "Pernas leves no fim do dia" - page_id 1332684176587603
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1332684176587603&search_type=page&media_type=all
+
+Jardim da Vida - 21 ads USD - jejum/fe - page_id 1088778750986793
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1088778750986793&search_type=page&media_type=all
+
+Easy Answers - advertorial de circulacion en las piernas, USD - page_id 965318063321057
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=965318063321057&search_type=page&media_type=all
+
+Leticia Brassani - USD, "Compre Agora" - page_id 1354102084463650
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1354102084463650&search_type=page&media_type=all
+
+Terapias de Luz - "Reflexologia: aprenda online e atenda", USD - page_id 106900707741937
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=106900707741937&search_type=page&media_type=all
+
+Ativar Metabolismo - VSL "Assista ao video da Dra. Monica" - page_id 1258188377387674
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1258188377387674&search_type=page&media_type=all
+
+--- RENDA EXTRA: OFICIO TECNICO ---
+
+Jeferson Moreira - 27 ads - conserto de celular, "(1.762) Alunos" - page_id 1144668072074497
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1144668072074497&search_type=page&media_type=all
+creativo: https://www.facebook.com/ads/library/?id=1117790954439102
+
+Mente Visual - "TECNICO DE INVERTER, OLHA ISSO!" - page_id 1327490347124777
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1327490347124777&search_type=page&media_type=all
+creativo: https://www.facebook.com/ads/library/?id=4628964737430456
+
+Exata Conteudo e Treinamentos - "Material Completo de Seguranca do Trabalho" - page_id 109849761279807
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=109849761279807&search_type=page&media_type=all
+creativo: https://www.facebook.com/ads/library/?id=1138248822020876
+
+HCB Harvard Cursos do Brasil - instrutor de NRs - page_id 405021789353201
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=405021789353201&search_type=page&media_type=all
+
+Conhecimento Visual - "Domine ANATOMIA CARDIOVASCULAR" (PDF visual) - page_id 1381962804989657
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=1381962804989657&search_type=page&media_type=all
+
+--- DESCARTADA, pero para que la veas ---
+
+Amanda Guerios - Sallus Method - quiz "Descubra em qual modo teu corpo esta" - page_id 107115621413908
+Es marca personal (mentora con nombre y cara). El QUIZ si sirve como molde.
+https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&view_all_page_id=107115621413908&search_type=page&media_type=all

@@ -1,3 +1,12 @@
+## 2026-11-05 (17ª pasada) — El checkout de Tai Chi Fit, corregido en todos los CTAs
+
+- Santiago: *"Actualizame el txt del quiz de taichi, quiero que todos los botones del cta de la ultima slide redirijan a este checkout: https://taichi-fit.impultienda.ar/checkout"*.
+- El quiz tenía `tai-chi-fit.impultienda.ar` (con guion), que era justamente el link que daba **"Tienda no encontrada"**. El real es **`taichi-fit.impultienda.ar/checkout`** y responde **200**.
+- Como la URL vive en un solo lugar (`CONFIG.LINK_CHECKOUT`), fue una línea: cambiada en `~/Desktop/tai-chi-fit/landing/tai-chi-fit-quiz.txt`, en `tai-chi-fit-quiz.html`, en `tai-chi-fit-PRUEBA.html` y en la copia `OUTPUTS/2026-11-04-quiz-tai-chi-fit.html`. Nada más del quiz se tocó.
+- **Verificado en el navegador** con `?utm_source=test&utm_campaign=cta`: los **6 botones `data-cta`** (el de abajo del VSL, los tres del recorrido, el de la caja de oferta y el de la barra fija) apuntan a `taichi-fit.impultienda.ar/checkout` y arrastran los UTMs. En la última slide no quedó ningún `<a>` ni `<button>` sin link.
+- El `.txt` quedó copiado al portapapeles, listo para pegar en ImpulTienda.
+- Páginas actualizadas: [[tai-chi-fit]] (checkout confirmado, se fue la pregunta abierta), [[quizzes-reglas-de-armado]] (regla: el subdominio de ImpulTienda no se deduce del nombre, se confirma o se verifica con 200).
+
 ## 2026-11-04 (16ª pasada) — Descripción para los ads de Monjaro Rojo
 
 - Santiago: *"Dame una descripcion para los ads de monjaro"*.

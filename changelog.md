@@ -1,3 +1,12 @@
+## 2026-11-05 (20ª pasada) — Los 6 videos de Your First Wooden Automaton
+
+- Santiago: *"Dale, haceme los videos, son 6 videos los que necesito"*.
+- **6 ads de voz en off producidos**, de 25 a 38 s, en `~/Desktop/wooden-automaton/anuncios/videos/` (`5-11 - 1.mp4` a `5-11 - 6.mp4`).
+- Voz **Orus** por API; el guion 2 va a **dos voces** (Orus + Sulafat) con el nuevo `tts_gemini_multi.py`. Dos de las seis salieron con `gemini-3.1-flash-tts-preview` por 429 del modelo 2.5.
+- Pool de **19 clips de TikTok** del tag `#woodenautomata`, todos de makers reales. Tres pasadas de render: la primera desbordaba la placa final, la segunda coló un *"link in bio"* y el subtítulo de las gallinas, la tercera un texto en español.
+- Scripts nuevos: `gen_automata_plans.py`, `edit_automata.py`, `tts_gemini_multi.py`.
+- Páginas actualizadas: [[orzzen-automatas]] · [[guiones-y-anuncios]] (3 reglas nuevas).
+
 ## 2026-11-05 (18ª pasada) — Habilidades Perdidas: 6 ads del competidor doblados a español neutro
 
 - Santiago: *"hagamos 6 anuncios agarrando los 6 mejores ads… únicamente blurrees sus subtítulos y metas el idioma en español neutro de LATAM… las visuales no quiero que cambies nada… no blurrees uno que está hablando un avatar porque no va a tener sincronización los labios"*.

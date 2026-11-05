@@ -23,6 +23,18 @@
 Guía completa · Curso en video de 18 lecciones (2 h 15) · Planos, plantillas y medidas · Proyectos paso a paso · Videoteca premium · Biblioteca de +20 mecanismos · Cuaderno de diseño · **App simuladora de mecanismos** · Guía para vender tus autómatas. Garantía de 30 días, acceso de por vida.
 Proyectos que promete: raya manta, pájaro con alas, músico, caballo al galope, escenas cotidianas, figura propia.
 
+## Tanda 1 producida (5/11) — 6 videos de voz en off
+- **Voz:** Orus (hombre, acento americano) por API. El guion 2 es el único a **dos voces** (Orus + Sulafat), generado con `tts_gemini_multi.py` y `multiSpeakerVoiceConfig`; el guion para TTS lleva los prefijos `Speaker1:`/`Speaker2:` y el guion que lee el editor va limpio (`V2_tts.txt` vs `V2.txt`).
+- **Modelo de TTS:** `gemini-2.5-flash-preview-tts` para 4 de las 6; dio 429 en el guion 4 y en el diálogo, y las dos salieron con `gemini-3.1-flash-tts-preview` sin leer el Style en voz alta.
+- **Pool:** 19 clips de TikTok del tag `#woodenautomata` (la página de hashtag **sí carga** en el navegador: `tiktok.com/tag/<tag>`, no hizo falta entrar por perfil). Makers reales, nunca tiendas de dropshipping.
+- **Duraciones:** 25 a 38 s. Scripts: `gen_automata_plans.py` + `edit_automata.py`.
+
+### Lo que se cayó del pool y por qué
+- Caras hablando a cámara (`craftsmm`) y marcas de agua **centradas** (`CRAFTSMM`): el zoom no las saca.
+- Texto quemado que vuelve a aparecer más tarde en el clip: el de los camarones dice *"link in bio"* a los 8 s, mucho después del bloque de subtítulos del principio. **Se cayó entero.**
+- Subtítulos que duran más de lo que mostraba la hoja de 1,5 s: *"Turn the crank → chickens dance!"* llega hasta 4,0 s y el texto en español del pájaro hasta 3,5 s, con un *"Gracias por ver"* a los 13,0 s. Los dos extremos de la ventana hay que verificarlos, no solo el principio.
+- Etsy y cualquier "link in bio".
+
 ## Detalles / notas
 - La landing ya escribe los hooks: *"Ves un autómata increíble y piensas ¿cómo se hace eso?"*, *"Buscaste tutoriales y todo lo que encontraste era confuso, incompleto o en otro idioma"*, *"Si puedes seguir instrucciones, puedes construirlo"*, *"Hay miles de proyectos de madera. Solo uno hace que la gente pare y pregunte ¿cómo funciona?"*.
 - El argumento *"todo lo que encontraste estaba en otro idioma"* **se da vuelta en inglés**: ahí el material bueno sí está en inglés, así que el dolor pasa a ser "confuso e incompleto".
@@ -39,3 +51,4 @@ Proyectos que promete: raya manta, pájaro con alas, músico, caballo al galope,
 - Biblioteca de Anuncios de Meta, búsqueda `orzzen.impultienda.ar` (5 nov. 2026, 32 ads activos, 14 videos transcriptos)
 - Landing `orzzen.impultienda.ar`
 - OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md
+- OUTPUTS/scripts-vsl/gen_automata_plans.py · OUTPUTS/scripts-vsl/edit_automata.py · OUTPUTS/scripts-vsl/tts_gemini_multi.py

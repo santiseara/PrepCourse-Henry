@@ -53,6 +53,14 @@
 - **Los números de la familia F van como proporción, no en pesos** ("casi la mitad de lo que salió el jean"): una cifra en pesos envejece en dos semanas.
 - **Nombre definitivo:** *A Tu Medida* (confirmado por la landing del 5/11).
 
+
+## Tanda 1 producida (2026-11-05)
+- **6 ads de voz en off** en `~/Desktop/arreglos-de-ropa/anuncios/videos/` (`5-11 - 1.mp4` a `5-11 - 6.mp4`), de **52 a 66 s**.
+- Voz **Sulafat** por API (`gemini-3.1-flash-tts-preview`, el 2.5 dio 429), `speed 1.30`, `silence [0.26, 0.12]`, acento rioplatense con voseo verificado.
+- **Pool de 21 clips de TikTok** de `#clothingalterations`, `#bridalalterations` y `#hemming`. Rendimiento bajísimo del primer tag: **13 limpios de 57**, el resto son thrift-flippers con subtítulo quemado en inglés. `#bridalalterations` rinde mucho mejor (sin texto, manos y alfileres sobre el cuerpo), pero hay que **racionarlo** o el ad parece de vestidos de novia.
+- **Dos insertos dibujados por código** (`gfx_arreglos.py`): la página de ventas en una laptop (cierre de los 6) y la pantalla del curso con las 9 clases. Es lo que hace el competidor: graba su pantalla, no muestra un mockup.
+- Editor nuevo `edit_arreglos.py`: subtítulos en **itálica** con la palabra activa dentro de una **caja de color** (un color por creativo: rosa, magenta, celeste, amarillo, violeta, verde), sin caja de hook y sin placa final.
+
 ## Preguntas abiertas
 - Faltan los **3 videos de testimonio** (9:16) que la landing tiene reservados.
 - ¿Se graban las 9 clases y los +25 videos, o se arma otro entregable?

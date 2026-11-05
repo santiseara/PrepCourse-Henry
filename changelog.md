@@ -1,3 +1,14 @@
+## 2026-11-05 (24ª pasada) — A Tu Medida: los 6 ads clonados de Stitched Fits
+
+- Santiago: *"Dale, haceme los videos"*. Y en el medio pasó la landing real: *"aca te dejo mi landing por si necesitas info, o si no coincide la info ajustalo"*.
+- La oferta se llama **A Tu Medida** (marca *Arreglala Vos Misma*), $19.999 de $32.499, 9 clases base + 25 videos, 3 bonos bizop. Se rehicieron **los 6 guiones, los 2 insertos y las 6 voces** con los datos y el vocabulario de la landing (modista, marcar con alfileres, líneas de costura, el calce).
+- **6 ads producidos**, de 52 a 66 s, en `~/Desktop/arreglos-de-ropa/anuncios/videos/` (`5-11 - 1.mp4` a `5-11 - 6.mp4`).
+- Voz **Sulafat** por API; el modelo 2.5 dio 429 y salió con `gemini-3.1-flash-tts-preview`. Acento rioplatense con voseo verificado contra el audio.
+- **Edición clonada de Stitched Fits**, no solo el guion: subtítulos **en itálica** con la palabra activa adentro de una **caja de color** (un color por creativo), sin caja de hook, sin placa final, y cierre sobre un inserto de la **página de ventas** dibujado por código.
+- **Pool de 21 clips** de TikTok. `#clothingalterations` rindió **13 limpios de 57** (tag tomado por thrift-flippers con subtítulo quemado en inglés); `#bridalalterations` y `#hemming` salvaron la tanda.
+- Scripts nuevos: `edit_arreglos.py`, `gen_arreglos_plans.py`, `gfx_arreglos.py`, `dl_tikwm.py`.
+- Páginas actualizadas: [[arreglos-de-ropa]] · [[guiones-y-anuncios]] (3 reglas nuevas) · [[index]].
+
 ## 2026-11-05 (26ª pasada) — El módulo impositivo, corto
 
 - Santiago, sobre la primera versión: *"me lo hiciste re largo y re complicado. **No quiero que sea como si estuviera hablando un contador**… es simplemente para que aquella persona que está desde cero sepa que si vende tiene que facturar, de que todos los meses tiene que pagar ingresos brutos, de que está exento de IVA porque vende libros y de que si es responsable inscripto no tiene límite de facturación"*.

@@ -1,3 +1,12 @@
+## 2026-11-05 (25ª pasada) — Módulo impositivo de la mentoría (Argentina + exterior)
+
+- Santiago: *"un documento que sea sobre todo el módulo impositivo en el negocio de los infoproductos… dividido en dos partes. Primero, ¿qué pasa cuando vendemos en Argentina? Y después la parte de todo lo que es vender afuera con Whop, con LLC"*, con el pedido explícito de **verificar los datos** (topes de monotributo, etc.) en vez de darlos de memoria.
+- Entregado en **formato guía** (el de [[mentoria]]): 17 secciones, dos partes, 11 cuadros. **Claude Doc** https://claude.ai/artifact/2y1AdsWcAioGyRfuakKkeB + **Google Doc en su Drive** https://docs.google.com/document/d/1VTJ43kFjoFyq4CHUcawiI1L_XG9Uhle1UmUY0A2NEgY/edit + copia en `OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md`.
+- **Datos verificados con fuente:** tabla de monotributo vigente desde **agosto de 2026** (tope de K: **$126.610.830**, cuota $1.614.446); **Monotributo Unificado CABA** desde enero de 2026 ($22.485 en A, $237.015 en K); IIBB CABA **3 % / 5 %**; **RG 5554/2024** derogó las retenciones de IVA y Ganancias de la RG 4622 (quedan SIRTAC y SIRCUPA, que sí aplican al monotributista).
+- **Tres cosas que corregimos de lo que traía:** (1) el IVA no se cae por ser digital — el **libro** está exento (art. 7 inc. a + **Dictamen 70/2010**, vale incluso descargándolo de la web), pero **curso, membresía o software pagan 21 %**; (2) en EE.UU. no pagar income tax **no es** no presentar: **Form 5472 + 1120 pro forma con multa de 25.000 USD** por año aunque la LLC no facture nada; (3) el **sales tax de productos digitales sí existe** por estado (economic nexus, ~100.000 USD o 200 transacciones) y el VAT de UK/UE se debe desde la primera venta — de ahí el modo "Whop cobra y declara" al 2 %.
+- Sumado también: los **tres modos de impuestos de Whop** y sus cláusulas duras (1 % de disputas, reservas de hasta el 100 %), la exención de **BOI** de FinCEN del 26/3/2025, y el lado argentino de la **renta mundial** y el origen de fondos.
+- Páginas nuevas: [[impuestos-en-argentina]]. Actualizadas: [[llc-banca-y-fiscal]], [[mentoria]], [[index]].
+
 ## 2026-11-05 (24ª pasada) — Descripción para los ads de Your First Wooden Automaton
 
 - Santiago: *"Dame una descripcion para los ads de la oferta de madera que hicimos recien"*.

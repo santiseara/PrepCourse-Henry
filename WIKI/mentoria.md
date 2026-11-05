@@ -33,6 +33,7 @@ Referencia declarada: **la School de Santiago Bilbao** (la formación que está 
 | 4 | Landing, checkout y upsells | pendiente |
 | 5 | Campañas y validación | pendiente |
 | 6 | Escalado y backend | pendiente |
+| **7** | **Impuestos: Argentina y vender afuera** | ✅ entregado 2026-11-05 (número a confirmar) |
 
 El orden sale de la jerarquía del método: **1. Mercado → 2. Anuncios → 3. Funnel → 4. Producto** ([[modelo-low-ticket]]). Los módulos 2 en adelante todavía no están confirmados con Santiago.
 
@@ -47,8 +48,25 @@ Entregado el 2026-11-01 en dos versiones, después de la corrección de formato:
 
 Secciones de la guía (9): el punto del módulo (jerarquía mercado → anuncios → funnel → producto) · qué es una oferta ganadora (5 señales + qué no cuenta) · la Biblioteca de Anuncios (`country=ALL`, las 2 URLs listas, los 4 caminos de búsqueda) · cómo se lee si vende (fecha antes que volumen, regla de los 3 días, escalera de certeza, descartes) · las otras plataformas · nichos y mercados (3 big niches, subnichos, fuente → destino) · auditar al competidor en 5 pasos · el scorecard y la ficha de oferta · errores, rutina y tarea.
 
+
+## Módulo 7 — Impuestos: vender en Argentina y vender afuera
+
+Pedido de Santiago del 2026-11-05: *"un documento que sea sobre todo el módulo impositivo en el negocio de los infoproductos… dividido en dos partes. Primero, ¿qué pasa cuando vendemos en Argentina? Y después la parte de todo lo que es vender afuera con Whop, con LLC"*. Pidió además que los datos (como el tope para pasar a responsable inscripto) se **investigaran y verificaran**, no que se dieran de memoria.
+
+| Entregable | Dónde |
+|---|---|
+| Claude Doc (el que usa en clase) | https://claude.ai/artifact/2y1AdsWcAioGyRfuakKkeB |
+| Google Doc en su Drive | https://docs.google.com/document/d/1VTJ43kFjoFyq4CHUcawiI1L_XG9Uhle1UmUY0A2NEgY/edit |
+| Copia para el cerebro | `OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md` |
+
+Secciones (17): el punto del módulo · **Parte 1 Argentina:** el mapa en un cuadro · monotributo y la tabla de categorías · cómo facturar (Facturitas) · el IVA del libro digital · Ingresos Brutos · el cruce a responsable inscripto · retenciones de las pasarelas · checklist y errores · **Parte 2 Afuera:** los dos caminos en un cuadro · Whop sin LLC · la LLC · Stripe · impuestos en EE.UU. · el lado argentino (renta mundial) · cómo llega la plata · **Cierre:** cuadro de decisión por etapa · tarea y criterio.
+
+Lo que se corrigió de lo que trajo Santiago, con fuente en el doc: el IVA **no** es automático por ser digital (el libro está exento por el art. 7 inc. a) y el Dictamen 70/2010, pero un curso o membresía paga 21 %); en EE.UU. **no pagar income tax no es no presentar** (Form 5472 con multa de 25.000 USD) y el **sales tax de productos digitales sí existe** por estado. Detalle en [[impuestos-en-argentina]] y [[llc-banca-y-fiscal]].
+
+**Nota de formato (2026-11-05):** se entregó como **Claude Doc + Google Doc nativo en su Drive**, sin el `.docx` en `~/Desktop/Mentoria/`. El Google Doc cumple la función que tenía el `.docx` (editarlo en Drive) y queda con el formato puesto.
+
 ## Preguntas abiertas
-- ¿Confirmamos el orden y los nombres de los módulos 2 a 6?
+- ¿Confirmamos el orden y los nombres de los módulos 2 a 6? ¿Y en qué número entra el módulo impositivo (hoy va como 7)?
 - ¿Los documentos llevan marca gráfica propia (logo, colores) o quedan en texto limpio?
 - ¿Van a tener también un PDF para el alumno, distinto del doc editable que usa él en clase?
 
@@ -59,4 +77,6 @@ Secciones de la guía (9): el punto del módulo (jerarquía mercado → anuncios
 - Pedido de Santiago del 2026-11-01 (armado de los módulos de su mentoría)
 - OUTPUTS/2026-11-01-modulo-1-busqueda-de-ofertas-ganadoras.md (teoría completa)
 - OUTPUTS/2026-11-01-modulo-1-guia-de-clase.md (la guía con la que se da la clase)
+- OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md (módulo impositivo)
+- Pedido de Santiago del 2026-11-05 (módulo impositivo, en Google Doc)
 - Corrección de Santiago del 2026-11-01 sobre el formato de los documentos

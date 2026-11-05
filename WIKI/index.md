@@ -6,7 +6,7 @@
 
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
-- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulo 1 entregado.
+- 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1 y 7 (impositivo) entregados.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
@@ -43,7 +43,8 @@
 - ✅ [[modelo-low-ticket]] — Mercado → Anuncios → Funnel → Producto. El front adquiere y el AOV es el negocio. Validar → backend → escalar. Las ofertas caducan a los 3–4 meses.
 - ✅ [[filosofia-de-marketing]] — Direct response puro: principios, referentes (Hormozi, Agora) y estilo de copy.
 - ✅ [[internacionalizacion]] — Una oferta en varios mercados = múltiples ofertas en profit. Países por mercado, localizar en vez de traducir, decisión de moneda.
-- ✅ [[llc-banca-y-fiscal]] — LLC en EE.UU., ITIN, Mercury y Relay, diversificar fondos, cripto para Meta, impuestos.
+- ✅ [[llc-banca-y-fiscal]] — LLC en EE.UU., ITIN, Mercury y Relay, diversificar fondos, cripto para Meta, el Form 5472 y su multa de 25.000 USD, sales tax y los 3 modos de impuestos de Whop.
+- 🆕 [[impuestos-en-argentina]] — Monotributo (tabla agosto 2026), Ingresos Brutos, el IVA del libro digital vs. el curso, retenciones SIRTAC/SIRCUPA y cuándo conviene responsable inscripto.
 - ✅ [[organizacion-y-registro]] — Registro diario por oferta (en OUTPUTS/), tres cuentas con tres trabajos, recorrido de herramientas.
 
 ## Oferta y producto
@@ -114,6 +115,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-05 — Mentoría, Módulo 7: impuestos en Argentina y vender afuera](../OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md) — monotributo con la tabla de agosto 2026, el IVA del libro digital (Dictamen 70/2010), Ingresos Brutos y retenciones, Whop vs. LLC + Stripe, el Form 5472 y la renta mundial argentina · ver [[mentoria]], [[impuestos-en-argentina]]
 - [2026-11-05 — Stitched Fits / Arreglá Tu Ropa: radiografía y plan para Argentina](../OUTPUTS/2026-11-05-analisis-stitched-fits-arreglos-de-ropa.md) — ballena de ~340 ads con creativos de hace 6 meses activos, las 8 familias de guion, su edición clonable (subtítulos karaoke con un color por creativo, inserto = grabación de pantalla) y la competencia vacía en AR · ver [[arreglos-de-ropa]]
 - [2026-11-05 — Arreglá Tu Ropa: tanda 1 de 6 guiones](../OUTPUTS/2026-11-05-guiones-arreglos-de-ropa.md) — un ganador distinto por video (coser≠arreglar, cuerpo real, la familia que te trae ropa, bizop, pagás dos veces, tres razones para NO entrar), todos bajo 1:30 · ver [[arreglos-de-ropa]]
 - [2026-11-05 — Habilidades Perdidas: 6 ads del competidor pasados a español neutro](../OUTPUTS/2026-11-05-guiones-habilidades-perdidas-es.md) — los 6 creativos sin presentador, con el subtítulo inglés borrado por inpaint + blur, carteles tapados y voz Orus calzada al largo exacto; los 6 guiones listos para copiar · ver [[habilidades-perdidas]]

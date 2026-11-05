@@ -1,3 +1,13 @@
+## 2026-11-05 (23ª pasada) — Stitched Fits: la ballena de arreglos de ropa para Argentina
+
+- Santiago: *"Quiero que analices esta oferta… la voy a tirar en argentina, la idea es clonar sus mejores anuncios, clonando guiones y edicion, las visuales vamos a tener que usar de tiktok, pero quiero que utilices las mismas o muy similares"*.
+- Radiografía de **Stitched Fits / Alter It Yourself** (UK): ~340 ads activos, el más viejo del **3 de mayo de 2026** (6 meses), 19 creativos de mayo todavía gastando. £99 → £59, 5.000+ alumnos, embudo simple sin quiz ni VSL.
+- **12 videos top bajados y transcriptos** con faster-whisper → **8 familias de guion**; dos cuerpos repetidos (coser≠arreglar y "pagás dos veces") marcan los ganadores.
+- **Edición relevada con hojas de contactos:** 100 % b-roll, sin caja de hook, subtítulos karaoke de 3 a 6 palabras con **un color de resalte por creativo**, cama musical continua, cortes de 2 a 3 s y el inserto de producto como **grabación de pantalla de la página de ventas**, no mockup.
+- **Competencia en AR: cero.** "curso arreglos de ropa" da 0 activos en la Ads Library argentina.
+- Entregada la **tanda 1: 6 guiones en voseo**, uno por familia ganadora, todos bajo 1:30. E y G quedan de banco.
+- Páginas nuevas: [[arreglos-de-ropa]]. Actualizadas: [[index]].
+
 ## 2026-11-05 (22ª pasada) — La edición de los 6 ads, clonada de Orzzen
 
 - Santiago: *"¿Copiaste tal cual los guiones como te dije? ¿Y la edición?"*. Los guiones sí eran literales; **la edición no**: estaba con nuestro formato de siempre. Eligió *"pegate a la edición de ellos"* y dejar el CTA que le agregué al guion 4.

@@ -1,3 +1,13 @@
+## 2026-11-05 (18ª pasada) — Habilidades Perdidas: 6 ads del competidor doblados a español neutro
+
+- Santiago: *"hagamos 6 anuncios agarrando los 6 mejores ads… únicamente blurrees sus subtítulos y metas el idioma en español neutro de LATAM… las visuales no quiero que cambies nada… no blurrees uno que está hablando un avatar porque no va a tener sincronización los labios"*.
+- **Se descubrió que la cuenta tiene solo 8 creativos distintos**: los 22 ads mejor rankeados son 8 archivos resubidos (el control, 5 subidas × 8 copias = 40 instancias). De esos 8, **tres tienen presentador hablando** y quedaron afuera por el labial; se tomaron los 6 que son 100 % voz en off.
+- **Cadena nueva, `OUTPUTS/scripts-vsl/render_hp.py`** (sobre la lógica de `render_idioma.py` del pase ruso): detección de la banda de subtítulos por perfil de texto con borde, máscara por componentes conexas, inpaint TELEA en dos pasadas, **blur gaussiano difuminado encima** y subtítulos karaoke nuevos en la misma posición. Los carteles (`Big offer incoming!`, `They Don't You To Know About This…`, `76% OFF DISCOUNT`, `+3 FREE GIFTS`, los stickers de comentario) se taparon con caja opaca que cubre el rectángulo original entero.
+- **Tres correcciones durante el control:** el inpaint solo deja fantasma en cajas sólidas grandes (hay que taparlas, no borrarlas); los subtítulos del competidor **a veces son de dos líneas** y la banda hay que medirla por máximo histórico, no por promedio; y el rectángulo de un sticker medido por umbral se queda corto (en A4 dejaba afuera la foto de perfil).
+- Voz **Orus**, `gemini-2.5-flash-preview-tts`, calzada al largo exacto de cada video. Cama musical del original separada con demucs. Verificado con Whisper: los 6 dan `es 1.00`, sin resto de la voz inglesa.
+- Entregado en `OUTPUTS/2026-11-05-guiones-habilidades-perdidas-es.md`, los MP4 en `~/Desktop/habilidades-perdidas/anuncios/` y al portapapeles.
+- Páginas actualizadas: [[habilidades-perdidas]] · [[index]].
+
 ## 2026-11-05 (19ª pasada) — Orzzen: autómatas de madera al mercado inglés
 
 - Santiago: *"la vamos a tirar la misma oferta, pero en el mercado inglés… 6 testeos… los guiones quiero que sean exactamente los mismos, pero en inglés"*. Y en el medio: *"No descargues todo"* → se cortó la descarga en **14 de los 32** ads.

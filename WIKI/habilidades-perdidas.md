@@ -54,6 +54,25 @@ Autor **Claude Davis** (el de *The Lost Ways*); presenta **Joel Lambert**, ex Na
 ### Tanda 1 propuesta (6 videos)
 Agua del aire (clon del control) · enterrá un tacho en el patio · huevos que duran meses sin heladera · el índice de 200 · el analgésico que crece en el jardín · avatar "lo que mi abuelo sabía". Banco para la segunda: pemmican, trampas caseras, salir de un auto trabado, reconocer a un narcisista, agua para 365 días, calentar con botellas.
 
+### Los 8 creativos reales de la cuenta (05/11)
+De las 722 instancias activas, los 22 anuncios mejor rankeados por impresiones son **solo 8 archivos distintos**, resubidos una y otra vez:
+
+| md5 | Subidas × copias | Fechas | Largo | ¿Cara hablando? |
+|---|---|---|---|---|
+| 2eb721a6 | 5 × 8 = **40** | 28 jul · 3 ago · 23 oct · 28 oct ×2 | 42,6 s | **Sí**, presentador al cierre |
+| 36ec0c24 | 5 × 7 = 35 | 20 jun · 15 jul · 23 jul · 28 jul · 11 ago | 76,4 s | **Sí**, PiP del tipo del bigote |
+| 155a3b3a | 3 × 8 = 24 | 28 jul · 7 sept · 11 sept | 42,6 s | **Sí**, presentador al cierre |
+| df8b8f0a | 4 × 6 = 24 | 27 ago · 1 sept · 7 oct ×2 | 26,5 s | No |
+| 4308d931 | 2 × 5 = 10 | 8 jul · 28 oct | 70,3 s | No |
+| 4dcd52ee | 1 × 4 | 22 jun | 51,6 s | **Sí**, presentador en PiP todo el video |
+| 2c98222b | 1 × 4 | 24 jun | 45,9 s | No |
+| 410dc20b | 1 × 4 | 26 jun | 52,6 s | No |
+
+**Regla que sale de acá:** la cuenta no renueva creativos, **resube el mismo archivo**. Lo que llaman "tanda nueva cada 3 a 7 días" es el mismo video con ID nuevo. Para modelarla alcanza con 6 a 8 piezas buenas y mucha resubida.
+
+### Producción: los 6 ads doblados al español (05/11)
+Se tomaron los 6 creativos **sin nadie hablando a cámara** y se les borró el subtítulo quemado por inpainting, se taparon los carteles en inglés con su versión en español y se rehizo la voz en off en **español neutro con tuteo** (voz Orus). La imagen quedó intacta. Detalle y guiones en `OUTPUTS/2026-11-05-guiones-habilidades-perdidas-es.md`; cadena en `OUTPUTS/scripts-vsl/render_hp.py` (reusa la lógica de `render_idioma.py` del pase ruso de piedras).
+
 ## Preguntas abiertas
 - ¿Vamos como **afiliado** (ya tuvo este producto a US$ 17 en [[ofertas]]) o con **producto propio** generado por código, como [[herrero-de-finde]]?
 - ¿Conseguimos el link de afiliado del digital en español o hay que armar el PDF de 200 fichas desde cero?

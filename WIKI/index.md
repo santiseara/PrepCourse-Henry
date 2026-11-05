@@ -113,6 +113,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-05 — Habilidades Perdidas: 6 ads del competidor pasados a español neutro](../OUTPUTS/2026-11-05-guiones-habilidades-perdidas-es.md) — los 6 creativos sin presentador, con el subtítulo inglés borrado por inpaint + blur, carteles tapados y voz Orus calzada al largo exacto; los 6 guiones listos para copiar · ver [[habilidades-perdidas]]
 - `OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md` — 6 guiones EN/ES de [[orzzen-automatas]] para el mercado inglés.
 - [2026-11-05 — The Lost Skills of Independence: radiografía y plan para LATAM](../OUTPUTS/2026-11-05-analisis-lost-skills-of-independence.md) — 722 ads, un solo copy (735 de 874), el video ganador resubido 8 veces con 12 copias, los 5 formatos, el checkout de US$ 39 y la versión en español que ya corre a US$ 21,90 · 6 videos propuestos y el plan país por país · ver [[habilidades-perdidas]]
 - [2026-11-05 — Caza Brasil: keywords ocultas de emagrecimento y renda extra](../OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md) — 20 keywords validadas una por una (10 + 10), las 11 que no sirven, una ballena de 132 ads en drenaje, la flota de cuidador de idosos y un set aparte de 20 para que busque Santiago · ver [[caza-de-ofertas]]

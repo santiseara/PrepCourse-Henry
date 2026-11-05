@@ -59,6 +59,7 @@
 - Voz **Sulafat** por API (`gemini-3.1-flash-tts-preview`, el 2.5 dio 429), `speed 1.30`, `silence [0.26, 0.12]`, acento rioplatense con voseo verificado.
 - **Pool de 21 clips de TikTok** de `#clothingalterations`, `#bridalalterations` y `#hemming`. Rendimiento bajísimo del primer tag: **13 limpios de 57**, el resto son thrift-flippers con subtítulo quemado en inglés. `#bridalalterations` rinde mucho mejor (sin texto, manos y alfileres sobre el cuerpo), pero hay que **racionarlo** o el ad parece de vestidos de novia.
 - **Dos insertos dibujados por código** (`gfx_arreglos.py`): la página de ventas en una laptop (cierre de los 6) y la pantalla del curso con las 9 clases. Es lo que hace el competidor: graba su pantalla, no muestra un mockup.
+- **Cama musical: `music.py` (118 BPM, con bombo).** Santiago, al ver la tanda: *"no pongas mas esa musica, necesito una musica mas activa"*. La cama de los autómatas es un pad sin pulso (4,5 % de graves); la de `music.py`, la misma que corre en [[scented-stones]] y [[atlas-cortes]], tiene **78 % de graves** y bombo marcado. En el mix final la tanda pasó de 2 % a 17 % de graves sin subir el volumen general.
 - Editor nuevo `edit_arreglos.py`: subtítulos en **itálica** con la palabra activa dentro de una **caja de color** (un color por creativo: rosa, magenta, celeste, amarillo, violeta, verde), sin caja de hook y sin placa final.
 
 ## Preguntas abiertas

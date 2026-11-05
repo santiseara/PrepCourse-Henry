@@ -1,3 +1,10 @@
+## 2026-11-05 (25ª pasada) — A Tu Medida: cama musical activa
+
+- Santiago: *"Estan muy bien, pero no pongas mas esa musica, necesito una musica mas activa, cambiale solo eso"*.
+- Se midieron las 7 camas que hay en el disco: la que veníamos usando es un **pad sin pulso** (4,5 % de graves, pulso 0,25). Se cambió por la de **`music.py`** (118 BPM con bombo, la validada en [[scented-stones]] y [[atlas-cortes]]): 78 % de graves y pulso 0,76.
+- **Los 6 re-renderizados** con `usage.json` borrado y los mismos seeds. Verificado: `usage.json` final **idéntico** al anterior y un cuadro del segundo 20 de cada video **pixel por pixel igual**. En el mix la tanda pasó de 2 % a 17 % de graves sin subir el volumen general (rms 0,095 → 0,098).
+- Páginas actualizadas: [[arreglos-de-ropa]] · [[guiones-y-anuncios]] (2 reglas nuevas).
+
 ## 2026-11-05 (24ª pasada) — A Tu Medida: los 6 ads clonados de Stitched Fits
 
 - Santiago: *"Dale, haceme los videos"*. Y en el medio pasó la landing real: *"aca te dejo mi landing por si necesitas info, o si no coincide la info ajustalo"*.

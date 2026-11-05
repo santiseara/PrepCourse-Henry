@@ -73,7 +73,7 @@ for v in VIDEOS:
     plan = dict(
         vo=f"vo/V{v['n']}.wav", script=f"V{v['n']}.txt", lang='es',
         speed=1.30, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=3,
-        music='music/bed.wav', music_db=-8,
+        music='music/bed_activo.wav', music_db=-8,   # 2026-11-05: Santiago pidio una cama mas activa (118 BPM con bombo, music.py)
         hi=v['hi'], hibox=v['hibox'], hibord=20, capy=1300,
         first=v['first'], last='VE', seed=v['n'] * 97, usage='usage.json',
         clips=clips, pool=pool, anchors=v['anchors'], overlays=[])

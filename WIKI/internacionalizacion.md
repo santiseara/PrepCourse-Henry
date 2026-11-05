@@ -258,6 +258,18 @@ Cuidado con el *timeline* de la capa de subtítulos: hay que armarla con **insta
 - **2026-11-03 · Localizar moneda y plataformas, no solo el idioma.** En polaco: **złoty** (no dólares, que matan la credibilidad), **OLX** en lugar de WhatsApp Business, e **imieniny** (onomástico) en la lista de ocasiones junto a fiestas y bodas. El CTA usa el texto real del botón de Meta en ese idioma (*Dowiedz się więcej*).
 - **2026-11-03 · Polonia se targetea directo**, a diferencia de Rusia (que necesita Worldwide + idioma ruso).
 
+### Cuando el video es del competidor, no nuestro (2026-11-05, [[habilidades-perdidas]])
+
+Pedido de Santiago: *"agarrá 6 de esos anuncios y únicamente blurreá sus subtítulos y metele el idioma en español neutro… las visuales no quiero que cambies nada"*. Mismo motor (`OUTPUTS/scripts-vsl/render_hp.py`), pero el material es ajeno y aparecen seis problemas que con los videos propios no existen:
+
+- **Elegir por md5, no por ID de la biblioteca.** Los 22 anuncios mejor rankeados de una cuenta con 722 activos eran **8 archivos distintos**. Lo que parece "tanda nueva cada 3 días" es el mismo video resubido. Se baja la muestra, se hashea y se agrupa; recién ahí se sabe cuál es el control.
+- **Descartar los que tienen cara hablando.** El labial no sincroniza con la voz nueva. Se revisa con hoja de contactos; en esta cuenta los tres creativos de más peso cerraban con presentador y quedaron afuera.
+- **La banda de subtítulos se mide por máximo histórico, no por promedio.** El competidor usa dos líneas en unos pocos planos; un perfil promediado las pierde y la segunda línea queda sin borrar.
+- **El inpaint solo no alcanza: va un blur gaussiano difuminado encima de la máscara.** Sin eso el resto del texto inglés sigue siendo legible.
+- **Las cajas sólidas no se borran, se tapan.** Una barra negra con texto blanco inpaintada deja un fantasma perfectamente legible. Va una caja opaca nueva con el texto traducido.
+- **El rectángulo de un sticker medido por umbral se queda corto** (deja afuera la foto de perfil del comentario, el escalón de la segunda línea del globo). La caja nueva se dibuja sobre la **unión** del rectángulo original y el texto nuevo.
+- ⚠️ **Es material filmado por otro:** hay riesgo de reclamo de copyright y de que Meta lo marque como contenido duplicado. Es una decisión de negocio, no un detalle técnico.
+
 ## Fuentes
 - OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md
 - OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md

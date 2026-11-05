@@ -124,6 +124,13 @@ Los dos videos del embudo salen del player de **ConverteAI/VTurb** (cuenta `cd0d
 - ⏳ **Falta el video corto de la Abuela Mei** del paso 11: va en `<template id="vsl-mei">`. **Si queda vacío, el paso se saltea solo** y el quiz sigue funcionando.
 - ⏳ Falta confirmar **nombre del producto, precio y link de checkout**.
 
+## Descripción para ads (2026-11-04)
+- **Una sola descripción para toda la tanda**, en `OUTPUTS/2026-11-04-descripcion-ads-monjaro-rojo.md` y en `~/Desktop/monjaro-violeta/anuncios/descripcion-ads-monjaro-rojo.txt`.
+- Usa el **molde de la casa para quiz funnel de peso en Argentina**, el mismo de [[mounjaro-humilde]] y [[protocolo-chia-28d]]: mecanismo en la primera línea → 4 bullets de beneficio → bloque de lo que incluye con la garantía → CTA al test gratis de 1 minuto.
+- **Sin precio y sin promesa de kilos con plazo.** La landing ya carga con "bajá 10 kg en 30 días" y el nombre deformado del fármaco (ver el aviso de riesgo más abajo): el ad no suma motivos de rechazo. El kilaje se menciona solo como pregunta del test ("descubrí cuántos kilos podés bajar según tu edad").
+- **El hook va en tercera persona** ("el jugo de remolacha que muchas argentinas están tomando"), no afirmando una condición del que mira, que es lo que castiga la política de atributos personales de Meta.
+- Lo que incluye sale de la **caja de oferta del quiz y del VSL**, sin inventar nada: las 12 variantes, el plan de 30 días, la tabla de horarios, el seguimiento por WhatsApp, el grupo cerrado, los menús, los ejercicios en casa y la garantía de 30 días.
+
 ## Aviso de riesgo (anti-bloqueo)
 La landing arranca con **"bajá 10 kg en 30 días"**, usa **antes y después** y el nombre de un fármaco deformado. Son justo las tres cosas que [[protocolo-chia-28d]] marcó como motivo de rechazo en Meta **aunque el guion del anuncio esté limpio**, porque Meta revisa el destino. Se dejó igual al original por fidelidad (§2), pero conviene tener a mano una versión de la portada sin kilos ni plazo ("Tu plan de 30 días con lo que ya hay en tu cocina") por si rebotan las cuentas.
 

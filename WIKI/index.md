@@ -111,6 +111,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-04 — Monjaro Rojo Japonés: descripción para ads](../OUTPUTS/2026-11-04-descripcion-ads-monjaro-rojo.md) — una sola para toda la tanda, molde de quiz de peso en AR: el jugo de remolacha en un horario exacto, lo que incluye y el test gratis de 1 minuto · ver [[monjaro-violeta]]
 - [2026-11-04 — Calendarios 2027: tanda 1 de 6 guiones y 6 ads en inglés](../OUTPUTS/2026-11-04-guiones-calendarios-2027-ingles.md) — feria, mamás de la escuela, oferta directa, 61 años, el fin de semana y la historia larga de Navidad · EN + ES voseo · ver [[calendarios-2027]]
 - [2026-11-04 — Quiz Monjaro Violeta Japonés (AR)](../OUTPUTS/2026-11-04-quiz-monjaro-violeta.html) — clon del quiz de Vovó Mei (`monja-roxo.lovable.app`, Lovable con el funnel en texto plano): 27 pasos con rama mujer/hombre, IMC con alerta, 3 medidores, textos con voseo y género variable, y la oferta oculta hasta el VSL · ver [[monjaro-violeta]]
 - [2026-11-04 — Análisis frame por frame del ad brasileño de pilates 50+](../OUTPUTS/2026-11-04-analisis-ad-pilates-brasil.md) — los 11 planos, el guion en portugués y en voseo, la prueba de que es IA y la receta para replicarlo · ver [[estilo-de-video-ia]]

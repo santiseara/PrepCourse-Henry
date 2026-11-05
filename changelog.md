@@ -1,3 +1,12 @@
+## 2026-11-04 (16ª pasada) — Descripción para los ads de Monjaro Rojo
+
+- Santiago: *"Dame una descripcion para los ads de monjaro"*.
+- **Una sola descripción** para toda la tanda, con el molde de la casa para quiz funnel de peso en Argentina (el de Mounjaro Humilde y Protocolo Chía 28D): mecanismo en la primera línea, 4 bullets de beneficio, bloque de lo que incluye con la garantía, y CTA al test gratis de 1 minuto.
+- **Sin precio y sin promesa de kilos con plazo**, y el hook en tercera persona ("muchas argentinas están tomando") en vez de afirmar una condición del que mira. La landing ya carga con los tres motivos de rechazo que marca [[protocolo-chia-28d]]; el ad no suma ninguno.
+- Lo que incluye se leyó de la caja de oferta del quiz y del VSL, sin inventar nada.
+- Entregada en `OUTPUTS/2026-11-04-descripcion-ads-monjaro-rojo.md`, en `~/Desktop/monjaro-violeta/anuncios/` y al portapapeles.
+- Páginas actualizadas: [[monjaro-violeta]], [[index]].
+
 ## 2026-11-04 (16ª pasada) — Los CTA de DanceGo, blindados al checkout
 
 - Santiago: *"Ajustame algo del quiz, todos los botones de cta de la ultima slide, tienen que redirigir a este checkout: https://dancego.impultienda.ar/checkout"*.

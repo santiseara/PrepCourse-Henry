@@ -1,6 +1,7 @@
 # Meta Ads 2 — Cómo saber si la oferta está validada (guía de clase)
 
 > Claude Doc: https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A
+> Google Doc: https://docs.google.com/document/d/1OMh6K6pX2U6nDaPJaHsZ5gDYiv1C7dAFwsvtTuFWcaU/edit
 > Segundo video del módulo de Meta Ads. Fuente: WIKI/metricas-y-kpis, WIKI/validacion-de-oferta, WIKI/lectura-de-resultados.
 
 La pregunta del módulo es una sola: **¿entra más plata de la que sale?**
@@ -62,7 +63,7 @@ Lo que entra **neto en la cuenta** por cada venta, descontadas comisiones y conv
 | **Oferta validada** | Convierte y el CPA cierra | Backend y escala |
 | **Creativo validado** | Ese anuncio tiene 5+ conversiones a buen CPA | Estructuras de escala (10+ para Pocket o Cost Cap) |
 
-Hay un caso de validación relámpago (3 ventas en 2 horas → directo a Cost Cap) que Bilbao marca como excepción: *"capaz que era un vicio"*. Lo normal es esperar las 5 conversiones.
+Existe la validación relámpago (3 ventas en 2 horas → directo a Cost Cap), pero es la excepción y puede ser un vicio de la cuenta. Lo normal es esperar las 5 conversiones.
 
 ## Los KPIs
 
@@ -72,8 +73,8 @@ Hay un caso de validación relámpago (3 ventas en 2 horas → directo a Cost Ca
 | --- | --- |
 | CPC | LatAm 0,10–0,50 USD · EE.UU. hasta 1 USD |
 | CTR | 1,5–2% mínimo, ideal 2,5%+ |
-| Hook rate (3 s ÷ impresiones) | Estándar 30%; **Bilbao exige >50%** |
-| Retention (thruplays ÷ impresiones) | Estándar 5%; **él exige >10%** |
+| Hook rate (3 s ÷ impresiones) | El estándar es 30%; acá el piso es **>50%** |
+| Retention (thruplays ÷ impresiones) | El estándar es 5%; acá el piso es **>10%** |
 | CPM | Sin número fijo |
 | Frecuencia | No debe dispararse al escalar en frío |
 

@@ -1,6 +1,7 @@
 # Meta Ads 3 — Campañas de escalado: Cost Cap, Bid Cap y Pocket (guía de clase)
 
 > Claude Doc: https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G
+> Google Doc: https://docs.google.com/document/d/1g6miyosUy1R7bzXlE7axYXiANBzcfH7bmXe8ktpdS2c/edit
 > Tercer video del módulo de Meta Ads. Fuente: WIKI/escalado-en-meta-ads, WIKI/estructuras-cbo, WIKI/metodo-v3 (+ la skill manejo-cbo).
 
 Arranca donde termina el anterior: la oferta ya está validada y hay anuncios ganadores. Estas estructuras no descubren nada, **exprimen lo que ya funciona**.
@@ -96,9 +97,9 @@ CBO con **límite de puja** y **entrega acelerada**.
 
 | | Valor |
 | --- | --- |
-| Presupuesto | Mínimo 100 USD; Bilbao arranca en **500** |
+| Presupuesto | Mínimo 100 USD; lo normal es arrancar en **500** |
 | Conjuntos | Uno por cada ganador |
-| Bid inicial | **front × 1,3** (el material viejo usaba el precio del front) |
+| Bid inicial | **front × 1,3** (antes se usaba el precio del front, a secas) |
 | Si no gasta | +50 centavos cada hora |
 | Dónde | Cuenta nueva, aislada |
 
@@ -166,7 +167,7 @@ Se sube el estándar por escalones: piso de 500/día → escalado el finde → 6
 ## Tres cosas que no se olvidan
 
 1. **Programar siempre a las 00:00.** Si programás a las 19:00, le das 6 horas para gastar 100 dólares y te lo quema.
-2. **Reglas automáticas de corte** en Meta: a un alumno se le dispararon 150 USD en dos horas. Pero con corte sano (2× el ticket), no a 8 USD.
+2. **Reglas automáticas de corte** en Meta: sin ellas se pueden disparar 150 USD en dos horas. Pero con corte sano (2× el ticket), no a 8 USD.
 3. **Encontrar la franja horaria de la oferta:** una oferta sin momentum responde al surfeo solo hasta cierta hora; pasada esa franja el ROAS cae.
 
 ## Tarea

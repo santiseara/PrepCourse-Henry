@@ -45,13 +45,24 @@ Pedido de Santiago: *"vamos a dividir el módulo de Meta Ads en varios videos"*.
 
 | # | Video | Qué resuelve | Documento |
 |---|---|---|---|
-| 1 | **Introducción + campañas de testeo** | Que la persona sepa la diferencia entre ABO y CBO y **las dos formas de testear** que tiene | [Claude Doc](https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R) · `OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md` |
-| 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
-| 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
+| 1 | **Introducción + campañas de testeo** | Que la persona sepa la diferencia entre ABO y CBO y **las dos formas de testear** que tiene | [Claude Doc](https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R) · [Google Doc](https://docs.google.com/document/d/1N943ljltNzis4Kpkg930njF4t-imDHm1TQsoIiljTwk/edit) · `OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md` |
+| 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · [Google Doc](https://docs.google.com/document/d/1OMh6K6pX2U6nDaPJaHsZ5gDYiv1C7dAFwsvtTuFWcaU/edit) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
+| 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · [Google Doc](https://docs.google.com/document/d/1g6miyosUy1R7bzXlE7axYXiANBzcfH7bmXe8ktpdS2c/edit) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
 
 El orden es deliberado: **no se escala nada antes de saber leer si la oferta está validada**, así que el módulo de métricas va en el medio.
 
 Lo que Santiago fijó para el primero: en ABO se testea **1-1-1** (una campaña y un conjunto por anuncio) y el presupuesto va **entre 5 y 10 USD por conjunto**. Lo demás salió de la formación de Bilbao volcada en [[estructuras-cbo]], [[testeo-de-creativos]], [[setup-de-campanas]], [[metodo-v3]], [[metricas-y-kpis]], [[validacion-de-oferta]], [[lectura-de-resultados]] y [[escalado-en-meta-ads]] — incluida la CBO de testeo post-Andrómeda, las dos Pocket y la intrapuja, que estaban todas en el cerebro.
+
+## ⭐ Los documentos de clase no citan a Bilbao (corrección del 2026-11-05)
+
+Corrección de Santiago sobre el primer documento de Meta Ads: *"no podemos decir como dice Bilbao. Claramente es una mentoría mía… Pongámoslo, pero no aclares eso"*. Reglas que quedan fijas para todos los módulos:
+
+- **El conocimiento va, la atribución no.** Los números, las estructuras y los criterios se escriben como la regla de la mentoría, sin decir de quién salieron. Nada de "Bilbao usa", "Bilbao exige", "el material", "el ejemplo del material", "a un alumno", ni "él".
+- **Tampoco se escribe en primera persona sobre Santiago.** No "yo uso 7, 8 o 10" (el documento lo escribo yo, no él). La forma correcta es impersonal o con el "nosotros" de la mentoría: *"dentro de ese rango es criterio propio"*, *"acá el piso es >50%"*, *"lo normal es arrancar en 500"*.
+- Las **citas textuales se pueden dejar** (dan color y suenan a clase), pero sin decir quién las dijo.
+- La wiki **sí** registra la fuente (es el cerebro, no el material de clase): la referencia declarada sigue estando arriba de esta página.
+
+También del 2026-11-05: **el primer documento quedó largo** (*"acortémoslo un poco, tampoco tanto"*). Se bajó de ~1.800 a ~1.100 palabras sin perder un solo número: se cortaron los subtítulos intermedios, los cuadros que repetían lo que ya decía un bullet, los recordatorios duplicados en la lista de errores y la media página de pre-testeo. El criterio: **si un dato ya está en un cuadro, no se vuelve a explicar en prosa.**
 
 ## Módulo 1 — Búsqueda de ofertas ganadoras
 

@@ -291,3 +291,20 @@ En la **fuente** se buscan ofertas de nivel 3-5. En el **destino** se mide el ni
 - Criterios de selección dictados por Santiago en la conversación del 24/10/2026
 - OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md (la caza de infoproducto con VSL en Brasil: de ahí salen los footprints, la trampa del display link y el techo de 48 ads)
 - OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md (la misma caza en EE.UU.: la shortlist de tres, los footprints en inglés y la regla de que en salud la VSL es producto físico)
+
+## Registro 05/11/2026 — dos reglas técnicas de keywords (Brasil)
+
+De la caza de emagrecimento + renda extra del 05/11 (`OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md`):
+
+1. **Las frases de 4+ palabras no sirven.** `ponto chinês da fome` → 0 resultados; `bactéria do intestino que engorda` → 4 viejos; `qual é o seu tipo de barriga` → 3.482 contaminados con microdramas. Lo que pesca son **2–3 palabras**: `auriculoterapia`, `nervo vago`, `pernas inchadas`, `escovação a seco`.
+
+2. **En salud, las terapias manuales están tomadas por clínicas locales.** `massagem modeladora` (3.009), `ventosaterapia` (2.832), `liberação miofascial` (5.448) y `extensão de cílios` (13.872) devuelven estudios de barrio con "agende sua avaliação". El filtro que separa al infoproducto del servicio local:
+   - **formato en el título** — atlas, mapas, catálogo digital, guia, material completo;
+   - **moneda USD** en un anuncio en portugués (gestor grande, no comercio de barrio);
+   - **fanpage sin ciudad** en el nombre.
+
+3. **La veta nueva de salud en BR no es el peso: es la terapia manual y el síntoma de pierna.** `auriculoterapia` destapó *Atlas de Auriculoterapia* con **100 Mapas por R$19,90** (producto puro, cero marca personal), y `drenagem linfática em casa` / `escovação a seco` destaparon una ballena de **132 anuncios activos** (page_id `702881226395611`, todos con el título `⭐⭐⭐⭐⭐ (5/5)`).
+
+4. **Señal de front faceless afinada:** un nombre de persona *genérico* y repetido entre páginas (Ana Silva, Patricia Oliveira, Carla Matos, Beatriz Rocha) con el mismo título `CLIQUE AQUI` y sin cara **no es marca personal: es una flota para esconderse**. Es lo contrario de la página con foto real y "minha história", que sí se descarta. Apareció así el nicho de **cuidador de idosos** (38 ads en la cabecera + 3 fronts).
+
+5. **Capa nueva de renda extra: el oficio técnico y la certificación obligatoria** — `conserto de celular`, `manutenção de ar condicionado`, `técnico de inverter`, `NR-35`, `instrutor de NRs`. Avatar distinto al de artesanía: hombre de 30–50 que quiere cobrar por un servicio concreto.

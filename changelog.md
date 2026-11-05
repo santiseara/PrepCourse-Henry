@@ -1,3 +1,12 @@
+## 2026-11-05 (17ª pasada) — Caza en Brasil: keywords ocultas de emagrecimento y renda extra
+
+- Santiago: *"Quiero que hagamos una buena investigación de mercado en el mercado de Brasil… Dame 10 palabras claves del nicho de bajar de peso, pero no las típicas… Quiero encontrar ofertas ocultas, ofertas que no ve nadie"*, y después *"Dame palabras clave tmb, asi busco, distintas a las que estas utilizando vos"* y *"Labura en mi compu"*.
+- **20 keywords validadas una por una** en la Biblioteca (conector oficial de Meta, BR, solo activos), ninguna repetida de los bancos del 12/10, 26/10 y 29/10. Se listan también **las 11 que no sirven**, con el número que devolvieron.
+- **Hallazgos:** una ballena de **132 anuncios activos** en drenaje (page_id `702881226395611`, todos con el título `⭐⭐⭐⭐⭐ (5/5)`), la **flota de cuidador de idosos** (Beatriz Rocha con 38 ads + 3 fronts con nombres de mujer genéricos) y *Atlas de Auriculoterapia* con **100 mapas por R$19,90**. Ninguna se recomienda todavía: falta abrir landing y checkout (paso 7 del Manual).
+- **Dos reglas técnicas nuevas** en [[caza-de-ofertas]]: las frases de 4+ palabras devuelven 0 o ruido (pescan las de 2–3), y las terapias manuales en BR están tomadas por clínicas locales — el infoproducto se separa por formato en el título (atlas, mapas, catálogo digital), moneda USD y fanpage sin ciudad. Se afinó además la señal de front faceless: nombre de persona *genérico* y repetido entre páginas no es marca personal, es flota.
+- Entregado en `OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md`, en `~/Desktop/caza-brasil-05-11/` (`caza-completa.txt` + `TUS-20-KEYWORDS.txt` con el set que Santiago busca en paralelo) y al portapapeles.
+- Páginas actualizadas: [[caza-de-ofertas]] · [[index]].
+
 ## 2026-11-05 (17ª pasada) — Descripción para los ads de Tai Chi Fit
 
 - Santiago: *"Bien, dame una descripcion para los ads"* (después de corregir el checkout del quiz).

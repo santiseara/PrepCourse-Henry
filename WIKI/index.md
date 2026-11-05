@@ -111,6 +111,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-05 — Caza Brasil: keywords ocultas de emagrecimento y renda extra](../OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md) — 20 keywords validadas una por una (10 + 10), las 11 que no sirven, una ballena de 132 ads en drenaje, la flota de cuidador de idosos y un set aparte de 20 para que busque Santiago · ver [[caza-de-ofertas]]
 - [2026-11-05 — Tai Chi Fit: descripción para ads](../OUTPUTS/2026-11-05-descripcion-ads-tai-chi-fit.md) — una sola para toda la tanda: el método de 400 años en 10 minutos descalza, "tu raíz", las tres fases y el test gratis de 1 minuto · ver [[tai-chi-fit]]
 - [2026-11-04 — Monjaro Rojo Japonés: descripción para ads](../OUTPUTS/2026-11-04-descripcion-ads-monjaro-rojo.md) — una sola para toda la tanda, molde de quiz de peso en AR: el jugo de remolacha en un horario exacto, lo que incluye y el test gratis de 1 minuto · ver [[monjaro-violeta]]
 - [2026-11-04 — Calendarios 2027: tanda 1 de 6 guiones y 6 ads en inglés](../OUTPUTS/2026-11-04-guiones-calendarios-2027-ingles.md) — feria, mamás de la escuela, oferta directa, 61 años, el fin de semana y la historia larga de Navidad · EN + ES voseo · ver [[calendarios-2027]]

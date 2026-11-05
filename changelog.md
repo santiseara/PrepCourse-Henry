@@ -1,3 +1,12 @@
+## 2026-11-05 (22ª pasada) — La edición de los 6 ads, clonada de Orzzen
+
+- Santiago: *"¿Copiaste tal cual los guiones como te dije? ¿Y la edición?"*. Los guiones sí eran literales; **la edición no**: estaba con nuestro formato de siempre. Eligió *"pegate a la edición de ellos"* y dejar el CTA que le agregué al guion 4.
+- Se armó la hoja de contactos de 5 ads de Orzzen y se copió el montaje: **sin caja de hook, sin placa final**, cierre con **la tapa del ebook + botón ámbar**, subtítulos de **3 palabras** y **un color por creativo**.
+- **5 inserts de producto dibujados por código** (`gfx_automata.py`): tapa, hoja de planos con cut list y medidas en mm, biblioteca de 20+ mecanismos, las 6 fases y la pantalla de la app simuladora. Van anclados a la palabra que los nombra.
+- Editor: overlay `button` y parámetro `last` (último plano fijo, para que el cierre no quede tapado).
+- Los 6 re-renderizados y revisados en `~/Desktop/wooden-automaton/anuncios/videos/` (`5-11 - 1.mp4` a `5-11 - 6.mp4`), un archivo por pieza.
+- Páginas actualizadas: [[orzzen-automatas]] · [[guiones-y-anuncios]] (3 reglas nuevas).
+
 ## 2026-11-05 (21ª pasada) — En la carpeta de entrega va un archivo por pieza
 
 - Santiago: *"Porque tengo muchos videos, dejame solo los que van"*. Había dejado los renders crudos (`V1.mp4`…`V6.mp4`) junto a las copias numeradas (`5-11 - 1.mp4`…): doce archivos para seis videos.

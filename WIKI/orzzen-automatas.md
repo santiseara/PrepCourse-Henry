@@ -29,6 +29,19 @@ Proyectos que promete: raya manta, pájaro con alas, músico, caballo al galope,
 - **Pool:** 19 clips de TikTok del tag `#woodenautomata` (la página de hashtag **sí carga** en el navegador: `tiktok.com/tag/<tag>`, no hizo falta entrar por perfil). Makers reales, nunca tiendas de dropshipping.
 - **Duraciones:** 25 a 38 s. Scripts: `gen_automata_plans.py` + `edit_automata.py`.
 
+### La edición: copiada de la de ellos (v2, 5/11)
+Santiago, al revisar la tanda 1: *"¿Copiaste tal cual los guiones como te dije? ¿Y la edición?"* La primera versión salió con **nuestro** formato (caja de hook, subtítulos de 2 palabras en ámbar, placa final oscura). Comparado contra sus ads, el montaje de Orzzen es otro:
+- **Sin caja de hook y sin placa final.** Arranca en el b-roll y cierra con **la tapa del ebook más un botón ámbar** ("QUIERO EMPEZAR" → *I WANT TO START*).
+- **Subtítulos de 3 palabras**, Montserrat con contorno, y **un color distinto por creativo**: amarillo, celeste, verde, ámbar, rosa, naranja.
+- **Muestran el producto todo el tiempo**: la tapa, las páginas internas (planos de un proyecto, "Biblioteca de Mecanismos", "Comparativa de los 12 Mecanismos", "Las 6 Fases del Proceso") y **la app simuladora funcionando**, con medidas en mm. Era la diferencia más grande con lo nuestro: nosotros no mostrábamos nada.
+- El ad del diálogo lo montan como **podcast**, con dos personas y micrófonos en banda inferior. Eso no se replicó.
+
+Los 5 inserts se dibujan por código en `gfx_automata.py` (tapa, hoja de planos con cut list, biblioteca de mecanismos, las 6 fases, pantalla de la app) y entran **anclados a la palabra que los nombra**. Cuestan cero y no hace falta que el producto exista.
+
+Dos cosas que el editor obligó a resolver:
+- **Los inserts necesitan margen.** El zoom de las fotos fijas va de 1.0 a 1.14 más un golpe de 1.16 en cada corte: un gráfico de 1080×1920 justo pierde la cabecera y el pie. Se entregan sobre un lienzo **1.20×** con el sobrante desenfocado. Con 1.41× entraban enteros pero quedaban ilegibles en el teléfono.
+- **El cierre se fuerza, no se ancla.** Anclar la tapa a la palabra del CTA no alcanza: en los videos largos entran planos después y el botón queda sobre un clip cualquiera. Se agregó `last` al plan, que fija el clip del último plano.
+
 ### Lo que se cayó del pool y por qué
 - Caras hablando a cámara (`craftsmm`) y marcas de agua **centradas** (`CRAFTSMM`): el zoom no las saca.
 - Texto quemado que vuelve a aparecer más tarde en el clip: el de los camarones dice *"link in bio"* a los 8 s, mucho después del bloque de subtítulos del principio. **Se cayó entero.**

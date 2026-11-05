@@ -129,6 +129,8 @@ for word, occ, key, st in P.get('anchors', []):
     if n in forced or forced.get(n - 1, [''])[0] == key or forced.get(n + 1, [''])[0] == key:
         print(f'aviso: anchor "{word}" choca con otro en el plano {n}, se ignora'); continue
     forced[n] = next((s for s in P['pool'] if s[0] == key and s[1] == st), None) or next(s for s in P['pool'] if s[0] == key)
+if P.get('last'):   # ultimo plano fijo: asi el cierre (la tapa del ebook) nunca queda tapado por otro
+    forced[len(cuts) - 2] = next(s for s in P['pool'] if s[0] == P['last'])
 for s in forced.values(): used.add(f'{s[0]}@{s[1]}')
 for n in range(len(cuts) - 1):
     d = cuts[n + 1] - cuts[n]
@@ -341,6 +343,21 @@ def png_end(o, path):
     if em: im.alpha_composite(em, (int(x0 + 45 + d.textlength(body, font=fc) + 14), int(y0 + 22)))
     im.save(path)
 
+
+def png_button(o, path):
+    """Boton de CTA al estilo Orzzen: pastilla ambar abajo, sobre el b-roll, sin placa oscura."""
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    body, emo = split_emoji(o.get('text', 'I WANT TO START'))
+    fc = font(o.get('size', 64), MX)
+    em = emoji_img(emo, 56) if emo else None
+    cw = d.textlength(body, font=fc) + (em.width + 14 if em else 0); bw = cw + 110
+    x0, y0 = (W - bw) / 2, o.get('y', 1560)
+    d.rounded_rectangle((x0 + 8, y0 + 10, x0 + bw + 8, y0 + 112), 54, fill=(0, 0, 0, 120))
+    rrect(d, (x0, y0, x0 + bw, y0 + 102), 52, ORANGE + (255,))
+    d.text((x0 + 55, y0 + 22), body, font=fc, fill=(18, 14, 8))
+    if em: im.alpha_composite(em, (int(x0 + 55 + d.textlength(body, font=fc) + 14), int(y0 + 20)))
+    im.save(path)
+
 ovs = []      # (png, t0, t1, anima)
 if P.get('hook'):
     png_tag(P['hook'], f'{tmp}/o_hook.png')
@@ -357,18 +374,19 @@ for k, o in enumerate(P.get('overlays', [])):
     elif o['type'] == 'plan': png_plan(o, pth); hits.append(('pop', t0))
     elif o['type'] == 'stamp': t0 += o.get('delay', 0.6); png_stamp(o, pth); hits.append(('sello', t0))
     elif o['type'] == 'end': png_end(o, pth); hits.append(('ding', t0))
-    if o['type'] == 'end': t1 = L
+    elif o['type'] == 'button': png_button(o, pth); hits.append(('ding', t0))
+    if o['type'] in ('end', 'button'): t1 = L
     elif o.get('until'):
         u = wt(o['until'], o.get('until_occ', 0)); t1 = u[1] + 0.2 if u else t0 + o.get('dur', 2.2)
     else: t1 = t0 + o.get('dur', 2.2)
     if o['type'] == 'stamp': t1 = min(t1, min([c for c in cuts if c > t0 + 0.1] or [L]) - 0.02)   # el sello no pasa al plano siguiente
-    ovs.append((pth, t0, t1, o['type'] != 'end'))
+    ovs.append((pth, t0, t1, o['type'] not in ('end', 'button')))
 
 # 5) subtítulos (3 palabras, DIN condensada, la que suena en naranja); se ocultan bajo la placa final
 def ts(t): t = max(0, t); return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}'
 CAPY = P.get('capy', 1380)
 HI = P.get('hi', '&H000B9EF5&')   # dorado de la tapa (BGR)
-end_t = min([t0 for p, t0, t1, a in ovs if t1 == L] or [L + 1])
+end_t = min([t0 for (p, t0, t1, a), o in zip(ovs[len(ovs) - len(P.get('overlays', [])):], P.get('overlays', [])) if o['type'] == 'end'] or [L + 1])
 ass = [f'''[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}

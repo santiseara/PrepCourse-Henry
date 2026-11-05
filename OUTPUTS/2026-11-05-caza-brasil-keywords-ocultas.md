@@ -71,25 +71,64 @@ REGLA TECNICA QUE SALIO DE ESTA CAZA:
 
 
 ====================================================================
-NICHO 2 - RENDA EXTRA: LAS 10 (capa nueva)
+NICHO 2 - RENDA EXTRA: GENERALES (corregido 05/11 por Santiago)
 ====================================================================
-Capa que no estaba en los bancos previos: el OFICIO TECNICO y la CERTIFICACION OBLIGATORIA.
-No es "renda extra", es un hombre de 30-50 que quiere cobrar por un servicio concreto.
+Santiago: "no quiero que me pongas especificamente que tipos de trabajo... quiero palabras
+generales de renda extra, pero no la tipica renda extra".
 
-1.  cuidador de idosos                -> la flota de 4+ fanpages. Lo mejor del dia.
-2.  conserto de celular               -> Jeferson Moreira, 27 ads, "(1.762) Alunos✅"
-3.  manutencao de ar condicionado     -> Mente Visual: "⚠️ TECNICO DE INVERTER, OLHA ISSO!"
-4.  NR-35                             -> Exata Conteudo: "Material Completo de Seguranca do Trabalho"
-5.  tecnico de inverter               -> variante caliente del 3, casi sin competencia
-6.  material completo de seguranca    -> huella de formato del mismo mercado
-7.  placa de celular                  -> capa tecnica del 2 (reparacion a nivel placa)
-8.  instrutor de NRs                  -> HCB Harvard Cursos do Brasil
-9.  aprenda online e atenda           -> huella de "convertite en terapeuta y cobra"
-10. alunos certificados               -> huella de prueba social del curso barato brasileno
+El molde que funciona NO es nombrar el deseo (renda extra, ganhar dinheiro = quemadas).
+Son tres formas de decirlo sin nombrar el oficio:
+  (a) la OBJECION o la CONDICION del comprador  -> "mesmo comecando do zero", "nao e piramide"
+  (b) el PRECIO o el FORMATO                    -> "curso por apenas"
+  (c) el oficio EN GENERICO                     -> "aprender uma profissao", "grana extra"
+  (d) la MECANICA de trabajo                    -> "so copiar e colar"
 
-LAS QUE PROBE Y NO SIRVEN:
-bolo no pote (46.892, confiteria local) · quanto cobrar por sessao (141, mentorias high ticket)
+LAS 8 QUE PASARON (validadas una por una)
 
+1. mesmo comecando do zero  (11.938) ★ LA MEJOR
+   Destapo "Curso Completo de Trancas por Apenas R$ 27!" (page 1673492262513338)
+   y "Curso de chinelos por R$ 10" (Luan Galvotoa, 1203910076134627).
+   Precio en el titulo, faceless, oficio cualquiera. Es la que mas cerca esta de lo que buscas.
+
+2. curso por apenas         (29.922)
+   Huella de precio pura. Vuelve a caer Tranca R$27 + Educacao EAD Brasil.
+
+3. aprender uma profissao   (9.854)
+   Humdiarista (102033118612039) con "ENTRE NO GRUPO VIP" repetido 7 de 8 -> faceless.
+   Mestre do Granito (1402464982944841) con "GARANTA SEU ACESSO!".
+
+4. nao e piramide           (1.024)
+   La objecion. La escribe el que vende, nunca el guru. Mariane Assis Dias (USD,
+   "Assista a Aula que Preparei para Voce") y Cristiane Sales ("Conteudista Viral").
+
+5. so copiar e colar        (3.826)
+   Vidareal.stories (1433651876489456): "Stories lindos em 10 segundos" x3. Plantillas.
+
+6. nas horas vagas          (2.846)
+   Derberbb (1359845130550829): "Get rich quick in 2026" x6 en USD. Gringo faceless.
+
+7. fazer um bico            (3.127)
+   Patricia Araujo (1438715749320549), 3 ads en USD sin titulo. "Bico" es como el
+   brasileno dice trabajito extra: no la busca nadie porque no es "renda extra".
+
+8. grana extra              (2.001)
+   El sinonimo coloquial. Cae Jeferson Moreira con "(1.762) Alunos". Sirve de control:
+   una general que te trae al mismo winner sin que sepas el oficio.
+
+LAS QUE PROBE Y NO SIRVEN (ruido, no las gastes)
+caiu no pix (186.399) · depois do expediente (537.439) · comece a vender (372.147) ·
+aprenda do zero (296.097) · complementar a renda (164.942, inmobiliarias y donaciones) ·
+grupo VIP (64.128, ecommerce de Black Friday) · sem experiencia nenhuma (6.631, microdramas) ·
+sem aparecer na camera (2.288, flota de reels WYY-Rells, no es renda extra)
+
+PARA QUE PRUEBES VOS (mismo molde, no las corri)
+curso completo por · aprenda uma nova profissao · mudar de profissao · trabalhar por conta ·
+quem nunca vendeu nada · nao precisa aparecer · da lucro de verdade · uma profissao em casa ·
+sem precisar de diploma · trabalho que ninguem quer fazer
+
+SI ALGUN DIA QUERES BAJAR AL OFICIO (las especificas quedan anotadas, no son el pedido)
+cuidador de idosos (la flota) · conserto de celular · manutencao de ar condicionado · NR-35 ·
+tecnico de inverter · instrutor de NRs · material completo de seguranca
 
 ====================================================================
 TU SET - 20 keywords que yo NO toque (para que busques en paralelo)
@@ -108,17 +147,17 @@ EMAGRECIMENTO (10)
 9.  rolo de drenagem
 10. o anel nao entra mais
 
-RENDA EXTRA (10)
-1.  espetinho para vender
-2.  salgado congelado para vender
-3.  instalacao de cameras
-4.  eletricista residencial
-5.  curso de libras com certificado
-6.  operador de empilhadeira
-7.  MOPP
-8.  auxiliar de saude bucal
-9.  chaveiro
-10. piscineiro
+RENDA EXTRA (10) - generales, ninguna nombra el oficio
+1.  curso completo por
+2.  aprenda uma nova profissao
+3.  mudar de profissao
+4.  trabalhar por conta
+5.  quem nunca vendeu nada
+6.  nao precisa aparecer
+7.  da lucro de verdade
+8.  uma profissao em casa
+9.  sem precisar de diploma
+10. trabalho que ninguem quer fazer
 
 COMO LAS LEES (el filtro de 3 segundos)
 - Mira primero si una misma pagina repite el MISMO titulo 10+ veces. Eso es lo que ya gano el test.

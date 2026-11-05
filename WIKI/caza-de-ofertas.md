@@ -308,3 +308,22 @@ De la caza de emagrecimento + renda extra del 05/11 (`OUTPUTS/2026-11-05-caza-br
 4. **Señal de front faceless afinada:** un nombre de persona *genérico* y repetido entre páginas (Ana Silva, Patricia Oliveira, Carla Matos, Beatriz Rocha) con el mismo título `CLIQUE AQUI` y sin cara **no es marca personal: es una flota para esconderse**. Es lo contrario de la página con foto real y "minha história", que sí se descarta. Apareció así el nicho de **cuidador de idosos** (38 ads en la cabecera + 3 fronts).
 
 5. **Capa nueva de renda extra: el oficio técnico y la certificación obligatoria** — `conserto de celular`, `manutenção de ar condicionado`, `técnico de inverter`, `NR-35`, `instrutor de NRs`. Avatar distinto al de artesanía: hombre de 30–50 que quiere cobrar por un servicio concreto.
+
+## Registro 05/11/2026 — en renda extra, las keywords van en genérico, no por oficio
+
+Corrección de Santiago, el mismo día: *"no quiero que en las de renda extra me pongas específicamente qué tipos de trabajo… quiero palabras generales de renda extra, o sea, no algo súper específico"*.
+
+**La regla:** en el nicho dinero las keywords de caza se arman **sin nombrar el oficio** (nada de `chaveiro`, `piscineiro`, `conserto de celular`). Pero tampoco sirve nombrar el deseo: `renda extra`, `ganhar dinheiro` y `comece a vender` están quemadas por ruido. Las cuatro formas que sí funcionan:
+
+| Forma | Ejemplos validados |
+|---|---|
+| **Objeción o condición del comprador** | `mesmo começando do zero`, `não é pirâmide` |
+| **Precio o formato** | `curso por apenas` |
+| **El oficio en genérico** | `aprender uma profissão`, `grana extra`, `fazer um bico` |
+| **La mecánica de trabajo** | `só copiar e colar`, `nas horas vagas` |
+
+**La mejor de todas: `mesmo começando do zero`** (11.938 resultados). Destapó *"Curso Completo de Tranças por Apenas R$ 27!"* y *"Curso de chinelos por R$ 10"* — precio en el título, faceless, y el oficio aparece solo, sin que uno tenga que adivinarlo de antemano. Es la ventaja de la keyword general sobre la específica: **no hay que saber el oficio para encontrar la oferta**.
+
+`grana extra` sirve de control: trae al mismo winner que había aparecido buscando el oficio (`conserto de celular` → Jeferson Moreira).
+
+**Quemadas por ruido en el nicho dinero (con su número):** `caiu no pix` 186.399 · `depois do expediente` 537.439 · `comece a vender` 372.147 · `aprenda do zero` 296.097 · `complementar a renda` 164.942 · `grupo VIP` 64.128. Todas devuelven comercio local, ecommerce o microdramas.

@@ -1,3 +1,13 @@
+## 2026-11-05 (17ª pasada) — Corrección: las keywords de renda extra van en genérico
+
+- Santiago: *"no quiero que en las de renda extra me pongas específicamente qué tipos de trabajo… quiero palabras generales de renda extra, o sea, no algo súper específico"*.
+- Se reemplazó la sección de renda extra del banco por **8 keywords generales validadas**, y las de oficio (`chaveiro`, `piscineiro`, `conserto de celular`…) quedaron anotadas aparte, fuera del pedido.
+- **La mejor: `mesmo começando do zero`** — destapó *"Curso Completo de Tranças por Apenas R$ 27!"* y *"Curso de chinelos por R$ 10"*, con precio en el título y sin cara. La ventaja de la general sobre la específica: **no hay que saber el oficio para encontrar la oferta**.
+- Las otras 7: `curso por apenas`, `aprender uma profissão` (Humdiarista, "ENTRE NO GRUPO VIP" x7), `não é pirâmide`, `só copiar e colar`, `nas horas vagas`, `fazer um bico`, `grana extra`.
+- **Quemadas, con su número:** `caiu no pix` 186.399 · `depois do expediente` 537.439 · `comece a vender` 372.147 · `aprenda do zero` 296.097 · `complementar a renda` 164.942 · `grupo VIP` 64.128.
+- La regla quedó en [[caza-de-ofertas]]: las cuatro formas de decir dinero sin nombrar el oficio (objeción, precio/formato, oficio en genérico, mecánica).
+- Páginas actualizadas: [[caza-de-ofertas]].
+
 ## 2026-11-05 (17ª pasada) — Caza en Brasil: keywords ocultas de emagrecimento y renda extra
 
 - Santiago: *"Quiero que hagamos una buena investigación de mercado en el mercado de Brasil… Dame 10 palabras claves del nicho de bajar de peso, pero no las típicas… Quiero encontrar ofertas ocultas, ofertas que no ve nadie"*, y después *"Dame palabras clave tmb, asi busco, distintas a las que estas utilizando vos"* y *"Labura en mi compu"*.

@@ -1,3 +1,12 @@
+## 2026-11-05 (18ª pasada) — The Lost Skills of Independence: radiografía y plan para LATAM
+
+- Santiago: *"tengo esta oferta que quiero que analices de arriba abajo. No quiero que descargues absolutamente todos sus anuncios… los que hace más tiempo están corriendo, los que tienen patrones en común… después me des ideas de los tipos de videos… La oferta la vamos a tirar en LATAM"*.
+- **Muestra, no descarga masiva:** 206 tarjetas leídas de las 722 activas (264 creativos únicos, 874 instancias) y **15 videos vistos cuadro a cuadro** con hojas de contacto armadas en el navegador. El más viejo activo es del **19 jun. 2026**.
+- **Un solo copy** (735 de 874 instancias: *"Why don't they make books like this anymore?"*) y **un solo creativo ganador**: *"How to Pull Water from Thin Air"*, 43 s, **resubido 8 veces con 12 copias cada vez**. No testean copy, testean creativo.
+- **Hallazgo grande:** la versión en español **ya existe y es digital**. Flota de `Marina cardozo` (156 ads, ES+IT) y `Adriana Garven` (207 ads, FR) → `habilidades-es.impultienda.ar`, de **Emmanuel Bilbao**, con checkout geo-adaptado: **US$ 109,90 → US$ 21,90** desde Argentina. España, Italia y Francia están tomadas; LATAM no.
+- Entregado en `OUTPUTS/2026-11-05-analisis-lost-skills-of-independence.md`, en `~/Desktop/habilidades-perdidas/` (con el video de referencia del 20/6) y al portapapeles.
+- Páginas actualizadas: [[habilidades-perdidas]] (nueva) · [[index]].
+
 ## 2026-11-05 (17ª pasada) — Corrección: las keywords de renda extra van en genérico
 
 - Santiago: *"no quiero que en las de renda extra me pongas específicamente qué tipos de trabajo… quiero palabras generales de renda extra, o sea, no algo súper específico"*.

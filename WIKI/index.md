@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-04.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-05.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -31,6 +31,7 @@
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
+- 🆕 [[habilidades-perdidas]] — Oferta a modelar para **LATAM**: el libro de 200 habilidades olvidadas. El original en inglés (*The Lost Skills of Independence*, 722 ads, 4 meses y medio) vende el libro **físico** a US$ 39 con un solo copy y un solo video resubido 8 veces; la versión en español ya existe en **digital a US$ 21,90**, la corre otro operador de Impultienda y su peso está en España/Italia/Francia.
 - ✅ [[guiones-y-anuncios]] — Reglas fijas de copy, variación real, ángulos validados, CTAs, natives y descripciones.
 - ✅ [[perfil-y-negocio]] — Quién es Santiago, su ciclo de trabajo, precios, stack completo y objetivos.
 - ✅ [[ofertas]] — Catálogo: Scented Stones activa y el resto como historial.
@@ -111,6 +112,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-05 — The Lost Skills of Independence: radiografía y plan para LATAM](../OUTPUTS/2026-11-05-analisis-lost-skills-of-independence.md) — 722 ads, un solo copy (735 de 874), el video ganador resubido 8 veces con 12 copias, los 5 formatos, el checkout de US$ 39 y la versión en español que ya corre a US$ 21,90 · 6 videos propuestos y el plan país por país · ver [[habilidades-perdidas]]
 - [2026-11-05 — Caza Brasil: keywords ocultas de emagrecimento y renda extra](../OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md) — 20 keywords validadas una por una (10 + 10), las 11 que no sirven, una ballena de 132 ads en drenaje, la flota de cuidador de idosos y un set aparte de 20 para que busque Santiago · ver [[caza-de-ofertas]]
 - [2026-11-05 — Tai Chi Fit: descripción para ads](../OUTPUTS/2026-11-05-descripcion-ads-tai-chi-fit.md) — una sola para toda la tanda: el método de 400 años en 10 minutos descalza, "tu raíz", las tres fases y el test gratis de 1 minuto · ver [[tai-chi-fit]]
 - [2026-11-04 — Monjaro Rojo Japonés: descripción para ads](../OUTPUTS/2026-11-04-descripcion-ads-monjaro-rojo.md) — una sola para toda la tanda, molde de quiz de peso en AR: el jugo de remolacha en un horario exacto, lo que incluye y el test gratis de 1 minuto · ver [[monjaro-violeta]]

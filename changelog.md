@@ -1,3 +1,12 @@
+## 2026-11-05 (19ª pasada) — Orzzen: autómatas de madera al mercado inglés
+
+- Santiago: *"la vamos a tirar la misma oferta, pero en el mercado inglés… 6 testeos… los guiones quiero que sean exactamente los mismos, pero en inglés"*. Y en el medio: *"No descargues todo"* → se cortó la descarga en **14 de los 32** ads.
+- Radiografía de `orzzen.impultienda.ar`: 32 ads activos, el más viejo del **13 oct. 2026** (23 días), un solo producto (AR$ 19.976 con 60% off, garantía 30 días, +1.400 compradores).
+- **7 familias de guion** transcriptas con faster-whisper. La madre, *"Podés construir esto aunque…"*, corre con 6 variantes que solo cambian la objeción del hook.
+- Entregada la **tanda 1: 6 guiones EN + ES**, traducción exacta de las 6 familias que están gastando. El estacional de Navidad y las 4 variantes de hook quedaron de banco.
+- Archivos: `OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md`, copia en `~/Desktop/wooden-automaton/anuncios/` y al portapapeles.
+- Páginas actualizadas: [[orzzen-automatas]] (nueva) · [[index]].
+
 ## 2026-11-05 (18ª pasada) — The Lost Skills of Independence: radiografía y plan para LATAM
 
 - Santiago: *"tengo esta oferta que quiero que analices de arriba abajo. No quiero que descargues absolutamente todos sus anuncios… los que hace más tiempo están corriendo, los que tienen patrones en común… después me des ideas de los tipos de videos… La oferta la vamos a tirar en LATAM"*.

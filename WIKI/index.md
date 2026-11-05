@@ -11,6 +11,7 @@
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
 - 🆕 [[dancego]] — Oferta nueva AR ($14.990): **bajar de peso bailando en casa**, 10 minutos por día, clon del quiz brasileño de DanceGo (Lovable + Supabase propio). Quiz de 35 pasos en voseo, **despintado** (papel crema + un acento) y con las capturas y tapas rehechas en HTML. Faltan precio final, checkout y definir si lleva VSL.
+- 🆕 [[orzzen-automatas]] — Oferta nueva para el **mercado inglés**: autómatas de madera (Your First Wooden Automaton), clon de Orzzen (32 ads activos, el más viejo del 13/10). Sus 7 familias de guion transcriptas y la tanda 1 de 6 ads traducidos.
 - 🆕 [[calendarios-2027]] — Oferta nueva para el **mercado inglés**: 50 calendarios 2027 imprimibles que apilados arman un ramo de flores, más la app que pone el precio. Modelada de Hecho en Casa (AR). Tanda 1 de 6 ads lista; faltan nombre, precio, los 50 diseños y la landing.
 - 🆕 [[tai-chi-fit]] — Oferta vieja que vendió muchísimo, revivida con **quiz + VSL** (AR, $14.990). Quiz modelado de Calistenia Militar Femenina, todo lo militar pasado a oriental. Falta el VSL.
 - 🆕 [[energia-vital]] — Oferta propia que ya corre en AR (Digital World, 54 ads) y se lanza a **LATAM en neutro a US$ 9,99**: Guía de Autocuración Energética, 80 fichas de raíz emocional + cristales y hierbas. Sus 3 familias de hook, las 2 DNA de cuerpo transcriptas y la tanda 1 de 6 videos.
@@ -112,6 +113,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- `OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md` — 6 guiones EN/ES de [[orzzen-automatas]] para el mercado inglés.
 - [2026-11-05 — The Lost Skills of Independence: radiografía y plan para LATAM](../OUTPUTS/2026-11-05-analisis-lost-skills-of-independence.md) — 722 ads, un solo copy (735 de 874), el video ganador resubido 8 veces con 12 copias, los 5 formatos, el checkout de US$ 39 y la versión en español que ya corre a US$ 21,90 · 6 videos propuestos y el plan país por país · ver [[habilidades-perdidas]]
 - [2026-11-05 — Caza Brasil: keywords ocultas de emagrecimento y renda extra](../OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md) — 20 keywords validadas una por una (10 + 10), las 11 que no sirven, una ballena de 132 ads en drenaje, la flota de cuidador de idosos y un set aparte de 20 para que busque Santiago · ver [[caza-de-ofertas]]
 - [2026-11-05 — Tai Chi Fit: descripción para ads](../OUTPUTS/2026-11-05-descripcion-ads-tai-chi-fit.md) — una sola para toda la tanda: el método de 400 años en 10 minutos descalza, "tu raíz", las tres fases y el test gratis de 1 minuto · ver [[tai-chi-fit]]

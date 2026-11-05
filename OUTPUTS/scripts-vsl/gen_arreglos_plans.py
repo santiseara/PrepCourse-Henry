@@ -47,12 +47,25 @@ def pool_y_clips():
 
 # un color de caja por creativo (BGR de ASS), como rota Stitched Fits entre sus ads
 VIDEOS = [
-    dict(n=1, hi='&H003AE2FF&', hibox='&H00B08BF5&', anchors=[('curso', 0, 'CL', 0)]),      # texto amarillo · caja rosa
-    dict(n=2, hi='&H00FFFFFF&', hibox='&H009B45E0&', anchors=[('videos', 0, 'CL', 0)]),     # texto blanco  · caja magenta
-    dict(n=3, hi='&H00FFFFFF&', hibox='&H00F7C34F&', anchors=[('enseña', 0, 'CL', 0)]),     # texto blanco  · caja celeste
-    dict(n=4, hi='&H001A1A1A&', hibox='&H002ED2FF&', anchors=[('videos', 0, 'CL', 0)]),     # texto tinta   · caja amarilla
-    dict(n=5, hi='&H00FFFFFF&', hibox='&H00F56B9B&', anchors=[('Arreglá', 0, 'CL', 0)]),    # texto blanco  · caja violeta
-    dict(n=6, hi='&H001A1A1A&', hibox='&H007AD65B&', anchors=[('curso', 0, 'CL', 0)]),      # texto tinta   · caja verde
+    # texto amarillo · caja rosa — abre en la maquina de coser
+    dict(n=1, hi='&H003AE2FF&', hibox='&H00B08BF5&', first=['B', 0],
+         anchors=[('clases', 0, 'CL', 0)]),
+    # texto blanco · caja magenta — abre en la camisa que le queda enorme
+    dict(n=2, hi='&H00FFFFFF&', hibox='&H009B45E0&', first=['L', 0],
+         anchors=[('videos', 0, 'CL', 0)]),
+    # texto blanco · caja celeste — abre en los alfileres sobre el escote
+    dict(n=3, hi='&H00FFFFFF&', hibox='&H00F7C34F&', first=['Q', 0],
+         anchors=[('clases', 0, 'CL', 0)]),
+    # texto tinta · caja amarilla — abre en la maquina industrial
+    dict(n=4, hi='&H001A1A1A&', hibox='&H002ED2FF&', first=['J', 3],
+         anchors=[('videos', 0, 'CL', 0)]),
+    # texto blanco · caja violeta — abre en el ruedo del jean
+    dict(n=5, hi='&H00FFFFFF&', hibox='&H00F56B9B&', first=['A', 0],
+         anchors=[('Medida', 0, 'CL', 0)]),
+    # texto tinta · caja verde — abre en el sweater que le queda grande
+    # (sin inserto de clases: en este guion el producto recien se nombra al final, y ahi cierra VE)
+    dict(n=6, hi='&H001A1A1A&', hibox='&H007AD65B&', first=['Y', 4.5],
+         anchors=[]),
 ]
 
 for v in VIDEOS:
@@ -62,7 +75,7 @@ for v in VIDEOS:
         speed=1.30, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=3,
         music='music/bed.wav', music_db=-8,
         hi=v['hi'], hibox=v['hibox'], hibord=20, capy=1300,
-        last='VE', seed=v['n'] * 97, usage='usage.json',
+        first=v['first'], last='VE', seed=v['n'] * 97, usage='usage.json',
         clips=clips, pool=pool, anchors=v['anchors'], overlays=[])
     json.dump(plan, open(f"{WK}/V{v['n']}.json", 'w'), ensure_ascii=False, indent=1)
     print(f"V{v['n']}.json  ({len(pool)} recortes de {len(clips)} clips)")

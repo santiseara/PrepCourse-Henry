@@ -1,6 +1,6 @@
-# Arreglá Tu Ropa (clon de Stitched Fits)
+# A Tu Medida · Arreglala Vos Misma (clon de Stitched Fits)
 
-> Oferta nueva para **Argentina**: curso online de **arreglos de ropa** para gente que ya sabe coser. Clon de *Alter It Yourself* de Stitched Fits (Reino Unido), una ballena de ~340 ads activos con creativos de hace 6 meses todavía gastando. Mercado argentino vacío. (fuente: Ads Library `view_all_page_id=1008286255711148`, `stitchedfits.co.uk`, 2026-11-05)
+> Oferta nueva para **Argentina**: **A Tu Medida** (marca: *Arreglala Vos Misma*), curso online de **arreglos de ropa** para gente que ya sabe coser. Clon de *Alter It Yourself* de Stitched Fits (Reino Unido), una ballena de ~340 ads activos con creativos de hace 6 meses todavía gastando. Mercado argentino vacío. (fuente: Ads Library `view_all_page_id=1008286255711148`, `stitchedfits.co.uk`, 2026-11-05)
 
 ## Ideas clave
 - **El mecanismo es el agujero, no la habilidad:** *"coser y arreglar son dos habilidades completamente distintas, y nadie te enseña la segunda"*. Aparece textual en 10 de sus 12 mejores ads. No compite con los miles de cursos de costura gratis: le habla a la que **ya tiene máquina**.
@@ -14,6 +14,17 @@
 - **Precio:** £99 tachado → **£59** (40% off permanente, ≈ US$ 75). Pago único, acceso de por vida, garantía de 30 días.
 - **Prueba social:** 5.000+ alumnos, 4,7 estrellas. Fundadora: Teresa, 10+ años en diseño, fábrica y taller propio.
 - **Avatar:** mujer de 35 a 65 con máquina en casa. Dolores: la pila de ropa en el rincón, pagar modista por algo que "debería" saber, y la familia que le trae prendas asumiendo que sabe.
+
+
+## La oferta propia (landing que pasó Santiago el 2026-11-05)
+- **Nombre:** **A Tu Medida**. Marca / claim: *Arreglala Vos Misma*. Profesora: **Carmela** (diseño de indumentaria, 10 años en arreglos). **No se la nombra en los guiones** ([[guiones-y-anuncios]]).
+- **Promesa del hero:** *"Dejá de pagarle a una modista y aprendé a arreglar tu ropa"*.
+- **Precio:** **$19.999** (de $32.499, AHORRÁS 40%). Pago único, acceso de por vida, sin suscripción, 30 días de garantía. Escasez: *"Quedan solo 21 lugares"*.
+- **Prueba social:** 5.0 ★, **+5000 alumnas**. Tres huecos de testimonio en video 9:16 todavía sin grabar.
+- **Contenido:** **9 clases base** (equipo, medir, planificar, entender el calce, evaluar la prenda, la ciencia del marcado con alfileres, cómo marcarte a vos misma, pasar los alfileres a líneas de costura, las telas) + **+25 videos** de marcado y costura.
+- **3 bonos (el backend bizop):** *De Tu Placard al de Ellas* (medir y marcar sobre otra persona, ficha de pedido), *¿Cuánto Cobro?* (calculadora de precios por prenda y arreglo), *Tus Primeras 10 Clientas*. Valuados en $49.997, van incluidos.
+- **Tabla de comparación:** modista $8.000–15.000 **cada vez** vs. $19.999 una sola vez; YouTube *"gratis pero lleno de avisos"* y *"horas y horas scrolleando"*.
+- **Vocabulario de la landing que se repite tal cual en los ads:** *marcar con alfileres*, *líneas de costura*, *el calce*, *modista*, *pago único*, *acceso de por vida*.
 
 ## Las 8 familias de guion
 | Familia | Hook | Dur | Nota |
@@ -40,13 +51,12 @@
 - **Precio low ticket:** AR$ 14.990 – 19.990, pago único, garantía de 30 días.
 - **Vocabulario:** tailor → **modista** (no sastre), alterations → **arreglos**, dart → **pinza**, hem → **ruedo**, take in the waist → **meter la cintura**.
 - **Los números de la familia F van como proporción, no en pesos** ("casi la mitad de lo que salió el jean"): una cifra en pesos envejece en dos semanas.
-- **Nombre propuesto:** *Arreglá Tu Ropa*. A confirmar.
+- **Nombre definitivo:** *A Tu Medida* (confirmado por la landing del 5/11).
 
 ## Preguntas abiertas
-- ¿Nombre y precio final?
-- ¿Landing propia en ImpulTienda o se clona la estructura Shopify de ellos?
-- El producto no existe todavía: hay que decidir si se graban los videos de arreglos o se arma otro entregable.
-- ¿Backend / OTOs?
+- Faltan los **3 videos de testimonio** (9:16) que la landing tiene reservados.
+- ¿Se graban las 9 clases y los +25 videos, o se arma otro entregable?
+- ¿Hay OTOs después del pago, además de los 3 bonos incluidos?
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[caza-de-ofertas]] · [[funnel-hacking]] · [[internacionalizacion]] · [[como-trabajar-con-santiago]]

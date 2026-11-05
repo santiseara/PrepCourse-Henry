@@ -1,3 +1,11 @@
+## 2026-11-05 (26ª pasada) — El módulo impositivo, corto
+
+- Santiago, sobre la primera versión: *"me lo hiciste re largo y re complicado. **No quiero que sea como si estuviera hablando un contador**… es simplemente para que aquella persona que está desde cero sepa que si vende tiene que facturar, de que todos los meses tiene que pagar ingresos brutos, de que está exento de IVA porque vende libros y de que si es responsable inscripto no tiene límite de facturación"*.
+- Reescrito: de **17 secciones y ~3.500 palabras a 4 secciones y ~500**, con dos cuadros chicos. Cierre fijo: **contador apenas empezás a vender**, porque si no aparecen **bloqueos en plataformas de pago, billeteras y bancos**. El Claude Doc mantiene el link; el Google Doc es nuevo (https://docs.google.com/document/d/1trq1-VkZVP157-O3IjPFYCMNz7TDg1I45fzBwUEda2s/edit) porque el conector de Drive crea archivos pero no los edita.
+- **Incorporadas sus ediciones a mano del doc largo**, que son reglas de estilo: hablar siempre de nuestro caso y no del universo de casos (fuera "salvo exento" y "según el comprador"); manda la **frecuencia** (IIBB 1 vez por mes, Ganancias y lo de afuera 1 vez al año); Ganancias dicho como **30–35% de la facturación**; **números en pesos de hoy** aunque sean aproximados (autónomos ~$80.000); **Whop/Stripe en la misma bolsa**, sin presentar la LLC como etapa; y borrar la fila de un impuesto que no pagamos.
+- La versión larga queda como **respaldo** en `OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md`; la guía de clase, en `OUTPUTS/2026-11-05-modulo-7-guia-de-clase.md`. El detalle verificado sigue viviendo en [[impuestos-en-argentina]] y [[llc-banca-y-fiscal]], no en el documento de clase.
+- Actualizadas: [[mentoria]] (regla nueva: el documento ordena, no enseña la materia), [[index]].
+
 ## 2026-11-05 (25ª pasada) — Módulo impositivo de la mentoría (Argentina + exterior)
 
 - Santiago: *"un documento que sea sobre todo el módulo impositivo en el negocio de los infoproductos… dividido en dos partes. Primero, ¿qué pasa cuando vendemos en Argentina? Y después la parte de todo lo que es vender afuera con Whop, con LLC"*, con el pedido explícito de **verificar los datos** (topes de monotributo, etc.) en vez de darlos de memoria.

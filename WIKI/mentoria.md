@@ -56,14 +56,38 @@ Pedido de Santiago del 2026-11-05: *"un documento que sea sobre todo el módulo 
 | Entregable | Dónde |
 |---|---|
 | Claude Doc (el que usa en clase) | https://claude.ai/artifact/2y1AdsWcAioGyRfuakKkeB |
-| Google Doc en su Drive | https://docs.google.com/document/d/1VTJ43kFjoFyq4CHUcawiI1L_XG9Uhle1UmUY0A2NEgY/edit |
-| Copia para el cerebro | `OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md` |
+| Google Doc en su Drive | https://docs.google.com/document/d/1trq1-VkZVP157-O3IjPFYCMNz7TDg1I45fzBwUEda2s/edit |
+| Guía de clase en el cerebro | `OUTPUTS/2026-11-05-modulo-7-guia-de-clase.md` |
+| Versión larga (respaldo, no se usa en clase) | `OUTPUTS/2026-11-05-modulo-7-impuestos-argentina-y-exterior.md` |
 
 Secciones (17): el punto del módulo · **Parte 1 Argentina:** el mapa en un cuadro · monotributo y la tabla de categorías · cómo facturar (Facturitas) · el IVA del libro digital · Ingresos Brutos · el cruce a responsable inscripto · retenciones de las pasarelas · checklist y errores · **Parte 2 Afuera:** los dos caminos en un cuadro · Whop sin LLC · la LLC · Stripe · impuestos en EE.UU. · el lado argentino (renta mundial) · cómo llega la plata · **Cierre:** cuadro de decisión por etapa · tarea y criterio.
 
 Lo que se corrigió de lo que trajo Santiago, con fuente en el doc: el IVA **no** es automático por ser digital (el libro está exento por el art. 7 inc. a) y el Dictamen 70/2010, pero un curso o membresía paga 21 %); en EE.UU. **no pagar income tax no es no presentar** (Form 5472 con multa de 25.000 USD) y el **sales tax de productos digitales sí existe** por estado. Detalle en [[impuestos-en-argentina]] y [[llc-banca-y-fiscal]].
 
-**Nota de formato (2026-11-05):** se entregó como **Claude Doc + Google Doc nativo en su Drive**, sin el `.docx` en `~/Desktop/Mentoria/`. El Google Doc cumple la función que tenía el `.docx` (editarlo en Drive) y queda con el formato puesto.
+
+### ⭐ Corrección del 2026-11-05 — el módulo impositivo va **corto**
+
+> «Fíjate que me lo hiciste re largo y re complicado. **No quiero que sea como si estuviera hablando un contador.** Obviamente nosotros no somos contadores y este trabajo es un trabajo de un contador. Es simplemente para que aquella persona que está desde cero sepa que si vende tiene que facturar, de que todos los meses tiene que pagar ingresos brutos, de que está exento de IVA porque vende libros y de que si es responsable inscripto no tiene límite de facturación. Tampoco hace falta entrar recontra en detalle. **Nuestra recomendación final es siempre que tienen que tener un contador apenas empiecen a vender** y estructurar toda la parte impositiva del negocio, porque si no les pueden aparecer bloqueos en las plataformas de pago, en las billeteras, en los bancos.»
+
+La primera versión tenía 17 secciones y ~3.500 palabras. La que quedó tiene **4 secciones y ~500 palabras**. Reglas que salen de esto, y valen para todo módulo que toque un tema de especialista:
+
+- **El documento ordena, no enseña la materia.** Si el tema lo resuelve un profesional, el módulo dice qué hay que saber para contratarlo bien, no cómo se hace.
+- **Lo verificado y el detalle van a la WIKI** ([[impuestos-en-argentina]], [[llc-banca-y-fiscal]]), no al documento de clase. La ley, los dictámenes y los formularios quedan de respaldo.
+- **La recomendación final de un módulo así es siempre "contratá al profesional", con el porqué operativo**: sin la parte impositiva en orden aparecen bloqueos en plataformas de pago, billeteras y bancos.
+- **Nada de párrafos de advertencia ni "ojo con el antecedente".** Si no cambia lo que la persona tiene que hacer mañana, afuera.
+
+### Lo que editó a mano en el documento (2026-11-05)
+
+Corrigió el doc largo antes de pedir la versión corta. Cada cambio es una regla de estilo:
+
+- **Habla siempre de nuestro caso, no del universo de casos.** "IVA discriminado: Sí, 21% (salvo exento)" → **"No, somos exentos por vender libros"**. "A quién le facturás: según el comprador" → **"consumidor final"**. Lo que no es nuestro caso, se borra.
+- **Manda la frecuencia, no el mecanismo.** "Ingresos Brutos se paga sobre la venta aunque pierdas plata" → **"se paga aparte 1 vez por mes"**. Y afuera: **"se declara una vez al año"**.
+- **Ganancias se dice como porcentaje de la facturación:** "escala progresiva sobre la ganancia neta" → **"entre el 30% y 35%, se paga una vez al año"**. Prefiere el número redondo que la precisión técnica.
+- **Números en pesos de hoy, aunque sean aproximados:** agregó a autónomos **"(hoy son masomenos 80 mil pesos argentinos)"**.
+- **Whop y Stripe van en la misma bolsa.** Sacó "plataforma que cobra por vos (Whop) y, cuando hay volumen, LLC + Stripe" y puso **"Whop/Stripe"**: no presenta la LLC como una etapa obligatoria.
+- **Borró la fila del impuesto al débito y crédito.** Un impuesto que no pagamos no ocupa una fila.
+
+**Nota de formato (2026-11-05):** se entregó como **Claude Doc + Google Doc nativo en su Drive**, sin el `.docx` en `~/Desktop/Mentoria/`. El Google Doc cumple la función que tenía el `.docx` (editarlo en Drive) y queda con el formato puesto. ⚠️ **El conector de Drive solo crea archivos, no los edita**: cada versión nueva es un Google Doc nuevo con link nuevo (el viejo va a la papelera). El link estable es el del Claude Doc.
 
 ## Preguntas abiertas
 - ¿Confirmamos el orden y los nombres de los módulos 2 a 6? ¿Y en qué número entra el módulo impositivo (hoy va como 7)?

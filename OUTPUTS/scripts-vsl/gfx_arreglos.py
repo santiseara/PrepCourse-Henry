@@ -112,13 +112,21 @@ def pagina_venta(d, w, h):
                            'aprendé a arreglar tu propia ropa',
                            'en casa, paso a paso.')):
         d.text((rx, 450 + i * 34), l, font=f(BCS, 30), fill=GREY)
-    # estrellas + alumnas
-    d.text((rx, 566), '★ ★ ★ ★ ★', font=f(BCS, 30), fill=(214, 164, 60))
-    d.text((rx + 176, 566), '5.0  ·  +5000 alumnas', font=f(BCS, 28), fill=GREY)
+    # estrellas dibujadas (la tipografia no tiene el glifo) + alumnas
+    import math as _m
+    for s in range(5):
+        cx_, cy_, r_ = rx + 14 + s * 34, 580, 13
+        pts = []
+        for k in range(10):
+            ang = -_m.pi / 2 + k * _m.pi / 5
+            rad = r_ if k % 2 == 0 else r_ * 0.45
+            pts.append((cx_ + rad * _m.cos(ang), cy_ + rad * _m.sin(ang)))
+        d.polygon(pts, fill=(214, 164, 60))
+    d.text((rx + 186, 566), '5.0  ·  +5000 alumnas', font=f(BCS, 28), fill=GREY)
     # pastilla de oferta en lugar del precio
     rr(d, (rx, 614, rx + 400, 690), 10, WINE)
     d.text((rx + 200, 630), 'AHORRÁS 40%  ·  HOY', font=f(BC, 42), fill=(255, 250, 248), anchor='mt')
-    d.text((rx, 708), 'Pago único · Acceso de por vida · Sin suscripción', font=f(BCS, 26), fill=GREY)
+    d.text((rx, 708), 'Pago único  ·  Acceso de por vida', font=f(BCS, 28), fill=GREY)
     for i, l in enumerate(('9 clases base',
                            '+25 videos de arreglos',
                            'Acceso de por vida',

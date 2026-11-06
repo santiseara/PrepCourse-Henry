@@ -1,7 +1,7 @@
 # Meta Ads 3 — Campañas de escalado: Cost Cap, Bid Cap y Pocket (guía de clase)
 
 > Claude Doc: https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G
-> Google Doc: https://docs.google.com/document/d/1vNqGURCjNZJP208lhqUCHnYNtXmT74VqxjrOhCXYyQQ/edit
+> Google Doc: https://docs.google.com/document/d/1_Lgwoz4qtx15WjEiY4LSjdCOs4aMYuynS3sI2vVOQVA/edit
 > Tercer video del módulo de Meta Ads. Fuente: WIKI/escalado-en-meta-ads, WIKI/estructuras-cbo, WIKI/metodo-v3 (+ la skill manejo-cbo).
 
 Arranca donde termina el anterior: la oferta ya está validada y hay anuncios ganadores. Estas estructuras no descubren nada, **exprimen lo que ya funciona**.
@@ -28,27 +28,14 @@ Arranca donde termina el anterior: la oferta ya está validada y hay anuncios ga
 
 **Condición:** 7 a 10 compras en unos 3 días a buen CPA.
 
-| Situación | Movimiento |
-| --- | --- |
-| CBO debajo de 500 USD/día | **+30% cada 3 o 4 horas** |
-| CBO arriba de 500 USD/día | **+30% una vez por día** |
-| ROAS por debajo de 2 | Una sola subida por día |
+> **El surfeo es uno solo: duplicar el presupuesto cada 2 horas.** Mientras el CPA aguante, se vuelve a duplicar. No hay escalera de porcentajes.
 
-**Nunca más de 30% por vez.** Progresión desde 10: 10 → 12,5 → 16 → 20 → 26…
-
-**La tabla de ayer y hoy**
-
-| Ayer | Hoy | Qué hacés |
-| --- | --- | --- |
-| Bueno (2+) | Bien | +30% |
-| Bajo | Mejor | Quieta |
-| Bajo | Mal | −30% (tirón de oreja) |
-| Los dos muy buenos (2,5–4) | — | Surfeo agresivo, volver en 3–4 h |
+Se surfea **las estructuras de escalado**: Cost Cap, Bid Cap y la Pocket. La campaña de testeo no se surfea — no es una estructura de escalado.
 
 - **Nunca surfear con 1 venta:** 3 a 5 ventas con ROAS 2,5+.
-- Si subís hoy y mañana no vende, **no vuelvas a subir**: quieta.
 - **Si el CPA sube, bajá el bid**, no el presupuesto. Si deja de gastar, subí el bid y esperá una hora.
-- Duplicar presupuesto **hasta que suba el CPM** (señal de saturación).
+- Duplicar **hasta que suba el CPM**: ahí está la saturación.
+- Si duplicaste y dejó de vender, **quieta**. No se vuelve a duplicar ese día.
 - **Reseteo nocturno**, o un escalón arriba si el día cerró muy bien.
 
 **El techo de la cuenta:** si a 2.000 USD/día rinde y a 2.600 el ROAS se cae, el techo está cerca de 2.000. No se fuerza: **se abren otras cuentas**. Y **una campaña por cuenta publicitaria**.

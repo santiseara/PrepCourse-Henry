@@ -24,18 +24,17 @@ Expectativa que conviene tener antes de frustrarse:
 
 Condición de entrada: **7–10 compras en unos 3 días a buen CPA**.
 
-Hay dos ritmos según cuánto riesgo quieras:
+> ⭐ **Corrección de Santiago del 2026-11-06:** **el surfeo es duplicar el presupuesto cada 2 horas, nada más.** No hay escalera de porcentajes (+30% cada 3-4 h, +30% una vez por día, −30% de tirón de oreja): eso es el surfeo de CBO del material de origen y **las CBO de Santiago no son estructuras de escalado**. Se surfea sobre Cost Cap, Bid Cap y Pocket. Detalle operativo en la sección «Surfeo cada ~2 horas», más abajo.
 
-| Ritmo | Incremento diario | Condición |
-|---|---|---|
-| **Conservador** | **+25–30%** sobre el adset (ABO) o la campaña (CBO) | Mientras el **ROAS supere 1,5** |
-| Prudente | **+15%** | El que aparece en la clase base |
+Las reglas que acompañan al surfeo:
 
-Progresión conservadora desde 10 USD: **10 → 12,5 → 16 → 20 → 26**…
+- **Nunca surfear con 1 venta:** 3 a 5 ventas con ROAS 2,5+.
+- **Si el CPA sube, bajá el bid**, no el presupuesto. Si deja de gastar, subí el bid y esperá una hora.
+- **Duplicar hasta que suba el CPM**, que es la señal de saturación.
+- Si duplicaste y dejó de vender, **quieta**: no se vuelve a duplicar ese día.
+- **Reseteo nocturno**, o un escalón arriba si el día cerró muy bien.
 
-**Solo una subida al día**, no más. Si un día sube y al siguiente no vende, no se vuelve a subir — se deja quieto. Si se recupera, se sigue subiendo.
-
-Alternativa: duplicar el conjunto ganador dentro de la misma ABO, o aislarlo en una **CBO 1-1-1** (una campaña, un conjunto, el anuncio ganador) a 10 USD y aplicarle la misma lógica de corte.
+Los ritmos de +25-30% y +15% que figuraban acá quedan **archivados**: eran del surfeo de CBO del material de origen.
 
 ## El ritmo semanal: subir el estándar
 
@@ -364,7 +363,7 @@ Las estructuras son un multiplicador de algo que ya funciona. Si los números no
 
 Se aplica a las campañas de puja manual (CostCap, BidCap, ROAS cap) y también a la **campaña V3** ([[metodo-v3]]), **siempre que sostenga un ROAS mayor a 2–2,5**. Por debajo de eso, la escala sigue la regla de una subida por día.
 
-- **Si sostiene buen CPA:** duplicar el presupuesto (o subirlo 50%) y esperar 2 h para la próxima decisión.
+- **Si sostiene buen CPA: duplicar el presupuesto** y esperar 2 h para la próxima decisión. Es el surfeo, y es lo único que hay (corrección del 2026-11-06).
 - **Si el CPA sube: bajar el bid**, no tocar el presupuesto.
 - **Si deja de gastar:** subir el bid (ej. +1) y **esperar una hora** antes de volver a subirlo.
 - **Nunca surfear con 1 venta.** Esperar **3–5 ventas con ROAS 2,5+**.
@@ -387,9 +386,9 @@ Relacionado: [[testeo-de-creativos]] · [[metricas-y-kpis]] · [[setup-de-campan
 
 Desde el 3/11 hay tres skills instaladas que cubren esta página ([[skills-launch-expert]]):
 
-- **`manejo-cbo`** — el surfeo vertical y la expansión horizontal a mano, con los números: nunca más de 30 % por vez, cada 3-4 h si la CBO está debajo de 500 USD/día y una vez por día si está arriba; el techo de la cuenta se detecta cuando el ROAS se cae al subir y no se fuerza, se abren cuentas. Detalle en [[metodo-v3]].
+- **`manejo-cbo`** — el surfeo vertical y la expansión horizontal a mano. ⚠️ Los números que trae (nunca más de 30 % por vez, cada 3-4 h debajo de 500 USD/día, una vez por día arriba) son del surfeo de CBO del material de origen y **ya no son los de Santiago**: el surfeo es duplicar el presupuesto cada 2 horas; el techo de la cuenta se detecta cuando el ROAS se cae al subir y no se fuerza, se abren cuentas. Detalle en [[metodo-v3]].
 - **`pujas-search-scale`** (bot, ⏳ sin desplegar) — Cost Cap y Bid Cap con los winners en **cuentas aisladas** donde la oferta no corre, una para cada tipo. Cruza el gasto por hora de Meta con las ventas por hora para encontrar los picos, saca los 8 ganadores (no entra el que tiene menos de 2 CPA de gasto), crea todo **en pausa** y mueve la puja en escalera cada 30 minutos avisando por Telegram o WhatsApp. Cost Cap inicial = CPA real de los winners · Bid Cap = front × 1,3.
-- **`surfing-scale`** (bot, ⏳ sin desplegar) — surfea el presupuesto de las CBO ±30 % en los horarios en que la oferta vende, con el ROAS **solo de Impultienda** (Utmify queda afuera: llega 20 minutos tarde) y confirmación **SI n / NO n** por WhatsApp antes de mover un dólar.
+- **`surfing-scale`** (bot, ⏳ sin desplegar) — ⚠️ armado con el surfeo viejo: surfea el presupuesto de las CBO ±30 % en los horarios en que la oferta vende, con el ROAS **solo de Impultienda** (Utmify queda afuera: llega 20 minutos tarde) y confirmación **SI n / NO n** por WhatsApp antes de mover un dólar.
 
 Los dos bots corren en un servidor de US$6/mes o en la Mac prendida, y necesitan token de Meta en `.env`, nunca en el chat.
 

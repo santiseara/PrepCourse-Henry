@@ -1,11 +1,11 @@
 ## 2026-11-06 (35ª pasada) — Cámaras frigoríficas: el manual visual al mercado inglés
 
 - Pedido de Santiago: anuncios para `visual-handbook-of-walk-in-coolers-freezers.impultienda.ar` modelando al competidor español `camaras-frigarificas.impultienda.ar`, **sin bajar todo** y usando **los 7 pasos del segundo cerebro**.
-- **Radiografía del ganador:** página Carlos Medina, **72 ads activos**, el más viejo en circulación desde el **5/10/2026** (32 días). Sube tandas de 6 a 13 creativos cada 4 o 5 días y **un solo primary text para los 72**. El formato es **avatar de IA hablando a cámara** (técnico de remera negra delante de una cámara frigorífica), **sin subtítulos, sin cortes, sin música**, de 18 a 38 s; un único creativo usa b-roll real con subtítulo palabra por palabra.
+- **Radiografía del ganador:** página Carlos Medina, **72 ads activos**, el más viejo en circulación desde el **5/10/2026** (32 días). Sube tandas de 6 a 13 creativos cada 4 o 5 días y **un solo primary text para los 72**. Testea **dos formatos en paralelo**: de los 8 creativos del 5/10, **4 son b-roll puro** con subtítulo palabra por palabra (y un estilo de resalte distinto por creativo), **3 son avatar de IA** a fondo fijo sin subtítulos ni cortes, y **1 es híbrido** (avatar recortado sobre b-roll). El avatar nunca lleva subtítulos; el b-roll siempre.
 - Se bajaron y transcribieron con faster-whisper **los 8 creativos más viejos** (los del 5/10, todos vivos), no los 72. De ahí salieron las 8 familias de guion y los dolores del avatar.
 - **Tanda 1 entregada:** 6 guiones EN + ES voseo con la estructura de 7 pasos, uno por ganador distinto y con cuerpo propio cada uno — demanda escondida, el trabajo mejor pagado, el error que mata compresores, la puerta, no cambies piezas sin diagnosticar y el llamado de emergencia. Banco: el recorrido del índice y la obra real documentada.
 - Nuevo: `WIKI/camaras-frigorificas.md` · `OUTPUTS/2026-11-06-guiones-camaras-frigorificas-ingles.md` · `~/Desktop/walk-in-coolers-freezers/` con `imagenes/`, `landing/` y `anuncios/`.
-- Pendiente: decidir si los videos van con **avatar de IA** (clonando la edición del ganador) o con voz en off + b-roll de TikTok, y definir países y presupuesto.
+- Pendiente: elegir el reparto de formatos de la tanda (propuesta: 4 con voz en off + b-roll de TikTok y 2 con avatar de HeyGen Avatar IV, que es lo que hace el ganador) y definir países y presupuesto.
 
 ## 2026-11-06 (34ª pasada) — Tu Primer Autómata de Madera: la tanda inglesa clonada a Argentina
 

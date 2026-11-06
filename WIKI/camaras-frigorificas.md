@@ -6,8 +6,10 @@
 - **Página:** Carlos Medina (`570406022821396`). **72 anuncios activos**, el más viejo en circulación desde el **5 de octubre de 2026** → 32 días vivo. Whale según los filtros de [[caza-de-ofertas]].
 - **Tandas:** sube de a 6–13 creativos cada 4 o 5 días (5/10, 7/10, 9/10, 10/10, 15/10, 16/10, 23/10, 5/11). Los de octubre siguen activos: no renueva porque se le caen, renueva encima de los que funcionan.
 - **Un solo primary text para los 72 anuncios.** Toda la variación está en el video. El copy abre con *"¿Te llaman para reparar una cámara frigorífica y no sabes por dónde empezar? 🥶"*, sigue con los negocios que dependen de la cámara, siete bullets con tilde (uno por módulo) y cierra con "60 páginas visuales".
-- **Formato dominante: avatar de IA hablando a cámara.** Técnico de remera negra, pantalón de trabajo con herramientas y manómetros colgando, parado delante de una cámara frigorífica o de una sala de máquinas. **Sin subtítulos, sin cortes, sin música, sin placas.** 18 a 38 segundos. Rota tres caras distintas (uno joven de pelo oscuro, uno canoso, uno de barba) y dos fondos.
-- **Excepción:** un solo creativo usa b-roll real de una obra (ampliación de una cámara) con **subtítulo palabra por palabra en caja azul**. Es el más largo (60 s).
+- **Testea dos formatos en paralelo, no uno.** De los 8 creativos del 5/10 (hoja de contactos de los 8, 6/11): **3 son avatar de IA puro**, **1 es híbrido** (avatar recortado sobre b-roll que cambia) y **4 son b-roll puro** con subtítulo. Todos entre 18 y 60 segundos.
+  - **Avatar:** técnico de remera negra con manómetros colgando, parado delante de la puerta de una cámara o de una sala de máquinas. **Fondo fijo, sin cortes, sin subtítulos, sin música, sin placas.** Rota tres caras (uno joven de pelo oscuro, uno canoso, uno de barba) y dos fondos.
+  - **B-roll:** clips reales de obra (ampliación de una cámara, una cámara podrida con productos pegados al evaporador, manómetros y pinza amperométrica, recorrido del índice con split screen de dos clips) con **subtítulo palabra por palabra** y un estilo distinto por creativo: caja azul, blanco con la palabra en verde, blanco con borde más flechas rojas y zoom, caja negra. Uno lleva además un chip amarillo fijo arriba con `CÁMARAS FRIGORÍFICAS`.
+  - **La regla que sí se cumple siempre: el avatar nunca lleva subtítulos y nunca tiene cortes; el b-roll siempre los lleva. No mezcla los dos sistemas dentro de un mismo creativo.**
 - **CTA siempre igual:** "Toca en más información para acceder al manual completo".
 
 ## Los 6 ganadores modelados (transcriptos el 6/11)
@@ -40,7 +42,7 @@ Rechazar trabajos de cámara por no saber por dónde empezar · no poder calcula
 - Entregados en `OUTPUTS/2026-11-06-guiones-camaras-frigorificas-ingles.md` y en `~/Desktop/walk-in-coolers-freezers/anuncios/`.
 
 ## Preguntas abiertas
-- ¿El video va con **avatar de IA** (clonando el formato del ganador, HeyGen Avatar IV) o con **voz en off + b-roll de TikTok**? El ganador es 7 de 8 con avatar; la regla del 5/11 dice clonar también la edición.
+- ¿Con qué formato se produce la tanda? El ganador reparte 4 b-roll / 3 avatar / 1 híbrido, así que las dos opciones están validadas por él. Propuesta: **4 con voz en off + b-roll de TikTok** (donde está afilado nuestro pipeline) y **2 con avatar de HeyGen Avatar IV** a fondo fijo y sin subtítulos. Los 6 guiones sirven para cualquiera de los dos.
 - Falta decidir países y presupuesto del testeo.
 
 ## Relacionado

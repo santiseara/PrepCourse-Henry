@@ -34,7 +34,6 @@ VENT = {
     # pao_c_music_baila
     'B1': ('7657358050411449633', 3, 57, {}),
     'B2': ('7664812275684936992', 2, 25, {}),
-    'B3': ('7693392764708375840', 1, 12, {}),
     # vibrafit7
     'C1': ('7542629009524526359', 4, 60, {}),
     'C2': ('7548186403595619606', 5, 60, {}),
@@ -50,9 +49,7 @@ VENT = {
     'G1': ('7704924884257754382', 3, 86, {}),                               # living, clase sola
     'H1': ('7694331681708215573', 2, 58, dict(zoom=1.45, ybias=1.0)),       # living con luces
     'I1': ('7567089753334582540', 3, 100, dict(zoom=1.45, ybias=1.0)),      # cocina
-    'J1': ('7612877286320246046', 1, 26, dict(zoom=1.45, ybias=1.0)),       # living con la tele
     # estudio, una clave por creadora
-    'K1': ('7646526700699782421', 2, 28, {}),
     'L1': ('7625664102123293974', 3, 58, {}),
     'M1': ('7704504496507915542', 3, 58, {}),
     'N1': ('7684747281182215445', 3, 38, {}),
@@ -117,7 +114,7 @@ VIDEOS = [
     dict(n=3,
          hi='&H001A1A1A&', hibox='&H00338FD6&',          # tinta · caja ámbar
          hook='En tu casa nadie te ve aprender', hook_until='aprendiendo.',
-         first=['J1', 1],
+         first=['I1', 3],
          anchors=[('grupo', 0, 'XW', 0), ('casa', 0, 'E1', 1)],
          last='XW',
          overlays=[

@@ -1,3 +1,14 @@
+## 2026-11-06 (38ª pasada) — DanceGo: radiografía del original y tanda 1 de 3 ads
+
+- Pedido de Santiago: *"metete a la página de Go, la original, fijate el estilo de video que están haciendo y hagamos variables… tres renovaciones siguiendo los patrones ganadores del original"*.
+- **Radiografía:** página DanceGo en la Biblioteca de Anuncios, **31 ads activos**, los 4 más viejos corriendo desde el **7 de enero de 2026** (diez meses). Se bajaron los 16 videos que daba la página, **9 únicos**, y se transcribieron con faster-whisper. Resultado: **un solo guion** repetido palabra por palabra en los cuatro creativos viejos, y **4 formatos en paralelo** (UGC + b-roll de 80 s, clip crudo con dos bandas de 37 s, voz en off rápida de 48 s y split PIP de 60 s). La frase que está en **todos** sus ads: *"la primera semana lo vas a sentir, la segunda lo vas a ver, la tercera lo van a ver los demás"*. Detalle en [[dancego]].
+- **Tanda 1 entregada:** 3 ads de voz en off de 45 a 47 s, con la DNA del ganador pero **sin una frase repetida entre ellos** (regla del 22/10): el gimnasio en la tele del living, diez minutos mientras se hace la cena, y en tu casa nadie te ve aprender.
+- **Edición clonada** de ellos con nuestra paleta: banda de hook de dos líneas desde el cuadro cero, placas de beneficio ancladas a la palabra, insertos de la app y de la comunidad, y placa final con el CTA y la flecha. Scripts nuevos: `gfx_dancego.py`, `gen_dancego_plans.py`, `edit_dancego.py`.
+- **Voz Sulafat** por API; `gemini-2.5-flash-preview-tts` dio 429 y salió con el de reemplazo `gemini-3.1-flash-tts-preview`. Acento rioplatense verificado y los 3 videos transcriptos contra el guion.
+- **B-roll:** 47 clips de `#bailoterapia` y `#zumbaencasa`, **28 sobrevivieron**. Se cayeron un clip con marca de agua en el medio del cuadro, dos recortes que quedaban en la cadera y todos los de `#bailarencasa` (baile social random en seis idiomas). Tres reglas nuevas en [[guiones-y-anuncios]].
+- Entrega en `~/Desktop/dancego/anuncios/` como `6-11 - 1` a `6-11 - 3` · `OUTPUTS/2026-11-06-guiones-dancego.md`.
+- Pendiente: la descripción para ads, el precio final y decidir si sumamos el formato B del original (clip crudo + dos bandas, sin voz).
+
 ## 2026-11-06 (37ª pasada) — A Tu Medida: descripción para ads
 
 - Descripción única para los 6 videos de [[arreglos-de-ropa]], al estilo de Stitched Fits (un solo copy para toda la flota).

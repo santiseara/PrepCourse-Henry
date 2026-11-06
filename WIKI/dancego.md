@@ -43,10 +43,49 @@ De 35 a **26**. Fuera:
 
 Quedan los que **personalizan el resultado** (objetivo, físico de hoy, cuerpo deseado, metabolismo, experiencia, frecuencia, duración, lesiones, altura, peso, meta) y los de **compromiso emocional** (eventos, motivación, evento próximo, confianza), más los puentes, la nota, el resultado y la previsión.
 
+## Radiografía de los ads del original (2026-11-06)
+Página de Facebook **DanceGo**, `page_id 964798933379484`: **31 ads activos**. Los 4 más viejos están en circulación desde el **7 de enero de 2026** — diez meses corriendo. Es una ballena.
+
+**El guion que aguanta diez meses es uno solo.** Cuatro creativos distintos (dos presentadoras, dos edes) dicen exactamente el mismo texto, palabra por palabra:
+1. *"¿No te gusta el gimnasio y querés bajar de peso divirtiéndote?"* — apertura por objeción
+2. *"Dejame presentarte la app DanceGo"*
+3. *"Más de 100 entrenamientos para hacer en casa"*
+4. *"Clases de baile para principiantes con paso a paso, entrenamientos avanzados y clases en vivo todas las semanas"*
+5. *"Todo desde la comodidad de tu casa, de tu living"*
+6. **El mecanismo:** *"Yo conecto la app a la tele y empiezo a bailar"*
+7. *"Pierdo calorías y encima me divierto"*
+8. **La frase que está en TODOS sus ads:** *"La primera semana lo vas a sentir. La segunda lo vas a ver. La tercera lo van a ver los demás."*
+9. *"¿Y sabés qué es lo mejor? Sin anualidad, sin mensualidad"*
+10. Comunidad de WhatsApp con tips diarios de alimentación y entrenamiento, otras alumnas, clases en vivo
+11. CTA: *"Tocá acá abajo. Pero tocá ya, que te estoy esperando para bailar juntas."*
+
+**Los 4 formatos que corren en paralelo:**
+| Formato | Largo | Qué es |
+|---|---|---|
+| **A · UGC + b-roll** (el de los 4 más viejos) | 78–82 s | Creadora a cámara en su living con la tele de fondo, cortes a clase de baile y a mujeres bailando en casa, placas de beneficio, progreso "Día 1 / 9 / 16 / 25" con la panza y la creadora en PIP, cierre en negro con **CLIQUE EM SAIBA MAIS** en amarillo y flecha roja |
+| **B · clip crudo + banda** | 37 s | **Un solo clip sin cortes** de una mujer bailando de espaldas frente a la tele, con banda amarilla arriba (testimonio) y banda blanca abajo (*"¿Querés aprender? Tocá Saber más"*). Sin voz en off. El más barato de producir |
+| **C · voz en off rápida** | 48 s | Cortes cortos, placas de una palabra con transición de fuego (PREGUIÇA, FALTA DE AUTOESTIMA, VERSÃO), pantallas de la app, comunidad, comida. Ángulo emocional: *"cada paso es una victoria contra la pereza y contra la falta de autoestima"* |
+| **D · split PIP** | 60 s | Pantalla partida (b-roll arriba, presentadora abajo), antes/después, íconos de comunidad, botón rojo **SAIBA MAIS!** fijo en el último tercio |
+
+**Lo que se copia de su edición:** banda de hook de dos líneas arriba desde el cuadro cero, placas de beneficio ancladas a la palabra que las nombra, la pantalla de la app y la comunidad de WhatsApp como insertos, subtítulos bajos de pocas palabras con la palabra activa resaltada, y una placa de cierre con el CTA y la flecha. **Lo que no se copia:** la paleta arcoíris; las placas van en el frambuesa de nuestra landing (ver [[guiones-y-anuncios]]).
+
+## Tanda 1 de ads (2026-11-06)
+Tres renovaciones de voz en off con la DNA del ganador, cada una con hook, cuerpo y CTA propios (no se repite una sola frase entre las tres, aunque el original sí repita):
+1. **El gimnasio entra en la tele de tu living** — objeción del gimnasio + el mecanismo de conectar la app a la tele + la escalera de las tres semanas + sin mensualidad.
+2. **Diez minutos mientras se hace la cena** — facilidad y constancia: el desafío de 28 días personalizado, el registro de peso, los ritmos.
+3. **En tu casa nadie te ve aprender** — vergüenza y autoestima: bailar como diversión, la comunidad de WhatsApp y la garantía de 7 días.
+
+- Voz **Sulafat** por API (`gemini-3.1-flash-tts-preview`, porque el 2.5 dio 429), acento rioplatense verificado, `speed 1.30`.
+- **Visual 100 % TikTok:** 47 clips bajados de `#bailoterapia` y `#zumbaencasa`, **28 sobrevivieron**. 6 son el plano firma de la oferta (mujer bailando en el living frente a la tele).
+- Inserts dibujados por código con `OUTPUTS/scripts-vsl/gfx_dancego.py`: la pantalla de la app (desafío día 11 de 28 y los ritmos) y el grupo de WhatsApp. **No hace falta que la app exista para lanzar.**
+- Scripts: `gen_dancego_plans.py` + `edit_dancego.py`. Entrega en `~/Desktop/dancego/anuncios/` como `6-11 - 1` a `6-11 - 3`, de 45 a 47 s.
+
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?
 - ¿Precio final? (el link de checkout ya está confirmado)
 - ¿Va VSL en el último paso? Si va, cambia `SEGUNDOS_OFERTA`.
+- ¿Probamos la escalera de las tres semanas en los tres ads, como hace el original, o la dejamos solo en el guion 1?
+- ¿Sumamos el formato B del original (clip crudo de una mujer bailando frente a la tele + dos bandas de texto, sin voz)? Es el más barato de todos y lo tienen corriendo.
 
 ## Relacionado
 [[quizzes-reglas-de-armado]] · [[quiz-funnel]] · [[landings-funnels-y-upsells]] · [[pilates-hormonal]] · [[tai-chi-fit]]
@@ -54,3 +93,5 @@ Quedan los que **personalizan el resultado** (objetivo, físico de hoy, cuerpo d
 ## Fuentes
 - `https://funilv1.appdancego.com/` y `/pgvendas` (recorrido completo del 2026-11-04)
 - Entregable: `OUTPUTS/2026-11-04-quiz-dancego.html`
+- Biblioteca de Anuncios de Meta, página DanceGo (`964798933379484`), relevamiento del 2026-11-06: 31 ads activos, 9 videos únicos bajados y transcriptos
+- Entregable: `OUTPUTS/2026-11-06-guiones-dancego.md`

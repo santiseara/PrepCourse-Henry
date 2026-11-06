@@ -47,7 +47,6 @@ Quedan los que **personalizan el resultado** (objetivo, físico de hoy, cuerpo d
 - ¿La marca queda **DanceGo** o se renombra?
 - ¿Precio final? (el link de checkout ya está confirmado)
 - ¿Va VSL en el último paso? Si va, cambia `SEGUNDOS_OFERTA`.
-- ¿Se recorta el bloque de hábitos (agua, sueño, rutina de trabajo, qué tan activa, energía)? Son 5 pasos que el quiz podría no necesitar.
 
 ## Relacionado
 [[quizzes-reglas-de-armado]] · [[quiz-funnel]] · [[landings-funnels-y-upsells]] · [[pilates-hormonal]] · [[tai-chi-fit]]

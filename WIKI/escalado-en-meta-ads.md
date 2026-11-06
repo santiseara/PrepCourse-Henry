@@ -104,6 +104,8 @@ Le das libertad total a Meta. Es la estrategia normal, la que se usa **tanto par
 
 En las tres, **si Meta no puede cumplir el parámetro, no entra a subasta**.
 
+> ⚠️ **La puja manual solo existe en ABO** (corrección del 2026-11-06). A una CBO no se le pueden poner bids: por eso CostCap y BidCap son ABO.
+
 ### La regla de reparto de la cuenta
 
 > Para invertir más presupuesto necesitás **una parte de la cuenta en manual bid y otra en bid automático**.
@@ -156,12 +158,15 @@ La lógica es exigirle a Facebook una conversión con un gasto diario mínimo. N
 
 ### 4. BidCap acelerada
 
-CBO con **límite de puja** en vez de auto-bidding, y **tipo de entrega: acelerada**.
+Campaña **ABO** con **límite de puja** en vez de auto-bidding, y **tipo de entrega: acelerada**.
 
 - Presupuesto: mínimo 100 USD, Santiago la arranca en **500 USD**
-- Un conjunto por cada anuncio ganador (los que tengas: 2, 10, 100)
-- **Bid inicial = el precio del front.** Si vendes a 19,99, el bid va en 9,99 según el ejemplo del material
+- **7 conjuntos**, con los bids escalonados
+- **Bid en Argentina y LatAm = front × 1,3**
+- **Bids en el mercado inglés: desde 17 USD y de uno en uno hasta 24**, uno por conjunto
 - Si no gasta: **subir 50 centavos cada hora** hasta que arranque
+
+> ⭐ **Corrección de Santiago del 2026-11-06:** la BidCap **es ABO, no CBO** — a una campaña CBO no se le pueden poner bids, así que CostCap y BidCap van las dos en ABO. Y los bids del mercado inglés son **7 conjuntos de 17 a 24 USD**; en Argentina queda el front × 1,3. La única CBO con puja automática de este bloque es la **Pocket**, con **35 USD a la campaña**.
 
 Al ser manual bidding y estar capeada, **aguanta escalas mucho más agresivas**: se puede cambiar presupuesto y bid sin que se desmadre.
 
@@ -232,14 +237,14 @@ Se parecen y conviene no confundirlas:
 |---|---|---|
 | Conjuntos | **8** | **10** |
 | Contenido | **El mismo** anuncio ganador en los 8 | **3–6 winners** distintos, duplicados |
-| Presupuesto (CBO) | **75% del front** | **3–5× el precio del front** |
+| Presupuesto (CBO) | **35 USD a la campaña** | **3–5× el precio del front** |
 | Cuándo | Tenés **un** creativo ganador | Tenés varios |
 
 Presupuesto de la Launch Pocket en concreto: front de 10 USD → **30–50 USD/día**; front de 20 → **60–100 USD/día**.
 
 **Lógica de la CBO Pocket:** el mismo creativo en 8 audiencias distintas, y **Meta redirige el presupuesto hacia los conjuntos que rinden**.
 
-**Presupuesto: 75% del precio del front** (o el precio del front entero para arrancar).
+**Presupuesto: 35 USD a la campaña** (corrección del 2026-11-06; antes figuraba el 75% del precio del front).
 
 #### Cómo se opera una Pocket
 

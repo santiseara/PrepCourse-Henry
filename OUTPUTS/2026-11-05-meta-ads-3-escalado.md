@@ -1,7 +1,7 @@
 # Meta Ads 3 — Campañas de escalado: Cost Cap, Bid Cap y Pocket (guía de clase)
 
 > Claude Doc: https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G
-> Google Doc: https://docs.google.com/document/d/1g6miyosUy1R7bzXlE7axYXiANBzcfH7bmXe8ktpdS2c/edit
+> Google Doc: https://docs.google.com/document/d/1vNqGURCjNZJP208lhqUCHnYNtXmT74VqxjrOhCXYyQQ/edit
 > Tercer video del módulo de Meta Ads. Fuente: WIKI/escalado-en-meta-ads, WIKI/estructuras-cbo, WIKI/metodo-v3 (+ la skill manejo-cbo).
 
 Arranca donde termina el anterior: la oferta ya está validada y hay anuncios ganadores. Estas estructuras no descubren nada, **exprimen lo que ya funciona**.
@@ -65,6 +65,8 @@ Arranca donde termina el anterior: la oferta ya está validada y hay anuncios ga
 
 En las tres, si Meta no puede cumplir, **no entra a la subasta**.
 
+> ⚠️ **La puja manual solo existe en ABO.** A una campaña CBO no se le pueden poner bids, así que **Cost Cap y Bid Cap van las dos en ABO**. De las tres estructuras de escalado, la única CBO es la **Pocket**, y por eso va con puja automática.
+
 > ⚠️ **Regla de reparto:** para meter más presupuesto necesitás una parte de la cuenta en manual y otra en automática. **Todo en manual no se puede**; todo en automático sí.
 
 Un mismo ganador puede estar en varias estructuras a la vez (V3, aislada, Cost Cap, Bid Cap). No se pisan.
@@ -93,13 +95,14 @@ Con oferta súper validada: presupuesto **20–30 tickets** y **Cost Cap inicial
 
 ## Bid Cap — la que aguanta las escalas más agresivas
 
-CBO con **límite de puja** y **entrega acelerada**.
+Campaña **ABO** con **límite de puja** y **entrega acelerada**.
 
 | | Valor |
 | --- | --- |
 | Presupuesto | Mínimo 100 USD; lo normal es arrancar en **500** |
-| Conjuntos | Uno por cada ganador |
-| Bid inicial | **front × 1,3** (antes se usaba el precio del front, a secas) |
+| Conjuntos | **7**, con bids escalonados |
+| Bid en Argentina y LatAm | **front × 1,3** |
+| Bids en el mercado inglés | Desde **17 USD** y de uno en uno **hasta 24**, uno por conjunto |
 | Si no gasta | +50 centavos cada hora |
 | Dónde | Cuenta nueva, aislada |
 
@@ -113,19 +116,19 @@ Después de que una Cost Cap o Bid Cap encuentra su puja. Con ticket 20 y bid ce
 2. **Duplicarlo 9 veces** → bids 10,1 … 10,9.
 3. Si gana el 10,6 → **10,6 ×9** → 10,61 … 10,69 (la intrapuja de la intrapuja).
 
-Para Bid Cap, igual pero arrancando en el precio del front y bajando de uno en uno.
+Para Bid Cap, igual pero sobre el escalón que ganó entre los 7 conjuntos.
 
 ⭐ **El atajo:** validada la puja ganadora (ej. 10,70), todos los winners nuevos van **directo a 10,70**. El test de puja se hace **una vez por oferta**, no por creativo.
 
 ## Pocket — el mismo ganador en muchas audiencias
 
-Son **CBO**: Meta redirige la plata hacia los conjuntos que rinden.
+Son **CBO** —de las tres estructuras de escalado, la única que lo es—: Meta redirige la plata hacia los conjuntos que rinden. Y al ser CBO **no llevan bids**: el presupuesto va a la campaña y la puja la maneja Meta.
 
 | | CBO Pocket | Launch Pocket |
 | --- | --- | --- |
 | Forma | **1-8-1** | **1-10-N** |
 | Qué va adentro | El mismo ganador en 8 conjuntos | 3 a 6 ganadores distintos, duplicados |
-| Presupuesto | **75% del front** | **3 a 5× el front** |
+| Presupuesto | **35 USD a la campaña** | **3 a 5× el front** |
 | Cuándo | Tenés **un** ganador | Tenés varios |
 
 Launch Pocket en concreto: front 10 USD → 30–50/día; front 20 → 60–100/día.
@@ -173,10 +176,11 @@ Se sube el estándar por escalones: piso de 500/día → escalado el finde → 6
 ## Tarea
 
 - [ ] Listar los anuncios con 5+ compras a buen CPA
-- [ ] Calcular CPA medio (ticket ÷ 2), Cost Cap inicial (front ÷ 2 + 30%) y Bid Cap inicial (front × 1,3)
+- [ ] Calcular CPA medio (ticket ÷ 2), Cost Cap inicial (front ÷ 2 + 30%) y el bid de Bid Cap (front × 1,3 en Argentina; de 17 a 24 en inglés)
 - [ ] Armar una aislada con el mejor ganador a 3× el CPA medio
 - [ ] Armar una Cost Cap de 7 conjuntos con bids escalonados, en cuenta aparte
+- [ ] Armar la Bid Cap como **ABO** de 7 conjuntos, con entrega acelerada
 - [ ] Dejar una regla automática de corte a 2× el ticket
 - [ ] Anotar el ROAS por franja horaria durante 3 días
 
-**Criterio de aprobación:** decir sin mirar el documento cuánto sube cada surfeo y cada cuánto, el bid inicial de Cost Cap y de Bid Cap, y qué se hace cuando una campaña manual no gasta nada.
+**Criterio de aprobación:** decir sin mirar el documento cuánto sube cada surfeo y cada cuánto, el bid inicial de Cost Cap y de Bid Cap, cuál de las tres estructuras es CBO y por qué, y qué se hace cuando una campaña manual no gasta nada.

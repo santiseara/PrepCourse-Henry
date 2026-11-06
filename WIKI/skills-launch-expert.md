@@ -55,7 +55,7 @@ Las 05 y 06 vienen con el código completo de los bots (Python + instalador de s
 - **Ritmo del surfeo según presupuesto:** debajo de 500 USD/día → +30 % cada 3-4 h · arriba de 500 → +30 % una vez por día.
 - **La tabla ayer/hoy:** ayer bueno + hoy bien → +30 % · ayer bajo + hoy mejor → **quieta** · ayer bajo + hoy mal → −30 % · los dos muy buenos → surfeo agresivo.
 - **El techo de la cuenta:** si a 2.000 rinde y a 2.600 se cae, el techo está cerca de 2.000 — no se fuerza, se abren cuentas.
-- **Pujas manuales (oferta súper validada):** presupuesto 20-30 tickets · Cost Cap inicial = front ÷ 2 + 30 % · Bid Cap inicial = front × 1,3 · si quema sin ventas, −1 USD y esperar 2 h; si no gasta, +1 USD y esperar 2 h.
+- **Pujas manuales (oferta súper validada):** presupuesto 20-30 tickets · Cost Cap inicial = front ÷ 2 + 30 % · Bid Cap inicial (ABO, 7 conjuntos) = front × 1,3 en Argentina y de 17 a 24 USD en inglés · si quema sin ventas, −1 USD y esperar 2 h; si no gasta, +1 USD y esperar 2 h.
 - **Objetivo de la V3 dicho con número:** la mayor cantidad de conjuntos con **más de 50 ventas en menos de 7 días**.
 - ⚠️ **Diferencia con tu wiki:** [[metodo-v3]] dice surfeo cada ~2 horas; el manual dice cada 3-4 h debajo de 500 USD y una vez por día arriba. Es la misma idea con el ritmo atado al presupuesto.
 

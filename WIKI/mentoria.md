@@ -47,7 +47,7 @@ Pedido de Santiago: *"vamos a dividir el módulo de Meta Ads en varios videos"*.
 |---|---|---|---|
 | 1 | **Introducción + campañas de testeo** | Que la persona sepa la diferencia entre ABO y CBO y **las dos formas de testear** que tiene | [Claude Doc](https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R) · [Google Doc](https://docs.google.com/document/d/1N943ljltNzis4Kpkg930njF4t-imDHm1TQsoIiljTwk/edit) · `OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md` |
 | 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · [Google Doc](https://docs.google.com/document/d/1sdeRe8hRzSNtJnUDmZ1MkoLG3G-PIK295OD5SiFwhZo/edit) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
-| 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · [Google Doc](https://docs.google.com/document/d/1g6miyosUy1R7bzXlE7axYXiANBzcfH7bmXe8ktpdS2c/edit) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
+| 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · [Google Doc](https://docs.google.com/document/d/1vNqGURCjNZJP208lhqUCHnYNtXmT74VqxjrOhCXYyQQ/edit) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
 
 El orden es deliberado: **no se escala nada antes de saber leer si la oferta está validada**, así que el módulo de métricas va en el medio.
 

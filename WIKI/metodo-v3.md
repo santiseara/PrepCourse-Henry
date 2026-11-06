@@ -119,7 +119,7 @@ Desde el 3/11 está instalada la skill **`manejo-cbo`**, el Manual de Manejo de 
 - **Ritmo del surfeo atado al presupuesto** (acá decía "cada ~2 horas"): CBO **debajo de 500 USD/día → +30 % cada 3-4 h** · **arriba de 500 USD/día → +30 % una vez por día**, porque a partir de ahí cada 30 % ya son más de 100 USD.
 - **La tabla ayer/hoy:** ayer bueno (2+) y hoy bien → **+30 %** · ayer bajo y hoy mejor → **quieta, ni subir ni bajar** · ayer bajo y hoy mal → **−30 %** (tirarle la oreja) · los dos muy buenos (2,5-4) → surfeo agresivo y volver a mirar en 3-4 h.
 - **El techo de la cuenta:** si a 2.000 USD/día rinde y a 2.600 el ROAS se cae, el techo está cerca de 2.000. No se fuerza esa cuenta, se abren otras.
-- **Pujas manuales con oferta súper validada:** presupuesto **20-30 tickets** · Cost Cap inicial = **front ÷ 2 + 30 %** · Bid Cap inicial = **front × 1,3** · si quema sin ventas, **−1 USD y esperar 2 h**; si no gasta, **+1 USD y esperar 2 h**. Siempre en cuentas nuevas.
+- **Pujas manuales con oferta súper validada:** presupuesto **20-30 tickets** · Cost Cap inicial = **front ÷ 2 + 30 %** · Bid Cap inicial (ABO, 7 conjuntos) = **front × 1,3** en Argentina, **de 17 a 24 USD** en el mercado inglés · si quema sin ventas, **−1 USD y esperar 2 h**; si no gasta, **+1 USD y esperar 2 h**. Siempre en cuentas nuevas.
 - **Leer los números:** ROAS de ventas **aprobadas** (las pendientes de tarjeta que siguen pendientes son checkouts abandonados), con comisiones cargadas (~8-10 % → el equilibrio real queda en ROAS ~1,10). El ROAS del pixel viene inflado: sirve para ordenar, no como valor.
 - **Cuenta master por producto:** subir los videos y armar los anuncios en una sola cuenta y clonarlos en las demás por ID de publicación, para conservar la prueba social.
 

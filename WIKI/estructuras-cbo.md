@@ -21,13 +21,15 @@ Se lee **Campañas-Conjuntos-Anuncios**:
 | **Winners** | 1-1-N | Los 6 a 10 mejores anuncios, clonados por post ID | ~250 USD/día | Llevar los ganadores a otra cuenta |
 | **CBO de testeo** | 1-3-N | 3 conjuntos = **3 conceptos** distintos, variaciones en contenido flexible | 35 USD (y una copia a 30) | Testear después de Andrómeda ([[testeo-de-creativos]]) |
 | **Aislada** | 1-3-1 | **El mismo** anuncio ganador en los 3 conjuntos | 3× el CPA medio | Escalar un ganador solo |
-| **Pocket** | 1-8-1 | **El mismo** anuncio ganador en 8 conjuntos | 75% del precio del front | Un ganador, más audiencias |
+| **Pocket** | 1-8-1 | **El mismo** anuncio ganador en 8 conjuntos | **35 USD a la campaña** | Un ganador, más audiencias |
 | **Mixta** | 1-4-N | 4 o 5 ganadores distintos, duplicados en 4 conjuntos | según el ticket | Poner a competir varios ganadores |
 | **Power** | 1-8-N | 7 u 8 ganadores distintos, duplicados en 8 conjuntos | según el ticket | Cuentas con muchos ganadores |
 | **Launch Pocket** | 1-10-N | 3 a 6 ganadores, duplicados | 3 a 5× el precio del front | Lanzar varios ganadores juntos |
 | **CBO de ganadores** | 5 CBO idénticas | 3 a 5 conjuntos con un ganador distinto cada uno | 30 / 40 / 50 / 60 / 70 USD | Ver qué presupuesto "agarra viaje" |
 
 Detalle de cada una, y de CostCap, BidCap, intrapuja y micropresupuesto, en [[escalado-en-meta-ads]].
+
+> ⭐ **Corrección del 2026-11-06:** la **Pocket es la única CBO de las estructuras de escalado** (CostCap y BidCap son ABO, porque a una CBO no se le pueden poner bids), y su presupuesto son **35 USD a la campaña**, no el 75% del front.
 
 ## CBO frente a ABO, con datos
 

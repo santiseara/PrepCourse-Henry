@@ -1,30 +1,30 @@
 # Meta Ads 2 — Cómo saber si la oferta está validada (guía de clase)
 
 > Claude Doc: https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A
-> Google Doc: https://docs.google.com/document/d/1OMh6K6pX2U6nDaPJaHsZ5gDYiv1C7dAFwsvtTuFWcaU/edit
+> Google Doc: https://docs.google.com/document/d/1sdeRe8hRzSNtJnUDmZ1MkoLG3G-PIK295OD5SiFwhZo/edit
 > Segundo video del módulo de Meta Ads. Fuente: WIKI/metricas-y-kpis, WIKI/validacion-de-oferta, WIKI/lectura-de-resultados.
 
 La pregunta del módulo es una sola: **¿entra más plata de la que sale?**
 
-## Todo el negocio son dos números
+## Las cuatro preguntas
 
-> **Costo por visita contra revenue por visita.** La diferencia es la ganancia por visita.
+Un día de campaña se lee con cuatro preguntas, en este orden:
 
-```
-Costo por visita   = lo que gastaste  ÷ visitantes
-Revenue por visita = lo que facturaste ÷ visitantes
-```
+| | La pregunta | Dónde se ve | Está sano si | Si está mal, el problema es |
+| --- | --- | --- | --- | --- |
+| 1 | ¿Llega gente a la landing? | Clics en el enlace y visitas a la landing | CTR de enlace 1,5–2%+ | El anuncio |
+| 2 | ¿Llegan al checkout? | Inicios de pago ÷ visitas | 10%+ | La landing o la oferta |
+| 3 | ¿Están comprando? | Compras ÷ inicios de pago | 25–30% | El precio, el checkout o los pagos rechazados |
+| 4 | ¿Cuánto generamos y cuánto gastamos? | Facturado contra gasto | Entra más de lo que sale | Todavía no hay negocio |
 
-100 USD y 200 visitas → 0,50 de costo por visita. Si facturan 200 USD → 1 USD de revenue por visita → **ROAS 2**.
+Las tres primeras dicen **dónde** está el problema. La cuarta dice **si hay negocio**, y es la única que valida una oferta: *"entra más dinero a tu cuenta del que sale"*, normalmente el primer o segundo día.
 
-El revenue por visita se sube de dos formas nada más: **mejor conversión** o **mejor AOV**.
+**Meta cobra por impresión: gana el que menos impresiones necesita para una compra.** Funciona igual en venta directa, VSL o quiz. Y para que cada visita valga más hay dos palancas nada más: **mejor conversión** o **mejor AOV**.
 
-**Meta cobra por impresión: gana el que menos impresiones necesita para una conversión.** Funciona igual en venta directa, VSL o quiz.
-
-| Familia | Qué mide | Se arregla con |
+| Familia de métricas | Qué pregunta responde | Se arregla con |
 | --- | --- | --- |
-| De anuncio | El costo por visita | Mejores creativos |
-| De conversión | El revenue por visita | Mejor funnel y oferta |
+| De anuncio | La 1: si llega gente, y a qué costo | Mejores creativos |
+| De conversión | La 2 y la 3: si esa gente compra | Mejor funnel y oferta |
 
 ## El CPA break-even
 
@@ -48,13 +48,12 @@ Lo que entra **neto en la cuenta** por cada venta, descontadas comisiones y conv
 
 > *"Cuando lanzás una oferta nueva no estás gastando dinero: estás comprando datos."*
 
-## Qué se mira, y en qué orden
+## Las primeras horas, con las cuatro preguntas en la mano
 
-**1. Costo por visita, en las primeras horas.** Asumís comprate del 2%. Ticket 15 → 100 visitas = 2 compras = 30 USD. Si el costo por visita es 0,30 estás en break-even exacto. Si es 1 USD, necesitarías 7% de conversión: descartar.
-
-**2. Costo por compra contra lo que entra neto.** Oferta validada = creativos con costo por compra menor a lo que ingresa en la cuenta bancaria.
-
-**3. La señal inequívoca:** *"entra más dinero a tu cuenta del que sale"*, normalmente el primer o segundo día.
+- **No entra gente.** El presupuesto corre y la landing está vacía: es el anuncio. No se toca el funnel.
+- **Entra gente y nadie llega al checkout.** Es la landing o la oferta, no los ads.
+- **Llegan al checkout y no compran.** Precio, medios de pago, pagos rechazados.
+- **Compran:** ahí se compara el **costo por compra contra lo que entra neto**. Oferta validada = creativos con costo por compra menor a lo que ingresa en la cuenta bancaria.
 
 ## Oferta validada ≠ creativo validado
 
@@ -78,7 +77,7 @@ Existe la validación relámpago (3 ventas en 2 horas → directo a Cost Cap), p
 | CPM | Sin número fijo |
 | Frecuencia | No debe dispararse al escalar en frío |
 
-El CPC es la métrica por excelencia: dice si el funnel va a estar en positivo antes de tener ventas. Duplicar el CTR es partir el CPC al medio.
+El CPC es el precio de la pregunta 1: lo que te cuesta traer a cada persona a la landing. Duplicar el CTR es partir el CPC al medio.
 
 **De conversión**
 

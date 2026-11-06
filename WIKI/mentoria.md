@@ -46,7 +46,7 @@ Pedido de Santiago: *"vamos a dividir el módulo de Meta Ads en varios videos"*.
 | # | Video | Qué resuelve | Documento |
 |---|---|---|---|
 | 1 | **Introducción + campañas de testeo** | Que la persona sepa la diferencia entre ABO y CBO y **las dos formas de testear** que tiene | [Claude Doc](https://claude.ai/artifact/TZ8mp6qzBtL4b19HLu214R) · [Google Doc](https://docs.google.com/document/d/1N943ljltNzis4Kpkg930njF4t-imDHm1TQsoIiljTwk/edit) · `OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md` |
-| 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · [Google Doc](https://docs.google.com/document/d/1OMh6K6pX2U6nDaPJaHsZ5gDYiv1C7dAFwsvtTuFWcaU/edit) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
+| 2 | **Cómo leer las métricas** | Cuándo una oferta está validada y cuándo no | [Claude Doc](https://claude.ai/artifact/TRb1YibGiWkMCCWg7pVo8A) · [Google Doc](https://docs.google.com/document/d/1sdeRe8hRzSNtJnUDmZ1MkoLG3G-PIK295OD5SiFwhZo/edit) · `OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md` |
 | 3 | **Campañas de escalado** | Con la oferta validada: Cost Cap, Bid Cap y Pocket | [Claude Doc](https://claude.ai/artifact/MokxS6UHE3HtrbbVaehM3G) · [Google Doc](https://docs.google.com/document/d/1g6miyosUy1R7bzXlE7axYXiANBzcfH7bmXe8ktpdS2c/edit) · `OUTPUTS/2026-11-05-meta-ads-3-escalado.md` |
 
 El orden es deliberado: **no se escala nada antes de saber leer si la oferta está validada**, así que el módulo de métricas va en el medio.
@@ -63,6 +63,16 @@ Corrección de Santiago sobre el primer documento de Meta Ads: *"no podemos deci
 - La wiki **sí** registra la fuente (es el cerebro, no el material de clase): la referencia declarada sigue estando arriba de esta página.
 
 También del 2026-11-05: **el primer documento quedó largo** (*"acortémoslo un poco, tampoco tanto"*). Se bajó de ~1.800 a ~1.100 palabras sin perder un solo número: se cortaron los subtítulos intermedios, los cuadros que repetían lo que ya decía un bullet, los recordatorios duplicados en la lista de errores y la media página de pre-testeo. El criterio: **si un dato ya está en un cuadro, no se vuelve a explicar en prosa.**
+
+## ⭐ Las métricas se explican como preguntas, no como ratios abstractos (corrección del 2026-11-06)
+
+Corrección de Santiago sobre el arranque del documento 2 de Meta Ads: *"haces mucho énfasis en el costo por visita, cuando en realidad lo único que importa es: ¿Está llegando gente a la landing? ¿Están llegando al checkout? ¿Están comprando? ¿Cuánto generamos y cuánto gastamos? Eso es lo que importa, nadie mira el costo por visita."*
+
+- **El marco de lectura de una campaña son esas cuatro preguntas, en ese orden.** Las tres primeras dicen **dónde** está el problema (anuncio → landing/oferta → precio y checkout); la cuarta, **si hay negocio**.
+- **Fuera el "costo por visita" y el "revenue por visita" como marco.** Se sacaron el blockquote de "todo el negocio son dos números", la fórmula en bloque de código y los ejemplos de 0,30 contra 1 USD por visita. Nadie mira ese número en el panel.
+- Las familias de métricas se presentan por **qué pregunta responden**: las de anuncio contestan la 1 (si llega gente y a qué costo), las de conversión la 2 y la 3.
+- El **CPC** se explica como "el precio de la pregunta 1", no como "la métrica por excelencia".
+- **Regla general para todos los módulos:** un KPI se explica diciendo qué pregunta del embudo contesta y qué se arregla si está mal. Un ratio sin pregunta atrás no entra al documento.
 
 ## Módulo 1 — Búsqueda de ofertas ganadoras
 

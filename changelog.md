@@ -1,3 +1,11 @@
+## 2026-11-06 (29ª pasada) — caza del mercado inglés en ingresos extra: ninguna pasó el filtro
+
+- Santiago pidió una investigación de mercado con la skill `cazar`: **mercado inglés, nicho "generar ingresos extra", solo infoproductos low ticket, mínimo 70 ads activos, nada de marcas personales, nada de productos físicos, mínimo 5 ofertas o que no le mande nada**. Y que lo guarde en memoria para no tener que repetirlo.
+- **Resultado: no se manda nada.** ~20 búsquedas angostas por los ejes del nicho (PLR/resell rights, faceless digital marketing, printables de Etsy, Amazon influencer, freight dispatcher, flipping, AI side hustle, encuestas pagas, blueprints de ingreso) y ninguna oferta cumplió los 4 filtros a la vez. Arsenales reales: Prime Finds With Jill 40, Bizzoso 18, Sarah Clarke 13, Sofia Mercado 9, Copy Paste Paid 7, Faceless After Fifty 7, Appisi 4. Los únicos dos de 70+ se caen por otro lado: **Credit Secrets** (77) es reparación de crédito y **SSAcademy** (170) es embudo de high ticket con masterclass gratis.
+- **Reglas nuevas, obligatorias de acá en adelante:** piso de **70 ads** (reemplaza el 40/50 del manual), **mínimo 5 o no se manda nada**, solo infoproducto low ticket y cero marcas personales — los cuatro se aplican **antes** de escribir la shortlist.
+- **Dos hallazgos técnicos de la herramienta:** `page_ids` con `limit: 1` ya devuelve el `estimated_total_count` = arsenal exacto, por ~300 tokens en vez de ~10.000 (la forma correcta de screenear en lote). Y `ads_library_search` solo rankea por relevancia las primeras ~5-10 filas: con keywords amplias se cae a orden por fecha y devuelve ruido de apps de novelas y dramas cortos, así que van frases angostas y literales de 3-4 palabras con `limit: 10-12` y `countries` siempre puesto.
+- Páginas actualizadas: [[caza-de-ofertas]] (filtro madre con el piso de 70 + registro del 06/11 con los dos hallazgos técnicos y la lectura del mercado).
+
 ## 2026-11-05 (28ª pasada) — Meta Ads 1 más corto y los documentos sin atribución
 
 - Santiago, sobre el primer documento: *"te quedó un poco largo. Acortémoslo un poco, tampoco tanto"* y *"no podemos decir como dice Bilbao. Claramente es una mentoría mía… Pongámoslo, pero no aclares eso"*. Después: *"Y hacelo en doc de google drive"*.

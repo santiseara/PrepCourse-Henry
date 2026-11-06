@@ -10,7 +10,8 @@ Es el **paso cero** de la operación, la versión automatizada de [[funnel-hacki
 
 Registro 2026-10-24 — lo pidió explícito al cargar la skill:
 
-- **Low ticket.** Nada de high ticket ni escalera de valor con tickets de 1.000+ USD.
+- **70+ ads activos, mínimo 5 ofertas.** Piso actualizado el 6/11/2026: abajo de 70 ads no entra, y si no junto 5 que pasen, no manda nada (ver el registro del 06/11/2026 al final).
+- **Low ticket.** Nada de high ticket ni escalera de valor con tickets de 1.000+ USD. Solo infoproducto: nada de productos físicos ni servicios.
 - **Que no la vea nadie.** No las comunes, no las obvias, no las básicas que ya están en todos los swipe files. Si la encuentra cualquiera, está quemada.
 - **Sin marca personal.** El activo no puede ser la persona: no es modelable y además pujan por CPAs de 100–200 USD que te revientan los CPM ([[funnel-hacking]]).
 - **Ya escalada o empezando a escalar.** Los dos extremos sirven: el whale probado y el que recién prendió el motor. Lo que no sirve es el tester de hoy.
@@ -327,3 +328,37 @@ Corrección de Santiago, el mismo día: *"no quiero que en las de renda extra me
 `grana extra` sirve de control: trae al mismo winner que había aparecido buscando el oficio (`conserto de celular` → Jeferson Moreira).
 
 **Quemadas por ruido en el nicho dinero (con su número):** `caiu no pix` 186.399 · `depois do expediente` 537.439 · `comece a vender` 372.147 · `aprenda do zero` 296.097 · `complementar a renda` 164.942 · `grupo VIP` 64.128. Todas devuelven comercio local, ecommerce o microdramas.
+
+## Registro 06/11/2026 — el piso sube a 70 ads y "mínimo 5 o no me mandes nada"
+
+Santiago lo pidió explícito al abrir la caza del mercado inglés en ingresos extra. **Reemplaza el filtro de 40/50 ads del manual** en toda caza futura:
+
+- **Piso de 70 ads activos.** Abajo de 70 no entra ni como mención. El 50+ de la skill y el 40+ del manual quedan viejos.
+- **Mínimo 5 ofertas que pasen.** Si junto 2 o 3, **no mando nada**: lo digo y sigo buscando. No se rellena la shortlist.
+- **Solo infoproducto low ticket.** Nada de productos físicos (ni los que venden el físico con un PDF de regalo), nada de servicios, nada de high ticket.
+- **Nada de marcas personales**, como ya estaba: se descarta antes de contar.
+
+Los cuatro filtros se aplican **antes** de escribir la shortlist, no después.
+
+### Hallazgo técnico: cómo contar el arsenal barato
+
+`ads_library_search` con `page_ids: ["<id>"]` y **`limit: 1`** devuelve igual el `estimated_total_count` de la página = el arsenal exacto de ads activos, por ~300 tokens en vez de ~10.000. Es la forma correcta de screenear muchas páginas candidatas de una.
+
+### Hallazgo técnico: la búsqueda se rompe con keywords amplias
+
+La herramienta rankea por relevancia **solo las primeras ~5-10 filas**; después se cae a orden por fecha de creación y devuelve el ruido de los anunciantes que más publican ese día (apps de novelas, dramas cortos, nutra con nombre de persona, el enjambre de India/Nigeria).
+
+- Frases amplias ("make money with AI", "side hustle", "work from home typing jobs", "get paid for online surveys") → **inservibles**, 500.000+ resultados de ruido.
+- Frases angostas y literales de 3-4 palabras ("digital products resell rights" → 330 resultados, "master resell rights" → 190, "faceless digital marketing" → 1.105) → **todas en tema**.
+- Regla operativa: **usar `limit: 10-12` y leer solo las primeras filas**, y tirar muchas búsquedas angostas en vez de pocas amplias.
+- `countries` conviene siempre para el mercado inglés (`["US","CA","GB","AU","NZ"]`): sin filtro, el ruido de India y Nigeria se come la pantalla.
+
+### El mercado inglés de ingresos extra está atomizado (resultado de esta caza)
+
+Barrí ~20 keywords angostas por los ejes del nicho: PLR/resell rights, faceless digital marketing, digital products, printables de Etsy, Amazon influencer, freight dispatcher, flipping/reselling, AI side hustle, encuestas pagas, blueprints de ingreso extra. **Ninguna oferta cumplió los 4 filtros.** Lo que hay:
+
+- Arsenales chicos en todas las páginas-marca del nicho: Bizzoso 18, Sarah Clarke Consulting 13, Appisi 4, Copy Paste Paid 7, Faceless After Fifty 7, Sofia Mercado 9, Prime Finds With Jill 40, Kaizen Marketing Agency 0 (ya pausada).
+- Los dos únicos arsenales de 70+: **Credit Secrets** (77 ads, "This Loophole Still Works in 2026") es reparación de crédito, no ingresos extra; y **SSAcademy** (170 ads, "How I leverage Amazon's 600B infrastructure") es hook de masterclass gratis → embudo de **high ticket**, no low ticket.
+- Lectura: en inglés este nicho lo laburan cientos de operadores chicos de 5-40 ads y marcas personales de coach. Los arsenales de 70+ en low ticket están en nichos de **hobby/oficio** (los que ya trabaja: squishies, autómatas, herrería, barbería), no en "ganá plata online".
+
+**Para la próxima caza de ingresos extra en inglés:** arrancar por footprint de checkout y precio en el texto (como se hace en Brasil con cakto/kirvano), no por la keyword del nicho — y mirar los nichos de oficio con promesa de ingreso en vez de "make money online" genérico.

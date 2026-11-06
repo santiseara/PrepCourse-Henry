@@ -10,7 +10,7 @@ Es el **paso cero** de la operación, la versión automatizada de [[funnel-hacki
 
 Registro 2026-10-24 — lo pidió explícito al cargar la skill:
 
-- **70+ ads activos, mínimo 5 ofertas.** Piso actualizado el 6/11/2026: abajo de 70 ads no entra, y si no junto 5 que pasen, no manda nada (ver el registro del 06/11/2026 al final).
+- **50+ ads activos, mínimo 5 ofertas.** Piso vigente desde el 6/11/2026: primero subió a 70 y el mismo día Santiago lo bajó a 50 ("te voy a bajar un poco la vara") porque con 70 el mercado inglés no devolvía nada. Abajo de 50 no entra, y si no junto 5 que pasen, lo digo (ver los dos registros del 06/11/2026 al final).
 - **Low ticket.** Nada de high ticket ni escalera de valor con tickets de 1.000+ USD. Solo infoproducto: nada de productos físicos ni servicios.
 - **Que no la vea nadie.** No las comunes, no las obvias, no las básicas que ya están en todos los swipe files. Si la encuentra cualquiera, está quemada.
 - **Sin marca personal.** El activo no puede ser la persona: no es modelable y además pujan por CPAs de 100–200 USD que te revientan los CPM ([[funnel-hacking]]).
@@ -333,7 +333,7 @@ Corrección de Santiago, el mismo día: *"no quiero que en las de renda extra me
 
 Santiago lo pidió explícito al abrir la caza del mercado inglés en ingresos extra. **Reemplaza el filtro de 40/50 ads del manual** en toda caza futura:
 
-- **Piso de 70 ads activos.** Abajo de 70 no entra ni como mención. El 50+ de la skill y el 40+ del manual quedan viejos.
+- **Piso de 70 ads activos.** Abajo de 70 no entra ni como mención. El 50+ de la skill y el 40+ del manual quedan viejos. ⚠️ *Corregido el mismo día: el piso final es 50, ver el registro siguiente.*
 - **Mínimo 5 ofertas que pasen.** Si junto 2 o 3, **no mando nada**: lo digo y sigo buscando. No se rellena la shortlist.
 - **Solo infoproducto low ticket.** Nada de productos físicos (ni los que venden el físico con un PDF de regalo), nada de servicios, nada de high ticket.
 - **Nada de marcas personales**, como ya estaba: se descarta antes de contar.
@@ -362,3 +362,40 @@ Barrí ~20 keywords angostas por los ejes del nicho: PLR/resell rights, faceless
 - Lectura: en inglés este nicho lo laburan cientos de operadores chicos de 5-40 ads y marcas personales de coach. Los arsenales de 70+ en low ticket están en nichos de **hobby/oficio** (los que ya trabaja: squishies, autómatas, herrería, barbería), no en "ganá plata online".
 
 **Para la próxima caza de ingresos extra en inglés:** arrancar por footprint de checkout y precio en el texto (como se hace en Brasil con cakto/kirvano), no por la keyword del nicho — y mirar los nichos de oficio con promesa de ingreso en vez de "make money online" genérico.
+
+## Registro 06/11/2026 (b) — la vara baja a 50 y aparecen las dos primeras del mercado inglés
+
+Santiago, el mismo día y después del no-send: *"Te voy a bajar un poco la vara, mínimo 50 ads"*.
+
+**Regla vigente:** el piso es **50 ads activos**. Reemplaza al 70 que había fijado horas antes y coincide con el filtro madre de la skill. Lo demás no se mueve: solo infoproducto low ticket, nada de marcas personales, nada de físico, mínimo 5 ofertas o se avisa.
+
+### Lo que pasó el filtro con 50
+
+| Oferta | Ads | Precio / producto | Veredicto |
+|---|---|---|---|
+| **Emily Makes → cutifystudio.com** | 130 | **$39**, biblioteca de 150.000 SVG con licencia comercial | Pasa limpio |
+| **Tina Ghazi Digital → go.tinaghazi.com** | 142 | **$17**, Canva Crash Course con Master Resell Rights | Pasa, pero la fanpage va con nombre propio |
+
+Adyacentes (low ticket digital, sin promesa de ingreso — nicho hobby, no "ingresos extra"): **The Crochet Nook** 215 ads (bundles de patrones de crochet) y **Master Crafts DIY** 208 ads ("500+ Plans. Every Cut Listed.", biblioteca de planos de carpintería).
+
+### Los 50+ que se cayeron por el otro lado del filtro
+
+- **Alina Bond** — 1.250 ads. Es **Zeely.ai**: app con suscripción, no infoproducto.
+- **30 Second Clients** — 262 ads. Es **Max Tornow**: marca personal + video gratis → high ticket (`smartphonefreedomlifestyle.com`).
+- **Norman Calloway** — 143 ads. Advertoriales de abogado de DUI, fuera de nicho.
+- **Al Crayfish** — 83 ads. Embudo a grupo de WhatsApp por "cursos gratis de IA", sin producto ni checkout.
+- **Highland Growth** — 61 ads, pero la página mezcla ofertas sin relación (hasta un ad en turco). No es la misma oferta.
+- **Credit Secrets** 77 (reparación de crédito) y **SSAcademy** 170 (masterclass gratis → high ticket), ya descartados en el registro anterior.
+
+### El patrón que sí funciona en inglés (lo que hay que modelar)
+
+**Advertorial largo en primera persona → bundle digital de ~$17-$39 con licencia comercial.** El de Cutify Studio es el molde: narradora con nombre y edad ("My name is Sarah. 37, administrative assistant, mom of two"), fecha concreta como ancla, el gasto hundido del equipo que ya compró ($378 de Cricut en el placard), un villano abstracto y nombrable (**"alquilar archivos" vs "tener la biblioteca"**, "there are two kinds of women who own a Cricut"), la cuñada que lo hace bien, la matemática explícita ($39 contra $4,99 por archivo), y el ingreso como consecuencia y no como promesa de tapa (mayo $170, junio $340, julio $510). El producto se vende a hobbistas con máquina parada, no a gente buscando "ganar plata online".
+
+Tina Ghazi corre el otro molde: **MRR como el beneficio principal** — "the smartest $17 you'll ever spend", vendé el curso como tuyo y quedate con el 100%, y encima pone cupón (`CANVA20`) y precio en el texto del ad.
+
+### Cómo buscar la próxima vez (lo que funcionó y lo que no)
+
+- **Funcionó:** frases de producto angostas y literales — `master resell rights digital products`, `sell digital printables on Etsy`, `SVG bundle full commercial license Cricut`, `private label rights ebooks bundle`, `printable planner PLR shop sell your own`, `woodworking plans projects download`. Y una vez que cae uno, buscar los *hermanos* por el patrón del bundle, no por la keyword del nicho.
+- **No funcionó:** cualquier frase de promesa o de precio. `keep 100% of the profit resell rights` (375k), `sell it as your own keep all the profit guide` (1,7M), `read this if you own a` (5,4M), `extra $500 a month from home system` (28k), `sell printables while you sleep passive` (5k) → todas caen en apps de novelas románticas, gyms y nutra. La Library rankea por relevancia solo las primeras filas y después ordena por fecha: con una frase amplia eso es ruido puro.
+- **Confirmado otra vez:** `page_ids` + `limit: 1` da el `estimated_total_count` exacto por ~300 tokens. Es la única forma sana de contar arsenales en serie.
+- **Ojo con el conteo:** la UI web de la Library filtra por país (muestra "~83 resultados" para Tina Ghazi con country=AR) mientras la API sin `countries` da el total mundial (142). El número que vale para el filtro es el de la API.

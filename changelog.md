@@ -1,3 +1,15 @@
+## 2026-11-06 (30ª pasada) — la vara baja a 50 ads: dos ofertas del mercado inglés pasan el filtro
+
+- Santiago, después del no-send de la pasada anterior: **"Te voy a bajar un poco la vara, mínimo 50 ads"**. El piso queda en **50 ads activos** y reemplaza al 70 que había fijado horas antes. El resto del filtro no se mueve: solo infoproducto low ticket, nada de marcas personales, nada de físico, mínimo 5 ofertas o se avisa.
+- **Pasan con 50:** **Emily Makes → cutifystudio.com** (130 ads, **$39**, biblioteca de 150.000 SVG con licencia comercial, advertorial largo con el ingreso de Etsy como consecuencia) y **Tina Ghazi Digital** (142 ads, **$17**, Canva Crash Course con Master Resell Rights, corriendo desde julio 2026; la fanpage va con nombre propio, eso queda avisado).
+- **Adyacentes** (low ticket digital pero nicho hobby, sin promesa de ingreso): The Crochet Nook 215 ads, Master Crafts DIY 208 ads.
+- **Se cayeron por el otro lado del filtro, aun con arsenal grande:** Alina Bond 1.250 ads (es Zeely.ai, app con suscripción), 30 Second Clients 262 (Max Tornow: marca personal → high ticket), Norman Calloway 143 (advertoriales de abogado de DUI), Al Crayfish 83 (embudo a grupo de WhatsApp sin producto), Highland Growth 61 (página con ofertas mezcladas).
+- **Medidos y abajo de 50:** Entrepedia 36, PLR Printables Store 30, PodFriendly 19, UGC Creator Accelerator 15, Prime Finds With Jill 40, Winclip 13, Bhs2020 12, Razvan Paraschiv 11, Work Beyond 9 to 5 11, AI Accelerator System 10, DigitalOriginal 10, Woodworthy 7, Nancy Badillo 6, Bob's Woodworking 6, Career Opportunity Network 6, Wood Atlas Plans 5, Woodplanshop 5, American Talent Network 4, AI Tool Report 4, Planning Made Personal 4, Kaizen Marketing Agency 3, Wonderheets 3, Intentionally Elevated 3, Craft By Melanie Smith 2, Hiring Team USA 2, Arlette S.Digital 2, Lunabloomcreative 1, Bloom Digital Products 1, Clickstoincome 1, Stars Crafts Designs 1.
+- **El molde que hay que modelar** (anotado en la WIKI): advertorial largo en primera persona → bundle digital de $17-$39 con licencia comercial, vendido a hobbistas con la máquina parada, no a gente buscando "ganar plata online". Villano abstracto nombrable ("alquilar archivos" vs "tener la biblioteca"), gasto hundido del equipo, matemática explícita, y el ingreso como consecuencia.
+- **Hallazgo de búsqueda:** las frases de promesa y de precio (`keep 100% of the profit`, `read this if you own a`, `extra $500 a month`) devuelven entre 5.000 y 5.400.000 resultados de apps de novelas y gyms. Solo sirven las frases de **producto** angostas, y después buscar los hermanos por el patrón del bundle.
+
+Páginas actualizadas: [[caza-de-ofertas]]
+
 ## 2026-11-06 (29ª pasada) — caza del mercado inglés en ingresos extra: ninguna pasó el filtro
 
 - Santiago pidió una investigación de mercado con la skill `cazar`: **mercado inglés, nicho "generar ingresos extra", solo infoproductos low ticket, mínimo 70 ads activos, nada de marcas personales, nada de productos físicos, mínimo 5 ofertas o que no le mande nada**. Y que lo guarde en memoria para no tener que repetirlo.

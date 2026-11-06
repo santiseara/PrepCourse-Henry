@@ -1,3 +1,9 @@
+## 2026-11-06 (37ª pasada) — A Tu Medida: descripción para ads
+
+- Descripción única para los 6 videos de [[arreglos-de-ropa]], al estilo de Stitched Fits (un solo copy para toda la flota).
+- Entregada primero en 330 palabras y rehecha en **152** a pedido de Santiago: *"más corta, más optimizada"*. Quedó como regla en [[guiones-y-anuncios]]: la descripción para ads es corta por defecto; las 900-1.200 palabras son el storytime UGC de una native, no el primary text de un video.
+- `OUTPUTS/2026-11-06-descripcion-ads-a-tu-medida.md` y `~/Desktop/arreglos-de-ropa/anuncios/descripcion-ads.txt`.
+
 ## 2026-11-06 (36ª pasada) — Cámaras frigoríficas: los 6 ads de voz en off
 
 - Santiago eligió **los 6 con voz en off**, no con avatar. Se produjo la tanda entera de [[camaras-frigorificas]]: 6 videos de **32,8 a 37,6 s**, en el rango del ganador.

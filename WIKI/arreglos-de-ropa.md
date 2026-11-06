@@ -62,6 +62,9 @@
 - **Cama musical: `music.py` (118 BPM, con bombo).** Santiago, al ver la tanda: *"no pongas mas esa musica, necesito una musica mas activa"*. La cama de los autómatas es un pad sin pulso (4,5 % de graves); la de `music.py`, la misma que corre en [[scented-stones]] y [[atlas-cortes]], tiene **78 % de graves** y bombo marcado. En el mix final la tanda pasó de 2 % a 17 % de graves sin subir el volumen general.
 - Editor nuevo `edit_arreglos.py`: subtítulos en **itálica** con la palabra activa dentro de una **caja de color** (un color por creativo: rosa, magenta, celeste, amarillo, violeta, verde), sin caja de hook y sin placa final.
 
+## Descripción para ads (2026-11-06)
+Una sola para los 6 videos, como hace Stitched Fits con sus ~340 ads. Abre por el mecanismo (*coser y arreglar son dos habilidades distintas*), 3 bullets de lo que aprende, los entregables y los 3 bonos en una línea cada uno, la comparación con la modista sin cifras y CTA a Más información. **152 palabras**, sin precio. En `OUTPUTS/2026-11-06-descripcion-ads-a-tu-medida.md` y en `~/Desktop/arreglos-de-ropa/anuncios/descripcion-ads.txt`.
+
 ## Preguntas abiertas
 - Faltan los **3 videos de testimonio** (9:16) que la landing tiene reservados.
 - ¿Se graban las 9 clases y los +25 videos, o se arma otro entregable?

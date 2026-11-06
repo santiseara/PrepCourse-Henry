@@ -1,3 +1,12 @@
+## 2026-11-06 (34ª pasada) — Tu Primer Autómata de Madera: la tanda inglesa clonada a Argentina
+
+- Pedido de Santiago: **"quiero que me hagas, exactamente los mismos ads, pero para argentina, todo igual"**. Se clonó entera la tanda del 5/11 de [[orzzen-automatas]] al mercado argentino, sin tocar la estructura: mismos 6 guiones (la versión ES que ya estaba escrita), mismo pool de TikToks, mismos seeds, mismos primeros planos y mismo color de subtítulo por creativo.
+- **Voces:** Orus por API con Style rioplatense (voseo), el guion 2 a dos voces con Sulafat. Las 6 salieron con `gemini-2.5-flash-preview-tts`. Acento verificado con Gemini sobre V1 y V2: español argentino, voseo auténtico, sin leer instrucciones de estilo. De paso: `gemini-2.5-flash` ya no está disponible para la clave, el verificador ahora usa `gemini-3.8-flash`.
+- **Scripts nuevos:** `OUTPUTS/scripts-vsl/gfx_automata_ar.py` (los 5 inserts con todos los textos en español) y `OUTPUTS/scripts-vsl/gen_automata_plans_ar.py` (`lang='es'`, anchors en la palabra española, botón `QUIERO EMPEZAR`, chips traducidos).
+- **Entrega:** `~/Desktop/wooden-automaton/anuncios/videos-ar/6-11 - 1..6.mp4` (24,6 a 33,7 s), más `OUTPUTS/2026-11-06-guiones-automatas-argentina.md` y `OUTPUTS/2026-11-06-descripcion-ads-automatas-argentina.md` (un solo copy para los 6, el mismo de la tanda inglesa en español).
+- **Avisado:** Orzzen corre en Argentina, así que esta tanda compite de frente contra el dueño de la oferta, con sus guiones y su prueba social. Queda anotado en la wiki junto a los dos defectos que se replicaron a propósito (el anchor de la app que choca en el guion 3 y el cartel de precios en libras del clip del cerdo volador).
+- **Wiki:** `orzzen-automatas` con la sección "Tanda 2 — Argentina (6/11)" y las fuentes nuevas; `index` con los dos outputs.
+
 ## 2026-11-06 (33ª pasada) — el surfeo es duplicar cada 2 horas, y las CBO no son estructuras de escalado
 
 - Corrección de Santiago, con captura del documento 3 a la vista: **"esto está mal, las cbo de Santi no son de escalado. La única cbo son las pocket. El surfeo es duplicar presupuestos cada 2 horas, nada más."**

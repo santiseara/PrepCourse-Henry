@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-05.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-06.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -125,6 +125,8 @@
 - [2026-11-05 — Habilidades Perdidas: 6 ads del competidor pasados a español neutro](../OUTPUTS/2026-11-05-guiones-habilidades-perdidas-es.md) — los 6 creativos sin presentador, con el subtítulo inglés borrado por inpaint + blur, carteles tapados y voz Orus calzada al largo exacto; los 6 guiones listos para copiar · ver [[habilidades-perdidas]]
 - `OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md` — 6 guiones EN/ES de [[orzzen-automatas]] para el mercado inglés.
 - [2026-11-05 — Your First Wooden Automaton: descripción para ads](../OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md) — un solo copy EN + ES para los 6 videos: el golpe de "es madera y no tiene motor", la app simuladora, los +20 mecanismos, +1.400 compradores y CTA a Más información · ver [[orzzen-automatas]]
+- [2026-11-06 — Tu Primer Autómata de Madera: los 6 ads clonados a Argentina](../OUTPUTS/2026-11-06-guiones-automatas-argentina.md) — la tanda inglesa entera pasada a español rioplatense: mismos guiones, mismo pool, mismos seeds, voz Orus con voseo verificado e inserts traducidos · ver [[orzzen-automatas]]
+- [2026-11-06 — Tu Primer Autómata de Madera: descripción para ads (Argentina)](../OUTPUTS/2026-11-06-descripcion-ads-automatas-argentina.md) — un solo copy para los 6 videos, el mismo de la tanda inglesa en su versión en español · ver [[orzzen-automatas]]
 - [2026-11-05 — The Lost Skills of Independence: radiografía y plan para LATAM](../OUTPUTS/2026-11-05-analisis-lost-skills-of-independence.md) — 722 ads, un solo copy (735 de 874), el video ganador resubido 8 veces con 12 copias, los 5 formatos, el checkout de US$ 39 y la versión en español que ya corre a US$ 21,90 · 6 videos propuestos y el plan país por país · ver [[habilidades-perdidas]]
 - [2026-11-05 — Caza Brasil: keywords ocultas de emagrecimento y renda extra](../OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md) — 20 keywords validadas una por una (10 + 10), las 11 que no sirven, una ballena de 132 ads en drenaje, la flota de cuidador de idosos y un set aparte de 20 para que busque Santiago · ver [[caza-de-ofertas]]
 - [2026-11-05 — Tai Chi Fit: descripción para ads](../OUTPUTS/2026-11-05-descripcion-ads-tai-chi-fit.md) — una sola para toda la tanda: el método de 400 años en 10 minutos descalza, "tu raíz", las tres fases y el test gratis de 1 minuto · ver [[tai-chi-fit]]

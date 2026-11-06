@@ -42,6 +42,17 @@ Dos cosas que el editor obligó a resolver:
 - **Los inserts necesitan margen.** El zoom de las fotos fijas va de 1.0 a 1.14 más un golpe de 1.16 en cada corte: un gráfico de 1080×1920 justo pierde la cabecera y el pie. Se entregan sobre un lienzo **1.20×** con el sobrante desenfocado. Con 1.41× entraban enteros pero quedaban ilegibles en el teléfono.
 - **El cierre se fuerza, no se ancla.** Anclar la tapa a la palabra del CTA no alcanza: en los videos largos entran planos después y el botón queda sobre un clip cualquiera. Se agregó `last` al plan, que fija el clip del último plano.
 
+## Tanda 2 — Argentina (6/11): los mismos 6 ads, en español
+Santiago: *"quiero que me hagas, exactamente los mismos ads, pero para argentina, todo igual"*. Se clonó la tanda inglesa entera, sin cambiar nada de la estructura: **mismos 6 guiones** (la versión ES que ya estaba escrita, traducción exacta de los del competidor), **mismo pool de TikToks, mismos seeds, mismos primeros planos y mismo color de subtítulo por creativo**. Lo único que cambia es el idioma.
+- **Voz:** Orus por API con un Style rioplatense (hombre argentino de unos 40, voseo); el guion 2 a dos voces (Orus + Sulafat) con `tts_gemini_multi.py`. Las 6 salieron con `gemini-2.5-flash-preview-tts`, sin 429 esta vez. Acento **verificado** con Gemini sobre V1 y V2: *"español argentino (rioplatense), voseo auténtico, no lee instrucciones de estilo"*.
+- **Inserts en español** (`gfx_automata_ar.py`): la tapa pasa a *TU PRIMER AUTÓMATA · EBOOK PRINCIPAL*, la hoja a *PROYECTO A-02 · PÁJARO CON ALAS* con la *LISTA DE CORTE*, *BIBLIOTECA DE MECANISMOS* (leva y seguidor, manivela y varilla, leva caracol, par de engranajes, rueda excéntrica, escuadra), *LAS 6 FASES DEL ARMADO* y la app simuladora con *MEDIDAS PARA TU MADERA*.
+- **Botón del cierre:** `QUIERO EMPEZAR`. Chips traducidos (+1.400 primeros autómatas, fotos · planos · paso a paso, etc.).
+- **Planes:** `gen_automata_plans_ar.py` (copia del inglés con `lang='es'` y los anchors cambiados a la palabra española: tecnicismos → las 6 fases, ilustraciones/planos → la hoja de planos, app/videos → la app, conectarlo/mecanismos → la biblioteca).
+- **Duraciones:** 24,6 a 33,7 s. Entrega en `~/Desktop/wooden-automaton/anuncios/videos-ar/` como `6-11 - 1` a `6-11 - 6`; el trabajo intermedio en `work-ar/` (con symlinks a `tiktoks/`, `fonts/` y `music/` de la tanda inglesa, para no duplicar los clips).
+- **Descripción:** la misma de la tanda inglesa en su versión ES, un solo copy para los 6.
+- ⚠️ **Dos cosas quedaron igual que en inglés a propósito:** en el guion 3 el anchor de la app choca con el de los planos (misma frase) y se ignora, así que ese video muestra un insert y no dos; y el clip del cerdo volador trae un cartel de precios en libras quemado abajo a la izquierda, que en Argentina se lee raro.
+- 🏴 **Lo que hay que mirar antes de gastar:** Orzzen **corre en Argentina**, es su mercado. Esta tanda compite de frente contra el dueño de la oferta, con sus guiones y con su prueba social (+1.400 compradores y 4.9★ son de ellos). El arbitraje de [[caza-de-ofertas]] es espiar en el mercado fuente y lanzar en el destino; acá fuente y destino son el mismo.
+
 ### La descripción del ad (5/11)
 Un **solo copy para los 6 videos**, igual que hace Orzzen con sus 32 ads (ellos testean creativo, no copy). Molde de oferta directa en inglés: golpe en la primera línea (*"It's wood. No motor, no battery, no electronics"*), bullets de mecanismo, entregables con nombre (app simuladora, +20 mecanismos, 18 lecciones, los proyectos), prueba social +1.400 y 4.9★, garantía de 30 días y acceso de por vida, un solo pago **sin precio**, CTA *Tap Learn More* con la promesa de tiempo (5 a 7 días, 1 a 2 h por día). Las dos versiones completas en `OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md`.
 
@@ -68,4 +79,6 @@ Un **solo copy para los 6 videos**, igual que hace Orzzen con sus 32 ads (ellos 
 - Landing `orzzen.impultienda.ar`
 - OUTPUTS/2026-11-05-guiones-orzzen-automatas-ingles.md
 - OUTPUTS/2026-11-05-descripcion-ads-wooden-automaton.md
+- OUTPUTS/2026-11-06-guiones-automatas-argentina.md · OUTPUTS/2026-11-06-descripcion-ads-automatas-argentina.md
+- OUTPUTS/scripts-vsl/gen_automata_plans_ar.py · OUTPUTS/scripts-vsl/gfx_automata_ar.py
 - OUTPUTS/scripts-vsl/gen_automata_plans.py · OUTPUTS/scripts-vsl/edit_automata.py · OUTPUTS/scripts-vsl/tts_gemini_multi.py

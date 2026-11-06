@@ -1,3 +1,14 @@
+## 2026-11-06 (36ª pasada) — Cámaras frigoríficas: los 6 ads de voz en off
+
+- Santiago eligió **los 6 con voz en off**, no con avatar. Se produjo la tanda entera de [[camaras-frigorificas]]: 6 videos de **32,8 a 37,6 s**, en el rango del ganador.
+- **Voces:** Orus por API con Style de técnico estadounidense, las 6 verificadas con Whisper contra el guion. V6 dio 429 y salió al reintentar con el mismo modelo, sin pasar al de reemplazo.
+- **B-roll:** 39 clips bajados con tikwm de los tags del producto y del oficio; **13 sobrevivieron** a la revisión. Se cayeron el explicador CGI de TXV (subtitulado entero), el cold room con el precio quemado, `#atlascool` (marca de agua) y un root cellar subtitulado. `#hvacrlife` no sirvió: puro meme y cara a cámara.
+- **Scripts nuevos:** `OUTPUTS/scripts-vsl/gfx_walkin.py` (tapa, lámina del ciclo de refrigeración y tarjeta de oferta, dibujadas con la landing real en la mano y sin precio) y `OUTPUTS/scripts-vsl/gen_walkin_plans.py`. El montaje reusa `edit_arreglos.py` con `lang='en'`.
+- **Un color de caja de subtítulo por creativo** (amarillo, verde, celeste, naranja, magenta, rojo), sin caja de hook ni placa final, cierre siempre sobre la tarjeta de oferta.
+- ⚠️ Se coló un cartel azul de 0,5 s al arranque de un clip de fábrica que la hoja de contactos de 1,5 s no mostró. Se corrigió la ventana y se re-renderizó la tanda completa.
+- Entrega en `~/Desktop/walk-in-coolers-freezers/anuncios/` como `6-11 - 1` a `6-11 - 6`, un archivo por pieza.
+- Pendiente: la descripción para ads y definir países y presupuesto.
+
 ## 2026-11-06 (35ª pasada) — Cámaras frigoríficas: el manual visual al mercado inglés
 
 - Pedido de Santiago: anuncios para `visual-handbook-of-walk-in-coolers-freezers.impultienda.ar` modelando al competidor español `camaras-frigarificas.impultienda.ar`, **sin bajar todo** y usando **los 7 pasos del segundo cerebro**.

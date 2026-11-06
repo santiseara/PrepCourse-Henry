@@ -41,8 +41,20 @@ Rechazar trabajos de cámara por no saber por dónde empezar · no poder calcula
 - **Voz: Orus** (hombre), la fija de [[como-trabajar-con-santiago]].
 - Entregados en `OUTPUTS/2026-11-06-guiones-camaras-frigorificas-ingles.md` y en `~/Desktop/walk-in-coolers-freezers/anuncios/`.
 
+## La tanda 1 de videos (6/11) — los 6 de voz en off
+Santiago eligió **los 6 con voz en off + b-roll de TikTok** (la mitad b-roll del ganador), no avatar.
+
+- **Voz Orus** por API (`tts_gemini.py`, `gemini-2.5-flash-preview-tts`) con un Style de técnico estadounidense de 40 y pico hablándole a otro técnico en la obra. Las 6 verificadas con Whisper contra el guion: sin errores de lectura. **V6 dio 429 en la primera vuelta y salió bien al reintentar con el mismo modelo**, así que antes de saltar al modelo de reemplazo conviene reintentar.
+- **13 clips** de TikTok, bajados con tikwm de los tags del producto (`#walkincooler`, `#walkinfreezer`, `#coldroom`) y del oficio (`#refrigerationtech`): interior de cámara con mercadería, timelapses de armado de paneles, búsqueda de fugas, instalación de evaporador y condensadora, cold storage grande, rack de supermercado cargando 404A, deshielo con soplete, limpieza de condensador sucio, sala de máquinas.
+- **Descartados por texto quemado:** el explicador CGI de TXV (subtitulado de punta a punta), el cold room chino con el precio en pantalla, `#atlascool` (marca de agua en todos los cuadros) y un clip de root cellar con subtítulos completos. De `#hvacrlife` no salió nada: es puro meme y cara a cámara.
+- **Edición:** subtítulo de 3 palabras en itálica con la palabra activa adentro de una caja de color, **un color por creativo** (amarillo, verde, celeste, naranja, magenta, rojo), sin caja de hook y sin placa final, `speed 1.30`, `silence [0.26, 0.12]`, cortes de 1,9 a 2,9 s y la cama `bed_activo` a -8. Reusa `edit_arreglos.py` con `lang='en'`.
+- **Inserts de producto** dibujados por código (`gfx_walkin.py`, con la landing real en la mano): tapa del manual, lámina interior del ciclo de refrigeración y tarjeta de oferta. **Sin precio.** La tapa se ancla donde el guion dice "handbook", la lámina donde nombra una página o un módulo, y la tarjeta cierra siempre.
+- **Largo: 32,8 a 37,6 s**, justo en el rango del ganador (18 a 38 s).
+- Entregados en `~/Desktop/walk-in-coolers-freezers/anuncios/` como `6-11 - 1` a `6-11 - 6`.
+- ⚠️ **Registro del 6/11:** el clip de la fábrica china (`7657470569218166046`) abre con un cartel azul de especificaciones que **dura 0,5 s**: no apareció en la hoja de contactos de 1,5 s y se coló en el render del V2. Confirma la regla del 5/11 ([[guiones-y-anuncios]]): los bordes de la ventana se verifican con cuadros cada 0,5 s. Se arregló moviendo el arranque de la ventana a 1,0 s y re-renderizando la tanda entera.
+
 ## Preguntas abiertas
-- ¿Con qué formato se produce la tanda? El ganador reparte 4 b-roll / 3 avatar / 1 híbrido, así que las dos opciones están validadas por él. Propuesta: **4 con voz en off + b-roll de TikTok** (donde está afilado nuestro pipeline) y **2 con avatar de HeyGen Avatar IV** a fondo fijo y sin subtítulos. Los 6 guiones sirven para cualquiera de los dos.
+- Falta la **descripción para ads** (el ganador usa un solo primary text para sus 72 anuncios).
 - Falta decidir países y presupuesto del testeo.
 
 ## Relacionado

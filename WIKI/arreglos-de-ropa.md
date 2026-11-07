@@ -122,6 +122,17 @@ línea), con estructura, bajada de producto y cierre propios, sin una frase repe
   el V8 no tomó un solo plano de la tanda 1.
 - Subtítulos de **4 palabras** (la tanda 1 iba en 3) y tres colores de caja nuevos: **naranja, rojo,
   turquesa**. Generador: `gen_arreglos_plans_v2.py`.
+- **Los 3 videos:** `~/Desktop/arreglos-de-ropa/anuncios/videos/7-11 - 1.mp4` a `7-11 - 3.mp4`
+  (61,2 s · 53,5 s · 53,0 s). El V7 se armó **entero** con el material nuevo; el V8 y el V9 lo mezclan
+  con los clips validados de la tanda 1 (mujeres probándose ropa), que es lo que les da el equilibrio.
+- **Tres clips se cayeron en la revisión del render**, no en la del pool: uno con la marca "charr Riss"
+  al medio-derecha (el `zoom` solo recorta los bordes, no sirve para una marca centrada), uno donde el
+  creador —hombre— entra en cuadro de cuerpo entero (la oferta le habla a una mujer) y un primer plano
+  de escote sobre piel, por riesgo de rechazo en Meta. Quedaron 7 clips nuevos de los 11.
+- **El hook del V7 se reescribió por la voz:** decía *"y está apagada"* y la TTS —y Whisper, con dos
+  modelos— lo leía *"está pagada"*. En castellano la sinalefa los vuelve homófonos y el hook significaba
+  lo contrario. Regla: si una palabra del hook se puede oír como otra que cambia el sentido, se cambia
+  la palabra, no se discute con la voz.
 - `OUTPUTS/2026-11-07-guiones-a-tu-medida-v7-v9.md` · `OUTPUTS/2026-11-07-lectura-tanda-1-a-tu-medida.md`
 
 ## Preguntas abiertas

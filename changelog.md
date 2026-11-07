@@ -9,6 +9,8 @@
 - Subtítulos de **4 palabras** (antes 3) y tres colores de caja nuevos: naranja, rojo, turquesa. Script nuevo: `OUTPUTS/scripts-vsl/gen_arreglos_plans_v2.py`.
 - **Voz Sulafat** por API, `gemini-2.5-flash-preview-tts`, las tres verificadas con Whisper. El hook del V7 se reescribió: la TTS decía "está apagada" y Whisper (small y medium) leía "está pagada" — en castellano la sinalefa los vuelve homófonos y el hook significaba lo contrario. Quedó "Está tapada con una funda, en un rincón".
 - Nuevo: `OUTPUTS/2026-11-07-lectura-tanda-1-a-tu-medida.md` · `OUTPUTS/2026-11-07-guiones-a-tu-medida-v7-v9.md`. Actualizado: `WIKI/arreglos-de-ropa.md`, `WIKI/guiones-y-anuncios.md` (4 reglas nuevas) y `WIKI/index.md`.
+- **Entrega:** `~/Desktop/arreglos-de-ropa/anuncios/videos/7-11 - 1.mp4` a `7-11 - 3.mp4` (61,2 · 53,5 · 53,0 s), un archivo por pieza.
+- **Tres clips se cayeron en la revisión del render**, no en la del pool: marca de agua al medio-derecha (el zoom solo recorta bordes), el creador hombre de cuerpo entero en una oferta de avatar mujer, y un primer plano de escote sobre piel por riesgo de rechazo en Meta. Dos reglas nuevas en [[guiones-y-anuncios]].
 - Pendiente: decidir si se cortan los cuatro conjuntos en cero antes de llegar al corte sano de ~$28, y subirle presupuesto al CJTO 3.
 
 ## 2026-11-06 (38ª pasada) — DanceGo: radiografía del original y tanda 1 de 3 ads

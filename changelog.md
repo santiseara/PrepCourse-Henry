@@ -1,3 +1,16 @@
+## 2026-11-07 (39ª pasada) — A Tu Medida: lectura de la tanda 1 y 3 renovaciones
+
+- Pedido de Santiago, con la captura de los 6 conjuntos: *"hace un análisis profundo, y hagamos las renovaciones… ahí vas a poder ver qué videos están funcionando y cuáles no, para que no repitamos los mismos errores"*.
+- **Lectura:** $43,01 de gasto, 4 ventas, ROAS total 1,26, ticket real US$ 14,38. Gana el **CJTO 3 (G5, la cuenta de la modista)** con 3 ventas, CPA $3,82 y **ROAS 3,77**; segundo el CJTO 1 (G2, el cuerpo real) con 1 venta y ROAS 1,94. Los otros cuatro, cero.
+- **El hallazgo:** los dos que vendieron **califican al avatar y nombran la plata que ya se está yendo en la primera frase**. Y el mecanismo que Stitched Fits usa en 10 de sus 12 mejores ads ("coser y arreglar son dos habilidades distintas") es el eje de los **tres guiones que vendieron cero** ($19,29 juntos): en AR funciona como giro en el medio, no como hook.
+- **Honestidad del dato:** con un CPA real de $10,75, un conjunto sano tiene ~54% de chances de no vender nada con $6 de gasto, y el corte sano son ~$28. Los ceros son direccionales, no una condena ([[lectura-de-resultados]]).
+- **Tanda 2 entregada:** V7 la máquina apagada · V8 el placard de plata muerta · V9 el arreglo que pagás a ciegas. Mismo eje ganador, calificador en la primera línea, y estructura, bajada de producto y cierre propios, sin una frase repetida entre ellas ni con el ganador.
+- **Estética nueva sin bajar un clip:** se revisaron los 112 del banco. Los 44 de `#clothingalterations` dieron **1 limpio de 44** (thrift-flippers con texto quemado); los 68 sin usar de `#hemming` y `#bridalalterations` dieron **11 limpios**, con los dos bordes de cada ventana verificados a 0,5 s. Como `usage.json` penaliza por uso, los videos se armaron casi enteros con material nuevo (el V8, entero).
+- Subtítulos de **4 palabras** (antes 3) y tres colores de caja nuevos: naranja, rojo, turquesa. Script nuevo: `OUTPUTS/scripts-vsl/gen_arreglos_plans_v2.py`.
+- **Voz Sulafat** por API, `gemini-2.5-flash-preview-tts`, las tres verificadas con Whisper. El hook del V7 se reescribió: la TTS decía "está apagada" y Whisper (small y medium) leía "está pagada" — en castellano la sinalefa los vuelve homófonos y el hook significaba lo contrario. Quedó "Está tapada con una funda, en un rincón".
+- Nuevo: `OUTPUTS/2026-11-07-lectura-tanda-1-a-tu-medida.md` · `OUTPUTS/2026-11-07-guiones-a-tu-medida-v7-v9.md`. Actualizado: `WIKI/arreglos-de-ropa.md`, `WIKI/guiones-y-anuncios.md` (4 reglas nuevas) y `WIKI/index.md`.
+- Pendiente: decidir si se cortan los cuatro conjuntos en cero antes de llegar al corte sano de ~$28, y subirle presupuesto al CJTO 3.
+
 ## 2026-11-06 (38ª pasada) — DanceGo: radiografía del original y tanda 1 de 3 ads
 
 - Pedido de Santiago: *"metete a la página de Go, la original, fijate el estilo de video que están haciendo y hagamos variables… tres renovaciones siguiendo los patrones ganadores del original"*.

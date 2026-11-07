@@ -74,6 +74,56 @@ Los 6 ads usan **el mismo pool**: lo que cambia es el seed del orden de cortes, 
 Las cuentas que más aportaron: **@natalie.adrienne** (3 clips), **@lavenderneedle** (3, bridal) y **@tonightsew** (2, ruedos).
 En `work/tiktoks/` quedaron **133 clips bajados**; 21 entraron al corte y 112 son banco para la próxima tanda.
 
+## Lectura de la tanda 1 (2026-11-07)
+
+$43,01 de gasto, **4 ventas**, ROAS total **1,26**. Ticket real **US$ 14,38**. El reparto por conjunto:
+
+| CJTO | Guion | Ángulo | Gasto | Ventas | CPA | ROAS |
+|---|---|---|---|---|---|---|
+| 3 | G5 | **Pagás dos veces la misma ropa** (la cuenta de la modista) | $11,45 | **3** | **$3,82** | **3,77** |
+| 1 | G2 | Tu cuerpo real / la ropa que no te queda | $5,63 | 1 | $5,63 | 1,94 |
+| 2 | G6 | Tres razones para NO entrar | $6,89 | 0 | — | — |
+| 4 | G3 | La presión de los demás | $5,98 | 0 | — | — |
+| 5 | G4 | Bizop: ingreso desde casa | $6,64 | 0 | — | — |
+| 6 | G1 | Brecha de habilidad + objeción YouTube | $6,42 | 0 | — | — |
+
+- **Gana la plata que ya se está yendo, no la identidad.** Los dos únicos que vendieron abren con una
+  pérdida concreta (la cuenta de la modista; la ropa que ya pagaste y no usás). Los cuatro ceros abren
+  por habilidades, por los demás o por plata nueva.
+- ⚠️ **El mecanismo del competidor inglés no vendió acá.** *"Coser y arreglar son dos habilidades
+  completamente distintas"* está en 10 de los 12 mejores ads de Stitched Fits. Los tres guiones que la
+  usan como **eje** (G1, G3, G6) gastaron $19,29 juntos y vendieron **cero**. En UK el avatar "ya sé
+  coser" es masivo; en AR esa frase abre con un reproche de identidad y le habla a un público chico.
+  **Como giro en el medio del guion sí funciona** — el ganador la usa, pero recién al final.
+- **Los dos que vendieron califican en la primera frase:** nombran el filtro (la máquina, los años
+  cosiendo) **y** la pérdida de plata en la misma línea. Los que no vendieron, o no filtran (G6), o
+  filtran tarde (G3), o filtran acusando (G1), o prometen trabajo en vez de ahorro (G4).
+- **La cifra en pesos no molestó.** La wiki decía que los números de esta familia van como proporción.
+  El ganador dice *"ocho mil pesos"* **dos veces** y es el que mejor convierte: la cifra concreta es lo
+  que hace creíble la cuenta. Se usa **una sola cifra por guion**.
+- **Honestidad del dato:** con un CPA real de $10,75, la probabilidad de que un conjunto sano no venda
+  nada con $6 de gasto es ~54%. El corte sano son ~2 veces el ticket (**~$28**) y ninguno llegó. Los
+  ceros son direccionales, no una condena ([[lectura-de-resultados]]).
+
+## Tanda 2 — 3 renovaciones (2026-11-07)
+
+Tres variables sobre la DNA del ganador (eje: **plata que ya se está yendo**, calificador en la primera
+línea), con estructura, bajada de producto y cierre propios, sin una frase repetida entre ellas:
+**V7** la máquina apagada (tenés una modista adentro de tu casa y la usás para cortinas) ·
+**V8** el placard de plata muerta (lo más caro de tu casa no es la máquina, es la ropa sana que no te ponés) ·
+**V9** el arreglo que pagás a ciegas (el problema de la modista no es el precio, es que no la podés revisar).
+
+- **Estética nueva sin bajar un clip:** se revisaron los **112 clips de banco**. Los 44 de
+  `#clothingalterations` que habían quedado afuera son todos thrift-flippers con texto quemado
+  (confirmado con hoja de contactos: 1 limpio de 44). Los que sí rindieron son los **68 sin usar de
+  `#hemming` y `#bridalalterations`**: salieron **11 clips limpios** (8 de ruedos con máquina
+  industrial, 2 de bridal, 1 de un top achicado), con los dos bordes de cada ventana verificados a 0,5 s.
+- Como `usage.json` penaliza por uso, los tres videos se armaron **casi enteros con el material nuevo**:
+  el V8 no tomó un solo plano de la tanda 1.
+- Subtítulos de **4 palabras** (la tanda 1 iba en 3) y tres colores de caja nuevos: **naranja, rojo,
+  turquesa**. Generador: `gen_arreglos_plans_v2.py`.
+- `OUTPUTS/2026-11-07-guiones-a-tu-medida-v7-v9.md` · `OUTPUTS/2026-11-07-lectura-tanda-1-a-tu-medida.md`
+
 ## Preguntas abiertas
 - Faltan los **3 videos de testimonio** (9:16) que la landing tiene reservados.
 - ¿Se graban las 9 clases y los +25 videos, o se arma otro entregable?

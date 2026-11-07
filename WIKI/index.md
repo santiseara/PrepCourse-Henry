@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-06.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-07.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -116,6 +116,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-07 — A Tu Medida: las visuales de la tanda 1, con links de TikTok](../OUTPUTS/2026-11-07-visuales-tiktok-a-tu-medida.md) — los 21 clips del pool con cuenta, link, qué se ve y tramos usados (13 arreglos + 6 bridal + 2 ruedos) y los 2 insertos de producto, para pasárselo al socio · ver [[arreglos-de-ropa]]
 - [2026-11-06 — DanceGo: radiografía de los ads del original + tanda 1 de 3](../OUTPUTS/2026-11-06-guiones-dancego.md) — ballena de 31 ads con 4 creativos vivos desde enero, un solo guion repetido palabra por palabra y 4 formatos en paralelo; 3 renovaciones de voz en off con hook, cuerpo y CTA propios · ver [[dancego]]
 - [2026-11-05 — Mentoría, Meta Ads 1: ABO, CBO y las dos formas de testear](../OUTPUTS/2026-11-05-meta-ads-1-abo-cbo-y-testeo.md) — dónde va el presupuesto en cada una, la ABO 1-1-1 con el setup completo y 5 a 10 USD por conjunto, la CBO de testeo post-Andrómeda, el CPA medio y la regla de corte · ver [[mentoria]]
 - [2026-11-05 — Mentoría, Meta Ads 2: cómo saber si la oferta está validada](../OUTPUTS/2026-11-05-meta-ads-2-oferta-validada.md) — costo por visita contra revenue por visita, el CPA break-even, los 100 USD y los 20 anuncios, los KPIs con sus números y el orden de diagnóstico de 6 pasos · ver [[mentoria]]

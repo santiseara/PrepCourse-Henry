@@ -9,6 +9,11 @@
 - Entrega en `~/Desktop/dancego/anuncios/` como `6-11 - 1` a `6-11 - 3` · `OUTPUTS/2026-11-06-guiones-dancego.md`.
 - Pendiente: la descripción para ads, el precio final y decidir si sumamos el formato B del original (clip crudo + dos bandas, sin voz).
 
+## 2026-11-07
+- **A Tu Medida — las visuales de la tanda 1, con fuente.** Se reconstruyó desde los `V*.json` el pool real de la tanda del 5/11: **los 6 ads usan los mismos 21 clips de TikTok** (cambia el seed del orden de cortes, el color del subtítulo y la voz). Se resolvió la cuenta y el link de cada ID por tikwm y se verificaron los 21 links (200). Reparto: 13 de arreglos sobre prenda real, 6 de bridal y 2 de ruedos, más los 2 insertos de `gfx_arreglos.py`.
+- Nuevo: `OUTPUTS/2026-11-07-visuales-tiktok-a-tu-medida.md` (+ copia en `~/Desktop/arreglos-de-ropa/anuncios/visuales-tiktok.md`), armado para pasárselo al socio.
+- Actualizado: `WIKI/arreglos-de-ropa.md` (sección «Los 21 clips del pool») y `WIKI/index.md`.
+
 ## 2026-11-06 (37ª pasada) — A Tu Medida: descripción para ads
 
 - Descripción única para los 6 videos de [[arreglos-de-ropa]], al estilo de Stitched Fits (un solo copy para toda la flota).

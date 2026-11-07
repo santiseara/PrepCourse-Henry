@@ -65,6 +65,15 @@
 ## Descripción para ads (2026-11-06)
 Una sola para los 6 videos, como hace Stitched Fits con sus ~340 ads. Abre por el mecanismo (*coser y arreglar son dos habilidades distintas*), 3 bullets de lo que aprende, los entregables y los 3 bonos en una línea cada uno, la comparación con la modista sin cifras y CTA a Más información. **152 palabras**, sin precio. En `OUTPUTS/2026-11-06-descripcion-ads-a-tu-medida.md` y en `~/Desktop/arreglos-de-ropa/anuncios/descripcion-ads.txt`.
 
+## Los 21 clips del pool (2026-11-07)
+Listado completo con **link de TikTok, cuenta, qué se ve y los tramos usados** en
+`OUTPUTS/2026-11-07-visuales-tiktok-a-tu-medida.md` y en `~/Desktop/arreglos-de-ropa/anuncios/visuales-tiktok.md`
+(se armó para pasárselo al socio). Reparto: **13 de arreglos sobre prenda real + 6 de bridal + 2 de ruedos**,
+más los 2 insertos de `gfx_arreglos.py` (`venta.png` cierra los 6 ads, `clases.png` muestra las 9 clases).
+Los 6 ads usan **el mismo pool**: lo que cambia es el seed del orden de cortes, el color del subtítulo y la voz.
+Las cuentas que más aportaron: **@natalie.adrienne** (3 clips), **@lavenderneedle** (3, bridal) y **@tonightsew** (2, ruedos).
+En `work/tiktoks/` quedaron **133 clips bajados**; 21 entraron al corte y 112 son banco para la próxima tanda.
+
 ## Preguntas abiertas
 - Faltan los **3 videos de testimonio** (9:16) que la landing tiene reservados.
 - ¿Se graban las 9 clases y los +25 videos, o se arma otro entregable?

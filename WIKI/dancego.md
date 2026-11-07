@@ -82,6 +82,28 @@ Tres renovaciones de voz en off con la DNA del ganador, cada una con hook, cuerp
 - Inserts dibujados por código con `OUTPUTS/scripts-vsl/gfx_dancego.py`: la pantalla de la app (desafío día 11 de 28 y los ritmos) y el grupo de WhatsApp. **No hace falta que la app exista para lanzar.**
 - Scripts: `gen_dancego_plans.py` + `edit_dancego.py`. Entrega en `~/Desktop/dancego/anuncios/` como `6-11 - 1` a `6-11 - 3`, de 45 a 47 s.
 
+## Tanda 2 — los 4 testeos del ganador (2026-11-07)
+**El ganador es `6-11 - 1.mp4`** (*"Hay un gimnasio adentro de la tele de tu living y todavía no lo prendiste"*). Santiago, el 7/11: *"ese ad está siendo una locura hoy"*.
+
+**Por qué funciona (diagnóstico antes de variar):** el hook no promete bajar de peso, **le mueve el gimnasio de lugar**: reencuadra un objeto que ya tiene (la tele del living) como la solución, y de un saque mata las tres fricciones del gimnasio — ir, el horario y que la vean. Después destraba la objeción madre ("no sé bailar") con el paso a paso (*"te dicen qué pie mover y cuándo. No hay forma de hacerlo mal"*), cierra con la escalera de las tres semanas y saca el riesgo con el "sin mensualidad".
+
+**Los 4 (`7-11 - 1` a `7-11 - 4`, de 36 a 43 s):**
+| # | Tipo | Hook | Qué cambia |
+|---|---|---|---|
+| 1 | Variable cercana | "Tu living ya tiene todo lo que necesitás para entrenar: una tele y dos metros de piso" | Cuerpo del ganador intacto; entra por el inventario del living |
+| 2 | Variable cercana | "El gimnasio al que más vas a ir es el que no te hace salir de tu casa" | Cuerpo del ganador; entra por la objeción del gimnasio |
+| 3 | Video nuevo | "El gimnasio más cerca que tenés está a tres pasos del sillón" | Cuerpo propio: el viaje al gimnasio vs. tres pasos, horario propio, los ritmos |
+| 4 | Video nuevo | "Esa tele del living laburó toda la semana para que te sientes" | Cuerpo propio: misma tele, misma hora, mismo sillón — cambia la posición, no la rutina |
+
+- **1 y 2 corren con el pool del ganador** (seed nuevo, color de caja distinto). **3 y 4 llevan el living nuevo.**
+- Voz Sulafat por API con **`gemini-2.5-flash-preview-tts`** (esta vez no dio 429), `speed 1.30`, verificada con Whisper: arranca por la primera palabra del guion.
+- Guiones en `OUTPUTS/2026-11-07-guiones-dancego-tanda-7-11.md`. Planes: `OUTPUTS/scripts-vsl/gen_dancego_plans_7.py`.
+
+### La caza de living nuevo rindió 8 de 67
+`#zumbaencasa` desde el perfil de Chrome (tikwm bloquea los listados por hashtag y por usuario con Cloudflare; el endpoint de un video suelto sigue andando). De **67 clips bajados sobrevivieron 8**: el resto es texto quemado, **memes de gatos bailando** (el formato dominante del tag) o splits de estudio. Los 8 están en `work/tiktoks2/` y listados con su ventana en `work/casa2_ok.txt`.
+- **Un cartel arriba no siempre se saca con `zoom 1.30`.** El clip `7694458671287356686` salió con el "me 🫶 zumba" cortado a la mitad en el primer cuadro del video 3; con **`zoom 1.52`** quedó afuera. Regla práctica: el zoom tiene que recortar más alto que la posición del cartel (z=1.30 recorta 23 % de la altura, y ese cartel estaba al 25 %).
+- **En `gen_*_plans.py`, numerar las claves con `enumerate` sobre un archivo con comentarios desfasa el pool.** Las claves arrancaron en `Z3` y `first=['Z1', 1]` reventó el editor con `StopIteration`. Contador propio, incrementado solo cuando la línea tiene contenido.
+
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?
 - ¿Precio final? (el link de checkout ya está confirmado)

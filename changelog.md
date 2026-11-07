@@ -29,6 +29,10 @@
 - **DanceGo — las visuales de la tanda 1, con fuente.** Mismo trabajo sobre los `V*.json` del 6/11: **los 3 ads comparten un pool de 26 clips** de `#bailoterapia` y `#zumbaencasa`, con cuenta y link resueltos por tikwm y verificados. Reparto corregido respecto de lo anotado antes: **19 de clase grupal + 7 del plano firma** (mujer sola en el living), no 28 clips con 6 de firma. En la carpeta hay 29 bajados; 3 quedaron afuera del corte.
 - Nuevo: `OUTPUTS/2026-11-07-visuales-tiktok-dancego.md` (+ copia en `~/Desktop/dancego/anuncios/visuales-tiktok.md`).
 - Actualizado: `WIKI/dancego.md` (el reparto real del pool y las cuentas que más aportaron).
+- **DanceGo — 4 testeos sobre el ganador `6-11 - 1`** (*"Hay un gimnasio adentro de la tele de tu living"*, que hoy está rindiendo fuerte). Dos variables cercanas (hook nuevo + cuerpo validado) y dos videos nuevos con cuerpo propio sobre el mismo ángulo. Entregados como `7-11 - 1` a `7-11 - 4` (36 a 43 s) en `~/Desktop/dancego/anuncios/`.
+- Se cazaron 67 clips de `#zumbaencasa` por Chrome y **sobrevivieron 8** (el tag está lleno de texto quemado y memes de gatos); van en los videos 3 y 4, que son los que necesitaban el plano firma del living.
+- Nuevo: `OUTPUTS/2026-11-07-guiones-dancego-tanda-7-11.md`, `OUTPUTS/scripts-vsl/gen_dancego_plans_7.py`.
+- Reglas nuevas en `WIKI/dancego.md`: el zoom tiene que recortar más alto que el cartel (1.30 no alcanzó, 1.52 sí) y el contador de claves del pool no puede salir de `enumerate` sobre un archivo con comentarios.
 
 ## 2026-11-06 (37ª pasada) — A Tu Medida: descripción para ads
 

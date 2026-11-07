@@ -116,6 +116,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-07 — DanceGo: los 4 testeos del ganador de la tele del living](../OUTPUTS/2026-11-07-guiones-dancego-tanda-7-11.md) — 2 variables cercanas con el cuerpo del ganador y 2 videos nuevos sobre el mismo ángulo, con 8 clips nuevos de living cazados en #zumbaencasa · ver [[dancego]]
 - [2026-11-07 — DanceGo: las visuales de la tanda 1, con links de TikTok](../OUTPUTS/2026-11-07-visuales-tiktok-dancego.md) — los 26 clips del pool con cuenta, link, qué se ve y tramos usados (19 de clase grupal + 7 del plano firma en el living) y los 2 insertos de la app y el WhatsApp · ver [[dancego]]
 - [2026-11-07 — A Tu Medida: lectura de la tanda 1](../OUTPUTS/2026-11-07-lectura-tanda-1-a-tu-medida.md) — qué guion corrió en cada conjunto, por qué ganó el de la cuenta de la modista (ROAS 3,77) y por qué el mecanismo de Stitched Fits vendió cero en AR · ver [[arreglos-de-ropa]]
 - [2026-11-07 — A Tu Medida: 3 renovaciones (V7-V9)](../OUTPUTS/2026-11-07-guiones-a-tu-medida-v7-v9.md) — la máquina apagada, el placard de plata muerta y el arreglo que pagás a ciegas: mismo eje ganador, estructura y cierre propios · ver [[arreglos-de-ropa]]

@@ -76,7 +76,9 @@ Tres renovaciones de voz en off con la DNA del ganador, cada una con hook, cuerp
 3. **En tu casa nadie te ve aprender** — vergüenza y autoestima: bailar como diversión, la comunidad de WhatsApp y la garantía de 7 días.
 
 - Voz **Sulafat** por API (`gemini-3.1-flash-tts-preview`, porque el 2.5 dio 429), acento rioplatense verificado, `speed 1.30`.
-- **Visual 100 % TikTok:** 47 clips bajados de `#bailoterapia` y `#zumbaencasa`, **28 sobrevivieron**. 6 son el plano firma de la oferta (mujer bailando en el living frente a la tele).
+- **Visual 100 % TikTok:** clips bajados de `#bailoterapia` y `#zumbaencasa`; en `work/tiktoks/` quedaron **29** y **26 entraron al corte** (los 3 ads comparten el mismo pool: cambia el guion, la voz, el seed del orden de cortes y el color de las placas). Reparto real: **19 de clase grupal de bailoterapia / rumbaterapia + 7 del plano firma** (mujer bailando sola en el living). El plano firma es el que escasea: si se arma otra tanda, hay que cazar living, no salón.
+- **Los clips son largos** (la mayoría de 60 s): cada uno aporta 4 o 5 ventanas de 4 s, por eso con 26 alcanzó para los 3 ads sin repetir un plano. Las cuentas que más aportaron: **@karlagaviria6** (6 clips), **@vibrafit7** (3), **@pao_c_music_baila** (2, y uno de ellos es el más visto del pool con 26,5 M).
+- **Listado completo con link de TikTok, cuenta, qué se ve y tramos usados** en `OUTPUTS/2026-11-07-visuales-tiktok-dancego.md` y en `~/Desktop/dancego/anuncios/visuales-tiktok.md` (se armó para pasárselo al socio).
 - Inserts dibujados por código con `OUTPUTS/scripts-vsl/gfx_dancego.py`: la pantalla de la app (desafío día 11 de 28 y los ritmos) y el grupo de WhatsApp. **No hace falta que la app exista para lanzar.**
 - Scripts: `gen_dancego_plans.py` + `edit_dancego.py`. Entrega en `~/Desktop/dancego/anuncios/` como `6-11 - 1` a `6-11 - 3`, de 45 a 47 s.
 

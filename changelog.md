@@ -13,6 +13,9 @@
 - **A Tu Medida — las visuales de la tanda 1, con fuente.** Se reconstruyó desde los `V*.json` el pool real de la tanda del 5/11: **los 6 ads usan los mismos 21 clips de TikTok** (cambia el seed del orden de cortes, el color del subtítulo y la voz). Se resolvió la cuenta y el link de cada ID por tikwm y se verificaron los 21 links (200). Reparto: 13 de arreglos sobre prenda real, 6 de bridal y 2 de ruedos, más los 2 insertos de `gfx_arreglos.py`.
 - Nuevo: `OUTPUTS/2026-11-07-visuales-tiktok-a-tu-medida.md` (+ copia en `~/Desktop/arreglos-de-ropa/anuncios/visuales-tiktok.md`), armado para pasárselo al socio.
 - Actualizado: `WIKI/arreglos-de-ropa.md` (sección «Los 21 clips del pool») y `WIKI/index.md`.
+- **DanceGo — las visuales de la tanda 1, con fuente.** Mismo trabajo sobre los `V*.json` del 6/11: **los 3 ads comparten un pool de 26 clips** de `#bailoterapia` y `#zumbaencasa`, con cuenta y link resueltos por tikwm y verificados. Reparto corregido respecto de lo anotado antes: **19 de clase grupal + 7 del plano firma** (mujer sola en el living), no 28 clips con 6 de firma. En la carpeta hay 29 bajados; 3 quedaron afuera del corte.
+- Nuevo: `OUTPUTS/2026-11-07-visuales-tiktok-dancego.md` (+ copia en `~/Desktop/dancego/anuncios/visuales-tiktok.md`).
+- Actualizado: `WIKI/dancego.md` (el reparto real del pool y las cuentas que más aportaron).
 
 ## 2026-11-06 (37ª pasada) — A Tu Medida: descripción para ads
 

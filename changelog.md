@@ -1,3 +1,13 @@
+## 2026-11-08 (46ª pasada) — Keywords de los 3 nichos de siempre, y la vara de qué es un buen nicho
+
+- Santiago, sobre el banco de los 4 nichos nuevos: *"Muy malos nichos, quiero de bajar de peso, ingresos extra y manifestacion, pero no me des tantas, maximo 10 por nicho"*. Queda como regla: **no se proponen nichos nuevos** y un nicho con mucho volumen no es bueno si él no lo vende.
+- 22 keywords corridas en la Biblioteca. Entrega: **10 / 9 / 10** con el número de ads activos y la oferta que destapa cada una.
+- **Emagrecimento:** la puerta es la **receta en PDF** — `receitas na airfryer` (877) y `receitas proteicas` (576) dan R$10 con el mismo título repetido 8 a 15 veces; `mounjaro natural` (680) sigue viva.
+- **Manifestação:** `mapa astral` (931) es lo más low ticket del día, **R$9,00 / R$27 / R$29,90 en el título**, varias páginas corriendo lo mismo; `lei da atração` (986) destapa la flota de Kamily Rebelatto en 4 fanpages.
+- **Renda extra:** quedan las 8 generales validadas el 05/11 más `uma profissão em casa` (3.686). Son 9 a propósito.
+- **Muertas:** `ozempic caseiro` (0), `áudio subliminar` (1), `oração a Santo Expedito` (4), `numerologia do nome` (222.226 de basura), `carteira do dinheiro` (305.599), `hora espelhada` y `quem nunca vendeu nada` (microdramas), `cardápio de 7 dias` (apps de delivery).
+- Nuevo: `OUTPUTS/2026-11-08-keywords-br-peso-ingresos-manifestacion.md`. Actualizado: `WIKI/caza-de-ofertas.md`, `WIKI/index.md`.
+
 ## 2026-11-08 (45ª pasada) — Keywords de Brasil: 4 nichos nuevos y la corrección de que keywords no es cazar
 
 - Pedido de Santiago: *"Dame palabras clave para buscar ofertas low ticket en Brasil, las mejores palabras, Quiero que me des de los mejores 4 nichos"*.

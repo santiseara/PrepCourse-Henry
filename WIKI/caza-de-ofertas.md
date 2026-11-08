@@ -417,3 +417,17 @@ Del barrido de 22 keywords en la Biblioteca para [[internacionalizacion]] Brasil
 3. **Terapia, dolor y adiestramiento = servicio local, no infoproducto.** `exercícios para dor nas costas` y `adestramento em casa` son 100 % fisio, quiropraxia y adestrador de barrio con "Agendar avaliação". El síntoma sirve como **ángulo de copy**, nunca como palabra de caza. Para pescar el infoproducto se entra por el **formato** (atlas, mapas, catálogo digital, apostila, para imprimir) o por el **profesional que lo compra**.
 
 **Los 4 nichos nuevos validados ese día** (los bancos anteriores cubrían renda extra, emagrecimento, manifestação, relacionamentos, IA y terapias manuales): **infantil imprimible** (`atividades para imprimir`, 7.051), **fe / infantil cristiano** (`ministério infantil`, 882; `escola bíblica dominical`, 246), **material para profesionales** (`alinhado à BNCC`, 638; `recursos terapêuticos`, 1.071) y **cocina que da plata** (`receitas para vender`, 4.842). Los cuatro comparten la huella: fanpage con nombre genérico o de "tienda" sin ciudad + cantidad o precio en el título + estrellitas 4,9/5 + el mismo título repetido 10 o 15 veces.
+
+### ⛔ 2026-11-08 · Los nichos son tres: emagrecimento, renda extra y manifestação
+
+Santiago, después de que le entregara un banco con infantil imprimible, fe, material para profesionales y cocina: *"Muy malos nichos, quiero de bajar de peso, ingresos extra y manifestacion, pero no me des tantas, maximo 10 por nicho"*.
+
+- **No se proponen nichos nuevos.** Los tres de arriba son los que trabaja y los únicos que hay que cazar, salvo que él nombre otro. Un nicho con mucho volumen en la Biblioteca (infantil imprimible tenía 7.051 ads activos) **no es un buen nicho** si él no lo vende: la vara es su operación, no el tamaño del mercado.
+- **Diez por nicho, no más.** Un banco de 40 keywords por nicho con ejes agrupados no le sirve: pide la lista corta de las que pescan. Lo que sí suma al lado de cada una es **el número de anuncios activos y qué oferta destapa**, para que decida sin tener que correrlas.
+- Mejor nueve que funcionan que diez con una muerta: si una del top se cae por ruido, se entrega el nicho con las que quedan y se dice.
+
+### Registro 2026-11-08 (2ª pasada) · lo mejor de cada nicho, validado
+
+- **Emagrecimento:** el dinero está en la **receta en PDF**, no en el peso. `receitas na airfryer` (877) y `receitas proteicas` (576) devuelven página tras página de R$10 con el mismo título repetido 8 o 15 veces (Vitrine Nossa Saúde, Eliane Morais, Chef Bia, la flota "Pegar receitas 👉"). `mounjaro natural` (680) sigue viva con Flávia Campos, 15 ads.
+- **Manifestação:** `mapa astral` (931) es la mejor del nicho y la más low ticket que vimos — **R$9,00, R$27 y R$29,90 en el título del creativo**, en páginas distintas corriendo lo mismo (Entrelinhas Descubra, 64 Portais, Lua Jade). `lei da atração` (986) destapa la flota de Kamily Rebelatto en 4 fanpages. El ángulo nivel 3 del nicho ya está escrito por ellos: *"a lei da atração não é suficiente"*, *"faz lei da atração, mas o dinheiro não fica?"*.
+- **Muertas confirmadas:** `ozempic caseiro` (0), `áudio subliminar` (1), `oração a Santo Expedito` (4, frase larga), `numerologia do nome` (222.226 de basura), `carteira do dinheiro` (305.599), `hora espelhada` y `quem nunca vendeu nada` (microdramas), `cardápio de 7 dias` (apps de delivery).

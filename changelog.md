@@ -1,3 +1,16 @@
+## 2026-11-08 (44ª pasada) — Nail Designer: radiografía de la ballena brasileña de uñas y tanda 1 de 6 ads en inglés
+
+- Pedido de Santiago, con el link de la Biblioteca de Anuncios: *"Tengo una nueva oferta… 6 anuncios para testear… la vamos a tirar en Inglés, acordate del acento… agarremos todo lo validado, todo lo ganador… no inventar la rueda… sacá los b-rolls de TikTok… es una marca personal la que lo ofrece, lo importante que agarramos acá es los anuncios"*.
+- **La oferta:** curso de **alargado de uñas** de **Fabiana Rodrigues** (Brasil), R$9,90 el plan básico y R$25 el Pro, destino `fabianajunyarodriguesnails.com`, hero *"Faça unhas de casa e fature de R$3 a R$5 mil por mês"*.
+- **Radiografía:** **162 ads activos** y el más viejo del **9 de junio** — cinco meses corriendo, la pieza más longeva que vimos en una caza. Se bajaron y transcribieron los **10 de más impresiones** y se armaron sus hojas de contacto.
+- **Las 4 familias:** "en una hora, sin curso de dos mil reales" (5 de los 10 ads, es el whale) · "sin empleo, sin plata: antes de mandar el próximo currículum" · "una clienta te paga R$120 por un alargado y aprender te sale menos de 10" · tres **demos técnicas** puras (cuadrada perfecta, el punto cero, el mínimo de lijado) que recién al final pivotean a la oferta.
+- **Su DNA:** el número siempre es el **precio de mercado del servicio**, nunca un ingreso prometido; el precio del curso se ancla contra *"menos que un lanche"*; *"desde cero, aunque nunca hayas hecho un alargado"*; entregables con nombre (15 clases, certificado internacional, guía para atraer clientas); escasez dura de **"solo 5 vagas"**; 19 a 47 s.
+- **La edición clonada:** el whale es **100 % macro de la uña en construcción** — ni una cara, ni una placa, ni un subtítulo, ni una foto fija. Nuestra versión mantiene el visual y suma subtítulos de 3 palabras con **un color de caja por creativo**, una sola cama y pastilla de CTA, sin placa oscura.
+- **La tanda:** 6 guiones, uno por hook, en **inglés y español con voseo**, con la cifra como precio de salón (sesenta a noventa dólares la mano) y nunca como ingreso prometido.
+- **El b-roll:** 76 clips bajados. **`#polygelnails` se midió medio podrido** (academias hispanohablantes con subtítulos quemados); **`#nailextensions` es el bueno** para mercado inglés. Pool final de **42 ventanas**. Tres clips se cayeron recién en la hoja de contactos del render (`DND #880`, `Save & Subscribe`, `Builder Gel`) y se recortaron o sacaron.
+- **Voz Sulafat** por API, estilo mujer estadounidense de 35, `speed 1.30`. El V6 salió con `gemini-3.1-flash-tts-preview` por cuota del 2.5.
+- Nuevo: `WIKI/nail-designer.md` · `OUTPUTS/2026-11-08-guiones-nail-designer-tanda1.md` · `OUTPUTS/scripts-vsl/edit_nails.py`, `gen_nails_plans.py`. Entrega en `~/Desktop/nail-designer/anuncios/` (`8-11 - 1` a `8-11 - 6`).
+
 ## 2026-11-08 (43ª pasada) — Quesos: radiografía de Queijo de Casa (BR) y tanda 1 de 6 ads para LATAM
 
 - Pedido de Santiago, con el link de la Biblioteca de Anuncios: *"Tengo una nueva oferta… 6 anuncios para testear… la vamos a tirar en LATAM, acordate del acento… agarremos todo lo validado… no inventar la rueda… sacá los b-rolls de TikTok"*.

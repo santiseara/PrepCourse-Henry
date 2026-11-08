@@ -1,3 +1,9 @@
+## 2026-11-08 — Piedras: los hooks en inglés de los 4 videos de Brasil
+
+- Santiago pidió los hooks en inglés de los 4 ads que se localizaron a portugués (BR1–BR4). No estaban escritos en ningún lado: los originales son los 4 MP4 de `~/Downloads` y los guiones ingleses nunca se transcribieron.
+- Se leyeron de los **subtítulos quemados** de cada fuente (frames cada 0,4 s recortados a la banda de subtítulos), sin whisper: `I'm 58 and I'd never sold a thing in my life…` · `In the next 30 seconds…` · `My accountant called me yesterday, worried…` · `Okay, I need to tell you guys this story…`
+- Entrega: `OUTPUTS/2026-11-08-hooks-ingles-piedras-brasil.md`, EN + ES con voseo, enlazado en `WIKI/index.md`.
+
 ## 2026-11-08 (46ª pasada) — Keywords de los 3 nichos de siempre, y la vara de qué es un buen nicho
 
 - Santiago, sobre el banco de los 4 nichos nuevos: *"Muy malos nichos, quiero de bajar de peso, ingresos extra y manifestacion, pero no me des tantas, maximo 10 por nicho"*. Queda como regla: **no se proponen nichos nuevos** y un nicho con mucho volumen no es bueno si él no lo vende.

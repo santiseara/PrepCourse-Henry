@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-07.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-08.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -105,6 +105,7 @@
 ## Herramientas y método
 - ⏳ [[stack-de-herramientas]] — inventario completo, marcado entre lo que está en uso y lo evaluado
 - 🆕 [[skills-launch-expert]] — ⭐ **Las 7 skills de Launch Expert instaladas en `~/.claude/skills/`** (3/11): edición IA, embudo post-compra, caza de ofertas, manejo de la CBO, los dos bots de pujas y surfeo, y disputas. Qué agrega cada una, dónde choca con tus reglas y qué falta para que estén operativas.
+- 🆕 [[skills-de-video-ia]] — ⭐ **Las 3 skills de video con IA instaladas (8/11)**: `antes-despues-ia` (selfie día 01/día 21 con wan2.7, ~US$9), `mini-novela` y `fruti-novela` (novelas de 3-4 min con Veo 3.1 Fast por ApiMart, US$8-12). La arquitectura de 7 partes de la novela brasileña, cómo se matan las voces cruzadas, el truco de cambiar solo el mecanismo por ≈US$2 y dónde chocan con tus voces de Google AI Studio y el visual de TikTok.
 - ✅ [[biblioteca-de-prompts]] — Los 23 prompts de producción, ✅ todos con texto en `RAW/prompts/`. Qué pide cada uno, qué devuelve y dónde choca con tus reglas o tiene riesgo.
 - ✅ [[ia-en-el-flujo-de-trabajo]] — Documentos como memoria, proyectos por producto, Claude Code y Meta Ads CLI, qué IA para qué.
 - ✅ [[claude-con-meta-ads]] — Conector de Meta Ads: qué hace, qué no y las trampas de estados.

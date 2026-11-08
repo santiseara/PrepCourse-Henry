@@ -58,6 +58,16 @@ Niveles Platino y Diamante bajan ~5 % y ~10 % más. El catálogo completo está 
 - **Omni Flash subió**: el manual anotaba ~US$0,036/s y hoy 720P son US$0,088/s. En **360P son US$0,0296/s**, que es el precio que el manual recordaba; para storyboard conviene 360P y recién después subir.
 - Aparecieron **Wan 3.0 / 3.0 Prime** (hasta 30 s) y **Seedance 2.5**, que no estaban cuando se escribió el manual.
 
+## Las skills de video la usan por variable de entorno (8/11)
+
+Las tres skills de [[skills-de-video-ia]] (`antes-despues-ia`, `mini-novela`, `fruti-novela`) generan todo por ApiMart y la buscan en la variable **`APIMART_API_KEY`** — que es exactamente el nombre que ya tiene `~/.config/apimart/env`. Solo falta que la shell la exporte:
+
+```bash
+echo 'set -a; . ~/.config/apimart/env; set +a' >> ~/.zshrc && source ~/.zshrc
+```
+
+También aceptan `KIE_API_KEY` como hosting público de imágenes y voces; sin ella usan catbox.moe, que es gratis. Esas skills usan **Veo 3.1 Fast** (US$0,13 la toma de 8 s) y **Hailuo 2.3**, dos modelos que no están en la tabla de arriba.
+
 ## Preguntas abiertas
 
 - ¿Cuánto saldo cargar para la primera tanda? Una tanda de 6 videos de 30 s con wan2.7-r2v en 720P ≈ US$12.
@@ -66,7 +76,7 @@ Niveles Platino y Diamante bajan ~5 % y ~10 % más. El catálogo completo está 
 
 ## Relacionado
 
-[[ugc-y-video-generativo]] · [[skills-launch-expert]] · [[vsl-reglas-de-armado]] · [[ia-en-el-flujo-de-trabajo]]
+[[ugc-y-video-generativo]] · [[skills-launch-expert]] · [[skills-de-video-ia]] · [[vsl-reglas-de-armado]] · [[ia-en-el-flujo-de-trabajo]]
 
 ## Fuentes
 

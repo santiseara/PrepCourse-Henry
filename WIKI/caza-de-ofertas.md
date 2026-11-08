@@ -399,3 +399,21 @@ Tina Ghazi corre el otro molde: **MRR como el beneficio principal** — "the sma
 - **No funcionó:** cualquier frase de promesa o de precio. `keep 100% of the profit resell rights` (375k), `sell it as your own keep all the profit guide` (1,7M), `read this if you own a` (5,4M), `extra $500 a month from home system` (28k), `sell printables while you sleep passive` (5k) → todas caen en apps de novelas románticas, gyms y nutra. La Library rankea por relevancia solo las primeras filas y después ordena por fecha: con una frase amplia eso es ruido puro.
 - **Confirmado otra vez:** `page_ids` + `limit: 1` da el `estimated_total_count` exacto por ~300 tokens. Es la única forma sana de contar arsenales en serie.
 - **Ojo con el conteo:** la UI web de la Library filtra por país (muestra "~83 resultados" para Tina Ghazi con country=AR) mientras la API sin `countries` da el total mundial (142). El número que vale para el filtro es el de la API.
+
+### ⛔ 2026-11-08 · "Palabras clave" no es "cazá": si pide keywords, van keywords y nada más
+
+Santiago, cuando le estaba armando el banco de los 4 nichos nuevos de Brasil con candidatas, filtro madre y links de fanpages: *"Acordate que solo te pedí palabras clave, no la skill cazar"*.
+
+- **Pedido "dame palabras clave / las mejores palabras" → se entrega el banco de keywords solo.** Nada de shortlist de anunciantes, arsenales, veredicto de competencia, radiografía ni "próximo paso: abrir la landing". Ese aparato es de esta skill y se activa solo cuando dice *cazá*, *buscá winner*, *espiá*, *analizá este nicho*.
+- **Lo que sí suma y no es la skill:** correr las keywords en la Biblioteca para saber **cuáles devuelven ruido**, y entregar la lista de las que no sirven con el motivo. Eso hace mejores las palabras, que es lo que pidió.
+- Es hermana de la regla de la página terminada: se hace lo que pide, no el viaje largo porque tengo las herramientas a mano.
+
+### Registro 2026-11-08 · tres reglas de keywords (banco de los 4 nichos nuevos de BR)
+
+Del barrido de 22 keywords en la Biblioteca para [[internacionalizacion]] Brasil (ver output del 08/11):
+
+1. **Dos o tres palabras.** Confirmado otra vez: `tabela de preços para confeitaria` devolvió **8** resultados y `salgados para vender` **569**. La frase de 4+ palabras no existe escrita en ningún creativo.
+2. **La frase emotiva en primera persona está quemada por los microdramas.** `meu filho não fala` (31.092) y `meu cachorro late muito` (223) devuelven **DramaBox, Dramas For U y Hot-Romance**: las apps de novelitas cortas compran todo el inventario de esas frases. Si la keyword suena a título de novela, no se usa.
+3. **Terapia, dolor y adiestramiento = servicio local, no infoproducto.** `exercícios para dor nas costas` y `adestramento em casa` son 100 % fisio, quiropraxia y adestrador de barrio con "Agendar avaliação". El síntoma sirve como **ángulo de copy**, nunca como palabra de caza. Para pescar el infoproducto se entra por el **formato** (atlas, mapas, catálogo digital, apostila, para imprimir) o por el **profesional que lo compra**.
+
+**Los 4 nichos nuevos validados ese día** (los bancos anteriores cubrían renda extra, emagrecimento, manifestação, relacionamentos, IA y terapias manuales): **infantil imprimible** (`atividades para imprimir`, 7.051), **fe / infantil cristiano** (`ministério infantil`, 882; `escola bíblica dominical`, 246), **material para profesionales** (`alinhado à BNCC`, 638; `recursos terapêuticos`, 1.071) y **cocina que da plata** (`receitas para vender`, 4.842). Los cuatro comparten la huella: fanpage con nombre genérico o de "tienda" sin ciudad + cantidad o precio en el título + estrellitas 4,9/5 + el mismo título repetido 10 o 15 veces.

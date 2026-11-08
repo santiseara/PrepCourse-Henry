@@ -1,3 +1,12 @@
+## 2026-11-08 (45ª pasada) — Keywords de Brasil: 4 nichos nuevos y la corrección de que keywords no es cazar
+
+- Pedido de Santiago: *"Dame palabras clave para buscar ofertas low ticket en Brasil, las mejores palabras, Quiero que me des de los mejores 4 nichos"*.
+- **Los 4 nichos nuevos** (ninguno estaba en los bancos del 12/10, 26/10, 27/10, 29/10 ni 05/11): **infantil imprimible** (`atividades para imprimir`, 7.051 ads), **fe / infantil cristiano** (`ministério infantil`, 882; `escola bíblica dominical`, 246; `devocional para imprimir`, 219), **material para profesionales** (`alinhado à BNCC`, 638; `recursos terapêuticos`, 1.071) y **cocina que da plata** (`receitas para vender`, 4.842; `salgados para vender`, 569).
+- Las 22 keywords se corrieron una por una en la Biblioteca: el banco separa las que pescan de **las 9 que probé y no sirven**, con el motivo de cada una.
+- **Tres reglas nuevas de keywords:** 2-3 palabras (la frase larga devuelve 8 resultados); la frase emotiva en primera persona está **quemada por los microdramas** (DramaBox compra todo el inventario de "meu filho não fala"); terapia, dolor y adiestramiento son **servicio local**, así que al infoproducto se entra por el formato o por el profesional que lo compra.
+- **Corrección de Santiago, anotada como regla:** *"Acordate que solo te pedí palabras clave, no la skill cazar"*. Le había sumado candidatas, filtro madre y links de fanpages; se recortó el archivo y queda la regla de que un pedido de keywords se entrega como keywords y nada más.
+- Nuevo: `OUTPUTS/2026-11-08-keywords-brasil-4-nichos-nuevos.md`. Actualizado: `WIKI/caza-de-ofertas.md` (dos registros del 08/11), `WIKI/index.md`.
+
 ## 2026-11-08 (44ª pasada) — Nail Designer: radiografía de la ballena brasileña de uñas y tanda 1 de 6 ads en inglés
 
 - Pedido de Santiago, con el link de la Biblioteca de Anuncios: *"Tengo una nueva oferta… 6 anuncios para testear… la vamos a tirar en Inglés, acordate del acento… agarremos todo lo validado, todo lo ganador… no inventar la rueda… sacá los b-rolls de TikTok… es una marca personal la que lo ofrece, lo importante que agarramos acá es los anuncios"*.

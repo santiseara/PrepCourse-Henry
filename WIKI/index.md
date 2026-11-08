@@ -120,6 +120,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-08 — Keywords de Brasil: 4 nichos nuevos](../OUTPUTS/2026-11-08-keywords-brasil-4-nichos-nuevos.md) — infantil imprimible, fe/infantil cristiano, material para profesionales y cocina que da plata, con las 9 que probé y no sirven y la regla de que la frase emotiva está quemada por los microdramas · ver [[caza-de-ofertas]]
 - [2026-11-08 — Nail Designer: tanda 1 de 6 guiones en inglés](../OUTPUTS/2026-11-08-guiones-nail-designer-tanda1.md) — una familia de Fabiana Rodrigues por video (en una hora, el currículum, lo que te paga una clienta y tres demos técnicas), 🇬🇧 y 🇪🇸 con voseo, con la cifra como precio de salón · ver [[nail-designer]]
 - [2026-11-08 — Quesos: radiografía de Queijo de Casa (BR)](../OUTPUTS/2026-11-08-analisis-queijo-de-casa.md) — 34 ads sin una línea de copy, los 10 de más impresiones transcriptos, las 8 familias de hook, su edición POV con el cuadernillo y la ventana vacía en español · ver [[quesos-latam]]
 - [2026-11-08 — Quesos: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-08-guiones-quesos-latam.md) — una familia ganadora por video (pelear precio, el suero, diez litros, los cinco rellenos, el yogur y la carta completa), en neutro con tuteo y sin cifras en moneda · ver [[quesos-latam]]

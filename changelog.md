@@ -1,3 +1,16 @@
+## 2026-11-08 (43ª pasada) — Quesos: radiografía de Queijo de Casa (BR) y tanda 1 de 6 ads para LATAM
+
+- Pedido de Santiago, con el link de la Biblioteca de Anuncios: *"Tengo una nueva oferta… 6 anuncios para testear… la vamos a tirar en LATAM, acordate del acento… agarremos todo lo validado… no inventar la rueda… sacá los b-rolls de TikTok"*.
+- **La oferta:** la **Cartilha Receitas Lucrativas do Leite** (cuadernillo *OURO BRANCO*) de **Queijo de Casa** / Karla Gonçalves, Hotmart, R$67 con ancla R$478, destino `cartilha.queijeiradevalor.com`.
+- **Radiografía:** 34 ads activos desde el **8 de octubre**, **todos con el cuerpo del anuncio vacío** (todo el peso en el video). Se bajaron y transcribieron con faster-whisper los **10 de más impresiones** y se armaron sus hojas de contacto.
+- **El avatar no es un curioso: es quien ya produce queso y no saca margen.** La landing abre con *"estás cansada de no tener la ganancia que quisieras"* y con el dolor de bajar el precio.
+- **Las familias ganadoras:** dejar de pelear precio con queso relleno (el más viejo y el de más impresiones) · el suero que se tira (ricota, crema de ricota, bebida láctea) · diez litros de leche rinden el triple · la carta completa · los cinco rellenos que más vende · el producto que vende todos los días. La mitad de sus creativos son de **contenido** (defectos de maduración, congelar el requeijão) con CTA de seguir.
+- **La edición clonada:** POV cenital de manos, el queso relleno cortado al medio como plano héroe, el cuadernillo con un celular encima en la segunda mitad, subtítulos de 3 palabras en mayúscula **blancos sin resalte de color** (a diferencia de meliponicultura), sin placas y sin efectos.
+- **La tanda:** 6 guiones en **español neutro con tuteo**, uno por familia, **sin cifras en moneda local** (sale a varios países) y **sin plazo de resultado**, por la regla de bloqueos de LATAM. El rendimiento se cuenta como múltiplo, no en plata.
+- **El b-roll:** 396 clips bajados de TikTok. **`#quesorelleno` se midió podrido** (reseñas de supermercado, caras y subtítulos quemados): no entró ni uno. El plano héroe salió de **`#queijorecheado`** — el b-roll sin texto no tiene idioma. Pool final de 26 ventanas de `#comohacerqueso`, `#quesoartesanal`, `#queijorecheado` e `#iogurtecaseiro`.
+- **Voz Sulafat** por API, acento latino neutro verificado contra Gemini (*"Colombia, neutro latinoamericano"*), `speed 1.30`. Inserts del cuadernillo dibujados por código (`gfx_quesos.py`).
+- Nuevo: `WIKI/quesos-latam.md` · `OUTPUTS/2026-11-08-analisis-queijo-de-casa.md` · `OUTPUTS/2026-11-08-guiones-quesos-latam.md` · `OUTPUTS/2026-11-08-descripcion-ads-quesos.md` · `OUTPUTS/scripts-vsl/gfx_quesos.py`, `gen_quesos_plans.py`, `vent_quesos.py`, `edit_quesos.py`. Entrega en `~/Desktop/quesos/anuncios/`.
+
 ## 2026-11-08 (42ª pasada) — Tres skills nuevas de video con IA guardadas e instaladas
 
 - Pedido de Santiago: *"Te voy a adjuntar 3 skills nuevas para que las guardes en el segundo cerebro, y si algún día te pido algo relacionado a las skills, las tengas a mano"* — los zips `skill-antes-despues-ia`, `skill-fruti-novela` y `skill-mini-novela-v2`.

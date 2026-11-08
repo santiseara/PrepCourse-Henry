@@ -1,3 +1,11 @@
+## 2026-11-08 — Piedras BR5: el ad «I never» clonado a portugués
+
+- Santiago pasó `~/Downloads/i never.mp4` (20,67 s, 1080x1920) y pidió el mismo video en portugués, tal cual. Se reusó la imagen y la cama del fuente: no se tocó ni un corte.
+- **Formato nuevo de subtítulo** (no es el de BR1–BR4): Courier Bold blanco con contorno negro y palabra activa en amarillo, bloques de hasta 2 líneas de 24 caracteres. Se midió sobre el original (28 px por carácter, interlineado 56, baselines 1429/1485/1457, amarillo #EBD414) en vez de inventarlo.
+- Guion inglés leído de los subtítulos quemados; el original termina cortado en «Inside is the exact formula» y se dejó igual.
+- Voz Sulafat, 4 tomas (27,20 / 25,24 / 23,64 / 26,12 s): la b dijo «pra» y «tá» en vez de «para» y «está» → se usó la c, la más corta y fiel, tempo 1,152. 80/80 palabras alineadas.
+- Entrega: `~/Desktop/scented-stones-ad/anuncios/portugues/SS-PT-5-nunca-quis.mp4` + `OUTPUTS/2026-11-08-guion-piedras-portugues-BR5.md` + script en `OUTPUTS/scripts-vsl/render_never_pt.py`.
+
 ## 2026-11-08 — Piedras: los hooks en inglés de los 4 videos de Brasil
 
 - Santiago pidió los hooks en inglés de los 4 ads que se localizaron a portugués (BR1–BR4). No estaban escritos en ningún lado: los originales son los 4 MP4 de `~/Downloads` y los guiones ingleses nunca se transcribieron.

@@ -1,0 +1,256 @@
+<script>
+window.QUIZ_CONFIG = {
+  // ⚠️ PENDIENTE: pegá acá el checkout de la tienda de Brasil. Es el ÚNICO lugar donde va la URL.
+  checkout: "https://COMPLETAR.impultienda.ar/checkout/chia",
+  precio: "R$ 67",
+  precioTachado: "TUDO ISSO DE R$ 147",
+  cuotas: "",
+  marca: "O Segredo da Chia",
+  // Textos de la portada (el antes/después ya está). Completalos con datos reales que puedas respaldar.
+  heroBadge: "-12kg",             // DATO DE EJEMPLO
+  heroBadgeSub: "em 21 dias",     // DATO DE EJEMPLO
+  pruebaSocial: "+12.847 mulheres", // DATO DE EJEMPLO
+  garantiaDias: 30,
+  // IMÁGENES: pegá la URL de cada una. Vacío = se muestra un recuadro de color con emoji.
+  img: {
+    logo: "",
+    heroHoy: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740585490_chia-quiz-antes-26f375fe.webp",
+    heroMeta: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740807621_chia-quiz-despues2-acbdb3bd.webp",
+    cuerpo: [  // 4 tipos de cuerpo (paso 3)
+      "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740599506_chia-quiz-cuerpo1-fcc464b4.webp",
+      "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740604713_chia-quiz-cuerpo2-4b8ef04d.webp",
+      "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740609882_chia-quiz-cuerpo3-f2229853.webp",
+      "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740615138_chia-quiz-cuerpo4-0a739d3f.webp"
+    ],
+    zonas: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740619471_chia-quiz-zonas-c4dccdf0.webp",
+    producto: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740595036_chia-quiz-producto-96627e92.webp",
+    compromiso: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740623959_chia-quiz-compromiso-4d699165.webp",
+    analisis: "https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/91729d60-bcfa-45bc-bb0e-06f8ea560e98/1792740628616_chia-quiz-analisis-e5258716.webp"
+  },
+  // Testimonios REALES con permiso de la persona. Si queda vacío, el paso 26 se salta.
+  // Formato: { foto:"url", frase:"...", nombre:"Maria", edad:47 }
+  testimonios: [],
+  bonos: [
+    { t: "Bônus 1: Dicas para turbinar sua rotina", d: "Hábitos simples para acompanhar a receita" },
+    { t: "Bônus 2: Sobremesas com chia", d: "Ideias doces para não se sentir de dieta" },
+    { t: "Bônus 3: Sucos e bebidas com chia", d: "Opções fáceis e rápidas" },
+    { t: "Bônus 4: Acesso vitalício ao app exclusivo", d: "Acesso GRÁTIS ao app, só para quem comprar hoje", hl: 1 }
+  ]
+};
+</script>
+
+<style>
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap";
+.q-root{--bg:#FFF5EB;--fg:#3A2614;--card:#fff;--pri:#FF7A00;--pes:#FFE9CC;--bege:#EADBC8;--mut:#8A6F55;--g:#2FA866;--gh:#258A53;
+ font-family:Poppins,sans-serif;color:var(--fg);background:var(--bg);height:100dvh;max-width:512px;margin:0 auto;display:flex;flex-direction:column;overflow:hidden}
+.q-root *{box-sizing:border-box;margin:0;padding:0}
+:where(.q-root button){font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.q-root button,.q-root a.btn{font-family:Poppins,sans-serif}
+.q-bar{flex:none;padding:12px 16px 8px}
+.q-bar .row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.q-bar .back{font-size:24px;color:var(--mut);width:28px}
+.q-bar .brand{font-weight:800;font-size:15px}
+.q-bar img{height:40px;object-fit:contain}
+.q-track{height:8px;border-radius:9px;background:var(--bege)}
+.q-track{overflow:hidden;display:block;width:100%}
+.q-root .q-track .q-fill{display:block!important;height:100%;min-width:4px;border-radius:9px;background:linear-gradient(90deg,#FF7A00,#FFC247);transition:width .6s ease-out}
+.q-body{flex:1;overflow-y:auto}
+.s{padding:28px 20px;display:flex;flex-direction:column;gap:16px;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q-root h1{font-size:21px;line-height:1.15;font-weight:900;text-align:center}
+.q-root h2{font-size:23px;line-height:1.2;font-weight:800;text-align:center}
+.q-root h3{font-size:16px;font-weight:800;text-align:center}
+.hl{color:var(--pri);font-weight:800}
+.mut{color:var(--mut);font-size:14px;text-align:center}
+.opts{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.opt{width:100%;text-align:left;background:linear-gradient(#fff,#fff7ee);border:2px solid #E3C9A6;border-bottom-width:5px;border-radius:16px;padding:15px 14px;display:flex;align-items:center;gap:12px;font-weight:700;transition:transform .08s,border-color .15s,background .15s;position:relative;user-select:none}
+.opt .em{font-size:24px}
+.opt small{display:block;font-weight:500;color:var(--mut);font-size:13px}
+/* flecha a la derecha en las opciones de elección única: indica "tocá para avanzar" */
+.opt[data-k]::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #cdb9a2;background:#fff}
+.opt.on[data-k]::before{border-color:#fff;background:radial-gradient(#FF7A00 0 38%,#fff 42%)}
+.grid2 .opt[data-k]::before{display:none}
+.opt[data-k]::after{content:"›";margin-left:auto;font-size:30px;line-height:1;color:var(--pri);font-weight:800;padding-left:6px}
+.grid2 .opt[data-k]::after{display:none}
+.opt:active{transform:translateY(3px);border-bottom-width:2px;margin-bottom:3px}
+.opt.on{background:var(--pri);border-color:#D96500;color:#fff}
+.opt.on small{color:#FFE6CC}
+.opt.on[data-k]::after{color:#fff}
+@media(hover:hover){.opt:hover{border-color:var(--pri);background:#FFF1E0}.opt.on:hover{background:var(--pri)}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2 .opt{flex-direction:column;text-align:center;font-size:14px}
+.btn{width:100%;border-radius:16px;padding:16px;font-weight:800;font-size:17px;background:var(--pri);color:#fff;box-shadow:0 5px 0 #C25E00,0 8px 16px rgba(255,122,0,.3);text-align:center;display:block;text-decoration:none;transition:transform .08s,box-shadow .08s}
+.btn.g{background:var(--g);box-shadow:0 5px 0 #1E7F4A,0 8px 16px rgba(47,168,102,.4);animation:pl 2s infinite}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #C25E00;animation:none}
+.btn.g:active{box-shadow:0 1px 0 #1E7F4A}
+.btn:disabled{opacity:.45;animation:none;cursor:not-allowed;box-shadow:0 5px 0 #b9a58f;background:#c9b8a3}
+@keyframes pl{50%{transform:scale(1.03)}}
+.ph{background:var(--pes);border-radius:16px;display:grid;place-items:center;font-size:44px;overflow:hidden;position:relative;border:2px solid var(--bege)}
+.ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.card{background:var(--card);border:1px solid var(--bege);border-radius:16px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.okb{display:flex;gap:10px;align-items:center;background:#E8F7EE;border:1px solid #9FDDB9;border-radius:12px;padding:13px;font-weight:600;font-size:14px}
+.big{font-size:58px;font-weight:900;color:var(--pri);text-align:center;line-height:1}
+.num{display:flex;justify-content:center;align-items:baseline;gap:6px}
+.stp{display:flex;gap:10px;justify-content:center}
+.stp button{width:60px;height:60px;border-radius:50%;border:2px solid #E3C9A6;border-bottom-width:5px;background:linear-gradient(#fff,#fff7ee);font-weight:800;font-size:19px;color:var(--pri)}
+.stp button:active{transform:translateY(3px);border-bottom-width:2px}
+.chk{width:24px;height:24px;border-radius:7px;border:2px solid #cdb9a2;background:#fff;flex:none;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:800}
+.opt.on .chk{background:#fff;border-color:#fff;color:var(--pri)}
+input.t{width:100%;text-align:center;font-size:20px;font-weight:700;padding:15px;border:2px solid var(--bege);border-radius:12px;background:var(--bg);outline:none}
+input.t:focus{border-color:var(--pri)}
+.tag{background:#E8F7EE;color:var(--g);font-weight:700;border-radius:99px;padding:8px 14px;font-size:14px;text-align:center}
+.step{display:flex;gap:10px;align-items:center;font-weight:600;font-size:14px}
+.pbar{height:8px;border-radius:9px;background:var(--bege);overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--pri);transition:width .1s linear}
+.faq{border-bottom:1px solid var(--bege)}
+.faq button{width:100%;text-align:left;font-weight:700;font-size:14px;padding:14px 0;display:flex;justify-content:space-between}
+.faq p{display:none;font-size:14px;color:var(--mut);padding-bottom:14px}
+.faq.on p{display:block}
+.pill{background:var(--pri);color:#fff;border-radius:99px;font-weight:800;font-size:11px;padding:6px 14px;text-align:center}
+.small{font-size:11px;color:var(--mut);text-align:center}
+.cinta{position:fixed;top:0;right:max(0px,calc((100vw - 512px)/2));width:96px;height:96px;overflow:hidden;z-index:50;pointer-events:none}.cinta span{position:absolute;top:20px;right:-34px;width:132px;transform:rotate(45deg);background:#3A2614;color:#FFF5EB;text-align:center;font:700 8.5px/1.2 Poppins,sans-serif;letter-spacing:.3px;padding:4px 0;box-shadow:0 2px 6px rgba(0,0,0,.25);animation:ci .6s .6s both}.cinta b{color:#F2C94C;font-weight:800}@keyframes ci{from{opacity:0}to{opacity:1}}</style>
+
+<div id="cinta" class="cinta" aria-hidden="true"><span>🎁 <b>SÓ HOJE</b><br>APP GRÁTIS</span></div><div id="q" class="q-root"></div>
+
+<script>
+(function(){
+var C=window.QUIZ_CONFIG,I=C.img,B=C.marca;
+// Bs = la marca sin el artículo inicial, para usarla después de preposición ("funciona o Segredo da Chia") y no repetir el artículo.
+var Bs=B.replace(/^(O|A|Os|As)\s+/i,"");
+var P=(C.testimonios&&C.testimonios.length)?[]:[26]; // pasos a saltar
+var TOTAL=29, page=1;
+var S={age:"",body:"",areas:[],name:"",impact:"",tried:"",barriers:[],goals:[],bloat:"",weight:75,height:165,desired:65,routine:"",sleep:"",commit:"",first:""};
+var root=document.getElementById("q");
+// Clarity: un evento por pantalla del quiz y una etiqueta con el último paso alcanzado
+var QN={1:"portada",2:"edad",3:"cuerpo",4:"zonas",5:"no_estas_sola",6:"producto",7:"nombre",8:"que_molesta",9:"intento_previo",10:"no_es_voluntad",11:"frenos",12:"ingredientes_super",13:"objetivos",14:"hinchazon",15:"como_funciona",16:"peso_actual",17:"altura",18:"peso_deseado",19:"rutina_diaria",20:"sueno",21:"meta_plan",22:"compromiso",23:"resultado_primero",24:"analisis_carga",25:"analisis_listo",26:"testimonios",27:"armando_rutina",28:"oferta"};
+var fired={};window.__lv=39;setInterval(function(){var e=document.querySelectorAll(".live-n");if(!e.length)return;window.__lv=Math.max(24,Math.min(63,window.__lv+Math.round(Math.random()*6-3)));for(var i=0;i<e.length;i++)e[i].textContent=window.__lv},3500);
+function ev(n){try{if(window.clarity){clarity("event",n)}}catch(e){}}
+function track(){if(fired[page])return;fired[page]=1;var n=("0"+page).slice(-2)+"_"+QN[page];ev("quiz_p"+n);try{if(window.clarity){clarity("set","quiz_ultimo_paso",n);clarity("set","quiz_portada","v2-suave")}}catch(e){}}
+// Precarga: la portada primero y el resto de las fotos en segundo plano, para que cada paso aparezca ya cargado.
+(function(){
+  var all=[I.heroHoy,I.heroMeta].concat(I.cuerpo||[],[I.zonas,I.producto,I.compromiso,I.analisis]);
+  all.forEach(function(u,i){if(!u)return;setTimeout(function(){var m=new Image();m.decoding="async";m.src=u},i<2?0:600+i*150)});
+})();
+function $(h){var d=document.createElement("div");d.innerHTML=h;return d}
+function ph(src,emoji,style){return '<div class="ph" style="'+(style||'')+'">'+(src?'<img src="'+src+'" alt="">':emoji)+'</div>'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function nm(){return esc(S.name||"Você")}
+function next(){do{page++}while(P.indexOf(page)>-1);render()}
+function back(){do{page--}while(P.indexOf(page)>-1&&page>1);render()}
+function go(fn,ms){setTimeout(fn,ms||300)}
+
+function single(title,key,opts,after){
+  return '<div class="s"><h2>'+title+'</h2><p class="mut" style="font-weight:600">👇 Toque em uma opção para continuar</p><div class="opts">'+opts.map(function(o){
+    return '<button class="opt'+(S[key]===o[0]?' on':'')+'" data-k="'+key+'" data-v="'+o[0]+'"><span class="em">'+o[1]+'</span><span>'+o[2]+'</span></button>'}).join('')+'</div></div>';
+}
+function multi(title,key,opts,hint){
+  return '<div class="s"><h2>'+title+'</h2>'+(hint?'<p class="mut">'+hint+'</p>':'')+'<div class="opts">'+opts.map(function(o){
+    return '<button class="opt'+(S[key].indexOf(o[0])>-1?' on':'')+'" data-m="'+key+'" data-v="'+o[0]+'"><span class="chk">'+(S[key].indexOf(o[0])>-1?'✓':'')+'</span><span class="em">'+o[1]+'</span><span>'+o[2]+'</span></button>'}).join('')+'</div><button class="btn" data-next '+(S[key].length?'':'disabled')+'>Continuar</button></div>';
+}
+function stepper(title,key,unit,min,max){
+  return '<div class="s" style="align-items:center"><h2>'+title+'</h2><div class="num"><span class="big">'+S[key]+'</span><b style="font-size:22px;color:var(--pri)">'+unit+'</b></div><div class="stp">'+[-5,-1,1,5].map(function(d){return '<button data-st="'+key+'" data-d="'+d+'" data-min="'+min+'" data-max="'+max+'">'+(d>0?'+':'−')+Math.abs(d)+'</button>'}).join('')+'</div>'+(key==="desired"?'<div class="tag">Meta: perder '+(S.weight-S.desired)+' kg 🎯</div>':'')+'<button class="btn" data-next>Continuar</button></div>';
+}
+function btnNext(t){return '<button class="btn" data-next>'+(t||'Continuar')+'</button>'}
+
+var areaLbl={papada:"a papada",brazos:"os braços",panza:"a barriga",cintura:"a cintura",cola:"o bumbum",muslos:"as coxas",todo:"o corpo todo"};
+
+var steps={
+1:function(){return '<div class="s" style="gap:10px">'+(I.logo?'<img src="'+I.logo+'" style="height:40px;object-fit:contain;margin:0 auto">':'<div class="brand" style="text-align:center;font-weight:800">'+B+'</div>')+
+ '<h1>A MISTURA COM <span class="hl">CHIA</span> QUE MUITAS MULHERES DE MAIS DE 40 ESTÃO TESTANDO</h1><p class="mut">Descubra em 2 minutos qual é a versão certa para você.</p>'+
+ '<div style="position:relative"><div class="grid2"><div>'+ph(I.heroHoy,'🙂','aspect-ratio:3/4;width:100%')+'<div class="pill" style="margin-top:8px;background:#9a8c80">ANTES</div></div><div>'+ph(I.heroMeta,'✨','aspect-ratio:3/4;width:100%;border-color:#5E9B72')+'<div class="pill" style="margin-top:8px;background:#5E9B72">DEPOIS</div></div></div>'+
+ (C.heroBadge?'<div style="position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:40px;height:40px;border-radius:50%;background:#fff;color:#5b4a3a;display:grid;place-items:center;font-size:20px;border:2px solid #e0d2c2;box-shadow:0 3px 10px rgba(0,0,0,.15)">→</div><b style="background:#5E9B72;color:#fff;border-radius:8px;padding:3px 9px">'+C.heroBadge+'</b><small style="background:var(--bg);border-radius:5px;padding:1px 6px;font-weight:700">'+(C.heroBadgeSub||'')+'</small></div>':'')+'</div>'+
+ (C.pruebaSocial?'<div class="mut" style="font-size:12px"><b style="color:var(--g)">'+C.pruebaSocial+'</b> já descobriram a versão certa para o corpo delas</div>':'')+
+ '<button class="btn g" data-next>QUERO DESCOBRIR A MINHA VERSÃO</button><div class="small">✓ 100% grátis · ✓ Resultado na hora · ✓ Ingredientes naturais</div><div class="small" style="font-size:14px;color:#C0392B;margin-top:2px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#E8837A;margin-right:8px;vertical-align:middle"></span><b class="live-n" style="font-weight:700">39</b> pessoas estão fazendo o teste agora</div></div>'},
+2:function(){return single("Qual é a sua idade?","age",[["18-27","🌸","18 – 27 anos"],["28-39","💐","28 – 39 anos"],["40-54","🌺","40 – 54 anos"],["54+","🌷","54+ anos"]])},
+3:function(){var L=["Médio","Com quilos a mais","Sobrepeso","Plus size"],E=["🙂","😊","🧍‍♀️","🤗"];
+ return '<div class="s"><h2>Como está o seu <span class="hl">corpo hoje</span>?</h2><div class="grid2">'+L.map(function(l,i){return '<button class="opt'+(S.body===l?' on':'')+'" data-k="body" data-v="'+l+'">'+ph(I.cuerpo[i],E[i],'width:110px;height:110px')+'<span>'+l+'</span></button>'}).join('')+'</div></div>'},
+4:function(){var o=[["papada","😊","Papada"],["brazos","💪","Braços"],["panza","🤰","Barriga"],["cintura","💝","Cintura"],["cola","🍑","Bumbum"],["muslos","🦵","Coxas"],["todo","✨","O corpo todo"]];
+ return '<div class="s"><h2>Em que parte você mais sente que o seu <span class="hl">corpo mudou</span>?</h2><div style="display:flex;gap:12px"><div style="width:40%">'+ph(I.zonas,'🧍‍♀️','height:100%;min-height:300px')+'</div><div class="opts" style="flex:1;margin:0">'+o.map(function(x){return '<button class="opt'+(S.areas.indexOf(x[0])>-1?' on':'')+'" data-m="areas" data-v="'+x[0]+'" style="padding:10px;font-size:14px"><span>'+x[1]+'</span><span>'+x[2]+'</span></button>'}).join('')+'</div></div><button class="btn" data-next '+(S.areas.length?'':'disabled')+'>Continuar</button></div>'},
+5:function(){var a=S.areas.filter(function(x){return x!=="todo"}).map(function(x){return areaLbl[x]});var t=a.length?a.join(", ").replace(/, ([^,]*)$/," e $1"):"a barriga";
+ return '<div class="s" style="align-items:center;text-align:center;padding-top:36px"><div class="ph" style="width:64px;height:64px;border-radius:50%;font-size:30px">🤝</div><h2>Você não está <span class="hl">sozinha.</span></h2><div class="card"><p style="font-size:16px;font-weight:600;line-height:1.4">É muito comum que muitas mulheres de mais de 40 sintam que o corpo mudou em <span class="hl">'+t+'</span>, mesmo sem comer a mais.</p></div><button class="btn" data-next>Entendi, quero continuar</button></div>'},
+6:function(){return '<div class="s" style="align-items:center"><h2>Conheça <span class="hl">'+B+'</span> ⭐</h2><div style="width:100%">'+ph(I.producto,'🥣','aspect-ratio:1;width:100%')+'</div><p class="mut">O seu protocolo de 28 dias com chia, passo a passo e feito sob medida. Com ingredientes que você acha em qualquer mercado.</p>'+btnNext()+'</div>'},
+7:function(){return '<div class="s"><h2>Como você se chama?</h2><input class="t" id="nm" placeholder="Seu nome" value="'+esc(S.name)+'"><button class="btn" id="nmb" data-next '+(S.name?'':'disabled')+'>Continuar</button></div>'},
+8:function(){return single('<span class="hl">'+nm()+'</span>, o que mais te incomoda no seu peso hoje?',"impact",[["autoestima","💔","Minha autoestima<small>Me olho no espelho e já não me reconheço</small>"],["salud","🩺","Minha saúde<small>Sinto que preciso me cuidar mais</small>"],["relaciones","👥","Meus relacionamentos<small>Evito sair, tirar fotos ou encontrar gente</small>"],["rutina","📅","Minha rotina<small>Não tenho energia para cuidar da minha família nem de mim</small>"]])},
+9:function(){return single('Você já tentou <span class="hl">emagrecer antes</span>?',"tried",[["varias","😞","Sim, várias vezes. Emagreço e logo recupero tudo"],["nomantengo","😶","Sim, mas nunca consigo manter"],["primera","✨","Estou tentando pra valer pela primeira vez"],["todo","😩","Já tentei de tudo e nada funcionou"]])},
+10:function(){return '<div class="s" style="align-items:center;text-align:center"><div style="font-size:48px">🧬</div><h2><span class="hl">'+nm()+'</span>, não é falta de força de vontade.</h2><p style="font-size:16px;color:var(--mut)">Muitas vezes o problema não é a vontade, e sim que dietas restritivas não dá para manter.</p><p style="font-size:16px;font-weight:600">'+B+' é um jeito simples e caseiro de incluir um hábito no seu dia.</p>'+btnNext("Entendi, continuar")+'</div>'},
+11:function(){return multi("O que mais te trava para emagrecer hoje?","barriers",[["plata","💸","Já gastei dinheiro e não tive resultado"],["caro","💰","Os tratamentos e suplementos são muito caros"],["constancia","📉","Começo e não consigo manter"],["hambre","🍫","Bate a fome e eu acabo caindo"],["tiempo","⏰","Não tenho tempo para dietas"]],"Marque todas que combinam com você")},
+12:function(){return '<div class="s" style="align-items:center;text-align:center"><div style="font-size:48px">🛒</div><h2 style="font-size:20px">Muitas opções custam caro, dependem de farmácia ou são difíceis de manter.</h2><div class="okb" style="flex-direction:column;text-align:center;width:100%"><span><b class="hl">'+B+'</b> é preparado com ingredientes simples do mercado.</span><span style="color:var(--mut);font-weight:500">Sem farmácia. Sem ingredientes estranhos.</span></div>'+btnNext()+'</div>'},
+13:function(){return multi('O que você quer <span class="hl">conquistar</span>?',"goals",[["salud","❤️","Melhorar os meus hábitos"],["peso","⚖️","Emagrecer de verdade"],["desinchar","💧","Me sentir menos inchada"],["energia","⚡","Ter mais energia no dia a dia"],["autoestima","🌸","Me sentir bem comigo mesma"]],"Marque todas que combinam com você")},
+14:function(){return single("Você sente inchaço, barriga dura ou digestão lenta com frequência?","bloat",[["siempre","😣","Sim, quase todo dia me sinto inchada"],["aveces","😐","Às vezes, principalmente à noite"],["nunca","😊","Quase nunca"]])},
+15:function(){var c=function(n,i,t,d){return '<div class="card" style="text-align:center;position:relative"><div class="pill" style="position:absolute;top:-10px;right:-6px;width:30px;height:30px;padding:0;display:grid;place-items:center">'+n+'</div><div style="font-size:30px">'+i+'</div><b style="font-size:13px">'+t+'</b><p class="mut" style="font-size:12px">'+d+'</p></div>'};
+ return '<div class="s"><h2><span class="hl">'+nm()+'</span>, veja como funciona o '+Bs+' 🎉</h2>'+['Ingredientes naturais','1 ou 2 vezes por dia','Receitas 100% caseiras'].map(function(x){return '<div class="okb"><b style="color:var(--g)">✓</b>'+x+'</div>'}).join('')+'<div class="grid2">'+c(1,'🍽️','Antes','Dietas difíceis de manter')+c(2,'🥣',B,'Sua receita caseira diária com chia')+c(3,'🔥','Sua rotina','Um hábito simples e diário')+c(4,'✨','Seu ritmo','Você avança no seu próprio passo')+'</div>'+btnNext("Entendi! Continuar 🚀")+'</div>'},
+16:function(){return stepper('Qual é o seu <span class="hl">peso atual</span>?',"weight","kg",45,150)},
+17:function(){return stepper('Qual é a sua <span class="hl">altura</span>?',"height","cm",140,200)},
+18:function(){return stepper('Qual é o seu <span class="hl">peso desejado</span>?',"desired","kg",40,S.weight-1)},
+19:function(){return single('Como é a sua <span class="hl">rotina diária</span>?',"routine",[["fuera","🏢","Trabalho fora de casa"],["home","🏠","Trabalho em casa / home office"],["casa","👨‍👩‍👧","Cuido da casa e da família"],["agitada","🏃‍♀️","Tenho uma rotina bem corrida e irregular"]])},
+20:function(){return single('Quantas horas você <span class="hl">dorme por noite</span>?',"sleep",[["<5","😴","Menos de 5 h"],["5-7","🌙","5 – 7 horas"],["7-9","😊","7 – 9 horas"],[">9","💤","Mais de 9 h"]])},
+21:function(){var d=Math.max(0,S.weight-S.desired);
+ return '<div class="s" style="text-align:center"><h2 style="font-size:20px"><span class="hl">'+nm()+'</span>, ter um objetivo claro é o primeiro passo!</h2><div class="okb" style="flex-direction:column;width:100%"><div style="display:flex;gap:16px;align-items:center"><div><b style="font-size:28px">'+S.weight+'kg</b><div class="mut">hoje</div></div><b style="color:var(--pri);font-size:24px">→</b><div><b style="font-size:28px;color:var(--pri)">'+S.desired+'kg</b><div class="mut">sua meta</div></div></div><div class="tag">Meta: perder '+d+' kg</div></div><div class="card"><p class="mut" style="font-weight:700;letter-spacing:.5px">SEU PLANO, PASSO A PASSO</p><svg viewBox="0 0 100 60" style="width:100%;height:150px"><path d="M5,8 L25,14 L45,28 L65,38 L95,52" fill="none" stroke="#FF7A00" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200"><animate attributeName="stroke-dashoffset" to="0" dur="1.5s" fill="freeze"/></path><circle cx="5" cy="8" r="2.5" fill="#3A2614"/><circle cx="95" cy="52" r="3" fill="#2FA866"/></svg></div><button class="btn" data-next>VAMOS LÁ!</button></div>'},
+22:function(){return '<div class="s" style="align-items:center">'+ph(I.compromiso,'💪','width:100%;max-width:300px;aspect-ratio:1')+'<div class="pill">🎁 PARA DESBLOQUEAR O SEU PLANO, PRECISO SABER:</div><h2 style="font-size:20px">Você se compromete a seguir <span class="hl">a rotina</span> por pelo menos 1 semana para ver como se sente?</h2><div class="opts" style="width:100%">'+[["si","😍","Sim, eu me comprometo!"],["hoy","🤩","Quero começar hoje mesmo"],["dudas","🤔","Ainda tenho algumas dúvidas"]].map(function(o){return '<button class="opt'+(S.commit===o[0]?' on':'')+'" data-k="commit" data-v="'+o[0]+'"><span class="em">'+o[1]+'</span><span>'+o[2]+'</span></button>'}).join('')+'</div></div>'},
+23:function(){return single('Qual resultado você quer ver <span class="hl">primeiro</span>?',"first",[["salud","❤️","Melhorar os meus hábitos"],["peso","⚖️","Emagrecer de verdade"],["desinchar","💧","Me sentir menos inchada"],["energia","⚡","Ter mais energia no dia a dia"],["autoestima","🌸","Me sentir bem comigo mesma"]])},
+24:function(){return '<div class="s" style="align-items:center;padding-top:36px"><div style="font-size:40px">🧠</div><h2 style="font-size:20px">Preparando a sua análise, <span class="hl">'+nm()+'</span>...</h2><p class="mut">Estamos processando as suas respostas</p><div id="ls" style="width:100%;display:flex;flex-direction:column;gap:12px"></div><div class="pbar" style="width:100%"><i id="lp"></i></div><p class="small" id="lt">0% concluído</p></div>'},
+25:function(){var h=S.height/100,imc=Math.max(18,S.weight/(h*h)),cat=imc>=30?"Obesidade":imc>=25?"Sobrepeso":"Normal";
+ var alert=["Hábitos difíceis de manter","Ritmo de vida difícil de organizar","Fome e ansiedade entre as refeições"];
+ var ben=["Uma rotina simples e caseira","Ingredientes fáceis de achar","Pensada para você manter no tempo","Mais vontade de se cuidar","Sem dietas extremas","Sobremesas e sucos inclusos"];
+ return '<div class="s"><h2 style="font-size:20px"><span class="hl">'+nm()+'</span>, a sua análise está pronta.</h2><div class="card" style="text-align:center"><div class="big">'+imc.toFixed(1)+'</div><div class="mut">Seu IMC: <b class="hl">'+cat+'</b></div><hr style="border:0;border-top:1px solid var(--bege);margin:12px 0"><b style="font-size:13px;color:var(--mut)">⚠️ Pontos a trabalhar:</b>'+alert.map(function(a){return '<div class="step" style="margin-top:8px">❌ '+a+'</div>'}).join('')+'</div>'+
+ '<h3>Benefícios do <span class="hl">'+Bs+'</span> 👇</h3>'+ben.map(function(b){return '<div class="okb" style="background:var(--pes);border-color:var(--bege)">✅ '+b+'</div>'}).join('')+ph(I.analisis,'🌿','aspect-ratio:16/10;width:100%')+btnNext()+'</div>'},
+26:function(){var t=C.testimonios;return '<div class="s"><h2 style="font-size:20px">Veja quem já testou o <span class="hl">'+Bs+'</span></h2>'+t.map(function(x){return '<div class="card" style="padding:0;overflow:hidden">'+(x.foto?'<img src="'+x.foto+'" style="width:100%" loading="lazy">':'')+'<div style="padding:14px;text-align:center"><p style="font-weight:600;font-size:14px">"'+esc(x.frase)+'"</p><p class="mut" style="font-size:12px">'+esc(x.nombre)+', '+x.edad+' anos</p></div></div>'}).join('')+'<button class="btn g" data-next>Quero começar</button></div>'},
+27:function(){return '<div class="s" style="align-items:center;text-align:center;padding-top:36px"><div class="card" style="background:var(--pri);color:#fff;width:100%"><div style="font-size:36px">✨</div><h2 style="color:#fff;font-size:18px">A sua rotina do <b>'+Bs+'</b> de <b>4 semanas</b> está pronta!</h2></div><div id="rs" style="width:100%;text-align:left;display:flex;flex-direction:column;gap:8px"></div><div class="pbar" style="width:100%"><i id="rp"></i></div></div>'},
+28:function(){var d=new Date().toLocaleDateString("pt-BR",{day:"numeric",month:"long",year:"numeric"});
+ var plan=[["Em 7 dias","Você começa a criar o hábito e a notar como se sente","✨"],["Em 14 dias","A sua rotina já faz parte do seu dia","🔥"],["Em 21 dias","O hábito já está firme e você faz sem pensar","🌿"],["Em 28 dias","Você conclui o seu plano e avalia o seu progresso","🏆"]];
+ var inc=[["Receitas completas do protocolo "+Bs,0],["Rotina de 28 dias passo a passo",0],['<span style="color:#D62828">SÓ POR HOJE! inclui acesso ao app exclusivo</span>',0],["Lista completa de ingredientes",0],["Acesso vitalício",0]].concat(C.bonos.filter(function(b){return !b.hl}).map(function(b){return [b.t.replace(/^Bônus \d: /,"BÔNUS: "),1]}));
+ var faq=[["Como funciona o "+Bs+"?","São receitas caseiras com chia que a gente te guia a incluir no seu dia com uma rotina de 28 dias, passo a passo."],["Quando vou notar mudanças?","Depende de cada pessoa, da rotina e da alimentação. Por isso o plano é feito para você manter dia após dia."],["Tem contraindicação?","São receitas com alimentos comuns. Se você tem alguma condição de saúde, está grávida, toma medicação ou tem alergias, consulte o seu médico antes."],["Como recebo o conteúdo?","Assim que o pagamento é aprovado você recebe o acesso imediato ao material por e-mail."],["E se não funcionar para mim?","Você tem "+C.garantiaDias+" dias de garantia. Se não gostar, devolvemos 100% do que você pagou, sem perguntas."],["O pagamento é seguro?","Sim. Usamos uma plataforma de pagamento criptografada e os seus dados estão protegidos."],["Preciso comprar ingredientes caros?","Não. São ingredientes comuns de qualquer supermercado."]];
+ return '<div class="s"><div style="text-align:center"><h1 style="font-size:20px"><span class="hl">'+nm()+'</span>, a sua rotina de 4 semanas com o '+Bs+' foi gerada com sucesso</h1><p class="mut" style="margin-top:8px">Ela é exclusiva e é gerada uma única vez, não saia desta página para não perdê-la</p></div>'+
+ ph(I.producto,'🥣','aspect-ratio:16/10;width:100%')+
+ '<div class="card" style="padding:0;overflow:hidden"><div style="background:var(--pri);color:#fff;text-align:center;padding:14px"><small>SEU PLANO EXCLUSIVO</small><div style="font-weight:800;font-size:18px">28 dias de rotina</div></div><div style="padding:12px;display:flex;flex-direction:column;gap:8px">'+plan.map(function(p){return '<div class="card" style="display:flex;flex-direction:row;gap:10px;align-items:center;padding:8px 12px"><span style="font-size:20px;width:26px;flex:none;text-align:center">'+p[2]+'</span><div style="flex:1;min-width:0;text-align:left"><div class="hl" style="font-size:11px;text-transform:uppercase">'+p[0]+'</div><b style="font-size:13px;line-height:1.25">'+p[1]+'</b></div></div>'}).join('')+'</div></div>'+
+ '<h3>Além disso você leva <span class="hl">'+C.bonos.length+' bônus</span> para acompanhar a sua rotina</h3>'+C.bonos.map(function(b){return '<div class="card" style="display:flex;gap:12px;background:var(--pes)'+(b.hl?';background:#FFF6D6;border:2px solid #E8B923;box-shadow:0 0 0 4px rgba(232,185,35,.18)':'')+'"><span style="font-size:26px">'+(b.hl?'📱':'🎁')+'</span><div><b style="font-size:14px">'+b.t+'</b>'+(b.hl?'<span style="display:inline-block;margin-left:6px;background:#D62828;color:#fff;border-radius:99px;font-size:9px;font-weight:800;padding:2px 7px;vertical-align:middle">SÓ POR HOJE</span>':'')+'<p class="mut" style="font-size:12px;text-align:left">'+b.d+'</p></div></div>'}).join('')+
+ '<div class="card" style="padding:0;overflow:hidden"><div style="background:var(--pri);color:#fff;text-align:center;padding:14px"><small>OLHA SÓ</small><div style="font-weight:800">Tudo o que você vai receber</div><small>Oferta disponível até '+d+'</small></div><div style="padding:14px;display:flex;flex-direction:column;gap:8px">'+inc.map(function(x){return '<div class="step">'+(x[1]?'🎁':'✅')+' '+x[0]+'</div>'}).join('')+'<div style="border-top:1px solid var(--bege);margin-top:8px;padding-top:14px;text-align:center"><div class="mut" style="text-decoration:line-through">'+C.precioTachado+'</div><div class="small">POR APENAS</div><div style="font-size:52px;font-weight:900;color:var(--g);line-height:1">'+C.precio+'</div>'+(C.cuotas?'<div class="mut">'+C.cuotas+'</div>':'')+'</div></div></div>'+
+ '<a class="btn g" href="'+C.checkout+'" data-checkout>QUERO COMEÇAR 🥰</a>'+
+ '<div class="card" style="text-align:center;border:2px solid var(--pri);background:var(--pes)"><svg viewBox="0 0 200 215" width="112" height="120" style="display:block;margin:0 auto 8px" role="img" aria-label="Garantia"><defs><linearGradient id="gsA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1A8"/><stop offset=".35" stop-color="#F2C94C"/><stop offset=".7" stop-color="#C98F12"/><stop offset="1" stop-color="#8A5A00"/></linearGradient><linearGradient id="gsB" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FFF1A8"/><stop offset=".5" stop-color="#E8B923"/><stop offset="1" stop-color="#A8710A"/></linearGradient></defs><polygon points="66,160 42,212 68,200 82,212 96,165" fill="url(#gsA)" stroke="#8A5A00" stroke-width="1.5"/><polygon points="134,160 158,212 132,200 118,212 104,165" fill="url(#gsA)" stroke="#8A5A00" stroke-width="1.5"/><polygon points="100.0,5.0 107.7,12.3 116.5,6.4 122.8,15.0 132.5,10.7 137.2,20.2 147.5,17.7 150.5,27.9 161.1,27.2 162.2,37.8 172.8,38.9 172.1,49.5 182.3,52.5 179.8,62.8 189.3,67.5 185.0,77.2 193.6,83.5 187.7,92.3 195.0,100.0 187.7,107.7 193.6,116.5 185.0,122.8 189.3,132.5 179.8,137.2 182.3,147.5 172.1,150.5 172.8,161.1 162.2,162.2 161.1,172.8 150.5,172.1 147.5,182.3 137.2,179.8 132.5,189.3 122.8,185.0 116.5,193.6 107.7,187.7 100.0,195.0 92.3,187.7 83.5,193.6 77.2,185.0 67.5,189.3 62.8,179.8 52.5,182.3 49.5,172.1 38.9,172.8 37.8,162.2 27.2,161.1 27.9,150.5 17.7,147.5 20.2,137.2 10.7,132.5 15.0,122.8 6.4,116.5 12.3,107.7 5.0,100.0 12.3,92.3 6.4,83.5 15.0,77.2 10.7,67.5 20.2,62.8 17.7,52.5 27.9,49.5 27.2,38.9 37.8,37.8 38.9,27.2 49.5,27.9 52.5,17.7 62.8,20.2 67.5,10.7 77.2,15.0 83.5,6.4 92.3,12.3" fill="url(#gsA)" stroke="#8A5A00" stroke-width="1.5"/><circle cx="100" cy="100" r="76" fill="url(#gsB)" stroke="#8A5A00" stroke-width="2"/><circle cx="100" cy="100" r="68" fill="none" stroke="#FFF6C7" stroke-width="1.5" stroke-dasharray="2 4"/><polygon points="100.0,42.0 102.5,48.6 109.5,48.9 104.0,53.3 105.9,60.1 100.0,56.2 94.1,60.1 96.0,53.3 90.5,48.9 97.5,48.6" fill="#7A4E00"/><polygon points="72.0,53.5 73.6,57.8 78.2,58.0 74.6,60.8 75.8,65.3 72.0,62.7 68.2,65.3 69.4,60.8 65.8,58.0 70.4,57.8" fill="#7A4E00"/><polygon points="128.0,53.5 129.6,57.8 134.2,58.0 130.6,60.8 131.8,65.3 128.0,62.7 124.2,65.3 125.4,60.8 121.8,58.0 126.4,57.8" fill="#7A4E00"/><text x="100" y="113" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="900" font-size="21" letter-spacing="1" fill="#6B4300" stroke="#FFF1A8" stroke-width=".6">GARANTIA</text><line x1="46" y1="124" x2="154" y2="124" stroke="#7A4E00" stroke-width="1.5"/><text x="100" y="142" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="700" font-size="11" letter-spacing="2" fill="#6B4300">DE SATISFAÇÃO</text><polygon points="100.0,154.0 101.5,158.0 105.7,158.1 102.4,160.8 103.5,164.9 100.0,162.5 96.5,164.9 97.6,160.8 94.3,158.1 98.5,158.0" fill="#7A4E00"/></svg><b>Garantia de reembolso</b><p class="mut" style="margin-top:6px">Se você não gostar ou não for o que esperava, devolvemos cada centavo que você pagou, sem perguntas.</p></div>'+
+ '<h3>❓ Perguntas frequentes</h3><div>'+faq.map(function(f){return '<div class="faq"><button data-faq>'+f[0]+'<span>⌄</span></button><p>'+f[1]+'</p></div>'}).join('')+'</div>'+
+ '<a class="btn g" href="'+C.checkout+'" data-checkout>QUERO COMEÇAR AGORA! 🔥</a><p class="small">🔒 Pagamento 100% seguro · Seus dados estão protegidos</p></div>'}
+};
+
+function after(){
+  if(page===24){var L=[["⚖️","Calculando faixa de peso",1800],["🎂","Avaliando idade",1500],["🔍","Revisando seus hábitos",1600],["✨","Mapeando benefícios",1400]],i=0,box=document.getElementById("ls");
+    L.forEach(function(x,k){box.insertAdjacentHTML("beforeend",'<div class="card step" id="l'+k+'" style="opacity:.4">'+x[0]+' '+x[1]+'</div>')});
+    (function run(){if(i>=L.length)return go(next,600);var el=document.getElementById("l"+i);el.style.opacity=1;var t=0,d=L[i].duration||L[i][2];
+      var iv=setInterval(function(){t+=50;var pct=(i+t/d)/L.length*100;document.getElementById("lp").style.width=pct+"%";document.getElementById("lt").textContent=Math.round(pct)+"% concluído";
+        if(t>=d){clearInterval(iv);el.innerHTML="✅ "+L[i][1];i++;setTimeout(run,300)}},50)})();}
+  if(page===27){var R=["Montando a sua rotina de 4 semanas","Personalizando o seu "+Bs,"Calculando ingredientes e receitas","Preparando os seus bônus","Rotina pronta"],j=0,w=0,box2=document.getElementById("rs");
+    var draw=function(){box2.innerHTML=R.map(function(r,k){return '<div class="step" style="opacity:'+(k<=j?1:.3)+'">'+(k<j?'✅':k===j?'⏳':'◻️')+' '+r+'</div>'}).join('')};draw();
+    var a=setInterval(function(){j=Math.min(j+1,R.length-1);draw()},1200),b=setInterval(function(){w=Math.min(w+1.5,100);document.getElementById("rp").style.width=w+"%"},100);
+    setTimeout(function(){clearInterval(a);clearInterval(b);next()},8500);}
+  if(page===7){var inp=document.getElementById("nm"),bt=document.getElementById("nmb");inp.oninput=function(){S.name=inp.value.trim();bt.disabled=!S.name};inp.onkeydown=function(e){if(e.key==="Enter"&&S.name)next()}}
+}
+
+// Barra ficticia suave: arranca en 35 % y llega a 97 %, un poco más rápido al principio
+var lastPct=0;
+function fakePct(){
+  var n=page-2-(page>26?P.length:0), tot=25-P.length; // pantallas con barra: 2 a 27, menos las saltadas
+  return Math.round(35+62*(1-Math.pow(1-n/tot,2.2)));
+}
+function render(){
+  var bar=page>1&&page<28,pct=fakePct();var _c=document.getElementById("cinta");if(_c)_c.style.display=page===1?"block":"none";
+  root.innerHTML=(bar?'<div class="q-bar"><div class="row"><button class="back" data-back>‹</button>'+(I.logo?'<img src="'+I.logo+'" alt="">':'<span class="brand">'+B+'</span>')+'</div><div class="q-track"><div class="q-fill" id="qf" style="width:'+lastPct+'%"></div></div></div>':'')+'<div class="q-body" id="qb"></div>';
+  if(bar){var qf=document.getElementById("qf");requestAnimationFrame(function(){requestAnimationFrame(function(){qf.style.width=pct+"%"})});lastPct=pct}else{lastPct=0}
+  document.getElementById("qb").innerHTML=steps[page]();
+  document.getElementById("qb").scrollTop=0;
+  after();
+  track();
+}
+
+root.addEventListener("click",function(e){
+  var t=e.target.closest("button,a");if(!t)return;
+  if(t.hasAttribute("data-checkout")){var co=root.querySelectorAll("[data-checkout]");ev("quiz_click_comprar_"+(t===co[0]?"1":"2"))}
+  if(t.hasAttribute("data-faq"))ev("quiz_faq_abre");
+  if(t.hasAttribute("data-back"))return back();
+  if(t.hasAttribute("data-next")){if(!t.disabled)next();return}
+  if(t.dataset.k){S[t.dataset.k]=t.dataset.v;render();return go(next)}
+  if(t.dataset.m){var a=S[t.dataset.m],v=t.dataset.v,i=a.indexOf(v);i>-1?a.splice(i,1):a.push(v);var y=document.getElementById("qb").scrollTop;render();document.getElementById("qb").scrollTop=y;return}
+  if(t.dataset.st){var k=t.dataset.st,mx=+t.dataset.max;if(k==="desired")mx=S.weight-1;S[k]=Math.max(+t.dataset.min,Math.min(mx,S[k]+(+t.dataset.d)));if(k==="weight"&&S.desired>=S.weight)S.desired=S.weight-1;render();return}
+  if(t.hasAttribute("data-faq")){t.parentNode.classList.toggle("on");return}
+});
+render();
+})();
+</script>

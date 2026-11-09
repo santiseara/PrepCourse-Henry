@@ -1,3 +1,14 @@
+## 2026-11-09 (3ª pasada) — El quiz de la chia clonado a Brasil
+
+- Pedido de Santiago: *"Necesito que me hagas exactamente este mismo quiz, pero para el mercado de Brasil… con las imágenes, con todo"*, con el link de `chauinflamacion.com/pages/chia`.
+- **El quiz viaja en texto plano** dentro de un `custom_liquid` de Shopify: se bajó con `curl -sL` y se cortó desde el primer `<script>` (el comentario de apertura sale repetido 4 veces por Liquid).
+- **Las 10 imágenes se reusan tal cual**: hoja de contactos con Pillow antes de planificar nada, y ninguna tiene texto quemado. Eso convirtió el trabajo en una localización de copy.
+- **Entregado:** `~/Desktop/o-segredo-da-chia/` con `landing/` (`.txt` para pegar, `.html` y `PRUEBA.html` con las fotos embebidas) e `imagenes/` con las 10 fotos renombradas. Copia en `OUTPUTS/2026-11-09-quiz-o-segredo-da-chia-br.html`.
+- Decisiones de Santiago: precio **R$ 67** (tachado R$ 147) y **checkout pendiente** — quedó `https://COMPLETAR.impultienda.ar/checkout/chia` en el único lugar del archivo donde vive la URL.
+- **Regla nueva en [[quizzes-reglas-de-armado]]:** al clonar a portugués, una marca que empieza con artículo (*O Segredo da Chia*) duplica el artículo en todos los textos que la nombran después de una preposición. Se resuelve con una variable `Bs` (marca sin artículo) y se detecta por código recorriendo el quiz.
+- Página nueva [[secreto-de-la-chia]] con la ficha de las dos versiones; nota de localización sumada a [[internacionalizacion]].
+- Verificado en Chrome a 390 px: los 28 pasos, cero desborde, cero errores de JS y los dos CTA leyendo el CONFIG.
+
 ## 2026-11-09 (2ª pasada) — Origen Pilates: despiece de los ads y la tanda 1 con Veo 3.1
 
 - Santiago cerró las decisiones: nombre **Origen Pilates**, precio **$7.999**, y la tanda 1 con **5 videos de avatar IA (Veo 3 por [[apimart]], créditos que él cargó) + 2 de voz en off**. Pidió analizar los ads a fondo antes de generar nada.

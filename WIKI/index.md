@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-08.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-09.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -22,6 +22,7 @@
 - 🆕 [[energia-vital]] — Oferta propia que ya corre en AR (Digital World, 54 ads) y se lanza a **LATAM en neutro a US$ 9,99**: Guía de Autocuración Energética, 80 fichas de raíz emocional + cristales y hierbas. Sus 3 familias de hook, las 2 DNA de cuerpo transcriptas y la tanda 1 de 6 videos.
 - 🆕 [[100-paper-squishies]] — Oferta propia **en inglés** (US$ 16,99): ebook de 100 diseños imprimibles de squishies de papel, modelada sobre Hora de Papel (94 ads activos en 12 días, ES/IT/DE). Sus 7 familias de hook, la DNA de sus videos de 9 a 25 s y la tanda 1 de 6 videos.
 - 🆕 [[365-actividades-imprimibles]] — Oferta propia (US$ 15,99): kit sin pantallas de +390 imprimibles para chicos de 4 a 12, modelada sobre Croba (15 ads del kit activos desde agosto). Las 15 familias de hook del ganador, su DNA y la tanda 1 de 6 videos.
+- 🆕 [[secreto-de-la-chia]] — Oferta propia de peso con chia (28 días, mujeres 40+). Corre en AR a $24.900 (`chauinflamacion.com/pages/chia`, quiz de 28 pasos **sin VSL**) y desde el 9/11 tiene su clon brasileño **O Segredo da Chia** a R$ 67, con las mismas imágenes. Falta el checkout de Brasil.
 - 🆕 [[protocolo-chia-28d]] — Oferta nueva para LATAM (neutro): clon del VSL post-quiz de Protocolo Chía 4S (AR, +700 ads). Mecanismo de células L y chía, 4 fases en 28 días, y el plan para clonar guion, b-rolls y edición.
 - 🆕 [[solar-installer-pro]] — Oferta nueva **en inglés** (US$ 47): curso de instalación solar en 20 días, clon de De Cero a Instalador Solar Profesional (Mundo en Digital, 66 días en circulación). Sus 2 cuerpos de video, el patrón **vende claridad, no plata** y la tanda 1 de 6 videos.
 - 🆕 [[skool-ai]] — Oferta nueva **en inglés**: **Skool AI**, clon de Udemia.IA (~960 ads activos, 8 idiomas, 43 días el más viejo). Ángulo **IA en general**, no Claude. Sus 3 formatos de video (85% testimonio / 15% voz en off + quiz por profesión) y el mercado inglés vacío.
@@ -121,6 +122,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-09 — Quiz O Segredo da Chia (BR)](../OUTPUTS/2026-11-09-quiz-o-segredo-da-chia-br.html) — clon 1:1 al portugués del quiz argentino de chia (28 pasos, sin VSL, R$ 67 de R$ 147), con las mismas 10 fotos y el checkout pendiente en el CONFIG · ver [[secreto-de-la-chia]]
 - [2026-11-08 — Piedras: BR5, el ad «I never» en portugués](../OUTPUTS/2026-11-08-guion-piedras-portugues-BR5.md) — quinto ad del mismo ganador clonado tal cual (20,67 s): subtítulos Courier con palabra amarilla medidos sobre el original, 4 tomas de Sulafat y tempo 1,152 · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-08 — Piedras: los hooks en inglés de los 4 videos de Brasil](../OUTPUTS/2026-11-08-hooks-ingles-piedras-brasil.md) — los ganchos originales (Stone Lady, los 30 segundos, la contadora y la vecina) leídos de los subtítulos quemados de los fuentes, EN + ES con voseo · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-08 — Keywords de Brasil: los 3 nichos de siempre](../OUTPUTS/2026-11-08-keywords-br-peso-ingresos-manifestacion.md) — 10 por nicho con el número de ads y la oferta que destapa cada una; `mapa astral` con R$9 a R$29,90 en el título y la receta en PDF como puerta de emagrecimento · ver [[caza-de-ofertas]]

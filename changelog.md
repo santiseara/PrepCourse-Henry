@@ -1,8 +1,22 @@
+## 2026-11-09 (2ª pasada) — Origen Pilates: despiece de los ads y la tanda 1 con Veo 3.1
+
+- Santiago cerró las decisiones: nombre **Origen Pilates**, precio **$7.999**, y la tanda 1 con **5 videos de avatar IA (Veo 3 por [[apimart]], créditos que él cargó) + 2 de voz en off**. Pidió analizar los ads a fondo antes de generar nada.
+- **Despiece frame por frame en `OUTPUTS/2026-11-09-despiece-ads-sana-pilates.md`:** 22 videos con detección de cortes, medición de audio y de ritmo, el estilo exacto de subtítulo, el banco de píldoras, las 7 aperturas que usan, el mecanismo en sus palabras y la lista de lo que no se copia.
+  - **Ritmo real: 166 palabras por minuto de mediana** (rango 138-190). Nuestra regla decía 150 y el molde brasileño iba a 185: los guiones de esta oferta se calculan a **170 ppm**.
+  - ⚠️ **Corrección al supuesto de partida:** sus ads **no** son "casi todos con IA". Verificado en resolución grande, lo único generado es el bloque de la profesora en la cocina (se delata por la mano con los dedos fusionados y por los planos de 7,4 a 9,9 s). La presentadora del sillón, Marta de 63 y la entrevista del shopping son **personas reales**. El 100 % IA es el competidor brasileño.
+- **Guiones de la tanda 1** en `OUTPUTS/2026-11-09-guiones-origen-pilates-tanda-1.md`: 7 guiones de 44 a 50 s, sin kilos, sin plazos de resultado y sin segunda persona sobre el cuerpo.
+- **Receta de video validada con una prueba antes de la tanda** (anotada en [[origen-pilates]]): `veo3.1-fast`, 8 s, 9:16, `generation_type: frame` desde una imagen de referencia, **US$0,14 la toma**; imágenes con `gemini-nano-banana-2.1-ext` a **US$0,014**. El clip de prueba salió con manos correctas, lipsync bueno y el texto exacto.
+  - 🆕 **La subida de imágenes va por `POST /v1/uploads/images` del propio ApiMart** (multipart, campo `file`). No hace falta catbox ni ningún host de terceros. `image_urls` rechaza los data URI en base64.
+  - 🆕 **Un clip de 8 s entra 23 a 25 palabras**, así que un video de 6 tomas son ~130 palabras y ~48 s.
+  - 🆕 **Para una escena con dos personas se genera una imagen de escena** pasando los dos retratos como `image_urls`: así el "día 1" y el "día 28" salen con el mismo departamento, el mismo encuadre y la misma madre.
+- Carpeta renombrada a `~/Desktop/origen-pilates/` y quiz dejado en `landing/quiz.html` para que lo mire.
+- Página de la WIKI renombrada a [[origen-pilates]] con las decisiones y la receta de producción.
+
 ## 2026-11-09 — Pilates Asiático: Sana Pilates desarmada y el nicho en Brasil
 
 - Santiago pasó la Biblioteca de Anuncios de **Sana Pilates** (AR) para armar una oferta de pilates propia, con el mismo quiz y mejor diseño, y pidió analizar el nicho en Brasil y en Argentina y decidir qué hacer con los anuncios (los de ellos son casi todos con IA).
 - **El hallazgo que cambia el encuadre: no es una oferta nueva.** Sana Pilates es la misma oferta que ya está armada como [[pilates-hormonal]] desde el 12/10 (el índice ya decía "modelado de Sana Pilates"): los **tres bonos coinciden palabra por palabra**, igual el reto de 28 días, el avatar, el mecanismo del abdomen profundo y la garantía. Lo que falta definir es nombre, precio y la tanda de ads.
-- **Página nueva [[pilates-asiatico]]** y análisis completo en `OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md`.
+- **Página nueva [[origen-pilates]]** y análisis completo en `OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md`.
 - **La ballena:** página `982998884899600`, **~92 ads activos**, el más viejo del **26/8** (75 días), **un solo primary text para los 92**. Quiz en **InLead** sobre `sanaspilates.com` con cloaker, checkout en **Shopify** + Mercado Pago, **$7.999 ARS** (ancla $39.000, 3 cuotas de $2.666), **sin VSL**. Están **solos en la categoría en AR** (los 28 resultados de "pilates asiático" son suyos) y **perdieron un dominio con los ads corriendo**: `sanapilates.com` hoy es un parking de GoDaddy.
 - **Quiz de 17 pasos mapeado paso por paso**, con las 9 cosas a corregir al clonarlo (el idioma baila entre vos/tú/usted, faltan tildes, los sliders arrancan en 180 cm y 70 kg, el peso objetivo no calcula nada, el resultado no personaliza, no hay VSL).
 - **22 videos bajados y transcriptos**, 8 familias de creativos identificadas. **El hallazgo grande: no escriben guiones, permutan píldoras** — un banco de ~15 micro-clips de 5-10 s que se reordenan, siempre con el mismo bloque de oferta al final. Por eso sostienen 92 anuncios con un solo copy.

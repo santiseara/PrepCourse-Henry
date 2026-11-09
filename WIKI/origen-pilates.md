@@ -1,6 +1,24 @@
-# Pilates Asiático (oferta nueva AR)
+# Origen Pilates
 
-> Clon de **Sana Pilates**, la ballena del nicho en Argentina: reto de 28 días de "pilates asiático" para mujeres +40, con quiz. Mercado Argentina, en pesos. ⚠️ **Es la misma oferta que [[pilates-hormonal]]**, que ya está armada desde el 12/10: no hay que construirla, hay que relanzarla. (fuente: relevamiento del 2026-11-09, `OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md`)
+> Oferta propia AR de pilates asiático, clon mejorado de **Sana Pilates**, la ballena del nicho en Argentina: reto de 28 días de "pilates asiático" para mujeres +40, con quiz. Mercado Argentina, en pesos. ⚠️ **Es la misma oferta que [[pilates-hormonal]]**, que ya está armada desde el 12/10: no hay que construirla, hay que relanzarla. (fuente: relevamiento del 2026-11-09, `OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md`)
+
+
+## ✅ Decisiones tomadas (2026-11-09)
+| | |
+|---|---|
+| **Nombre** | **Origen Pilates** (eligió la opción 3 dada vuelta). El mecanismo "Pilates Asiático" se mantiene en el copy |
+| **Precio** | **$7.999 ARS**, igual que Sana Pilates |
+| **Carpeta** | `~/Desktop/origen-pilates/` con `imagenes/`, `landing/` y `anuncios/` |
+| **Tanda 1** | **5 videos con avatar IA + 2 de voz en off** (Santiago pidió 7; el tope habitual son 6) |
+| **Herramienta de video** | **Veo 3.1** por [[apimart]] — créditos pagados por Santiago el 9/11 en la cuenta de Juan |
+
+### La receta de video que quedó validada (9/11)
+- Modelo **`veo3.1-fast`**, `duration: 8`, `aspect_ratio: "9:16"`, `generation_type: "frame"` con una imagen de referencia. **US$0,14 por toma de 8 s.**
+- **Las imágenes salen de `gemini-nano-banana-2.1-ext` en el mismo ApiMart: US$0,014 cada una.** Un retrato por personaje, y para una escena con dos personas se genera una **imagen de escena** pasando los dos retratos como `image_urls`.
+- 🆕 **La subida de imágenes va por `POST /v1/uploads/images` de ApiMart** (multipart, campo `file`, devuelve `url` en la raíz). No hace falta catbox ni ningún host de terceros. `image_urls` **sólo acepta http/https o `asset://`**: un data URI en base64 lo rechaza con 400.
+- **Un clip de 8 s entra 23 a 25 palabras.** Medido: 23 palabras ocuparon de 0,11 a 7,35 s. Por eso un video de 6 tomas son **~130 palabras y ~48 s**.
+- **El prompt que da buen lipsync y manos correctas** fija, en este orden: la acción y el encuadre · la línea entre comillas · "Only this woman speaks" · "These are the ONLY words spoken in the whole video, exactly as written, in this order" · qué hace después de la última palabra · "Argentinian Rioplatense Spanish with a Buenos Aires accent" + "accurate lip sync perfectly matched to every word" + "anatomically correct hands with five separate fingers" · "Keep her exact face, hair, clothes and the exact room from the reference image" · cámara estática · "Audio: only these exact spoken words and quiet room ambience" · "No subtitles, no captions, no text, no logos and no watermark".
+- Salida real: **720×1280, 24 fps**, audio AAC 48 kHz. El clip de prueba salió con **manos correctas, cara estable y sin texto quemado**.
 
 ## ⚠️ No es una oferta nueva
 Los **tres bonos de Sana Pilates coinciden palabra por palabra** con los de [[pilates-hormonal]] (Protocolo Anti-flacidez · Revelación lumbar cervical · Drenaje Linfático Express), igual que el reto de 28 días, el avatar de mujeres +40 en menopausia, el mecanismo de los músculos profundos del abdomen, la app, el planner y la garantía de 30 días. Pilates Hormonal ya era este clon. Lo que falta definir es **nombre, precio y la tanda de ads**.

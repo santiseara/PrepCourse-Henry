@@ -13,7 +13,7 @@
 - **Clon 1:1**: mismos 28 pasos, mismo orden, mismos componentes, misma paleta naranja y las **mismas 10 imágenes** — ninguna tiene texto quemado, así que se reusan sin tocarlas.
 - Marca: **O Segredo da Chia**. Precio **R$ 67**, tachado **R$ 147** (decisión de Santiago del 9/11).
 - Localización, no traducción: *panza* → **barriga**, *cola* → **bumbum**, *muslos* → **coxas**, *talle grande* → **plus size**, *plata* → **dinheiro**, *súper* → **mercado**, *te devolvemos cada peso* → **devolvemos cada centavo**, fecha con `toLocaleDateString("pt-BR")`.
-- **Checkout pendiente**: quedó `https://COMPLETAR.impultienda.ar/checkout/chia` en `QUIZ_CONFIG.checkout`, que es el único lugar del archivo donde vive la URL.
+- **Checkout: `https://o-segredo-da-chia.impultienda.ar/checkout`** (lo pasó Santiago el 9/11, verificado 200 con `curl -sIL`). Vive en `QUIZ_CONFIG.checkout`, el único lugar del archivo donde está la URL; los dos botones de compra la leen de ahí.
 - Entregables: `~/Desktop/o-segredo-da-chia/` (`landing/` con el `.txt` para pegar, el `.html` y el `PRUEBA.html` con las fotos embebidas; `imagenes/` con las 10 fotos). Copia en `OUTPUTS/2026-11-09-quiz-o-segredo-da-chia-br.html`.
 - Verificado en el navegador a 390 px: los 28 pasos, **cero desborde**, cero errores de JS, los dos CTA leyendo el CONFIG.
 
@@ -23,7 +23,7 @@
 - Datos de la portada marcados como ejemplo en el propio CONFIG (`-12kg`, `+12.847 mujeres`): **no están respaldados**, los dejó así él.
 
 ## Preguntas abiertas
-- ¿Cuál es el subdominio de ImpulTienda de la tienda brasileña? Sin eso los CTA no van a ningún lado.
+- Los CTA van **directo** al checkout, sin arrastrar los UTM de la URL — igual que el quiz argentino. ¿Se agrega el pase de UTM o se deja como está el original?
 - ¿La versión BR lleva cuotas (`ou 12x de R$ 6,70`)? El campo `cuotas` está vacío, igual que en el original argentino.
 - ¿Se suben las 10 imágenes a la tienda de Brasil o se dejan apuntando al Supabase argentino?
 

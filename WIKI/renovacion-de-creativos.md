@@ -109,6 +109,14 @@ Atlas de Cortes, V49–V51. El checklist del 27/10 pide cambiar también la **es
 - **Regla: antes de bajar material nuevo, mirar cuánto queda sin usar de los clips que ya pasaron la revisión.** Es más rápido y el material ya está validado.
 - La revisión fina es a 1 cuadro por segundo, no a 1 cada 2 s: los carteles quemados duran 2 o 3 segundos y la hoja gruesa los saltea.
 
+## Ampliar el pool es gratis, pero hay que revisarlo (2026-11-09)
+
+DanceGo, tanda del 9/11. La regla del 3/11 dice mirar lo que queda sin usar antes de bajar material nuevo. La forma más barata de hacerlo es **correr la ventana de muestreo**: los mismos clips, con un offset de +2 s y un tope de 9 recortes por clip en vez de 5, dieron 228 recortes en lugar de 130, con claves que no coinciden con las del `usage.json` — así el editor elige planos frescos solo.
+
+- **Lo que entra ampliando no está revisado.** Hay que mirar el pool entero (2 cuadros por recorte alcanzan, en hojas de contactos de 45) antes de renderizar. En DanceGo apareció un salón con una piñata colgando que nadie habría elegido a mano.
+- **El texto quemado de un clip no siempre es motivo de veto:** si el recorte lleva `zoom` con `ybias 1.0`, el crop sale de abajo y el cartel de arriba se va solo. Vetar solo lo que el zoom no tapa.
+- **La palabra que ancla la placa final se elige entre las que aparecen una sola vez en el guion.** Un hook que repite una palabra del cierre ("Mirá cómo es por dentro" / "mirá el plan") adelanta la placa de cierre al segundo 6 y tapa el video entero. Se verifica con un cuadro a mitad de video, siempre.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

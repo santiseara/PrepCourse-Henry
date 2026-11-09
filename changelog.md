@@ -1,3 +1,13 @@
+## 2026-11-09 (4ª pasada) — DanceGo: tanda 3, tres renovaciones del ganador
+
+- Pedido de Santiago: *"Necesito que hagamos mas renovaciones para dancego. 3"*.
+- **Tres renovaciones del mismo ganador** (`6-11 - 1`, "Hay un gimnasio adentro de la tele de tu living") con el **cuerpo validado copiado textual** y **tres formatos de hook distintos**: pregunta del cliente ("¿y si no sé bailar?"), storytime en primera persona (la puerta del living cerrada) y lista de tres (lo que no necesitás). La tanda del 7/11 habían sido cuatro declaraciones sobre el mismo objeto, que es lo que el checklist del 27/10 marca como error.
+- **Estética nueva**: caja de subtítulo crema sobre tinta / ciruela / petróleo, tres ritmos de corte y 2, 4 y 3 palabras por placa. Los tres abren con living.
+- **Pool ampliado sin bajar un solo clip**: offset +2 s y tope de 9 recortes por clip sobre las ventanas ya revisadas → de ~130 a **228 recortes**. Se revisó el pool entero en hojas de contactos y se vetó **`R1`** (salón con una piñata colgando).
+- **Dos reglas nuevas** en [[renovacion-de-creativos]] y en [[dancego]]: la palabra que ancla la placa final se elige entre las que aparecen **una sola vez** (el `end` del video 1 arrancó en el segundo 6 porque el hook repetía "mirá"), y el texto quemado de un clip no es motivo de veto si el `zoom` con `ybias 1.0` lo recorta.
+- Voz Sulafat por API (`gemini-2.5-flash-preview-tts`, speed 1.30), acento verificado con **`gemini-3.5-flash`** (el `2.5-flash` ya devuelve 404 para cuentas nuevas).
+- Nuevo: `OUTPUTS/2026-11-09-guiones-dancego-tanda-9-11.md`, `OUTPUTS/scripts-vsl/gen_dancego_plans_9.py`. Entrega: `~/Desktop/dancego/anuncios/9-11 - 1` a `9-11 - 3`.
+
 ## 2026-11-09 (3ª pasada) — El quiz de la chia clonado a Brasil
 
 - Pedido de Santiago: *"Necesito que me hagas exactamente este mismo quiz, pero para el mercado de Brasil… con las imágenes, con todo"*, con el link de `chauinflamacion.com/pages/chia`.

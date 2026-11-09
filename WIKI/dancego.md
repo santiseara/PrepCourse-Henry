@@ -104,6 +104,24 @@ Tres renovaciones de voz en off con la DNA del ganador, cada una con hook, cuerp
 - **Un cartel arriba no siempre se saca con `zoom 1.30`.** El clip `7694458671287356686` salió con el "me 🫶 zumba" cortado a la mitad en el primer cuadro del video 3; con **`zoom 1.52`** quedó afuera. Regla práctica: el zoom tiene que recortar más alto que la posición del cartel (z=1.30 recorta 23 % de la altura, y ese cartel estaba al 25 %).
 - **En `gen_*_plans.py`, numerar las claves con `enumerate` sobre un archivo con comentarios desfasa el pool.** Las claves arrancaron en `Z3` y `first=['Z1', 1]` reventó el editor con `StopIteration`. Contador propio, incrementado solo cuando la línea tiene contenido.
 
+## Tanda 3 — tres renovaciones del ganador (2026-11-09)
+Sigue mandando el mismo ganador (`6-11 - 1`). La tanda del 7/11 fueron **cuatro declaraciones sobre el mismo objeto** (el living, la tele): eso es cambiar el objeto, no el hook ([[renovacion-de-creativos]], checklist del 27/10). Esta vez van **tres formatos distintos** sobre el **cuerpo validado copiado textual**:
+
+| # | Formato del hook | Hook | Entra por |
+|---|---|---|---|
+| 1 | Pregunta del cliente | "Lo que más me preguntan es siempre lo mismo: ¿y si no sé bailar?" | la objeción madre |
+| 2 | Storytime en primera persona | "Mi primera clase la bailé con la puerta del living cerrada" | la vergüenza |
+| 3 | Lista de tres | "Anotá tres cosas que no necesitás para empezar a entrenar hoy" | lo que no hace falta |
+
+- **La estética también cambia**: caja de subtítulo crema sobre tinta / ciruela / petróleo, tres ritmos de corte (`cut` 1.5-2.3 / 2.1-3.2 / 1.6-2.5) y **2, 4 y 3 palabras por placa**. Los tres abren con un plano de living (Z8, Z5, Z7), no con salón.
+- **Planos nuevos sin bajar un solo clip**: las ventanas ya revisadas se muestrean con **offset +2 s** y **TOPE 9** en vez de 5. El pool pasó de ~130 a **228 recortes** y las claves no coinciden con las de `usage7.json`, así que el editor prefiere lo no usado. Es la regla del 3/11 de [[renovacion-de-creativos]] aplicada sin revisión nueva de material.
+- Voz Sulafat por API con `gemini-2.5-flash-preview-tts`, `speed 1.30`, verificada (rioplatense, lee solo el guion). El verificador de acento ahora pide **`gemini-3.5-flash`**: `gemini-2.5-flash` devuelve 404 ("no longer available to new users") y `gemini-flash-latest` y `gemini-3.8-flash` dieron 503.
+- Guiones en `OUTPUTS/2026-11-09-guiones-dancego-tanda-9-11.md`. Planes: `OUTPUTS/scripts-vsl/gen_dancego_plans_9.py`. Entrega: `9-11 - 1` a `9-11 - 3`.
+
+### Dos cosas que hay que mirar cuando se amplía un pool
+1. **Una palabra que se repite en el guion mueve la placa final al principio.** El `end` del video 1 estaba anclado a `mirá` y ese guion dice "Mirá cómo es por dentro" en el hook: la placa de cierre arrancó en el segundo 6 y tapó 38 de los 44 segundos. **Regla: la palabra que ancla la placa final se elige entre las que aparecen una sola vez** (acá, `plan`), y se verifica con un cuadro a mitad del video.
+2. **Ampliar el pool mete planos que nadie revisó.** Con TOPE 9 entraron recortes nuevos de clips viejos: se revisó el pool entero (228 recortes, 2 cuadros cada uno, en hojas de 45) y **el único veto fue `R1` (`7704573729669451039`): un salón con una piñata colgando, plano lejano y confuso**. El texto quemado de `E1`, `E2`, `I1`, `Z1` y `Z2` **no es problema**: todos llevan `zoom` con `ybias 1.0`, que recorta de arriba justo donde está el cartel.
+
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?
 - ¿Precio final? (el link de checkout ya está confirmado)

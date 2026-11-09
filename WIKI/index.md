@@ -26,6 +26,7 @@
 - 🆕 [[solar-installer-pro]] — Oferta nueva **en inglés** (US$ 47): curso de instalación solar en 20 días, clon de De Cero a Instalador Solar Profesional (Mundo en Digital, 66 días en circulación). Sus 2 cuerpos de video, el patrón **vende claridad, no plata** y la tanda 1 de 6 videos.
 - 🆕 [[skool-ai]] — Oferta nueva **en inglés**: **Skool AI**, clon de Udemia.IA (~960 ads activos, 8 idiomas, 43 días el más viejo). Ángulo **IA en general**, no Claude. Sus 3 formatos de video (85% testimonio / 15% voz en off + quiz por profesión) y el mercado inglés vacío.
 - 🆕 [[profesional-digital]] — Oferta AR ($14.999): pack de Community Manager + Marketing + UGC, clon de Elevada Digital (~300 ads en LATAM y EE.UU.). Patrones de sus ganadores, **reglas anti-bloqueo** y tanda 1 de 6 videos.
+- 🆕 [[pilates-asiatico]] — Oferta nueva AR: clon de **Sana Pilates** (92 ads, 75 días, $7.999). ⚠️ Es la misma oferta que [[pilates-hormonal]]. Quiz de 17 pasos, las 6 familias de ads, el banco de píldoras y el nicho en Brasil.
 - 🆕 [[pilates-hormonal]] — Reto de 28 días para mujeres 45+ (quiz + VSL + ImpulTienda): ficha, activos y reglas de ads.
 - 🆕 [[pilates-sin-vueltas]] — Oferta nueva AR ($17.999) **para instructoras** de pilates: 100 clases armadas + 500 ejercicios, clon de Centerline Pilates (41 ads en inglés). DNA de su tanda ganadora.
 - 🆕 [[herrero-de-finde]] — Oferta AR ($14.990): planos de herrería, clon de The Weekend Fabricator (EE.UU.). Landing larga, V7 ganador con CPA de 1 USD y **producto propio: 1.485 planos y 12 bonus generados por código (un PDF de 4.866 páginas + 12 archivos)**.
@@ -305,6 +306,7 @@
 - 2026-10-14 — [Descripción Mounjaro Humilde](../OUTPUTS/2026-10-14-descripcion-mounjaro-humilde.md): primary text corto con emojis, sin precio, CTA al test de 1 minuto
 - 2026-10-14 — [Descripción Resina Rentable](../OUTPUTS/2026-10-14-descripcion-resina-rentable.md): primary text corto con emojis
 - [2026-10-14 — Guiones Chupetines v6](../OUTPUTS/2026-10-14-guiones-chupetines-v6.md) — 5 guiones: el mes desglosado, "Tres cosas", diciembre lleno, la caja del súper, el cumpleaños del hijo
+- 2026-11-09 — [Análisis Pilates Asiático / Sana Pilates](../OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md): radiografía de la ballena argentina (92 ads, quiz de 17 pasos, oferta y precio), las 6 familias de creativos, el banco de píldoras, el nicho en Brasil y el plan de 6 ads en 3 carriles · ver [[pilates-asiatico]]
 - 2026-10-14 — [Guiones UGC Pilates Hormonal v2](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal-v2.md): 5 guiones de la experta enfocados en bajar de peso
 - 2026-10-14 — [Guiones UGC Pilates Hormonal](../OUTPUTS/2026-10-14-guiones-ugc-pilates-hormonal.md): 5 guiones UGC de ~30 s en primera persona con CTA al test gratis
 - [2026-10-14 — Guion Piedras: "Así generé más de 2.000 dólares en un mes"](../OUTPUTS/2026-10-14-guion-piedras-2000-en-un-mes.md) — el mes desglosado por canal (casamiento, feria, locales, WhatsApp), EN/ES

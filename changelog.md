@@ -1,3 +1,15 @@
+## 2026-11-09 — Pilates Asiático: Sana Pilates desarmada y el nicho en Brasil
+
+- Santiago pasó la Biblioteca de Anuncios de **Sana Pilates** (AR) para armar una oferta de pilates propia, con el mismo quiz y mejor diseño, y pidió analizar el nicho en Brasil y en Argentina y decidir qué hacer con los anuncios (los de ellos son casi todos con IA).
+- **El hallazgo que cambia el encuadre: no es una oferta nueva.** Sana Pilates es la misma oferta que ya está armada como [[pilates-hormonal]] desde el 12/10 (el índice ya decía "modelado de Sana Pilates"): los **tres bonos coinciden palabra por palabra**, igual el reto de 28 días, el avatar, el mecanismo del abdomen profundo y la garantía. Lo que falta definir es nombre, precio y la tanda de ads.
+- **Página nueva [[pilates-asiatico]]** y análisis completo en `OUTPUTS/2026-11-09-analisis-pilates-asiatico-sana-pilates.md`.
+- **La ballena:** página `982998884899600`, **~92 ads activos**, el más viejo del **26/8** (75 días), **un solo primary text para los 92**. Quiz en **InLead** sobre `sanaspilates.com` con cloaker, checkout en **Shopify** + Mercado Pago, **$7.999 ARS** (ancla $39.000, 3 cuotas de $2.666), **sin VSL**. Están **solos en la categoría en AR** (los 28 resultados de "pilates asiático" son suyos) y **perdieron un dominio con los ads corriendo**: `sanapilates.com` hoy es un parking de GoDaddy.
+- **Quiz de 17 pasos mapeado paso por paso**, con las 9 cosas a corregir al clonarlo (el idioma baila entre vos/tú/usted, faltan tildes, los sliders arrancan en 180 cm y 70 kg, el peso objetivo no calcula nada, el resultado no personaliza, no hay VSL).
+- **22 videos bajados y transcriptos**, 8 familias de creativos identificadas. **El hallazgo grande: no escriben guiones, permutan píldoras** — un banco de ~15 micro-clips de 5-10 s que se reordenan, siempre con el mismo bloque de oferta al final. Por eso sostienen 92 anuncios con un solo copy.
+- **Brasil:** "21 Day Challenge" (241 ads) **no es modelo**, es BetterMe. El que sí importa es **"Calistenia Japonesa 28 Dias"** (50 ads en 5 días), con **mini-novelas 3D estilo Pixar 100 % IA**, y **"Camila Oliveira"** (14 ads, arrancó hoy) con el **ángulo de la vergüenza** que falta en Argentina.
+- **Plan de ads propuesto:** tanda de 6 en 3 carriles (mini-novela 3D con IA ×2, avatar IA a cámara de 90 s ×2, voz en off sobre TikTok ×2), más la estacionalidad de pre-verano que ellos ya usan y nosotros no.
+- Material en `~/Desktop/pilates-asiatico/anuncios/competidor/` y `/competidor-br/`.
+
 ## 2026-11-08 — Piedras BR5: el ad «I never» clonado a portugués
 
 - Santiago pasó `~/Downloads/i never.mp4` (20,67 s, 1080x1920) y pidió el mismo video en portugués, tal cual. Se reusó la imagen y la cama del fuente: no se tocó ni un corte.

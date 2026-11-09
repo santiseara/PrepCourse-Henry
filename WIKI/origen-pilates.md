@@ -98,6 +98,55 @@ No es "IA o voz en off": son dos carriles distintos, y **el que no podemos copia
 
 **Se copia de su edición:** el bloque de oferta fijo al final con **fecha y no con precio**, los subtítulos karaoke, la placa de marca de cierre, y la lógica de banco de píldoras para renovar barato.
 
+
+## Tanda 1 de ads y quiz (2026-11-09)
+
+### Los 7 videos · `~/Desktop/origen-pilates/anuncios/`
+| # | Formato | Largo | Escenas |
+|---|---|---|---|
+| 9-11 - 1 | avatar IA | 34,6 s | pizarrón "ABDOMEN PROFUNDO" · profe en su living · clase en terraza · presentadora |
+| 9-11 - 2 | avatar IA | 34,5 s | día 1 (hija filmando, la madre atrás) · día 28 · abuela con la nieta · presentadora |
+| 9-11 - 3 | avatar IA | 41,9 s | Ana en su casa (3 tomas) · clase en terraza · abuela con la nieta · presentadora |
+| 9-11 - 4 | avatar IA | 34,9 s | pizarrón (la rodilla) · estudio · clase en terraza · presentadora |
+| 9-11 - 5 | avatar IA | 35,6 s | balcón porteño · abuela con la nieta · presentadora (3 escenas) |
+| 9-11 - 6 | voz en off | 36,1 s | b-roll de TikTok |
+| 9-11 - 7 | voz en off | 34,0 s | b-roll de TikTok |
+
+Guiones en `OUTPUTS/2026-11-09-guiones-origen-pilates-tanda-1.md`. **Costo total de ApiMart: US$4,90.**
+
+### 🧬 La estructura que se calcó (del despiece de sus videos cortos)
+Su ad de 53 s son **4 escenas + placa**; el de 75 s, **7 escenas + placa**. Cada escena es otra mujer en otro lugar, y **el bloque de oferta lo dice siempre la misma presentadora del living**, al final de todos los anuncios. Reglas que salen de ahí y que ahora son el molde de esta oferta:
+- **Máximo 4 escenas por video** (regla de Santiago del 9/11). Una escena puede tener 2 o 3 tomas.
+- **Cada video arma con escenas distintas**: algunos de antes/después, otros con las que ellos usan (pizarrón, testimonio al espejo, clase grupal, entrevista en la calle, dos generaciones).
+- **Caja roja de hook** sobre los primeros 6 s, blanca en itálica, como su "5 EJERCICIOS / Y SE VAN A ARREPENTIR / DE CRITICAR".
+- **Una sola toma de cierre reusada en los 5 videos**: la presentadora con el bloque de oferta, con fecha y sin precio.
+- Repertorio de escenas: pizarrón casero · profe en su living · testimonio con nombre y ciudad · clase grupal en terraza · entrevista en la vereda · abuela con la nieta · presentadora · placa de marca.
+
+### ⚠️ El filtro de contenido de Veo
+Rechaza (`content_policy_violation`, y **no cobra**) las referencias con **ropa ceñida o de color piel** y las escenas de **una mujer sola en un dormitorio** o de **un hombre fuera de cuadro abordando a una mujer en la calle**. Se cayeron el testimonio al espejo (3 tomas) y la entrevista en la vereda (2). Con ropa holgada y en otro ambiente pasan: la presentadora salió recién al rehacerla con remera blanca y jogging. **Regla: las imágenes de referencia van siempre con ropa holgada y cubierta.**
+
+### Ajuste del 9/11 (pedido de Santiago, sin regenerar nada)
+*"metele 1.2 de velocidad, cortame los silencios y poneme una música activa que se escuche bien."* Se re-montó desde las tomas ya generadas:
+- **`speed 1.2`** en video y audio juntos (el lipsync se mantiene), silencios de más de 0,26 s recortados a 0,12 s a −38 dB.
+- **Cama `bed_activo`** (la misma que DanceGo, Quesos y Nail Designer, md5 idéntico): medida en **85 % de graves, pulso 0,64 y 135 onsets/min**. Va a −12 dB con `sidechaincompress`, así que baja sola cuando alguien habla.
+- **Niveles normalizados**: los cinco a pico −1,3 dB (antes iban de −5,8 a −11,4 y algunos se oían flojos). Media entre −18 y −23 dB, el rango de los de Sana Pilates.
+- Los subtítulos se **re-alinean contra el audio ya acelerado**, no se estiran.
+
+### ⚠️ Los tags de pilates en español están podridos para b-roll
+84 clips bajados entre `#pilatesencasa`, `#pilatesmenopausia` y `#pilatesmujeres40`: **sobrevivieron 6**. El resto tiene el título de la rutina quemado en pantalla ("Elbow Sliders 10 reps", "Rutina brazos", "A partir de los 50"), son hombres hablando a cámara, o son **chicas de 20**, que no es el avatar de una oferta para mujeres de más de 40. `#pilatesemcasa` en portugués **se solapa casi entero** con el tag en español, así que no sirve de escape. Para la tanda 2: cazar con más calma o generar el b-roll con Veo.
+
+### El quiz · `~/Desktop/origen-pilates/landing/`
+- **Sin VSL** (pedido del 9/11): se sacaron el player de Panda, el `<template id="vsl-template">` y el JS que lo cargaba. **`SEGUNDOS_OFERTA: 0`** → la oferta se ve apenas se llega al paso 19. Copia en `OUTPUTS/2026-11-09-quiz-origen-pilates.html`, original en `quiz.html.bak`.
+- **Precio $9.990**, 3 cuotas sin interés de **$3.330** (ancla coherente $33.300 con el 70 % OFF).
+- **Las 29 imágenes se rehicieron de cero** (las del quiz de [[pilates-hormonal]] no existían en disco) y quedaron en `landing/img/`, con el mapa `IMAGENES` apuntando ahí:
+  - **17 por código, a costo cero** (`OUTPUTS/scripts-vsl/` no; el script quedó en el scratchpad): logo de loto de 8 pétalos con "ORIGEN PILATES / Método Asiático" en PNG transparente, las 5 siluetas de zonas con el círculo del acento, las 3 de punto de partida y las 5 de cuerpo deseado con anchos bien diferenciados, el mockup de la app (reto día 11 de 28), la placa del Pase VIP y el sello de pago seguro.
+  - **12 fotos con `gemini-nano-banana-2.1-ext`** (US$0,014 c/u): mujeres argentinas de 45 a 65 en departamentos porteños reales, ropa holgada.
+
+### Pendientes
+- **El checkout sigue en `pilates-hormonal.impultienda.ar`**: falta el link nuevo de Origen Pilates.
+- **El quiz mezcla tuteo y voseo** ("comenzaron como tú", "Si sientes dolor") y conserva claims de kilos de la versión vieja ("Silvia, de 75 a 71 kg"). Hay que pasarlo a voseo cerrado y revisar los claims antes de lanzar.
+- Las dos escenas que rechazó el filtro (espejo y entrevista) quedan para la tanda 2.
+
 ## Decisiones abiertas
 - **Nombre.** Propuestas: **Kaizen Pilates** (recomendada), Pilates Hana, Pilates Origen. El mecanismo "Pilates Asiático" se mantiene en el copy. Evitar "sana", "zen" y "wellness".
 - **Precio.** Ellos están a $7.999 hace 75 días: el mercado está calibrado ahí. [[pilates-hormonal]] estaba fijado en $14.990, **87 % más caro que el único otro jugador**. Recomendación: **$7.999, ancla $39.000, 3 cuotas**.

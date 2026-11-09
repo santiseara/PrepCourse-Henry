@@ -19,6 +19,17 @@
 - Página nueva [[secreto-de-la-chia]] con la ficha de las dos versiones; nota de localización sumada a [[internacionalizacion]].
 - Verificado en Chrome a 390 px: los 28 pasos, cero desborde, cero errores de JS y los dos CTA leyendo el CONFIG.
 
+## 2026-11-09 (3ª pasada) — Origen Pilates: los 7 ads de la tanda 1 y el quiz sin VSL
+
+- **7 videos entregados** en `~/Desktop/origen-pilates/anuncios/` (`9-11 - 1` a `9-11 - 7`): 5 de avatar IA con Veo 3.1 y 2 de voz en off. **US$4,90 de ApiMart en total.**
+- **Se calcó la estructura de escenas de Sana Pilates**, no el molde brasileño: su ad de 53 s son 4 escenas + placa y el de 75 s, 7 + placa, y **el bloque de oferta lo dice siempre la misma presentadora**. Santiago: *"si ellos hacen un video que tiene 3 escenas… lo quiero así"* y después *"en un video se puede máximo 4 escenas, no quiero más que eso"*. Repertorio y reglas en [[origen-pilates]].
+- 🆕 **El filtro de Veo rechaza (y no cobra) las referencias con ropa ceñida o color piel**, la mujer sola en un dormitorio y el hombre fuera de cuadro abordando a una mujer en la calle. Se cayeron 5 tomas; con ropa holgada pasan. Las imágenes de referencia van siempre cubiertas.
+- 🆕 **La subida de imágenes se hace en serie y con reintentos.** Subir cinco en paralelo a `/v1/uploads/images` hizo fallar la subida y, como estaba fuera del `try`, se llevó tres hilos en silencio: la tanda "terminó" con 3 de 14 generadas.
+- **Ajuste pedido después:** `speed 1.2`, silencios de más de 0,26 s recortados a 0,12 s y **cama `bed_activo`** a −12 dB con ducking, todo re-montado desde las tomas ya generadas (cero créditos). Niveles normalizados a pico −1,3 dB. Los subtítulos se re-alinean contra el audio acelerado, no se estiran.
+- ⚠️ **Los tags de pilates en español están podridos para b-roll:** 84 clips bajados, **6 limpios**. Texto de la rutina quemado, hombres, o chicas de 20 que no son el avatar. `#pilatesemcasa` en portugués se solapa casi entero con el español, así que esta vez la regla de "buscar el producto en otro idioma" no sirvió.
+- **Quiz sin VSL** y con la oferta de entrada (`SEGUNDOS_OFERTA: 0`), **precio $9.990 y 3 cuotas de $3.330**, y **las 29 imágenes rehechas de cero**: 17 por código (logo, siluetas, mockup, placas) y 12 fotos con nano-banana. Entregable en `OUTPUTS/2026-11-09-quiz-origen-pilates.html`.
+- Pendientes: el checkout nuevo, pasar el quiz a voseo cerrado y sacar los claims de kilos que venían de la versión vieja.
+
 ## 2026-11-09 (2ª pasada) — Origen Pilates: despiece de los ads y la tanda 1 con Veo 3.1
 
 - Santiago cerró las decisiones: nombre **Origen Pilates**, precio **$7.999**, y la tanda 1 con **5 videos de avatar IA (Veo 3 por [[apimart]], créditos que él cargó) + 2 de voz en off**. Pidió analizar los ads a fondo antes de generar nada.

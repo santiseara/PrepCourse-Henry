@@ -122,6 +122,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-09 — Piedras: BR6, BR7 y BR8 en portugués](../OUTPUTS/2026-11-09-guiones-piedras-portugues-BR6-BR8.md) — tres anuncios más clonados 1:1 a Brasil, cada uno con su estilo de subtítulo medido sobre el original (karaoke amarillo, píldora acumulativa y píldora de una palabra) · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-09 — DanceGo: tanda 3, tres renovaciones del ganador](../OUTPUTS/2026-11-09-guiones-dancego-tanda-9-11.md) — tres formatos de hook distintos (pregunta del cliente, storytime, lista de tres) sobre el cuerpo validado, con estética y pool nuevos sin bajar un clip · ver [[dancego]] · [[renovacion-de-creativos]]
 - [2026-11-09 — Quiz O Segredo da Chia (BR)](../OUTPUTS/2026-11-09-quiz-o-segredo-da-chia-br.html) — clon 1:1 al portugués del quiz argentino de chia (28 pasos, sin VSL, R$ 67 de R$ 147), con las mismas 10 fotos y el checkout pendiente en el CONFIG · ver [[secreto-de-la-chia]]
 - [2026-11-08 — Piedras: BR5, el ad «I never» en portugués](../OUTPUTS/2026-11-08-guion-piedras-portugues-BR5.md) — quinto ad del mismo ganador clonado tal cual (20,67 s): subtítulos Courier con palabra amarilla medidos sobre el original, 4 tomas de Sulafat y tempo 1,152 · ver [[scented-stones]] · [[internacionalizacion]]

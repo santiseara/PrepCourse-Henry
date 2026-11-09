@@ -1,3 +1,12 @@
+## 2026-11-09 (5ª pasada) — Piedras: tres anuncios más en portugués (BR6–BR8)
+
+- Pedido de Santiago: *"ahora haceme estos 3 ads en portugues, exactamente iguales pero en portugues"*, con tres MOV/MP4 de Scented Stones en inglés.
+- **Clonados 1:1**: misma imagen, misma cama de audio, misma duración (58,20 / 44,29 / 36,60 s). Lo nuevo es la voz Sulafat brasileña y los subtítulos en portugués.
+- **Los tres originales tenían estilos de subtítulo distintos**, así que cada uno se midió aparte: karaoke de mayúsculas con palabra amarilla (BR6), píldora magenta con palabras que se suman (BR7) y píldora magenta con una palabra grande por vez (BR8).
+- **Tres trampas nuevas, anotadas en [[internacionalizacion]]:** la fuente se identifica por el ancho de una frase a altura de mayúscula fija (ganó Nunito 800 para BR6 y Montserrat ExtraBold 148 para BR8); la franja de inpaint tiene que tener **altura par** o libx264 corta el pipe; y `demucs` sin `--two-stems=vocals` no deja `no_vocals.wav` — se arma sumando bass+drums+other.
+- Voz: dos tomas por anuncio verificadas con whisper medium; se eligió la `a` en los tres (tempos 1,03 · 1,01 · 1,05).
+- Nuevo: `OUTPUTS/2026-11-09-guiones-piedras-portugues-BR6-BR8.md`, `OUTPUTS/scripts-vsl/render_pt2.py`. Entrega en `~/Desktop/scented-stones-ad/anuncios/portugues/`.
+
 ## 2026-11-09 (4ª pasada) — DanceGo: tanda 3, tres renovaciones del ganador
 
 - Pedido de Santiago: *"Necesito que hagamos mas renovaciones para dancego. 3"*.
@@ -7,6 +16,15 @@
 - **Dos reglas nuevas** en [[renovacion-de-creativos]] y en [[dancego]]: la palabra que ancla la placa final se elige entre las que aparecen **una sola vez** (el `end` del video 1 arrancó en el segundo 6 porque el hook repetía "mirá"), y el texto quemado de un clip no es motivo de veto si el `zoom` con `ybias 1.0` lo recorta.
 - Voz Sulafat por API (`gemini-2.5-flash-preview-tts`, speed 1.30), acento verificado con **`gemini-3.5-flash`** (el `2.5-flash` ya devuelve 404 para cuentas nuevas).
 - Nuevo: `OUTPUTS/2026-11-09-guiones-dancego-tanda-9-11.md`, `OUTPUTS/scripts-vsl/gen_dancego_plans_9.py`. Entrega: `~/Desktop/dancego/anuncios/9-11 - 1` a `9-11 - 3`.
+
+## 2026-11-09 (4ª pasada) — Origen Pilates: quiz terminado y los dos ads de voz en off rehechos
+
+- **Quiz cerrado:** checkout propio `origen-pilates.impultienda.ar` en los 5 CTA (responde 200), **logo rehecho** (loto más grande, `display:block` a 76 px para que centre de verdad) y **las siluetas dibujadas reemplazadas por fotos reales**: 4 reusadas del quiz de la chía y 9 nuevas en ese mismo estilo de catálogo sobre fondo crema. Las 29 imágenes están en `landing/img/`.
+- 🐛 **Bug del cliente de ApiMart:** `bajar()` usaba `curl -C -`, que **continúa** la descarga en vez de reemplazar. Como los archivos ya existían con ese nombre, pegó los bytes nuevos detrás de la imagen vieja y quedaron corruptos (una silueta de 10 KB pesando 550 KB). Arreglado: borra el destino antes de bajar.
+- **Los dos ads de voz en off se rehicieron.** Santiago: *"son muy malos, clips horribles, muy poco variado, todo repetitivo"*. El pool era de 6 clips para dos videos.
+- ⚠️ **Medición completa de la caza: 191 clips bajados en 5 tags para 8 limpios.** El nicho de pilates en TikTok está tomado por creadoras que queman el título de la rutina, en todos los idiomas, y `#pilatesemcasa` en portugués se solapa casi entero con el tag en español: la regla de "buscar el producto en otro idioma" no aplica acá. Lo que sirvió fueron `#wallpilates` y `#pilatesathome`, que traen planos de piso de cuerpo entero donde no se lee la edad. Detalle en [[origen-pilates]].
+- 🆕 **tikwm entrega de a poco:** un pase da 12 de 75, tres pases dan 47 de 49. Hay que dejarlo correr con reintentos, no darlo por perdido.
+- Los 7 videos quedaron con **pico normalizado en −1,3 dB** y de 34 a 41 s.
 
 ## 2026-11-09 (3ª pasada) — El quiz de la chia clonado a Brasil
 

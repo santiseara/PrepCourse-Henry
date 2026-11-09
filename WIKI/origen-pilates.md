@@ -109,8 +109,8 @@ No es "IA o voz en off": son dos carriles distintos, y **el que no podemos copia
 | 9-11 - 3 | avatar IA | 41,9 s | Ana en su casa (3 tomas) · clase en terraza · abuela con la nieta · presentadora |
 | 9-11 - 4 | avatar IA | 34,9 s | pizarrón (la rodilla) · estudio · clase en terraza · presentadora |
 | 9-11 - 5 | avatar IA | 35,6 s | balcón porteño · abuela con la nieta · presentadora (3 escenas) |
-| 9-11 - 6 | voz en off | 36,1 s | b-roll de TikTok |
-| 9-11 - 7 | voz en off | 34,0 s | b-roll de TikTok |
+| 9-11 - 6 | voz en off | 36,1 s | b-roll de TikTok, 8 familias visuales |
+| 9-11 - 7 | voz en off | 34,0 s | b-roll de TikTok, mismo pool con otro seed |
 
 Guiones en `OUTPUTS/2026-11-09-guiones-origen-pilates-tanda-1.md`. **Costo total de ApiMart: US$4,90.**
 
@@ -132,8 +132,23 @@ Rechaza (`content_policy_violation`, y **no cobra**) las referencias con **ropa 
 - **Niveles normalizados**: los cinco a pico −1,3 dB (antes iban de −5,8 a −11,4 y algunos se oían flojos). Media entre −18 y −23 dB, el rango de los de Sana Pilates.
 - Los subtítulos se **re-alinean contra el audio ya acelerado**, no se estiran.
 
-### ⚠️ Los tags de pilates en español están podridos para b-roll
-84 clips bajados entre `#pilatesencasa`, `#pilatesmenopausia` y `#pilatesmujeres40`: **sobrevivieron 6**. El resto tiene el título de la rutina quemado en pantalla ("Elbow Sliders 10 reps", "Rutina brazos", "A partir de los 50"), son hombres hablando a cámara, o son **chicas de 20**, que no es el avatar de una oferta para mujeres de más de 40. `#pilatesemcasa` en portugués **se solapa casi entero** con el tag en español, así que no sirve de escape. Para la tanda 2: cazar con más calma o generar el b-roll con Veo.
+### ⚠️ Cazar b-roll de pilates en TikTok: 191 clips para 8 limpios
+Santiago rechazó la primera versión de los dos ads de voz en off: *"son muy malos, clips horribles, muy poco variado, todo repetitivo"*. Tenía razón: el pool era de 6 clips para dos videos y se compartían.
+
+**Medición de los cinco tags**, 191 clips bajados en total:
+
+| Tag | Bajados | Limpios |
+|---|---|---|
+| `#pilatesencasa` | 70 | 6 |
+| `#pilatesmenopausia` + `#pilatesmujeres40` | 75 | 0 |
+| `#wallpilates` + `#pilatesathome` | 47 | 6 |
+
+**El nicho de pilates está tomado por creadoras que queman el título de la rutina en pantalla** ("Elbow Sliders 10 reps", "WALL PILATES WORKOUT", "Bridge Lifts 30 reps"), en todos los idiomas. `#pilatesemcasa` en portugués **se solapa casi entero** con el tag en español, así que la regla del 8/11 ("buscar el mismo producto en otro idioma") **no aplica acá**: el solapamiento de TikTok la anula.
+
+Lo que sí sirvió:
+- **Los tags de pilates en la pared y en inglés** (`#wallpilates`, `#pilatesathome`) rinden parecido al español, pero traen **planos de piso de cuerpo entero** donde no se lee la cara ni la edad, que es justo lo que necesita una oferta para mujeres de más de 40 (en TikTok de pilates casi todas las creadoras tienen 20).
+- **Bajar con tres pases y reintentos.** tikwm entrega de a poco: en un pase da 12 de 75, en tres da 47 de 49. Hay que dejarlo correr y volver.
+- **Pool final: 8 clips limpios en 8 familias visuales**, con la franja limpia anotada (`desde`/`hasta`) para saltear los segundos con cartel.
 
 ### El quiz · `~/Desktop/origen-pilates/landing/`
 - **Sin VSL** (pedido del 9/11): se sacaron el player de Panda, el `<template id="vsl-template">` y el JS que lo cargaba. **`SEGUNDOS_OFERTA: 0`** → la oferta se ve apenas se llega al paso 19. Copia en `OUTPUTS/2026-11-09-quiz-origen-pilates.html`, original en `quiz.html.bak`.

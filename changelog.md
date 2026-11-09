@@ -1,3 +1,15 @@
+## 2026-11-09 (6ª pasada) — Deco Magic: oferta nueva modelada para LATAM, tanda 1 de 6 videos
+
+- Pedido de Santiago: *"te mando una nueva oferta que está en el mercado inglés y quiero modelarla para el mercado de LATAM… vamos a hacer 6 anuncios de testeo… español neutro como LATAM"*, con el link de la Biblioteca de Anuncios de `www.decomagic.shop`.
+- **Radiografía del competidor** (Magic Deco / DECO MAGIC, Amaya Digital LLC): ~35 ads activos en dos páginas, el más viejo del 26/10, $17/$37, landing en 6 idiomas. Se bajaron y transcribieron sus **10 ads de más impresiones** y se armó la hoja de contactos de su edición.
+- **La DNA que repiten los 6 ganadores:** hook de una línea → el mecanismo en cuatro verbos (*escribís la temática → aparece el set completo → le cambiás el nombre en Canva gratis → imprimís en casa*) → enumeración de piezas → lista de "no" → el catálogo como prueba → cierre literal. **Cero cifras de plata en el audio** y **nunca nombran una marca registrada**.
+- **Dos avatares en paralelo:** la mamá que organiza el cumpleaños y la que vende decoración de fiestas. El ad de más impresiones es del lado bizop. La tanda sale 4 + 2.
+- **Se clonó también la edición:** pastillas rosas redondeadas arriba, subtítulos blancos de 3 palabras con la palabra activa adentro de una **caja magenta**, inserts de la app y de Canva anclados a la palabra, y placa de cierre con su degradado **#7E3D96 → #E74FA4** (`edit_deco.py`, `gfx_deco.py`).
+- **Español neutro sin voseo** y **sin cifras en moneda** (LATAM multipaís, regla del 8/11). Voz Sulafat; V6 salió con `gemini-3.1-flash-tts-preview` porque el 2.5 dio 429.
+- **Pool de TikTok:** 154 clips de 7 tags (`#mesadedulces`, `#cajitasdedulces`, `#golosinaspersonalizadas`, `#souvenirspersonalizados`, `#toppersparatortas`, `#imprimiblesparafiestas`, `#bolsitasdegolosinas`), revisados a 1,5 s + verificación a 1 s de cada ventana. Quedaron **28**. Se cayeron las mesas de pastelería fina (no muestran lo que vendemos) y un clip con una **Cricut** en pantalla, justo cuando el ad dice que no hace falta máquina de corte.
+- Nuevo: `WIKI/deco-magic.md`, `OUTPUTS/2026-11-09-analisis-deco-magic.md`, `OUTPUTS/2026-11-09-guiones-deco-magic-latam.md`, `OUTPUTS/2026-11-09-descripcion-ads-deco-magic.md`, `OUTPUTS/scripts-vsl/edit_deco.py`, `gfx_deco.py`, `gen_deco_plans.py`, `vent_deco.py`. Entrega en `~/Desktop/deco-magic/anuncios/` (`9-11 - 1` a `9-11 - 6`).
+- ⚠️ Pendiente: falta la landing y el nombre del producto propio. Los guiones dicen "la app" y los inserts salieron sin marca.
+
 ## 2026-11-09 (5ª pasada) — Piedras: tres anuncios más en portugués (BR6–BR8)
 
 - Pedido de Santiago: *"ahora haceme estos 3 ads en portugues, exactamente iguales pero en portugues"*, con tres MOV/MP4 de Scented Stones en inglés.

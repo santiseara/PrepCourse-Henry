@@ -157,10 +157,29 @@ Lo que sí sirvió:
   - **17 por código, a costo cero** (`OUTPUTS/scripts-vsl/` no; el script quedó en el scratchpad): logo de loto de 8 pétalos con "ORIGEN PILATES / Método Asiático" en PNG transparente, las 5 siluetas de zonas con el círculo del acento, las 3 de punto de partida y las 5 de cuerpo deseado con anchos bien diferenciados, el mockup de la app (reto día 11 de 28), la placa del Pase VIP y el sello de pago seguro.
   - **12 fotos con `gemini-nano-banana-2.1-ext`** (US$0,014 c/u): mujeres argentinas de 45 a 65 en departamentos porteños reales, ropa holgada.
 
+### ✅ Quiz cerrado y entregado (9/11, segunda vuelta)
+Santiago pidió *"el txt del quiz"* y *"una descripcion para los ads"*. Antes de generar el .txt se cerraron los tres pendientes del quiz:
+- **Checkout propio y verificado:** `https://origen-pilates.impultienda.ar/checkout` devuelve **200**. Los 4 CTAs del paso 19 (2 botones + los 2 cuadros de precio) pasan por `comprar()` → `CONFIG.LINK_CHECKOUT` + UTMs. Ninguno muerto.
+- **Voseo cerrado:** se sacaron las 20 formas de tuteo que quedaban del original traducido (*comenzaron como tú · Elija · Puedes elegir · te sientes · Arrastre · para usted · tienes · te llevas · congelas · aseguras · Para ti · Si sientes · Consigue*) y se repusieron las tildes que faltaban (*dias · asiatico · Cual · interes · energia · Revelacion · guia · gluteos · pelvico · Explicacion · Como · segun*).
+- **Claims de kilos afuera:** se cayó *"Silvia, de 75 a 71 kg en 28 dias"* (ahora *"Silvia, 54 años · reto de 28 días completo"*) y *"Consegui resultados visibles en 28 DIAS"* pasó a *"Empezá hoy tu reto de 28 DÍAS"*. Sin plazo de resultado y sin cifra de peso.
+- **Testimonios argentinos, no italianos:** las cuatro reseñas venían con nombres del clon (Francesca Rossi, Laura Bianchi, Martina Conti, Silvia Romano). Ahora van con nombre + ciudad: Marcela F. (Rosario), Alejandra P. (Mendoza), Verónica S. (La Plata), Silvia R. (Mar del Plata). 👉 **Regla: un clon trae los nombres propios del mercado de origen y no saltan leyendo el HTML, saltan recorriendo el quiz.**
+- **Sliders a valores del avatar:** 160 cm / 72 kg actual / 65 kg objetivo (venían en 180 cm y 70 kg, valores de hombre promedio).
+
+**Entregables:** `landing/origen-pilates-quiz.txt` (**1,24 MB**, 29 imágenes embebidas, listo para pegar en ImpulTienda), `landing/origen-pilates-PRUEBA.html` y copia en `OUTPUTS/2026-11-09-quiz-origen-pilates.html` (+ el fuente con rutas `img/` en `-fuente.html`).
+
+**Probado los 19 pasos** en un iframe de 390 px: 29 imágenes sin romper, cero overflow horizontal (`scrollWidth` 390), la carga de 15 s pasa sola al paso 18 y la oferta se ve al entrar al 19 (`SEGUNDOS_OFERTA: 0`).
+
+### La descripción de los ads (una sola para la tanda)
+`anuncios/descripcion-ads.txt` y `OUTPUTS/2026-11-09-descripcion-ads-origen-pilates.md`. **177 palabras**, el formato corto del 6/11. Igual que Sana Pilates, que corre **un solo primary text para sus 92 anuncios**: el creativo es la variable, no el copy.
+- Abre por el mecanismo (*el ejercicio equivocado · los músculos profundos del abdomen que se apagan*), 3 bullets, una línea de entregables, una de bonos, una de garantía y CTA al test gratis.
+- **Sin precio** (el precio lo dice el paso 19), **sin kilos, sin plazo de resultado y sin segunda persona sobre el cuerpo de quien mira**: se habla de *"el cuerpo"*, nunca de *"tu panza"*.
+- Cierra con la **estacionalidad** que ellos usan y nosotros no: *"Falta un mes para el verano"*.
+
 ### Pendientes
-- **El checkout sigue en `pilates-hormonal.impultienda.ar`**: falta el link nuevo de Origen Pilates.
-- **El quiz mezcla tuteo y voseo** ("comenzaron como tú", "Si sientes dolor") y conserva claims de kilos de la versión vieja ("Silvia, de 75 a 71 kg"). Hay que pasarlo a voseo cerrado y revisar los claims antes de lanzar.
 - Las dos escenas que rechazó el filtro (espejo y entrevista) quedan para la tanda 2.
+- **El peso objetivo sigue sin calcular nada**: falta la previsión con fecha que sí hace [[dancego]].
+- **El resultado no es personalizado**: después de 16 preguntas el plan es el mismo para todas.
+- Falta el **VSL** (hueco #6 del embudo).
 
 ## Decisiones abiertas
 - **Nombre.** Propuestas: **Kaizen Pilates** (recomendada), Pilates Hana, Pilates Origen. El mecanismo "Pilates Asiático" se mantiene en el copy. Evitar "sana", "zen" y "wellness".

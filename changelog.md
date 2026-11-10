@@ -1,3 +1,14 @@
+## 2026-11-09 (7ª pasada) — Origen Pilates: el .txt del quiz listo para ImpulTienda y la descripción de la tanda
+
+- Pedido de Santiago: *"Necesito que me des el txt del quiz de origen pilates. Y necesito que me des una descripcion para los ads"*.
+- **Se cerraron los tres pendientes del quiz antes de generar el .txt**: checkout propio verificado (`origen-pilates.impultienda.ar/checkout` → 200, los 4 CTAs del paso 19 pasan por `comprar()`), **voseo cerrado** (20 formas de tuteo heredadas del original traducido) y **claims de kilos afuera** (se cayó *"de 75 a 71 kg en 28 dias"* y *"resultados visibles en 28 DIAS"*).
+- **Dos cosas que el clon traía y no se veían leyendo el HTML**: las cuatro reseñas con **nombres italianos** (Francesca Rossi, Laura Bianchi…), ahora con nombre + ciudad argentina; y los **sliders en 180 cm / 70 kg** (hombre promedio) para una oferta de mujeres +40, ahora 160 / 72 / 65.
+- **El .txt bajó de 3,2 MB a 1,24 MB**: `inline_quiz.py` ahora lee `ANCHO_MAX` y `CALIDAD` del entorno y se corrió con 700/74. Sin diferencia visible en el teléfono.
+- **Probado los 19 pasos por código** en un iframe de 390 px servido por `http.server`: 29 imágenes sin romper, cero overflow horizontal, la carga de 15 s pasa sola y la oferta se ve al entrar al paso 19.
+- **Una sola descripción para los 7 videos** (177 palabras, formato corto del 6/11), igual que Sana Pilates con sus 92 ads: mecanismo de los músculos profundos, 3 bullets, entregables, bonos, garantía y CTA al test. Sin precio, sin kilos, sin plazo de resultado y sin segunda persona sobre el cuerpo de quien mira. Cierra con la estacionalidad pre-verano.
+- Nuevo: `OUTPUTS/2026-11-09-descripcion-ads-origen-pilates.md`, `OUTPUTS/2026-11-09-quiz-origen-pilates-fuente.html`; reemplazado `OUTPUTS/2026-11-09-quiz-origen-pilates.html`. Entrega en `~/Desktop/origen-pilates/landing/origen-pilates-quiz.txt` + `origen-pilates-PRUEBA.html` y `~/Desktop/origen-pilates/anuncios/descripcion-ads.txt`.
+- ⚠️ Pendiente: el peso objetivo sigue sin previsión con fecha, el resultado del quiz no es personalizado y falta el VSL.
+
 ## 2026-11-09 (6ª pasada) — Deco Magic: oferta nueva modelada para LATAM, tanda 1 de 6 videos
 
 - Pedido de Santiago: *"te mando una nueva oferta que está en el mercado inglés y quiero modelarla para el mercado de LATAM… vamos a hacer 6 anuncios de testeo… español neutro como LATAM"*, con el link de la Biblioteca de Anuncios de `www.decomagic.shop`.

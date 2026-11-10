@@ -5,8 +5,8 @@ Uso: python3 inline_quiz.py <quiz.html> <salida.txt>
 import base64, io, mimetypes, os, re, sys
 from PIL import Image
 
-ANCHO_MAX = 1000     # el quiz es mobile: más de 1000 px no se ve y pesa el doble
-CALIDAD = 86
+ANCHO_MAX = int(os.environ.get('ANCHO_MAX', 1000))   # el quiz es mobile: más de 1000 px no se ve y pesa el doble
+CALIDAD = int(os.environ.get('CALIDAD', 86))         # se bajan por env cuando el .txt pasa de ~1,5 MB
 
 ent, sal = sys.argv[1], sys.argv[2]
 base = os.path.dirname(os.path.abspath(ent))

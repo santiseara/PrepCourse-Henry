@@ -123,6 +123,8 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-09 — Origen Pilates: el quiz para ImpulTienda](../OUTPUTS/2026-11-09-quiz-origen-pilates.html) — 19 pasos, voseo cerrado, sin claims de kilos, checkout propio verificado y el .txt autocontenido de 1,24 MB · ver [[origen-pilates]] · [[quizzes-reglas-de-armado]]
+- [2026-11-09 — Origen Pilates: descripción para los ads](../OUTPUTS/2026-11-09-descripcion-ads-origen-pilates.md) — una sola para los 7 videos, 177 palabras, sin precio y sin plazo de resultado, con el cierre de pre-verano · ver [[origen-pilates]]
 - [2026-11-09 — Deco Magic: radiografía del competidor](../OUTPUTS/2026-11-09-analisis-deco-magic.md) — sus 6 ganadores transcriptos, la DNA que repiten los seis (el mecanismo en cuatro verbos) y la hoja de contactos de su edición · ver [[deco-magic]]
 - [2026-11-09 — Deco Magic: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-09-guiones-deco-magic-latam.md) — una familia ganadora por video, en español neutro, sin cifras en moneda y sin nombrar marcas registradas · ver [[deco-magic]]
 - [2026-11-09 — Deco Magic: descripciones para ads](../OUTPUTS/2026-11-09-descripcion-ads-deco-magic.md) — dos cortas, una para los videos de mamá y otra para los de bizop · ver [[deco-magic]]

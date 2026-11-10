@@ -1,0 +1,3 @@
+
+# binario compilado de OCR (se rehace con: swiftc -O ocr_vision.swift -o ocrbin)
+OUTPUTS/scripts-vsl/ocrbin

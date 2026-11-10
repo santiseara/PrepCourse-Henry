@@ -1,3 +1,11 @@
+## 2026-11-10 (6ª pasada) — El Secreto de la Chía: el precio del quiz argentino a $17.990
+
+- Pedido de Santiago: *"Ajustame el precio del quiz, lo vendemos a 17.990"*.
+- Cambiado en el único lugar donde vive (`QUIZ_CONFIG.precio`: `$ 24.900` → `$ 17.990`), con la cuenta de ocurrencias antes y después en los cuatro archivos (`.txt`, `.html`, `PRUEBA.html` y la copia de OUTPUTS: 1 antes, 1 después, 0 del viejo). El `.txt` quedó en el portapapeles.
+- **El ancla no se tocó** (`TODO ESTO DE $ 38.999`), así que el descuento que muestra el quiz pasó de 36 % a 54 %: queda avisado, es decisión de Santiago.
+- **Reverificado en el navegador** a 390 px con UTMs en la URL, caminando los 27 clics hasta la oferta: `TODO ESTO DE $ 38.999 / POR SOLO / $ 17.990`, los dos CTA al checkout propio, cero desborde, cero imágenes rotas, cero errores de JS.
+- 🆕 **Regla nueva en [[quizzes-reglas-de-armado]]: el caminador por código tiene que respetar el `disabled`.** El recorrido se colgó dos veces (82 clics en una opción, después 82 en un `Continuar` apagado) antes de que saliera el orden correcto: input → `[data-next]` no `disabled` → primera `.opt` → esperar. Y el bucle largo va lanzado en segundo plano contra `window.__st`, porque un `javascript_tool` que espera 70 s muere con `Detached while handling command`.
+
 ## 2026-11-10 (5ª pasada) — El Secreto de la Chía: el checkout propio del quiz argentino
 
 - Pedido de Santiago: *"Este es mi checkout, agregalo https://el-secreto-de-la-chia.impultienda.ar/checkout"*.

@@ -1,5 +1,12 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-10 · El caminador del quiz tiene que respetar el `disabled` (si no, se cuelga para siempre)
+- Para reverificar el quiz de [[secreto-de-la-chia]] tras cambiarle el precio, el recorrido por código se colgó **dos veces**: 82 clics en `😊Papada` y después 82 clics en `Continuar`, sin avanzar un paso.
+- **La regla del caminador, en este orden:** 1) llenar el `input` de texto si está vacío; 2) si hay un `[data-next]` **y no tiene `disabled`**, clickearlo; 3) si no, clickear la primera `.opt`; 4) si no hay nada, esperar (es una pantalla de carga de 8,5 s). Filtrar siempre `[data-back]`, `[data-faq]` y el `‹`.
+- El error estaba en no mirar el `disabled`: en los pasos de **selección múltiple** el `Continuar` nace apagado hasta que se elige una opción, y en los de **opción única** la opción avanza sola. Clickear "lo primero visible" se come la opción y nunca toca el `Continuar`; clickear "el `data-next`" lo aprieta apagado al infinito.
+- **El bucle largo va lanzado en segundo plano, no esperado dentro de la llamada.** Un `javascript_tool` que espera 70 s muere con `Detached while handling command`: hay que dejar el `async` corriendo contra `window.__st` (con `{done, log, errs}`), esperar afuera con un `sleep` y leer el estado en una segunda llamada.
+- Y el motor **no deja globals**: todo está en una IIFE, así que no se puede saltar al último paso con `page=28;render()`. Hay que caminarlo (27 clics, ~40 s por los dos loaders).
+
 ### 🆕 2026-11-10 · "El mismo quiz pero en español": primero mirar si el original ya es ese
 - Santiago pidió *"exactamente el mismo quiz pero en español argentino"* del clon brasileño de [[secreto-de-la-chia]]. **El argentino era el original** y ya estaba en voseo: lo que faltaba no era traducir, era **empaquetarlo** (el `.txt` autocontenido, el `PRUEBA.html` y la carpeta de imágenes). Antes de reescribir nada, se baja el que corre y se diffea contra el clon: si las diferencias son solo idioma, marca, precio y checkout, el trabajo es de empaquetado.
 - **Un "ya está en voseo" se comprueba contando formas, no leyendo.** Ojo con los falsos positivos: `eres` cae dentro de *mujeres* y los `puedes` del HTML en vivo salían del **tema de Shopify** (mensajes del carrito), no del quiz. Se mira el contexto de cada uno antes de dar el dato.

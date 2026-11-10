@@ -122,6 +122,15 @@ Sigue mandando el mismo ganador (`6-11 - 1`). La tanda del 7/11 fueron **cuatro 
 1. **Una palabra que se repite en el guion mueve la placa final al principio.** El `end` del video 1 estaba anclado a `mirá` y ese guion dice "Mirá cómo es por dentro" en el hook: la placa de cierre arrancó en el segundo 6 y tapó 38 de los 44 segundos. **Regla: la palabra que ancla la placa final se elige entre las que aparecen una sola vez** (acá, `plan`), y se verifica con un cuadro a mitad del video.
 2. **Ampliar el pool mete planos que nadie revisó.** Con TOPE 9 entraron recortes nuevos de clips viejos: se revisó el pool entero (228 recortes, 2 cuadros cada uno, en hojas de 45) y **el único veto fue `R1` (`7704573729669451039`): un salón con una piñata colgando, plano lejano y confuso**. El texto quemado de `E1`, `E2`, `I1`, `Z1` y `Z2` **no es problema**: todos llevan `zoom` con `ybias 1.0`, que recorta de arriba justo donde está el cartel.
 
+## Backend post-compra (propuesta del 2026-11-09, pendiente de OK)
+Pedido de Santiago: *"armarle unos upsells a la oferta de dance go, utiliza la skill de pospagos"*. **No tenemos el backend de la competencia** (aclaración suya: *"El backend de la competencia no lo tenemos, asi que mira solo lo que ofrecemos en el front"*), así que el paso 2 del manual se saltea y la escalera sale del mapa del front propio.
+
+- **Ejes que el front ya ocupa y quedan prohibidos en los OTOs:** más clases/ritmos · el desafío de 28 días · clases en vivo · comunidad de WhatsApp · recetario · registro de peso · puntos canjeables · acceso de por vida. Hoy **no hay order bumps**.
+- **Los 4 huecos que la oferta abre y no cierra:** nadie le dice si lo está haciendo bien (y el avatar es justo la que no sabe bailar) · el día 29 · la flacidez que el baile no tonifica · **el evento próximo que el quiz pregunta y después nadie usa**.
+- **Escalera:** OTO1 Asistente Personalizado 1 a 1 $24.990 → OTO2 El Plan de los 90 Días™ $17.990 → OTO3 El Sistema Anti-Flacidez™ $12.990 → OTO4 El Plan Evento Express™ $7.990, con ruletas al 50/53/47/55 %. **AOV proyectado $23.300 sobre el front de $14.990 → ratio 1,55.**
+- ⚠️ **Bloqueador:** el front ya promete +150 videos, clases en vivo y puntos canjeables que todavía no existen. El backend no lo arregla, lo agrava. El OTO1 y el OTO2 se pueden producir sin la app; el OTO3 y el OTO4 necesitan video.
+- Detalle completo en `OUTPUTS/2026-11-09-propuesta-upsells-dancego.md`.
+
 ## Preguntas abiertas
 - ¿La marca queda **DanceGo** o se renombra?
 - ¿Precio final? (el link de checkout ya está confirmado)

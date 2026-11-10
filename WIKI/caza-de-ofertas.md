@@ -293,6 +293,16 @@ En la **fuente** se buscan ofertas de nivel 3-5. En el **destino** se mide el ni
 - OUTPUTS/2026-11-02-caza-infoproductos-vsl-brasil.md (la caza de infoproducto con VSL en Brasil: de ahí salen los footprints, la trampa del display link y el techo de 48 ads)
 - OUTPUTS/2026-11-02-caza-infoproductos-vsl-ingles.md (la misma caza en EE.UU.: la shortlist de tres, los footprints en inglés y la regla de que en salud la VSL es producto físico)
 
+### 🆕 2026-11-10 · Las keywords no se corren por la API: van por la UI con frase exacta
+
+Del banco nuevo de ingresos en Brasil (`OUTPUTS/2026-11-10-keywords-br-ingresos-tanda-nueva.md`):
+
+- **`ads_library_search` (la API) no sirve para probar keywords.** No tiene `keyword_exact_phrase` y rankea por relevancia solo las primeras filas: después ordena por fecha de creación y devuelve a los que más publican ese día. Las 6 primeras pruebas (`sem precisar de experiência`, `não precisa de diploma`, `trabalhar por conta própria`, `lucro por peça`, `quanto cobrar`, `faça e venda`) volvieron **100 % DramaBox, Vega TV, Dramaflix y AI-Talera**. Sirve para contar arsenales con `page_ids` + `limit: 1`, no para medir una palabra.
+- **La UI sí, y el conteo se lee del DOM.** El HTML que devuelve `fetch` de la página de la Library **no trae el número** (lo pinta el SPA después de su consulta) y el endpoint viejo `/ads/library/async/search_ads/` devuelve **404**. Lo que funciona: navegar a la URL con `search_type=keyword_exact_phrase`, esperar a que aparezca `~N resultados` en `body.innerText` y cortar las tarjetas por `Ver detalles del anuncio` para leer página + dominio + copy de cada una. Con `browser_batch` alternando `navigate` + `javascript_tool` entran 4 keywords por llamada.
+- **Ojo con el país:** la UI filtra, así que `country=BR` da números más chicos que el `country=ALL` de los bancos viejos (`mesmo começando do zero`: 5.600 en BR contra 11.938 mundial). Se elige uno y se mantiene en toda la tanda, y se aclara cuál es al entregar.
+- **Lo que confirmó esta tanda:** el eje que pesca en el nicho dinero es el **formato del material** (`material completo`, `aulas gravadas`) y la **objeción del comprador** (`sem patrão`, `sem nenhuma experiência`), no el deseo. `sem patrão` (210) es chica pero limpísima: es toda la flota de fronts con nombre genérico de mujer (Lidiane silva, Lilian Silva, Mariana Gourmet) mandando a WhatsApp con material digital de cocina.
+
+
 ## Registro 05/11/2026 — dos reglas técnicas de keywords (Brasil)
 
 De la caza de emagrecimento + renda extra del 05/11 (`OUTPUTS/2026-11-05-caza-brasil-keywords-ocultas.md`):

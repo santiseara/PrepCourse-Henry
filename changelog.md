@@ -1,3 +1,21 @@
+## 2026-11-10 (4ª pasada) — Keywords de "generar ingresos" en Brasil: tanda nueva
+
+- Pedido de Santiago: *"Dame palabras clave en brasil para buscar ofertas de generar ingresos"*, y después *"Necesito palabras nada mas, no me armes una investigacion"*.
+- **8 keywords que pescan**, ninguna repite las 9 del banco del 8/11: `material completo` (9.100), `aulas gravadas` (5.000), `com as próprias mãos` (4.700), `produzir e vender` (670), `sem nenhuma experiência` (360), `sem patrão` (210), `tabela de precificação` (180), `vender por encomenda` (170).
+- **Tachadas con el motivo:** `com certificado por apenas` (18, frase de 4 palabras), `montar seu negócio` (mayoristas y institutos de belleza locales), `quanto cobrar pelo` (todo QuintoAndar), `qualquer pessoa aprende` (ecommerce y marca personal).
+- 🆕 **Regla técnica nueva en [[caza-de-ofertas]]: las keywords NO se corren por la API de la Biblioteca.** `ads_library_search` no tiene frase exacta y rankea por relevancia solo las primeras filas: las 6 primeras pruebas volvieron 100 % DramaBox, Vega TV y AI-Talera. Hay que correrlas en la **UI con `search_type=keyword_exact_phrase`**, y el conteo se lee del DOM después de que el SPA resuelve la consulta (el HTML que devuelve `fetch` no lo trae, y el endpoint viejo `async/search_ads` da 404).
+- Nuevo: `OUTPUTS/2026-11-10-keywords-br-ingresos-tanda-nueva.md`.
+
+## 2026-11-10 (3ª pasada) — El Secreto de la Chía: la versión argentina del quiz, autocontenida
+
+- Pedido de Santiago, después de que le recordara el quiz brasileño: *"necesito que hagamos exactamente el mismo quiz pero en español argentino"*.
+- **El quiz argentino ya existía y es el original.** Corre en `chauinflamacion.com/pages/chia` y **ya estaba entero en voseo**: los únicos `puedes` del HTML en vivo son strings del tema de Shopify. No hubo traducción — lo que faltaba era el **mismo paquete que se armó para Brasil el 9/11**, pero argentino.
+- **Diff contra el brasileño: 139 líneas**, todas de idioma, marca, precio, checkout y la variable `Bs` del artículo portugués. Mismo motor, **28 pasos** (`TOTAL=29`), las **mismas 10 imágenes**.
+- **Entregado:** `~/Desktop/el-secreto-de-la-chia/` con `landing/` (`.txt` de 40 KB para pegar en el `custom_html`, el `.html` y el `PRUEBA.html` de 1 MB con las fotos embebidas) e `imagenes/` con las 10 fotos renombradas en castellano. Copia en `OUTPUTS/2026-11-10-quiz-el-secreto-de-la-chia-ar.html` y en el portapapeles.
+- ⚠️ **Checkout pendiente:** Santiago dijo *"después te lo paso"*, así que quedó el que corre hoy (`chauinflamacion.impultienda.ar/checkout/chia`). Vive en un solo lugar del CONFIG y los dos CTA lo leen de ahí: cambiarlo es una línea, y se verifica con `curl -sIL` antes de entregar.
+- **Verificado** por código en un iframe de 390 px: los 28 pasos hasta la oferta, cero desborde, cero imágenes rotas, cero errores de JS, todos los `.btn` centrados y los dos CTA saliendo del CONFIG.
+- **Regla nueva en [[quizzes-reglas-de-armado]]:** recorrer el quiz dos veces en el mismo iframe inventa errores de JS que no existen. Antes de cada verificación se recarga con `?x=Date.now()`.
+
 ## 2026-11-10 (2ª pasada) — Carteras Maison: oferta nueva para Argentina, clonada de Maison Luxe Bags
 
 - Pedido de Santiago: *"Quiero que hagamos ahora anuncios para esta otra oferta… Esta oferta es para Argentina. Seguí los mismos procesos que seguimos en toda para hacer los 6 testeos"*, con el link de la Biblioteca de Anuncios de `maisonluxebags.impultienda.ar`. Nombre del producto, decidido por él: **"Usa el original, carteras maison"**.

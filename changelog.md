@@ -1,3 +1,11 @@
+## 2026-11-10 (5ª pasada) — El Secreto de la Chía: el checkout propio del quiz argentino
+
+- Pedido de Santiago: *"Este es mi checkout, agregalo https://el-secreto-de-la-chia.impultienda.ar/checkout"*.
+- **Verificado 200 con `curl -sIL` antes de tocar nada** (regla de Tai Chi Fit) y cambiado en el único lugar donde vive la URL: `QUIZ_CONFIG.checkout`. Rehechos el `.txt`, el `.html` y el `PRUEBA.html`, más la copia en OUTPUTS y el portapapeles.
+- **Comprobado en el navegador** a 390 px, recorriendo el quiz entero: los dos CTA del último paso (`QUIERO EMPEZAR 🥰` y `¡QUIERO EMPEZAR AHORA! 🔥`) salen con el checkout nuevo, cero desborde y cero errores de JS en el camino hacia adelante.
+- 🐞 **Encontrado un bug del motor, en las dos versiones (AR y BR):** en las pantallas de carga el `setInterval` de la barra se limpia solo dentro del `setTimeout` final, y esos pasos llevan la flechita de volver. Tocando `‹` ahí, el intervalo tira un error cada 100 ms (**82 medidos**) y a los 8,5 s el `setTimeout` **arrastra a la persona a la oferta aunque había vuelto atrás**. **No se tocó** — el pedido era el checkout — y quedó anotado en [[secreto-de-la-chia]] y en [[quizzes-reglas-de-armado]].
+- ✏️ **Corrección de lo que dije en la pasada anterior:** había anotado que esos errores de JS los inventaba mi recorrido del iframe. El recorrido ensucia la medición, pero el error era real. La regla quedó reescrita: un error repetido se persigue hasta el stack antes de descartarlo.
+
 ## 2026-11-10 (4ª pasada) — Keywords de "generar ingresos" en Brasil: tanda nueva
 
 - Pedido de Santiago: *"Dame palabras clave en brasil para buscar ofertas de generar ingresos"*, y después *"Necesito palabras nada mas, no me armes una investigacion"*.

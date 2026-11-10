@@ -1,3 +1,16 @@
+## 2026-11-10 — Pisos Epoxi: oferta nueva LATAM a $17, clonada de Hands & Home
+
+- Pedido de Santiago: *"Vamos con una oferta nueva… quiero que hagamos anuncios para LATAM… con buena edición, sacando todo lo ganador… el producto lo vamos a cobrar $17"*, con el link de la Biblioteca de Anuncios de `handshome.impultienda.ar`.
+- **Radiografía del competidor** (Emma Girard / Hands & Home, *The Epoxy Floor Playbook*, US$26.99): **61 ads activos**, el más viejo del **6/10** → 35 días. Corre en **ImpulTienda**, igual que nosotros. Se bajaron y transcribieron sus **10 ads de más impresiones** y se armó la hoja de contactos de su edición.
+- **Lo que no cambia en sus 61 ads:** una sola descripción y un **bloque de producto idéntico palabra por palabra**. Lo único que rota es el hook, en **6 familias**: el 80% antes de abrir el tarro (3 de 10 = la principal), el vecino al que se le levantó, el que vive de arreglar pisos ajenos, el pintor que dice "no hago pisos", un garage/un fin de semana y la ventana que se cierra.
+- **Tanda 1 de 6 guiones**, uno por familia, con **cuerpo y cierre propios** (regla del 22/10: del ganador se toma el ángulo, no la plantilla). Español **neutro** y **cero cifras en moneda** porque sale a varios países (regla del 8/11): el margen va como múltiplo. El `$17` queda para la landing.
+- **Se clonó también la edición:** subtítulos de 3 palabras con la palabra activa en **cobre #C06A2C** sin caja, chips oscuros arriba, **pastillas blancas con cruz roja** para los defectos, panel "EL SISTEMA" que se va tildando, los **insertos del producto dibujados por código** (`gfx_epoxi.py`: la página paso a paso con fotos reales de los clips, la Tabla de Soluciones, la tabla de cuánto cobrar, los 3 bonos y el celular) y placa de cierre marrón → cobre con el celular adentro.
+- **Pool de TikTok:** 61 clips bajados de `#pisoepoxi` y `#epoxyfloor`, revisados a 1,5 s + mitad inferior. Quedaron **33**. Se cayeron los de subtítulo quemado, los de marca de agua centrada y **una cuenta entera de renders de IA** (pisos con nubes adentro, árboles sumergidos): llamativos pero no son trabajo real.
+- **La hoja de contactos del render atrapó dos cosas que la del pool no:** un clip que a los 27 s levanta un cartel con **la tapa de otra guía de pisos** ("Puedes aprender con nuestro Libro digital…") y un `BEFORE` en inglés que entra a los 21 s. El primero se cayó entero (el creador vende su propio infoproducto y el cartel vuelve), al segundo se le acortó la ventana. Regla nueva en [[guiones-y-anuncios]].
+- Voz **Orus** por API (`gemini-2.5-flash-preview-tts`) a `speed 1.30`, cama `bed_activo`. Videos de 38 a 44 s.
+- Nuevo: `WIKI/pisos-epoxi.md`, `OUTPUTS/2026-11-10-guiones-pisos-epoxi-tanda1.md`, `OUTPUTS/2026-11-10-descripcion-pisos-epoxi.md`, `OUTPUTS/scripts-vsl/{gfx_epoxi.py, edit_epoxi.py, gen_epoxi_plans.py, vent_epoxi.py}`. Entrega en `~/Desktop/pisos-epoxi/anuncios/`.
+- ⚠️ Pendiente: **falta la landing en español** (el inserto y los guiones se escribieron contra la del competidor traducida) y el backend post-compra.
+
 ## 2026-11-09 (7ª pasada) — Origen Pilates: el .txt del quiz listo para ImpulTienda y la descripción de la tanda
 
 - Pedido de Santiago: *"Necesito que me des el txt del quiz de origen pilates. Y necesito que me des una descripcion para los ads"*.

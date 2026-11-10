@@ -123,6 +123,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-09 — DanceGo: nombres y descripciones de los 4 OTOs](../OUTPUTS/2026-11-09-nombres-y-descripciones-otos-dancego.md) — listos para pegar en la pantalla de upsells, con el molde de 3 renglones (hueco, qué recibe, qué lo diferencia de lo que ya compró) · ver [[dancego]] · [[aumento-de-aov]]
 - [2026-11-09 — DanceGo: propuesta de backend post-compra](../OUTPUTS/2026-11-09-propuesta-upsells-dancego.md) — 4 OTOs + 4 downsells con ruleta armados sobre los huecos del front propio (sin el backend del competidor), AOV proyectado 1,55× · **pendiente del OK de Santiago** · ver [[dancego]] · [[embudo-vsl-post-pago]]
 - [2026-11-09 — Origen Pilates: el quiz para ImpulTienda](../OUTPUTS/2026-11-09-quiz-origen-pilates.html) — 19 pasos, voseo cerrado, sin claims de kilos, checkout propio verificado y el .txt autocontenido de 1,24 MB · ver [[origen-pilates]] · [[quizzes-reglas-de-armado]]
 - [2026-11-09 — Origen Pilates: descripción para los ads](../OUTPUTS/2026-11-09-descripcion-ads-origen-pilates.md) — una sola para los 7 videos, 177 palabras, sin precio y sin plazo de resultado, con el cierre de pre-verano · ver [[origen-pilates]]

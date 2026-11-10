@@ -50,10 +50,10 @@ Búsqueda `piso epoxi` en la Biblioteca de Anuncios, todo el mundo: ~910 ads act
 
 ## Tanda 1 (2026-11-10, 6 videos)
 `OUTPUTS/2026-11-10-guiones-pisos-epoxi-tanda1.md` · descripción en `OUTPUTS/2026-11-10-descripcion-pisos-epoxi.md` · videos en `~/Desktop/pisos-epoxi/anuncios/`.
-Nombres: `10/11 - 1` a `10/11 - 6`, uno por familia de hook.
+Nombres: `10/11 - 1` a `10/11 - 6`, uno por familia de hook. Duran de 32 a 43 s.
 
 ### Producción
-- **B-roll:** 33 clips limpios de TikTok de 61 bajados (`#pisoepoxi`, `#epoxyfloor`). Se cayeron los de subtítulo quemado, los de marca de agua centrada y **una cuenta entera de renders de IA** (pisos con nubes, árboles sumergidos): no son trabajo real y se notan.
+- **B-roll:** 30 clips limpios de TikTok de 61 bajados (`#pisoepoxi`, `#epoxyfloor`). Se cayeron los de subtítulo quemado, los de marca de agua centrada, los que promocionan **otro infoproducto de pisos** dentro del clip y **una cuenta entera de renders de IA** (pisos con nubes, árboles sumergidos): no son trabajo real y se notan. Tres rondas de render hasta tener los 6 limpios.
 - **Gráficos:** `OUTPUTS/scripts-vsl/gfx_epoxi.py` (HTML + Chrome headless) dibuja las 5 piezas del producto. Las fotos de los pasos son **cuadros de los propios clips**, igual que el ganador.
 - **Editor:** `OUTPUTS/scripts-vsl/edit_epoxi.py` + `gen_epoxi_plans.py` + `vent_epoxi.py`. Voz Orus a `speed 1.30`, cama `bed_activo`.
 

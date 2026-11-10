@@ -65,7 +65,7 @@ VIDEOS = [
          chips=[('placas', 0, 'Se levanta en placas')],
          plan=('orden', 0, 'EL SISTEMA', 'Los cuatro pasos, en orden',
                ['Preparar el concreto', 'Mezclar', 'Verter', 'Sellar'])),
-    dict(n=3, cta='toca', gfx='124', first=['C', VENT['C'][1]], last='y',
+    dict(n=3, cta='toca', gfx='124', first=['j', VENT['j'][1]], last='y',
          anchors=[('manual', 0, '1', 0), ('tabla', 0, '2', 0), ('bonos', 0, '4', 0)],
          tags=[('barata', 0, 'EL MATERIAL ES LA PARTE BARATA')],
          chips=[('pegajosas', 0, 'Manchas pegajosas'), ('zapato', 0, 'Placas que se despegan')],

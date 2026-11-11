@@ -1,3 +1,13 @@
+## 2026-11-10 (7ª pasada) — Noche de Citas Cristiana: oferta nueva para Argentina y tanda 1 de 6 ads
+
+- Pedido de Santiago, con el link de la Biblioteca: *"Tenemos que hacer 6 ads... 3 como los de ellos, tipo copiándoles todo el formato"* y los otros 3 *"más originales y orgánicos"*, estilo TikTok y **sin subtítulos**. Mercado: **Argentina, voseo**.
+- **Radiografía del ganador** ([[noche-de-citas-cristiana]]): la página es **Ana Cristina**, vende **Date Night Cristão** (`dateparacasais.com.br`, R$ 19,90), **16 ads activos** desde el 12/8. Se bajaron los 12 videos: **6 creativos distintos**, todos de **15,4 s**, y **ninguno tiene locución** (transcriptos con faster-whisper: audio vacío). Venden con **dos carteles fijos y una caja blanca de CTA** sobre b-roll de celular y las hojas del producto.
+- **Competencia:** en portugués el nicho tiene **~100 ads** y 8 anunciantes; **en español no lo corre nadie** (lo que aparece son mazos físicos argentinos, que prueban la demanda). Arbitraje limpio.
+- **Las 7 hojas del producto se dibujaron por código** (`gfx_datenight.py`): cartas de la gratitud, preguntále a tu pareja, devocional, oraciones guiadas, desafíos de conexión, bingo y verdad o desafío, en la paleta de ellos. El producto todavía no existe y la tanda se puede testear igual.
+- **Editor nuevo sin voz:** `edit_datenight.py` + `gen_datenight_plans.py` + `vent_datenight.py`, con la cama `bed_calma`. Los 6 videos quedaron en `~/Desktop/date-night/anuncios/` como `10-11 - 1` a `10-11 - 6` (15,40 s, 1080×1920).
+- 🆕 **Regla nueva en [[guiones-y-anuncios]]: un nicho entero de TikTok puede estar podrido.** 135 clips de los tags cristianos y de pareja en español se tiraron enteros (todos con texto quemado); los limpios salieron de **tags de objeto**, que no tienen idioma (`#juegodecartas`, `#cardgames`, `#boardgamenight`, `#cozynight`). 11 limpios de 65.
+- 🐞 **Y otra: `zoompan` emite `d` cuadros por cuadro de entrada.** Las hojas armadas con `-loop 1 -t 2` duraban 120 s y los seis ads mostraban siempre la misma página. Se corrige con una sola imagen de entrada y `-frames:v N`.
+
 ## 2026-11-10 (7ª pasada) — The Party Box Vault: oferta nueva para el mercado inglés, tanda 1 de 6 videos
 
 - Pedido de Santiago: *"Necesito que hagamos 6 testeos para esta oferta… la vamos a tirar en inglés, acordate de hacer lo mismo de siempre para los ads"*, con el link a la Biblioteca de Anuncios de la page `1288335281030909`.

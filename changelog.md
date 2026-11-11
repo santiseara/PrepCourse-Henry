@@ -5,6 +5,7 @@
 - **Duraciones decrecientes** como pidió: 972 / 552 / 369 / 317 palabras → ~4:30, 2:35, 1:45 y 1:30 editados.
 - Los cuatro en **inglés (producción) y español con voseo**. Avatar guardado en `~/Desktop/party-box-vault/imagenes/avatar-megan-sentada.png`.
 - Nuevo: `OUTPUTS/2026-11-11-vsl-pospagos-party-box-profits.md` (copia en `~/Desktop/party-box-vault/vsl/guiones.md`).
+- 🇬🇧 **Pasada de registro US (recordatorio de Santiago: "la oferta es en inglés"):** se sacaron 12 britanismos y el gramaje métrico de los guiones de producción (*card stock de 160 gramos* → *sixty five pound cover*, *millimetre* → *a hair*, *catalogue* → *catalog*, *shop* → *store*, *christening* → *baptism*, *nurseries* → *daycares*, *back garden* → *backyard*, *status* → *stories*, *candy table ladies* → *dessert table ladies*). **Todo lo que se renderiza va en inglés**: voz, avatar, subtítulos y el texto de los botones; el español del archivo es solo la copia de lectura.
 - No hay ningún VSL de piedras guardado en el cerebro: la referencia usada es la estructura de 7 puntos del Manual del Embudo Post-Compra más los 4 OTO de Mounjaro Humilde, que es el set equivalente que sí existe.
 
 ## 2026-11-11 (7ª pasada) — Party Box Profits: el backend pasa a ser el molde de piedras

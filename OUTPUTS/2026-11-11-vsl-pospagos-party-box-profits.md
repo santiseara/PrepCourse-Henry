@@ -18,8 +18,8 @@ Congratulations. Your Party Box Profits is confirmed, and in a couple of minutes
 So don't close this page yet. Your access is still being prepared, and there is something I want to tell you before it finishes. It takes three minutes, and it is the thing I wish somebody had told me the night I started.
 My name is Megan. I print party boxes at this table. The same table you are looking at right now.
 And I remember my first week perfectly, because it was not the templates that stopped me. The templates were already there, the same way they are already yours. What stopped me was everything around them.
-Here is what I mean. Tonight, or maybe tomorrow, you are going to open the library and pick a template. And right there the first question shows up. What paper do I use. Does it have to be card stock. Is a hundred and sixty grams enough, and is that the same as sixty five pound cover. You look it up, you get four different answers, and you end up buying whatever the shop had on the shelf.
-Then you print. And the first one does not close right. The tabs are a millimetre off, or the fold lands in the wrong place, and you have no idea if that is the printer, the paper, or you.
+Here is what I mean. Tonight, or maybe tomorrow, you are going to open the library and pick a template. And right there the first question shows up. What paper do I use. Does it have to be cardstock. Is sixty five pound cover heavy enough, or do I need the thicker one. You look it up, you get four different answers, and you end up buying whatever the store had on the shelf.
+Then you print. And the first one does not close right. The tabs are a hair off, or the fold lands in the wrong place, and you have no idea if that is the printer, the paper, or you.
 And then comes the real one. Somebody writes to you and asks how much for twelve. And you freeze. Because twelve is not one. Twelve has paper in it, and ink, and glue, and ribbon, and four hours of your night. You do not want to be the expensive one. You do not want to work for free either. And she is typing right now.
 None of those questions are big. That is exactly the problem. They are small, they show up at nine at night, and there is nobody to ask. The video cannot answer you, because the video was recorded before your question existed. Your friends do not know. And the groups are full of women asking the same thing you are asking.
 That is where it stops. Not because the product does not work, but because she is alone with it in the first week. And the first week is the one that decides whether this turns into money, or turns into a folder you open once more and then forget.
@@ -29,7 +29,7 @@ BLOQUE 2
 
 It is called your Personalized One on One Assistant, and this is how it works.
 You get a link. You open it on your phone, like any other chat. And you ask it anything, in your own words, at any hour.
-Ask it what paper to buy where you live, and it gives you the weight, the name it has in your country, and roughly what it should cost. Ask it why your box will not close, and it walks you through it, fold by fold, until it does. Tell it the party your client described, and it picks which of the three hundred templates fits. Tell it that a mother wants twelve boxes in pink with her daughter's name on them, and it gives you the price to charge, and then writes the message you send back. Word for word, ready to copy.
+Ask it what paper to buy where you live, and it gives you the weight, the name it goes by where you are, and roughly what it should cost. Ask it why your box will not close, and it walks you through it, fold by fold, until it does. Tell it the party your client described, and it picks which of the three hundred templates fits. Tell it that a mother wants twelve boxes in pink with her daughter's name on them, and it gives you the price to charge, and then writes the message you send back. Word for word, ready to copy.
 And it already knows your product. It read the whole library, the eight collections, every measurement and the four bonuses, so you never have to explain what you bought.
 It does not sleep. It does not get tired of you. And there is no such thing as a silly question at eleven at night.
 On top of that, for the next thirty days, you get me and my team as well, one on one. Anything the assistant cannot solve, you send to us, and a person answers you.
@@ -46,18 +46,18 @@ If you would rather not, there is a line under the button, and nothing happens t
 BLOQUE 1
 
 Everything you just bought is on its way to your email right now. While that finishes, I want to show you one more thing. This one is short, and it is about what happens after your first box is sitting on the table.
-Because the first week usually goes like this. You print one. It comes out better than you expected. You take a picture of it, you send it to your sister, you put it up on your status. Three people reply with a heart. One of them says it is gorgeous.
+Because the first week usually goes like this. You print one. It comes out better than you expected. You take a picture of it, you send it to your sister, you put it up on your stories. Three people reply with a heart. One of them says it is gorgeous.
 Nobody asks the price.
 And then it goes quiet.
 It is not that the box is wrong. The box is fine. It is that the only people who know you make party boxes are the people already in your phone. There are about forty of them, and they have a birthday once a year.
-Meanwhile, this weekend, in your town, there are parties. A first birthday with a hundred photos taken of one table. A christening. A school fair. A baby shower in somebody's back garden. Every one of those tables has favor boxes on it. Somebody is already supplying them. And it is almost never the woman with the printer at home, because the woman with the printer at home is waiting for her friends to ask.
+Meanwhile, this weekend, in your town, there are parties. A first birthday with a hundred photos taken of one table. A baptism. A school fundraiser. A baby shower in somebody's backyard. Every one of those tables has favor boxes on it. Somebody is already supplying them. And it is almost never the woman with the printer at home, because the woman with the printer at home is waiting for her friends to ask.
 The First Sale Playbook you already have starts with the people you know, and it works. But that list runs out in about a week. What I am going to give you now is what you do when it does.
 
 BLOQUE 2
 
 It is called The First Customer Blueprint, and it is a seven day plan that ends with a stranger paying you a deposit.
-Day one, you get the map. The fifty doors that exist in any town and buy favor boxes all year round. Bakeries, the candy table ladies, party shops, nurseries, churches, hair salons, event halls. For each type there is a three line script, because what you say to a bakery is not what you say to a nursery.
-Then there is the sample box. One box, with a QR code underneath that opens your catalogue. You leave it there, you sell nothing, and you say one sentence. That is the whole move, and it is the one that works, because nobody says no to a free box and nobody throws one away.
+Day one, you get the map. The fifty doors that exist in any town and buy favor boxes all year round. Bakeries, the dessert table ladies, party stores, daycares, churches, hair salons, event halls. For each type there is a three line script, because what you say to a bakery is not what you say to a daycare.
+Then there is the sample box. One box, with a QR code underneath that opens your catalog. You leave it there, you sell nothing, and you say one sentence. That is the whole move, and it is the one that works, because nobody says no to a free box and nobody throws one away.
 You also get the flyer, ready to print, and the price card you hand over. Both of them editable with your name on them. And the page I wish somebody had given me. What to say when she tells you she will think about it.
 And it tells you what to do day by day. Monday, three doors. Tuesday, three doors. By Sunday you have walked the whole street.
 It is thirty seven dollars, in one payment, added to the order you already made, with the same thirty day guarantee.
@@ -72,16 +72,16 @@ BLOQUE 1
 Two more screens and I leave you alone with your templates, I promise. This one is the one most women skip, which is exactly why I am putting it here.
 Let me tell you what happens before anybody asks you a price.
 She does not meet your box. She meets a photo of your box. On a phone, in a hallway, for about one second.
-And here is the part nobody says out loud. The box you just printed is prettier than the photo you just took of it. The paper looks grey. There is a wrinkle in the tablecloth, a charger in the corner, a shadow across the ribbon. So what she sees is not a shop. What she sees is a woman at her kitchen table with some paper.
+And here is the part nobody says out loud. The box you just printed is prettier than the photo you just took of it. The paper looks grey. There is a crease in the tablecloth, a charger in the corner, a shadow across the ribbon. So what she sees is not a store. What she sees is a woman at her kitchen table with some paper.
 She does not think any of that, of course. She just keeps scrolling.
 That one second is the whole business. It is the difference between a hundred people seeing your work and two of them asking the price, or twenty of them asking.
 
 BLOQUE 2
 
-So this is The Party Box Marketing System. It is everything that makes you look like a shop instead of a woman with a printer.
+So this is The Party Box Marketing System. It is everything that makes you look like a store instead of a woman with a printer.
 Six photo recipes, with your phone. No ring light, no camera. Where to stand, which way the window has to be, what goes under the box and what has to come out of the frame. Each one comes with the photo, so you copy it.
-Twelve frames where you drop your picture in, and it comes out looking like a page from a catalogue.
-Your own catalogue, in a PDF, with your name, your boxes and your prices, that you send on WhatsApp instead of answering how much for the fortieth time.
+Twelve frames where you drop your picture in, and it comes out looking like a page from a catalog.
+Your own catalog, in a PDF, with your name, your boxes and your prices, that you send on WhatsApp instead of answering how much for the fortieth time.
 And your order link, with its QR code. She picks the theme, the quantity and the name, she sees the price, and the order arrives to you already written, with the deposit asked for.
 Your content planner tells you when to post. Your hundred messages tell you what to say. This is what she is looking at while she reads them.
 Twenty seven dollars, one payment, same guarantee. Tap the button and it goes in with the rest.

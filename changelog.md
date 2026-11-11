@@ -1,3 +1,8 @@
+## 2026-11-11 (4ª pasada) — Cápsulas Encantadas: la mentora pasa a ser Juliana Alves
+
+- Pedido: *"la experta del quiz es Juliana Alves"*. Reemplazadas las **7 menciones** de Emilia Castro en el HTML (la bio del paso 8, el "Soy…" del paso 1, la burbuja de la alumna y los `alt`/placeholder de las fotos) y renombrada la imagen a `25-bio-juliana.webp`. Ninguna imagen tenía el nombre quemado: no hizo falta retocar píxeles.
+- `.txt` rearmado (1,4 MB, 21 imágenes) y verificado en el navegador: cero "Emili" en la página, bio con el nombre nuevo, las 24 imágenes cargan y los 4 CTA siguen apuntando al checkout real.
+
 ## 2026-11-11 (3ª pasada) — Cápsulas Encantadas: checkout real puesto
 
 - Santiago pasó el link: `https://capsulas-encantadas.impultienda.ar/checkout`. Reemplazó al `/checkout` relativo en `CONFIG.checkoutUrl`, se rearmó el `.txt` autocontenido (1,4 MB, 21 imágenes) y se actualizaron `PRUEBA.html` y la copia de `OUTPUTS/`.

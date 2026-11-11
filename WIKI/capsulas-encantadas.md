@@ -4,7 +4,8 @@
 
 ## ⚠️ Pendientes
 - ✅ **Checkout (11/11):** `https://capsulas-encantadas.impultienda.ar/checkout`, puesto en `CONFIG.checkoutUrl`. Verificado: los 4 CTA apuntan ahí y arrastran las UTMs de la URL del quiz.
-- 🔴 **Nombre de marca y de la mentora:** los puse yo. Marca **Cápsulas Encantadas**, mentora **Emilia Castro** (mismas iniciales que Emily Carter, por si alguna imagen las usa), método **Moldeá y Derretí**. Si quiere otros, se cambian en el HTML (la marca aparece ~12 veces) y hay que rehacer la tapa del mockup con `mockup.py`.
+- ✅ **Mentora (11/11):** Santiago la llamó **Juliana Alves**. Reemplazó a la Emilia Castro que había puesto yo, en las 7 menciones del HTML (bio, textos y `alt` de las fotos) y en el nombre de la imagen (`25-bio-juliana.webp`). Ninguna imagen tenía el nombre quemado, así que no hubo que retocar nada.
+- 🔴 **Nombre de marca y del método:** los puse yo, siguen sin confirmar. Marca **Cápsulas Encantadas**, método **Moldeá y Derretí**. Si quiere otros, la marca se cambia en el HTML (~12 veces) y hay que rehacer la tapa del mockup con `OUTPUTS/scripts-quiz/mockup-capsulas.py`.
 - 🟡 **Mail de soporte:** quedó el de la oferta en inglés (`digitallearninghub.support@gmail.com`), que es el que funciona. Se cambia en `CONFIG.correoSoporte`.
 - 🟡 **UTMify:** el quiz original traía el script cifrado de UTMify de la tienda en inglés. **No lo copié** (apunta a la configuración de esa tienda). Si quiere rastreo, va el script de la cuenta argentina.
 

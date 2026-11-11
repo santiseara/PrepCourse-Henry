@@ -74,6 +74,7 @@ Propuesta completa en `OUTPUTS/2026-11-11-pospagos-party-box-vault.md`, **pendie
 - **Las tres escaleras** comparten la matematica (97 / 37 / 27 / 20 con downsells al 50/53/47/55 %) y cambian quien va primero a 97: **A** el asistente 1 a 1 (patron de [[scented-stones]], la validada), **B** los derechos de reventa (mas valor percibido, pero el front ya dice "imprimi y vende"), **C** el sistema de proveedora mayorista (el unico angulo que ya vendio con plata: la demanda / el cliente que vuelve).
 - **AOV:** 51 USD con las tasas del manual (ratio 1,90) y 39 USD en el escenario conservador (ratio 1,45, el numero real de su tienda de 27).
 - Todos los entregables son **PDF, HTML offline y un Gem compartido**: cero video, cero creditos.
+- **Títulos y descripciones de los 8**, listos para la pantalla de upsells: `OUTPUTS/2026-11-11-otos-titulos-descripciones-party-box-vault.md`, en inglés (el que se pega) y en español con voseo. Molde de 3 renglones de [[aumento-de-aov]]. **El Repeat Order System ($37) y el Party Supplier System ($97) son el mismo eje en dos tamaños: nunca van juntos en la misma escalera.**
 - ⚠️ **Orden sensato: landing primero.** Sin la landing las 8 paginas de OTO/DS no tienen identidad visual (regla de marca del manual) y el front sigue prometiendo un *step by step assembly video* que no esta producido.
 
 ## Preguntas abiertas

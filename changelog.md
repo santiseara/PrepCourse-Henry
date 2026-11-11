@@ -1,3 +1,11 @@
+## 2026-11-11 (5ª pasada) — The Party Box Vault: los 8 pospagos con título y descripción
+
+- Pedido de Santiago: *"Dame uno por uno con su descripcion, no me importa el orden"*. Se entregaron los **8 productos del banco** (los de las tres escaleras), cada uno con título, precio y descripción de 3 renglones con el molde de [[aumento-de-aov]]: el hueco, qué recibe, qué lo diferencia de lo que ya compró.
+- **En inglés (el que se pega en Impultienda) y en español con voseo**, las dos versiones completas, como manda la regla de ofertas en inglés.
+- El renglón 3 de cada uno hace de entrada el trabajo que el manual pide en los primeros 20 segundos de la VSL: nombra el bono del front con el que podría confundirse (*assembly video*, *First Sale Kit*, *100 ready messages*, *30 day posting planner*) y marca la diferencia.
+- Anotado en [[party-box-vault]]: **The Repeat Order System ($37) y The Party Supplier System ($97) son el mismo eje en dos tamaños y nunca van juntos** en la misma escalera.
+- Nuevo: `OUTPUTS/2026-11-11-otos-titulos-descripciones-party-box-vault.md`.
+
 ## 2026-11-11 (4ª pasada) — The Party Box Vault: los pospagos, tres escaleras para elegir
 
 - Pedido de Santiago: *"Necesito que me ayudes a armarle buenos pospagos a la oferta de cajas, utiliza la skill que tenes instalada y dame distintas opciones asi yo elijo"*. Se siguió el **Manual del Embudo Post-Compra** (skill `embudo-post-compra`).

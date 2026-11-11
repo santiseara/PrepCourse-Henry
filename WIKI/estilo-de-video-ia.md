@@ -63,9 +63,18 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
 - [[guiones-y-anuncios]] fija **cortes de 1,9 a 2,9 s** y voz a **speed 1,30**: eso es para los ads de **voz en off con clips de TikTok**, que siguen igual. **Este formato es el otro carril:** avatar IA, planos de 8 s, voz a ritmo natural rápido (185 ppm) y sin recorte de silencios, porque rompe el lipsync.
 - El tope de 30 segundos tampoco aplica acá: la referencia que le gustó dura **88 s** y recién nombra el CTA al segundo 58.
 
+## Registro de correcciones
+
+- **2026-11-11 · El largo por defecto son 4 o 5 escenas, no 88 segundos.** Pedido textual: *"videos de 4/5 escenas, podés repetir algunas, no siempre, pero a veces sí, que salgan bien, metele un poco de velocidad, cortá silencios, y que suenen reales, que hablen fluido, cuidado con las entonaciones o el acento, tiene que sonar argentino, no raro"*. Lo que cambia de las 8 reglas de arriba:
+  - **4 o 5 tomas por video, de 5 a 9 s cada una → 22 a 26 s de ad.** Los 88 s de la referencia brasileña son el techo del formato, no el molde.
+  - **Repetir plano es parte del formato:** el video 1 de [[dancego]] usa tres veces el mismo plano del "día 21" y cambia solo lo que cuenta. Es lo que hace el original.
+  - **Sí se cortan los silencios y sí se acelera.** La regla de [[guiones-y-anuncios]] ("UGC con avatar: speed 1,08 y sin recorte de silencios porque rompe el lipsync") vale para una voz en off pegada encima. Acá el corte saca **el mismo tramo del video y del audio**, así que no hay nada que desincronizar: queda como jump cut. Medido: silencios internos > 0,26 s recortados + **×1,05** global de imagen y sonido.
+  - **El acento se resuelve con la muestra de voz, no con el prompt.** Una muestra de 9-10 s de Sulafat / Orus pasada como `reference_voice` hace que el video hable en rioplatense; describir el acento en el prompt solo refuerza. Y las entonaciones raras se detectan midiendo el F0 de cada toma: la que se sale de ±8 % se regenera (US$0,53), no se arregla en el montaje.
+  - **Escenas de la vida real, dichas por quien las vive:** antes y después, el marido sorprendido, el juego con la hija. El avatar que explica a cámara es el cierre, no el video entero.
+
 ## Preguntas abiertas
 
-- ¿El avatar de las ofertas de Santiago sale de HeyGen Avatar IV (lo que usa hoy) o pasa a `wan2.7-r2v` por [[apimart]], que es el que permite los 8 s con la misma referencia y voz fija?
+- ✅ **Resuelto el 11/11: sale de `wan2.7-r2v` por [[apimart]]**, con la voz de Gemini TTS como `reference_voice`. HeyGen queda para doblaje.
 - ¿Las fotos de testimonio de dónde salen cuando la oferta es nueva y no hay clientes todavía?
 - ¿La cama musical va o no va? En la referencia casi no se oye.
 

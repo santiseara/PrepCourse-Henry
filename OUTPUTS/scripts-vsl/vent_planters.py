@@ -24,6 +24,8 @@ imposibles). Se reconocen por el proceso que no puede pasar y por la piel y la r
 
 Formato: clave -> (archivo, desde, hasta, extras)
 """
+# 🆕 Tres clips (j, n, o) terminan con la pieza usada como FAROL, PORTA VELA o FOGON: se les corta
+# la cola, porque el ad vende macetas y esos planos cuentan otra cosa. Aparecieron en la hoja del render.
 # 🆕 El cartel semitransparente "Dont waste money / Instead..." de 47606 sigue vivo despues de los 4 s
 # y el OCR cada 2 s no lo vio: aparecio en la hoja de contactos del render. El clip se cayo entero.
 VENT.update({
@@ -38,12 +40,12 @@ VENT.update({
     'g': ('7659504081995648270', 0.0, 28.9, {'fam': 'corazon'}),     # molde de carton + maceta calada
     'h': ('7665159540706512142', 0.0, 27.7, {'fam': 'flor'}),        # moldes de flor, pintadas
     'i': ('7666355422189718798', 0.0, 16.0, {'fam': 'piedras'}),     # cajon + piedras pegadas
-    'j': ('7694578423347285270', 0.0, 15.8, {'fam': 'paraguas'}),    # molde de paraguas
+    'j': ('7694578423347285270', 0.0, 10.4, {'fam': 'paraguas'}),    # molde de paraguas; el final es un fogon encendido
     'k': ('7630881719054388502', 0.0, 21.8, {'fam': 'toalla'}),      # toalla sobre balde, taller con macetas
     'l': ('7678755000666869000', 0.0, 10.4, {'fam': 'paraguas2'}),   # paraguas + piedras; despues de 10,5 s es un fogon encendido, no una maceta
     'm': ('7682811526025153805', 0.0, 14.9, {'fam': 'bolsa'}),       # bolsa de nylon -> maceta con moño
     # --- manos, mesa, piezas chicas (planos de detalle) ---
-    'n': ('7672812203048848658', 0.0, 14.2, {'fam': 'vasitos'}),     # vasos de papel + puntilla
+    'n': ('7672812203048848658', 0.0, 10.6, {'fam': 'vasitos'}),     # vasos de papel + puntilla; el final son porta velas encendidos
     'o': ('7676148635658128658', 0.0, 11.2, {'fam': 'media'}),       # media como molde; el final es la maceta encendida como farol, de noche
     'p': ('7677260746358623509', 0.0, 12.6, {'fam': 'puntilla'}),    # maceta rosa con puntilla
     'q': ('7120592176064548101', 0.0, 20.0, {'fam': 'bowl'}),        # bowl de vidrio; a los 22,5 s entra un cartel de TV

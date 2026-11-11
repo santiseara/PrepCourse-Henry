@@ -131,6 +131,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-11 — Party Box Profits: los 4 guiones de VSL de pospago](../OUTPUTS/2026-11-11-vsl-pospagos-party-box-profits.md) — arco continuo (solo el primero felicita), duraciones decrecientes 4:30 / 2:35 / 1:45 / 1:30, en inglés y español con voseo · ver [[party-box-vault]] · [[vsl-reglas-de-armado]]
 - [2026-11-11 — Party Box Profits: pospagos v3, el molde de los 4 OTOs de piedras](../OUTPUTS/2026-11-11-pospagos-party-box-profits-v3-molde-piedras.md) — Assistant 97 / First Customer Blueprint 37 / Party Box Marketing System 27 / Holiday Profit System 17, AOV 1,60–2,21× · ver [[party-box-vault]] · [[aumento-de-aov]]
 - [2026-11-11 — Party Box Profits: pospagos v2 contra la landing real](../OUTPUTS/2026-11-11-pospagos-party-box-profits-v2.md) — escalera 97/47/37/27 (asistente, cualquier tema, tienda de un link, fotos con el teléfono), AOV 1,69–2,37× sobre un front de $19,99 · ver [[party-box-vault]] · [[embudo-vsl-post-pago]]
 - [2026-11-11 — The Party Box Vault: títulos y descripciones de los 8 pospagos](../OUTPUTS/2026-11-11-otos-titulos-descripciones-party-box-vault.md) — los 8 productos del banco con el molde de 3 renglones (hueco, qué recibe, qué lo diferencia), en inglés para pegar y en español con voseo · ver [[party-box-vault]] · [[aumento-de-aov]]

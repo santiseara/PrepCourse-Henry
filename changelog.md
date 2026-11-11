@@ -1,3 +1,12 @@
+## 2026-11-11 (8ª pasada) — Party Box Profits: los 4 guiones de VSL de pospago
+
+- Santiago pasó la foto del avatar (sale perfecta, 941×1672, ya es 9:16) y pidió los 4 VSL "similares a los de piedras", con buena edición, subtítulos, velocidad, las visuales de TikTok de los ads y **coherencia entre los cuatro**: *"si en el primero decimos felicitaciones… en el segundo no podemos volver a decir felicitaciones"*.
+- **Arco continuo:** solo el VSL 1 felicita y presenta a Megan; el 2 abre con el mail en camino, el 3 con "dos pantallas más" y el 4 con "última pantalla" y el cierre de toda la escalera. Ninguno da por hecho que compró el anterior (quien rechaza también pasa por ahí).
+- **Duraciones decrecientes** como pidió: 972 / 552 / 369 / 317 palabras → ~4:30, 2:35, 1:45 y 1:30 editados.
+- Los cuatro en **inglés (producción) y español con voseo**. Avatar guardado en `~/Desktop/party-box-vault/imagenes/avatar-megan-sentada.png`.
+- Nuevo: `OUTPUTS/2026-11-11-vsl-pospagos-party-box-profits.md` (copia en `~/Desktop/party-box-vault/vsl/guiones.md`).
+- No hay ningún VSL de piedras guardado en el cerebro: la referencia usada es la estructura de 7 puntos del Manual del Embudo Post-Compra más los 4 OTO de Mounjaro Humilde, que es el set equivalente que sí existe.
+
 ## 2026-11-11 (7ª pasada) — Party Box Profits: el backend pasa a ser el molde de piedras
 
 - Santiago descartó las dos propuestas anteriores: *"No me gustaron, vamos a usar los mismos otos que la oferta de the scented stone method, te acordas cuales eran?"*.

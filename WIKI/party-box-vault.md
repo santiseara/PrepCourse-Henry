@@ -77,11 +77,42 @@ Propuesta completa en `OUTPUTS/2026-11-11-pospagos-party-box-vault.md`, **pendie
 - **Títulos y descripciones de los 8**, listos para la pantalla de upsells: `OUTPUTS/2026-11-11-otos-titulos-descripciones-party-box-vault.md`, en inglés (el que se pega) y en español con voseo. Molde de 3 renglones de [[aumento-de-aov]]. **El Repeat Order System ($37) y el Party Supplier System ($97) son el mismo eje en dos tamaños: nunca van juntos en la misma escalera.**
 - ⚠️ **Orden sensato: landing primero.** Sin la landing las 8 paginas de OTO/DS no tienen identidad visual (regla de marca del manual) y el front sigue prometiendo un *step by step assembly video* que no esta producido.
 
+## La landing real: Party Box Profits (leida el 2026-11-11)
+`https://party-box-profits.impultienda.ar` · **front 19,99 USD**, ancla 97, pago unico, acceso de por vida, garantia de 30 dias, 4,9 estrellas de 6.195 vendedoras. Headline: *"Print a $3 party box tonight. Sell it for $35 this weekend."* **Sin order bumps en el checkout** (hueco abierto).
+
+**El stack:** 300+ moldes en **8 colecciones** con cartelitos de nombre personalizados y updates gratis · los add-ons que ya vienen incluidos (**cake toppers, cuadros de recuerdo, polaroids y cajas rompecabezas**) · **step by step assembly video** · acceso de por vida en cualquier dispositivo.
+
+**Los 4 bonos (con su valor cantado):** The First Sale Playbook ($47: a quien mensajear, que cobrar y como tomar el pedido) · 100 Copy-and-Send Sales Messages ($39) · 30-Day Content Planner ($35) · **The Pricing & Profit Calculator ($29)**.
+
+⚠️ **Los valores de los bonos suman $150 y la pagina canta $97 de valor total del combo.** Conviene alinearlo antes de escalar.
+
+### ⛔ 2026-11-11 · No se proponen pospagos sin leer la landing
+Santiago, sobre la v1: *"No me gustaron, el unico que va es el asistente, pero los demas, el 37 y el de 27 ya estan en los bonos, analiza la landing y haceme pospagos potentes que se vean irresistibles"*.
+- Yo habia mapeado los ejes del front **desde los entregables que nombran los guiones** porque la wiki decia "falta la landing". La landing ya existia, y adentro estaban **la calculadora de precios** (mi OTO3 de $27) y buena parte de **el cliente que vuelve** (mi OTO2 de $37, que choca con el First Sale Playbook).
+- **Regla:** antes de proponer backend se abre la landing y se transcribe el stack completo con cada bono y su valor. Es la misma familia que la regla de [[monjaro-violeta]]: *lo que tiene una oferta no se deduce*. Deducir los ejes desde los ads alcanza para escribir ads, no para armar pospagos.
+- **Y los OTOs tienen que verse irresistibles**, no solo no pisar un eje: cada uno arranca con la escena del problema que ella va a tener **esta noche**, no con la categoria del producto.
+
+### Pospagos v2 (la que va)
+`OUTPUTS/2026-11-11-pospagos-party-box-profits-v2.md`, en ingles (el que se pega) y espanol con voseo. Escalera **97 / 47 / 37 / 27** con downsells al 50/53/47/55 %.
+
+| | Producto | USD | El hueco que la landing abre y no cierra |
+|---|---|---|---|
+| OTO1 | **Personalized 1-on-1 Assistant** 🤖✨ | 97 | nadie le contesta a ella (el unico aprobado de la v1) |
+| OTO2 | **The Any-Theme Studio™** 🎨♾️ | 47 | el tema que la clienta pide y no esta en las 8 colecciones |
+| OTO3 | **The One-Link Order Shop™** 🛍️📲 | 37 | contestar "cuanto sale" cuarenta veces; la vidriera que no tiene |
+| OTO4 | **The Phone Photo Studio™** 📸✨ | 27 | la foto arriba de la mesa de la cocina es lo unico que la clienta ve |
+
+- **Backend $27,42 por comprador** con las tasas del manual → AOV **$47,41 (ratio 2,37)**; conservador (mitad de tasas) AOV **$33,70 (ratio 1,69)**. Con un front de $19,99 el backend no es un extra: es el negocio. El CPA tolerable pasa de 20 a 34-47 dolares.
+- Todo sale en **PDF, HTML offline y un Gem**: cero video, cero creditos. Los dielines en blanco del OTO2 se dibujan con `gfx_boxes.py`, que ya existe.
+- **Banco:** The Batch Production System™ ($20, OTO4 alternativo) y The Resale Rights Kit™ ($97, el unico que le pelea el puesto al asistente, pero necesita aclarar en 20 segundos la diferencia con el "imprimi y vende" del front).
+- 🕳️ **El checkout no tiene order bumps.** Es la palanca mas barata que queda y no pisa ningun eje de los 4 OTOs.
+
 ## Preguntas abiertas
-- **Falta la landing.** Sin ella los insertos van con nombre de trabajo y vocabulario propio (regla del 5/11 de [[arreglos-de-ropa]]: el inserto se dibuja con la landing en la mano).
+- ~~Falta la landing~~ **Resuelto el 11/11: `party-box-profits.impultienda.ar`.** La marca es **Party Box Profits**, asi que los insertos de los videos que dicen *The Party Box Vault* hay que rehacerlos con el nombre real (los guiones y las voces no se tocan).
 - ¿Se clonan también las otras dos líneas del ganador (**cajas para taza** y **caja explosión**) como ofertas aparte, o entran como temas adentro de ésta?
 - ¿El plan de dos precios (básico sin bonos / completo con los 10) se copia tal cual?
-- ¿Cuál de las tres escaleras de pospago se produce? De eso depende si **caja explosión y caja para taza** entran como OTO3 (opción C) o salen como ofertas aparte.
+- ¿Se produce la escalera v2 completa o solo el asistente para empezar? ¿Y cuál de las tres escaleras de la v1 se descarta del todo?
+- (v1, superada) ¿Cuál de las tres escaleras de pospago se produce? De eso depende si **caja explosión y caja para taza** entran como OTO3 (opción C) o salen como ofertas aparte.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[caza-de-ofertas]] · [[100-paper-squishies]] · [[calendarios-2027]] · [[internacionalizacion]] · [[como-trabajar-con-santiago]]

@@ -44,6 +44,7 @@
 - 🆕 [[vence-al-parkinson]] — Vence al Parkinson (5 tomos + 4 bonos, 1.395 págs ilustradas, $16.999 ARS, Argentina): clon del whale "Tom Miller". Sus 30 ads activos transcriptos: un solo cuerpo y 21 hooks rotando; 7 familias de hook y tanda 1 de 6 guiones en voseo.
 - 🆕 [[barber-pro]] — BarberPro MegaPack ($19.99, landing propia en inglés): curso de barbería en +100 clases, clon de "Barbería Online". 28 ads en inglés del competidor transcriptos, 6 familias de hook y tanda 1 de 6 guiones.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
+- 🆕 [[from-concrete-to-cash]] — Oferta propia en inglés: macetas de cemento ($19,99). Clon de "De Cemento a Dinero" (AR, 35 ads activos de 6 días). Tanda 1 de 6 ads.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
@@ -130,6 +131,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-11 — Party Box Profits: pospagos v2 contra la landing real](../OUTPUTS/2026-11-11-pospagos-party-box-profits-v2.md) — escalera 97/47/37/27 (asistente, cualquier tema, tienda de un link, fotos con el teléfono), AOV 1,69–2,37× sobre un front de $19,99 · ver [[party-box-vault]] · [[embudo-vsl-post-pago]]
 - [2026-11-11 — The Party Box Vault: títulos y descripciones de los 8 pospagos](../OUTPUTS/2026-11-11-otos-titulos-descripciones-party-box-vault.md) — los 8 productos del banco con el molde de 3 renglones (hueco, qué recibe, qué lo diferencia), en inglés para pegar y en español con voseo · ver [[party-box-vault]] · [[aumento-de-aov]]
 - [2026-11-11 — The Party Box Vault: pospagos, 3 escaleras para elegir](../OUTPUTS/2026-11-11-pospagos-party-box-vault.md) — los ejes que el front ya se come, los 7 huecos y tres escaleras de 97/37/27/20 (asistente, derechos o proveedora al frente), AOV 1,45–1,90× · **pendiente del OK de Santiago** · ver [[party-box-vault]] · [[embudo-vsl-post-pago]]
 - [2026-11-10 — Noche de Citas Cristiana: la tanda 1 de 6 ads](../OUTPUTS/2026-11-10-guiones-date-night-tanda1.md) — el texto en pantalla de los 6 videos sin voz: 3 clonados del formato de Ana Cristina y 3 orgánicos de TikTok · ver [[noche-de-citas-cristiana]]
@@ -154,6 +156,10 @@
 - [2026-11-09 — Piedras: BR6, BR7 y BR8 en portugués](../OUTPUTS/2026-11-09-guiones-piedras-portugues-BR6-BR8.md) — tres anuncios más clonados 1:1 a Brasil, cada uno con su estilo de subtítulo medido sobre el original (karaoke amarillo, píldora acumulativa y píldora de una palabra) · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-09 — DanceGo: tanda 3, tres renovaciones del ganador](../OUTPUTS/2026-11-09-guiones-dancego-tanda-9-11.md) — tres formatos de hook distintos (pregunta del cliente, storytime, lista de tres) sobre el cuerpo validado, con estética y pool nuevos sin bajar un clip · ver [[dancego]] · [[renovacion-de-creativos]]
 - [2026-11-10 — Keywords de ingresos en Brasil (tanda nueva)](../OUTPUTS/2026-11-10-keywords-br-ingresos-tanda-nueva.md) — 8 palabras que pescan, corridas una por una con frase exacta en BR, más las 4 tachadas con el motivo · ver [[caza-de-ofertas]]
+- [2026-11-11 — From Concrete to Cash: tanda 1 de 6 ads para el mercado inglés](../OUTPUTS/2026-11-11-guiones-concrete-planters-tanda1.md) — una familia ganadora de "De Cemento a Dinero" por video, en inglés y español con voseo · ver [[from-concrete-to-cash]]
+- [2026-11-11 — De Cemento a Dinero: radiografía del competidor](../OUTPUTS/2026-11-11-analisis-de-cemento-a-dinero.md) — 35 ads activos de 6 días, 33 videos transcriptos, su edición y sus 7 familias de hook · ver [[from-concrete-to-cash]]
+- [2026-11-11 — From Concrete to Cash: descripción para ads](../OUTPUTS/2026-11-11-descripcion-ads-concrete-planters.md) — una sola para los 6, en inglés y español, sin cifra de ingresos · ver [[from-concrete-to-cash]]
+- [2026-11-11 — From Concrete to Cash: las visuales de TikTok](../OUTPUTS/2026-11-11-visuales-tiktok-concrete-planters.md) — los 19 clips que entraron de 75, con ventana, y los 13 que se cayeron por ser video de IA · ver [[from-concrete-to-cash]]
 - [2026-11-11 — Cápsulas Encantadas: descripción para ads (2 renglones)](../OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md) — la que va más dos variantes, en voseo y sin cifras de ingresos · ver [[capsulas-encantadas]]
 - [2026-11-11 — Quiz Cápsulas Encantadas (AR)](../OUTPUTS/2026-11-11-quiz-capsulas-encantadas.html) — clon argentino del quiz inglés de cápsulas de té, 8 pasos, $12.990 en 3 cuotas, con el mockup y las capturas rehechas en castellano sin IA · ver [[capsulas-encantadas]]
 - [2026-11-10 — Quiz El Secreto de la Chía (AR)](../OUTPUTS/2026-11-10-quiz-el-secreto-de-la-chia-ar.html) — el mismo quiz de 28 pasos empaquetado autocontenido para ImpulTienda, ya en voseo, con su checkout propio ya puesto y verificado · ver [[secreto-de-la-chia]]

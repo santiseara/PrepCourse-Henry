@@ -61,10 +61,10 @@ BLANCO = '&H00FFFFFF&'      # palabra activa en blanco: ellos NO resaltan en col
 NEGRO = '&H00000000&'       # sin caja, solo el borde negro
 
 CIERRE = dict(type='end', occ=0,
-              head=['TOCÁ ABAJO'],
+              head=['TOCA ABAJO'],
               sub='y empieza por el sillón que tienes en casa',
               cta='Ver las clases en video',
-              sub2='Curso completo · Almohadones · La tela justa · Grupo de WhatsApp · Garantía de 7 días',
+              sub2='Curso completo · Cojines · La tela justa · Grupo de WhatsApp · Garantía de 7 días',
               img='gfx/celular_solo.png')
 
 VIDEOS = [

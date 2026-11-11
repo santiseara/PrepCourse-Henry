@@ -1,3 +1,23 @@
+## 2026-11-11 (6ª pasada) — Party Box Profits: los pospagos, rearmados contra la landing real
+
+- Corrección de Santiago: *"No me gustaron, el unico que va es el asistente, pero los demas, el 37 y el de 27 ya estan en los bonos, analiza la landing y haceme pospagos potentes que se vean irresistibles"*, con el link `party-box-profits.impultienda.ar`.
+- **La landing ya existía y la wiki decía que faltaba.** Adentro estaban **The Pricing & Profit Calculator** (mi OTO3 de $27) y el **First Sale Playbook** (que se come mi OTO2 de $37). Quedó anotada en [[party-box-vault]] la regla: **antes de proponer backend se abre la landing y se transcribe el stack completo con cada bono y su valor**; deducir los ejes desde los ads alcanza para escribir ads, no para armar pospagos.
+- **El front real:** Party Box Profits, **$19.99** (ancla 97), 300+ moldes en 8 colecciones, add-ons incluidos, video de armado y 4 bonos. **Sin order bumps en el checkout.** Y los valores de los bonos suman $150 contra un valor total cantado de $97: conviene alinearlo.
+- **Escalera v2: 97 / 47 / 37 / 27** con downsells al 50/53/47/55 %. Asistente 1 a 1 (el único aprobado) + **The Any-Theme Studio™** (el tema que no está en los 300) + **The One-Link Order Shop™** (la vidriera que le contesta "cuánto sale") + **The Phone Photo Studio™** (la foto es lo único que la clienta ve).
+- Cada descripción arranca con la escena del problema de **esta noche**, no con la categoría del producto: eso es lo que pidió con "irresistibles".
+- **AOV $47,41 (ratio 2,37)** con las tasas del manual y **$33,70 (1,69)** conservador. Con un front de $19,99 el backend es el negocio, no un extra.
+- Todo en PDF, HTML offline y un Gem: cero video y cero créditos. Nuevo: `OUTPUTS/2026-11-11-pospagos-party-box-profits-v2.md`.
+- Dato suelto para los videos: la marca real es **Party Box Profits**, así que los insertos que dicen *The Party Box Vault* hay que rehacerlos (guiones y voces no se tocan).
+
+## 2026-11-11 (5ª pasada) — From Concrete to Cash: el argentino de macetas de cemento, clonado al inglés
+
+- Pedido de Santiago: *"Vamos con ads para esta oferta ahora… mismo análisis que hacemos siempre, quiero 6 ads de testeo para el mercado inglés"*, con el link de la biblioteca de "De Cemento a Dinero" y, después, su landing propia: `from-concrete-to-cash.impultienda.ar` ($19,99, experto Mark Ross).
+- **El competidor, desarmado:** página `1312841241922512`, **35 ads activos y todos de entre el 5 y el 9 de noviembre** — una oferta nueva escalando de cero. 30 son video (15 a 50 s, 360×640), corren **un solo texto principal** y 10 van **sin copy**. Se bajaron los 33 videos únicos (fetch + Blob concatenado desde la página, como en [[bachas-de-concreto]]) y se transcribieron con faster-whisper: **7 familias de hook**, la más repetida (7 copias) es *"me querían cobrar 90 mil por una maceta, hoy soy yo la que las fabrica y las vende"*.
+- **6 guiones, uno por familia**, en inglés y español con voseo, escritos **contra la landing propia** (regla del 5/11): *models with plans and dimensions*, *costs and pricing*, *premium paints and textures*, *common mistakes*, *marketing kit*, *care cards*. **Sin la cifra del hero** ("$700 in a matter of days"): la plata va como precio de mercado o en primera persona.
+- **Edición clonada de ellos:** 100 % b-roll, subtítulos de 3 palabras en mayúscula con la palabra activa en **amarillo**, sin placas, sin insertos y sin cierre gráfico. Voz Sulafat.
+- 🆕 **Tres reglas nuevas en [[guiones-y-anuncios]]:** (1) un tag de manualidades puede estar **tomado por video de IA** — 13 de los 75 clips eran "satisfying DIY" generado, y pasan el OCR y la hoja de contactos; se cazan preguntándole al plano si pudo filmarse; (2) el **cartel semitransparente** se le escapa al OCR cada 2 s y aparece en la hoja del render, así que el clip se cae entero en vez de recortarle la ventana; (3) cuando el TTS 2.5 se queda sin cuota (10 requests por día y por modelo), el **3.x mandado sin bloque de Style** no lee instrucciones y salva la tanda.
+- Entregado: 6 videos de 36 a 42 s, los guiones, la descripción única para los 6, la radiografía del competidor y `visuales-tiktok`. Página nueva [[from-concrete-to-cash]], índice al día.
+
 ## 2026-11-11 (5ª pasada) — The Party Box Vault: los 8 pospagos con título y descripción
 
 - Pedido de Santiago: *"Dame uno por uno con su descripcion, no me importa el orden"*. Se entregaron los **8 productos del banco** (los de las tres escaleras), cada uno con título, precio y descripción de 3 renglones con el molde de [[aumento-de-aov]]: el hueco, qué recibe, qué lo diferencia de lo que ya compró.

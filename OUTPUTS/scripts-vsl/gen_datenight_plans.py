@@ -36,6 +36,12 @@ def hoja(nombre, dur):
     return dict(src='gfx/%s.png' % nombre, dur=dur)
 
 
+def dur_wav(p):
+    import wave
+    with wave.open(p) as w:
+        return w.getnframes() / w.getframerate()
+
+
 MUS = dict(music='music/bed_calma.wav', music_vol=0.60)
 
 # ------------------------------------------------------------------ los 3 clones
@@ -106,10 +112,19 @@ for v in CLON:
     escribir(v['n'], dict(segments=segs, caps=caps, music_in=round(v['n'] * 1.7, 1), **MUS))
 
 for v in ORG:
-    segs = [pl(k, 1.5, t) for k, t in v['planos']]
-    segs += [hoja(v['hoja'], 3.0)]
-    segs += [pl(k, 1.7, t) for k, t in v['cola'][:2]]
-    segs += [pl(k, 1.5, t) for k, t in v['cola'][2:]]
-    caps = [dict(t0=c[1], t1=c[2], text=c[0], tipo='sticker', y=0.20, fs=52) for c in v['caps']]
-    caps.append(dict(t0=11.3, t1=15.4, text=v['cta'], tipo='sticker', y=0.205, fs=52))
-    escribir(v['n'], dict(segments=segs, caps=caps, music_in=round(v['n'] * 1.7, 1), **MUS))
+    # el largo del video lo manda la locucion ya procesada (speed 1.30 + pausas recortadas)
+    vo = 'vo/V%d.wav' % v['n']
+    seg_vo = dur_wav(os.path.join(WK, vo))
+    T = round(seg_vo + 0.6, 2)
+    d_hoja = round(T * 0.20, 3)
+    d_pl = round((T - d_hoja) / 8, 3)
+    segs = [pl(k, d_pl, t) for k, t in v['planos']]
+    segs += [hoja(v['hoja'], d_hoja)]
+    segs += [pl(k, d_pl, t) for k, t in v['cola']]
+    # con voz queda UN cartel de apertura (el de TikTok) y el del CTA; el del medio lo dice ella
+    caps = [dict(t0=v['caps'][0][1], t1=v['caps'][0][2], text=v['caps'][0][0],
+                 tipo='sticker', y=0.20, fs=52),
+            dict(t0=round(T - 3.6, 2), t1=T, text=v['cta'], tipo='sticker', y=0.205, fs=52)]
+    escribir(v['n'], dict(segments=segs, caps=caps, vo=vo, vo_vol=1.0,
+                          music='music/bed_activa_dn.wav', music_vol=0.22,
+                          music_in=round(v['n'] * 2.0, 1)))

@@ -1,3 +1,11 @@
+## 2026-11-10 (8ª pasada) — Noche de Citas Cristiana: los 3 orgánicos con voz de mujer y cama activa
+
+- Pedido de Santiago: *"Los 3 que hiciste mas originales, me gustaria que tengan voz en off, de una mujer, y con musica activa, no me pongas la de siempre, quiero musica activa"*.
+- **Voz Sulafat** con Style de mujer argentina contándole algo a una amiga, `speed 1.30` y pausas recortadas. Las tres se verificaron con Whisper: arrancan por la primera palabra y no leen el Style. La 2.5 dio **429** después de la primera, así que las otras dos salieron con `gemini-3.1-flash-tts-preview` (la regla de reemplazo del 2/11).
+- 🆕 **Cama musical nueva y propia: `OUTPUTS/scripts-vsl/music_activa.py`** — 104 BPM, pluck de marimba, bajo redondo, palmas y hi-hat, Do–Sol–Lam–Fa. Hermana de `music_calma.py`. Se escribió porque pidió música activa **que no sea la de siempre**: no se reusó `bed_activo`.
+- **El largo del video lo manda la locución**: los orgánicos quedaron en 14,87 / 17,47 / 13,93 s (los clones siguen en 15,40). Con voz quedan **dos carteles** en vez de tres: el de apertura y el del CTA.
+- `edit_datenight.py` ahora acepta `vo` y mezcla sin normalizar (`amix normalize=0`), con la cama a 0,22. Comprobado transcribiendo el audio final de los tres: la voz se entiende entera por encima de la música.
+
 ## 2026-11-10 (7ª pasada) — Noche de Citas Cristiana: oferta nueva para Argentina y tanda 1 de 6 ads
 
 - Pedido de Santiago, con el link de la Biblioteca: *"Tenemos que hacer 6 ads... 3 como los de ellos, tipo copiándoles todo el formato"* y los otros 3 *"más originales y orgánicos"*, estilo TikTok y **sin subtítulos**. Mercado: **Argentina, voseo**.

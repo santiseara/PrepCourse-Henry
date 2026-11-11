@@ -214,10 +214,16 @@ dur = sum(s['dur'] for s in P['segments'])
 mus = F(P['music'])
 ins += ['-i', mus]
 idx_mus = len(P.get('caps', [])) + 1
+salida_mus = '[a]' if not P.get('vo') else '[mu]'
 filtros.append('[%d:a]atrim=%s:%s,asetpts=N/SR/TB,volume=%s,afade=t=in:st=0:d=0.5,'
-               'afade=t=out:st=%.2f:d=0.9[a]'
+               'afade=t=out:st=%.2f:d=0.9%s'
                % (idx_mus, P.get('music_in', 0), P.get('music_in', 0) + dur,
-                  P.get('music_vol', 0.62), dur - 0.9))
+                  P.get('music_vol', 0.62), dur - 0.9, salida_mus))
+if P.get('vo'):
+    # con locucion la cama baja y se mezcla sin normalizar (si no, amix le come el nivel a la voz)
+    ins += ['-i', F(P['vo'])]
+    filtros.append('[%d:a]aresample=48000,volume=%s[vz]' % (idx_mus + 1, P.get('vo_vol', 1.0)))
+    filtros.append('[vz][mu]amix=inputs=2:duration=longest:normalize=0[a]')
 
 run([FF, '-y', '-v', 'error'] + ins + ['-filter_complex', ';'.join(filtros),
      '-map', '[%s]' % prev, '-map', '[a]', '-t', str(dur),

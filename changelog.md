@@ -1,3 +1,12 @@
+## 2026-11-11 (3ª pasada) — The Party Box Vault: tres renovaciones leyendo la cuenta
+
+- Pedido de Santiago: *"Tenemos que hacer renovaciones para cajas, así les fue"*, con la captura de los 6 conjuntos.
+- **Lectura antes de escribir:** $63,22 de gasto y 3 compras. Vendió el **CJTO 3** (el calendario / la demanda) con **2 compras a $7,12** y el **CJTO 5** (la carpeta de guardados) con 1 a $14,10. Los cuatro restantes, cero: murieron los dos ángulos de **mecanismo** (la impresora, "no hace falta diseñar") y los dos **emocionales** (la caja contra el regalo, el storytime). Frecuencia 1,39, sin fatiga: se renueva el hook.
+- **Tres renovaciones** (`11-11 - 1` a `11-11 - 3`, 30 a 31 s) con el **cuerpo del CJTO 3 copiado textual** y tres formatos de hook nuevos, todos adentro del territorio que vendió: el trabajo que nadie tomó · la escena de la puerta cuando termina la fiesta · la misma mamá que compra cuatro veces al año.
+- **La edición también cambia:** la caja del subtítulo pasa del amarillo a **un color por creativo** (coral, verde, violeta), corte más rápido y planos nuevos con offset de +1,4 s sobre el mismo pool revisado.
+- 🐞 **Bug propio: el `first` fijo rompió los tres renders.** Con el offset nuevo el primer tramo de cada clip ya no cae en el borde de la ventana, así que el plano de apertura que yo había fijado a mano no existía en el pool y el editor murió con `StopIteration`. Se cambió por un `_first()` que lo resuelve contra el pool. Quedó anotado en [[party-box-vault]].
+- OCR del render: 88 cuadros con texto, todo propio. Entregado con la descripción y los guiones en inglés y español.
+
 ## 2026-11-11 (2ª pasada) — Tapizar sillones: oferta nueva para Argentina
 
 - Pedido de Santiago: *"Ahora vamos a hacer los ads para esta oferta de tapizados de sillones… mismas instrucciones que siempre, 6 ads"*.

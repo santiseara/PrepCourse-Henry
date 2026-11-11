@@ -38,6 +38,34 @@
 - **Insertos por código** (`gfx_boxes.py`): la librería de moldes con los dielines dibujados en SVG, el celular con el índice, la página del armado y el calendario de la demanda. Cuestan cero y no hace falta que el producto exista.
 - **Entregables con nombre propio** en los guiones (regla del mercado inglés): *300+ box templates*, *step by step assembly video*, *the First Sale Kit*, *100 ready messages*, *30 day posting planner*. Son los bonos del original traducidos, así que coinciden cuando se clone la landing.
 
+## Tanda 2 — tres renovaciones leyendo la cuenta (2026-11-11)
+Santiago pasó la captura de los 6 conjuntos: **$63,22 de gasto, 3 compras**.
+
+| Conjunto | Guion | Compras | CPA | Gastado |
+|---|---|---|---|---|
+| 3 | el calendario / la demanda | **2** | **$7,12** | $14,24 |
+| 5 | la carpeta de guardados vs. la mesa vacía | 1 | $14,10 | $14,10 |
+| 6 | la mitad difícil ya viene hecha | 0 | — | $7,65 |
+| 2 | storytime de los doce souvenirs | 0 | — | $8,58 |
+| 1 | ya tenés la fábrica / la impresora | 0 | — | $8,21 |
+| 4 | nadie fotografía el regalo | 0 | — | $10,44 |
+
+**Lo que dice la lectura:** vendió **la demanda** (hay fiesta todos los meses y esa parte no la hace nadie) y, en segundo lugar, la **comparación social con catálogo**. Murieron los dos ángulos de **mecanismo** (la impresora, "no hace falta diseñar") y los dos **emocionales** (la caja contra el regalo, el storytime). **Frecuencia 1,39**: no hay fatiga de público, así que se renueva el hook.
+
+⚠️ Con $63 de gasto y 3 ventas la lectura es fina; la dirección es clara pero no es un veredicto.
+
+**Las tres (`11-11 - 1` a `11-11 - 3`, de 30 a 31 s), cuerpo del CJTO 3 copiado textual:**
+| # | Formato del hook | Hook |
+|---|---|---|
+| 1 | El trabajo que nadie tomó | *"At every party in your town, three people got paid and one job stayed empty"* |
+| 2 | La escena de la puerta | *"Stand by the door when a kid's party ends and watch what the mother hands out"* |
+| 3 | El cliente que vuelve | *"The same mother is going to buy from you four times this year and she does not know it yet"* |
+
+- **La estética también cambia:** la caja del subtítulo deja de ser amarilla en los tres y pasa a **un color por creativo** (coral, verde, violeta), corte de 1,6-2,6 s y planos nuevos con **offset de +1,4 s** y TOPE 10 sobre las mismas ventanas ya revisadas, con `usage.json` penalizando lo usado.
+- 🐞 **El `first` fijo rompió los tres renders.** Con el offset nuevo el primer tramo de cada clip ya no arranca en el borde de la ventana, así que `first=['i', 0.0]` no existía en el pool y el editor murió con `StopIteration`. Ahora el generador resuelve el `first` contra el pool (`_first()`), que es a prueba de cambios de offset.
+- Guiones en `OUTPUTS/2026-11-11-renovaciones-party-box-vault.md`. Planes: `OUTPUTS/scripts-vsl/gen_boxes_plans_11.py`.
+- **Lo que sigue:** el cuerpo del CJTO 5 es el segundo validado. Si estas tres rinden, la próxima tanda renueva ese.
+
 ## Preguntas abiertas
 - **Falta la landing.** Sin ella los insertos van con nombre de trabajo y vocabulario propio (regla del 5/11 de [[arreglos-de-ropa]]: el inserto se dibuja con la landing en la mano).
 - ¿Se clonan también las otras dos líneas del ganador (**cajas para taza** y **caja explosión**) como ofertas aparte, o entran como temas adentro de ésta?

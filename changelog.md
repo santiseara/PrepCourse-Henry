@@ -1,3 +1,10 @@
+## 2026-11-10 (9ª pasada) — Noche de Citas Cristiana: subtítulos en los 3 orgánicos
+
+- Pedido de Santiago: *"Estan bien, pero agregale subtitulos, que se vean bien"*.
+- `edit_datenight.py` ahora arma los subtítulos solo: transcribe la locución con `word_timestamps`, la **alinea contra el guion escrito** con `difflib` (así salen con tildes y mayúsculas bien) y escribe un `.ass` de **3 palabras** que se quema con el filtro `ass=`. Este ffmpeg (imageio 7.1) **trae libass**, así que no hizo falta dibujarlos a mano.
+- Estilo: Montserrat ExtraBold 92, blanco con borde negro de 9, la palabra que suena en **ámbar #F2B33C**, con un golpecito de escala al entrar cada bloque. Van a `capy 1330`, bien abajo del cartel de apertura y del CTA, así no se pisan.
+- Los tres videos se rehicieron y reemplazaron en `~/Desktop/date-night/anuncios/`. Los clones (1 a 3) siguen sin voz y sin subtítulos, como el ganador.
+
 ## 2026-11-10 (8ª pasada) — Noche de Citas Cristiana: los 3 orgánicos con voz de mujer y cama activa
 
 - Pedido de Santiago: *"Los 3 que hiciste mas originales, me gustaria que tengan voz en off, de una mujer, y con musica activa, no me pongas la de siempre, quiero musica activa"*.

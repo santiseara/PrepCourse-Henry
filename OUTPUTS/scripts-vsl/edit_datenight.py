@@ -200,6 +200,68 @@ cuerpo = os.path.join(tmp, 'cuerpo.mp4')
 run([FF, '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista,
      '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-r', str(FPS), '-an', cuerpo])
 
+# ---------------------------------------------------------------- 1b) subtitulos de la voz
+def ts(x):
+    x = max(0.0, x)
+    return '%d:%02d:%05.2f' % (int(x // 3600), int(x % 3600 // 60), x % 60)
+
+
+def norm(w): return re.sub(r'[^\w]', '', w.lower())
+
+
+def escribir_subs(ruta_vo, ruta_guion, destino):
+    """Alinea la transcripcion con el guion escrito y escribe el .ass de 3 palabras."""
+    from faster_whisper import WhisperModel
+    import difflib
+    model = WhisperModel('small', device='cpu', compute_type='int8')
+    segs, _ = model.transcribe(ruta_vo, language='es', word_timestamps=True)
+    wd = [(w.start, w.end, w.word.strip()) for s in segs for w in s.words]
+    sw = open(ruta_guion).read().split()
+    a, b = [norm(x[2]) for x in wd], [norm(x) for x in sw]
+    vw = []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op == 'equal':
+            vw += [(wd[i1 + k][0], wd[i1 + k][1], sw[j1 + k]) for k in range(i2 - i1)]
+    if not vw: return False
+    HI = P.get('hi', '&H003CB3F2&')        # ambar #F2B33C en BGR: la palabra que suena
+    cab = ('[Script Info]\nScriptType: v4.00+\nPlayResX: %d\nPlayResY: %d\nWrapStyle: 0\n\n'
+           '[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, '
+           'OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, '
+           'Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, '
+           'MarginV, Encoding\n'
+           'Style: C,Montserrat ExtraBold,%d,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,'
+           '0,0,0,0,100,100,0,0,1,9,5,5,60,60,0,1\n\n'
+           '[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, '
+           'Effect, Text' % (W, H, P.get('subs_fs', 92)))
+    ass = [cab]
+    def limpia(w): return w.replace('…', '').strip(' ,;:"“”').upper()
+    chunks, cur = [], []
+    for x in vw:
+        cur.append(x)
+        if len(cur) == P.get('words', 3) or re.search(r'[.?!…]$', x[2]):
+            chunks.append(cur); cur = []
+    if cur: chunks.append(cur)
+    capy = P.get('capy', 1330)
+    for ci, ch in enumerate(chunks):
+        nxt = chunks[ci + 1][0][0] if ci + 1 < len(chunks) else ch[-1][1] + 0.4
+        for wi, (s, e, w) in enumerate(ch):
+            e2 = ch[wi + 1][0] if wi + 1 < len(ch) else min(nxt, ch[-1][1] + 0.5)
+            pop = '{\\fscx116\\fscy116\\t(0,90,\\fscx100\\fscy100)}' if wi == 0 else ''
+            txt = pop + ' '.join(('{\\1c%s}' % HI) + limpia(x[2]) + '{\\r}' if j == wi
+                                 else limpia(x[2]) for j, x in enumerate(ch))
+            ass.append('Dialogue: 0,%s,%s,C,,0,0,0,,{\\pos(%d,%d)}%s'
+                       % (ts(s), ts(e2), W // 2, capy, txt))
+    open(destino, 'w').write('\n'.join(ass) + '\n')
+    return True
+
+
+subs = None
+if P.get('vo') and P.get('subs', True):
+    sp = os.path.join(tmp, 'subs.ass')
+    guion = F(P.get('guion') or P['vo'].replace('.wav', '.txt'))
+    if escribir_subs(F(P['vo']), guion, sp):
+        subs = sp
+
 # ---------------------------------------------------------------- 2) carteles
 ins, filtros, prev = ['-i', cuerpo], [], '0:v'
 for i, c in enumerate(P.get('caps', [])):
@@ -224,6 +286,10 @@ if P.get('vo'):
     ins += ['-i', F(P['vo'])]
     filtros.append('[%d:a]aresample=48000,volume=%s[vz]' % (idx_mus + 1, P.get('vo_vol', 1.0)))
     filtros.append('[vz][mu]amix=inputs=2:duration=longest:normalize=0[a]')
+
+if subs:
+    filtros.append('[%s]ass=%s:fontsdir=%s[vsub]' % (prev, subs, FD))
+    prev = 'vsub'
 
 run([FF, '-y', '-v', 'error'] + ins + ['-filter_complex', ';'.join(filtros),
      '-map', '[%s]' % prev, '-map', '[a]', '-t', str(dur),

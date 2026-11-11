@@ -44,7 +44,7 @@ VENT.update({
     'm': ('7682811526025153805', 0.0, 14.9, {'fam': 'bolsa'}),       # bolsa de nylon -> maceta con moño
     # --- manos, mesa, piezas chicas (planos de detalle) ---
     'n': ('7672812203048848658', 0.0, 14.2, {'fam': 'vasitos'}),     # vasos de papel + puntilla
-    'o': ('7676148635658128658', 0.0, 13.9, {'fam': 'media'}),       # media como molde, maceta acanalada
+    'o': ('7676148635658128658', 0.0, 11.2, {'fam': 'media'}),       # media como molde; el final es la maceta encendida como farol, de noche
     'p': ('7677260746358623509', 0.0, 12.6, {'fam': 'puntilla'}),    # maceta rosa con puntilla
     'q': ('7120592176064548101', 0.0, 20.0, {'fam': 'bowl'}),        # bowl de vidrio; a los 22,5 s entra un cartel de TV
     # --- con ventana por cartel del creador ---

@@ -92,7 +92,7 @@ Santiago, sobre la v1: *"No me gustaron, el unico que va es el asistente, pero l
 - **Regla:** antes de proponer backend se abre la landing y se transcribe el stack completo con cada bono y su valor. Es la misma familia que la regla de [[monjaro-violeta]]: *lo que tiene una oferta no se deduce*. Deducir los ejes desde los ads alcanza para escribir ads, no para armar pospagos.
 - **Y los OTOs tienen que verse irresistibles**, no solo no pisar un eje: cada uno arranca con la escena del problema que ella va a tener **esta noche**, no con la categoria del producto.
 
-### Pospagos v2 (la que va)
+### Pospagos v2 (descartada)
 `OUTPUTS/2026-11-11-pospagos-party-box-profits-v2.md`, en ingles (el que se pega) y espanol con voseo. Escalera **97 / 47 / 37 / 27** con downsells al 50/53/47/55 %.
 
 | | Producto | USD | El hueco que la landing abre y no cierra |
@@ -107,11 +107,29 @@ Santiago, sobre la v1: *"No me gustaron, el unico que va es el asistente, pero l
 - **Banco:** The Batch Production System™ ($20, OTO4 alternativo) y The Resale Rights Kit™ ($97, el unico que le pelea el puesto al asistente, pero necesita aclarar en 20 segundos la diferencia con el "imprimi y vende" del front).
 - 🕳️ **El checkout no tiene order bumps.** Es la palanca mas barata que queda y no pisa ningun eje de los 4 OTOs.
 
+### Pospagos v3 - el molde de piedras (la que va, 2026-11-11)
+Santiago descarto la v1 y la v2: *"No me gustaron, vamos a usar los mismos otos que la oferta de the scented stone method"*. **Los cuatro OTOs de [[scented-stones]] son el molde fijo** (regla nueva en [[aumento-de-aov]]).
+
+`OUTPUTS/2026-11-11-pospagos-party-box-profits-v3-molde-piedras.md`, en ingles (el que se pega) y espanol con voseo.
+
+| | Producto | USD | DS |
+|---|---|---|---|
+| OTO1 | **Personalized 1-on-1 Assistant** 🤖✨ | 97 | 48 (50 %) |
+| OTO2 | **The First Customer Blueprint™** 🚀💰 | 37 | 18 (53 %) |
+| OTO3 | **The Party Box Marketing System™** 📈✨ | 27 | 14 (47 %) |
+| OTO4 | **The Holiday Profit System™** 🚀💰 | 17 | 7 (55 %) |
+
+- Lo unico que se traduce de piedras es el OTO3 (*Scented Stone* → *Party Box*). Los otros tres van con el nombre tal cual.
+- **Backend $24,18 → AOV $44,17 (ratio 2,21)**; conservador $32,08 (1,60).
+- El OTO2 pisa de cerca el **First Sale Playbook** del front: por regla no se cambia el OTO, se cambia el vehiculo (aca, las 50 puertas de la ciudad y la cajita de muestra con QR en vez de los contactos de su telefono) y el renglon 3 de la descripcion lo aclara.
+- El OTO3 absorbe las dos herramientas de la v2 (las fotos con el telefono y el link de pedidos) en un solo producto de $27, que es el molde de piedras.
+- Todo sale en PDF, HTML offline y un Gem: cero video, cero creditos.
+
 ## Preguntas abiertas
 - ~~Falta la landing~~ **Resuelto el 11/11: `party-box-profits.impultienda.ar`.** La marca es **Party Box Profits**, asi que los insertos de los videos que dicen *The Party Box Vault* hay que rehacerlos con el nombre real (los guiones y las voces no se tocan).
 - ¿Se clonan también las otras dos líneas del ganador (**cajas para taza** y **caja explosión**) como ofertas aparte, o entran como temas adentro de ésta?
 - ¿El plan de dos precios (básico sin bonos / completo con los 10) se copia tal cual?
-- ¿Se produce la escalera v2 completa o solo el asistente para empezar? ¿Y cuál de las tres escaleras de la v1 se descarta del todo?
+- ¿Se producen los 4 entregables de la v3 de una vez o arrancamos por el asistente y el Blueprint?
 - (v1, superada) ¿Cuál de las tres escaleras de pospago se produce? De eso depende si **caja explosión y caja para taza** entran como OTO3 (opción C) o salen como ofertas aparte.
 
 ## Relacionado

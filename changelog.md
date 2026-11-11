@@ -1,3 +1,13 @@
+## 2026-11-11 (7ª pasada) — Party Box Profits: el backend pasa a ser el molde de piedras
+
+- Santiago descartó las dos propuestas anteriores: *"No me gustaron, vamos a usar los mismos otos que la oferta de the scented stone method, te acordas cuales eran?"*.
+- **Regla fija nueva en [[aumento-de-aov]]: el backend se clona de Scented Stones, no se inventa.** Los cuatro OTOs de piedras (*The First Customer Blueprint™* $37, *Personalized 1-on-1 Assistant* $97, *The [producto] Marketing System™* $27, *The Holiday Profit System™* $17) son el molde fijo de todo backend nuevo: se traducen al vehículo de la oferta, no se reemplazan por cuatro productos nuevos.
+- Es la misma familia que las voces fijas: **no se estrena nada en una entrega**. Yo venía proponiendo ejes nuevos (cualquier tema, tienda de un link, fotos, derechos de reventa) cuando ya había cuatro validados con plata.
+- **La escalera de cajas:** Assistant 97 → Blueprint 37 → Party Box Marketing System 27 → Holiday Profit System 17, con downsells al 50/53/47/55 %. Lo único que se traduce es el nombre del OTO3. Backend **$24,18 → AOV $44,17 (ratio 2,21)**.
+- El OTO2 roza el *First Sale Playbook* del front: por regla no se cambia el OTO, se cambia el vehículo (las 50 puertas de la ciudad y la cajita de muestra con QR, en vez de los contactos del teléfono) y el renglón 3 lo aclara.
+- El OTO3 absorbe las dos herramientas de la v2 (fotos con el teléfono y link de pedidos) en un solo producto de $27.
+- Nuevo: `OUTPUTS/2026-11-11-pospagos-party-box-profits-v3-molde-piedras.md`. La v2 quedó marcada como descartada en [[party-box-vault]].
+
 ## 2026-11-11 (4ª pasada) — Tapizar sillones: la tanda en español neutro para LATAM
 
 - Pedido de Santiago: *"Necesito los ads de sillón con acento neutro, son para LATAM"*.

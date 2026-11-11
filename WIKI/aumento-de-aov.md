@@ -190,6 +190,25 @@ Títulos reales de la pantalla de Scented Stones: *The First Customer Blueprint�
 
 Es la misma lógica de la descripción del order bump: lo que convierte es que se entienda qué se lleva.
 
+
+### El backend se clona de Scented Stones, no se inventa (REGLA FIJA, 2026-11-11)
+Santiago, despues de dos propuestas de backend para [[party-box-vault]]: *"No me gustaron, vamos a usar los mismos otos que la oferta de the scented stone method, te acordas cuales eran?"*.
+
+**Los cuatro OTOs de piedras son el molde fijo de todo backend nuevo:**
+
+| | Producto | USD |
+|---|---|---|
+| 1 | **The First Customer Blueprint™ 🚀💰** — el atajo a la primera clienta | 37 |
+| 2 | **Personalized 1-on-1 Assistant 🤖✨** — el acceso 1 a 1 (Gem + soporte 30 dias) | 97 |
+| 3 | **The [producto] Marketing System™ 📈✨** — el kit que la hace ver como una tienda | 27 |
+| 4 | **The Holiday Profit System™ 🚀💰** — las temporadas que mas pagan | 17 |
+
+- **No se proponen cuatro productos nuevos por oferta.** Se traduce este molde al vehiculo de la oferta: cambia el sustantivo del OTO3 y cambian los entregables, no la escalera ni los ejes.
+- Los cuatro tipos son los del manual: **atajo** (1), **acceso** (2), **herramienta/visualizacion** (3) y **temporada con urgencia honesta** (4).
+- Si un eje del molde choca con un bono del front (el *First Sale Playbook* de [[party-box-vault]] contra el Blueprint), **no se cambia el OTO: se cambia el vehiculo** y el renglon 3 de la descripcion marca la diferencia. El eje ya esta validado con plata.
+- El manual pide el mas caro primero, asi que el asistente va de OTO1 y el Blueprint de OTO2. En la pantalla de piedras el orden es 37 → 97: cuesta ~1,70 USD de backend por comprador.
+- Es la misma familia que la regla de voces fijas de [[como-trabajar-con-santiago]]: **no se estrena nada en una entrega**.
+
 ## Front y backend son variables independientes
 
 Idea que abre una palanca que mucha gente no ve:

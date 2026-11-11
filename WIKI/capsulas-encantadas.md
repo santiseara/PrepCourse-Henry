@@ -52,3 +52,6 @@ Los 8 pasos, sin imágenes rotas, sin desborde horizontal, sin errores de JS; lo
 
 ## Fuentes
 - Quiz en vivo `emilycarter.digitallearninghub.lat` (ImpulTienda, `custom_html`), bajado el 2026-11-11.
+
+## Descripción para ads
+Dos renglones, en `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md` (la que va más dos variantes). Sin cifras de ingresos: la promesa de plata queda adentro del quiz.

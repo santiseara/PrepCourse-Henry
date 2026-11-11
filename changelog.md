@@ -1,3 +1,7 @@
+## 2026-11-11 (2ª pasada) — Cápsulas Encantadas: la descripción para los ads
+
+- Pedido: *"Dame una descripción de 2 renglones para la oferta"*. Entregadas tres de dos renglones (la que va + dos variantes) en `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md`, en voseo y **sin cifras de ingresos**: la promesa de plata vive adentro del quiz, no en el ad.
+
 ## 2026-11-11 — Displays de papel: oferta nueva LATAM para competirle de frente a Decorarina
 
 - Pedido de Santiago: *"Vamos a salir en LATAM a competirle, pero necesitamos que sean visuales nuevas y variantes de sus guiones ganadores… al competir en el mismo mercado tenemos que hacer cosas nuevas y mejores. Hacé 6 testeos"*.

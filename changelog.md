@@ -1,3 +1,14 @@
+## 2026-11-11 (2ª pasada) — Tapizar sillones: oferta nueva para Argentina
+
+- Pedido de Santiago: *"Ahora vamos a hacer los ads para esta oferta de tapizados de sillones… mismas instrucciones que siempre, 6 ads"*.
+- **Quién es:** **Caprichos de Mar** (`aprendeatapizarsillones.impultienda.ar`), **19 ads activos en AR** desde el 30 de octubre, curso de **AR$39.990** en ImpulTienda con 3 bonos (almohadones, la tela y la medida, emprender con planilla de presupuesto), grupo de WhatsApp y garantía de 7 días. Dos hermanas con 10 años de taller: es **marca personal**, se clonan los anuncios.
+- **Se bajaron los 14 videos y se transcribieron.** Seis familias ganadoras y un mecanismo que repiten en todos lados: *"sin coser, solo con martillo y engrampadora"*. Su landing además **regala la lista de objeciones** del avatar (que quede desarmado por meses, no saber cuánta tela, creer que hay que saber coser, "es cosa de hombres"), que es de donde salen los hooks 2 y 5.
+- **6 guiones en voseo**, uno por familia, con hook, cuerpo y CTA propios. **Sin cifra en pesos**: la única candidata era cuánto se cobra un retapizado y en un ad de ingresos es lo que más mira Meta, así que quedó como múltiplo.
+- **La edición se clona** (banda blanca con texto negro arriba durante el hook + subtítulos chicos blancos sin caja, como ellos) y se le agregan **4 insertos dibujados por código** (`gfx_tapizar.py`), que ellos no tienen.
+- **Pool:** 96 clips de `#tapiceria`, `#tapizado`, `#reformadesofa` y `#restauraciondemuebles`, **21 entraron**. El tag de restauración trae casi todo **pintura de muebles de madera** y los otros pesan en **tapizado de autos**.
+- ⚠️ **Volví a tropezar con la regla que había escrito esta mañana.** El clip `26999` tenía *"34 cuadros con texto de 60"* en el scan —cartel casi todo el tiempo— y en vez de tirarlo le recorté la ventana. El cartel (*"Publicada en mi perfil"*) apareció en la hoja del render y hubo que rehacer la tanda. Quedó anotado en [[tapizar-sillones]] y en [[displays-de-papel]].
+- Entregado: 6 videos de 31 a 34 s, la descripción para ads y `visuales-tiktok.md` con cuenta, link y tramo de los 21 clips. Página nueva [[tapizar-sillones]], índice al día.
+
 ## 2026-11-11 (4ª pasada) — Cápsulas Encantadas: la mentora pasa a ser Juliana Alves
 
 - Pedido: *"la experta del quiz es Juliana Alves"*. Reemplazadas las **7 menciones** de Emilia Castro en el HTML (la bio del paso 8, el "Soy…" del paso 1, la burbuja de la alumna y los `alt`/placeholder de las fotos) y renombrada la imagen a `25-bio-juliana.webp`. Ninguna imagen tenía el nombre quemado: no hizo falta retocar píxeles.

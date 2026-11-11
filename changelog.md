@@ -1,3 +1,14 @@
+## 2026-11-11 (1ª pasada) — Cápsulas Encantadas: el quiz inglés de cápsulas de té, clonado a Argentina
+
+- Pedido de Santiago: *"Ahora quiero que hagamos este quiz pero para argentina. Lo vamos a cobrar 12.990"*, con el link del quiz propio en inglés (`emilycarter.digitallearninghub.lat`, *Tea Charm Studio*, 27 USD). El checkout lo pasa después.
+- **El quiz viajaba entero en el `custom_html` de ImpulTienda**: se bajó con `curl -sL`, se recortó el bloque (1.694 líneas) y se editó directo, como dice [[quizzes-reglas-de-armado]] §3.
+- **Clon de los 8 pasos, mismo orden y misma lógica**, en español argentino con voseo. Precio **$12.990** (antes $46.990, −72 %) y **3 cuotas sin interés de $4.330**: el motor multi-moneda por zona horaria del original se sacó entero y quedó precio fijo en el CONFIG. Nombres, ciudades y cifras pasados a Argentina con la aritmética cerrada ($2.500 la cápsula × 40 = $100.000 el pedido × 10 al mes = $1.000.000).
+- **Las 5 imágenes con texto en inglés se rehicieron sin gastar un crédito:** el hero y la foto del cierre salieron de recortes de las fotos limpias; las 3 capturas de Instagram y las 4 chapitas de beneficio se rehicieron **en HTML**; los nombres de las alumnas se repintaron con Pillow; y el **mockup de los 5 libros + el sello** se borró por interpolación y se re-tipeó con Playfair Display y Great Vibes (`OUTPUTS/scripts-quiz/mockup-capsulas.py`).
+- **Verificado en el navegador** (iframe de 390 px, `python3 -m http.server`): los 8 pasos, sin imágenes rotas, sin desborde, sin errores de JS, los 4 CTA con el mismo link y arrastrando las UTMs, y las 24 imágenes del `.txt` autocontenido (1,4 MB) cargando.
+- **Dos aprendizajes nuevos anotados en [[quizzes-reglas-de-armado]]:** `inline_quiz.py` solo embebe rutas **entre comillas dobles** (con comillas simples el `.txt` sale con 4 de 25 fotos y parece liviano), y una foto escrita en el markup además del CONFIG se embebe **dos veces** en base64 (2,4 MB → 1,4 MB al pasarla a `data-img`).
+- 🔴 Pendiente: el **link de checkout** (sale con `/checkout` relativo, que resuelve a la tienda donde se pegue) y el OK al **nombre de marca** (Cápsulas Encantadas / Emilia Castro / Método Moldeá y Derretí), que los elegí yo.
+- Nueva página: [[capsulas-encantadas]]. Entregable: `OUTPUTS/2026-11-11-quiz-capsulas-encantadas.html` y `~/Desktop/capsulas-encantadas/`.
+
 ## 2026-11-10 (8ª pasada) — DanceGo: tres renovaciones leyendo la cuenta
 
 - Pedido de Santiago: *"Tenemos que hacer renovaciones para dancego, te mando como le fue a las que hicimos"*, con la captura de los 6 conjuntos.

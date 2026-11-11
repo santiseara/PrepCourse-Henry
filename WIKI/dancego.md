@@ -153,6 +153,32 @@ Santiago pasó la captura de los 6 conjuntos (todos a $10 menos el 14, ya en $20
 - Voz Sulafat por API con **`gemini-3.1-flash-tts-preview`** (el 2.5 volvió a dar 429), `speed 1.30`, verificada con Whisper.
 - Guiones en `OUTPUTS/2026-11-10-guiones-dancego-tanda-10-11.md`. Planes: `OUTPUTS/scripts-vsl/gen_dancego_plans_11.py`.
 
+## Tanda 5 — tres ads 100 % con IA, escenas actuadas (2026-11-11)
+Pedido de Santiago: *"Tenemos que hacer renovaciones para danza, quiero que hagamos ads con IA, con apimart… videos de 4/5 escenas, podés repetir algunas… metele un poco de velocidad, cortá silencios, y que suenen reales… tiene que sonar argentino, no raro. Videos llamativos, de antes y después, de marido sorprendido, juegos con la hija"*.
+
+**Es el otro carril, no una renovación más de hook.** Hasta acá los 13 ads de DanceGo eran voz en off sobre clips de TikTok. Estos tres son el formato de [[estilo-de-video-ia]]: **escenas actuadas generadas con IA**, una sola voz fija por personaje, sin un solo clip de b-roll. Se hicieron con la skill `antes-despues-ia` ([[skills-de-video-ia]]) por [[apimart]].
+
+| # | Escena | Hook | Entra por |
+|---|---|---|---|
+| 1 | El marido que la filmaba para reírse | "Mi señora me dijo que iba a bajar de peso bailando en el living de casa. Yo la empecé a filmar para reírme en un mes" | la reacción de un tercero (ángulo validado de [[guiones-y-anuncios]]) |
+| 2 | La hija que le pedía que bailara con ella | "Mi hija me pide que baile con ella desde que empezó el jardín. Yo siempre le decía lo mismo: después, mi amor" | la culpa y el juego con la hija |
+| 3 | El espejo, cinco semanas después | "Esta soy yo el día que decidí que no iba a pisar un gimnasio nunca más en mi vida" | el antes/después propio |
+
+- **Cuerpo validado del ganador `6-11 - 1` comprimido a 4-5 frases**: conectar la app a la tele, los diez minutos sin que nadie te mire, el paso a paso, la escalera de las tres semanas (video 3) y el "sin mensualidad". El CTA es el mismo: tocar en Más información y responder el test de un minuto.
+- **4 o 5 escenas por video y la escena se repite a propósito**: el video 1 usa tres veces el mismo plano del "día 21" (cambia lo que cuenta, no el plano), que es justo lo que hace el ad brasileño de referencia.
+- **Velocidad**: el montaje recorta los silencios internos (`pausas [0.26, 0.10]`) y encima va un **×1,05 global** de video y audio. Quedaron en **25,8 / 24,5 / 21,9 s** a 240-260 palabras por minuto.
+- **Voz**: Sulafat (mujer) y Orus (hombre) generadas por API a velocidad natural y pasadas como `reference_voice` a wan2.7 — el acento rioplatense no se "pide" en el prompt, **viene pegado a la muestra**. Las 15 tomas dicen el guion exacto (parecido 0,98-1,00 con Whisper) y el voseo aguanta ("tenés que tocar", "arrancás", "bajé").
+- **8 imágenes y 18 tomas por US$8,63.** Saldo de ApiMart después de la tanda: US$21,38.
+- Guiones en `OUTPUTS/2026-11-11-guiones-dancego-ia-11-11.md`. Proyecto completo en `~/Desktop/dancego/anuncios/ia/{v1,v2,v3}/`. Entrega: `11-11 IA - 1` a `11-11 IA - 3`.
+- ⚠️ **Llevan el rótulo "Caso ilustrativo · imágenes con IA"** abajo a la izquierda: las tres mujeres del antes/después no existen. Es la regla 7 de la skill. Si Santiago lo quiere afuera, se saca en el último pase de ffmpeg, pero entonces no se pauta como testimonio real.
+
+### Lo que hay que mirar la próxima vez
+- **La muestra de voz de referencia no puede pasar de 10 s**: con 11 s wan2.7 devuelve `duration should be at most 10s` (la tarea sale `refunded`, no cobra).
+- **El tono de wan se mueve entre tomas aunque la voz de referencia sea la misma.** Con `tono.py` (F0 mediano por toma) salieron tres fuera de ±8 %: regenerar la toma cuesta **US$0,53** y salió más barato y más limpio que montar seed-vc. Al marido le tomó dos intentos quedar parejo (+24 % → -1,6 %).
+- **Una placa anclada a la última palabra no llega a verse** (el fade de entrada dura 0,18 s): la de "semana 3" estaba en *demás.* y había que anclarla en *tercera*.
+- **Las palabras que el subtítulo convierte en cifra no sirven de ancla**: *diez* ya no existe en el timeline, es *10*.
+- **Las placas se pisan con la etiqueta del día** (que vive en y=330): van en y=170. Y en los planos cerrados a cámara tapan la cara: ahí van abajo, entre el subtítulo y el botón (y 1360-1560).
+
 ## Backend post-compra (2026-11-09) — ✅ escalera aprobada
 Pedido de Santiago: *"armarle unos upsells a la oferta de dance go, utiliza la skill de pospagos"*. **No tenemos el backend de la competencia** (aclaración suya: *"El backend de la competencia no lo tenemos, asi que mira solo lo que ofrecemos en el front"*), así que el paso 2 del manual se saltea y la escalera sale del mapa del front propio.
 

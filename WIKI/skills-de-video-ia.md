@@ -88,6 +88,18 @@ Veo le da la línea al personaje equivocado. Las defensas, en orden:
 ### Lo que no se entrega
 Las tres coinciden: **no se entrega** si el parecido guion/audio da **menos de 0,97**, si en la hoja de contacto una cara o una fruta cambia entre tomas, si alguien atraviesa un objeto, si el antes/después no se nota o si **Veo quemó subtítulos inventados** (~1 de cada 40 tomas).
 
+## La primera corrida real: 3 ads de DanceGo (11/11/2026)
+
+`antes-despues-ia` se usó por primera vez de punta a punta en [[dancego]] y **anda**. Lo que cambió respecto de lo que dice la skill, y lo que hay que saber antes de la próxima:
+
+- **Formato corto, no de 60-90 s.** Santiago pidió **4 o 5 escenas** por video: salieron de 22 a 26 s con 4-5 tomas. La máquina es la misma, el `proyecto.json` tiene cinco clips en vez de catorce, y se saltean `animar.py`, `recorte.py` y la escena `testimonio` (que es la que pide `transformers`/Mask2Former y Hailuo).
+- **No hace falta `KIE_API_KEY`:** ApiMart hostea los archivos (ver [[apimart]]). Un `subir.py` de 25 líneas deja las URLs en `subidas.json` y la skill las toma sola.
+- **Faltan dos cosas en esta Mac:** `ffprobe` (solo está `ffmpeg`, el de imageio, en `~/bin`) — se resuelve con un shim de 4 líneas en `~/bin/ffprobe` que saca la duración con ffmpeg — y `librosa`, que es lo único que usa `voz.py`. Se reemplazó por `tono.py` (F0 por autocorrelación con numpy), que alcanza para ver qué toma se sale.
+- **Regenerar la toma desviada le gana a seed-vc.** US$0,53 contra clonar un repo, armar un venv de python3.10 y bajar modelos. Dos intentos dejaron al personaje dentro de ±4 %.
+- **El acento no se pide, se pega.** La muestra de `reference_voice` sale de Gemini TTS (Sulafat / Orus) a velocidad natural: el rioplatense del video es el de la muestra. El `ACENTO` del prompt es el refuerzo, no la fuente. ⚠️ **La muestra no puede pasar de 10 s.**
+- **El recorte de silencios no rompe el lipsync**, al contrario de lo que dice la regla de [[guiones-y-anuncios]] para UGC: `montar.py` corta el mismo tramo en el video y en el audio, así que el corte se lee como jump cut. La velocidad extra (×1,05 de video y audio juntos) tampoco lo rompe.
+- **Las placas (`stickers`) hay que ubicarlas a mano**: se pisan con la etiqueta del día (y=330) y, en los planos cerrados a cámara, tapan la cara. Y la que se ancla a la última palabra del clip no llega a aparecer.
+
 ## Dónde chocan con las reglas de Santiago
 
 | Lo que dice la skill | Lo que manda | Qué hacer |
@@ -100,7 +112,7 @@ Las tres coinciden: **no se entrega** si el parecido guion/audio da **menos de 0
 
 ## Preguntas abiertas
 
-- **Falta cargar saldo en ApiMart** (y cargar `~/.config/apimart/env` en la shell). Hasta eso, ninguna de las tres puede generar un cuadro.
+- ✅ **Resuelto el 11/11:** hay saldo, la clave se exporta y `antes-despues-ia` ya produjo tres ads. Siguen sin probarse `mini-novela` y `fruti-novela`.
 - Falta probar una novela entera de punta a punta con una oferta real. El candidato natural es una oferta de salud/estética con quiz ya armado ([[dancego]], [[pilates-hormonal]], [[monjaro-violeta]]): las tres tienen el "test" que pide el CTA del formato.
 - Falta decidir si la novela de 3-4 min entra en la V3 como un creativo más o en una CBO aparte: es un formato de retención larga, el CPA y el hook rate no se leen igual que en un ad de 40 s ([[metricas-y-kpis]]).
 - `antes-despues-ia` pide **chip M con GPU `mps`** para el recorte y los emojis de los stickers usan la fuente de Apple. En otro equipo salen sin emoji.

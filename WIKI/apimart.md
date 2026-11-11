@@ -68,9 +68,24 @@ echo 'set -a; . ~/.config/apimart/env; set +a' >> ~/.zshrc && source ~/.zshrc
 
 También aceptan `KIE_API_KEY` como hosting público de imágenes y voces; sin ella usan catbox.moe, que es gratis. Esas skills usan **Veo 3.1 Fast** (US$0,13 la toma de 8 s) y **Hailuo 2.3**, dos modelos que no están en la tabla de arriba.
 
+## ApiMart hostea los archivos: no hace falta KIE ni catbox (11/11)
+
+Los modelos piden la foto y la voz por **URL pública**, y la skill `antes-despues-ia` las sube con `KIE_API_KEY`. No hace falta: **ApiMart tiene su propio almacenamiento**, que es además el proveedor que después procesa el archivo.
+
+```
+POST https://api.apimart.ai/v1/uploads/images?retention_days=3   (JPEG/PNG/GIF/WebP, 30 MB)
+POST https://api.apimart.ai/v1/uploads/audios?retention_days=3   (MP3/WAV/M4A, 15 MB)
+POST https://api.apimart.ai/v1/uploads/videos?retention_days=3   (MP4/MOV/WebM, 50 MB)
+-F file=@archivo    ·    la URL pública vuelve en el campo `url` de la raíz
+```
+- **Gratis hasta 2000 archivos cada 72 h** con la retención de 3 días (la cuota se ve en el panel).
+- El cliente está en `~/Desktop/dancego/anuncios/ia/subir.py`: deja la URL cargada en `subidas.json`, que es de donde lee `comun.subir()` de la skill. Con eso, **las skills de video corren sin KIE y sin hosting de terceros**.
+- **El saldo real se lee en `GET /v1/user/balance`** (`remain_balance` en dólares). El panel muestra *credits*, que son **dólares × 10**: 213,75 credits = US$21,38.
+- **wan2.7-r2v: la muestra de `reference_voice` no puede pasar de 10 s.** Con 11 s la tarea falla con `duration should be at most 10s` — se devuelve el dinero (`billing_status: refunded`), pero se pierden los minutos.
+
 ## Preguntas abiertas
 
-- ¿Cuánto saldo cargar para la primera tanda? Una tanda de 6 videos de 30 s con wan2.7-r2v en 720P ≈ US$12.
+- **Costo real medido el 11/11:** 3 ads de 22-26 s con 4-5 escenas cada uno (8 imágenes con gpt-image-2 + 18 tomas de wan2.7-r2v en 720P, con 3 regeneraciones) = **US$8,63**. O sea ~US$2,90 por ad.
 - ¿La voz sigue saliendo de Google AI Studio (Sulafat/Orus) y se pasa como `reference_voice`, o se prueba la voz propia de Omni?
 - Falta probar el flujo de punta a punta: sin créditos ni `GET /v1/models` responde.
 

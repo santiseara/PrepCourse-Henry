@@ -1,3 +1,14 @@
+## 2026-11-11 (6ª pasada) — DanceGo: tres ads 100 % con IA, el segundo carril de la oferta
+
+- Pedido de Santiago: *"Tenemos que hacer renovaciones para danza, quiero que hagamos ads con IA, con apimart… videos de 4/5 escenas, podés repetir algunas… metele un poco de velocidad, cortá silencios, y que suenen reales… tiene que sonar argentino, no raro. Videos llamativos, de antes y después, de marido sorprendido, juegos con la hija"*.
+- **Primera corrida real de la skill `antes-despues-ia`** ([[skills-de-video-ia]]) por [[apimart]]: 8 imágenes con gpt-image-2 y 18 tomas con wan2.7-r2v, **US$8,63 los tres videos** (saldo: US$21,38).
+- **Tres escenas de la vida real, no tres ideas**: el marido que la filmaba para reírse (día 01 → día 21), la hija que le pedía que bailara con ella, y el espejo cinco semanas después. Cuerpo validado del ganador `6-11 - 1` comprimido a 4-5 frases; el CTA sigue siendo el test de un minuto.
+- **El acento no se pide, se pega**: la voz de Sulafat / Orus sale de Gemini TTS a velocidad natural y entra como `reference_voice`. Las 15 tomas dicen el guion exacto (0,98-1,00 con Whisper) y el voseo aguanta.
+- **Velocidad**: silencios recortados en el montaje + ×1,05 global de video y audio. Quedaron en 25,8 / 24,5 / 21,9 s. El recorte **no** rompe el lipsync porque corta el mismo tramo en los dos.
+- **Hallazgos técnicos nuevos** (anotados en [[apimart]] y [[skills-de-video-ia]]): ApiMart hostea archivos propios (`/v1/uploads/images|audios|videos`), así que **no hace falta KIE ni ningún hosting de terceros**; la muestra de voz de referencia **no puede pasar de 10 s**; el saldo real se lee en `/v1/user/balance` y el panel muestra dólares × 10; regenerar la toma desviada de tono (US$0,53) le gana a montar seed-vc.
+- Los tres llevan el rótulo **"Caso ilustrativo · imágenes con IA"**: las mujeres del antes/después no existen.
+- Nuevo: `OUTPUTS/2026-11-11-guiones-dancego-ia-11-11.md`. Entrega en `~/Desktop/dancego/anuncios/` como `11-11 IA - 1` a `11-11 IA - 3`.
+
 ## 2026-11-11 (8ª pasada) — Party Box Profits: los 4 guiones de VSL de pospago
 
 - Santiago pasó la foto del avatar (sale perfecta, 941×1672, ya es 9:16) y pidió los 4 VSL "similares a los de piedras", con buena edición, subtítulos, velocidad, las visuales de TikTok de los ads y **coherencia entre los cuatro**: *"si en el primero decimos felicitaciones… en el segundo no podemos volver a decir felicitaciones"*.

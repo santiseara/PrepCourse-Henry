@@ -82,7 +82,7 @@ PASOS = [('Desarmar', 'Con fotos y cada pieza numerada'),
          ('Cortar', 'Sin desperdiciar medio metro'),
          ('Estirar', 'Donde se decide que no haga arrugas'),
          ('Grapar', 'El orden de los lados importa'),
-         ('Rematar', 'Esquinas, apoyabrazos y terminación')]
+         ('Rematar', 'Esquinas, brazos y terminación')]
 
 SISTEMA = hoja(f"""
   <div class="kick">NO ES TALENTO, ES UN ORDEN</div>
@@ -109,7 +109,7 @@ HERRAMIENTAS = hoja(f"""
   <div class="hr"></div>
   <div class="gr">
     <div class="p"><div class="im">{icono('martillo')}</div><b>Martillo</b></div>
-    <div class="p"><div class="im">{icono('engrampadora')}</div><b>Engrampadora</b></div>
+    <div class="p"><div class="im">{icono('engrampadora')}</div><b>Engrapadora</b></div>
     <div class="p"><div class="im">{icono('tijera')}</div><b>Tijera</b></div>
   </div>
   <div class="hr"></div>
@@ -131,14 +131,14 @@ HERRAMIENTAS = hoja(f"""
 
 # --- 3) todo lo que recibís -----------------------------------------------------------------
 COMBO = [('Curso en video', 'Un sillón de dos cuerpos, de punta a punta', 'INCLUIDO'),
-         ('Almohadones', 'Confección paso a paso, con fotos', 'DE REGALO'),
+         ('Cojines', 'Confección paso a paso, con fotos', 'DE REGALO'),
          ('La tela y la medida', 'Cuál elegir, cuánta comprar, cómo cortar', 'DE REGALO'),
          ('Empezar a cobrar', 'Cómo presupuestar un trabajo', 'DE REGALO'),
-         ('Grupo de WhatsApp', 'Preguntás con la foto de tu sillón', 'INCLUIDO'),
-         ('Garantía de 7 días', 'Lo mirás y decidís', 'INCLUIDO')]
+         ('Grupo de WhatsApp', 'Preguntas con la foto de tu sillón', 'INCLUIDO'),
+         ('Garantía de 7 días', 'Lo miras y decides', 'INCLUIDO')]
 
 TODO = hoja(f"""
-  <div class="kick">LO QUE RECIBÍS</div>
+  <div class="kick">LO QUE RECIBES</div>
   <h1>Todo junto y <em>de una vez</em></h1>
   <div class="ctr" style="margin-top:14px"><span class="pill">UN SOLO PAGO · ACCESO DE POR VIDA</span></div>
   <div class="hr"></div>
@@ -162,8 +162,8 @@ TODO = hoja(f"""
 IND = [('01', 'Desarmar sin romper nada', 'Fotos, numeración y la tela vieja'),
        ('02', 'Medir y calcular la tela', 'Cuánta comprar sin tirar de más'),
        ('03', 'Estirar y grapar', 'El orden que evita las arrugas'),
-       ('04', 'Esquinas y apoyabrazos', 'Lo que separa lo prolijo de lo casero'),
-       ('05', 'Almohadones', 'Confección paso a paso'),
+       ('04', 'Esquinas y brazos', 'Lo que separa lo parejo de lo casero'),
+       ('05', 'Cojines', 'Confección paso a paso'),
        ('06', 'Presupuestar un trabajo', 'Qué cobrar y cómo pasarlo')]
 
 CELULAR = f"""<!doctype html><html><head><meta charset="utf-8">{FONTS}{BASE}

@@ -130,6 +130,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-11 — The Party Box Vault: pospagos, 3 escaleras para elegir](../OUTPUTS/2026-11-11-pospagos-party-box-vault.md) — los ejes que el front ya se come, los 7 huecos y tres escaleras de 97/37/27/20 (asistente, derechos o proveedora al frente), AOV 1,45–1,90× · **pendiente del OK de Santiago** · ver [[party-box-vault]] · [[embudo-vsl-post-pago]]
 - [2026-11-10 — Noche de Citas Cristiana: la tanda 1 de 6 ads](../OUTPUTS/2026-11-10-guiones-date-night-tanda1.md) — el texto en pantalla de los 6 videos sin voz: 3 clonados del formato de Ana Cristina y 3 orgánicos de TikTok · ver [[noche-de-citas-cristiana]]
 - [2026-11-10 — Noche de Citas Cristiana: la descripción de los ads](../OUTPUTS/2026-11-10-descripcion-date-night.md) — una sola descripción para los 6, como hace el ganador con sus 16 · ver [[noche-de-citas-cristiana]]
 - [2026-11-09 — DanceGo: nombres y descripciones de los 4 OTOs](../OUTPUTS/2026-11-09-nombres-y-descripciones-otos-dancego.md) — listos para pegar en la pantalla de upsells, con el molde de 3 renglones (hueco, qué recibe, qué lo diferencia de lo que ya compró) · ver [[dancego]] · [[aumento-de-aov]]

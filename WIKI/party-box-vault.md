@@ -66,10 +66,21 @@ Santiago pasó la captura de los 6 conjuntos: **$63,22 de gasto, 3 compras**.
 - Guiones en `OUTPUTS/2026-11-11-renovaciones-party-box-vault.md`. Planes: `OUTPUTS/scripts-vsl/gen_boxes_plans_11.py`.
 - **Lo que sigue:** el cuerpo del CJTO 5 es el segundo validado. Si estas tres rinden, la próxima tanda renueva ese.
 
+## Pospagos - 3 escaleras propuestas (2026-11-11)
+Propuesta completa en `OUTPUTS/2026-11-11-pospagos-party-box-vault.md`, **pendiente del OK de Santiago** (seccion 0.3 del Manual del Embudo Post-Compra). Armada con [[aumento-de-aov]] y [[embudo-vsl-post-pago]].
+
+- **Los ejes que el front ya se come** (y que ningun OTO puede pisar): mas moldes y temas, el video de armado, el First Sale Kit, los 100 ready messages y el 30 day posting planner. Los 10 bonos del original son casi todos de "vender", asi que **cada bono clonado mata un eje de backend**: la recomendacion es no sumar mas bonos de venta al front.
+- **Los 7 huecos** que quedan: cuanto cobrar, nadie le contesta a ella, el cliente que vuelve 4 veces al ano, cuando pre-vender cada tema, los 12 pedidos juntos, vender el archivo en vez de la cajita, y las otras dos categorias del ganador (explosion y taza).
+- **Las tres escaleras** comparten la matematica (97 / 37 / 27 / 20 con downsells al 50/53/47/55 %) y cambian quien va primero a 97: **A** el asistente 1 a 1 (patron de [[scented-stones]], la validada), **B** los derechos de reventa (mas valor percibido, pero el front ya dice "imprimi y vende"), **C** el sistema de proveedora mayorista (el unico angulo que ya vendio con plata: la demanda / el cliente que vuelve).
+- **AOV:** 51 USD con las tasas del manual (ratio 1,90) y 39 USD en el escenario conservador (ratio 1,45, el numero real de su tienda de 27).
+- Todos los entregables son **PDF, HTML offline y un Gem compartido**: cero video, cero creditos.
+- ⚠️ **Orden sensato: landing primero.** Sin la landing las 8 paginas de OTO/DS no tienen identidad visual (regla de marca del manual) y el front sigue prometiendo un *step by step assembly video* que no esta producido.
+
 ## Preguntas abiertas
 - **Falta la landing.** Sin ella los insertos van con nombre de trabajo y vocabulario propio (regla del 5/11 de [[arreglos-de-ropa]]: el inserto se dibuja con la landing en la mano).
 - ¿Se clonan también las otras dos líneas del ganador (**cajas para taza** y **caja explosión**) como ofertas aparte, o entran como temas adentro de ésta?
 - ¿El plan de dos precios (básico sin bonos / completo con los 10) se copia tal cual?
+- ¿Cuál de las tres escaleras de pospago se produce? De eso depende si **caja explosión y caja para taza** entran como OTO3 (opción C) o salen como ofertas aparte.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[caza-de-ofertas]] · [[100-paper-squishies]] · [[calendarios-2027]] · [[internacionalizacion]] · [[como-trabajar-con-santiago]]

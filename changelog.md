@@ -1,3 +1,12 @@
+## 2026-11-11 (4ª pasada) — The Party Box Vault: los pospagos, tres escaleras para elegir
+
+- Pedido de Santiago: *"Necesito que me ayudes a armarle buenos pospagos a la oferta de cajas, utiliza la skill que tenes instalada y dame distintas opciones asi yo elijo"*. Se siguió el **Manual del Embudo Post-Compra** (skill `embudo-post-compra`).
+- **Primero el mapa del front:** los guiones de la tanda 1 ya nombran *300+ templates*, *assembly video*, *First Sale Kit*, *100 ready messages* y *30 day posting planner*, así que esos ejes quedan prohibidos en los OTOs. Hallazgo para la landing: los 10 bonos del original son casi todos de "vender", y **cada bono clonado mata un eje de backend**.
+- **7 huecos** identificados y **tres escaleras** que comparten la matemática (97 / 37 / 27 / 20, downsells al 50/53/47/55 % redondeados hacia abajo) y cambian quién va primero a 97: el **asistente 1 a 1** (patrón de Scented Stones), los **derechos de reventa** o el **sistema de proveedora mayorista** (el único ángulo que ya vendió con plata).
+- AOV proyectado **51 USD (1,90)** con las tasas del manual y **39 USD (1,45)** en el escenario conservador, que es el número real de su tienda de 27.
+- Entregables **solo PDF, HTML offline y un Gem compartido**: cero video y cero créditos. ⚠️ Avisado que el orden sensato es **landing primero** (las páginas de OTO usan la identidad de la landing) y que el *assembly video* del front todavía no está producido.
+- Nuevo: `OUTPUTS/2026-11-11-pospagos-party-box-vault.md`. Actualizados [[party-box-vault]] (sección de pospagos + pregunta abierta de cuál escalera se produce) y `WIKI/index.md`.
+
 ## 2026-11-11 (3ª pasada) — The Party Box Vault: tres renovaciones leyendo la cuenta
 
 - Pedido de Santiago: *"Tenemos que hacer renovaciones para cajas, así les fue"*, con la captura de los 6 conjuntos.

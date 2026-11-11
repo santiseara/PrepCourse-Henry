@@ -122,6 +122,37 @@ Sigue mandando el mismo ganador (`6-11 - 1`). La tanda del 7/11 fueron **cuatro 
 1. **Una palabra que se repite en el guion mueve la placa final al principio.** El `end` del video 1 estaba anclado a `mirá` y ese guion dice "Mirá cómo es por dentro" en el hook: la placa de cierre arrancó en el segundo 6 y tapó 38 de los 44 segundos. **Regla: la palabra que ancla la placa final se elige entre las que aparecen una sola vez** (acá, `plan`), y se verifica con un cuadro a mitad del video.
 2. **Ampliar el pool mete planos que nadie revisó.** Con TOPE 9 entraron recortes nuevos de clips viejos: se revisó el pool entero (228 recortes, 2 cuadros cada uno, en hojas de 45) y **el único veto fue `R1` (`7704573729669451039`): un salón con una piñata colgando, plano lejano y confuso**. El texto quemado de `E1`, `E2`, `I1`, `Z1` y `Z2` **no es problema**: todos llevan `zoom` con `ybias 1.0`, que recorta de arriba justo donde está el cartel.
 
+## Tanda 4 — tres renovaciones leyendo la cuenta (2026-11-10)
+Santiago pasó la captura de los 6 conjuntos (todos a $10 menos el 14, ya en $20):
+
+| Conjunto | Formato del hook | Compras | CPA |
+|---|---|---|---|
+| 13 · *El que todas* | (no es nuestro) | 2 | **$3,63** |
+| 14 · *Mas que un* | (no es nuestro) | 2 | **$5,14** |
+| 10 · *Anota* | lista de tres | 1 | $6,57 |
+| 9 · *Mi primera* | storytime en primera persona | 1 | $6,69 |
+| 11 · *Lo que* | pregunta del cliente | **0** | — |
+| 12 · *Nadie me habia* | (no es nuestro) | **0** | — |
+
+**Lo que dice la lectura:** de la tanda del 9/11 vendieron **la lista** y **el storytime**; la **pregunta del cliente** vendió cero en 512 personas. Lo concreto y en primera persona rinde, lo meta no. La **frecuencia está entre 1,02 y 1,09**: todavía no hay fatiga de público, así que lo que se renueva es el hook, no el alcance.
+
+⚠️ **Tres de los seis conjuntos corren creativos que no salieron de acá** (*Mas que un*, *El que todas*, *Nadie me habia*) y dos de ellos son los de mejor CPA. No están en las tandas del 6/11, 7/11 ni 9/11. Pedido a Santiago el 10/11; sin ese guion no se puede renovar lo que mejor anda.
+⚠️ **No sabemos en qué cuenta publicitaria corre DanceGo.** Se probaron cinco por MCP sin encontrarla; queda pendiente para poder leer gasto, CTR y frecuencia por anuncio en vez de la captura.
+
+**Los tres nuevos (`10-11 - 1` a `10-11 - 3`, de 46 a 50 s), cuerpo validado textual:**
+| # | Formato del hook | Hook | Entra por |
+|---|---|---|---|
+| 1 | Prueba social con cifra | "Ciento cincuenta mil mujeres están bailando en el living de su casa ahora mismo, y casi ninguna sabía bailar cuando empezó" | la cifra de la portada de la landing |
+| 2 | Reencuadre del costo | "No te estoy pidiendo que agregues nada a tu día. Te estoy pidiendo que muevas diez minutos de sillón" | el tiempo que ya tiene |
+| 3 | Mecanismo emocional | "Lo que me sacó del sillón no fue la fuerza de voluntad. Fue una canción que me gustaba" | la motivación |
+
+- **Estética nueva:** caja de subtítulo **crema sobre frambuesa / tinta sobre crema / crema sobre verde** (el 9/11 fue crema-sobre-tinta, blanco-sobre-ciruela y blanco-sobre-petróleo), cortes de 1,4-2,2 / 1,8-2,7 / 2,2-3,4 y **3, 2 y 4 palabras** por placa.
+- **Planos nuevos sin bajar material:** offset de **+0,8 s** sobre las mismas ventanas (el 9/11 fue +2,0), con `usage7.json` penalizando lo ya usado. 231 recortes de 35 clips.
+- La placa de cierre se ancla a **`plan`**, que aparece una sola vez en los tres guiones (la regla del 9/11). Verificado: entra a los 44 s de 47,9 en el V3.
+- **Control por OCR en vez de hoja de contactos** (`scan_carteles.py`, la herramienta del 10/11): 145 cuadros con texto en los tres videos, todo propio (los insertos de la app y del grupo de WhatsApp, las placas) salvo dos cosas de b-roll que son inofensivas: *"need Jesus"* impreso en la remera de la bailarina del living y un cartel de **RUTA DE EVACUACIÓN** en la pared del salón.
+- Voz Sulafat por API con **`gemini-3.1-flash-tts-preview`** (el 2.5 volvió a dar 429), `speed 1.30`, verificada con Whisper.
+- Guiones en `OUTPUTS/2026-11-10-guiones-dancego-tanda-10-11.md`. Planes: `OUTPUTS/scripts-vsl/gen_dancego_plans_11.py`.
+
 ## Backend post-compra (2026-11-09) — ✅ escalera aprobada
 Pedido de Santiago: *"armarle unos upsells a la oferta de dance go, utiliza la skill de pospagos"*. **No tenemos el backend de la competencia** (aclaración suya: *"El backend de la competencia no lo tenemos, asi que mira solo lo que ofrecemos en el front"*), así que el paso 2 del manual se saltea y la escalera sale del mapa del front propio.
 

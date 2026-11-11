@@ -1,3 +1,12 @@
+## 2026-11-10 (8ª pasada) — DanceGo: tres renovaciones leyendo la cuenta
+
+- Pedido de Santiago: *"Tenemos que hacer renovaciones para dancego, te mando como le fue a las que hicimos"*, con la captura de los 6 conjuntos.
+- **Lectura antes de escribir:** de la tanda del 9/11 vendieron la **lista** (*Anota*, $6,57) y el **storytime** (*Mi primera*, $6,69); la **pregunta del cliente** (*Lo que más me preguntan*) vendió **cero en 512 personas**. Frecuencia de 1,02 a 1,09 en los seis: no hay fatiga de público todavía, así que lo que se renueva es el hook.
+- **Tres renovaciones** (`10-11 - 1` a `10-11 - 3`, 46 a 50 s) con el **cuerpo validado copiado textual** y tres formatos de hook que no se habían probado: prueba social con la cifra de la portada, reencuadre del costo ("no agregues nada, mové diez minutos de sillón") y el mecanismo emocional ("no fue la fuerza de voluntad, fue una canción").
+- **La edición también cambió:** otra paleta de caja de subtítulo (crema sobre frambuesa / tinta sobre crema / crema sobre verde), otros tres ritmos de corte y 3, 2 y 4 palabras por placa. Planos nuevos con offset +0,8 s sobre las ventanas ya revisadas, sin bajar un solo clip.
+- **El control de b-roll salió por OCR, no por hoja de contactos** (la herramienta escrita hoy para The Party Box Vault): 145 cuadros con texto, todo propio salvo un *"need Jesus"* en la remera de la bailarina y un cartel de RUTA DE EVACUACIÓN en la pared de un salón. Los dos se dejan.
+- ⚠️ **Dos pendientes que quedaron anotados en [[dancego]]:** tres de los seis conjuntos corren creativos que **no salieron de acá** (*Mas que un*, *El que todas*, *Nadie me habia*) y dos de ellos son los de mejor CPA — sin su guion no se puede renovar lo que mejor anda. Y **no sabemos en qué cuenta publicitaria corre la oferta**: se probaron cinco por MCP sin encontrarla, así que la lectura salió de la captura y no de la cuenta.
+
 ## 2026-11-10 (9ª pasada) — Noche de Citas Cristiana: subtítulos en los 3 orgánicos
 
 - Pedido de Santiago: *"Estan bien, pero agregale subtitulos, que se vean bien"*.

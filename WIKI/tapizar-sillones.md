@@ -31,6 +31,14 @@ B-roll de sillones **antes/después** y panorámicas lentas del sillón terminad
 - **Sin cifra en pesos.** Es oferta de un solo país, así que podría llevar una, pero la única candidata era cuánto se cobra un retapizado, que en un ad de ingresos es lo que más mira Meta ([[problemas-de-cuentas-meta]]). Quedó como múltiplo: *"se cobra varias veces lo que sale aprender a hacerlo"*.
 - **Voz Sulafat** en rioplatense, `speed 1.30`. La V6 salió con `gemini-2.5-flash-preview-tts` porque el 3.1 se quedó sin cuota a mitad de la tanda.
 
+## Versión LATAM (2026-11-11)
+Santiago: *"Necesito los ads de sillón con acento neutro, son para LATAM"*. La tanda se rehízo entera en **español neutro**.
+
+- **No alcanza con sacar el voseo:** también salieron los argentinismos que no se leen igual en México o Colombia — *vereda* → **calle**, *living* → **sala**, *engrampadora* → **engrapadora**, *almohadones* → **cojines**, *prolijo* → **parejo**, *garage* → **garaje**, *dar vuelta* → **voltear**, *apoyabrazos* → **brazos**. Los **insertos** (`gfx_tapizar.py`) y la descripción se rehicieron igual.
+- **Voz** Sulafat con Style de mujer latinoamericana (mezcla mexicano-colombiana), verificada con Gemini sobre el primer wav: *"español mexicano, no usa voseo"*.
+- 🐞 **La placa de cierre se me quedó en voseo.** Cambié los guiones, la voz y los insertos, pero el `head` de la placa final seguía diciendo **"TOCÁ ABAJO"** y la línea de entregables, *"Almohadones"*. Lo cazó el OCR del render (17 cuadros) y hubo que rehacer los seis. Regla práctica: cuando se cambia el dialecto de una tanda, el texto vive en **cuatro lugares** — el guion, los chips y tags del plan, los insertos de `gfx_*.py` y la **placa de cierre** —, y el OCR del render es el que confirma que no quedó ninguno.
+- Guiones en `OUTPUTS/2026-11-11-guiones-tapizar-sillones-latam.md`. Planes: `gen_tapizar_plans_latam.py`. Los videos en voseo quedaron en `work/version-argentina/`.
+
 ## El pool de TikTok
 - 96 clips de `#tapiceria`, `#tapizado`, `#reformadesofa` y `#restauraciondemuebles`. **Entraron 21.**
 - `#restauraciondemuebles` trae sobre todo **pintura de muebles de madera** (chalk paint), y los otros tags pesan fuerte en **tapizado de autos**: nada de eso muestra lo que vendemos.

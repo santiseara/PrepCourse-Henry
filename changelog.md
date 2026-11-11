@@ -1,3 +1,11 @@
+## 2026-11-11 (4ª pasada) — Tapizar sillones: la tanda en español neutro para LATAM
+
+- Pedido de Santiago: *"Necesito los ads de sillón con acento neutro, son para LATAM"*.
+- Los 6 se rehicieron enteros: guiones, voces, insertos y descripción. **No alcanza con sacar el voseo**: también salieron *vereda* → calle, *living* → sala, *engrampadora* → engrapadora, *almohadones* → cojines, *prolijo* → parejo, *garage* → garaje, *dar vuelta* → voltear, *apoyabrazos* → brazos.
+- **Voz** Sulafat con Style de mujer latinoamericana, verificada con Gemini sobre el primer wav: *"español mexicano, no usa voseo"*.
+- 🐞 **La placa de cierre se quedó en voseo** (*"TOCÁ ABAJO"*, 17 cuadros) más un *"Almohadones"* en la línea de entregables. Lo cazó el OCR del render y hubo que rehacer los seis. Quedó como regla en [[guiones-y-anuncios]]: el texto de una tanda vive en **cuatro lugares** (guion, chips y tags del plan, insertos de `gfx_*.py` y la placa de cierre).
+- Entregado: 6 videos de 30 a 33 s en `~/Desktop/tapizar-sillones/anuncios/`. La versión en voseo quedó guardada en `work/version-argentina/` para no dejar dos juegos mezclados.
+
 ## 2026-11-11 (6ª pasada) — Party Box Profits: los pospagos, rearmados contra la landing real
 
 - Corrección de Santiago: *"No me gustaron, el unico que va es el asistente, pero los demas, el 37 y el de 27 ya estan en los bonos, analiza la landing y haceme pospagos potentes que se vean irresistibles"*, con el link `party-box-profits.impultienda.ar`.

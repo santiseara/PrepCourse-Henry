@@ -142,6 +142,7 @@
 - [2026-11-11 — Tapizar sillones: tanda 1 de 6 guiones para Argentina](../OUTPUTS/2026-11-11-guiones-tapizar-sillones-tanda1.md) — una familia ganadora del competidor por video, en voseo · ver [[tapizar-sillones]]
 - [2026-11-11 — Tapizar sillones: las visuales de la tanda 1](../OUTPUTS/2026-11-11-visuales-tiktok-tapizar-sillones.md) — los 21 clips de TikTok con cuenta, link y tramo · ver [[tapizar-sillones]]
 - [2026-11-11 — Displays de papel: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-11-guiones-displays-de-papel-tanda1.md) — un ángulo del competidor por video, reescritos de cero, en español neutro · ver [[displays-de-papel]]
+- [2026-11-10 — The Party Box Vault: las visuales de la tanda 1](../OUTPUTS/2026-11-10-visuales-tiktok-party-box-vault.md) — los 28 clips de TikTok con cuenta, link y tramo · ver [[party-box-vault]]
 - [2026-11-10 — The Party Box Vault: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-10-guiones-party-box-vault-tanda1.md) — una familia ganadora del competidor por video, en inglés y español con voseo · ver [[party-box-vault]]
 - [2026-11-10 — Pisos Epoxi: descripción para ads y nombres de la tanda](../OUTPUTS/2026-11-10-descripcion-pisos-epoxi.md) — la descripción corta clonada de la única que corre el ganador en sus 61 ads · ver [[pisos-epoxi]]
 - [2026-11-09 — Deco Magic: radiografía del competidor](../OUTPUTS/2026-11-09-analisis-deco-magic.md) — sus 6 ganadores transcriptos, la DNA que repiten los seis (el mecanismo en cuatro verbos) y la hoja de contactos de su edición · ver [[deco-magic]]

@@ -1,3 +1,8 @@
+## 2026-11-11 (3ª pasada) — Cápsulas Encantadas: checkout real puesto
+
+- Santiago pasó el link: `https://capsulas-encantadas.impultienda.ar/checkout`. Reemplazó al `/checkout` relativo en `CONFIG.checkoutUrl`, se rearmó el `.txt` autocontenido (1,4 MB, 21 imágenes) y se actualizaron `PRUEBA.html` y la copia de `OUTPUTS/`.
+- **Verificado en el navegador** con `?utm_source=fb&utm_campaign=test`: los **4 CTA** con el mismo href, apuntando al checkout real y con las dos UTMs pegadas; no quedó ninguno relativo.
+
 ## 2026-11-11 (2ª pasada) — Cápsulas Encantadas: la descripción para los ads
 
 - Pedido: *"Dame una descripción de 2 renglones para la oferta"*. Entregadas tres de dos renglones (la que va + dos variantes) en `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md`, en voseo y **sin cifras de ingresos**: la promesa de plata vive adentro del quiz, no en el ad.

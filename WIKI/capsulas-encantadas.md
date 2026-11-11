@@ -3,7 +3,7 @@
 > Clon argentino del quiz **Tea Charm Studio** (mercado de habla inglesa, 27 USD): cápsulas de té y café sin azúcar que se derriten en la taza, para vender como regalos y souvenirs. Precio **$12.990** ARS. (fuente: quiz en vivo `emilycarter.digitallearninghub.lat`)
 
 ## ⚠️ Pendientes
-- 🔴 **Checkout:** Santiago dijo *"el link de checkout te lo paso desp"*. El quiz sale con **`/checkout` relativo**, así que apunta al checkout de la tienda donde se pegue el HTML. Cuando pase la URL completa, va en una sola línea: `CONFIG.checkoutUrl`.
+- ✅ **Checkout (11/11):** `https://capsulas-encantadas.impultienda.ar/checkout`, puesto en `CONFIG.checkoutUrl`. Verificado: los 4 CTA apuntan ahí y arrastran las UTMs de la URL del quiz.
 - 🔴 **Nombre de marca y de la mentora:** los puse yo. Marca **Cápsulas Encantadas**, mentora **Emilia Castro** (mismas iniciales que Emily Carter, por si alguna imagen las usa), método **Moldeá y Derretí**. Si quiere otros, se cambian en el HTML (la marca aparece ~12 veces) y hay que rehacer la tapa del mockup con `mockup.py`.
 - 🟡 **Mail de soporte:** quedó el de la oferta en inglés (`digitallearninghub.support@gmail.com`), que es el que funciona. Se cambia en `CONFIG.correoSoporte`.
 - 🟡 **UTMify:** el quiz original traía el script cifrado de UTMify de la tienda en inglés. **No lo copié** (apunta a la configuración de esa tienda). Si quiere rastreo, va el script de la cuenta argentina.

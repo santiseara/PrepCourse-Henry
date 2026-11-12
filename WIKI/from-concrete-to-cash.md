@@ -31,6 +31,11 @@ Un guion por familia ganadora, en inglés y español con voseo: `OUTPUTS/2026-11
 `~/Desktop/concrete-planters/anuncios/11-11 CP 1..6.mp4`, de **36 a 43 s** (el competidor corre de 34 a 48), 14 a 18 planos, corte de 2,4 s promedio, voz a 1.30 con silencios recortados, una sola cama musical.
 Verificado con hoja de contactos de cada render: sin texto quemado, sin marca de agua, el producto en pantalla en todos los planos. Dos clips se cayeron recién ahí — el del cartel semitransparente y la cola de uno donde la maceta aparece encendida como farol de noche.
 
+## Descripción para ads
+- **La corta es la que va** (regla del 11/11): mecanismo + 3 bullets con ✅ + bonos y garantía + CTA, unas 90 palabras, en inglés y español con voseo. Más dos variantes de dos renglones para testear (curiosidad y negocio): `OUTPUTS/2026-11-11-descripcion-corta-concrete-planters.md`.
+- La primera versión, más larga y calcada del competidor, queda como banco: `OUTPUTS/2026-11-11-descripcion-ads-concrete-planters.md`.
+- Igual que el competidor, **un solo texto para los 6 ads**; lo único que rota es el video. Sin precio del curso y sin cifra de ingresos: la plata entra como **precio de mercado** ("a garden store sells for a hundred and forty dollars").
+
 ## El pool de TikTok
 75 clips de `#concreteplanter`, `#cementplanter`, `#concretepot` y `#concretecrafts`. Entraron **20**. Detalle de por qué se cayó cada uno: `OUTPUTS/scripts-vsl/vent_planters.py`.
 

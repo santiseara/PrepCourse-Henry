@@ -1,3 +1,9 @@
+## 2026-11-11 — From Concrete to Cash: la descripción corta para los ads
+- Pedido de Santiago: *"Dame una descripción para la oferta de cemento"*. Se entregó con la forma corta del 11/11 (mecanismo + 3 bullets + bonos/garantía + CTA, ~90 palabras), en inglés y español con voseo, más dos variantes de dos renglones (curiosidad y negocio).
+- Sin precio del curso y sin cifra de ingresos: la plata entra como precio de mercado ($140 de un local), no como promesa.
+- Nuevo: `OUTPUTS/2026-11-11-descripcion-corta-concrete-planters.md`. Copia en `~/Desktop/concrete-planters/anuncios/descripcion-ads-corta.txt`.
+- `WIKI/from-concrete-to-cash.md`: sección *Descripción para ads* nueva (la corta es la que va, la larga queda de banco). `WIKI/index.md`: output enlazado.
+
 ## 2026-11-11 — Cápsulas Encantadas: descripción corta para los ads
 - `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md`: se reemplazó por la versión **corta y optimizada** (mecanismo + 3 bullets + regalo/garantía + CTA, ~90 palabras) y se bajaron las dos variantes de dos renglones a banco de testeo.
 - `WIKI/guiones-y-anuncios.md`: regla nueva (11/11) con la forma de la descripción corta, sin precio y sin cifras de ingresos cuando el destino es un quiz.

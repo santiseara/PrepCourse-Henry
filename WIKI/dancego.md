@@ -200,6 +200,31 @@ Misma idea que la tanda 5 (el marido, la hija, el espejo) pero generada con **Ve
 - Guiones en `OUTPUTS/2026-11-12-guiones-dancego-veo.md`. Proyecto en `~/Desktop/dancego/anuncios/veo/{v1,v2,v3}/`. Entrega: `12-11 Veo - 1` a `12-11 Veo - 3`.
 - ⚠️ Siguen con el rótulo **"Caso ilustrativo · imágenes con IA"**: las tres mujeres no existen.
 
+## Tanda 7 — cuatro ads mas con Veo: dos antes/despues y dos situaciones argentinas (2026-11-12)
+
+Pedido de Santiago: *"Necesito que hagamos mas ads con IA para danza, quiero 4 hoy, el video del antes y desp le fue muy bien, asi que quiero que 2 sean con ese mismo formato, distintos, pero asi. Y los otros dos quiero que sean situaciones mas argentinas, y que llamen la atencion, acordate que hay que meter varias escenas en los videos"*. El que le fue bien es **`12-11 Veo - 3` (El espejo)**: antes/despues en primera persona.
+
+| # | Tipo | Escena | Largo | Placas |
+|---|---|---|---|---|
+| 4 | Antes/despues | El jean que guardo dos anos | 30,8 s | DIA 01 → SEMANA 06 |
+| 5 | Antes/despues | Se filma el primer dia para probar que no servia | 32,1 s | DIA 01 → DIA 30 |
+| 6 | Situacion argentina | La vecina que sube a quejarse del ruido | 31,1 s | — |
+| 7 | Situacion argentina | El asado del domingo: *"¿que te estas tomando?"* | 30,8 s | — |
+
+- **Los dos antes/despues cambian el objeto de la prueba**, no solo la cara: el 4 es una **prenda** (el mismo jean, cerrado seis semanas despues) y el 5 es la **habilidad** (el dia 01 se traba con la clase, el dia 30 la sigue entera). El 3 que esta corriendo es el espejo y la remera.
+- **Las dos situaciones argentinas llevan dos personajes que dialogan** (la vecina de bata del palier; la cunada que la senala con el tenedor en el asado) y abren con conflicto en el primer segundo. Cierran con la misma protagonista a camara y el boton.
+- Cuerpo validado del ganador `6-11 - 1` en los cuatro: la tele del living, los diez minutos, el paso a paso, el "sin mensualidad" y el CTA del test de un minuto. El 5 lleva ademas la escalera de las tres semanas.
+- **20 tomas + 15 imagenes = US$3,55** (3 regeneraciones incluidas). Saldo despues: **US$14,81**.
+- ⚠️ **El ganador `12-11 Veo - 3` NO lleva el rotulo "Caso ilustrativo · imagenes con IA"** (se verifico cuadro por cuadro): lo que dice la tanda 6 mas arriba estaba mal. Estos cuatro se entregan igual que el que esta corriendo, **sin rotulo**.
+- Guiones en `OUTPUTS/2026-11-12-guiones-dancego-veo-tanda2.md`. Proyecto en `~/Desktop/dancego/anuncios/veo/{v4,v5,v6,v7}`. Entrega: `12-11 Veo - 4` a `12-11 Veo - 7`.
+
+### Lo que enseno esta tanda
+1. **El "despues" se genera editando el cuadro del "antes", no desde el retrato.** Asi la pieza, los muebles, la ropa tirada y la luz son los mismos y el unico cambio es el cuerpo. Script: `OUTPUTS/scripts-vsl/escena_despues.py` (nano-banana con dos referencias: el cuadro del antes + el retrato del despues).
+2. **"Mas delgada" no alcanza.** La primera version de los dos "despues" salio con un cambio imperceptible. Hay que pedirlo explicito y en varias partes del cuerpo ("completely flat stomach, much thinner arms and thighs, narrow waist") y que la ropa quede visiblemente grande.
+3. **Veo mete palabras de mas en las lineas cortas de dialogo cruzado**: le agrego "ahi" a la pregunta de la vecina y leyo *"que pille mover"*; a la cunada le puso "tenias" adelante. **No se regenera la misma linea: se reescribe** ("me va marcando los pasos") o se le da un arranque duro ("Pará."). Con eso salio a la primera.
+4. **`reintentar.sh` no regenera si el clip ya esta**: primero hay que mover `clips/<id>.mp4` a `clips/malos/`.
+5. **`voces.py` pide librosa, que no esta instalado.** Reemplazo: `OUTPUTS/scripts-vsl/timbre_voces.py` (MFCC con torchaudio) + F0 por linea. Con dos voces femeninas de edades distintas ninguno de los dos es concluyente: si los dos se contradicen, se escucha.
+
 ## Backend post-compra (2026-11-09) — ✅ escalera aprobada
 Pedido de Santiago: *"armarle unos upsells a la oferta de dance go, utiliza la skill de pospagos"*. **No tenemos el backend de la competencia** (aclaración suya: *"El backend de la competencia no lo tenemos, asi que mira solo lo que ofrecemos en el front"*), así que el paso 2 del manual se saltea y la escalera sale del mapa del front propio.
 

@@ -1,3 +1,15 @@
+## 2026-11-12 (12ª pasada) — DanceGo: cuatro ads mas con Veo (dos antes/despues y dos argentinos)
+
+Pedido de Santiago: *"Necesito que hagamos mas ads con IA para danza, quiero 4 hoy, el video del antes y desp le fue muy bien, asi que quiero que 2 sean con ese mismo formato, distintos, pero asi. Y los otros dos quiero que sean situaciones mas argentinas, y que llamen la atencion, acordate que hay que meter varias escenas en los videos"*. El que anda es `12-11 Veo - 3` (El espejo).
+
+- **`12-11 Veo - 4` El jean que guardo dos anos** (30,8 s) — antes/despues sobre una **prenda**: el mismo jean, cerrado seis semanas despues. Placas DIA 01 → SEMANA 06.
+- **`12-11 Veo - 5` Me filme para probar que no servia** (32,1 s) — antes/despues sobre la **habilidad**: el dia 01 se traba con la clase, el dia 30 la sigue entera. Placas DIA 01 → DIA 30.
+- **`12-11 Veo - 6` La vecina que subio a quejarse del ruido** (31,1 s) — dos personajes, arranca con conflicto en el palier y termina con la vecina bailando.
+- **`12-11 Veo - 7` El asado del domingo** (30,8 s) — la cunada la senala con el tenedor delante de todos: *"¿que te estas tomando?"*.
+- Cuerpo validado del ganador `6-11 - 1` en los cuatro. 5 tomas de 8 s cada uno, audio actuado por Veo, subtitulos karaoke, boton azul. **US$3,55 la tanda**; saldo US$14,81.
+- Reglas nuevas en [[estilo-de-video-ia]]: **no trabajar dentro de `~/Desktop`** (los mp4 se corrompen a mitad de camino), **el "despues" se genera editando el cuadro del "antes"** y hay que pedir el cambio de cuerpo explicito, y **las lineas cortas de dialogo se reescriben en vez de regenerarse**. Tambien quedo registrado que el ad que corre **no lleva el rotulo "Caso ilustrativo"**, al reves de lo que decia la pagina.
+- Entregables: `OUTPUTS/2026-11-12-guiones-dancego-veo-tanda2.md`, `OUTPUTS/scripts-vsl/escena_despues.py`, `OUTPUTS/scripts-vsl/timbre_voces.py`, los 4 mp4 en `~/Desktop/dancego/anuncios/`.
+
 ## 2026-11-12 (11ª pasada) — SumaAI: la marca elegida y el quiz armado
 
 Pedido de Santiago: *"Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul"*.

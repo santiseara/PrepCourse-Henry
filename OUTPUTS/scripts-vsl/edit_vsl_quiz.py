@@ -19,6 +19,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RVM = os.path.join(sys.argv[2], 'rvm_mobilenetv3_fp32.onnx')   # el modelo va en la carpeta de trabajo
 SPEED = float(os.environ.get('SPEED', 1.08))          # VSL largos de OTO: SPEED=1.0 para que queden en 4–5 min
 GAP_MAX, GAP_KEEP = float(os.environ.get('GAP_MAX', 0.40)), float(os.environ.get('GAP_KEEP', 0.18))
+# Whisper cierra las palabras ANTES de tiempo (medido 12/11/2026 en Party Box: cree que
+# "Congratulations" termina en 0,92 cuando termina en 1,32 — 0,40 s de error). Como el
+# recorte de silencios se guiaba por ese final, se comia la ultima silaba de cada palabra
+# anterior a un silencio: "templates" sonaba "template", "Congratulations" sonaba
+# "Congratulate". PAD_FIN es el colchon que se le suma al final de la palabra antes de cortar.
+PAD_FIN = float(os.environ.get('PAD_FIN', 0.0))
 PIP_W = 430                          # ancho de la avatar recortada (de 1080)
 PIP_X, PIP_Y = 1080 - PIP_W + 20, 1920 - PIP_W * 16 // 9 + 60   # esquina de abajo a la derecha, un poco cortada
 SPLIT_Y, FADE = 880, 220             # modo 'split': dónde empieza el B-roll (debajo del mentón) y alto del degradé
@@ -82,7 +88,8 @@ dur0 = duration(src)
 keep, cur_s = [], 0.0
 for a, b in zip(words0, words0[1:]):
     if b['s'] - a['e'] > GAP_MAX:
-        keep.append((cur_s, a['e'] + GAP_KEEP / 2)); cur_s = b['s'] - GAP_KEEP / 2
+        keep.append((cur_s, min(a['e'] + PAD_FIN + GAP_KEEP / 2, b['s'] - 0.05)))
+        cur_s = b['s'] - GAP_KEEP / 2
 keep.append((cur_s, min(dur0, words0[-1]['e'] + 0.5)))
 
 def mapt(t):
@@ -178,6 +185,14 @@ for p, txt, fx, d in HEAD:
     if t is None: continue
     heads.append((t, min(t + d, total), txt))
     if fx: sfx.append((fx + '.wav', t, 0.9 if fx == 'chaching' else 0.5))
+# Todas las placas van en la misma posicion: si dos se pisan, se dibujan una encima de la otra
+# y no se lee ninguna (medido 12/11/2026 en Party Box V4: "$17 · ONE PAYMENT" y "30-DAY GUARANTEE"
+# superpuestas 1,7 s). El final de cada placa se corta 0,25 s antes de que arranque la siguiente.
+heads.sort(key=lambda h: h[0])
+for i in range(len(heads) - 1):
+    a, b, txt = heads[i]
+    heads[i] = (a, min(b, heads[i + 1][0] - 0.25), txt)
+heads = [h for h in heads if h[1] - h[0] >= 0.8]
 
 # ---------- Subtítulos tipo TikTok (3 palabras, la plata en amarillo) ----------
 def ts(t): return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}'

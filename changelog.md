@@ -1,3 +1,13 @@
+## 2026-11-12 (8ª pasada) — Party Box Profits: las 4 VSL post-pago y el defecto que se comía las palabras
+
+**Corrección de Santiago:** *"DALE HERMANO, 3 DÍAS, ESTÁS HACE UNA BANDA, HACÉ LAS COSAS BIEN, Y MÁS RÁPIDO"*.
+
+- **Las 4 VSL de OTO** de Party Box Profits en inglés, una por escalón ($97 · $37 · $27 · $17), con la escalera de duración que pidió: **4:49 · 2:50 · 1:54 · 1:34**. Voz de Gemini TTS, Avatar IV de HeyGen, B-roll de TikTok, subtítulos karaoke y placas de precio y garantía.
+- **El defecto grande:** el montaje se comía la última sílaba de cada palabra anterior a un silencio ("Congratulations" sonaba "Congratulate", "300 templates" sonaba "300 template"). Causa medida: **Whisper cierra la palabra hasta 0,40 s antes de que termine**, y el recorte de silencios solo dejaba 0,07 s de aire. Se detectó comparando el MP4 montado contra el render crudo de HeyGen: 29 diferencias contra 19.
+- **[[vsl-reglas-de-armado]]** — sección 9 nueva con las siete reglas que salieron de la tanda: `PAD_FIN` y los parámetros de corte seguros (9a), las placas que no se pueden pisar (9b), los anclajes que salen del guion y no de la transcripción (9c), la cuota diaria y el estilo por prefijo de Gemini TTS (9d), bloques de voz de hasta ~350 palabras (9e), el B-roll que respira (9f) y la pasada de compresión final (9g). Cuatro filas nuevas en el registro de correcciones.
+- **Parches a los scripts** (`OUTPUTS/scripts-vsl/`): `edit_vsl_quiz.py` suma `PAD_FIN` y separa las placas que se superponen; `tts_gemini.py` saca el encabezado RIFF y distingue cuota del día de cuota del minuto; `revisar_voz.py` acepta el idioma por variable. Nuevos: `vsl_palabras.py` (la lista de palabras exacta del editor), `gen_vsl_plans.py` (planes de B-roll) y `gen_vsl_heads.py` (placas de precio y garantía).
+- **Entrega:** `~/Desktop/party-box-vault/vsl/entrega/V1-V4.mp4`. Delay del botón: **232 s · 145 s · 108 s · 76 s**.
+
 ## 2026-11-12 (7ª pasada) — El modelo de video es Veo: la tanda de DanceGo rehecha
 
 **Corrección de Santiago:** *"el modelo que tenés que usar siempre es el de Veo, hacelos de nuevo, y ponelo como regla, salieron súper mal los videos, mal los audios, mal lo visual, se re nota que es IA"*.

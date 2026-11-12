@@ -482,6 +482,10 @@ Quemar la transcripción cruda de Whisper deja errores a la vista: en Tai Chi Fi
 | 2026-10-14 | Scented Stones (ad UGC) | "No pongas tantos headlines arriba, se hace muy cansador el efecto de sonido; solo los puntos importantes" | §6: 3–4 headlines por ad |
 | 2026-10-14 | Scented Stones (ad UGC) | "La idea es variar las ediciones": avatar chiquita sin fondo en una esquina, full UGC orgánico de TikTok | §6: formato 2 |
 | 2026-10-14 | Pilates Hormonal (ad "Asia") | "Variá la edición, no quiero que pongas el avatar chico"; 5 B-rolls nuevos de ejercicio que llamen la atención | §6: formato 3 |
+| 2026-11-12 | Party Box Profits (4 VSL de OTO) | El montaje se comía la última sílaba antes de cada silencio ("Congratulate", "300 template") | §9a: `GAP_MAX=0.60` + `PAD_FIN=0.40` |
+| 2026-11-12 | Party Box Profits (V4) | Dos placas superpuestas, ilegibles | §9b: cortar cada placa 0,25 s antes de la siguiente |
+| 2026-11-12 | Party Box Profits | Los anclajes de B-roll y placas no se encontraban | §9c: buscar contra la lista del editor (`vsl_palabras.py`) |
+| 2026-11-12 | Party Box Profits | "DALE HERMANO, 3 DÍAS… HACÉ LAS COSAS BIEN, Y MÁS RÁPIDO" | Renderizar los videos **en paralelo**, no uno por uno; y no dar estimaciones de tiempo que no se puedan sostener |
 | 2026-10-14 | Pilates Hormonal (ad "rodillas") | "Fijate que las visuales no sean tan IA; no hagas nuevos B-rolls todo el tiempo, solo si es súper necesario" | §6: reusar B-rolls, planos reales y look de celular |
 
 ## Preguntas abiertas
@@ -500,6 +504,84 @@ Desde el 3/11 está instalada la skill **`edicion-ia`** (Manual de Edición IA d
 - **Control final:** transcribir cada clip recortado **aislado** (el MP4 entero no ve las sílabas sueltas de los bordes), re-renderizar antes de analizar y mirar el video completo con auriculares.
 
 ⚠️ **Manda lo tuyo:** voz **Sulafat / Orus** por API de Google AI Studio, **Avatar IV** en HeyGen, B-roll de **clips de TikTok** y **speed 1.30**. Del manual se toma el control de calidad y los parámetros de corte, no la elección de herramientas.
+
+## 9. Las cuatro VSL post-pago de Party Box Profits (12/11/2026)
+
+Cuatro VSL de OTO en inglés, una por escalón ($97 · $37 · $27 · $17), hechas con voz de Gemini
+TTS + Avatar IV de HeyGen + B-roll de TikTok y montadas con `edit_vsl_quiz.py`. De esta tanda
+salieron cinco reglas que aplican a cualquier VSL que se monte de acá en adelante.
+
+### 9a. Whisper cierra las palabras antes de tiempo: el recorte se las come
+
+El editor recortaba los silencios usando el final de palabra que da Whisper. **Whisper cierra la
+palabra hasta 0,40 s antes de que termine de verdad** (medido: "Congratulations" termina en 1,32 s
+y Whisper la cierra en 0,92 s). Con el aire de 0,07 s que dejaba `GAP_KEEP/2`, cada corte se comía
+la última sílaba de la palabra anterior:
+
+| Decía el guion | Se oía en el video |
+|---|---|
+| Congratulations | Congratulate |
+| three hundred templates | 300 template |
+| eight collections | 8 collection |
+| subscription | subscript |
+| fits | fit |
+| finishes | finish |
+
+- **No se detecta transcribiendo el render de HeyGen**: el defecto lo mete el montaje. Se detecta
+  transcribiendo el **MP4 ya montado** y comparando contra el **mismo original sin montar**. Si el
+  montado tiene más diferencias que el crudo, esas de más las metió la edición.
+- **Regla:** el editor tiene `PAD_FIN`, un colchón que se le suma al final de palabra antes de
+  cortar. Para VSL en inglés: **`GAP_MAX=0.60` y `PAD_FIN=0.40`** (deja 0,47 s de margen, por
+  encima del error de 0,40 s). Recorta menos silencio — V1 pasó de 4:09 a 4:49 — pero no toca
+  ninguna palabra.
+- Antes de elegir los parámetros, **simular**: contar cuántos cortes quedan, cuánto dura el video
+  y cuál es el margen mínimo. Un margen por debajo del error de Whisper es un video roto.
+
+### 9b. Las placas no se pueden pisar
+
+Todas las placas se dibujan en la misma posición. Si dos se superponen quedan una encima de la
+otra y no se lee ninguna (pasó en V4: "$17 · ONE PAYMENT" y "30-DAY GUARANTEE" pisadas 1,7 s).
+El editor ahora **corta el final de cada placa 0,25 s antes de que arranque la siguiente** y
+descarta las que quedan en menos de 0,8 s.
+
+### 9c. Los anclajes salen del guion, no de la transcripción
+
+Para colocar un B-roll o una placa hay que decirle al editor en qué frase va. Esa frase se busca
+contra la lista de palabras **que arma el editor**, que no es la transcripción cruda: el editor
+pega las continuaciones con guion y **reemplaza las palabras transcriptas por las del guion**.
+Buscar contra `words0.json` falla. Por eso existe `vsl_palabras.py`, que replica esa lista exacta
+y lo usan los dos generadores (`gen_vsl_plans.py` y `gen_vsl_heads.py`). Resultado: cero
+`NO ENCONTRADO`.
+
+### 9d. Gemini TTS por API: la cuota es diaria y el estilo va en el prompt
+
+- El plan gratis da **10 pedidos por día y por modelo**, no por minuto. Un 429 que dice
+  `per day` no se arregla reintentando: hay que cambiar de modelo. `tts_gemini.py` ahora corta con
+  código 2 (cuota del día), 3 (cuota del minuto) o 4 (otro error) en vez de reintentar a ciegas.
+- Los modelos `3.8` **404 con el header `x-goog-api-key`**; funcionan con `?key=` en la URL.
+- Los modelos `3.8` **devuelven un WAV completo, no PCM crudo**: hay que sacarle el encabezado
+  RIFF o queda un clic al principio y la frecuencia mal.
+- `systemInstruction` devuelve 400 en estos modelos. El estilo va como **prefijo del prompt**, y
+  si se manda como párrafo aparte **la voz lo lee en voz alta**. Con 3.8 conviene generar sin
+  estilo y arreglar el ritmo en post con `atempo`.
+- **Un solo modelo para toda la tanda**: si se cambia a mitad, cambia el timbre entre bloques.
+
+### 9e. Bloques de voz cortos
+
+Un bloque de 498 palabras se comió una frase entera sin avisar. **Máximo ~350 palabras por bloque**
+y frases cortas: la que se perdió era una subordinada larga, y partida en dos oraciones salió bien.
+
+### 9f. El B-roll tiene que respirar
+
+El primer plan de B-roll tenía 57 tramos con el modo cambiando en cada corte: quedaba robótico,
+justo lo contrario de orgánico. La versión buena tiene **34 tramos en 4:49**, el mismo modo
+sostenido **2-3 tramos seguidos**, los primeros **12 s a cara limpia** y nada de B-roll sobre las
+frases abstractas (precio, garantía, CTA, felicitación): ahí va la cara.
+
+### 9g. Peso del entregable
+
+El editor termina con `-c:v copy` a ~29 Mbps (900 MB). Siempre **una pasada final de `crf 22`
+`preset medium` + `faststart`** antes de entregar.
 
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]

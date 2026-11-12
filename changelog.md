@@ -1,5 +1,9 @@
-## 2026-11-11 (9ª pasada) — Piedras: tres renovaciones para Brasil con el material que ya había
+## 2026-11-11 — Cápsulas Encantadas: descripción corta para los ads
+- `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md`: se reemplazó por la versión **corta y optimizada** (mecanismo + 3 bullets + regalo/garantía + CTA, ~90 palabras) y se bajaron las dos variantes de dos renglones a banco de testeo.
+- `WIKI/guiones-y-anuncios.md`: regla nueva (11/11) con la forma de la descripción corta, sin precio y sin cifras de ingresos cuando el destino es un quiz.
+- `WIKI/capsulas-encantadas.md`: sección *Descripción para ads* actualizada.
 
+## 2026-11-11 (9ª pasada) — Piedras: tres renovaciones para Brasil con el material que ya había
 - Pedido de Santiago: *"Vamos con renovaciones para piedras en Brasil. Quiero videos nuevos"* → *"Variables de los que ya hicimos, utilizá visuales de piedras que ya tengas"*. Tres videos (regla de tanda para oferta que ya corre).
 - **Tres ángulos que los ocho BR no tocaban**, cada uno con otro formato de hook: la clienta que **nunca revendió** una piedra (inmobiliaria que repone cada tres meses porque el aroma se apaga), **no doy abasto con diciembre** (amigo secreto, Natal, presente corporativo, casamento) y **no tengo un pingo de talento manual** (la forma la hace el molde; la objeción "não sou artesã" estaba virgen en Brasil).
 - **Ni un clip nuevo:** el pool son los propios ads que ya corren en portugués (100 % b-roll de piedras) con un **zoom calculado por clip para dejar el subtítulo quemado fuera del encuadre** (1,45 a 1,70 con `ybias 0`), más los seis B-rolls limpios de `work/brolls`. El octavo ad quedó vetado (habría pedido zoom 2,1).

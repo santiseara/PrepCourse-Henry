@@ -7,6 +7,7 @@
 ## 🧠 Tu operación (empezar acá)
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1, los 3 de Meta Ads y el impositivo entregados.
+- 🆕 [[sumaai]] — **Oferta nueva**: contar calorías sacándole una foto al plato, modelada de [[welmi]]. Marca propia elegida el 12/11 (el App Store tiene quemado todo lo que diga `cal/nutri`). Quiz de **19 pasos** armado y verificado (el original tiene 35), paleta azul, números calculados de verdad con piso de 1.200 calorías y pago único en ImpulTienda. Faltan producto, precio y checkout.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
@@ -132,6 +133,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Quiz de SumaAI (19 pasos, HTML)](../OUTPUTS/2026-11-12-quiz-sumaai.html) — el quiz de [[welmi]] recortado de 35 a 19 pasos, con la marca propia, paleta azul y la oferta de pago único · ver [[sumaai]]
 - [2026-11-12 — Opciones de marca propia para el contador de calorías](../OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md) — por qué todo nombre con `cal/kal/nutri` es ASO suicida (Kalo, Calo, Numi, Nutri AI, Satia y Platia ya existen), las 3 familias de nombre con App Store y dominios chequeados, y el kit de marca de **Platea** · ver [[welmi]]
 - [2026-11-12 — Radiografía completa de Welmi](../OUTPUTS/2026-11-12-analisis-welmi.md) — toda la oferta: empresa en Chipre, 637 ads activos en 9 idiomas, precios del App Store, el quiz de 35 pantallas con email gate, el boleto raspable de 50/75/90 %, el upsell de pago único a 1 clic y los 5 formatos de creativo · ver [[welmi]] · [[funnel-hacking]]
 - [Las 4 VSL post-pago de Party Box Profits (entrega)](../OUTPUTS/2026-11-12-vsl-pospagos-party-box-profits-entrega.md) — duraciones, delay del botón de cada página y qué se verificó

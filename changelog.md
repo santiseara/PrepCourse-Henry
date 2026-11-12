@@ -1,3 +1,15 @@
+## 2026-11-12 (11ª pasada) — SumaAI: la marca elegida y el quiz armado
+
+Pedido de Santiago: *"Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul"*.
+
+- **[[sumaai]]** — página nueva de la oferta. Marca **SumaAI**, claim *"Sacale una foto. SumaAI la suma."*, logo de texto solo.
+- **Quiz armado y verificado: de 35 pasos a 19.** Se fueron la prueba social con ratings ajenos, "¿te derivó un profesional?", nivel de nutrición, hábitos, la placa de Harvard/UNICEF, el objetivo de pasos, la fecha del primer control, la edad exacta, las placas de relleno y **el email gate** (el mail se pide en el checkout). Se unificaron intolerancias + dieta y caminata + escaleras + pasos.
+- **Se conservó lo que vende:** la pregunta del mayor reto (y su devolución dos pasos después), el cálculo en vivo, la proyección con fechas reales y el gráfico día 3/7/30.
+- **Paleta azul** (`#1B4CD9` acento, `#0E2452` tinta, `#F2F6FD` fondo), con el verde reservado para "bien" y el rojo para riesgo.
+- **Los números se calculan de verdad** (Mifflin-St Jeor + actividad + déficit por ritmo) y el déficit se recalcula cuando pega el **piso de 1.200 calorías**, así la fecha estimada no miente. Regla nueva en [[quizzes-reglas-de-armado]].
+- **Verificado en iframe de 390 px**: los 19 pasos recorridos por código, 0 desbordes, 0 errores de JS, los 3 CTA con el checkout y los UTMs, y el `.txt` probado pegado dentro de una página de tienda.
+- Entregables: `~/Desktop/sumaai/landing/` (`quiz.html`, `sumaai-quiz.txt` para el `custom_html`, `PRUEBA.html`) + copia en `OUTPUTS/2026-11-12-quiz-sumaai.html`. **Pendientes: producto, precio y checkout.**
+
 ## 2026-11-12 (10ª pasada) — Opciones de marca propia para el contador de calorías
 
 Pedido de Santiago: *"Dame opciones para brandear mi propia marca, quiero cambiarle el nombre"* (sobre la oferta de [[welmi]]).

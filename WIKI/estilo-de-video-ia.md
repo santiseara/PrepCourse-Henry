@@ -2,6 +2,19 @@
 
 > **Regla fija desde el 4/11/2026.** Cuando Santiago pide "un video con IA", esto es lo que espera, sin que lo tenga que repetir. Sale del despiece completo de un ad brasileño de pilates 50+ que le gustó (`OUTPUTS/2026-11-04-analisis-ad-pilates-brasil.md`): *"para que cuando yo pida un video con IA se entienda que quiero de esto… no específicamente estas mismas situaciones, sino la onda"*. La onda, no el tema: cada video cambia avatar, nicho, situación y guion.
 
+## Regla 0 — el modelo es SIEMPRE Veo
+
+> **Corrección de Santiago, 11/11/2026:** *"el modelo que tenés que usar siempre es el de Veo… salieron súper mal los videos, mal los audios, mal lo visual, se re nota que es IA"*.
+
+**Todo video con IA se genera con Veo 3.1 (Fast) por [[apimart]]. `wan2.7-r2v` queda descartado para anuncios.** No se pregunta ni se evalúa alternativa: si el pedido es "video con IA", es Veo.
+
+Por qué Veo y no un avatar con voz clonada:
+- **El audio lo actúa el modelo.** El diálogo va escrito en el prompt y Veo lo dice con entonación, pausas y respiración propias de la escena. Con `wan2.7-r2v` la voz salía de una muestra TTS clonada: plana, con tonada que se iba de clip en clip y lipsync de maniquí. Eso es lo que sonaba falso.
+- **La escena se mueve.** Veo genera gente que actúa dentro de un plano (cámara en mano, luz real, cuerpos que pesan). El avatar hablando a cámara desde una foto fija se lee como IA a los dos segundos.
+- **Nada de parches de montaje.** No hay que medir F0, ni igualar RMS, ni regenerar por tonada: si una toma sale mal, se regenera y listo.
+
+Lo que esto implica en la práctica: **una toma = 8 s y 0 a 3 líneas de diálogo**, el primer cuadro sale de una imagen (`gemini-nano-banana-2.1-ext` para componer la escena con las caras de referencia), el acento se escribe en el prompt (`ACENTO` rioplatense con voseo) y cada toma se verifica con Whisper + MMS. El pipeline entero está en la skill `mini-novela` (sirve igual para un ad de 25 s: son 4 o 5 tomas en vez de 50).
+
 ## Las 8 reglas de oro
 
 1. **Un avatar hablando a cámara en selfie, de punta a punta.** Nada de voz en off sobre B-roll. La persona es el video.
@@ -65,6 +78,7 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
 
 ## Registro de correcciones
 
+- **2026-11-11 · El modelo es Veo, siempre.** Está arriba, en la Regla 0. La primera tanda de DanceGo salió con `wan2.7-r2v` y Santiago la rechazó entera: *"mal los audios, mal lo visual, se re nota que es IA"*. **Nunca más elegir modelo de video por precio.** La voz clonada sobre una foto fija es el defecto, no la solución; lo barato salió caro (US$8,63 tirados). Si el saldo no alcanza para hacerlo con Veo, se avisa antes de generar, no se baja de modelo.
 - **2026-11-11 · El largo por defecto son 4 o 5 escenas, no 88 segundos.** Pedido textual: *"videos de 4/5 escenas, podés repetir algunas, no siempre, pero a veces sí, que salgan bien, metele un poco de velocidad, cortá silencios, y que suenen reales, que hablen fluido, cuidado con las entonaciones o el acento, tiene que sonar argentino, no raro"*. Lo que cambia de las 8 reglas de arriba:
   - **4 o 5 tomas por video, de 5 a 9 s cada una → 22 a 26 s de ad.** Los 88 s de la referencia brasileña son el techo del formato, no el molde.
   - **Repetir plano es parte del formato:** el video 1 de [[dancego]] usa tres veces el mismo plano del "día 21" y cambia solo lo que cuenta. Es lo que hace el original.
@@ -74,7 +88,7 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
 
 ## Preguntas abiertas
 
-- ✅ **Resuelto el 11/11: sale de `wan2.7-r2v` por [[apimart]]**, con la voz de Gemini TTS como `reference_voice`. HeyGen queda para doblaje.
+- ✅ **Resuelto el 11/11: sale de Veo 3.1 Fast por [[apimart]]** (mirá la Regla 0). Se probó `wan2.7-r2v` con voz de Gemini TTS como `reference_voice` y se descartó el mismo día: audio plano y visual que se nota. HeyGen queda para doblaje.
 - ¿Las fotos de testimonio de dónde salen cuando la oferta es nueva y no hay clientes todavía?
 - ¿La cama musical va o no va? En la referencia casi no se oye.
 

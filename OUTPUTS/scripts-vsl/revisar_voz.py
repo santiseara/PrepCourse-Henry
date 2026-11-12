@@ -1,9 +1,10 @@
 """Revisa un WAV de voz contra su guion: palabras mal dichas, de más, de menos, estiradas y huecos.
-Uso: python3 revisar_voz.py audio.wav guion.txt"""
+Uso: python3 revisar_voz.py audio.wav guion.txt [idioma]   (o REV_LANG=en; por defecto es)"""
 import sys, os, subprocess, difflib, unicodedata, tempfile
 from faster_whisper import WhisperModel
 FF = os.path.expanduser('~/bin/ffmpeg')
 wav, guion = sys.argv[1], sys.argv[2]
+IDIOMA = os.environ.get('REV_LANG', sys.argv[3] if len(sys.argv) > 3 else 'es')
 txt = open(guion, encoding='utf-8').read()
 def norm(s):
     s = unicodedata.normalize('NFD', s.lower())
@@ -11,7 +12,7 @@ def norm(s):
 tmp = os.path.join(tempfile.gettempdir(), 'rev16k.wav')
 subprocess.run([FF, '-y', '-v', 'error', '-i', wav, '-ac', '1', '-ar', '16000', tmp], check=True)
 m = WhisperModel('small', device='cpu', compute_type='int8')
-segs, _ = m.transcribe(tmp, language='es', word_timestamps=True, vad_filter=False, beam_size=5)
+segs, _ = m.transcribe(tmp, language=IDIOMA, word_timestamps=True, vad_filter=False, beam_size=5)
 W = [{'w': w.word.strip(), 's': w.start, 'e': w.end} for s in segs for w in s.words]
 A, B = [norm(x['w']) for x in W], [norm(x) for x in txt.split()]
 G = txt.split()

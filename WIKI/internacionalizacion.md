@@ -249,6 +249,8 @@ Pedido de Santiago: *"haceme estos mismos anuncios pero en ruso, todo igual"*. E
 
 Cuidado con el *timeline* de la capa de subtítulos: hay que armarla con **instantes absolutos**, no acumulando duraciones, o el solape de cada línea corre los subtítulos varios segundos.
 
+**Después del clon vienen las variables, y para esas no hace falta material nuevo (2026-11-11, Brasil).** Cuando un mercado ya tiene su tanda clonada, el paso siguiente no es clonar más: son **guiones nuevos del mismo ganador** en ese idioma. El visual se arma con los propios ads clonados usados como pool de recortes, con un zoom que deja el subtítulo quemado fuera del encuadre ([[renovacion-de-creativos]]). Sale una tanda sin bajar un clip ni gastar un crédito, y los planos no se parecen a los que el segmento ya vio.
+
 ### Correcciones acumuladas
 
 - **2026-11-03 · Del segundo idioma en adelante, no se rehace nada del video.** Las bandas ya limpias (`tmpN/band.mp4`) y los stems de demucs **no dependen del idioma**: se copian del pase anterior y el idioma nuevo pasa a ser solo **guion + voz + subtítulos**. El pase polaco de piedras salió en minutos porque reusó todo el material del pase ruso. Guardar siempre `band.mp4`, los stems y las fuentes al terminar una tanda (`~/Desktop/<oferta>/anuncios/_assets/`).

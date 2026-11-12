@@ -1,3 +1,12 @@
+## 2026-11-11 (9ª pasada) — Piedras: tres renovaciones para Brasil con el material que ya había
+
+- Pedido de Santiago: *"Vamos con renovaciones para piedras en Brasil. Quiero videos nuevos"* → *"Variables de los que ya hicimos, utilizá visuales de piedras que ya tengas"*. Tres videos (regla de tanda para oferta que ya corre).
+- **Tres ángulos que los ocho BR no tocaban**, cada uno con otro formato de hook: la clienta que **nunca revendió** una piedra (inmobiliaria que repone cada tres meses porque el aroma se apaga), **no doy abasto con diciembre** (amigo secreto, Natal, presente corporativo, casamento) y **no tengo un pingo de talento manual** (la forma la hace el molde; la objeción "não sou artesã" estaba virgen en Brasil).
+- **Ni un clip nuevo:** el pool son los propios ads que ya corren en portugués (100 % b-roll de piedras) con un **zoom calculado por clip para dejar el subtítulo quemado fuera del encuadre** (1,45 a 1,70 con `ybias 0`), más los seis B-rolls limpios de `work/brolls`. El octavo ad quedó vetado (habría pedido zoom 2,1).
+- **El OCR de Vision se corre sobre el encuadre final, no sobre el clip crudo**: así aparecieron una tarjeta "Piedra difusora" **en español** dentro de dos ads en inglés y un "STORYTIME!" de cinco segundos. Regla nueva en [[renovacion-de-creativos]].
+- **Cuota de TTS:** `gemini-2.5-flash-preview-tts` y `gemini-3.1-flash-tts-preview` se agotaron (10 por día y por modelo, compartidos con las otras ofertas del día) después de la primera voz. Las otras dos salieron con `gemini-3.8-flash-tts`, que lee el Style en voz alta: se localizó con Whisper el arranque del guion y se recortó el preámbulo. Regla nueva en [[guiones-y-anuncios]].
+- Nuevo: `OUTPUTS/2026-11-11-renovaciones-piedras-brasil-R1-R3.md`, `OUTPUTS/scripts-vsl/gen_pedras_ren_plans.py` y `OUTPUTS/scripts-vsl/edit_pedras.py` (edit_broll con cama musical propia y rotación por familia). Entrega en `~/Desktop/scented-stones-ad/anuncios/portugues/` como `11-11 - 1` a `11-11 - 3`.
+
 ## 2026-11-11 (6ª pasada) — DanceGo: tres ads 100 % con IA, el segundo carril de la oferta
 
 - Pedido de Santiago: *"Tenemos que hacer renovaciones para danza, quiero que hagamos ads con IA, con apimart… videos de 4/5 escenas, podés repetir algunas… metele un poco de velocidad, cortá silencios, y que suenen reales… tiene que sonar argentino, no raro. Videos llamativos, de antes y después, de marido sorprendido, juegos con la hija"*.

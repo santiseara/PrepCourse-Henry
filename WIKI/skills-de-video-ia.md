@@ -104,9 +104,9 @@ Las tres coinciden: **no se entrega** si el parecido guion/audio da **menos de 0
 
 | Lo que dice la skill | Lo que manda | Qué hacer |
 |---|---|---|
-| Voz con **muestra de referencia** por personaje (wan2.7 / Veo generan la voz) | **Las voces van en Google AI Studio: mujer = Sulafat, hombre = Orus**, por API, a **speed 1.30** ([[estilo-de-video-ia]]) | En las novelas la voz **viene pegada al clip de Veo**, no se puede sustituir sin romper el labial: es la excepción. En `antes-despues-ia`, si hay que unificar tono, seed-vc contra una referencia de Sulafat/Orus. |
+| La voz la genera el modelo de video | **Las voces van en Google AI Studio: mujer = Sulafat, hombre = Orus**, por API, a **speed 1.30** ([[estilo-de-video-ia]]) | **Excepción confirmada:** en los videos con IA la voz viene pegada al clip de Veo y es justamente lo que los hace sonar reales. Sulafat/Orus siguen mandando en los ads de **voz en off sobre clips de TikTok**. |
 | Visual generado 100 % con IA | **Todo el visual es clip de TikTok**, ni una foto fija ni stock | Las tres son **otro formato**, no el de voz en off: acá el visual generado es el producto. No mezclar las dos recetas en el mismo video. |
-| Modelos y parámetros propios | **Siempre lo más barato que sirva** | Ya cumplen: Veo 3.1 **Fast**, wan2.7 en vez de Veo completo. Nada de subir a Veo full. |
+| Modelos y parámetros propios | **Siempre lo más barato que sirva** | **Lo más barato DENTRO de Veo**, no otro modelo: `veo3.1-fast` (US$0,14 la toma de 8 s), nunca `veo3.1-quality`. Bajarse a `wan2.7-r2v` por precio ya se probó y se rechazó ([[estilo-de-video-ia]] Regla 0). |
 | Piloto de 3 tomas y después el lote entero | **Tanda de máximo 6 videos**, 3 si es una oferta que ya corre | Una novela es **un** creativo de 3-4 min, no una tanda. Para tandas sigue mandando la regla de 3/6. |
 | Testimonio con personas que no existen | — | **Rótulo obligatorio "Caso ilustrativo · imágenes con IA"** y la skill avisa: Meta rechaza los antes/después en Salud y bienestar. **No pautarlo como testimonio real.** Para pautar, clienta real con permiso y sus fotos. |
 

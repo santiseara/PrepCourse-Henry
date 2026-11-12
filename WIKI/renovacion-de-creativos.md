@@ -117,6 +117,15 @@ DanceGo, tanda del 9/11. La regla del 3/11 dice mirar lo que queda sin usar ante
 - **El texto quemado de un clip no siempre es motivo de veto:** si el recorte lleva `zoom` con `ybias 1.0`, el crop sale de abajo y el cartel de arriba se va solo. Vetar solo lo que el zoom no tapa.
 - **La palabra que ancla la placa final se elige entre las que aparecen una sola vez en el guion.** Un hook que repite una palabra del cierre ("Mirá cómo es por dentro" / "mirá el plan") adelanta la placa de cierre al segundo 6 y tapa el video entero. Se verifica con un cuadro a mitad de video, siempre.
 
+## Renovar con el material que ya está, incluidos los propios ads (2026-11-11)
+
+Piedras, renovaciones para Brasil. Santiago: *"Variables de los que ya hicimos, utilizá visuales de piedras que ya tengas"*. No se bajó un solo clip nuevo y aun así los tres videos salieron con planos que nadie vio en Brasil.
+
+- **Los ads propios que ya corren son un pool.** Los ocho que corren en portugués son 100 % b-roll de piedras: unos 360 segundos de material ya validado. Lo único que estorba son los **subtítulos quemados** del ad original.
+- **El subtítulo se saca con zoom, no con inpaint.** Se mide en un cuadro grande a qué altura arranca el texto y se calcula `zoom = 1/fracción` con `ybias 0` (recorte desde arriba): la franja queda fuera del encuadre y no hay ni un píxel borroneado. En esta tanda dio 1,45 a 1,70 según el ad. El que tenía la píldora arrancando en el 48 % del alto pedía zoom 2,1 y **se vetó entero**.
+- **Regalo colateral: la estética cambia sola.** Los mismos clips con un recorte más cerrado, otro orden, cortes de 1,9 a 2,9 s y subtítulos nuevos no se parecen al ad que el segmento ya vio, que es justamente lo que pide el checklist del 27/10.
+- **El OCR va sobre el encuadre final, no sobre el clip crudo.** Con zoom, la mitad del texto del clip ya no está en cuadro: escanear el original hace vetar tramos que estaban limpios. Al revés también: en estos clips apareció una **tarjeta explicativa en español** ("Piedra difusora… Colocá unas gotas") dentro de dos ads en inglés, y un **"STORYTIME!"** en los primeros cinco segundos de otro. Un cartel en otro idioma invalida el plano aunque el ad de origen sea nuestro.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

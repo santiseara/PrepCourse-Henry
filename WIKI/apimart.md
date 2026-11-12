@@ -42,7 +42,7 @@ curl -X POST https://api.apimart.ai/v1/videos/generations \
 
 | Modelo | Para qué | Precio |
 |---|---|---|
-| `wan2.7-r2v` | avatar que habla con **cara y voz fijas** (`reference_voice`), 2-15 s, 9:16 | **US$0,0664/s** en 720P · US$0,1096/s en 1080P |
+| ~~`wan2.7-r2v`~~ | avatar que habla con cara y voz fijas (`reference_voice`), 2-15 s, 9:16. **DESCARTADO el 11/11 para anuncios** (audio plano, visual que se nota; mirá [[estilo-de-video-ia]] Regla 0) | US$0,0664/s en 720P |
 | `grok-imagine-video` | **B-roll mudo**, lo más barato | US$0,04/s |
 | `gemini-omni-1.1-flash` | avatar/video multimodal, primer y último cuadro, edición y extensión | US$0,0296/s en 360P · US$0,088/s en 720P · US$0,132/s en 1080P |
 | `wan2.7-videoedit` | limpiar subtítulos o personas de un clip | máx. 10 s |
@@ -82,6 +82,18 @@ POST https://api.apimart.ai/v1/uploads/videos?retention_days=3   (MP4/MOV/WebM, 
 - El cliente está en `~/Desktop/dancego/anuncios/ia/subir.py`: deja la URL cargada en `subidas.json`, que es de donde lee `comun.subir()` de la skill. Con eso, **las skills de video corren sin KIE y sin hosting de terceros**.
 - **El saldo real se lee en `GET /v1/user/balance`** (`remain_balance` en dólares). El panel muestra *credits*, que son **dólares × 10**: 213,75 credits = US$21,38.
 - **wan2.7-r2v: la muestra de `reference_voice` no puede pasar de 10 s.** Con 11 s la tarea falla con `duration should be at most 10s` — se devuelve el dinero (`billing_status: refunded`), pero se pierden los minutos.
+
+## El modelo de video de la casa: Veo 3.1 (11/11)
+
+En ApiMart hay cinco variantes: `veo3.1-lite`, `veo3.1-fast`, `veo3.1-fast-official`, `veo3.1-quality`, `veo3.1-quality-official`. **El que se usa es `veo3.1-fast`** (es el que tienen puesto las skills `mini-novela` y `fruti-novela`, en `VEO`). Tomas de 8 s, 9:16, **audio nativo**: el diálogo va en el prompt y el modelo lo actúa, así que no hace falta ni TTS ni voz de referencia.
+
+```bash
+# una toma, con el primer cuadro saliendo de una imagen ya subida
+{"model":"veo3.1-fast","prompt":"<escena + diálogo + acento>","duration":8,
+ "aspect_ratio":"9:16","image_urls":["https://..."],"generation_type":"frame"}
+```
+
+`subir()` de las dos skills ya **sube por ApiMart** (antes iba a catbox.moe, que es un host público de terceros): parcheado el 11/11 en `~/.claude/skills/mini-novela/scripts/comun.py`.
 
 ## Preguntas abiertas
 

@@ -131,6 +131,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [Las 4 VSL post-pago de Party Box Profits (entrega)](../OUTPUTS/2026-11-12-vsl-pospagos-party-box-profits-entrega.md) — duraciones, delay del botón de cada página y qué se verificó
 - [2026-11-11 — Piedras: tres renovaciones para Brasil (R1–R3)](../OUTPUTS/2026-11-11-renovaciones-piedras-brasil-R1-R3.md) — variables nuevas de los ocho ads en portugués (la clienta que no revende, diciembre desbordado, "no soy artesana"), con el visual armado de los propios ads por zoom, sin bajar un clip · ver [[scented-stones]] · [[renovacion-de-creativos]]
 - [2026-11-11 — Claude + Lovable + base de datos de eventos](../OUTPUTS/2026-11-11-claude-con-lovable-y-base-de-datos.md) — el MCP oficial de Lovable (`query_database` incluido) y cómo notificar cada evento con Database Webhooks de Supabase
 - [2026-11-12 — DanceGo: tanda 6, los tres ads rehechos con Veo](../OUTPUTS/2026-11-12-guiones-dancego-veo.md) — el marido, la hija y el espejo con **Veo 3.1 Fast** (el diálogo lo actúa el modelo, sin TTS), 5 tomas por video, 28-31 s, US$3,02 los tres · ver [[dancego]] · [[estilo-de-video-ia]] · [[skills-de-video-ia]]

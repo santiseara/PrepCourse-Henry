@@ -1,3 +1,12 @@
+## 2026-11-12 (10ª pasada) — Opciones de marca propia para el contador de calorías
+
+Pedido de Santiago: *"Dame opciones para brandear mi propia marca, quiero cambiarle el nombre"* (sobre la oferta de [[welmi]]).
+
+- **OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md** — shortlist de nombres con el filtro puesto: cada candidato chequeado contra el App Store (iTunes Search API) y contra los registros `.ai` y `.app`.
+- **Lo que aprendimos del nicho:** `cal / kal / nutri / fit / slim` están quemados (Cal AI, Kalo, Calo, Calz, Numi, Nutri AI, Satia ×3, Platia ×2). Welmi gana por no significar nada: es la única respuesta a su propia búsqueda.
+- **Recomendado: Platea** (plato + butaca; App Store limpio, `platea.app` libre). Alternativa: **Porcia**, el único con `.ai` **y** `.app` libres, que habilita copy en primera persona.
+- Incluye el kit de marca (ficha de tienda, claim, tono, nombre del add-on del upsell y el boleto raspable con la marca puesta).
+
 ## 2026-11-12 (9ª pasada) — Radiografía completa de Welmi (app de calorías con IA)
 
 Pedido de Santiago: *"Quiero que analices en profundidad esta oferta, no solo los ads, toda la oferta"* (link a la Biblioteca de Anuncios).

@@ -132,6 +132,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Opciones de marca propia para el contador de calorías](../OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md) — por qué todo nombre con `cal/kal/nutri` es ASO suicida (Kalo, Calo, Numi, Nutri AI, Satia y Platia ya existen), las 3 familias de nombre con App Store y dominios chequeados, y el kit de marca de **Platea** · ver [[welmi]]
 - [2026-11-12 — Radiografía completa de Welmi](../OUTPUTS/2026-11-12-analisis-welmi.md) — toda la oferta: empresa en Chipre, 637 ads activos en 9 idiomas, precios del App Store, el quiz de 35 pantallas con email gate, el boleto raspable de 50/75/90 %, el upsell de pago único a 1 clic y los 5 formatos de creativo · ver [[welmi]] · [[funnel-hacking]]
 - [Las 4 VSL post-pago de Party Box Profits (entrega)](../OUTPUTS/2026-11-12-vsl-pospagos-party-box-profits-entrega.md) — duraciones, delay del botón de cada página y qué se verificó
 - [2026-11-11 — Piedras: tres renovaciones para Brasil (R1–R3)](../OUTPUTS/2026-11-11-renovaciones-piedras-brasil-R1-R3.md) — variables nuevas de los ocho ads en portugués (la clienta que no revende, diciembre desbordado, "no soy artesana"), con el visual armado de los propios ads por zoom, sin bajar un clip · ver [[scented-stones]] · [[renovacion-de-creativos]]

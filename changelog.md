@@ -2155,6 +2155,11 @@ Páginas actualizadas: [[caza-de-ofertas]]
 
 # Changelog
 
+## 2026-11-11 — Claude + Lovable y base de datos de eventos
+- **Pedido de Santiago:** "¿puedo conectar Claude con Lovable y armar una base de datos que me notifique cada cosa que pase en el sitio?".
+- **Creado:** `OUTPUTS/2026-11-11-claude-con-lovable-y-base-de-datos.md` (MCP oficial de Lovable + Database Webhooks de Supabase + el aviso por Telegram).
+- **Cambiado:** `WIKI/index.md`.
+
 ## 2026-10-22 — The Group Work Playbook: pipeline de video con la edición del competidor
 - **Pedido de Santiago:** "la original hace todo con voz en off… la edición tiene que ser similar a la de la original también, la idea es utilizar lo que ya funciona".
 - **Relevado:** frame de apertura del ad #1 de Talleres Listos (b-roll de stock, chip amarillo calificador arriba, hook en cajas violetas, chip blanco con el claim). Anotado en `WIKI/group-work-playbook.md` con lo que quedó sin verificar.

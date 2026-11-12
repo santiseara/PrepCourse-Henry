@@ -131,6 +131,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-11 — Claude + Lovable + base de datos de eventos](../OUTPUTS/2026-11-11-claude-con-lovable-y-base-de-datos.md) — el MCP oficial de Lovable (`query_database` incluido) y cómo notificar cada evento con Database Webhooks de Supabase
 - [2026-11-11 — DanceGo: tanda 5, tres ads 100 % con IA de 4-5 escenas](../OUTPUTS/2026-11-11-guiones-dancego-ia-11-11.md) — el otro carril: escenas actuadas con avatar IA y voz fija rioplatense (el marido, la hija, el espejo), 22-26 s, US$8,63 los tres · ver [[dancego]] · [[skills-de-video-ia]] · [[apimart]]
 - [2026-11-11 — Party Box Profits: los 4 guiones de VSL de pospago](../OUTPUTS/2026-11-11-vsl-pospagos-party-box-profits.md) — arco continuo (solo el primero felicita), duraciones decrecientes 4:30 / 2:35 / 1:45 / 1:30, en inglés y español con voseo · ver [[party-box-vault]] · [[vsl-reglas-de-armado]]
 - [2026-11-11 — Party Box Profits: pospagos v3, el molde de los 4 OTOs de piedras](../OUTPUTS/2026-11-11-pospagos-party-box-profits-v3-molde-piedras.md) — Assistant 97 / First Customer Blueprint 37 / Party Box Marketing System 27 / Holiday Profit System 17, AOV 1,60–2,21× · ver [[party-box-vault]] · [[aumento-de-aov]]

@@ -60,6 +60,9 @@ ninguno de esos tocó:
   en el 48 % del alto y habría hecho falta un zoom de 2,1.
 - Se vetaron además los tramos con la **tarjeta "Piedra difusora" en español** (clips b y g) y el
   cartel **"STORYTIME!"** del arranque del cuarto, que se ven aun con el zoom.
+- En la hoja de contactos del primer render apareció un **billete de dólar** apoyado en el cajón del
+  B-roll de feria: el OCR no lo marca porque no es texto. Se le cortó la cola a ese clip (2,2–5,5 s)
+  y se volvieron a renderizar los tres.
 - **Voz:** Sulafat brasileña, el mismo Style de BR1–BR8, a `speed 1.30` con cortes de plano de 1,9
   a 2,9 s. La cuota diaria de `gemini-2.5-flash-preview-tts` y de `gemini-3.1-flash-tts-preview` se
   agotó con la primera voz, así que R2 y R3 salieron con `gemini-3.8-flash-tts`, que **sí lee el

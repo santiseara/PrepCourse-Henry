@@ -25,7 +25,9 @@ TOPE = 6
 #  ENCUADRE FINAL (scan del 11/11, 1 cuadro por segundo): se cayeron los tramos con la tarjeta
 #  "Piedra difusora" EN ESPANOL (clips b y g, 8-9 s, 26 s y 32 s), el cartel "STORYTIME!" de los
 #  primeros 5 s del cuarto ad, la etiqueta "Pure palette" (d 11 s, e 6 s), la bolsa "Pour Stone
-#  Plaster" del broll de IA (m, 0-2 s) y el jarro Pyrex (j, 3 s).
+#  Plaster" del broll de IA (m, 0-2 s) y el jarro Pyrex (j, 3 s). 🆕 A 'm' se le corta tambien la
+#  cola: a partir de 6 s la feria tiene un BILLETE DE DOLAR apoyado en el cajon, que en un ad
+#  brasileno esta mal. El OCR no lo ve (no es texto legible): aparecio en la hoja del render.
 VENT = {
     'a':  ('src/o1.mp4', 0.0, 40.0, {'zoom': 1.60, 'ybias': 0.0, 'fam': 'tabla'}),
     'b':  ('src/o2.mp4', 12.0, 24.5, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
@@ -46,7 +48,7 @@ VENT = {
     'j':  (BR + '/stirring.mp4', 4.2, 7.8, {'fam': 'ia3'}),
     'k':  (BR + '/unpacking.mp4', 0.0, 7.8, {'fam': 'ia4'}),
     'l':  (BR + '/wedding.mp4', 0.0, 7.8, {'fam': 'ia5'}),
-    'm':  (BR + '/crafting.mp4', 2.2, 7.8, {'zoom': 1.35, 'ybias': 0.0, 'fam': 'ia6'}),
+    'm':  (BR + '/crafting.mp4', 2.2, 5.5, {'zoom': 1.35, 'ybias': 0.0, 'fam': 'ia6'}),
 }
 TODOS = list(VENT.keys())
 

@@ -153,8 +153,10 @@ Santiago pasó la captura de los 6 conjuntos (todos a $10 menos el 14, ya en $20
 - Voz Sulafat por API con **`gemini-3.1-flash-tts-preview`** (el 2.5 volvió a dar 429), `speed 1.30`, verificada con Whisper.
 - Guiones en `OUTPUTS/2026-11-10-guiones-dancego-tanda-10-11.md`. Planes: `OUTPUTS/scripts-vsl/gen_dancego_plans_11.py`.
 
-## Tanda 5 — tres ads 100 % con IA, escenas actuadas (2026-11-11)
+## Tanda 5 — tres ads con IA hechos con wan2.7 · ❌ RECHAZADA (2026-11-11)
 Pedido de Santiago: *"Tenemos que hacer renovaciones para danza, quiero que hagamos ads con IA, con apimart… videos de 4/5 escenas, podés repetir algunas… metele un poco de velocidad, cortá silencios, y que suenen reales… tiene que sonar argentino, no raro. Videos llamativos, de antes y después, de marido sorprendido, juegos con la hija"*.
+
+> ❌ **Santiago los rechazó enteros:** *"salieron súper mal los videos, mal los audios, mal lo visual, se re nota que es IA"*. Se rehicieron con Veo (Tanda 6, abajo). Esta sección queda como registro de lo que no funciona: **avatar `wan2.7-r2v` con voz TTS clonada**. Los tres mp4 quedaron en `~/Desktop/dancego/anuncios/rechazados/`.
 
 **Es el otro carril, no una renovación más de hook.** Hasta acá los 13 ads de DanceGo eran voz en off sobre clips de TikTok. Estos tres son el formato de [[estilo-de-video-ia]]: **escenas actuadas generadas con IA**, una sola voz fija por personaje, sin un solo clip de b-roll. Se hicieron con la skill `antes-despues-ia` ([[skills-de-video-ia]]) por [[apimart]].
 
@@ -178,6 +180,25 @@ Pedido de Santiago: *"Tenemos que hacer renovaciones para danza, quiero que haga
 - **Una placa anclada a la última palabra no llega a verse** (el fade de entrada dura 0,18 s): la de "semana 3" estaba en *demás.* y había que anclarla en *tercera*.
 - **Las palabras que el subtítulo convierte en cifra no sirven de ancla**: *diez* ya no existe en el timeline, es *10*.
 - **Las placas se pisan con la etiqueta del día** (que vive en y=330): van en y=170. Y en los planos cerrados a cámara tapan la cara: ahí van abajo, entre el subtítulo y el botón (y 1360-1560).
+
+## Tanda 6 — los tres ads rehechos con Veo (2026-11-12)
+
+Misma idea que la tanda 5 (el marido, la hija, el espejo) pero generada con **Veo 3.1 Fast**, que **actúa el diálogo él mismo**: el texto va dentro del prompt y el audio sale del propio modelo, sin TTS ni voz clonada. Es la [[estilo-de-video-ia]] Regla 0 y es lo que hace que suene a persona y no a avatar.
+
+| # | Escena | Largo | Placas |
+|---|---|---|---|
+| 1 | El marido que la filmaba para reírse | 28,7 s | DÍA 01 → DÍA 21 |
+| 2 | La hija que le pedía que bailara con ella | 30,6 s | DÍA 01 → DÍA 30 |
+| 3 | El espejo, cinco semanas después | 31,1 s | DÍA 01 → SEMANA 05 |
+
+- **5 tomas de 8 s por video**, recortadas a lo hablado, con los silencios internos achicados y **×1,08** de video y audio juntos. El cuerpo sigue siendo el del ganador `6-11 - 1`.
+- **El antes/después se ve dentro del plano**: el "día 21" se genera **editando el cuadro del día 01** (misma pieza, mismos muebles, misma persona), así el único cambio es el cuerpo. El video 1 repite ese plano tres veces.
+- **Lo barato salió caro:** la tanda rechazada con wan2.7 costó **US$8,63**; esta, con Veo, **US$3,02** (18 imágenes + 20 tomas, incluidas 6 regeneraciones). Saldo después: **US$18,35**.
+- **Las líneas van con tildes.** Sin tilde, Veo dijo "tienes" en vez de "tenés" en **las tres tomas de cierre**, y en una se inventó una dirección web. Con tilde salió bien a la primera.
+- **Los números raros se esquivan**: "veintiún días" lo leyó *veintiuno días*; se cambió por "tres semanas" (la placa igual dice DÍA 21).
+- **El filtro de Veo bloquea el contacto físico con un chico** (la mamá haciendo girar a la nena de las manos). Reescrita sin contacto, salió. Esas tomas no se cobran.
+- Guiones en `OUTPUTS/2026-11-12-guiones-dancego-veo.md`. Proyecto en `~/Desktop/dancego/anuncios/veo/{v1,v2,v3}/`. Entrega: `12-11 Veo - 1` a `12-11 Veo - 3`.
+- ⚠️ Siguen con el rótulo **"Caso ilustrativo · imágenes con IA"**: las tres mujeres no existen.
 
 ## Backend post-compra (2026-11-09) — ✅ escalera aprobada
 Pedido de Santiago: *"armarle unos upsells a la oferta de dance go, utiliza la skill de pospagos"*. **No tenemos el backend de la competencia** (aclaración suya: *"El backend de la competencia no lo tenemos, asi que mira solo lo que ofrecemos en el front"*), así que el paso 2 del manual se saltea y la escalera sale del mapa del front propio.

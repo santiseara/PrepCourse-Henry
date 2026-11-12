@@ -1,3 +1,14 @@
+## 2026-11-12 (7ª pasada) — El modelo de video es Veo: la tanda de DanceGo rehecha
+
+**Corrección de Santiago:** *"el modelo que tenés que usar siempre es el de Veo, hacelos de nuevo, y ponelo como regla, salieron súper mal los videos, mal los audios, mal lo visual, se re nota que es IA"*.
+
+- **[[estilo-de-video-ia]]** — **Regla 0** nueva arriba de todo: todo video con IA sale de **Veo 3.1 Fast** por ApiMart; `wan2.7-r2v` queda descartado para anuncios. Por qué: el audio lo actúa el modelo (el diálogo va en el prompt) en vez de ser una voz TTS clonada sobre una foto fija. Registro de corrección con la fecha y el motivo.
+- **[[dancego]]** — la tanda 5 queda marcada como **rechazada** y se suma la **tanda 6**: los tres mismos ángulos (el marido, la hija, el espejo) rehechos con Veo, 28-31 s, **US$3,02** contra los US$8,63 que costó la rechazada.
+- **[[skills-de-video-ia]]** — corrida nueva documentada: `mini-novela` sirve para ads cortos, precio por toma, las líneas van **con tildes** (sin tilde Veo dice "tienes" y hasta se inventa una dirección web), el filtro bloquea el contacto físico con un chico, y el "después" se genera editando el cuadro del "antes".
+- **[[apimart]]** — sección del modelo de la casa (`veo3.1-fast`, body de ejemplo) y `wan2.7-r2v` tachado en la tabla.
+- **Parches a las skills:** `mini-novela/comun.py` sube por ApiMart con reintentos (chau catbox.moe) y `mini-novela/montar.py` suma `ANCHO/ALTO`, `VEL`, `ETIQUETAS` (placa de día) y `SUBS=ad` (karaoke en mayúsculas + botón azul final). `antes-despues-ia` lleva el aviso de que su modelo quedó descartado.
+- **Entrega:** `OUTPUTS/2026-11-12-guiones-dancego-veo.md` y los tres mp4 en `~/Desktop/dancego/anuncios/`.
+
 ## 2026-11-11 — From Concrete to Cash: la descripción corta para los ads
 - Pedido de Santiago: *"Dame una descripción para la oferta de cemento"*. Se entregó con la forma corta del 11/11 (mecanismo + 3 bullets + bonos/garantía + CTA, ~90 palabras), en inglés y español con voseo, más dos variantes de dos renglones (curiosidad y negocio).
 - Sin precio del curso y sin cifra de ingresos: la plata entra como precio de mercado ($140 de un local), no como promesa.

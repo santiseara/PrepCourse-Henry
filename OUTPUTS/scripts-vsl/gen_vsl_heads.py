@@ -9,6 +9,8 @@ El efecto va SIEMPRE vacio: cero SFX (Manual de Edicion IA, regla de oro 1).
 Uso: python3 gen_vsl_heads.py <V1|V2|V3|V4> <carpeta_trabajo>
 """
 import json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from vsl_palabras import palabras_del_editor
 
 PLACAS = {           # (regex sobre la transcripcion, texto de la placa, segundos)
     'V1': [(r'\$\s?97',  '$97 · ONE PAYMENT',  4.0), (r'30\s*-?\s*day\s+guarantee', '30-DAY GUARANTEE', 3.5)],
@@ -23,7 +25,8 @@ def main():
     # misma regla que gen_vsl_plans: si el editor ya transcribio, manda SU lista
     del_editor = os.path.join(wd, f'edit_{v}', 'words0.json')
     fuente = del_editor if os.path.exists(del_editor) else os.path.join(wd, f'words_{v}.json')
-    W = json.load(open(fuente))
+    W = palabras_del_editor(json.load(open(fuente)),
+                            open(os.path.join(wd, 'txt', f'{v}_full.txt'), encoding='utf-8').read())
     pal = [w['w'] for w in W]
     # Whisper deja la puntuacion pegada ("$27," / "guarantee."): para buscar se limpia,
     # pero el anclaje se arma con la palabra TAL CUAL, que es lo que find() compara

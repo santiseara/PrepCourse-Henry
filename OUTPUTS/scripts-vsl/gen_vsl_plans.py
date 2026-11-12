@@ -17,6 +17,8 @@ Uso: python3 gen_vsl_plans.py <V1|V2|V3|V4> <heygen.mp4> <carpeta_trabajo>
      -> escribe <carpeta>/plan_<V>.json, <carpeta>/heads_<V>.json y corta los b-rolls en brolls/
 """
 import os, sys, json, re, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from vsl_palabras import palabras_del_editor
 
 FF = os.path.expanduser('~/bin/ffmpeg')
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -116,6 +118,8 @@ def main():
     guion = open(os.path.join(wd, 'txt', vsl + '_full.txt'), encoding='utf-8').read()
     br = os.path.join(wd, 'brolls'); os.makedirs(br, exist_ok=True)
     W = transcribir(mp4, os.path.join(wd, f'words_{vsl}.json'), guion)
+    # los anclajes tienen que salir de la MISMA lista que arma el editor, no de la cruda
+    W = palabras_del_editor(W, guion)
     ORS = oraciones(W)
 
     plan, heads, usados = [], [], []

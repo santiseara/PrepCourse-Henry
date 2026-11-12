@@ -88,7 +88,22 @@ Veo le da la línea al personaje equivocado. Las defensas, en orden:
 ### Lo que no se entrega
 Las tres coinciden: **no se entrega** si el parecido guion/audio da **menos de 0,97**, si en la hoja de contacto una cara o una fruta cambia entre tomas, si alguien atraviesa un objeto, si el antes/después no se nota o si **Veo quemó subtítulos inventados** (~1 de cada 40 tomas).
 
-## La primera corrida real: 3 ads de DanceGo (11/11/2026)
+## La corrida con Veo: los 3 ads de DanceGo rehechos (12/11/2026)
+
+La tanda del 11/11 se hizo con `antes-despues-ia` (wan2.7-r2v) y **se rechazó entera**. Se rehizo con el pipeline de **`mini-novela`**, que es el que usa Veo, y quedó. Lo que hay que saber:
+
+- **`mini-novela` sirve igual para un ad corto.** Es la misma máquina: `guion.py` con 5 `TOMAS` en vez de 50, `imagenes.py` → `gen.py` → `verif.py` → `montar.py`. Un ad de 30 s son 5 tomas de 8 s recortadas a lo hablado.
+- **Precio real medido: US$0,14 la toma de 8 s** de `veo3.1-fast`; retrato con `gpt-image-2` US$0,0085 y edición/composición con `gemini-nano-banana-2.1-ext` US$0,014. **Tres ads completos: US$3,02** (contra US$8,63 la tanda de wan2.7, que además se tiró).
+- **Las líneas del guion van CON TILDES.** Sin tilde, Veo dijo *"tienes"* por "tenés" en las tres tomas de cierre y en una **se inventó una dirección web**. Con tilde salió a la primera. Los números que se leen raro se esquivan: *"veintiún días"* lo leyó *"veintiuno días"*.
+- **El filtro de contenido bloquea el contacto físico con un chico** ("takes the girl's hands and spins her around"). Se reescribe sin contacto, nadie toca a nadie, y sale. **Las tomas bloqueadas no se cobran** (`billing_status: refunded`).
+- **El "después" se genera editando el cuadro del "antes"**, pasándolo como referencia 1 junto al retrato nuevo: así la pieza, los muebles y el encuadre quedan idénticos y lo único que cambia es el cuerpo. Si se genera de cero, cambia el living entero.
+- **Parches que se le hicieron a la skill** (ya están aplicados):
+  - `comun.subir()` ahora sube **por ApiMart** y no por catbox.moe, con reintentos (en paralelo la subida se corta); ver [[apimart]].
+  - `montar.py` acepta `ANCHO`/`ALTO` (1080x1920), `VEL` (velocidad de video y audio juntos), `ETIQUETAS` del guion (placa "DÍA 01" arriba a la izquierda) y `SUBS=ad`: **subtítulos karaoke** en MAYÚSCULAS, Poppins SemiBold, palabra activa en amarillo, 3 por placa, y **botón azul "MÁS INFORMACIÓN"** sobre la última toma en lugar de la placa negra final.
+  - Comando de la tanda: `SUBS=ad VEL=1.08 ANCHO=1080 ALTO=1920 python3 montar.py <proyecto>`.
+- **No hizo falta nada de voz:** ni Gemini TTS, ni muestras de referencia, ni medir F0, ni seed-vc. El audio viene actuado dentro de la toma.
+
+## La primera corrida real: 3 ads de DanceGo (11/11/2026) · con wan2.7, descartado
 
 `antes-despues-ia` se usó por primera vez de punta a punta en [[dancego]] y **anda**. Lo que cambió respecto de lo que dice la skill, y lo que hay que saber antes de la próxima:
 

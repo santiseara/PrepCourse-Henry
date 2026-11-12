@@ -55,6 +55,13 @@ def duracion(p):
 
 
 def transcribir(mp4, cache, guion):
+    # el editor guarda su propia transcripcion en <wd>/edit_<nombre>/words0.json. Es la que
+    # usa find() para ubicar cada frase, asi que si existe se usa ESA: transcribir por
+    # separado da palabras distintas ("take" vs "pick") y los anclajes no se encuentran.
+    del_editor = os.path.join(os.path.dirname(cache),
+                              'edit_' + os.path.splitext(os.path.basename(mp4))[0], 'words0.json')
+    if os.path.exists(del_editor):
+        return json.load(open(del_editor))
     if os.path.exists(cache):
         return json.load(open(cache))
     from faster_whisper import WhisperModel
@@ -160,7 +167,8 @@ def main():
             plan.append([nombre, ancla(pal, p_ini, 3), ancla(pal, max(p_ini, p_fin - 2), 3), 0.0, modo_actual])
 
     json.dump(plan, open(os.path.join(wd, f'plan_{vsl}.json'), 'w'), indent=1)
-    json.dump(heads, open(os.path.join(wd, f'heads_{vsl}.json'), 'w'), indent=1)
+    # las placas NO se tocan aca: las escribe gen_vsl_heads.py. Escribir una lista vacia
+    # pisaba las placas de precio y garantia y el render salia sin ellas (11/11/2026).
     print(f'{vsl}: {len(plan)} tramos de b-roll, {len(ORS)} oraciones, '
           f'{sum(1 for o in ORS if SIN_BROLL.search(o[2]))} oraciones a cara limpia')
 

@@ -20,7 +20,10 @@ PLACAS = {           # (regex sobre la transcripcion, texto de la placa, segundo
 
 def main():
     v, wd = sys.argv[1], sys.argv[2]
-    W = json.load(open(os.path.join(wd, f'words_{v}.json')))
+    # misma regla que gen_vsl_plans: si el editor ya transcribio, manda SU lista
+    del_editor = os.path.join(wd, f'edit_{v}', 'words0.json')
+    fuente = del_editor if os.path.exists(del_editor) else os.path.join(wd, f'words_{v}.json')
+    W = json.load(open(fuente))
     pal = [w['w'] for w in W]
     # Whisper deja la puntuacion pegada ("$27," / "guarantee."): para buscar se limpia,
     # pero el anclaje se arma con la palabra TAL CUAL, que es lo que find() compara

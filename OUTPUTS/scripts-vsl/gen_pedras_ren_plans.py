@@ -28,10 +28,13 @@ TOPE = 6
 #  Plaster" del broll de IA (m, 0-2 s) y el jarro Pyrex (j, 3 s). 🆕 A 'm' se le corta tambien la
 #  cola: a partir de 6 s la feria tiene un BILLETE DE DOLAR apoyado en el cajon, que en un ad
 #  brasileno esta mal. El OCR no lo ve (no es texto legible): aparecio en la hoja del render.
+#  🆕 La tarjeta "Piedra difusora" tambien vive en 21-24,5 s y en 41 s de b y de g: el OCR a 1 cuadro
+#  por segundo no la leyo (cursiva fina sobre blanco) y se colo en el minuto 32 del primer render.
+#  Las cuatro ventanas de esos dos clips se cerraron mirando hoja de contactos cuadro a cuadro.
 VENT = {
     'a':  ('src/o1.mp4', 0.0, 40.0, {'zoom': 1.60, 'ybias': 0.0, 'fam': 'tabla'}),
-    'b':  ('src/o2.mp4', 12.0, 24.5, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
-    'b2': ('src/o2.mp4', 35.0, 43.5, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
+    'b':  ('src/o2.mp4', 12.0, 20.5, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
+    'b2': ('src/o2.mp4', 35.0, 40.0, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
     'b3': ('src/o2.mp4', 0.0, 7.0, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'proceso'}),
     'c':  ('src/o3.mp4', 0.0, 42.0, {'zoom': 1.70, 'ybias': 0.0, 'fam': 'mesa'}),
     'd':  ('src/o4.mp4', 12.5, 62.5, {'zoom': 1.60, 'ybias': 0.0, 'fam': 'manos'}),
@@ -39,8 +42,8 @@ VENT = {
     'e':  ('src/o5.mp4', 7.5, 20.3, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'lazo'}),
     'e2': ('src/o5.mp4', 0.0, 4.8, {'zoom': 1.45, 'ybias': 0.0, 'fam': 'lazo'}),
     'f':  ('src/o6.MOV', 0.0, 57.8, {'zoom': 1.70, 'ybias': 0.0, 'fam': 'macrame'}),
-    'g':  ('src/o7.mp4', 12.0, 25.0, {'zoom': 1.50, 'ybias': 0.0, 'fam': 'cajon'}),
-    'g2': ('src/o7.mp4', 35.0, 44.0, {'zoom': 1.50, 'ybias': 0.0, 'fam': 'cajon'}),
+    'g':  ('src/o7.mp4', 12.0, 20.5, {'zoom': 1.50, 'ybias': 0.0, 'fam': 'cajon'}),
+    'g2': ('src/o7.mp4', 35.0, 40.0, {'zoom': 1.50, 'ybias': 0.0, 'fam': 'cajon'}),
     'g3': ('src/o7.mp4', 0.0, 7.0, {'zoom': 1.50, 'ybias': 0.0, 'fam': 'cajon'}),
     'h':  (BR + '/assembling.mp4', 0.0, 4.2, {'fam': 'ia1'}),
     'h2': (BR + '/assembling.mp4', 6.2, 7.8, {'fam': 'ia1'}),

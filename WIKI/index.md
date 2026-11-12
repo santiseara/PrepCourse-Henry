@@ -75,6 +75,7 @@
 - 🆕 [[drawing-world]] — Dibujo desde cero en inglés (drawing-world.impultienda.ar), modelada de Lumea Desenului: 430 ads en 13 días, 9 idiomas y el mercado inglés grande vacío.
 - 🆕 [[academia-del-trazo]] — Dibujo desde cero paso a paso (AR), modelada de Academia de Dibujo Creativo. Método de las 3 Capas, landing propia y los 6 ángulos que el original no corre.
 - 🆕 [[group-work-playbook]] — +150 dinámicas grupales en PDF (USD 27, mercado inglés), modelada de Talleres Listos. 6 módulos, 5 bonos y la DNA de sus ~160 ads.
+- 🆕 [[welmi]] — Contador de calorías con IA (637 ads activos, 9 idiomas, 7 meses corriendo). No es para cazar: es el manual del quiz de 35 pantallas, el paywall con boleto raspable, el upsell de 1 clic y la plantilla de copy de 6 líneas repetida 233 veces.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
 ## Adquisición — Meta Ads
@@ -131,6 +132,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Radiografía completa de Welmi](../OUTPUTS/2026-11-12-analisis-welmi.md) — toda la oferta: empresa en Chipre, 637 ads activos en 9 idiomas, precios del App Store, el quiz de 35 pantallas con email gate, el boleto raspable de 50/75/90 %, el upsell de pago único a 1 clic y los 5 formatos de creativo · ver [[welmi]] · [[funnel-hacking]]
 - [Las 4 VSL post-pago de Party Box Profits (entrega)](../OUTPUTS/2026-11-12-vsl-pospagos-party-box-profits-entrega.md) — duraciones, delay del botón de cada página y qué se verificó
 - [2026-11-11 — Piedras: tres renovaciones para Brasil (R1–R3)](../OUTPUTS/2026-11-11-renovaciones-piedras-brasil-R1-R3.md) — variables nuevas de los ocho ads en portugués (la clienta que no revende, diciembre desbordado, "no soy artesana"), con el visual armado de los propios ads por zoom, sin bajar un clip · ver [[scented-stones]] · [[renovacion-de-creativos]]
 - [2026-11-11 — Claude + Lovable + base de datos de eventos](../OUTPUTS/2026-11-11-claude-con-lovable-y-base-de-datos.md) — el MCP oficial de Lovable (`query_database` incluido) y cómo notificar cada evento con Database Webhooks de Supabase

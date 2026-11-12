@@ -1,3 +1,14 @@
+## 2026-11-12 (9ª pasada) — Radiografía completa de Welmi (app de calorías con IA)
+
+Pedido de Santiago: *"Quiero que analices en profundidad esta oferta, no solo los ads, toda la oferta"* (link a la Biblioteca de Anuncios).
+
+- **[[welmi]]** — página nueva. 637 anuncios activos volcados y medidos: línea de tiempo (tandas de 182, 118, 64 y 44 ads cada 3–4 días), reparto por idioma (ES 163 · EN 84 · PT 76 · FR 71 · TR 70 · UA/RU 78 · IT 29) y **233 copies únicos** con su plantilla de 6 líneas y 77 palabras.
+- **La oferta entera, no solo los ads:** empresa (T-SHAPED APPS LTD, Chipre), precios del App Store ($4,99 semanal a $59,99 anual + add-on de $24,99), las dos vías de cobro (IAP y checkout web con Stripe/PayPal) y el embudo web completo leído del código del funnel: quiz de ~35 pantallas → pantalla de cálculo en vivo → **email gate antes del precio** → paywall de 4 planes con contador y garantía de 30 días → **downsell de boleto raspable (50/75/90 %)** → **upsell de pago único a 1 clic sobre la tarjeta guardada** → entrega por QR dentro de la app.
+- **Los 5 formatos de creativo** transcritos de una muestra de 9 videos (sin bajar los 637): el mejor es el VSL animado de 47 s "día 1 / día 5 / día 30".
+- **Veredicto:** pasa los filtros de [[funnel-hacking]] (faceless, mismo destino, 7 meses) pero **no es una oferta para cazar** (suscripción con 250.000 reseñas y capital). Sirve como manual de embudo y de copy.
+- **Entrega:** `OUTPUTS/2026-11-12-analisis-welmi.md`.
+- **Pendiente:** los precios del paywall web están detrás del email gate; no dejé un correo sin su OK.
+
 ## 2026-11-12 (8ª pasada) — Party Box Profits: las 4 VSL post-pago y el defecto que se comía las palabras
 
 **Corrección de Santiago:** *"DALE HERMANO, 3 DÍAS, ESTÁS HACE UNA BANDA, HACÉ LAS COSAS BIEN, Y MÁS RÁPIDO"*.

@@ -1,5 +1,27 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-12 · Un quiz no se escribe de cero: se clona el motor del último que funcionó
+Santiago, sobre la primera versión del quiz de [[sumaai]]: *"Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz"*. Tenía razón: estaba escrito desde cero, sin fotos y con emojis como imagen principal. Lo que faltó fue **abrir un quiz nuestro antes de escribir una línea**.
+
+**La regla: antes de armar cualquier quiz, se abre el último entregado (hoy `OUTPUTS/2026-11-04-quiz-dancego.html`) y se clona su motor.** No se reinventa el render, ni el CSS, ni el manejo de pasos. Lo único que cambia es la paleta, los pasos y los textos.
+
+**La anatomía que tienen todos los quizzes que funcionan** (y que un quiz "simple" no tiene):
+- **Tipografías de Google: `Fraunces` (serif display) para títulos, números grandes y precios + `Inter` para el resto.** Con la fuente del sistema se ve como un formulario, no como un producto.
+- **Cabecera: el logo va CENTRADO** (`.brand` con `justify-content:center`), con la marca partida en dos colores (`Suma<i>AI</i>`) y un ícono de 26 px al lado. **La flecha de volver va `position:absolute` a la izquierda**, nunca en el flujo: si se la mete en el mismo flex que la marca, el logo queda corrido a un costado.
+- **Barra de progreso** debajo del logo, de borde a borde.
+- **Portada con fotos a sangre** (`.pick.ov`, 3:4, etiqueta sobre banda oscura) + `cover-badge` + `h1` de 2,05rem. La primera pregunta es la portada.
+- **Palabras destacadas en el acento**: `.q em` dentro de cada pregunta. Un título sin una palabra resaltada se lee plano.
+- **Componentes con foto**: `.pick` (grilla 2×2), `.rowpick` (foto 94×118 en fila) y `.media` (foto ancha de puente).
+- **Sliders con número gigante en serif + chapita de rango** (`.sl-tag`), nunca un `<input type=number>`.
+- **Pantalla de carga con anillo girando y lista que se va tildando**, y **pantalla de resultado** con KPIs, barra de IMC y gráfico SVG de previsión.
+- **Oferta en HTML estático** dentro de `#oferta` (barra de urgencia, antes/después, lista de incluye, caja `.promo` de lanzamiento, testimonios, garantía en SVG, FAQ), con `ligarCTAs()` idempotente.
+- **Botones**: `.btn` con `text-align:center`, sombra de color y `.foot` pegajoso abajo.
+
+**Y las imágenes son la mitad del trabajo, no el final.** Antes de escribir el HTML:
+1. **Mirar el banco propio.** Las imágenes de los quizzes viejos están **embebidas en base64 dentro de los `.html` de `OUTPUTS/`**: se extraen con un `re.findall(r'data:image/(\w+);base64,([A-Za-z0-9+/=]{3000,})')` y se arma una hoja de contactos con Pillow. De ahí salieron las 11 fotos de SumaAI (género de Mounjaro Humilde, comidas de Pan Sin Picos) **sin gastar un crédito**.
+2. Recién si falta un set entero, se busca en los competidores (Biblioteca → dominio → landing) y, último recurso, se genera con IA.
+3. **Pillow no corre con `python3 -I`**: el modo aislado ignora el `site-packages` del usuario, que es donde está instalado (`pip install --user`). Para estos scripts se corre `python3` normal desde una carpeta propia.
+
 ### 🆕 2026-11-12 · Si el objetivo diario tiene piso, el déficit se recalcula (si no, la fecha miente)
 - En el quiz de [[sumaai]] el objetivo diario se calcula con Mifflin-St Jeor y un déficit por ritmo (300 / 500 / 750 kcal), con **piso de seguridad de 1.200 calorías**. Caso real: mujer de 162 cm, 95 kg, 45+, sedentaria y ritmo ambicioso → TDEE 1.862, el déficit de 750 daría 1.112, así que el piso lo sube a 1.200.
 - **El bug:** la pantalla mostraba 1.200 calorías pero seguía calculando la fecha con los 750 kcal de déficit. **El déficit real es `TDEE − objetivo` (662), no el que eligió la persona.** Con el número viejo prometía 36 semanas; con el real son 45. La aritmética del resultado tiene que cerrar con el número que la persona está viendo.
@@ -234,6 +256,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-12 | Quiz SumaAI (v2) | "Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz" | Se rehizo entero **clonando el motor de DanceGo** (ver la regla del 12/11 arriba): Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada de género con fotos a sangre, dos pantallas de comida con fotos reales, maqueta de celular, carga con anillo, resultado con IMC y gráfico, y la oferta completa estilo lanzamiento. **11 fotos sacadas del banco propio** (base64 de los quizzes viejos de `OUTPUTS/`), cero créditos |
 | 2026-11-12 | Quiz SumaAI (modelado de Welmi) | "Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul" | De **35 pasos a 19**. Se van: prueba social con ratings ajenos, "¿te derivó un profesional?", nivel de nutrición, hábitos, placa de Harvard/UNICEF, objetivo de pasos, fecha del primer control, edad exacta, placas de relleno y **el email gate**. Se unifican intolerancias + dieta y caminata + escaleras + pasos. Quedan las que personalizan el resultado y las de compromiso emocional (el **mayor reto** se devuelve dos pasos después). Paleta azul `#1B4CD9` / `#0E2452` / `#F2F6FD`, con verde solo para "bien" y rojo solo para riesgo. **Un rating que no es nuestro no se clona**: ahí no aplica "fidelidad al original", aplica "no inventar datos" |
 | 2026-11-11 | Quiz Cápsulas Encantadas (AR) | "Ahora quiero que hagamos este quiz pero para argentina. Lo vamos a cobrar 12.990… El link de checkout te lo paso desp" | Clon del quiz propio en inglés (*Tea Charm Studio*, 27 USD): mismos 8 pasos y mismo orden, español argentino con voseo, motor multi-moneda reemplazado por precio fijo + cuotas, nombres y ciudades argentinos, y las 5 imágenes con texto en inglés rehechas sin gastar un crédito (recorte, HTML y Pillow). Checkout relativo hasta que pase la URL. Aprendizajes nuevos: las comillas del CONFIG en `inline_quiz.py` y la foto duplicada en base64 (ver la regla del 11/11 arriba) |
 | 2026-11-10 | Quiz El Secreto de la Chía (AR) | "necesito que hagamos exactamente el mismo quiz pero en español argentino" | El original **ya era** el argentino y ya estaba en voseo: el pedido se resolvió **empaquetando** (bloque del quiz bajado con `curl -sL`, `.txt` para el `custom_html`, `PRUEBA.html` con las fotos embebidas y la carpeta de imágenes). Se diffea el que corre contra el clon antes de reescribir: 139 líneas, todas de idioma, marca, precio y checkout. Checkout nuevo pendiente → se entrega con el que corre y se anota en rojo |

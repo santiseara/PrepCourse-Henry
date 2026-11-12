@@ -1,3 +1,13 @@
+## 2026-11-12 (12ª pasada) — SumaAI: el quiz rehecho sobre el motor que ya funciona
+
+Corrección de Santiago sobre la v1: *"Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz"*. Tenía razón.
+
+- **[[quizzes-reglas-de-armado]]** — regla nueva: **un quiz no se escribe de cero, se clona el motor del último que funcionó** (`OUTPUTS/2026-11-04-quiz-dancego.html`). Queda escrita la anatomía completa: Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada con fotos a sangre, `.pick`/`.rowpick`/`.media`, sliders con número en serif, carga con anillo, resultado con IMC y gráfico, oferta estática con `ligarCTAs()`.
+- **El banco de imágenes propio**: las fotos de los quizzes viejos están embebidas en base64 dentro de los `.html` de `OUTPUTS/`. Se extraen con una regex, se miran en una hoja de contactos de Pillow y se reusan. De ahí salieron **las 11 fotos de SumaAI** (género de Mounjaro Humilde, comidas de Pan Sin Picos): **cero créditos gastados**. Anotado también que **Pillow no corre con `python3 -I`**.
+- **[[sumaai]] v2 — 22 pasos con fotos reales.** Pantalla nueva que vende sola: *"¿cuál de estos desayunos tiene más calorías?"* con 4 fotos y el ranking revelado (palta y manteca 640 · budín 520 · medialunas 470 · pan integral 330).
+- **Verificado en iframe de 390 px sobre el `.txt` que se pega**: los 22 pasos recorridos por código, 0 desbordes, 0 errores de JS, 0 imágenes rotas, los 4 CTA con el checkout y los UTMs. Mirado también con capturas (portada, comidas, revelación, resultado y oferta).
+- Entregables: `~/Desktop/sumaai/landing/` (`quiz.html`, `sumaai-quiz.txt` de 623 KB con las 11 fotos embebidas, `PRUEBA.html`) + `~/Desktop/sumaai/imagenes/` + copia en `OUTPUTS/2026-11-12-quiz-sumaai.html`.
+
 ## 2026-11-12 (12ª pasada) — DanceGo: cuatro ads mas con Veo (dos antes/despues y dos argentinos)
 
 Pedido de Santiago: *"Necesito que hagamos mas ads con IA para danza, quiero 4 hoy, el video del antes y desp le fue muy bien, asi que quiero que 2 sean con ese mismo formato, distintos, pero asi. Y los otros dos quiero que sean situaciones mas argentinas, y que llamen la atencion, acordate que hay que meter varias escenas en los videos"*. El que anda es `12-11 Veo - 3` (El espejo).

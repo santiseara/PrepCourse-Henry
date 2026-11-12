@@ -1,759 +1,1064 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-AR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SumaAI — Tu plan de calorías</title>
-<!-- ============================================================
-     CONFIG — todo lo editable vive acá
-     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SumaAI — Tu plan de calorías personalizado</title>
+<meta name="description" content="Sacale una foto al plato y SumaAI la suma. Descubrí cuántas calorías tenés que comer por día.">
+<meta name="theme-color" content="#F4F7FC">
+
+<!-- ==========================================================================
+     SUMAAI · QUIZ — bloque de configuración
+     Todo lo que se toca está acá arriba.
+     ========================================================================== -->
 <script>
 window.CONFIG = {
-  MARCA: "SumaAI",
-  CLAIM: "Sacale una foto. SumaAI la suma.",
 
-  /* ⚠️ PENDIENTES (confirmar con Santiago) */
-  LINK_CHECKOUT: "/checkout",       // relativo: resuelve al checkout de la tienda donde se pegue
-  PIXEL_ID: "",                     // vacío = no dispara nada
-  precio: "14.990",                 // placeholder
-  precioAntes: "49.990",            // placeholder
-  cantCuotas: 3,
-  cuota: "4.997",                   // 14990 / 3 redondeado hacia arriba
-  SEGUNDOS_OFERTA: 0,               // 0 = la oferta se ve de una (sin VSL). Si se carga un VSL, poner los segundos.
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL. */
+  LINK_CHECKOUT: "/checkout",
 
-  /* ⚠️ reemplazar por reseñas reales antes de poner plata */
-  resenas: [
-    { n: "Marcela F.", c: "Rosario",  t: "Comía igual que siempre y no entendía por qué no bajaba. Resulta que el desayuno 'sano' me comía medio día de calorías." },
-    { n: "Diego P.",   c: "Córdoba",  t: "Lo único que hago es la foto del plato. En tres semanas bajé 4 kilos sin dejar el asado del domingo." },
-    { n: "Vanina R.",  c: "La Plata", t: "Nunca pesé un alimento. Sé cuánto me queda para el día y con eso me arreglo." }
-  ]
+  /* Pixel de Meta. Vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos antes de que aparezca la oferta. 0 = se ve de entrada (sin VSL).
+     Si cargás un VSL en <template id="vsl-template">, poné el segundo exacto
+     en que el video dice el precio. 230 = 3:50 · 960 = 16:00 */
+  SEGUNDOS_OFERTA: 0,
+
+  /* Imágenes. Pegá acá la URL de ImpulTienda de cada una. */
+  IMG: {
+    generoH:  "../imagenes/genero-hombre.webp",
+    generoM:  "../imagenes/genero-mujer.webp",
+    desPalta: "../imagenes/des-palta.webp",
+    desCroi:  "../imagenes/des-croissant.webp",
+    desPanes: "../imagenes/des-panes.webp",
+    desBudin: "../imagenes/des-budin.webp",
+    almPizza: "../imagenes/alm-pizza.webp",
+    almSand:  "../imagenes/alm-sandwich.webp",
+    almFoca:  "../imagenes/alm-focaccia.webp",
+    almPan:   "../imagenes/alm-pan.webp",
+    platoHero:"../imagenes/plato-hero.webp"
+  },
+
+  /* Precios. Si cambia el precio, cambiarlo en los 6 campos. */
+  PRECIO:       "14.990",
+  PRECIO_VIEJO: "49.990",
+  DESCUENTO:    "70",
+  CUOTAS:       "3",
+  CUOTA_VALOR:  "4.997",
+  AHORRO:       "35.000",
+  VALOR_BONOS:  "29.800"
 };
 </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+
 <style>
+/* ===========================================================================
+   PALETA — azul. Fondo papel azulado, tinta y UN acento.
+   El verde solo significa "bien" y el rojo solo "riesgo".
+   =========================================================================== */
 :root{
-  --az:#1B4CD9;        /* acento de marca */
-  --az-d:#0E2452;      /* azul tinta, títulos */
-  --az-l:#E8EFFD;      /* azul lavado */
-  --bg:#F2F6FD;
-  --card:#fff;
-  --tx:#15213B;
-  --tx2:#5B6782;
-  --line:#DDE5F4;
-  --ok:#1F6B47;        /* verde = bien (nunca es el color de marca) */
-  --rg:#C0392B;        /* rojo = riesgo */
+  --paper:#F4F7FC; --card:#FFFFFF;
+  --ink:#121A2B; --ink-2:#3B4660; --muted:#6B7693;
+  --line:#E2E9F5; --line-2:#CBD7EC;
+  --accent:#1B4CD9; --accent-d:#0E2E8F; --accent-s:#EAF0FE;
+  --green:#1F7A52; --green-s:#E7F3ED;
+  --amber:#B07A1F; --amber-s:#FBF2E0;
+  --red:#C0392B; --red-s:#FBEDEB;
+  --shadow:0 18px 40px -26px rgba(18,26,43,.45);
+  --shadow-s:0 8px 20px -14px rgba(18,26,43,.35);
   --r:16px;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
-body{
-  background:var(--bg);color:var(--tx);
-  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:440px;margin:0 auto;padding:0 16px 48px}
+button{font:inherit;color:inherit}
+.hidden{display:none!important}
+.wrap{max-width:540px;margin:0 auto;padding:0 18px}
+h1,h2,h3,.disp{font-family:'Fraunces','Georgia',serif;font-weight:700;line-height:1.14;letter-spacing:-.012em}
 
-/* ---- header ---- */
-.top{position:sticky;top:0;z-index:30;background:var(--bg);padding:12px 0 8px}
-.topin{display:flex;align-items:center;gap:10px;max-width:440px;margin:0 auto;padding:0 16px}
-.back{width:34px;height:34px;flex:0 0 34px;border:0;background:#fff;border-radius:50%;
-  box-shadow:0 1px 3px rgba(14,36,82,.12);color:var(--az-d);font-size:18px;line-height:1;cursor:pointer}
-.back[hidden]{visibility:hidden;display:block!important}
-.logo{font-weight:800;letter-spacing:-.02em;color:var(--az-d);font-size:1.08rem}
-.logo i{color:var(--az);font-style:normal}
-.prog{height:5px;background:var(--line);border-radius:99px;overflow:hidden;margin:10px auto 0;max-width:440px}
-.prog>i{display:block;height:100%;background:var(--az);border-radius:99px;transition:width .35s ease}
-.pcount{font-size:.74rem;color:var(--tx2);text-align:right;max-width:440px;margin:6px auto 0;padding:0 16px}
+/* ====== cabecera + progreso ====== */
+.top{position:sticky;top:0;z-index:40;background:rgba(244,247,252,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:540px;margin:0 auto;padding:12px 18px 10px;display:flex;flex-direction:column;gap:10px;position:relative}
+.brand{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;color:var(--ink)}
+.brand .mark{width:27px;height:27px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:16px;height:16px}
+.brand .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.14rem;letter-spacing:-.02em}
+.brand .name i{font-style:normal;color:var(--accent)}
+.bar{height:5px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar>span{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.back{position:absolute;left:14px;top:11px;width:32px;height:32px;border:1px solid var(--line);background:var(--card);
+  border-radius:10px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2);z-index:2}
+.back:disabled{opacity:0;pointer-events:none}
 
-/* ---- tipografía de paso ---- */
-.q{font-size:1.5rem;line-height:1.26;font-weight:800;color:var(--az-d);letter-spacing:-.02em;margin:22px 0 6px}
-.sub{color:var(--tx2);margin:0 0 20px;font-size:.96rem}
-.hint{font-size:.8rem;color:var(--tx2);text-align:center;margin:14px 0 0}
+/* ====== layout del paso ====== */
+main{padding:24px 0 30px;min-height:calc(100vh - 70px)}
+.step{animation:in .32s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-s);padding:5px 11px;border-radius:99px;margin-bottom:14px}
+.q{font-size:1.5rem;text-align:center;margin-bottom:10px}
+.q em{font-style:normal;color:var(--accent)}
+.help{text-align:center;color:var(--muted);font-size:.93rem;margin-bottom:24px;line-height:1.6}
+.q+.opts,.q+.grid{margin-top:24px}
 
-/* ---- opciones ---- */
-.opts{display:flex;flex-direction:column;gap:10px}
-.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;
-  background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);
-  padding:15px 14px;font-size:1rem;color:var(--tx);font-family:inherit;
-  transition:border-color .15s,transform .05s}
-.opt:active{transform:scale(.99)}
-.opt:hover{border-color:#B9CBF2}
-.opt .ic{flex:0 0 38px;height:38px;display:grid;place-items:center;background:var(--az-l);
-  border-radius:11px;font-size:1.12rem}
-.opt .tt{flex:1;font-weight:600}
-.opt .tt small{display:block;font-weight:400;color:var(--tx2);font-size:.82rem;line-height:1.35}
-.opt .ar{color:#9FB2D6;font-size:1.1rem}
-.opt.sel{border-color:var(--az);background:#F7FAFF}
-.opt .bx{flex:0 0 22px;height:22px;border:1.5px solid #C3D1EC;border-radius:6px;display:grid;place-items:center;
-  color:#fff;font-size:.78rem}
-.opt.sel .bx{background:var(--az);border-color:var(--az)}
+/* ====== opciones de lista ====== */
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--card);
+  border:1.5px solid var(--line);border-radius:var(--r);padding:16px;cursor:pointer;
+  transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s)}
+.opt:hover{border-color:var(--line-2)}
+.opt:active{transform:scale(.993)}
+.opt.on{border-color:var(--accent);background:var(--accent-s);box-shadow:0 0 0 3px rgba(27,76,217,.09)}
+.opt .ic{width:34px;height:34px;flex:none;border-radius:9px;background:var(--paper);display:grid;place-items:center;
+  font-size:1.02rem;border:1px solid var(--line)}
+.opt.on .ic{background:#fff;border-color:rgba(27,76,217,.25)}
+.opt .tx{flex:1;min-width:0}
+.opt .tx b{display:block;font-weight:600;font-size:.98rem;line-height:1.35}
+.opt .tx small{display:block;color:var(--muted);font-size:.82rem;line-height:1.4;margin-top:2px}
+.opt .ar{color:var(--line-2);flex:none}
+.opt.on .ar{color:var(--accent)}
+.opt .chk{width:22px;height:22px;flex:none;border:1.5px solid var(--line-2);border-radius:7px;display:grid;place-items:center;color:#fff}
+.opt.on .chk{background:var(--accent);border-color:var(--accent)}
+.opt .chk svg{opacity:0}
+.opt.on .chk svg{opacity:1}
 
-/* ---- botón ---- */
-.btn{display:flex;align-items:center;justify-content:center;text-align:center;
-  width:100%;border:0;cursor:pointer;font-family:inherit;
-  background:var(--az);color:#fff;font-weight:800;font-size:1.03rem;
-  padding:16px 18px;border-radius:14px;margin-top:18px;text-decoration:none;
-  box-shadow:0 6px 16px rgba(27,76,217,.26)}
-.btn[disabled]{background:#C3D1EC;box-shadow:none;cursor:default}
-.btn.g{background:var(--ok);box-shadow:0 6px 16px rgba(31,107,71,.26)}
+/* ====== opciones con foto ====== */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid .opt{padding:13px 11px;gap:9px}
+.grid .opt .ic{width:28px;height:28px;font-size:.92rem}
+.grid .opt .tx b{font-size:.88rem}
+.grid .opt .ar{display:none}
+.pick{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;
+  padding:0;text-align:center;transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s);position:relative}
+.pick:active{transform:scale(.99)}
+.pick.on{border-color:var(--accent);box-shadow:0 0 0 3px rgba(27,76,217,.09)}
+.pick figure{position:relative;background:#EDF1F8}
+.pick img{width:100%;height:auto!important;aspect-ratio:1!important;object-fit:cover}
+.pick .lb{padding:11px 8px;font-size:.84rem;font-weight:700;letter-spacing:.03em;color:var(--ink-2);line-height:1.3}
+.pick.on .lb{color:var(--accent)}
+/* portada: foto a sangre con la etiqueta encima, sobre banda oscura */
+.pick.ov img{aspect-ratio:3/4!important}
+.pick.ov figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 13px;color:#fff;
+  font-size:.95rem;font-weight:800;letter-spacing:.05em;text-align:center;
+  background:linear-gradient(180deg,rgba(14,23,43,0) 0%,rgba(14,23,43,.55) 45%,rgba(14,23,43,.9) 100%)}
+.pick.ov::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .15s}
+.pick.ov.on::after{box-shadow:inset 0 0 0 3px var(--accent)}
+.cover-head{text-align:center;margin-bottom:20px}
+.cover-badge{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;font-size:.68rem;
+  font-weight:800;letter-spacing:.11em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:16px}
+.cover-badge i{width:6px;height:6px;border-radius:50%;background:#5BD08C;font-style:normal;box-shadow:0 0 0 3px rgba(91,208,140,.25)}
+.cover-head h1{font-size:2.05rem;line-height:1.08;letter-spacing:-.025em}
+.cover-head h1 em{font-style:normal;color:var(--accent)}
+.cover-head p{color:var(--muted);font-size:.95rem;margin-top:10px}
+@media(max-width:380px){.cover-head h1{font-size:1.78rem}}
 
-/* ---- placas ---- */
-.placa{background:var(--card);border-radius:var(--r);padding:22px 18px;border:1px solid var(--line);
-  box-shadow:0 2px 10px rgba(14,36,82,.05);margin-top:18px}
-.placa h3{margin:0 0 8px;font-size:1.22rem;color:var(--az-d);letter-spacing:-.01em}
-.placa p{margin:0 0 12px;color:var(--tx2)}
-.placa p:last-child{margin-bottom:0}
-.chip{display:inline-block;background:var(--az-l);color:var(--az-d);font-size:.78rem;font-weight:700;
-  padding:5px 10px;border-radius:99px;margin:0 6px 6px 0}
-.bars{display:flex;align-items:flex-end;gap:10px;height:112px;margin:18px 0 6px}
-.bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}
-.bars b{display:block;width:100%;background:linear-gradient(180deg,#5B8BF2,var(--az));border-radius:8px 8px 3px 3px}
-.bars span{font-size:.72rem;color:var(--tx2)}
+/* ====== botones ====== */
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;gap:9px;width:100%;border:none;
+  cursor:pointer;font-weight:700;font-size:1.02rem;color:#fff;background:var(--accent);padding:16px 20px;
+  border-radius:13px;text-decoration:none;box-shadow:0 10px 24px -14px rgba(27,76,217,.85);
+  transition:filter .15s,transform .08s}
+.btn:hover{filter:brightness(1.07)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn.buy{background:var(--green);box-shadow:0 10px 24px -14px rgba(31,122,82,.9)}
+.skip{display:block;width:100%;background:none;border:none;color:var(--muted);font-size:.88rem;
+  text-decoration:underline;cursor:pointer;padding:14px;text-align:center}
+.foot{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(244,247,252,0),var(--paper) 36%);
+  padding:18px 0 14px;margin-top:26px}
 
-/* ---- maqueta de celular (HTML/CSS, sin imágenes) ---- */
-.fono{width:186px;margin:16px auto 4px;background:#0E2452;border-radius:26px;padding:8px;
-  box-shadow:0 14px 30px rgba(14,36,82,.26)}
-.fono .scr{background:#F7FAFF;border-radius:20px;overflow:hidden}
-.fono .nb{height:16px;display:grid;place-items:center}
-.fono .nb i{display:block;width:46px;height:4px;background:#C3D1EC;border-radius:99px}
-.fono .plate{height:70px;background:linear-gradient(135deg,#FFE2B8,#FFC487);display:grid;place-items:center;font-size:1.9rem}
-.fono .bd{padding:9px 10px 11px}
-.fono .kcal{font-size:1.5rem;font-weight:800;color:var(--az-d);line-height:1.1}
-.fono .kcal small{display:block;font-size:.58rem;font-weight:600;color:var(--tx2);letter-spacing:.04em}
-.fono .ring{height:6px;background:var(--line);border-radius:99px;margin:8px 0 9px;overflow:hidden}
-.fono .ring i{display:block;height:100%;width:64%;background:var(--az);border-radius:99px}
-.fono .row{display:flex;justify-content:space-between;font-size:.6rem;color:var(--tx2);margin-top:4px}
-.fono .row b{color:var(--az-d)}
+/* ====== tarjetas ====== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-s)}
+.note{background:var(--accent-s);border:1px solid rgba(27,76,217,.16);border-radius:13px;padding:14px 16px;
+  font-size:.9rem;color:var(--ink-2);line-height:1.6}
+.legal{margin-top:22px;font-size:.76rem;color:var(--muted);text-align:center;line-height:1.6}
+.legal a{color:var(--accent)}
+.media{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#EDF1F8}
+.cap{font-size:.78rem;color:var(--muted);text-align:center;margin-top:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.78rem;
+  font-weight:600;color:var(--ink-2);box-shadow:var(--shadow-s)}
+.chip b{color:var(--accent)}
+.bars{display:flex;align-items:flex-end;gap:12px;height:120px;margin:22px 0 4px}
+.bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.bars b{display:block;width:100%;background:linear-gradient(180deg,#6B93F2,var(--accent));border-radius:9px 9px 3px 3px}
+.bars span{font-size:.74rem;color:var(--muted);font-weight:600}
 
-/* ---- slider ---- */
-.sval{text-align:center;margin:26px 0 6px}
-.sval b{font-size:3.1rem;font-weight:800;color:var(--az-d);letter-spacing:-.03em;line-height:1}
-.sval span{font-size:1.05rem;color:var(--tx2);font-weight:700;margin-left:4px}
-.rule{position:relative;height:30px;margin:2px 0 10px}
-.rule i{position:absolute;bottom:0;width:1px;background:#C3D1EC}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0}
-input[type=range]::-webkit-slider-runnable-track{height:7px;background:var(--line);border-radius:99px}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-12px;
-  background:#fff;border:3px solid var(--az);border-radius:50%;box-shadow:0 2px 8px rgba(14,36,82,.22);cursor:pointer}
-input[type=range]::-moz-range-track{height:7px;background:var(--line);border-radius:99px}
-input[type=range]::-moz-range-thumb{width:24px;height:24px;background:#fff;border:3px solid var(--az);border-radius:50%;cursor:pointer}
-.ends{display:flex;justify-content:space-between;font-size:.76rem;color:var(--tx2)}
+/* ====== revelación de calorías ====== */
+.rev{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.rev div{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:12px 14px;box-shadow:var(--shadow-s)}
+.rev img{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none}
+.rev b{flex:1;font-size:.92rem;font-weight:600}
+.rev span{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700}
+.rev .alto span{color:var(--red)}
+.rev .bajo span{color:var(--green)}
 
-/* ---- alerta ---- */
-.warn{display:flex;gap:10px;background:#FDF3F1;border:1px solid #F2CFC9;border-radius:12px;
-  padding:12px 13px;margin-top:14px;font-size:.88rem;color:#8E2E22}
-.warn b{color:var(--rg)}
+/* ====== maqueta del celular, dibujada en HTML ====== */
+.phone{width:248px;margin:0 auto;border-radius:34px;background:#0E172B;padding:9px;box-shadow:0 26px 50px -26px rgba(18,26,43,.6)}
+.phone .scr{background:var(--paper);border-radius:26px;overflow:hidden}
+.phone .nn{height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:.6rem;
+  color:var(--ink-2);background:var(--card)}
+.ph-shot{position:relative}
+.ph-shot img{width:100%;height:auto!important;aspect-ratio:4/3!important;object-fit:cover}
+.ph-shot i{position:absolute;right:8px;bottom:8px;background:rgba(14,23,43,.86);color:#fff;font-style:normal;
+  font-size:.56rem;font-weight:700;padding:4px 8px;border-radius:99px;letter-spacing:.04em}
+.ph-hero{background:var(--accent);color:#fff;padding:12px;margin:8px;border-radius:14px}
+.ph-hero b{font-family:'Fraunces',serif;font-size:1.3rem;display:block;line-height:1}
+.ph-hero small{font-size:.58rem;opacity:.9;display:block;letter-spacing:.07em;margin-top:3px}
+.ph-ring{height:6px;background:rgba(255,255,255,.28);border-radius:99px;margin-top:9px;overflow:hidden}
+.ph-ring i{display:block;height:100%;width:62%;background:#fff;border-radius:99px;font-style:normal}
+.ph-sec{margin:0 8px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.ph-sec>b{font-size:.68rem;display:block;margin-bottom:7px}
+.ph-row{display:flex;align-items:center;gap:7px;padding:5px 0;border-top:1px solid var(--line);font-size:.58rem;color:var(--ink-2)}
+.ph-row:first-of-type{border-top:none}
+.ph-row i{width:16px;height:16px;border-radius:5px;background:var(--accent-s);flex:none;font-style:normal}
+.ph-row span{flex:1}
+.ph-row em{font-style:normal;color:var(--muted);font-weight:700}
+.ph-tab{display:flex;justify-content:space-around;padding:7px 0 9px;border-top:1px solid var(--line);background:var(--card)}
+.ph-tab i{width:14px;height:14px;border-radius:4px;background:var(--line-2);font-style:normal}
+.ph-tab i.on{background:var(--accent)}
 
-/* ---- carga ---- */
-.load{padding:40px 0 10px}
-.load .big{font-size:1.32rem;font-weight:800;color:var(--az-d);text-align:center;margin-bottom:4px}
-.load .pct{text-align:center;color:var(--tx2);font-size:.9rem;margin-bottom:22px}
-.lbar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:26px}
-.lbar i{display:block;height:100%;width:0;background:var(--az);border-radius:99px;transition:width .2s linear}
-.lrow{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);color:var(--tx2)}
-.lrow:last-child{border:0}
-.lrow.on{color:var(--tx);font-weight:600}
-.lrow .tick{flex:0 0 22px;height:22px;border-radius:50%;background:var(--line);display:grid;place-items:center;
-  color:#fff;font-size:.72rem}
-.lrow.on .tick{background:var(--ok)}
+/* ====== sliders ====== */
+.sl-val{text-align:center;margin:8px 0 4px}
+.sl-val b{font-family:'Fraunces',serif;font-size:3rem;line-height:1}
+.sl-val span{font-size:1.05rem;color:var(--muted);font-weight:600}
+.sl-tag{display:block;width:max-content;margin:8px auto 22px;font-size:.76rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;background:var(--accent-s);color:var(--accent);padding:5px 12px;border-radius:99px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--card);
+  border:3px solid var(--accent);cursor:pointer;box-shadow:0 3px 10px -3px rgba(18,26,43,.4)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--card);border:3px solid var(--accent);cursor:pointer}
+.sl-ends{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);margin-top:9px}
+.sl-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:14px}
+.warn{display:flex;gap:11px;background:var(--red-s);border:1px solid rgba(192,57,43,.22);border-radius:13px;
+  padding:13px 15px;margin-top:16px;font-size:.88rem;color:#8E2E22;line-height:1.55}
+.warn b{color:var(--red)}
 
-/* ---- resultado ---- */
-.card{background:var(--card);border-radius:var(--r);border:1px solid var(--line);padding:18px;margin-top:14px;
-  box-shadow:0 2px 10px rgba(14,36,82,.05)}
-.kpi{display:flex;gap:10px;margin-top:14px}
-.kpi>div{flex:1;background:var(--az-l);border-radius:13px;padding:13px 11px;text-align:center}
-.kpi b{display:block;font-size:1.5rem;color:var(--az-d);letter-spacing:-.02em;line-height:1.15}
-.kpi span{font-size:.72rem;color:var(--tx2);font-weight:600}
-.imc{margin-top:18px}
-.imc .tr{height:9px;border-radius:99px;background:linear-gradient(90deg,#4F86F0,var(--ok),#E8A13A,var(--rg));position:relative}
-.imc .dot{position:absolute;top:-5px;width:19px;height:19px;border-radius:50%;background:#fff;border:3px solid var(--az-d);
-  transform:translateX(-50%);box-shadow:0 2px 6px rgba(14,36,82,.25)}
-.imc .lb{display:flex;justify-content:space-between;font-size:.68rem;color:var(--tx2);margin-top:7px}
-.proj{display:flex;align-items:flex-end;justify-content:space-between;gap:6px;margin-top:8px}
-.proj>div{flex:1;text-align:center}
-.proj .pb{background:var(--az-l);border-radius:9px 9px 3px 3px;border-bottom:3px solid var(--az)}
-.proj .pb.meta{background:#E4F3EB;border-bottom-color:var(--ok)}
-.proj em{display:block;font-style:normal;font-size:.7rem;color:var(--tx2);margin-top:6px}
-.proj strong{display:block;font-size:.86rem;color:var(--az-d)}
-.logros{list-style:none;margin:14px 0 0;padding:0}
-.logros li{display:flex;gap:9px;padding:8px 0;font-size:.93rem;border-top:1px solid var(--line)}
-.logros li b{color:var(--ok)}
+/* ====== pantalla de carga ====== */
+.load{text-align:center;padding:40px 0}
+.load .ring{width:54px;height:54px;margin:0 auto 22px;border:3px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load h2{font-size:1.35rem;margin-bottom:6px}
+.load>p{color:var(--muted);font-size:.9rem;margin-bottom:26px}
+.load ul{list-style:none;display:flex;flex-direction:column;gap:13px;max-width:340px;margin:0 auto;text-align:left}
+.load li{display:flex;align-items:center;gap:11px;font-size:.9rem;color:var(--muted);opacity:.45;transition:opacity .3s,color .3s}
+.load li.on,.load li.ok{opacity:1;color:var(--ink-2)}
+.load li i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2);flex:none;display:grid;place-items:center;
+  font-style:normal;font-size:.65rem;color:#fff}
+.load li.ok i{background:var(--green);border-color:var(--green)}
+.load li.on i{border-color:var(--accent)}
+.pct{font-family:'Fraunces',serif;font-size:2.4rem;margin:16px 0 6px}
 
-/* ---- oferta ---- */
-#oferta[hidden]{display:none}
-.cd{background:var(--az-d);color:#fff;border-radius:13px;padding:12px;text-align:center;margin-top:16px}
-.cd span{font-size:.78rem;opacity:.82;display:block}
-.cd b{font-size:1.52rem;font-variant-numeric:tabular-nums;letter-spacing:.04em}
-.cuotas{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px;text-align:center;margin-top:12px}
-.cuotas b{color:var(--az-d);font-size:1.06rem}
-.cuotas span{display:block;font-size:.8rem;color:var(--tx2)}
-.aviso{font-size:.84rem;color:var(--tx2);text-align:center;margin-top:12px}
-.oferta-box{background:#fff;border:1.5px solid var(--az);border-radius:18px;padding:20px 17px;margin-top:22px;position:relative;
-  box-shadow:0 8px 24px rgba(14,36,82,.08)}
-.oferta-box .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--az);color:#fff;
-  font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:6px 13px;border-radius:99px;white-space:nowrap}
-.oferta-box h3{margin:8px 0 2px;font-size:1.44rem;color:var(--az-d);letter-spacing:-.02em;text-align:center}
-.oferta-box .mec{text-align:center;font-size:.72rem;letter-spacing:.09em;color:var(--tx2);text-transform:uppercase;margin-bottom:14px}
-.pr{text-align:center;margin:14px 0 4px}
-.pr .old{color:var(--tx2);text-decoration:line-through;font-size:1rem}
-.pr .sav{display:inline-block;background:#E4F3EB;color:var(--ok);font-weight:800;font-size:.78rem;padding:4px 9px;border-radius:99px;margin-left:7px}
-.pr .now{display:block;font-size:2.7rem;font-weight:800;color:var(--az-d);letter-spacing:-.03em;line-height:1.1;margin-top:6px}
-.pr .now small{font-size:.9rem;font-weight:600;color:var(--tx2);letter-spacing:0}
-.lleva{background:#F7FAFF;border-radius:13px;padding:15px;margin-top:16px}
-.lleva h4{margin:0 0 9px;font-size:.98rem;color:var(--az-d)}
-.lleva ul{list-style:none;margin:0;padding:0}
-.lleva li{display:flex;gap:9px;padding:6px 0;font-size:.93rem}
-.lleva li b{color:var(--ok)}
-.vida{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px;margin-top:11px;text-align:center;font-size:.92rem}
-.vida b{color:var(--az-d)}
-.garantia{display:flex;gap:13px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px;margin-top:16px}
-.garantia .sello{flex:0 0 58px}
-.garantia p{margin:0;font-size:.88rem;color:var(--tx2)}
-.garantia p b{color:var(--az-d);display:block;font-size:.96rem}
-.rese{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px;margin-top:11px}
-.rese .hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.rese .av{width:38px;height:38px;border-radius:50%;background:var(--az-l);color:var(--az-d);display:grid;place-items:center;font-weight:800}
-.rese .nm{font-weight:700;font-size:.92rem;color:var(--az-d);line-height:1.2}
-.rese .nm span{display:block;font-weight:400;font-size:.76rem;color:var(--tx2)}
-.rese p{margin:0;font-size:.91rem;color:var(--tx)}
-.micro{text-align:center;font-size:.78rem;color:var(--tx2);margin-top:12px}
-.faq{margin-top:22px}
-.faq h4{font-size:1.1rem;color:var(--az-d);margin:0 0 10px}
-.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:8px}
-.faq summary{font-weight:700;color:var(--az-d);cursor:pointer;font-size:.94rem;list-style:none}
+/* ====== resultado ====== */
+.res-h{text-align:center;margin-bottom:22px}
+.res-h .tick{width:48px;height:48px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin:0 auto 14px;color:#fff}
+.big-kcal{background:var(--accent);color:#fff;border-radius:var(--r);padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
+.big-kcal b{font-family:'Fraunces',serif;font-size:3.4rem;line-height:1;display:block}
+.big-kcal small{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9;margin-top:6px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:13px;overflow:hidden;margin:14px 0}
+.kpi div{background:var(--card);padding:15px 12px;text-align:center}
+.kpi b{display:block;font-family:'Fraunces',serif;font-size:1.65rem;line-height:1.1}
+.kpi small{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
+.kpi .go b{color:var(--green)}
+.imc{margin:22px 0}
+.imc-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
+.imc-top b{font-family:'Fraunces',serif;font-size:1.25rem}
+.imc-tag{font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 11px;border-radius:99px}
+.imc-track{height:9px;border-radius:99px;position:relative;
+  background:linear-gradient(90deg,#4E86B8 0 18%,#1F7A52 18% 46%,#B07A1F 46% 72%,#C0392B 72% 100%)}
+.imc-dot{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--ink);
+  transform:translate(-50%,-50%);transition:left .6s cubic-bezier(.4,0,.2,1)}
+.imc-sc{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px}
+.fc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow-s)}
+.fc-top{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-bottom:12px}
+.fc svg{width:100%;height:auto;display:block}
+.fc-legend{display:flex;justify-content:space-between;margin-top:12px;font-size:.78rem}
+.fc-legend b{display:block;font-family:'Fraunces',serif;font-size:1.1rem}
+.fc-legend .a{color:var(--red)}
+.fc-legend .b{color:var(--green);text-align:right}
+.logros{list-style:none;margin:16px 0 0;padding:0}
+.logros li{display:flex;gap:10px;padding:10px 0;font-size:.92rem;border-top:1px solid var(--line);line-height:1.5}
+.logros li i{color:var(--green);font-style:normal;flex:none}
+
+/* ====== notificaciones ====== */
+#notif{position:fixed;left:14px;bottom:14px;z-index:70;max-width:290px;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--shadow);
+  display:flex;gap:10px;align-items:center;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
+#notif.on{opacity:1;transform:none}
+#notif .av{width:32px;height:32px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.85rem;flex:none}
+#notif p{font-size:.78rem;line-height:1.4}
+#notif small{display:block;color:var(--muted);font-size:.69rem;margin-top:1px}
+#notif small b{color:var(--red)}
+
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+#oferta{display:none}
+.urg{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;text-align:center;padding:10px 14px;
+  font-size:.82rem;font-weight:600}
+.urg b{font-family:'Fraunces',serif;background:var(--accent);padding:3px 9px;border-radius:7px;margin-left:7px;
+  display:inline-block;font-size:.9rem}
+.vsl{border-radius:var(--r);overflow:hidden;background:#111;aspect-ratio:9/16;max-width:360px;margin:0 auto 22px;box-shadow:var(--shadow)}
+.vsl iframe,.vsl video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+.sec{padding:34px 0;border-top:1px solid var(--line)}
+.sec h2{font-size:1.45rem;text-align:center;margin-bottom:8px}
+.sec .sub{text-align:center;color:var(--muted);font-size:.92rem;margin-bottom:26px;line-height:1.6}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.ba figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#EDF1F8}
+.ba img{width:100%;height:auto!important;aspect-ratio:1!important;object-fit:cover}
+.ba .tapa{position:absolute;inset:0;display:grid;place-items:center;background:rgba(14,23,43,.45)}
+.ba .tapa b{font-family:'Fraunces',serif;color:#fff;font-size:2.4rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.ba .num{position:absolute;inset:0;display:grid;place-items:center;background:rgba(27,76,217,.42)}
+.ba .num b{font-family:'Fraunces',serif;color:#fff;font-size:1.9rem;line-height:1;text-align:center;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.ba .num b small{display:block;font-size:.6rem;letter-spacing:.14em;font-weight:700;margin-top:4px}
+.ba figcaption{position:absolute;left:8px;bottom:8px;background:rgba(18,26,43,.82);color:#fff;font-size:.7rem;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:99px;z-index:2}
+.ba .go figcaption{background:var(--green)}
+.incl{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.incl li{display:flex;gap:12px;align-items:flex-start;list-style:none;background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:14px 15px;font-size:.92rem;line-height:1.55;box-shadow:var(--shadow-s)}
+.incl li i{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;
+  flex:none;font-style:normal;margin-top:1px;font-size:.75rem}
+.promo{position:relative;background:var(--card);border:1.5px solid var(--line-2);border-radius:20px;padding:34px 20px 24px;
+  margin-top:28px;box-shadow:var(--shadow)}
+.promo .tagtop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:6px 15px;border-radius:99px;white-space:nowrap}
+.promo .pname{font-family:'Fraunces',serif;font-size:1.6rem;text-align:center;line-height:1.12}
+.promo .pmech{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-top:7px;margin-bottom:20px}
+.pmoney{text-align:center;margin-bottom:22px}
+.pmoney .old{font-size:1rem;color:var(--muted);text-decoration:line-through}
+.pmoney .save{display:inline-block;background:var(--green-s);color:var(--green);font-size:.76rem;font-weight:700;
+  padding:4px 11px;border-radius:99px;margin-left:8px}
+.pmoney .now{font-family:'Fraunces',serif;font-size:3.1rem;line-height:1;margin-top:10px}
+.pmoney .now sup{font-size:1.3rem;vertical-align:super;margin-right:2px}
+.pmoney .cur{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+.pmoney .inst{display:block;font-size:.92rem;color:var(--ink-2);margin-top:10px}
+.pmoney .inst b{color:var(--accent)}
+.plist{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:14px}
+.plist>b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.plist ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.plist li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
+.plist li i{color:var(--green);flex:none;font-style:normal;margin-top:2px}
+.lifetime{display:flex;gap:11px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;margin-top:13px}
+.lifetime b{display:block;font-size:.9rem}
+.lifetime small{display:block;color:var(--muted);font-size:.78rem}
+.gifts{border:1.5px dashed var(--line-2);border-radius:14px;padding:16px;margin-bottom:20px;text-align:center}
+.gifts .gt{font-size:.95rem;font-weight:700}
+.gifts .gv{font-size:.85rem;color:var(--muted);margin-top:5px}
+.gifts .gv s{margin-right:8px}
+.gifts .free{display:inline-block;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;
+  padding:4px 11px;border-radius:99px;cursor:pointer}
+.micro{text-align:center;font-size:.76rem;color:var(--muted);margin-top:13px;line-height:1.6}
+.tst{display:flex;flex-direction:column;gap:13px}
+.tst article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
+.tst header{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.tst .av{width:38px;height:38px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.9rem;flex:none}
+.tst b{font-size:.9rem;display:block}
+.tst small{color:var(--muted);font-size:.76rem}
+.tst .st{color:var(--amber);font-size:.8rem;letter-spacing:.08em}
+.tst p{font-size:.9rem;line-height:1.65;color:var(--ink-2)}
+.gar{text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-s)}
+.gar svg{margin:0 auto 14px;display:block}
+.gar h3{font-size:1.2rem;margin-bottom:8px}
+.gar p{font-size:.9rem;color:var(--muted);line-height:1.65;max-width:360px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden}
+.faq summary{padding:15px 17px;font-weight:600;font-size:.93rem;cursor:pointer;list-style:none;display:flex;
+  justify-content:space-between;gap:12px;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
-.faq p{margin:9px 0 0;font-size:.9rem;color:var(--tx2)}
-.vsl-frame{margin-top:4px;border-radius:14px;overflow:hidden;background:#000}
-.vsl-frame>div{width:100%}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.25rem;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 17px 16px;font-size:.88rem;color:var(--ink-2);line-height:1.68}
+.ftr{text-align:center;padding:26px 0 36px;font-size:.76rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--line)}
 
-/* ---- notificaciones ---- */
-#noti{position:fixed;left:12px;bottom:14px;z-index:60;max-width:270px;
-  background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border:1px solid var(--line);
-  border-radius:12px;padding:9px 11px;display:flex;gap:9px;align-items:center;
-  box-shadow:0 6px 18px rgba(14,36,82,.14);opacity:0;transform:translateY(8px);
-  transition:opacity .3s,transform .3s;pointer-events:none}
-#noti.on{opacity:1;transform:translateY(0)}
-#noti .av{flex:0 0 28px;height:28px;border-radius:50%;background:var(--az-l);color:var(--az-d);
-  display:grid;place-items:center;font-weight:800;font-size:.8rem}
-#noti .tx{font-size:.78rem;line-height:1.35;color:var(--tx)}
-#noti .tx em{font-style:normal;color:var(--tx2);display:block;font-size:.72rem}
-#noti .tx em b{color:var(--rg)}
+@media(max-width:380px){
+  .q{font-size:1.32rem}
+  .pmoney .now{font-size:2.7rem}
+  .big-kcal b{font-size:2.9rem}
+}
 </style>
 </head>
 <body>
 
-<div class="top">
-  <div class="topin">
-    <button class="back" id="back" data-back aria-label="Volver">‹</button>
-    <div class="logo">Suma<i>AI</i></div>
-  </div>
-  <div class="prog"><i id="pbar"></i></div>
-  <div class="pcount" id="pcount"></div>
-</div>
-
-<div class="wrap"><div id="app"></div></div>
-
-<div id="noti"><div class="av" id="nav">M</div><div class="tx" id="ntx"></div></div>
-
-<!-- El embed del VSL (Panda) va acá adentro. Vacío = la oferta se muestra de una. -->
+<!-- El embed del VSL va acá adentro. Solo el <iframe>. Vacío = sin video. -->
 <template id="vsl-template"></template>
 
+<header class="top">
+  <div class="top-in">
+    <button class="back" id="back" aria-label="Volver" disabled>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <a class="brand" href="#" onclick="return false">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg></span>
+      <span class="name">Suma<i>AI</i></span>
+    </a>
+    <div class="bar"><span id="bar"></span></div>
+  </div>
+</header>
+
+<main><div class="wrap" id="app"></div></main>
+
+<!-- =========================================================================
+     OFERTA (último paso). Queda oculta hasta CONFIG.SEGUNDOS_OFERTA.
+     ========================================================================= -->
+<section id="oferta">
+  <div class="urg">Tu precio queda reservado por <b id="reloj">10:00</b></div>
+  <div class="wrap">
+    <div class="sec" style="border:none;padding-top:28px">
+      <h2 id="of-tit">Tu plan de calorías está listo</h2>
+      <p class="sub">Lo armamos con tus respuestas. Entrás hoy y hoy mismo sabés cuánto comés.</p>
+
+      <div class="vsl" id="vsl-box"></div>
+
+      <div class="ba">
+        <figure><img id="img-antes" alt="Un plato cualquiera" width="420" height="420" loading="lazy">
+          <div class="tapa"><b>?</b></div><figcaption>Hoy</figcaption></figure>
+        <figure class="go"><img id="img-despues" alt="El mismo plato, contado" width="420" height="420" loading="lazy">
+          <div class="num"><b id="num-kcal">640<small>KCAL</small></b></div><figcaption>Con SumaAI</figcaption></figure>
+      </div>
+
+      <ul class="incl" id="incluye">
+        <li><i>✓</i>Tu número diario calculado con tu edad, tu peso, tu altura y tu ritmo</li>
+        <li><i>✓</i>El contador por foto: sacás la foto del plato y suma solo</li>
+        <li><i>✓</i>Las calorías de la comida argentina de verdad: asado, empanada, milanesa, factura, mate</li>
+        <li><i>✓</i>Qué pedir cuando comés afuera sin arruinar el día</li>
+        <li><i>✓</i>Tu plan por etapas, con la fecha estimada de tu objetivo</li>
+      </ul>
+
+      <a class="btn buy js-cta" href="#">Quiero mi plan ahora</a>
+    </div>
+
+    <div class="sec">
+      <div class="promo">
+        <span class="tagtop">★ PRECIO DE LANZAMIENTO ★</span>
+        <div class="pname">SumaAI Completo</div>
+        <div class="pmech">Contá calorías con una foto · acceso de por vida</div>
+
+        <div class="pmoney">
+          <span class="old" id="p-old"></span><span class="save" id="p-save"></span>
+          <div class="now"><sup>$</sup><span id="p-now"></span></div>
+          <span class="cur">pesos (ARS) · pago único</span>
+          <span class="inst">o <b id="p-inst"></b></span>
+        </div>
+
+        <div class="plist">
+          <b>Todo lo que te llevás</b>
+          <ul>
+            <li><i>✓</i>Tu número diario personalizado</li>
+            <li><i>✓</i>El contador por foto del plato</li>
+            <li><i>✓</i>La tabla de equivalencias argentinas</li>
+            <li><i>✓</i>Plan por etapas hasta tu objetivo</li>
+            <li><i>✓</i>Guía de qué pedir afuera</li>
+          </ul>
+          <div class="lifetime"><i style="font-size:1.3rem">∞</i><div><b>Acceso de por vida</b><small>Pagás una sola vez. No se renueva.</small></div></div>
+        </div>
+
+        <div class="gifts">
+          <div class="gt">🎁 + 2 regalos incluidos, sin costo</div>
+          <div class="gv">Lista de 50 comidas de menos de 500 calorías + Las 20 trampas del supermercado<br>
+            <s>Valor $<span id="p-bonus"></span></s><span class="free js-cta">HOY: GRATIS</span></div>
+        </div>
+
+        <a class="btn buy js-cta" href="#">Comprar ahora</a>
+        <p class="micro">Pago seguro · Acceso por mail en 2 minutos<br>Garantía de 30 días</p>
+      </div>
+    </div>
+
+    <!-- ⚠️ reseñas de ejemplo: reemplazar por reales antes de poner plata -->
+    <div class="sec">
+      <h2>Lo que nos escriben</h2>
+      <p class="sub">Mensajes de gente que empezó a contar</p>
+      <div class="tst">
+        <article><header><span class="av">MF</span><span><b>Marcela F.</b><small>Rosario · hace 3 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Comía igual que siempre y no entendía por qué no bajaba. Resulta que el desayuno “sano” se llevaba medio día de calorías.</p></article>
+        <article><header><span class="av">DP</span><span><b>Diego P.</b><small>Córdoba · hace 1 mes</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Lo único que hago es la foto del plato. En tres semanas bajé 4 kilos sin dejar el asado del domingo.</p></article>
+        <article><header><span class="av">VR</span><span><b>Vanina R.</b><small>La Plata · hace 2 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Nunca pesé un alimento. Sé cuánto me queda para el día y con eso me arreglo.</p></article>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="gar">
+        <svg width="92" height="92" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#1B4CD9" stroke-width="2"/>
+          <circle cx="60" cy="60" r="48" fill="#EAF0FE" stroke="#1B4CD9" stroke-width="1.5"/>
+          <path id="arcoTxt" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
+          <text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#1B4CD9">
+            <textPath href="#arcoTxt" startOffset="50%" text-anchor="middle">GARANTÍA TOTAL</textPath></text>
+          <text x="60" y="66" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="700" fill="#1B4CD9">30</text>
+          <text x="60" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#1B4CD9">DÍAS</text>
+        </svg>
+        <h3>Garantía de 30 días</h3>
+        <p>Probalo un mes entero. Si lo seguís y tu número no se mueve, pedís el reembolso dentro de ese plazo y te devolvemos el 100% de lo que pagaste.</p>
+      </div>
+    </div>
+
+    <div class="sec faq">
+      <h2>Preguntas frecuentes</h2>
+      <p class="sub">Lo que más nos consultan antes de entrar</p>
+      <details open><summary>¿Tengo que pesar la comida?</summary>
+        <p>No. Le sacás una foto al plato y SumaAI estima las porciones. Si querés corregir algo, lo editás en dos toques.</p></details>
+      <details><summary>¿Tengo que dejar de comer lo que me gusta?</summary>
+        <p>No. Es un número por día, no una lista de prohibidos. Si hoy querés pizza, entra: lo que cambia es el resto del día.</p></details>
+      <details><summary>¿Y si nunca conté calorías?</summary>
+        <p>Mejor. Justamente por eso el primer día te damos tu número ya calculado: no tenés que aprender nada ni armar planillas.</p></details>
+      <details><summary>¿Es una suscripción?</summary>
+        <p>No. Es un pago único de $<span id="p-faq"></span> con acceso de por vida. No hay mensualidad ni renovación automática.</p></details>
+      <details><summary>¿Cómo lo recibo?</summary>
+        <p>Por mail, a los dos minutos de pagar. El mail te lo pedimos en el checkout.</p></details>
+      <div style="margin-top:22px"><a class="btn buy js-cta" href="#">Comprar ahora</a></div>
+    </div>
+
+    <p class="ftr">SumaAI — Todos los derechos reservados<br>Términos de uso · Política de privacidad · Contacto</p>
+  </div>
+</section>
+
+<div id="notif"><div class="av">M</div><p id="notif-tx"></p></div>
+
 <script>
-(function(){
-  "use strict";
-  var C = window.CONFIG, B = C.MARCA;
+/* ===========================================================================
+   SUMAAI · motor del quiz  (mismo motor validado de DanceGo)
+   =========================================================================== */
+var C = window.CONFIG, IMG = C.IMG;
+var state = { nombre:'', altura:168, peso:82, meta:72 };
+var i = 0, hist = [];
 
-  /* ---------- estado ---------- */
-  var S = {
-    genero:"", edad:"", objetivo:"", intento:"", reto:"", comidas:"",
-    cuenta:[], mov:"", altura:168, peso:82, pesoObj:72, ritmo:"", salud:[]
+function checkout(){
+  var qs = location.search.replace(/^\?/,'');
+  if(!qs) return C.LINK_CHECKOUT;
+  return C.LINK_CHECKOUT + (C.LINK_CHECKOUT.indexOf('?')>-1 ? '&' : '?') + qs;
+}
+function track(ev){ if(window.fbq) try{ fbq('track', ev); }catch(e){} }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+function num(n){ return Math.round(n).toLocaleString('es-AR'); }
+function gen(){ return state.genero === 1 ? 'a' : 'o'; }   /* 0 = hombre · 1 = mujer */
+
+/* --- el cálculo de verdad: Mifflin-St Jeor + actividad + déficit --- */
+function calc(){
+  var edadN = [21,29,39,50][state.edad] || 35;
+  var tmb = state.genero === 1
+    ? 10*state.peso + 6.25*state.altura - 5*edadN - 161
+    : 10*state.peso + 6.25*state.altura - 5*edadN + 5;
+  var fa   = [1.2, 1.375, 1.55][state.mov] || 1.2;
+  var tdee = tmb * fa;
+  var def  = [300, 500, 750][state.ritmo] || 500;
+  var meta = Math.max(1200, tdee - def);        /* piso de seguridad */
+  var defR = Math.max(150, tdee - meta);        /* el déficit que de verdad queda */
+  var kilos = Math.max(1, state.peso - state.meta);
+  var kgSem = defR*7/7700;
+  var sem = Math.max(1, Math.ceil(kilos/kgSem));
+  var hoy = new Date(), fin = new Date(hoy.getTime()+sem*7*864e5), med = new Date(hoy.getTime()+Math.round(sem/2)*7*864e5);
+  var v = state.peso/Math.pow(state.altura/100,2);
+  return { tmb:tmb, tdee:tdee, meta:meta, def:defR, piso:(tdee-def)<1200, kilos:kilos, sem:sem,
+           hoy:hoy, med:med, fin:fin, pesoMed:state.peso-kilos/2, imc:v };
+}
+function fecha(d){ var m=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return d.getDate()+' '+m[d.getMonth()]; }
+function fechaLarga(d){ var m=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return d.getDate()+' de '+m[d.getMonth()]; }
+function imcTag(v){
+  if(v<18.5) return {t:'Bajo peso', c:'#4E86B8', bg:'#EAF2FA', p:9};
+  if(v<25)   return {t:'Saludable', c:'var(--green)', bg:'var(--green-s)', p:32};
+  if(v<30)   return {t:'Sobrepeso', c:'var(--amber)', bg:'var(--amber-s)', p:59};
+  return {t:'Obesidad', c:'var(--red)', bg:'var(--red-s)', p:86};
+}
+function tok(s){
+  var c = calc();
+  return String(s)
+    .replace(/\{\{o\}\}/g, gen())
+    .replace(/\{\{nombre\}\}/g, state.nombre || '')
+    .replace(/\{\{kcal\}\}/g, num(c.meta))
+    .replace(/\{\{kilos\}\}/g, num(c.kilos))
+    .replace(/\{\{fecha\}\}/g, fechaLarga(c.fin))
+    .replace(/\{\{meta\}\}/g, state.meta)
+    .replace(/\{\{peso\}\}/g, state.peso);
+}
+var CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+/* ===========================================================================
+   LOS PASOS · 21 (el de Welmi tiene ~35)
+   Lo que se sacó del original:
+     · la prueba social con sus ratings  -> no son nuestros (no se inventan datos)
+     · la placa de Harvard y UNICEF      -> idem
+     · "¿te derivó un profesional?"      -> no cambia el resultado
+     · nivel de nutrición y hábitos      -> idem
+     · objetivo de pasos y fecha de control
+     · la edad exacta (quedan los rangos)
+     · el e-mail                         -> se pide en el checkout
+   Lo que se unificó: intolerancias + dieta, y caminata + escaleras + pasos.
+   Lo que se sumó: las dos pantallas de comida, que demuestran el mecanismo.
+   =========================================================================== */
+var STEPS = [
+
+/*  1 */ {id:'genero', type:'cover', q:'TU PLAN DE CALORÍAS<br><em>PERSONALIZADO</em>', help:'Un minuto y medio y sabés tu número exacto', opts:[
+          {l:'Soy hombre', img:'generoH'},{l:'Soy mujer', img:'generoM'}]},
+
+/*  2 */ {id:'edad', type:'single', q:'¿Cuántos <em>años</em> tenés?', help:'El metabolismo cambia con la edad: con esto calculamos tu número real.', opts:[
+          {e:'🙂', l:'18 a 24'},{e:'😀', l:'25 a 34'},{e:'😎', l:'35 a 44'},{e:'🧓', l:'45 o más'}]},
+
+/*  3 */ {id:'objetivo', type:'single', q:'¿Qué querés <em>lograr</em>?', help:'Todo lo que viene después se arma con esta respuesta.', opts:[
+          {e:'⚖️', l:'Bajar de peso', s:'Perder grasa sin dejar de comer lo que me gusta'},
+          {e:'🫀', l:'Estar más san{{o}}', s:'Que los análisis den bien'},
+          {e:'💪', l:'Verme mejor', s:'Que se note en la ropa y en las fotos'},
+          {e:'⚡', l:'Tener más energía', s:'Dejar de caerme a las 4 de la tarde'}]},
+
+/*  4 */ {id:'promesa', type:'promesa', btn:'Dale, sigamos'},
+
+/*  5 */ {id:'intento', type:'single', q:'¿Ya intentaste <em>contar</em> lo que comés?', opts:[
+          {e:'🆕', l:'Nunca lo hice'},{e:'😮‍💨', l:'Lo intenté y lo dejé'},{e:'📓', l:'Estoy intentando ahora'}]},
+
+/*  6 */ {id:'reto', type:'single', q:'¿Qué fue lo que te hizo <em>abandonar</em>?', help:'Decilo tal cual: es el punto que vamos a resolver.', opts:[
+          {e:'🧮', l:'Era un quilombo anotar todo'},{e:'⏰', l:'No tenía tiempo'},
+          {e:'📉', l:'No veía resultados'},{e:'😣', l:'Me estresaba estar midiendo'},
+          {e:'🔥', l:'Perdí la motivación'}]},
+
+/*  7 */ {id:'desayuno', type:'pick', q:'¿Cuál de estos <em>desayunos</em> tiene más calorías?', help:'Elegí el que te parezca. Después te muestro los números.', opts:[
+          {l:'Tostadas con palta y manteca', img:'desPalta', kcal:640},
+          {l:'Dos medialunas con café', img:'desCroi', kcal:470},
+          {l:'Pan integral con café', img:'desPanes', kcal:330},
+          {l:'Budín de banana y nuez', img:'desBudin', kcal:520}]},
+
+/*  8 */ {id:'revela', type:'revela', btn:'No tenía idea'},
+
+/*  9 */ {id:'mecanismo', type:'app', q:'Con SumaAI <em>no anotás nada</em>',
+          help:'Sacás la foto del plato, la app lo reconoce, lo suma y te dice cuánto te queda para hoy.', btn:'Mostrame más'},
+
+/* 10 */ {id:'comidas', type:'single', q:'¿Cuántas veces <em>comés</em> por día?', help:'Contá también el mate con bizcochitos.', opts:[
+          {e:'🍽️', l:'1 o 2 veces'},{e:'🍽️', l:'3 veces'},{e:'🍽️', l:'4 o más'},{e:'🍪', l:'Picoteo todo el día'}]},
+
+/* 11 */ {id:'almuerzo', type:'pick', q:'¿Qué se parece más a tu <em>almuerzo</em> de todos los días?', opts:[
+          {l:'Pizza o algo rápido', img:'almPizza'},{l:'Sándwich o tostado', img:'almSand'},
+          {l:'Algo casero al horno', img:'almFoca'},{l:'Pan y algo liviano', img:'almPan'}]},
+
+/* 12 */ {id:'cuenta', type:'multi', q:'¿Algo que tengamos que <em>tener en cuenta</em>?', help:'Podés elegir más de una.', opts:[
+          {e:'🥛', l:'Intolerancia a la lactosa'},{e:'🌾', l:'Celiaquía o sin gluten'},
+          {e:'🥗', l:'Vegetarian{{o}} o vegan{{o}}'},{e:'🥑', l:'Hago keto o low carb'},
+          {e:'🚫', l:'Nada de esto', solo:true}], btn:'Continuar'},
+
+/* 13 */ {id:'mov', type:'single', q:'¿Cuánto te <em>movés</em> en un día normal?', help:'Sin exagerar: el número depende de esto.', opts:[
+          {e:'💻', l:'Casi nada', s:'Sentad{{o}} la mayor parte del día'},
+          {e:'🚶', l:'Camino bastante', s:'Mandados, trabajo de pie, algo de ejercicio'},
+          {e:'🏃', l:'Me muevo mucho', s:'Entreno o tengo trabajo físico'}]},
+
+/* 14 */ {id:'altura', type:'slider', q:'¿Cuánto <em>medís</em>?', help:'Entra en la cuenta de tu metabolismo.',
+          min:140, max:210, def:168, unit:'cm', key:'altura', tags:[[0,160,'Baj{{o}}'],[160,178,'Medi{{o}}'],[178,999,'Alt{{o}}']]},
+
+/* 15 */ {id:'peso', type:'slider', q:'¿Cuánto <em>pesás</em> hoy?', help:'Es el dato que más mueve el número.',
+          min:45, max:180, def:82, unit:'kg', key:'peso'},
+
+/* 16 */ {id:'meta', type:'slider', q:'¿A cuánto <em>querés llegar</em>?', help:'Tu objetivo, sin apuro.',
+          min:45, max:180, def:72, unit:'kg', key:'meta'},
+
+/* 17 */ {id:'ritmo', type:'single', q:'¿A qué <em>ritmo</em> querés ir?', opts:[
+          {e:'🌿', l:'Tranquil{{o}}', s:'Unos 0,3 kg por semana'},
+          {e:'⚖️', l:'Equilibrad{{o}}', s:'Unos 0,45 kg por semana · el más elegido'},
+          {e:'🚀', l:'Ambicios{{o}}', s:'Unos 0,7 kg por semana · el más difícil de sostener'}]},
+
+/* 18 */ {id:'salud', type:'multi', grid:true, q:'¿Tenés alguna de estas <em>condiciones</em>?', help:'Para que el plan no te recomiende cualquier cosa.', opts:[
+          {e:'✅', l:'Ninguna', solo:true},{e:'🩸', l:'Diabetes'},{e:'🦋', l:'Tiroides'},
+          {e:'❤️', l:'Presión o colesterol'},{e:'🫃', l:'Digestivas'},{e:'🌙', l:'Menopausia', soloM:true}], btn:'Continuar'},
+
+/* 19 */ {id:'apoyo', type:'apoyo', btn:'Armar mi plan'},
+
+/* 20 */ {id:'load', type:'loading', title:'Armando tu plan…', sub:'Un segundo, estamos haciendo las cuentas', ms:1500},
+
+/* 21 */ {id:'resultado', type:'result', btn:'Ver mi plan'},
+
+/* 22 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu plan (opcional)',
+          ph:'Escribí tu nombre', btn:'Continuar', skip:'Saltear este paso'}
+];
+
+/* ===========================================================================
+   RENDER
+   =========================================================================== */
+var app = document.getElementById('app');
+var back = document.getElementById('back');
+
+function go(n){
+  hist.push(i);
+  i = (n===undefined) ? i+1 : n;
+  if(i >= STEPS.length){ return abrirOferta(); }
+  render(); window.scrollTo({top:0, behavior:'instant'});
+}
+function volver(){ if(!hist.length) return; i = hist.pop(); render(); window.scrollTo({top:0}); }
+back.onclick = volver;
+
+function visibles(s){
+  return s.opts.filter(function(o){ return !(o.soloM && state.genero !== 1); });
+}
+
+function render(){
+  var s = STEPS[i];
+  document.getElementById('bar').style.width = Math.round((i/STEPS.length)*100) + '%';
+  /* sin flecha de volver en la portada ni en la pantalla de carga */
+  back.disabled = (i === 0 || s.type === 'loading');
+  var h = '<div class="step">';
+  var head = '';
+  if(s.q) head += '<h2 class="q">' + tok(s.q) + '</h2>';
+  if(s.help) head += '<p class="help">' + tok(s.help) + '</p>';
+
+  /* ---------- portada: género con foto ---------- */
+  if(s.type === 'cover'){
+    h += '<div class="cover-head"><span class="cover-badge"><i></i>Tu número en 90 segundos</span>'
+      +  '<h1>' + s.q + '</h1><p>' + s.help + '</p></div><div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick ov" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
+        +  '" width="760" height="1013" loading="eager"><figcaption>' + esc(o.l) + '</figcaption></figure></button>';
+    });
+    h += '</div><p class="legal">Al elegir y continuar, aceptás nuestros <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>.</p>';
+  }
+
+  /* ---------- opciones de lista ---------- */
+  else if(s.type === 'single' || s.type === 'multi'){
+    var ops = visibles(s);
+    h += head + '<div class="' + (s.grid ? 'grid' : 'opts') + '">';
+    ops.forEach(function(o,k){
+      var on = s.type === 'multi' && (state[s.id]||[]).indexOf(k) > -1;
+      h += '<button class="opt' + (on?' on':'') + '" data-k="' + k + '">';
+      if(o.e) h += '<span class="ic">' + o.e + '</span>';
+      h += '<span class="tx"><b>' + tok(esc(o.l)) + '</b>' + (o.s ? '<small>' + tok(esc(o.s)) + '</small>' : '') + '</span>';
+      h += (s.type === 'multi') ? '<span class="chk">' + CHK + '</span>' : ARR;
+      h += '</button>';
+    });
+    h += '</div>';
+    if(s.type === 'multi') h += '<div class="foot"><button class="btn" id="next"' + ((state[s.id]||[]).length?'':' disabled') + '>' + (s.btn||'Continuar') + '</button></div>';
+  }
+
+  /* ---------- opciones con foto ---------- */
+  else if(s.type === 'pick'){
+    h += head + '<div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
+        +  '" width="420" height="420" loading="' + (k<2?'eager':'lazy') + '"></figure><div class="lb">' + esc(o.l) + '</div></button>';
+    });
+    h += '</div>';
+  }
+
+  /* ---------- placa de promesa ---------- */
+  else if(s.type === 'promesa'){
+    var quien = (state.genero === 1 ? 'Mujeres' : 'Hombres') + ' de ' + ['18 a 24','25 a 34','35 a 44','45 o más'][state.edad||0] + (state.edad===3?'':' años');
+    var obj = ['bajar de peso','mejorar sus análisis','verse mejor','recuperar energía'][state.objetivo||0];
+    h += '<h2 class="q">Tenemos <em>buenas noticias</em></h2>';
+    h += '<div class="card"><h3 style="font-size:1.18rem;margin-bottom:8px">' + quien + ' con tu perfil suelen ' + obj + ' en unos 2 meses</h3>'
+      +  '<p style="color:var(--muted);font-size:.92rem">No es fuerza de voluntad: es saber tu número. Esto es lo que pasa cuando lo sabés.</p>'
+      +  '<div class="bars"><div><b style="height:26%"></b><span>Día 3</span></div>'
+      +  '<div><b style="height:58%"></b><span>Día 7</span></div>'
+      +  '<div><b style="height:100%"></b><span>Día 30</span></div></div>'
+      +  '<p class="cap" style="text-align:left">Avance esperado según tus respuestas. Los resultados varían de persona a persona.</p></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- revelación de las calorías ---------- */
+  else if(s.type === 'revela'){
+    var des = STEPS[6].opts.slice().sort(function(a,b){ return b.kcal - a.kcal; });
+    var elegido = STEPS[6].opts[state.desayuno || 0];
+    var acerto = elegido === des[0];
+    h += '<h2 class="q">' + (acerto ? '¡Le <em>acertaste</em>!' : 'Casi: era <em>el otro</em>') + '</h2>';
+    h += '<p class="help">' + (acerto
+          ? 'Pocos la pegan. El de palta y manteca parece el más sano y es el más pesado de los cuatro.'
+          : 'Elegiste <b>' + esc(elegido.l.toLowerCase()) + '</b>, pero el más pesado es el de palta y manteca. Parece el más sano y es el que más suma.') + '</p>';
+    h += '<div class="rev">';
+    des.forEach(function(o,k){
+      h += '<div class="' + (k===0?'alto':(k===des.length-1?'bajo':'')) + '"><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
+        +  '" width="420" height="420" loading="lazy"><b>' + esc(o.l) + '</b><span>' + o.kcal + '</span></div>';
+    });
+    h += '</div>';
+    h += '<div class="note" style="margin-top:18px">Nadie calcula bien a ojo. Por eso no bajás: no es lo que comés, es que <b>no sabés cuánto</b>.</div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- maqueta de la app ---------- */
+  else if(s.type === 'app'){
+    h += head + telefono();
+    h += '<div class="chips"><span class="chip"><b>1</b> foto</span><span class="chip"><b>0</b> planillas</span><span class="chip"><b>Sin</b> balanza</span></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- medidor ---------- */
+  else if(s.type === 'slider'){
+    var v = state[s.key] || s.def;
+    h += head;
+    h += '<div class="sl-val"><b id="slv">' + v + '</b><span>' + s.unit + '</span></div>';
+    h += '<span class="sl-tag" id="sltag">' + sliderTag(s, v) + '</span>';
+    h += '<input type="range" id="sl" min="' + s.min + '" max="' + s.max + '" value="' + v + '" step="1">';
+    h += '<div class="sl-ends"><span>' + s.min + '</span><span>' + Math.round((s.min+s.max)/2) + '</span><span>' + s.max + '</span></div>';
+    h += '<p class="sl-hint">Deslizá para ajustar</p><div id="slwarn"></div>';
+    h += '<div class="foot"><button class="btn" id="next">Continuar</button></div>';
+  }
+
+  /* ---------- placa de apoyo: le devuelve su propia objeción ---------- */
+  else if(s.type === 'apoyo'){
+    var reto = ['que anotar todo era un quilombo','que no tenías tiempo','que no veías resultados',
+                'que te estresaba estar midiendo','que se te cayó la motivación'][state.reto];
+    h += '<h2 class="q">No vas a estar <em>sol{{o}}</em> en esto</h2>'.replace('{{o}}', gen());
+    h += '<div class="card"><h3 style="font-size:1.15rem;margin-bottom:10px">' + (reto ? 'Nos dijiste ' + reto : 'Vamos a hacerlo simple') + '</h3>'
+      +  '<p style="color:var(--muted);font-size:.93rem">Por eso tu plan arranca con una sola cosa por día: la foto. '
+      +  'Nada de planillas, nada de pesar, nada de dejar de comer lo que te gusta.</p>'
+      +  '<div class="chips" style="justify-content:flex-start"><span class="chip">Un número por día</span>'
+      +  '<span class="chip">Cero planillas</span><span class="chip">Sin prohibidos</span></div></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- carga ---------- */
+  else if(s.type === 'loading'){
+    var c = calc();
+    var lista = ['Perfil: ' + state.altura + ' cm · ' + state.peso + ' kg',
+                 'Metabolismo basal: ' + num(c.tmb) + ' calorías',
+                 'Tu objetivo diario: ' + num(c.meta) + ' calorías',
+                 'Ajustando por tus condiciones'];
+    h += '<div class="load"><div class="ring"></div><h2>' + s.title + '</h2><p>' + s.sub + '</p><ul>';
+    lista.forEach(function(t,k){ h += '<li data-k="' + k + '"><i>' + CHK + '</i>' + t + '</li>'; });
+    h += '</ul></div>';
+  }
+
+  /* ---------- resultado ---------- */
+  else if(s.type === 'result'){
+    var c = calc(), t = imcTag(c.imc);
+    h += '<div class="res-h"><div class="tick"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>'
+      +  '<h2 class="q" style="margin-bottom:4px">Tu plan está listo</h2><p class="help" style="margin-bottom:0">Armado con tus respuestas</p></div>';
+    h += '<div class="big-kcal"><b>' + num(c.meta) + '</b><small>calorías por día</small></div>';
+    h += '<div class="kpi"><div><b>' + num(c.kilos) + ' kg</b><small>A bajar</small></div>'
+      +  '<div class="go"><b>' + fecha(c.fin) + '</b><small>Fecha estimada</small></div></div>';
+    if(c.piso) h += '<div class="warn"><span>🛟</span><div><b>Tu plan no baja de 1.200 calorías.</b> Con el ritmo que elegiste daba menos, y menos que eso no es seguro: estiramos la fecha en vez de recortar la comida.</div></div>';
+    h += '<div class="imc"><div class="imc-top"><b>Tu IMC: ' + c.imc.toFixed(1) + '</b>'
+      +  '<span class="imc-tag" style="color:' + t.c + ';background:' + t.bg + '">' + t.t + '</span></div>'
+      +  '<div class="imc-track"><span class="imc-dot" style="left:' + t.p + '%"></span></div>'
+      +  '<div class="imc-sc"><span>Bajo peso</span><span>Saludable</span><span>Sobrepeso</span><span>Obesidad</span></div></div>';
+    h += grafico(c);
+    h += '<ul class="logros">'
+      +  '<li><i>✓</i>Semana 1: sabés exactamente cuánto comés, sin pesar nada.</li>'
+      +  '<li><i>✓</i>Semana 3: la ropa empieza a entrar distinto.</li>'
+      +  '<li><i>✓</i>' + fechaLarga(c.fin) + ': ' + num(c.kilos) + ' kg menos, comiendo lo que te gusta.</li></ul>';
+    h += '<p class="cap">Estimación según tus respuestas, no una promesa médica.</p>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- campo de texto ---------- */
+  else if(s.type === 'field'){
+    h += head;
+    h += '<input id="fld" type="text" placeholder="' + s.ph + '" value="' + esc(state.nombre) + '" autocomplete="given-name" '
+      +  'style="width:100%;padding:16px;border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-size:1rem;text-align:center;outline:none">';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button><button class="skip" id="skip">' + s.skip + '</button></div>';
+  }
+
+  h += '</div>';
+  app.innerHTML = h;
+  bind(s);
+}
+
+function sliderTag(s, v){
+  if(!s.tags) return s.unit === 'kg' ? 'Deslizá hasta tu peso' : '';
+  for(var k=0;k<s.tags.length;k++){ if(v >= s.tags[k][0] && v < s.tags[k][1]) return tok(s.tags[k][2]); }
+  return '';
+}
+
+/* ---------- la maqueta del celular, dibujada en HTML ---------- */
+function telefono(){
+  var c = calc(), restan = Math.max(0, c.meta - 640);
+  return '<div class="phone"><div class="scr">'
+    + '<div class="nn"><span>9:41</span><span>SumaAI</span></div>'
+    + '<div class="ph-shot"><img src="' + IMG.almPizza + '" alt="Foto del plato" width="420" height="420" loading="lazy"><i>FOTO DEL PLATO</i></div>'
+    + '<div class="ph-hero"><b>' + num(restan) + '</b><small>TE QUEDAN HOY</small>'
+    +   '<div class="ph-ring"><i></i></div></div>'
+    + '<div class="ph-sec"><b>Lo que comiste hoy</b>'
+    +   '<div class="ph-row"><i></i><span>Café con leche y tostada</span><em>230</em></div>'
+    +   '<div class="ph-row"><i></i><span>Milanesa con puré</span><em>640</em></div>'
+    +   '<div class="ph-row"><i></i><span>Mate con dos bizcochitos</span><em>180</em></div></div>'
+    + '<div class="ph-tab"><i class="on"></i><i></i><i></i><i></i></div>'
+    + '</div></div>';
+}
+
+/* ---------- gráfico de previsión ---------- */
+function grafico(c){
+  return '<div class="fc"><div class="fc-top"><span>Hoy</span><span>' + fecha(c.fin) + '</span></div>'
+    + '<svg viewBox="0 0 320 130" preserveAspectRatio="none" aria-hidden="true">'
+    + '<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">'
+    +   '<stop offset="0%" stop-color="#C0392B"/><stop offset="100%" stop-color="#1F7A52"/></linearGradient>'
+    +   '<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">'
+    +   '<stop offset="0%" stop-color="rgba(31,122,82,.14)"/><stop offset="100%" stop-color="rgba(31,122,82,0)"/></linearGradient></defs>'
+    + '<path d="M8,26 C110,30 150,78 312,104 L312,130 L8,130 Z" fill="url(#g2)"/>'
+    + '<path d="M8,26 C110,30 150,78 312,104" fill="none" stroke="url(#g1)" stroke-width="3.5" stroke-linecap="round"/>'
+    + '<circle cx="8" cy="26" r="5.5" fill="#C0392B"/><circle cx="312" cy="104" r="5.5" fill="#1F7A52"/></svg>'
+    + '<div class="fc-legend"><span class="a"><b>' + state.peso + ' kg</b>Hoy</span>'
+    +   '<span class="b"><b>' + state.meta + ' kg</b>' + fechaLarga(c.fin) + '</span></div></div>';
+}
+
+/* ===========================================================================
+   EVENTOS
+   =========================================================================== */
+function bind(s){
+  app.querySelectorAll('.opt,.pick').forEach(function(el){
+    el.onclick = function(){
+      var k = +el.dataset.k;
+      if(s.type === 'multi'){
+        var ops = visibles(s), arr = state[s.id] || [];
+        if(ops[k].solo){ arr = arr.indexOf(k) > -1 ? [] : [k]; }
+        else {
+          arr = arr.filter(function(x){ return !ops[x].solo; });
+          arr = arr.indexOf(k) > -1 ? arr.filter(function(x){ return x !== k; }) : arr.concat([k]);
+        }
+        state[s.id] = arr; render(); return;
+      }
+      state[s.id] = k;
+      el.classList.add('on');
+      setTimeout(go, 190);
+    };
+  });
+
+  var nx = document.getElementById('next');
+  if(nx) nx.onclick = function(){
+    if(s.type === 'field'){ state.nombre = (document.getElementById('fld').value || '').trim(); }
+    go();
   };
+  var sk = document.getElementById('skip');
+  if(sk) sk.onclick = function(){ state.nombre = ''; go(); };
 
-  /* ---------- helpers ---------- */
-  function g(){ return S.genero==="h" ? "o" : "a"; }                 // token {{o}}
-  function T(s){ return String(s).replace(/\{\{o\}\}/g, g()).replace(/\{\{B\}\}/g, B); }
-  function num(n){ return Math.round(n).toLocaleString("es-AR"); }
-  function fecha(d){ return d.toLocaleDateString("es-AR",{day:"numeric",month:"short"}).replace(".",""); }
-  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]}); }
-
-  /* ---------- cálculo real (Mifflin-St Jeor) ---------- */
-  function calc(){
-    var edadN = {"18-24":21,"25-34":29,"35-44":39,"45+":50}[S.edad] || 35;
-    var tmb = S.genero==="h"
-      ? 10*S.peso + 6.25*S.altura - 5*edadN + 5
-      : 10*S.peso + 6.25*S.altura - 5*edadN - 161;
-    var fa  = {bajo:1.2, medio:1.375, alto:1.55}[S.mov] || 1.2;
-    var tdee = tmb*fa;
-    var def  = {relajado:300, equilibrado:500, ambicioso:750}[S.ritmo] || 500;
-    var meta = Math.max(1200, tdee - def);      // piso de seguridad
-    var defReal = Math.max(150, tdee - meta);   // el déficit que de verdad queda después del piso
-    var kilos = Math.max(1, S.peso - S.pesoObj);
-    var kgSem = defReal*7/7700;                 // 7.700 kcal ≈ 1 kg
-    var sem   = Math.max(1, Math.ceil(kilos/kgSem));
-    var hoy = new Date();
-    var fin = new Date(hoy.getTime() + sem*7*864e5);
-    var med = new Date(hoy.getTime() + Math.round(sem/2)*7*864e5);
-    var imc = S.peso / Math.pow(S.altura/100,2);
-    return {
-      tmb:tmb, tdee:tdee, def:defReal, meta:meta, piso:(tdee-def) < 1200, kilos:kilos, kgSem:kgSem, sem:sem,
-      hoy:hoy, med:med, fin:fin, imc:imc,
-      pesoMed: S.peso - kilos/2,
-      imcTxt: imc<18.5?"Bajo peso": imc<25?"Saludable": imc<30?"Sobrepeso":"Obesidad",
-      imcPos: Math.min(97, Math.max(3, (imc-16)/(40-16)*100))
+  if(s.type === 'slider'){
+    var sl = document.getElementById('sl'), wn = document.getElementById('slwarn');
+    function pintar(){
+      var p = (sl.value - s.min) / (s.max - s.min) * 100;
+      sl.style.background = 'linear-gradient(90deg,var(--accent) ' + p + '%,var(--line) ' + p + '%)';
+    }
+    function aviso(){
+      wn.innerHTML = (s.key === 'meta' && state.peso - state.meta > 25)
+        ? '<div class="warn"><span>⚠️</span><div><b>Es un objetivo grande.</b> Lo vamos a dividir en etapas de 5 kg para que no abandones en la segunda semana.</div></div>' : '';
+    }
+    pintar(); aviso();
+    sl.oninput = function(){
+      state[s.key] = +sl.value;
+      if(s.key === 'peso' && state.meta > state.peso) state.meta = state.peso;
+      document.getElementById('slv').textContent = sl.value;
+      document.getElementById('sltag').textContent = sliderTag(s, +sl.value);
+      pintar(); aviso();
     };
   }
 
-  /* ---------- los pasos ---------- */
-  var P = [
-    /* 1 */ { t:"opt", k:"genero", q:"¿Cuál es tu plan de calorías?",
-      sub:"Un minuto y medio de preguntas y te decimos exactamente cuántas calorías tenés que comer por día.",
-      o:[{v:"h",ic:"👨",l:"Soy hombre"},{v:"m",ic:"👩",l:"Soy mujer"}] },
-
-    /* 2 */ { t:"opt", k:"edad", q:"¿Cuántos años tenés?",
-      sub:"El metabolismo cambia con la edad: con esto calculamos tu número real.",
-      o:[{v:"18-24",ic:"🙂",l:"18 a 24"},{v:"25-34",ic:"😀",l:"25 a 34"},{v:"35-44",ic:"😎",l:"35 a 44"},{v:"45+",ic:"🧓",l:"45 o más"}] },
-
-    /* 3 */ { t:"opt", k:"objetivo", q:"¿Qué querés lograr?",
-      sub:"Todo lo que viene después se arma con esta respuesta.",
-      o:[
-        {v:"peso",  ic:"⚖️",l:"Bajar de peso",  s:"Perder grasa sin dejar de comer lo que me gusta"},
-        {v:"salud", ic:"🫀",l:"Estar más san{{o}}", s:"Que los análisis den bien"},
-        {v:"verme", ic:"💪",l:"Verme mejor",    s:"Que se note en la ropa y en las fotos"},
-        {v:"energia",ic:"⚡",l:"Tener más energía", s:"Dejar de caerme a las 4 de la tarde"}
-      ] },
-
-    /* 4 */ { t:"placa", q:"Tenemos buenas noticias", f:"promesa" },
-
-    /* 5 */ { t:"opt", k:"intento", q:"¿Ya intentaste contar lo que comés?",
-      o:[
-        {v:"nunca", ic:"🆕",l:"Nunca lo hice"},
-        {v:"deje",  ic:"😮‍💨",l:"Lo intenté y lo dejé"},
-        {v:"ahora", ic:"📓",l:"Estoy intentando ahora"}
-      ] },
-
-    /* 6 */ { t:"opt", k:"reto", q:"¿Qué fue lo que te hizo abandonar?",
-      sub:"Decilo tal cual: es el punto que vamos a resolver.",
-      o:[
-        {v:"complicado",ic:"🧮",l:"Era un quilombo anotar todo"},
-        {v:"tiempo",    ic:"⏰",l:"No tenía tiempo"},
-        {v:"resultados",ic:"📉",l:"No veía resultados"},
-        {v:"estres",    ic:"😣",l:"Me estresaba estar midiendo"},
-        {v:"motivacion",ic:"🔥",l:"Perdí la motivación"}
-      ] },
-
-    /* 7 */ { t:"placa", q:"Con {{B}} no anotás nada", f:"mecanismo" },
-
-    /* 8 */ { t:"opt", k:"comidas", q:"¿Cuántas veces comés por día?",
-      sub:"Contá también el mate con bizcochitos.",
-      o:[{v:"1-2",ic:"🍽️",l:"1 o 2 veces"},{v:"3",ic:"🍽️",l:"3 veces"},{v:"4+",ic:"🍽️",l:"4 o más"},{v:"picoteo",ic:"🍪",l:"Picoteo todo el día"}] },
-
-    /* 9 */ { t:"multi", k:"cuenta", q:"¿Algo que tengamos que tener en cuenta?",
-      sub:"Podés elegir varias.",
-      o:[
-        {v:"lactosa",ic:"🥛",l:"Intolerancia a la lactosa"},
-        {v:"gluten", ic:"🌾",l:"Celiaquía o sin gluten"},
-        {v:"vegeta", ic:"🥗",l:"Vegetarian{{o}} o vegan{{o}}"},
-        {v:"keto",   ic:"🥑",l:"Hago keto o low carb"},
-        {v:"nada",   ic:"🚫",l:"Nada de esto", solo:true}
-      ] },
-
-    /* 10 */ { t:"opt", k:"mov", q:"¿Cuánto te movés en un día normal?",
-      sub:"Sin exagerar: el número depende de esto.",
-      o:[
-        {v:"bajo", ic:"💻",l:"Casi nada", s:"Sentad{{o}} la mayor parte del día"},
-        {v:"medio",ic:"🚶",l:"Camino bastante", s:"Mandados, trabajo de pie, algo de ejercicio"},
-        {v:"alto", ic:"🏃",l:"Me muevo mucho", s:"Entreno o tengo trabajo físico"}
-      ] },
-
-    /* 11 */ { t:"slider", k:"altura", q:"¿Cuánto medís?", min:140, max:210, u:"cm" },
-    /* 12 */ { t:"slider", k:"peso",    q:"¿Cuánto pesás hoy?", min:45, max:180, u:"kg" },
-    /* 13 */ { t:"slider", k:"pesoObj", q:"¿A cuánto querés llegar?", min:45, max:180, u:"kg", f:"obj" },
-
-    /* 14 */ { t:"opt", k:"ritmo", q:"¿A qué ritmo querés ir?",
-      o:[
-        {v:"relajado",   ic:"🌿",l:"Tranquil{{o}}",  s:"Unos 0,3 kg por semana"},
-        {v:"equilibrado",ic:"⚖️",l:"Equilibrad{{o}}", s:"Unos 0,45 kg por semana · el más elegido"},
-        {v:"ambicioso",  ic:"🚀",l:"Ambicios{{o}}",  s:"Unos 0,7 kg por semana · es el más difícil de sostener"}
-      ] },
-
-    /* 15 */ { t:"multi", k:"salud", q:"¿Tenés alguna de estas condiciones?",
-      sub:"Para que el plan no te recomiende cualquier cosa.",
-      o:[
-        {v:"diabetes",ic:"🩸",l:"Diabetes o prediabetes"},
-        {v:"tiroides",ic:"🦋",l:"Tiroides"},
-        {v:"presion", ic:"❤️",l:"Presión alta o colesterol"},
-        {v:"estomago",ic:"🫃",l:"Problemas digestivos"},
-        {v:"meno",    ic:"🌙",l:"Menopausia o perimenopausia", solo_m:true},
-        {v:"ninguna", ic:"✅",l:"Ninguna", solo:true}
-      ] },
-
-    /* 16 */ { t:"placa", q:"No vas a estar sol{{o}} en esto", f:"apoyo" },
-
-    /* 17 */ { t:"load" },
-    /* 18 */ { t:"res" },
-    /* 19 */ { t:"oferta" }
-  ];
-
-  var QN = P.filter(function(x){ return ["opt","multi","placa","slider"].indexOf(x.t) >= 0; }).length;
-  var page = 0, timers = [];
-  var app = document.getElementById("app");
-  var back = document.getElementById("back");
-
-  function clearTimers(){ timers.forEach(function(t){ clearInterval(t); clearTimeout(t); }); timers = []; }
-
-  function visibles(step){
-    if(step.t!=="multi") return step.o;
-    return step.o.filter(function(o){ return !(o.solo_m && S.genero!=="m"); });
+  if(s.type === 'field'){
+    var f = document.getElementById('fld');
+    f.onkeydown = function(e){ if(e.key === 'Enter'){ state.nombre = f.value.trim(); go(); } };
   }
 
-  /* ---------- render ---------- */
-  function render(){
-    clearTimers();
-    var s = P[page];
-    document.getElementById("pbar").style.width = Math.round((page)/(P.length-1)*100)+"%";
-    var esPregunta = ["opt","multi","placa","slider"].indexOf(s.t) >= 0;
-    document.getElementById("pcount").textContent = esPregunta ? "Paso "+(page+1)+" de "+QN : "";
-    // sin flecha de volver en la portada, en la carga ni en la oferta
-    back.hidden = (page===0 || s.t==="load" || s.t==="oferta");
-    window.scrollTo(0,0);
-    ({opt:rOpt, multi:rMulti, placa:rPlaca, slider:rSlider, load:rLoad, res:rRes, oferta:rOferta})[s.t](s);
+  if(s.type === 'loading'){
+    var lis = app.querySelectorAll('.load li'), k = 0;
+    lis[0].classList.add('on');
+    var t = setInterval(function(){
+      if(!document.body.contains(lis[0])){ clearInterval(t); return; }   /* se fueron del paso */
+      lis[k].classList.remove('on'); lis[k].classList.add('ok');
+      k++;
+      if(k >= lis.length){ clearInterval(t); setTimeout(function(){ if(STEPS[i].type==='loading') go(); }, 450); return; }
+      lis[k].classList.add('on');
+    }, s.ms);
   }
-  function next(){ if(page < P.length-1){ page++; render(); } }
-  function prev(){ if(page > 0){ page--; render(); } }
-  back.addEventListener("click", prev);
+}
 
-  function head(s){
-    return '<h1 class="q">'+T(s.q)+'</h1>'+(s.sub?'<p class="sub">'+T(s.sub)+'</p>':'');
-  }
+/* ===========================================================================
+   NOTIFICACIONES — discretas y los cupos solo bajan
+   =========================================================================== */
+var NOMBRES = [['Claudia R.','Rosario'],['Marcos D.','Córdoba'],['Vanina S.','La Plata'],['Gustavo A.','Mendoza'],
+  ['Lorena P.','Mar del Plata'],['Sergio M.','Salta'],['Noelia F.','Neuquén'],['Daniel G.','Tucumán']];
+var cupos = 9;
+function notificar(){
+  if(cupos > 2) cupos--;
+  var n = NOMBRES[Math.floor(Math.random()*NOMBRES.length)];
+  var box = document.getElementById('notif');
+  box.querySelector('.av').textContent = n[0][0];
+  document.getElementById('notif-tx').innerHTML = esc(n[0]) + ' de ' + esc(n[1]) + ' se sumó a SumaAI'
+    + '<small>hace ' + (2 + Math.floor(Math.random()*7)) + ' min · <b>Quedan ' + cupos + ' cupos con descuento</b></small>';
+  box.classList.add('on');
+  setTimeout(function(){ box.classList.remove('on'); }, 4500);
+}
 
-  /* --- opción única: avanza sola --- */
-  function rOpt(s){
-    app.innerHTML = head(s) + '<div class="opts">' + s.o.map(function(o){
-      return '<button class="opt" type="button" data-v="'+o.v+'">'+
-        '<span class="ic">'+o.ic+'</span><span class="tt">'+T(o.l)+
-        (o.s?'<small>'+T(o.s)+'</small>':'')+'</span><span class="ar">›</span></button>';
-    }).join("") + '</div>';
-    app.querySelectorAll(".opt").forEach(function(b){
-      b.addEventListener("click", function(){ S[s.k] = b.dataset.v; next(); });
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+function abrirOferta(){
+  var c = calc();
+  document.querySelector('main').style.display = 'none';
+  document.querySelector('.top').style.display = 'none';
+  var of = document.getElementById('oferta');
+  of.style.display = 'block';
+  window.scrollTo({top:0});
+
+  var n = state.nombre ? state.nombre.charAt(0).toUpperCase() + state.nombre.slice(1) : '';
+  document.getElementById('of-tit').innerHTML = (n ? esc(n) + ', tu' : 'Tu') + ' plan de ' + num(c.meta) + ' calorías por día';
+
+  document.getElementById('img-antes').src = IMG.desPalta;
+  document.getElementById('img-despues').src = IMG.desPalta;
+  document.getElementById('num-kcal').innerHTML = '640<small>KCAL</small>';
+
+  document.getElementById('p-old').textContent  = '$' + C.PRECIO_VIEJO;
+  document.getElementById('p-save').textContent = 'Ahorrás $' + C.AHORRO + ' (' + C.DESCUENTO + '% OFF)';
+  document.getElementById('p-now').textContent  = C.PRECIO;
+  document.getElementById('p-inst').textContent = C.CUOTAS + ' cuotas de $' + C.CUOTA_VALOR;
+  document.getElementById('p-bonus').textContent = C.VALOR_BONOS;
+  document.getElementById('p-faq').textContent  = C.PRECIO;
+
+  var tpl = document.getElementById('vsl-template'), box = document.getElementById('vsl-box');
+  if(tpl && tpl.innerHTML.trim()){ box.innerHTML = tpl.innerHTML; } else { box.style.display = 'none'; }
+
+  var tapar = document.querySelectorAll('#oferta .sec:not(:first-of-type), #oferta .ba, #oferta .incl, #oferta .btn');
+  if(C.SEGUNDOS_OFERTA > 0){
+    tapar.forEach(function(e){ e.classList.add('hidden'); });
+    setTimeout(function(){
+      tapar.forEach(function(e){ e.classList.remove('hidden'); });
+      ligarCTAs(); arrancarReloj(); arrancarNotifs();
+    }, C.SEGUNDOS_OFERTA * 1000);
+  } else { ligarCTAs(); arrancarReloj(); arrancarNotifs(); }
+  track('Lead');
+}
+
+/* Todo lo que parece un botón en la oferta lleva al checkout. Idempotente. */
+function ligarCTAs(){
+  var url = checkout();
+  document.querySelectorAll('#oferta a.btn, #oferta button.btn, #oferta .js-cta').forEach(function(el){
+    if(el.tagName === 'A'){ el.href = url; el.rel = 'noopener'; } else { el.style.cursor = 'pointer'; }
+    if(el.dataset.cta) return;
+    el.dataset.cta = '1';
+    el.addEventListener('click', function(e){
+      track('AddToCart');
+      if(el.tagName !== 'A'){ e.preventDefault(); location.href = url; }
     });
-  }
+  });
+}
+function arrancarReloj(){
+  var seg = 600, el = document.getElementById('reloj');
+  var t = setInterval(function(){
+    seg--; if(seg <= 0){ seg = 0; clearInterval(t); }
+    el.textContent = String(Math.floor(seg/60)).padStart(2,'0') + ':' + String(seg%60).padStart(2,'0');
+  }, 1000);
+}
+function arrancarNotifs(){ setTimeout(notificar, 4000); setInterval(notificar, 16000); }
 
-  /* --- selección múltiple: Continuar apagado hasta elegir --- */
-  function rMulti(s){
-    var ops = visibles(s);
-    app.innerHTML = head(s) + '<div class="opts">' + ops.map(function(o){
-      return '<button class="opt" type="button" data-v="'+o.v+'"'+(o.solo?' data-solo="1"':'')+'>'+
-        '<span class="ic">'+o.ic+'</span><span class="tt">'+T(o.l)+'</span><span class="bx">✓</span></button>';
-    }).join("") + '</div><button class="btn" id="next" data-next disabled>Continuar</button>';
-    var btn = app.querySelector("#next");
-    function sync(){
-      app.querySelectorAll(".opt").forEach(function(b){ b.classList.toggle("sel", S[s.k].indexOf(b.dataset.v)>=0); });
-      btn.disabled = S[s.k].length===0;
-    }
-    app.querySelectorAll(".opt").forEach(function(b){
-      b.addEventListener("click", function(){
-        var v = b.dataset.v, i = S[s.k].indexOf(v);
-        if(b.dataset.solo){ S[s.k] = i>=0 ? [] : [v]; }
-        else {
-          S[s.k] = S[s.k].filter(function(x){ return !ops.some(function(o){ return o.solo && o.v===x; }); });
-          i = S[s.k].indexOf(v);
-          if(i>=0) S[s.k].splice(i,1); else S[s.k].push(v);
-        }
-        sync();
-      });
-    });
-    btn.addEventListener("click", function(){ if(!btn.disabled) next(); });
-    sync();
-  }
-
-  /* --- placas --- */
-  function rPlaca(s){
-    var c = calc(), h = "";
-    if(s.f==="promesa"){
-      var quien = (S.genero==="h"?"Hombres":"Mujeres") + " de " + (S.edad==="45+"?"45 o más":S.edad+" años");
-      var objTxt = {peso:"bajar de peso",salud:"mejorar sus análisis",verme:"verse mejor",energia:"recuperar energía"}[S.objetivo]||"su objetivo";
-      h = '<div class="placa">'+
-        '<h3>'+quien+' con tu perfil suelen '+objTxt+' en unos 2 meses</h3>'+
-        '<p>No es fuerza de voluntad: es saber tu número. Mirá lo que pasa cuando lo sabés.</p>'+
-        '<div class="bars">'+
-          '<div><b style="height:26%"></b><span>Día 3</span></div>'+
-          '<div><b style="height:58%"></b><span>Día 7</span></div>'+
-          '<div><b style="height:100%"></b><span>Día 30</span></div>'+
-        '</div>'+
-        '<p style="font-size:.8rem;margin-top:10px">Avance esperado según tus respuestas. Los resultados varían de persona a persona.</p>'+
-      '</div>';
-    }
-    if(s.f==="mecanismo"){
-      h = '<div class="placa">'+
-        '<h3>Sacale una foto al plato y listo</h3>'+
-        '<p>'+B+' reconoce lo que hay en la foto, lo suma y te dice <b>cuánto te queda para hoy</b>. Sin pesar nada, sin anotar nada, sin buscar en una tabla.</p>'+
-        '<div class="fono"><div class="scr">'+
-          '<div class="nb"><i></i></div>'+
-          '<div class="plate">🍝</div>'+
-          '<div class="bd">'+
-            '<div class="kcal">'+num(c.meta - 640)+' <small>TE QUEDAN HOY</small></div>'+
-            '<div class="ring"><i></i></div>'+
-            '<div class="row"><span>Fideos con tuco</span><b>640 kcal</b></div>'+
-            '<div class="row"><span>Proteína</span><b>22 g</b></div>'+
-          '</div>'+
-        '</div></div>'+
-        '<p style="text-align:center;font-size:.82rem;margin-top:10px">Así se ve tu día dentro de la app.</p>'+
-      '</div>';
-    }
-    if(s.f==="apoyo"){
-      var reto = {complicado:"que anotar todo era un quilombo",tiempo:"que no tenías tiempo",
-        resultados:"que no veías resultados",estres:"que te estresaba estar midiendo",
-        motivacion:"que se te cayó la motivación"}[S.reto] || "lo que te costó la última vez";
-      h = '<div class="placa">'+
-        '<h3>Nos dijiste '+reto+'</h3>'+
-        '<p>Por eso tu plan arranca con una sola cosa por día: la foto. Nada de planillas, nada de pesar, nada de dejar de comer lo que te gusta.</p>'+
-        '<p><span class="chip">Un número por día</span><span class="chip">Cero planillas</span><span class="chip">Sin prohibidos</span></p>'+
-      '</div>';
-    }
-    app.innerHTML = head(s) + h + '<button class="btn" id="next" data-next>Continuar</button>';
-    app.querySelector("#next").addEventListener("click", next);
-  }
-
-  /* --- sliders con regla --- */
-  function rSlider(s){
-    var val = S[s.k];
-    var ticks = "";
-    for(var i=0;i<=40;i++){
-      var alto = i%5===0 ? 16 : 9;
-      ticks += '<i style="left:'+(i/40*100)+'%;height:'+alto+'px"></i>';
-    }
-    app.innerHTML = head(s) +
-      '<div class="sval"><b id="sv">'+val+'</b><span>'+s.u+'</span></div>'+
-      '<div class="rule">'+ticks+'</div>'+
-      '<input type="range" id="sr" min="'+s.min+'" max="'+s.max+'" value="'+val+'" step="1">'+
-      '<div class="ends"><span>'+s.min+' '+s.u+'</span><span>'+s.max+' '+s.u+'</span></div>'+
-      '<div id="sw"></div>'+
-      '<button class="btn" id="next" data-next>Continuar</button>';
-    var sr = app.querySelector("#sr"), sv = app.querySelector("#sv"), sw = app.querySelector("#sw");
-    function aviso(){
-      sw.innerHTML = "";
-      if(s.f==="obj" && S.peso - S[s.k] > 25){
-        sw.innerHTML = '<div class="warn"><span>⚠️</span><div><b>Es un objetivo grande.</b> Lo vamos a dividir en etapas de 5 kg para que no abandones en la segunda semana.</div></div>';
-      }
-    }
-    sr.addEventListener("input", function(){
-      S[s.k] = +sr.value; sv.textContent = sr.value;
-      if(s.k==="peso" && S.pesoObj > S.peso) S.pesoObj = S.peso;
-      aviso();
-    });
-    aviso();
-    app.querySelector("#next").addEventListener("click", next);
-  }
-
-  /* --- pantalla de cálculo en vivo (8,5 s) --- */
-  function rLoad(){
-    var c = calc();
-    var filas = [
-      "Perfil: "+S.altura+" cm · "+S.peso+" kg",
-      "Metabolismo basal: "+num(c.tmb)+" calorías",
-      "Tu objetivo diario: "+num(c.meta)+" calorías",
-      "Ajuste por tus condiciones"
-    ];
-    app.innerHTML = '<div class="load">'+
-      '<div class="big">Armando tu plan…</div>'+
-      '<div class="pct" id="lp">0 %</div>'+
-      '<div class="lbar"><i id="lb"></i></div>'+
-      filas.map(function(f,i){ return '<div class="lrow" id="lr'+i+'"><span class="tick">✓</span><span>'+f+'</span></div>'; }).join("")+
-    '</div>';
-    var lb = document.getElementById("lb"), lp = document.getElementById("lp"), p = 0;
-    var iv = setInterval(function(){
-      // si el paso cambió (volvieron atrás), el intervalo se apaga solo
-      if(!document.getElementById("lb")){ clearInterval(iv); return; }
-      p = Math.min(100, p + 100/85);
-      lb.style.width = p+"%"; lp.textContent = Math.round(p)+" %";
-      var n = Math.floor(p/25);
-      for(var i=0;i<n;i++){ var el = document.getElementById("lr"+i); if(el) el.classList.add("on"); }
-      if(p>=100){ clearInterval(iv); if(P[page].t==="load") next(); }
-    },100);
-    timers.push(iv);
-  }
-
-  /* --- resultado --- */
-  function rRes(){
-    var c = calc();
-    var objTxt = {peso:"bajar "+num(c.kilos)+" kg",salud:"mejorar tus análisis",verme:"verte mejor",energia:"recuperar tu energía"}[S.objetivo]||"tu objetivo";
-    app.innerHTML =
-      '<h1 class="q">Tu plan está listo</h1>'+
-      '<p class="sub">Esto es lo que calculamos con tus respuestas.</p>'+
-      '<div class="card">'+
-        '<div class="kpi">'+
-          '<div><b>'+num(c.meta)+'</b><span>CALORÍAS POR DÍA</span></div>'+
-          '<div><b>'+num(c.kilos)+' kg</b><span>A BAJAR</span></div>'+
-          '<div><b>'+fecha(c.fin)+'</b><span>FECHA ESTIMADA</span></div>'+
-        '</div>'+
-        '<div class="imc">'+
-          '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px">'+
-            '<b style="color:var(--az-d)">Tu índice de masa corporal</b>'+
-            '<span style="font-weight:800;color:var(--az-d)">'+c.imc.toFixed(1)+' · '+c.imcTxt+'</span>'+
-          '</div>'+
-          '<div class="tr"><span class="dot" style="left:'+c.imcPos+'%"></span></div>'+
-          '<div class="lb"><span>Bajo</span><span>Saludable</span><span>Sobrepeso</span><span>Obesidad</span></div>'+
-        '</div>'+
-      '</div>'+
-      '<div class="card">'+
-        '<b style="color:var(--az-d)">Si comés '+num(c.meta)+' calorías por día</b>'+
-        '<div class="proj">'+
-          '<div><strong>'+num(S.peso)+' kg</strong><div class="pb" style="height:84px"></div><em>Hoy<br>'+fecha(c.hoy)+'</em></div>'+
-          '<div><strong>'+num(c.pesoMed)+' kg</strong><div class="pb" style="height:'+Math.round(84*c.pesoMed/S.peso)+'px"></div><em>Mitad<br>'+fecha(c.med)+'</em></div>'+
-          '<div><strong>'+num(S.pesoObj)+' kg</strong><div class="pb meta" style="height:'+Math.round(84*S.pesoObj/S.peso)+'px"></div><em>Meta<br>'+fecha(c.fin)+'</em></div>'+
-        '</div>'+
-        '<ul class="logros">'+
-          '<li><b>✓</b><span>Semana 1: sabés exactamente cuánto comés, sin pesar nada.</span></li>'+
-          '<li><b>✓</b><span>Semana 3: '+(S.genero==="h"?"el pantalón":"la ropa")+' empieza a entrar distinto.</span></li>'+
-          '<li><b>✓</b><span>'+fecha(c.fin)+': '+objTxt+' comiendo lo que te gusta.</span></li>'+
-        '</ul>'+
-      '</div>'+
-      (c.piso ? '<div class="warn"><span>🛟</span><div><b>Tu plan no baja de 1.200 calorías.</b> Con el ritmo que elegiste daba menos, y menos que eso no es seguro: estiramos la fecha en vez de recortar la comida.</div></div>' : '')+
-      '<p class="hint">Estimación según tus respuestas, no una promesa médica.</p>'+
-      '<button class="btn" id="next" data-next>Ver mi plan</button>';
-    app.querySelector("#next").addEventListener("click", next);
-  }
-
-  /* --- oferta --- */
-  function rOferta(){
-    var c = calc();
-    var ahorro = (+String(C.precioAntes).replace(/\./g,"")) - (+String(C.precio).replace(/\./g,""));
-    var tpl = document.getElementById("vsl-template");
-    var tieneVsl = tpl && tpl.innerHTML.trim().length > 0;
-    var espera = tieneVsl ? (C.SEGUNDOS_OFERTA||0) : 0;
-
-    app.innerHTML =
-      (tieneVsl ? '<div class="vsl-frame" id="vslbox"></div>' : '')+
-      '<section id="oferta"'+(espera>0?' hidden':'')+'>'+
-        '<h1 class="q">Tu plan de '+num(c.meta)+' calorías por día</h1>'+
-        '<p class="sub">Guardamos tu diagnóstico. Lo único que falta es activarlo.</p>'+
-        '<div class="cd"><span>Tu precio queda reservado por</span><b id="cdv">10:00</b></div>'+
-        '<div class="cuotas"><b>'+C.cantCuotas+' cuotas de $'+C.cuota+'</b><span>con Mercado Pago · o un pago de $'+C.precio+'</span></div>'+
-        '<p class="aviso">📩 Te llega por mail en 2 minutos. El mail lo pedimos en el checkout.</p>'+
-        '<a class="btn js-cta" href="#">QUIERO MI PLAN DE '+num(c.meta)+' CALORÍAS</a>'+
-
-        '<div class="oferta-box">'+
-          '<span class="tag">★ PRECIO DE LANZAMIENTO ★</span>'+
-          '<h3>'+B+'</h3>'+
-          '<div class="mec">Contá calorías con una foto</div>'+
-          '<div class="pr">'+
-            '<span class="old">$'+C.precioAntes+'</span><span class="sav">Ahorrás $'+ahorro.toLocaleString("es-AR") +'</span>'+
-            '<span class="now">$'+C.precio+' <small>pesos (ARS)</small></span>'+
-          '</div>'+
-          '<div class="lleva">'+
-            '<h4>Todo lo que te llevás</h4>'+
-            '<ul>'+
-              '<li><b>✓</b><span>Tu número diario calculado: <b>'+num(c.meta)+' calorías</b></span></li>'+
-              '<li><b>✓</b><span>El contador por foto: sacás la foto y suma solo</span></li>'+
-              '<li><b>✓</b><span>Plan en etapas hasta los '+num(S.pesoObj)+' kg</span></li>'+
-              '<li><b>✓</b><span>Lista de equivalencias argentinas (asado, empanada, milanesa, mate)</span></li>'+
-              '<li><b>✓</b><span>Qué pedir cuando comés afuera</span></li>'+
-            '</ul>'+
-            '<div class="vida"><b>Acceso de por vida</b> · pago único, no se renueva</div>'+
-          '</div>'+
-          '<a class="btn js-cta" href="#">ACTIVAR MI PLAN AHORA</a>'+
-          '<p class="micro">Pago seguro · Acceso por mail en 2 minutos</p>'+
-        '</div>'+
-
-        '<div class="garantia">'+
-          '<svg class="sello" viewBox="0 0 100 100" width="58" height="58" aria-hidden="true">'+
-            '<circle cx="50" cy="50" r="46" fill="#E8EFFD"/><circle cx="50" cy="50" r="38" fill="none" stroke="#1B4CD9" stroke-width="2"/>'+
-            '<path id="arco" d="M18,50 A32,32 0 0 1 82,50" fill="none"/>'+
-            '<text font-size="11" font-weight="700" fill="#0E2452"><textPath href="#arco" startOffset="50%" text-anchor="middle">GARANTÍA</textPath></text>'+
-            '<text x="50" y="58" font-size="22" font-weight="800" fill="#1B4CD9" text-anchor="middle">30</text>'+
-            '<text x="50" y="72" font-size="9" font-weight="700" fill="#0E2452" text-anchor="middle">DÍAS</text>'+
-          '</svg>'+
-          '<p><b>30 días de garantía</b>Si lo seguís y tu número no se mueve, escribinos y te devolvemos cada peso. Sin preguntas.</p>'+
-        '</div>'+
-
-        C.resenas.map(function(r){
-          return '<div class="rese"><div class="hd"><div class="av">'+esc(r.n.charAt(0))+'</div>'+
-            '<div class="nm">'+esc(r.n)+'<span>'+esc(r.c)+'</span></div></div><p>“'+esc(r.t)+'”</p></div>';
-        }).join("")+
-
-        '<div class="faq"><h4>Preguntas que nos hacen siempre</h4>'+
-          '<details><summary>¿Tengo que pesar la comida?</summary><p>No. Le sacás una foto al plato y '+B+' estima las porciones. Si querés corregir algo, lo editás en dos toques.</p></details>'+
-          '<details><summary>¿Tengo que dejar de comer lo que me gusta?</summary><p>No. El plan es un número por día, no una lista de prohibidos. Si hoy querés pizza, entra: lo que cambia es el resto del día.</p></details>'+
-          '<details><summary>¿Es una suscripción?</summary><p>No. Es un <b>pago único de $'+C.precio+'</b> con acceso de por vida. No se renueva.</p></details>'+
-          '<details><summary>¿Cómo lo recibo?</summary><p>Por mail, a los dos minutos de pagar. El mail lo pedimos en el checkout.</p></details>'+
-        '</div>'+
-
-        '<a class="btn g js-cta" href="#">EMPEZAR HOY POR $'+C.precio+'</a>'+
-        '<p class="micro">Pago único · Garantía de 30 días</p>'+
-      '</section>';
-
-    if(tieneVsl) document.getElementById("vslbox").appendChild(tpl.content.cloneNode(true));
-    ligarCTAs();
-
-    if(espera>0){
-      var to = setTimeout(function(){
-        var o = document.getElementById("oferta");
-        if(o){ o.hidden = false; arrancarOferta(); }
-      }, espera*1000);
-      timers.push(to);
-    } else {
-      arrancarOferta();
-    }
-  }
-
-  /* --- contador + notificaciones: arrancan con la oferta --- */
-  function arrancarOferta(){
-    var t = 600;
-    var iv = setInterval(function(){
-      var el = document.getElementById("cdv");
-      if(!el){ clearInterval(iv); return; }
-      t = Math.max(0, t-1);
-      el.textContent = String(Math.floor(t/60)).padStart(2,"0")+":"+String(t%60).padStart(2,"0");
-    },1000);
-    timers.push(iv);
-
-    var gente = [["Claudia R.","Rosario"],["Marcos D.","Córdoba"],["Vanina S.","La Plata"],
-                 ["Gustavo A.","Mendoza"],["Lorena P.","Mar del Plata"],["Sergio M.","Salta"]];
-    var cupos = 8, i = 0;
-    var box = document.getElementById("noti");
-    var iv2 = setInterval(function(){
-      var p = gente[i % gente.length]; i++;
-      cupos = Math.max(2, cupos-1);
-      document.getElementById("nav").textContent = p[0].charAt(0);
-      document.getElementById("ntx").innerHTML = esc(p[0])+" de "+esc(p[1])+" se sumó a "+B+
-        "<em>hace "+(2+i*3)+" min · <b>Quedan "+cupos+" cupos con descuento</b></em>";
-      box.classList.add("on");
-      var to = setTimeout(function(){ box.classList.remove("on"); }, 4500);
-      timers.push(to);
-    },16000);
-    timers.push(iv2);
-  }
-
-  /* --- un solo lugar engancha todos los CTAs --- */
-  function ligarCTAs(){
-    var url = C.LINK_CHECKOUT || "/checkout";
-    var qs = location.search.replace(/^\?/,"");
-    if(qs) url += (url.indexOf("?")>=0 ? "&" : "?") + qs;
-    document.querySelectorAll("#oferta a.btn, #oferta button.btn, #oferta .js-cta").forEach(function(el){
-      if(el.dataset.cta) return;
-      el.dataset.cta = "1";
-      if(el.tagName === "A"){ el.setAttribute("href", url); el.setAttribute("rel","noopener"); }
-      else { el.style.cursor = "pointer"; }
-      el.addEventListener("click", function(){
-        if(window.fbq) fbq("track","AddToCart");
-        if(el.tagName !== "A") location.href = url;
-      });
-    });
-  }
-
-  /* pixel (solo si hay ID) */
-  if(C.PIXEL_ID){
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', C.PIXEL_ID); fbq('track','PageView');
-  }
-
-  ligarCTAs();   // también en el arranque
-  render();
-})();
+/* ===========================================================================
+   ARRANQUE
+   =========================================================================== */
+if(C.PIXEL_ID){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', C.PIXEL_ID); fbq('track','PageView');
+}
+render();
+ligarCTAs();
+/* las dos fotos de la oferta quedan puestas desde el arranque (nada de src="") */
+document.getElementById('img-antes').src = IMG.desPalta;
+document.getElementById('img-despues').src = IMG.desPalta;
 </script>
 </body>
 </html>

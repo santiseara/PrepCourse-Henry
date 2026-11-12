@@ -9,14 +9,17 @@
 - **Por qué este nombre:** `cal / kal / nutri / fit / slim` están quemados en el App Store (Cal AI, Kalo, Calo, Calz, Numi, Nutri AI, Satia ×3, Platia ×2). *Suma* no colisiona en Health & Fitness y `suma.app` estaba libre. Ver OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md.
 - **Diferencia de fondo con el original:** Welmi vende **suscripción** (4 planes de 1/4/12/52 semanas que renuevan). Nosotros vendemos **pago único con acceso de por vida** en ImpulTienda, con cuotas de Mercado Pago. El paywall de 4 planes no se clona: no entra en el checkout.
 
-## El quiz (19 pasos, armado el 2026-11-12)
+## El quiz (22 pasos, v2 del 2026-11-12)
 
-Orden: género → edad → objetivo (4 ramas) → placa de promesa con gráfico 3/7/30 → ¿ya intentaste contar? → **cuál fue tu mayor reto** → placa del mecanismo con la maqueta del celular → comidas por día → intolerancias y dieta (unificadas) → cuánto te movés → altura → peso → peso objetivo → ritmo → condiciones de salud → placa de apoyo que **repite el reto que eligió** → cálculo en vivo (8,5 s) → resultado → oferta.
+> La v1 se tiró a la basura: estaba escrita de cero, sin fotos y con emojis como imagen principal. La v2 **clona el motor de [[dancego]]** (ver la regla del 12/11 en [[quizzes-reglas-de-armado]]).
 
-- **Las 16 pantallas que se sacaron** del original: prueba social con ratings (no son nuestros), "¿te derivó un profesional?", nivel de conocimiento en nutrición, hábitos a cambiar, placa científica con Harvard y UNICEF, objetivo de pasos diarios, fecha del primer control, escaleras y caminata por separado, intolerancias y tipo de dieta por separado, edad exacta, placas de relleno y **el email gate** (el mail se pide en el checkout, regla de [[quizzes-reglas-de-armado]]).
-- **Lo que se conservó del original porque es lo que vende:** la pregunta del **mayor reto** (recoge la objeción y se la devuelve dos pasos después), la **pantalla de cálculo en vivo**, la **proyección con fechas reales** y el gráfico día 3 / 7 / 30.
-- **Los números se calculan de verdad** (Mifflin-St Jeor + factor de actividad + déficit por ritmo). El objetivo diario tiene **piso de 1.200 calorías** y, cuando pega el piso, la fecha se recalcula con el déficit real y aparece un aviso: *"estiramos la fecha en vez de recortar la comida"*.
-- **Paleta azul** (pedido de Santiago): acento `#1B4CD9`, tinta `#0E2452`, lavado `#E8EFFD`, fondo `#F2F6FD`. El verde `#1F6B47` queda solo para "bien" y el rojo `#C0392B` solo para riesgo.
+Orden: **portada de género con foto** → edad → objetivo (4 ramas) → placa de promesa con gráfico 3/7/30 → ¿ya intentaste contar? → **cuál fue tu mayor reto** → **adivinanza del desayuno (4 fotos)** → **revelación de calorías** → mecanismo con maqueta de celular → comidas por día → **almuerzo típico (4 fotos)** → intolerancias y dieta → cuánto te movés → altura → peso → peso objetivo → ritmo → condiciones de salud → placa que le devuelve su reto → carga → resultado → nombre → oferta.
+
+- **La pantalla que vende: la adivinanza.** *"¿Cuál de estos desayunos tiene más calorías?"* con cuatro fotos reales, y después el ranking: palta y manteca **640**, budín **520**, medialunas **470**, pan integral **330**. Cierra con *"no es lo que comés, es que no sabés cuánto"*. Es el ángulo #1 de los 233 copies de [[welmi]] convertido en interacción.
+- **Las 16 pantallas que se sacaron** del original: prueba social con ratings (no son nuestros), "¿te derivó un profesional?", nivel de nutrición, hábitos, placa de Harvard y UNICEF, objetivo de pasos, fecha del primer control, escaleras y caminata por separado, intolerancias y dieta por separado, edad exacta, placas de relleno y **el email gate** (el mail se pide en el checkout).
+- **Los números se calculan de verdad** (Mifflin-St Jeor + factor de actividad + déficit por ritmo). Piso de 1.200 calorías y, cuando pega el piso, la fecha se recalcula con el déficit real y aparece el aviso *"estiramos la fecha en vez de recortar la comida"*.
+- **Paleta azul**: acento `#1B4CD9`, tinta `#0E2452`, lavado `#EAF0FE`, fondo `#F4F7FC`. Verde `#1F7A52` solo para "bien", rojo `#C0392B` solo para riesgo.
+- **Las 11 fotos salieron del banco propio**, sin gastar un crédito: el género de [[monjaro-violeta]] (Mounjaro Humilde, recortado sin la chapa verde y montado en tarjeta 3:4) y las comidas de [[pan-sin-picos]].
 - Token `{{o}}` para la concordancia de género y la opción de menopausia solo en la rama mujer.
 
 ## Pendientes (lo que falta para poder subirlo)
@@ -25,7 +28,7 @@ Orden: género → edad → objetivo (4 ramas) → placa de promesa con gráfico
 - **Precio real.** Hoy el CONFIG trae `$14.990` tachando `$49.990` y 3 cuotas de `$4.997` como placeholder.
 - **Checkout.** Va relativo (`/checkout`) hasta que exista el subdominio; se verifica con `curl -sIL` que devuelva 200 ([[quizzes-reglas-de-armado]], corrección de Tai Chi Fit).
 - **Las 3 reseñas del CONFIG son de ejemplo** y hay que reemplazarlas por reales.
-- Sin imágenes: la maqueta del celular y el sello de garantía están dibujados en CSS/SVG. Si más adelante van fotos, entran por el CONFIG.
+- La maqueta del celular y el sello de garantía van dibujados en CSS/SVG (regla de [[quizzes-reglas-de-armado]]). Las fotos entran todas por `CONFIG.IMG`.
 
 ## Preguntas abiertas
 

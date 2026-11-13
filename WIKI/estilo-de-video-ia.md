@@ -68,6 +68,7 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
 - [ ] **Lip sync:** los labios se mueven con la voz, sin desfase visible. Medición: hoja de 12 cuadros seguidos en una sílaba fuerte; además, correlación boca/audio con pico cerca de 0 (±150 ms es normal, los labios se adelantan un poco).
 - [ ] **Fondo estable** entre clips del mismo plano (muebles, mantas, cuadros).
 - [ ] **Manos:** revisar dedos en los cuadros donde gesticula.
+- [ ] **Anatomía y física (2026-11-13):** ningún brazo o pierna de más, ninguna mano que salga de donde no va, y **ningún objeto flotando**: el celular que graba tiene que estar apoyado en algo que se vea (mesa, repisa, trípode) o sostenido por una mano. Se revisa **cuadro por cuadro en la hoja de contactos de cada toma**, no solo en el primero: el brazo duplicado suele aparecer a mitad del plano, cuando el personaje gesticula.
 - [ ] **Subtítulos:** ninguno tapado, ninguno cortado, nada de texto quemado del modelo.
 - [ ] **Audio:** voz al frente (picos cerca de −4 dBFS), sin silencios, sin efectos.
 
@@ -90,6 +91,10 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
 - **2026-11-12 · El antes/despues se genera editando el cuadro del antes.** No alcanza con dos retratos del mismo personaje: la pieza, los muebles y la luz cambian y se nota. Se le pasan a nano-banana **dos referencias** (el cuadro del "antes" + el retrato del "despues") y se pide **mantener todo menos el cuerpo**. Y el cambio de cuerpo hay que pedirlo fuerte y por partes: con "slimmer" a secas no se ve nada. Script: `OUTPUTS/scripts-vsl/escena_despues.py`.
 - **2026-11-12 · Las lineas cortas de dialogo cruzado se las inventa un poco.** En dos tomas de dos personajes Veo agrego palabras ("ahi", "tenias") y leyo *"pille"* por *"pie"*. **Se reescribe la linea, no se regenera igual**: un arranque duro ("Pará.") o cambiar la palabra floja ("me va marcando los pasos") lo arregla a la primera.
 - **2026-11-12 · El rotulo "Caso ilustrativo · imagenes con IA" no esta en el ad que corre.** Se verifico cuadro por cuadro sobre `12-11 Veo - 3`. Las tandas nuevas salen igual que el que esta andando; si se quiere el rotulo, se agrega a los cuatro en un pase de ffmpeg y se avisa.
+- **2026-11-13 · Una toma con el cuerpo roto no se entrega, se regenera.** Santiago, pidiendo renovaciones de [[dancego]]: *"fijate que las visuales salgan bien, hay muchas que los brazos se duplican, o el celular se sostiene solo, muy malas"*. Los dos defectos que más aparecieron: **brazos duplicados** (un tercer brazo que asoma cuando el personaje gesticula o cuando dos personajes se cruzan en el plano) y **objetos que se sostienen solos** (el celular que la filma flotando en el aire). Reglas que salen de ahí:
+  - El **selfie filmado por un tercero no se pide nunca en abstracto**: en el prompt va **quién sostiene el teléfono o dónde está apoyado** ("the phone is propped against a stack of books on the table"), porque si no Veo lo deja flotando.
+  - Las tomas con **dos personajes muy juntos o con contacto** son las que más brazos duplican: se separan en el encuadre o se pide contacto explícito y simple (una mano en el hombro, no un abrazo).
+  - El control visual **es por toma y cuadro por cuadro** (checklist de arriba), antes del montaje. Una toma con el cuerpo roto **se regenera**, no se corrige en edición ni se tapa con un corte.
 
 ## Preguntas abiertas
 

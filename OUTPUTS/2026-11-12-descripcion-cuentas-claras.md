@@ -1,14 +1,16 @@
-DESCRIPCION PRINCIPAL
+DESCRIPCION PARA LOS ADS
 
-¿En qué se te fue el dinero este mes? Si para responder tienes que abrir tres aplicaciones, el problema no es cuánto ganas.
+¿En qué se te fue el dinero este mes? Si para responder tienes que abrir tres aplicaciones, el problema no es cuánto ganas: es que nadie está anotando.
 
-Una planilla para Google Sheets y Excel: anotas lo que entra y lo que sale, y el tablero se arma solo.
+Esto es una planilla para Google Sheets y Excel. Anotas lo que entra y lo que sale, y el tablero se arma solo.
 
 ✅ Todas tus cuentas, tarjetas y deudas sumadas en un solo número
 ✅ Calendario de pagos: ves la semana antes de que se te pase un vencimiento
 ✅ Plan de salida de deudas con fecha concreta
 
-21 hojas listas + guía de 60 páginas para armar tu primer presupuesto desde cero. Pago único, sin mensualidades, y no se conecta a tu banco: es un archivo tuyo. 30 días de garantía.
+21 hojas listas para usar + guía de 60 páginas para armar tu primer presupuesto desde cero.
+
+Pago único, sin mensualidades. No se conecta a tu banco: es un archivo tuyo y nadie más lee tus movimientos. 30 días de garantía.
 
 👉 Ordena tus finanzas hoy
 

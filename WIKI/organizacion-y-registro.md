@@ -39,6 +39,26 @@ Una cuarta cuenta, o más, sirve para **replicar horizontalmente** lo que gana. 
 
 Relacionado: [[testeo-de-creativos]] · [[escalado-en-meta-ads]] · [[metodo-v3]] · [[ia-en-el-flujo-de-trabajo]]
 
+## 📁 Entrega en Google Drive — las ofertas con el socio (REGLA FIJA, 2026-11-13)
+
+Santiago: *"vos entrás a esa carpeta y vas a crear una nueva carpeta con el nombre de la oferta que el nombre de la oferta siempre por delante va a tener la palabra eBook… y dentro de la carpeta que crees vas a crear una carpeta que se llame Videos terminados y ahí vas a subir los anuncios terminados siempre siempre"*.
+
+**Toda oferta que se hace con el socio (Damián) se entrega en el Drive de Santiago, en este camino exacto:**
+
+```
+Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados /
+```
+
+- La carpeta madre **`Ebook Dami`** ya existe y no se toca. Dentro va **una carpeta por oferta**.
+- El nombre de la carpeta de la oferta **siempre arranca con `Ebook`** y después el nombre de la oferta (ej.: oferta "Campo" → `Ebook Campo`). Las carpetas que ya están ahí cierran con el mercado entre paréntesis — `Ebook Tapizado (LATAM)`, `Ebook Juegos en Pareja (ARG)`, `Ebook Box (INGLES)` —, así que se respeta esa forma: **`Ebook <Oferta> (LATAM | ARG | INGLES | …)`**.
+- Dentro de la carpeta de la oferta va **siempre** una subcarpeta **`Videos terminados`**, y ahí van **los anuncios terminados** (los MP4 finales, no los crudos ni las voces ni los guiones).
+- **El nombre de cada video es el arranque del hook**, tal cual se escucha. Si el video empieza diciendo *"Las vacas que…"*, el archivo se llama **`Las vacas.mp4`**. Nada de `V1.mp4` ni de la nomenclatura `DD-M - N` acá: esa sigue valiendo para la carpeta del Escritorio.
+- **Es el mismo proceso siempre, sin que lo pida.** Apenas una tanda está terminada, se sube.
+
+**La única excepción:** cuando la oferta es **de Santiago solo** (sus cosas, no las del socio). Ahí no va a `Ebook Dami`; se le pregunta o se usa el circuito de siempre de `~/Desktop/<oferta>/anuncios/`.
+
+> Esto **no reemplaza** la carpeta local: los videos igual se arman y quedan en `~/Desktop/<oferta>/anuncios/` con el nombre de tanda `DD-M - N` (regla de [[como-trabajar-con-santiago]]). El Drive es la **entrega**, el Escritorio es el **taller**.
+
 ## Conexiones con tu operación actual
 - **El registro diario va en `OUTPUTS/` de este cerebro.** Cuando me pases cambios de presupuesto o de puja con la captura de UTMify, los anoto en `OUTPUTS/AAAA-MM-DD-registro-<oferta>.md` y los enlazo desde el índice.
 - **"El método es un documento vivo: cargá en RAW y pedí procesá RAW"** es exactamente cómo funciona este segundo cerebro.

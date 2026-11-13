@@ -1,3 +1,22 @@
+## 2026-11-13 (16ª pasada) — Método Ganadero: desarmado del competidor y tanda 1 de 6 guiones para LATAM
+
+Santiago pasó la Biblioteca de Anuncios de **Correa Suelta** (metodoganadero.com, AR): va a modelar
+la oferta para LATAM con el socio.
+
+- **Competidor desarmado.** ~39 ads activos desde el 20/10 con renovaciones el 27/10, el 7/11 y el
+  13/11. Landing completa leída y **6 videos bajados y transcritos** (la API de Gemini: `gemini-3.5-transcribe`
+  da 429 de cuota y `gemini-2.5-flash` ya no existe para cuentas nuevas — el que anda para audio es
+  **`gemini-3.1-flash-lite`**). Su formato es voz en off + b-roll de hacienda + subtítulos dinámicos,
+  sin cara a cámara, sin mockups y sin precio en el video.
+- **WIKI/metodo-ganadero.md** nueva: oferta, bonos, los tres avatares de la landing, la estructura fija
+  de sus guiones, las 5 familias de ángulo y la tabla de traducción de vocabulario ganadero AR → LATAM.
+- **OUTPUTS/2026-11-13-metodo-ganadero-tanda-1.md**: 6 guiones de testeo en español neutro, uno por
+  familia ganadora, más la descripción corta para los seis.
+- **Regla fija nueva (Drive).** Las ofertas que se hacen con el socio se entregan en
+  `Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados`, con cada MP4 nombrado por
+  el arranque de su hook. Queda en [[organizacion-y-registro]] con puntero desde
+  [[como-trabajar-con-santiago]]. La carpeta **Ebook Metodo Ganadero (LATAM)** ya está creada.
+
 ## 2026-11-12 (15ª pasada) — Planilla Maestra: los 6 videos de la tanda 1
 
 Santiago: *"Hace en 3 la opcion 2 y en los otros la opcion 3"* — tres videos con la planilla

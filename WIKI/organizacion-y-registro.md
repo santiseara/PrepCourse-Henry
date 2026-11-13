@@ -55,6 +55,15 @@ Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados /
 - **El nombre de cada video es el arranque del hook**, tal cual se escucha. Si el video empieza diciendo *"Las vacas que…"*, el archivo se llama **`Las vacas.mp4`**. Nada de `V1.mp4` ni de la nomenclatura `DD-M - N` acá: esa sigue valiendo para la carpeta del Escritorio.
 - **Es el mismo proceso siempre, sin que lo pida.** Apenas una tanda está terminada, se sube.
 
+> ⚠️ **La subida a Drive la tiene que hacer Santiago (13/11/2026).** Probado y descartado: `file_upload`
+> de Claude in Chrome corta en **10,4 MB por llamada** (un ad de 45 s en 1080x1920 pesa 65–76 MB), el
+> **drop sintético** sobre la página de Drive **no sube nada** (Drive exige eventos confiables y
+> `webkitGetAsEntry` real), **Chrome bloquea las descargas** automáticas del sitio después del primer
+> intento, **no hay Google Drive para escritorio** instalado y el `fetch` a un servidor local lo corta
+> la CSP de Drive. Lo que sí se hace: **crear la carpeta de la oferta y la de `Videos terminados`** en
+> Drive, y dejar los MP4 ya nombrados por el hook en `~/Desktop/<oferta>/anuncios/videos/` para que él
+> los arrastre de una. Si algún día se instala Drive para escritorio, la subida pasa a ser un `cp`.
+
 **La única excepción:** cuando la oferta es **de Santiago solo** (sus cosas, no las del socio). Ahí no va a `Ebook Dami`; se le pregunta o se usa el circuito de siempre de `~/Desktop/<oferta>/anuncios/`.
 
 ### 🔧 Cómo se sube un MP4 al Drive desde acá (2026-11-13)

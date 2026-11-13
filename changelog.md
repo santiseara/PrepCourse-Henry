@@ -24,6 +24,11 @@ inglés, hacé el mismo análisis y armemos los mejores ads"*, con la Biblioteca
   visual (`OUTPUTS/2026-11-13-visuales-tiktok-plaster-concrete.md`), y **el montaje del ganador**:
   subtítulo de **una sola palabra** en pastilla fucsia, cartel de hook amarillo, chip "50% OFF + 7 BONUSES"
   al cierre y sin placa final. Scripts: `edit_plaster.py`, `gen_plaster_plans.py`, `vent_plaster.py`.
+- **Subidos al Drive** en `Ebook Dami / Ebook Yeso y Cemento (INGLES) / Videos terminados`, con el nombre
+  del arranque de cada hook (regla fija del 13/11). De paso quedó anotado en [[organizacion-y-registro]]
+  **cómo se sube un MP4 desde acá**: el drop sintético no anda y el fetch a localhost se cuelga; lo que
+  funciona es interceptar el selector nativo de Drive y rearmar el archivo en el navegador desde partes
+  de 9,4 MB.
 
 ## 2026-11-13 (16ª pasada) — Método Ganadero: desarmado del competidor y tanda 1 de 6 guiones para LATAM
 

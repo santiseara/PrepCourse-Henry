@@ -22,7 +22,7 @@ exec(open(os.path.join(WK, 'vent.py')).read())   # define VENT = {clave: (id, de
 def pool_y_clips():
     pool, clips = [], {}
     for k, (vid, a, b, ex) in VENT.items():
-        clips[k] = dict(src=f'tiktoks/tk_{vid}.mp4', fam=vid, **ex)
+        clips[k] = dict(src=f'tiktoks/{vid}.mp4', fam=vid, **ex)
         tramos, t = [], a
         while t < b - 1.8:
             tramos.append([k, round(t, 2), round(min(t + SEG, b), 2)])

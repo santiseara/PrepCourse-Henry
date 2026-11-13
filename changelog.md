@@ -18,6 +18,12 @@ inglés, hacé el mismo análisis y armemos los mejores ads"*, con la Biblioteca
   **texto principal único** en inglés. Sin cifras de ingreso mensual y sin precio del producto: la plata va
   como precio de mercado de la pieza. `OUTPUTS/2026-11-13-guiones-plaster-concrete-tanda1.md`.
 - Wiki nueva: `WIKI/arte-en-yeso-y-cemento.md`. Carpeta de la oferta: `~/Desktop/plaster-concrete/`.
+- **Los 6 videos, renderizados el mismo día** (`13-11 - 1.mp4` a `13-11 - 6.mp4`, 46,4 a 50,4 s): voz
+  Sulafat por API (las cinco primeras con el 2.5, la sexta con el 3.1 porque se agotó la cuota diaria),
+  **30 clips limpios de 75** bajados de cinco tags de objeto y filtrados con OCR de Vision + revisión
+  visual (`OUTPUTS/2026-11-13-visuales-tiktok-plaster-concrete.md`), y **el montaje del ganador**:
+  subtítulo de **una sola palabra** en pastilla fucsia, cartel de hook amarillo, chip "50% OFF + 7 BONUSES"
+  al cierre y sin placa final. Scripts: `edit_plaster.py`, `gen_plaster_plans.py`, `vent_plaster.py`.
 
 ## 2026-11-13 (16ª pasada) — Método Ganadero: desarmado del competidor y tanda 1 de 6 guiones para LATAM
 

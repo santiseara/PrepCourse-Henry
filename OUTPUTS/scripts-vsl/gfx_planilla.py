@@ -17,17 +17,18 @@ from PIL import Image, ImageFilter
 OUT = os.path.expanduser('~/Desktop/cuentas-claras/anuncios/work/sheet')
 os.makedirs(OUT, exist_ok=True)
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-W, H = 1080, 1920
+W, H = 1080, 1920              # tamano final del PNG
+SW, SH = 702, 1248             # viewport de captura: la hoja sale 1.54x mas grande al escalar
 MW, MH = 1296, 2304            # 1.20x, margen para el zoom del editor
 
 VERDE, LILA, CELESTE, AMAR, ROSA, GRIS = '#D9EAD3', '#D9D2E9', '#CFE2F3', '#FFF2CC', '#F4CCCC', '#EFEFEF'
 
 CSS = """<style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{width:1080px;height:1920px;background:#fff;overflow:hidden}
-.bar{height:46px;display:flex;align-items:center;gap:14px;padding:0 18px;border-bottom:1px solid #e3e3e3}
-.doc{font-size:22px;color:#202124}
-.menus{display:flex;gap:18px;font-size:18px;color:#5f6368;margin-left:2px}
+body{width:702px;height:1248px;background:#fff;overflow:hidden}
+.bar{height:46px;display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid #e3e3e3;white-space:nowrap;overflow:hidden}
+.doc{font-size:19px;color:#202124;font-weight:600}
+.menus{display:flex;gap:14px;font-size:17px;color:#5f6368;margin-left:2px}
 .tool{height:54px;display:flex;align-items:center;gap:22px;padding:0 20px;border-bottom:1px solid #e3e3e3;
  font-size:20px;color:#444}
 .tool b{font-weight:700}
@@ -36,17 +37,17 @@ body{width:1080px;height:1920px;background:#fff;overflow:hidden}
 .fx .cell{border:1px solid #ddd;border-radius:3px;padding:3px 16px;min-width:90px;text-align:center;color:#222}
 .cols{display:flex;height:34px;background:#f8f9fa;border-bottom:1px solid #e3e3e3;font-size:17px;color:#5f6368}
 .cols div{display:flex;align-items:center;justify-content:center;border-right:1px solid #e3e3e3}
-.cols .rn{width:56px}
+.cols .rn{width:48px}
 .cols .c{flex:1}
 .cols .on{background:#d3e3fd;color:#1967d2;font-weight:700}
-.grid{position:relative;height:1740px;background:
+.grid{position:relative;height:1068px;background:
  repeating-linear-gradient(#fff 0 47px,#e8eaed 47px 48px),
- repeating-linear-gradient(90deg,#fff 0 127px,#e8eaed 127px 128px)}
-.rows{position:absolute;left:0;top:0;width:56px;height:100%;background:#f8f9fa;border-right:1px solid #e3e3e3;
+ repeating-linear-gradient(90deg,#fff 0 93px,#e8eaed 93px 94px)}
+.rows{position:absolute;left:0;top:0;width:48px;height:100%;background:#f8f9fa;border-right:1px solid #e3e3e3;
  font-size:17px;color:#5f6368}
 .rows i{display:flex;align-items:center;justify-content:center;height:48px;font-style:normal;
  border-bottom:1px solid #e8eaed}
-.wrap{position:absolute;left:56px;right:0;top:0;bottom:0;padding:0 26px;display:flex;flex-direction:column;justify-content:center}
+.wrap{position:absolute;left:48px;right:0;top:0;bottom:0;padding:0 14px;display:flex;flex-direction:column;justify-content:center}
 .blk{margin:0 0 26px;border:1px solid #d7d7d7;background:#fff;box-shadow:0 1px 0 #00000008}
 .blk:last-child{margin-bottom:0}
 .blk h3{font-size:30px;letter-spacing:2px;font-weight:700;color:#3c4043;padding:14px 18px;text-align:center}
@@ -70,9 +71,9 @@ td.dim{color:#bdc1c6}
 .note{font-size:23px;color:#5f6368;padding:12px 18px;border-top:1px solid #e3e3e3;background:#fafafa}
 </style>"""
 
-MENUS = ('<div class="bar"><div class="doc">Planilla Maestra 2026</div>'
+MENUS = ('<div class="bar"><div class="doc">Planilla Maestra</div>'
          '<div class="menus"><span>Archivo</span><span>Editar</span><span>Ver</span><span>Insertar</span>'
-         '<span>Formato</span><span>Datos</span><span>Herramientas</span><span>Ayuda</span></div></div>'
+         '<span>Formato</span><span>Datos</span></div></div>'
          '<div class="tool"><span>100%</span><span>|</span><span><b>B</b></span><span><i>I</i></span>'
          '<span>A</span><span>|</span><span>123</span><span>Arial</span><span>|</span><span>&#8721;</span>'
          '<span>&#9636;</span><span>&#9205;</span></div>')
@@ -83,13 +84,13 @@ def marco(cell, valor, cols_on, bloques, rows_from=1):
     for c in 'ABCDEFG':
         cols += '<div class="c%s">%s</div>' % (' on' if c == cols_on else '', c)
     cols += '</div>'
-    rows = ''.join('<i>%d</i>' % n for n in range(rows_from, rows_from + 37))
+    rows = ''.join('<i>%d</i>' % n for n in range(rows_from, rows_from + 23))
     fx = ('<div class="fx"><div class="cell">%s</div><span>fx</span><span>%s</span></div>'
           % (cell, valor))
     return (CSS + MENUS + fx + cols +
             '<div class="grid"><div class="rows">' + rows + '</div>'
             '<div class="wrap">' + bloques + '</div>'
-            '<svg class="cur" style="left:702px;top:1012px" viewBox="0 0 24 34">'
+            '<svg class="cur" style="left:452px;top:660px" viewBox="0 0 24 34">'
             '<path d="M2 2 L2 26 L8.5 20 L12.5 30 L16.5 28 L12.5 18.5 L21 18 Z" fill="#111" '
             'stroke="#fff" stroke-width="1.6"/></svg>'
             '</div>')
@@ -130,7 +131,7 @@ def shot(html, name):
     p = '%s/_%s.html' % (OUT, name)
     open(p, 'w').write(html)
     subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars',
-                    '--window-size=%d,%d' % (W, H), '--screenshot=%s/_%s.png' % (OUT, name),
+                    '--window-size=%d,%d' % (SW, SH), '--screenshot=%s/_%s.png' % (OUT, name),
                     '--virtual-time-budget=4000', 'file://' + p], check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     im = Image.open('%s/_%s.png' % (OUT, name)).convert('RGB').resize((W, H), Image.LANCZOS)
@@ -248,6 +249,25 @@ ESCENAS = [
      tabla('CATEGORÍAS AUTOMÁTICAS', AMAR, CAB3C, G5_CAT)),
     ('g5_met', 'E20', '=D20/C20', 'E', barras('AHORRO POR OBJETIVOS', CELESTE, G5_MET)),
     ('g5_res', 'D34', '=D6-D31', 'D', tabla('RESUMEN DEL MES', VERDE, CAB2, RES)),
+]
+
+
+# estados vacios de la pareja (el bloque antes de cargarse), para que el recorrido tenga el doble
+# de planos y nunca se repita la misma hoja dos veces seguidas
+G3_ING0 = [['Sueldo de ella', '10 nov', V], ['Sueldo de él', '5 nov', V], ['Trabajo extra', '—', V],
+           ['__TOT__', 'TOTAL QUE ENTRA', '', V]]
+G3_FIJ0 = [['Alquiler', '5 nov', V], ['Cuota del auto', '12 nov', V], ['Seguros', '16 nov', V],
+           ['Celulares', '22 nov', V], ['__TOT__', 'TOTAL FIJOS', '', V]]
+G3_VAR0 = [['Supermercado', 'Necesidad', ('560', 'sel')], ['Transporte', 'Necesidad', V],
+           ['Salidas', 'Gusto', V], ['Ropa', 'Gusto', V], ['__TOT__', 'TOTAL VARIABLES', '', '560']]
+G3_DEU0 = [['Tarjeta 1', '72% anual', ('180', 'sel')], ['Tarjeta 2', '58% anual', V],
+           ['Préstamo', '45% anual', V], ['__TOT__', 'PAGO MENSUAL', '', '180']]
+
+ESCENAS += [
+    ('g3_ing0', 'D6', '', 'D', tabla('INGRESOS DE LOS DOS', VERDE, CAB3, G3_ING0)),
+    ('g3_fij0', 'D12', '', 'D', tabla('GASTOS FIJOS', LILA, CAB3, G3_FIJ0)),
+    ('g3_var0', 'D24', '560', 'D', tabla('GASTOS VARIABLES', AMAR, CAB3C, G3_VAR0)),
+    ('g3_deu0', 'D30', '180', 'D', tabla('DEUDAS Y PRÉSTAMOS', ROSA, ['CONCEPTO', 'TASA', 'CUOTA'], G3_DEU0)),
 ]
 
 if __name__ == '__main__':

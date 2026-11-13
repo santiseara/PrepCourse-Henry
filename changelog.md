@@ -15,6 +15,8 @@ Pedido: *"Vamos a hacer la de piedras para hebreo, quiero que me hagas todos los
 - **Localización de Israel:** shekel (~3,3 ₪/USD, low ticket 99 ₪), Janucá y los מארזי שי לעובדים
   en lugar del amigo secreto y el Natal, חשבוניות/יזמות como miedo a formalizarse, todo en segunda
   persona femenina y CTA `לחצי על מידע נוסף`. Israel se targetea directo.
+- **Descripción para ads en hebreo** con el formato corto de siempre, sus dos variantes, el título
+  del anuncio y el "Empezá hoy" en sus tres formas: `OUTPUTS/2026-11-12-descripcion-piedras-hebreo.md`.
 - **Archivos:** `~/Desktop/scented-stones-ad/anuncios/hebreo/` (SS-HE-1 … SS-HE-8 y `12-11 - 1/2/3.mp4`).
   Scripts: `hebreo/work/render_he.py` y `OUTPUTS/scripts-vsl/edit_pedras_he.py`.
 - **Pendiente avisado:** la segunda lectura del hebreo por API no se pudo correr (la API de Gemini

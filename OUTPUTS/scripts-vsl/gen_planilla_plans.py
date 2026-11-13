@@ -43,14 +43,18 @@ V1_ANCHORS = [('mes', 0, 'a', 0), ('cargo', 0, 'b', 0), ('cobro', 0, 'c', 0), ('
               ('suscripciones', 0, 'h', 0), ('variables', 0, 'i', 0), ('ropa', 0, 'j', 0),
               ('separa', 0, 'k', 0), ('pantalla', 0, 'l', 0)]
 
-V3_SHEETS = ['g3_ing', 'g3_fij', 'g3_sus', 'g3_var', 'g3_deu', 'g3_lib', 'g3_dist', 'g3_plan']
-V3_ANCHORS = [('ingresos', 0, 'a', 0), ('fijos', 0, 'b', 0), ('suscripciones', 0, 'c', 0),
-              ('variables', 0, 'd', 0), ('deudas', 0, 'e', 0), ('ahorro', 0, 'f', 0),
-              ('reparte', 0, 'g', 0), ('plan', 0, 'h', 0)]
+V3_SHEETS = ['g1_mes', 'g3_ing0', 'g3_ing', 'g3_fij0', 'g3_fij', 'g3_sus', 'g3_var0', 'g3_var',
+             'g3_deu0', 'g3_deu', 'g3_lib', 'g3_dist', 'g3_plan']
+V3_ANCHORS = [('cuentas', 0, 'a', 0), ('ingresos', 0, 'b', 0), ('extra', 0, 'c', 0),
+              ('fijos', 0, 'd', 0), ('celulares', 0, 'e', 0), ('suscripciones', 0, 'f', 0),
+              ('variables', 0, 'g', 0), ('ropa', 0, 'h', 0), ('deudas', 0, 'i', 0),
+              ('tasa', 0, 'j', 0), ('ahorro', 0, 'k', 0), ('reparte', 0, 'l', 0),
+              ('plan', 0, 'm', 0)]
 
-V5_SHEETS = ['g5_pat', 'g5_cat', 'g5_met', 'g5_res']
-V5_ANCHORS = [('número', 0, 'a', 0), ('categorías', 0, 'b', 0), ('metas', 0, 'c', 0),
-              ('adivinar', 0, 'd', 0)]
+V5_SHEETS = ['g1_mes', 'g1_var1', 'g1_var2', 'g5_pat', 'g5_cat', 'g1_dist', 'g5_met', 'g5_res']
+V5_ANCHORS = [('mes', 0, 'a', 0), ('anotar', 1, 'b', 0), ('hiciste', 0, 'c', 0),
+              ('número', 0, 'd', 0), ('categorías', 0, 'e', 0), ('mano', 0, 'f', 0),
+              ('metas', 0, 'g', 0), ('adivinar', 0, 'h', 0)]
 
 PANTALLA = {
     1: dict(sheets=V1_SHEETS, anchors=V1_ANCHORS, hook='RUTINA DEL DÍA DE PAGO',
@@ -81,7 +85,8 @@ def plan_pantalla(n):
         hook=v['hook'], hook_until=v['hook_until'],
         first=['a', 0], last=chr(ord('a') + len(v['sheets']) - 1),
         seed=n * 401, usage='usage.json',
-        clips=clips, pool=pool, anchors=v['anchors'], overlays=overlays)
+        clips=clips, pool=pool, seq=[chr(ord('a') + i) for i in range(len(v['sheets']))],
+        anchors=v['anchors'], overlays=overlays)
 
 
 if __name__ == '__main__':

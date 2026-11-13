@@ -93,43 +93,69 @@ for word, occ, key, st in P.get('anchors', []):
         k = max(i for i in range(len(cuts) - 1) if cuts[i] <= tg)
         if cuts[k] + 0.7 < tg < cuts[k + 1] - 0.7: cuts.insert(k + 1, tg)
 
-# 3) plan de planos (pool sin repetir, anchors, usage.json compartido entre videos)
-rnd = random.Random(P.get('seed', 0))
-upath = F(P['usage']) if 'usage' in P else None
-usage = json.load(open(upath)) if upath and os.path.exists(upath) else {}
-used, plan, forced = set(), [], {}
-for word, occ, key, st in P.get('anchors', []):
-    w = wt(word, occ)
-    if not w: continue
-    n = max(i for i in range(len(cuts) - 1) if cuts[i] <= w[0] + 0.05)
-    if n in forced or forced.get(n - 1, [''])[0] == key or forced.get(n + 1, [''])[0] == key:
-        print(f'aviso: anchor "{word}" choca con otro en el plano {n}, se ignora'); continue
-    forced[n] = next((s for s in P['pool'] if s[0] == key and s[1] == st), None) or next(s for s in P['pool'] if s[0] == key)
-if P.get('last'):   # ultimo plano fijo: asi el cierre (la tapa del ebook) nunca queda tapado por otro
-    forced[len(cuts) - 2] = next(s for s in P['pool'] if s[0] == P['last'])
-for s in forced.values(): used.add(f'{s[0]}@{s[1]}')
-for n in range(len(cuts) - 1):
-    d = cuts[n + 1] - cuts[n]
-    prev = [p[0] for p in plan[-2:]]
-    if n in forced:
-        seg = forced[n]
-    elif n == 0 and 'first' in P:
-        seg = next(s for s in P['pool'] if s[0] == P['first'][0] and s[1] == P['first'][1])
-    else:
-        nxt = forced[n + 1][0] if n + 1 in forced else None
-        cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0][:1] not in [q[:1] for q in prev[-1:]] and s[0][:1] != (nxt or ' ')[:1]]
-        here = {}
-        for p in plan: here[p[0][:1]] = here.get(p[0][:1], 0) + 1     # misma fuente = misma letra inicial
-        def score(s):
-            return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:1], 0) * 3 + (3 if s[0] in prev else 0)
-                    + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
-        seg = min(cand, key=score)
-    sid = f'{seg[0]}@{seg[1]}'; used.add(sid)
-    plan.append((seg[0], seg[1], seg[2], usage.get(sid, 0) % 2 == 1 and not P['clips'][seg[0]].get('still')))   # las fotos nunca se espejan (tienen texto)
-    usage[sid] = usage.get(sid, 0) + 1
-if upath: json.dump(usage, open(upath, 'w'), indent=0)
-print('planos:', ' '.join(f'{k}:{s:g}{"↔" if f else ""}' for k, s, e, f in plan))
-if os.environ.get('DEBUG'): print('cortes:', ' '.join(f'{c:.2f}' for c in cuts)); sys.exit()
+# 3a) recorrido fijo de la planilla ("seq"): las hojas van en el orden del guion, las anclas
+# clavan la hoja que suena con cada palabra y los planos del medio se reparten entre medio.
+if P.get('seq'):
+    seq = P['seq']; nplanos = len(cuts) - 1
+    pos = {}
+    for word, occ, key, st in P.get('anchors', []):
+        w = wt(word, occ)
+        if not w or key not in seq: continue
+        n = max(i for i in range(nplanos) if cuts[i] <= w[0] + 0.05)
+        pos[n] = seq.index(key)
+    pos.setdefault(0, 0); pos.setdefault(nplanos - 1, len(seq) - 1)
+    ks = sorted(pos); plan = []
+    for n in range(nplanos):
+        if n in pos:
+            idx = pos[n]
+        else:
+            lo = max(k for k in ks if k < n); hi = min(k for k in ks if k > n)
+            idx = round(pos[lo] + (pos[hi] - pos[lo]) * (n - lo) / (hi - lo))
+        if plan and seq[idx] == plan[-1][0]:            # nunca dos planos seguidos de la misma hoja
+            tope = min([pos[k] for k in ks if k > n] or [len(seq) - 1])
+            if idx + 1 <= tope: idx += 1
+            elif idx - 1 >= 0 and seq[idx - 1] != plan[-1][0]: idx -= 1
+        plan.append((seq[idx], 0, 3.2, False))
+    print('planos:', ' '.join(p_[0] for p_ in plan))
+    if os.environ.get('DEBUG'): print('cortes:', ' '.join(f'{c:.2f}' for c in cuts)); sys.exit()
+else:
+ # 3) plan de planos (pool sin repetir, anchors, usage.json compartido entre videos)
+ rnd = random.Random(P.get('seed', 0))
+ upath = F(P['usage']) if 'usage' in P else None
+ usage = json.load(open(upath)) if upath and os.path.exists(upath) else {}
+ used, plan, forced = set(), [], {}
+ for word, occ, key, st in P.get('anchors', []):
+     w = wt(word, occ)
+     if not w: continue
+     n = max(i for i in range(len(cuts) - 1) if cuts[i] <= w[0] + 0.05)
+     if n in forced or forced.get(n - 1, [''])[0] == key or forced.get(n + 1, [''])[0] == key:
+         print(f'aviso: anchor "{word}" choca con otro en el plano {n}, se ignora'); continue
+     forced[n] = next((s for s in P['pool'] if s[0] == key and s[1] == st), None) or next(s for s in P['pool'] if s[0] == key)
+ if P.get('last'):   # ultimo plano fijo: asi el cierre (la tapa del ebook) nunca queda tapado por otro
+     forced[len(cuts) - 2] = next(s for s in P['pool'] if s[0] == P['last'])
+ for s in forced.values(): used.add(f'{s[0]}@{s[1]}')
+ for n in range(len(cuts) - 1):
+     d = cuts[n + 1] - cuts[n]
+     prev = [p[0] for p in plan[-2:]]
+     if n in forced:
+         seg = forced[n]
+     elif n == 0 and 'first' in P:
+         seg = next(s for s in P['pool'] if s[0] == P['first'][0] and s[1] == P['first'][1])
+     else:
+         nxt = forced[n + 1][0] if n + 1 in forced else None
+         cand = [s for s in P['pool'] if f'{s[0]}@{s[1]}' not in used and s[0][:1] not in [q[:1] for q in prev[-1:]] and s[0][:1] != (nxt or ' ')[:1]]
+         here = {}
+         for p in plan: here[p[0][:1]] = here.get(p[0][:1], 0) + 1     # misma fuente = misma letra inicial
+         def score(s):
+             return (usage.get(f'{s[0]}@{s[1]}', 0) * 10 + here.get(s[0][:1], 0) * 3 + (3 if s[0] in prev else 0)
+                     + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
+         seg = min(cand, key=score)
+     sid = f'{seg[0]}@{seg[1]}'; used.add(sid)
+     plan.append((seg[0], seg[1], seg[2], usage.get(sid, 0) % 2 == 1 and not P['clips'][seg[0]].get('still')))   # las fotos nunca se espejan (tienen texto)
+     usage[sid] = usage.get(sid, 0) + 1
+ if upath: json.dump(usage, open(upath, 'w'), indent=0)
+ print('planos:', ' '.join(f'{k}:{s:g}{"↔" if f else ""}' for k, s, e, f in plan))
+ if os.environ.get('DEBUG'): print('cortes:', ' '.join(f'{c:.2f}' for c in cuts)); sys.exit()
 
 hits = []     # (sonido, t)
 parts = []

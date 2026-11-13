@@ -134,6 +134,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Descripción para ads de piedras en hebreo](../OUTPUTS/2026-11-12-descripcion-piedras-hebreo.md) — la corta de siempre (mecanismo, 3 bullets, 4 bonos y garantía) en hebreo con sus dos variantes, el título y la descripción del anuncio, y cómo se dice "Empezá hoy" · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-12 — Piedras aromáticas: los 11 anuncios en hebreo (HE1–HE8 + R1–R3)](../OUTPUTS/2026-11-12-guiones-piedras-hebreo-HE1-HE8-R1-R3.md) — los 8 doblajes del ganador más las 3 renovaciones, con la localización de Israel (shekel, Janucá y מארזי שי לעובדים, segunda persona femenina, CTA לחצי על מידע נוסף) y las reglas del primer idioma de derecha a izquierda · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-12 — Guiones de la Planilla Maestra (tanda 1, LATAM)](../OUTPUTS/2026-11-12-guiones-cuentas-claras-tanda1.md) — 6 guiones neutros clonando el "payday routine" de The Sheet Code: día de pago, reseñas de la landing, pareja con dos sueldos, anti-app, anotar no es presupuestar y recargos por olvido · ver [[planilla-maestra]]
 - [2026-11-12 — Radiografía de The Sheet Code](../OUTPUTS/2026-11-12-analisis-the-sheet-code.md) — los 3 formatos de video transcriptos (payday routine, reseñas apiladas, familia de cuatro), su montaje 1:1 con grabación de pantalla, los 7 ángulos de copy y qué de todo eso ya tiene nuestra landing · ver [[planilla-maestra]] · [[funnel-hacking]]

@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-11.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-12.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1, los 3 de Meta Ads y el impositivo entregados.
 - 🆕 [[sumaai]] — **Oferta nueva**: contar calorías sacándole una foto al plato, modelada de [[welmi]]. Marca propia elegida el 12/11 (el App Store tiene quemado todo lo que diga `cal/nutri`). Quiz de **19 pasos** armado y verificado (el original tiene 35), paleta azul, números calculados de verdad con piso de 1.200 calorías y pago único en ImpulTienda. Faltan producto, precio y checkout.
+- 🆕 [[planilla-maestra]] — **Oferta nueva LATAM**: planilla de finanzas personales (21 hojas, Sheets y Excel, pago único US$ 8.99) clonada de **The Sheet Code** (~57 ads en inglés corriendo desde diciembre de 2025). Landing lista; tanda 1 de 6 guiones entregada el 12/11. Falta el archivo real de la planilla para grabar pantalla como ellos.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.
 - 🆕 [[monjaro-violeta]] — Oferta nueva AR ($14.990): la receta del **Monjaro Violeta Japonés** (bebida de remolacha, 30 días), clon del quiz brasileño de Vovó Mei (~37 ads activos). Quiz de 27 pasos con rama por género, IMC y oferta oculta tras el VSL. Falta el VSL.
@@ -133,6 +134,9 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Guiones de la Planilla Maestra (tanda 1, LATAM)](../OUTPUTS/2026-11-12-guiones-cuentas-claras-tanda1.md) — 6 guiones neutros clonando el "payday routine" de The Sheet Code: día de pago, reseñas de la landing, pareja con dos sueldos, anti-app, anotar no es presupuestar y recargos por olvido · ver [[planilla-maestra]]
+- [2026-11-12 — Radiografía de The Sheet Code](../OUTPUTS/2026-11-12-analisis-the-sheet-code.md) — los 3 formatos de video transcriptos (payday routine, reseñas apiladas, familia de cuatro), su montaje 1:1 con grabación de pantalla, los 7 ángulos de copy y qué de todo eso ya tiene nuestra landing · ver [[planilla-maestra]] · [[funnel-hacking]]
+- [2026-11-12 — Descripciones de la Planilla Maestra](../OUTPUTS/2026-11-12-descripcion-cuentas-claras.md) — la descripción corta con 3 bullets y dos variantes de testeo (anti-suscripción y "anotar no es presupuestar") · ver [[planilla-maestra]]
 - [2026-11-12 — Displays: tres renovaciones del guion 1 (R1–R3)](../OUTPUTS/2026-11-12-renovaciones-displays-R1-R3.md) — el cuerpo de la imprenta escondida con tres hooks de formato distinto (demo con el objeto, autoridad, pregunta-acertijo), planos nuevos sin bajar un clip y tres vetos que salieron del render · ver [[displays-de-papel]] · [[renovacion-de-creativos]]
 - [2026-11-12 — Quiz de SumaAI (19 pasos, HTML)](../OUTPUTS/2026-11-12-quiz-sumaai.html) — el quiz de [[welmi]] recortado de 35 a 19 pasos, con la marca propia, paleta azul y la oferta de pago único · ver [[sumaai]]
 - [2026-11-12 — Opciones de marca propia para el contador de calorías](../OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md) — por qué todo nombre con `cal/kal/nutri` es ASO suicida (Kalo, Calo, Numi, Nutri AI, Satia y Platia ya existen), las 3 familias de nombre con App Store y dominios chequeados, y el kit de marca de **Platea** · ver [[welmi]]

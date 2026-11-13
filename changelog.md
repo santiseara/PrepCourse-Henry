@@ -1,3 +1,25 @@
+## 2026-11-12 (14ª pasada) — Planilla Maestra: radiografía de The Sheet Code y tanda 1 para LATAM
+
+Pedido: *"Haceme ads para esta oferta… quiero 6, copados, como los de ellos, es para latam"*, con la
+página del competidor en la Biblioteca y la landing propia (`cuentas-claras1.impultienda.ar`).
+
+- **Competidor desarmado de verdad:** ~57 ads activos de **The Sheet Code** (page 143504718840854,
+  cuentas en CAD, mercado inglés), con ads vivos **desde el 17/12/2025** hasta el 27/10/2026.
+  Se bajaron **7 videos** y se transcribieron los 6 únicos con faster_whisper: tres formatos
+  (*payday routine* con grabación de pantalla, *reseñas apiladas con marcador*, *familia de cuatro
+  en tercera persona*), todos **1:1**, 40–57 s, voz en off de mujer y sin subtítulos quemados.
+  Hojas de contactos para copiar el montaje, no solo el texto (regla del 5/11).
+- **Tanda 1 entregada:** 6 guiones en español **neutro** (la landing habla de "tú" y la oferta sale a
+  varios países), **sin cifra en moneda** — el ganador vive de *"$4,700 salary"* y eso no se traduce
+  en LATAM multipaís — y sin precio. Ángulos: día de pago · reseñas de la propia landing · pareja con
+  dos sueldos · anti-app con clave del banco · anotar no es presupuestar · recargos por olvido.
+- **Archivos:** `OUTPUTS/2026-11-12-guiones-cuentas-claras-tanda1.md`,
+  `OUTPUTS/2026-11-12-descripcion-cuentas-claras.md`,
+  `OUTPUTS/2026-11-12-analisis-the-sheet-code.md`, `WIKI/planilla-maestra.md` (nueva) e índice.
+  Copias en `~/Desktop/cuentas-claras/anuncios/`.
+- **Pendiente avisado:** sin el archivo real de la planilla no se puede clonar la grabación de
+  pantalla, que es el 80 % de lo que se ve en sus ads. Y la landing dice "Sitema" en la barra de marca.
+
 ## 2026-11-12 (13ª pasada) — Displays: tres renovaciones del guion ganador
 
 Pedido: *"Tenemos que hacer 3 renovaciones, armamelas"*. Renovación, no tanda nueva: el **cuerpo del

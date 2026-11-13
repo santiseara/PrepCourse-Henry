@@ -15,8 +15,11 @@
   string**; se esquiva reemplazando `? & =` por marcas y leyendo la página con `get_page_text`.
 - **Gemini:** `gemini-2.5-flash` ya no existe para cuentas nuevas y `gemini-3.5-transcribe` da 429.
   El que anda para audio es **`gemini-3.1-flash-lite`**.
-- Entregables en `~/Desktop/metodo-ganadero/anuncios/videos/`, **nombrados por el arranque del hook**.
-  La subida al Drive queda del lado de Santiago (ver [[organizacion-y-registro]]).
+- **Los 6 subidos al Drive**, en `Ebook Dami / Ebook Metodo Ganadero (LATAM) / Videos terminados`,
+  nombrados por el arranque del hook. Se resolvió la subida parcheando `HTMLInputElement.prototype.click`
+  para capturar el input real de Drive en vez de simular el arrastre (procedimiento entero en
+  [[organizacion-y-registro]]). En el Escritorio no queda ningún entregable: los masters en alta van a
+  `work/masters/`.
 
 ## 2026-11-13 (16ª pasada) — Arte en Yeso y Cemento: desarmado del competidor y tanda 1 de 6 ads en inglés
 

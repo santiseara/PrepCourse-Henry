@@ -55,14 +55,32 @@ Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados /
 - **El nombre de cada video es el arranque del hook**, tal cual se escucha. Si el video empieza diciendo *"Las vacas que…"*, el archivo se llama **`Las vacas.mp4`**. Nada de `V1.mp4` ni de la nomenclatura `DD-M - N` acá: esa sigue valiendo para la carpeta del Escritorio.
 - **Es el mismo proceso siempre, sin que lo pida.** Apenas una tanda está terminada, se sube.
 
-> ⚠️ **La subida a Drive la tiene que hacer Santiago (13/11/2026).** Probado y descartado: `file_upload`
-> de Claude in Chrome corta en **10,4 MB por llamada** (un ad de 45 s en 1080x1920 pesa 65–76 MB), el
-> **drop sintético** sobre la página de Drive **no sube nada** (Drive exige eventos confiables y
-> `webkitGetAsEntry` real), **Chrome bloquea las descargas** automáticas del sitio después del primer
-> intento, **no hay Google Drive para escritorio** instalado y el `fetch` a un servidor local lo corta
-> la CSP de Drive. Lo que sí se hace: **crear la carpeta de la oferta y la de `Videos terminados`** en
-> Drive, y dejar los MP4 ya nombrados por el hook en `~/Desktop/<oferta>/anuncios/videos/` para que él
-> los arrastre de una. Si algún día se instala Drive para escritorio, la subida pasa a ser un `cp`.
+### Cómo se suben los videos a Drive (resuelto el 2026-11-13)
+
+Santiago: *"Metela en el drive siempre, no quiero mas en el escritorio"*. **Los videos terminados no
+quedan en el Escritorio: van al Drive y listo.** El Escritorio es solo taller (`work/`, con las voces,
+el pool de clips y los masters en alta).
+
+**El método que funciona** (Drive no acepta arrastre simulado ni deja usar el selector nativo):
+
+1. Abrir la carpeta `Videos terminados` en Chrome y **parchear `HTMLInputElement.prototype.click`**
+   para que, cuando Drive quiera abrir el selector nativo, en vez de abrirlo **se capture el input**:
+   guardarlo en `window.__cap`, ponerle un `id` y un `aria-label` propios y, si no está en el DOM,
+   agregarlo al `body`. Sin el parche, el clic abre un diálogo del sistema que no se puede manejar.
+2. Clic real en **Nuevo → Subir archivo**. El input queda capturado (es `multiple`).
+3. Cargar los MP4 con `file_upload`. **Tope de 10,4 MB por llamada**, así que van de a uno; para
+   mandarlos todos juntos, se acumulan en un `input` propio con un listener que los empuja a
+   `window.__acc`, y al final se arma un `DataTransfer` y se hace `input.files = dt.files`.
+4. Disparar `input` y `change` sobre el input capturado. Ahí Drive sube de verdad.
+
+**Por el tope de 10,4 MB los MP4 se recomprimen antes de subir:** `-crf 29 -maxrate 1650k -preset slow`
+deja un ad de 45 s en 1080x1920 en **8,5–9,6 MB** (el render sale a 12 Mbps, 65–76 MB). Es calidad de
+sobra para Meta, que recomprime igual. **El master en alta queda en `work/masters/`.**
+
+⛔ Lo que **no** funciona y no hay que volver a probar: el evento `drop` sintético sobre la página de
+Drive (exige eventos confiables y `webkitGetAsEntry` real), el `fetch` a un servidor local (lo corta la
+CSP de Drive), y las descargas automáticas del navegador (Chrome las bloquea después del primer intento).
+Tampoco hay Google Drive para escritorio instalado; si algún día se instala, la subida pasa a ser un `cp`.
 
 **La única excepción:** cuando la oferta es **de Santiago solo** (sus cosas, no las del socio). Ahí no va a `Ebook Dami`; se le pregunta o se usa el circuito de siempre de `~/Desktop/<oferta>/anuncios/`.
 

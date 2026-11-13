@@ -1,3 +1,25 @@
+## 2026-11-12 (15ª pasada) — Piedras aromáticas: los 11 anuncios de Brasil pasados a hebreo (Israel)
+
+Pedido: *"Vamos a hacer la de piedras para hebreo, quiero que me hagas todos los ads que me hiciste en portugués, pero para hebreo, hacemelo rápido"*.
+
+- **11 anuncios, no 8:** los ocho doblajes del ganador (HE1–HE8, misma imagen, misma cama de audio,
+  misma duración, voz Sulafat israelí) **más las tres renovaciones** del 11/11 (R1–R3), que son
+  variables propias montadas con b-roll. `OUTPUTS/2026-11-12-guiones-piedras-hebreo-HE1-HE8-R1-R3.md`.
+- **Primer idioma de derecha a izquierda.** Fuentes hebreas nuevas en `_assets/fonts` (Heebo,
+  Noto Serif Hebrew, Rubik), tamaño elegido igualando la **altura de letra hebrea a la cap height
+  latina** del original, `python-bidi` para el dibujado con Pillow y libass/FriBidi gratis en el
+  editor de renovaciones. Todo anotado en `WIKI/internacionalizacion.md`.
+- **Sin los MP4 originales en inglés** (ya no estaban en Downloads): la base limpia se armó con el
+  video portugués más la franja inpaintada guardada en `work/tmpN/band.mp4`, y los tres que llevan
+  píldora opaca ni eso necesitaron.
+- **Localización de Israel:** shekel (~3,3 ₪/USD, low ticket 99 ₪), Janucá y los מארזי שי לעובדים
+  en lugar del amigo secreto y el Natal, חשבוניות/יזמות como miedo a formalizarse, todo en segunda
+  persona femenina y CTA `לחצי על מידע נוסף`. Israel se targetea directo.
+- **Archivos:** `~/Desktop/scented-stones-ad/anuncios/hebreo/` (SS-HE-1 … SS-HE-8 y `12-11 - 1/2/3.mp4`).
+  Scripts: `hebreo/work/render_he.py` y `OUTPUTS/scripts-vsl/edit_pedras_he.py`.
+- **Pendiente avisado:** la segunda lectura del hebreo por API no se pudo correr (la API de Gemini
+  devolvió 503 en todos los reintentos); el texto quedó revisado solo por mí.
+
 ## 2026-11-12 (14ª pasada) — Planilla Maestra: radiografía de The Sheet Code y tanda 1 para LATAM
 
 Pedido: *"Haceme ads para esta oferta… quiero 6, copados, como los de ellos, es para latam"*, con la

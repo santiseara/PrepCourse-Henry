@@ -37,6 +37,21 @@ UGC real de la creadora con sus propios displays terminados (oso, Merlina, Barbi
 - El OCR de Vision sobre cada ventana (`scan_carteles.py`) sacó cuatro marcas de agua de creador, tres clips con cartel quemado de punta a punta y —lo más útil— **tramos de captura de pantalla que la hoja de contactos no mostraba**: el diálogo de impresión de la Epson, el Rasterbator y una publicación de Mercado Livre con precios. Esos tramos quedaron fuera de las ventanas.
 - **Lo que sí se deja es el texto del producto:** el nombre "Sarah" recortado en papel, "PAW PATROL", "ROBLOX", "ROUTE 66" y los "Feliz Natal" impresos en los paneles.
 
+## Renovaciones del 12/11 (R1-R3)
+Tres renovaciones sobre el **cuerpo del guion 1** (la imprenta escondida), que es el angulo que
+Decorarina mas replica en PT y ES. Tres formatos de hook distintos: **demo con el objeto en la
+mano** (la hoja contra el dinosaurio de dos metros), **declaracion de autoridad** (cuatro anos
+decorando sin pisar una imprenta) y **pregunta-acertijo** (de que esta hecho el leon de tamano
+real). Archivos `12-11 - 1/2/3.mp4`, de 33,6 a 41,1 s.
+- **Sin bajar un clip nuevo:** la ventana de muestreo corrida +1,45 s, tramos de 2,4 s y tope de 10
+  por clip dan 145 recortes que no coinciden con ninguno de los 6 videos del 11/11.
+- **Estetica cambiada:** caja de la palabra activa en naranja quemado (antes tinta azul noche) y
+  cortes de 1,6 / 2,0 / 2,5 s (antes 1,9 / 2,4 / 2,9).
+- **Tres vetos nuevos del pool**, que salieron en la hoja de contactos del render: la bolsa
+  "SUPORTE PARA BALAO" en portugues (clip s, 59-71 s), la silueta de MDF pelada (clip r, 27-30 s) y
+  el carton de "maizena" con la marca impresa (clip b, 133-153 s). Quedaron en el `VETO` de
+  `gen_displays_ren_plans.py`. (fuente: OUTPUTS/2026-11-12-renovaciones-displays-R1-R3.md)
+
 ## Preguntas abiertas
 - **Falta la landing y el nombre.** Los guiones no nombran la marca, así que si sale con otro nombre solo hay que rehacer los 4 insertos.
 - ¿Copiamos su escalera (curso + DisplayPack + Pack Cutouts como ofertas separadas) o vamos con una sola?
@@ -50,3 +65,4 @@ UGC real de la creadora con sus propios displays terminados (oso, Merlina, Barbi
 - Biblioteca de Anuncios, keyword `www.decorarina.com` (~110 ads activos, leídos el 2026-11-11)
 - `decorarina.com/FAB-INSCRIO-LATA`, `/packdisplays-LATAM`, `/PackCutoutsInscrio`
 - OUTPUTS/2026-11-11-guiones-displays-de-papel-tanda1.md
+- OUTPUTS/2026-11-12-renovaciones-displays-R1-R3.md

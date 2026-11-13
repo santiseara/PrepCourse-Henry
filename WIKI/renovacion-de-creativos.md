@@ -127,6 +127,23 @@ Piedras, renovaciones para Brasil. Santiago: *"Variables de los que ya hicimos, 
 - **El OCR encuentra texto; la moneda hay que mirarla.** En el render de la tanda apareció un **billete de dólar** apoyado en un cajón, dentro de un B-roll de feria, en tres anuncios para Brasil. No es texto legible, así que ningún OCR lo marca: salió en la hoja de contactos del video terminado. En un mercado que no es Estados Unidos, el pase de revista incluye **billetes, monedas, banderas, carteles de precio y enchufes**, y se hace a ojo.
 - **El OCR va sobre el encuadre final, no sobre el clip crudo.** Con zoom, la mitad del texto del clip ya no está en cuadro: escanear el original hace vetar tramos que estaban limpios. Al revés también: en estos clips apareció una **tarjeta explicativa en español** ("Piedra difusora… Colocá unas gotas") dentro de dos ads en inglés, y un **"STORYTIME!"** en los primeros cinco segundos de otro. Un cartel en otro idioma invalida el plano aunque el ad de origen sea nuestro.
 
+## Un plano limpio de texto puede seguir contradiciendo la oferta (2026-11-12)
+
+Displays de papel, renovaciones R1-R3. La hoja de contactos de los tres renders terminados saco
+tres planos que ningun OCR habria marcado, y uno de ellos estaba en el hook:
+
+- Un **envase en otro idioma** no es un cartel: la bolsa naranja "SUPORTE PARA BALAO - MEDIO" ocupaba
+  un tercio del cuadro en portugues, dentro de un ad para LATAM en espanol. El OCR de la tanda 1 no
+  la habia marcado. **Los envases, las etiquetas y los paquetes del fondo se miran a ojo**, igual que
+  los billetes y las banderas (registro del 11/11).
+- **Un plano puede mostrar justo lo que decimos que no es.** El clip del futbolista termina con una
+  silueta de **MDF pelada** en la mano, y el hook de R3 abre con "no es carton, no es madera". Antes
+  de aprobar un plano hay que leerlo contra la frase que se escucha encima, no solo contra la oferta.
+- Mismo caso con el **carton de marca** usado de base en otro clip: no hay texto prohibido, pero
+  contradice "son hojas".
+- Practico: los vetos van a un dict `VETO = {clave: [(ini, fin)]}` dentro del generador de planes, no
+  recortando la ventana del pool, asi el resto del clip se sigue usando y el veto queda documentado.
+
 ## Complementos prácticos
 
 - **Al relanzar un anuncio que ya vendió:** sin post ID se trata como fresco; con post ID conserva interacciones y prueba social. Las dos prácticas se usan según el caso.

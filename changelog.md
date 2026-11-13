@@ -1,3 +1,23 @@
+## 2026-11-12 (13ª pasada) — Displays: tres renovaciones del guion ganador
+
+Pedido: *"Tenemos que hacer 3 renovaciones, armamelas"*. Renovación, no tanda nueva: el **cuerpo del
+guion 1 del 11/11** (la imprenta escondida, el ángulo que Decorarina más replica en PT y ES) va
+copiado textual y solo cambia el hook, con tres formatos distintos — demo con el objeto en la mano,
+declaración de autoridad y pregunta-acertijo.
+
+- `12-11 - 1/2/3.mp4` en `~/Desktop/displays-de-papel/anuncios/` (37,9 / 41,1 / 33,6 s).
+- **Ni un clip nuevo bajado:** la ventana de muestreo corrida +1,45 s con tramos de 2,4 s y tope de
+  10 por clip da 145 recortes, ninguno repetido de los 6 videos del 11/11.
+- **Estética cambiada** como pide el checklist del 27/10: caja de la palabra activa en naranja
+  quemado y cortes de 1,6 / 2,0 / 2,5 s.
+- La hoja de contactos de los renders sacó **tres vetos nuevos**: la bolsa "SUPORTE PARA BALÃO" en
+  portugués, la silueta de MDF pelada (justo debajo del hook "no es cartón, no es madera") y el
+  cartón de "maizena" con la marca impresa.
+- Antes, en la misma sesión: la carpeta `anuncios/visuales/` con los 19 clips del pool con nombre
+  legible y los 5 insertos, para no tener que abrir `work/`.
+- Nuevo: `OUTPUTS/scripts-vsl/gen_displays_ren_plans.py` · nuevo registro en
+  [[renovacion-de-creativos]] (un plano limpio de texto puede contradecir la oferta igual).
+
 ## 2026-11-12 (12ª pasada) — SumaAI: el quiz rehecho sobre el motor que ya funciona
 
 Corrección de Santiago sobre la v1: *"Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz"*. Tenía razón.

@@ -133,6 +133,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-12 — Displays: tres renovaciones del guion 1 (R1–R3)](../OUTPUTS/2026-11-12-renovaciones-displays-R1-R3.md) — el cuerpo de la imprenta escondida con tres hooks de formato distinto (demo con el objeto, autoridad, pregunta-acertijo), planos nuevos sin bajar un clip y tres vetos que salieron del render · ver [[displays-de-papel]] · [[renovacion-de-creativos]]
 - [2026-11-12 — Quiz de SumaAI (19 pasos, HTML)](../OUTPUTS/2026-11-12-quiz-sumaai.html) — el quiz de [[welmi]] recortado de 35 a 19 pasos, con la marca propia, paleta azul y la oferta de pago único · ver [[sumaai]]
 - [2026-11-12 — Opciones de marca propia para el contador de calorías](../OUTPUTS/2026-11-12-nombres-de-marca-contador-de-calorias.md) — por qué todo nombre con `cal/kal/nutri` es ASO suicida (Kalo, Calo, Numi, Nutri AI, Satia y Platia ya existen), las 3 familias de nombre con App Store y dominios chequeados, y el kit de marca de **Platea** · ver [[welmi]]
 - [2026-11-12 — Radiografía completa de Welmi](../OUTPUTS/2026-11-12-analisis-welmi.md) — toda la oferta: empresa en Chipre, 637 ads activos en 9 idiomas, precios del App Store, el quiz de 35 pantallas con email gate, el boleto raspable de 50/75/90 %, el upsell de pago único a 1 clic y los 5 formatos de creativo · ver [[welmi]] · [[funnel-hacking]]

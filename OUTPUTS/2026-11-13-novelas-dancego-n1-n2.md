@@ -159,3 +159,35 @@ J16. **La camarera:** Tranquila. Tocá en Más información y hacé el test ahor
 ## K · Cierre
 K1. **Sandra:** Diez minutos por día. En tu living, sin que te vea nadie.
 K2. **Sandra:** Tocá en Más información y hacé el test. Son unas preguntas de un minuto.
+
+
+---
+
+## Lo que salio y lo que costo (13/11)
+
+| | Archivo | Largo | Tomas |
+|---|---|---|---|
+| Novela 1 | `13-11 novela - 1 Dame tres semanas.mp4` | 2:53 | 51 |
+| Novela 2 | `13-11 novela - 2 Agarrate del tuyo.mp4` | 2:31 | 45 (32 reusadas de la 1) |
+
+Montaje a **VEL=1.25 · PAUSA=0.35** (pedido de Santiago: *"1.25 ponele de velocidad"*). Saldo ApiMart al cerrar: ~US$3,5.
+
+## Los cinco gotchas de Veo que costaron la manana
+
+1. **El filtro de content safety rebota las lineas cortas.** "¿A donde?", "¿Por que?", "¿Que test?", "No, ¿eso importa?" fueron
+   bloqueadas una y otra vez (no se cobran, pero se pierde el tiempo del reintento). **Se alargan y pasan a la primera.**
+   Regla nueva: en el guion, ninguna linea de menos de 5 palabras.
+2. **Una escena entera puede estar vetada, no la linea.** `E2` siguio bloqueada aun reescrita: toda la escena del cumple de la
+   pileta (se rieron de sus fotos en malla) dispara el filtro. **Se saco esa toma y la escena encadena igual.**
+3. **Veo no dice una marca en ingles dos veces igual:** "DanceGo" salio *dance go*, *dansego* y *dance a go*. Se escribe
+   **"Dance Go"** separado en todas las lineas.
+4. **Se le escapa el castellano de Espana en los CTA:** dijo *tocad*, *haced*, *haz el test* y *prova*. El voseo del ACENTO no
+   alcanza: hay que **reescribir la linea** ("el boton de Mas informacion lo tenes aca abajo").
+5. **Las enumeraciones hacen que queme texto en pantalla.** "Gimnasio. Dietas. Caminar sola a las seis" salio con
+   *"3. Dietas"* escrito encima del video. Se reescribio como frase corrida ("Probe el gimnasio, probe las dietas y probe...")
+   y el prompt de accion dice **"No text appears on screen"**.
+
+## Control visual (lo que pidio Santiago)
+Hoja de contactos de los dos videos terminados (1 cuadro cada 2,2 s) mas hoja por toma del hook y de la 3D: **sin brazos
+duplicados, sin manos de mas y sin objetos flotando**; el celular de la hija y el de la vecina estan sostenidos en la mano.
+El unico defecto encontrado fue el texto quemado del punto 5, y se regenero esa toma.

@@ -1,3 +1,20 @@
+## 2026-11-13 (16ª pasada) — DanceGo: dos mini novelas con IA copiadas de un competidor, y piedras en hebreo
+
+- **Piedras en hebreo:** los 11 anuncios de Brasil pasados a hebreo para Israel (8 doblajes + 3 renovaciones), con la
+  localización de Israel y las reglas del primer idioma RTL. Detalle en la pasada 15ª.
+- **DanceGo, formato nuevo:** Santiago pasó la Biblioteca de **Coach Ana Belén – Buenos Hábitos** (Método 21-7,
+  `planmetodo217.com`, 27 ads activos, el más viejo del 27/9) y pidió copiarle 4 videos con todas las escenas. Arrancamos con
+  **2**: mini novelas de 2:31 y 2:53 hechas 100 % con Veo 3.1 Fast, con la arquitectura exacta de la referencia (cadena de
+  viñetas de humillación + salto de tres semanas, contagio en la calle, la animada 3D, la cafetería como núcleo de venta y el
+  cierre con placa). La novela 2 **reusa los módulos compartidos**, igual que hace el competidor.
+- **Archivos:** `~/Desktop/dancego/anuncios/novelas/`. Guiones y gotchas en
+  `OUTPUTS/2026-11-13-novelas-dancego-n1-n2.md`; los dos `guion.py` en `OUTPUTS/scripts-vsl/`.
+- **Correcciones de Santiago anotadas en `WIKI/estilo-de-video-ia.md`:** una toma con el cuerpo roto se regenera (brazos
+  duplicados, celulares flotando), lo que se manda a aprobar va **montado y no crudo**, y las novelas largas van a **x1,25**.
+- **Lo que costó la mañana:** los cinco gotchas de Veo (líneas cortas bloqueadas por content safety, una escena entera vetada,
+  la marca en inglés mal pronunciada, el castellano de España en los CTA y el texto quemado en las enumeraciones). Están
+  escritos en el output para que la próxima tanda salga en una pasada.
+
 ## 2026-11-13 (17ª pasada) — Kit de Radiestesia (péndulo): radiografía de Regarte y tanda 1 para LATAM
 
 Pedido: *"Ahora vamos con esta nueva oferta… hacé videos voz en off, ignorá los que aparece la mujer"*, y

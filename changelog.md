@@ -1,3 +1,24 @@
+## 2026-11-13 (16ª pasada) — Arte en Yeso y Cemento: desarmado del competidor y tanda 1 de 6 ads en inglés
+
+Pedido: *"Vamos a modelar esta oferta para inglés, necesito que hagamos 6 ads en inglés, la voy a tirar en
+inglés, hacé el mismo análisis y armemos los mejores ads"*, con la Biblioteca de **"Manualidades y Arte"**
+(page 118274498039808, `manuyarte.online`).
+
+- **El competidor:** ~53 ads activos desde el 11/10/2026, **todos video 9:16 a 360x640** de 57 s a 1:50,
+  **un solo texto principal** para los 53 y título *"¡50% DE DESCUENTO + 7 REGALOS!"*. Lo único que rota es
+  el video. Se bajaron **12 videos** (ordenados por impresiones) y se transcribieron con faster-whisper.
+- **8 familias de guion**, encabezadas por las cuentas (*"menos de mil pesos en materiales, 15 a 20 mil por
+  venta, 30 minutos por día"*, 3 copias), Navidad (2) y *"se te agrietan y el problema no sos vos"* (2).
+- **Su montaje, anotado para copiarlo:** b-roll real de manos, **subtítulo de una sola palabra** en pastilla
+  fucsia, cartel de hook amarillo, etiqueta blanca de producto, inserto del PDF de la guía y cierre
+  *"Haz clic en: COMPRAR"* + pastilla *"50%"*. Sin placa final y sin cara a cámara.
+- **Su oferta:** $14.500 ARS de $25.000, garantía de 7 días, 3.400+ alumnas y **7 bonos de US$7,99**
+  (el de packaging + 10 etiquetas aparece nombrado en dos de sus guiones).
+- **Tanda 1 entregada:** 6 guiones en **inglés y español con voseo**, las dos versiones completas, más el
+  **texto principal único** en inglés. Sin cifras de ingreso mensual y sin precio del producto: la plata va
+  como precio de mercado de la pieza. `OUTPUTS/2026-11-13-guiones-plaster-concrete-tanda1.md`.
+- Wiki nueva: `WIKI/arte-en-yeso-y-cemento.md`. Carpeta de la oferta: `~/Desktop/plaster-concrete/`.
+
 ## 2026-11-13 (16ª pasada) — Método Ganadero: desarmado del competidor y tanda 1 de 6 guiones para LATAM
 
 Santiago pasó la Biblioteca de Anuncios de **Correa Suelta** (metodoganadero.com, AR): va a modelar

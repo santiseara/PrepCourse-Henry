@@ -47,6 +47,7 @@
 - 🆕 [[vence-al-parkinson]] — Vence al Parkinson (5 tomos + 4 bonos, 1.395 págs ilustradas, $16.999 ARS, Argentina): clon del whale "Tom Miller". Sus 30 ads activos transcriptos: un solo cuerpo y 21 hooks rotando; 7 familias de hook y tanda 1 de 6 guiones en voseo.
 - 🆕 [[barber-pro]] — BarberPro MegaPack ($19.99, landing propia en inglés): curso de barbería en +100 clases, clon de "Barbería Online". 28 ads en inglés del competidor transcriptos, 6 familias de hook y tanda 1 de 6 guiones.
 - 🆕 [[atlas-de-cortes]] — The Women's Cutting Atlas ($27, landing propia): guía visual de cortes para estilistas, clon de "Estilismo Con Propósito" (ES). DNA de sus ganadores y tanda 1 de 6 guiones.
+- 🆕 [[arte-en-yeso-y-cemento]] — The Plaster & Concrete Guide: figuras decorativas en yeso y cemento (terrazo, portavelas, velas con base de cemento) para el **mercado inglés**. Clon de "Manualidades y Arte" (AR, 53 ads activos desde el 11/10). 12 videos transcriptos, 8 familias de guion y tanda 1 de 6 ads.
 - 🆕 [[from-concrete-to-cash]] — Oferta propia en inglés: macetas de cemento ($19,99). Clon de "De Cemento a Dinero" (AR, 35 ads activos de 6 días). Tanda 1 de 6 ads.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
@@ -136,6 +137,7 @@
 
 ## Outputs
 
+- [2026-11-13 — The Plaster & Concrete Guide: tanda 1 de 6 guiones (EN + ES)](../OUTPUTS/2026-11-13-guiones-plaster-concrete-tanda1.md) — una familia ganadora de "Manualidades y Arte" por video (terrazo de ochenta dólares, Navidad, los tres errores, el acabado es el precio, treinta souvenirs y anti-tutorial), más el texto principal único en inglés · ver [[arte-en-yeso-y-cemento]]
 - [2026-11-13 — Método Ganadero: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-13-metodo-ganadero-tanda-1.md) — una familia ganadora por video (el encargado que se jubila, el lote más lindo de la feria, el técnico sin argumento, la vaca que come de más, cabecera y fondo, y el orden en que se mira), en neutro sin voseo y sin precio, más la descripción corta para los seis · ver [[metodo-ganadero]]
 - [2026-11-12 — Descripción para ads de piedras en hebreo](../OUTPUTS/2026-11-12-descripcion-piedras-hebreo.md) — la corta de siempre (mecanismo, 3 bullets, 4 bonos y garantía) en hebreo con sus dos variantes, el título y la descripción del anuncio, y cómo se dice "Empezá hoy" · ver [[scented-stones]] · [[internacionalizacion]]
 - [2026-11-12 — Piedras aromáticas: los 11 anuncios en hebreo (HE1–HE8 + R1–R3)](../OUTPUTS/2026-11-12-guiones-piedras-hebreo-HE1-HE8-R1-R3.md) — los 8 doblajes del ganador más las 3 renovaciones, con la localización de Israel (shekel, Janucá y מארזי שי לעובדים, segunda persona femenina, CTA לחצי על מידע נוסף) y las reglas del primer idioma de derecha a izquierda · ver [[scented-stones]] · [[internacionalizacion]]

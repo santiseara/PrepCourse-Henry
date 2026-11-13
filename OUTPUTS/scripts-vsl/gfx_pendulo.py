@@ -363,5 +363,5 @@ if __name__ == '__main__':
     graficos('graf_kit', True)
     placa_paso('paso1', 1, '¿Qué chakra está bajo?')
     placa_paso('paso2', 2, '¿Qué lo está bloqueando?')
-    placa_paso('paso3', 3, 'Oración y volvés a medir')
+    placa_paso('paso3', 3, 'Oración y vuelves a medir')
     portada('portada')

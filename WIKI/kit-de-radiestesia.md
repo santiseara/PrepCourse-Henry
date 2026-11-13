@@ -31,7 +31,28 @@
 - `#pendulo` y `#radiestesia` son **videos de frases**: lectura a cámara y texto quemado de punta a punta. Mismo caso que [[noche-de-citas-cristiana]]: el nicho vive de texto, no de planos.
 - **Los dos que sirven:** `7550667569720610064` (péndulos de cristal colgando sobre tela blanca) y `7551588054801108238` (manos con un péndulo de cristal negro).
 - **Los 50 clips del nicho real quedaron en el Drive** para que Santiago elija: `Mi unidad / Ebook Dami / Ebook Pendulo (LATAM) / Clips` (nombrados con el id de TikTok, así cada uno se abre con `tiktok.com/@x/video/<id>`). Los 10 más pesados se recomprimieron a 540 px y 75 s para que entraran.
-- **La salida propuesta** (pendiente de su OK): copiar el ad suyo **sin persona**, el de **placas animadas** con las láminas dibujadas por código (como la planilla de Google Sheets de [[planilla-maestra]]), con los dos clips limpios de respiro.
+- **La salida que se usó:** copiar el ad suyo **sin persona** y dibujar las láminas por código.
+
+## Los 6 videos (13/11/2026)
+`~/Desktop/kit-radiestesia/anuncios/13-11 - 1.mp4` a `13-11 - 6.mp4`, de **40,5 a 51,5 s**.
+- **Voz:** Sulafat por API con Style de mujer latinoamericana neutra, `speed 1.30`. Las seis con
+  `gemini-3.1-flash-tts-preview`, porque la cuota diaria del 2.5 ya se había gastado en [[arte-en-yeso-y-cemento]].
+  Verificadas con Whisper: ninguna leyó el Style.
+- **Visual:** `OUTPUTS/scripts-vsl/gfx_pendulo.py` dibuja **22 láminas** sobre fondo violeta estrellado:
+  biómetro de chakras (con y sin marca), biómetro de porcentaje (20 %, 80 % y el 90 % de "vuelves a medir"),
+  biómetro de motivo del bloqueo, el cuerpo con los 7 chakras, el animal con 7 y con 10 (braquial, menores,
+  patas), el plano del hogar con el porcentaje por ambiente, las tarjetas de pregunta bien y mal formulada,
+  el contraste "lo que tienes hoy" (capturas sueltas) contra "lo que trae el kit" (12 láminas ordenadas),
+  las tres placas de paso y la portada. Los **dos clips de TikTok** que sobrevivieron entran como respiro.
+- **Montaje:** `edit_pendulo.py` (clon de `edit_planilla.py`) + `gen_pendulo_plans.py`. Subtítulo blanco de
+  **una sola palabra** con borde negro y sin caja, como el ganador; sin SFX; cierre con placa KIT DE RADIESTESIA
+  y botón "Toca en Descargar". **V1, V3 y V6 usan `seq`** (recorrido fijo de láminas) porque cuentan un paso a paso:
+  sin eso, el PASO 3 aparecía antes que el PASO 1.
+- ⚠️ **Las anclas no pueden usar palabras que el guion dice antes**: en V3, anclar el PASO 1 a *"uno"* y el PASO 3
+  a *"tres"* lo rompía, porque la primera frase ya dice *"en tres pasos"*. Se anclaron a *desarmonizado*,
+  *aislamiento*, *oración* y *subió*.
+- **Entregados en el Drive:** `Mi unidad / Ebook Dami / Ebook Pendulo (LATAM) / Videos terminados`, con el nombre
+  del arranque de cada hook. https://drive.google.com/drive/folders/1pK_Fy3u_6fD42GUsCfxMqYSTlqXrFDTN
 
 ## Preguntas abiertas
 - ¿Vamos con las placas animadas o busco b-roll de ambiente (velas, cristales, altar) para mezclar?

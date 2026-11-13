@@ -34,6 +34,14 @@ después *"es para LATAM la oferta"*.
 - **Los 50 clips del nicho real se subieron al Drive** a pedido suyo: `Ebook Dami / Ebook Pendulo (LATAM) / Clips`,
   nombrados con el id de TikTok para que cada uno se abra con `tiktok.com/@x/video/<id>`. Los 10 más pesados
   se recomprimieron a 540 px y 75 s para pasar el límite de subida.
+- **Los 6 videos renderizados el mismo día** (`13-11 - 1.mp4` a `13-11 - 6.mp4`, 40,5 a 51,5 s), con el
+  formato del ganador sin persona: **22 láminas dibujadas por código** (`gfx_pendulo.py`) sobre fondo violeta
+  estrellado —biómetros de chakras, de porcentaje y de bloqueo, el cuerpo, el animal con sus 10 chakras, el
+  plano del hogar, las tarjetas de pregunta y las placas de paso— con subtítulo blanco de **una sola palabra**
+  y los dos clips de TikTok de respiro. Scripts: `edit_pendulo.py` y `gen_pendulo_plans.py`.
+- **Aprendizaje de montaje:** un ancla no puede usar una palabra que el guion dice antes. Anclar el PASO 1 a
+  *"uno"* y el PASO 3 a *"tres"* desordenaba el video, porque la primera frase ya decía *"en tres pasos"*.
+- **Subidos al Drive** en `Ebook Pendulo (LATAM) / Videos terminados` con el nombre del arranque de cada hook.
 
 ## 2026-11-13 (17ª pasada) — Método Ganadero: los 6 videos de la tanda 1
 

@@ -59,8 +59,8 @@ VIDEOS = [
          laminas=['paso1', 'bio_chakras_corazon', 'bio_pct_bajo', 'paso2', 'bio_bloqueo_aisl',
                   'paso3', 'bio_pct_sube', 'cuerpo_7'],
          tiktok=[CLIP_PEND],
-         anchors=[('uno', 0, 'a', 0), ('chakras', 1, 'b', 0), ('porcentaje', 0, 'c', 0),
-                  ('dos', 0, 'd', 0), ('bloqueando', 0, 'e', 0), ('tres', 0, 'f', 0),
+         anchors=[('uno', 0, 'a', 0), ('desarmonizado', 0, 'b', 0), ('porcentaje', 0, 'c', 0),
+                  ('dos', 0, 'd', 0), ('aislamiento', 0, 'e', 0), ('oración', 0, 'f', 0),
                   ('subió', 0, 'g', 0)]),
     # 4) los diez chakras del animal
     dict(n=4, seed=464,

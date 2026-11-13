@@ -1,3 +1,22 @@
+## 2026-11-12 (15ª pasada) — Planilla Maestra: los 6 videos de la tanda 1
+
+Santiago: *"Hace en 3 la opcion 2 y en los otros la opcion 3"* — tres videos con la planilla
+dibujada y grabada, tres con b-roll y placas.
+
+- **La planilla se dibujó por código** (`OUTPUTS/scripts-vsl/gfx_planilla.py`): HTML con la cara de
+  Google Sheets (menús, barra de fórmulas, celda activa, cursor) y **32 capturas** en estados
+  sucesivos. Viewport de 702x1248 escalado a 1080x1920 para que se lea en el teléfono.
+- **`edit_planilla.py`** (clon de `edit_displays.py`) suma `seq`: recorrido fijo de hojas en el
+  orden del guion, con las anclas clavando la hoja que suena con cada palabra y relleno
+  interpolado entre ancla y ancla. SFX apagados por defecto (`nosfx`).
+- **B-roll:** 61 clips bajados, **5 sobrevivieron**. Los tags de finanzas (`planner`,
+  `cashstuffing`) están tomados por texto quemado y billetes de dólar; el supermercado trae precios
+  en una sola moneda. Un clip sin una sola letra se cayó por el **logo de Starbucks** en pantalla.
+- **Voces:** cuota diaria del TTS 2.5 y 3.1 agotada → `gemini-3.8-flash-tts` sin Style, verificado
+  con Whisper (arrancan por la primera palabra) y el acento confirmado con Gemini: neutro
+  latinoamericano.
+- Entrega: `~/Desktop/cuentas-claras/anuncios/12-11 - 1..6.mp4` (33 a 37,6 s).
+
 ## 2026-11-12 (15ª pasada) — Piedras aromáticas: los 11 anuncios de Brasil pasados a hebreo (Israel)
 
 Pedido: *"Vamos a hacer la de piedras para hebreo, quiero que me hagas todos los ads que me hiciste en portugués, pero para hebreo, hacemelo rápido"*.

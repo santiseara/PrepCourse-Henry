@@ -270,6 +270,55 @@ ESCENAS += [
     ('g3_deu0', 'D30', '180', 'D', tabla('DEUDAS Y PRÉSTAMOS', ROSA, ['CONCEPTO', 'TASA', 'CUOTA'], G3_DEU0)),
 ]
 
+
+# --- calendario de pagos (el ad de los recargos) y las resenas de la landing ---
+CAL = [['Alquiler', 'vence el 5', 'Pagado'], ['Luz', 'vence el 14', 'Esta semana'],
+       ['Tarjeta', 'vence el 17', 'Esta semana'], ['Internet', 'vence el 18', 'Falta'],
+       ['Celular', 'vence el 22', 'Falta'], ['__TOT__', 'ESTA SEMANA VENCEN', '', '2']]
+
+RESENAS = [
+    ('Carolina M.', 'Bogotá, Colombia',
+     'Llevaba años diciendo que me iba a organizar y nunca pasaba de la primera semana.',
+     'Cargarla me tomó una tarde y el primer mes ya vi todo lo que se me iba en cosas que ni '
+     'recordaba haber comprado.'),
+    ('Martín S.', 'Montevideo, Uruguay',
+     'Tenía tres tarjetas y no sabía cuál me convenía pagar primero.',
+     'La hoja de deudas me lo ordenó sola. En ocho meses salí de dos.'),
+    ('Valentina P.', 'Lima, Perú',
+     'Probé dos aplicaciones antes y las dos me pedían acceso a todo.',
+     'Lo mejor es que no se conecta a mi banco. Esto es un archivo mío y listo.'),
+]
+
+RES_CSS = """<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{width:702px;height:1248px;background:#E8F1EC;display:flex;align-items:center;
+ justify-content:center;padding:0 34px}
+.card{background:#fff;border-radius:26px;padding:40px 38px 44px;box-shadow:0 18px 40px rgba(20,60,45,.18);width:100%}
+.stars{font-size:40px;color:#E8A72B;letter-spacing:4px}
+.sc{font-size:26px;color:#8a8a8a;margin-left:12px}
+.nm{font-size:40px;font-weight:700;color:#1b2b24;margin-top:18px}
+.ct{font-size:26px;color:#6b7c74;margin-top:6px}
+.tx{font-size:33px;line-height:1.5;color:#2a3a33;margin-top:24px}
+.hl{background:#FDE68A;padding:2px 4px;border-radius:4px;box-decoration-break:clone}
+</style>"""
+
+
+def resena(nombre, ciudad, texto, destacado):
+    return (RES_CSS + '<div class="card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;'
+            '<span class="sc">5.0</span></div>'
+            '<div class="nm">%s</div><div class="ct">%s</div>'
+            '<div class="tx">%s <span class="hl">%s</span></div></div>' % (nombre, ciudad, texto, destacado))
+
+
+ESCENAS += [
+    ('g6_cal', 'C16', 'vence el 14', 'C',
+     tabla('CALENDARIO DE PAGOS', CELESTE, ['CONCEPTO', 'VENCIMIENTO', 'ESTADO'], CAL,
+           'La planilla te muestra la semana antes de que se te pase.')),
+]
+RES_ESCENAS = [('res%d' % (i + 1), resena(*r)) for i, r in enumerate(RESENAS)]
+
 if __name__ == '__main__':
+    for name, html in RES_ESCENAS:
+        shot(html, name)
     for name, cell, valor, col, bloque in ESCENAS:
         shot(marco(cell, valor, col, bloque), name)

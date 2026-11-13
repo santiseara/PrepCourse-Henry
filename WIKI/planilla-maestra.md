@@ -18,12 +18,17 @@
 - Copy madre del primary text: *"Budgeting apps: $15/month = $180/year. Our workbook: pay once, yours forever"*, *"no bank login, your numbers stay yours"*, *"tracking isn't budgeting"*.
 
 ## Detalles / notas
+- **Tanda 1 entregada (12/11/2026):** 6 videos en `~/Desktop/cuentas-claras/anuncios/` (`12-11 - 1` a `12-11 - 6`), de 33 a 37,6 s.
+  - **1, 3 y 5 son de pantalla:** la planilla no existía, así que se dibujó por código (`gfx_planilla.py`: HTML tipo Google Sheets + Chrome headless) en 32 estados —bloque vacío, a medio cargar y completo— y el editor los encadena en el orden del guion con las anclas (`seq` nuevo en `edit_planilla.py`). Viewport de captura de 702x1248 escalado a 1080x1920: así la hoja se lee en el teléfono.
+  - **2, 4 y 6 son de b-roll:** 61 clips bajados de `#deskaesthetic`, `#coffeeandlaptop`, `#planner`, `#cashstuffing` y `#supermercado`; **sobrevivieron 5**. Los tags de finanzas (`planner`, `cashstuffing`) están podridos de texto quemado y de billetes de dólar, y los de supermercado traen precios en una sola moneda. El clip que no tenía una sola letra se cayó igual: tenía el vaso con el **logo de Starbucks**.
+  - Las **reseñas de la landing** (Carolina, Martín, Valentina) se dibujaron como tarjetas con resaltador amarillo, igual que las capturas que apila el ganador.
+  - Voz **Sulafat** por API a speed 1.30; el 2.5 y el 3.1 estaban con la cuota diaria agotada, salió con `gemini-3.8-flash-tts` **sin Style** y verificado con Whisper. Acento confirmado con Gemini: **neutro latinoamericano**.
 - **Tanda 1 (12/11/2026):** 6 guiones en `OUTPUTS/2026-11-12-guiones-cuentas-claras-tanda1.md` — día de pago · reseñas · pareja con dos sueldos · anti-app · anotar no es presupuestar · recargos y calendario. Descripciones en `OUTPUTS/2026-11-12-descripcion-cuentas-claras.md`.
 - **Sin cifra en moneda** en los guiones: el ganador vive de *"$4,700 salary"* y en LATAM multipaís eso no se traduce ([[guiones-y-anuncios]], regla del 8/11). Se cuenta con categorías y cantidades.
 - La landing tiene un typo en la barra de marca: dice **"Sitema"** en vez de "Sistema".
 
 ## Preguntas abiertas
-- ¿Existe ya el archivo real de la planilla (Google Sheets)? Sin él no se puede clonar la grabación de pantalla, que es el 80% de la pantalla del ganador.
+- La planilla de los videos está **dibujada**, no es el producto real. Cuando exista el archivo, conviene regrabar las hojas de verdad (los nombres y los bloques ya coinciden con la landing).
 - ¿Se arma el ad de lead magnet gratis que ellos corren en paralelo (*"FREE BUDGET TOOL"*)?
 
 ## Relacionado

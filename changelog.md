@@ -1,3 +1,23 @@
+## 2026-11-13 (17ª pasada) — Kit de Radiestesia (péndulo): radiografía de Regarte y tanda 1 para LATAM
+
+Pedido: *"Ahora vamos con esta nueva oferta… hacé videos voz en off, ignorá los que aparece la mujer"*, y
+después *"es para LATAM la oferta"*.
+
+- **Competidor desarmado:** Regarte (page 1342388312284290), **116 ads activos**, 55 videos únicos, cada ad
+  con su propio texto principal. De los 12 más vistos, **7 son ella a cámara y 5 son voz en off**; se modelaron
+  solo esos cinco. Su oferta: $16.990 ARS, 9 módulos, 37 biómetros con la pregunta impresa, 52 gráficos
+  radiónicos, 7 circuitos, 6 bonos y garantía de 14 días.
+- **Tanda 1:** 6 guiones de voz en off en **español neutro** (se escribieron en voseo y se pasaron a neutro
+  cuando avisó que era para LATAM): `OUTPUTS/2026-11-13-guiones-pendulo-tanda1.md`.
+- **⚠️ El nicho no da b-roll en TikTok.** 104 clips bajados de seis tags, **2 sobrevivieron**: `#pendulum` es
+  física (péndulos de Newton, un recital), `#dowsing` es búsqueda de agua con varillas, `#pendulumboard` es
+  carpintería con pirograbado en inglés, y `#pendulo` / `#radiestesia` son videos de frases con texto quemado.
+  Queda anotado en [[kit-de-radiestesia]] junto con la salida propuesta: **placas animadas** con las láminas
+  dibujadas por código, que es el único ad suyo sin persona.
+- **Los 50 clips del nicho real se subieron al Drive** a pedido suyo: `Ebook Dami / Ebook Pendulo (LATAM) / Clips`,
+  nombrados con el id de TikTok para que cada uno se abra con `tiktok.com/@x/video/<id>`. Los 10 más pesados
+  se recomprimieron a 540 px y 75 s para pasar el límite de subida.
+
 ## 2026-11-13 (17ª pasada) — Método Ganadero: los 6 videos de la tanda 1
 
 - **6 videos renderizados** (40–45 s, 1080x1920): voz **Orus** por API en neutro latinoamericano

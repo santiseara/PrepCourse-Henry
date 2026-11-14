@@ -19,6 +19,40 @@ anchos renderizados y se comparan con los porcentajes del dato:
 `[...d.querySelectorAll('.rev .track i')].map(e=>Math.round(e.getBoundingClientRect().width))`.
 Si los píxeles no guardan la misma proporción que los números, el gráfico está mintiendo.
 
+### 🆕 2026-11-14 · 🐞 El motor del competidor TIRA EL HOST del checkout
+Al poner el checkout definitivo en [[gluteo-despierto]] apareció un bug del motor que clonamos. Su `completar()` termina así:
+
+```js
+a.setAttribute("href", u.pathname + u.search);   // ← se come el host
+```
+
+Con un checkout **relativo** (`/checkout`) no se nota: `u.pathname` ya es lo que hace falta. Con uno **absoluto**
+(`https://tu-tienda.impultienda.ar/checkout`), al tocar el botón el href se reescribe como `/checkout` **del dominio
+donde está el quiz** — y si el quiz vive en otra tienda, todos los CTAs mandan el tráfico pagado a una página que no
+existe. **Es un bug dormido: aparece recién el día que se pone la URL real.**
+
+Se reemplaza el bloque entero por uno que guarda la URL completa (`u.href`) y, de paso, arregla otras tres cosas de su
+versión:
+- **Los `href` nacen puestos desde que carga la página**, no recién en el `pointerdown`. El suyo solo completaba al
+  tocar: si el JS fallaba antes, o alguien copiaba el link con el botón derecho, se llevaba el relativo.
+- **El selector cubre también lo que no es `<a>`** (`a[href^="/checkout"], [data-cta]`), que es como entra la caja de
+  precio.
+- **Es idempotente** (`data-ligado`): llamarlo dos veces no suma dos listeners ni dispara dos `AddToCart` por clic.
+
+⚠️ **Y la caja de precio lleva al checkout.** En el quiz del competidor `.precio` es una caja verde con borde y esquinas
+redondeadas que **parece un botón** y no lleva a ningún lado. Es exactamente el caso de la corrección del 4/11 en
+[[academia-del-trazo]] (*"Esos botones también tienen que redirigir, TODOS LOS BOTONES"*): se le pone `data-cta` y el JS
+le da `cursor:pointer` y el clic. En este quiz pasó de **9 CTAs a 10**.
+
+**Cómo se verifica (no leyendo el código):** se construye una vez con un checkout **absoluto de prueba**, se abre el
+último paso con `?utm_source=...&utm_campaign=...&fbclid=...`, se dispara `pointerdown` en todos los `<a>` y se chequea
+que **todos** sigan empezando por el host completo y arrastren los parámetros. 🐞 Ojo al comparar: `new URL()`
+**normaliza el host a minúsculas**, así que un `indexOf()` contra la URL tal cual se escribió da falso negativo.
+
+🐞 **Y antes de cada recorrido, limpiar el `localStorage`.** Este motor recuerda el paso un día (`pc_paso`): después de
+probar la oferta, la siguiente carga arranca **directo en el paso 29** y el recorrido "ve" un solo paso. Parece que el
+quiz está roto y lo único que pasa es que retomó donde quedó.
+
 ### 🆕 2026-11-14 · "El mismo diseño que ellos, pero que diga cosas distintas"
 Santiago, sobre [[gluteo-despierto]]: *"que sea similar al de ellos, pero un poco distinto, porque va a ir en el mismo
 mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera"*. Lo interpreté como **copiá la

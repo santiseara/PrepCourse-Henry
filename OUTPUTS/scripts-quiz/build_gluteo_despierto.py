@@ -8,6 +8,14 @@ imagenes y el bloque de configuracion.
 """
 import re, sys, os
 
+# ===========================================================================
+# EL CHECKOUT — es lo unico que hay que tocar cuando cambia la tienda.
+# Puede ser absoluto ("https://tu-tienda.impultienda.ar/checkout") o relativo
+# ("/checkout", que resuelve a la tienda donde se pegue el HTML).
+# Se verifica con: curl -sIL -o /dev/null -w "%{http_code}" <url>  -> 200
+# ===========================================================================
+CHECKOUT_URL = '/checkout'
+
 SRC = 'comp_doc.html'
 OUT = os.path.expanduser('~/Desktop/gluteo-despierto/landing/quiz.html')
 
@@ -415,6 +423,9 @@ OF = [
   '<span>Quiero Despertar Mi Glúteo en 28 Días</span>'),
  ('alt="Compra segura, satisfacción garantizada, privacidad protegida"',
   'alt="Compra segura, satisfacción garantizada, privacidad protegida"'),
+ # la caja de precio PARECE un boton (verde, con borde y radio): tiene que
+ # llevar al checkout como cualquier CTA. En el original no llevaba a nada.
+ ('<div class="precio">', '<div class="precio" data-cta>'),
  ('<p class="caja-tit">Lo que vas a recibir</p>', '<p class="caja-tit">Lo que te llevás hoy</p>'),
  ('<strong>Método Anti-Lesión</strong>: La técnica exacta para tonificar glúteos y piernas protegiendo tus rodillas de cualquier impacto;',
   '<strong>Fase 1 &#x2014; Despertar</strong>: los 7 días que vuelven a encender el glúteo antes de pedirle que crezca;'),
@@ -490,31 +501,66 @@ pasos[29] = rep(pasos[29], OF, 'oferta')
 cola = rep(cola, [
  ('var VTURB_CUENTA = "";      /* VTurb: id de la cuenta (scripts.converteai.net/CUENTA/players/PLAYER/v4/player.js) */',
   '/* ===== LO QUE SE TOCA =====\n'
-  '   CHECKOUT  : relativo mientras no esté el subdominio de ImpulTienda.\n'
-  '               Resuelve solo a la tienda donde se pegue este HTML.\n'
+  '   CHECKOUT  : el ÚNICO lugar con la URL de pago. Puede ser absoluta\n'
+  '               ("https://tu-tienda.impultienda.ar/checkout") o relativa\n'
+  '               ("/checkout", que resuelve a la tienda donde se pegue esto).\n'
   '   PIXEL_ID  : vacío si el pixel lo carga ImpulTienda.\n'
   '   BOTON_SEGUNDO: 0 = el botón del diagnóstico se ve de entrada.\n'
   '   Las imágenes cuelgan de ../imagenes/ y se embeben con inline_quiz.py. */\n'
-  'var CHECKOUT = "/checkout";\n'
+  'var CHECKOUT = "' + CHECKOUT_URL + '";\n'
   'var PIXEL_ID = "";\n'
   'var VTURB_CUENTA = "";      /* VTurb: id de la cuenta (scripts.converteai.net/CUENTA/players/PLAYER/v4/player.js) */'),
  ('var VSL_MP4 = "";',
   'var VSL_MP4 = "";           /* el MP4 de nuestro VSL, cuando esté */'),
- # el checkout sale de CHECKOUT, no hardcodeado
- ('var u = new URL(a.getAttribute("href"), location.origin);',
-  'var u = new URL(CHECKOUT + a.getAttribute("href").slice(9), location.origin);'),
 ], 'config')
 
-# el pixel, al final del script
+# ---------------------------------------------------------------------------
+# El bloque de checkout del competidor se reemplaza entero. El suyo hacia
+#   a.setAttribute("href", u.pathname + u.search)
+# que TIRA EL HOST: con un checkout en otro dominio, el link se rompia al
+# tocarlo. Ademas solo completaba en el click, y la caja de precio — que
+# parece un boton — no llevaba a ningun lado.
+# ---------------------------------------------------------------------------
+viejo_checkout = cola[cola.index('/* ===== CHECKOUT:'): cola.index('/* ===== ARRANQUE:')]
+nuevo_checkout = '''/* ===== CHECKOUT ==========================================================
+   Un solo lugar con la URL (CHECKOUT). Todo lo que lleva al pago nace con
+   ella puesta desde que carga la pagina, no recien al tocarla, y le suma los
+   parametros de la visita (UTMs, fbclid). Idempotente: no engancha dos veces.
+   ========================================================================= */
+function urlCheckout() {
+try {
+var u = new URL(CHECKOUT, location.origin);
+if (params) params.forEach(function (v, k) {
+if (k !== "paso" && v && !u.searchParams.get(k)) u.searchParams.set(k, v);
+});
+return u.href;
+} catch (e) { return CHECKOUT; }
+}
+function ligarCTAs() {
+var url = urlCheckout();
+[].forEach.call(document.querySelectorAll('a[href^="/checkout"], a[data-cta], [data-cta]'), function (el) {
+if (el.tagName === "A") { el.setAttribute("href", url); el.setAttribute("rel", "noopener"); }
+else { el.style.cursor = "pointer"; }
+if (el.getAttribute("data-ligado")) return;
+el.setAttribute("data-ligado", "1");
+el.addEventListener("click", function (e) {
+track("checkout_click");
+if (PIXEL_ID && window.fbq) { try { fbq("track", "AddToCart"); } catch (x) {} }
+if (el.tagName !== "A") { e.preventDefault(); location.href = urlCheckout(); }
+});
+});
+}
+ligarCTAs();
+'''
+cola = cola.replace(viejo_checkout, nuevo_checkout, 1)
+
+# el pixel, al final del script (el AddToCart ya lo dispara ligarCTAs)
 cola = cola.replace('})();\n</script>',
  '''if (PIXEL_ID) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
 fbq("init", PIXEL_ID); fbq("track","PageView");
-[].forEach.call(document.querySelectorAll('a[href^="/checkout"]'), function (a) {
-a.addEventListener("click", function () { try { fbq("track","AddToCart"); } catch (e) {} });
-});
 }
 })();
 </script>''', 1)

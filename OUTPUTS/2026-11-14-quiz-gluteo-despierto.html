@@ -477,7 +477,7 @@ button{font-family:inherit}
 <h2 class="of-tit">¡Tu Protocolo de 28 días está listo!</h2>
 <p class="of-sub">Según tus respuestas, podés <strong>despertar el glúteo y tener la cola parada en 28 días</strong> &#x2014; aunque tengas las rodillas sensibles.</p>
 <div class="timer rojo">Tu descuento queda guardado por: <span data-timer="900" data-clave="oferta">15:00</span></div>
-<div class="precio"><div class="precio-izq">Precio</div><div class="precio-der"><small>Antes AR$ 99.990</small><strong>AR$ 19.990</strong><span>en un solo pago</span></div></div>
+<div class="precio" data-cta><div class="precio-izq">Precio</div><div class="precio-der"><small>Antes AR$ 99.990</small><strong>AR$ 19.990</strong><span>en un solo pago</span></div></div>
 <p class="cuotas">o <strong>3 cuotas de AR$ 6.664</strong> con Mercado Pago</p>
 <div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Despertar Mi Glúteo en 28 Días</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
 <img class="sellos" src="../imagenes/sellos-compra.webp" alt="Compra segura, satisfacción garantizada, privacidad protegida" width="1000" height="164">
@@ -527,8 +527,9 @@ button{font-family:inherit}
 "use strict";
 /* ===== CONFIGURACION ===== */
 /* ===== LO QUE SE TOCA =====
-   CHECKOUT  : relativo mientras no esté el subdominio de ImpulTienda.
-               Resuelve solo a la tienda donde se pegue este HTML.
+   CHECKOUT  : el ÚNICO lugar con la URL de pago. Puede ser absoluta
+               ("https://tu-tienda.impultienda.ar/checkout") o relativa
+               ("/checkout", que resuelve a la tienda donde se pegue esto).
    PIXEL_ID  : vacío si el pixel lo carga ImpulTienda.
    BOTON_SEGUNDO: 0 = el botón del diagnóstico se ve de entrada.
    Las imágenes cuelgan de ../imagenes/ y se embeben con inline_quiz.py. */
@@ -690,19 +691,35 @@ el.addEventListener("video:ended", mostrar);
 if (player && player.played) revisar(Number(player.currentTime) || 0);
 }, 2000);
 }
-/* ===== CHECKOUT: los botones y fotos de la oferta llevan los parametros de la visita (UTMs, fbclid) ===== */
-function completar(a) {
+/* ===== CHECKOUT ==========================================================
+   Un solo lugar con la URL (CHECKOUT). Todo lo que lleva al pago nace con
+   ella puesta desde que carga la pagina, no recien al tocarla, y le suma los
+   parametros de la visita (UTMs, fbclid). Idempotente: no engancha dos veces.
+   ========================================================================= */
+function urlCheckout() {
 try {
-if (!params) return;
-var u = new URL(CHECKOUT + a.getAttribute("href").slice(9), location.origin);
-params.forEach(function (v, k) { if (k !== "paso" && v && !u.searchParams.get(k)) u.searchParams.set(k, v); });
-a.setAttribute("href", u.pathname + u.search);
-} catch (e) {}
-}
-[].forEach.call(document.querySelectorAll('a[href^="/checkout"]'), function (a) {
-a.addEventListener("pointerdown", function () { completar(a); });
-a.addEventListener("click", function () { completar(a); track("checkout_click"); });
+var u = new URL(CHECKOUT, location.origin);
+if (params) params.forEach(function (v, k) {
+if (k !== "paso" && v && !u.searchParams.get(k)) u.searchParams.set(k, v);
 });
+return u.href;
+} catch (e) { return CHECKOUT; }
+}
+function ligarCTAs() {
+var url = urlCheckout();
+[].forEach.call(document.querySelectorAll('a[href^="/checkout"], a[data-cta], [data-cta]'), function (el) {
+if (el.tagName === "A") { el.setAttribute("href", url); el.setAttribute("rel", "noopener"); }
+else { el.style.cursor = "pointer"; }
+if (el.getAttribute("data-ligado")) return;
+el.setAttribute("data-ligado", "1");
+el.addEventListener("click", function (e) {
+track("checkout_click");
+if (PIXEL_ID && window.fbq) { try { fbq("track", "AddToCart"); } catch (x) {} }
+if (el.tagName !== "A") { e.preventDefault(); location.href = urlCheckout(); }
+});
+});
+}
+ligarCTAs();
 /* ===== ARRANQUE: como el original, retoma el paso donde quedo (1 dia). ?paso=N abre esa pantalla sin guardar. ===== */
 var pedido = parseInt(param("paso"), 10);
 if (pedido >= 0 && pedido < TOTAL) ir(pedido, false);
@@ -715,9 +732,6 @@ if (PIXEL_ID) {
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
 fbq("init", PIXEL_ID); fbq("track","PageView");
-[].forEach.call(document.querySelectorAll('a[href^="/checkout"]'), function (a) {
-a.addEventListener("click", function () { try { fbq("track","AddToCart"); } catch (e) {} });
-});
 }
 })();
 </script>

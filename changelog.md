@@ -1,3 +1,23 @@
+## 2026-11-14 (22ª pasada) — Glúteo Despierto: los CTAs del último slide
+
+Santiago pidió ajustar los botones del último slide con su checkout. **El link no llegó en el mensaje** (se cortó al
+pegar), así que quedó el relativo `/checkout` y se avisó. Lo que sí se hizo es todo lo que no dependía de la URL:
+
+- 🐞 **El motor del competidor tiraba el host.** Su `completar()` hacía `a.setAttribute("href", u.pathname + u.search)`:
+  con un checkout absoluto, al tocar el botón el href se reescribía como `/checkout` del dominio del quiz. Bug dormido
+  que aparecía recién con la URL real. Se reemplazó el bloque entero: ahora guarda la URL completa, los `href` nacen
+  puestos desde que carga la página, el selector cubre lo que no es `<a>` y es idempotente.
+- **La caja de precio ahora lleva al checkout.** Es una caja verde con borde y esquinas redondeadas que parece un botón
+  y no llevaba a ningún lado (regla del 4/11 de Academia del Trazo). De **9 CTAs a 10**.
+- **Verificado con un checkout absoluto de prueba**: los 9 `<a>` conservan el host completo y arrastran `utm_source`,
+  `utm_campaign`, `utm_content` y `fbclid`; los 10 ligados una sola vez. Y los 30 pasos de nuevo, sin desbordes ni
+  errores.
+- 🐞 Dos trampas de medición anotadas: `new URL()` **normaliza el host a minúsculas** (da falso negativo al comparar) y
+  el motor **recuerda el paso un día** en `localStorage`, así que hay que limpiarlo antes de cada recorrido o arranca
+  directo en la oferta.
+- El `.txt` (1.010 KB, 15 imágenes en base64) quedó regenerado y en el portapapeles. **Cambiar el checkout es una línea**
+  (`CHECKOUT_URL` en `scripts-quiz/build_gluteo_despierto.py`) y volver a correr el script.
+
 ## 2026-11-14 (21ª pasada) — Glúteo Despierto v2: su mismo diseño, todos los textos nuevos
 
 Le entregué el quiz con **nuestro** motor y me lo rebotó: *"No, no entendiste, quiero el mismo diseño que ellos, pero

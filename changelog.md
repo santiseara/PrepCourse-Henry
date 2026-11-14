@@ -1,3 +1,20 @@
+## 2026-11-14 (18ª pasada) — Postres en vaso: radiografía del competidor argentino y tanda 1
+
+Santiago pasó la Biblioteca de **Recetas para la familia** (`mi-dulce-negocio-postres-en-vaso-irresistibles.impultienda.ar`,
+~81 ads activos, el más viejo del 8/11, segunda landing estrenada el 13/11, checkout en ImpulTienda) y pidió **6 videos de
+testeo para Argentina**, con guiones distintos porque el competidor ya tira acá.
+
+- **Radiografía:** se bajaron y transcribieron **14 de sus ~81 ads** (muestra, regla de no bajar todos). Corre **un solo texto
+  principal** para todo el arsenal y **dos cuerpos de video fijos** (bizop completo y lifestyle sin horno) con **14 hooks**
+  rotando. Sus ángulos: sin local, sin horno, sin experiencia, velocidad (10 minutos, una tarde) y "ya tenés todo en tu cocina".
+- **Lo que no usa, y es nuestro espacio:** ni una cifra de plata, ni un cliente que compre, ninguna reacción de un tercero,
+  ningún margen visible y nada de temporada.
+- **Tanda 1 (6 guiones, voseo, 29-34 s):** el pedido de veinte de una sola vez, el margen del kilo de helado, el stock que se
+  arma y no se hornea, "¿de qué pastelería los trajiste?", los cumpleaños a diez cuadras y la foto al grupo del colegio.
+- **Archivos:** `OUTPUTS/2026-11-14-guiones-postres-en-vaso-tanda1.md`, copia en `~/Desktop/mi-dulce-negocio/anuncios/`,
+  página nueva `WIKI/postres-en-vaso.md`.
+- **Pendiente:** nombre de la oferta propia, precio, landing, y si se meten cifras en pesos (el competidor no usa ninguna).
+
 ## 2026-11-14 (17ª pasada) — DanceGo: las otras dos novelas
 
 Las novelas 3 («El asado del domingo», 2:02) y 4 («La foto del cumple», 1:52), con 12 y 8 tomas nuevas; el resto reusa los

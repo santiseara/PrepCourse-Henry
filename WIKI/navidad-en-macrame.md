@@ -39,8 +39,17 @@ Dos sub-ángulos que rotan: **decorar tu casa** (deseo) y **vender en diciembre*
 
 Insertos de producto dibujados por código: `OUTPUTS/scripts-vsl/gfx_macrame.py` (tapa, página de proyecto, las 6 categorías, los 4 nudos, los 8 bonos). Editor: `edit_macrame.py`; planes: `gen_macrame_plans.py`.
 
+## Entrega
+Los 6 videos (29-34 s) están en el Drive: `Mi unidad / Ebook Dami / Ebook Macrame (LATAM) / Videos terminados`,
+nombrados por el arranque de su hook (`La decoración de Navidad.mp4`, `En Nochebuena.mp4`, `Si quieres vender.mp4`,
+`El problema no es.mp4`, `El regalo que más.mp4`, `Un solo adorno.mp4`). Los masters en alta quedaron en
+`~/Desktop/navidad-macrame/anuncios/work/masters/`.
+
+Santiago, el 14/11: *"va con el mismo [nombre], obviamente hagámoslos un poco distintos, no tanto, porque solo tira
+en arg, yo voy a tirar en el resto de países de LATAM"*. Así que la oferta se llama igual que la original y los
+guiones son variantes de su DNA, no copias: mismo esqueleto, hooks y ángulos propios.
+
 ## Preguntas abiertas
-- **¿La landing propia ya existe?** Los guiones nombran la oferta **"Navidad en Macramé"**, igual que la página original. Si en LATAM va con otro nombre, se cambian los guiones, los insertos y hay que regenerar las voces.
 - Precio y checkout de la versión LATAM.
 
 ## Relacionado

@@ -53,6 +53,8 @@ testeo para LATAM con acento neutro**. Además: *"Acordate lo del drive, guardal
   y aparecio en tres renders. Se agrego al metodo un **mosaico de un cuadro grande por clip** para mirarle las esquinas.
 - **Archivos:** `OUTPUTS/2026-11-14-guiones-navidad-macrame-tanda1.md` (guiones + descripción corta + 6 variantes),
   `WIKI/navidad-en-macrame.md`, y los scripts `gfx_macrame.py`, `vent_macrame.py`, `gen_macrame_plans.py`, `edit_macrame.py`.
+- **Entregado:** los 6 MP4 en `Mi unidad / Ebook Dami / Ebook Macrame (LATAM) / Videos terminados`, nombrados por el
+  arranque de su hook. ⚠️ `file_upload` ya no acepta archivos del Escritorio: hay que copiarlos antes al scratchpad.
 - **Regla reconfirmada:** el Drive es el destino de **toda** tanda terminada, sin preguntar ([[organizacion-y-registro]],
   [[como-trabajar-con-santiago]] y memoria `entrega-en-drive`).
 - **Pendiente:** confirmar el nombre de la oferta propia (los guiones dicen "Navidad en Macramé", igual que la original),

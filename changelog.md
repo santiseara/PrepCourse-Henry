@@ -1,3 +1,32 @@
+## 2026-11-14 (20ª pasada) — Glúteo Despierto: el quiz modelado de una ballena de 194 ads
+
+Santiago pasó la Ads Library de **Guía Piernas y Cola Sin Sentadillas** (`guiapiernasycola.impultienda.ar`) y pidió
+*"un quiz similar al de ellos, pero un poco distinto, porque va a ir en el mismo mercado, de última le podemos cambiar
+el nombre al método, o mostrarlo de otra manera"*.
+
+- **Radiografía:** **194 anuncios activos**, el más viejo del 7/11 y el grueso creado el 12 y 13/11 — escaló en una semana.
+  Un solo link title: *"Truco del Bumbum - Sin sentadillas"* (se les quedó el *bumbum* del original brasileño). El quiz
+  entero viajaba en **texto plano** en el `custom_html` de su tienda: 29 pasos, 24 preguntas, cero fotos en las opciones,
+  $19.990 (antes $99.990), 3 bonos y 2 upsells (*Panza Chata* $3.990 y *Busto Firme* $4.990).
+- **La diferencia, que es el mecanismo y no el copy:** ellos venden *sacá la sentadilla porque te duelen las rodillas*;
+  nosotros **el Protocolo del Glúteo Dormido** — *la sentadilla no te levanta la cola porque el cuádriceps se come el
+  trabajo y el glúteo se acostumbra a no encenderse*. Tres fases: Despertar · Aislar · Cargar.
+- **El quiz (22 pasos, 15 preguntas contra sus 29/24).** Motor clonado del de SumaAI/DanceGo. Se recortaron 9 preguntas
+  suyas que repetían el mismo golpe emocional y se sumó lo que ellos no tienen: la **pregunta del ejercicio con 4 fotos**
+  + la **pantalla de revelación** con barras comparativas, dos **medidores**, el **Índice de Activación Glútea** (0-100
+  con barra de riesgo, potencial a 28 días y gráfico) y la **maqueta de la app en HTML/CSS**.
+- **Las 8 fotos son propias**, generadas en un solo batch: 4 retratos por rango etario (22/31/41/54, mismo set) y 4
+  ejercicios con la misma mujer y el mismo living. Antes de gastar un crédito se miró el banco propio: Origen Pilates son
+  mujeres 40+ vestidas de calle y Calistenia Rusa son todos hombres — no servía, y se dijo.
+- **Verificado por código** en un iframe de 390 px: los 15 pasos recorridos, **0 desbordes, 0 imágenes rotas, 0 errores**
+  de consola, los 4 CTAs al checkout arrastrando los UTMs y los 7 campos de precio consistentes.
+- **Dos arreglos nuevos para la checklist:** un `<span>` con `height` no se ve si no es `display:block`, y si la chapita
+  de al lado de una barra cambia de ancho, **las barras dejan de ser comparables** (ancho fijo).
+- **Pendientes anotados:** el VSL (`SEGUNDOS_OFERTA` en 0), el subdominio de ImpulTienda (checkout relativo), los
+  testimonios de ejemplo y el nombre del método, que lo elegí yo.
+- Nuevo: `WIKI/gluteo-despierto.md`. Entregable: `OUTPUTS/2026-11-14-quiz-gluteo-despierto.html` y
+  `~/Desktop/gluteo-despierto/` (`landing/` con el `.txt` de 552 KB, el `PRUEBA.html` y el fuente; `imagenes/` con las 8).
+
 ## 2026-11-14 (19ª pasada) — Navidad en Macramé: radiografía del competidor y tanda 1 para LATAM
 
 Santiago pasó la Ads Library de **emprender con manualidades** (`navidadenmacrame.impultienda.ar`) y pidió **6 ads de

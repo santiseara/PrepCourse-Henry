@@ -1,5 +1,50 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-14 · Dos cosas que rompen una barra comparativa (y no tiran ningún error)
+En la pantalla de revelación de [[gluteo-despierto]] —cuatro ejercicios ordenados por cuánto activan el glúteo— las barras
+salieron primero invisibles y después mentirosas. Las dos fallas son silenciosas: no hay error de consola, el HTML es
+válido y el desborde da 0.
+
+1. **Un `<span>` con `height` no se ve: hay que darle `display:block`.** La barra era
+   `<span class="track"><i style="width:95%"></i></span>` dentro de un `<span class="nm">`. Como el span es inline, el
+   `height:7px` del CSS no aplica y la barra simplemente no existe en pantalla. Quedaban solo las etiquetas, y la
+   comparación —que es el mecanismo demostrado— se perdía entera.
+2. **Si la chapita de al lado cambia de ancho, las barras dejan de ser comparables.** Con el track en `flex:1`, la fila
+   de *"MUY ALTA"* tiene menos espacio que la de *"ALTA"*, así que **el 95 % medía 155 px y el 74 % medía 145 px**: dos
+   barras casi iguales para dos valores muy distintos. Se arregla fijando el ancho de la chapita
+   (`width:88px;text-align:center;white-space:nowrap`). Después: 156 / 121 / 75 / 36 px, y la diferencia se lee de una.
+
+**Cómo se chequea:** no alcanza con mirar la captura (las etiquetas distraen y parece que está bien). Se miden los
+anchos renderizados y se comparan con los porcentajes del dato:
+`[...d.querySelectorAll('.rev .track i')].map(e=>Math.round(e.getBoundingClientRect().width))`.
+Si los píxeles no guardan la misma proporción que los números, el gráfico está mintiendo.
+
+### 🆕 2026-11-14 · Un quiz contra un competidor del MISMO mercado cambia el mecanismo, no el copy
+Pedido de Santiago sobre [[gluteo-despierto]]: *"que sea similar al de ellos, pero un poco distinto, porque va a ir en el
+mismo mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera"*. Esto **no es** el caso de
+§2 (fidelidad al original): ahí se clona porque el competidor corre en otro país. Acá compartimos feed, y dos quizzes
+iguales en el mismo feed se canibalizan.
+
+**Lo que se mantiene** (es lo validado): la arquitectura de pasos, el orden de los bloques (datos → dolor → miedo →
+compromiso → diagnóstico → oferta), las preguntas que de verdad personalizan el resultado y el precio.
+
+**Lo que cambia, en este orden:**
+1. **El mecanismo.** Es lo único que de verdad diferencia. Ellos: *sacá la sentadilla porque te duelen las rodillas*.
+   Nosotros: *la sentadilla no te levanta la cola, el cuádriceps se come el trabajo*. El beneficio de ellos (rodillas)
+   queda adentro, pero como ítem de la lista, no como ángulo madre.
+2. **Una pantalla que lo demuestre.** Una pregunta con fotos + una revelación. Contar el mecanismo es copy; hacérselo
+   descubrir en una pregunta es producto, y es lo que el competidor no tiene.
+3. **Una métrica propia con nombre.** El Índice de Activación Glútea (0-100) hace que el resultado sea nuestro: barra de
+   riesgo, potencial a X días y gráfico. Se calcula con respuestas que ya estábamos pidiendo.
+4. **La paleta.** Se mira la del competidor y se elige otra familia. Ellos violeta `#970FA9` + magenta; nosotros ciruela
+   `#A62B55` sobre papel cálido. En el mismo feed tienen que leerse como dos marcas.
+5. **Las fotos, propias.** Reusar el antes/después del competidor en su mismo mercado se nota. Y lo que se puede resolver
+   en HTML —el antes/después, por ejemplo, como dos listas ✗ / ✓— sale nítido, gratis y no arrastra material ajeno.
+
+**Y se recorta.** De sus 24 preguntas quedaron 15: se van las que repiten el mismo golpe emocional con otras palabras
+(*qué temés* / *cómo te ves en 6 meses* / *qué impacto tiene en tu autoestima* son la misma pregunta tres veces). La
+lista de las que se sacan va **comentada arriba del array `STEPS`**, para poder volver atrás sin rehacer el análisis.
+
 ### 🆕 2026-11-12 · Un quiz no se escribe de cero: se clona el motor del último que funcionó
 Santiago, sobre la primera versión del quiz de [[sumaai]]: *"Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz"*. Tenía razón: estaba escrito desde cero, sin fotos y con emojis como imagen principal. Lo que faltó fue **abrir un quiz nuestro antes de escribir una línea**.
 
@@ -256,6 +301,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | "que sea similar al de ellos, pero un poco distinto, porque va a ir en el mismo mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera" | **Mismo mercado = se cambia el mecanismo, no el copy** (ver la regla del 14/11 arriba). De sus 29 pasos / 24 preguntas a **22 / 15**; mecanismo nuevo (**Protocolo del Glúteo Dormido**), pregunta con fotos + revelación, **Índice de Activación Glútea**, paleta ciruela y **8 fotos propias** generadas en un batch. Antes de generar se miró el banco propio y **no servía** — se dijo en vez de prometer un reuso inexistente. Dos bugs silenciosos nuevos: el `<span>` sin `display:block` y la chapita de ancho variable que descalibra las barras |
 | 2026-11-12 | Quiz SumaAI (v2) | "Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz" | Se rehizo entero **clonando el motor de DanceGo** (ver la regla del 12/11 arriba): Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada de género con fotos a sangre, dos pantallas de comida con fotos reales, maqueta de celular, carga con anillo, resultado con IMC y gráfico, y la oferta completa estilo lanzamiento. **11 fotos sacadas del banco propio** (base64 de los quizzes viejos de `OUTPUTS/`), cero créditos |
 | 2026-11-12 | Quiz SumaAI (modelado de Welmi) | "Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul" | De **35 pasos a 19**. Se van: prueba social con ratings ajenos, "¿te derivó un profesional?", nivel de nutrición, hábitos, placa de Harvard/UNICEF, objetivo de pasos, fecha del primer control, edad exacta, placas de relleno y **el email gate**. Se unifican intolerancias + dieta y caminata + escaleras + pasos. Quedan las que personalizan el resultado y las de compromiso emocional (el **mayor reto** se devuelve dos pasos después). Paleta azul `#1B4CD9` / `#0E2452` / `#F2F6FD`, con verde solo para "bien" y rojo solo para riesgo. **Un rating que no es nuestro no se clona**: ahí no aplica "fidelidad al original", aplica "no inventar datos" |
 | 2026-11-11 | Quiz Cápsulas Encantadas (AR) | "Ahora quiero que hagamos este quiz pero para argentina. Lo vamos a cobrar 12.990… El link de checkout te lo paso desp" | Clon del quiz propio en inglés (*Tea Charm Studio*, 27 USD): mismos 8 pasos y mismo orden, español argentino con voseo, motor multi-moneda reemplazado por precio fijo + cuotas, nombres y ciudades argentinos, y las 5 imágenes con texto en inglés rehechas sin gastar un crédito (recorte, HTML y Pillow). Checkout relativo hasta que pase la URL. Aprendizajes nuevos: las comillas del CONFIG en `inline_quiz.py` y la foto duplicada en base64 (ver la regla del 11/11 arriba) |

@@ -70,7 +70,10 @@ el pool de clips y los masters en alta).
    guardarlo en `window.__cap`, ponerle un `id` y un `aria-label` propios y, si no está en el DOM,
    agregarlo al `body`. Sin el parche, el clic abre un diálogo del sistema que no se puede manejar.
 2. Clic real en **Nuevo → Subir archivo**. El input queda capturado (es `multiple`).
-3. Cargar los MP4 con `file_upload`. **Tope de 10,4 MB por llamada**, así que van de a uno; para
+3. Cargar los MP4 con `file_upload`. **Tope de 10,4 MB por llamada**, así que van de a uno. ⚠️ **Desde
+   el 2026-11-14 `file_upload` solo acepta archivos que la sesión tiene permitidos**: un MP4 que está en
+   `~/Desktop/...` lo rechaza con *"only files this session is allowed to read can be uploaded"*. Se copian
+   antes al **scratchpad de la sesión** y se suben desde ahí. Para
    mandarlos todos juntos, se acumulan en un `input` propio con un listener que los empuja a
    `window.__acc`, y al final se arma un `DataTransfer` y se hace `input.files = dt.files`.
 4. Disparar `input` y `change` sobre el input capturado. Ahí Drive sube de verdad.

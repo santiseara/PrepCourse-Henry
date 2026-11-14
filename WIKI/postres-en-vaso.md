@@ -54,6 +54,25 @@ Los seis ángulos, todos nuevos respecto de sus 14 hooks pero sobre su misma pro
 6. **No hace falta saber vender** — una foto al grupo del colegio, lista de sabores y transferencia antes de armarlos.
 Archivo: `OUTPUTS/2026-11-14-guiones-postres-en-vaso-tanda1.md` · carpeta `~/Desktop/mi-dulce-negocio/`.
 
+### Los 6 videos (14/11)
+Voz **Sulafat** rioplatense (V1–V3 con `gemini-2.5-flash-preview-tts`; cuando se agotó la cuota diaria,
+V4–V6 con `gemini-3.1-flash-tts-preview` **con Style y sin que lo lea en voz alta**), `speed 1.30`,
+24 a 29 segundos — el mismo largo que ellos (22 a 31).
+
+**La edición es la de ellos**, sacada de la hoja de contactos de 4 de sus ads: b-roll 100 % de vasitos,
+subtítulo de 3 palabras abajo (`capy 1450`) blanco con borde negro y **la palabra activa en amarillo
+sin caja**, **sin caja de hook** y **sin placa final** — el video termina sobre el b-roll con el último
+subtítulo. Scripts: `OUTPUTS/scripts-vsl/edit_postres.py` y `gen_postres_plans.py`.
+
+**El pool costó:** 95 clips bajados de `#postresenvaso` y `#postresenvasito`, y el nicho en español está
+tomado por **video-receta con subtítulo quemado de punta a punta**. Quedaron **21 ventanas** y a casi
+todas hubo que recortarles el cartel inicial del creador. Dos planos héroe: la **caja llena de vasitos**
+(`7157025100833754373`) y la **heladera llena** (`7646998067870289172`), anclados a "veinte", "sábado",
+"cumpleaños" y "heladera".
+
+Entrega: `Ebook Dami / Ebook Postres en Vaso (ARG) / Videos terminados`, cada MP4 con el arranque de su
+hook. Taller en `~/Desktop/mi-dulce-negocio/anuncios/` (`work/`, `tiktoks/`, `vo/`, `entrega/`).
+
 ## Preguntas abiertas
 - **¿Cómo se llama nuestra oferta y cuál es el precio?** Los seis guiones dicen "la guía" y "baratísima" para no quedar atados a un nombre.
 - **¿Entregables propios?** La tanda usa los del competidor (50 recetas, calculadora, 30 textos, calendario). Si la landing propia cambia alguno, hay que tocar el guion ([[guiones-y-anuncios]], regla del 5/11: el guion se escribe con la landing en la mano).

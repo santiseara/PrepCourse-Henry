@@ -73,6 +73,14 @@ testeo para Argentina**, con guiones distintos porque el competidor ya tira acá
   arma y no se hornea, "¿de qué pastelería los trajiste?", los cumpleaños a diez cuadras y la foto al grupo del colegio.
 - **Archivos:** `OUTPUTS/2026-11-14-guiones-postres-en-vaso-tanda1.md`, copia en `~/Desktop/mi-dulce-negocio/anuncios/`,
   página nueva `WIKI/postres-en-vaso.md`.
+- **Los 6 videos, el mismo día:** voz Sulafat rioplatense (3 con el TTS 2.5 y 3 con el 3.1 cuando se agotó
+  la cuota diaria), `speed 1.30`, 24-29 s, con **la edición de ellos** (subtítulo de 3 palabras con la
+  palabra activa en amarillo, sin caja de hook y **sin placa final**). Scripts nuevos: `edit_postres.py`
+  y `gen_postres_plans.py`.
+- **El pool costó:** de 95 clips de `#postresenvaso` y `#postresenvasito` quedaron 21 ventanas; el nicho
+  en español vive del video-receta con subtítulo quemado. Un clip (`...447493`) se cayó **después** del
+  primer render: su cartel rosa sobrevivía a la ventana y lo cazó el OCR del render.
+- **Entrega:** `Ebook Dami / Ebook Postres en Vaso (ARG) / Videos terminados`.
 - **Pendiente:** nombre de la oferta propia, precio, landing, y si se meten cifras en pesos (el competidor no usa ninguna).
 
 ## 2026-11-14 (17ª pasada) — DanceGo: las otras dos novelas

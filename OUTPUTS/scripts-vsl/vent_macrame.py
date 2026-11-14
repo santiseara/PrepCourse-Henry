@@ -34,7 +34,6 @@ VENT = {
     'o': ('7704865082718588168', 0.0, 24.0, dict(fam='88168')),   # corona roja y blanca sobre aro, rama de pino detras
     'p': ('7706251016450231570', 0.0, 29.0, dict(fam='31570')),   # adornos tipo baston de caramelo colgados del arbol
     'q': ('7706994228794084629', 0.0, 90.0, dict(fam='84629')),   # guirnalda de arbolitos blancos con broches de madera
-    'r': ('7707274580175392032', 0.0, 13.0, dict(fam='92032')),   # arbolito verde colgado del picaporte de una puerta
     's': ('7707341414669045014', 4.0, 21.0, dict(fam='45014')),   # estrella roja y blanca (0-4 s marca de agua del creador)
     't': ('7706369276495531284', 5.0, 40.0, dict(fam='31284')),   # ovillo rojo y papa noel de pompon (45 s entra un libro)
     'u': ('7707409867392240917', 0.0, 65.0, dict(fam='40917')),   # arbolito de cordon verde sobre tablero rosa

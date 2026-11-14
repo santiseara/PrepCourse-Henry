@@ -19,31 +19,49 @@ anchos renderizados y se comparan con los porcentajes del dato:
 `[...d.querySelectorAll('.rev .track i')].map(e=>Math.round(e.getBoundingClientRect().width))`.
 Si los píxeles no guardan la misma proporción que los números, el gráfico está mintiendo.
 
-### 🆕 2026-11-14 · Un quiz contra un competidor del MISMO mercado cambia el mecanismo, no el copy
-Pedido de Santiago sobre [[gluteo-despierto]]: *"que sea similar al de ellos, pero un poco distinto, porque va a ir en el
-mismo mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera"*. Esto **no es** el caso de
-§2 (fidelidad al original): ahí se clona porque el competidor corre en otro país. Acá compartimos feed, y dos quizzes
-iguales en el mismo feed se canibalizan.
+### 🆕 2026-11-14 · "El mismo diseño que ellos, pero que diga cosas distintas"
+Santiago, sobre [[gluteo-despierto]]: *"que sea similar al de ellos, pero un poco distinto, porque va a ir en el mismo
+mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera"*. Lo interpreté como **copiá la
+estructura y hacé el resto nuestro**: cloné nuestro motor (Fraunces + Inter, paleta propia, mecánica nueva, 22 pasos).
+Lo rebotó: ***"No, no entendiste, quiero el mismo diseño que ellos, pero que diga cosas distintas"***.
 
-**Lo que se mantiene** (es lo validado): la arquitectura de pasos, el orden de los bloques (datos → dolor → miedo →
-compromiso → diagnóstico → oferta), las preguntas que de verdad personalizan el resultado y el precio.
+**La regla: "similar al de ellos" significa SU HTML, no nuestra plantilla.** Cuando pasa el quiz de un competidor
+escalado, el entregable se construye **sobre su documento**: su `<style>` sin tocar una regla, su sprite de íconos, su
+markup y su motor. Lo único que cambia son **las palabras, las imágenes con su marca y el bloque de configuración**.
+Esto vale **también cuando corremos en su mismo mercado**: ahí lo que nos diferencia es el **copy y el mecanismo**, no
+la estética. Nuestro motor (el de DanceGo → SumaAI, regla del 12/11) es para cuando **no hay** un quiz del competidor
+que clonar.
 
-**Lo que cambia, en este orden:**
-1. **El mecanismo.** Es lo único que de verdad diferencia. Ellos: *sacá la sentadilla porque te duelen las rodillas*.
-   Nosotros: *la sentadilla no te levanta la cola, el cuádriceps se come el trabajo*. El beneficio de ellos (rodillas)
-   queda adentro, pero como ítem de la lista, no como ángulo madre.
-2. **Una pantalla que lo demuestre.** Una pregunta con fotos + una revelación. Contar el mecanismo es copy; hacérselo
-   descubrir en una pregunta es producto, y es lo que el competidor no tiene.
-3. **Una métrica propia con nombre.** El Índice de Activación Glútea (0-100) hace que el resultado sea nuestro: barra de
-   riesgo, potencial a X días y gráfico. Se calcula con respuestas que ya estábamos pidiendo.
-4. **La paleta.** Se mira la del competidor y se elige otra familia. Ellos violeta `#970FA9` + magenta; nosotros ciruela
-   `#A62B55` sobre papel cálido. En el mismo feed tienen que leerse como dos marcas.
-5. **Las fotos, propias.** Reusar el antes/después del competidor en su mismo mercado se nota. Y lo que se puede resolver
-   en HTML —el antes/después, por ejemplo, como dos listas ✗ / ✓— sale nítido, gratis y no arrastra material ajeno.
+**En la duda, la respuesta es su HTML.** Es más rápido, es lo validado, y cambiar el diseño es la decisión cara: si
+Santiago quisiera otro diseño, lo diría.
 
-**Y se recorta.** De sus 24 preguntas quedaron 15: se van las que repiten el mismo golpe emocional con otras palabras
-(*qué temés* / *cómo te ves en 6 meses* / *qué impacto tiene en tu autoestima* son la misma pregunta tres veces). La
-lista de las que se sacan va **comentada arriba del array `STEPS`**, para poder volver atrás sin rehacer el análisis.
+**Cómo se hace sin romper nada: con un script de reemplazos, nunca a mano.**
+(`OUTPUTS/scripts-quiz/build_gluteo_despierto.py` es el molde.)
+1. `curl -sL` a la tienda y **cortar el documento del `custom_html`** entre su `<!DOCTYPE>` y su `</html>` — ojo, el
+   HTML de la tienda tiene **dos** `<html>` y **dos** `<body>`: el segundo par es el del quiz.
+2. **Partir por `<section class="paso"`** y aplicar los reemplazos **paso por paso**, no sobre el archivo entero. Hay
+   textos repetidos entre pasos (*"A veces me siento incómoda"*, *"Sí, algunas veces"*, *"Casi nunca me pasa"*) y un
+   `replace` global pisa el del paso equivocado. Ojo con el conteo: el `class="paso angosto"` de la portada y el de la
+   oferta **no matchean** `<section class="paso"` con comilla.
+3. **Cada par tiene que aparecer, y el script falla si no.** Son ~120 textos: sin esa verificación, uno que no matcheó
+   queda en el idioma del competidor y no lo ve nadie hasta que está corriendo con plata.
+4. **Al final, barrer rastros**: el nombre de su marca, su método, los nombres de sus testimonios, el dominio de su CDN
+   y los números que cambiaron (si su promesa eran *20 minutos*, que no quede ni un "20 minutos").
+5. 🐞 **Los precios del markup llevan espacio no separable**: `AR$\xa019.990`, no `AR$ 19.990`. Un par escrito con
+   espacio común no matchea nunca. Si un reemplazo "que está ahí" falla, imprimir el fragmento con `repr()`.
+
+**Lo que sí se agrega** (son nuestras reglas y no rompen su diseño): el bloque de configuración arriba del script
+(`CHECKOUT` relativo, `PIXEL_ID`, `VSL_MP4`), el pixel de Meta con `AddToCart` en los CTAs, la línea de cuotas de
+Mercado Pago y la FAQ de *"¿es una suscripción?"*, que es la objeción madre del low ticket.
+
+⚠️ **La línea de cuotas va DEBAJO de la caja de precio, no adentro.** Metida en el `<span>` que dice "en un solo pago"
+parte el precio en cinco renglones y desbalancea la caja entera. Va como un `<p>` aparte, con **una sola regla de CSS
+nueva** que reusa el color que esa caja ya tiene.
+
+**Las imágenes: se reusan las suyas que no llevan marca ni texto** (fotos de antes/después, avatares, sellos) y se
+rehacen **solo** las que la llevan — normalmente el logo y la portada. La portada se rearma con **el mismo layout de la
+de ellos** (bandas, díptico, pie) y nuestro texto, con Pillow. Si corremos en su mismo mercado y Santiago quiere fotos
+100 % propias, se dice y se generan: es una decisión suya, no una que se toma sola.
 
 ### 🆕 2026-11-12 · Un quiz no se escribe de cero: se clona el motor del último que funcionó
 Santiago, sobre la primera versión del quiz de [[sumaai]]: *"Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz"*. Tenía razón: estaba escrito desde cero, sin fotos y con emojis como imagen principal. Lo que faltó fue **abrir un quiz nuestro antes de escribir una línea**.
@@ -301,7 +319,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
-| 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | "que sea similar al de ellos, pero un poco distinto, porque va a ir en el mismo mercado, de última le podemos cambiar el nombre al método, o mostrarlo de otra manera" | **Mismo mercado = se cambia el mecanismo, no el copy** (ver la regla del 14/11 arriba). De sus 29 pasos / 24 preguntas a **22 / 15**; mecanismo nuevo (**Protocolo del Glúteo Dormido**), pregunta con fotos + revelación, **Índice de Activación Glútea**, paleta ciruela y **8 fotos propias** generadas en un batch. Antes de generar se miró el banco propio y **no servía** — se dijo en vez de prometer un reuso inexistente. Dos bugs silenciosos nuevos: el `<span>` sin `display:block` y la chapita de ancho variable que descalibra las barras |
+| 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | **"No, no entendiste, quiero el mismo diseño que ellos, pero que diga cosas distintas"** (después de entregar una v1 con nuestro motor) | **"Similar al de ellos" = SU HTML, no nuestra plantilla** (ver la regla del 14/11 arriba). La v2 es su documento tal cual —su CSS, su sprite, sus 30 pasos, su violeta— con **los ~120 textos reescritos por script**, que falla si un par no matchea o si queda un rastro suyo. 13 de las 15 imágenes son suyas (las neutras); logo y portada rehechos. Se suman cuotas de Mercado Pago, pixel y la FAQ de suscripción. Bugs nuevos: el `AR$\xa0` con espacio no separable, los textos repetidos entre pasos y la línea de cuotas que parte la caja de precio |
 | 2026-11-12 | Quiz SumaAI (v2) | "Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz" | Se rehizo entero **clonando el motor de DanceGo** (ver la regla del 12/11 arriba): Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada de género con fotos a sangre, dos pantallas de comida con fotos reales, maqueta de celular, carga con anillo, resultado con IMC y gráfico, y la oferta completa estilo lanzamiento. **11 fotos sacadas del banco propio** (base64 de los quizzes viejos de `OUTPUTS/`), cero créditos |
 | 2026-11-12 | Quiz SumaAI (modelado de Welmi) | "Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul" | De **35 pasos a 19**. Se van: prueba social con ratings ajenos, "¿te derivó un profesional?", nivel de nutrición, hábitos, placa de Harvard/UNICEF, objetivo de pasos, fecha del primer control, edad exacta, placas de relleno y **el email gate**. Se unifican intolerancias + dieta y caminata + escaleras + pasos. Quedan las que personalizan el resultado y las de compromiso emocional (el **mayor reto** se devuelve dos pasos después). Paleta azul `#1B4CD9` / `#0E2452` / `#F2F6FD`, con verde solo para "bien" y rojo solo para riesgo. **Un rating que no es nuestro no se clona**: ahí no aplica "fidelidad al original", aplica "no inventar datos" |
 | 2026-11-11 | Quiz Cápsulas Encantadas (AR) | "Ahora quiero que hagamos este quiz pero para argentina. Lo vamos a cobrar 12.990… El link de checkout te lo paso desp" | Clon del quiz propio en inglés (*Tea Charm Studio*, 27 USD): mismos 8 pasos y mismo orden, español argentino con voseo, motor multi-moneda reemplazado por precio fijo + cuotas, nombres y ciudades argentinos, y las 5 imágenes con texto en inglés rehechas sin gastar un crédito (recorte, HTML y Pillow). Checkout relativo hasta que pase la URL. Aprendizajes nuevos: las comillas del CONFIG en `inline_quiz.py` y la foto duplicada en base64 (ver la regla del 11/11 arriba) |

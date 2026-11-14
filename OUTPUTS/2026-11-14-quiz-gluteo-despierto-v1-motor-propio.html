@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glúteo Despierto — Cola parada en 28 días, sin sentadillas</title>
+<meta name="description" content="Tu cola no crece porque el glúteo está dormido. Hacé el test de 1 minuto y descubrí tu Índice de Activación Glútea.">
+<meta name="theme-color" content="#FAF6F6">
+
+<!-- ==========================================================================
+     GLÚTEO DESPIERTO · QUIZ — bloque de configuración
+     Todo lo que se toca está acá arriba.
+     ========================================================================== -->
+<script>
+window.CONFIG = {
+
+  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL.
+     Relativo = resuelve al checkout de la tienda donde se pegue el HTML.
+     Cuando esté el subdominio definitivo, se cambia SOLO esta línea. */
+  LINK_CHECKOUT: "/checkout",
+
+  /* Pixel de Meta. Vacío ("") si lo cargás desde ImpulTienda. */
+  PIXEL_ID: "",
+
+  /* Segundos antes de que aparezca la oferta. 0 = se ve de entrada (sin VSL).
+     Si cargás un VSL en <template id="vsl-template">, poné el segundo exacto
+     en que el video dice el precio. 230 = 3:50 · 960 = 16:00 */
+  SEGUNDOS_OFERTA: 0,
+
+  /* Imágenes. Pegá acá la URL de ImpulTienda de cada una. */
+  IMG: {
+    edad1: "../imagenes/edad-18-24.webp",
+    edad2: "../imagenes/edad-25-34.webp",
+    edad3: "../imagenes/edad-35-44.webp",
+    edad4: "../imagenes/edad-45-mas.webp",
+    ejSenta:  "../imagenes/ej-sentadilla.webp",
+    ejEstoca: "../imagenes/ej-estocada.webp",
+    ejPuente: "../imagenes/ej-puente.webp",
+    ejPatada: "../imagenes/ej-patada.webp"
+  },
+
+  /* Precios. Si cambia el precio, cambiarlo en los 7 campos. */
+  PRECIO:       "19.990",
+  PRECIO_VIEJO: "99.990",
+  DESCUENTO:    "80",
+  CUOTAS:       "3",
+  CUOTA_VALOR:  "6.664",
+  AHORRO:       "80.000",
+  VALOR_BONOS:  "32.970"
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+
+<style>
+/* ===========================================================================
+   PALETA — ciruela. Papel cálido, tinta y UN acento.
+   El competidor corre violeta eléctrico + magenta: esto se tiene que ver
+   de otra marca en el mismo feed.
+   El verde solo significa "bien" y el rojo solo "riesgo".
+   =========================================================================== */
+:root{
+  --paper:#FAF6F6; --card:#FFFFFF;
+  --ink:#241A1E; --ink-2:#4C3B42; --muted:#7D6B72;
+  --line:#EDE2E4; --line-2:#DCC8CD;
+  --accent:#A62B55; --accent-d:#7B1D3E; --accent-s:#FBEEF2;
+  --green:#1F7A52; --green-s:#E7F3ED;
+  --amber:#B07A1F; --amber-s:#FBF2E0;
+  --red:#C0392B; --red-s:#FBEDEB;
+  --shadow:0 18px 40px -26px rgba(36,26,30,.45);
+  --shadow-s:0 8px 20px -14px rgba(36,26,30,.35);
+  --r:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit}
+.hidden{display:none!important}
+.wrap{max-width:540px;margin:0 auto;padding:0 18px}
+h1,h2,h3,.disp{font-family:'Fraunces','Georgia',serif;font-weight:700;line-height:1.14;letter-spacing:-.012em}
+
+/* ====== cabecera + progreso ====== */
+.top{position:sticky;top:0;z-index:40;background:rgba(250,246,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:540px;margin:0 auto;padding:12px 18px 10px;display:flex;flex-direction:column;gap:10px;position:relative}
+.brand{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;color:var(--ink)}
+.brand .mark{width:27px;height:27px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:16px;height:16px}
+.brand .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.14rem;letter-spacing:-.02em}
+.brand .name i{font-style:normal;color:var(--accent)}
+.bar{height:5px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar>span{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+.back{position:absolute;left:14px;top:11px;width:32px;height:32px;border:1px solid var(--line);background:var(--card);
+  border-radius:10px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2);z-index:2}
+.back:disabled{opacity:0;pointer-events:none}
+.paso-n{position:absolute;right:16px;top:17px;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+
+/* ====== layout del paso ====== */
+main{padding:24px 0 30px;min-height:calc(100vh - 70px)}
+.step{animation:in .32s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.q{font-size:1.5rem;text-align:center;margin-bottom:10px}
+.q em{font-style:normal;color:var(--accent)}
+.help{text-align:center;color:var(--muted);font-size:.93rem;margin-bottom:24px;line-height:1.6}
+.q+.opts,.q+.grid{margin-top:24px}
+
+/* ====== opciones de lista ====== */
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--card);
+  border:1.5px solid var(--line);border-radius:var(--r);padding:16px;cursor:pointer;
+  transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s)}
+.opt:hover{border-color:var(--line-2)}
+.opt:active{transform:scale(.993)}
+.opt.on{border-color:var(--accent);background:var(--accent-s);box-shadow:0 0 0 3px rgba(166,43,85,.09)}
+.opt .ic{width:34px;height:34px;flex:none;border-radius:9px;background:var(--paper);display:grid;place-items:center;
+  font-size:1.02rem;border:1px solid var(--line)}
+.opt.on .ic{background:#fff;border-color:rgba(166,43,85,.25)}
+.opt .tx{flex:1;min-width:0}
+.opt .tx b{display:block;font-weight:600;font-size:.98rem;line-height:1.35}
+.opt .tx small{display:block;color:var(--muted);font-size:.82rem;line-height:1.4;margin-top:2px}
+.opt .ar{color:var(--line-2);flex:none}
+.opt.on .ar{color:var(--accent)}
+
+/* ====== opciones con foto ====== */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid .opt{padding:13px 11px;gap:9px}
+.grid .opt .ic{width:28px;height:28px;font-size:.92rem}
+.grid .opt .tx b{font-size:.88rem}
+.grid .opt .ar{display:none}
+.pick{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;
+  padding:0;text-align:center;transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s);position:relative}
+.pick:active{transform:scale(.99)}
+.pick.on{border-color:var(--accent);box-shadow:0 0 0 3px rgba(166,43,85,.09)}
+.pick figure{position:relative;background:#F3EAEC}
+.pick img{width:100%;height:auto!important;aspect-ratio:1!important;object-fit:cover}
+.pick .lb{padding:11px 8px;font-size:.84rem;font-weight:700;letter-spacing:.03em;color:var(--ink-2);line-height:1.3}
+.pick.on .lb{color:var(--accent)}
+/* portada: foto a sangre con la etiqueta encima, sobre banda oscura */
+.pick.ov img{aspect-ratio:3/4!important}
+.pick.ov figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 13px;color:#fff;
+  font-size:.95rem;font-weight:800;letter-spacing:.05em;text-align:center;
+  background:linear-gradient(180deg,rgba(28,18,22,0) 0%,rgba(28,18,22,.55) 45%,rgba(28,18,22,.9) 100%)}
+.pick.ov::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
+  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .15s}
+.pick.ov.on::after{box-shadow:inset 0 0 0 3px var(--accent)}
+.cover-head{text-align:center;margin-bottom:20px}
+.cover-badge{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;font-size:.68rem;
+  font-weight:800;letter-spacing:.11em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:16px}
+.cover-badge i{width:6px;height:6px;border-radius:50%;background:#5BD08C;font-style:normal;box-shadow:0 0 0 3px rgba(91,208,140,.25)}
+.cover-head h1{font-size:2.05rem;line-height:1.08;letter-spacing:-.025em}
+.cover-head h1 em{font-style:normal;color:var(--accent)}
+.cover-head p{color:var(--muted);font-size:.95rem;margin-top:10px}
+@media(max-width:380px){.cover-head h1{font-size:1.78rem}}
+
+/* ====== botones ====== */
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;gap:9px;width:100%;border:none;
+  cursor:pointer;font-weight:700;font-size:1.02rem;color:#fff;background:var(--accent);padding:16px 20px;
+  border-radius:13px;text-decoration:none;box-shadow:0 10px 24px -14px rgba(166,43,85,.85);
+  transition:filter .15s,transform .08s}
+.btn:hover{filter:brightness(1.07)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn.buy{background:var(--green);box-shadow:0 10px 24px -14px rgba(31,122,82,.9)}
+.skip{display:block;width:100%;background:none;border:none;color:var(--muted);font-size:.88rem;
+  text-decoration:underline;cursor:pointer;padding:14px;text-align:center}
+.foot{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(250,246,246,0),var(--paper) 36%);
+  padding:18px 0 14px;margin-top:26px}
+
+/* ====== tarjetas ====== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-s)}
+.note{background:var(--accent-s);border:1px solid rgba(166,43,85,.16);border-radius:13px;padding:14px 16px;
+  font-size:.9rem;color:var(--ink-2);line-height:1.6}
+.legal{margin-top:22px;font-size:.76rem;color:var(--muted);text-align:center;line-height:1.6}
+.legal a{color:var(--accent)}
+.cap{font-size:.78rem;color:var(--muted);text-align:center;margin-top:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.78rem;
+  font-weight:600;color:var(--ink-2);box-shadow:var(--shadow-s)}
+.chip b{color:var(--accent)}
+.bars{display:flex;align-items:flex-end;gap:12px;height:120px;margin:22px 0 4px}
+.bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.bars b{display:block;width:100%;background:linear-gradient(180deg,#D4759B,var(--accent));border-radius:9px 9px 3px 3px}
+.bars span{font-size:.74rem;color:var(--muted);font-weight:600}
+
+/* ====== revelación del mecanismo: barras de activación ====== */
+.rev{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.rev div{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:12px 14px;box-shadow:var(--shadow-s)}
+.rev img{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none}
+.rev .nm{flex:1;min-width:0;display:block}
+.rev .nm b{display:block;font-size:.9rem;font-weight:600;line-height:1.3}
+.rev .track{display:block;height:7px;border-radius:99px;background:var(--line);margin-top:7px;overflow:hidden}
+.rev .track i{display:block;height:100%;border-radius:99px;background:var(--accent);font-style:normal}
+/* ancho fijo: si la chapita cambia de ancho, las barras dejan de ser comparables */
+.rev .tag{font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;flex:none;
+  padding:4px 9px;border-radius:99px;background:var(--accent-s);color:var(--accent);
+  width:88px;text-align:center;white-space:nowrap;font-size:.67rem}
+.rev .alta .track i{background:var(--green)}
+.rev .alta .tag{background:var(--green-s);color:var(--green)}
+.rev .baja .track i{background:var(--red)}
+.rev .baja .tag{background:var(--red-s);color:var(--red)}
+
+/* ====== maqueta del celular, dibujada en HTML ====== */
+.phone{width:248px;margin:0 auto;border-radius:34px;background:#2A1D22;padding:9px;box-shadow:0 26px 50px -26px rgba(36,26,30,.6)}
+.phone .scr{background:var(--paper);border-radius:26px;overflow:hidden}
+.phone .nn{height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:.6rem;
+  color:var(--ink-2);background:var(--card)}
+.ph-hero{background:var(--accent);color:#fff;padding:12px;margin:8px;border-radius:14px}
+.ph-hero b{font-family:'Fraunces',serif;font-size:1.3rem;display:block;line-height:1}
+.ph-hero small{font-size:.58rem;opacity:.9;display:block;letter-spacing:.07em;margin-top:3px}
+.ph-ring{height:6px;background:rgba(255,255,255,.28);border-radius:99px;margin-top:9px;overflow:hidden}
+.ph-ring i{display:block;height:100%;width:46%;background:#fff;border-radius:99px;font-style:normal}
+.ph-sec{margin:0 8px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
+.ph-sec>b{font-size:.68rem;display:block;margin-bottom:7px}
+.ph-row{display:flex;align-items:center;gap:7px;padding:6px 0;border-top:1px solid var(--line);font-size:.58rem;color:var(--ink-2)}
+.ph-row:first-of-type{border-top:none}
+.ph-row i{width:17px;height:17px;border-radius:5px;background:var(--accent-s);color:var(--accent);flex:none;
+  font-style:normal;display:grid;place-items:center;font-size:.5rem;font-weight:800}
+.ph-row span{flex:1}
+.ph-row em{font-style:normal;color:var(--muted);font-weight:700}
+.ph-tab{display:flex;justify-content:space-around;padding:7px 0 9px;border-top:1px solid var(--line);background:var(--card)}
+.ph-tab i{width:14px;height:14px;border-radius:4px;background:var(--line-2);font-style:normal}
+.ph-tab i.on{background:var(--accent)}
+
+/* ====== sliders ====== */
+.sl-val{text-align:center;margin:8px 0 4px}
+.sl-val b{font-family:'Fraunces',serif;font-size:3rem;line-height:1}
+.sl-val span{font-size:1.05rem;color:var(--muted);font-weight:600}
+.sl-tag{display:block;width:max-content;max-width:100%;margin:8px auto 22px;font-size:.76rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;background:var(--accent-s);color:var(--accent);padding:5px 12px;
+  border-radius:99px;text-align:center}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--card);
+  border:3px solid var(--accent);cursor:pointer;box-shadow:0 3px 10px -3px rgba(36,26,30,.4)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--card);border:3px solid var(--accent);cursor:pointer}
+.sl-ends{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);margin-top:9px}
+.sl-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:14px}
+.warn{display:flex;gap:11px;background:var(--red-s);border:1px solid rgba(192,57,43,.22);border-radius:13px;
+  padding:13px 15px;margin-top:16px;font-size:.88rem;color:#8E2E22;line-height:1.55}
+.warn b{color:var(--red)}
+
+/* ====== pantalla de carga ====== */
+.load{text-align:center;padding:40px 0}
+.load .ring{width:54px;height:54px;margin:0 auto 22px;border:3px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load h2{font-size:1.35rem;margin-bottom:6px}
+.load>p{color:var(--muted);font-size:.9rem;margin-bottom:26px}
+.load ul{list-style:none;display:flex;flex-direction:column;gap:13px;max-width:340px;margin:0 auto;text-align:left}
+.load li{display:flex;align-items:center;gap:11px;font-size:.9rem;color:var(--muted);opacity:.45;transition:opacity .3s,color .3s}
+.load li.on,.load li.ok{opacity:1;color:var(--ink-2)}
+.load li i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2);flex:none;display:grid;place-items:center;
+  font-style:normal;font-size:.65rem;color:#fff}
+.load li.ok i{background:var(--green);border-color:var(--green)}
+.load li.on i{border-color:var(--accent)}
+
+/* ====== resultado ====== */
+.res-h{text-align:center;margin-bottom:22px}
+.res-h .tick{width:48px;height:48px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin:0 auto 14px;color:#fff}
+.big-kcal{background:var(--accent);color:#fff;border-radius:var(--r);padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
+.big-kcal b{font-family:'Fraunces',serif;font-size:3.4rem;line-height:1;display:block}
+.big-kcal b sup{font-size:1.4rem;vertical-align:super}
+.big-kcal small{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9;margin-top:6px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:13px;overflow:hidden;margin:14px 0}
+.kpi div{background:var(--card);padding:15px 12px;text-align:center}
+.kpi b{display:block;font-family:'Fraunces',serif;font-size:1.65rem;line-height:1.1}
+.kpi small{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
+.kpi .go b{color:var(--green)}
+.imc{margin:22px 0}
+.imc-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;gap:10px}
+.imc-top b{font-family:'Fraunces',serif;font-size:1.25rem}
+.imc-tag{font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 11px;border-radius:99px;flex:none}
+/* izquierda = dormido (riesgo) · derecha = despierto (bien) */
+.imc-track{height:9px;border-radius:99px;position:relative;
+  background:linear-gradient(90deg,#C0392B 0 26%,#B07A1F 26% 52%,#7FA86B 52% 76%,#1F7A52 76% 100%)}
+.imc-dot{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--ink);
+  transform:translate(-50%,-50%);transition:left .6s cubic-bezier(.4,0,.2,1)}
+.imc-sc{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px}
+.fc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow-s)}
+.fc-top{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-bottom:12px}
+.fc svg{width:100%;height:auto;display:block}
+.fc-legend{display:flex;justify-content:space-between;margin-top:12px;font-size:.78rem}
+.fc-legend b{display:block;font-family:'Fraunces',serif;font-size:1.1rem}
+.fc-legend .a{color:var(--red)}
+.fc-legend .b{color:var(--green);text-align:right}
+.logros{list-style:none;margin:16px 0 0;padding:0}
+.logros li{display:flex;gap:10px;padding:10px 0;font-size:.92rem;border-top:1px solid var(--line);line-height:1.5}
+.logros li i{color:var(--green);font-style:normal;flex:none}
+
+/* ====== notificaciones ====== */
+#notif{position:fixed;left:14px;bottom:14px;z-index:70;max-width:290px;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--shadow);
+  display:flex;gap:10px;align-items:center;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
+#notif.on{opacity:1;transform:none}
+#notif .av{width:32px;height:32px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.85rem;flex:none}
+#notif p{font-size:.78rem;line-height:1.4}
+#notif small{display:block;color:var(--muted);font-size:.69rem;margin-top:1px}
+#notif small b{color:var(--red)}
+
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+#oferta{display:none}
+.urg{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;text-align:center;padding:10px 14px;
+  font-size:.82rem;font-weight:600}
+.urg b{font-family:'Fraunces',serif;background:var(--accent);padding:3px 9px;border-radius:7px;margin-left:7px;
+  display:inline-block;font-size:.9rem}
+.vsl{border-radius:var(--r);overflow:hidden;background:#111;aspect-ratio:9/16;max-width:360px;margin:0 auto 22px;box-shadow:var(--shadow)}
+.vsl iframe,.vsl video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+.sec{padding:34px 0;border-top:1px solid var(--line)}
+.sec h2{font-size:1.45rem;text-align:center;margin-bottom:8px}
+.sec .sub{text-align:center;color:var(--muted);font-size:.92rem;margin-bottom:26px;line-height:1.6}
+/* antes / después en HTML nítido, sin fotos */
+.ad{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:24px}
+@media(min-width:460px){.ad{grid-template-columns:1fr 1fr}}
+.ad .col{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
+.ad .col.go{border-color:rgba(31,122,82,.3);background:var(--green-s)}
+.ad h4{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ad .col.go h4{color:var(--green)}
+.ad ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ad li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
+.ad li i{flex:none;font-style:normal;font-weight:800;color:var(--red);margin-top:1px}
+.ad .col.go li i{color:var(--green)}
+.incl{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.incl li{display:flex;gap:12px;align-items:flex-start;list-style:none;background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:14px 15px;font-size:.92rem;line-height:1.55;box-shadow:var(--shadow-s)}
+.incl li i{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;
+  flex:none;font-style:normal;margin-top:1px;font-size:.75rem}
+.promo{position:relative;background:var(--card);border:1.5px solid var(--line-2);border-radius:20px;padding:34px 20px 24px;
+  margin-top:28px;box-shadow:var(--shadow)}
+.promo .tagtop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;
+  font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:6px 15px;border-radius:99px;white-space:nowrap}
+.promo .pname{font-family:'Fraunces',serif;font-size:1.6rem;text-align:center;line-height:1.12}
+.promo .pmech{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-top:7px;margin-bottom:20px}
+.pmoney{text-align:center;margin-bottom:22px}
+.pmoney .old{font-size:1rem;color:var(--muted);text-decoration:line-through}
+.pmoney .save{display:inline-block;background:var(--green-s);color:var(--green);font-size:.76rem;font-weight:700;
+  padding:4px 11px;border-radius:99px;margin-left:8px}
+.pmoney .now{font-family:'Fraunces',serif;font-size:3.1rem;line-height:1;margin-top:10px}
+.pmoney .now sup{font-size:1.3rem;vertical-align:super;margin-right:2px}
+.pmoney .cur{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+.pmoney .inst{display:block;font-size:.92rem;color:var(--ink-2);margin-top:10px}
+.pmoney .inst b{color:var(--accent);display:inline}
+.plist{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:14px}
+.plist>b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.plist ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.plist li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
+.plist li i{color:var(--green);flex:none;font-style:normal;margin-top:2px}
+.lifetime{display:flex;gap:11px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;margin-top:13px}
+.lifetime b{display:block;font-size:.9rem}
+.lifetime small{display:block;color:var(--muted);font-size:.78rem}
+.gifts{border:1.5px dashed var(--line-2);border-radius:14px;padding:16px;margin-bottom:20px;text-align:center}
+.gifts .gt{font-size:.95rem;font-weight:700}
+.gifts .gl{list-style:none;margin:11px 0;display:flex;flex-direction:column;gap:6px;text-align:left}
+.gifts .gl li{font-size:.84rem;color:var(--ink-2);line-height:1.5;display:flex;gap:8px}
+.gifts .gl li i{color:var(--accent);font-style:normal;flex:none}
+.gifts .gv{font-size:.85rem;color:var(--muted);margin-top:5px}
+.gifts .gv s{margin-right:8px}
+.gifts .free{display:inline-block;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;
+  padding:4px 11px;border-radius:99px;cursor:pointer}
+.micro{text-align:center;font-size:.76rem;color:var(--muted);margin-top:13px;line-height:1.6}
+.tst{display:flex;flex-direction:column;gap:13px}
+.tst article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
+.tst header{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.tst .av{width:38px;height:38px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
+  place-items:center;font-weight:700;font-size:.9rem;flex:none}
+.tst b{font-size:.9rem;display:block}
+.tst small{color:var(--muted);font-size:.76rem}
+.tst .st{color:var(--amber);font-size:.8rem;letter-spacing:.08em}
+.tst p{font-size:.9rem;line-height:1.65;color:var(--ink-2)}
+.gar{text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-s)}
+.gar svg{margin:0 auto 14px;display:block}
+.gar h3{font-size:1.2rem;margin-bottom:8px}
+.gar p{font-size:.9rem;color:var(--muted);line-height:1.65;max-width:360px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden}
+.faq summary{padding:15px 17px;font-weight:600;font-size:.93rem;cursor:pointer;list-style:none;display:flex;
+  justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.25rem;font-weight:400;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 17px 16px;font-size:.88rem;color:var(--ink-2);line-height:1.68}
+.ftr{text-align:center;padding:26px 0 36px;font-size:.76rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--line)}
+
+@media(max-width:380px){
+  .q{font-size:1.32rem}
+  .pmoney .now{font-size:2.7rem}
+  .big-kcal b{font-size:2.9rem}
+}
+</style>
+</head>
+<body>
+
+<!-- El embed del VSL va acá adentro. Solo el <iframe>. Vacío = sin video. -->
+<template id="vsl-template"></template>
+
+<header class="top">
+  <div class="top-in">
+    <button class="back" id="back" aria-label="Volver" disabled>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <a class="brand" href="#" onclick="return false">
+      <!-- el ícono significa algo: señal de activación (el músculo que se enciende) -->
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6" fill="#fff" stroke="none"/><path d="M7.4 16.6a6.5 6.5 0 0 1 0-9.2"/><path d="M16.6 7.4a6.5 6.5 0 0 1 0 9.2"/></svg></span>
+      <span class="name">Glúteo <i>Despierto</i></span>
+    </a>
+    <span class="paso-n" id="paso-n"></span>
+    <div class="bar"><span id="bar"></span></div>
+  </div>
+</header>
+
+<main><div class="wrap" id="app"></div></main>
+
+<!-- =========================================================================
+     OFERTA (último paso). Queda oculta hasta CONFIG.SEGUNDOS_OFERTA.
+     ========================================================================= -->
+<section id="oferta">
+  <div class="urg">Tu descuento queda reservado por <b id="reloj">15:00</b></div>
+  <div class="wrap">
+    <div class="sec" style="border:none;padding-top:28px">
+      <h2 id="of-tit">Tu Protocolo de 28 días está listo</h2>
+      <p class="sub" id="of-sub">Según tus respuestas, podés tener la cola parada y las piernas firmes en 4 semanas — incluso con rodillas sensibles.</p>
+
+      <div class="vsl" id="vsl-box"></div>
+
+      <div class="ad">
+        <div class="col">
+          <h4>Como venís hasta hoy</h4>
+          <ul>
+            <li><i>✗</i>Sentadillas que te dejan las rodillas doloridas</li>
+            <li><i>✗</i>Entrenás piernas y la cola sigue igual</li>
+            <li><i>✗</i>Evitás la ropa ajustada y la pileta</li>
+            <li><i>✗</i>Horas de gimnasio sin ver un cambio real</li>
+          </ul>
+        </div>
+        <div class="col go">
+          <h4>Con el Protocolo del Glúteo Dormido</h4>
+          <ul>
+            <li><i>✓</i>15 minutos por día, en tu casa, sin equipo</li>
+            <li><i>✓</i>El glúteo trabaja y las rodillas descansan</li>
+            <li><i>✓</i>Piernas firmes y cola parada en 28 días</li>
+            <li><i>✓</i>Te mirás al espejo y te gusta lo que ves</li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="incl" id="incluye">
+        <li><i>✓</i><span><b>Las 3 fases del Protocolo</b>: Despertar, Aislar y Cargar. El orden exacto que hace que el glúteo trabaje en vez del cuádriceps.</span></li>
+        <li><i>✓</i><span><b>Rutinas de 15 minutos</b>: una por día, en video, para hacer en el living sin pesas ni máquinas.</span></li>
+        <li><i>✓</i><span><b>Cero impacto en las rodillas</b>: ni una sentadilla, ni un salto. Pensado para rodillas sensibles.</span></li>
+        <li><i>✓</i><span><b>Cronograma de 28 días</b>: qué hacés cada día, sin pensar y sin decidir nada.</span></li>
+      </ul>
+
+      <a class="btn buy js-cta" href="#">Quiero despertar mi glúteo</a>
+    </div>
+
+    <div class="sec">
+      <div class="promo">
+        <span class="tagtop">★ PRECIO DE LANZAMIENTO ★</span>
+        <div class="pname">Glúteo Despierto</div>
+        <div class="pmech">Protocolo del Glúteo Dormido · 28 días · acceso de por vida</div>
+
+        <div class="pmoney">
+          <span class="old" id="p-old"></span><span class="save" id="p-save"></span>
+          <div class="now"><sup>$</sup><span id="p-now"></span></div>
+          <span class="cur">pesos (ARS) · pago único</span>
+          <span class="inst">o <b id="p-inst"></b> con Mercado Pago</span>
+        </div>
+
+        <div class="plist">
+          <b>Todo lo que te llevás</b>
+          <ul>
+            <li><i>✓</i>El Protocolo completo en sus 3 fases</li>
+            <li><i>✓</i>28 rutinas de 15 minutos, en video</li>
+            <li><i>✓</i>La guía de técnica sin dolor de rodillas</li>
+            <li><i>✓</i>El cronograma día por día de las 4 semanas</li>
+            <li><i>✓</i>Las adaptaciones para rodillas sensibles</li>
+          </ul>
+          <div class="lifetime"><i style="font-size:1.3rem">∞</i><div><b>Acceso de por vida</b><small>Pagás una sola vez. No se renueva.</small></div></div>
+        </div>
+
+        <div class="gifts">
+          <div class="gt">🎁 + 3 regalos incluidos, sin costo</div>
+          <ul class="gl">
+            <li><i>›</i>Cronograma de 28 días para imprimir y colgar en la heladera</li>
+            <li><i>›</i>Las 8 rutinas express de 15 minutos, en PDF</li>
+            <li><i>›</i>Checklist de técnica anti-dolor de rodillas</li>
+          </ul>
+          <div class="gv"><s>Valor $<span id="p-bonus"></span></s><span class="free js-cta">HOY: GRATIS</span></div>
+        </div>
+
+        <a class="btn buy js-cta" href="#">Comprar ahora</a>
+        <p class="micro">Pago seguro · Acceso por mail en 2 minutos<br>Garantía de 30 días</p>
+      </div>
+    </div>
+
+    <!-- ⚠️ reseñas de ejemplo: reemplazar por reales antes de poner plata -->
+    <div class="sec">
+      <h2>Lo que nos escriben</h2>
+      <p class="sub">Mensajes de mujeres que empezaron el Protocolo</p>
+      <div class="tst">
+        <article><header><span class="av">MT</span><span><b>Mariana T.</b><small>Rosario · hace 3 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Dejé de entrenar piernas hace dos años por las rodillas. Esto lo hago en el living y al cuarto día ya sentía el glúteo, no la rodilla.</p></article>
+        <article><header><span class="av">AC</span><span><b>Ana Clara G.</b><small>La Plata · hace 1 mes</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Hacía sentadillas desde siempre y la cola seguía igual. Con esto en tres semanas me entró un jean que tenía guardado.</p></article>
+        <article><header><span class="av">VS</span><span><b>Valeria S.</b><small>Córdoba · hace 2 semanas</small></span></header>
+          <div class="st">★★★★★</div>
+          <p>Son 15 minutos de verdad, no 15 que después son 40. Es lo único que pude sostener un mes entero.</p></article>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="gar">
+        <svg width="92" height="92" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#A62B55" stroke-width="2"/>
+          <circle cx="60" cy="60" r="48" fill="#FBEEF2" stroke="#A62B55" stroke-width="1.5"/>
+          <path id="arcoTxt" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
+          <text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#A62B55">
+            <textPath href="#arcoTxt" startOffset="50%" text-anchor="middle">GARANTÍA TOTAL</textPath></text>
+          <text x="60" y="66" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="700" fill="#A62B55">30</text>
+          <text x="60" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#A62B55">DÍAS</text>
+        </svg>
+        <h3>Riesgo cero: 30 días de garantía</h3>
+        <p>Probá el Protocolo un mes entero. Si no sentís que el glúteo trabaja de verdad, o simplemente no te gusta, pedís el reembolso dentro de ese plazo y te devolvemos el 100% de lo que pagaste. Sin preguntas.</p>
+      </div>
+    </div>
+
+    <div class="sec faq">
+      <h2>Preguntas frecuentes</h2>
+      <p class="sub">Lo que más nos consultan antes de entrar</p>
+      <details open><summary>¿Funciona sin hacer ni una sentadilla?</summary>
+        <p>Sí. El Protocolo trabaja el glúteo con movimientos aislados y sin impacto, que además son más cómodos para quien tiene las rodillas sensibles. La sentadilla no está en el plan en ningún día de los 28.</p></details>
+      <details><summary>Tengo dolor de rodilla o condromalacia, ¿puedo hacerlo?</summary>
+        <p>Sí: justamente para eso lo armamos así. Sacamos todos los ejercicios que comprimen la rodilla y dejamos los que trabajan desde la cadera. Si tenés una lesión diagnosticada, mostrale el plan a tu médico antes de empezar.</p></details>
+      <details><summary>¿Cuánto tiempo me lleva por día?</summary>
+        <p>15 minutos. Una rutina por día, en video, que podés hacer en el living con una colchoneta. Nada de gimnasio ni de equipo.</p></details>
+      <details><summary>¿Necesito pesas o máquinas?</summary>
+        <p>No. Todo se hace con el peso del cuerpo o con cosas que ya tenés en casa (una silla, una mochila, una toalla).</p></details>
+      <details><summary>¿Es una suscripción?</summary>
+        <p>No. Es un pago único de $<span id="p-faq"></span> con acceso de por vida. No hay mensualidad ni renovación automática.</p></details>
+      <details><summary>¿Cómo lo recibo?</summary>
+        <p>Por mail, a los dos minutos de pagar. El mail te lo pedimos en el checkout.</p></details>
+      <div style="margin-top:22px"><a class="btn buy js-cta" href="#">Quiero mi Protocolo por $<span id="p-faq2"></span></a></div>
+    </div>
+
+    <p class="ftr">Glúteo Despierto — Todos los derechos reservados<br>Términos de uso · Política de privacidad · Contacto</p>
+  </div>
+</section>
+
+<div id="notif"><div class="av">M</div><p id="notif-tx"></p></div>
+
+<script>
+/* ===========================================================================
+   GLÚTEO DESPIERTO · motor del quiz
+   (el mismo motor validado de DanceGo → SumaAI; solo cambian paleta,
+    pasos y textos)
+   =========================================================================== */
+var C = window.CONFIG, IMG = C.IMG;
+var state = { nombre:'', meses:14, minutos:15 };
+var i = 0, hist = [];
+
+function checkout(){
+  var qs = location.search.replace(/^\?/,'');
+  if(!qs) return C.LINK_CHECKOUT;
+  return C.LINK_CHECKOUT + (C.LINK_CHECKOUT.indexOf('?')>-1 ? '&' : '?') + qs;
+}
+function track(ev){ if(window.fbq) try{ fbq('track', ev); }catch(e){} }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+
+/* ---------------------------------------------------------------------------
+   EL CÁLCULO: Índice de Activación Glútea (IAG)
+   Arranca en 100 y baja con lo que la persona contestó. Es una lectura de
+   sus respuestas, no una medición clínica — y así se dice en pantalla.
+   --------------------------------------------------------------------------- */
+function calc(){
+  var p = 100;
+
+  /* dolor al hacer sentadillas: 0 = mucho dolor … 4 = nunca las hizo */
+  p -= [26, 19, 13, 6, 16][state.dolor] || 0;
+
+  /* qué le pasa hoy con el entrenamiento */
+  p -= [22, 16, 14, 10, 24][state.frustra] || 0;
+
+  /* historia de intentos */
+  p -= [16, 14, 12, 8, 10][state.intento] || 0;
+
+  /* meses sin entrenar piernas en serio: hasta 24 puntos */
+  p -= Math.min(24, Math.round((state.meses || 0) * 0.85));
+
+  var iag = Math.max(8, Math.min(72, Math.round(p)));
+
+  /* el potencial a 28 días: lo que se recupera activando bien */
+  var pot = Math.min(94, iag + 38);
+
+  /* las semanas dependen de los minutos que puede darle */
+  var sem = (state.minutos >= 15) ? 4 : 5;
+  var hoy = new Date(), fin = new Date(hoy.getTime() + sem*7*864e5);
+
+  return { iag:iag, pot:pot, sem:sem, hoy:hoy, fin:fin, dias:sem*7 };
+}
+function fecha(d){ var m=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  return d.getDate()+' '+m[d.getMonth()]; }
+function fechaLarga(d){ var m=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return d.getDate()+' de '+m[d.getMonth()]; }
+function iagTag(v){
+  if(v < 25) return {t:'Dormido',   c:'var(--red)',   bg:'var(--red-s)',   p:12};
+  if(v < 45) return {t:'Apagado',   c:'var(--amber)', bg:'var(--amber-s)', p:38};
+  if(v < 62) return {t:'A media máquina', c:'#5E7F4C', bg:'#EDF3E8',       p:63};
+  return {t:'Activo', c:'var(--green)', bg:'var(--green-s)', p:86};
+}
+function tok(s){
+  var c = calc();
+  return String(s)
+    .replace(/\{\{iag\}\}/g, c.iag)
+    .replace(/\{\{pot\}\}/g, c.pot)
+    .replace(/\{\{dias\}\}/g, c.dias)
+    .replace(/\{\{nombre\}\}/g, state.nombre || '');
+}
+var CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+/* ===========================================================================
+   LOS PASOS · 22 (el del competidor tiene 29, con 24 preguntas)
+   Lo que se sacó de su quiz:
+     · la pantalla de urgencia de entrada ("se libera gratis 1 vez")
+     · "¿cuánto tardás en ver resultados con los entrenos tradicionales?"
+     · "¿cada cuánto abandonás por dolor?"  -> ya la cubre la del dolor
+     · "¿cuánto tiempo perdiste?"           -> ya la cubre la del 6 meses
+     · "¿cómo te sentís al ver a otras mujeres?"
+     · "¿dejaste de hacer algo importante?" -> ya la cubren ropa y pileta
+     · "¿qué impacto tiene en tu autoestima?"
+     · "¿estás de acuerdo en que ignorarlo empeora?"
+     · "¿qué es lo que más temés?"
+     · "si existiera una forma comprobada, ¿la probarías?"
+     · "¿qué resultado sería el más importante?"
+     · "si te mostrara exactamente cómo, ¿empezarías hoy?"
+   Lo que se sumó (y es nuestra diferencia): la pregunta del ejercicio con
+   fotos + la revelación del glúteo dormido, los dos medidores, la maqueta
+   de la app y el resultado con Índice de Activación.
+   =========================================================================== */
+var STEPS = [
+
+/*  1 */ {id:'edad', type:'cover', q:'TU COLA NO CRECE<br>PORQUE EL GLÚTEO<br><em>ESTÁ DORMIDO</em>',
+          help:'Un minuto de test y sabés tu Índice de Activación Glútea', opts:[
+          {l:'18 a 24 años', img:'edad1'},{l:'25 a 34 años', img:'edad2'},
+          {l:'35 a 44 años', img:'edad3'},{l:'45 años o más', img:'edad4'}]},
+
+/*  2 */ {id:'objetivo', type:'single', q:'¿Cuál es tu <em>mayor objetivo</em> con las piernas y la cola?',
+          help:'Todo lo que viene después se arma con esta respuesta.', opts:[
+          {e:'🍑', l:'Tener la cola parada y las piernas torneadas'},
+          {e:'💪', l:'Ganar fuerza y definición'},
+          {e:'👗', l:'Que me entre la ropa que amo'},
+          {e:'🔥', l:'Volver a sentirme segura y linda'},
+          {e:'✨', l:'Mirarme al espejo y estar orgullosa'}]},
+
+/*  3 */ {id:'tiempo', type:'single', q:'¿Cuánto tiempo por día le podés <em>dedicar</em>?',
+          help:'Decí la verdad, no lo que te gustaría.', opts:[
+          {e:'🕐', l:'Menos de 15 minutos', s:'Vivo a las corridas'},
+          {e:'🕒', l:'15 a 30 minutos', s:'Algo rápido puedo meter'},
+          {e:'🕕', l:'30 a 45 minutos', s:'Tengo un tiempo razonable'},
+          {e:'🕘', l:'Más de 45 minutos', s:'Tengo flexibilidad'}]},
+
+/*  4 */ {id:'promesa', type:'promesa', btn:'Dale, sigamos'},
+
+/*  5 */ {id:'intento', type:'single', q:'¿Ya <em>intentaste</em> entrenar piernas antes?', opts:[
+          {e:'📉', l:'Sí, pero abandoné porque no veía resultados'},
+          {e:'🤕', l:'Sí, pero dejé por dolor o molestias'},
+          {e:'🌀', l:'Sí, pero no pude ser constante'},
+          {e:'🆕', l:'No, nunca entrené en serio'},
+          {e:'🏃‍♀️', l:'Entreno a veces, sin mucha disciplina'}]},
+
+/*  6 */ {id:'frustra', type:'single', q:'¿Cuál es tu mayor <em>frustración</em> hoy?',
+          help:'Decilo tal cual: es el punto que vamos a resolver.', opts:[
+          {e:'😤', l:'No veo resultados aunque entreno'},
+          {e:'🦵', l:'Me duelen las rodillas al hacer sentadillas'},
+          {e:'🤷‍♀️', l:'No sé si estoy haciendo los ejercicios correctos'},
+          {e:'⏰', l:'No tengo tiempo para ir al gimnasio'},
+          {e:'😮‍💨', l:'Ya probé de todo y nada me funciona'}]},
+
+/*  7 */ {id:'dolor', type:'single', q:'¿Sentís <em>dolor o molestia</em> al hacer sentadillas?',
+          help:'Es el dato que más mueve tu índice.', opts:[
+          {e:'😫', l:'Sí, mucho dolor, no puedo hacerlas'},
+          {e:'😣', l:'Sí, una molestia moderada'},
+          {e:'🤨', l:'A veces siento algo raro'},
+          {e:'🙂', l:'Casi nunca siento nada'},
+          {e:'🙅‍♀️', l:'Nunca hice sentadillas como para saber'}]},
+
+/*  8 */ {id:'ejercicio', type:'pick', q:'¿Cuál de estos creés que <em>activa más</em> el glúteo?',
+          help:'Elegí el que te parezca. Después te muestro la respuesta.', opts:[
+          {l:'Sentadilla',  img:'ejSenta',  act:22, tag:'Baja',      cls:'baja',
+           why:'La mayor parte del esfuerzo se lo lleva el cuádriceps, y la rodilla se come la compresión.'},
+          {l:'Estocada',    img:'ejEstoca', act:46, tag:'Media',     cls:'',
+           why:'Mejor que la sentadilla, pero sigue cargando la rodilla de adelante.'},
+          {l:'Patada atrás', img:'ejPatada', act:74, tag:'Alta',      cls:'',
+           why:'El glúteo trabaja aislado, sin que la rodilla tenga que sostener nada.'},
+          {l:'Puente de glúteo', img:'ejPuente', act:95, tag:'Muy alta', cls:'alta',
+           why:'El movimiento nace en la cadera: el glúteo es el que empuja, de principio a fin.'}]},
+
+/*  9 */ {id:'revela', type:'revela', btn:'Ahora entiendo'},
+
+/* 10 */ {id:'load1', type:'loading', title:'Analizando tus respuestas…',
+          sub:'Un segundo, estamos cruzando los datos', ms:900,
+          items:['Objetivo y tiempo disponible', 'Historial de entrenamiento', 'Mapa de dolor y molestias', 'Patrón de abandono']},
+
+/* 11 */ {id:'nonaci', type:'single', q:'¿Alguna vez pensaste <em>"yo no nací"</em> para tener la cola parada?', opts:[
+          {e:'😔', l:'Sí, lo pienso todo el tiempo'},
+          {e:'😕', l:'Sí, lo pensé algunas veces'},
+          {e:'😐', l:'A veces me siento así'},
+          {e:'💪', l:'No, creo que puedo lograrlo'},
+          {e:'🤔', l:'Nunca lo pensé'}]},
+
+/* 12 */ {id:'ropa', type:'single', q:'¿Te sentís <em>insegura</em> con la ropa ajustada?', opts:[
+          {e:'😖', l:'¡Sí, muchísimo! Evito esa ropa'},
+          {e:'😟', l:'Sí, bastante insegura'},
+          {e:'😬', l:'A veces me siento incómoda'},
+          {e:'🙆‍♀️', l:'Un poco, pero la uso igual'},
+          {e:'🧘‍♀️', l:'No, me siento segura'}]},
+
+/* 13 */ {id:'bikini', type:'single', q:'¿Evitás la <em>pileta o la playa</em> por tu cuerpo?', opts:[
+          {e:'😭', l:'Sí, lo evito por completo'},
+          {e:'😔', l:'Voy, pero me siento muy insegura'},
+          {e:'😐', l:'A veces me siento incómoda'},
+          {e:'😬', l:'Voy, pero me gustaría sentirme mejor'},
+          {e:'💪', l:'No, estoy cómoda'}]},
+
+/* 14 */ {id:'invertiste', type:'single', q:'¿Ya <em>gastaste</em> en gimnasios o programas que no funcionaron?', opts:[
+          {e:'💸', l:'¡Sí, un montón y sin resultados!'},
+          {e:'😫', l:'Sí, lo intenté 3 veces o más'},
+          {e:'😕', l:'Sí, una o dos veces'},
+          {e:'🧐', l:'No, pero me da miedo tirar la plata'},
+          {e:'❌', l:'Nunca gasté en esto'}]},
+
+/* 15 */ {id:'seismeses', type:'single', q:'Si seguís como hoy, ¿cómo te <em>ves en 6 meses</em>?', opts:[
+          {e:'😰', l:'Con la misma frustración, sin ningún cambio'},
+          {e:'😤', l:'Todavía intentando y fallando'},
+          {e:'😨', l:'Seguramente ya habré abandonado del todo'},
+          {e:'🤞', l:'Espero estar mejor, pero no sé cómo'},
+          {e:'🏃‍♀️', l:'Voy a tener el cuerpo que quiero'}]},
+
+/* 16 */ {id:'meses', type:'slider', q:'¿Hace cuánto no <em>entrenás piernas</em> en serio?',
+          help:'Cuanto más tiempo pasó, más dormido está el glúteo.',
+          min:0, max:36, def:14, unit:'meses', key:'meses',
+          tags:[[0,4,'Hace poco'],[4,12,'Varios meses'],[12,24,'Más de un año'],[24,999,'Dos años o más']]},
+
+/* 17 */ {id:'minutos', type:'slider', q:'¿Cuántos <em>minutos por día</em> le podés dar de verdad?',
+          help:'Con 15 alcanza. Más no acelera: lo que acelera es no faltar.',
+          min:5, max:60, def:15, unit:'min', key:'minutos',
+          tags:[[0,15,'Vamos a estirar el plan'],[15,31,'El punto justo'],[31,999,'De sobra']]},
+
+/* 18 */ {id:'mecanismo', type:'app', q:'Así funciona el <em>Protocolo</em>',
+          help:'Tres fases, 28 días, 15 minutos por día. Abrís el día que toca y lo hacés.', btn:'Mostrame mi resultado'},
+
+/* 19 */ {id:'compromiso', type:'single', q:'¿Te <em>comprometés</em> a 15 minutos por día durante 28 días?',
+          help:'Última pregunta. Sin esto, ningún plan funciona.', opts:[
+          {e:'✅', l:'¡Sí! Estoy 100% comprometida'},
+          {e:'🙋‍♀️', l:'Sí, lo voy a seguir al pie de la letra'},
+          {e:'💪', l:'Sí, voy a dar lo mejor de mí'},
+          {e:'🤔', l:'Tal vez, depende de qué sea'}]},
+
+/* 20 */ {id:'load2', type:'loading', title:'Armando tu Protocolo…',
+          sub:'Cruzando tu índice con las 3 fases', ms:1100, calc:true},
+
+/* 21 */ {id:'resultado', type:'result', btn:'Ver mi Protocolo'},
+
+/* 22 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu plan (opcional)',
+          ph:'Escribí tu nombre', btn:'Continuar', skip:'Saltear este paso'}
+];
+
+/* el contador cuenta SOLO las preguntas: ni la carga, ni el resultado, ni la oferta */
+var PREG = STEPS.filter(function(s){ return s.type==='single'||s.type==='pick'||s.type==='slider'||s.type==='cover'; });
+function nPreg(k){
+  var n = 0;
+  for(var x=0; x<=k; x++){ var t=STEPS[x].type;
+    if(t==='single'||t==='pick'||t==='slider'||t==='cover') n++; }
+  return n;
+}
+
+/* ===========================================================================
+   RENDER
+   =========================================================================== */
+var app = document.getElementById('app');
+var back = document.getElementById('back');
+var pasoN = document.getElementById('paso-n');
+
+function go(n){
+  hist.push(i);
+  i = (n===undefined) ? i+1 : n;
+  if(i >= STEPS.length){ return abrirOferta(); }
+  render(); window.scrollTo({top:0, behavior:'instant'});
+}
+function volver(){ if(!hist.length) return; i = hist.pop(); render(); window.scrollTo({top:0}); }
+back.onclick = volver;
+
+function render(){
+  var s = STEPS[i];
+  document.getElementById('bar').style.width = Math.round((i/STEPS.length)*100) + '%';
+  /* sin flecha de volver en la portada ni en las pantallas de carga */
+  back.disabled = (i === 0 || s.type === 'loading');
+  var esPreg = (s.type==='single'||s.type==='pick'||s.type==='slider'||s.type==='cover');
+  pasoN.textContent = esPreg ? ('Paso ' + nPreg(i) + ' de ' + PREG.length) : '';
+
+  var h = '<div class="step">';
+  var head = '';
+  if(s.q) head += '<h2 class="q">' + tok(s.q) + '</h2>';
+  if(s.help) head += '<p class="help">' + tok(s.help) + '</p>';
+
+  /* ---------- portada: la edad, con fotos a sangre ---------- */
+  if(s.type === 'cover'){
+    h += '<div class="cover-head"><span class="cover-badge"><i></i>Test gratis · 1 minuto</span>'
+      +  '<h1>' + s.q + '</h1><p>' + s.help + '</p></div>'
+      +  '<p class="help" style="margin-bottom:16px;font-weight:600;color:var(--ink-2)">Para empezar: ¿qué edad tenés?</p>'
+      +  '<div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick ov" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
+        +  '" width="720" height="960" loading="' + (k<2?'eager':'lazy') + '"><figcaption>' + esc(o.l) + '</figcaption></figure></button>';
+    });
+    h += '</div><p class="legal">Al elegir y continuar, aceptás nuestros <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>.</p>';
+  }
+
+  /* ---------- opciones de lista ---------- */
+  else if(s.type === 'single'){
+    h += head + '<div class="opts">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="opt" data-k="' + k + '">';
+      if(o.e) h += '<span class="ic">' + o.e + '</span>';
+      h += '<span class="tx"><b>' + tok(esc(o.l)) + '</b>' + (o.s ? '<small>' + tok(esc(o.s)) + '</small>' : '') + '</span>';
+      h += ARR + '</button>';
+    });
+    h += '</div>';
+  }
+
+  /* ---------- opciones con foto ---------- */
+  else if(s.type === 'pick'){
+    h += head + '<div class="grid">';
+    s.opts.forEach(function(o,k){
+      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
+        +  '" width="600" height="600" loading="' + (k<2?'eager':'lazy') + '"></figure><div class="lb">' + esc(o.l) + '</div></button>';
+    });
+    h += '</div>';
+  }
+
+  /* ---------- placa de promesa ---------- */
+  else if(s.type === 'promesa'){
+    var rango = ['18 a 24','25 a 34','35 a 44','45 o más'][state.edad||0];
+    var obj = ['levantar la cola y marcar las piernas','ganar fuerza y definición',
+               'volver a entrar en la ropa que les gusta','volver a sentirse seguras',
+               'mirarse al espejo sin esquivar'][state.objetivo||0];
+    h += '<h2 class="q">Tenemos <em>buenas noticias</em></h2>';
+    h += '<div class="card"><h3 style="font-size:1.18rem;margin-bottom:8px">Mujeres de ' + rango
+      +  ' años con tu perfil suelen ' + obj + ' en unas 4 semanas</h3>'
+      +  '<p style="color:var(--muted);font-size:.92rem">Y casi nunca es por entrenar más. Es por despertar el músculo correcto. '
+      +  'Esto es lo que pasa cuando el glúteo empieza a trabajar:</p>'
+      +  '<div class="bars"><div><b style="height:24%"></b><span>Día 4</span></div>'
+      +  '<div><b style="height:56%"></b><span>Día 14</span></div>'
+      +  '<div><b style="height:100%"></b><span>Día 28</span></div></div>'
+      +  '<p class="cap" style="text-align:left">Avance esperado según tus respuestas. Los resultados varían de persona a persona.</p></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- la revelación: el glúteo dormido ---------- */
+  else if(s.type === 'revela'){
+    var ej = STEPS[7].opts;
+    var orden = ej.slice().sort(function(a,b){ return b.act - a.act; });
+    var elegido = ej[state.ejercicio || 0];
+    var acerto = (elegido === orden[0]);
+    h += '<h2 class="q">' + (acerto ? '¡Le <em>acertaste</em>!' : 'Casi: era <em>el puente</em>') + '</h2>';
+    h += '<p class="help">' + (acerto
+          ? 'Pocas la pegan. El puente de glúteo es el que más lo hace trabajar, y es el que nadie hace.'
+          : 'Elegiste <b>' + esc(elegido.l.toLowerCase()) + '</b>. El que más activa el glúteo es el <b>puente</b>, y es el que casi nadie hace.') + '</p>';
+    h += '<div class="rev">';
+    orden.forEach(function(o){
+      h += '<div class="' + o.cls + '"><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="160" height="160" loading="lazy">'
+        +  '<span class="nm"><b>' + esc(o.l) + '</b><span class="track"><i style="width:' + o.act + '%"></i></span></span>'
+        +  '<span class="tag">' + o.tag + '</span></div>';
+    });
+    h += '</div>';
+    h += '<div class="note" style="margin-top:18px"><b>Esto es el glúteo dormido.</b> Cuando hacés sentadillas, el cuerpo le pasa el trabajo al cuádriceps y a la espalda. '
+      +  'El glúteo se acostumbra a no activarse. Por eso entrenás y la cola sigue igual: '
+      +  'no es que entrenes poco, es que <b>el músculo que querés no se está encendiendo</b>.</div>';
+    h += '<p class="cap">Comparación orientativa entre ejercicios, no una medición de laboratorio.</p>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- maqueta de la app ---------- */
+  else if(s.type === 'app'){
+    h += head + telefono();
+    h += '<div class="chips"><span class="chip"><b>3</b> fases</span><span class="chip"><b>28</b> días</span>'
+      +  '<span class="chip"><b>15</b> min por día</span><span class="chip"><b>0</b> sentadillas</span></div>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- medidor ---------- */
+  else if(s.type === 'slider'){
+    var v = state[s.key];
+    if(v === undefined || v === null) v = s.def;
+    h += head;
+    h += '<div class="sl-val"><b id="slv">' + v + '</b><span>' + s.unit + '</span></div>';
+    h += '<span class="sl-tag" id="sltag">' + sliderTag(s, v) + '</span>';
+    h += '<input type="range" id="sl" min="' + s.min + '" max="' + s.max + '" value="' + v + '" step="1">';
+    h += '<div class="sl-ends"><span>' + s.min + '</span><span>' + Math.round((s.min+s.max)/2) + '</span><span>' + s.max + (s.max===36?'+':'') + '</span></div>';
+    h += '<p class="sl-hint">Deslizá para ajustar</p><div id="slwarn"></div>';
+    h += '<div class="foot"><button class="btn" id="next">Continuar</button></div>';
+  }
+
+  /* ---------- carga ---------- */
+  else if(s.type === 'loading'){
+    var lista = s.items;
+    if(s.calc){
+      var cc = calc();
+      lista = ['Índice de Activación Glútea: ' + cc.iag + ' de 100',
+               'Fase 1 · Despertar: ajustada a tus rodillas',
+               'Fase 2 · Aislar: ' + state.minutos + ' minutos por día',
+               'Fase 3 · Cargar: cerrando los ' + cc.dias + ' días'];
+    }
+    h += '<div class="load"><div class="ring"></div><h2>' + s.title + '</h2><p>' + s.sub + '</p><ul>';
+    lista.forEach(function(t,k){ h += '<li data-k="' + k + '"><i>' + CHK + '</i>' + t + '</li>'; });
+    h += '</ul></div>';
+  }
+
+  /* ---------- resultado ---------- */
+  else if(s.type === 'result'){
+    var c = calc(), t = iagTag(c.iag);
+    h += '<div class="res-h"><div class="tick"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>'
+      +  '<h2 class="q" style="margin-bottom:4px">Tu diagnóstico está listo</h2><p class="help" style="margin-bottom:0">Armado con tus respuestas</p></div>';
+    h += '<div class="big-kcal"><b>' + c.iag + '<sup>/100</sup></b><small>Índice de Activación Glútea</small></div>';
+    h += '<div class="kpi"><div><b>' + c.pot + '/100</b><small>Tu potencial en ' + c.dias + ' días</small></div>'
+      +  '<div class="go"><b>' + fecha(c.fin) + '</b><small>Fecha estimada</small></div></div>';
+    if(state.minutos < 15) h += '<div class="warn"><span>⏱️</span><div><b>Elegiste menos de 15 minutos por día.</b> '
+      +  'Se puede, pero el plan se estira a ' + c.sem + ' semanas en vez de 4. Preferimos estirar la fecha antes que prometerte algo que no se cumple.</div></div>';
+    h += '<div class="imc"><div class="imc-top"><b>Tu glúteo hoy</b>'
+      +  '<span class="imc-tag" style="color:' + t.c + ';background:' + t.bg + '">' + t.t + '</span></div>'
+      +  '<div class="imc-track"><span class="imc-dot" style="left:' + t.p + '%"></span></div>'
+      +  '<div class="imc-sc"><span>Dormido</span><span>Apagado</span><span>A media</span><span>Activo</span></div></div>';
+    h += grafico(c);
+    h += '<ul class="logros">'
+      +  '<li><i>✓</i>Días 1 a 7 · Despertar: sentís el glúteo trabajando, sin tocar las rodillas.</li>'
+      +  '<li><i>✓</i>Días 8 a 18 · Aislar: la ropa empieza a caer distinto.</li>'
+      +  '<li><i>✓</i>' + fechaLarga(c.fin) + ' · Cargar: cola parada y piernas firmes.</li></ul>';
+    h += '<p class="cap">Estimación según tus respuestas, no un diagnóstico médico.</p>';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
+  }
+
+  /* ---------- campo de texto ---------- */
+  else if(s.type === 'field'){
+    h += head;
+    h += '<input id="fld" type="text" placeholder="' + s.ph + '" value="' + esc(state.nombre) + '" autocomplete="given-name" '
+      +  'style="width:100%;padding:16px;border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-size:1rem;text-align:center;outline:none">';
+    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button><button class="skip" id="skip">' + s.skip + '</button></div>';
+  }
+
+  h += '</div>';
+  app.innerHTML = h;
+  bind(s);
+}
+
+function sliderTag(s, v){
+  if(!s.tags) return '';
+  for(var k=0;k<s.tags.length;k++){ if(v >= s.tags[k][0] && v < s.tags[k][1]) return tok(s.tags[k][2]); }
+  return '';
+}
+
+/* ---------- la maqueta del celular, dibujada en HTML ---------- */
+function telefono(){
+  return '<div class="phone"><div class="scr">'
+    + '<div class="nn"><span>9:41</span><span>Glúteo Despierto</span></div>'
+    + '<div class="ph-hero"><b>Día 12 de 28</b><small>FASE 2 · AISLAR</small>'
+    +   '<div class="ph-ring"><i></i></div></div>'
+    + '<div class="ph-sec"><b>La rutina de hoy · 15 min</b>'
+    +   '<div class="ph-row"><i>1</i><span>Puente de glúteo · 3 series</span><em>4 min</em></div>'
+    +   '<div class="ph-row"><i>2</i><span>Patada atrás en cuatro apoyos</span><em>4 min</em></div>'
+    +   '<div class="ph-row"><i>3</i><span>Abducción tumbada de costado</span><em>4 min</em></div>'
+    +   '<div class="ph-row"><i>4</i><span>Elongación de cadera</span><em>3 min</em></div></div>'
+    + '<div class="ph-sec"><b>Tus 3 fases</b>'
+    +   '<div class="ph-row"><i>✓</i><span>Despertar · días 1 a 7</span><em>hecho</em></div>'
+    +   '<div class="ph-row"><i>●</i><span>Aislar · días 8 a 18</span><em>vas acá</em></div>'
+    +   '<div class="ph-row"><i>○</i><span>Cargar · días 19 a 28</span><em>—</em></div></div>'
+    + '<div class="ph-tab"><i class="on"></i><i></i><i></i><i></i></div>'
+    + '</div></div>';
+}
+
+/* ---------- gráfico de previsión ---------- */
+function grafico(c){
+  return '<div class="fc"><div class="fc-top"><span>Hoy</span><span>' + fecha(c.fin) + '</span></div>'
+    + '<svg viewBox="0 0 320 130" preserveAspectRatio="none" aria-hidden="true">'
+    + '<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">'
+    +   '<stop offset="0%" stop-color="#C0392B"/><stop offset="100%" stop-color="#1F7A52"/></linearGradient>'
+    +   '<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">'
+    +   '<stop offset="0%" stop-color="rgba(31,122,82,.14)"/><stop offset="100%" stop-color="rgba(31,122,82,0)"/></linearGradient></defs>'
+    + '<path d="M8,104 C110,100 150,44 312,22 L312,130 L8,130 Z" fill="url(#g2)"/>'
+    + '<path d="M8,104 C110,100 150,44 312,22" fill="none" stroke="url(#g1)" stroke-width="3.5" stroke-linecap="round"/>'
+    + '<circle cx="8" cy="104" r="5.5" fill="#C0392B"/><circle cx="312" cy="22" r="5.5" fill="#1F7A52"/></svg>'
+    + '<div class="fc-legend"><span class="a"><b>' + c.iag + '/100</b>Hoy</span>'
+    +   '<span class="b"><b>' + c.pot + '/100</b>' + fechaLarga(c.fin) + '</span></div></div>';
+}
+
+/* ===========================================================================
+   EVENTOS
+   =========================================================================== */
+function bind(s){
+  app.querySelectorAll('.opt,.pick').forEach(function(el){
+    el.onclick = function(){
+      state[s.id] = +el.dataset.k;
+      el.classList.add('on');
+      setTimeout(go, 190);
+    };
+  });
+
+  var nx = document.getElementById('next');
+  if(nx) nx.onclick = function(){
+    if(s.type === 'field'){ state.nombre = (document.getElementById('fld').value || '').trim(); }
+    go();
+  };
+  var sk = document.getElementById('skip');
+  if(sk) sk.onclick = function(){ state.nombre = ''; go(); };
+
+  if(s.type === 'slider'){
+    var sl = document.getElementById('sl'), wn = document.getElementById('slwarn');
+    function pintar(){
+      var p = (sl.value - s.min) / (s.max - s.min) * 100;
+      sl.style.background = 'linear-gradient(90deg,var(--accent) ' + p + '%,var(--line) ' + p + '%)';
+    }
+    function aviso(){
+      wn.innerHTML = (s.key === 'meses' && state.meses >= 24)
+        ? '<div class="warn"><span>⚠️</span><div><b>Dos años o más sin entrenar piernas.</b> No es un problema: es exactamente el caso para el que armamos la Fase 1, que son los primeros 7 días.</div></div>'
+        : (s.key === 'minutos' && state.minutos < 15)
+        ? '<div class="warn"><span>⏱️</span><div><b>Con menos de 15 minutos el plan se estira.</b> Lo vamos a repartir en 5 semanas en vez de 4, para que no abandones en la segunda.</div></div>' : '';
+    }
+    pintar(); aviso();
+    sl.oninput = function(){
+      state[s.key] = +sl.value;
+      document.getElementById('slv').textContent = sl.value;
+      document.getElementById('sltag').textContent = sliderTag(s, +sl.value);
+      pintar(); aviso();
+    };
+  }
+
+  if(s.type === 'field'){
+    var f = document.getElementById('fld');
+    f.onkeydown = function(e){ if(e.key === 'Enter'){ state.nombre = f.value.trim(); go(); } };
+  }
+
+  if(s.type === 'loading'){
+    var lis = app.querySelectorAll('.load li'), k = 0;
+    lis[0].classList.add('on');
+    var t = setInterval(function(){
+      if(!document.body.contains(lis[0])){ clearInterval(t); return; }   /* se fueron del paso */
+      lis[k].classList.remove('on'); lis[k].classList.add('ok');
+      k++;
+      if(k >= lis.length){ clearInterval(t); setTimeout(function(){ if(STEPS[i].type==='loading') go(); }, 450); return; }
+      lis[k].classList.add('on');
+    }, s.ms);
+  }
+}
+
+/* ===========================================================================
+   NOTIFICACIONES — discretas y los cupos solo bajan
+   =========================================================================== */
+var NOMBRES = [['Claudia R.','Rosario'],['Mariana D.','Córdoba'],['Vanina S.','La Plata'],['Lucía A.','Mendoza'],
+  ['Lorena P.','Mar del Plata'],['Silvia M.','Salta'],['Noelia F.','Neuquén'],['Daniela G.','Tucumán']];
+var cupos = 9;
+function notificar(){
+  if(cupos > 2) cupos--;
+  var n = NOMBRES[Math.floor(Math.random()*NOMBRES.length)];
+  var box = document.getElementById('notif');
+  box.querySelector('.av').textContent = n[0][0];
+  document.getElementById('notif-tx').innerHTML = esc(n[0]) + ' de ' + esc(n[1]) + ' empezó el Protocolo'
+    + '<small>hace ' + (2 + Math.floor(Math.random()*7)) + ' min · <b>Quedan ' + cupos + ' cupos con descuento</b></small>';
+  box.classList.add('on');
+  setTimeout(function(){ box.classList.remove('on'); }, 4500);
+}
+
+/* ===========================================================================
+   OFERTA
+   =========================================================================== */
+function abrirOferta(){
+  var c = calc();
+  document.querySelector('main').style.display = 'none';
+  document.querySelector('.top').style.display = 'none';
+  var of = document.getElementById('oferta');
+  of.style.display = 'block';
+  window.scrollTo({top:0});
+
+  var n = state.nombre ? state.nombre.charAt(0).toUpperCase() + state.nombre.slice(1) : '';
+  document.getElementById('of-tit').innerHTML = (n ? esc(n) + ', tu' : 'Tu') + ' Protocolo de ' + c.dias + ' días está listo';
+  document.getElementById('of-sub').innerHTML = 'Arrancás con un Índice de Activación de <b>' + c.iag + '/100</b> y el plan te lleva a <b>'
+    + c.pot + '/100</b> para el ' + fechaLarga(c.fin) + ' — sin una sola sentadilla.';
+
+  document.getElementById('p-old').textContent  = '$' + C.PRECIO_VIEJO;
+  document.getElementById('p-save').textContent = 'Ahorrás $' + C.AHORRO + ' (' + C.DESCUENTO + '% OFF)';
+  document.getElementById('p-now').textContent  = C.PRECIO;
+  document.getElementById('p-inst').textContent = C.CUOTAS + ' cuotas de $' + C.CUOTA_VALOR;
+  document.getElementById('p-bonus').textContent = C.VALOR_BONOS;
+  document.getElementById('p-faq').textContent  = C.PRECIO;
+  document.getElementById('p-faq2').textContent = C.PRECIO;
+
+  var tpl = document.getElementById('vsl-template'), box = document.getElementById('vsl-box');
+  if(tpl && tpl.innerHTML.trim()){ box.innerHTML = tpl.innerHTML; } else { box.style.display = 'none'; }
+
+  var tapar = document.querySelectorAll('#oferta .sec:not(:first-of-type), #oferta .ad, #oferta .incl, #oferta .btn');
+  if(C.SEGUNDOS_OFERTA > 0){
+    tapar.forEach(function(e){ e.classList.add('hidden'); });
+    setTimeout(function(){
+      tapar.forEach(function(e){ e.classList.remove('hidden'); });
+      ligarCTAs(); arrancarReloj(); arrancarNotifs();
+    }, C.SEGUNDOS_OFERTA * 1000);
+  } else { ligarCTAs(); arrancarReloj(); arrancarNotifs(); }
+  track('Lead');
+}
+
+/* Todo lo que parece un botón en la oferta lleva al checkout. Idempotente. */
+function ligarCTAs(){
+  var url = checkout();
+  document.querySelectorAll('#oferta a.btn, #oferta button.btn, #oferta .js-cta').forEach(function(el){
+    if(el.tagName === 'A'){ el.href = url; el.rel = 'noopener'; } else { el.style.cursor = 'pointer'; }
+    if(el.dataset.cta) return;
+    el.dataset.cta = '1';
+    el.addEventListener('click', function(e){
+      track('AddToCart');
+      if(el.tagName !== 'A'){ e.preventDefault(); location.href = url; }
+    });
+  });
+}
+function arrancarReloj(){
+  var seg = 900, el = document.getElementById('reloj');
+  var t = setInterval(function(){
+    seg--; if(seg <= 0){ seg = 0; clearInterval(t); }
+    el.textContent = String(Math.floor(seg/60)).padStart(2,'0') + ':' + String(seg%60).padStart(2,'0');
+  }, 1000);
+}
+function arrancarNotifs(){ setTimeout(notificar, 4000); setInterval(notificar, 16000); }
+
+/* ===========================================================================
+   ARRANQUE
+   =========================================================================== */
+if(C.PIXEL_ID){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', C.PIXEL_ID); fbq('track','PageView');
+}
+render();
+ligarCTAs();
+</script>
+</body>
+</html>

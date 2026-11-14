@@ -1,3 +1,32 @@
+## 2026-11-14 (21ª pasada) — Glúteo Despierto v2: su mismo diseño, todos los textos nuevos
+
+Le entregué el quiz con **nuestro** motor y me lo rebotó: *"No, no entendiste, quiero el mismo diseño que ellos, pero
+que diga cosas distintas"*. **"Similar al de ellos" significaba SU HTML, no nuestra plantilla.**
+
+- **La v2 es el documento del competidor tal cual**: su `<style>` sin tocar una regla, su sprite de íconos, su markup,
+  sus 30 pasos, su violeta `#970FA9`, sus botones verdes y sus tres cargas con porcentaje. Lo único que cambia son las
+  palabras, las dos imágenes con su marca y el bloque de configuración.
+- **~120 textos reescritos por script**, no a mano: `OUTPUTS/scripts-quiz/build_gluteo_despierto.py` parte el documento
+  por `<section class="paso">`, aplica los pares paso por paso (hay textos repetidos entre pasos que un replace global
+  pisaría) y **falla si un par no aparece o si queda un rastro del competidor**.
+- **Lo que dice ahora:** las 24 preguntas y sus opciones en voseo con otro fraseo; el **Protocolo del Glúteo Dormido**
+  (Despertar · Aislar · Cargar) en vez de su *Método Anti-Lesión*; **15 minutos y 28 días** en vez de sus *20 minutos y
+  4 semanas*; el diagnóstico pasa a *1 músculo dormido / 1 mentira que te vendieron / 1 protocolo de 28 días*; y
+  testimonios con nombre y ciudad argentina.
+- **Lo que se agregó** sin romper su diseño: configuración arriba (`CHECKOUT` relativo, `PIXEL_ID`, `VSL_MP4`), el pixel
+  de Meta con `AddToCart`, la línea de cuotas de Mercado Pago y la FAQ de *"¿es una suscripción?"*.
+- **Imágenes: 13 de 15 son suyas** (las que no llevan marca ni texto). Rehechas: el **logo** (su durazno con cinta
+  métrica → nuestro durazno con tres ondas de activación, mirado a 135, 96 y 60 px) y la **portada** (mismo layout de
+  bandas + díptico + pie, con nuestro texto).
+- **Verificado:** los 30 pasos en un iframe de 390 px, **0 desbordes, 0 imágenes rotas, 0 errores**; los **9 CTAs** al
+  checkout arrastrando `utm_source`, `utm_campaign` y `fbclid`; y el `.txt` de 1.010 KB con las 15 imágenes y el favicon
+  en base64.
+- **Tres bugs nuevos para la checklist:** los precios del markup llevan **espacio no separable** (`AR$\xa019.990`), los
+  textos repetidos entre pasos obligan a reemplazar **por paso**, y la línea de cuotas metida dentro de la caja de
+  precio la parte en cinco renglones.
+- La v1 queda en `OUTPUTS/2026-11-14-quiz-gluteo-despierto-v1-motor-propio.html` y sus 8 fotos de IA en
+  `~/Desktop/gluteo-despierto/banco-imagenes-ia/`, por si sirven para los anuncios.
+
 ## 2026-11-14 (20ª pasada) — Glúteo Despierto: el quiz modelado de una ballena de 194 ads
 
 Santiago pasó la Ads Library de **Guía Piernas y Cola Sin Sentadillas** (`guiapiernasycola.impultienda.ar`) y pidió

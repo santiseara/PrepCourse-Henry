@@ -3,1150 +3,723 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <title>Glúteo Despierto — Cola parada en 28 días, sin sentadillas</title>
-<meta name="description" content="Tu cola no crece porque el glúteo está dormido. Hacé el test de 1 minuto y descubrí tu Índice de Activación Glútea.">
-<meta name="theme-color" content="#FAF6F6">
-
-<!-- ==========================================================================
-     GLÚTEO DESPIERTO · QUIZ — bloque de configuración
-     Todo lo que se toca está acá arriba.
-     ========================================================================== -->
-<script>
-window.CONFIG = {
-
-  /* Link de checkout. Todos los botones van acá y le suman las UTMs de la URL.
-     Relativo = resuelve al checkout de la tienda donde se pegue el HTML.
-     Cuando esté el subdominio definitivo, se cambia SOLO esta línea. */
-  LINK_CHECKOUT: "/checkout",
-
-  /* Pixel de Meta. Vacío ("") si lo cargás desde ImpulTienda. */
-  PIXEL_ID: "",
-
-  /* Segundos antes de que aparezca la oferta. 0 = se ve de entrada (sin VSL).
-     Si cargás un VSL en <template id="vsl-template">, poné el segundo exacto
-     en que el video dice el precio. 230 = 3:50 · 960 = 16:00 */
-  SEGUNDOS_OFERTA: 0,
-
-  /* Imágenes. Pegá acá la URL de ImpulTienda de cada una. */
-  IMG: {
-    edad1: "../imagenes/edad-18-24.webp",
-    edad2: "../imagenes/edad-25-34.webp",
-    edad3: "../imagenes/edad-35-44.webp",
-    edad4: "../imagenes/edad-45-mas.webp",
-    ejSenta:  "../imagenes/ej-sentadilla.webp",
-    ejEstoca: "../imagenes/ej-estocada.webp",
-    ejPuente: "../imagenes/ej-puente.webp",
-    ejPatada: "../imagenes/ej-patada.webp"
-  },
-
-  /* Precios. Si cambia el precio, cambiarlo en los 7 campos. */
-  PRECIO:       "19.990",
-  PRECIO_VIEJO: "99.990",
-  DESCUENTO:    "80",
-  CUOTAS:       "3",
-  CUOTA_VALOR:  "6.664",
-  AHORRO:       "80.000",
-  VALOR_BONOS:  "32.970"
-};
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
-
+<meta name="description" content="Tu cola no crece porque el glúteo está dormido. Hacé el test y descubrí el Protocolo del Glúteo Dormido.">
+<link rel="icon" type="image/webp" href="../imagenes/icono.webp">
 <style>
-/* ===========================================================================
-   PALETA — ciruela. Papel cálido, tinta y UN acento.
-   El competidor corre violeta eléctrico + magenta: esto se tiene que ver
-   de otra marca en el mismo feed.
-   El verde solo significa "bien" y el rojo solo "riesgo".
-   =========================================================================== */
-:root{
-  --paper:#FAF6F6; --card:#FFFFFF;
-  --ink:#241A1E; --ink-2:#4C3B42; --muted:#7D6B72;
-  --line:#EDE2E4; --line-2:#DCC8CD;
-  --accent:#A62B55; --accent-d:#7B1D3E; --accent-s:#FBEEF2;
-  --green:#1F7A52; --green-s:#E7F3ED;
-  --amber:#B07A1F; --amber-s:#FBF2E0;
-  --red:#C0392B; --red-s:#FBEDEB;
-  --shadow:0 18px 40px -26px rgba(36,26,30,.45);
-  --shadow-s:0 8px 20px -14px rgba(36,26,30,.35);
-  --r:16px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
-  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.15;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-button{font:inherit;color:inherit}
-.hidden{display:none!important}
-.wrap{max-width:540px;margin:0 auto;padding:0 18px}
-h1,h2,h3,.disp{font-family:'Fraunces','Georgia',serif;font-weight:700;line-height:1.14;letter-spacing:-.012em}
-
-/* ====== cabecera + progreso ====== */
-.top{position:sticky;top:0;z-index:40;background:rgba(250,246,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top-in{max-width:540px;margin:0 auto;padding:12px 18px 10px;display:flex;flex-direction:column;gap:10px;position:relative}
-.brand{display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;color:var(--ink)}
-.brand .mark{width:27px;height:27px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none}
-.brand .mark svg{width:16px;height:16px}
-.brand .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.14rem;letter-spacing:-.02em}
-.brand .name i{font-style:normal;color:var(--accent)}
-.bar{height:5px;background:var(--line);border-radius:99px;overflow:hidden}
-.bar>span{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
-.back{position:absolute;left:14px;top:11px;width:32px;height:32px;border:1px solid var(--line);background:var(--card);
-  border-radius:10px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2);z-index:2}
-.back:disabled{opacity:0;pointer-events:none}
-.paso-n{position:absolute;right:16px;top:17px;font-size:.7rem;font-weight:700;letter-spacing:.06em;color:var(--muted)}
-
-/* ====== layout del paso ====== */
-main{padding:24px 0 30px;min-height:calc(100vh - 70px)}
-.step{animation:in .32s ease}
-@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.q{font-size:1.5rem;text-align:center;margin-bottom:10px}
-.q em{font-style:normal;color:var(--accent)}
-.help{text-align:center;color:var(--muted);font-size:.93rem;margin-bottom:24px;line-height:1.6}
-.q+.opts,.q+.grid{margin-top:24px}
-
-/* ====== opciones de lista ====== */
-.opts{display:flex;flex-direction:column;gap:11px}
-.opt{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--card);
-  border:1.5px solid var(--line);border-radius:var(--r);padding:16px;cursor:pointer;
-  transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s)}
-.opt:hover{border-color:var(--line-2)}
-.opt:active{transform:scale(.993)}
-.opt.on{border-color:var(--accent);background:var(--accent-s);box-shadow:0 0 0 3px rgba(166,43,85,.09)}
-.opt .ic{width:34px;height:34px;flex:none;border-radius:9px;background:var(--paper);display:grid;place-items:center;
-  font-size:1.02rem;border:1px solid var(--line)}
-.opt.on .ic{background:#fff;border-color:rgba(166,43,85,.25)}
-.opt .tx{flex:1;min-width:0}
-.opt .tx b{display:block;font-weight:600;font-size:.98rem;line-height:1.35}
-.opt .tx small{display:block;color:var(--muted);font-size:.82rem;line-height:1.4;margin-top:2px}
-.opt .ar{color:var(--line-2);flex:none}
-.opt.on .ar{color:var(--accent)}
-
-/* ====== opciones con foto ====== */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.grid .opt{padding:13px 11px;gap:9px}
-.grid .opt .ic{width:28px;height:28px;font-size:.92rem}
-.grid .opt .tx b{font-size:.88rem}
-.grid .opt .ar{display:none}
-.pick{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;
-  padding:0;text-align:center;transition:border-color .15s,box-shadow .15s,transform .08s;box-shadow:var(--shadow-s);position:relative}
-.pick:active{transform:scale(.99)}
-.pick.on{border-color:var(--accent);box-shadow:0 0 0 3px rgba(166,43,85,.09)}
-.pick figure{position:relative;background:#F3EAEC}
-.pick img{width:100%;height:auto!important;aspect-ratio:1!important;object-fit:cover}
-.pick .lb{padding:11px 8px;font-size:.84rem;font-weight:700;letter-spacing:.03em;color:var(--ink-2);line-height:1.3}
-.pick.on .lb{color:var(--accent)}
-/* portada: foto a sangre con la etiqueta encima, sobre banda oscura */
-.pick.ov img{aspect-ratio:3/4!important}
-.pick.ov figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 13px;color:#fff;
-  font-size:.95rem;font-weight:800;letter-spacing:.05em;text-align:center;
-  background:linear-gradient(180deg,rgba(28,18,22,0) 0%,rgba(28,18,22,.55) 45%,rgba(28,18,22,.9) 100%)}
-.pick.ov::after{content:"";position:absolute;inset:0;border-radius:var(--r);pointer-events:none;
-  box-shadow:inset 0 0 0 0 var(--accent);transition:box-shadow .15s}
-.pick.ov.on::after{box-shadow:inset 0 0 0 3px var(--accent)}
-.cover-head{text-align:center;margin-bottom:20px}
-.cover-badge{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;font-size:.68rem;
-  font-weight:800;letter-spacing:.11em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:16px}
-.cover-badge i{width:6px;height:6px;border-radius:50%;background:#5BD08C;font-style:normal;box-shadow:0 0 0 3px rgba(91,208,140,.25)}
-.cover-head h1{font-size:2.05rem;line-height:1.08;letter-spacing:-.025em}
-.cover-head h1 em{font-style:normal;color:var(--accent)}
-.cover-head p{color:var(--muted);font-size:.95rem;margin-top:10px}
-@media(max-width:380px){.cover-head h1{font-size:1.78rem}}
-
-/* ====== botones ====== */
-.btn{display:flex;align-items:center;justify-content:center;text-align:center;gap:9px;width:100%;border:none;
-  cursor:pointer;font-weight:700;font-size:1.02rem;color:#fff;background:var(--accent);padding:16px 20px;
-  border-radius:13px;text-decoration:none;box-shadow:0 10px 24px -14px rgba(166,43,85,.85);
-  transition:filter .15s,transform .08s}
-.btn:hover{filter:brightness(1.07)}
-.btn:active{transform:translateY(1px)}
-.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
-.btn.buy{background:var(--green);box-shadow:0 10px 24px -14px rgba(31,122,82,.9)}
-.skip{display:block;width:100%;background:none;border:none;color:var(--muted);font-size:.88rem;
-  text-decoration:underline;cursor:pointer;padding:14px;text-align:center}
-.foot{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(250,246,246,0),var(--paper) 36%);
-  padding:18px 0 14px;margin-top:26px}
-
-/* ====== tarjetas ====== */
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow-s)}
-.note{background:var(--accent-s);border:1px solid rgba(166,43,85,.16);border-radius:13px;padding:14px 16px;
-  font-size:.9rem;color:var(--ink-2);line-height:1.6}
-.legal{margin-top:22px;font-size:.76rem;color:var(--muted);text-align:center;line-height:1.6}
-.legal a{color:var(--accent)}
-.cap{font-size:.78rem;color:var(--muted);text-align:center;margin-top:9px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
-.chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font-size:.78rem;
-  font-weight:600;color:var(--ink-2);box-shadow:var(--shadow-s)}
-.chip b{color:var(--accent)}
-.bars{display:flex;align-items:flex-end;gap:12px;height:120px;margin:22px 0 4px}
-.bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
-.bars b{display:block;width:100%;background:linear-gradient(180deg,#D4759B,var(--accent));border-radius:9px 9px 3px 3px}
-.bars span{font-size:.74rem;color:var(--muted);font-weight:600}
-
-/* ====== revelación del mecanismo: barras de activación ====== */
-.rev{display:flex;flex-direction:column;gap:10px;margin-top:4px}
-.rev div{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
-  border-radius:13px;padding:12px 14px;box-shadow:var(--shadow-s)}
-.rev img{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none}
-.rev .nm{flex:1;min-width:0;display:block}
-.rev .nm b{display:block;font-size:.9rem;font-weight:600;line-height:1.3}
-.rev .track{display:block;height:7px;border-radius:99px;background:var(--line);margin-top:7px;overflow:hidden}
-.rev .track i{display:block;height:100%;border-radius:99px;background:var(--accent);font-style:normal}
-/* ancho fijo: si la chapita cambia de ancho, las barras dejan de ser comparables */
-.rev .tag{font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;flex:none;
-  padding:4px 9px;border-radius:99px;background:var(--accent-s);color:var(--accent);
-  width:88px;text-align:center;white-space:nowrap;font-size:.67rem}
-.rev .alta .track i{background:var(--green)}
-.rev .alta .tag{background:var(--green-s);color:var(--green)}
-.rev .baja .track i{background:var(--red)}
-.rev .baja .tag{background:var(--red-s);color:var(--red)}
-
-/* ====== maqueta del celular, dibujada en HTML ====== */
-.phone{width:248px;margin:0 auto;border-radius:34px;background:#2A1D22;padding:9px;box-shadow:0 26px 50px -26px rgba(36,26,30,.6)}
-.phone .scr{background:var(--paper);border-radius:26px;overflow:hidden}
-.phone .nn{height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:.6rem;
-  color:var(--ink-2);background:var(--card)}
-.ph-hero{background:var(--accent);color:#fff;padding:12px;margin:8px;border-radius:14px}
-.ph-hero b{font-family:'Fraunces',serif;font-size:1.3rem;display:block;line-height:1}
-.ph-hero small{font-size:.58rem;opacity:.9;display:block;letter-spacing:.07em;margin-top:3px}
-.ph-ring{height:6px;background:rgba(255,255,255,.28);border-radius:99px;margin-top:9px;overflow:hidden}
-.ph-ring i{display:block;height:100%;width:46%;background:#fff;border-radius:99px;font-style:normal}
-.ph-sec{margin:0 8px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px}
-.ph-sec>b{font-size:.68rem;display:block;margin-bottom:7px}
-.ph-row{display:flex;align-items:center;gap:7px;padding:6px 0;border-top:1px solid var(--line);font-size:.58rem;color:var(--ink-2)}
-.ph-row:first-of-type{border-top:none}
-.ph-row i{width:17px;height:17px;border-radius:5px;background:var(--accent-s);color:var(--accent);flex:none;
-  font-style:normal;display:grid;place-items:center;font-size:.5rem;font-weight:800}
-.ph-row span{flex:1}
-.ph-row em{font-style:normal;color:var(--muted);font-weight:700}
-.ph-tab{display:flex;justify-content:space-around;padding:7px 0 9px;border-top:1px solid var(--line);background:var(--card)}
-.ph-tab i{width:14px;height:14px;border-radius:4px;background:var(--line-2);font-style:normal}
-.ph-tab i.on{background:var(--accent)}
-
-/* ====== sliders ====== */
-.sl-val{text-align:center;margin:8px 0 4px}
-.sl-val b{font-family:'Fraunces',serif;font-size:3rem;line-height:1}
-.sl-val span{font-size:1.05rem;color:var(--muted);font-weight:600}
-.sl-tag{display:block;width:max-content;max-width:100%;margin:8px auto 22px;font-size:.76rem;font-weight:700;
-  letter-spacing:.06em;text-transform:uppercase;background:var(--accent-s);color:var(--accent);padding:5px 12px;
-  border-radius:99px;text-align:center}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:var(--line);outline:none}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--card);
-  border:3px solid var(--accent);cursor:pointer;box-shadow:0 3px 10px -3px rgba(36,26,30,.4)}
-input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:var(--card);border:3px solid var(--accent);cursor:pointer}
-.sl-ends{display:flex;justify-content:space-between;font-size:.74rem;color:var(--muted);margin-top:9px}
-.sl-hint{text-align:center;font-size:.78rem;color:var(--muted);margin-top:14px}
-.warn{display:flex;gap:11px;background:var(--red-s);border:1px solid rgba(192,57,43,.22);border-radius:13px;
-  padding:13px 15px;margin-top:16px;font-size:.88rem;color:#8E2E22;line-height:1.55}
-.warn b{color:var(--red)}
-
-/* ====== pantalla de carga ====== */
-.load{text-align:center;padding:40px 0}
-.load .ring{width:54px;height:54px;margin:0 auto 22px;border:3px solid var(--line);border-top-color:var(--accent);
-  border-radius:50%;animation:spin .9s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.load h2{font-size:1.35rem;margin-bottom:6px}
-.load>p{color:var(--muted);font-size:.9rem;margin-bottom:26px}
-.load ul{list-style:none;display:flex;flex-direction:column;gap:13px;max-width:340px;margin:0 auto;text-align:left}
-.load li{display:flex;align-items:center;gap:11px;font-size:.9rem;color:var(--muted);opacity:.45;transition:opacity .3s,color .3s}
-.load li.on,.load li.ok{opacity:1;color:var(--ink-2)}
-.load li i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line-2);flex:none;display:grid;place-items:center;
-  font-style:normal;font-size:.65rem;color:#fff}
-.load li.ok i{background:var(--green);border-color:var(--green)}
-.load li.on i{border-color:var(--accent)}
-
-/* ====== resultado ====== */
-.res-h{text-align:center;margin-bottom:22px}
-.res-h .tick{width:48px;height:48px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin:0 auto 14px;color:#fff}
-.big-kcal{background:var(--accent);color:#fff;border-radius:var(--r);padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
-.big-kcal b{font-family:'Fraunces',serif;font-size:3.4rem;line-height:1;display:block}
-.big-kcal b sup{font-size:1.4rem;vertical-align:super}
-.big-kcal small{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9;margin-top:6px}
-.kpi{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:13px;overflow:hidden;margin:14px 0}
-.kpi div{background:var(--card);padding:15px 12px;text-align:center}
-.kpi b{display:block;font-family:'Fraunces',serif;font-size:1.65rem;line-height:1.1}
-.kpi small{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
-.kpi .go b{color:var(--green)}
-.imc{margin:22px 0}
-.imc-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px;gap:10px}
-.imc-top b{font-family:'Fraunces',serif;font-size:1.25rem}
-.imc-tag{font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 11px;border-radius:99px;flex:none}
-/* izquierda = dormido (riesgo) · derecha = despierto (bien) */
-.imc-track{height:9px;border-radius:99px;position:relative;
-  background:linear-gradient(90deg,#C0392B 0 26%,#B07A1F 26% 52%,#7FA86B 52% 76%,#1F7A52 76% 100%)}
-.imc-dot{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#fff;border:3px solid var(--ink);
-  transform:translate(-50%,-50%);transition:left .6s cubic-bezier(.4,0,.2,1)}
-.imc-sc{display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:8px}
-.fc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow-s)}
-.fc-top{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-bottom:12px}
-.fc svg{width:100%;height:auto;display:block}
-.fc-legend{display:flex;justify-content:space-between;margin-top:12px;font-size:.78rem}
-.fc-legend b{display:block;font-family:'Fraunces',serif;font-size:1.1rem}
-.fc-legend .a{color:var(--red)}
-.fc-legend .b{color:var(--green);text-align:right}
-.logros{list-style:none;margin:16px 0 0;padding:0}
-.logros li{display:flex;gap:10px;padding:10px 0;font-size:.92rem;border-top:1px solid var(--line);line-height:1.5}
-.logros li i{color:var(--green);font-style:normal;flex:none}
-
-/* ====== notificaciones ====== */
-#notif{position:fixed;left:14px;bottom:14px;z-index:70;max-width:290px;background:rgba(255,255,255,.95);
-  backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:11px 13px;box-shadow:var(--shadow);
-  display:flex;gap:10px;align-items:center;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
-#notif.on{opacity:1;transform:none}
-#notif .av{width:32px;height:32px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
-  place-items:center;font-weight:700;font-size:.85rem;flex:none}
-#notif p{font-size:.78rem;line-height:1.4}
-#notif small{display:block;color:var(--muted);font-size:.69rem;margin-top:1px}
-#notif small b{color:var(--red)}
-
-/* ===========================================================================
-   OFERTA
-   =========================================================================== */
-#oferta{display:none}
-.urg{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;text-align:center;padding:10px 14px;
-  font-size:.82rem;font-weight:600}
-.urg b{font-family:'Fraunces',serif;background:var(--accent);padding:3px 9px;border-radius:7px;margin-left:7px;
-  display:inline-block;font-size:.9rem}
-.vsl{border-radius:var(--r);overflow:hidden;background:#111;aspect-ratio:9/16;max-width:360px;margin:0 auto 22px;box-shadow:var(--shadow)}
-.vsl iframe,.vsl video{width:100%;height:100%;border:0;display:block;object-fit:cover}
-.sec{padding:34px 0;border-top:1px solid var(--line)}
-.sec h2{font-size:1.45rem;text-align:center;margin-bottom:8px}
-.sec .sub{text-align:center;color:var(--muted);font-size:.92rem;margin-bottom:26px;line-height:1.6}
-/* antes / después en HTML nítido, sin fotos */
-.ad{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:24px}
-@media(min-width:460px){.ad{grid-template-columns:1fr 1fr}}
-.ad .col{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
-.ad .col.go{border-color:rgba(31,122,82,.3);background:var(--green-s)}
-.ad h4{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.ad .col.go h4{color:var(--green)}
-.ad ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.ad li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
-.ad li i{flex:none;font-style:normal;font-weight:800;color:var(--red);margin-top:1px}
-.ad .col.go li i{color:var(--green)}
-.incl{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
-.incl li{display:flex;gap:12px;align-items:flex-start;list-style:none;background:var(--card);border:1px solid var(--line);
-  border-radius:13px;padding:14px 15px;font-size:.92rem;line-height:1.55;box-shadow:var(--shadow-s)}
-.incl li i{width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;
-  flex:none;font-style:normal;margin-top:1px;font-size:.75rem}
-.promo{position:relative;background:var(--card);border:1.5px solid var(--line-2);border-radius:20px;padding:34px 20px 24px;
-  margin-top:28px;box-shadow:var(--shadow)}
-.promo .tagtop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;
-  font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:6px 15px;border-radius:99px;white-space:nowrap}
-.promo .pname{font-family:'Fraunces',serif;font-size:1.6rem;text-align:center;line-height:1.12}
-.promo .pmech{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);margin-top:7px;margin-bottom:20px}
-.pmoney{text-align:center;margin-bottom:22px}
-.pmoney .old{font-size:1rem;color:var(--muted);text-decoration:line-through}
-.pmoney .save{display:inline-block;background:var(--green-s);color:var(--green);font-size:.76rem;font-weight:700;
-  padding:4px 11px;border-radius:99px;margin-left:8px}
-.pmoney .now{font-family:'Fraunces',serif;font-size:3.1rem;line-height:1;margin-top:10px}
-.pmoney .now sup{font-size:1.3rem;vertical-align:super;margin-right:2px}
-.pmoney .cur{display:block;font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
-.pmoney .inst{display:block;font-size:.92rem;color:var(--ink-2);margin-top:10px}
-.pmoney .inst b{color:var(--accent);display:inline}
-.plist{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:14px}
-.plist>b{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.plist ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.plist li{display:flex;gap:10px;font-size:.89rem;line-height:1.5;align-items:flex-start}
-.plist li i{color:var(--green);flex:none;font-style:normal;margin-top:2px}
-.lifetime{display:flex;gap:11px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;
-  padding:12px 14px;margin-top:13px}
-.lifetime b{display:block;font-size:.9rem}
-.lifetime small{display:block;color:var(--muted);font-size:.78rem}
-.gifts{border:1.5px dashed var(--line-2);border-radius:14px;padding:16px;margin-bottom:20px;text-align:center}
-.gifts .gt{font-size:.95rem;font-weight:700}
-.gifts .gl{list-style:none;margin:11px 0;display:flex;flex-direction:column;gap:6px;text-align:left}
-.gifts .gl li{font-size:.84rem;color:var(--ink-2);line-height:1.5;display:flex;gap:8px}
-.gifts .gl li i{color:var(--accent);font-style:normal;flex:none}
-.gifts .gv{font-size:.85rem;color:var(--muted);margin-top:5px}
-.gifts .gv s{margin-right:8px}
-.gifts .free{display:inline-block;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;
-  padding:4px 11px;border-radius:99px;cursor:pointer}
-.micro{text-align:center;font-size:.76rem;color:var(--muted);margin-top:13px;line-height:1.6}
-.tst{display:flex;flex-direction:column;gap:13px}
-.tst article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow-s)}
-.tst header{display:flex;align-items:center;gap:11px;margin-bottom:10px}
-.tst .av{width:38px;height:38px;border-radius:50%;background:var(--accent-s);color:var(--accent);display:grid;
-  place-items:center;font-weight:700;font-size:.9rem;flex:none}
-.tst b{font-size:.9rem;display:block}
-.tst small{color:var(--muted);font-size:.76rem}
-.tst .st{color:var(--amber);font-size:.8rem;letter-spacing:.08em}
-.tst p{font-size:.9rem;line-height:1.65;color:var(--ink-2)}
-.gar{text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-s)}
-.gar svg{margin:0 auto 14px;display:block}
-.gar h3{font-size:1.2rem;margin-bottom:8px}
-.gar p{font-size:.9rem;color:var(--muted);line-height:1.65;max-width:360px;margin:0 auto}
-.faq details{background:var(--card);border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden}
-.faq summary{padding:15px 17px;font-weight:600;font-size:.93rem;cursor:pointer;list-style:none;display:flex;
-  justify-content:space-between;gap:12px;align-items:center}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--accent);font-size:1.25rem;font-weight:400;flex:none}
-.faq details[open] summary::after{content:"–"}
-.faq p{padding:0 17px 16px;font-size:.88rem;color:var(--ink-2);line-height:1.68}
-.ftr{text-align:center;padding:26px 0 36px;font-size:.76rem;color:var(--muted);line-height:1.8;border-top:1px solid var(--line)}
-
-@media(max-width:380px){
-  .q{font-size:1.32rem}
-  .pmoney .now{font-size:2.7rem}
-  .big-kcal b{font-size:2.9rem}
-}
+button{font-family:inherit}
+.app{max-width:464px;margin:0 auto;overflow-x:hidden}
+.top{padding-top:16px;margin-bottom:18px}
+.top .logo{width:135px;height:135px;margin:20px auto 16px}
+.barra{height:12px;margin:0 96px;border-radius:9999px;background:#ededed;overflow:hidden}
+.barra span{display:block;width:0;height:100%;background:#485FC7;transition:width 1s ease}
+.top.sin{height:44px;padding:0;margin:0}
+.top.sin .logo,.top.sin .barra{display:none}
+.paso{display:none;padding:10px;opacity:0;transition:opacity .3s ease-in-out}
+.paso.angosto{padding:10px 24px}
+.col{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.col>*{width:100%}
+.q{margin:0 0 4px;font-size:28.5px;line-height:1.16;font-weight:700;letter-spacing:1px}
+.t3{margin:0 0 4px;font-size:24.5px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.ops{--tema:#6D28D9;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:8px}
+.ops.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.op{display:block;width:100%;margin:0;padding:0;border:1px solid rgba(163,163,163,.8);border-radius:20px;background:transparent;color:#000;font-size:16px;text-align:left;cursor:pointer;-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+.op-in{display:flex;align-items:center;min-height:66px;border-radius:19px;background:#fff;overflow:hidden;transition:background-color .3s}
+.op-in.vert{flex-direction:column;align-items:stretch}
+.op-emo{flex:none;display:flex;align-items:center;justify-content:center;min-height:66px;margin-left:16px;font-size:40px;line-height:40px}
+.op-emo.der{margin:0 16px 0 0}
+.op-in.vert .op-emo{margin:0}
+.op-cuerpo{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;padding:0 8px}
+.op-txt{flex:1;min-width:0;min-height:64px;display:flex;align-items:center;font-size:16px;line-height:1.15;letter-spacing:1px;color:#000}
+.op-txt strong{font-weight:700}
+.op-flecha{flex:none;display:flex;padding:8px}
+.op-flecha i{display:flex;width:24px;height:24px;margin-bottom:4px;padding:4px 3px 4px 5px;border-radius:6px;background:rgba(2,6,23,.15)}
+.op-flecha svg{width:16px;height:16px;fill:#030712}
+.lila .op{border-style:dashed}
+.lila .op-in{background:rgba(207,147,217,.42)}
+.lila .op-txt{justify-content:center;text-align:center;color:#030712}
+.v-contrast .op-txt{color:var(--tema)}
+.v-contrast .op-flecha i{background:var(--tema)}
+.v-contrast .op-flecha svg,.v-highlight .op-flecha svg,.v-relief .op-flecha svg{fill:#fff}
+.v-highlight .op-in,.v-relief .op-in{background:var(--tema)}
+.v-highlight .op-txt,.v-relief .op-txt{color:#fff}
+.v-highlight .op-flecha i{background:var(--tema);filter:brightness(.85)}
+.v-relief .op-in{border-bottom:8px solid #6B7280;box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)}
+.v-relief .op-flecha i{background:transparent}
+.op.activa .op-in{background:var(--tema)}
+.op.activa .op-txt{color:#fff}
+.op.activa .op-flecha svg{fill:#fff}
+.img-carga.alta{width:auto;height:303px;margin:0 auto}
+.lista{list-style:none;margin:0;padding:0;text-align:left}
+.lista li{display:flex;align-items:center;margin-top:2px;font-size:18px;line-height:1.15;letter-spacing:1px}
+.lista .ic{flex:none;width:20px;height:20px;margin-right:8px;fill:#000}
+.lista.centro li{justify-content:center}
+.carga{width:calc(100% - 56px)!important}
+.carga-top{display:flex;justify-content:flex-end;padding-bottom:4px;font-size:16px;line-height:24px}
+.carga-fondo{height:16px;border-radius:999px;background:#f0f0f0}
+.carga-barra{width:0;height:16px;padding:8px;border-radius:999px;background:#8F0EA0}
+.portada{width:100%}
+.aviso{font-size:16px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.aviso p{margin:1.6px 0 3.2px}
+.rojo{color:#D81B43}
+.marca-roja{background:#D81B43;color:#fff}
+.cta-caja{position:relative;z-index:0}
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin:0;padding:15px 24px;border:0;border-radius:14px;background:#05A045;color:#F0F0F0;font-family:Arial,Helvetica,sans-serif;font-size:20px;line-height:1.15;font-weight:700;letter-spacing:1px;text-align:center;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cta>span{flex:1;min-width:0}
+.cta .ic{flex:none;width:24px;height:24px;fill:#F0F0F0}
+.cta.late{gap:0;animation:latido 1s infinite ease-in-out}
+.cta.chica>span{flex:none}
+.cta.pulso::before{content:"";position:absolute;left:0;top:-5%;width:100%;height:100%;border-radius:14px;background:#05A045;z-index:-1;animation:alerta 1s infinite;pointer-events:none}
+@keyframes latido{0%{transform:scale3d(1,1,1)}50%{transform:scale3d(1.15,1.15,1.15)}100%{transform:scale3d(1,1,1)}}
+@keyframes alerta{0%{opacity:1;transform:scaleY(.95)}50%{opacity:0;transform:scaleY(1.3) scaleX(1.04)}100%{opacity:0;transform:scaleY(.95)}}
+.timer-borde{border:4px solid #A5D6A7;border-radius:10px}
+.timer{padding:16px 12px;border-radius:6px;background:#FFFAEB;color:#A16207;font-size:16px;line-height:1.15;font-weight:700;box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.timer.rojo{border-radius:10px;background:#FEECF0;color:#B91C1C;box-shadow:none}
+.p16{margin:0;font-size:16px;line-height:1.15;letter-spacing:1px}
+.p16.dos p{margin:1.6px 0 3.2px}
+.morado{color:#970FA9}
+.vsl-txt{margin:0;font-size:24px;line-height:1.15;letter-spacing:1px;color:#970FA9}
+.vsl-txt .negro{color:#000}
+.vsl{position:relative;background:#000}
+.vsl-r{position:relative;width:100%}
+.vsl-r video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.vsl-sonido{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:100%;padding:0;border:0;background:rgba(0,0,0,.25);cursor:pointer}
+.vsl-sonido span{padding:14px 18px;border-radius:12px;background:#970FA9;color:#fff;font-size:16px;line-height:1.3;font-weight:700;letter-spacing:.5px}
+.of-tit{margin:0;font-size:21px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.of-sub{margin:1.6px 0 3.2px;font-size:17px;line-height:1.15;letter-spacing:1px}
+.of-sub strong{font-weight:700}
+.precio{display:flex;align-items:center;justify-content:space-between;padding:10px;border:2px solid #A5D6A7;border-radius:19px;background:#C8E6CA}
+.precio-izq{margin-left:16px;color:#05A045;font-size:28px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.precio-der{display:flex;flex-direction:column;align-items:flex-end;padding:12px 18px;border-radius:16px;background:#DCEFE1;color:#05A045;letter-spacing:1px;text-align:right}
+.precio-der small{font-size:12px;line-height:18px}
+.precio-der strong{margin:2px 0 4px;font-size:24px;line-height:1.15;font-weight:700}
+.precio-der span{font-size:15px;line-height:1.15}
+.cuotas{margin:10px 0 0;text-align:center;font-size:15px;line-height:1.3;color:#047C38}
+.cuotas strong{font-weight:700}
+.sellos{width:100%}
+.caja-violeta,.caja{padding:18px 18px 26px;border-radius:12px;text-align:left}
+.caja-violeta{background:#8F0EA0;color:#fff}
+.caja.rosa{background:#FCE8EC}
+.caja.verde{background:#C8E6CA}
+.caja-tit{margin:0 0 16px;padding:1.6px 0 3.2px;font-size:20px;line-height:1.15;font-weight:700;letter-spacing:1px;text-align:center}
+.caja.rosa .caja-tit{color:#D81B43}
+.caja.verde .caja-tit{color:#047C38}
+.lista-of{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.lista-of li{display:flex;align-items:center;font-size:18px;line-height:1.15;letter-spacing:1px}
+.lista-of li>span{margin:2px 0 0 8px}
+.lista-of .ic{flex:none;width:20px;height:20px}
+.lista-of strong{font-weight:700}
+.caja-violeta .ic{fill:#4CB050}
+.caja.rosa .ic{fill:#D81B43}
+.caja.verde .ic{fill:#047C38}
+.of-h{margin:14px 0 0;padding:1.6px 0 3.2px;font-size:24px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.garantia-tit{font-size:20px}
+.foto-300,.foto-ancha{display:flex;justify-content:center}
+.foto-300 img{width:300px}
+.foto-ancha img{width:100%}
+.depos{display:flex;flex-direction:column;gap:8px}
+.depo{border:1px solid rgba(163,163,163,.8);border-radius:20px;text-align:left}
+.depo img{width:48px;height:48px;margin:8px 0 0 12px;border-radius:9999px;object-fit:cover}
+.depo-cont{padding:8px 16px 16px}
+.estrellas{font-size:12px;line-height:18px}
+.estrellas i{font-style:normal;font-size:13.2px}
+.autor{margin:4px 0;color:#030712;font-weight:700;line-height:24px}
+.desc{padding-top:8px;color:#6B7280;line-height:24px}
+.faq-tit{margin:14px 0 0;padding:1.6px 0 3.2px;color:#970FA9;font-size:20px;line-height:1.15;letter-spacing:1px}
+.faq-tit strong{background:rgba(207,147,217,.33)}
+.faq{display:flex;flex-direction:column;gap:16px;padding:10px;text-align:left}
+.faq h3{margin:4px 0 -5px;color:#970FA9;font-size:20px;line-height:1.15;font-weight:700;letter-spacing:1px}
+.faq p{margin:0;font-size:16px;line-height:1.15;letter-spacing:1px}
+.faq hr{width:100%;height:1px;margin:8px 0;border:0;background:#dbdbdb}
+.flecha-abajo{width:36px!important;height:36px;fill:#F1627E}
+.sello{width:172px!important;margin:0 auto}
+@media (min-width:769px){.q{font-size:24px}}
+#downsell-exit-modal{background:rgba(59,10,69,.62)!important}#downsell-exit-modal>div{position:relative;overflow:hidden;background:#fff!important;border:2px solid #A5D6A7!important;border-radius:16px!important;box-shadow:0 24px 60px -18px rgba(59,10,69,.55)!important;padding:30px 22px 16px!important;text-align:center!important}#downsell-exit-modal>div::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:#8F0EA0}#downsell-modal-title{font-family:Arial,Helvetica,sans-serif!important;font-size:24px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:.5px!important;color:#970FA9!important;margin:4px 0 10px!important}#downsell-exit-modal p{font-family:Arial,Helvetica,sans-serif!important;font-size:16px!important;line-height:1.45!important;letter-spacing:.3px!important;color:#374151!important;margin:0 0 18px!important}#downsell-modal-accept{background:#05A045!important;color:#F0F0F0!important;font-family:Arial,Helvetica,sans-serif!important;font-size:19px!important;font-weight:700!important;letter-spacing:1px!important;border:0!important;border-radius:14px!important;padding:16px 12px!important;box-shadow:0 10px 22px -8px rgba(5,160,69,.55)!important;animation:dsPulso 1.6s ease-in-out infinite}#downsell-modal-dismiss{font-family:Arial,Helvetica,sans-serif!important;font-size:14px!important;color:#6B7280!important;text-decoration:underline!important;margin-top:6px!important}@keyframes dsPulso{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
 </style>
 </head>
 <body>
-
-<!-- El embed del VSL va acá adentro. Solo el <iframe>. Vacío = sin video. -->
-<template id="vsl-template"></template>
-
-<header class="top">
-  <div class="top-in">
-    <button class="back" id="back" aria-label="Volver" disabled>
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-    <a class="brand" href="#" onclick="return false">
-      <!-- el ícono significa algo: señal de activación (el músculo que se enciende) -->
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6" fill="#fff" stroke="none"/><path d="M7.4 16.6a6.5 6.5 0 0 1 0-9.2"/><path d="M16.6 7.4a6.5 6.5 0 0 1 0 9.2"/></svg></span>
-      <span class="name">Glúteo <i>Despierto</i></span>
-    </a>
-    <span class="paso-n" id="paso-n"></span>
-    <div class="bar"><span id="bar"></span></div>
-  </div>
-</header>
-
-<main><div class="wrap" id="app"></div></main>
-
-<!-- =========================================================================
-     OFERTA (último paso). Queda oculta hasta CONFIG.SEGUNDOS_OFERTA.
-     ========================================================================= -->
-<section id="oferta">
-  <div class="urg">Tu descuento queda reservado por <b id="reloj">15:00</b></div>
-  <div class="wrap">
-    <div class="sec" style="border:none;padding-top:28px">
-      <h2 id="of-tit">Tu Protocolo de 28 días está listo</h2>
-      <p class="sub" id="of-sub">Según tus respuestas, podés tener la cola parada y las piernas firmes en 4 semanas — incluso con rodillas sensibles.</p>
-
-      <div class="vsl" id="vsl-box"></div>
-
-      <div class="ad">
-        <div class="col">
-          <h4>Como venís hasta hoy</h4>
-          <ul>
-            <li><i>✗</i>Sentadillas que te dejan las rodillas doloridas</li>
-            <li><i>✗</i>Entrenás piernas y la cola sigue igual</li>
-            <li><i>✗</i>Evitás la ropa ajustada y la pileta</li>
-            <li><i>✗</i>Horas de gimnasio sin ver un cambio real</li>
-          </ul>
-        </div>
-        <div class="col go">
-          <h4>Con el Protocolo del Glúteo Dormido</h4>
-          <ul>
-            <li><i>✓</i>15 minutos por día, en tu casa, sin equipo</li>
-            <li><i>✓</i>El glúteo trabaja y las rodillas descansan</li>
-            <li><i>✓</i>Piernas firmes y cola parada en 28 días</li>
-            <li><i>✓</i>Te mirás al espejo y te gusta lo que ves</li>
-          </ul>
-        </div>
-      </div>
-
-      <ul class="incl" id="incluye">
-        <li><i>✓</i><span><b>Las 3 fases del Protocolo</b>: Despertar, Aislar y Cargar. El orden exacto que hace que el glúteo trabaje en vez del cuádriceps.</span></li>
-        <li><i>✓</i><span><b>Rutinas de 15 minutos</b>: una por día, en video, para hacer en el living sin pesas ni máquinas.</span></li>
-        <li><i>✓</i><span><b>Cero impacto en las rodillas</b>: ni una sentadilla, ni un salto. Pensado para rodillas sensibles.</span></li>
-        <li><i>✓</i><span><b>Cronograma de 28 días</b>: qué hacés cada día, sin pensar y sin decidir nada.</span></li>
-      </ul>
-
-      <a class="btn buy js-cta" href="#">Quiero despertar mi glúteo</a>
-    </div>
-
-    <div class="sec">
-      <div class="promo">
-        <span class="tagtop">★ PRECIO DE LANZAMIENTO ★</span>
-        <div class="pname">Glúteo Despierto</div>
-        <div class="pmech">Protocolo del Glúteo Dormido · 28 días · acceso de por vida</div>
-
-        <div class="pmoney">
-          <span class="old" id="p-old"></span><span class="save" id="p-save"></span>
-          <div class="now"><sup>$</sup><span id="p-now"></span></div>
-          <span class="cur">pesos (ARS) · pago único</span>
-          <span class="inst">o <b id="p-inst"></b> con Mercado Pago</span>
-        </div>
-
-        <div class="plist">
-          <b>Todo lo que te llevás</b>
-          <ul>
-            <li><i>✓</i>El Protocolo completo en sus 3 fases</li>
-            <li><i>✓</i>28 rutinas de 15 minutos, en video</li>
-            <li><i>✓</i>La guía de técnica sin dolor de rodillas</li>
-            <li><i>✓</i>El cronograma día por día de las 4 semanas</li>
-            <li><i>✓</i>Las adaptaciones para rodillas sensibles</li>
-          </ul>
-          <div class="lifetime"><i style="font-size:1.3rem">∞</i><div><b>Acceso de por vida</b><small>Pagás una sola vez. No se renueva.</small></div></div>
-        </div>
-
-        <div class="gifts">
-          <div class="gt">🎁 + 3 regalos incluidos, sin costo</div>
-          <ul class="gl">
-            <li><i>›</i>Cronograma de 28 días para imprimir y colgar en la heladera</li>
-            <li><i>›</i>Las 8 rutinas express de 15 minutos, en PDF</li>
-            <li><i>›</i>Checklist de técnica anti-dolor de rodillas</li>
-          </ul>
-          <div class="gv"><s>Valor $<span id="p-bonus"></span></s><span class="free js-cta">HOY: GRATIS</span></div>
-        </div>
-
-        <a class="btn buy js-cta" href="#">Comprar ahora</a>
-        <p class="micro">Pago seguro · Acceso por mail en 2 minutos<br>Garantía de 30 días</p>
-      </div>
-    </div>
-
-    <!-- ⚠️ reseñas de ejemplo: reemplazar por reales antes de poner plata -->
-    <div class="sec">
-      <h2>Lo que nos escriben</h2>
-      <p class="sub">Mensajes de mujeres que empezaron el Protocolo</p>
-      <div class="tst">
-        <article><header><span class="av">MT</span><span><b>Mariana T.</b><small>Rosario · hace 3 semanas</small></span></header>
-          <div class="st">★★★★★</div>
-          <p>Dejé de entrenar piernas hace dos años por las rodillas. Esto lo hago en el living y al cuarto día ya sentía el glúteo, no la rodilla.</p></article>
-        <article><header><span class="av">AC</span><span><b>Ana Clara G.</b><small>La Plata · hace 1 mes</small></span></header>
-          <div class="st">★★★★★</div>
-          <p>Hacía sentadillas desde siempre y la cola seguía igual. Con esto en tres semanas me entró un jean que tenía guardado.</p></article>
-        <article><header><span class="av">VS</span><span><b>Valeria S.</b><small>Córdoba · hace 2 semanas</small></span></header>
-          <div class="st">★★★★★</div>
-          <p>Son 15 minutos de verdad, no 15 que después son 40. Es lo único que pude sostener un mes entero.</p></article>
-      </div>
-    </div>
-
-    <div class="sec">
-      <div class="gar">
-        <svg width="92" height="92" viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="60" cy="60" r="56" fill="none" stroke="#A62B55" stroke-width="2"/>
-          <circle cx="60" cy="60" r="48" fill="#FBEEF2" stroke="#A62B55" stroke-width="1.5"/>
-          <path id="arcoTxt" d="M 22,60 A 38,38 0 0 1 98,60" fill="none"/>
-          <text font-family="Inter,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#A62B55">
-            <textPath href="#arcoTxt" startOffset="50%" text-anchor="middle">GARANTÍA TOTAL</textPath></text>
-          <text x="60" y="66" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="700" fill="#A62B55">30</text>
-          <text x="60" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#A62B55">DÍAS</text>
-        </svg>
-        <h3>Riesgo cero: 30 días de garantía</h3>
-        <p>Probá el Protocolo un mes entero. Si no sentís que el glúteo trabaja de verdad, o simplemente no te gusta, pedís el reembolso dentro de ese plazo y te devolvemos el 100% de lo que pagaste. Sin preguntas.</p>
-      </div>
-    </div>
-
-    <div class="sec faq">
-      <h2>Preguntas frecuentes</h2>
-      <p class="sub">Lo que más nos consultan antes de entrar</p>
-      <details open><summary>¿Funciona sin hacer ni una sentadilla?</summary>
-        <p>Sí. El Protocolo trabaja el glúteo con movimientos aislados y sin impacto, que además son más cómodos para quien tiene las rodillas sensibles. La sentadilla no está en el plan en ningún día de los 28.</p></details>
-      <details><summary>Tengo dolor de rodilla o condromalacia, ¿puedo hacerlo?</summary>
-        <p>Sí: justamente para eso lo armamos así. Sacamos todos los ejercicios que comprimen la rodilla y dejamos los que trabajan desde la cadera. Si tenés una lesión diagnosticada, mostrale el plan a tu médico antes de empezar.</p></details>
-      <details><summary>¿Cuánto tiempo me lleva por día?</summary>
-        <p>15 minutos. Una rutina por día, en video, que podés hacer en el living con una colchoneta. Nada de gimnasio ni de equipo.</p></details>
-      <details><summary>¿Necesito pesas o máquinas?</summary>
-        <p>No. Todo se hace con el peso del cuerpo o con cosas que ya tenés en casa (una silla, una mochila, una toalla).</p></details>
-      <details><summary>¿Es una suscripción?</summary>
-        <p>No. Es un pago único de $<span id="p-faq"></span> con acceso de por vida. No hay mensualidad ni renovación automática.</p></details>
-      <details><summary>¿Cómo lo recibo?</summary>
-        <p>Por mail, a los dos minutos de pagar. El mail te lo pedimos en el checkout.</p></details>
-      <div style="margin-top:22px"><a class="btn buy js-cta" href="#">Quiero mi Protocolo por $<span id="p-faq2"></span></a></div>
-    </div>
-
-    <p class="ftr">Glúteo Despierto — Todos los derechos reservados<br>Términos de uso · Política de privacidad · Contacto</p>
-  </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-chev" viewBox="0 0 96 96"><path transform="rotate(270 48 48)" d="M81.8457,25.3876a6.0239,6.0239,0,0,0-8.45.7676L48,56.6257l-25.396-30.47a5.999,5.999,0,1,0-9.2114,7.6879L43.3943,69.8452a5.9969,5.9969,0,0,0,9.2114,0L82.6074,33.8431A6.0076,6.0076,0,0,0,81.8457,25.3876Z"/></symbol><symbol id="i-check" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></symbol><symbol id="i-times" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></symbol><symbol id="i-flecha" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></symbol><symbol id="i-abajo" viewBox="0 0 448 512"><path d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"/></symbol><symbol id="i-fuego" viewBox="0 0 448 512"><path d="M323.56 51.2c-20.8 19.3-39.58 39.59-56.22 59.97C240.08 73.62 206.28 35.53 168 0 69.74 91.17 0 209.96 0 281.6 0 408.85 100.29 512 224 512s224-103.15 224-230.4c0-53.27-51.98-163.14-124.44-230.4zm-19.47 340.65C282.43 407.01 255.72 416 226.86 416 154.71 416 96 368.26 96 290.75c0-38.61 24.31-72.63 72.79-130.75 6.93 7.98 98.83 125.34 98.83 125.34l58.63-66.88c4.14 6.85 7.91 13.55 11.27 19.97 27.35 52.19 15.81 118.97-33.43 153.42z"/></symbol><symbol id="i-lampara" viewBox="0 0 352 512"><path d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16 16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06 459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32 7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7 2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0 44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42 92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64 59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24 60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0 0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55 260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"/></symbol><symbol id="i-pulgar" viewBox="0 0 512 512"><path d="M466.27 225.31c4.674-22.647.864-44.538-8.99-62.99 2.958-23.868-4.021-48.565-17.34-66.99C438.986 39.423 404.117 0 327 0c-7 0-15 .01-22.22.01C201.195.01 168.997 40 128 40h-10.845c-5.64-4.975-13.042-8-21.155-8H32C14.327 32 0 46.327 0 64v240c0 17.673 14.327 32 32 32h64c11.842 0 22.175-6.438 27.708-16h7.052c19.146 16.953 46.013 60.653 68.76 83.4 13.667 13.667 10.153 108.6 71.76 108.6 57.58 0 95.27-31.936 95.27-104.73 0-18.41-3.93-33.73-8.85-46.54h36.48c48.602 0 85.82-41.565 85.82-85.58 0-19.15-4.96-34.99-13.73-49.84zM64 296c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zm330.18 16.73H290.19c0 37.82 28.36 55.37 28.36 94.54 0 23.75 0 56.73-47.27 56.73-18.91-18.91-9.46-66.18-37.82-94.54C206.9 342.89 167.28 272 138.92 272H128V85.83c53.611 0 100.001-37.82 171.64-37.82h37.82c35.512 0 60.82 17.12 53.12 65.9 15.2 8.16 26.5 36.44 13.94 57.57 21.581 20.384 18.699 51.065 5.21 65.62 9.45 0 22.36 18.91 22.27 37.81-.09 18.91-16.71 37.82-37.82 37.82z"/></symbol><symbol id="i-checkc" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/></symbol></svg>
+<div class="app">
+<header class="top" id="top"><img class="logo" src="../imagenes/logo.webp" alt="Logo" width="135" height="135"><div class="barra"><span id="barraFill"></span></div></header>
+<section class="paso angosto" data-barra="0">
+<div class="col">
+<img class="portada" src="../imagenes/portada.webp" alt="Antes y después: sin y con el Protocolo del Glúteo Dormido" width="1080" height="1080">
+<div class="aviso">
+<p>&#x26A0;&#xFE0F; <strong>Atención: por la cantidad de gente entrando, este </strong><strong class="rojo">diagnóstico se abre gratis una sola vez por persona</strong><strong>.</strong></p>
+<p><strong class="marca-roja">Si cerrás la página, perdés el lugar.</strong></p>
+</div>
+<div class="cta-caja"><button type="button" class="cta late" data-sig><span>Quiero Despertar Mi Glúteo</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></button></div>
+<div class="timer-borde"><div class="timer">Tu lugar queda guardado por: <span data-timer="60" data-clave="portada">01:00</span></div></div>
+</div>
 </section>
-
-<div id="notif"><div class="av">M</div><p id="notif-tx"></p></div>
-
+<section class="paso">
+<div class="col">
+<h2 class="q">Para arrancar, ¿qué edad tenés?</h2>
+<div class="ops v-simple c2">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">1&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt"><strong>De 18 a 24 años</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">2&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt"><strong>De 25 a 34 años</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">3&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt"><strong>De 35 a 44 años</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">4&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt"><strong>45 años o más</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Qué es lo que MÁS querés lograr con tus piernas y tu cola?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F351;</span><span class="op-cuerpo"><span class="op-txt">Levantar la cola y marcar las piernas</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4AA;</span><span class="op-cuerpo"><span class="op-txt">Tener fuerza y músculo de verdad</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F457;</span><span class="op-cuerpo"><span class="op-txt">Volver a entrar en la ropa que me gusta</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F525;</span><span class="op-cuerpo"><span class="op-txt">Sentirme linda otra vez</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x2728;</span><span class="op-cuerpo"><span class="op-txt">Mirarme al espejo sin esquivar la vista</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Cuántos minutos por día le podés dar de verdad?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F55B;</span><span class="op-cuerpo"><span class="op-txt">Menos de 15 (vivo a las corridas)</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F567;</span><span class="op-cuerpo"><span class="op-txt">Entre 15 y 30 (algo rápido meto)</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F562;</span><span class="op-cuerpo"><span class="op-txt">Entre 30 y 45 (tengo un rato)</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F566;</span><span class="op-cuerpo"><span class="op-txt">Más de 45 (me sobra el tiempo)</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="t3">Leyendo tus respuestas</h2>
+<img class="img-carga" src="../imagenes/carga-1.webp" alt="Antes y después del Protocolo" width="1080" height="589">
+<ul class="lista"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Edad y objetivo registrados</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Minutos por día calculados</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Perfil de entrenamiento armado</span></li></ul>
+<div class="carga" data-auto><div class="carga-top"><span class="carga-pct">0%</span></div><div class="carga-fondo"><div class="carga-barra"></div></div></div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Ya probaste entrenar piernas alguna vez?</h2>
+<div class="ops v-simple lila">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F937;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sí, y lo dejé porque no pasaba nada</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F645;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sí, y lo dejé porque me dolía</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F647;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sí, pero nunca lo sostuve</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F486;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">No, nunca entrené en serio</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F3C3;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Entreno de a ratos, sin método</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Qué es lo que más te frustra hoy con tus piernas y tu cola?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F605;</span><span class="op-cuerpo"><span class="op-txt">Entreno y la cola sigue igual</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F616;</span><span class="op-cuerpo"><span class="op-txt">Las sentadillas me matan las rodillas</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F614;</span><span class="op-cuerpo"><span class="op-txt">No sé si hago bien los ejercicios</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F937;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">No me da el tiempo para el gimnasio</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62A;</span><span class="op-cuerpo"><span class="op-txt">Probé de todo y nada me movió el amperímetro</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Te duele algo cuando hacés sentadillas?</h2>
+<div class="ops v-highlight">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62B;</span><span class="op-cuerpo"><span class="op-txt">Sí, me duele tanto que ni las hago</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F611;</span><span class="op-cuerpo"><span class="op-txt">Sí, una molestia que me banco</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F928;</span><span class="op-cuerpo"><span class="op-txt">A veces siento algo raro</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F605;</span><span class="op-cuerpo"><span class="op-txt">Casi nunca me molesta</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F645;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Nunca las hice, no sabría decirte</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Cada cuánto cortás un entrenamiento porque algo te duele?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">1&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt">Siempre, por eso dejé de entrenar</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">2&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt">Seguido, más de 3 veces al mes</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">3&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt">Una o dos veces por mes</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">4&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt">Casi nunca me pasa</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">5&#xFE0F;&#x20E3;</span><span class="op-cuerpo"><span class="op-txt">Nunca corto, pero termino dolorida</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Alguna vez pensaste que tu cola "es así y no cambia"?</h2>
+<div class="ops v-highlight">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x23F2;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sí, lo pienso todo el tiempo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x23F3;</span><span class="op-cuerpo"><span class="op-txt">Sí, se me cruzó varias veces</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F481;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Algún día malo, sí</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F483;</span><span class="op-cuerpo"><span class="op-txt">No, sé que se puede cambiar</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F486;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Nunca me lo planteé</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">Con lo que entrenaste hasta ahora, ¿en cuánto viste algún cambio?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x203C;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Nunca vi un cambio real</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4C6;</span><span class="op-cuerpo"><span class="op-txt">Más de 6 meses, una eternidad</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x231B;</span><span class="op-cuerpo"><span class="op-txt">Entre 3 y 6 meses, tardísimo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F64C;</span><span class="op-cuerpo"><span class="op-txt">Entre 1 y 3 meses, aceptable</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F937;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Ni idea, nunca llegué tan lejos</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Te da cosa ponerte ropa ajustada?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F625;</span><span class="op-cuerpo"><span class="op-txt">Muchísimo, directamente no la uso</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F613;</span><span class="op-cuerpo"><span class="op-txt">Bastante, me siento incómoda</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62C;</span><span class="op-cuerpo"><span class="op-txt">A veces nomás</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F64E;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Un poco, pero me la pongo igual</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F9D8;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">No, estoy cómoda con eso</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Ya pusiste plata en gimnasios o planes que no te sirvieron?</h2>
+<div class="ops v-highlight">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4B8;</span><span class="op-cuerpo"><span class="op-txt">Sí, gasté un montón al pedo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62B;</span><span class="op-cuerpo"><span class="op-txt">Sí, tres veces o más</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62A;</span><span class="op-cuerpo"><span class="op-txt">Sí, una o dos veces</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F913;</span><span class="op-cuerpo"><span class="op-txt">No, y justamente me da miedo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x274C;</span><span class="op-cuerpo"><span class="op-txt">Nunca gasté en esto</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Esquivás la pileta, la playa o la malla por tu cuerpo?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62D;</span><span class="op-cuerpo"><span class="op-txt">Sí, directamente no voy</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F614;</span><span class="op-cuerpo"><span class="op-txt">Voy, pero la paso incómoda</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F611;</span><span class="op-cuerpo"><span class="op-txt">A veces me pasa</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62C;</span><span class="op-cuerpo"><span class="op-txt">Voy, aunque me gustaría estar mejor</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4AA;</span><span class="op-cuerpo"><span class="op-txt">Antes me sentía mejor que ahora</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="t3">&#x1F50E; Cruzando tus respuestas</h2>
+<ul class="lista"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Dolores y frenos mapeados</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Bloqueos detectados</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Perfil de constancia analizado</span></li></ul>
+<img class="img-carga" src="../imagenes/carga-2.webp" alt="Antes y después: piernas y cola más firmes" width="1080" height="589">
+<div class="carga" data-auto><div class="carga-top"><span class="carga-pct">0%</span></div><div class="carga-fondo"><div class="carga-barra"></div></div></div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">Si todo sigue igual, ¿cómo te imaginás en 6 meses?</h2>
+<div class="ops v-relief">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F630;</span><span class="op-cuerpo"><span class="op-txt">Igual de frustrada, sin un solo cambio</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F624;</span><span class="op-cuerpo"><span class="op-txt">Probando y fallando otra vez</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F628;</span><span class="op-cuerpo"><span class="op-txt">Ya habré largado todo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F92A;</span><span class="op-cuerpo"><span class="op-txt">Espero estar mejor, pero no sé cómo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F3C3;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Con el cuerpo que quiero, seguro</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Cuánto tiempo calculás que ya tiraste en planes que no andaban?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F624;</span><span class="op-cuerpo"><span class="op-txt">Un montón, más de 3 años</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62A;</span><span class="op-cuerpo"><span class="op-txt">Entre 1 y 3 años dando vueltas</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F613;</span><span class="op-cuerpo"><span class="op-txt">De 6 meses a un año</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F645;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Unos pocos meses</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F6B6;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Recién estoy arrancando</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Qué sentís cuando ves a otra con el cuerpo que vos querés?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F630;</span><span class="op-cuerpo"><span class="op-txt">Frustración, y un poco de envidia</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F625;</span><span class="op-cuerpo"><span class="op-txt">Tristeza, porque creo que yo no puedo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F610;</span><span class="op-cuerpo"><span class="op-txt">Ganas, pero sin fe</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F917;</span><span class="op-cuerpo"><span class="op-txt">Inspiración, me dan ganas</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F609;</span><span class="op-cuerpo"><span class="op-txt">Alegría por ella y decisión por mí</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Te perdiste algo importante por no sentirte cómoda con tu cuerpo?</h2>
+<div class="ops v-relief" style="--tema:#970FA9">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Sí, un montón: salidas, viajes, citas</span></span><span class="op-emo der">&#x1F44D;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Sí, algunas veces</span></span><span class="op-emo der">&#x1F485;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Una o dos veces</span></span><span class="op-emo der">&#x270C;&#xFE0F;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Casi me lo pierdo, pero fui</span></span><span class="op-emo der">&#x1F92B;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">No, nunca dejé de ir a nada</span></span><span class="op-emo der">&#x1F483;</span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Cuánto te pega eso en la autoestima hoy?</h2>
+<div class="ops v-contrast c2">
+<button type="button" class="op" data-sig><span class="op-in vert"><span class="op-cuerpo"><span class="op-txt">Muchísimo, me condiciona todo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span><span class="op-emo">&#x203C;&#xFE0F;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in vert"><span class="op-cuerpo"><span class="op-txt">Bastante, lo pienso todos los días</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span><span class="op-emo">&#x1F92F;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in vert"><span class="op-cuerpo"><span class="op-txt">Lo justo, pero me molesta</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span><span class="op-emo">&#x1F610;</span></span></button>
+<button type="button" class="op" data-sig><span class="op-in vert"><span class="op-cuerpo"><span class="op-txt">Poco, lo manejo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span><span class="op-emo">&#x1F634;</span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Coincidís en que dejarlo pasar lo único que hace es empeorarlo?</h2>
+<div class="ops v-highlight">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">¡Totalmente! Necesito cambiarlo YA</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Sí, tiene sentido.</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt">Puede ser, no lo había pensado</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">Si nada cambia en los próximos meses, ¿qué es lo que más MIEDO te da?</h2>
+<div class="ops v-relief">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt"><strong>Perder la autoestima del todo y dejar de cuidarme</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt"><strong>Quedarme en este loop para siempre</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt"><strong>Bajar los brazos y conformarme</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-cuerpo"><span class="op-txt"><strong>Que se me resienta la salud</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<img class="img-carga alta" src="../imagenes/carga-3.webp" alt="Resultado de piernas y cola sin sentadillas" width="1080" height="1481">
+<h2 class="t3">&#x1F50E; Buscando el protocolo que te corresponde</h2>
+<ul class="lista"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Nivel de urgencia medido</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Bloqueo principal identificado</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Compromiso evaluado</span></li></ul>
+<div class="carga" data-auto><div class="carga-top"><span class="carga-pct">0%</span></div><div class="carga-fondo"><div class="carga-barra"></div></div></div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">Si existiera una forma de levantar la cola SIN UNA SOLA SENTADILLA, ¿la probarías?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x2705;</span><span class="op-cuerpo"><span class="op-txt"><strong>¡SÍ! Arrancaría hoy mismo</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F44D;</span><span class="op-cuerpo"><span class="op-txt"><strong>Sí, la probaría sin dudar</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x2611;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt"><strong>Sí, aunque con un poco de duda</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F481;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt"><strong>Depende de qué sea</strong></span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Te bancás 15 minutos por día durante 28 días para lograrlo?</h2>
+<div class="ops v-simple">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F917;</span><span class="op-cuerpo"><span class="op-txt">¡SÍ! Son 15 minutos, los saco de donde sea</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4AA;</span><span class="op-cuerpo"><span class="op-txt">Sí, 15 minutos me cierra perfecto</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F483;</span><span class="op-cuerpo"><span class="op-txt">Sí, me hago el tiempo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F62A;</span><span class="op-cuerpo"><span class="op-txt">Capaz que sí</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">En los próximos 30 días, ¿qué resultado te cambiaría el ánimo?</h2>
+<div class="ops v-highlight">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F351;</span><span class="op-cuerpo"><span class="op-txt">Ver la cola más parada en el espejo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F938;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sentir las piernas firmes y marcadas</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F46F;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Ponerme esa ropa sin pensarlo dos veces</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F444;</span><span class="op-cuerpo"><span class="op-txt">Volver a sentirme bien conmigo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F9D8;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Entrenar sin dolor y que se note</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">Si te muestro EXACTAMENTE cómo despertar el glúteo en 28 días, ¿arrancás HOY?</h2>
+<div class="ops v-contrast">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F44D;</span><span class="op-cuerpo"><span class="op-txt">¡SÍ! Estoy lista para arrancar YA</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F478;</span><span class="op-cuerpo"><span class="op-txt">Sí, hoy mismo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F440;</span><span class="op-cuerpo"><span class="op-txt">Sí, pero primero quiero ver cómo es</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F9E0;</span><span class="op-cuerpo"><span class="op-txt">Lo tengo que pensar</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F914;</span><span class="op-cuerpo"><span class="op-txt">No, prefiero dejar todo como está</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso">
+<div class="col">
+<h2 class="q">¿Te COMPROMETÉS a seguir el protocolo exactamente como te lo doy?</h2>
+<div class="ops v-relief">
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x2705;</span><span class="op-cuerpo"><span class="op-txt">¡SÍ! Estoy 100% comprometida</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F64B;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Sí, al pie de la letra</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F4AA;</span><span class="op-cuerpo"><span class="op-txt">Sí, voy a poner todo</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+<button type="button" class="op" data-sig><span class="op-in"><span class="op-emo">&#x1F937;&#x200D;&#x2640;&#xFE0F;</span><span class="op-cuerpo"><span class="op-txt">Depende de qué sea</span><span class="op-flecha"><i><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></i></span></span></span></button>
+</div>
+</div>
+</section>
+<section class="paso" data-barra="0" data-vsl>
+<div class="col">
+<h2 class="t3">&#x2728;Tu diagnóstico está listo&#x2728;</h2>
+<div class="carga"><div class="carga-top"><span class="carga-pct">0%</span></div><div class="carga-fondo"><div class="carga-barra"></div></div></div>
+<p class="p16">Cruzamos tus respuestas y encontramos <strong class="morado">EXACTAMENTE</strong> por qué tu cola no cambia aunque entrenes.</p>
+<ul class="lista centro"><li><svg class="ic" aria-hidden="true"><use href="#i-lampara"/></svg><span>1 músculo dormido</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-pulgar"/></svg><span>1 mentira que te vendieron</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span>1 protocolo de 28 días</span></li></ul>
+<p class="vsl-txt" id="vslTxt"><strong class="negro">&#x1F3A5; </strong><strong>¡Mirá el video de abajo y te muestro el Protocolo del Glúteo Dormido!</strong></p>
+<div class="vsl" id="vslBox"></div>
+<div class="p16 dos"><p>&#x23F3; Estás a 30 segundos de entender</p><p>por qué tu glúteo no se enciende</p></div>
+<div class="cta-caja"><button type="button" class="cta pulso chica" id="btnGuia" data-sig><svg class="ic" aria-hidden="true"><use href="#i-fuego"/></svg><span>Quiero Mi Protocolo Ahora</span></button></div>
+</div>
+</section>
+<section class="paso angosto">
+<div class="col">
+<h2 class="of-tit">¡Tu Protocolo de 28 días está listo!</h2>
+<p class="of-sub">Según tus respuestas, podés <strong>despertar el glúteo y tener la cola parada en 28 días</strong> &#x2014; aunque tengas las rodillas sensibles.</p>
+<div class="timer rojo">Tu descuento queda guardado por: <span data-timer="900" data-clave="oferta">15:00</span></div>
+<div class="precio"><div class="precio-izq">Precio</div><div class="precio-der"><small>Antes AR$ 99.990</small><strong>AR$ 19.990</strong><span>en un solo pago</span></div></div>
+<p class="cuotas">o <strong>3 cuotas de AR$ 6.664</strong> con Mercado Pago</p>
+<div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Despertar Mi Glúteo en 28 Días</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
+<img class="sellos" src="../imagenes/sellos-compra.webp" alt="Compra segura, satisfacción garantizada, privacidad protegida" width="1000" height="164">
+<div class="caja-violeta"><p class="caja-tit">Lo que te llevás hoy</p><ul class="lista-of blanca"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Fase 1 &#x2014; Despertar</strong>: los 7 días que vuelven a encender el glúteo antes de pedirle que crezca;</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Fase 2 &#x2014; Aislar</strong>: 15 minutos por día de movimientos que el cuádriceps no le puede robar al glúteo;</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Fase 3 &#x2014; Cargar</strong>: las 10 sesiones finales, donde la cola termina de pararse. Ni una sentadilla en los 28 días;</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Bonus</strong>: el cronograma de los 28 días, día por día, para imprimir y colgar en la heladera.</span></li></ul></div>
+<div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Empezar Hoy</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
+<p class="of-h">Las que ya hicieron los 28 días:</p>
+<a class="foto-300" href="/checkout"><img src="../imagenes/resultado-1.webp" alt="Antes y después de los 28 días" width="900" height="1117" loading="lazy"></a>
+<div class="depos">
+<div class="depo"><img src="../imagenes/avatar-1.webp" alt="Mariana T. de Rosario" width="144" height="144" loading="lazy"><div class="depo-cont"><div class="estrellas"><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i></div><div class="autor">Mariana T. &#x2014; Rosario</div><div class="desc">¡Por fin algo que no me deja las rodillas hechas pelota!</div></div></div>
+<div class="depo"><img src="../imagenes/avatar-2.webp" alt="Ana Clara G. de La Plata" width="144" height="144" loading="lazy"><div class="depo-cont"><div class="estrellas"><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i></div><div class="autor">Ana Clara G. &#x2014; La Plata</div><div class="desc">Había dejado piernas por la rodilla. A la semana ya sentía el glúteo trabajando, cosa que nunca me había pasado. Ahora tengo otro problema: los jeans viejos no me entran atrás. &#x1F605;</div></div></div>
+<div class="depo"><img src="../imagenes/avatar-3.webp" alt="Valeria S. de Córdoba" width="144" height="144" loading="lazy"><div class="depo-cont"><div class="estrellas"><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i><i> &#x2B50; </i></div><div class="autor">Valeria S. &#x2014; Córdoba</div><div class="desc">Mi entrenador decía que sin las máquinas del gimnasio no había caso. Mentira. Lo hice en el living, 15 minutos por día, y las piernas quedaron durísimas. Valió cada peso.</div></div></div>
+</div>
+<a class="foto-300" href="/checkout"><img src="../imagenes/resultado-2.webp" alt="Cola más firme en 28 días" width="900" height="1117" loading="lazy"></a>
+<div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Empezar la Fase 1</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
+<div class="caja rosa"><p class="caja-tit">Como venís hasta hoy</p><ul class="lista-of"><li><svg class="ic" aria-hidden="true"><use href="#i-times"/></svg><span>Las rodillas te frenan antes que las piernas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-times"/></svg><span>Esquivás la malla y la ropa ajustada</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-times"/></svg><span>Horas de gimnasio sin un solo cambio</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-times"/></svg><span>El glúteo dormido y el cuádriceps haciendo todo el trabajo</span></li></ul></div>
+<div class="caja verde"><p class="caja-tit">Después de los 28 días de Glúteo Despierto</p><ul class="lista-of"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Piernas firmes y la cola parada</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Te mirás al espejo y te gusta</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Cero sentadillas, cero impacto en las rodillas</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>15 minutos por día, en el living de tu casa</span></li></ul></div>
+<a class="foto-ancha" href="/checkout"><img src="../imagenes/antes-despues.webp" alt="Antes y después, sin una sola sentadilla" width="1080" height="589" loading="lazy"></a>
+<div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Las Piernas Firmes</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></a></div>
+<p class="faq-tit"><strong>PREGUNTAS FRECUENTES</strong></p>
+<div class="faq">
+<h3>¿Funciona sin hacer ni una sentadilla?</h3>
+<p>¡Sí! El Protocolo trabaja el glúteo con movimientos que nacen en la cadera, sin impacto. Son los que más lo activan y, encima, los más cómodos para rodillas sensibles. La sentadilla no aparece en ninguno de los 28 días.</p>
+<hr>
+<h3>¿En cuánto se empieza a notar?</h3>
+<p>La mayoría siente el glúteo trabajando en la primera semana &#x2014; que es justamente para lo que está la Fase 1. Lo que se ve en el espejo llega después, con las fases 2 y 3.</p>
+<hr>
+<h3>Tengo condromalacia o dolor de rodilla, ¿puedo hacerlo?</h3>
+<p>¡Sí! Para eso está armado así: sacamos todo lo que comprime la rodilla y dejamos lo que trabaja desde la cadera. Si tenés una lesión diagnosticada, mostrale el plan a tu médico antes de arrancar.</p>
+<hr>
+<h3>¿Necesito pesas o máquinas?</h3>
+<p>No. Todo se hace con el peso del cuerpo o con cosas que ya tenés en casa: una silla, una toalla, una mochila.</p>
+<hr>
+<h3>¿Es una suscripción?</h3>
+<p>No. Es un pago único de AR$ 19.990 con acceso de por vida. No hay mensualidad ni renovación automática.</p>
+</div>
+<a class="foto-300" href="/checkout"><img src="../imagenes/resultado-3.webp" alt="Resultado del Protocolo del Glúteo Dormido" width="900" height="1612" loading="lazy"></a>
+<svg class="ic flecha-abajo" aria-hidden="true"><use href="#i-abajo"/></svg>
+<p class="of-h garantia-tit">Riesgo CERO: 30 días de garantía</p>
+<p class="p16">Tenés 30 días para probar Glúteo Despierto. Si no sentís el glúteo trabajando de verdad, o simplemente no te gusta, te devolvemos el 100% de tu plata. <strong>Sin preguntas.</strong></p>
+<img class="sello" src="../imagenes/sello-garantia.webp" alt="Garantía de 30 días, riesgo cero" width="400" height="396" loading="lazy">
+<div class="cta-caja"><a class="cta pulso" href="/checkout"><span>Quiero Mi Protocolo Por AR$ 19.990</span></a></div>
+</div>
+</section>
+</div>
 <script>
-/* ===========================================================================
-   GLÚTEO DESPIERTO · motor del quiz
-   (el mismo motor validado de DanceGo → SumaAI; solo cambian paleta,
-    pasos y textos)
-   =========================================================================== */
-var C = window.CONFIG, IMG = C.IMG;
-var state = { nombre:'', meses:14, minutos:15 };
-var i = 0, hist = [];
-
-function checkout(){
-  var qs = location.search.replace(/^\?/,'');
-  if(!qs) return C.LINK_CHECKOUT;
-  return C.LINK_CHECKOUT + (C.LINK_CHECKOUT.indexOf('?')>-1 ? '&' : '?') + qs;
+(function () {
+"use strict";
+/* ===== CONFIGURACION ===== */
+/* ===== LO QUE SE TOCA =====
+   CHECKOUT  : relativo mientras no esté el subdominio de ImpulTienda.
+               Resuelve solo a la tienda donde se pegue este HTML.
+   PIXEL_ID  : vacío si el pixel lo carga ImpulTienda.
+   BOTON_SEGUNDO: 0 = el botón del diagnóstico se ve de entrada.
+   Las imágenes cuelgan de ../imagenes/ y se embeben con inline_quiz.py. */
+var CHECKOUT = "/checkout";
+var PIXEL_ID = "";
+var VTURB_CUENTA = "";      /* VTurb: id de la cuenta (scripts.converteai.net/CUENTA/players/PLAYER/v4/player.js) */
+var VTURB_PLAYER = "";      /* VTurb: id del player de la VSL en castellano */
+var VSL_MP4 = "";           /* el MP4 de nuestro VSL, cuando esté */           /* o un link directo a un .mp4 (por ejemplo, el video subido a Recursos de la tienda) */
+var VIDEO_ALTO_PCT = 56.25; /* 16:9 horizontal, como la VSL original */
+var BOTON_SEGUNDO = 0;      /* 0 = el boton del diagnostico se ve desde el principio, como en el original */
+var DIA = 864e5;            /* el paso y los contadores se recuerdan 1 dia, como las cookies del original */
+var $ = function (id) { return document.getElementById(id); };
+function leer(k) {
+try {
+var v = JSON.parse(localStorage.getItem(k));
+return v && typeof v.t === "number" && Date.now() - v.t < DIA ? v.v : null;
+} catch (e) { return null; }
 }
-function track(ev){ if(window.fbq) try{ fbq('track', ev); }catch(e){} }
-function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
-
-/* ---------------------------------------------------------------------------
-   EL CÁLCULO: Índice de Activación Glútea (IAG)
-   Arranca en 100 y baja con lo que la persona contestó. Es una lectura de
-   sus respuestas, no una medición clínica — y así se dice en pantalla.
-   --------------------------------------------------------------------------- */
-function calc(){
-  var p = 100;
-
-  /* dolor al hacer sentadillas: 0 = mucho dolor … 4 = nunca las hizo */
-  p -= [26, 19, 13, 6, 16][state.dolor] || 0;
-
-  /* qué le pasa hoy con el entrenamiento */
-  p -= [22, 16, 14, 10, 24][state.frustra] || 0;
-
-  /* historia de intentos */
-  p -= [16, 14, 12, 8, 10][state.intento] || 0;
-
-  /* meses sin entrenar piernas en serio: hasta 24 puntos */
-  p -= Math.min(24, Math.round((state.meses || 0) * 0.85));
-
-  var iag = Math.max(8, Math.min(72, Math.round(p)));
-
-  /* el potencial a 28 días: lo que se recupera activando bien */
-  var pot = Math.min(94, iag + 38);
-
-  /* las semanas dependen de los minutos que puede darle */
-  var sem = (state.minutos >= 15) ? 4 : 5;
-  var hoy = new Date(), fin = new Date(hoy.getTime() + sem*7*864e5);
-
-  return { iag:iag, pot:pot, sem:sem, hoy:hoy, fin:fin, dias:sem*7 };
+function grabar(k, v) { try { localStorage.setItem(k, JSON.stringify({ v: v, t: Date.now() })); } catch (e) {} }
+function track(evento, extra) {
+try {
+window.dataLayer = window.dataLayer || [];
+var p = { event: evento };
+if (extra) for (var k in extra) p[k] = extra[k];
+window.dataLayer.push(p);
+} catch (e) {}
 }
-function fecha(d){ var m=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-  return d.getDate()+' '+m[d.getMonth()]; }
-function fechaLarga(d){ var m=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-  return d.getDate()+' de '+m[d.getMonth()]; }
-function iagTag(v){
-  if(v < 25) return {t:'Dormido',   c:'var(--red)',   bg:'var(--red-s)',   p:12};
-  if(v < 45) return {t:'Apagado',   c:'var(--amber)', bg:'var(--amber-s)', p:38};
-  if(v < 62) return {t:'A media máquina', c:'#5E7F4C', bg:'#EDF3E8',       p:63};
-  return {t:'Activo', c:'var(--green)', bg:'var(--green-s)', p:86};
+var params;
+try { params = new URLSearchParams(location.search); } catch (e) { params = null; }
+function param(k) { return params ? params.get(k) : null; }
+var pasos = [].slice.call(document.querySelectorAll(".paso"));
+var TOTAL = pasos.length;
+var cab = $("top"), relleno = $("barraFill");
+var actual = -1, ocupado = false, ivCarga = null, toCarga = null, ivTimer = null;
+/* ===== NAVEGACION (un paso por pantalla, con el fundido de 0,3 s del original) ===== */
+function ir(n, guardar) {
+if (n < 0 || n >= TOTAL) return;
+clearInterval(ivCarga); clearTimeout(toCarga); clearInterval(ivTimer);
+pasos.forEach(function (p, i) { if (i !== n) { p.style.display = "none"; p.style.opacity = 0; } });
+var p = pasos[n];
+p.style.display = "block";
+setTimeout(function () { p.style.opacity = 1; }, 10);
+actual = n;
+window.scrollTo(0, 0);
+if (p.getAttribute("data-barra") === "0") cab.classList.add("sin"); else cab.classList.remove("sin");
+relleno.style.width = (n === TOTAL - 1 ? 100 : Math.floor((n + 1) / TOTAL * 100)) + "%";
+if (guardar !== false) grabar("pc_paso", n);
+var t = p.querySelector("[data-timer]");
+if (t) contador(t);
+var c = p.querySelector(".carga");
+if (c) cargar(c, n);
+if (p.hasAttribute("data-vsl")) montarVideo();
+track("quiz_paso", { paso: n });
 }
-function tok(s){
-  var c = calc();
-  return String(s)
-    .replace(/\{\{iag\}\}/g, c.iag)
-    .replace(/\{\{pot\}\}/g, c.pot)
-    .replace(/\{\{dias\}\}/g, c.dias)
-    .replace(/\{\{nombre\}\}/g, state.nombre || '');
+document.addEventListener("click", function (e) {
+var b = e.target && e.target.closest ? e.target.closest("[data-sig]") : null;
+if (!b || ocupado) return;
+var desde = actual;
+if (!b.closest || b.closest(".paso") !== pasos[desde]) return;
+ocupado = true;
+var esOpcion = b.classList.contains("op");
+if (esOpcion) b.classList.add("activa");
+setTimeout(function () { ocupado = false; if (actual === desde) ir(desde + 1); }, esOpcion ? 150 : 0);
+});
+/* ===== CARGAS: 0 a 100 % en 3 s; las que tienen data-auto pasan solas medio segundo despues ===== */
+function cargar(c, n) {
+var pct = c.querySelector(".carga-pct"), barra = c.querySelector(".carga-barra");
+var auto = c.hasAttribute("data-auto"), i = 0;
+pct.textContent = "0%";
+barra.style.width = "0%";
+ivCarga = setInterval(function () {
+if (i <= 100) { pct.textContent = i + "%"; barra.style.width = i + "%"; i++; return; }
+clearInterval(ivCarga);
+if (auto) toCarga = setTimeout(function () { if (actual === n) ir(n + 1); }, 500);
+}, 30);
 }
-var CHK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
-var ARR = '<svg class="ar" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
-
-/* ===========================================================================
-   LOS PASOS · 22 (el del competidor tiene 29, con 24 preguntas)
-   Lo que se sacó de su quiz:
-     · la pantalla de urgencia de entrada ("se libera gratis 1 vez")
-     · "¿cuánto tardás en ver resultados con los entrenos tradicionales?"
-     · "¿cada cuánto abandonás por dolor?"  -> ya la cubre la del dolor
-     · "¿cuánto tiempo perdiste?"           -> ya la cubre la del 6 meses
-     · "¿cómo te sentís al ver a otras mujeres?"
-     · "¿dejaste de hacer algo importante?" -> ya la cubren ropa y pileta
-     · "¿qué impacto tiene en tu autoestima?"
-     · "¿estás de acuerdo en que ignorarlo empeora?"
-     · "¿qué es lo que más temés?"
-     · "si existiera una forma comprobada, ¿la probarías?"
-     · "¿qué resultado sería el más importante?"
-     · "si te mostrara exactamente cómo, ¿empezarías hoy?"
-   Lo que se sumó (y es nuestra diferencia): la pregunta del ejercicio con
-   fotos + la revelación del glúteo dormido, los dos medidores, la maqueta
-   de la app y el resultado con Índice de Activación.
-   =========================================================================== */
-var STEPS = [
-
-/*  1 */ {id:'edad', type:'cover', q:'TU COLA NO CRECE<br>PORQUE EL GLÚTEO<br><em>ESTÁ DORMIDO</em>',
-          help:'Un minuto de test y sabés tu Índice de Activación Glútea', opts:[
-          {l:'18 a 24 años', img:'edad1'},{l:'25 a 34 años', img:'edad2'},
-          {l:'35 a 44 años', img:'edad3'},{l:'45 años o más', img:'edad4'}]},
-
-/*  2 */ {id:'objetivo', type:'single', q:'¿Cuál es tu <em>mayor objetivo</em> con las piernas y la cola?',
-          help:'Todo lo que viene después se arma con esta respuesta.', opts:[
-          {e:'🍑', l:'Tener la cola parada y las piernas torneadas'},
-          {e:'💪', l:'Ganar fuerza y definición'},
-          {e:'👗', l:'Que me entre la ropa que amo'},
-          {e:'🔥', l:'Volver a sentirme segura y linda'},
-          {e:'✨', l:'Mirarme al espejo y estar orgullosa'}]},
-
-/*  3 */ {id:'tiempo', type:'single', q:'¿Cuánto tiempo por día le podés <em>dedicar</em>?',
-          help:'Decí la verdad, no lo que te gustaría.', opts:[
-          {e:'🕐', l:'Menos de 15 minutos', s:'Vivo a las corridas'},
-          {e:'🕒', l:'15 a 30 minutos', s:'Algo rápido puedo meter'},
-          {e:'🕕', l:'30 a 45 minutos', s:'Tengo un tiempo razonable'},
-          {e:'🕘', l:'Más de 45 minutos', s:'Tengo flexibilidad'}]},
-
-/*  4 */ {id:'promesa', type:'promesa', btn:'Dale, sigamos'},
-
-/*  5 */ {id:'intento', type:'single', q:'¿Ya <em>intentaste</em> entrenar piernas antes?', opts:[
-          {e:'📉', l:'Sí, pero abandoné porque no veía resultados'},
-          {e:'🤕', l:'Sí, pero dejé por dolor o molestias'},
-          {e:'🌀', l:'Sí, pero no pude ser constante'},
-          {e:'🆕', l:'No, nunca entrené en serio'},
-          {e:'🏃‍♀️', l:'Entreno a veces, sin mucha disciplina'}]},
-
-/*  6 */ {id:'frustra', type:'single', q:'¿Cuál es tu mayor <em>frustración</em> hoy?',
-          help:'Decilo tal cual: es el punto que vamos a resolver.', opts:[
-          {e:'😤', l:'No veo resultados aunque entreno'},
-          {e:'🦵', l:'Me duelen las rodillas al hacer sentadillas'},
-          {e:'🤷‍♀️', l:'No sé si estoy haciendo los ejercicios correctos'},
-          {e:'⏰', l:'No tengo tiempo para ir al gimnasio'},
-          {e:'😮‍💨', l:'Ya probé de todo y nada me funciona'}]},
-
-/*  7 */ {id:'dolor', type:'single', q:'¿Sentís <em>dolor o molestia</em> al hacer sentadillas?',
-          help:'Es el dato que más mueve tu índice.', opts:[
-          {e:'😫', l:'Sí, mucho dolor, no puedo hacerlas'},
-          {e:'😣', l:'Sí, una molestia moderada'},
-          {e:'🤨', l:'A veces siento algo raro'},
-          {e:'🙂', l:'Casi nunca siento nada'},
-          {e:'🙅‍♀️', l:'Nunca hice sentadillas como para saber'}]},
-
-/*  8 */ {id:'ejercicio', type:'pick', q:'¿Cuál de estos creés que <em>activa más</em> el glúteo?',
-          help:'Elegí el que te parezca. Después te muestro la respuesta.', opts:[
-          {l:'Sentadilla',  img:'ejSenta',  act:22, tag:'Baja',      cls:'baja',
-           why:'La mayor parte del esfuerzo se lo lleva el cuádriceps, y la rodilla se come la compresión.'},
-          {l:'Estocada',    img:'ejEstoca', act:46, tag:'Media',     cls:'',
-           why:'Mejor que la sentadilla, pero sigue cargando la rodilla de adelante.'},
-          {l:'Patada atrás', img:'ejPatada', act:74, tag:'Alta',      cls:'',
-           why:'El glúteo trabaja aislado, sin que la rodilla tenga que sostener nada.'},
-          {l:'Puente de glúteo', img:'ejPuente', act:95, tag:'Muy alta', cls:'alta',
-           why:'El movimiento nace en la cadera: el glúteo es el que empuja, de principio a fin.'}]},
-
-/*  9 */ {id:'revela', type:'revela', btn:'Ahora entiendo'},
-
-/* 10 */ {id:'load1', type:'loading', title:'Analizando tus respuestas…',
-          sub:'Un segundo, estamos cruzando los datos', ms:900,
-          items:['Objetivo y tiempo disponible', 'Historial de entrenamiento', 'Mapa de dolor y molestias', 'Patrón de abandono']},
-
-/* 11 */ {id:'nonaci', type:'single', q:'¿Alguna vez pensaste <em>"yo no nací"</em> para tener la cola parada?', opts:[
-          {e:'😔', l:'Sí, lo pienso todo el tiempo'},
-          {e:'😕', l:'Sí, lo pensé algunas veces'},
-          {e:'😐', l:'A veces me siento así'},
-          {e:'💪', l:'No, creo que puedo lograrlo'},
-          {e:'🤔', l:'Nunca lo pensé'}]},
-
-/* 12 */ {id:'ropa', type:'single', q:'¿Te sentís <em>insegura</em> con la ropa ajustada?', opts:[
-          {e:'😖', l:'¡Sí, muchísimo! Evito esa ropa'},
-          {e:'😟', l:'Sí, bastante insegura'},
-          {e:'😬', l:'A veces me siento incómoda'},
-          {e:'🙆‍♀️', l:'Un poco, pero la uso igual'},
-          {e:'🧘‍♀️', l:'No, me siento segura'}]},
-
-/* 13 */ {id:'bikini', type:'single', q:'¿Evitás la <em>pileta o la playa</em> por tu cuerpo?', opts:[
-          {e:'😭', l:'Sí, lo evito por completo'},
-          {e:'😔', l:'Voy, pero me siento muy insegura'},
-          {e:'😐', l:'A veces me siento incómoda'},
-          {e:'😬', l:'Voy, pero me gustaría sentirme mejor'},
-          {e:'💪', l:'No, estoy cómoda'}]},
-
-/* 14 */ {id:'invertiste', type:'single', q:'¿Ya <em>gastaste</em> en gimnasios o programas que no funcionaron?', opts:[
-          {e:'💸', l:'¡Sí, un montón y sin resultados!'},
-          {e:'😫', l:'Sí, lo intenté 3 veces o más'},
-          {e:'😕', l:'Sí, una o dos veces'},
-          {e:'🧐', l:'No, pero me da miedo tirar la plata'},
-          {e:'❌', l:'Nunca gasté en esto'}]},
-
-/* 15 */ {id:'seismeses', type:'single', q:'Si seguís como hoy, ¿cómo te <em>ves en 6 meses</em>?', opts:[
-          {e:'😰', l:'Con la misma frustración, sin ningún cambio'},
-          {e:'😤', l:'Todavía intentando y fallando'},
-          {e:'😨', l:'Seguramente ya habré abandonado del todo'},
-          {e:'🤞', l:'Espero estar mejor, pero no sé cómo'},
-          {e:'🏃‍♀️', l:'Voy a tener el cuerpo que quiero'}]},
-
-/* 16 */ {id:'meses', type:'slider', q:'¿Hace cuánto no <em>entrenás piernas</em> en serio?',
-          help:'Cuanto más tiempo pasó, más dormido está el glúteo.',
-          min:0, max:36, def:14, unit:'meses', key:'meses',
-          tags:[[0,4,'Hace poco'],[4,12,'Varios meses'],[12,24,'Más de un año'],[24,999,'Dos años o más']]},
-
-/* 17 */ {id:'minutos', type:'slider', q:'¿Cuántos <em>minutos por día</em> le podés dar de verdad?',
-          help:'Con 15 alcanza. Más no acelera: lo que acelera es no faltar.',
-          min:5, max:60, def:15, unit:'min', key:'minutos',
-          tags:[[0,15,'Vamos a estirar el plan'],[15,31,'El punto justo'],[31,999,'De sobra']]},
-
-/* 18 */ {id:'mecanismo', type:'app', q:'Así funciona el <em>Protocolo</em>',
-          help:'Tres fases, 28 días, 15 minutos por día. Abrís el día que toca y lo hacés.', btn:'Mostrame mi resultado'},
-
-/* 19 */ {id:'compromiso', type:'single', q:'¿Te <em>comprometés</em> a 15 minutos por día durante 28 días?',
-          help:'Última pregunta. Sin esto, ningún plan funciona.', opts:[
-          {e:'✅', l:'¡Sí! Estoy 100% comprometida'},
-          {e:'🙋‍♀️', l:'Sí, lo voy a seguir al pie de la letra'},
-          {e:'💪', l:'Sí, voy a dar lo mejor de mí'},
-          {e:'🤔', l:'Tal vez, depende de qué sea'}]},
-
-/* 20 */ {id:'load2', type:'loading', title:'Armando tu Protocolo…',
-          sub:'Cruzando tu índice con las 3 fases', ms:1100, calc:true},
-
-/* 21 */ {id:'resultado', type:'result', btn:'Ver mi Protocolo'},
-
-/* 22 */ {id:'nombre', type:'field', q:'¿Cómo te <em>llamás</em>?', help:'Para personalizar tu plan (opcional)',
-          ph:'Escribí tu nombre', btn:'Continuar', skip:'Saltear este paso'}
-];
-
-/* el contador cuenta SOLO las preguntas: ni la carga, ni el resultado, ni la oferta */
-var PREG = STEPS.filter(function(s){ return s.type==='single'||s.type==='pick'||s.type==='slider'||s.type==='cover'; });
-function nPreg(k){
-  var n = 0;
-  for(var x=0; x<=k; x++){ var t=STEPS[x].type;
-    if(t==='single'||t==='pick'||t==='slider'||t==='cover') n++; }
-  return n;
+/* ===== CONTADORES: arrancan la primera vez que se ve la pantalla y siguen aunque recargue ===== */
+function contador(el) {
+var seg = Number(el.getAttribute("data-timer")), clave = "pc_timer_" + el.getAttribute("data-clave");
+var fin = leer(clave);
+if (typeof fin !== "number") { fin = Date.now() + seg * 1000; grabar(clave, fin); }
+function tick() {
+var r = fin - Date.now();
+if (r <= 0) { el.textContent = "00:00"; clearInterval(ivTimer); return; }
+var m = Math.floor(r / 60000), s = Math.floor(r / 1000) % 60;
+el.textContent = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
 }
-
-/* ===========================================================================
-   RENDER
-   =========================================================================== */
-var app = document.getElementById('app');
-var back = document.getElementById('back');
-var pasoN = document.getElementById('paso-n');
-
-function go(n){
-  hist.push(i);
-  i = (n===undefined) ? i+1 : n;
-  if(i >= STEPS.length){ return abrirOferta(); }
-  render(); window.scrollTo({top:0, behavior:'instant'});
+tick();
+ivTimer = setInterval(tick, 1000);
 }
-function volver(){ if(!hist.length) return; i = hist.pop(); render(); window.scrollTo({top:0}); }
-back.onclick = volver;
-
-function render(){
-  var s = STEPS[i];
-  document.getElementById('bar').style.width = Math.round((i/STEPS.length)*100) + '%';
-  /* sin flecha de volver en la portada ni en las pantallas de carga */
-  back.disabled = (i === 0 || s.type === 'loading');
-  var esPreg = (s.type==='single'||s.type==='pick'||s.type==='slider'||s.type==='cover');
-  pasoN.textContent = esPreg ? ('Paso ' + nPreg(i) + ' de ' + PREG.length) : '';
-
-  var h = '<div class="step">';
-  var head = '';
-  if(s.q) head += '<h2 class="q">' + tok(s.q) + '</h2>';
-  if(s.help) head += '<p class="help">' + tok(s.help) + '</p>';
-
-  /* ---------- portada: la edad, con fotos a sangre ---------- */
-  if(s.type === 'cover'){
-    h += '<div class="cover-head"><span class="cover-badge"><i></i>Test gratis · 1 minuto</span>'
-      +  '<h1>' + s.q + '</h1><p>' + s.help + '</p></div>'
-      +  '<p class="help" style="margin-bottom:16px;font-weight:600;color:var(--ink-2)">Para empezar: ¿qué edad tenés?</p>'
-      +  '<div class="grid">';
-    s.opts.forEach(function(o,k){
-      h += '<button class="pick ov" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
-        +  '" width="720" height="960" loading="' + (k<2?'eager':'lazy') + '"><figcaption>' + esc(o.l) + '</figcaption></figure></button>';
-    });
-    h += '</div><p class="legal">Al elegir y continuar, aceptás nuestros <a href="#">Términos de servicio</a> y la <a href="#">Política de privacidad</a>.</p>';
-  }
-
-  /* ---------- opciones de lista ---------- */
-  else if(s.type === 'single'){
-    h += head + '<div class="opts">';
-    s.opts.forEach(function(o,k){
-      h += '<button class="opt" data-k="' + k + '">';
-      if(o.e) h += '<span class="ic">' + o.e + '</span>';
-      h += '<span class="tx"><b>' + tok(esc(o.l)) + '</b>' + (o.s ? '<small>' + tok(esc(o.s)) + '</small>' : '') + '</span>';
-      h += ARR + '</button>';
-    });
-    h += '</div>';
-  }
-
-  /* ---------- opciones con foto ---------- */
-  else if(s.type === 'pick'){
-    h += head + '<div class="grid">';
-    s.opts.forEach(function(o,k){
-      h += '<button class="pick" data-k="' + k + '"><figure><img src="' + IMG[o.img] + '" alt="' + esc(o.l)
-        +  '" width="600" height="600" loading="' + (k<2?'eager':'lazy') + '"></figure><div class="lb">' + esc(o.l) + '</div></button>';
-    });
-    h += '</div>';
-  }
-
-  /* ---------- placa de promesa ---------- */
-  else if(s.type === 'promesa'){
-    var rango = ['18 a 24','25 a 34','35 a 44','45 o más'][state.edad||0];
-    var obj = ['levantar la cola y marcar las piernas','ganar fuerza y definición',
-               'volver a entrar en la ropa que les gusta','volver a sentirse seguras',
-               'mirarse al espejo sin esquivar'][state.objetivo||0];
-    h += '<h2 class="q">Tenemos <em>buenas noticias</em></h2>';
-    h += '<div class="card"><h3 style="font-size:1.18rem;margin-bottom:8px">Mujeres de ' + rango
-      +  ' años con tu perfil suelen ' + obj + ' en unas 4 semanas</h3>'
-      +  '<p style="color:var(--muted);font-size:.92rem">Y casi nunca es por entrenar más. Es por despertar el músculo correcto. '
-      +  'Esto es lo que pasa cuando el glúteo empieza a trabajar:</p>'
-      +  '<div class="bars"><div><b style="height:24%"></b><span>Día 4</span></div>'
-      +  '<div><b style="height:56%"></b><span>Día 14</span></div>'
-      +  '<div><b style="height:100%"></b><span>Día 28</span></div></div>'
-      +  '<p class="cap" style="text-align:left">Avance esperado según tus respuestas. Los resultados varían de persona a persona.</p></div>';
-    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
-  }
-
-  /* ---------- la revelación: el glúteo dormido ---------- */
-  else if(s.type === 'revela'){
-    var ej = STEPS[7].opts;
-    var orden = ej.slice().sort(function(a,b){ return b.act - a.act; });
-    var elegido = ej[state.ejercicio || 0];
-    var acerto = (elegido === orden[0]);
-    h += '<h2 class="q">' + (acerto ? '¡Le <em>acertaste</em>!' : 'Casi: era <em>el puente</em>') + '</h2>';
-    h += '<p class="help">' + (acerto
-          ? 'Pocas la pegan. El puente de glúteo es el que más lo hace trabajar, y es el que nadie hace.'
-          : 'Elegiste <b>' + esc(elegido.l.toLowerCase()) + '</b>. El que más activa el glúteo es el <b>puente</b>, y es el que casi nadie hace.') + '</p>';
-    h += '<div class="rev">';
-    orden.forEach(function(o){
-      h += '<div class="' + o.cls + '"><img src="' + IMG[o.img] + '" alt="' + esc(o.l) + '" width="160" height="160" loading="lazy">'
-        +  '<span class="nm"><b>' + esc(o.l) + '</b><span class="track"><i style="width:' + o.act + '%"></i></span></span>'
-        +  '<span class="tag">' + o.tag + '</span></div>';
-    });
-    h += '</div>';
-    h += '<div class="note" style="margin-top:18px"><b>Esto es el glúteo dormido.</b> Cuando hacés sentadillas, el cuerpo le pasa el trabajo al cuádriceps y a la espalda. '
-      +  'El glúteo se acostumbra a no activarse. Por eso entrenás y la cola sigue igual: '
-      +  'no es que entrenes poco, es que <b>el músculo que querés no se está encendiendo</b>.</div>';
-    h += '<p class="cap">Comparación orientativa entre ejercicios, no una medición de laboratorio.</p>';
-    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
-  }
-
-  /* ---------- maqueta de la app ---------- */
-  else if(s.type === 'app'){
-    h += head + telefono();
-    h += '<div class="chips"><span class="chip"><b>3</b> fases</span><span class="chip"><b>28</b> días</span>'
-      +  '<span class="chip"><b>15</b> min por día</span><span class="chip"><b>0</b> sentadillas</span></div>';
-    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
-  }
-
-  /* ---------- medidor ---------- */
-  else if(s.type === 'slider'){
-    var v = state[s.key];
-    if(v === undefined || v === null) v = s.def;
-    h += head;
-    h += '<div class="sl-val"><b id="slv">' + v + '</b><span>' + s.unit + '</span></div>';
-    h += '<span class="sl-tag" id="sltag">' + sliderTag(s, v) + '</span>';
-    h += '<input type="range" id="sl" min="' + s.min + '" max="' + s.max + '" value="' + v + '" step="1">';
-    h += '<div class="sl-ends"><span>' + s.min + '</span><span>' + Math.round((s.min+s.max)/2) + '</span><span>' + s.max + (s.max===36?'+':'') + '</span></div>';
-    h += '<p class="sl-hint">Deslizá para ajustar</p><div id="slwarn"></div>';
-    h += '<div class="foot"><button class="btn" id="next">Continuar</button></div>';
-  }
-
-  /* ---------- carga ---------- */
-  else if(s.type === 'loading'){
-    var lista = s.items;
-    if(s.calc){
-      var cc = calc();
-      lista = ['Índice de Activación Glútea: ' + cc.iag + ' de 100',
-               'Fase 1 · Despertar: ajustada a tus rodillas',
-               'Fase 2 · Aislar: ' + state.minutos + ' minutos por día',
-               'Fase 3 · Cargar: cerrando los ' + cc.dias + ' días'];
-    }
-    h += '<div class="load"><div class="ring"></div><h2>' + s.title + '</h2><p>' + s.sub + '</p><ul>';
-    lista.forEach(function(t,k){ h += '<li data-k="' + k + '"><i>' + CHK + '</i>' + t + '</li>'; });
-    h += '</ul></div>';
-  }
-
-  /* ---------- resultado ---------- */
-  else if(s.type === 'result'){
-    var c = calc(), t = iagTag(c.iag);
-    h += '<div class="res-h"><div class="tick"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>'
-      +  '<h2 class="q" style="margin-bottom:4px">Tu diagnóstico está listo</h2><p class="help" style="margin-bottom:0">Armado con tus respuestas</p></div>';
-    h += '<div class="big-kcal"><b>' + c.iag + '<sup>/100</sup></b><small>Índice de Activación Glútea</small></div>';
-    h += '<div class="kpi"><div><b>' + c.pot + '/100</b><small>Tu potencial en ' + c.dias + ' días</small></div>'
-      +  '<div class="go"><b>' + fecha(c.fin) + '</b><small>Fecha estimada</small></div></div>';
-    if(state.minutos < 15) h += '<div class="warn"><span>⏱️</span><div><b>Elegiste menos de 15 minutos por día.</b> '
-      +  'Se puede, pero el plan se estira a ' + c.sem + ' semanas en vez de 4. Preferimos estirar la fecha antes que prometerte algo que no se cumple.</div></div>';
-    h += '<div class="imc"><div class="imc-top"><b>Tu glúteo hoy</b>'
-      +  '<span class="imc-tag" style="color:' + t.c + ';background:' + t.bg + '">' + t.t + '</span></div>'
-      +  '<div class="imc-track"><span class="imc-dot" style="left:' + t.p + '%"></span></div>'
-      +  '<div class="imc-sc"><span>Dormido</span><span>Apagado</span><span>A media</span><span>Activo</span></div></div>';
-    h += grafico(c);
-    h += '<ul class="logros">'
-      +  '<li><i>✓</i>Días 1 a 7 · Despertar: sentís el glúteo trabajando, sin tocar las rodillas.</li>'
-      +  '<li><i>✓</i>Días 8 a 18 · Aislar: la ropa empieza a caer distinto.</li>'
-      +  '<li><i>✓</i>' + fechaLarga(c.fin) + ' · Cargar: cola parada y piernas firmes.</li></ul>';
-    h += '<p class="cap">Estimación según tus respuestas, no un diagnóstico médico.</p>';
-    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button></div>';
-  }
-
-  /* ---------- campo de texto ---------- */
-  else if(s.type === 'field'){
-    h += head;
-    h += '<input id="fld" type="text" placeholder="' + s.ph + '" value="' + esc(state.nombre) + '" autocomplete="given-name" '
-      +  'style="width:100%;padding:16px;border:1.5px solid var(--line);border-radius:13px;background:var(--card);font-size:1rem;text-align:center;outline:none">';
-    h += '<div class="foot"><button class="btn" id="next">' + s.btn + '</button><button class="skip" id="skip">' + s.skip + '</button></div>';
-  }
-
-  h += '</div>';
-  app.innerHTML = h;
-  bind(s);
+/* ===== VSL DEL DIAGNOSTICO ===== */
+var videoMontado = false;
+function montarVideo() {
+if (videoMontado) return;
+videoMontado = true;
+var box = $("vslBox"), txt = $("vslTxt");
+if (VTURB_CUENTA && VTURB_PLAYER) {
+box.innerHTML = '<vturb-smartplayer id="vid-' + VTURB_PLAYER + '" style="display:block;margin:0 auto;width:100%;">' +
+'<div class="vturb-player-placeholder" style="position:relative;width:100%;padding:' + VIDEO_ALTO_PCT +
+'% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer>';
+var s = document.createElement("script");
+s.src = "https://scripts.converteai.net/" + VTURB_CUENTA + "/players/" + VTURB_PLAYER + "/v4/player.js";
+s.async = true;
+document.head.appendChild(s);
+} else if (VSL_MP4) {
+videoPropio(box);
+} else {
+box.style.display = "none";
+txt.style.display = "none";
 }
-
-function sliderTag(s, v){
-  if(!s.tags) return '';
-  for(var k=0;k<s.tags.length;k++){ if(v >= s.tags[k][0] && v < s.tags[k][1]) return tok(s.tags[k][2]); }
-  return '';
+botonGuia();
+track("vsl_view");
 }
-
-/* ---------- la maqueta del celular, dibujada en HTML ---------- */
-function telefono(){
-  return '<div class="phone"><div class="scr">'
-    + '<div class="nn"><span>9:41</span><span>Glúteo Despierto</span></div>'
-    + '<div class="ph-hero"><b>Día 12 de 28</b><small>FASE 2 · AISLAR</small>'
-    +   '<div class="ph-ring"><i></i></div></div>'
-    + '<div class="ph-sec"><b>La rutina de hoy · 15 min</b>'
-    +   '<div class="ph-row"><i>1</i><span>Puente de glúteo · 3 series</span><em>4 min</em></div>'
-    +   '<div class="ph-row"><i>2</i><span>Patada atrás en cuatro apoyos</span><em>4 min</em></div>'
-    +   '<div class="ph-row"><i>3</i><span>Abducción tumbada de costado</span><em>4 min</em></div>'
-    +   '<div class="ph-row"><i>4</i><span>Elongación de cadera</span><em>3 min</em></div></div>'
-    + '<div class="ph-sec"><b>Tus 3 fases</b>'
-    +   '<div class="ph-row"><i>✓</i><span>Despertar · días 1 a 7</span><em>hecho</em></div>'
-    +   '<div class="ph-row"><i>●</i><span>Aislar · días 8 a 18</span><em>vas acá</em></div>'
-    +   '<div class="ph-row"><i>○</i><span>Cargar · días 19 a 28</span><em>—</em></div></div>'
-    + '<div class="ph-tab"><i class="on"></i><i></i><i></i><i></i></div>'
-    + '</div></div>';
+/* Video propio (.mp4): arranca mudo como los players de VSL y con un toque vuelve al principio con sonido. */
+function videoPropio(box) {
+box.innerHTML = '<div class="vsl-r" style="padding-top:' + VIDEO_ALTO_PCT + '%"><video id="vslVideo" playsinline muted autoplay preload="auto"></video>' +
+'<button type="button" class="vsl-sonido" id="vslSonido"><span>Tu video ya empezó<br>Tocá para escuchar</span></button></div>';
+var v = $("vslVideo"), b = $("vslSonido");
+v.src = VSL_MP4;
+try { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {}
+b.addEventListener("click", function () {
+v.muted = false;
+try { v.currentTime = 0; } catch (e) {}
+v.play();
+b.style.display = "none";
+track("vsl_sonido");
+});
+v.addEventListener("click", function () { if (!v.muted) { if (v.paused) v.play(); else v.pause(); } });
 }
-
-/* ---------- gráfico de previsión ---------- */
-function grafico(c){
-  return '<div class="fc"><div class="fc-top"><span>Hoy</span><span>' + fecha(c.fin) + '</span></div>'
-    + '<svg viewBox="0 0 320 130" preserveAspectRatio="none" aria-hidden="true">'
-    + '<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">'
-    +   '<stop offset="0%" stop-color="#C0392B"/><stop offset="100%" stop-color="#1F7A52"/></linearGradient>'
-    +   '<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">'
-    +   '<stop offset="0%" stop-color="rgba(31,122,82,.14)"/><stop offset="100%" stop-color="rgba(31,122,82,0)"/></linearGradient></defs>'
-    + '<path d="M8,104 C110,100 150,44 312,22 L312,130 L8,130 Z" fill="url(#g2)"/>'
-    + '<path d="M8,104 C110,100 150,44 312,22" fill="none" stroke="url(#g1)" stroke-width="3.5" stroke-linecap="round"/>'
-    + '<circle cx="8" cy="104" r="5.5" fill="#C0392B"/><circle cx="312" cy="22" r="5.5" fill="#1F7A52"/></svg>'
-    + '<div class="fc-legend"><span class="a"><b>' + c.iag + '/100</b>Hoy</span>'
-    +   '<span class="b"><b>' + c.pot + '/100</b>' + fechaLarga(c.fin) + '</span></div></div>';
+/* Con BOTON_SEGUNDO > 0 el boton sale en ese segundo del video (o al terminar) y queda visible en las visitas siguientes. */
+function botonGuia() {
+var b = $("btnGuia").parentNode;
+var LISTO = "pc_guia_" + BOTON_SEGUNDO;
+if (!BOTON_SEGUNDO || !(VSL_MP4 || (VTURB_CUENTA && VTURB_PLAYER))) return;
+try { if (localStorage.getItem(LISTO) === "1") return; } catch (e) {}
+b.style.display = "none";
+var mostrado = false, player = null;
+function mostrar() {
+if (mostrado) return;
+mostrado = true;
+try { localStorage.setItem(LISTO, "1"); } catch (e) {}
+b.style.display = "";
 }
-
-/* ===========================================================================
-   EVENTOS
-   =========================================================================== */
-function bind(s){
-  app.querySelectorAll('.opt,.pick').forEach(function(el){
-    el.onclick = function(){
-      state[s.id] = +el.dataset.k;
-      el.classList.add('on');
-      setTimeout(go, 190);
-    };
-  });
-
-  var nx = document.getElementById('next');
-  if(nx) nx.onclick = function(){
-    if(s.type === 'field'){ state.nombre = (document.getElementById('fld').value || '').trim(); }
-    go();
-  };
-  var sk = document.getElementById('skip');
-  if(sk) sk.onclick = function(){ state.nombre = ''; go(); };
-
-  if(s.type === 'slider'){
-    var sl = document.getElementById('sl'), wn = document.getElementById('slwarn');
-    function pintar(){
-      var p = (sl.value - s.min) / (s.max - s.min) * 100;
-      sl.style.background = 'linear-gradient(90deg,var(--accent) ' + p + '%,var(--line) ' + p + '%)';
-    }
-    function aviso(){
-      wn.innerHTML = (s.key === 'meses' && state.meses >= 24)
-        ? '<div class="warn"><span>⚠️</span><div><b>Dos años o más sin entrenar piernas.</b> No es un problema: es exactamente el caso para el que armamos la Fase 1, que son los primeros 7 días.</div></div>'
-        : (s.key === 'minutos' && state.minutos < 15)
-        ? '<div class="warn"><span>⏱️</span><div><b>Con menos de 15 minutos el plan se estira.</b> Lo vamos a repartir en 5 semanas en vez de 4, para que no abandones en la segunda.</div></div>' : '';
-    }
-    pintar(); aviso();
-    sl.oninput = function(){
-      state[s.key] = +sl.value;
-      document.getElementById('slv').textContent = sl.value;
-      document.getElementById('sltag').textContent = sliderTag(s, +sl.value);
-      pintar(); aviso();
-    };
-  }
-
-  if(s.type === 'field'){
-    var f = document.getElementById('fld');
-    f.onkeydown = function(e){ if(e.key === 'Enter'){ state.nombre = f.value.trim(); go(); } };
-  }
-
-  if(s.type === 'loading'){
-    var lis = app.querySelectorAll('.load li'), k = 0;
-    lis[0].classList.add('on');
-    var t = setInterval(function(){
-      if(!document.body.contains(lis[0])){ clearInterval(t); return; }   /* se fueron del paso */
-      lis[k].classList.remove('on'); lis[k].classList.add('ok');
-      k++;
-      if(k >= lis.length){ clearInterval(t); setTimeout(function(){ if(STEPS[i].type==='loading') go(); }, 450); return; }
-      lis[k].classList.add('on');
-    }, s.ms);
-  }
+function revisar(t) { if (typeof t === "number" && t >= BOTON_SEGUNDO) mostrar(); }
+var v = $("vslVideo");
+if (v) {
+v.addEventListener("timeupdate", function () { if (!v.muted) revisar(v.currentTime); });
+v.addEventListener("ended", mostrar);
+return;
 }
-
-/* ===========================================================================
-   NOTIFICACIONES — discretas y los cupos solo bajan
-   =========================================================================== */
-var NOMBRES = [['Claudia R.','Rosario'],['Mariana D.','Córdoba'],['Vanina S.','La Plata'],['Lucía A.','Mendoza'],
-  ['Lorena P.','Mar del Plata'],['Silvia M.','Salta'],['Noelia F.','Neuquén'],['Daniela G.','Tucumán']];
-var cupos = 9;
-function notificar(){
-  if(cupos > 2) cupos--;
-  var n = NOMBRES[Math.floor(Math.random()*NOMBRES.length)];
-  var box = document.getElementById('notif');
-  box.querySelector('.av').textContent = n[0][0];
-  document.getElementById('notif-tx').innerHTML = esc(n[0]) + ' de ' + esc(n[1]) + ' empezó el Protocolo'
-    + '<small>hace ' + (2 + Math.floor(Math.random()*7)) + ' min · <b>Quedan ' + cupos + ' cupos con descuento</b></small>';
-  box.classList.add('on');
-  setTimeout(function(){ box.classList.remove('on'); }, 4500);
+var sondeo = setInterval(function () {
+if (mostrado) { clearInterval(sondeo); return; }
+var el = document.querySelector("#vslBox vturb-smartplayer");
+if (el && el !== player) {
+player = el;
+el.addEventListener("video:timeupdate", function (e) { revisar(e.detail && e.detail.time); });
+el.addEventListener("video:ended", mostrar);
 }
-
-/* ===========================================================================
-   OFERTA
-   =========================================================================== */
-function abrirOferta(){
-  var c = calc();
-  document.querySelector('main').style.display = 'none';
-  document.querySelector('.top').style.display = 'none';
-  var of = document.getElementById('oferta');
-  of.style.display = 'block';
-  window.scrollTo({top:0});
-
-  var n = state.nombre ? state.nombre.charAt(0).toUpperCase() + state.nombre.slice(1) : '';
-  document.getElementById('of-tit').innerHTML = (n ? esc(n) + ', tu' : 'Tu') + ' Protocolo de ' + c.dias + ' días está listo';
-  document.getElementById('of-sub').innerHTML = 'Arrancás con un Índice de Activación de <b>' + c.iag + '/100</b> y el plan te lleva a <b>'
-    + c.pot + '/100</b> para el ' + fechaLarga(c.fin) + ' — sin una sola sentadilla.';
-
-  document.getElementById('p-old').textContent  = '$' + C.PRECIO_VIEJO;
-  document.getElementById('p-save').textContent = 'Ahorrás $' + C.AHORRO + ' (' + C.DESCUENTO + '% OFF)';
-  document.getElementById('p-now').textContent  = C.PRECIO;
-  document.getElementById('p-inst').textContent = C.CUOTAS + ' cuotas de $' + C.CUOTA_VALOR;
-  document.getElementById('p-bonus').textContent = C.VALOR_BONOS;
-  document.getElementById('p-faq').textContent  = C.PRECIO;
-  document.getElementById('p-faq2').textContent = C.PRECIO;
-
-  var tpl = document.getElementById('vsl-template'), box = document.getElementById('vsl-box');
-  if(tpl && tpl.innerHTML.trim()){ box.innerHTML = tpl.innerHTML; } else { box.style.display = 'none'; }
-
-  var tapar = document.querySelectorAll('#oferta .sec:not(:first-of-type), #oferta .ad, #oferta .incl, #oferta .btn');
-  if(C.SEGUNDOS_OFERTA > 0){
-    tapar.forEach(function(e){ e.classList.add('hidden'); });
-    setTimeout(function(){
-      tapar.forEach(function(e){ e.classList.remove('hidden'); });
-      ligarCTAs(); arrancarReloj(); arrancarNotifs();
-    }, C.SEGUNDOS_OFERTA * 1000);
-  } else { ligarCTAs(); arrancarReloj(); arrancarNotifs(); }
-  track('Lead');
+if (player && player.played) revisar(Number(player.currentTime) || 0);
+}, 2000);
 }
-
-/* Todo lo que parece un botón en la oferta lleva al checkout. Idempotente. */
-function ligarCTAs(){
-  var url = checkout();
-  document.querySelectorAll('#oferta a.btn, #oferta button.btn, #oferta .js-cta').forEach(function(el){
-    if(el.tagName === 'A'){ el.href = url; el.rel = 'noopener'; } else { el.style.cursor = 'pointer'; }
-    if(el.dataset.cta) return;
-    el.dataset.cta = '1';
-    el.addEventListener('click', function(e){
-      track('AddToCart');
-      if(el.tagName !== 'A'){ e.preventDefault(); location.href = url; }
-    });
-  });
+/* ===== CHECKOUT: los botones y fotos de la oferta llevan los parametros de la visita (UTMs, fbclid) ===== */
+function completar(a) {
+try {
+if (!params) return;
+var u = new URL(CHECKOUT + a.getAttribute("href").slice(9), location.origin);
+params.forEach(function (v, k) { if (k !== "paso" && v && !u.searchParams.get(k)) u.searchParams.set(k, v); });
+a.setAttribute("href", u.pathname + u.search);
+} catch (e) {}
 }
-function arrancarReloj(){
-  var seg = 900, el = document.getElementById('reloj');
-  var t = setInterval(function(){
-    seg--; if(seg <= 0){ seg = 0; clearInterval(t); }
-    el.textContent = String(Math.floor(seg/60)).padStart(2,'0') + ':' + String(seg%60).padStart(2,'0');
-  }, 1000);
+[].forEach.call(document.querySelectorAll('a[href^="/checkout"]'), function (a) {
+a.addEventListener("pointerdown", function () { completar(a); });
+a.addEventListener("click", function () { completar(a); track("checkout_click"); });
+});
+/* ===== ARRANQUE: como el original, retoma el paso donde quedo (1 dia). ?paso=N abre esa pantalla sin guardar. ===== */
+var pedido = parseInt(param("paso"), 10);
+if (pedido >= 0 && pedido < TOTAL) ir(pedido, false);
+else {
+var g = leer("pc_paso");
+ir(typeof g === "number" && g >= 0 && g < TOTAL ? g : 0);
 }
-function arrancarNotifs(){ setTimeout(notificar, 4000); setInterval(notificar, 16000); }
-
-/* ===========================================================================
-   ARRANQUE
-   =========================================================================== */
-if(C.PIXEL_ID){
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', C.PIXEL_ID); fbq('track','PageView');
+if (PIXEL_ID) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", PIXEL_ID); fbq("track","PageView");
+[].forEach.call(document.querySelectorAll('a[href^="/checkout"]'), function (a) {
+a.addEventListener("click", function () { try { fbq("track","AddToCart"); } catch (e) {} });
+});
 }
-render();
-ligarCTAs();
+})();
 </script>
 </body>
 </html>

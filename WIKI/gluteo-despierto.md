@@ -17,26 +17,53 @@ El quiz entero viaja en **texto plano** dentro del HTML de la tienda ([[quizzes-
 - **Su backend:** 2 upsells — *Panza Chata en 15 Minutos* ($3.990) y *Busto Firme y Postura en 10 Minutos* ($4.990) — y 3 bonos declarados en la tienda. Molde a mirar cuando armemos los pospagos ([[embudo-post-compra]]).
 
 ## Nuestro quiz (entregado el 14/11)
-**22 pasos, 15 preguntas** — se recortaron 9 preguntas suyas que repetían el mismo golpe emocional (ver el comentario del array `STEPS` en el HTML, que las lista una por una).
+> ⚠️ **Se entregó dos veces.** La primera versión clonaba **nuestro** motor (Fraunces + Inter, paleta ciruela, Índice de
+> Activación Glútea, 22 pasos). Santiago la rebotó: *"No, no entendiste, quiero el mismo diseño que ellos, pero que diga
+> cosas distintas"*. Quedó guardada en `OUTPUTS/2026-11-14-quiz-gluteo-despierto-v1-motor-propio.html`, pero **la que vale
+> es la v2**. Ver la regla del 14/11 en [[quizzes-reglas-de-armado]].
 
-Lo que **se sumó** y no está en el de ellos:
-1. **La pregunta del ejercicio con 4 fotos** ("¿cuál de estos creés que activa más el glúteo?") y **la pantalla de revelación** con barras comparativas. Es el mecanismo demostrado, no contado.
-2. **Dos medidores** (meses sin entrenar piernas · minutos por día), que alimentan el cálculo.
-3. **El Índice de Activación Glútea (IAG)**: 0-100 calculado con sus respuestas de dolor, frustración, historia de intentos y meses parada. Barra de riesgo (Dormido → Apagado → A media → Activo), potencial a 28 días y gráfico de previsión.
-4. **La maqueta de la app dibujada en HTML/CSS** con las 3 fases y la rutina del día.
-5. **Antes/después en HTML** (dos listas ✗ / ✓) en vez de fotos de cuerpos: nítido, gratis y no arrastra el material del competidor al mismo feed.
+**La v2 es el documento del competidor con los textos reescritos.** Se bajó su quiz entero con `curl -sL`, se cortó el
+documento del `custom_html` y se reemplazó, paso por paso, cada texto. **No se tocó ni una regla de su CSS, ni su sprite
+de íconos, ni una línea de su motor**: quedan sus 30 pasos, su violeta `#970FA9`, sus botones verdes, sus flechitas, su
+aviso rojo de la portada y sus tres pantallas de carga con porcentaje.
 
-**Aritmética del IAG:** arranca en 100 y baja por dolor en sentadillas (hasta 26), frustración (hasta 24), historia de intentos (hasta 16) y meses sin entrenar (hasta 24, a 0,85 por mes). Queda topeado entre 8 y 72; el potencial es el índice + 38 con techo en 94. Si eligen **menos de 15 minutos por día**, el plan se estira a **5 semanas** y la pantalla lo dice en vez de prometer las 4.
+El reemplazo se hace con un script, no a mano: `OUTPUTS/scripts-quiz/build_gluteo_despierto.py`. Parte el documento por
+`<section class="paso">`, aplica a cada paso su lista de pares (viejo → nuevo) y **falla si alguno no aparece** o si
+queda algún rastro del competidor. Si mañana hay que retocar un texto, se toca ahí y se vuelve a correr.
 
-**Paleta:** ciruela `#A62B55` sobre papel cálido `#FAF6F6`. El competidor corre violeta eléctrico `#970FA9` + magenta: en el mismo feed tienen que leerse como dos marcas distintas. El verde solo significa "bien" y el rojo solo "riesgo".
+**Lo que cambia:**
+- **Los 24 cuestionarios y sus ~120 opciones, reescritos uno por uno** en voseo, con el mismo golpe y otro fraseo
+  (*"¿Cuánto tiempo por día podés dedicarle a entrenar?"* → *"¿Cuántos minutos por día le podés dar de verdad?"*).
+- **El mecanismo.** Las 3 fases del Protocolo (Despertar · Aislar · Cargar) reemplazan su *Método Anti-Lesión + Rutina
+  Express + Protocolo Sin Sentadillas*. Su promesa de **20 minutos y 4 semanas** pasa a **15 minutos y 28 días**.
+- **El diagnóstico.** Sus *3 patrones detectados / 1 mentira revelada / 1 solución personalizada* pasan a
+  **1 músculo dormido / 1 mentira que te vendieron / 1 protocolo de 28 días**.
+- **Los 3 testimonios**, con nombre + ciudad argentina (Rosario, La Plata, Córdoba).
+- **Una FAQ más que ellos** (*"¿Es una suscripción?"*), que es la objeción madre del low ticket. Es su mismo componente.
+- **La línea de cuotas de Mercado Pago**, que ellos no tienen: va **debajo** de la caja de precio, no adentro
+  (metida en el `<span>` del original parte el precio en cinco renglones). Una sola regla de CSS nueva, `.cuotas`, con
+  el verde que su propia caja ya usa.
+- **El bloque de configuración arriba del script** (`CHECKOUT`, `PIXEL_ID`, `VSL_MP4`, `BOTON_SEGUNDO`) y el pixel de
+  Meta con `AddToCart` en los CTAs, que su versión no traía.
 
-**Las 8 fotos son propias**, generadas con IA en un solo batch (gpt_image_2_6): 4 retratos por rango etario (22/31/41/54, mismo fondo beige, misma remera gris, misma luz, recorte apretado a la cara en 3:4) y 4 ejercicios (sentadilla, estocada, puente, patada) con la misma mujer, el mismo living y el mismo encuadre. **El banco propio no servía**: Origen Pilates son mujeres 40+ vestidas de calle y Calistenia Rusa son todos hombres — se miró antes de generar ([[quizzes-reglas-de-armado]], regla del 4/11).
+**Imágenes: 13 de 15 son suyas.** Las que no llevan marca ni texto se reusan tal cual (las 3 de las cargas, el
+antes/después, los 3 resultados, los 3 avatares, los sellos de compra y el de garantía). Se rehicieron las dos que sí la
+llevaban:
+- **El logo**: el de ellos es un durazno con cinta métrica. El nuestro es un durazno con **tres ondas de activación** —
+  el músculo que se enciende. Dibujado con Pillow y **mirado a 135, 96 y 60 px** antes de aceptarlo.
+- **La portada**: mismo formato que la de ellos (dos bandas violetas arriba, el díptico antes/después, el pie violeta),
+  con *SIN / CON el Protocolo del Glúteo Dormido* y *"Mariana despertó el glúteo y paró la cola en 28 días, en el living
+  de su casa. SIN UNA SOLA SENTADILLA."*
+
+**Verificado por código** en un iframe de 390 px: **los 30 pasos recorridos, 0 desbordes, 0 imágenes rotas, 0 errores**
+de consola; los **9 CTAs** de la oferta al checkout **arrastrando `utm_source`, `utm_campaign` y `fbclid`**; y el `.txt`
+autocontenido (1.010 KB) con **las 15 imágenes y el favicon en base64**, ninguna rota.
 
 ## Preguntas abiertas
-- **El nombre del método y de la marca los elegí yo** ("Glúteo Despierto" / "Protocolo del Glúteo Dormido"). Si Santiago prefiere otro, es un find/replace sobre el `CONFIG` y el markup.
+- **El nombre del método y de la marca los elegí yo** ("Glúteo Despierto" / "Protocolo del Glúteo Dormido"). Si Santiago prefiere otro, se cambia en `build_gluteo_despierto.py` y se vuelve a correr.
+- **13 de las 15 imágenes son del competidor** (las neutras, sin marca ni texto). Es lo que manda la §4 de la checklist y lo que mantiene su diseño, pero **corremos en su mismo feed**: si Santiago quiere fotos 100 % propias, se generan con IA y se reemplazan en `imagenes/`.
 - **El subdominio de ImpulTienda no está confirmado.** El checkout quedó **relativo** (`/checkout`), que resuelve solo en la tienda donde se pegue el HTML ([[quizzes-reglas-de-armado]], regla del 11/11). Cuando esté el subdominio se cambia **una línea** del `CONFIG`.
-- **Falta el VSL.** `SEGUNDOS_OFERTA` está en 0 y el `<template id="vsl-template">` vacío, igual que el competidor (su botón de diagnóstico también se ve de entrada). Cuando haya VSL, el número se calcula con el segundo exacto en que dice el precio.
-- **En la revelación no hay porcentajes de activación, hay barras y etiquetas** (Baja / Media / Alta / Muy alta) y una línea al pie que aclara que es orientativo. No se inventó una cifra de laboratorio ([[quizzes-reglas-de-armado]] §2). Si Santiago quiere números duros, hay que buscar el estudio.
+- **Falta el VSL.** `VSL_MP4` está vacío y `BOTON_SEGUNDO` en 0, igual que el competidor (su botón de diagnóstico también se ve de entrada). El de ellos es un **MP4 propio de 720p** servido desde los recursos de su tienda, no un player externo.
 - **Los 3 testimonios son de ejemplo**, marcados en rojo en el HTML. Reemplazarlos por reales antes de poner plata.
 - Falta la tanda de anuncios y el backend (los 2 upsells del competidor son el molde más cercano).
 

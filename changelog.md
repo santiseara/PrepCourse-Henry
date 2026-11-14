@@ -1,3 +1,10 @@
+## 2026-11-14 (17ª pasada) — DanceGo: las otras dos novelas
+
+Las novelas 3 («El asado del domingo», 2:02) y 4 («La foto del cumple», 1:52), con 12 y 8 tomas nuevas; el resto reusa los
+modulos compartidos. Con esto quedan las **4 novelas** que pidio Santiago. Gotcha nuevo: Veo quema marcas de agua inventadas
+(«©UIO YSTONA») y hay que pedir el cuadro limpio en el prompt de accion. Saldo ApiMart al cerrar: **US$0,32** (hay que cargar
+antes de la proxima tanda).
+
 ## 2026-11-13 (16ª pasada) — DanceGo: dos mini novelas con IA copiadas de un competidor, y piedras en hebreo
 
 - **Piedras en hebreo:** los 11 anuncios de Brasil pasados a hebreo para Israel (8 doblajes + 3 renovaciones), con la

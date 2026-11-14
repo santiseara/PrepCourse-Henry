@@ -4,7 +4,9 @@ Referencias: ad de 3:16 del 2/11 (el que marco Santiago) y control de 2:18 del 2
 Mismo formato: mini novela 100% Veo, vinetas de conflicto + contagio + la animada 3D + la cafeteria + cierre con placa.
 La novela 2 reusa los clips de las escenas G, H, I, J y K de la novela 1, igual que hace el competidor.
 
-# DanceGo · Novela 1 — «Dame tres semanas»
+# DanceGo · las 4 novelas (13-14/11)
+
+# Novela 1 — «Dame tres semanas»
 
 > copia del ad de 3:16 (el que marcaste, 2 de noviembre). 52 tomas de Veo 3.1 Fast.
 
@@ -191,3 +193,56 @@ Montaje a **VEL=1.25 · PAUSA=0.35** (pedido de Santiago: *"1.25 ponele de veloc
 Hoja de contactos de los dos videos terminados (1 cuadro cada 2,2 s) mas hoja por toma del hook y de la 3D: **sin brazos
 duplicados, sin manos de mas y sin objetos flotando**; el celular de la hija y el de la vecina estan sostenidos en la mano.
 El unico defecto encontrado fue el texto quemado del punto 5, y se regenero esa toma.
+
+
+---
+
+## Novelas 3 y 4 (14/11)
+
+Mismo molde, vinetas nuevas y los modulos compartidos reusados (la animada 3D, la cafeteria y el cierre).
+
+### Novela 3 — «El asado del domingo» (2:02 · 35 tomas, 12 nuevas)
+
+V · EL ASADO
+La cunada:  Vos seguis con el mismo plan de siempre, ¿no? El de empezar el lunes.
+Sandra:     Estoy viendo que hago, Patricia.
+La cunada:  Y bueno, mira, el verano llega igual, no te espera a vos.
+Sandra:     Tenes razon. Dame tres semanas y lo hablamos de nuevo.
+
+W · EL ASADO, TRES SEMANAS DESPUES
+La cunada:  A ver, para un segundo. ¿Vos que te hiciste?
+Sandra:     Dance Go. Diez minutos por dia en el living, con la tele prendida.
+La cunada:  ¿Y eso como es? ¿Hay que pagar todos los meses como el gimnasio?
+Sandra:     No tiene mensualidad. Lo pagas una vez y te queda. El test te dice por donde arrancar.
+
+X · EL PROBADOR
+Sandra:     Este me quedaba bien el ano pasado, te juro.
+La vendedora: ¿Te traigo el mismo pero dos talles mas grande?
+Sandra:     No. Guardamelo que en tres semanas vuelvo a probarmelo.
+La vendedora: Dale, te lo dejo separado con tu nombre.
+
+### Novela 4 — «La foto del cumple» (1:52 · 31 tomas, 8 nuevas)
+
+Y · LA COCINA DE LA OFICINA
+La companiera: Mira la foto del cumple de Marcela, salimos todas divinas.
+Sandra:     Yo estoy atras de todas, casi no se me ve.
+La companiera: Bueno, es que siempre te ponés atras, nena.
+Sandra:     Ya se. En la proxima me pongo adelante. Dame tres semanas.
+
+Z · LA MISMA COCINA, TRES SEMANAS DESPUES
+La companiera: Para, esta foto me la guardo. Estas otra persona, nena.
+Sandra:     Diez minutos por dia en el living, con la tele. Nada mas.
+La companiera: ¿Y vos cuando lo haces? Porque yo salgo de aca a las seis.
+Sandra:     Cuando puedo. El test te arma el plan segun el tiempo que tengas.
+
+## Entrega final
+| # | Archivo | Largo |
+|---|---|---|
+| 1 | `13-11 novela - 1 Dame tres semanas.mp4` | 2:53 |
+| 2 | `13-11 novela - 2 Agarrate del tuyo.mp4` | 2:31 |
+| 3 | `13-11 novela - 3 El asado del domingo.mp4` | 2:02 |
+| 4 | `13-11 novela - 4 La foto del cumple.mp4` | 1:52 |
+
+**Sexto gotcha (14/11): Veo quema marcas de agua inventadas.** La toma I2 salio con *"©UIO YSTONA"* y *"27 Quma."* escritos
+abajo. Como ese clip lo comparten las cuatro novelas, se regenero una sola vez agregando al prompt de accion
+**"Clean frame, no text, no captions, no watermark anywhere on screen"** y se remontaron las cuatro.

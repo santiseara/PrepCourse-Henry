@@ -153,6 +153,10 @@
 
 - **2026-11-11 · La descripción corta tiene forma: hook del mecanismo + 3 bullets + regalo/garantía + CTA.** En [[capsulas-encantadas]] pidió la descripción *"optimizada y no tan larga"*. La forma que quedó (unas 90 palabras, más corta que las 150 de la regla del 6/11): un renglón con el mecanismo y para quién se vende, **3 bullets con ✅** de lo que se llevan, un renglón con el regalo y la garantía, y el CTA con 👉. **Sin precio** (regla del 5/11) y **sin cifras de ingresos** cuando el destino es un quiz: la plata se cuenta adentro del quiz, no en el ad. Las variantes de testeo van de dos renglones, una por ángulo. Ejemplo en `OUTPUTS/2026-11-11-descripcion-capsulas-encantadas.md`.
 
+- **🐞 2026-11-14 · El Escritorio está en iCloud y puede vaciar los clips del pool.** En la tanda 1 de [[navidad-en-macrame]], diez MP4 de `~/Desktop/navidad-macrame/anuncios/work/clips/` quedaron con **tamaño en el `ls` pero sin datos en el disco** (`du` en 0, `head` devuelve *Error reading*), y el render murió con el mismo `AttributeError: 'NoneType' object has no attribute 'groups'` del *Duration* que deja una descarga truncada. No era tikwm corriendo en paralelo: era la sincronización. Regla: **antes de renderizar una tanda, pasarle `ffmpeg -i` a todo el pool** y rebajar los clips que no se leen (`dl_tikwm.py` los saltea si existen, así que primero hay que borrarlos).
+
+- **2026-11-14 · El OCR no ve los logos, porque son imagen.** En la tanda 1 de [[navidad-en-macrame]] el clip de la corona trenzada paso el OCR de Vision limpio y aparecio en tres renders con un **logo redondo del creador ("Claudia", con globos) arriba a la derecha**, semitransparente. Vision solo lo leyo tres veces en 32 cuadros y con letras rotas ("Blandia", "Clando"), asi que no levanto ninguna alarma. Regla: ademas del OCR, al pool se le arma un **mosaico de un cuadro grande (~300 px de ancho) por clip, a dos tiempos distintos**, y se le miran las **cuatro esquinas**. El OCR caza el cartel; el ojo caza el logo.
+
 ## Relacionado
 [[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 

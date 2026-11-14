@@ -39,11 +39,13 @@ Una cuarta cuenta, o más, sirve para **replicar horizontalmente** lo que gana. 
 
 Relacionado: [[testeo-de-creativos]] · [[escalado-en-meta-ads]] · [[metodo-v3]] · [[ia-en-el-flujo-de-trabajo]]
 
-## 📁 Entrega en Google Drive — las ofertas con el socio (REGLA FIJA, 2026-11-13)
+## 📁 Entrega en Google Drive — TODA tanda terminada (REGLA FIJA, 2026-11-13 · reconfirmada el 2026-11-14)
 
 Santiago: *"vos entrás a esa carpeta y vas a crear una nueva carpeta con el nombre de la oferta que el nombre de la oferta siempre por delante va a tener la palabra eBook… y dentro de la carpeta que crees vas a crear una carpeta que se llame Videos terminados y ahí vas a subir los anuncios terminados siempre siempre"*.
 
-**Toda oferta que se hace con el socio (Damián) se entrega en el Drive de Santiago, en este camino exacto:**
+**2026-11-14, al arrancar [[navidad-en-macrame]]: *"Acordate lo del drive, guardalo como regla así no lo tengo que repetir más"*.** O sea: el Drive **no se pregunta y no se avisa**. Apenas una tanda está renderizada y revisada, se sube, se da el link y recién ahí se cuenta que está lista. Vale para **toda oferta nueva**, no solo las del socio: si no hay una indicación distinta, el destino es `Ebook Dami`.
+
+**El camino exacto:**
 
 ```
 Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados /
@@ -82,7 +84,7 @@ Drive (exige eventos confiables y `webkitGetAsEntry` real), el `fetch` a un serv
 CSP de Drive), y las descargas automáticas del navegador (Chrome las bloquea después del primer intento).
 Tampoco hay Google Drive para escritorio instalado; si algún día se instala, la subida pasa a ser un `cp`.
 
-**La única excepción:** cuando la oferta es **de Santiago solo** (sus cosas, no las del socio). Ahí no va a `Ebook Dami`; se le pregunta o se usa el circuito de siempre de `~/Desktop/<oferta>/anuncios/`.
+**La única excepción:** cuando él dice expresamente que esa oferta no va al Drive. Mientras no lo diga, toda tanda terminada sube a `Ebook Dami` (regla reconfirmada el 2026-11-14).
 
 ### 🔧 Cómo se sube un MP4 al Drive desde acá (2026-11-13)
 Drive no deja subir por las vías obvias y esto costó encontrarlo, así que queda anotado:

@@ -108,7 +108,7 @@ Santiago, después de que las fotos de avatar del VSL de Monjaro se sacaran en H
 - Cada oferta nueva va en **una sola carpeta** `~/Desktop/<oferta>/` con tres subcarpetas: `imagenes/`, `landing/` y `anuncios/`. Nada suelto en el Escritorio.
 - Imágenes de landing, tapas y mockups van a `imagenes/`. HTML, .txt para ImpulTienda y PRUEBA.html, a `landing/`. Videos, guiones, natives y descripciones de ads, a `anuncios/`.
 - Santiago: "siempre así lo quiero, para que no dejes cosas sueltas en mi escritorio".
-- **Las ofertas con el socio se entregan en el Drive, no en el Escritorio** (2026-11-13: *"Metela en el drive siempre, no quiero mas en el escritorio"*), en `Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados`, con cada video nombrado por el arranque de su hook (regla fija del 2026-11-13, detalle en [[organizacion-y-registro]]).
+- **Los videos terminados se entregan en el Drive, no en el Escritorio** (2026-11-13: *"Metela en el drive siempre, no quiero mas en el escritorio"*; reconfirmado el 2026-11-14: *"Acordate lo del drive, guardalo como regla así no lo tengo que repetir más"*), en `Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados`, con cada video nombrado por el arranque de su hook. **Vale para toda tanda, sin preguntar y sin que lo pida**; el Escritorio queda como taller (`work/`). Detalle en [[organizacion-y-registro]].
 
 ## Registro y nombres
 - Los cambios de presupuesto o de puja que me pases van a `OUTPUTS/AAAA-MM-DD-registro-<oferta>.md` ([[organizacion-y-registro]]).

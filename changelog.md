@@ -1,3 +1,34 @@
+## 2026-11-14 (19ª pasada) — Navidad en Macramé: radiografía del competidor y tanda 1 para LATAM
+
+Santiago pasó la Ads Library de **emprender con manualidades** (`navidadenmacrame.impultienda.ar`) y pidió **6 ads de
+testeo para LATAM con acento neutro**. Además: *"Acordate lo del drive, guardalo como regla así no lo tengo que repetir más"*.
+
+- **Radiografía:** **26 creativos distintos y 58 ads activos**, el más viejo del 15/10 (un mes gastando). Tres creativos
+  duplicados 13, 10 y 10 veces. Se bajaron y transcribieron **10 de sus ads** (muestra, regla de no bajar todos) y se armó
+  la hoja de contactos de los 3 más duplicados.
+- **Su DNA:** 29-43 s, 105-130 palabras, siempre la misma escalera (hook → piezas concretas → "tenés más de X proyectos
+  paso a paso" → "no necesitás experiencia, cuatro nudos base" → 8 bonos → "hacé clic en el botón de abajo"). Dos
+  sub-ángulos que rotan: decorar tu casa y vender en diciembre.
+- **Su edición, que se clonó:** 100 % b-roll de macramé, **sin banda de hook**, subtítulos de 3 palabras con la palabra
+  activa en **caja magenta**, el producto anclado a la palabra que lo nombra y **sin placa de cierre**.
+- **Tanda 1 (6 videos de 29-33 s):** la casa decorada, la mesa de Nochebuena, el error de empezar en diciembre, los treinta
+  maestros distintos, el regalo de una tarde y el adorno de tienda contra el rollo de cuerda. Español neutro sin voseo y
+  sin cifra en moneda; voz Sulafat, acento verificado con Gemini.
+- **El pool costó:** de 104 clips de TikTok quedaron **23**. El nicho de macramé es casi todo tutorial con texto quemado
+  de punta a punta; el OCR de Vision volteó 10 clips por marca de agua del creador (hasta 61 cuadros de 63), y adentro de
+  los tags había **anuncios de otra guía de macramé navideño** y flyers de talleres presenciales.
+- **🐞 Clips vaciados por iCloud:** 10 MP4 de `~/Desktop/.../clips/` quedaron con tamaño pero **sin datos** (`du` en 0,
+  "Error reading"), y el render murió con el `AttributeError: 'NoneType' ... Duration`. El Escritorio está sincronizado:
+  si una tanda tarda, hay que revisar el pool con `ffmpeg -i` antes de renderizar y rebajar los que no se leen.
+- **🐞 El OCR no ve los logos:** un clip con el logo redondo de la creadora arriba a la derecha paso el escaneo de texto
+  y aparecio en tres renders. Se agrego al metodo un **mosaico de un cuadro grande por clip** para mirarle las esquinas.
+- **Archivos:** `OUTPUTS/2026-11-14-guiones-navidad-macrame-tanda1.md` (guiones + descripción corta + 6 variantes),
+  `WIKI/navidad-en-macrame.md`, y los scripts `gfx_macrame.py`, `vent_macrame.py`, `gen_macrame_plans.py`, `edit_macrame.py`.
+- **Regla reconfirmada:** el Drive es el destino de **toda** tanda terminada, sin preguntar ([[organizacion-y-registro]],
+  [[como-trabajar-con-santiago]] y memoria `entrega-en-drive`).
+- **Pendiente:** confirmar el nombre de la oferta propia (los guiones dicen "Navidad en Macramé", igual que la original),
+  el precio y la landing de LATAM.
+
 ## 2026-11-14 (18ª pasada) — Postres en vaso: radiografía del competidor argentino y tanda 1
 
 Santiago pasó la Biblioteca de **Recetas para la familia** (`mi-dulce-negocio-postres-en-vaso-irresistibles.impultienda.ar`,

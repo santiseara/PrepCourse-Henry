@@ -17,6 +17,15 @@ Santiago pasó la búsqueda de la Ads Library de `crobavault-t8.impultienda.ar`:
 - **Editor `edit_color.py`** (clon de `edit_macrame.py`) con el montaje de ellos: pastilla del hook **amarilla
   #F5C518**, subtítulo de 2 palabras con la activa en amarillo, chip de reatribución, placa de entregables y botón
   terracota #C1622F. Los mockups flotantes del producto **no** se copian (regla de cero fotos fijas).
+- **Los 6 videos** (21 a 25 s, 9 a 11 planos) en `Ebook Dami / Ebook Color Exacto (ARG) / Videos terminados`,
+  nombrados por su hook. Masters en `~/Desktop/color-exacto/anuncios/` como `15-11 - N.mp4`.
+- 🐞 **El clon de `edit_macrame.py` no traía `noflip`:** los tubos **8.46 + 8.60 salieron espejados** en tres videos
+  (los números del tinte al revés, en el ad que vende fórmulas). Agregado al editor y re-renderizados.
+- **El chip lleva cruz roja**, así que dice el costo y no el beneficio: en V5, *"es lo que mejor se paga"* pasó a
+  *"y se va a otro salón"*.
+- ⛔ **El conector de Drive no toma rutas por referencia** (`base64Content` con una ruta devuelve *"not a valid base64
+  string"*, con y sin `@`): la subida sigue siendo por el navegador con el parche del `input`. Anotado en
+  [[organizacion-y-registro]].
 - `WIKI/color-exacto.md` nueva, con su oferta, sus 6 ángulos, su DNA y su montaje.
 
 ## 2026-11-15 (28ª pasada) — KeyMaster Hub: los 6 videos a speed 1.30

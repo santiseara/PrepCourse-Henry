@@ -49,6 +49,14 @@ El 6 es el más repetido de todos: es el que lleva la **reatribución de culpa**
 - Editor `OUTPUTS/scripts-vsl/edit_color.py` (clon de `edit_macrame.py`) con la pastilla del hook en **amarillo #F5C518** y el botón en **terracota #C1622F**, como ellos.
 - **El texto de objeto se deja:** el clip con los tubos `8.46 + 8.60` es exactamente la fórmula de la que habla el guion.
 
+## Dos cosas que costaron un re-render (2026-11-15)
+- 🐞 **`edit_macrame.py` no traía `noflip`.** Al clonarlo salieron los tubos **8.46 + 8.60 espejados**: los números
+  del tinte se leían al revés, justo en el ad que vende fórmulas. El editor espeja un clip cuando su `usage` es impar;
+  keymaster ya tenía la excepción y macramé no. **Al clonar un editor, revisar que soporte `noflip` antes de armar un
+  pool con texto de objeto** (tubos, cajas, etiquetas, códigos).
+- **El chip lleva una cruz roja**, así que su texto tiene que ser **el costo, no el beneficio**. En V5 decía *"es lo que
+  mejor se paga"* con una cruz al lado: quedó como un error. Pasó a *"y se va a otro salón"*.
+
 ## Preguntas abiertas
 - Nombre para Argentina: ¿se queda **Color Exacto** o se renombra el método?
 - Checkout y precio en pesos (todavía no hay landing AR).

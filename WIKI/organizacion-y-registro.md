@@ -82,6 +82,11 @@ el pool de clips y los masters en alta).
 deja un ad de 45 s en 1080x1920 en **8,5–9,6 MB** (el render sale a 12 Mbps, 65–76 MB). Es calidad de
 sobra para Meta, que recomprime igual. **El master en alta queda en `work/masters/`.**
 
+⛔ **El conector de Drive no toma rutas por referencia** (probado otra vez el 2026-11-15): pasarle la ruta del MP4 en
+`base64Content` devuelve *"The file content is not a valid base64 string"*, con y sin `@` adelante, y desde el
+scratchpad de la sesión. O entra el base64 entero (y un video de 5 MB son ~7 MB de payload dentro del contexto) o se
+sube por el navegador. **El camino sigue siendo el navegador con el parche**, que además sube los 6 de una.
+
 ⛔ Lo que **no** funciona y no hay que volver a probar: el evento `drop` sintético sobre la página de
 Drive (exige eventos confiables y `webkitGetAsEntry` real), el `fetch` a un servidor local (lo corta la
 CSP de Drive), y las descargas automáticas del navegador (Chrome las bloquea después del primer intento).

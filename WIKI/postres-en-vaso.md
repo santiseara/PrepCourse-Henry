@@ -73,6 +73,13 @@ todas hubo que recortarles el cartel inicial del creador. Dos planos héroe: la 
 Entrega: `Ebook Dami / Ebook Postres en Vaso (ARG) / Videos terminados`, cada MP4 con el arranque de su
 hook. Taller en `~/Desktop/mi-dulce-negocio/anuncios/` (`work/`, `tiktoks/`, `vo/`, `entrega/`).
 
+## Descripción para los ads — 14/11
+`OUTPUTS/2026-11-14-descripcion-postres-en-vaso.md` · forma corta validada (hook del mecanismo + 3 bullets ✅ + regalos/garantía + CTA 👉), 114 palabras, en voseo y **sin precio ni cifras en pesos**.
+
+**El ángulo de la descripción es el que su arsenal no toca: el pedido.** Ellos corren *"¿Te gustaría ganar dinero sin salir de casa? 🍰"* en los ~81 ads; la nuestra entra por *"Nadie encarga un postre en vaso. Encarga veinte, para el cumpleaños del sábado"*. Las 3 variantes de testeo son los otros ángulos de la tanda 1: el margen (un kilo de helado → diez vasitos), el stock que se arma y no se hornea, y la foto al grupo del colegio.
+
+La garantía de 30 días y el acceso de por vida van **como estándar de ImpulTienda**, no porque los tenga la landing del competidor: si la nuestra no los lleva, se borra el renglón.
+
 ## Preguntas abiertas
 - **¿Cómo se llama nuestra oferta y cuál es el precio?** Los seis guiones dicen "la guía" y "baratísima" para no quedar atados a un nombre.
 - **¿Entregables propios?** La tanda usa los del competidor (50 recetas, calculadora, 30 textos, calendario). Si la landing propia cambia alguno, hay que tocar el guion ([[guiones-y-anuncios]], regla del 5/11: el guion se escribe con la landing en la mano).

@@ -1,3 +1,21 @@
+## 2026-11-14 (23ª pasada) — Postres en Vaso: la descripción para los ads
+
+Pedido: *"Dame una descripción para la oferta de recetas que hicimos hoy… Para los anuncios"*. De las tres ofertas de
+hoy (Glúteo Despierto, Navidad en Macramé, Postres en Vaso), la de recetas es **Postres en Vaso**.
+
+- **Forma corta validada** (regla del 11/11): hook del mecanismo + 3 bullets ✅ + renglón de regalos y garantía + CTA 👉.
+  **114 palabras**, en voseo.
+- **Sin precio y sin una sola cifra en pesos.** El precio todavía no está definido y, sobre todo, **el competidor no usa
+  ninguna cifra en sus ~81 ads**: meter un número de ingresos sin tener el precio real de venta de un vasito en
+  Argentina sería inventarlo.
+- **El ángulo entra por donde ellos no entran.** Sus ~81 anuncios corren **la misma descripción**
+  (*"¿Te gustaría ganar dinero sin salir de casa? 🍰"*). La nuestra arranca con *"Nadie encarga un postre en vaso.
+  Encarga veinte, para el cumpleaños del sábado"* — el ángulo del **pedido**, que su arsenal no toca.
+- **3 variantes de testeo**, una por ángulo de la tanda 1: el margen (un kilo de helado → diez vasitos), el stock que se
+  arma y no se hornea, y la foto al grupo del colegio.
+- Anotado en el archivo: la **garantía de 30 días y el acceso de por vida** van como estándar de ImpulTienda, no porque
+  los tenga la landing del competidor. Si la nuestra no los lleva, se borra ese renglón.
+
 ## 2026-11-14 (22ª pasada) — Glúteo Despierto: los CTAs del último slide
 
 Santiago pidió ajustar los botones del último slide con su checkout. **El link no llegó en el mensaje** (se cortó al

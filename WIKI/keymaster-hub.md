@@ -67,18 +67,19 @@ Carpeta: `~/Desktop/keymaster-hub/anuncios/` (`work/`, `work/app/`, `gfx/`, `vo/
   La key quedó en `~/.keys/gemini.env` (chmod 600, **fuera del repo**) y `voces.sh` la carga sola.
 
 ### Los 6 videos (14/11)
-`~/Desktop/keymaster-hub/anuncios/entrega/`, 9:16 1080x1920, **24,3 a 29,2 s** (el rango de ellos es 27-46).
-Voz **Orus**, `speed 1.06` y `silence [0.26, 0.12]` — **no 1.30**: estas voces salieron a ritmo natural
-(26-34 s de crudo) y a 1.30 quedaban en 20-26 s, por debajo del rango del competidor.
+`~/Desktop/keymaster-hub/anuncios/entrega/`, 9:16 1080x1920, **19,9 a 23,9 s**.
+Voz **Orus**, `speed 1.30` y `silence [0.26, 0.12]`. Los había montado a 1.06 para quedar dentro del rango del
+competidor (27-46 s) y Santiago lo corrigió el 15/11: *"ponele mas velocidad en el audio"*. **1.30 es la regla fija
+de la voz en off** y gana sobre el largo del competidor — no era una decisión mía para tomar.
 
 | # | Hook | Largo | Planos |
 |---|---|---|---|
-| 1 | Last month I turned down a job | 27,8 s | 13 |
-| 2 | Let me check and call you back | 26,4 s | 11 |
-| 3 | Ten minutes looking up a chip | 27,5 s | 13 |
-| 4 | The customer is watching you | 29,2 s | 13 |
-| 5 | If you're doing rekeys all day | 28,5 s | 14 |
-| 6 | Wrong shell, wrong battery | 24,3 s | 11 |
+| 1 | Last month I turned down a job | 22,7 s | 10 |
+| 2 | Let me check and call you back | 21,6 s | 10 |
+| 3 | Ten minutes looking up a chip | 22,5 s | 10 |
+| 4 | The customer is watching you | 23,9 s | 9 |
+| 5 | If you're doing rekeys all day | 23,4 s | 10 |
+| 6 | Wrong shell, wrong battery | 19,9 s | 8 |
 
 **El pool costó:** de 147 clips bajados quedaron **14 ventanas** (498 s). El nicho esta tomado por video con
 **subtitulo quemado de punta a punta** y por **marcas de agua de cerrajerias con telefono**. En el control de

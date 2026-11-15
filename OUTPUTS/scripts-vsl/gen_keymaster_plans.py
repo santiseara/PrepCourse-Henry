@@ -5,8 +5,8 @@ Clonado de "Centro Maestro del Cerrajero": b-roll de cerrajeria automotriz, la a
 completa dos o tres veces por video anclada a la palabra que la nombra, subtitulo de UNA palabra
 en dorado con borde negro y placa de cierre con el CTA.
 
-Las voces salieron a ritmo natural (26-34 s para 67-86 palabras), asi que van a speed 1.06 y no
-a 1.30: con 1.30 quedarian en 20-26 s, por debajo del rango del competidor (27-46 s).
+Van a speed 1.30, la regla fija de Santiago para la voz en off (pedido del 15/11: "ponele mas
+velocidad en el audio"). Quedan mas cortos que el competidor (27-46 s), y esta bien asi.
 
 Uso: python3 gen_keymaster_plans.py   -> escribe V1.json .. V6.json en work/
 """
@@ -67,7 +67,7 @@ for v in VIDEOS:
     pool, clips = pool_y_clips()
     plan = dict(
         vo=f"../vo/V{v['n']}.wav", script=f"V{v['n']}.txt", lang='en',
-        speed=1.06, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=1,
+        speed=1.30, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=1,
         hi=ORO, hibox=NEGRO, hibord=8, capy=1430,
         seed=v['n'] * 211, usage='usage.json',
         clips=clips, pool=pool, anchors=v['anchors'],

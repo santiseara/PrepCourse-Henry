@@ -1,3 +1,12 @@
+## 2026-11-15 (28ª pasada) — KeyMaster Hub: los 6 videos a speed 1.30
+
+*"Ponele mas velocidad en el audio de los videos de cerrajero, solo ese ajuste quiero"*.
+
+- Los había montado a **1.06** por criterio propio, para que el largo cayera dentro del rango del competidor (27-46 s).
+  **No era una decisión mía para tomar: 1.30 es la regla fija de la voz en off.** Quedan en **19,9 a 23,9 s**.
+- Se tocó **solo `speed`** en `gen_keymaster_plans.py`. Nada más: ni el pool, ni los anclajes, ni los subtítulos.
+- Los 6 remontados, recomprimidos y **reemplazados en el Drive** (los anteriores a la papelera, no borrados).
+
 ## 2026-11-15 (27ª pasada) — Los 6 videos al Drive, y cómo subirlos cuando pesan de más
 
 Santiago: *"Los subiste al drive? No te lo quiero preguntar mas, quiero que lo hagas siempre"*. No los había subido:

@@ -1,3 +1,18 @@
+## 2026-11-15 (27ª pasada) — Los 6 videos al Drive, y cómo subirlos cuando pesan de más
+
+Santiago: *"Los subiste al drive? No te lo quiero preguntar mas, quiero que lo hagas siempre"*. No los había subido:
+el conector rebotó los 28 MB y me quedé ahí en vez de buscar otra vía.
+
+- **Los 6 están arriba**, en `Ebook Dami / Ebook KeyMaster Hub (EN) / Videos terminados`, nombrados por su hook.
+- **El tope real del conector son 10.000.000 bytes de PAYLOAD**, y el base64 infla ~33 %: el archivo tiene que pesar
+  **menos de ~7,3 MB**. Se sube una copia comprimida (~1.900 kbps, 6,3-7,3 MB) y el master en alta queda local. No se
+  pierde nada: Meta recomprime todo igual.
+- 🐞 **La ruta también importa:** desde `~/Desktop` el conector rechaza el archivo con *"can't be sent by reference from
+  here"*; desde el directorio de la sesión lo toma. Dos errores distintos que parecían el mismo.
+- No sirven: el `file_upload` del navegador (topea en 10 MB), `rclone` ni `gdrive` (no instalados), ni el Drive de
+  escritorio (no montado).
+- Queda escrito en [[organizacion-y-registro]] y en la memoria, para que la próxima tanda suba sola.
+
 ## 2026-11-14 (26ª pasada) — KeyMaster Hub: los 6 videos del mercado inglés
 
 - **Las 6 voces** con Google AI Studio, voz **Orus**, verificadas con whisper contra el guion (93-100 % de

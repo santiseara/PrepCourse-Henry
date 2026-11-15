@@ -106,3 +106,21 @@ Drive no deja subir por las vías obvias y esto costó encontrarlo, así que que
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/organizacion-y-registro.md (página de la wiki previa, actualizada el 2026-09-24)
 - Fuentes originales citadas (todavía no están en este cerebro): clases de la formación y experiencias de la comunidad, agosto–septiembre 2026
+
+## 🆕 2026-11-15 · Cómo se sube una tanda al Drive cuando el video pesa de más
+
+La regla es que **toda tanda terminada sube sola** a `Ebook Dami / Ebook <oferta> / Videos terminados`. El problema
+práctico: el conector de Drive tiene un tope de **10.000.000 bytes de payload** y el base64 infla ~33 %, así que el
+archivo tiene que pesar **menos de ~7,3 MB**. Un ad vertical de 27 s sale de 22 a 30 MB: no entra nunca tal cual.
+
+El camino que funciona:
+1. **Una copia comprimida para el Drive**, dejando el master en alta en `entrega/`. Bitrate objetivo
+   `6.900.000 × 8 ÷ duración ÷ 1000 − 130` kbps, con `-preset slow -movflags +faststart -c:a aac -b:a 128k`.
+   A 27 s da ~1.900 kbps y queda en 6,5-7 MB. **No se pierde nada**: Meta recomprime todo lo que se sube.
+2. **Copiarla al directorio de la sesión.** Desde `~/Desktop` el conector la rechaza con *"can't be sent by reference
+   from here"*; desde el scratchpad la toma. Es por la ruta, no por el archivo.
+3. `create_file` con `disableConversionToGoogleType: true`, cada MP4 nombrado **por el arranque de su hook**.
+4. Verificar con `search_files` por `parentId` que estén todos.
+
+Lo que **no** sirve: el `file_upload` del navegador (topea en 10 MB), `rclone` y `gdrive` (no están instalados) y el
+Drive de escritorio (no está montado en esta Mac).

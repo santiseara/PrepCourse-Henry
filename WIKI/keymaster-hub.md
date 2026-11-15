@@ -106,7 +106,7 @@ texto de objeto se le agrego la marca **`noflip`**.
 - **El nombre lo elegí yo** ("KeyMaster Hub"). Si preferís otro, es un find/replace sobre los 6 guiones.
 - **Precio y checkout** de la versión en inglés. A US$6.99 / US$9.99 el margen en habla inglesa da mucho mejor que en LATAM, así que conviene revisar si no va más arriba.
 - **Falta el pool de b-roll.** El nicho en TikTok (`#locksmith`, `#automotivelocksmith`, `#carkeyprogramming`) todavía no se relevó, y por la regla del 10/11 hay que mirar si no está podrido de video con texto quemado.
-- **Falta subir los 6 al Drive.** La carpeta ya está creada (`Ebook Dami / Ebook KeyMaster Hub (EN) / Videos terminados`), pero el conector no toma archivos de ~28 MB por referencia y el upload del navegador topea en 10 MB: hay que arrastrarlos a mano.
+- ~~Falta subir los 6 al Drive.~~ **Subidos** a `Ebook Dami / Ebook KeyMaster Hub (EN) / Videos terminados` el 15/11, en versión comprimida (6,3-7,3 MB) porque el conector topea en 10 MB de payload. Los masters en alta quedan en `entrega/`. Método en [[organizacion-y-registro]].
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[funnel-hacking]] · [[caza-de-ofertas]] · [[internacionalizacion]] · [[testeo-de-creativos]] · [[navidad-en-macrame]]

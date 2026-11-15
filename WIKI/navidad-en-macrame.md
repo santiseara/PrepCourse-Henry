@@ -49,6 +49,15 @@ Santiago, el 14/11: *"va con el mismo [nombre], obviamente hagámoslos un poco d
 en arg, yo voy a tirar en el resto de países de LATAM"*. Así que la oferta se llama igual que la original y los
 guiones son variantes de su DNA, no copias: mismo esqueleto, hooks y ángulos propios.
 
+## Descripción para los ads — 14/11
+`OUTPUTS/2026-11-14-descripcion-navidad-macrame.md` · forma corta validada (hook + 3 bullets ✅ + bonos/garantía + CTA 👉), 129 palabras, **en neutro y sin una sola cifra en moneda**.
+
+**El ángulo principal es el calendario**, que es el único que caduca solo y el que mejor rinde en noviembre: *"El problema nunca fue el macramé. Es que todos empiezan en diciembre, cuando ya no da el tiempo."* Es el hook tipo (c) de su DNA, el del error de arrancar tarde.
+
+Las 3 variantes son los otros sub-ángulos que ellos rotan: **vender en diciembre** (un adorno de tienda cuesta más que el rollo con el que haces veinte — el margen **sin nombrar moneda**, que es lo que necesita una oferta multi-país), **la mesa de Nochebuena** y **los regalos**.
+
+Todos los datos salen de su landing (los +100 proyectos en 6 categorías, los 4 nudos, los 8 bonos, la descarga inmediata y la **garantía de 7 días**). El CTA quedó **agnóstico del botón** ("Toca el botón") porque la landing LATAM todavía no está.
+
 ## Preguntas abiertas
 - Precio y checkout de la versión LATAM.
 

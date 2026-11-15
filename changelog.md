@@ -1,3 +1,22 @@
+## 2026-11-14 (24ª pasada) — Navidad en Macramé: la descripción para los ads
+
+Misma forma corta que la de Postres en Vaso, pero **el registro cambia entero**: esta sale a varios países de LATAM, así
+que va en **español neutro, tuteando y sin una sola cifra en moneda**.
+
+- **El ángulo principal es el calendario.** *"El problema nunca fue el macramé. Es que todos empiezan en diciembre,
+  cuando ya no da el tiempo."* Es el hook tipo (c) de su DNA y el único que caduca solo: en noviembre rinde como ninguno.
+- **3 variantes**, una por sub-ángulo de los que ellos rotan: vender en diciembre, la mesa de Nochebuena y los regalos.
+- **El margen, sin nombrar moneda:** *"Un solo adorno de tienda cuesta más que el rollo de cuerda con el que haces
+  veinte."* Es la forma de dar la cuenta en una oferta multi-país.
+- **Todos los datos son de su landing**, ninguno inventado: +100 proyectos en 6 categorías, los 4 nudos base,
+  materiales + metros de cuerda + fotos, 8 bonos, descarga inmediata, acceso de por vida y **garantía de 7 días** (la de
+  ellos; si la LATAM pone otra, se cambia el número).
+- **Va con el mismo nombre** que la original, como pidió Santiago: ellos corren solo en Argentina, esto es arbitraje y
+  no competencia de frente, así que la descripción se queda cerca de su DNA.
+- **CTA agnóstico del botón** ("Toca el botón"), porque la landing LATAM todavía no está.
+- Verificado por código que no se coló ningún voseo ni argentinismo (ni *tocá/armá/vos*, ni *shopping*, ni *plata*) y
+  que no hay ninguna cifra en moneda.
+
 ## 2026-11-14 (23ª pasada) — Postres en Vaso: la descripción para los ads
 
 Pedido: *"Dame una descripción para la oferta de recetas que hicimos hoy… Para los anuncios"*. De las tres ofertas de

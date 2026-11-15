@@ -1,3 +1,24 @@
+## 2026-11-15 (28ª pasada) — Color Exacto: oferta nueva para Argentina, tanda 1 de 6 videos
+
+Santiago pasó la búsqueda de la Ads Library de `crobavault-t8.impultienda.ar`: *"Vamos con esta oferta pero para arg…
+6 ads de testeo, que las visuales sean de los tratamientos de los que habla… Metele velocidad"*.
+
+- **Quiénes son:** página **Nube Educativa**, curso de colorimetría **Color Exacto** (100 fórmulas + Método de las 3
+  Lecturas, 15 módulos, 40 lecciones, 6 herramientas imprimibles, 5 bonos, US$ 24 de US$ 59). **~200 anuncios activos.**
+- **El dato que decide el arbitraje:** los 30 más vistos son **el mismo set de 6 ángulos traducido** a italiano,
+  francés, inglés, alemán, japonés y hebreo. **Ni uno en español.** Argentina está libre.
+- **Su DNA de guion (29 s, ~80 palabras):** hook con el error concreto → **reatribución de culpa** ("no fue tu mano,
+  fue el fondo de aclaración") → las 3 lecturas → entregables con número → desde cero y a tu ritmo → "Tocá Más
+  información". **Nunca dicen el precio.**
+- **6 guiones en voseo**, uno por ángulo, 75-82 palabras. `OUTPUTS/2026-11-15-guiones-color-exacto-tanda1.md`.
+- **Pool:** 75 clips bajados de `#balayage`, `#coloracioncapilar`, `#mechascabello` y `#babylights`; **20 ventanas
+  limpias de 36 revisadas**. El nicho del color es el más limpio que vimos hasta ahora: casi todo es espalda, manos y
+  pelo. Se dejó el clip con los tubos **8.46 + 8.60** (texto de objeto = la fórmula de la que habla el guion).
+- **Editor `edit_color.py`** (clon de `edit_macrame.py`) con el montaje de ellos: pastilla del hook **amarilla
+  #F5C518**, subtítulo de 2 palabras con la activa en amarillo, chip de reatribución, placa de entregables y botón
+  terracota #C1622F. Los mockups flotantes del producto **no** se copian (regla de cero fotos fijas).
+- `WIKI/color-exacto.md` nueva, con su oferta, sus 6 ángulos, su DNA y su montaje.
+
 ## 2026-11-15 (28ª pasada) — KeyMaster Hub: los 6 videos a speed 1.30
 
 *"Ponele mas velocidad en el audio de los videos de cerrajero, solo ese ajuste quiero"*.

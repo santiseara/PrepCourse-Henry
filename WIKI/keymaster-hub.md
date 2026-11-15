@@ -46,6 +46,26 @@
 
 Más **10 hooks sueltos en inglés** para renovar.
 
+## Producción de los 6 videos — estado al 14/11
+Carpeta: `~/Desktop/keymaster-hub/anuncios/` (`work/`, `work/app/`, `gfx/`, `vo/`, `tiktoks/`, `entrega/`).
+
+**Su edición, sacada de la hoja de contactos de 4 de sus ads:**
+- **B-roll de cerrajería automotriz**: manos con llaves, remote tester Xhorse, placas de control remoto, estación de soldadura, duplicadora, cajas de espadines. Siempre plano cerrado sobre la mesa de trabajo.
+- **La app a pantalla completa, dos o tres veces por video.** No es un overlay: es un plano más del montaje, y es el único que demuestra que el producto existe.
+- **Subtítulo de UNA palabra**, en mayúscula, **dorado con borde negro** y sin caja.
+- **Sí llevan placa de cierre**: el CTA sobre el b-roll con **tres flechas rojas** hacia abajo.
+- Ojo: varios de sus clips traen `LABPINS.COM` quemado — es b-roll de terceros, no de ellos.
+
+**Hecho:**
+- ✅ `OUTPUTS/scripts-vsl/gfx_keymaster.py` → **4 maquetas de la app** dibujadas por código (catálogo, búsqueda, ficha técnica y secciones), **en inglés y con parque norteamericano** (F-150, Silverado, Civic, Camry, RAM 1500; 315 MHz). Convertidas a planos de 5 s con zoom suave en `work/app/`.
+- ✅ `OUTPUTS/scripts-vsl/edit_keymaster.py` → editor clonado de `edit_macrame.py` con su paleta y su cierre.
+- ✅ Los 6 guiones en `work/V1.txt` … `V6.txt` y el `style.txt` del locutor, listos para TTS.
+- ⏳ Pool de b-roll: **147 clips** de `#automotivelocksmith` bajándose con `dl_tikwm.py`.
+
+**Bloqueado:** la voz en off. `GEMINI_API_KEY` no está en el entorno de la sesión y buscarla en los
+archivos de configuración está (bien) bloqueado. Sin voz no hay montaje, porque el editor arranca
+alineando las palabras del guion contra el audio. Voz **Orus** (hombre), `speed 1.30`.
+
 ## Preguntas abiertas
 - 🚨 **La base de datos de ellos es latinoamericana y el ad en inglés promete otra cosa.** Sus tres ejemplos son **Hyundai HB20, VW Gol G6 y Chevrolet Onix**, con frecuencias de **433.92 MHz**. En US/CA el parque es F-150, Silverado, RAM, Civic, Camry y la frecuencia típica es **315 MHz**. **Esto se decide antes de gastar un peso:** o se arma la base con vehículos norteamericanos, o los guiones salen sin nombrar modelos concretos (son dos líneas de cambio, pero pegan menos).
 - **El nombre lo elegí yo** ("KeyMaster Hub"). Si preferís otro, es un find/replace sobre los 6 guiones.

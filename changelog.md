@@ -1,3 +1,22 @@
+## 2026-11-14 (26ª pasada) — KeyMaster Hub: los 6 videos del mercado inglés
+
+- **Las 6 voces** con Google AI Studio, voz **Orus**, verificadas con whisper contra el guion (93-100 % de
+  calce, los 6 MD5 distintos, ninguna lee el style). 🐞 Dos trampas nuevas: el **`gemini-3.8-flash-tts` lee
+  el style en voz alta** aunque termine en dos puntos (sí lo respetan el 2.5 y el 3.1), y la **cuota del free
+  tier es 10 por día Y POR MODELO**, así que la tanda terminó rotando entre tres modelos.
+- **Los 6 videos**, 9:16, **24,3 a 29,2 s**, 11 a 14 planos. `speed 1.06` y no 1.30: estas voces ya salieron a
+  ritmo natural y a 1.30 quedaban por debajo del rango del competidor.
+- **El pool:** 147 clips bajados de `#automotivelocksmith` → **14 ventanas**. El nicho está tomado por video
+  con subtítulo quemado y por marcas de agua de cerrajerías con teléfono. En el control de la hoja de
+  contactos se cayeron 11 más: **seis con cara hablando a cámara**, dos con **bandas negras** y tres que no
+  aportaban. Se dejó el texto del objeto (HON66, HU92, TOY48, CR2032, CARDOT), que en este nicho suma.
+- 🐞 **Las maquetas de la app tienen que ir como PNG con `still`.** El editor espeja planos como variación y
+  la primera pasada sacó la ficha técnica **al revés**, con el texto ilegible. Se agregó además la marca
+  **`noflip`** para los clips con texto de objeto.
+- Nuevos scripts: `gfx_keymaster.py`, `edit_keymaster.py`, `gen_keymaster_plans.py`.
+- **Pendiente:** subir los 6 al Drive. La carpeta está creada, pero el conector no toma archivos de ~28 MB
+  por referencia y el upload del navegador topea en 10 MB.
+
 ## 2026-11-14 (26ª pasada) — Glúteo Despierto: el contador de la portada
 
 Santiago: *"El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva"*.

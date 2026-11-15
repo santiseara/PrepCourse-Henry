@@ -60,18 +60,53 @@ Carpeta: `~/Desktop/keymaster-hub/anuncios/` (`work/`, `work/app/`, `gfx/`, `vo/
 - ✅ `OUTPUTS/scripts-vsl/gfx_keymaster.py` → **4 maquetas de la app** dibujadas por código (catálogo, búsqueda, ficha técnica y secciones), **en inglés y con parque norteamericano** (F-150, Silverado, Civic, Camry, RAM 1500; 315 MHz). Convertidas a planos de 5 s con zoom suave en `work/app/`.
 - ✅ `OUTPUTS/scripts-vsl/edit_keymaster.py` → editor clonado de `edit_macrame.py` con su paleta y su cierre.
 - ✅ Los 6 guiones en `work/V1.txt` … `V6.txt` y el `style.txt` del locutor, listos para TTS.
-- ⏳ Pool de b-roll: **147 clips** de `#automotivelocksmith` bajándose con `dl_tikwm.py`.
+- ✅ Pool de b-roll: 147 clips de `#automotivelocksmith`, curados a 14 ventanas.
 
-**Bloqueado:** la voz en off. `GEMINI_API_KEY` no está en el entorno de la sesión y buscarla en los
-archivos de configuración está (bien) bloqueado. Sin voz no hay montaje, porque el editor arranca
-alineando las palabras del guion contra el audio. Voz **Orus** (hombre), `speed 1.30`.
+- ✅ **Las 6 voces en off**, en `vo/V1.wav` … `V6.wav`. Google AI Studio, voz **Orus**, 26 a 34 s.
+  Verificadas con whisper contra el guion: calzan 93-100 %, los 6 MD5 distintos y ninguna lee el style.
+  La key quedó en `~/.keys/gemini.env` (chmod 600, **fuera del repo**) y `voces.sh` la carga sola.
+
+### Los 6 videos (14/11)
+`~/Desktop/keymaster-hub/anuncios/entrega/`, 9:16 1080x1920, **24,3 a 29,2 s** (el rango de ellos es 27-46).
+Voz **Orus**, `speed 1.06` y `silence [0.26, 0.12]` — **no 1.30**: estas voces salieron a ritmo natural
+(26-34 s de crudo) y a 1.30 quedaban en 20-26 s, por debajo del rango del competidor.
+
+| # | Hook | Largo | Planos |
+|---|---|---|---|
+| 1 | Last month I turned down a job | 27,8 s | 13 |
+| 2 | Let me check and call you back | 26,4 s | 11 |
+| 3 | Ten minutes looking up a chip | 27,5 s | 13 |
+| 4 | The customer is watching you | 29,2 s | 13 |
+| 5 | If you're doing rekeys all day | 28,5 s | 14 |
+| 6 | Wrong shell, wrong battery | 24,3 s | 11 |
+
+**El pool costó:** de 147 clips bajados quedaron **14 ventanas** (498 s). El nicho esta tomado por video con
+**subtitulo quemado de punta a punta** y por **marcas de agua de cerrajerias con telefono**. En el control de
+la hoja de contactos (3 cuadros por ventana) se cayeron 11 mas: **seis con cara hablando a camara**, dos con
+**bandas negras** quemadas y tres que no aportaban. Lo que se dejo es el texto del **objeto**, que en este
+nicho juega a favor: HON66, HU92, TOY48, HU162T, CR2032, CARDOT, Milwaukee PACKOUT.
+
+🐞 **Las maquetas de la app van como PNG con `still`, nunca como video.** El editor **espeja** planos como
+variacion anti-repeticion, y la primera pasada saco la ficha tecnica **al reves**, con todo el texto
+ilegible. Con `still` el editor nunca las voltea y ademas les pone el zoom el mismo. Para los clips con
+texto de objeto se le agrego la marca **`noflip`**.
+
+### 🐞 Dos trampas del TTS en esta tanda
+1. **El style tiene que terminar en dos puntos, y aun así el `gemini-3.8-flash-tts` lo lee en voz alta.**
+   Con el style terminado en punto, las 6 primeras voces arrancaron recitando *"Read this as a working
+   automotive locksmith…"*. Se corrigió a dos puntos y **el 3.8 lo siguió leyendo**. Los que sí lo respetan
+   son **`gemini-2.5-flash-preview-tts`** y **`gemini-3.1-flash-tts-preview`**. Regla: con el 3.8, el style
+   no es confiable; se verifica **siempre** transcribiendo el WAV antes de montar.
+2. **La cuota del free tier es de 10 requests por día Y POR MODELO.** Se agotó el 3.8, después el 2.5, y la
+   tanda se terminó con el 3.1. Si hay que rehacer voces el mismo día, se rota de modelo — es lo que ya había
+   pasado en [[postres-en-vaso]]. Con 6 voces y un error de style, se queman 2 modelos de entrada.
 
 ## Preguntas abiertas
 - 🚨 **La base de datos de ellos es latinoamericana y el ad en inglés promete otra cosa.** Sus tres ejemplos son **Hyundai HB20, VW Gol G6 y Chevrolet Onix**, con frecuencias de **433.92 MHz**. En US/CA el parque es F-150, Silverado, RAM, Civic, Camry y la frecuencia típica es **315 MHz**. **Esto se decide antes de gastar un peso:** o se arma la base con vehículos norteamericanos, o los guiones salen sin nombrar modelos concretos (son dos líneas de cambio, pero pegan menos).
 - **El nombre lo elegí yo** ("KeyMaster Hub"). Si preferís otro, es un find/replace sobre los 6 guiones.
 - **Precio y checkout** de la versión en inglés. A US$6.99 / US$9.99 el margen en habla inglesa da mucho mejor que en LATAM, así que conviene revisar si no va más arriba.
 - **Falta el pool de b-roll.** El nicho en TikTok (`#locksmith`, `#automotivelocksmith`, `#carkeyprogramming`) todavía no se relevó, y por la regla del 10/11 hay que mirar si no está podrido de video con texto quemado.
-- **Falta la descripción (primary text) en inglés** y los videos montados.
+- **Falta subir los 6 al Drive.** La carpeta ya está creada (`Ebook Dami / Ebook KeyMaster Hub (EN) / Videos terminados`), pero el conector no toma archivos de ~28 MB por referencia y el upload del navegador topea en 10 MB: hay que arrastrarlos a mano.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[funnel-hacking]] · [[caza-de-ofertas]] · [[internacionalizacion]] · [[testeo-de-creativos]] · [[navidad-en-macrame]]

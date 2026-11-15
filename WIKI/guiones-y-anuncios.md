@@ -43,7 +43,18 @@
 - **Voz:** la voz validada de esa oferta, nunca una nueva por capricho. Se entregan 3 opciones numeradas solo cuando él tiene que elegir.
 - **Modelo de TTS:** `gemini-2.5-flash-preview-tts` y ninguno más. Los TTS 3.x (`gemini-3.8-flash-tts`) **leen el Style en voz alta** — el 3/11 la primera tanda de Academia del Trazo salió con 22 s de instrucciones habladas y hubo que rehacer las seis voces. El free tier son **10 requests por día y por modelo**, así que no se gastan en pruebas: una voz de control, se transcribe con Whisper para confirmar que arranca por la primera palabra del guion, y recién ahí el resto.
 - **Cuando la cuota diaria de TTS se agota (2026-11-11, renovaciones BR de piedras):** el free tier da 10 requests por día **por modelo** y lo comparten todas las ofertas del día. Si `gemini-2.5-flash-preview-tts` y `gemini-3.1-flash-tts-preview` ya devuelven 429, queda **`gemini-3.8-flash-tts`**, que tiene su propia cuota pero **lee el Style en voz alta** aunque termine en dos puntos (lo leyó en las tres voces de esta tanda, 25 s de instrucciones). No hace falta tirar la voz: se corre Whisper, se busca la **última** aparición de las primeras cuatro palabras del guion y se corta el wav desde ahí. La lectura del guion en sí sale igual de bien que con el 2.5.
-- **Música:** una sola cama musical para toda la tanda, `music_db` alrededor de -8.
+- ⛔ **PROHIBIDO usar imágenes de mierda (regla fija, 2026-11-15).** Santiago, al arrancar [[ceramic-recipes]]: *"Si
+  necesitas B-rolls, busca. No uses imágenes que son malísimas. Poné como regla prohibido usar imágenes de mierda. Así
+  que o usás B-rolls como los de ellos, o le sacás a ellos los B-rolls, o los buscás de TikTok, lo que quieras."* El
+  plano feo no se justifica nunca con "no había material": hay **tres fuentes** y se usan en este orden —
+  **1)** clips de TikTok del nicho, **2)** el b-roll del propio ganador (se le saca de sus creativos), **3)** b-roll
+  del mismo tipo que usa él. Un clip borroso, oscuro, pixelado, movido, con la acción fuera de cuadro o que no muestra
+  el producto **se cae**, aunque eso obligue a bajar cuarenta clips más.
+- **Velocidad de la voz: `speed 1.20`** (corregido el 2026-11-15; antes 1.30). Santiago: *"Acordate de la velocidad,
+  que suene natural. Velocidad 1.2 a la voz."* 1.30 corre bien en ofertas de ritmo rápido, pero en un ad largo
+  (45-60 s) suena acelerado: el nuevo valor por defecto es **1.20**.
+- **Música:** una sola cama musical para toda la tanda, `music_db` alrededor de -8. Que sea **buena**: pista con
+  gancho y que acompañe el nicho, no un loop de relleno (pedido del 2026-11-15).
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 
 ## 🔁 Variación real (ver [[angulos-publicitarios]])

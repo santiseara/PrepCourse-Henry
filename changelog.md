@@ -1,3 +1,27 @@
+## 2026-11-15 (29ª pasada) — Ceramic Glaze Recipe Bible: oferta nueva para el mercado inglés
+
+Santiago pasó la Ads Library de `receitas-de-ceramica-br.impultienda.ar`: *"la vamos a tirar en inglés nosotros… haz el
+mismo análisis de siempre… no uses imágenes que son malísimas… Velocidad 1.2 a la voz. Y buena música."*
+
+- **Dos reglas nuevas, anotadas en [[guiones-y-anuncios]] y en memoria:**
+  ⛔ **prohibido usar imágenes de mierda** — hay tres fuentes de b-roll (TikTok del nicho, el b-roll del propio ganador,
+  o b-roll del mismo tipo que usa él) y ninguna excusa para un plano feo; y la **velocidad de la voz pasa de 1.30 a
+  `1.20`**, que es lo que suena natural en un ad largo.
+- **Quiénes son:** *A Bíblia das Receitas de Cerâmica*, 200 recetas de esmaltes y engobes + 5 manuales, R$ 127 → **R$ 37**,
+  garantía de 15 días. **~35 anuncios activos, todos en portugués**: el inglés está libre.
+- **Sus 10 ángulos** y la DNA de sus guiones (48-57 s): hook con la escena del dolor → **reatribución de culpa**
+  ("não é falta de jeito: é uma receita pela metade") → el esmalte son polvos y agua, lo que cambia es la proporción →
+  entregables con número → "pesá, mezclá, tamizá y probá en una muestrita" → mail al instante y 15 días → CTA.
+  **Dos de los diez son testimoniales en primera persona.** Nunca dicen el precio.
+- **6 guiones de ~45-50 s en inglés y español con voseo**, uno por ángulo.
+- **El pool:** 89 clips bajados de `#potteryglaze`, `#glazing`, `#ceramicglaze` y `#kilnopening`; **17 ventanas limpias
+  sobre 24 revisadas**. Entra con texto solo el clip de los **potes AMACO**, que es texto de objeto y además el villano
+  del guion (el frasco comprado).
+- **Editor `edit_ceramic.py`** con su montaje: pastilla blanca del hook, palabra activa en **rosa #E8457F**, chip de
+  reatribución, placa "200 RECIPES · 5 BONUS MANUALS" y botón rosa. Música **`music_activa.py`** (marimba, 104 BPM) a -9 dB.
+- 🐞 **La cuota de TTS se agotó a mitad de tanda** (10 por día y por modelo, y el día ya tenía las 7 de Color Exacto):
+  V5 y V6 salieron con `gemini-3.1-flash-tts-preview`, que tampoco lee el style.
+
 ## 2026-11-15 (28ª pasada) — Color Exacto: oferta nueva para Argentina, tanda 1 de 6 videos
 
 Santiago pasó la búsqueda de la Ads Library de `crobavault-t8.impultienda.ar`: *"Vamos con esta oferta pero para arg…

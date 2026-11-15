@@ -1,3 +1,38 @@
+## 2026-11-14 (25ª pasada) — KeyMaster Hub: oferta nueva para el mercado inglés
+
+Santiago pasó la página de **Centro Maestro del Cerrajero** y pidió los ads para tirarla en inglés.
+
+- **La oferta:** no es un curso ni un ebook, es una **plataforma de consulta técnica para cerrajeros automotrices**
+  (busca por marca/modelo/año y devuelve transponder, FCC ID, frecuencia, espadín, carcasa, batería y procedimiento).
+  **US$6.99** el base y **US$9.99** el PRO con 5 bonos valuados en US$79.95. Pago único, garantía de 7 días.
+- 🔎 **El display link del ad era falso.** Decía `CENTROMAESTRO.COM`, que **no existe** (NXDOMAIN): el destino real es
+  `centromaestro.lovable.app` y hay que sacarlo del `href` del botón en la biblioteca. Queda como regla.
+- **Su arsenal: ~52 ads activos desde el 17/08** (casi tres meses). Y un dato que cambia cómo se lee: **52 creativos
+  únicos sobre 54 videos**, casi sin duplicación. **Están testeando, no escalando** — lo contrario de Navidad en
+  Macramé. Así que no hay un ángulo ganador para copiar: hay una fórmula.
+- **Su DNA (10 ads transcriptos):** 27 a 46 s, voz en off en primera persona, siempre la misma escalera — dolor de
+  buscar con el cliente esperando → grupos de WhatsApp y Google → la plataforma → la lista técnica → "escribo el modelo
+  y en segundos tengo todo" → ahorro de tiempo → "haz clic en Más información".
+- **Tanda 1: 6 guiones de 27 a 35 s, en inglés y en español con voseo**, sobre los seis huecos de su arsenal: el trabajo
+  rechazado, el cliente que llama al siguiente, el día entero que se va por semana, lo que ve el cliente mientras
+  buscás, el residencial que quiere pasar al automotriz y el viaje por la carcasa equivocada. Más 10 hooks en inglés.
+- 🚨 **Pendiente que bloquea el gasto:** su base de datos es **latinoamericana** (Hyundai HB20, VW Gol, Chevrolet Onix,
+  433.92 MHz) y en US/CA el parque es otro (F-150, Silverado, RAM) con **315 MHz**. Los guiones nombran "Silverado"
+  porque es lo que hace creíble el ad en inglés; si la base no se arma para ese mercado, el ad promete lo que el
+  producto no da. Hay versión alternativa sin modelos concretos: son dos líneas.
+- Nuevo: `WIKI/keymaster-hub.md`. Entregable: `OUTPUTS/2026-11-14-guiones-keymaster-hub-tanda1.md`.
+
+## 2026-11-14 (25ª pasada) — Glúteo Despierto: el quiz arrancaba en la última slide
+
+Santiago: *"arranca directo en la última slide, me sacaste todo"*. **No faltaba nada**: el `.txt` tiene las 30 pantallas
+enteras. El motor que cloné del competidor retomaba el paso guardado en `localStorage` (`pc_paso`, un día de vida), así
+que después de haberlo recorrido hasta la oferta la carga siguiente abría en el **paso 29**.
+
+- Arranque nuevo en los 4 archivos (`landing/quiz.html`, `gluteo-despierto-quiz.txt`, `gluteo-despierto-PRUEBA.html` y la
+  copia de `OUTPUTS/`): borra `pc_paso` y va al paso 0. `?paso=N` queda solo para probar.
+- `WIKI/quizzes-reglas-de-armado.md`: la nota de "limpiar el localStorage antes de probar" pasa a ser **regla del motor**
+  (ningún quiz retoma el paso) + sección fechada con el snippet y la fila en la tabla de correcciones.
+
 ## 2026-11-14 (24ª pasada) — Navidad en Macramé: la descripción para los ads
 
 Misma forma corta que la de Postres en Vaso, pero **el registro cambia entero**: esta sale a varios países de LATAM, así

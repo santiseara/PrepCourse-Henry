@@ -49,9 +49,13 @@ le da `cursor:pointer` y el clic. En este quiz pasó de **9 CTAs a 10**.
 que **todos** sigan empezando por el host completo y arrastren los parámetros. 🐞 Ojo al comparar: `new URL()`
 **normaliza el host a minúsculas**, así que un `indexOf()` contra la URL tal cual se escribió da falso negativo.
 
-🐞 **Y antes de cada recorrido, limpiar el `localStorage`.** Este motor recuerda el paso un día (`pc_paso`): después de
-probar la oferta, la siguiente carga arranca **directo en el paso 29** y el recorrido "ve" un solo paso. Parece que el
-quiz está roto y lo único que pasa es que retomó donde quedó.
+🐞 **El quiz arranca SIEMPRE en la portada: no retoma el paso donde quedó.** El motor del competidor guardaba el paso
+un día (`pc_paso`) y lo retomaba al cargar: después de probar la oferta, la siguiente carga abría **directo en el paso
+29** y parecía que el quiz estuviera roto o que le hubieran sacado todas las pantallas. Corregido el **2026-11-14** a
+pedido de Santiago (*"arranca directo en la última slide, me sacaste todo"*): en el arranque se hace
+`localStorage.removeItem("pc_paso")` y se llama `ir(0)`. `?paso=N` sigue sirviendo para saltar a una pantalla y probar.
+**Esto va en todo quiz nuevo**: que retome el paso es cómodo para el que lo armó y confuso para el tráfico frío, que
+llega del ad y tiene que ver la portada.
 
 ### 🆕 2026-11-14 · "El mismo diseño que ellos, pero que diga cosas distintas"
 Santiago, sobre [[gluteo-despierto]]: *"que sea similar al de ellos, pero un poco distinto, porque va a ir en el mismo
@@ -353,6 +357,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-14 | Quiz Glúteo Despierto | "arranca directo en la última slide, me sacaste todo" | **Ningún quiz retoma el paso guardado**: en el arranque se borra `pc_paso` y se va al paso 0 (ver la regla de §arranque). Las 30 pantallas estaban todas; lo único que pasaba era que el motor del competidor retomaba donde había quedado la prueba anterior |
 | 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | **"No, no entendiste, quiero el mismo diseño que ellos, pero que diga cosas distintas"** (después de entregar una v1 con nuestro motor) | **"Similar al de ellos" = SU HTML, no nuestra plantilla** (ver la regla del 14/11 arriba). La v2 es su documento tal cual —su CSS, su sprite, sus 30 pasos, su violeta— con **los ~120 textos reescritos por script**, que falla si un par no matchea o si queda un rastro suyo. 13 de las 15 imágenes son suyas (las neutras); logo y portada rehechos. Se suman cuotas de Mercado Pago, pixel y la FAQ de suscripción. Bugs nuevos: el `AR$\xa0` con espacio no separable, los textos repetidos entre pasos y la línea de cuotas que parte la caja de precio |
 | 2026-11-12 | Quiz SumaAI (v2) | "Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz" | Se rehizo entero **clonando el motor de DanceGo** (ver la regla del 12/11 arriba): Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada de género con fotos a sangre, dos pantallas de comida con fotos reales, maqueta de celular, carga con anillo, resultado con IMC y gráfico, y la oferta completa estilo lanzamiento. **11 fotos sacadas del banco propio** (base64 de los quizzes viejos de `OUTPUTS/`), cero créditos |
 | 2026-11-12 | Quiz SumaAI (modelado de Welmi) | "Vamos a ir con SumaAI, quiero que me armes el quiz pero con el reebranding nuestro, sacale algunas preguntas que sean innecesarias. Y cambiale los colores, me gusta el azul" | De **35 pasos a 19**. Se van: prueba social con ratings ajenos, "¿te derivó un profesional?", nivel de nutrición, hábitos, placa de Harvard/UNICEF, objetivo de pasos, fecha del primer control, edad exacta, placas de relleno y **el email gate**. Se unifican intolerancias + dieta y caminata + escaleras + pasos. Quedan las que personalizan el resultado y las de compromiso emocional (el **mayor reto** se devuelve dos pasos después). Paleta azul `#1B4CD9` / `#0E2452` / `#F2F6FD`, con verde solo para "bien" y rojo solo para riesgo. **Un rating que no es nuestro no se clona**: ahí no aplica "fidelidad al original", aplica "no inventar datos" |
@@ -462,3 +467,23 @@ Santiago, sobre DanceGo: *"todos los botones de cta de la ultima slide, tienen q
 - **Tiene que ser idempotente**: marcar cada elemento con `dataset.cta` y saltearlo si ya estaba. Si no, al llamarlo dos veces (arranque + oferta, o la oferta que se destapa con `SEGUNDOS_OFERTA`) se suman dos listeners y el pixel dispara **dos `AddToCart` por clic**, que infla la métrica y ensucia la optimización.
 - Los `<a>` del checkout llevan `rel="noopener"`.
 - **Verificar en el navegador, no leyendo el código**: saltar al último paso y listar `#oferta a, #oferta button, #oferta .js-cta` con su `href`. Si algún CTA sale con `href="#"`, no se enganchó. Probar también con `?utm_source=...` en la URL y confirmar que el `href` final arrastra los UTM.
+
+## 2026-11-14 · El arranque del quiz no se hereda del competidor
+
+Santiago, abriendo el `.txt` del quiz de [[gluteo-despierto]]: *"arranca directo en la última slide, me sacaste todo"*.
+No faltaba nada: el archivo tenía las **30 pantallas** completas. El motor que cloné del competidor retomaba el paso
+guardado en `localStorage` (`pc_paso`, un día de vida), así que después de haberlo recorrido hasta la oferta, la carga
+siguiente abría en el **paso 29** y el resto quedaba oculto.
+
+**Regla fija: el arranque va siempre al paso 0 y limpia el paso guardado.**
+
+```js
+var pedido = parseInt(param("paso"), 10);
+try { localStorage.removeItem("pc_paso"); } catch (e) {}
+ir(pedido >= 0 && pedido < TOTAL ? pedido : 0, false);
+```
+
+- Se borra la clave, no solo se ignora: si queda guardada, cualquier copia vieja del HTML vuelve a saltar al final.
+- `?paso=N` queda **para probar**, y entra con `guardar = false` para no volver a escribir el estado.
+- Cuando algo "se ve roto" en un quiz, **antes de buscar textos faltantes hay que descartar el estado guardado**: abrirlo
+  en una ventana limpia o borrar el `localStorage` del dominio.

@@ -19,6 +19,17 @@ mismo análisis de siempre… no uses imágenes que son malísimas… Velocidad 
   del guion (el frasco comprado).
 - **Editor `edit_ceramic.py`** con su montaje: pastilla blanca del hook, palabra activa en **rosa #E8457F**, chip de
   reatribución, placa "200 RECIPES · 5 BONUS MANUALS" y botón rosa. Música **`music_activa.py`** (marimba, 104 BPM) a -9 dB.
+- **Los 6 videos** (43,8 a 51,3 s, 19 a 23 planos) en `Ebook Ceramic Glaze Recipes (INGLES) / Videos terminados`,
+  nombrados por su hook. Masters en `~/Desktop/ceramic-recipes/anuncios/` como `15-11 - N.mp4`.
+- 🐞 **La hoja de contactos de 6 cuadros no alcanza para los bordes:** tres clips tenían texto quemado en los
+  primeros o últimos segundos que la hoja no mostró (`Let's glaze this thumb cup` en los 3 primeros segundos,
+  `green tea x2` en los últimos, `before/after` casi todo el clip). Se vieron recién en el render. **Antes de fijar
+  una ventana, el clip se mira a 1 cuadro por segundo**, no con la hoja general. Los 6 se re-renderizaron con el pool
+  corregido y uno de los clips se cayó entero.
+- 🐞 **El conector de Drive no sube por referencia** (reconfirmado: `content` y `base64Content` con una ruta dan
+  *"not a valid base64 string"*), y **la extensión de Chrome se desconectó a mitad de la subida**. Se recuperó
+  reinyectando el parche y el acumulador en la pestaña. Con archivos de ~5 MB entran de a dos por llamada
+  (el tope de `file_upload` es 10,4 MB y **se cuenta por llamada, también dentro de un `browser_batch`**).
 - 🐞 **La cuota de TTS se agotó a mitad de tanda** (10 por día y por modelo, y el día ya tenía las 7 de Color Exacto):
   V5 y V6 salieron con `gemini-3.1-flash-tts-preview`, que tampoco lee el style.
 

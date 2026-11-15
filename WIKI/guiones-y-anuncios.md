@@ -43,6 +43,11 @@
 - **Voz:** la voz validada de esa oferta, nunca una nueva por capricho. Se entregan 3 opciones numeradas solo cuando él tiene que elegir.
 - **Modelo de TTS:** `gemini-2.5-flash-preview-tts` y ninguno más. Los TTS 3.x (`gemini-3.8-flash-tts`) **leen el Style en voz alta** — el 3/11 la primera tanda de Academia del Trazo salió con 22 s de instrucciones habladas y hubo que rehacer las seis voces. El free tier son **10 requests por día y por modelo**, así que no se gastan en pruebas: una voz de control, se transcribe con Whisper para confirmar que arranca por la primera palabra del guion, y recién ahí el resto.
 - **Cuando la cuota diaria de TTS se agota (2026-11-11, renovaciones BR de piedras):** el free tier da 10 requests por día **por modelo** y lo comparten todas las ofertas del día. Si `gemini-2.5-flash-preview-tts` y `gemini-3.1-flash-tts-preview` ya devuelven 429, queda **`gemini-3.8-flash-tts`**, que tiene su propia cuota pero **lee el Style en voz alta** aunque termine en dos puntos (lo leyó en las tres voces de esta tanda, 25 s de instrucciones). No hace falta tirar la voz: se corre Whisper, se busca la **última** aparición de las primeras cuatro palabras del guion y se corta el wav desde ahí. La lectura del guion en sí sale igual de bien que con el 2.5.
+- 🐞 **Antes de fijar la ventana de un clip, mirarlo a 1 cuadro por segundo** (2026-11-15, [[ceramic-recipes]]). La
+  hoja de contactos de 6 cuadros se saltea el texto que vive en los **bordes**: un *"Let's glaze this thumb cup"* en
+  los 3 primeros segundos, un *"green tea x2"* en los últimos y un *"before/after"* chiquito se vieron recién en el
+  render y costaron una tanda entera de re-render. La hoja sirve para elegir el clip; la ventana se fija cuadro a
+  cuadro.
 - ⛔ **PROHIBIDO usar imágenes de mierda (regla fija, 2026-11-15).** Santiago, al arrancar [[ceramic-recipes]]: *"Si
   necesitas B-rolls, busca. No uses imágenes que son malísimas. Poné como regla prohibido usar imágenes de mierda. Así
   que o usás B-rolls como los de ellos, o le sacás a ellos los B-rolls, o los buscás de TikTok, lo que quieras."* El

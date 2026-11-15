@@ -24,14 +24,14 @@ VENT = {
     'f': ('7580241089689308471', 0.0, 13.5, dict(fam='08471')),   # obvara: la espuma de burbujas sobre la pieza
     'g': ('7443481313752927534', 14.0, 61.0, dict(fam='27534')),  # inmersion en el balde + bowl con flores (desde 14 s: antes se ve la cara)
     'h': ('7589716851895176503', 0.0, 24.6, dict(fam='76503b')),  # plato con pinza dentro del balde + platos pintados
-    'i': ('7502173052139031813', 0.0, 16.0, dict(fam='31813')),   # taza borgona con pincel
+    'i': ('7502173052139031813', 3.5, 19.5, dict(fam='31813')),  # taza borgona con pincel (el 'Let's glaze this thumb cup' esta en los primeros 3 s)
     'j': ('7538471990580071702', 29.0, 33.4, dict(fam='71702')),  # SOLO el plano final: el 'green tea x2' quemado llega hasta los 28 s
     'k': ('7597623991368437023', 6.0, 31.5, dict(fam='37023')),   # lirios pintados sobre el jarron
-    'l': ('7688829406105668895', 4.0, 15.0, dict(fam='68895')),   # jarron en la torneta + aerografo
+    'l': ('7688829406105668895', 9.0, 15.0, dict(fam='68895')),  # SOLO el aerografo y el final: antes hay cara a camara y textos grises
     'm': ('7640937007681768725', 6.0, 20.0, dict(fam='68725'), ), # LOS FRASCOS COMPRADOS: el villano del guion
     'n': ('7420120310411840800', 18.0, 24.0, dict(fam='40800')),  # bowl verde terminado (texto hasta los 17 s)
     'o': ('7474688973307268407', 6.0, 16.8, dict(fam='68407')),   # pincel sobre pieza celeste
-    'p': ('7693695104376179998', 2.0, 10.3, dict(fam='79998')),   # torno + resultado azul con burbujas
+    #   'p': ('7693695104376179998', 2.0, 10.3, dict(fam='79998')),   # FUERA: 'before'/'after' quemado casi todo el clip
     'q': ('7553326241101876503', 10.0, 21.6, dict(fam='76503a')), # bowl verde moteado en la mano (texto hasta los 9 s)
 }
 VENT = {k: (v[0], v[1], v[2], v[3]) for k, v in VENT.items() if v[2] > v[1]}

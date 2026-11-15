@@ -357,6 +357,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-14 | Quiz Glúteo Despierto | "El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva" | Portada en **600 s** (`data-timer` **y** el texto del `<span>`, los dos lugares) y **un `fin` vencido no se hereda**: `contador()` lo descarta y arranca de nuevo, así ningún contador abre en 00:00 |
 | 2026-11-14 | Quiz Glúteo Despierto | "arranca directo en la última slide, me sacaste todo" | **Ningún quiz retoma el paso guardado**: en el arranque se borra `pc_paso` y se va al paso 0 (ver la regla de §arranque). Las 30 pantallas estaban todas; lo único que pasaba era que el motor del competidor retomaba donde había quedado la prueba anterior |
 | 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | **"No, no entendiste, quiero el mismo diseño que ellos, pero que diga cosas distintas"** (después de entregar una v1 con nuestro motor) | **"Similar al de ellos" = SU HTML, no nuestra plantilla** (ver la regla del 14/11 arriba). La v2 es su documento tal cual —su CSS, su sprite, sus 30 pasos, su violeta— con **los ~120 textos reescritos por script**, que falla si un par no matchea o si queda un rastro suyo. 13 de las 15 imágenes son suyas (las neutras); logo y portada rehechos. Se suman cuotas de Mercado Pago, pixel y la FAQ de suscripción. Bugs nuevos: el `AR$\xa0` con espacio no separable, los textos repetidos entre pasos y la línea de cuotas que parte la caja de precio |
 | 2026-11-12 | Quiz SumaAI (v2) | "Muy malo el quiz, super simple, el logo esta corrido a un costado, no usaste imagenes buenas. Es el peor quiz que vi en mi vida, mira los quiz que hicimos siempre y aprender de una vez como hacer quiz" | Se rehizo entero **clonando el motor de DanceGo** (ver la regla del 12/11 arriba): Fraunces + Inter, logo centrado con la flecha de volver en `absolute`, portada de género con fotos a sangre, dos pantallas de comida con fotos reales, maqueta de celular, carga con anillo, resultado con IMC y gráfico, y la oferta completa estilo lanzamiento. **11 fotos sacadas del banco propio** (base64 de los quizzes viejos de `OUTPUTS/`), cero créditos |
@@ -487,3 +488,25 @@ ir(pedido >= 0 && pedido < TOTAL ? pedido : 0, false);
 - `?paso=N` queda **para probar**, y entra con `guardar = false` para no volver a escribir el estado.
 - Cuando algo "se ve roto" en un quiz, **antes de buscar textos faltantes hay que descartar el estado guardado**: abrirlo
   en una ventana limpia o borrar el `localStorage` del dominio.
+
+## 2026-11-14 · El contador de la portada: 10 minutos, y nunca heredado
+
+Santiago: *"El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva"*. Dos cosas
+distintas en el mismo renglón:
+
+- **El valor.** El del competidor era de **60 segundos** (`data-timer="60"` → "01:00"). Va en **600** (`10:00`). El
+  número se cambia en **dos lugares**: el atributo `data-timer` y el texto que está escrito dentro del `<span>`, que es
+  lo que se ve en el primer frame antes del primer `tick()`.
+- **El cero era el mismo bug del paso guardado.** `contador()` guarda el instante de fin en `localStorage`
+  (`pc_timer_<clave>`, un día de vida) y lo reusa si existe. Después de una prueba, el fin ya había pasado y el contador
+  abría en **00:00** de entrada. **Regla: un fin vencido se descarta y el contador arranca de nuevo.**
+
+```js
+var fin = leer(clave);
+if (typeof fin !== "number" || fin - Date.now() <= 0) { fin = Date.now() + seg * 1000; grabar(clave, fin); }
+```
+
+Vale para **todos** los contadores del quiz (portada y oferta): un timer en 00:00 no genera urgencia, muestra que el
+quiz está viejo. El fin guardado sigue sirviendo para lo que se inventó —que al navegar entre pasos no se regale tiempo
+nuevo—, pero sólo mientras esté vigente. Va de la mano de la regla de arranque de más arriba: **el quiz no hereda
+estado de la prueba anterior**, ni el paso ni el reloj.

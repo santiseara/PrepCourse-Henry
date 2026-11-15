@@ -1,3 +1,14 @@
+## 2026-11-14 (26ª pasada) — Glúteo Despierto: el contador de la portada
+
+Santiago: *"El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva"*.
+
+- **10 minutos** en la portada: el del competidor era de 60 s. Cambiado en los dos lugares, `data-timer="600"` y el
+  texto `10:00` del `<span>` (el primer frame sale de ahí, antes del primer `tick()`).
+- **El 00:00 era estado viejo**, el mismo bug que el paso: `contador()` reusaba el instante de fin guardado en
+  `localStorage` (`pc_timer_portada`, un día) aunque ya hubiera vencido. Ahora un fin vencido se descarta y el contador
+  arranca de nuevo — vale también para el de la oferta (15:00).
+- Aplicado en los 4 archivos y sumado a `WIKI/quizzes-reglas-de-armado.md` (sección fechada + fila en la tabla).
+
 ## 2026-11-14 (25ª pasada) — KeyMaster Hub: oferta nueva para el mercado inglés
 
 Santiago pasó la página de **Centro Maestro del Cerrajero** y pidió los ads para tirarla en inglés.

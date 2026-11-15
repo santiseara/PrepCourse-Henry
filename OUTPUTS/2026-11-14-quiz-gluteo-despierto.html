@@ -154,7 +154,7 @@ button{font-family:inherit}
 <p><strong class="marca-roja">Si cerrás la página, perdés el lugar.</strong></p>
 </div>
 <div class="cta-caja"><button type="button" class="cta late" data-sig><span>Quiero Despertar Mi Glúteo</span><svg class="ic" aria-hidden="true"><use href="#i-flecha"/></svg></button></div>
-<div class="timer-borde"><div class="timer">Tu lugar queda guardado por: <span data-timer="60" data-clave="portada">01:00</span></div></div>
+<div class="timer-borde"><div class="timer">Tu lugar queda guardado por: <span data-timer="600" data-clave="portada">10:00</span></div></div>
 </div>
 </section>
 <section class="paso">
@@ -610,7 +610,7 @@ if (auto) toCarga = setTimeout(function () { if (actual === n) ir(n + 1); }, 500
 function contador(el) {
 var seg = Number(el.getAttribute("data-timer")), clave = "pc_timer_" + el.getAttribute("data-clave");
 var fin = leer(clave);
-if (typeof fin !== "number") { fin = Date.now() + seg * 1000; grabar(clave, fin); }
+if (typeof fin !== "number" || fin - Date.now() <= 0) { fin = Date.now() + seg * 1000; grabar(clave, fin); }
 function tick() {
 var r = fin - Date.now();
 if (r <= 0) { el.textContent = "00:00"; clearInterval(ivTimer); return; }

@@ -1,3 +1,12 @@
+## 2026-11-16 (37ª pasada) — Chau Panza: radiografía de Belu Fitness
+
+Santiago: *"idear una oferta que sea exactamente igual… armar un avatar para simular la experta… primero quiero que leas bien todo"*.
+
+- **Radiografía** en `OUTPUTS/2026-11-16-radiografia-belu-fitness.md`: ~290 ads activos, 3 destinos (Shopify ARS 19.999, quiz ImpulTienda ARS 21.999, internacional US$ 19,99), el producto entero, el quiz de 20 pasos con sus 4 diagnósticos y 4 formatos de ads.
+- 15 videos, transcripciones y el HTML del quiz en `~/Desktop/chau-panza/referencia/`.
+- Página nueva [[chau-panza]] y línea en el índice.
+- Sin Chrome conectado: la Biblioteca se leyó con **Chrome headless `--dump-dom`** (trae las primeras ~26 tarjetas con los links de video) y se transcribió con faster-whisper en un venv del scratchpad.
+
 ## 2026-11-16 (36ª pasada) — Hígado Liviano: los 6 anuncios producidos de punta a punta
 
 Santiago: *"Si, termina tu trabajo"* (y antes: *"no quiero videos de 5 minutos, máximo 1 minuto y medio, si es menos

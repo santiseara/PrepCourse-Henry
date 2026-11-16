@@ -1,3 +1,12 @@
+## 2026-11-16 (38ª pasada) — Silvia Fitness: avatar y quiz Adiós Panza
+
+Santiago: *"quiero que hagamos el mismo quiz pero con mi experta, se va a llamar silvia fitness"*.
+
+- Fotos de la experta (living, mate, sentadilla) en `~/Desktop/silvia-fitness/imagenes/`; carpeta renombrada desde `chau-panza`.
+- Quiz sobre el HTML de Belu con `OUTPUTS/scripts-quiz/build_silvia_fitness.py` → `~/Desktop/silvia-fitness/landing/adios-panza-quiz.txt` y `OUTPUTS/2026-11-16-quiz-adios-panza.html`. Probado en headless: portada, siluetas, prueba, diagnóstico, autoridad y venta sin errores de JS.
+- Sin fotos ni capturas de clientas de Belu: burbujas HTML + maqueta de la app en CSS; antes/después en slots.
+- WIKI: `chau-panza` → [[silvia-fitness]].
+
 ## 2026-11-16 (37ª pasada) — Chau Panza: radiografía de Belu Fitness
 
 Santiago: *"idear una oferta que sea exactamente igual… armar un avatar para simular la experta… primero quiero que leas bien todo"*.

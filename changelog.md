@@ -1,3 +1,30 @@
+## 2026-11-16 (33ª pasada) — Nervio Vago: el checkout definitivo y la barra de progreso que no avanzaba
+
+Dos pedidos de Santiago: *"Este es el link de mi checkout, ajustame los botones de la ultima slide
+https://resetnervio-vago.impultienda.ar/checkout"* y *"Y que la barra de progreso de arriba vaya avanzando según va
+completando"*.
+
+- **El checkout, chequeado antes de ponerlo** (regla del 5/11): `curl -sIL` → **200 y 0 redirecciones**. Va en un solo
+  lugar, el `CONFIG.CHECKOUT`; verificado que la URL aparece **una vez** en el archivo y que no queda ningún
+  `/checkout` suelto.
+- **Verificado sobre una copia instrumentada, no contra la tienda.** Este motor navega por JS
+  (`location.href = checkoutHref()`), así que disparar los CTAs de verdad mandaría visitas de prueba a la tienda real.
+  Se cambia esa única línea por `window.__DESTINO = …`, se clickean **los 2 CTAs** y se lee el destino: los dos salen
+  con el **host completo** y los **6 parámetros** (fbclid + 5 UTMs). ✅ Este motor **no** tiene el bug del 14/11 que se
+  comía el host, pero se verificó igual en vez de deducirlo.
+- **La barra de progreso no faltaba: estaba en 100 % desde la primera pregunta.** El `progressBar()` del motor colapsa
+  las pantallas con `outcome` en una sola, porque asume que son los 3 resultados por puntaje. En este quiz el `outcome`
+  lo llevan **35 de las 36** pantallas (es el mecanismo del A/B), así que `total = 2` y la barra nacía llena.
+- **Se parchea el motor desde el script de armado**, con `assert` de que el bloque viejo matchee exactamente una vez
+  (si mañana ImpulTienda cambia su runtime, el build falla en vez de entregar una barra rota en silencio). El
+  reemplazo cuenta solo las **pantallas de pregunta del carril actual**, filtradas con el propio `gateMatches()` del
+  motor: 25 en el carril largo. Medido recorriendo el quiz: `4% → 8% → … → 96% → 100%`, y sin barra en la portada,
+  las cargas y el resultado.
+- 2 reglas nuevas en [[quizzes-reglas-de-armado]] (la barra que miente con `outcome` en todas las pantallas, y la copia
+  instrumentada para probar un checkout absoluto en un motor que navega por JS).
+- Entregables actualizados en `~/Desktop/nervio-vago-latam/landing/` + `OUTPUTS/2026-11-16-quiz-nervio-vago-latam.html`,
+  y el `.txt` al portapapeles. **Sigue pendiente confirmar el precio** (US$ 9,99 / US$ 29,99, lo puse yo).
+
 ## 2026-11-16 (32ª pasada) — Reseteo del Nervio Vago 28: el quiz clonado a LATAM en neutro
 
 Pedido de Santiago: *"Necesito que me hagas este quiz [nervio-vago.impultienda.ar]. Pero va a ser para latam, así que

@@ -6,6 +6,7 @@
 - **El avatar es mujer de 35 a 55+** que vive cansada, ansiosa, con la cabeza nublada y el cuello duro. Todo el copy del original está en **femenino** (*estresada, cansada, descansada*) aunque el paso 2 pregunte Mujer/Hombre: se respetó tal cual.
 - **El mecanismo es el nervio vago trabado = "modo alerta".** El cable que une cerebro, corazón, pulmones y estómago; cuando se traba, el cortisol no baja, se duerme mal y se digiere mal. La promesa: el nervio vago **se entrena**.
 - **Producto:** el plan de 28 días día por día + 3 bonos (SOS Ansiedad, Dormir de corrido, Comer para desinflamarte). Garantía de 7 días.
+- **Checkout: `https://resetnervio-vago.impultienda.ar/checkout`** (lo pasó Santiago el 16/11; chequeado con `curl -sIL`: 200 y 0 redirecciones). Vive en **un solo lugar**, el `CONFIG.CHECKOUT`.
 - **Precio puesto: US$ 9,99 (antes US$ 29,99), pago único.** ⚠️ **Lo elegí yo**, siguiendo el piso de [[energia-vital]] para LATAM neutro — el original corre AR$ 14.999 / AR$ 19.990. Vive en **un solo lugar** del `CONFIG`, así que cambiarlo es una línea.
 
 ## La plataforma: un quiz NATIVO del builder de ImpulTienda
@@ -51,11 +52,24 @@ Las 10 son las del original. Ninguna tenía marca ni texto quemado, así que **n
 ## El gauge estaba invertido (y se arregló)
 La métrica es **"Desregulación del nervio vago"**: cuanto más alto, **peor**. El gradiente del motor viene `rojo → ámbar → verde` de izquierda a derecha (sirve para métricas donde más es mejor), así que pintaba de **verde la banda "Alto"** justo al lado del cartel *"Desregulación alta — con el tiempo esto sube la inflamación y la presión"*. Se invierte con **una línea de CSS** (`verde → ámbar → rojo`). Es la regla fija de [[quizzes-reglas-de-armado]] §4b: el verde solo significa "bien" y el rojo solo "riesgo".
 
+## Los dos parches al motor
+Su runtime se usa tal cual salvo **una función**, reemplazada desde el script de armado (con `assert` de que el bloque
+viejo matchee exactamente una vez, así un cambio futuro de ImpulTienda hace fallar el build en vez de entregar algo roto):
+
+- **`progressBar()`.** El motor cuenta las pantallas con `outcome` como **una sola** (asume que son los 3 resultados por
+  puntaje). Acá el `outcome` lo llevan **35 de las 36** porque es el mecanismo del A/B, así que daba `total = 2` y la
+  barra salía **llena desde la primera pregunta**. El reemplazo cuenta solo las **pantallas de pregunta del carril
+  actual** (las que llevan `showProgress`, filtradas con su propio `gateMatches()`): 25 en el carril largo, de a 4 %.
+
+Lo demás —render, pasos, bandas, checkout, pixel— es suyo sin tocar. El CSS también, salvo la línea que invierte el
+gauge.
+
 ## Verificación (en el navegador, no leyendo el código)
 En un `<iframe>` de 390 px servido por `http.server`, recorrido entero por código:
 - **32 pantallas** del carril A, de la portada al checkout. Cero imágenes rotas, **cero desborde** (`scrollWidth - clientWidth = 0` en todos los pasos), cero elementos de más de 392 px, **cero errores de consola**.
 - **Las 10 imágenes** pasan a Blob URL y quedan **decodificadas al arrancar** (10 de 10), con la red de seguridad que las devuelve a su data URI si la tienda bloqueara `blob:`.
-- **El CTA llega a `/checkout` arrastrando los 6 parámetros** (`fbclid`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_id`).
+- **Los 2 CTAs llegan a `https://resetnervio-vago.impultienda.ar/checkout`** arrastrando los 6 parámetros (`fbclid`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_id`). Probado sobre una **copia instrumentada**, porque el motor navega por JS y disparar los CTAs de verdad mandaría visitas de prueba a la tienda.
+- **La barra de progreso avanza** `4% → 8% → … → 100%`, una pantalla a la vez, y no aparece en la portada, las cargas ni el resultado.
 - **Arranca siempre en la portada**: este motor no guarda el paso en `localStorage`, así que no tiene el bug del 14/11 de [[gluteo-despierto]].
 - El contador de la oferta arranca en **10:00**, no heredado.
 
@@ -68,7 +82,6 @@ En un `<iframe>` de 390 px servido por `http.server`, recorrido entero por códi
 
 ## Preguntas abiertas
 - **El precio.** Puse US$ 9,99 / US$ 29,99 por el piso de LATAM neutro. ¿Va ese o otro?
-- **El checkout.** Quedó relativo (`/checkout`), que resuelve solo en la tienda donde se pegue. Falta el subdominio definitivo — y se verifica con `curl -sIL` que devuelva 200 antes de ponerlo ([[quizzes-reglas-de-armado]], registro del 5/11).
 - **El VSL del carril B.** Si se graba uno propio, se enciende con `AB_VSL: true`.
 - **El copy está todo en femenino** aunque el quiz pregunte Mujer/Hombre. Es así en el original y se respetó; si se quiere concordancia, va el token `{{o}}` de [[monjaro-violeta]].
 - Faltan los anuncios y el producto real.

@@ -6,9 +6,9 @@
      ==================================================================== -->
 <script>
 window.CONFIG_QUIZ = {
-  // Checkout. Relativo = el checkout de la tienda donde se pegue este HTML.
-  // Cuando este el definitivo, va la URL completa aca y en ningun otro lado.
-  CHECKOUT: "/checkout",
+  // Checkout. Unico lugar donde vive la URL: los 4 CTAs de la ultima slide la
+  // leen de aca y le enganchan los UTMs y los click id de la URL.
+  CHECKOUT: "https://resetnervio-vago.impultienda.ar/checkout",
 
   // Pixel de Meta. Vacio = no dispara nada.
   PIXEL_ID: "",
@@ -560,14 +560,18 @@ fbq('init',id);fbq('track','PageView')})();
 
   function progressBar(screen) {
     if (screen.showProgress === false) return ''
-    // Score-gated screens are alternatives of one result slot: count them as 1.
-    var gated = 0
-    for (var k = 0; k < steps.length; k++) if (steps[k] && steps[k].outcome) gated++
-    var total = steps.length - (gated > 1 ? gated - 1 : 0)
-    var pos = 0
-    for (var m = 0; m <= state.i && m < steps.length; m++) if (!steps[m].outcome) pos++
-    if (screen.outcome) pos++
-    var pct = Math.min(100, Math.round(((pos - 1) / Math.max(1, total - 1)) * 100))
+    // Solo las pantallas de pregunta del carril en el que esta la persona.
+    // (El conteo original colapsaba las 35 pantallas con `outcome` en una sola
+    //  y dejaba la barra en 100 % desde la primera pregunta.)
+    var total = 0, pos = 0
+    for (var k = 0; k < steps.length; k++) {
+      var s = steps[k]
+      if (!s || s.showProgress === false) continue
+      if (!gateMatches(s)) continue
+      total++
+      if (k <= state.i) pos++
+    }
+    var pct = total > 0 ? Math.min(100, Math.round((pos / total) * 100)) : 100
     return '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:' + pct + '%"></div></div>'
   }
   function headerBar(screen) {

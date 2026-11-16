@@ -1,4 +1,63 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-16 · 🐞 La barra de progreso del motor de ImpulTienda miente si el quiz usa `outcome` en todas las pantallas
+Santiago, sobre [[nervio-vago]]: *"Y que la barra de progreso de arriba vaya avanzando según va completando"*. No era
+que faltara: **estaba en 100 % desde la primera pregunta**, así que parecía decorativa.
+
+La causa está en el motor. Su `progressBar()` asume que las pantallas con `outcome` son **variantes de un mismo
+resultado** (los 3 finales por puntaje) y las cuenta como **una sola**:
+
+```js
+var gated = 0
+for (var k=0;k<steps.length;k++) if (steps[k] && steps[k].outcome) gated++
+var total = steps.length - (gated > 1 ? gated - 1 : 0)
+```
+
+En este quiz el `outcome` **no** marca el resultado: es el mecanismo del A/B de embudo, así que lo llevan **35 de las
+36** pantallas. La cuenta da `gated = 35` → `total = 36 - 34 = 2`, y el `pos` nunca pasa de 2: **100 % fijo**.
+
+**El reemplazo cuenta solo las pantallas de PREGUNTA del carril en el que está la persona** — las que llevan
+`showProgress`, filtradas con el mismo `gateMatches()` del motor, que es lo que ya separa los carriles:
+
+```js
+var total = 0, pos = 0
+for (var k = 0; k < steps.length; k++) {
+  var s = steps[k]
+  if (!s || s.showProgress === false) continue
+  if (!gateMatches(s)) continue
+  total++
+  if (k <= state.i) pos++
+}
+var pct = total > 0 ? Math.min(100, Math.round((pos / total) * 100)) : 100
+```
+
+Son 25 preguntas en el carril largo, así que avanza **de a 4 % por pantalla** y llega a 100 % en la última. Es la misma
+idea que la regla del 12/11 ("el contador de pasos solo cuenta las preguntas: si se cuenta todo, el denominador
+miente"), aplicada al denominador de la barra.
+
+- **El parche al motor va en el script de armado, con `assert` de que el bloque viejo matchee exactamente una vez.**
+  Así, si mañana ImpulTienda cambia su runtime, el build falla en vez de entregar una barra rota en silencio.
+- **Cómo se chequea:** no mirando una captura (al 100 % se ve "llena", que es creíble en cualquier paso). Se recorre el
+  quiz por código guardando `document.querySelector('.quiz-progress-bar').style.width` en cada pantalla y se mira la
+  **secuencia entera**: tiene que ser estrictamente creciente y terminar en 100 %. Acá dio
+  `4% → 8% → 12% → … → 96% → 100%`, y `(sin barra)` en la portada, las cargas y el resultado.
+
+### 🆕 2026-11-16 · El checkout absoluto se prueba sobre una copia instrumentada
+Al poner el checkout definitivo de [[nervio-vago]] (`https://resetnervio-vago.impultienda.ar/checkout`), la
+verificación del 14/11 pide disparar todos los CTAs y mirar a dónde van. Pero este motor **navega por JS**
+(`window.location.href = checkoutHref()`), no por `href`: dispararlos de verdad manda visitas de prueba a la tienda real.
+
+**Se prueba sobre una copia que cambia una sola línea**, `window.location.href = checkoutHref()` →
+`window.__DESTINO = checkoutHref()`. Después se clickean **todos** los `button[data-act=checkout]` y se lee
+`__DESTINO` de cada uno. Verificado acá: los **2 CTAs** salen con el **host completo** y los **6 parámetros**
+(`fbclid` + los 5 UTMs).
+
+- ✅ **Este motor NO tiene el bug del 14/11** (el del competidor de [[gluteo-despierto]], que reescribía el `href` con
+  `u.pathname` y se comía el host): devuelve `base + '?' + qs` con la base tal cual, así que un checkout absoluto
+  sobrevive. Igual se verifica, no se deduce.
+- 🐞 **Al devolver el resultado desde el navegador, no se devuelve la URL entera**: si lleva `?fbclid=…`, la llamada
+  se bloquea entera (regla del 4/11). Se devuelve `hostname`, `pathname` y los **nombres** de los parámetros.
+- **El subdominio se chequea antes de ponerlo** (regla del 5/11): `curl -sIL` dio **200 y 0 redirecciones**. Y después,
+  que la URL aparezca **una sola vez** en el archivo — la del `CONFIG` — y que no quede ningún `/checkout` suelto.
 
 ### 🆕 2026-11-16 · Un quiz NATIVO del builder de ImpulTienda se clona desde su `quiz-data`
 Hasta hoy los quizzes que clonamos eran `custom_html` (el HTML del competidor pegado a mano en su tienda). El de
@@ -524,6 +583,8 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Y que la barra de progreso de arriba vaya avanzando según va completando" | **No faltaba: estaba en 100 % desde la primera pregunta.** El `progressBar()` del motor colapsa las pantallas con `outcome` en una sola (asume que son los 3 resultados), y acá el `outcome` lo llevan 35 de 36 porque es el mecanismo del A/B: `total = 2` y la barra nacía llena. Se parchea el motor desde el script de armado (con `assert` de que el bloque viejo matchee) para contar solo las **pantallas de pregunta del carril actual**: avanza de a 4 % y llega a 100 % en la última |
+| 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Este es el link de mi checkout, ajustame los botones de la ultima slide `https://resetnervio-vago.impultienda.ar/checkout`" | `curl -sIL` → **200, 0 redirecciones** antes de ponerla. Va en **un solo lugar** (`CONFIG.CHECKOUT`, verificado: aparece 1 vez y no queda ningún `/checkout` suelto). Como este motor **navega por JS**, se verifica sobre una **copia instrumentada** que captura el destino en vez de navegar, para no mandar visitas de prueba a la tienda real: los 2 CTAs salen con el host completo y los 6 parámetros |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Necesito que me hagas este quiz. Pero va a ser para latam, así que ajustá el acento al neutro" + "Usa las mismas imagenes, todo igual, si alguna se ve mal, ajustala" | Primer clon de un quiz **nativo del builder de ImpulTienda**: su `quiz-data` JSON, su motor y su `q-home.css` tal cual, con **59 textos pasados a neutro por script** (falla si un par no matchea) y cero voseo verificado contando formas. Traía un **A/B de embudo escondido** por banda de puntaje (quiz largo vs. quiz corto + VSL): se conserva entero y apagado en el CONFIG. Se le sacan su Whop, su A/B de precio, **sus claves de Supabase** y sus targets de checkout. Las 10 imágenes son las suyas; hubo que **recortar dos mates** y **recortar a la cara las 4 fotos de edad**, que a `height:120px` con `cover` mostraban solo las piernas. El **gauge venía invertido** (verde sobre la banda de riesgo) |
 | 2026-11-14 | Quiz Glúteo Despierto | "El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva" | Portada en **600 s** (`data-timer` **y** el texto del `<span>`, los dos lugares) y **un `fin` vencido no se hereda**: `contador()` lo descarta y arranca de nuevo, así ningún contador abre en 00:00 |
 | 2026-11-14 | Quiz Glúteo Despierto | "arranca directo en la última slide, me sacaste todo" | **Ningún quiz retoma el paso guardado**: en el arranque se borra `pc_paso` y se va al paso 0 (ver la regla de §arranque). Las 30 pantallas estaban todas; lo único que pasaba era que el motor del competidor retomaba donde había quedado la prueba anterior |

@@ -176,6 +176,49 @@ ICONOS = {"🧉": "☕", "☕": None}  # se resuelve por paso, ver fix_iconos()
 # Bloques HTML del original que NO se copian: su analitica y su A/B de precio.
 BLOQUES_FUERA = {"bsm9m4qd", "bab_pref", "bab_r1", "bab_r2", "bab_r3"}
 
+# ---------------------------------------------------------------------------
+# Parche al motor: la barra de progreso.
+#
+# El motor supone que las pantallas con `outcome` son "variantes de un mismo
+# resultado" y las cuenta como UNA sola. En este quiz el `outcome` es el
+# mecanismo del A/B, asi que lo llevan las 35 pantallas menos la portada:
+#   gated = 35  ->  total = 36 - 34 = 2  ->  pct = 100 % desde el paso 1.
+# La barra nacia llena y no se movia nunca.
+#
+# El reemplazo cuenta solo las pantallas de PREGUNTA del carril en el que esta
+# la persona (las que llevan `showProgress`, filtradas por su banda de puntaje
+# con el mismo `gateMatches` del motor). Son 25 en el carril largo, asi que la
+# barra avanza de a 4 % por pregunta y llega a 100 % en la ultima.
+PROGRESO_VIEJO = """  function progressBar(screen) {
+    if (screen.showProgress === false) return ''
+    // Score-gated screens are alternatives of one result slot: count them as 1.
+    var gated = 0
+    for (var k = 0; k < steps.length; k++) if (steps[k] && steps[k].outcome) gated++
+    var total = steps.length - (gated > 1 ? gated - 1 : 0)
+    var pos = 0
+    for (var m = 0; m <= state.i && m < steps.length; m++) if (!steps[m].outcome) pos++
+    if (screen.outcome) pos++
+    var pct = Math.min(100, Math.round(((pos - 1) / Math.max(1, total - 1)) * 100))
+    return '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:' + pct + '%"></div></div>'
+  }"""
+
+PROGRESO_NUEVO = """  function progressBar(screen) {
+    if (screen.showProgress === false) return ''
+    // Solo las pantallas de pregunta del carril en el que esta la persona.
+    // (El conteo original colapsaba las 35 pantallas con `outcome` en una sola
+    //  y dejaba la barra en 100 % desde la primera pregunta.)
+    var total = 0, pos = 0
+    for (var k = 0; k < steps.length; k++) {
+      var s = steps[k]
+      if (!s || s.showProgress === false) continue
+      if (!gateMatches(s)) continue
+      total++
+      if (k <= state.i) pos++
+    }
+    var pct = total > 0 ? Math.min(100, Math.round((pos / total) * 100)) : 100
+    return '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:' + pct + '%"></div></div>'
+  }"""
+
 CAMPOS_TEXTO = {
     "text", "label", "title", "body", "authorName", "question", "metricLabel",
     "startLabel", "endLabel", "placeholder",
@@ -377,6 +420,9 @@ def main():
     css = open(os.path.join(trabajo, "css-q-home.C17Cvys6.css"), encoding="utf-8").read()
     runtime = open(os.path.join(trabajo, "script3.js"), encoding="utf-8").read()
 
+    assert runtime.count(PROGRESO_VIEJO) == 1, "no encontre el progressBar del motor"
+    runtime = runtime.replace(PROGRESO_VIEJO, PROGRESO_NUEVO)
+
     datos = json.dumps(salida_data, ensure_ascii=False).replace("</script>", "<\\/script>")
 
     frag = PLANTILLA.replace("@@CSS@@", css)
@@ -406,9 +452,9 @@ PLANTILLA = """<!-- ============================================================
      ==================================================================== -->
 <script>
 window.CONFIG_QUIZ = {
-  // Checkout. Relativo = el checkout de la tienda donde se pegue este HTML.
-  // Cuando este el definitivo, va la URL completa aca y en ningun otro lado.
-  CHECKOUT: "/checkout",
+  // Checkout. Unico lugar donde vive la URL: los 4 CTAs de la ultima slide la
+  // leen de aca y le enganchan los UTMs y los click id de la URL.
+  CHECKOUT: "https://resetnervio-vago.impultienda.ar/checkout",
 
   // Pixel de Meta. Vacio = no dispara nada.
   PIXEL_ID: "",

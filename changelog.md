@@ -1,3 +1,22 @@
+## 2026-11-16 (31ª pasada) — SumaAI: el checkout definitivo, con los 4 CTAs verificados
+
+Santiago pasó la URL: *"Este es el checkout al que tienen que redirigir los botones de cta de la última slide
+https://sumaai.impultienda.ar/checkout"*.
+
+- **Chequeada antes de ponerla:** `curl -sIL` → **200 y 0 redirecciones**.
+- **Puesta en el CONFIG** (`LINK_CHECKOUT`), que es el único lugar donde se toca.
+- **Revisado el bug dormido del 14/11** (el motor del competidor reescribía el `href` con `u.pathname` y se comía el
+  host): **el motor propio no lo tiene**, y ahora está verificado en el navegador en vez de leído — los 3 `<a>` nacen
+  con el host y los parámetros, y **siguen igual después de dispararles `pointerdown`, `mousedown` y `touchstart`**.
+- **El 4º CTA no es un `<a>`** (el `<span>` de "HOY: GRATIS", que navega por `location.href`): se probó sobre una
+  **copia instrumentada** que cambia `location.href = url` por una variable, así no se ensucia la tienda real con
+  visitas de prueba. También va al host completo con los UTMs.
+- **Sin parámetros en la URL** los 4 quedan exactamente en el checkout, sin un `?` colgado, y con `rel="noopener"`.
+- Regla nueva en [[quizzes-reglas-de-armado]] con la prueba de cuatro puntos, y [[sumaai]] ya no lista el checkout
+  como pendiente: **quedan dos, qué se entrega y el precio real**.
+- Entregables: `~/Desktop/sumaai/landing/` (`quiz.html`, `sumaai-quiz.txt`, `PRUEBA.html`) + copia en
+  `OUTPUTS/2026-11-12-quiz-sumaai.html`, y el `.txt` al portapapeles.
+
 ## 2026-11-16 (30ª pasada) — SumaAI v3: las fotos al instante, el gráfico que no existía y el carrusel de antes y después
 
 Pedido de Santiago: *"las imágenes tardan mucho en cargar, tipo, no cargan. Tengo que estar como un minuto en la slide

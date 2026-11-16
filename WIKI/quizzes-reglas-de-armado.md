@@ -1,5 +1,31 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-16 · El checkout definitivo: el motor propio NO tiene el bug del host (verificado)
+Al poner el checkout real de [[sumaai]] (`https://sumaai.impultienda.ar/checkout`) correspondía revisar el **bug dormido
+del 14/11**: el motor del competidor reescribía el `href` como `u.pathname + u.search` y se comía el host, así que con
+una URL absoluta todos los CTAs mandaban el tráfico pagado al dominio donde vive el quiz.
+
+**El motor propio (el de DanceGo, el que clonamos desde el 12/11) no lo tiene**, y ahora está verificado, no leído:
+su `ligarCTAs()` usa `C.LINK_CHECKOUT` **entero** y solo le concatena el query de la página. Igual **hay que probarlo
+cada vez que se pone la URL real**, porque es exactamente el momento en que el bug aparecería.
+
+**La prueba, en cuatro puntos** (con el quiz abierto con `?utm_source=...&utm_campaign=...&fbclid=...`):
+1. Los `<a>` **nacen** con el host completo y los parámetros desde que carga la página, sin tocar nada.
+2. Siguen igual **después de dispararles** `pointerdown`, `mousedown` y `touchstart` — ahí es donde el motor viejo los
+   reescribía.
+3. El CTA que **no es un `<a>`** (en SumaAI el `<span class="free js-cta">HOY: GRATIS</span>`) navega por
+   `location.href`, así que no tiene `href` que mirar: se prueba **sobre una copia instrumentada** en la que se cambia
+   `location.href = url` por `window.__DESTINO = url`, se hace clic y se mira esa variable. Así no se ensucia la tienda
+   real con visitas de prueba.
+4. **Sin ningún parámetro** en la URL, el `href` tiene que quedar **exactamente** el checkout, sin un `?` colgado.
+
+Y antes de todo eso, la URL se chequea con `curl -sIL`: **200 y sin redirecciones** (regla de Tai Chi Fit). Si redirige,
+el que redirige es el que va en el CONFIG.
+
+🐞 **Ojo al comparar hrefs desde la consola del navegador:** devolver la URL armada con `fbclid` y los `utm_*`
+puede quedar filtrado por el canal. Conviene que la prueba devuelva **booleanos y longitudes** (`indexOf(HOST)===0`,
+`every(k => h.indexOf(k) > -1)`), no las URLs crudas.
+
 ### 🆕 2026-11-16 · 🐞 Las fotos embebidas tardan un minuto en aparecer (o no aparecen)
 Corrección de Santiago sobre [[sumaai]]: *"las imágenes tardan mucho en cargar, tipo, no cargan. Tengo que estar como
 un minuto en la slide para que recién carguen"*. No era el peso del `.txt` (638 KB): eran **dos causas que se suman**, y

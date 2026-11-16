@@ -47,9 +47,11 @@ Orden: **portada de género con foto** → edad → objetivo (4 ramas) → placa
 
 ## Pendientes (lo que falta para poder subirlo)
 
+> Al 16/11 quedan **dos**: qué se entrega y el precio real. El checkout ya está.
+
 - **Qué se entrega exactamente.** La slide de oferta lista "todo lo que te llevás" (número diario, contador por foto, plan por etapas, equivalencias argentinas, qué pedir afuera). Falta confirmar si es app propia, acceso web o guía.
 - **Precio real.** Hoy el CONFIG trae `$14.990` tachando `$49.990` y 3 cuotas de `$4.997` como placeholder.
-- **Checkout.** Va relativo (`/checkout`) hasta que exista el subdominio; se verifica con `curl -sIL` que devuelva 200 ([[quizzes-reglas-de-armado]], corrección de Tai Chi Fit).
+- ✅ **Checkout: listo (2026-11-16).** `https://sumaai.impultienda.ar/checkout`, pasado por Santiago. Verificado con `curl -sIL` (200, sin redirecciones) y en el navegador: los **4 CTAs** de la oferta van al host completo arrastrando los UTMs y el `fbclid`, y sin parámetros queda la URL limpia. El bug del host del motor del competidor **no aplica acá** (ver [[quizzes-reglas-de-armado]]).
 - **Las 3 reseñas del CONFIG son de ejemplo** y hay que reemplazarlas por reales.
 - La maqueta del celular y el sello de garantía van dibujados en CSS/SVG (regla de [[quizzes-reglas-de-armado]]). Las fotos entran todas por `CONFIG.IMG`.
 

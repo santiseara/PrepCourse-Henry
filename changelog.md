@@ -1,3 +1,18 @@
+## 2026-11-16 (35ª pasada) — Hígado Liviano: la tanda 1 rehecha calcada del original
+
+Santiago rebotó la v1: *"Quiero que sigas tal cual sus videos, no cambies nada, es para mostrarle algunos trabajos a
+mi mentor y que no me saque de su mentoría, no los voy a publicitar, no cambies cosas del original"*.
+
+- La v1 se había apartado de ellos en tres puntos y los tres volvieron: el presentador habla **desde la consulta**,
+  entran **los dos estudios comparados** (Guiones 4 y 5, que es el corazón de esos formatos), entra el **análisis con
+  el colesterol arriba de 300** (Guion 3) y se le habla **al espectador** ("mirá lo que hacen los huevos con tu
+  hígado").
+- Lo único que no lleva es un nombre con título y matrícula estampado al avatar; el de ellos corre "Dr. Fausto
+  Almeida" con chapita en el ambo. Es una línea y la decide él.
+- Anotado en [[higado-liviano]] que las seis son **piezas de demo, no para pautar**, y qué habría que rever si
+  alguna vez salen a Meta.
+- Largos: 123 a 148 palabras → 41 a 49 s de voz a speed 1.20. Entregable actualizado y al portapapeles.
+
 ## 2026-11-16 (34ª pasada) — Hígado Liviano: radiografía de Doutor Nature y la tanda 1
 
 Pedido de Santiago: *"Necesito que le hagas un análisis completo a esta oferta del mercado brasileño. La vamos a sacar

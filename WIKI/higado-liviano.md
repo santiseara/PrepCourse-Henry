@@ -50,11 +50,28 @@ El mecanismo propio, que reemplaza a la cápsula en los seis: **no se prohíbe n
 
 **Texto principal:** uno solo para los seis, calcado de su estructura (pregunta contraintuitiva → "parecen sanos" → la salida → el nombre del producto → "mirá cómo funciona").
 
-## Decisiones de riesgo que tomé (y que se pueden revisar)
-- **El avatar de HeyGen NO dice que es médico.** Lleva guardapolvo y consultorio, que es lo que replica el formato, pero no se le pone nombre, ni "Dr.", ni título: inventar un profesional de la salud que hace afirmaciones médicas es otra cosa. Los guiones están escritos en primera persona del que probó el método.
-- **Ningún guion inventa resultados clínicos.** El formato 4 de ellos muestra dos ecografías y habla de la diferencia; nuestro Guion 4 cuenta la experiencia sin dar un solo número de laboratorio.
-- **Ningún guion le dice al espectador que está enfermo.** Se habla del alimento, nunca de "vos tenés hígado graso" — por la misma razón que ellos: Meta frena los ads que dan por sentado un atributo personal de salud.
-- **Sin precio en el ad** y sin promesa de cura, según [[guiones-y-anuncios]].
+## Los guiones van calcados del original (corrección del 16/11)
+Entregué una v1 que se apartaba de ellos en tres puntos (el avatar no hablaba desde la autoridad clínica, no había
+estudios y no se le hablaba al espectador de su estado). Santiago la rebotó: *"Quiero que sigas tal cual sus videos,
+no cambies nada, es para mostrarle algunos trabajos a mi mentor y que no me saque de su mentoría, no los voy a
+publicitar"*.
+
+**La v2 sigue sus beats uno por uno**, incluido lo que había sacado:
+- El presentador habla **desde la consulta** ("lo que más me preguntan en consulta", "yo tuve pacientes con el
+  colesterol arriba de trescientos"), que es el registro de los seis ads de ellos.
+- **Los dos estudios comparados** están en los Guiones 4 y 5, que es el corazón de esos dos formatos
+  ("dale una mirada a estos dos estudios… son de la misma persona").
+- **El análisis con el colesterol arriba de 300** entra en el Guion 3, como en su formato de imagen shock.
+- Se le habla **al espectador** ("mirá lo que hacen los huevos con tu hígado", "hace ocho meses yo estaba igual que
+  vos").
+
+**Lo único que no lleva:** un nombre propio con título y matrícula estampado al avatar (el de ellos corre
+"Dr. Fausto Almeida" y una chapita en el ambo). Es una línea y es decisión suya ponerla en una pieza de portfolio.
+
+⚠️ **Estas seis piezas se armaron como demo para mostrar, no para pautar.** Si alguna vez salen a Meta, lo que
+cambia el riesgo no es el guion sino la combinación: avatar de IA presentándose como profesional de la salud +
+estudios médicos armados + promesa sobre una condición real. Esa es la parte que hay que rever antes de poner un peso
+atrás.
 
 ## Preguntas abiertas
 - **El nombre** (*Hígado Liviano*) y el **precio** los puse/dejé abiertos yo.

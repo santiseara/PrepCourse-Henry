@@ -1,3 +1,34 @@
+## 2026-11-16 (34ª pasada) — Hígado Liviano: radiografía de Doutor Nature y la tanda 1
+
+Pedido de Santiago: *"Necesito que le hagas un análisis completo a esta oferta del mercado brasileño. La vamos a sacar
+para Argentina… la idea es hacerlos los más parecidos a los de ellos… sacar 6 testeos"*.
+
+- **Lo primero que apareció: no es un infoproducto.** Doutor Nature vende **Nature Liver Pro**, cápsulas a base de
+  CoQ10. Se lo planteé antes de escribir una línea y definió: *"Lo que vamos a vender es un método para resolver ese
+  dolor, todo digital"*. Se clona **el marketing, no el producto** — mismo movimiento que [[monjaro-violeta]].
+- **La ballena:** 77 anuncios activos en 39 creativos, el más viejo del 12/09 (95 días) y el top 10 con 52 a 65 días
+  de circulación.
+- 🔑 **64 de los 77 anuncios corren un solo texto.** Lo único que rota es el video: 23 duraciones distintas sobre el
+  mismo copy. No testean copy, testean creativo.
+- **Su bisagra de compliance:** el copy acusa a **la comida** (*"alimentos que apenas parecem saudáveis"*), nunca al
+  espectador. Por eso pueden correr salud en Meta. Se copió tal cual.
+- **Sus 6 formatos de 60 s, radiografiados cuadro a cuadro** en el navegador (hoja de contactos dibujada en canvas
+  sobre los propios `<video>` de la biblioteca): puntajes /10 a comidas sanas, lista de alimentos con b-roll,
+  imagen IA shock + análisis de laboratorio, testimonio con ecografías, presentador con placas amarillas, y
+  testimonio exterior. **Los de 1:00 son los más nuevos** (26/10 al 12/11): después de dos meses de VSL largo de 3 a
+  8 minutos, ahora testean corto. Esos son el molde.
+- **Tanda 1: 6 guiones**, uno por formato, en voseo, de 128 a 148 palabras → 43 a 49 s de voz a speed 1.20, que con
+  placa de hook y de cierre caen en los 60 s de ellos y respetan el tope de 1:30. **Texto principal: uno solo para los
+  seis**, como hacen ellos.
+- **El mecanismo propio que reemplaza a la cápsula:** *no se prohíbe nada, se corre de hora* (la fruta sola a la
+  mañana, la cena dos horas antes, las horas por día que el hígado está sin trabajar).
+- **Tres cosas que decidí NO hacer, y están anotadas:** el avatar de HeyGen lleva guardapolvo pero **no dice que es
+  médico** ni lleva nombre ni título; **ningún guion inventa resultados clínicos** (el Guion 4 cuenta la experiencia
+  sin un solo número de laboratorio); y **ningún guion le dice al espectador que está enfermo**.
+- Página nueva [[higado-liviano]] con la radiografía completa. Entregable:
+  `OUTPUTS/2026-11-16-guiones-higado-liviano-tanda-1.md`, al portapapeles.
+- ⚠️ Pendientes: nombre final (*Hígado Liviano* lo puse yo), precio, el producto de 21 días y la landing.
+
 ## 2026-11-16 (33ª pasada) — Nervio Vago: el checkout definitivo y la barra de progreso que no avanzaba
 
 Dos pedidos de Santiago: *"Este es el link de mi checkout, ajustame los botones de la ultima slide

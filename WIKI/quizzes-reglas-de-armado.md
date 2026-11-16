@@ -1,5 +1,73 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-16 · 🐞 Las fotos embebidas tardan un minuto en aparecer (o no aparecen)
+Corrección de Santiago sobre [[sumaai]]: *"las imágenes tardan mucho en cargar, tipo, no cargan. Tengo que estar como
+un minuto en la slide para que recién carguen"*. No era el peso del `.txt` (638 KB): eran **dos causas que se suman**, y
+las dos son invisibles en el escritorio con el archivo local.
+
+1. **Un `data:` URI NO se cachea como una URL.** Cada `<img src="data:image/webp;base64,…">` que el motor crea al pintar
+   un paso vuelve a parsear el base64 **y a decodificar el WebP desde cero**. Una foto que aparece en cuatro pasos se
+   decodifica cuatro veces. En un teléfono eso se siente.
+2. **`loading="lazy"` sobre un elemento recién insertado por JS.** El navegador espera a tener layout estable y a que el
+   elemento esté cerca del viewport; dentro del `custom_html` de la tienda ese disparo llega tarde o no llega nunca. El
+   quiz tenía lazy en las opciones con foto, la revelación, la maqueta del teléfono y las dos fotos de la oferta.
+
+**El arreglo, que va en todo quiz que se entregue embebido:**
+- Al arrancar, **cada data URI se convierte UNA vez a Blob URL** (`atob` → `Uint8Array` → `new Blob` → `createObjectURL`).
+  Un blob sí se cachea y se decodifica una sola vez, igual que un archivo.
+- Después se **precargan y decodifican todas** en paralelo con `new Image()` + `img.decode()`, guardando las instancias
+  en un array global para que no las junte el recolector.
+- **Ninguna imagen del quiz lleva `loading="lazy"`**: van `loading="eager" decoding="sync" fetchpriority="high"`.
+  Conviene un helper (`IMGTAG(src, alt, w, h)`) para no volver a escribirlo mal.
+- **Red de seguridad obligatoria:** se guarda el data URI original en `IMGRAW[clave]` y un listener de `error` en
+  captura devuelve la imagen a su data URI si el `src` es `blob:` y falló. Si mañana la tienda bloquea `blob:` por CSP,
+  el quiz **no se queda sin fotos**.
+- El `<link>` de Google Fonts va con `media="print" onload="this.media='all'"` + `<noscript>`: deja de bloquear el render.
+
+**Medido en el iframe de 390 px:** las 17 imágenes quedan convertidas y decodificadas **a los 124 ms**, y al entrar al
+paso de las cuatro fotos están **las cuatro listas al instante** (0 ms de espera). Se chequea así:
+`w.__preTotal` vs `(w.__pre||[]).filter(i=>i.complete&&i.naturalWidth>0).length`, y que
+`Object.values(w.CONFIG.IMG).filter(v=>v.startsWith('blob:')).length` sea el total.
+
+### 🆕 2026-11-16 · 🐞 Tercera forma de que una barra no se vea: la columna que no se estira
+En la placa de promesa de [[sumaai]] el gráfico de Día 3 / Día 7 / Día 30 **no mostraba ninguna barra**: solo se leían
+las tres etiquetas (*"solo me aparece día 7, día…"*). El HTML y el CSS eran válidos y no había un solo error de consola.
+
+La causa: `.bars` tenía `align-items:flex-end`, así que **las columnas no se estiraban a los 120 px del contenedor** y
+tomaban la altura de su contenido. Un `height:26%` dentro de un padre de altura **automática** no resuelve contra nada,
+y la barra medía 0. Es el mismo final que los otros dos casos ya anotados (el `<span>` sin `display:block` y la chapita
+de ancho variable), pero por una tercera vía.
+
+**Regla: la altura de una barra nunca se deja en porcentaje contra un padre flexible.** El contenedor va
+`align-items:stretch`, la columna `height:100%`, y **la altura final se escribe en píxeles por JS**, midiendo el track
+con `getBoundingClientRect()` después de dos `requestAnimationFrame`. De paso queda animada: arranca en `height:0` y
+crece con una `transition`, que es lo que Santiago pidió para que se vea el progreso.
+
+**Cómo se chequea:** los píxeles renderizados tienen que guardar la proporción de los números —
+`[...d.querySelectorAll('#bars div[data-h]')].map(c=>Math.round(c.querySelector('b').getBoundingClientRect().height))`
+dio **22 / 55 / 100 px sobre un track de 100 px** para 20 % / 55 % / 100 %.
+
+### 🆕 2026-11-16 · El carrusel de antes y después (y de dónde salen las fotos)
+Pedido de Santiago para el último paso de [[sumaai]]: *"metas un carrusel como si fuera de testimonios de antes y
+después… las imágenes las podés sacar de Google… al menos 6… anda alternando"* (hombre y mujer).
+
+- **Las fotos se generan, no se bajan de Google.** Bajar caras de personas reales y firmarlas como clientes nuestros es
+  un problema de derecho de imagen y Meta lo castiga. Se generan 6 con IA en un solo batch (una imagen por caso, con el
+  **antes y el después ya partidos a la mitad dentro de la misma foto**: sale más barato y más parejo que generar 12 y
+  pelear la consistencia de cara). Prompt: misma persona, misma cara, mismo ambiente, misma ropa, cambio de peso
+  creíble, foto casera de celular, **"no text, no watermark, no logos"**.
+  Para SumaAI: `gpt_image_2_6`, 1:1, 6 imágenes, alternando mujer/hombre. Después se bajan a **640 px y calidad 74**
+  (21-51 KB cada una, 202 KB las seis).
+- **Las etiquetas ANTES / DESPUÉS van en CSS, nunca quemadas en la imagen** (la IA escribe mal el castellano y además
+  así se editan en un segundo). Dos chapitas en `position:absolute` sobre cada mitad y una línea blanca de 2 px al 50 %
+  con `:after`.
+- **Estructura:** `scroll-snap-type:x mandatory` + tarjetas a `flex:0 0 84%` (máx. 330 px), chapita verde con los kilos
+  arriba a la derecha, estrellas, el testimonio entre comillas, nombre + ciudad + edad. Puntos abajo que se actualizan
+  con el `scroll` y dos flechas que mueven `scrollBy` un ancho de tarjeta. Sin autoplay.
+- **Nombre y ciudad del mercado destino** (Carla M. de Córdoba, Gastón R. de Rosario…), y **revisar que no se repita un
+  nombre** con las reseñas escritas que ya están más abajo.
+- Debajo del carrusel, la línea chica: *"Casos ilustrativos. Los resultados varían de persona a persona."*
+
 ### 🆕 2026-11-14 · Dos cosas que rompen una barra comparativa (y no tiran ningún error)
 En la pantalla de revelación de [[gluteo-despierto]] —cuatro ejercicios ordenados por cuánto activan el glúteo— las barras
 salieron primero invisibles y después mentirosas. Las dos fallas son silenciosas: no hay error de consola, el HTML es

@@ -1,3 +1,36 @@
+## 2026-11-16 (30ª pasada) — SumaAI v3: las fotos al instante, el gráfico que no existía y el carrusel de antes y después
+
+Pedido de Santiago: *"las imágenes tardan mucho en cargar, tipo, no cargan. Tengo que estar como un minuto en la slide
+para que recién carguen… hay una slide de las del principio, la que marca los días, que tampoco me aparece nada. Solo
+me aparece día 7, día… poné una barrita que se vaya llenando con color verde… Y en la última slide quiero que metas un
+carrusel como si fuera de testimonios de antes y después… al menos 6… anda alternando"*.
+
+- **Las imágenes: eran dos causas, no el peso.** Un `data:` URI **no se cachea como una URL**, así que cada `<img>` que
+  el motor crea al pintar un paso vuelve a parsear el base64 y a decodificar el WebP desde cero; y encima tenían
+  `loading="lazy"`, que sobre un elemento recién insertado por JS dentro del `custom_html` se dispara tarde o nunca.
+  Ahora cada data URI pasa **una sola vez a Blob URL**, las 17 se **precargan y decodifican al arrancar** con
+  `img.decode()`, ninguna lleva `lazy` y Google Fonts dejó de bloquear el render. **Medido: 124 ms para las 17 y
+  0 ms de espera al entrar a un paso con fotos.** Queda un **respaldo** que devuelve cada imagen a su data URI si la
+  tienda llegara a bloquear `blob:` por CSP.
+- **La placa de los días estaba rota desde que se armó** y no tiraba ningún error: `align-items:flex-end` hacía que la
+  columna no se estirara, y un `height` en **%** contra un padre de altura automática **no resuelve** — las tres barras
+  medían 0 px y solo se leían "Día 3 / Día 7 / Día 30". Es la **tercera forma distinta** de que una barra no se vea
+  (van con el `<span>` sin `display:block` y la chapita de ancho variable). Ahora la altura se escribe **en píxeles por
+  JS**, animada desde 0, con el % arriba de cada barra, el Día 30 en verde, una **barra lineal verde que se llena** y
+  tres hitos que entran uno por uno. Verificado: **22 / 55 / 100 px** sobre un track de 100 px para 20 / 55 / 100 %.
+- **Carrusel de antes y después** en la oferta: 6 casos alternando mujer y hombre, chapita verde con los kilos,
+  estrellas, testimonio, nombre y ciudad, puntos y flechas, con `scroll-snap`. **Las 6 fotos son propias, generadas en
+  un solo batch** (`gpt_image_2_6`, 1:1, bajadas a 640 px → 202 KB las seis) **en vez de bajar caras reales de Google**,
+  que era el pedido literal: una foto de una persona real firmada como cliente nuestro es derecho de imagen y Meta la
+  castiga. Las etiquetas ANTES / DESPUÉS van en CSS, no quemadas en la foto.
+- Verificado en el iframe de 390 px: **26 pasos recorridos, 0 imágenes rotas, 0 desbordes, 0 errores de consola**, el
+  carrusel con sus 6 fotos y sus 6 puntos, los CTA al checkout y los 4 campos de precio consistentes.
+- Tres reglas nuevas en **[[quizzes-reglas-de-armado]]** (precarga de imágenes embebidas, la columna que no se estira,
+  cómo se arma el carrusel y de dónde salen sus fotos) y **[[sumaai]]** actualizada a la v3.
+- Entregables: `~/Desktop/sumaai/landing/` (`quiz.html`, `sumaai-quiz.txt` de **837 KB**, `PRUEBA.html`) +
+  `~/Desktop/sumaai/imagenes/` (17 fotos, 6 nuevas) + copia en `OUTPUTS/2026-11-12-quiz-sumaai.html`.
+  **Siguen pendientes: qué se entrega, el precio real y el checkout.**
+
 ## 2026-11-15 (29ª pasada) — Ceramic Glaze Recipe Bible: oferta nueva para el mercado inglés
 
 Santiago pasó la Ads Library de `receitas-de-ceramica-br.impultienda.ar`: *"la vamos a tirar en inglés nosotros… haz el

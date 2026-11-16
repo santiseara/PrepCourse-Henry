@@ -19,6 +19,14 @@ Radiografía completa: `OUTPUTS/2026-11-16-radiografia-belu-fitness.md`. Videos,
 - Antes/después: slots `BA_IMGS` (archivos `q-ba-1.webp`, `q-ba-2.webp`); vacíos = el bloque no se muestra.
 - Se sacó el "1.200.000 seguidoras" de Belu; autoridad en `EXPERIENCIA` y `ALUMNAS` del CONFIG, a completar con datos reales.
 
+### Anuncios · tanda 1 (16/11)
+- **6 videos** en `~/Desktop/silvia-fitness/anuncios/16-11 - 1..6.mp4`, 1080x1920, 8 a 36 s. Uno por formato de Belu: V1 déficit (cocina, su ad01), V2 a los 40 (living de cuerpo entero, ad06), V3 espejo (parque, ad07), V4 gimnasio con cartel de comentario (ad11), V5 principiantes con comentario + mate, V6 mudo con pantalla partida (ad03/ad12).
+- **Veo 3.1 Fast por ApiMart** (HeyGen necesita Chrome y no estaba conectado), proyecto de la skill `mini-novela` en `~/Desktop/silvia-fitness/work/tanda1/` (`guion.py`, 26 tomas, ~US$4). Escenas nuevas con Nano Banana a partir de la foto de Silvia: cocina con fruta, living de cuerpo entero, parque.
+- Montaje: `OUTPUTS/scripts-vsl/edit_silvia.py` (subtítulo de una palabra rosa con borde blanco y pop, inserts del producto anclados a la palabra **debajo** del subtítulo, cartel de comentario, zoom alternado, velocidad 1,25, música `music_activa.py` baja). Inserts: `OUTPUTS/scripts-vsl/gfx_silvia.py`.
+- Control: audio contra guion 0,999-1,000 en los 5 con voz, 0 cuadros negros.
+- Sin testimonios inventados ni kilos: el "miren la foto que me mandó Cami" y el testimonio de alumna de Belu no se clonaron (Manual de Edición IA, sección 13). El V6 muestra *nivel inicial → avanzado* en vez de un antes/después de otra persona.
+- 🐞 Veo: **3 tomas bloqueadas por el filtro** (devueltas sin costo) con frases inocentes; se destrabaron cambiando una palabra o el gesto. Y en una toma dijo **"queréis"**: Whisper lo marca como EXTRA y se regenera reescribiendo la línea sin ese verbo.
+
 ## Preguntas abiertas
 - Fotos de antes/después generadas.
 - Backend de Belu (no visto: hace falta pasar el checkout).

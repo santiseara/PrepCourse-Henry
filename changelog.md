@@ -1,3 +1,9 @@
+## 2026-11-16 (40ª pasada) — Silvia Fitness: los 6 anuncios de la tanda 1
+
+Santiago: *"tienen que ser super similares a los de ella… usar siempre nuestro avatar… misma dinámica, mismas visuales"*.
+- 6 videos en `~/Desktop/silvia-fitness/anuncios/`, con Veo 3.1 por ApiMart y montaje `edit_silvia.py` + inserts `gfx_silvia.py`. Guion en `OUTPUTS/2026-11-16-guiones-silvia-tanda1.py`.
+- Control final: audio contra guion 0,999-1,000, 0 cuadros negros.
+
 ## 2026-11-16 (39ª pasada) — Adiós Panza: precio y checkout
 
 Santiago: *"el precio va a ser de 16.990 ars… https://adios-panza.impultienda.ar/checkout"*.

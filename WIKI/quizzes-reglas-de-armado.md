@@ -1,5 +1,78 @@
 # Quizzes: reglas de armado (checklist viva)
 
+### 🆕 2026-11-16 · Un quiz NATIVO del builder de ImpulTienda se clona desde su `quiz-data`
+Hasta hoy los quizzes que clonamos eran `custom_html` (el HTML del competidor pegado a mano en su tienda). El de
+[[nervio-vago]] es otra cosa: el **motor propio de ImpulTienda** (*engine v2 — block-based screens*), o sea una ruta de
+quiz de la plataforma. Se reconoce porque el `<head>` carga `/_astro/q-home.*.css` y el `<body>` es solo
+`<main class="quiz-wrap"><div id="quiz-root"></div></main>`.
+
+- **El quiz entero viaja sin cifrar** en `<script id="quiz-data" type="application/json">`: `spec.steps`, `theme`,
+  `checkoutBase` y **las claves de su Supabase**. Se baja con `curl -sL` y se parsea con Python. No hace falta recorrerlo.
+- **El motor es un `<script>` inline de ~39 KB** y el CSS entero está en `q-home.*.css` (~13 KB). Los dos se bajan y se
+  reusan tal cual: el entregable es **su motor + su CSS + su spec con nuestros textos**, igual que la regla del 14/11.
+  ⚠️ Ojo al cortar los scripts con una regex: el motor **contiene los literales `<script set:html>` y `</script>`**
+  adentro de sus comentarios, así que un `finditer` ingenuo lo parte en tres pedazos falsos.
+- **Las ramas se resuelven por PUNTAJE, no por salto.** Una pantalla con `outcome:{min,max}` solo se muestra si el
+  puntaje cae en su banda. Así es como el original esconde un **A/B de embudo entero**: dos bloques de opciones
+  superpuestos en la portada, el segundo con `score 1000000`, y el CSS muestra uno u otro según un sorteo 50/50 en
+  `localStorage`. Antes de contar los pasos hay que mirar si hay bandas de puntaje absurdas: son un carril paralelo.
+- **Lo que NO se copia** (es su stack, como el cloaker y TrackTurbo del 26/10): su analítica (acá, Whop), su A/B de
+  precio que hace `fetch` al checkout para leer el precio real, **sus claves de Supabase** (si quedan, cada respuesta de
+  nuestro tráfico se guarda en SU base) y sus `outcome.target` de checkout por banda.
+
+### 🆕 2026-11-16 · 🐞 Una opción con foto se renderiza a 120 px de alto: el cuerpo entero pierde la cara
+En [[nervio-vago]] las 4 fotos de edad eran retratos de cuerpo entero de 600×800, buenos y parejos. En pantalla no se
+veía la cara de ninguna: `.quiz-option-img-lg` es **`width:100%;height:120px`** con `object-fit:cover`, así que de una
+foto vertical se muestra **la franja horizontal del centro** — de los hombros a las rodillas. Cuatro pares de calzas
+lila idénticos, y el rango de edad (que es lo único que esa pregunta tiene que comunicar) ilegible.
+
+**Regla: antes de dar por buena una foto de opción, se mide la caja en la que va a caer y se simula el `cover`.**
+Son tres líneas de Pillow: escalar al ancho de la celda, recortar el alto de la celda desde el centro, y mirarlas las
+cuatro juntas al tamaño real. Si no se distinguen entre sí, el recorte está mal — no la foto.
+El arreglo es el mismo de [[dancego]] (4/11): recorte apretado a la cara, **con la relación de aspecto de la caja**
+(acá 380×285 ≈ 4:3, que es la de 165×120) y el centro vertical en **0,28**, para que el `cover` casi no recorte.
+
+### 🆕 2026-11-16 · El gauge del motor viene al revés si la métrica es de riesgo
+El `gauge` de ImpulTienda pinta `linear-gradient(90deg, rojo, ámbar 50%, verde)`: sirve para una métrica donde **más es
+mejor**. En [[nervio-vago]] la métrica es **"Desregulación del nervio vago"** (más alto = peor), con etiquetas
+Bajo/Normal/Medio/Alto, así que la bolita del peor resultado (88 %) caía **sobre el verde**, pegada al cartel
+*"Desregulación alta"*. El color decía "bien" donde el texto decía "riesgo".
+
+**Regla: cuando la métrica es de riesgo, el gradiente se invierte** (`verde → ámbar → rojo`), con una sola línea de CSS
+en nuestro bloque. Es la misma regla de §4b (la barra del IMC) y de la paleta del 26/10: **el verde solo significa
+"bien" y el rojo solo "riesgo"**, aunque el componente venga del motor del competidor.
+**Cómo se chequea:** no mirando la captura — se lee `getComputedStyle(gauge).backgroundImage` y se compara el orden de
+los colores contra el orden de las etiquetas.
+
+### 🆕 2026-11-16 · El caminador mira el `data-act`, no "el primer botón visible"
+Recorriendo [[nervio-vago]] el caminador se coló dos veces en el mismo paso de selección múltiple. La regla del 10/11
+decía "si hay un `[data-next]` y no está `disabled`, clickealo", y yo la implementé como *"el primer botón con
+`data-act` que no sea `choose` ni `back`"*. En este motor **las opciones de un `multi` también llevan `data-act`**
+(`toggle`), así que `btn[0]` era una opción: la prendía y la apagaba para siempre, sin tocar nunca *Continuar*.
+
+**Regla: el caminador busca los actos POR NOMBRE, en este orden** — `checkout` (y corta), `next`, `choose` — y nunca
+"el primero que haya". En un `multi`, antes de apretar `next` hay que verificar que haya **al menos un `toggle` con la
+clase de seleccionado**, porque `minSelect` lo bloquea. Un caminador que se cuelga **no es un bug del quiz**: antes de
+anotar nada hay que imprimir los `data-act` visibles de esa pantalla.
+
+### 🆕 2026-11-16 · Localizar a LATAM neutro: el marcador también se cuela en las FOTOS
+Pasar un quiz argentino a español neutro no termina en el voseo. En [[nervio-vago]] había **dos mates** adentro de las
+imágenes — uno enorme en el mockup del celular y otro al lado de la notebook en la foto de "modo alerta" — y un tercero
+en el texto (*"¿Cuánto mate o café tomás por día?"*). Para México, Colombia o Perú el mate es una señal de "esto no es
+para mí", igual de fuerte que un *laburo*.
+
+- **Los dos se arreglaron recortando, sin generar una sola imagen.** Es el primer recurso de la regla del 11/11 (buscar
+  otra parte de la misma foto). De paso los dos recortes quedaron **mejores** que el original, porque el sujeto pasa a
+  llenar el encuadre.
+- **Checklist de barrido para LATAM neutro:** el mate y el termo · *laburo, plata, pibe/chico, pavada, chau, re-* ·
+  *mail* → correo · *panza* → estómago/barriga · el gentilicio de la prueba social (*"+12.400 argentinas"*) · las
+  ciudades de los testimonios · la moneda · los nombres propios muy rioplatenses.
+- **Y al sacar un marcador, revisar los emojis que quedan.** Sacado el mate, las opciones de cafeína quedaban con **dos
+  ☕ en el mismo paso**: se reparten ☕ 🍵 🥛 (regla del 4/11, un emoji por opción).
+- **El voseo se comprueba contando formas, no leyendo** (regla del 10/11): se listan las palabras que terminan en
+  `-ás/-és/-ís` y se revisa una por una. Los falsos positivos esperables son *más, demás, después, estrés* y **`estás`,
+  que es igual en tuteo**.
+
 ### 🆕 2026-11-16 · El checkout definitivo: el motor propio NO tiene el bug del host (verificado)
 Al poner el checkout real de [[sumaai]] (`https://sumaai.impultienda.ar/checkout`) correspondía revisar el **bug dormido
 del 14/11**: el motor del competidor reescribía el `href` como `u.pathname + u.search` y se comía el host, así que con
@@ -451,6 +524,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Necesito que me hagas este quiz. Pero va a ser para latam, así que ajustá el acento al neutro" + "Usa las mismas imagenes, todo igual, si alguna se ve mal, ajustala" | Primer clon de un quiz **nativo del builder de ImpulTienda**: su `quiz-data` JSON, su motor y su `q-home.css` tal cual, con **59 textos pasados a neutro por script** (falla si un par no matchea) y cero voseo verificado contando formas. Traía un **A/B de embudo escondido** por banda de puntaje (quiz largo vs. quiz corto + VSL): se conserva entero y apagado en el CONFIG. Se le sacan su Whop, su A/B de precio, **sus claves de Supabase** y sus targets de checkout. Las 10 imágenes son las suyas; hubo que **recortar dos mates** y **recortar a la cara las 4 fotos de edad**, que a `height:120px` con `cover` mostraban solo las piernas. El **gauge venía invertido** (verde sobre la banda de riesgo) |
 | 2026-11-14 | Quiz Glúteo Despierto | "El contador del principio arranca en 0, tiene que empezar en 10 minutos, cuenta regresiva" | Portada en **600 s** (`data-timer` **y** el texto del `<span>`, los dos lugares) y **un `fin` vencido no se hereda**: `contador()` lo descarta y arranca de nuevo, así ningún contador abre en 00:00 |
 | 2026-11-14 | Quiz Glúteo Despierto | "arranca directo en la última slide, me sacaste todo" | **Ningún quiz retoma el paso guardado**: en el arranque se borra `pc_paso` y se va al paso 0 (ver la regla de §arranque). Las 30 pantallas estaban todas; lo único que pasaba era que el motor del competidor retomaba donde había quedado la prueba anterior |
 | 2026-11-14 | Quiz Glúteo Despierto (modelado de Guía Piernas y Cola) | **"No, no entendiste, quiero el mismo diseño que ellos, pero que diga cosas distintas"** (después de entregar una v1 con nuestro motor) | **"Similar al de ellos" = SU HTML, no nuestra plantilla** (ver la regla del 14/11 arriba). La v2 es su documento tal cual —su CSS, su sprite, sus 30 pasos, su violeta— con **los ~120 textos reescritos por script**, que falla si un par no matchea o si queda un rastro suyo. 13 de las 15 imágenes son suyas (las neutras); logo y portada rehechos. Se suman cuotas de Mercado Pago, pixel y la FAQ de suscripción. Bugs nuevos: el `AR$\xa0` con espacio no separable, los textos repetidos entre pasos y la línea de cuotas que parte la caja de precio |

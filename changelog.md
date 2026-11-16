@@ -1,3 +1,39 @@
+## 2026-11-16 (32ª pasada) — Reseteo del Nervio Vago 28: el quiz clonado a LATAM en neutro
+
+Pedido de Santiago: *"Necesito que me hagas este quiz [nervio-vago.impultienda.ar]. Pero va a ser para latam, así que
+ajustá el acento al neutro"* + *"Usa las mismas imagenes, todo igual, si alguna se ve mal, ajustala"*.
+
+- **Es el primer quiz NATIVO del builder de ImpulTienda que clonamos.** No es un `custom_html`: el quiz entero viaja
+  sin cifrar en un `<script id="quiz-data">` (36 pasos, tema, checkout **y las claves de su Supabase**), el motor es un
+  `<script>` inline de ~39 KB y el CSS está en `/_astro/q-home.css`. Siguiendo la regla del 14/11 ("su HTML, no nuestra
+  plantilla"), el entregable es **su motor + su CSS + su spec con nuestros textos**, armado por script.
+- **Traía un A/B de embudo escondido**, no de copy: dos bloques de opciones superpuestos en la portada, uno con
+  `score 1000000`, que parten el tráfico 50/50 entre el **quiz largo con 3 resultados por puntaje** y un **quiz corto de
+  5 preguntas + VSL vertical**. Se conserva **entero** y apagado en el CONFIG (`AB_VSL: false`), porque el VSL es de
+  ellos; se enciende el día que haya uno propio.
+- **59 textos al neutro, por script y con verificación**: el build falla si un par no matchea. Voseo → tuteo, y el
+  léxico (*laburo → trabajo, plata → dinero, mail → correo, panza → estómago*). Verificado **contando formas**: cero
+  verbos en `-ás/-és/-ís`. Testimonios a **Guadalajara, Bogotá y Lima**; *"+12.400 argentinas"* → *"mujeres de
+  Latinoamérica"*.
+- **Las mismas 10 imágenes, sin generar ni una.** Dos tenían **mate** (el mockup del celular y la foto de "modo
+  alerta"): se fueron **recortando**, y los dos recortes quedaron mejores que el original. Y las **4 fotos de edad no
+  mostraban la cara**: la opción con foto se renderiza a `height:120px` con `cover`, así que de un cuerpo entero solo
+  se veía la franja del medio. Recortadas a la cara, los cuatro rangos se distinguen de una.
+- **El gauge venía invertido**: la métrica es *desregulación* (más alto = peor) y el gradiente del motor pinta de
+  **verde la banda "Alto"**, justo al lado del cartel de riesgo. Se invierte con una línea de CSS.
+- **Se le saca todo su stack**: la analítica de Whop, su A/B de precio que hace `fetch` al checkout, **sus claves de
+  Supabase** (si quedaban, cada respuesta de nuestro tráfico iba a SU base) y sus targets de checkout por banda.
+- **Verificado en el navegador, no leído**: iframe de 390 px, las 32 pantallas del carril A recorridas por código —
+  0 imágenes rotas, 0 desborde, 0 errores de consola, las 10 fotos decodificadas al arrancar, y el CTA llegando a
+  `/checkout` con los 6 parámetros (fbclid + 5 UTMs).
+- ⚠️ **Dos cosas las decidí yo y están para confirmar:** el **precio** (US$ 9,99 / US$ 29,99, por el piso de LATAM
+  neutro de [[energia-vital]]) y el **checkout**, que quedó relativo `/checkout` hasta que esté el subdominio.
+- 5 reglas nuevas en [[quizzes-reglas-de-armado]] (el builder nativo, la foto de opción a 120 px, el gauge de riesgo,
+  el caminador que mira el `data-act`, y el barrido LATAM que incluye las fotos) + página nueva [[nervio-vago]].
+- Entregables: `~/Desktop/nervio-vago-latam/` (`landing/` con el `.txt` de 632 KB, `PRUEBA.html` y `spec-latam.json`,
+  + `imagenes/` con las 10 webp) · copia en `OUTPUTS/2026-11-16-quiz-nervio-vago-latam.html` · script en
+  `OUTPUTS/scripts-quiz/build_nervio_vago_latam.py` · el `.txt` al portapapeles.
+
 ## 2026-11-16 (31ª pasada) — SumaAI: el checkout definitivo, con los 4 CTAs verificados
 
 Santiago pasó la URL: *"Este es el checkout al que tienen que redirigir los botones de cta de la última slide

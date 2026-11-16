@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-14.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-16.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -8,6 +8,7 @@
 - ✅ [[como-trabajar-con-santiago]] — **Leer primero.** Rol, herramientas, reglas de interacción y glosario.
 - 🆕 [[mentoria]] — **Su mentoría propia** (enseñar a vender infoproductos low ticket). Un documento por módulo en **formato guía** (títulos, orden y cuadros sí; explicaciones largas no), referencia la School de Bilbao. Módulos 1, los 3 de Meta Ads y el impositivo entregados.
 - 🆕 [[sumaai]] — **Oferta nueva**: contar calorías sacándole una foto al plato, modelada de [[welmi]]. Marca propia elegida el 12/11 (el App Store tiene quemado todo lo que diga `cal/nutri`). Quiz de **22 pasos** armado y verificado (el original tiene 35), paleta azul, números calculados de verdad con piso de 1.200 calorías y pago único en ImpulTienda. **v3 (16/11): fotos al instante, el gráfico de los días arreglado, carrusel de 6 antes/después y el checkout definitivo puesto y verificado.** Faltan producto y precio.
+- 🆕 [[nervio-vago]] — **Oferta nueva LATAM** (español neutro): **Reseteo del Nervio Vago 28**, plan de 28 días para salir del *modo alerta* (respiración, tarareo, agua fría, 5-15 min por día). Clon del quiz argentino de `nervio-vago.impultienda.ar`, que es el **primer quiz nativo del builder de ImpulTienda** que clonamos: su `quiz-data` JSON, su motor y su CSS tal cual, con los 59 textos al neutro. **36 pasos**, con un **A/B de embudo escondido** por banda de puntaje (quiz largo con 3 resultados vs. quiz corto de 5 preguntas + VSL), que queda entero y apagado. Las mismas imágenes, con **dos mates recortados** y las 4 fotos de edad recortadas a la cara. Quiz entregado el 16/11 a US$ 9,99. Faltan el precio final, el checkout, el VSL y los anuncios.
 - 🆕 [[planilla-maestra]] — **Oferta nueva LATAM**: planilla de finanzas personales (21 hojas, Sheets y Excel, pago único US$ 8.99) clonada de **The Sheet Code** (~57 ads en inglés corriendo desde diciembre de 2025). Landing lista; tanda 1 de 6 guiones entregada el 12/11. Falta el archivo real de la planilla para grabar pantalla como ellos.
 - ✅ [[scented-stones]] — ⭐ La oferta ganadora: DNA de los 3 guiones, variables y próximos pasos.
 - 🆕 [[calistenia-rusa]] — Oferta nueva AR ($17.990) para **hombres 40+**: calistenia **rusa** para diferenciarse de la calistenia militar que vende todo el mundo. Quiz de 14 pasos recortado del de Calistenia Asiática H40+ (oferta propia). Falta el VSL.

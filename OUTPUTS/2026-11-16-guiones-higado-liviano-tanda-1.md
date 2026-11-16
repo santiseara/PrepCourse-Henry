@@ -1,26 +1,28 @@
-HIGADO LIVIANO - TANDA 1 - 6 GUIONES - 2026-11-16 (v2, calcados del original)
-Argentina, voseo. 60 segundos cada uno. Voz: Sulafat (mujer) / Orus (hombre), speed 1.20.
-Cada guion sigue beat por beat uno de los 6 formatos de 60 s de Doutor Nature.
+HIGADO LIVIANO - TANDA 1 - 6 GUIONES - 2026-11-16 (v3, para producir)
+Argentina, voseo. 60 segundos. Voz: Sulafat (mujer) / Orus (hombre), speed 1.20.
+Un guion por cada uno de los 6 formatos de 60 s de Doutor Nature.
 
 
-Guion 1
+Guion 1   [formato PUNTAJES - avatar mujer]
 
-¿Qué es lo mejor para sacar la grasa del hígado? Le pongo nota del uno al diez a lo que más me preguntan en consulta.
+Le puse nota del uno al diez a las cuatro comidas que todo el mundo cree que le hacen bien al hígado. Ninguna llegó a seis.
 
-El café. Cinco. Es bueno, pero el café no toca lo que ya está adentro.
+El café. Cinco. Ayuda, pero no toca la grasa que ya está adentro.
 
-Los huevos. Tres. No son el gran villano que todos creen, pero no te sacan un gramo de grasa del hígado.
+Los huevos. Tres. No son el villano que te contaron, pero tampoco mueven la aguja.
 
-El aceite de oliva. Cuatro. Buenísimo para reemplazar, pero está lejos de ser el santo grial de la grasa del hígado.
+El aceite de oliva. Cuatro. Buenísimo para reemplazar, lejísimos de ser el santo grial.
 
-La ensalada. Dos. Suma, pero no alcanza ni cerca para sacar la grasa que ya está adentro.
+La ensalada. Dos. Comer verde no desinflama un hígado cargado, y por eso hay tanta gente que come sano y no cambia nada.
 
-¿Y el té detox? Cero. No existe un solo estudio serio que diga que saca grasa del hígado.
+¿Y el té detox? Cero.
 
-Lo que sí la mueve es otra cosa, y es lo primero que ordenamos. Te lo dejo acá abajo, día por día.
+Lo que sí mueve la aguja es el orden en que comés, no la lista de lo que comés. Eso es todo el método: veintiún días, comida de supermercado, sin pastillas.
+
+Te lo dejo acá abajo, día por día.
 
 
-Guion 2
+Guion 2   [formato LISTA DE ALIMENTOS - avatar mujer + b-roll de comida]
 
 Mirá lo que hacen los huevos con tu hígado.
 
@@ -32,54 +34,52 @@ La cerveza del fin de semana. Una sola no te hace nada. El tema es que el hígad
 
 La panceta del domingo. Y la gaseosa light, que no tiene azúcar pero igual le da trabajo.
 
-Lo que veo todas las semanas es gente que come así, se hace un análisis y le sale el colesterol por las nubes sin entender por qué.
+El hígado no duele y no avisa. Lo único que notás es que estás apagado.
 
 Ninguna de las cinco hay que prohibirla. Hay que correrlas de lugar. Te dejo el orden acá abajo.
 
 
-Guion 3
+Guion 3   [formato IMAGEN SHOCK - placa de apertura + b-roll de fruta]
 
 Mirá lo que hace la banana con tu hígado.
 
-Estos son los tres peores alimentos asesinos del hígado, y los tres están en tu cocina ahora mismo.
+Estos son los tres peores alimentos para un hígado cargado, y los tres están en tu cocina ahora mismo.
 
 La banana madura. Mientras más manchitas tiene, más rápido entra. Y lo que no usás en el momento, el hígado lo guarda.
 
 La papaya al desayuno, sola, con el estómago vacío. Dulce puro.
 
-Y el jugo de naranja exprimido. Tres naranjas adentro de un vaso que te tomás en veinte segundos.
+Y el jugo de naranja exprimido. Tres naranjas adentro de un vaso que te tomás en veinte segundos. Enteras no te comerías ninguna.
 
 Y ahora me vas a decir: entonces necesito hacer dieta, ¿no? No.
 
-Yo tuve pacientes con el colesterol arriba de trescientos que no cambiaron un solo alimento. Cambiaron la hora.
+No se saca ningún alimento. Se cambia la hora. Eso es todo.
 
-No se prohíbe nada, se corre de hora. Está todo acá abajo, día por día.
-
-
-Guion 4
-
-Dale una mirada a estos dos estudios.
-
-Son de la misma persona. El de la izquierda, hace ocho meses. El de la derecha, el mes pasado.
-
-Yo no tomo. Casi no como fritura. Peso lo mismo que hace diez años. Y el primer estudio igual me salió con el hígado cargado.
-
-Lo único que me dijeron fue bajá un poco de peso y volvé en seis meses. Nada más.
-
-Una amiga me mandó un video explicando que el hígado no se arregla sacando comida, se arregla ordenando las horas. A qué hora como la fruta. Cuántas horas dejo entre la última comida y la cama.
-
-Tres semanas haciendo eso y lo primero que noté no fue la panza: fue levantarme sin esa sensación de haber dormido mal.
-
-El de la derecha es de ocho meses después. Te dejo el link acá abajo.
+Está acá abajo, día por día.
 
 
-Guion 5
+Guion 4   [formato COMPARACION lado a lado - demostracion del mecanismo con dos mesas]
 
-Estos dos estudios son de la misma persona.
+Mirá estas dos mesas.
 
-Este está cargado de grasa. Este está limpio. Y en el medio no hubo ni una pastilla.
+La de la izquierda es un día que come desde que se levanta hasta que se acuesta. Catorce horas de hígado trabajando sin parar.
 
-Treinta años escuchando lo mismo: comé menos, movete más, bajá de peso. Y la balanza no te dice nada del hígado.
+La de la derecha tiene exactamente la misma comida. Los mismos platos, las mismas porciones. Lo único que cambia es que la última es dos horas antes.
+
+Diez horas de trabajo en vez de catorce. Cuatro horas por día en las que el hígado por fin puede ocuparse de lo que ya tiene guardado.
+
+Nadie sacó un plato. Nadie contó una caloría.
+
+Eso es exactamente lo que hace el método, y por eso no se siente como una dieta.
+
+Veintiún días, hora por hora. Te lo dejo acá abajo.
+
+
+Guion 5   [formato PRESENTADOR ENERGICO con placas amarillas - avatar hombre]
+
+Dos personas con la misma edad, el mismo peso y la misma balanza pueden tener dos hígados completamente distintos.
+
+Y la balanza no te lo dice nunca. Ese es todo el problema.
 
 Podés ser flaco y tenerlo cargado. Podés tener panza y tenerlo impecable.
 
@@ -89,24 +89,26 @@ Si comés desde que te levantás hasta que te acostás, nunca para. Y un hígado
 
 Correr la cena dos horas ya cambia eso, sin sacar un solo plato de tu semana.
 
-Eso es lo que hay adentro. Veintiún días, hora por hora. Te lo dejo acá abajo.
+Eso es lo que hay adentro. Veintiún días, hora por hora.
+
+Te lo dejo acá abajo.
 
 
-Guion 6
+Guion 6   [formato UGC EXTERIOR - avatar mujer, camara en mano]
 
-Mi marido me dijo volviste, y yo ni me había dado cuenta de que me había ido.
+El hígado es el único órgano que te puede estar fallando y no te duele nunca.
 
-Durante como dos años pensé que estaba así por la edad. Cuarenta y cuatro, dos hijos, laburo. Cansada todo el día, hinchada de la cintura para arriba, con la cabeza lenta.
+No hay síntoma. No hay aviso. Lo único que notás es que estás apagada, hinchada de la cintura para arriba y con la cabeza lenta, y se lo echás a la edad o al laburo.
 
-Lo que me cambió la cabeza fue entender que el hígado no duele. No avisa. Lo único que notás es que estás apagada.
+Y la respuesta que te dan casi siempre es bajá de peso y volvé en seis meses.
 
-No tomé nada. No dejé el asado ni el mate. Lo único que cambié fue el orden de las comidas y el horario de la cena.
+Pero hay algo que no te cuentan: no es solamente qué comés, es cuántas horas por día tu hígado está sin trabajar.
 
-A las tres semanas me entró un pantalón que tenía guardado hacía años, y eso fue lo de menos.
+No hay que dejar el asado ni el mate. Hay que correr la cena y ordenar en qué momento del día entra cada cosa.
 
-Hace ocho meses yo estaba igual que vos, mirando un video como este y pensando que no era para mí.
+Está todo escrito, día por día, veintiún días.
 
-Está todo escrito, día por día. El link te lo dejo abajo.
+El link te lo dejo abajo.
 
 
 TEXTO PRINCIPAL (uno solo para los 6, como hacen ellos)

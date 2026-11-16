@@ -73,6 +73,28 @@ cambia el riesgo no es el guion sino la combinación: avatar de IA presentándos
 estudios médicos armados + promesa sobre una condición real. Esa es la parte que hay que rever antes de poner un peso
 atrás.
 
+## La tanda 1, producida (16/11)
+Los 6 anuncios estan en `~/Desktop/higado-liviano/anuncios/` como `16-11 - 1..6.mp4`, **1080x1920, 30 fps**, de
+**40 a 55 segundos** (el tope que pidio Santiago es 1:30).
+
+| # | Formato | Avatar | Dur |
+|---|---|---|---|
+| 1 | Puntajes /10 | Valeria Chia 28D | 54,7 s |
+| 2 | Lista de alimentos | Valeria Chia 28D | 46,6 s |
+| 3 | Imagen shock | Valeria Chia 28D | 48,5 s |
+| 4 | Dos mesas comparadas | sin avatar, pantalla partida con b-roll | 45,4 s |
+| 5 | Presentador | Dr. Mauricio Teixeira | 40,4 s |
+| 6 | UGC | Megan Party Box | 43,7 s |
+
+- **Voz:** Gemini TTS, Sulafat (mujer) y Orus (hombre), acento **rioplatense verificado 0,95**. Transcripcion
+  contra el guion: 6 de 6 sin errores.
+- **Avatar:** HeyGen **Avatar IV** ("motor 4"), 720p vertical. **13-15 creditos por video**, ~85 la tanda entera
+  sobre 2.394 disponibles. No se estreno ningun avatar: los tres son del banco.
+- **Montaje:** `OUTPUTS/scripts-vsl/edit_higado.py`. Subtitulo Anton de 2-3 palabras con la palabra clave en
+  amarillo al 66 % del alto, placa de hook de borde a borde los primeros 2,6 s, chapas de puntaje `/10` en verde
+  sobre el pecho, y placa final con el nombre y *"EL LINK ESTA ABAJO"*.
+- **Control final:** audio contra guion 0,936-1,000 · cero cuadros negros · los 6 en 1080x1920.
+
 ## Preguntas abiertas
 - **El nombre** (*Hígado Liviano*) y el **precio** los puse/dejé abiertos yo.
 - **Falta el producto**: el método de 21 días día por día.

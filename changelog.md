@@ -1,3 +1,26 @@
+## 2026-11-16 (36ª pasada) — Hígado Liviano: los 6 anuncios producidos de punta a punta
+
+Santiago: *"Si, termina tu trabajo"* (y antes: *"no quiero videos de 5 minutos, máximo 1 minuto y medio, si es menos
+mejor"*).
+
+- **Los 6 terminados**, `~/Desktop/higado-liviano/anuncios/16-11 - 1..6.mp4`, **1080x1920, 30 fps**, de **40 a 55
+  segundos**: ninguno llega al minuto. Uno por cada formato de 60 s de Doutor Nature.
+- **Voz:** Gemini TTS, Sulafat y Orus, acento **rioplatense verificado 0,95**, transcripción contra el guion 6/6 OK.
+- **Avatar:** HeyGen **Avatar IV**, 720p vertical, reusando tres avatares del banco (Valeria Chia 28D para la
+  autoridad de guardapolvo, Dr. Mauricio Teixeira y Megan Party Box). **~85 créditos** la tanda entera.
+- **Montaje propio:** `OUTPUTS/scripts-vsl/edit_higado.py` — subtítulo Anton de 2-3 palabras con la clave en amarillo,
+  placa de hook de borde a borde, chapas de puntaje `/10` en verde, placa final de CTA. El anuncio 4 no lleva avatar:
+  es pantalla partida con b-roll y las etiquetas *14 HORAS* / *10 HORAS*.
+- **Control final:** audio contra guion 0,936-1,000 · cero cuadros negros · los 6 en 1080x1920.
+- **Dos reglas nuevas** en [[guiones-y-anuncios]]: las páginas de **tag de TikTok sí se abren en el navegador** (60-86
+  IDs por tag, mucho más rápido que entrar por perfil), pero **el tag en español puede estar ocupado por otra cosa**
+  — `#banana` es un baile de 2020 y de 29 clips en español servían 2; lo que rindió fueron los tags de objeto en
+  inglés. Y las trampas de HeyGen: **el motor se resetea a Avatar 6 cada vez que se cambia de avatar**, el uploader
+  solo lee de carpetas de la sesión, y un render se puede colgar en 99 % (recargar antes de relanzar y pagar dos veces).
+- ⚠️ **Los 6 quedaron sin subir al Drive**: el conector corta en **10 MB** y pesan 19-36 MB. La carpeta ya está creada
+  (*Ebook Dami / Ebook Hígado Liviano (AR) / Videos terminados*) y hay que arrastrarlos a mano.
+- Pendientes: precio, landing, y meterle cortes de b-roll de comida al 2 y al 3, que hoy son avatar puro.
+
 ## 2026-11-16 (35ª pasada) — Hígado Liviano: la tanda 1 rehecha calcada del original
 
 Santiago rebotó la v1: *"Quiero que sigas tal cual sus videos, no cambies nada, es para mostrarle algunos trabajos a

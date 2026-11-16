@@ -62,6 +62,35 @@
   gancho y que acompañe el nicho, no un loop de relleno (pedido del 2026-11-15).
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 
+### 🆕 2026-11-16 · Los tags de TikTok SÍ se abren en el navegador, y hay que elegirlos en inglés
+Dos cosas medidas armando [[higado-liviano]]:
+
+- **`tiktok.com/tag/<tag>` carga y se puede raspar** con `javascript_tool` (scroll + juntar los `/video/<id>` de los
+  `<a>`): 60 a 86 IDs por tag en unos segundos. La regla vieja —*"la búsqueda de TikTok falla en el navegador, se
+  entra por el perfil del creador"*— vale para el **buscador**, no para las páginas de tag. Esto es mucho más rápido.
+- 🐞 **El tag en español puede ser otra cosa.** `#banana` en TikTok es un **baile de 2020**: 14 clips de chicos
+  bailando, cero fruta. `#cafe` devuelve gente hablando a cámara con texto quemado y tortas. **De 29 clips bajados de
+  tags en español servían 2.** Los que sí rindieron fueron los **tags de objeto en inglés** (`#friedegg`,
+  `#healthybreakfast`): comida real, plano cerrado, sin cara. Es la misma lección del 10/11 en
+  [[noche-de-citas-cristiana]], ahora con una causa nueva: el tag en español estaba **ocupado por otra cosa**.
+- **El filtro no cambia:** aun en el pool bueno, 7 de 15 tenían texto quemado o cara. Se revisan todos con hoja de
+  contactos antes de usarlos.
+
+### 🆕 2026-11-16 · HeyGen: el motor se resetea al cambiar de avatar
+Produciendo los 6 de [[higado-liviano]] con **Avatar IV** ("motor 4", tercero en el desplegable, abajo de Avatar 6 y
+Avatar V):
+
+- **Cada vez que se cambia de avatar, el motor vuelve solo a Avatar 6.** La resolución y la orientación se mantienen,
+  el motor no. Orden correcto: **avatar → audio → resolución → motor → enviar**, con el motor siempre al final y
+  verificando el cartel antes de mandar.
+- **El audio propio** (nuestra voz de Gemini, ya verificada) entra por *subir/grabar* → pestaña **Subir audio**. Así
+  la voz es la nuestra y HeyGen solo hace el lipsync.
+- 🐞 **El uploader del navegador solo lee de las carpetas de la sesión**, no del Escritorio: los wav hay que copiarlos
+  al scratchpad antes de subirlos.
+- **Costo real medido: 13-15 créditos por video** de 40-55 s a 720p vertical. Una tanda de 6 son ~85 créditos.
+- 🐞 **Un render se puede colgar en 99 %**: uno de los seis tardó 25 minutos contra los 5 de los otros. Antes de
+  relanzarlo (y pagar dos veces) conviene recargar la página: el mío había terminado y el cartel estaba viejo.
+
 ## 🔁 Variación real (ver [[angulos-publicitarios]])
 - Una variable cuenta solo si cambia el hook, el mecanismo, el ángulo, la objeción, la emoción, el nivel de conciencia o la forma de presentar el producto. Cambiar palabras no cuenta.
 - Proporción: 90% variables del ganador y 10% ángulos nuevos, con ángulos totalmente nuevos 2 o 3 veces por semana.

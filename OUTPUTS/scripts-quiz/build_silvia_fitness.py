@@ -144,6 +144,18 @@ CSS = '''
 '''
 rep("</style>\n</head>", CSS + "</style>\n</head>", 1)
 
+# ---------- precio y checkout (16/11: $16.990, checkout propio) ----------
+rep('const CHECKOUT_URL = ""; // link del checkout de TU tienda (ej. https://xxxx.impultienda.ar/checkout). Vacío = baja hasta el precio.',
+    'const CHECKOUT_URL = "https://adios-panza.impultienda.ar/checkout"; // link de pago. Vacío = baja hasta el precio.\n'
+    '/* checkout + los UTM/fbclid con los que llegó la visita */\n'
+    'const CK = ()=> CHECKOUT_URL ? CHECKOUT_URL + (location.search ? (CHECKOUT_URL.includes("?")?"&":"?") + location.search.slice(1) : "") : "";', 1)
+rep('a.href=CHECKOUT_URL;', 'a.href=CK();', 1)
+rep('<a class="cta" id="buyIn" href="${CHECKOUT_URL}"', '<a class="cta" id="buyIn" href="${CK()}"', 1)
+rep('"🔒 Pago seguro · Acceso inmediato", CHECKOUT_URL||null);', '"🔒 Pago seguro · Acceso inmediato", CK()||null);', 1)
+rep('De <s>$43.998</s> por solo', 'De <s>$33.980</s> por solo', 1)
+rep('<div class="now">$21.999</div>', '<div class="now">$16.990</div>', 1)
+rep('Menos de <b>$790 por día</b>', 'Menos de <b>$610 por día</b>', 1)  # 16.990 / 28 = 606,8
+
 # ---------- barrido ----------
 t = t.replace(' loading="lazy"', "")
 for bad in ("belu", "chau panza", "cami,", "aekpgsbqjzqntlbucbts", "1.200.000", "20 años"):

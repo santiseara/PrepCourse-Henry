@@ -1,3 +1,8 @@
+## 2026-11-16 (39ª pasada) — Adiós Panza: precio y checkout
+
+Santiago: *"el precio va a ser de 16.990 ars… https://adios-panza.impultienda.ar/checkout"*.
+- $16.990, tachado $33.980 (50 %), $610 por día. Checkout puesto en el CONFIG; los 2 CTAs de la venta arrastran los UTM. Verificado en una copia instrumentada.
+
 ## 2026-11-16 (38ª pasada) — Silvia Fitness: avatar y quiz Adiós Panza
 
 Santiago: *"quiero que hagamos el mismo quiz pero con mi experta, se va a llamar silvia fitness"*.

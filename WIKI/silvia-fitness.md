@@ -13,13 +13,13 @@
 Radiografía completa: `OUTPUTS/2026-11-16-radiografia-belu-fitness.md`. Videos, transcripciones y el HTML del quiz original en `~/Desktop/silvia-fitness/referencia/`.
 
 ### Quiz (16/11)
+- **Precio $16.990** (tachado $33.980, "menos de $610 por día") y **checkout `https://adios-panza.impultienda.ar/checkout`** (200, sin redirecciones). Los 2 CTAs de la venta (`#buyIn` y el sticky) salen por `CK()`, que le suma los UTM/fbclid de la visita: verificado con y sin parámetros.
 - **Su mismo HTML** (regla del 14/11): `OUTPUTS/scripts-quiz/build_silvia_fitness.py` corta el `custom_html` de Belu y aplica ~25 reemplazos con control de que cada uno aparezca. Marca **Silvia Fitness**, producto **Adiós Panza**. Entregable: `~/Desktop/silvia-fitness/landing/adios-panza-quiz.txt` (118 KB, imágenes embebidas).
 - **No se reusan** su cara ni las capturas y antes/después de sus clientas (llevan `@belu_fitness`). Los mensajes de alumnas pasan a **burbujas HTML** con "Casos ilustrativos"; la imagen "NO ES UN PDF. ES TU APP." pasa a **maqueta en CSS**.
 - Antes/después: slots `BA_IMGS` (archivos `q-ba-1.webp`, `q-ba-2.webp`); vacíos = el bloque no se muestra.
 - Se sacó el "1.200.000 seguidoras" de Belu; autoridad en `EXPERIENCIA` y `ALUMNAS` del CONFIG, a completar con datos reales.
 
 ## Preguntas abiertas
-- Checkout de la tienda propia (`CHECKOUT_URL` vacío) y precio (quedó el de Belu: $21.999, tachado $43.998).
 - Fotos de antes/después generadas.
 - Backend de Belu (no visto: hace falta pasar el checkout).
 - ¿Tenemos el producto (planillas, grilla, videos de ejercicios) o lo armamos?

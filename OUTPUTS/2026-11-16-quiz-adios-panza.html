@@ -251,7 +251,9 @@ mark{background:var(--pink);color:var(--ink);padding:0 3px;border-radius:4px}
 
 <script>
 /* ==== CONFIG: completá esto antes de publicar ==== */
-const CHECKOUT_URL = ""; // link del checkout de TU tienda (ej. https://xxxx.impultienda.ar/checkout). Vacío = baja hasta el precio.
+const CHECKOUT_URL = "https://adios-panza.impultienda.ar/checkout"; // link de pago. Vacío = baja hasta el precio.
+/* checkout + los UTM/fbclid con los que llegó la visita */
+const CK = ()=> CHECKOUT_URL ? CHECKOUT_URL + (location.search ? (CHECKOUT_URL.includes("?")?"&":"?") + location.search.slice(1) : "") : "";
 const ALUMNAS = "+29.000"; // ⚠️ poné el número real de alumnas
 const EXPERIENCIA = "más de 12 años entrenando mujeres"; // ⚠️ la experiencia de Silvia
 const BA_IMGS = ["",""]; // antes/después (q-ba-1.webp, q-ba-2.webp). Vacío = no se muestra.
@@ -519,7 +521,7 @@ function plan(){
   sticky("Ver mi plan", next);
 }
 function buy(){
-  if(CHECKOUT_URL){ const a=document.createElement("a"); a.href=CHECKOUT_URL; a.target="_blank"; a.rel="noopener"; document.body.appendChild(a); a.click(); a.remove(); }
+  if(CHECKOUT_URL){ const a=document.createElement("a"); a.href=CK(); a.target="_blank"; a.rel="noopener"; document.body.appendChild(a); a.click(); a.remove(); }
   else document.getElementById("precio").scrollIntoView({behavior:"smooth",block:"center"});
 }
 function sales(){
@@ -586,15 +588,15 @@ function sales(){
     <div class="sec"><div class="warn">⚠️ Cupos con bonus liberados solo hoy</div></div>
 
     <div class="sec" id="precio"><div class="price">
-      <div class="from">De <s>$43.998</s> por solo</div>
-      <div class="now">$21.999</div>
-      <div class="per">Pago único. Menos de <b>$790 por día</b> durante el reto.</div>
+      <div class="from">De <s>$33.980</s> por solo</div>
+      <div class="now">$16.990</div>
+      <div class="per">Pago único. Menos de <b>$610 por día</b> durante el reto.</div>
       <span class="badge">🎁 Oferta 50% OFF · Solo 10 cupos</span>
     </div>
     <div class="timer" aria-live="polite"><span id="tm">10</span><i>:</i><span id="ts">00</span></div>
     <p class="tnote">Tu lugar está reservado por 10 minutos. Si no lo tomás, se libera para otra persona.</p>
     <div class="live mt"><span class="up">¡El precio está por subir!</span><span><b id="viewers">31</b> personas están viendo</span></div>
-    <div class="mt"><a class="cta" id="buyIn" href="${CHECKOUT_URL}" target="_blank" rel="noopener">Quiero mi lugar con 50% off</a></div>
+    <div class="mt"><a class="cta" id="buyIn" href="${CK()}" target="_blank" rel="noopener">Quiero mi lugar con 50% off</a></div>
     </div>
 
     <div class="sec duo">
@@ -620,7 +622,7 @@ function sales(){
     </div>
     <p class="foot">Silvia Fitness · Adiós Panza en 4 Semanas</p>
   </section>`;
-  sticky("Quiero mi lugar con 50% off", buy, "🔒 Pago seguro · Acceso inmediato", CHECKOUT_URL||null);
+  sticky("Quiero mi lugar con 50% off", buy, "🔒 Pago seguro · Acceso inmediato", CK()||null);
   let left=600;
   timers.push(setInterval(()=>{
     left=Math.max(0,left-1);

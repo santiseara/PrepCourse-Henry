@@ -110,6 +110,14 @@ Santiago, después de que las fotos de avatar del VSL de Monjaro se sacaran en H
 - Santiago: "siempre así lo quiero, para que no dejes cosas sueltas en mi escritorio".
 - **Los videos terminados se entregan en el Drive, no en el Escritorio** (2026-11-13: *"Metela en el drive siempre, no quiero mas en el escritorio"*; reconfirmado el 2026-11-14: *"Acordate lo del drive, guardalo como regla así no lo tengo que repetir más"*), en `Mi unidad / Ebook Dami / Ebook <Oferta> (<MERCADO>) / Videos terminados`, con cada video nombrado por el arranque de su hook. **Vale para toda tanda, sin preguntar y sin que lo pida**; el Escritorio queda como taller (`work/`). Detalle en [[organizacion-y-registro]].
 
+## ⛔ Los videos van al Drive SIEMPRE, y el peso no es excusa (REGLA FIJA, 2026-11-17)
+Santiago, después de que le entregara los 6 de [[tarot-2-dias]] diciendo que no entraban por el límite del conector: *"Metelos en el drive, pone como regla obligatoria meterlos en el drive siempre, siempre pones la excusa del peso y desp los subis, metelos"*.
+- **Toda tanda terminada sube al Drive, sin preguntar y sin excepciones.** No se entrega una tanda avisando que "quedó en el Escritorio".
+- El conector de Drive y el uploader de Chrome cortan en **10 MB**. Eso **no es un motivo para no subir**: es un paso más del trabajo.
+- **Cómo se resuelve:** se recomprime cada video con **x264 en dos pasadas**, `-preset veryslow`, apuntando a **9,3 MB** (`bitrate = (9.3*8192)/duración - 130 kbps`, audio AAC 128k). Verificado el 17/11 en un video de 56 s: de **42 MB a 9,2 MB** con la imagen **indistinguible** al comparar cuadros. Meta recomprime todo lo que subís igual, así que el máster pesado no aporta nada en destino.
+- Antes de reemplazar, se **compara un cuadro** del original contra el comprimido. Si se degradó, se sube igual pero se avisa en una línea; no se deja de subir.
+- ⛔ **Lo que NO funciona** (probado el 17/11, no volver a intentarlo): servir los videos desde un `http://127.0.0.1` con CORS y hacerles `fetch` desde la página de Drive. Chrome bloquea el pedido **http** desde una página **https** y la promesa queda colgada sin error; el servidor no registra ni una petición. Tampoco hay Google Drive para escritorio en su Mac.
+
 ## Registro y nombres
 - Los cambios de presupuesto o de puja que me pases van a `OUTPUTS/AAAA-MM-DD-registro-<oferta>.md` ([[organizacion-y-registro]]).
 - Las tandas se entregan con nombres listos: `DD/M - N` ([[nomenclatura-del-metodo]]).

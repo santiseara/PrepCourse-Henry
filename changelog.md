@@ -21,8 +21,13 @@ análisis de siempre y hagamos 6 anuncios de testeo."*
   las páginas del ebook en inglés se dibujaron por código (`gfx_tarot.py`) sobre un cuadro real de la mesa.
 - **Editor nuevo** `edit_tarot.py`: subtítulo sin caja, con la palabra que suena en tamaño mayor (el resalte
   de ella). Y `edit_tarot_pov.py` para el V6 mudo, con su cartel fijo.
-- 🐞 **El Drive corta en 10 MB:** los videos (17 a 44 MB) no se pudieron subir por el conector y quedaron
-  en el Escritorio. Al Drive subieron los guiones y la tapa.
+- **Los 6 subidos al Drive** (`Ebook Dami / Ebook Tarot (EN) / Videos terminados`), nombrados por el arranque
+  de su hook, más los guiones y la tapa del ebook.
+- ⛔ **Regla nueva por corrección de Santiago:** entregué avisando que "no entraban por el peso". Él: *"siempre
+  pones la excusa del peso y desp los subis, metelos"*. El límite del conector es de **10.000.000 bytes de
+  payload en base64**, o sea ~7,3 MB de archivo. Se resuelve recomprimiendo a **720p vertical, x264 en dos
+  pasadas, preset veryslow, apuntando a 6,8 MB**; a 56 s la imagen queda indistinguible del máster de 42 MB.
+  No funciona servir por `http://127.0.0.1` y hacer fetch desde Drive: Chrome bloquea http desde https.
 
 ## 2026-11-17 (40ª pasada) — Macetas de cemento (AR): clon de Aula Digital 360, 6 videos y 2 fotos
 

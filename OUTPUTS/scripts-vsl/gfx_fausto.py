@@ -58,7 +58,10 @@ def entre(ini, fin):
 # ---------------------------------------------------------------------------
 def barra_roja(l1, l2, ini=0.0, fin=2.4, desfase=0.6):
     f = fuente()
-    TS, PAD = 54, 18
+    # Anton es condensada: ~0.46 del cuerpo por caracter. Se achica si no entra.
+    largo = max(len(l1), len(l2))
+    TS = min(58, int((W - 80) / max(1, largo * 0.47)))
+    PAD = 20
     alto = TS + PAD * 2
     y1, y2 = 8, 8 + alto + 4
     p = []
@@ -78,14 +81,14 @@ def barra_roja(l1, l2, ini=0.0, fin=2.4, desfase=0.6):
 # ---------------------------------------------------------------------------
 def placa_blanca(lineas, ini=0.0, fin=3.6, y0=70):
     f = fuente()
-    TS, PAD, LH = 44, 16, 58
+    TS, LH = 46, 62
     if isinstance(lineas, str):
         lineas = [lineas]
-    alto = LH * len(lineas) + PAD * 2
-    p = [f"drawbox=x=60:y={y0}:w={W-120}:h={alto}:color=white@0.94:t=fill:{entre(ini,fin)}"]
+    alto = LH * len(lineas) + 30
+    p = [f"drawbox=x=50:y={y0}:w={W-100}:h={alto}:color=white@0.95:t=fill:{entre(ini,fin)}"]
     for i, l in enumerate(lineas):
         p.append(f"drawtext=fontfile='{f}':text='{esc(l)}':fontcolor=0x111111:fontsize={TS}:"
-                 f"x=(w-text_w)/2:y={y0+PAD+i*LH}:{entre(ini,fin)}")
+                 f"x=(w-text_w)/2:y={y0+15+i*LH}:{entre(ini,fin)}")
     return ','.join(p)
 
 
@@ -106,11 +109,9 @@ def puntaje(n, ini, fin, color='verde', x=None, y=330):
 # ---------------------------------------------------------------------------
 def chapa_nombre(txt, ini, fin, x=60, y=150):
     f = fuente()
-    TS, PAD = 42, 14
-    ancho = int(len(txt) * TS * 0.62) + PAD * 2
-    return (f"drawbox=x={x}:y={y}:w={ancho}:h={TS+PAD*2}:color=white@0.94:t=fill:{entre(ini,fin)},"
-            f"drawtext=fontfile='{f}':text='{esc(txt)}':fontcolor=0x111111:fontsize={TS}:"
-            f"x={x+PAD}:y={y+PAD}:{entre(ini,fin)}")
+    TS = 44
+    return (f"drawtext=fontfile='{f}':text='{esc(txt)}':fontcolor=0x111111:fontsize={TS}:"
+            f"box=1:boxcolor=white@0.95:boxborderw=16:x={x}:y={y}:{entre(ini,fin)}")
 
 
 # ---------------------------------------------------------------------------
@@ -125,31 +126,25 @@ def tacha_roja(etiqueta, ini, fin, grosor=26):
     p = [f"drawtext=fontfile='{f}':text='X':fontcolor=0xD81E1E@0.92:fontsize=620:"
          f"x=(w-text_w)/2:y=(h-text_h)/2-120:{entre(ini,fin)}"]
     if etiqueta:
-        TS, PAD = 46, 14
-        ancho = int(len(etiqueta) * TS * 0.62) + PAD * 2
+        TS = 50
         y = H - 640
-        p.append(f"drawbox=x=(w-{ancho})/2:y={y}:w={ancho}:h={TS+PAD*2}:color=0xD81E1E@0.95:t=fill:{entre(ini,fin)}")
         p.append(f"drawtext=fontfile='{f}':text='{esc(etiqueta.upper())}':fontcolor=white:fontsize={TS}:"
-                 f"x=(w-text_w)/2:y={y+PAD}:{entre(ini,fin)}")
+                 f"box=1:boxcolor=0xD81E1E@0.95:boxborderw=16:x=(w-text_w)/2:y={y}:{entre(ini,fin)}")
     return ','.join(p)
 
 
 # ---------------------------------------------------------------------------
 # Placa de mito, roja, redondeada (r040): `MITO 1 · VIENE DE LA COMIDA`
 # ---------------------------------------------------------------------------
-def placa_mito(txt, ini, fin, y=740, sub=None):
+def placa_mito(txt, ini, fin, y=700, sub=None):
     f = fuente()
-    TS, PAD = 40, 13
-    ancho = int(len(txt) * TS * 0.60) + PAD * 3
-    p = [f"drawbox=x=(w-{ancho})/2:y={y}:w={ancho}:h={TS+PAD*2}:color=0xD81E1E@0.96:t=fill:{entre(ini,fin)}",
-         f"drawtext=fontfile='{f}':text='{esc(txt.upper())}':fontcolor=white:fontsize={TS}:"
-         f"x=(w-text_w)/2:y={y+PAD}:{entre(ini,fin)}"]
+    TS, BW = 46, 18
+    p = [f"drawtext=fontfile='{f}':text='{esc(txt.upper())}':fontcolor=white:fontsize={TS}:"
+         f"box=1:boxcolor=0xD81E1E@0.96:boxborderw={BW}:x=(w-text_w)/2:y={y}:{entre(ini,fin)}"]
     if sub:
-        y2 = y + TS + PAD * 2 + 12
-        a2 = int(len(sub) * TS * 0.60) + PAD * 3
-        p.append(f"drawbox=x=(w-{a2})/2:y={y2}:w={a2}:h={TS+PAD*2}:color=0xD81E1E@0.96:t=fill:{entre(ini+0.8,fin)}")
+        y2 = y + TS + BW * 2 + 14
         p.append(f"drawtext=fontfile='{f}':text='{esc(sub.upper())}':fontcolor=white:fontsize={TS}:"
-                 f"x=(w-text_w)/2:y={y2+PAD}:{entre(ini+0.8,fin)}")
+                 f"box=1:boxcolor=0xD81E1E@0.96:boxborderw={BW}:x=(w-text_w)/2:y={y2}:{entre(ini+0.9,fin)}")
     return ','.join(p)
 
 
@@ -192,12 +187,9 @@ def caja_comentario(usuario, pregunta, ini=0.0, fin=2.4, y0=60):
 # ---------------------------------------------------------------------------
 def boton_final(out, segundos=2.6, texto='MÁS INFORMACIÓN'):
     f = fuente()
-    TS, PADX, PADY = 38, 44, 20
-    ancho = int(len(texto) * TS * 0.60) + PADX * 2
-    alto = TS + PADY * 2
-    filtro = (f"drawbox=x=(w-{ancho})/2:y=(h-{alto})/2:w={ancho}:h={alto}:"
-              f"color=0x2D7FF9@0.98:t=fill,"
-              f"drawtext=fontfile='{f}':text='{esc(texto)}':fontcolor=white:fontsize={TS}:"
+    TS = 46
+    filtro = (f"drawtext=fontfile='{f}':text='{esc(texto)}':fontcolor=white:fontsize={TS}:"
+              f"box=1:boxcolor=0x2D7FF9@0.98:boxborderw=34:"
               f"x=(w-text_w)/2:y=(h-text_h)/2")
     subprocess.run([FF, '-v', 'error', '-y', '-f', 'lavfi',
                     '-i', f'color=c=black:s={W}x{H}:r={FPS}:d={segundos}',
@@ -224,11 +216,11 @@ def subtitulos(palabras, out, estilo='blanco', por_vez=3, clave=None, hablantes=
     clave = {sinac(k).lower() for k in (clave or [])}
     fn = 'Anton' if os.path.exists(ANTON) else 'Arial'
     if estilo == 'caja':
-        est = f'Style: D,{fn},62,&H00FFFFFF,&H00000000,&H00000000,&HC0000000,-1,0,0,0,100,100,0,0,3,0,0,2,60,60,300,1'
+        est = f'Style: D,{fn},86,&H00FFFFFF,&H00000000,&H00000000,&HC0000000,-1,0,0,0,100,100,0,0,3,0,0,2,70,70,420,1'
     elif estilo == 'rojo':
-        est = f'Style: D,{fn},66,&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,4,2,2,60,60,300,1'
+        est = f'Style: D,{fn},88,&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,4,2,2,70,70,420,1'
     else:
-        est = f'Style: D,{fn},62,&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,4,2,2,60,60,300,1'
+        est = f'Style: D,{fn},86,&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,4,2,2,70,70,420,1'
     cab = ('[Script Info]\nScriptType: v4.00+\n'
            f'PlayResX: {W}\nPlayResY: {H}\nWrapStyle: 2\n\n'
            '[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,'

@@ -217,7 +217,8 @@ def montar(plan):
     off = dur(partes[0]) if hk else 0.0
     aud = f'{T}/audio.m4a'
     filtro = (f'[0:a]adelay={int(off*1000)}|{int(off*1000)},'
-              f'loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[v];'
+              f'loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,'
+              f'apad=whole_dur={DV:.2f}[v];'
               f'[1:a]volume=0.20,afade=t=in:st=0:d=1.2,'
               f'afade=t=out:st={max(0.1,DV-1.6):.2f}:d=1.4,aresample=48000[m];'
               f'[v][m]amix=inputs=2:duration=first:dropout_transition=0,aresample=48000[a]')
@@ -227,7 +228,7 @@ def montar(plan):
 
     run([FF, '-v', 'error', '-y', '-i', vfinal, '-i', aud, '-map', '0:v', '-map', '1:a',
          '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2',
-         '-shortest', out])
+         '-t', f'{DV:.2f}', out])
 
     # --- 8. control: existe, pesa, y el audio dice 48000 Hz ---
     if not os.path.exists(out) or os.path.getsize(out) < 200_000:

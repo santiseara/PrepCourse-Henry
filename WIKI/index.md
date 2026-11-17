@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-16.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-17.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -59,6 +59,8 @@
 - 🆕 [[kit-de-radiestesia]] — Kit de Radiestesia para **LATAM**: láminas imprimibles con biómetros para usar el péndulo, clon de "Regarte" (AR, 116 ads activos). Tanda 1 de 6 guiones de voz en off; el nicho **no da b-roll limpio en TikTok** (2 clips de 104).
 - 🆕 [[arte-en-yeso-y-cemento]] — The Plaster & Concrete Guide: figuras decorativas en yeso y cemento (terrazo, portavelas, velas con base de cemento) para el **mercado inglés**. Clon de "Manualidades y Arte" (AR, 53 ads activos desde el 11/10). 12 videos transcriptos, 8 familias de guion y tanda 1 de 6 ads.
 - 🆕 [[from-concrete-to-cash]] — Oferta propia en inglés: macetas de cemento ($19,99). Clon de "De Cemento a Dinero" (AR, 35 ads activos de 6 días). Tanda 1 de 6 ads.
+- 🆕 [[tarot-2-dias]] — "Tu primera lectura de tarot en 2 días" para el **mercado inglés**. Clon de Soyjulietacelis (AR, 49 ads activos arrancados el 12/11, todos video y con un solo primary text). 15 creativos transcriptos, 6 familias de guion y tanda 1 de 6 ads. El mercado inglés de "learn tarot" está **vacío de low ticket**: nadie pasa de 8 ads.
+- 🆕 [[macetas-de-cemento]] — Clon argentino de **Aula Digital 360** (58 ads activos desde el 12/10). Su guion ganador de 31 s, sus chips y su montaje. Tanda 1 de 6 ads + 2 fotos.
 - 🆕 [[bachas-de-concreto]] — Oferta nueva en inglés: curso de bachas de concreto, clon de "De Cemento a Negocio" (AR). Sus ads traducidos, con voz de Google AI Studio sobre B-roll de TikTok.
 - 🆕 [[patitas-felices]] — Oferta nueva AR ($16.990): 200 recetas para perros, clon de Tigela Cheia (BR). Videos de voz en off sobre sus visuales.
 - 🆕 [[resina-rentable]] — Oferta nueva en Argentina (pesos, Impultienda): ficha, avatar, bonos y reglas propias de guion (50–60 s).
@@ -146,6 +148,9 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-17 — Tarot en 2 días: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-17-guiones-tarot-2-dias-EN-tanda1.md) — una por familia del ganador: The Tower leída en orden, Death no significa que alguien se muere, "pick a card 1, 2 o 3", el mazo que sigue en la caja, lo que me hubiese gustado tener y el POV sin voz; en inglés y español con voseo, más la descripción única · ver [[tarot-2-dias]]
+- [2026-11-17 — Macetas de cemento: tanda 1 de 6 guiones](../OUTPUTS/2026-11-17-guiones-macetas-cemento-tanda1.md) — clon de Aula Digital 360: el ganador de 31 s más cinco hooks sobre el mismo cuerpo · ver [[macetas-de-cemento]]
+- [2026-11-17 — Macetas de cemento: descripción para ads](../OUTPUTS/2026-11-17-descripcion-macetas-cemento.md) — la calcada de una línea (como corren ellos) y una con emojis para testear · ver [[macetas-de-cemento]]
 - [2026-11-16 — Descripción para los ads de Reseteo del Nervio Vago](../OUTPUTS/2026-11-16-descripcion-ads-nervio-vago.md) — la corta que va + 2 variantes (curiosidad y cansancio), en neutro, sin precio ni promesas médicas; entra por el "modo alerta" y que el nervio se entrena · ver [[nervio-vago]]
 - [Radiografía Belu Fitness](../OUTPUTS/2026-11-16-radiografia-belu-fitness.md) — oferta, quiz, landing y 15 ads de la ballena de bajar la panza (16/11)
 

@@ -364,6 +364,7 @@ def ts(t): t = max(0, t); return f'{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t
 CAPY = P.get('capy', 1380)
 HI = P.get('hi', '&H003AE2FF&')         # color del TEXTO de la palabra activa (BGR)
 HIBOX = P.get('hibox', '&H00B08BF5&')   # color de la CAJA detras de la palabra activa (BGR)
+HIBOX2 = P.get('hibox2')                # Aula Digital alterna DOS colores de caja dentro del mismo ad
 HIB = P.get('hibord', 20)               # grosor de la caja
 end_t = min([t0 for (p, t0, t1, a), o in zip(ovs[len(ovs) - len(P.get('overlays', [])):], P.get('overlays', [])) if o['type'] == 'end'] or [L + 1])
 ass = [f'''[Script Info]
@@ -391,7 +392,8 @@ for ci, ch in enumerate(chunks):
         e2 = ch[wi + 1][0] if wi + 1 < len(ch) else min(nxt, ch[-1][1] + 0.5)
         e2 = min(e2, end_t)
         pop = '{\\fscx118\\fscy118\\t(0,90,\\fscx100\\fscy100)}' if wi == 0 else ''
-        txt = pop + ' '.join((f'{{\\3c{HIBOX}\\bord{HIB}\\shad0\\1c{HI}}}' + clean(x[2]) + '{\\r}') if j == wi else clean(x[2]) for j, x in enumerate(ch))
+        box = (HIBOX2 if (HIBOX2 and ci % 2) else HIBOX)
+        txt = pop + ' '.join((f'{{\\3c{box}\\bord{HIB}\\shad0\\1c{HI}}}' + clean(x[2]) + '{\\r}') if j == wi else clean(x[2]) for j, x in enumerate(ch))
         ass.append(f'Dialogue: 0,{ts(s)},{ts(e2)},C,,0,0,0,,{{\\pos({W // 2},{CAPY})}}{txt}')
 open(f'{tmp}/subs.ass', 'w').write('\n'.join(ass) + '\n')
 

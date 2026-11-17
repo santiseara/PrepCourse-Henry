@@ -1,3 +1,50 @@
+## 2026-11-17 (41ª pasada) — Tarot "Tu primera lectura en 2 días": clon al mercado inglés, 6 guiones
+
+Santiago: *"Vamos a hacer los anuncios para esta oferta. La voy a tirar en el mercado de inglés. Haz el mismo
+análisis de siempre y hagamos 6 anuncios de testeo."*
+
+- **Competidor desarmado:** `juli.akashicostarot.com` (Soyjulietacelis, AR), **49 ads activos** arrancados entre el
+  12 y el 17/11 — una oferta escalando de cero, no una ballena vieja. 23 tarjetas, **15 creativos únicos**, todos
+  video y **un solo primary text para los 49**: toda la variación está en el video.
+- **Seis familias de guion** identificadas por duplicación en conjuntos: la lectura de una carta en orden
+  (arcano → número → símbolos), la creencia equivocada sobre una carta, el "elegí la 1, la 2 o la 3", el mazo que
+  sigue en la caja, el "lo que me hubiese gustado tener" y un **POV sin voz** de 0:24 con un único cartel fijo.
+- **Su visual es su propio producto filmado**, no b-roll: cenital de mesa de madera con el ebook impreso y
+  anillado, el mazo Rider-Waite en abanico, velas y cristales, y la carta física apoyada sobre su página en la guía.
+- **Veredicto del mercado destino:** `learn tarot` en US da 640 resultados y **ni un anunciante con volumen**
+  (el máximo son 8 ads). Nadie vende un ebook low ticket de aprender tarot en inglés. Nicho libre.
+- **Tanda 1:** 6 guiones, uno por familia, en inglés y español con voseo, más la descripción única
+  (`OUTPUTS/2026-11-17-guiones-tarot-2-dias-EN-tanda1.md`). Página nueva: `WIKI/tarot-2-dias.md`.
+- **Pendiente antes de renderizar:** saber si la oferta inglesa ya existe (landing + ebook) o se clona de cero.
+
+## 2026-11-17 (40ª pasada) — Macetas de cemento (AR): clon de Aula Digital 360, 6 videos y 2 fotos
+
+Santiago: *"Vamos a hacer esta oferta ahora… Quiero 6 videos de testeo y 2 fotos. Las fotos vas a hacer las que se
+repiten mucho, vamos a tirarla en arg"* y después *"Para las visuales usa las mismas o saca de tiktok similares, no
+quiero nada distinto, quiero todo similar, los guiones cambialos un poco pero tampoco tanto"*.
+
+- **Competidor desarmado:** `auladigital360.shop`, **58 ads activos** desde el 12/10, los 58 video y con un solo
+  texto principal. Cuatro formatos (31 s ×18, 26 s, 20 s y audio de WhatsApp de 51 s a 1:15). Radiografía completa
+  de su oferta, su edición y su guion ganador en `WIKI/macetas-de-cemento.md`.
+- **El guion se reconstruyó del subtitulado quemado con OCR de Vision**, no con Whisper: sus subtítulos SON el
+  guion palabra por palabra y el OCR a 5 cuadros por segundo lo devuelve completo en un minuto. Whisper con la
+  máquina ocupada tardaba 20 minutos y no llegó a escribir nada.
+- **6 guiones** (`OUTPUTS/2026-11-17-guiones-macetas-cemento-tanda1.md`): el ganador clonado más cinco hooks sobre
+  el mismo cuerpo, con cambios mínimos como pidió.
+- **6 videos de 30 a 44 s** con su edición exacta: chips fijos arriba a la izquierda en tres juegos que rotan,
+  subtítulos de 3 palabras con la palabra activa adentro de una caja que **alterna rojo y verde dentro del mismo
+  video** (así lo hacen ellos), 100 % b-roll y una cama musical. Scripts nuevos: `gfx_macetas.py`,
+  `vent_macetas.py`, `gen_macetas_plans.py`, `edit_macetas.py`, `medir_barras.py`.
+- **2 fotos** (`gfx_fotos_macetas.py`) armadas con los dos planos que más se repiten en sus videos, con sus chips
+  y su titular.
+- **Pool:** 201 clips bajados, **entraron 25**. El plano insignia de Aula Digital resultó ser el clip
+  `7678821416162184478` de **@ali.diyideas**: el mismo que ellos usan, limpio y en 1080×1920.
+- 🐞 **`cropdetect` de ffmpeg no detecta el letterbox cuando la barra no es negro puro.** Tres clips lo pasaron y
+  aparecieron igual como franja negra en el render. Lo que funcionó fue medir 10 cuadros por clip con numpy
+  (filas con luminancia media < 14). Quedó en `OUTPUTS/scripts-vsl/medir_barras.py`.
+- 🐞 **El free tier de `gemini-2.5-flash-preview-tts` se agotó a mitad de la tanda** (10 requests por día): la voz
+  4 salió con `gemini-3.1-flash-tts-preview`, verificada con Gemini antes de usarla.
+
 ## 2026-11-17 (39ª pasada) — Hígado Liviano v4: el minuto, la música de Santiago, pantalla partida y los 3D
 
 Santiago: *"Quiero que me hagas de nuevo los videos porque están muy cortos, duran muy poco, así que extendemos un

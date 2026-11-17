@@ -1,3 +1,27 @@
+## 2026-11-16 (37ª pasada) — Hígado Liviano v2: velocidad, música y cortes como los de ellos
+
+Santiago: *"Metele velocidad a los videos, y musica"* + *"quedaron re aburridos, muy basicos, mejoralos"* +
+*"usa hey gen y apimart para que queden mas organicos"*.
+
+- **El diagnóstico:** eran un plano fijo de 45 segundos. Los de Doutor Nature cortan entre la doctora y la comida
+  cada 3 o 4 segundos. Eso era todo lo que faltaba.
+- **Editor reescrito** (`OUTPUTS/scripts-vsl/edit_higado.py`): jump cut en cada silencio + **velocidad 1.12 pareja**
+  (video y audio juntos, así el lipsync no se mueve), **corte a b-roll cada 6,5 s sin tocar la voz**, punch-in
+  alternado en los tramos de avatar, y **cama musical con sidechain ducking**. De 40-55 s a **34-41 s**.
+- **19 tomas de b-roll generadas con Kling por ApiMart**, US$ 3,50 (US$ 0,184 c/u): push-in sobre el huevo
+  friéndose, el aceite cayendo, la gaseosa con hielo, la balanza. Movimiento de cámara real, sin texto, sin gente.
+  **Reemplazan a los clips de TikTok**, que traían receta quemada en pantalla.
+- **Los puntajes /10 ahora se anclan al nombre de la comida**, no a un tiempo fijo: el corte de silencios y la
+  velocidad mueven todo, y Whisper escribe los puntajes como dígitos o directamente se come alguno.
+- 🐞 **Bug que se comía palabras:** el corte de silencios descartaba los tramos de menos de 0,5 s, y una palabra
+  suelta entre dos pausas (el *"Tres."* del puntaje de los huevos) es exactamente eso. Se detectó porque la
+  similitud contra el guion daba 0,884 en el anuncio 1.
+- ⚠️ **El avatar del 6 era "Megan Party Box" y tenía cajitas de souvenir en primer plano.** Recortado al 68 %
+  superior: se van las cajitas y queda plano busto, más parecido al de ellos.
+- ⚠️ **Dos cosas quedaron sin hacer por falta de navegador** (la extensión de Chrome se desconectó): sacarle el
+  b-roll a los creativos de Doutor Nature, y rehacer avatares en HeyGen (no hay API key, es solo por interfaz).
+- **Control final:** audio contra guion 0,966-1,000 · cero cuadros negros · los 6 en 1080x1920.
+
 ## 2026-11-16 (41ª pasada) — Silvia Fitness: V4 rehecho y formato espejo
 
 Santiago: *"No me gustó el video 4… se ve muy brillante y muy IA"*, *"fijate si usa voz en off o algún formato distinto"*, *"dejame solo 1, la mejor"*, *"sacá de la carpeta el que no me gustó y no lo metas en ningún drive"*.

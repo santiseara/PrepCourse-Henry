@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Las 2 fotos (estáticos 4:5) de Macetas de Cemento AR, con la estética exacta de Aula Digital 360.
+"""Las 2 fotos (estáticos 9:16) de Macetas de Cemento AR, con la estética exacta de Aula Digital 360.
 
 Aula Digital corre 58 ads y los 58 son video: no hay un estático que copiar. Lo que sí se repite en
 todos sus videos son DOS planos (los de @ali.diyideas 7678821416162184478): la maceta de tela blanca
@@ -14,25 +14,25 @@ Uso: python3 gfx_fotos_macetas.py <carpeta_cuadros> <carpeta_salida>
 import os, sys
 from PIL import Image, ImageDraw, ImageFont
 
-W, H = 1080, 1350
+W, H = 1080, 1920     # 9:16, el mismo lienzo de sus videos: recortar a 4:5 le cortaba la cabeza a la del vivero
 FD = os.path.expanduser('~/Desktop/macetas-cemento/anuncios/work/fonts')
 MX = FD + '/Montserrat-ExtraBold.ttf'
 AZUL = (29, 118, 240)
 ROJO = (214, 26, 32)
 VERDE = (34, 197, 64)
-X0, Y0, GAP, PADX, PADY, RAD = 26, 46, 9, 14, 9, 7
+X0, Y0, GAP, PADX, PADY, RAD = 26, 64, 9, 14, 9, 7
 
 FOTOS = [
-    dict(src='h_19.4.png', out='FOTO-1.jpg', crop_y=0.00,
+    dict(src='A_20.6.png', out='FOTO-1.jpg', crop_y=0.00,
          chips=[(AZUL, 32, ['1 maceta de cemento = $60.000']),
                 (ROJO, 32, ['aprendé a fabricarlas', 'y a venderlas desde 0.']),
                 (ROJO, 32, ['Descargá nuestra guía 👇'])],
-         titulo=[('LA HICE YO\n', None), ('ARENA Y CEMENTO', VERDE), (' NADA MÁS', None)]),
-    dict(src='h_23.0.png', out='FOTO-2.jpg', crop_y=0.06,
+         titulo=[('HOY VENDO\n', None), ('40 POR MES', ROJO), ('\nDESDE MI CASA', None)]),
+    dict(src='B_1.2.png', out='FOTO-2.jpg', crop_y=0.00,
          chips=[(ROJO, 31, ['APRENDÉ A FABRICAR MACETAS', 'DE CEMENTO DESDE CERO']),
                 (AZUL, 31, ['1 maceta de cemento: $60.000']),
                 (AZUL, 31, ['inversión = $4.500'])],
-         titulo=[('HOY VENDO\n', None), ('40 POR MES', ROJO), ('\nDESDE MI CASA', None)]),
+         titulo=[('LA HICE YO\n', None), ('ARENA Y CEMENTO', VERDE), ('\nNADA MÁS', None)]),
 ]
 
 
@@ -80,7 +80,7 @@ def pegar_chips(im, chips):
         y += bh + GAP
 
 
-def titular(im, partes, fsz=76, y=None):
+def titular(im, partes, fsz=84, y=None):
     """Mayúscula, blanco con borde negro grueso; los tramos marcados van adentro de una caja."""
     d = ImageDraw.Draw(im)
     f = ImageFont.truetype(MX, fsz)
@@ -135,15 +135,18 @@ if __name__ == '__main__':
     os.makedirs(dst, exist_ok=True)
     for cfg in FOTOS:
         base = Image.open(os.path.join(src_dir, cfg['src'])).convert('RGBA')
+        from PIL import ImageFilter
         esc = W / base.width
         base = base.resize((W, int(base.height * esc)), Image.LANCZOS)
+        if esc > 1.2:   # los clips vienen en 576 de ancho: un unsharp suave recupera el detalle
+            base = base.filter(ImageFilter.UnsharpMask(radius=2, percent=70, threshold=3))
         top = int((base.height - H) * (0.5 + cfg['crop_y']))
         im = base.crop((0, max(0, top), W, max(0, top) + H))
         # viñeta suave abajo para que el titular se lea siempre
         sombra = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ds = ImageDraw.Draw(sombra)
-        for k in range(360):
-            ds.line([(0, H - k), (W, H - k)], fill=(0, 0, 0, int(118 * (k / 360) ** 1.6)))
+        for k in range(460):
+            ds.line([(0, H - k), (W, H - k)], fill=(0, 0, 0, int(124 * (k / 460) ** 1.6)))
         im.alpha_composite(sombra)
         pegar_chips(im, cfg['chips'])
         titular(im, cfg['titulo'])

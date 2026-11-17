@@ -58,8 +58,7 @@ porque Santiago pidió *"los guiones cambialos un poco pero tampoco tanto"*.
 - **Voz:** Sulafat por API, estilo rioplatense, `speed 1.20`. La V4 salió con `gemini-3.1-flash-tts-preview`
   porque el 2.5 se quedó sin cuota a mitad de la tanda.
 - **Scripts:** `gfx_macetas.py` (chips), `vent_macetas.py` (pool), `gen_macetas_plans.py`, `edit_macetas.py`.
-- **Las 2 fotos** salen de los dos planos que más se repiten en sus videos, con sus chips y su titular:
-  `gfx_fotos_macetas.py`.
+- **Las 2 fotos** (`gfx_fotos_macetas.py`): ver abajo cómo se midió cuáles son.
 
 ## El pool de TikTok
 201 clips de `#macetasdecemento`, `#concreteplanter` y del perfil `@ali.diyideas`. **Entraron 28.**
@@ -67,11 +66,30 @@ El plano insignia de Aula Digital es el clip `7678821416162184478` de **@ali.diy
 remera negra, el globo azul y la maceta de tela blanca con moño amarillo): es el mismo que corre en
 sus ads, limpio y en 1080×1920. Detalle de por qué se cayó cada uno: `OUTPUTS/scripts-vsl/vent_macetas.py`.
 
+## Las 2 fotos: cómo se eligieron
+Santiago pidió *"las 2 que más repetidas tenga la página original"*. Con el filtro **Imágenes** la
+Biblioteca devuelve **cero** ads de Aula Digital: los 58 son video. Así que "las 2 imágenes" se midieron
+sobre los **58 posters** (el cuadro de portada de cada ad): se bajaron los 58, se les sacó hash
+perceptual de 12×12 y se agruparon por distancia de Hamming ≤ 12. Los dos grupos más grandes tienen
+**seis ads cada uno**:
+
+1. la mujer del vivero levantando una **matera negra grande**, con las macetas blancas al costado;
+2. la misma mujer poniendo un **ficus en una maceta blanca grande**, en el mismo vivero.
+
+Las dos son del mismo creador de TikTok, **@materos_pertuz** (vivero de Bucaramanga), y las dos se
+consiguieron **limpias y sin su texto** de los clips originales: `7600598138956696840` @20,6 s y
+`7467949774021414149` @1,2 s. Vienen en 576×1024, así que se escalan con Lanczos y un unsharp suave,
+y salen en **1080×1920** (recortarlas a 4:5 le cortaba la cabeza a la del vivero).
+
+🐞 **Primero las hice mal:** las armé con cuadros del clip de @ali.diyideas que usa el *video*, no con
+las imágenes que más repite la *página*. Regla: "las más repetidas" se **cuenta**, no se estima a ojo.
+
 ## Entrega
-- **Videos:** `~/Desktop/macetas-cemento/anuncios/17-11 - N · <hook>.mp4` (6, de 30 a 44 s, 6,6 a 9,4 MB).
-  No subieron al Drive: `file_upload` corta arriba de ~800 KB ([[organizacion-y-registro]], 17/11).
-- **Fotos:** las 2 sí están en `Mi unidad / Ebook Dami / Ebook Macetas de Cemento (AR) / Videos terminados`.
-- Los masters en alta y el pool quedan en `anuncios/work/`.
+Todo en `Mi unidad / Ebook Dami / Ebook Macetas de Cemento (AR) / Videos terminados`: los 6 videos y las
+2 fotos. Los MP4 se subieron **troceados en partes de 700 KB** y recompuestos en el navegador, porque
+`file_upload` corta arriba de ~800 KB; los seis SHA-256 quedaron idénticos a los del disco
+([[organizacion-y-registro]], 17/11). Copia local en `~/Desktop/macetas-cemento/anuncios/`; los masters
+en alta y el pool, en `anuncios/work/`.
 
 ## Preguntas abiertas
 - ¿Santiago ya tiene landing propia para esta oferta en AR? Los guiones salieron del vocabulario del

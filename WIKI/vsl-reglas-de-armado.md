@@ -706,6 +706,23 @@ clienta, no 3 segundos.
 Sin foto base fija por personaje **la protagonista cambia de cara entre tomas**: para una novela hay que
 fijar una foto por personaje y encadenar el último cuadro dentro de cada escena.
 
+### 12i. 🔴 HeyGen devuelve algunos avatares apaisados dentro del lienzo vertical
+Santiago, sobre los anuncios del doctor hombre: *"se ve cortada la visual, con bordes negros, quiero que
+se vea completo"*. El render de **Doctor Lucas VSL** sale 1080x1920 pero con **301 px de banda blanca
+arriba y 301 abajo**: el contenido real es apaisado, metido en el lienzo 9:16.
+
+⚠️ **`cropdetect` no lo encuentra**, porque busca negro y las bandas son **blancas**. Hay que medirlo por
+luminancia: sacar un cuadro en gris, recorrer las filas desde arriba y desde abajo y contar las que son
+casi uniformes (`max-min < 10`).
+
+**Regla:** antes de montar, medir las bandas del render y recortarlas
+(`crop=W:H-arr-ab:0:arr`) antes de escalar. En `edit_fausto.py` lo hace la función `bandas()` sola, para
+cualquier avatar. No todos los traen: la doctora de consultorio sale llena.
+
+### 12j. La música va en 0,14
+Pedido del 17/11: *"bajá un poco la música a todos, un poco nada más, no mucho"*. Era 0,20. **Queda en
+0,14** con los mismos fades de entrada (1,2 s) y salida (1,4 s).
+
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]
 

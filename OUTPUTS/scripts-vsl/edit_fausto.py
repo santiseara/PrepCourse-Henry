@@ -60,6 +60,34 @@ def buscar(nombre):
     return None
 
 
+def bandas(mp4):
+    """Devuelve (arriba, abajo) en px de banda lisa del render. HeyGen devuelve
+    algunos avatares apaisados dentro del lienzo 9:16, con franjas blancas."""
+    import tempfile
+    tmp = tempfile.mktemp(suffix='.raw')
+    subprocess.run([FF, '-nostdin', '-loglevel', 'error', '-ss', '5', '-i', mp4,
+                    '-frames:v', '1', '-vf', f'scale=120:{H},format=gray',
+                    '-f', 'rawvideo', tmp], capture_output=True)
+    try:
+        d = open(tmp, 'rb').read()
+    except OSError:
+        return 0, 0
+    finally:
+        if os.path.exists(tmp): os.remove(tmp)
+    W2 = 120
+    filas = [d[i*W2:(i+1)*W2] for i in range(len(d)//W2)]
+    if not filas: return 0, 0
+    liso = lambda f: (max(f) - min(f)) < 10
+    arr = 0
+    while arr < len(filas) and liso(filas[arr]): arr += 1
+    ab = 0
+    while ab < len(filas) - arr and liso(filas[len(filas)-1-ab]): ab += 1
+    # solo se recorta si la banda es significativa y queda alto util suficiente
+    if arr + ab < 40 or (len(filas) - arr - ab) < 400:
+        return 0, 0
+    return arr, ab
+
+
 def plano(src, L, out, zoom=True):
     """Un plano de L segundos, 1080x1920. Foto -> push-in; clip -> tal cual."""
     esc = f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={FPS}'
@@ -114,8 +142,12 @@ def montar(plan):
     sp = plan.get('speed', 1.20)
     av = plan['avatar']
     cuerpo = f'{T}/cuerpo.mp4'
+    arr, ab = bandas(av)
+    pre = f'crop={W}:{H-arr-ab}:0:{arr},' if (arr or ab) else ''
+    if pre:
+        print(f'  recorto banda del render: {arr}px arriba, {ab}px abajo', flush=True)
     run([FF, '-v', 'error', '-y', '-i', av, '-filter_complex',
-         f'[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,'
+         f'[0:v]{pre}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,'
          f'setpts=PTS/{sp},fps={FPS}[v];[0:a]atempo={sp},aresample=48000[a]',
          '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
          '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', cuerpo])
@@ -236,7 +268,7 @@ def montar(plan):
     filtro = (f'[0:a]adelay={int(off*1000)}|{int(off*1000)},'
               f'loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,'
               f'apad=whole_dur={DV:.2f}[v];'
-              f'[1:a]volume=0.20,afade=t=in:st=0:d=1.2,'
+              f'[1:a]volume=0.14,afade=t=in:st=0:d=1.2,'
               f'afade=t=out:st={max(0.1,DV-1.6):.2f}:d=1.4,aresample=48000[m];'
               f'[v][m]amix=inputs=2:duration=first:dropout_transition=0,aresample=48000[a]')
     run([FF, '-v', 'error', '-y', '-i', cap, '-stream_loop', '-1', '-i', MUS,

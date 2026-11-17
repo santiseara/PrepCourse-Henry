@@ -2,6 +2,14 @@
 
 ## 2026-11-17 · Hígado Liviano v5: los 12 anuncios replicados de Fausto Almeida
 
+**Correcciones del 17/11 a la noche (v6).** Santiago: *"se ve cortada la visual, con bordes negros,
+quiero que se vea completo"* y *"bajá un poco la música a todos"*. El render de **Doctor Lucas VSL**
+salía con **301 px de banda blanca arriba y abajo** (el avatar viene apaisado dentro del lienzo 9:16) y
+`cropdetect` no lo detectaba porque busca negro. Ahora `edit_fausto.py` mide las bandas por luminancia y
+las recorta solo, para cualquier avatar. La música pasó de 0,20 a **0,14**. Los 10 cortos remontados y
+verificados: cero bandas en los diez. Las 2 novelas quedan como están (Santiago: *"olvidate, no los
+vamos a usar"*).
+
 **Lo nuevo.** Se relevó la página de **Fausto Almeida** (`1397189743483324`, Argentina): ~410 anuncios
 activos, **285 creativos de video** y **un solo texto en 384 de 386**. No vende un suplemento: vende
 nuestro mismo producto, *El Ritual Rojo del Hígado*, un método digital de 21 días en 3 fases.

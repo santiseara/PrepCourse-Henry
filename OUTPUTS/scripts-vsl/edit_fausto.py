@@ -134,22 +134,36 @@ def montar(plan):
 
     cap = cuerpo
     if ins:
-        entradas = ['-i', cuerpo]
-        filtros = []
-        prev = '0:v'
+        # Los inserts se montan CORTANDO el video y pegando, no con overlay:
+        # el overlay con PTS desplazado no muestra el clip (bug visto el 17/11).
+        # El audio del avatar queda intacto y se vuelve a pegar al final.
+        ins = sorted(ins, key=lambda x: x['t'])
+        trozos, cursor = [], 0.0
         for k, i in enumerate(ins, 1):
+            t0 = max(0.0, min(i['t'], DC))
+            L = min(i.get('dura', 1.8), max(0.0, DC - t0))
+            if L <= 0.05:
+                continue
+            if t0 > cursor + 0.04:                      # tramo de avatar antes del insert
+                tr = f'{T}/av{k}.mp4'
+                run([FF, '-v', 'error', '-y', '-ss', f'{cursor:.3f}', '-t', f'{t0-cursor:.3f}',
+                     '-i', cuerpo, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
+                     '-pix_fmt', 'yuv420p', '-vf', f'fps={FPS},scale={W}:{H},setsar=1', tr])
+                trozos.append(tr)
             src = buscar(i['vis'])
-            L = i.get('dura', 1.8)
-            pl = plano(src, L, f'{T}/ins{k}.mp4')
-            entradas += ['-i', pl]
-            filtros.append(f"[{k}:v]scale={W}:{H},setsar=1[i{k}];"
-                           f"[{prev}][i{k}]overlay=0:0:enable='between(t,{i['t']:.2f},{i['t']+L:.2f})'[o{k}]")
-            prev = f'o{k}'
+            trozos.append(plano(src, L, f'{T}/ins{k}.mp4'))
+            cursor = t0 + L
+        if cursor < DC - 0.04:                          # el resto del avatar
+            tr = f'{T}/avfin.mp4'
+            run([FF, '-v', 'error', '-y', '-ss', f'{cursor:.3f}', '-i', cuerpo, '-an',
+                 '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p',
+                 '-vf', f'fps={FPS},scale={W}:{H},setsar=1', tr])
+            trozos.append(tr)
+        mudo = concat(trozos, f'{T}/conins_mudo.mp4')
         cap = f'{T}/conins.mp4'
-        run([FF, '-v', 'error', '-y'] + entradas + ['-filter_complex', ';'.join(filtros),
-             '-map', f'[{prev}]', '-map', '0:a', '-c:v', 'libx264', '-preset', 'veryfast',
-             '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
-             '-ar', '48000', '-ac', '2', cap])
+        run([FF, '-v', 'error', '-y', '-i', mudo, '-i', cuerpo, '-map', '0:v', '-map', '1:a',
+             '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2',
+             '-shortest', cap])
 
     # --- 3. el hook: la visual de apertura con su barra/placa ---
     hk = plan.get('hook')
@@ -185,6 +199,9 @@ def montar(plan):
         gfx.append(G.placa_mito(m['txt'], m['ini'], m['fin'], sub=m.get('sub')))
     for n in plan.get('no', []):
         gfx.append(G.no_rojo(n['ini'], n['fin']))
+    if plan.get('placa'):                 # placa blanca sobre el propio avatar (molde r013)
+        pl = plan['placa']
+        gfx.append(G.placa_blanca(pl['lineas'], 0, pl.get('fin', 3.0)))
     if plan.get('comentario'):
         c = plan['comentario']
         gfx.append(G.caja_comentario(c['usuario'], c['pregunta'], 0, c.get('fin', 2.4)))

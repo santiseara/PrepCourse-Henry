@@ -113,6 +113,80 @@ con fade de entrada y de salida.
 - **El tope real del conector de Drive** son 10.000.000 bytes de payload base64, o sea **~7,4 MB de archivo**.
   El objetivo de compresion es **6,6 MiB** con 2 pasadas y `preset slower`: a 7,37 MB pasa raspando.
 
+## La tanda v5: los 12 replicados de Fausto Almeida (17/11/2026)
+
+Pedido de Santiago: *"quiero únicamente que hagas los mejores anuncios que tiene esta página llamada
+Fausto Almeida… los quiero exactamente igual, pero cambiando un poco los guiones"*, y después
+*"los largos son con IA, tipo novelas"*.
+
+### El competidor de verdad es Fausto Almeida, no Doutor Nature
+`view_all_page_id=1397189743483324`, Argentina. **No vende un suplemento: vende nuestro mismo producto**,
+*El Ritual Rojo del Hígado* — el Shot Rojo con 4 ingredientes del súper, plan de **21 días en 3 fases**
+(Destapar, Desinflamar, Despertar). Dentro del VSL el mecanismo se llama **el Reseteo Matinal del Hígado**,
+*"un ritual de 30 segundos en el desayuno"*, atribuido a *"un argentino especializado en gastroenterología
+en la Harvard Medical School, el doctor Fausto Almeida"*.
+
+| Dato (17/11) | Valor |
+|---|---|
+| Anuncios activos | ~410 (relevados 386) |
+| Creativos de video distintos | **285** |
+| Textos de anuncio | **2** — y 384 de 386 corren el mismo |
+| Arranque | 5 de noviembre |
+| Ritmo | 14/11: 65 · 15/11: 59 · **16/11: 80** · 17/11: 54 |
+
+En uno de sus creativos se ve un cartel del **"XXXII Congresso Médico · Minas Gerais"**: su VSL es
+**material brasileño doblado al rioplatense**, el mismo movimiento que hacemos nosotros.
+
+### 🔑 Sus 285 creativos son 5 cuerpos de VSL con el hook cambiado
+Comprobado cuadro por cuadro: `r004` (banana a la sartén), `r011` (hígado crudo con manteca),
+`r030` (hígado de silicona girando) y `r022` (pantalla partida) **empalman todos en la misma palabra**
+(*"Mirá estos dos…"*) y de ahí en adelante son el mismo video, con 1.238 a 1.249 palabras de guion
+idéntico. Lo mismo entre `r001` y `r013`.
+**Para replicarlo: no son 12 producciones, son 5 cuerpos y 12 hooks.**
+
+### Su firma visual, medida y replicada
+- **Barra roja** de dos líneas arriba: `MIRÁ LO QUE HACE X CON TU Y`. La primera línea entra ~0,6 s después.
+- **Placa blanca redondeada** para las frases largas.
+- **Puntajes `/10`**: verdes en `r001`, naranjas en `r013`.
+- **Chapas de nombre y edad** (`Rosa, 61`) sobre la foto del desayuno.
+- **Tachas X rojas** sobre el alimento, con etiqueta abajo.
+- **Placas rojas de mito numerado** (`MITO 1 · VIENE DE LA COMIDA` + `FALSO`).
+- **`NO` rojo gigante** sobre la doctora cuando niega algo.
+- **Caja de comentario de Instagram** como hook.
+- Cierra siempre en **placa negra con botón azul MÁS INFORMACIÓN**.
+- Cortes cada **1-2 s** en el cuerpo doctora, **2-4 s** en el cuerpo cocina, **10-20 s** en las novelas.
+
+Todo eso está en `OUTPUTS/scripts-vsl/gfx_fausto.py`; el montaje en `edit_fausto.py` y `edit_novela.py`.
+La planilla plano por plano de los 12 en
+`OUTPUTS/2026-11-17-planilla-fausto-almeida-12-anuncios.md`.
+
+### Lo entregado (12 videos, todos 1080x1920 · 48000 Hz · 0 cuadros negros)
+Subidos al Drive en *Ebook Dami / Ebook Hígado Liviano (AR) / Videos terminados*, reemplazando los 6
+de la v4 (que quedaron en la papelera).
+
+| # | Formato | Dur |
+|---|---|---|
+| 1 | Dr. ambo + puntajes /10 verdes | 1:33 |
+| 2 | Hígado graso + *"Tres cosas que no tenés que hacer"* | 1:45 |
+| 3 | Doctora + tachas X sobre manteca, asado y vino | 1:32 |
+| 4 | Bebé-banana + `NO` rojo | 1:41 |
+| 5 | Caja de comentario de Instagram | 1:27 |
+| 6 | Reacciono a los desayunos (4 fotos con chapa y puntaje) | 1:10 |
+| 7 | Manteca + *"La culpa no es la manteca"* | 1:22 |
+| 8 | Bebé-banana + ecografías + hígado 3D | 1:22 |
+| 9 | Bebé-naranja + *"Los 3 peores alimentos asesinos"* | 1:09 |
+| 10 | Bebé-mate + los 3 mitos | 0:36 |
+| 11 | 🎬 Novela *"El mate y las facturas"* | 2:04 |
+| 12 | 🎬 Novela *"El infarto"* | 1:56 |
+
+Costo: **US$ 3,92** de Veo 3.1 (29 tomas a $0,14) y **~600 créditos** de HeyGen.
+
+### Lo que quedó distinto del original
+- **La mujer de cocina (2, 7 y 8) está sobre fondo gris liso**, no en una cocina: en el banco de HeyGen
+  no hay ninguna avatar en cocina y no se estrenó una sin permiso.
+- **En la novela 1 la protagonista cambia de cara en 3-4 tomas**: se generaron sin fijar una foto base
+  por personaje. Se arregla con foto fija y regenerando esas tomas (~US$ 1).
+
 ## Preguntas abiertas
 - **El nombre** (*Hígado Liviano*) y el **precio** los puse/dejé abiertos yo.
 - **Falta el producto**: el método de 21 días día por día.

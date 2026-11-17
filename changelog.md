@@ -1,3 +1,31 @@
+# Changelog
+
+## 2026-11-17 · Hígado Liviano v5: los 12 anuncios replicados de Fausto Almeida
+
+**Lo nuevo.** Se relevó la página de **Fausto Almeida** (`1397189743483324`, Argentina): ~410 anuncios
+activos, **285 creativos de video** y **un solo texto en 384 de 386**. No vende un suplemento: vende
+nuestro mismo producto, *El Ritual Rojo del Hígado*, un método digital de 21 días en 3 fases.
+
+**El hallazgo:** sus 285 creativos son **5 cuerpos de VSL con el hook cambiado** — cuatro de ellos
+empalman en la misma palabra y comparten 1.240 palabras de guion idéntico.
+
+**Entregado:** 12 anuncios en `~/Desktop/higado-liviano/anuncios/`, todos 1080x1920 · 48000 Hz · sin
+cuadros negros, subidos al Drive (*Ebook Dami / Ebook Hígado Liviano (AR) / Videos terminados*)
+reemplazando los 6 de la v4. Diez cortos de 1:09 a 1:45 con la gráfica de ellos replicada (barra roja,
+placas de mito, puntajes /10, chapas de nombre, tachas X, `NO` rojo, caja de comentario de Instagram,
+botón azul final) y **dos mini novelas con actores de IA** ("El mate y las facturas" 2:04, "El infarto"
+1:56).
+
+**Costo:** US$ 3,92 de Veo 3.1 (29 tomas) y ~600 créditos de HeyGen.
+
+**Archivos nuevos:** `OUTPUTS/2026-11-17-planilla-fausto-almeida-12-anuncios.md` (la planilla plano por
+plano), `OUTPUTS/scripts-vsl/gfx_fausto.py`, `edit_fausto.py`, `edit_novela.py`.
+
+**Wiki:** `higado-liviano.md` (la radiografía de Fausto y lo entregado) y `vsl-reglas-de-armado.md`
+§12 (ocho trampas nuevas: el upload que se corta por peso, la CSP de HeyGen, el overlay que no se ve,
+las cajas por `box`, el cierre que se pierde, la imagen mal bajada, los inserts alineados con la voz y
+el costo de Veo).
+
 ## 2026-11-17 (41ª pasada) — Tarot "Tu primera lectura en 2 días": clon al mercado inglés, 6 guiones
 
 Santiago: *"Vamos a hacer los anuncios para esta oferta. La voy a tirar en el mercado de inglés. Haz el mismo

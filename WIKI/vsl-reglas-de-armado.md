@@ -657,6 +657,55 @@ usarlas como pantalla partida de antes/después es un antes y después falso y e
 **Regla:** cada plano se elige por lo que se está diciendo en ese segundo. Si no hay visual para ese momento,
 se genera la que falta; no se tapa con lo que sobró.
 
+## 12. Replicar un competidor plano por plano (17/11/2026, Hígado Liviano v5)
+
+### 12a. 🔴 El `file_upload` de la extensión se corta con archivos grandes
+HeyGen rechazaba los `.wav` de 1,87 MB con *"connection was lost"*, tres veces. **No era un permiso ni
+la CSP: era el peso.** Los mismos audios en **mp3 de 114 a 351 KB entraron de una**.
+Antes de dar por roto el canal, **achicar el archivo**. Se perdieron dos horas probando servidor local,
+host HTTPS externo, portapapeles y pegado por teclado.
+
+El mp3 chico no baja la calidad del resultado: HeyGen lo usa **solo para calcular el lipsync**, y en el
+montaje se vuelve a pegar el wav original, que dura exactamente lo mismo.
+
+### 12b. La CSP de HeyGen bloquea toda red externa desde su página
+Un `fetch` al propio HeyGen responde 200; a cualquier otro dominio, *"Failed to fetch"*. No sirve
+levantar un servidor local (Chrome bloquea HTTP desde HTTPS) ni subir el archivo a otro host.
+
+### 12c. 🐞 Un insert con `overlay` no se ve: hay que cortar y pegar
+`overlay=...:enable='between(t,A,B)'` muestra el avatar igual, porque el clip insertado ya terminó su
+propio PTS. Ni con `setpts=PTS+A/TB` anduvo. **La forma que funciona es cortar el video del avatar en
+tramos, intercalar el plano y concatenar**, pegando después el audio del avatar entero. Es además lo que
+hace el original: son cortes, no superposiciones.
+
+### 12d. Las cajas de las placas se dibujan con `box` del propio drawtext
+Calcular el ancho con `len(txt) * fontsize * 0.6` se desborda y la chapa sale corrida o cortada.
+`drawtext=...:box=1:boxcolor=X:boxborderw=N` se ajusta solo al texto. Para la barra roja, el cuerpo se
+calcula como `min(58, (W-80) / (largo * 0.47))` para que nunca se corte.
+
+### 12e. El cierre se pierde si el audio termina antes que el video
+Con `-shortest`, la placa negra del final se corta. Después de `loudnorm` va
+`apad=whole_dur=<largo del video>` y el muxeo cierra con `-t <largo del video>`.
+
+### 12f. 🔴 Bajar "la última imagen de la página" trae la ANTERIOR
+Generando el b-roll en ChatGPT, dos imágenes salieron mal: `B4-higado-graso` era **la foto de un hombre
+de ambo azul** y `D3-silvia` era **una copia del desayuno de Norma**. El hook del anuncio 2 arrancaba con
+un tipo de ambo mientras la placa hablaba del hígado.
+**Regla: antes de bajar, verificar que el `src` de la imagen cambió respecto del anterior; y después,
+mirar las visuales en hoja de contactos y comparar los md5 entre sí.** El nombre del archivo no prueba
+nada.
+
+### 12g. Los inserts se alinean con la voz, no con tiempos inventados
+En el anuncio de "reacciono a los desayunos", las chapas (`Rosa, 61`) caían sobre el avatar y no sobre la
+foto. Se corrigió transcribiendo el avatar con Whisper y poniendo cada insert donde la voz dice el nombre
+(Rosa 4,2 s · Norma 14,1 · Silvia 21,9 · Elena 31,4), con el insert durando **todo el bloque** de esa
+clienta, no 3 segundos.
+
+### 12h. Veo 3.1 para las novelas: US$ 0,14 la toma de 8 s
+`veo3.1-fast` por ApiMart, con diálogo nativo en rioplatense dentro del prompt. 29 tomas = US$ 3,92.
+Sin foto base fija por personaje **la protagonista cambia de cara entre tomas**: para una novela hay que
+fijar una foto por personaje y encadenar el último cuadro dentro de cada escena.
+
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]
 

@@ -1,3 +1,31 @@
+## 2026-11-17 (39ª pasada) — Hígado Liviano v4: el minuto, la música de Santiago, pantalla partida y los 3D
+
+Santiago: *"Quiero que me hagas de nuevo los videos porque están muy cortos, duran muy poco, así que extendemos un
+poco más los guiones, hasta por lo menos un minuto. Ponerles esta música que te estoy dejando acá y fíjate que la
+original usa cada tanto pantalla dividida, pone buenos visuales, pone las del cuerpo en 3D… Metele más emoción,
+basate más en la original"*.
+
+- **De 30-36 s a 57,7-64,0 s.** Los 6 pasan el minuto o quedan a un pelo (el 3, 4 y 6 entre 57,7 y 58,5 s).
+- **Dos partes por anuncio** (`OUTPUTS/scripts-vsl/edit_higado2.py`): parte A con el avatar de HeyGen y **su CTA
+  recortado**, parte B con una **extensión de voz en off nueva de 79 a 129 palabras** sobre visuales solos. El CTA
+  va una sola vez, al final; en la v3 el avatar cerraba en el medio.
+- **Pantalla partida cada 4 planos** de la parte B (espejo antes/después, hígado graso contra hígado sano) y los
+  **3D del cuerpo** donde el guion nombra el mecanismo: bilis que se espesa, colesterol, intestino, el detergente
+  cortando la grasa, el frasco de bilis espesa.
+- **La música que mandó Santiago** (suspenso) al 0,20 con fade de entrada y de salida, en loop sobre todo el largo.
+- **Más emoción en el copy:** *"no es que seas vaga, no es la edad"*, el análisis que da mal aunque comas sano.
+- 🐞 **Los 6 renders de la primera corrida fallaron con código 254**: el demuxer `concat` de ffmpeg resuelve las
+  rutas de la lista **relativas al archivo de lista**, no al directorio actual. Ahora van con `os.path.abspath`.
+  **Y se dio la tanda por terminada sin verificar que los archivos existieran** — de ahí sale la regla §10e.
+- **El 5 había salido en 51 s**: se reescribió su extensión de 82 a 129 palabras en vez de frenar la voz. Frenarla
+  lo volvería aburrido, que era justo el reclamo original.
+- **Control final:** cobertura audio/guion **0,960-1,000** · cero cuadros negros · los 6 en 1080x1920.
+- **Subidos al Drive** (*Ebook Dami / Ebook Hígado Liviano (AR) / Videos terminados*), recomprimidos a ~6,85 MB con
+  2 pasadas y `preset slower`; los 6 de la v3 a la papelera. El tope real del conector son 10.000.000 bytes de
+  payload base64 ≈ 7,4 MB de archivo, así que el objetivo es 6,6 MiB.
+- WIKI: nueva **§10 de `vsl-reglas-de-armado`** (anuncios de un minuto en dos partes, las dos trampas de ffmpeg y
+  el tope del conector) + 3 filas en el registro de correcciones; `higado-liviano` reescrito con la tanda v4.
+
 ## 2026-11-17 (38ª pasada) — Hígado Liviano v3: el ritmo de Silvia y las visuales propias
 
 Santiago: *"siguen saliendo muy mal, se ve muy aburrido, muy lento todo… para las visuales usaste todo de stock…

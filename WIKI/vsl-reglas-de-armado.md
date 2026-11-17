@@ -486,6 +486,9 @@ Quemar la transcripción cruda de Whisper deja errores a la vista: en Tai Chi Fi
 | 2026-11-12 | Party Box Profits (V4) | Dos placas superpuestas, ilegibles | §9b: cortar cada placa 0,25 s antes de la siguiente |
 | 2026-11-12 | Party Box Profits | Los anclajes de B-roll y placas no se encontraban | §9c: buscar contra la lista del editor (`vsl_palabras.py`) |
 | 2026-11-12 | Party Box Profits | "DALE HERMANO, 3 DÍAS… HACÉ LAS COSAS BIEN, Y MÁS RÁPIDO" | Renderizar los videos **en paralelo**, no uno por uno; y no dar estimaciones de tiempo que no se puedan sostener |
+| 2026-11-17 | Hígado Liviano (v4) | "Están muy cortos… extendemos los guiones hasta por lo menos un minuto" | §10a: parte A avatar + parte B voz en off |
+| 2026-11-17 | Hígado Liviano (v4) | "La original usa cada tanto pantalla dividida… poné las del cuerpo en 3D" | §10c: split cada 4 planos, 3D sobre el mecanismo |
+| 2026-11-17 | Hígado Liviano (v4) | Se dio la tanda por terminada sin que existiera ningún archivo | §10e: verificar tamaño del mp4 antes de avisar |
 | 2026-10-14 | Pilates Hormonal (ad "rodillas") | "Fijate que las visuales no sean tan IA; no hagas nuevos B-rolls todo el tiempo, solo si es súper necesario" | §6: reusar B-rolls, planos reales y look de celular |
 
 ## Preguntas abiertas
@@ -582,6 +585,41 @@ frases abstractas (precio, garantía, CTA, felicitación): ahí va la cara.
 
 El editor termina con `-c:v copy` a ~29 Mbps (900 MB). Siempre **una pasada final de `crf 22`
 `preset medium` + `faststart`** antes de entregar.
+
+## 10. Anuncios de un minuto en dos partes (17/11/2026, Hígado Liviano v4)
+
+Pedido de Santiago: *"están muy cortos, duran muy poco, así que extendemos un poco más los guiones, hasta por lo
+menos un minuto… la original usa cada tanto pantalla dividida, poné buenos visuales, poné las del cuerpo en 3D…
+metele más emoción, basate más en la original"*. Montaje: `OUTPUTS/scripts-vsl/edit_higado2.py`.
+
+### 10a. Un render de HeyGen no llega al minuto: el anuncio va en dos partes
+El avatar da 30-35 s útiles. Para llegar al minuto se le suma una **parte B de voz en off sobre visuales solos**
+(79-129 palabras). No se estira el render del avatar ni se frena la voz.
+
+- **El CTA del avatar se recorta.** Se busca hacia atrás en las palabras alineadas (`abajo|instante|dia`) y se
+  corta ahí. Si no, el anuncio cierra en el medio y la parte B queda colgada.
+- **El CTA va una sola vez, al final de todo.**
+
+### 10b. El que sale corto se arregla con más texto, nunca frenando la voz
+Si un anuncio queda abajo del mínimo pedido, se **reescribe la extensión más larga** y se regenera la voz.
+Bajar la velocidad lo vuelve aburrido, que suele ser el reclamo que originó el pedido.
+
+### 10c. Pantalla partida cada 4 planos, y los 3D del cuerpo bien usados
+En la parte B, uno de cada cuatro planos es **pantalla partida** con el par antes/después (espejo, órgano sano
+contra órgano enfermo). Los 3D médicos no son relleno: van donde el guion nombra el mecanismo.
+
+### 10d. 🐞 El demuxer `concat` resuelve las rutas relativas AL ARCHIVO DE LISTA
+No al directorio de trabajo. Una prueba suelta en `/tmp` anda y la tanda real en `../anuncios/` falla con
+**código 254**. Las rutas de la lista van **siempre con `os.path.abspath`**.
+
+### 10e. Verificar el archivo antes de avisar que está listo
+Los 6 renders de la primera corrida de la v4 fallaron y la tanda se dio por terminada igual. **Después de cada
+render: comprobar que el mp4 existe y pesa lo que tiene que pesar**, antes de decir una palabra.
+
+### 10f. El tope real del conector de Drive
+Son **10.000.000 bytes de payload base64**, o sea **~7,4 MB de archivo**. El objetivo de compresión es
+**6,6 MiB** con 2 pasadas y `preset slower`: a 7,37 MB pasa raspando. Y el `-passlogfile` va **antes** del
+archivo de salida, si no libx264 aborta con `-22 Invalid argument`.
 
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]

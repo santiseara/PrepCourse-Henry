@@ -73,27 +73,45 @@ cambia el riesgo no es el guion sino la combinación: avatar de IA presentándos
 estudios médicos armados + promesa sobre una condición real. Esa es la parte que hay que rever antes de poner un peso
 atrás.
 
-## La tanda 1, producida (16/11)
+## La tanda 1, producida — version v4 (17/11)
 Los 6 anuncios estan en `~/Desktop/higado-liviano/anuncios/` como `16-11 - 1..6.mp4`, **1080x1920, 30 fps**, de
-**40 a 55 segundos** (el tope que pidio Santiago es 1:30).
+**57,7 a 64,0 segundos**, y subidos al Drive en *Ebook Dami / Ebook Higado Liviano (AR) / Videos terminados*.
 
-| # | Formato | Avatar | Dur |
-|---|---|---|---|
-| 1 | Puntajes /10 | Valeria Chia 28D | 54,7 s |
-| 2 | Lista de alimentos | Valeria Chia 28D | 46,6 s |
-| 3 | Imagen shock | Valeria Chia 28D | 48,5 s |
-| 4 | Dos mesas comparadas | sin avatar, pantalla partida con b-roll | 45,4 s |
-| 5 | Presentador | Dr. Mauricio Teixeira | 40,4 s |
-| 6 | UGC | Megan Party Box | 43,7 s |
+| # | Formato | Avatar | Dur | Extension de VO |
+|---|---|---|---|---|
+| 1 | Puntajes /10 | Valeria Chia 28D | 64,0 s | 111 palabras |
+| 2 | Lista de alimentos | Valeria Chia 28D | 63,1 s | 103 palabras |
+| 3 | Imagen shock | Valeria Chia 28D | 58,5 s | 96 palabras |
+| 4 | Dos mesas comparadas | sin avatar, pantalla partida con b-roll | 57,9 s | 79 palabras |
+| 5 | Presentador | Dr. Mauricio Teixeira | 59,7 s | 129 palabras |
+| 6 | UGC | Megan Party Box | 57,7 s | 84 palabras |
 
-- **Voz:** Gemini TTS, Sulafat (mujer) y Orus (hombre), acento **rioplatense verificado 0,95**. Transcripcion
-  contra el guion: 6 de 6 sin errores.
-- **Avatar:** HeyGen **Avatar IV** ("motor 4"), 720p vertical. **13-15 creditos por video**, ~85 la tanda entera
-  sobre 2.394 disponibles. No se estreno ningun avatar: los tres son del banco.
-- **Montaje:** `OUTPUTS/scripts-vsl/edit_higado.py`. Subtitulo Anton de 2-3 palabras con la palabra clave en
-  amarillo al 66 % del alto, placa de hook de borde a borde los primeros 2,6 s, chapas de puntaje `/10` en verde
-  sobre el pecho, y placa final con el nombre y *"EL LINK ESTA ABAJO"*.
-- **Control final:** audio contra guion 0,936-1,000 · cero cuadros negros · los 6 en 1080x1920.
+**Estructura de dos partes** (`OUTPUTS/scripts-vsl/edit_higado2.py`):
+
+- **Parte A, ~32-35 s** — el avatar de HeyGen con **su CTA recortado** (se busca hacia atras `abajo|instante|dia`),
+  silencios cortados en seco, velocidad **1.25**, inserts de comida de 1,7 s cada 4,0 s, zoom alternado 1.00/1.10.
+- **Parte B, ~24-32 s** — la voz en off nueva sobre visuales solos: higado graso en 3D, bilis, colesterol,
+  intestino, la bilis espesa en el frasco, el detergente cortando la grasa, el analisis de laboratorio.
+  **Pantalla partida cada 4 planos** (espejo antes/despues, higado graso contra higado sano).
+- **El CTA va una sola vez, al final.** En la v3 el avatar cerraba en el medio del anuncio.
+
+Sobre las dos partes: subtitulo Anton de 2-3 palabras con pop de entrada y la palabra clave en amarillo, barra de
+hook, chapas de puntaje `/10` en verde, placa de cierre, y la **musica de suspenso que mando Santiago** al 0,20
+con fade de entrada y de salida.
+
+- **Voz:** Gemini TTS, Sulafat (mujer) y Orus (hombre), acento **rioplatense verificado 0,95**.
+- **Avatar:** HeyGen **Avatar IV** ("motor 4"), 720p vertical. Los tres avatares son del banco.
+- **Control final:** cobertura audio/guion **0,960-1,000** · cero cuadros negros · los 6 en 1080x1920.
+
+### Dos cosas que hay que recordar de esta vuelta
+- 🐞 **El demuxer `concat` de ffmpeg resuelve las rutas de la lista relativas al archivo de lista**, no al
+  directorio actual. Los 6 renders fallaron con codigo 254 por eso. Van siempre con `os.path.abspath`.
+  Y peor que el bug: **di la tanda por terminada sin verificar que los mp4 existieran**. Verificar siempre el
+  tamaño del archivo antes de avisar.
+- **El que sale corto se arregla escribiendo mas texto, no frenando la voz.** El 5 habia quedado en 51 s; se
+  reescribio su extension de 82 a 129 palabras. Frenar la voz lo volveria aburrido, que era el reclamo original.
+- **El tope real del conector de Drive** son 10.000.000 bytes de payload base64, o sea **~7,4 MB de archivo**.
+  El objetivo de compresion es **6,6 MiB** con 2 pasadas y `preset slower`: a 7,37 MB pasa raspando.
 
 ## Preguntas abiertas
 - **El nombre** (*Hígado Liviano*) y el **precio** los puse/dejé abiertos yo.

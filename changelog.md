@@ -1,3 +1,7 @@
+## 2026-11-16 — Nervio Vago: descripción para los ads
+
+- Creado `OUTPUTS/2026-11-16-descripcion-ads-nervio-vago.md` (+ copia en `~/Desktop/nervio-vago-latam/anuncios/`); enlazado en `WIKI/index.md` y en [[nervio-vago]].
+
 ## 2026-11-16 (40ª pasada) — Silvia Fitness: los 6 anuncios de la tanda 1
 
 Santiago: *"tienen que ser super similares a los de ella… usar siempre nuestro avatar… misma dinámica, mismas visuales"*.

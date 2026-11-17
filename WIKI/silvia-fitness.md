@@ -27,6 +27,12 @@ Radiografía completa: `OUTPUTS/2026-11-16-radiografia-belu-fitness.md`. Videos,
 - Sin testimonios inventados ni kilos: el "miren la foto que me mandó Cami" y el testimonio de alumna de Belu no se clonaron (Manual de Edición IA, sección 13). El V6 muestra *nivel inicial → avanzado* en vez de un antes/después de otra persona.
 - 🐞 Veo: **3 tomas bloqueadas por el filtro** (devueltas sin costo) con frases inocentes; se destrabaron cambiando una palabra o el gesto. Y en una toma dijo **"queréis"**: Whisper lo marca como EXTRA y se regenera reescribiendo la línea sin ese verbo.
 
+### Correcciones y formato nuevo (16/11, tarde)
+- **V4 rehecho**: la selfie blanca y brillante "se veía muy IA". Nueva escena **H** en el sillón con luz de lámpara, buzo gris abierto y *subtle natural expressions* en el prompt. El viejo quedó en `work/descartados/`, **fuera de la carpeta y fuera de cualquier Drive** (pedido de Santiago).
+- **Belu no usa voz en off.** De 12 ads más (10 de los más nuevos, 15-16/11, y 2 de septiembre), **9 de los 10 nuevos son el formato ESPEJO**: se filma en el espejo, sin voz, con música y una **pila de carteles** (hook blanco que rota · caja rosa "si en verano querés ponerte la bikini…" · "¡tenés que empezar ya!" en rojo · tres pastillas negras · precio regular contra precio hoy · banda "últimos 7 cupos"). Lo único que cambia entre ads es el hook.
+- **V7 = formato espejo**, una sola versión (*"A solo 45 días de estrenar bikini"*): Santiago pidió **una sola, la mejor**, no tres parecidas. Escena **M** recortada para que la cabeza quede a mitad de pantalla (si está cerca, los carteles le tapan la cara) y el precio a la altura de la cadera. Lo hace `build_mirror()` en `edit_silvia.py`.
+- 🐞 La escena del espejo con el cuerpo entero la frenó el filtro de Veo **6 veces** (M1 nunca salió, M2 sí): el V7 dura 8 s con una sola toma.
+
 ## Preguntas abiertas
 - Fotos de antes/después generadas.
 - Backend de Belu (no visto: hace falta pasar el checkout).

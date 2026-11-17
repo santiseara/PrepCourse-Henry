@@ -1,3 +1,10 @@
+## 2026-11-16 (41ª pasada) — Silvia Fitness: V4 rehecho y formato espejo
+
+Santiago: *"No me gustó el video 4… se ve muy brillante y muy IA"*, *"fijate si usa voz en off o algún formato distinto"*, *"dejame solo 1, la mejor"*, *"sacá de la carpeta el que no me gustó y no lo metas en ningún drive"*.
+- V4 rehecho en escena orgánica (sillón, luz cálida). El viejo, a `work/descartados/`.
+- 12 ads más de Belu revisados: no hay voz en off; el formato nuevo dominante es el espejo con pila de carteles → V7 (una sola versión).
+- Reglas nuevas: selfie sobreexpuesta = IA ([[guiones-y-anuncios]]) y memoria *una sola variable por formato*.
+
 ## 2026-11-16 — Nervio Vago: descripción para los ads
 
 - Creado `OUTPUTS/2026-11-16-descripcion-ads-nervio-vago.md` (+ copia en `~/Desktop/nervio-vago-latam/anuncios/`); enlazado en `WIKI/index.md` y en [[nervio-vago]].

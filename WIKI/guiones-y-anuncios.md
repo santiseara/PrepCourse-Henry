@@ -2,6 +2,8 @@
 
 > Reglas **personales** de Santiago para guiones. El método general (7 pasos, variación modular, niveles de conciencia) está en [[guiones-de-video-ads]] y los hooks en [[hooks]]. Cubre guiones (ad scripts), natives, descripciones UGC y primary text. Los ejemplos reales que ganaron están en [[scented-stones]]. (fuente: RAW/2026-10-10-contexto-maestro-santiago.md, RAW/2026-10-10-guiones-ganadores-scented-stones.md)
 
+- **2026-11-16 · Una selfie de avatar sobreexpuesta grita IA.** Santiago, sobre el V4 de [[silvia-fitness]]: *"quedó muy mal la visual… se ve muy brillante y muy IA, y el selfie salió mal"*. La escena era la foto base del avatar (living blanco, luz de ventana estallada) y Veo le sumó caras exageradas (ojos muy abiertos, sonrisa de dientes). Regla: la foto base del avatar sirve para HeyGen, **no como primer cuadro de Veo**. Para Veo se arma una escena **orgánica**: luz cálida y más baja, ambiente vivido (auto, sillón a la tarde, pasillo), algo de grano, nada blanco estallado. Y en el prompt: *subtle, relaxed natural expressions, no exaggerated faces*.
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

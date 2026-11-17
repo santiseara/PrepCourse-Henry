@@ -29,7 +29,7 @@ PLANES = {
                ins={"videos": "video", "grilla": "grilla", "recetas": "receta", "bonos": "bonos"}),
     "V3": dict(tomas=["C1", "C2", "C3", "C4", "C5"],
                ins={"planilla": "planilla", "video": "video", "grilla": "grilla", "recetas": "receta", "sumate": "app"}),
-    "V4": dict(tomas=["D1", "D2", "D3"], ins={"método": "app"},
+    "V4": dict(tomas=["H1", "H2", "H3"], ins={"método": "app"},   # rehecho el 16/11 en el sillón (D era muy brillante)
                comment=("lu.martinez_", "Yo necesito bajar la panza ya, el mes que viene sí o sí arranco el gym 😩")),
     "V5": dict(tomas=["E1", "E2", "E3", "E4"], ins={"nivel": "planilla", "catorce": "grilla"},
                comment=("caro.gomez", "¿Sirve si nunca entrené en mi vida? 🙈")),
@@ -197,5 +197,94 @@ def build_mute():
     print("OK", V, f"{C.dur(OUT):.1f}s", OUT)
 
 
+
+# ---------- V7 · formato espejo (los 8 ads más nuevos de Belu) ----------
+HOOKS = {"V7a": "NOVIEMBRE ES ESFUERZO, ENERO ES RESULTADO 💪",
+         "V7b": "A SOLO 45 DÍAS DE ESTRENAR BIKINI 👙",
+         "V7c": "TE POSTERGASTE MUCHOS VERANOS. ESTE ES EL TUYO ☀️"}
+SUP = "/System/Library/Fonts/Supplemental"
+
+
+def box_text(im, cx, y, lines, fnt, fg, bg, padx=26, pady=12, gap=0, radius=18, emo=None, esize=0):
+    """Caja de color con texto centrado (estilo texto de historia de Instagram). Devuelve el y de abajo."""
+    d = ImageDraw.Draw(im); lh = fnt.size + 10
+    ws = [d.textlength(l, font=fnt) + (esize + 10 if (emo and k == len(lines) - 1) else 0) for k, l in enumerate(lines)]
+    w = max(ws) + 2 * padx; h = lh * len(lines) + 2 * pady
+    d.rounded_rectangle((cx - w / 2, y, cx + w / 2, y + h), radius, fill=bg)
+    for k, l in enumerate(lines):
+        tx = cx - ws[k] / 2; ty = y + pady + k * lh
+        d.text((tx, ty), l, font=fnt, fill=fg)
+        if emo and k == len(lines) - 1:
+            im.alpha_composite(emoji_img(emo, esize), (int(tx + d.textlength(l, font=fnt) + 10), int(ty + (fnt.size - esize) / 2 + 4)))
+    return y + h
+
+
+def pills(im, cx, y, rows, fnt, esize):
+    """Pastillas negras apiladas, una por renglón, con emoji al final."""
+    d = ImageDraw.Draw(im); lh = fnt.size + 18
+    for k, (t, e) in enumerate(rows):
+        w = d.textlength(t, font=fnt) + (esize + 12 if e else 0) + 50
+        d.rounded_rectangle((cx - w / 2, y + k * lh, cx + w / 2, y + k * lh + lh + 2), lh / 2, fill=(12, 12, 12))
+        x = cx - w / 2 + 25; d.text((x, y + k * lh + 9), t, font=fnt, fill=(255, 255, 255))
+        if e: im.alpha_composite(emoji_img(e, esize), (int(x + d.textlength(t, font=fnt) + 10), int(y + k * lh + (lh - esize) / 2)))
+    return y + len(rows) * lh
+
+
+def neon_arrow(im, pts, color=(255, 92, 190)):
+    lay = Image.new("RGBA", im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    d.line(pts, fill=color + (255,), width=7, joint="curve")
+    x1, y1 = pts[-1]; x0, y0 = pts[-2]
+    import math
+    a = math.atan2(y1 - y0, x1 - x0)
+    for s in (2.5, -2.5):
+        d.line([(x1, y1), (x1 - 34 * math.cos(a + s / 3), y1 - 34 * math.sin(a + s / 3))], fill=color + (255,), width=7)
+    glow = lay.filter(ImageFilter.GaussianBlur(10))
+    im.alpha_composite(glow); im.alpha_composite(glow); im.alpha_composite(lay)
+
+
+def mirror_overlay(hook):
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); cx = W // 2
+    txt, em = re.match(r"^(.*?)\s*([\U0001F300-\U0001FAFF\u2600-\u27BF\uFE0F]*)$", hook).groups()
+    fh = ImageFont.truetype(f"{SUP}/Arial Bold.ttf", 56)
+    dd = ImageDraw.Draw(im); lines = wrap(dd, txt, fh, 860)
+    y = box_text(im, cx, 150, lines, fh, (12, 12, 12), (255, 255, 255), padx=34, pady=18, radius=22, emo=em[:1] if em else None, esize=52)
+    fp = ImageFont.truetype(f"{SUP}/Arial Bold.ttf", 37)
+    y = box_text(im, cx, y + 26, ["SI EN VERANO QUERÉS PONERTE LA BIKINI", "Y TENER EL CUERPO DE TUS SUEÑOS..."], fp, (255, 255, 255), (232, 96, 196), radius=14)
+    fr = ImageFont.truetype(f"{SUP}/Arial Bold.ttf", 40)
+    y_red = y + 22
+    y = box_text(im, cx, y_red, ["¡TENÉS QUE EMPEZAR YA!"], fr, (255, 255, 255), (226, 18, 28), radius=8, emo="⏰", esize=44)
+    fpl = ImageFont.truetype(f"{SUP}/Arial Bold.ttf", 38)
+    y = pills(im, cx, y + 18, [("RUTINAS CORTAS Y EFECTIVAS", "💪"), ("+ ALIMENTACIÓN COMPLETA", "🥗"), ("+ MENTALIDAD ANTIABANDONO", "🧘")], fpl, 36)
+    neon_arrow(im, [(70, 300), (40, 400), (60, 500), (150, y_red + 34)])
+    neon_arrow(im, [(1020, 380), (1050, 460), (1040, 560), (935, y_red + 30)])
+    fd = ImageFont.truetype(f"{SUP}/DIN Condensed Bold.ttf", 50)
+    yp = 1180   # a la altura de la cadera: más arriba le tapa la cara cuando Veo se acerca
+    yp = box_text(im, 800, yp, ["PRECIO REGULAR: $33.980"], fd, (40, 40, 40), (255, 222, 232), padx=20, pady=8, radius=4)
+    fd2 = ImageFont.truetype(f"{SUP}/DIN Condensed Bold.ttf", 76)
+    box_text(im, 780, yp + 12, ["PRECIO HOY X $16.990"], fd2, (255, 255, 255), (226, 18, 28), padx=24, pady=6, radius=4)
+    fc = ImageFont.truetype(f"{SUP}/Times New Roman.ttf", 48)
+    box_text(im, cx, H - 300, ["¡ÚLTIMOS 7 CUPOS CON", "50% DE DESCUENTO!"], fc, (255, 255, 255), (226, 18, 28), padx=40, pady=18, radius=2)
+    p = f"{TMP}/mirror.png"; im.save(p); return p
+
+
+def build_mirror(hook):
+    clips = [c for c in (f"{P}/clips/M1.mp4", f"{P}/clips/M2.mp4") if os.path.exists(c)]   # M1 la bloqueó el filtro 4 veces
+    segs = []
+    for k, c in enumerate(clips):
+        sg = f"{TMP}/m{k}.mp4"; d = C.dur(c) - 0.1
+        run([FF, "-loglevel", "error", "-y", "-t", f"{d:.2f}", "-i", c, "-vf", f"scale={W}:{H},fps={FPS},setpts=PTS-STARTPTS", "-an",
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", sg]); segs.append(sg)
+    lst = f"{TMP}/list.txt"; open(lst, "w").write("".join(f"file '{x}'\n" for x in segs))
+    cat = f"{TMP}/cat.mp4"; run([FF, "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", cat])
+    d = C.dur(cat); ov = mirror_overlay(hook)
+    mus = f"{TMP}/music.wav"; run(["python3", MUSIC, f"{d + 1:.1f}", mus])
+    fc = (f"[0:v][1:v]overlay=0:0[vout];[2:a]volume=0.8,atrim=0:{d:.2f},afade=t=out:st={d - 0.8:.2f}:d=0.8,loudnorm=I=-14:TP=-1.5[aout]")
+    run([FF, "-loglevel", "error", "-y", "-i", cat, "-i", ov, "-i", mus, "-filter_complex", fc, "-map", "[vout]", "-map", "[aout]",
+         "-t", f"{d:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
+         "-movflags", "+faststart", OUT])
+    print("OK", V, f"{C.dur(OUT):.1f}s", OUT)
+
+
 if V == "V6": build_mute()
+elif V in HOOKS: build_mirror(HOOKS[V])
 else: build_talk(PLANES[V])

@@ -23,10 +23,19 @@ ESCENAS = {
     "C": ("Late afternoon in a tree-lined park in Buenos Aires with tall plane trees and a dirt path. The woman (ref 1) wears a black sports "
           "bra and black high-waisted leggings, selfie framing from the waist up while walking toward the lens, natural daylight, phone not "
           "visible. " + SIL, ["silvia"]),
+    "H": ("Late afternoon in a lived-in Argentine apartment, warm dim light from a floor lamp and the last daylight from a window, slightly "
+          "grainy phone front camera. The woman (ref 1) sits on a beige sofa with a throw blanket, wearing an oversized grey hoodie open over a "
+          "black sports bra, hair in a messy ponytail after training, close selfie framing from the chest up, relaxed natural face, phone not "
+          "visible. Not overexposed, soft shadows, real home. " + SIL, ["silvia"]),
+    "M": ("Mirror selfie seen through a tall full-length mirror leaning on the wall of a modern Argentine apartment with a polished grey "
+          "concrete floor and an open kitchen with tall wooden stools behind. The woman (ref 1) stands FAR from the mirror, about three meters "
+          "away, so she looks small: her head is at the vertical middle of the image and her sneakers near the bottom edge; the whole upper half "
+          "of the image shows the empty white wall and ceiling above her. She wears an orange sports bra, black high-waisted leggings and white "
+          "sneakers, holding a smartphone at chest height. Soft natural indoor light, slightly muted colors, candid Instagram story look. " + SIL, ["silvia"]),
 }
 
 VOZ = {"S": ("F", "Silvia, a 40-year-old Argentine fitness coach with a warm, confident, energetic medium-pitched porteña voice")}
-POS = {k: {"S": "the woman"} for k in "ABCDE"}
+POS = {k: {"S": "the woman"} for k in "ABCDEH"}
 
 TOMAS = [
     # V1 · déficit (ad01 de Belu)
@@ -82,6 +91,16 @@ TOMAS = [
      [("S", "friendly", "Y no es una dieta imposible: son catorce días de desayuno, almuerzo, merienda y cena, sin pasar hambre.")]),
     ("E4", "E", "She smiles and points down with her free hand.",
      [("S", "excited", "Para arrancar hoy mismo, tocá acá abajo, que todavía está con la mitad de precio.")]),
+    # V4 rehecho (16/11): escena orgánica en el sillón
+    ("H1", "H", "She sits relaxed on the sofa, tilts her head with a small amused smile, gesturing calmly with one hand. Subtle, relaxed, natural facial expressions, not exaggerated, no wide-eyed faces.",
+     [("S", "amused, calm", "La gente dice: tengo que cambiar mi cuerpo, tengo que empezar el gimnasio. ¿Para qué, chicas?")]),
+    ("H2", "H", "She smiles and rests one hand on her knee, sincere and calm. Subtle, relaxed, natural facial expressions, not exaggerated, no wide-eyed faces.",
+     [("S", "sincere", "Yo me puse en forma entrenando desde casa, sin máquinas y sin pesas enormes.")]),
+    ("H3", "H", "She shakes her head slightly, then nods and points softly at the lens. Subtle, relaxed, natural facial expressions, not exaggerated, no wide-eyed faces.",
+     [("S", "firm, warm", "El gimnasio no es ni el problema ni la solución. El método sí. Así que sumate y arrancá hoy.")]),
+    # V7 · formato espejo (los 8 ads más nuevos de Belu): mudo, se filma en el espejo
+    ("M1", "M", "She films herself in the mirror with her phone, takes one small step to the side and smiles. Wide static framing.", []),
+    ("M2", "M", "She films herself in the mirror with her phone and fixes her ponytail with her free hand, smiling. Wide static framing.", []),
     # V6 · mudo (ad03/ad12 de Belu): sentadillas arriba, mate abajo
     ("F1", "F", "She does slow controlled bodyweight squats on the yoga mat, then speeds up into jump squats, breathing, focused.", []),
     ("G1", "E", "She takes a slow sip from the metal straw of the mate gourd and looks into the lens with a confident knowing smile, nodding slightly.", []),

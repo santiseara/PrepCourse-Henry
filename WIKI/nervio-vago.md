@@ -84,7 +84,7 @@ En un `<iframe>` de 390 px servido por `http.server`, recorrido entero por códi
 - **El precio.** Puse US$ 9,99 / US$ 29,99 por el piso de LATAM neutro. ¿Va ese o otro?
 - **El VSL del carril B.** Si se graba uno propio, se enciende con `AB_VSL: true`.
 - **El copy está todo en femenino** aunque el quiz pregunte Mujer/Hombre. Es así en el original y se respetó; si se quiere concordancia, va el token `{{o}}` de [[monjaro-violeta]].
-- Faltan los anuncios y el producto real.
+- Faltan los anuncios y el producto real. ✅ Descripción para ads lista: `OUTPUTS/2026-11-16-descripcion-ads-nervio-vago.md`.
 
 ## Relacionado
 [[quizzes-reglas-de-armado]] · [[gluteo-despierto]] · [[dancego]] · [[energia-vital]] · [[internacionalizacion]]

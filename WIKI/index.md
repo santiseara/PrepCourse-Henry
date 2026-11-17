@@ -146,6 +146,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-16 — Descripción para los ads de Reseteo del Nervio Vago](../OUTPUTS/2026-11-16-descripcion-ads-nervio-vago.md) — la corta que va + 2 variantes (curiosidad y cansancio), en neutro, sin precio ni promesas médicas; entra por el "modo alerta" y que el nervio se entrena · ver [[nervio-vago]]
 - [Radiografía Belu Fitness](../OUTPUTS/2026-11-16-radiografia-belu-fitness.md) — oferta, quiz, landing y 15 ads de la ballena de bajar la panza (16/11)
 
 - [2026-11-14 — Quiz de Glúteo Despierto (modelado de Guía Piernas y Cola)](../OUTPUTS/2026-11-14-quiz-gluteo-despierto.html) — el documento del competidor con **todos** los textos reescritos por script (`scripts-quiz/build_gluteo_despierto.py`), logo y portada propios, cuotas de Mercado Pago y pixel; 30 pasos verificados sin desbordes ni errores · ver [[gluteo-despierto]]

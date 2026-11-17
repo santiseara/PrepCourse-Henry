@@ -489,6 +489,9 @@ Quemar la transcripción cruda de Whisper deja errores a la vista: en Tai Chi Fi
 | 2026-11-17 | Hígado Liviano (v4) | "Están muy cortos… extendemos los guiones hasta por lo menos un minuto" | §10a: parte A avatar + parte B voz en off |
 | 2026-11-17 | Hígado Liviano (v4) | "La original usa cada tanto pantalla dividida… poné las del cuerpo en 3D" | §10c: split cada 4 planos, 3D sobre el mecanismo |
 | 2026-11-17 | Hígado Liviano (v4) | Se dio la tanda por terminada sin que existiera ningún archivo | §10e: verificar tamaño del mp4 antes de avisar |
+| 2026-11-17 | Hígado Liviano (v4) | "En todos los videos se corta el audio a la mitad" | §11a: `aresample=48000` tras `loudnorm` + `-ar 48000` |
+| 2026-11-17 | Hígado Liviano (v4) | "Repetís todo el tiempo los mismos b-rolls" | §11c: prohibido el `%` sobre la lista de visuales |
+| 2026-11-17 | Hígado Liviano (v4) | "Una mina estirando los brazos, ¿qué tiene que ver?" | §11d: la visual se elige por lo que se dice |
 | 2026-10-14 | Pilates Hormonal (ad "rodillas") | "Fijate que las visuales no sean tan IA; no hagas nuevos B-rolls todo el tiempo, solo si es súper necesario" | §6: reusar B-rolls, planos reales y look de celular |
 
 ## Preguntas abiertas
@@ -620,6 +623,39 @@ render: comprobar que el mp4 existe y pesa lo que tiene que pesar**, antes de de
 Son **10.000.000 bytes de payload base64**, o sea **~7,4 MB de archivo**. El objetivo de compresión es
 **6,6 MiB** con 2 pasadas y `preset slower`: a 7,37 MB pasa raspando. Y el `-passlogfile` va **antes** del
 archivo de salida, si no libx264 aborta con `-22 Invalid argument`.
+
+## 11. Dos trampas que arruinaron la tanda de Hígado Liviano (17/11/2026)
+
+### 11a. 🔴 `loudnorm` deja el audio en 192 kHz y el AAC sale a 96 kHz
+El filtro `loudnorm` fija su salida en **192.000 Hz**. Si no se vuelve a bajar, el encoder AAC guarda el
+audio a **96.000 Hz**, y cualquier reproductor que asuma 48 kHz lo reproduce al doble de lento: **se escucha
+la primera mitad y el resto nunca suena**. Es exactamente el *"se corta el audio a la mitad"* que reportó
+Santiago en los 6 anuncios.
+
+**Regla:** después de `loudnorm` va **siempre** `aresample=48000`, y el muxeo final lleva `-ar 48000 -ac 2`.
+Control obligatorio sobre el archivo entregado: `ffmpeg -i salida.mp4` tiene que decir `48000 Hz`.
+
+### 11b. 🔴 El `ffprobe` de esta Mac es un shim falso
+`~/bin/ffprobe` es un script de 4 líneas que **devuelve la duración y nada más**, sin importar qué
+`-show_entries` se le pida. `imageio_ffmpeg` trae `ffmpeg` pero no `ffprobe`. Por eso un control que pedía
+el sample rate o el alto y el ancho recibía la duración y **daba "OK" siempre**.
+
+**Regla:** para inspeccionar un archivo se usa **`~/bin/ffmpeg -i archivo`** y se lee la línea `Stream #`.
+Nunca `ffprobe` en esta máquina. Un control que no puede fallar no es un control.
+
+### 11c. El módulo `%` en la lista de visuales garantiza la repetición
+`visuales[k % len(visuales)]` recicla la misma imagen apenas hay más huecos que visuales. Se ve como
+*"repetís todo el tiempo los mismos b-rolls"*. **Regla:** antes de repetir una visual dentro de un mismo
+anuncio, se espacian los inserts o se alargan los planos; si aun así no alcanza, el script **corta y pide
+más visuales** en vez de entregar repetido.
+
+### 11d. Una visual que no habla del tema no va, aunque llene el hueco
+En la tanda entró `F11-rutina` (una mujer estirando los brazos en un living) en anuncios sobre el hígado.
+No tiene nada que ver y se nota. Y `F12-espejo-antes` / `F13-espejo-despues` **son dos personas distintas**:
+usarlas como pantalla partida de antes/después es un antes y después falso y evidente.
+
+**Regla:** cada plano se elige por lo que se está diciendo en ese segundo. Si no hay visual para ese momento,
+se genera la que falta; no se tapa con lo que sobró.
 
 ## Relacionado
 [[ugc-y-video-generativo]] · [[quizzes-reglas-de-armado]] · [[embudo-vsl-post-pago]] · [[pagina-de-ventas]]

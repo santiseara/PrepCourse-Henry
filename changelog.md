@@ -1,3 +1,25 @@
+## 2026-11-17 (38ª pasada) — Hígado Liviano v3: el ritmo de Silvia y las visuales propias
+
+Santiago: *"siguen saliendo muy mal, se ve muy aburrido, muy lento todo… para las visuales usaste todo de stock…
+la música se escucha muy bajita. Tomá de referencia los que me hiciste para Silvia Fitness"*, y después
+*"tampoco el mismo estilo que Silvia, pero esos movimientos quedaron reales, la voz quedó bien también"*.
+
+- **Tenía razón en las tres.** Comparando contra `edit_silvia.py`: velocidad **1.12 vs 1.25**, música **0.085 con
+  sidechain vs 0.09 sin sidechain** (el ducking la hundía cada vez que hablaba la avatar), y subtítulo fijo vs
+  **pop de entrada** (70 → 112 → 100 % en 140 ms).
+- **Se tomó el movimiento, no la estética.** El look sigue siendo el de Doutor Nature (Anton blanco con la palabra
+  clave en amarillo, barra negra de hook, chapas verdes de puntaje). De Silvia vienen velocidad 1.25, corte seco
+  cada 4 s, zoom alternado y el pop del subtítulo.
+- **Fuera todo el b-roll de ApiMart.** Santiago mandó dos zips con material hecho para esta oferta: **20 clips**
+  (hígado graso en 3D, bilis, el detergente cortando la grasa, el médico, milanesas, análisis, espejo antes/después)
+  y **42 fotos 9:16** (manteca en sartén, asado, balanza, jean que no cierra, reloj de cocina, consultorio).
+  Guardadas en `work/visuales/`. **Las fotos llevan push-in** del 9 %, no quedan quietas.
+- **De 34-41 s a 30-36 s.**
+- 🐞 **Los subtítulos se dibujaban encima de la placa final** (el filtro `subtitles` va último en la cadena): ahora
+  los eventos cortan antes de que entre el cierre.
+- **No se usan las 4 fotos de testimonio** del kit: serían clientas inventadas con resultados (§13 del Manual).
+- **Control final:** audio contra guion 0,970-1,000 · cero cuadros negros · los 6 en 1080x1920.
+
 ## 2026-11-16 (41ª pasada) — Adiós Panza: descripción para los ads, banner de la página y la regla de "menos prometedora"
 
 Santiago: *"Dame una descripcion para los ads de adios panza (Variable de la original). Y dame un promt

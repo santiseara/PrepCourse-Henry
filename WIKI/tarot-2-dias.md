@@ -53,9 +53,35 @@ Seis guiones, uno por familia, en inglés y español con voseo: `OUTPUTS/2026-11
 1. **The Tower leída en orden** (F1, 1:08) · 2. **Death no significa que alguien se muere** (F2, 0:39) · 3. **Pick a card: 1, 2 o 3** (F3, 0:57, con Cuatro de Copas / Ocho de Bastos / Dos de Oros para no calcar las cartas del original) · 4. **El mazo que sigue en la caja** (F4, 0:33) · 5. **Lo que me hubiese gustado tener** (F5, 0:31) · 6. **POV sin voz** (F6, 0:24).
 Más la **descripción única** para los seis, clonando que el original corre un solo primary text.
 
+## 🏭 Producción de la tanda 1 (17/11) — lo que se aprendió
+
+- 🐞 **El nicho de tarot en TikTok está podrido, y además trae competencia.** Del tag `#riderwaite` se
+  bajaron 23 clips y **servían 2**: el resto es creador hablando a cámara con texto quemado en español.
+  Peor todavía, apareció un **"Manual Rider Waite"** —otra guía anillada, competencia directa del producto—
+  con su propia marca de agua. Es la regla del 10/11 de [[pisos-epoxi]] (el nicho que vende cursos se
+  publicita dentro del b-roll) sumada a la del 10/11 de [[noche-de-citas-cristiana]] (nicho de frases).
+  **En esta oferta el b-roll de TikTok se descarta entero.**
+- ✅ **La salida fue la del propio ganador: el producto y las cartas.** El ambiente vivo (manos, velas,
+  mesa) se generó con **`cinematic_studio_video_v2` de Higgsfield**, modo `std`, 9:16, 5 s, `sound: off`:
+  **5 créditos por clip**, 12 clips = 60 créditos. Salen limpios y no gritan IA si el prompt cierra con
+  *"No text, no captions, no logos, no faces"* y se evita pedir **caras de cartas** (las inventa); los
+  dorsos sí salen bien. Pedir siempre la misma mesa, la misma luz y los mismos props para que el pool
+  tenga una sola paleta.
+- ⛔ **Las páginas del ebook NO las hace la IA**: ningún modelo pone texto legible. Se dibujan por código
+  (`OUTPUTS/scripts-vsl/gfx_tarot.py`) y se componen sobre un **cuadro real de la mesa** sacado de uno de
+  los clips generados, con sombra, rotación de 2-3° y la carta Rider-Waite real apoyada al lado. Queda
+  como una foto del producto sobre la mesa y es 100 % legible en inglés.
+- 🆕 **Resalte de subtítulo por TAMAÑO, no por color.** Es lo que hace ella en los 49 ads: frase blanca en
+  sans condensada, sin caja y sin color, y la palabra que suena **más grande y en bold** dentro de la misma
+  frase (`fsbase` 74 / `fshi` 104 en `edit_tarot.py`). Es el primer editor de la casa con este resalte.
+- **El cierre va fijo sobre la tapa** (`last: "pcov"`), y los insertos de cada carta van anclados a la
+  palabra que la nombra. Ojo: si una carta ya entra por anchor, **no se le ancla además la tapa**, o el
+  video la muestra dos veces casi seguidas.
+- Cama musical: `music_calma.py` (piano de fieltro, 64 BPM, Am) a `music_db: -11`. Una sola para la oferta.
+
 ## Preguntas abiertas
-- ¿La oferta inglesa ya existe (landing + ebook en inglés) o se clona de cero? Hace falta antes de dibujar los insertos de producto y de renderizar (regla del 5/11, [[guiones-y-anuncios]]).
-- El visual del original es su producto físico filmado. Sin ebook impreso en inglés, el reemplazo es clips de TikTok del nicho + páginas dibujadas por código.
+- ✅ **Resuelto el 17/11:** Santiago confirmó que la oferta es suya y que la landing inglesa lleva la misma información que la argentina, y autorizó generar las visuales del ebook.
+- ⚠️ El *"over eighteen hundred women"* del guion 2 sale del *"+1847 descargas"* de la landing argentina: si la inglesa no lleva ese número, esa línea se cae.
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[como-trabajar-con-santiago]] · [[caza-de-ofertas]] · [[problemas-de-cuentas-meta]] · [[internacionalizacion]]

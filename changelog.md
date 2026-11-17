@@ -47,6 +47,9 @@ quiero nada distinto, quiero todo similar, los guiones cambialos un poco pero ta
   suben de a 8 por llamada de `browser_batch` y se recomponen en el navegador con
   `new File([...partes])`. 6 videos, 46 MB, 72 partes, **13 llamadas**, y los seis SHA-256 idénticos a
   los del disco. Sin degradar la calidad. Procedimiento en `WIKI/organizacion-y-registro.md`.
+- 🖼️ **El estático que quiere es la caja de preguntas de Instagram**, no foto + titular: sticker con la
+  objeción arriba y cuatro burbujas de chat (azul que desarma, dos rojas con los números, azul con el
+  CTA). Generador: `scripts-vsl/gfx_preguntas_macetas.py`; formato anotado en `WIKI/imagenes-y-mockups.md`.
 - 🐞 **Las 2 fotos salieron mal la primera vez.** Las armé con un cuadro del clip de TikTok que usan en
   los *videos*, cuando lo que pidió era las 2 imágenes que más repite la *página*. Se midió de verdad:
   hash perceptual de los **58 posters** agrupados por Hamming → dos grupos de **6 ads cada uno**, los dos

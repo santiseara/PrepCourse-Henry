@@ -127,3 +127,25 @@ Relacionado: [[pagina-de-ventas]] · [[creacion-de-productos-digitales]] · [[ug
 ## Fuentes
 - RAW/2026-10-10-wiki-previa/imagenes-y-mockups.md (página de la wiki previa, actualizada el 2026-08-10)
 - Fuentes originales citadas (todavía no están en este cerebro): RAW/contexto-chatgpt.md, RAW/prompts/prompt-crear-mockups.md, RAW/prompts/prompt-one-shot-mockups.md, RAW/prompts/prompt-imagenes-ads.md, RAW/formacion/lecciones/como-crear-crear-recursos-visuales-con-ia-para-sus-landings-testimonios-mockups-fondos-imagenes-carruseles.md, RAW/formacion/lecciones/como-crear-un-arsenal-de-imagenes-con-ia.md
+
+## 🆕 2026-11-17 · El estático que quiere para ads: caja de preguntas de Instagram
+
+Santiago, después de que le entregara dos estáticos con la foto más un titular grande: *"Estas son las
+imágenes que quiero, haceme dos así, distintas"*, pasando una captura de la competencia. **El formato
+del ad estático no es foto + titular: es el sticker de preguntas de IG respondido en burbujas de chat.**
+
+Anatomía (9:16, 1080×1920), de arriba a abajo:
+1. **Foto real de fondo**, del nicho, con un velo negro parejo (~58 de alfa) para que el texto se lea.
+2. **El sticker de preguntas**: cabecera gris oscuro con la invitación (*"Dudas sobre macetas de
+   cemento"*) y, pegado abajo, la pregunta sobre fondo blanco, centrada, en tipografía de sistema.
+   Es la objeción del avatar escrita como si la hubiera mandado un seguidor.
+3. **Cuatro burbujas de chat** alineadas a la izquierda, con colita abajo y sombra suave, en
+   Montserrat ExtraBold blanco: **azul** la que desarma la objeción, **dos rojas** con los números
+   (lo que cuesta hacerla / a cuánto se vende), y **azul** el CTA (*"Descargá mi guía paso a paso ahora 👇"*).
+
+Reglas que salieron de armarlo:
+- **Ninguna burbuja toca el borde**: si el ancho se pasa de `W − 52`, se achica la tipografía y se
+  vuelve a medir (está resuelto en el generador).
+- **Las dos piezas de una tanda son distintas entre sí**: otra foto, otra pregunta y otras respuestas.
+  Lo que no cambia es el esqueleto.
+- Generador: `OUTPUTS/scripts-vsl/gfx_preguntas_macetas.py`.

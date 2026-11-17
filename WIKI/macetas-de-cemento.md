@@ -81,8 +81,12 @@ consiguieron **limpias y sin su texto** de los clips originales: `76005981389566
 `7467949774021414149` @1,2 s. Vienen en 576×1024, así que se escalan con Lanczos y un unsharp suave,
 y salen en **1080×1920** (recortarlas a 4:5 le cortaba la cabeza a la del vivero).
 
-🐞 **Primero las hice mal:** las armé con cuadros del clip de @ali.diyideas que usa el *video*, no con
-las imágenes que más repite la *página*. Regla: "las más repetidas" se **cuenta**, no se estima a ojo.
+🐞 **Primero las hice mal dos veces.** La primera, con cuadros del clip de @ali.diyideas que usa el
+*video* en vez de las imágenes que más repite la *página* (regla: "las más repetidas" se **cuenta**, no
+se estima a ojo). La segunda, con el formato equivocado: les puse un titular grande abajo cuando lo que
+quería era el **sticker de preguntas de Instagram** respondido en burbujas de chat. Las que quedaron
+usan esas dos fotos con ese formato (`gfx_preguntas_macetas.py`, detalle en [[imagenes-y-mockups]]):
+*"¿Se necesita mucha inversión para empezar?"* y *"¿Me sirve si nunca hice una en mi vida?"*.
 
 ## Entrega
 Todo en `Mi unidad / Ebook Dami / Ebook Macetas de Cemento (AR) / Videos terminados`: los 6 videos y las

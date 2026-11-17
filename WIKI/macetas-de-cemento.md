@@ -67,6 +67,12 @@ El plano insignia de Aula Digital es el clip `7678821416162184478` de **@ali.diy
 remera negra, el globo azul y la maceta de tela blanca con moño amarillo): es el mismo que corre en
 sus ads, limpio y en 1080×1920. Detalle de por qué se cayó cada uno: `OUTPUTS/scripts-vsl/vent_macetas.py`.
 
+## Entrega
+- **Videos:** `~/Desktop/macetas-cemento/anuncios/17-11 - N · <hook>.mp4` (6, de 30 a 44 s, 6,6 a 9,4 MB).
+  No subieron al Drive: `file_upload` corta arriba de ~800 KB ([[organizacion-y-registro]], 17/11).
+- **Fotos:** las 2 sí están en `Mi unidad / Ebook Dami / Ebook Macetas de Cemento (AR) / Videos terminados`.
+- Los masters en alta y el pool quedan en `anuncios/work/`.
+
 ## Preguntas abiertas
 - ¿Santiago ya tiene landing propia para esta oferta en AR? Los guiones salieron del vocabulario del
   competidor; si la landing propia dice otra cosa, hay que alinear los entregables que nombra la voz.

@@ -82,6 +82,19 @@ el pool de clips y los masters en alta).
 deja un ad de 45 s en 1080x1920 en **8,5–9,6 MB** (el render sale a 12 Mbps, 65–76 MB). Es calidad de
 sobra para Meta, que recomprime igual. **El master en alta queda en `work/masters/`.**
 
+### ⚠️ 2026-11-17 · El tope de `file_upload` bajó a ~800 KB y con eso no entra un video
+Subiendo la tanda de [[macetas-de-cemento]]: `file_upload` **corta la conexión** ("the connection was lost
+before its result came back") con cualquier archivo de más de unos **800 KB**. Medido: 713 KB (las dos
+fotos juntas) y 154 KB pasan; 900 KB, 1,4 MB, 4,6 MB y 7,2 MB fallan, siempre igual y sin importar el tipo
+de archivo ni la carpeta. Los **10,4 MB** que figuraban acá desde el 13/11 ya no valen.
+- **Las imágenes siguen subiendo bien** (una foto de ad pesa 300-400 KB).
+- **Los videos no.** Bajar la calidad hasta que entren los dejaría a ~200 kbps, que es exactamente lo que
+  prohíbe la regla de imágenes de mierda; y trocear un MP4 en 11 pedazos de 700 KB para recomponerlo con
+  `new File([...partes])` son 60-70 llamadas por tanda.
+- **Lo que se hace mientras tanto:** las fotos van al Drive, los videos quedan en
+  `~/Desktop/<oferta>/anuncios/` con el nombre de tanda y del hook, y **se le avisa en una línea** que los
+  arrastre él. No se da la tanda por subida si no se verificó en el Drive.
+
 ⛔ **El conector de Drive no toma rutas por referencia** (probado otra vez el 2026-11-15): pasarle la ruta del MP4 en
 `base64Content` devuelve *"The file content is not a valid base64 string"*, con y sin `@` adelante, y desde el
 scratchpad de la sesión. O entra el base64 entero (y un video de 5 MB son ~7 MB de payload dentro del contexto) o se

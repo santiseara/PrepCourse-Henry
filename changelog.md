@@ -42,6 +42,9 @@ quiero nada distinto, quiero todo similar, los guiones cambialos un poco pero ta
 - 🐞 **`cropdetect` de ffmpeg no detecta el letterbox cuando la barra no es negro puro.** Tres clips lo pasaron y
   aparecieron igual como franja negra en el render. Lo que funcionó fue medir 10 cuadros por clip con numpy
   (filas con luminancia media < 14). Quedó en `OUTPUTS/scripts-vsl/medir_barras.py`.
+- ⚠️ **Al Drive subieron solo las 2 fotos.** `file_upload` corta la conexión arriba de **~800 KB** (medido:
+  713 KB y 154 KB pasan; 900 KB, 1,4 MB, 4,6 MB y 7,2 MB fallan). Los 6 videos quedaron en
+  `~/Desktop/macetas-cemento/anuncios/`. Regla anotada en `WIKI/organizacion-y-registro.md`.
 - 🐞 **El free tier de `gemini-2.5-flash-preview-tts` se agotó a mitad de la tanda** (10 requests por día): la voz
   4 salió con `gemini-3.1-flash-tts-preview`, verificada con Gemini antes de usarla.
 

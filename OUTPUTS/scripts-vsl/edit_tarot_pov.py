@@ -17,7 +17,7 @@ tmp = os.path.join(WD, os.path.basename(OUT) + '_tmp')
 os.makedirs(tmp, exist_ok=True)
 
 CARTEL = 'POV: the tarot guide that finally made it click'
-END1, END2 = 'Your first reading in 2 days', 'Tap Learn more'
+END2 = 'Tap Learn more'
 
 # orden de planos: ASMR, como el suyo — abrir, hojear, barajar, subrayar, cerrar sobre el producto
 SEQ = [
@@ -49,26 +49,33 @@ def png_cartel(path):
         if d.textlength(t, font=f) <= W - 150: cur = t
         else: lines.append(cur); cur = w
     lines.append(cur)
-    y = 300
+    y = 132
     for ln in lines:
         x = (W - d.textlength(ln, font=f)) / 2
-        for dx, dy in ((2, 3), (-2, 3), (0, 4)):
-            d.text((x + dx, y + dy), ln, font=f, fill=(0, 0, 0, 110))
-        d.text((x, y), ln, font=f, fill=(255, 255, 255, 242))
+        for r in (4, 3, 2):                       # contorno: se lee tambien sobre papel crema
+            for dx in range(-r, r + 1):
+                for dy in range(-r, r + 1):
+                    if dx * dx + dy * dy <= r * r:
+                        d.text((x + dx, y + dy), ln, font=f, fill=(24, 18, 14, 190))
+        d.text((x + 2, y + 4), ln, font=f, fill=(0, 0, 0, 120))
+        d.text((x, y), ln, font=f, fill=(255, 255, 255, 250))
         y += 64
     im.save(path)
 
 def png_end(path):
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rectangle([0, 0, W, H], fill=(16, 12, 10, 120))
-    f1, f2 = didot(68), didot(44)
-    y = 760
-    for ln, f in ((END1, f1), (END2, f2)):
-        x = (W - d.textlength(ln, font=f)) / 2
-        d.text((x, y), ln, font=f, fill=(255, 255, 255, 248))
-        y += 110
-    d.line([(W/2 - 90, 900), (W/2 + 90, 900)], fill=(255, 255, 255, 170), width=1)
+    d.rectangle([0, 0, W, H], fill=(16, 12, 10, 95))
+    f2 = didot(54)
+    y = 1560
+    x = (W - d.textlength(END2, font=f2)) / 2
+    for r in (4, 3):
+        for dx in range(-r, r + 1):
+            for dy in range(-r, r + 1):
+                if dx * dx + dy * dy <= r * r:
+                    d.text((x + dx, y + dy), END2, font=f2, fill=(20, 15, 12, 200))
+    d.text((x, y), END2, font=f2, fill=(255, 255, 255, 250))
+    d.line([(W/2 - 110, y - 36), (W/2 + 110, y - 36)], fill=(255, 255, 255, 160), width=1)
     im.save(path)
 
 png_cartel(f'{tmp}/cartel.png')
@@ -82,8 +89,9 @@ for i, (src, a, b) in enumerate(SEQ + [END_SHOT]):
     still = src.endswith(('.jpg', '.png'))
     zin = i % 2 == 0
     z = (f"(1+0.10*t/{d:.3f})" if zin else f"(1.10-0.10*t/{d:.3f})")
+    if src.endswith((".jpg", ".png")): z = (f"(1+0.05*t/{d:.3f})" if zin else f"(1.05-0.05*t/{d:.3f})")
     if still:
-        vf = (f"scale={W*2}:-1,crop={W*2}:{H*2}:0:(ih-{H*2})/2,"
+        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
               f"scale=w=iw*{z}:h=ih*{z}:eval=frame,crop={W}:{H},setsar=1,fps=30")
         cmd = [FF, '-v', 'error', '-y', '-loop', '1', '-t', f'{d:.3f}', '-i', F(src),
                '-vf', vf, '-frames:v', str(int(d * 30)), '-c:v', 'libx264', '-crf', '17',
@@ -103,9 +111,17 @@ L = sum(b - a for _, a, b in SEQ) + (END_SHOT[2] - END_SHOT[1])
 t_end = L - (END_SHOT[2] - END_SHOT[1])
 
 # --- pegar, poner el cartel fijo, la placa final y la musica
+# EN DOS PASOS A PROPOSITO: el concat demuxer deja PTS que hacen que el 'enable' por tiempo
+# de los overlays caiga donde no va (el cartel fijo desaparecia a los 5 s). Se concatena a un
+# intermedio y recien sobre ese, que arranca limpio en 0, se ponen los overlays.
+MID = f'{tmp}/mid.mp4'
+subprocess.run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/list.txt',
+                '-c:v', 'libx264', '-crf', '16', '-preset', 'veryfast', '-pix_fmt', 'yuv420p',
+                '-vsync', 'cfr', '-r', '30', '-an', MID], check=True)
+
 subprocess.run([
     FF, '-v', 'error', '-y',
-    '-f', 'concat', '-safe', '0', '-i', f'{tmp}/list.txt',
+    '-i', MID,
     '-i', f'{tmp}/cartel.png', '-i', f'{tmp}/end.png',
     '-i', F('music/bed.wav'),
     '-filter_complex',
@@ -114,5 +130,5 @@ subprocess.run([
     f"[3:a]atrim=0:{L:.2f},afade=t=in:st=0:d=1.2,afade=t=out:st={L-1.4:.2f}:d=1.4,volume=-7dB[aud]",
     '-map', '[v]', '-map', '[aud]', '-t', f'{L:.2f}',
     '-c:v', 'libx264', '-crf', '19', '-preset', 'medium', '-pix_fmt', 'yuv420p',
-    '-c:a', 'aac', '-b:a', '160k', OUT], check=True)
+    '-r', '30', '-c:a', 'aac', '-b:a', '160k', OUT], check=True)
 print(f'OK {OUT} {L:.1f}s, {len(parts)} planos, sin voz')

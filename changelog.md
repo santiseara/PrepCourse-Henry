@@ -15,7 +15,14 @@ análisis de siempre y hagamos 6 anuncios de testeo."*
   (el máximo son 8 ads). Nadie vende un ebook low ticket de aprender tarot en inglés. Nicho libre.
 - **Tanda 1:** 6 guiones, uno por familia, en inglés y español con voseo, más la descripción única
   (`OUTPUTS/2026-11-17-guiones-tarot-2-dias-EN-tanda1.md`). Página nueva: `WIKI/tarot-2-dias.md`.
-- **Pendiente antes de renderizar:** saber si la oferta inglesa ya existe (landing + ebook) o se clona de cero.
+- **Los 6 videos producidos** (56, 37, 35, 24, 23 y 26 s), en `~/Desktop/tarot-2-dias/anuncios/`.
+- **El b-roll de TikTok se descartó entero:** el tag `#riderwaite` dio 2 clips limpios de 23 y traía un
+  "Manual Rider Waite" de la competencia. El ambiente se generó con Higgsfield (12 clips, 60 créditos) y
+  las páginas del ebook en inglés se dibujaron por código (`gfx_tarot.py`) sobre un cuadro real de la mesa.
+- **Editor nuevo** `edit_tarot.py`: subtítulo sin caja, con la palabra que suena en tamaño mayor (el resalte
+  de ella). Y `edit_tarot_pov.py` para el V6 mudo, con su cartel fijo.
+- 🐞 **El Drive corta en 10 MB:** los videos (17 a 44 MB) no se pudieron subir por el conector y quedaron
+  en el Escritorio. Al Drive subieron los guiones y la tapa.
 
 ## 2026-11-17 (40ª pasada) — Macetas de cemento (AR): clon de Aula Digital 360, 6 videos y 2 fotos
 

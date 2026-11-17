@@ -1,3 +1,22 @@
+## 2026-11-16 (41ª pasada) — Adiós Panza: descripción para los ads, banner de la página y la regla de "menos prometedora"
+
+Santiago: *"Dame una descripcion para los ads de adios panza (Variable de la original). Y dame un promt
+para hacerle un buen banner a la pagina de fb"* + *"Dame una descripcion super similar pero menos prometedora"*.
+
+- **Descripción para los ads** (`OUTPUTS/2026-11-16-descripcion-ads-adios-panza.md`): variable del texto
+  principal único de Belu — promesa en una línea, párrafo del mecanismo, 4 ✅ y CTA al quiz. Sin precio y
+  **sin números de alumnas** (el CONFIG del quiz todavía tiene el dato pendiente). Título y descripción del
+  enlace incluidos, más dos variantes de testeo (temporada e identificación).
+- **Versión suave** (`OUTPUTS/2026-11-16-descripcion-ads-adios-panza-suave.md`): misma estructura con la
+  promesa bajada. Protagonista el plan, no el resultado: se fueron el plazo, la bikini de enero, los cupos
+  y el 50 % off.
+- **Regla nueva en [[guiones-y-anuncios]]** (2026-11-16): *"menos prometedora" = se vende el plan, no el resultado*.
+- **Prompts del banner de la página de Facebook** (`OUTPUTS/2026-11-16-prompt-banner-facebook-adios-panza.md`):
+  1640×624, zonas seguras a los costados y esquina inferior izquierda libre. Prompt A con Silvia (su foto como
+  referencia de cara, living cálido, nada blanco estallado) y Prompt B tipográfico sobre la paleta del quiz
+  (ciruela #4a1530, rosa #b8336a, blush #fcebf3). Para Nano Banana o su ChatGPT, nada que cobre.
+- Copias de todo en `~/Desktop/silvia-fitness/anuncios/` e `imagenes/`.
+
 ## 2026-11-16 (37ª pasada) — Hígado Liviano v2: velocidad, música y cortes como los de ellos
 
 Santiago: *"Metele velocidad a los videos, y musica"* + *"quedaron re aburridos, muy basicos, mejoralos"* +

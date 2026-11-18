@@ -240,6 +240,10 @@ def montar(plan):
 
     # --- 5. subtítulos alineados con la voz ---
     ws = palabras(cap)
+    if plan.get('guion'):
+        # el transcriptor escribe lo que le parece; se encaja el guion real
+        import edit_eslo as _E
+        ws = _E.encajar(ws, open(plan['guion']).read().strip())
     ass = G.subtitulos(ws, f'{T}/sub.ass', plan.get('sub', 'blanco'),
                        plan.get('por_vez', 3), plan.get('clave'))
     vf = (','.join(gfx) + ',' if gfx else '') + f"subtitles='{ass}':fontsdir='{G.FONTDIR}'"

@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-18 (tarde II) · Limpia Dolor publicado: el quiz corriendo en la tienda
+
+Santiago, con la captura del error de ImpulTienda (*"El HTML pesa 3,1 MB y el máximo es 1,5 MB"*): *"entra a
+impultienda y hacelo"*.
+
+- **El tope de ImpulTienda es 1,5 MB**, y eso responde una pregunta abierta que estaba desde el 12/10. Lo pesado va
+  a **Diseño de tienda → Recursos**, que es el almacén propio de la tienda.
+- **Subidos los 25 archivos** (19 imágenes + 6 videos) en dos tandas. ⛔ **Recursos no acepta mp3**, así que los
+  3 audios del médico se quedan embebidos en base64: **el `.txt` pasó de 3,1 MB a 662 KB**.
+- 🐞 El subidor del navegador solo lee carpetas compartidas con la sesión: hubo que copiar los archivos al scratchpad
+  antes de subirlos.
+- 🐞 La tienda renombra cada archivo con un **timestamp adelante** y le pasa los `_` a `-`, así que el reemplazo por
+  nombre hay que normalizarlo.
+- **Pegado en Contenido → HTML propio** y guardado. **Verificado en vivo**: las 28 pantallas recorridas por código
+  sin imágenes rotas ni desbordes, y un CTA tocado de verdad aterriza en `/checkout` del mismo host con los UTMs y
+  el `fbclid`.
+
 ## 2026-11-18 (tarde) · Limpia Dolor: el checkout definitivo y los audios a 1.20
 
 Santiago: *"este es el link de checkout, `https://protocolo-desparacitacion-intestinal.impultienda.ar/checkout`.

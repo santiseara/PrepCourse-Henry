@@ -1,4 +1,37 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-18 · ImpulTienda corta en 1,5 MB: las imágenes y los videos van a *Diseño → Recursos*
+Santiago, con el quiz de [[limpia-dolor]] ya pegado: *"Me dice esto, entra a impultienda y hacelo"* — y la captura:
+**"El HTML pesa 3,1 MB y el máximo es 1,5 MB. Tiene imágenes en base64 que no se pudieron convertir: subilas en
+Diseño → Recursos y pegá su link."** Es el límite real de la plataforma, y responde la pregunta abierta que estaba
+anotada desde el 12/10 (*"¿ImpulTienda acepta pegar un HTML de ~1 MB?"*): **sí, hasta 1,5 MB**.
+
+**La tienda tiene su propio almacén de archivos**, y es ahí donde va lo pesado:
+`Dashboard → <tienda> → Diseño de tienda → Recursos`.
+
+- **Acepta imágenes** (PNG, JPG, WebP, GIF, AVIF) **y videos** (MP4, WebM, hasta 100 MB), los dos con *multiple*:
+  las 19 imágenes y los 6 videos subieron **en dos tandas**, de una.
+- ⛔ **NO acepta audio.** No hay input de mp3, así que **los audios se quedan embebidos en base64**. Por eso la
+  regla del reparto de peso (más arriba) se da vuelta: lo que se embebe es **solo el audio**, y las imágenes y los
+  videos salen por URL. Con 3 audios de WhatsApp, el `.txt` quedó en **662 KB**.
+- **La URL es predecible y sirve para todas:**
+  `https://sb.impultienda.ar/storage/v1/object/public/store-resources/<id-de-la-tienda>/<timestamp>_<nombre>`
+  El archivo se renombra con un **timestamp adelante** y **los `_` del nombre pasan a `-`**: `v1_hombre_rodilla.mp4`
+  queda como `…_v1-hombre-rodilla.mp4`. Si se arma el reemplazo por nombre, hay que normalizar, o falla.
+- **Las URLs se sacan del DOM**, no copiando una por una: `[...document.querySelectorAll('img,video,source')]` y se
+  arma el mapa `nombre → URL`. Hay un botón *"Copiar todos los links"*, pero el DOM es más rápido y no pasa por el
+  portapapeles.
+- 🐞 **El subidor del navegador solo lee las carpetas que la sesión tiene compartidas.** Desde `~/Desktop/<oferta>/`
+  rebota con *"only files this session is allowed to read"*: hay que **copiar los archivos al scratchpad** y subirlos
+  desde ahí.
+- **Dónde se pega el quiz:** `Diseño de tienda → Contenido → Diseño de la landing → HTML propio`, en el campo
+  *HTML completo de la tienda*. Son 650 KB: no se tipean, **se pegan con `pbcopy` + `cmd+v`** sobre el campo con
+  `cmd+a` antes. Después, *Guardar cambios*.
+
+**Cómo se verifica, ya en vivo:** se abre el dominio de la tienda con `?utm_source=…&fbclid=…`, se recorre el quiz
+entero por código (cero desbordes, cero `naturalWidth===0`, cero imágenes pendientes) y **se toca un CTA de verdad**:
+tiene que aterrizar en `/checkout` del mismo host con los UTMs y el `fbclid` puestos. Acá dio los 6 CTAs y el
+aterrizaje correcto.
+
 ### 🆕 2026-11-18 · La voz de un quiz va a 1.30, no a 1.20
 Santiago pidió acelerar los audios del médico de [[limpia-dolor]] **dos veces**: *"le metas un poco de velocidad,
 suena muy lento"* y, con 1.20 ya puesto, *"metele un poco mas de velocidad a los audios, 1.3"*.
@@ -726,6 +759,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "este es el link de checkout, `https://protocolo-desparacitacion-intestinal.impultienda.ar/checkout`. Agregalo en todos los botones de cta de la ultima slide" | `curl -sIL` → **200 y 0 redirecciones** antes de ponerla. Va en **un solo lugar** (`CONFIG.CHECKOUT`, verificado: aparece 1 vez y no queda ningún `/checkout` suelto). Probado sobre una copia instrumentada: los **6 CTAs** salen con el host completo y los 6 parámetros, y sin parámetros queda el checkout exacto. ⚠️ **El subdominio no se deduce**: dice *desparacitacion* (con c) y *intestinal*, no *articular* |
+| 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "Me dice esto, entra a impultienda y hacelo" (captura: *"El HTML pesa 3,1 MB y el máximo es 1,5 MB… subilas en Diseño → Recursos y pegá su link"*) | **El tope de ImpulTienda es 1,5 MB.** Las 19 imágenes y los 6 videos subidos a **Diseño → Recursos** (acepta múltiples; **no acepta mp3**, así que los 3 audios quedan embebidos) y el quiz apuntado a sus URLs: de 3,1 MB a **662 KB**. Pegado en *Contenido → HTML propio* y guardado. Verificado en vivo: las 28 pantallas sin imágenes rotas y un CTA aterrizando en `/checkout` con UTMs y `fbclid` |
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "metele un poco mas de velocidad a los audios, 1.3" (con 1.20 ya puesto) | **La voz de un quiz va a `atempo=1.30`**, no a 1.20 como la de los ads: 192/179/193 ppm (75 s, 46 s y 31 s). Se rehace **desde el wav original a 1.0**, nunca encadenando sobre el mp3 ya acelerado |
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "a los audios del medico le metas un poco de velocidad, suena muy lento" | Primer paso: `atempo=1.20` (177/166/178 ppm). **No alcanzó** — ver la fila de abajo y la regla del 18/11: el número de un quiz es **1.30** |
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "Vamos con una oferta nueva, necesito que le copiemos el quiz, lo vamos a cobrar 17.990 ars, es para argentina, en donde hay videos, no los metas, o sii sentis que con apimart los podes hacer bien y que queden reales, hacelos" | Primer clon de un funnel de **InLead descifrado por código** (su `q` cifrado se abre con el algoritmo de su propio bundle: ver la regla del 18/11). 28 pantallas con rama por género, en voseo, a $17.990. **Los videos se hicieron**: 6 testimonios de 8 s con `veo3.1-fast` por ApiMart (US$ 0,78), con el acento rioplatense verificado y la línea de "caso ilustrativo" debajo. Los **3 audios del médico** regrabados con Orus — y ahí apareció que `gemini-3.8-flash-tts` **lee el bloque de estilo en voz alta**. La **captura falsa del G1 no se clonó**: va una tarjeta de divulgación sin marca. Peso: imágenes y audio embebidos (1,34 MB), video por URL |
@@ -799,7 +833,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 - ¿"Pilates Asiático" pasa a llamarse "Pilates Hormonal" en los textos o queda como nombre del método?
 - ¿El sello de pago seguro (Visa, Mercado Pago) también se pasa a HTML?
 - ~~¿Los 2:40 son fijos?~~ No: dependen de cada VSL (Pilates Hormonal: 3:50).
-- ¿ImpulTienda acepta pegar un HTML de ~1 MB? Si no, volver al .txt liviano con las URLs de las imágenes subidas.
+- ~~¿ImpulTienda acepta pegar un HTML de ~1 MB?~~ **Sí: el tope es 1,5 MB** (18/11). Arriba de eso, las imágenes y los videos van a *Diseño → Recursos*.
 
 ## Relacionado
 [[quiz-funnel]] · [[imagenes-y-mockups]] · [[shopify-y-checkout]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]

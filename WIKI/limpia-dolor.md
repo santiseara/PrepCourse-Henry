@@ -61,13 +61,17 @@ Su checkout de **Payt**, su analítica y su `__NEXT_DATA__` de InLead (es su pla
 
 ```
 ~/Desktop/limpia-dolor/
-  landing/limpia-dolor-quiz.txt              1,17 MB · para pegar en el custom_html
-  landing/limpia-dolor-quiz-CON-VIDEOS.txt   3,37 MB · con los 6 videos embebidos
-  landing/limpia-dolor-PRUEBA.html           el mismo, para abrir en Chrome
-  landing/quiz.html                          el fuente, con el bloque CONFIG arriba
-  landing/media/                             3 mp3 + 6 mp4 listos para subir
-  imagenes/                                  19 webp (415 KB)
+  landing/limpia-dolor-quiz.txt    662 KB · lo que está pegado en la tienda
+  landing/limpia-dolor-PRUEBA.html el mismo, para abrir en Chrome
+  landing/quiz.html                el fuente, con el bloque CONFIG arriba
+  landing/media/                   3 mp3 + 6 mp4 (los mp4 ya subidos a Recursos)
+  imagenes/                        19 webp (los 19 ya subidos a Recursos)
 ```
+
+**Está en vivo** en `protocolo-desparacitacion-intestinal.impultienda.ar` desde el 18/11, pegado en
+*Diseño de tienda → Contenido → HTML propio*. Las **19 imágenes y los 6 videos viven en Diseño → Recursos**
+(`sb.impultienda.ar/storage/…/store-resources/43d7fdfe-…/`); **los 3 audios van embebidos**, porque Recursos no
+acepta mp3. Detalle en [[quizzes-reglas-de-armado]] (regla del 18/11).
 
 Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-limpia-dolor-fuente.html`.
 

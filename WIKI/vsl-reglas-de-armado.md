@@ -733,12 +733,21 @@ Pedido del 17/11: *"bajá un poco la música a todos, un poco nada más, no much
 
 ## 13. Renovaciones y dos formatos nuevos de Fausto (18/11/2026, Hígado Liviano v6)
 
-### 13a. ⭐ Una renovación es un hook nuevo PEGADO ADELANTE del ganador
-El cuerpo validado no se toca ([[renovacion-de-creativos]]). Fausto hace exactamente eso: su `r011`
-arranca con una frase propia sobre una visual nueva y recién después entra el `Mirá lo que hace la
-banana` del cuerpo que ya corría. Dos renovaciones del ganador salen en **4 minutos y sin HeyGen**:
-una visual nueva + una línea de TTS + `barra_roja` + `concat` (`OUTPUTS/scripts-vsl/ren_hook.py`).
-No hace falta re-renderizar el avatar, porque la voz del hook va sobre b-roll, no sobre su cara.
+### 13a. 🔴 "Renovación" para Santiago NO es un hook pegado adelante
+Entregué las dos primeras como hace Fausto en `r011` (visual nueva + una línea de TTS pegadas delante
+del ganador intacto, con `OUTPUTS/scripts-vsl/ren_hook.py`) y las rebotó:
+
+> *"No, las dos renovaciones del ganador las hiciste mal, no quería el mismo video pero que le metas un
+> hook adelante, quería un video similar pero que diga distintas cosas, apuntando al mismo ángulo."*
+
+**La regla:** una renovación es un **video nuevo entero** — mismo molde, mismo avatar, mismo ángulo de
+venta, mismo estilo de barra y subtítulo — con un **guion distinto**. Lo que se reusa es el **formato**,
+no el archivo. El `ren_hook.py` queda igual para cuando haga falta volumen barato de verdad (es lo que
+hace el competidor), pero no es lo que él llama renovación.
+
+Las dos que sí sirvieron: mismo molde `r008` (la doctora, barra roja, inserts, subtítulo rojo con
+palabras clave) y el mismo ángulo — *el 80 % del colesterol lo fabrica el hígado, no el plato* — una
+entrando por **el pan** y la otra por **el jugo de naranja**, cada una con su propio bebé-fruta.
 
 ### 13b. 🔴 "Generar video" puede dejar el proyecto en BORRADOR
 El primero de los dos renders del 18/11 figuraba en *Mis videos* con su miniatura y parecía enviado:

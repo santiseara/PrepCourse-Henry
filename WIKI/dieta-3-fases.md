@@ -76,6 +76,12 @@ Uno por cada uno de sus 10 formatos de más impresiones, 1080x1920 · 30 fps · 
 - **Voz:** Gemini TTS, Orus (hombre) y Sulafat (mujer), rioplatense, speed 1.20.
 - **Avatar:** HeyGen **Avatar IV**, 720p vertical, los tres del banco.
 - **B-roll:** 28 tomas propias de **Veo 3.1 Fast** por ApiMart (US$ 3,92), 720x1280.
+- **Entrega:** los 10 en el Drive, *Ebook Dami / Ebook Dieta de las 3 Fases (AR) / Videos terminados*, con el nombre
+  del hook. Los masters quedan en `~/Desktop/dieta-3-fases/anuncios/` (`18-11 - 1.mp4` a `18-11 - 10.mp4`),
+  de 28 a 57 MB. Los del Drive son una recompresión a 7,1 MB (x264 dos pasadas, 445 a 960 kbps según el largo),
+  porque el conector cuenta el payload en base64 y el techo real del archivo es ~7,3 MB. **SSIM contra el master:
+  0,962 en el peor (el 7, de 1:37) y 0,988 en el mejor (el 8, de 0:51)** — se degrada poco, pero para subir a Meta
+  conviene el master del Escritorio, no el del Drive.
 
 ## Lo que quedó distinto del original, y por qué
 - **La placa de noticia del anuncio 4 dice "INFORME DE SALUD", no el nombre de un diario real.** Ellos estampan *"JORNAL OPINIÃO GOIÁS"* sobre un titular que escribieron ellos. Poner el nombre de un medio real arriba de un titular inventado es hacerlo pasar por suyo; la placa queda igual, la fuente no.

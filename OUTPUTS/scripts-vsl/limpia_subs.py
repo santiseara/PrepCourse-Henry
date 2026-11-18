@@ -22,27 +22,33 @@ def letras(roi, color):
         m = am
     elif color == 'blanco':
         m = bl
+    elif color == 'todos':
+        # algunos anuncios resaltan una palabra en rojo, verde o violeta:
+        # cualquier color saturado y brillante cuenta como letra
+        m = bl | ((s > 110) & (v > 140))
     else:                      # 'ambos': el anuncio mezcla linea blanca y linea amarilla
         m = am | bl
     m = m.astype(np.uint8) * 255
-    oscuro = (v < 85).astype(np.uint8)
+    oscuro = (v < 125).astype(np.uint8)
     n, lab, st, cen = cv2.connectedComponentsWithStats(m, 8)
     caj = []
     for i in range(1, n):
         x, y, w, hh, area = st[i]
-        if not (14 <= hh <= 105 and 5 <= w <= 230 and area > 55 and area / float(w * hh) > 0.22):
+        if not (12 <= hh <= 110 and 5 <= w <= 460 and area > 45 and area / float(w * hh) > 0.14):
             continue
         # una letra de subtitulo SIEMPRE tiene contorno negro alrededor:
-        # si el anillo que la rodea no es oscuro, es un brillo de la imagen
-        comp = (lab[y:y+hh, x:x+w] == i).astype(np.uint8)
-        anillo = cv2.dilate(comp, np.ones((9, 9), np.uint8)) - comp
-        y0r, y1r = max(0, y-5), min(m.shape[0], y+hh+5)
-        x0r, x1r = max(0, x-5), min(m.shape[1], x+w+5)
-        sub_osc = oscuro[y:y+hh, x:x+w]
+        # si el anillo que la rodea no es oscuro, es un brillo de la imagen.
+        # el recorte va con margen, si no el anillo queda cortado por la caja
+        P = 7
+        y0r, y1r = max(0, y - P), min(m.shape[0], y + hh + P)
+        x0r, x1r = max(0, x - P), min(m.shape[1], x + w + P)
+        comp = (lab[y0r:y1r, x0r:x1r] == i).astype(np.uint8)
+        anillo = cv2.dilate(comp, np.ones((11, 11), np.uint8)) - comp
+        sub_osc = oscuro[y0r:y1r, x0r:x1r]
         if anillo.sum() == 0:
             continue
         frac = float((anillo & sub_osc).sum()) / float(anillo.sum())
-        if frac < 0.22:
+        if frac < 0.10:
             continue
         caj.append((x, y, w, hh, i))
     return caj, lab
@@ -69,6 +75,16 @@ def renglones(caj, W):
         x0 = min(c[0] for c in l); x1 = max(c[0] + c[2] for c in l)
         y0 = min(c[1] for c in l); y1 = max(c[1] + c[3] for c in l)
         if x1 - x0 < W * 0.12:
+            continue
+        # un renglon de subtitulo esta centrado y tiene letras de altura pareja;
+        # una mancha de pelo o de piel no cumple ni una cosa ni la otra
+        centro = (x0 + x1) / 2.0 / W
+        if not (0.20 <= centro <= 0.80):
+            continue
+        alturas = [c[3] for c in l]
+        med = sum(alturas) / len(alturas)
+        disp = (sum((h - med) ** 2 for h in alturas) / len(alturas)) ** 0.5
+        if med > 0 and disp / med > 0.55:
             continue
         rects.append((x0, y0, x1, y1))
     return rects

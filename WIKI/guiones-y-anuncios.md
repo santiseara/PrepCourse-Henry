@@ -78,7 +78,7 @@ Dos cosas medidas armando [[higado-liviano]]:
 - **El filtro no cambia:** aun en el pool bueno, 7 de 15 tenían texto quemado o cara. Se revisan todos con hoja de
   contactos antes de usarlos.
 
-### 🆕 2026-11-18 · Cuatro cosas medidas armando [[dieta-3-fases]]
+### 🆕 2026-11-18 · Cinco cosas medidas armando [[dieta-3-fases]]
 
 - ⛔ **La Biblioteca de Anuncios de Meta sirve los videos a 360x640.** No importa qué tan lindo sea el b-roll del
   competidor: ampliado a 1080x1920 es basura y se cae por la regla de las imágenes de mierda. **La fuente 2 de la
@@ -98,6 +98,11 @@ Dos cosas medidas armando [[higado-liviano]]:
 - **Los subtítulos se anclan al guion, no a lo que escribe el transcriptor.** Whisper oyó "Sarhouse" por
   "Lucas Aráoz" y lo quemó en pantalla. `encajar()` alinea las dos listas y deja el guion, que es lo que de verdad
   se dice. Va en todo montaje con subtítulo quemado.
+- 🐞 **El tope de 10 MB del conector de Drive es del payload, no del archivo.** El archivo viaja en base64, que
+  infla 4/3: un mp4 de 9,7 MB arma un payload de 13,3 MB y el servidor contesta
+  `Request payload size exceeds the limit: 10000000 bytes`. **El techo real del archivo es ~7,3 MB**, así que
+  `comprimir_drive.py` apunta a 6,8 MB. Segunda cosa: **el conector solo lee archivos de las carpetas de la
+  sesión**, igual que el uploader del navegador — desde el Escritorio contesta que el archivo "no existe".
 
 ### 🆕 2026-11-16 · HeyGen: el motor se resetea al cambiar de avatar
 Produciendo los 6 de [[higado-liviano]] con **Avatar IV** ("motor 4", tercero en el desplegable, abajo de Avatar 6 y

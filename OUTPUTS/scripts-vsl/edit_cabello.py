@@ -34,11 +34,14 @@ def run(c, mostrar=False):
     return r
 
 
-def dur(f):
+def dur(f, defecto=None):
     import re
     s = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr
     m = re.search(r'Duration: (\d+):(\d+):([\d.]+)', s)
     if not m:
+        # los planos de 1 o 2 cuadros del original a veces salen ilegibles
+        if defecto is not None:
+            return defecto
         raise SystemExit(f'no pude leer la duracion de {f}')
     h, mi, se = m.groups()
     return int(h) * 3600 + int(mi) * 60 + float(se)
@@ -46,9 +49,14 @@ def dur(f):
 
 # ------------------------------------------------------------------ planos
 
+def tiene_video(f):
+    s = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr
+    return 'Video:' in s
+
+
 def plano_broll(src, t_out, out, tarjeta=False):
     """Un plano de B-roll del original, escalado a 1080x1920 y estirado a t_out."""
-    d = dur(src)
+    d = dur(src, 0.12)
     pts = max(0.25, t_out) / max(0.08, d)
     if tarjeta:
         # fondo oscuro desenfocado + tarjeta redondeada con halo blanco
@@ -142,6 +150,8 @@ def tarjetas_de(estilo, palabras):
             txt = ' '.join(p['word'].strip() for p in g)
             for j, p in enumerate(g):
                 t.append((p['start'], p['end'], fn(txt, j)))
+    elif estilo == 'ninguno':
+        return []       # el anuncio 8 no lleva subtitulos corridos
     else:
         raise SystemExit('estilo desconocido: ' + estilo)
     # sin huecos negativos
@@ -164,31 +174,47 @@ def montar(plan):
     segs = cortes['segs']
     D = cortes['dur']
     voz = f"{BASE}/voz/{gid}.wav"
-    avatar = plan['avatar']
+    avatar = plan.get('avatar')
     Dp = dur(voz)
     k = Dp / D
-    pres = set(plan['presentador'])
+    # un anuncio puede tener varios presentadores (el 5 tiene tres):
+    # cada avatar corre con el mismo reloj y se muestra en sus propios planos
+    avatares = plan.get('avatares') or [{'archivo': avatar, 'idx': plan['presentador']}]
+    de_quien = {}
+    for a in avatares:
+        for i in a['idx']:
+            de_quien[i] = a['archivo']
+    pres = set(de_quien)
     # si ya existe el concat de una corrida anterior, se reusa: rehacer solo
     # los subtitulos no justifica volver a codificar 60 planos
     if plan.get('base') and os.path.exists(plan['base']):
         tmp = os.path.dirname(plan['base'])
         base = plan['base']
         total = dur(base)
-        return _terminar(plan, gid, tmp, base, total, voz)
+        return _terminar(plan, gid, tmp, base, total, voz, D, Dp / D)
     tmp = tempfile.mkdtemp(prefix=f'cab_{gid}_', dir='/private/tmp')
     piezas = []
+    ultimo_bueno = None
     t_av = 0.0        # cuanto del avatar llevamos consumido
     reloj = 0.0
     for i, (a, b, dd) in enumerate(segs):
         t_out = round(max(0.25, dd * k), 3)
         out = f'{tmp}/p{i:03d}.mp4'
         if i in pres:
-            plano_avatar(avatar, t_av, t_out, out)
+            plano_avatar(de_quien[i], t_av, t_out, out)
         else:
             # el clip sin los subtitulos en portugues; si no se limpio, el crudo
             src = f'{BASE}/planos_limpios/{pid}/{i:03d}.mp4'
             if not os.path.exists(src):
                 src = f'{BASE}/planos/{pid}/{i:03d}.mp4'
+            # los planos de uno o dos cuadros a veces salen sin pista de video:
+            # se alarga el ultimo plano bueno en vez de cortar el montaje
+            if not tiene_video(src):
+                if ultimo_bueno is None:
+                    continue
+                src = ultimo_bueno
+            else:
+                ultimo_bueno = src
             plano_broll(src, t_out, out, tarjeta=plan.get('tarjeta', False))
         t_av += t_out     # el avatar corre con el reloj aunque no se vea
         reloj += t_out
@@ -201,15 +227,21 @@ def montar(plan):
     run([FF, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lista,
          '-c', 'copy', base])
     total = dur(base)
-    return _terminar(plan, gid, tmp, base, total, voz)
+    return _terminar(plan, gid, tmp, base, total, voz, D, k)
 
 
-def _terminar(plan, gid, tmp, base, total, voz):
+def _terminar(plan, gid, tmp, base, total, voz, D, k):
     """Subtitulos, placas y muxeo final sobre el concat ya armado."""
     # subtitulos
     palabras = json.load(open(f'{BASE}/alineacion/{gid}.json'))
+    tarjetas = tarjetas_de(plan['estilo'], palabras)
     subs = f'{tmp}/subs.mov'
-    capa_subtitulos(tarjetas_de(plan['estilo'], palabras), total, tmp, subs)
+    if tarjetas:
+        capa_subtitulos(tarjetas, total, tmp, subs)
+    else:
+        run([FF, '-y', '-loglevel', 'error', '-f', 'lavfi',
+             '-i', f'color=c=black@0.0:s={G.W}x{BANDA_Y1-BANDA_Y0}:r={FPS}',
+             '-t', f'{total:.3f}', '-c:v', 'qtrle', '-pix_fmt', 'argb', subs])
 
     # placas fijas (boton, caja de hook, ranking)
     extras = plan.get('extras', [])

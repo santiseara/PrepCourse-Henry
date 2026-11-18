@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Recomprime los mp4 a <=9,3 MB para que entren por el conector de Drive (tope 10 MB).
+"""Recomprime los mp4 para que entren por el conector de Drive.
+18/11/2026: el tope de 10 MB del conector es del PAYLOAD, y el payload va en base64,
+que infla 4/3. O sea el archivo no puede pasar de ~7,3 MB. Objetivo 6,8 MB.
 x264 en dos pasadas, preset veryslow, audio AAC 128k. Uso: python3 comprimir_drive.py <carpeta_in> <carpeta_out>"""
 import os, re, subprocess, sys
 FF = os.path.expanduser('~/bin/ffmpeg')
 SRC, DST = sys.argv[1], sys.argv[2]
 os.makedirs(DST, exist_ok=True)
-OBJ_MB = 9.3
+OBJ_MB = 6.8
 
 def dur(f):
     r = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr
@@ -17,7 +19,7 @@ for f in sorted(os.listdir(SRC)):
     if not f.endswith('.mp4'):
         continue
     ent, sal = os.path.join(SRC, f), os.path.join(DST, f)
-    if os.path.exists(sal) and os.path.getsize(sal) < 9.8e6:
+    if os.path.exists(sal) and os.path.getsize(sal) < 7.2e6:
         print('ya esta', f); continue
     D = dur(ent)
     br = int((OBJ_MB * 8192) / D - 130)

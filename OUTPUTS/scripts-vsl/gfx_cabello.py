@@ -216,14 +216,26 @@ def titular_grande(texto, y=0.22, color=AMARILLO):
     return img
 
 
-def caja_hook(lineas, y0=20):
-    """g4 — la caja roja de arriba con el hook, los primeros segundos."""
+def caja_hook(linea_blanca, lineas_rojas):
+    """g4 — el cartel de arriba de los primeros 8 segundos: una linea blanca
+    sobre banda negra y dos sobre banda roja. Medido sobre el original."""
     img = _lienzo(); d = ImageDraw.Draw(img)
-    f = fuente(MONT, 40)
-    alto = 52 * len(lineas) + 28
-    d.rectangle([0, y0, W, y0 + alto], fill=(190, 20, 24, 235))
-    for i, l in enumerate(lineas):
-        d.text((W // 2, y0 + 20 + 26 + i * 52), l.upper(), font=f, fill=BLANCO, anchor='mm')
+    # banda negra
+    d.rectangle([0, 0, W, 205], fill=(8, 8, 8, 255))
+    fb = fuente(MONT, 68)
+    while _ancho(d, linea_blanca.upper(), fb) > W * 0.95 and fb.size > 40:
+        fb = fuente(MONT, fb.size - 3)
+    d.text((W // 2, 118), linea_blanca.upper(), font=fb, fill=BLANCO, anchor='mm')
+    # banda roja
+    d.rectangle([0, 224, W, 389], fill=(205, 16, 20, 255))
+    fr = fuente(MONT, 58)
+    ls = lineas_rojas[:2]
+    ys = [306] if len(ls) == 1 else [280, 350]
+    for y, l in zip(ys, ls):
+        ff = fr
+        while _ancho(d, l.upper(), ff) > W * 0.95 and ff.size > 34:
+            ff = fuente(MONT, ff.size - 3)
+        d.text((W // 2, y), l.upper(), font=ff, fill=BLANCO, anchor='mm')
     return img
 
 

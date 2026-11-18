@@ -34,6 +34,14 @@ Santiago: *"Quiero sus 10 mejores videos. Exactamente iguales"* y, a mitad de ca
 - 🐞 **`bandas()` da falso positivo con los renders de Avatar IV a 720x1280**: mide sobre el lienzo escalado a
   120x1920 y los degradé del fondo le parecen franjas lisas (301 px arriba y abajo sobre un cuadro lleno).
   Queda apagado en `edit_claas.py`.
+- 🐞 **Los subtítulos se anclan al guion, no al transcriptor.** Whisper quemó "SARHOUSE" por "Lucas Aráoz":
+  `encajar()` alinea las dos listas y deja el guion. Se rehicieron los 10.
+- 🐞 **Las constantes de color de ffmpeg van RRGGBB, no BGR**: la placa amarilla salía celeste y la barra roja,
+  azul. Corregido y re-renderizado.
+- **Los 10 terminados y subidos al Drive** (*Ebook Dami / Ebook Dieta de las 3 Fases (AR) / Videos terminados*),
+  con el nombre del hook. 🐞 **El tope de 10 MB del conector es del payload en base64**, no del archivo: el techo
+  real es ~7,3 MB, así que `comprimir_drive.py` pasó de 9,3 a 6,8 MB de objetivo. SSIM contra el master 0,962 en
+  el peor y 0,988 en el mejor. Los masters de 28-57 MB quedan en `~/Desktop/dieta-3-fases/anuncios/`.
 - Wiki nueva: `WIKI/dieta-3-fases.md`, con la radiografía, los 6 cuerpos, la firma visual y **el riesgo de las
   tres piezas que se replicaron tal cual** (el testimonio de la colostomía, el titular de cáncer de intestino y
   el avatar de IA presentándose como nutricionista).

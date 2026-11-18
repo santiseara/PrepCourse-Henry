@@ -175,7 +175,7 @@ def subtitulos(palabras, out, estilo='grande', por_vez=3, clave=None, color='ama
     clave = {sinac(k).lower() for k in (clave or [])}
     fn = 'Anton' if os.path.exists(ANTON) else 'Arial'
     col = {'amarillo': r'{\c&H00E8FF&}', 'celeste': r'{\c&HF5B040&}'}[color]
-    TS = 100 if estilo == 'grande' else 74
+    TS = 100 if estilo == 'grande' else 86
     MV = 400 if estilo == 'grande' else 430
     est = (f'Style: D,{fn},{TS},&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,'
            f'100,100,0,0,1,4,3,2,70,70,{MV},1')

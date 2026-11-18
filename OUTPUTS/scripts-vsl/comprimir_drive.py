@@ -1,45 +1,35 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Recomprime un mp4 a 9,3 MB con x264 en dos pasadas, para que entre por el
-conector de Drive (corta en 10 MB). Regla fija del 17/11/2026: el peso no es
-excusa para no subir una tanda.
-
-Uso: python3 comprimir_drive.py entrada.mp4 salida.mp4 [MB]
-"""
+"""Recomprime los mp4 a <=9,3 MB para que entren por el conector de Drive (tope 10 MB).
+x264 en dos pasadas, preset veryslow, audio AAC 128k. Uso: python3 comprimir_drive.py <carpeta_in> <carpeta_out>"""
 import os, re, subprocess, sys
-
 FF = os.path.expanduser('~/bin/ffmpeg')
-
+SRC, DST = sys.argv[1], sys.argv[2]
+os.makedirs(DST, exist_ok=True)
+OBJ_MB = 9.3
 
 def dur(f):
-    s = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr
-    m = re.search(r'Duration: (\d+):(\d+):([\d.]+)', s)
-    h, mi, se = m.groups()
-    return int(h) * 3600 + int(mi) * 60 + float(se)
+    r = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr
+    m = re.search(r'Duration: (\d+):(\d+):([\d.]+)', r)
+    h, mi, s = m.groups()
+    return int(h)*3600 + int(mi)*60 + float(s)
 
-
-def comprimir(entrada, salida, mb=9.3):
-    d = dur(entrada)
-    kbps = int((mb * 8192) / d - 130)
-    if kbps < 200:
-        kbps = 200
-    base = ['-y', '-loglevel', 'error', '-i', entrada, '-c:v', 'libx264',
-            '-preset', 'veryslow', '-b:v', f'{kbps}k', '-pix_fmt', 'yuv420p']
-    log = salida + '.2pass'
-    subprocess.run([FF] + base + ['-pass', '1', '-passlogfile', log, '-an',
-                    '-f', 'mp4', '/dev/null'], check=True)
-    subprocess.run([FF] + base + ['-pass', '2', '-passlogfile', log,
-                    '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2',
-                    '-movflags', '+faststart', salida], check=True)
-    for ext in ('-0.log', '-0.log.mbtree', '.log', '.log.mbtree'):
-        p = log + ext
-        if os.path.exists(p):
-            os.remove(p)
-    return os.path.getsize(salida)
-
-
-if __name__ == '__main__':
-    e, s = sys.argv[1], sys.argv[2]
-    mb = float(sys.argv[3]) if len(sys.argv) > 3 else 9.3
-    n = comprimir(e, s, mb)
-    print(f'{s}  {n//1024} KB  ({dur(s):.1f}s)')
+for f in sorted(os.listdir(SRC)):
+    if not f.endswith('.mp4'):
+        continue
+    ent, sal = os.path.join(SRC, f), os.path.join(DST, f)
+    if os.path.exists(sal) and os.path.getsize(sal) < 9.8e6:
+        print('ya esta', f); continue
+    D = dur(ent)
+    br = int((OBJ_MB * 8192) / D - 130)
+    log = os.path.join(DST, '_2pass')
+    base = [FF, '-v', 'error', '-y', '-i', ent, '-c:v', 'libx264', '-preset', 'veryslow',
+            '-b:v', f'{br}k', '-pix_fmt', 'yuv420p', '-passlogfile', log]
+    subprocess.run(base + ['-pass', '1', '-an', '-f', 'mp4', '/dev/null'], check=True)
+    subprocess.run(base + ['-pass', '2', '-c:a', 'aac', '-b:a', '128k', '-ar', '48000',
+                           '-ac', '2', '-movflags', '+faststart', sal], check=True)
+    mb = os.path.getsize(sal) / 1e6
+    print(f'{f}  {D:.1f}s  {br} kbps  ->  {mb:.2f} MB', flush=True)
+for x in os.listdir(DST):
+    if x.startswith('_2pass'):
+        os.remove(os.path.join(DST, x))
+print('LISTO')

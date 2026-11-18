@@ -168,6 +168,13 @@ def montar(plan):
     Dp = dur(voz)
     k = Dp / D
     pres = set(plan['presentador'])
+    # si ya existe el concat de una corrida anterior, se reusa: rehacer solo
+    # los subtitulos no justifica volver a codificar 60 planos
+    if plan.get('base') and os.path.exists(plan['base']):
+        tmp = os.path.dirname(plan['base'])
+        base = plan['base']
+        total = dur(base)
+        return _terminar(plan, gid, tmp, base, total, voz)
     tmp = tempfile.mkdtemp(prefix=f'cab_{gid}_', dir='/private/tmp')
     piezas = []
     t_av = 0.0        # cuanto del avatar llevamos consumido
@@ -194,7 +201,11 @@ def montar(plan):
     run([FF, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lista,
          '-c', 'copy', base])
     total = dur(base)
+    return _terminar(plan, gid, tmp, base, total, voz)
 
+
+def _terminar(plan, gid, tmp, base, total, voz):
+    """Subtitulos, placas y muxeo final sobre el concat ya armado."""
     # subtitulos
     palabras = json.load(open(f'{BASE}/alineacion/{gid}.json'))
     subs = f'{tmp}/subs.mov'

@@ -142,6 +142,43 @@ def palabras(f):
     return [(w.start, w.end, w.word.strip()) for s in segs for w in (s.words or []) if w.word.strip()]
 
 
+def encajar(ws, texto):
+    """Pone las palabras del GUION sobre los tiempos del transcriptor.
+
+    Whisper escribe lo que le parece ("Sarhouse" por "Lucas Araoz", "90" por "noventa")
+    y ese texto es el que se quema en pantalla. Aca se alinean las dos listas y se queda
+    el guion, que es lo que realmente se dice.
+    """
+    import difflib
+    gw = texto.split()
+    if not gw or not ws:
+        return ws
+    na = [G.sinac(w).lower().strip('.,¿?¡!:;') for _, _, w in ws]
+    nb = [G.sinac(w).lower().strip('.,¿?¡!:;') for w in gw]
+    sm = difflib.SequenceMatcher(a=na, b=nb, autojunk=False)
+    out = []
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == 'equal':
+            for k in range(i2 - i1):
+                out.append((ws[i1 + k][0], ws[i1 + k][1], gw[j1 + k]))
+        elif tag == 'replace':
+            t0, t1 = ws[i1][0], ws[i2 - 1][1]
+            n = j2 - j1
+            paso = (t1 - t0) / max(1, n)
+            for k in range(n):
+                out.append((t0 + k * paso, t0 + (k + 1) * paso, gw[j1 + k]))
+        elif tag == 'insert':
+            t0 = out[-1][1] if out else (ws[0][0] if ws else 0.0)
+            t1 = ws[i1][0] if i1 < len(ws) else t0 + 0.4 * (j2 - j1)
+            if t1 <= t0:
+                t1 = t0 + 0.25 * (j2 - j1)
+            paso = (t1 - t0) / max(1, j2 - j1)
+            for k in range(j2 - j1):
+                out.append((t0 + k * paso, t0 + (k + 1) * paso, gw[j1 + k]))
+        # 'delete': palabras que el transcriptor invento y el guion no tiene -> se tiran
+    return out
+
+
 def montar(plan):
     nom, out = plan['nombre'], plan['salida']
     T = out + '_tmp'
@@ -239,6 +276,8 @@ def montar(plan):
 
     # 5. subtitulos
     ws = palabras(cap)
+    if plan.get('guion') and os.path.exists(plan['guion']):
+        ws = encajar(ws, open(plan['guion']).read().strip())
     ass = G.subtitulos(ws, f'{T}/sub.ass', plan.get('sub', 'grande'),
                        plan.get('por_vez', 3), plan.get('clave'), plan.get('color', 'amarillo'))
     vf = (','.join(gfx) + ',' if gfx else '') + f"subtitles='{ass}':fontsdir='{G.FONTDIR}'"

@@ -127,7 +127,7 @@ for g, a in ADS.items():
             inserts.append(item)
     planes.append(dict(
         nombre=a['nombre'], salida=f'{SAL}/{g}.mp4', avatar=av, speed=1.20,
-        hook=a['hook'], inserts=inserts, partidas=partidas,
+        hook=a['hook'], inserts=inserts, partidas=partidas, guion=f'{BASE}/guion/{g}.txt',
         sub=a['sub'], por_vez=3, clave=a['clave'], color=a['color'], cierre_seg=2.6))
 
 json.dump(planes, open(f'{BASE}/planes.json', 'w'), ensure_ascii=False, indent=1)

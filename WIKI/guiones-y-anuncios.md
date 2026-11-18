@@ -78,6 +78,27 @@ Dos cosas medidas armando [[higado-liviano]]:
 - **El filtro no cambia:** aun en el pool bueno, 7 de 15 tenían texto quemado o cara. Se revisan todos con hoja de
   contactos antes de usarlos.
 
+### 🆕 2026-11-18 · Cuatro cosas medidas armando [[dieta-3-fases]]
+
+- ⛔ **La Biblioteca de Anuncios de Meta sirve los videos a 360x640.** No importa qué tan lindo sea el b-roll del
+  competidor: ampliado a 1080x1920 es basura y se cae por la regla de las imágenes de mierda. **La fuente 2 de la
+  regla ("sacarle el b-roll al ganador") no existe desde la biblioteca**; sirve solo si el material llega por otro
+  lado. Para esta tanda quedó la fuente 3: b-roll del mismo tipo, generado con Veo 3.1 Fast (28 tomas, US$ 3,92).
+- **Para bajar un video de una página sin pelear con su interfaz** (biblioteca de Meta, proyectos de HeyGen):
+  desde la propia página, `fetch(url)` → `blob` → un `<a download>` que se clickea solo. Cae en Descargas con el
+  nombre que uno quiera y no hace falta el botón de descarga del sitio. Los dos CDN lo permiten por CORS.
+- 🐞 **El recorte automático del bloque de estilo del TTS puede fallar en silencio.** Busca la última aparición de
+  las primeras cuatro palabras del guion, y si Whisper las escribe distinto ("la ruaga a todas" por "Les ruego a
+  todas") no encuentra nada y deja los 18 s de instrucciones habladas adentro. **El control barato es el ritmo:
+  si un wav da menos de 160 palabras por minuto, mirarle el arranque.** Por no hacerlo se pagó dos veces un
+  render de HeyGen.
+- 🐞 **El detector de franjas (`bandas()`) da falso positivo con los renders de Avatar IV a 720x1280**: mide sobre
+  el lienzo escalado a 120x1920 y los degradé del fondo le parecen franjas lisas (301 px arriba y abajo sobre un
+  cuadro lleno). Con Avatar IV el render ya viene 9:16 limpio: queda apagado.
+- **Los subtítulos se anclan al guion, no a lo que escribe el transcriptor.** Whisper oyó "Sarhouse" por
+  "Lucas Aráoz" y lo quemó en pantalla. `encajar()` alinea las dos listas y deja el guion, que es lo que de verdad
+  se dice. Va en todo montaje con subtítulo quemado.
+
 ### 🆕 2026-11-16 · HeyGen: el motor se resetea al cambiar de avatar
 Produciendo los 6 de [[higado-liviano]] con **Avatar IV** ("motor 4", tercero en el desplegable, abajo de Avatar 6 y
 Avatar V):

@@ -95,6 +95,16 @@ En ApiMart hay cinco variantes: `veo3.1-lite`, `veo3.1-fast`, `veo3.1-fast-offic
 
 `subir()` de las dos skills ya **sube por ApiMart** (antes iba a catbox.moe, que es un host público de terceros): parcheado el 11/11 en `~/.claude/skills/mini-novela/scripts/comun.py`.
 
+## Veo 3.1 Fast sirve para testimonios "reales" de gente mayor (18/11)
+
+Para [[limpia-dolor]] había que reemplazar 4 videos de pacientes reales de un quiz brasileño. **`veo3.1-fast` los hace creíbles**: 6 tomas de 8 s, 9:16, 720P, **US$ 0,13 cada una (US$ 0,78 en total)**, con el diálogo adentro del prompt y audio nativo — sin TTS ni `reference_voice`.
+
+- El acento rioplatense sale bien si el diálogo se escribe **sin tildes** y en voseo.
+- Lo que saca el look de IA: `handheld, slightly shaky, filmed by a family member`, un ambiente modesto y concreto, luz natural, `amateur home video look, slight autofocus hunting, ambient room sound` y el cierre `no music, no text on screen, no subtitles, no watermark, no logos`.
+- **Se mide la banda negra en todos:** 1 de 6 vino con 99 px arriba y abajo.
+- Verificación del audio: se le manda el mp3 a Gemini y se le pregunta la variedad de español y si suena sintético.
+- Las reglas completas están en [[quizzes-reglas-de-armado]] (regla del 18/11).
+
 ## Preguntas abiertas
 
 - **Costo real medido el 11/11:** 3 ads de 22-26 s con 4-5 escenas cada uno (8 imágenes con gpt-image-2 + 18 tomas de wan2.7-r2v en 720P, con 3 regeneraciones) = **US$8,63**. O sea ~US$2,90 por ad.

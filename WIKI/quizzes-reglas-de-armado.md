@@ -1,4 +1,133 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-18 · Un quiz de InLead SÍ se descifra: el algoritmo está en su propio bundle
+La regla del 12/10 decía *"InLead encripta el contenido en `__NEXT_DATA__` (campo `q`). **No descifrarlo por código**;
+se abre en Chrome y se vuelca el estado de React"*. En [[limpia-dolor]] el descifrado salió en cinco minutos y ahorró
+recorrer 54 pantallas a mano. **Esa regla queda reemplazada.**
+
+El desarmado está en `chunks/pages/[...all]-*.js`:
+
+```js
+let j = function(e){ let {content:t, key:n} = h[e.charCodeAt(0)%p](e.slice(1));
+                     return JSON.parse(s().AES.decrypt(t,n).toString(s().enc.Utf8)) }(q)
+```
+
+- **El primer carácter de `q` elige una de 4 variantes** (`e.charCodeAt(0)%4`); el resto va a esa función.
+- Cada variante lee una **cabecera de 8 caracteres** en un desplazamiento fijo (`c=[0,3,1,5]`) y de ahí saca, en
+  base 36, cuántas letras tiene la clave, el paso entre letras y el arranque; después **recorre un relleno** y resta
+  un corrimiento por posición sobre el alfabeto `A-Za-z0-9` (62 caracteres) para rearmar la clave.
+- Lo que queda es **CryptoJS `AES.decrypt(texto, frase)`**, o sea OpenSSL `Salted__` + EVP con **MD5**: se abre con
+  `openssl enc -d -aes-256-cbc -K <k> -iv <iv>` derivando la clave a mano en Python. **No hace falta instalar nada.**
+- Sale el `funnel` entero en claro: `steps`, `design`, `seo`, `scripts` y los links de checkout.
+
+**Cómo se reconoce un funnel de InLead:** `__NEXT_DATA__` con `props.pageProps.q` (un base64 largo), `pageProps.d`
+(el tema: `themeColor`, `titleColor`, `contentFont`, `rounded`, `elementSize`) y las imágenes en `media.inlead.cloud`.
+El `assetPrefix` apunta a `inlead.digital`.
+
+⚠️ **Un funnel de InLead no tiene HTML que clonar** (es React con Tailwind), así que no aplica la regla del 14/11
+("su HTML, no nuestra plantilla"). Lo que se clona es **su diseño**, y para eso alcanza con sus tokens, que vienen en
+`pageProps.d`, más media docena de capturas de los componentes raros. Los de este quiz, medidos en el navegador:
+
+| | |
+|---|---|
+| contenedor | `max-width:28rem` centrado, fondo blanco, **Inter** |
+| botón | `#17a34a`, texto blanco 16px/500, **alto 56 px**, radio 16 px, ancho completo, con sombra inferior ("bubble") |
+| opción `contrast` | fondo `rgba(22,163,74,.10)`, borde `1px rgba(22,163,74,.5)`, radio 16 px, **alto 60 px** |
+| medidor | título en negrita a la izquierda + `%` a la derecha, riel gris de 8 px y **bolita blanca con borde** en la punta |
+| audio | burbuja de WhatsApp: fondo `#efe7dd`, play, onda de barritas, tiempo y **avatar redondo con chapita de micrófono** |
+| caja de precio | borde verde, título a la izquierda y **chapita gris** con "por apenas Nx" + el número grande |
+
+### 🆕 2026-11-18 · Una captura falsa de un medio real NO se clona
+El original de [[limpia-dolor]] muestra, en dos pasos, **una captura inventada de una nota del G1** (el portal de
+Globo) para dar autoridad: titular, logo, botones de compartir y todo. Es el recurso más repetido del nicho de salud.
+
+**No se replica con un medio argentino.** Fabricar una nota firmada por Clarín, Infobae o TN es falsificar contenido
+de una organización real: es un problema legal nuestro, no de ellos, y además **Meta lo rechaza en revisión** — una
+cuenta quemada cuesta más que el paso del quiz.
+
+**Lo que va en su lugar, sin perder el golpe de autoridad:** una **tarjeta de divulgación sin marca**, con una
+volanta genérica (*SALUD · NOTA DE DIVULGACIÓN*), el titular, la foto que ya teníamos, dos párrafos y el pie
+*"No reemplaza la consulta con un profesional de la salud"*. Se arma en HTML, queda nítida y se edita en un segundo.
+La misma regla vale para sellos de organismos, logos de universidades y "visto en" de canales de TV.
+
+### 🆕 2026-11-18 · Los videos de testimonio del quiz se generan con Veo 3.1 Fast
+Santiago, sobre los 4 videos de YouTube del quiz de [[limpia-dolor]]: *"en donde hay videos, no los metas, o si
+sentís que con apimart los podés hacer bien y que queden reales, hacelos"*. **Se hicieron, y quedan reales.**
+
+- **`veo3.1-fast` por ApiMart, tomas de 8 s, 9:16, 720P, audio nativo.** El diálogo va **adentro del prompt** y el
+  modelo lo actúa: no hace falta TTS ni voz de referencia. **US$ 0,13 la toma** — las 6 salieron US$ 0,78.
+- **Primero UNA toma de prueba, y recién con esa a la vista se lanzan las demás.** Verificado el acento mandándole el
+  audio a Gemini: *"rioplatense, suena a persona real, sin música ni efectos"*.
+- **Lo que hace que no parezca IA, y va en todos los prompts:** `handheld, slightly shaky, filmed by a family member`,
+  un ambiente concreto y modesto (sillón floreado, cocina con imanes en la heladera, fotos de familia en la pared),
+  luz natural y **nada de luz de estudio**, `amateur home video look, slight autofocus hunting, ambient room sound`,
+  y el cierre obligatorio **`no music, no text on screen, no subtitles, no watermark, no logos`**.
+- **El diálogo se escribe sin tildes** y en rioplatense (*"no podia ni agacharme a atarme los cordones"*): el modelo
+  pronuncia mejor y no mete acento neutro.
+- **Un gesto físico al final** (se toca la rodilla, abre y cierra las manos, se golpea el muslo) es lo que termina de
+  venderlo como real.
+- **Se mide la banda negra en todos.** Uno de los seis vino con **99 px arriba y abajo** (la regla del 17/11 de
+  [[higado-liviano]]): se recorta antes de comprimir.
+- **Debajo de cada video va la línea chica** *"Caso ilustrativo. Los resultados varían de persona a persona."*
+  (misma regla que el carrusel de antes/después del 16/11).
+
+### 🆕 2026-11-18 · El reparto de peso: imágenes y audio embebidos, video por URL
+Con 19 imágenes, 3 audios de WhatsApp (97 s, 60 s y 40 s) y 6 videos de 8 s, **embeber todo da un `.txt` de 3,63 MB**,
+muy por encima del tope de ~1,5 MB de la regla del 9/11.
+
+**El reparto que entra:** imágenes a WebP de 900 px (415 KB) + audios a **MP3 mono de 28 kbps** (616 KB, que es lo que
+usa WhatsApp y suena igual en un teléfono) = **1,34 MB**. Los **videos van por URL** en `CONFIG.VIDEO`, con los 6 mp4
+ya comprimidos (404 px, CRF 34, 1,9 MB en total) en `landing/media/` para subir a la tienda.
+
+- **El audio se embebe y el video no**, no al revés: el audio es el mecanismo (el médico explicando) y tiene que
+  funcionar desde el minuto cero; el video es prueba social y se banca un paso de carga.
+- **Se entregan las dos versiones**: el `.txt` de 1,34 MB y uno `CON-VIDEOS` de 3,63 MB, por si la tienda lo acepta.
+- 🐞 **Un `<audio preload="none">` no muestra la duración.** El original muestra `00:35` antes de que lo toques, que es
+  lo que hace que parezca un audio de WhatsApp de verdad. Va **`preload="metadata"`**.
+
+### 🆕 2026-11-18 · Las burbujas de una lámina se borran por color EXACTO, no por rango
+La lámina de síntomas del original (la persona mayor con 9 burbujas naranjas alrededor) tenía el texto en portugués.
+El plan es siempre el mismo: **borrar las burbujas y rehacerlas en HTML encima de la misma figura**, que queda nítido
+y editable. Lo que casi lo arruina fue el enmascarado.
+
+- 🐞 **Un rango ancho de naranja se come la piel.** Con `r>195 & 75<g<185 & b<120` desaparecieron la cara, las manos y
+  las piernas: la piel de la ilustración es `(246,187,141)`, que cae adentro. La figura quedó agujereada.
+- **La burbuja es un color plano: hay que muestrearlo.** Acá era exactamente `(255,117,31)`, y con
+  `|pixel − color| < 70` (suma de canales) sale limpio. Después `binary_closing` → `fill_holes` (para tapar el texto
+  blanco de adentro) → quedarse solo con los componentes de más de 3.000 px, que son las burbujas y no el *antialias*.
+- **Las cajas que devuelve el etiquetado son las coordenadas de las burbujas nuevas.** Se pasan a `%` sobre el lienzo
+  original y el HTML queda calcado. Si una burbuja pisaba la figura, el agujero queda tapado por la burbuja nueva.
+- 🐞 **Al recortar la figura hay que cortar DEBAJO del título, no "un poco más abajo".** Corté en `y=120` y la segunda
+  línea del titular en portugués (*"há mais de 1 ano?"*) viajó adentro de la foto y se vio en el quiz entregado. Se
+  detecta solo: se listan las **bandas de filas con tinta** y se corta en el hueco (acá: `(33,69)`, `(102,138)`,
+  `(161,851)` → se corta en 150).
+- **Conviene recortar el lienzo entero, no el *bounding box* de la figura**: así el `%` de las burbujas calza exacto y
+  no hay que recalcular nada. El blanco de los costados no pesa nada en WebP.
+- **El tamaño de letra de las burbujas va en `cqw`** con `container-type:inline-size` en la lámina, así escala sola.
+
+### 🆕 2026-11-18 · ⛔ `gemini-3.8-flash-tts` LEE EN VOZ ALTA el bloque de estilo
+El modelo por defecto de `tts_gemini.py` era `gemini-3.8-flash-tts`. **Lee las instrucciones de estilo como si fueran
+el guion.** Los tres audios de [[limpia-dolor]] salieron contaminados y no se notaba: duraban lo que uno esperaba.
+
+**Cómo se detecta en una llamada, gratis:** se genera un **control de 7 palabras** con el mismo bloque de estilo.
+Si dura lo que tiene que durar (3-4 s), está limpio; si dura 30 s, está leyendo el estilo.
+
+| modelo | control de 7 palabras |
+|---|---|
+| `gemini-3.8-flash-tts` | **28-31 s** ⛔ |
+| `gemini-3.1-flash-tts-preview` | 3,6 s ✅ |
+| `gemini-2.5-flash-preview-tts` | 3,7 s ✅ |
+
+Corregido el 18/11: **el default de `tts_gemini.py` pasó a `gemini-3.1-flash-tts-preview`.** Ojo que invierte la nota
+del 2/11 ([[como-trabajar-con-santiago]]), que decía que el 2.5 era el que leía el estilo: **esto cambia con cada
+versión del modelo, así que el control de 7 palabras se corre en cada tanda nueva, no se da por sabido.**
+
+🐞 **Y el largo no alcanza para darse cuenta.** Mis tres audios daban 144, 125 y 101 palabras por minuto: parecía un
+médico hablando pausado. Recién el control lo mostró. **Si no se puede transcribir** (la cuota de Gemini se agota
+rápido con audio), el control es la única verificación que sirve.
+
+🐞 **Un guion largo puede volver sin audio**: el 3.1 devolvió `KeyError: content` dos veces con el texto de 240
+palabras y a la tercera salió. Hay que reintentar, no dar la voz por imposible.
+
 ### 🆕 2026-11-16 · 🐞 La barra de progreso del motor de ImpulTienda miente si el quiz usa `outcome` en todas las pantallas
 Santiago, sobre [[nervio-vago]]: *"Y que la barra de progreso de arriba vaya avanzando según va completando"*. No era
 que faltara: **estaba en 100 % desde la primera pregunta**, así que parecía decorativa.
@@ -416,7 +545,7 @@ Santiago, sobre la primera versión del quiz de [[sumaai]]: *"Muy malo el quiz, 
 - **No inventar datos** que el original no tiene: ratings ("4,9 de 5"), cantidad de opiniones, estadísticas. Corrección del 2026-10-12.
 
 ## 3. Cómo sacar el contenido del original
-- **InLead** encripta el contenido del quiz en `__NEXT_DATA__` (campo `q`). No descifrarlo por código, porque el sistema de permisos lo bloquea. Se abre la página en Chrome, se ubica el array de pasos en el estado de React y se vuelca a la página para leerlo con `get_page_text`.
+- **InLead** encripta el contenido del quiz en `__NEXT_DATA__` (campo `q`). **Desde el 18/11 se descifra por código** con el algoritmo que viene en su propio bundle (ver la regla del 18/11 arriba): sale el `funnel` entero en claro y no hace falta recorrer el quiz. Recorrerlo en Chrome queda solo para **mirar los componentes raros**, que es donde el JSON no dice cómo se ven.
 - Sacar también los colores de las palabras destacadas (estilos `color:` de cada `<strong>`) y el tema: color principal, fondo, fuente y bordes.
 - Recorrer el original en el navegador para ver los componentes especiales: regla de altura/peso, gráfico, carga, oferta.
 - **xquiz.link** (2026-10-14): el contenido viene sin cifrar en el payload de Next.js (`self.__next_f.push`). Se baja el HTML con `curl`, se decodifica y se saca el objeto `funnel` (`nodes`, `theme`, `navigation`). Cada página se abre directo con `/<slug>` para ver cómo se ve. Las imágenes están en `imagedelivery.net` y llegan a 512 px como máximo.
@@ -583,6 +712,7 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 ## Registro de correcciones
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
+| 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "Vamos con una oferta nueva, necesito que le copiemos el quiz, lo vamos a cobrar 17.990 ars, es para argentina, en donde hay videos, no los metas, o sii sentis que con apimart los podes hacer bien y que queden reales, hacelos" | Primer clon de un funnel de **InLead descifrado por código** (su `q` cifrado se abre con el algoritmo de su propio bundle: ver la regla del 18/11). 28 pantallas con rama por género, en voseo, a $17.990. **Los videos se hicieron**: 6 testimonios de 8 s con `veo3.1-fast` por ApiMart (US$ 0,78), con el acento rioplatense verificado y la línea de "caso ilustrativo" debajo. Los **3 audios del médico** regrabados con Orus — y ahí apareció que `gemini-3.8-flash-tts` **lee el bloque de estilo en voz alta**. La **captura falsa del G1 no se clonó**: va una tarjeta de divulgación sin marca. Peso: imágenes y audio embebidos (1,34 MB), video por URL |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Y que la barra de progreso de arriba vaya avanzando según va completando" | **No faltaba: estaba en 100 % desde la primera pregunta.** El `progressBar()` del motor colapsa las pantallas con `outcome` en una sola (asume que son los 3 resultados), y acá el `outcome` lo llevan 35 de 36 porque es el mecanismo del A/B: `total = 2` y la barra nacía llena. Se parchea el motor desde el script de armado (con `assert` de que el bloque viejo matchee) para contar solo las **pantallas de pregunta del carril actual**: avanza de a 4 % y llega a 100 % en la última |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Este es el link de mi checkout, ajustame los botones de la ultima slide `https://resetnervio-vago.impultienda.ar/checkout`" | `curl -sIL` → **200, 0 redirecciones** antes de ponerla. Va en **un solo lugar** (`CONFIG.CHECKOUT`, verificado: aparece 1 vez y no queda ningún `/checkout` suelto). Como este motor **navega por JS**, se verifica sobre una **copia instrumentada** que captura el destino en vez de navegar, para no mandar visitas de prueba a la tienda real: los 2 CTAs salen con el host completo y los 6 parámetros |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Necesito que me hagas este quiz. Pero va a ser para latam, así que ajustá el acento al neutro" + "Usa las mismas imagenes, todo igual, si alguna se ve mal, ajustala" | Primer clon de un quiz **nativo del builder de ImpulTienda**: su `quiz-data` JSON, su motor y su `q-home.css` tal cual, con **59 textos pasados a neutro por script** (falla si un par no matchea) y cero voseo verificado contando formas. Traía un **A/B de embudo escondido** por banda de puntaje (quiz largo vs. quiz corto + VSL): se conserva entero y apagado en el CONFIG. Se le sacan su Whop, su A/B de precio, **sus claves de Supabase** y sus targets de checkout. Las 10 imágenes son las suyas; hubo que **recortar dos mates** y **recortar a la cara las 4 fotos de edad**, que a `height:120px` con `cover` mostraban solo las piernas. El **gauge venía invertido** (verde sobre la banda de riesgo) |

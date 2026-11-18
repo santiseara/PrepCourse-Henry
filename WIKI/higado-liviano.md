@@ -201,3 +201,33 @@ Costo: **US$ 3,92** de Veo 3.1 (29 tomas a $0,14) y **~600 créditos** de HeyGen
 - Biblioteca de Anuncios de Meta, página `100443659732606` (medida el 2026-11-16)
 - `info.doutornature.com/sfunnel/20417/` y `doutornature.com`
 - Pedido de Santiago del 2026-11-16
+
+## Renovaciones del 18/11/2026 (v6) — 4 anuncios
+
+Pedido de Santiago: *"Necesito que hagamos 4 renovaciones, 2 de ese video, y quiero que copies otros 2
+del competidor que te mandé de acá, que sean distintos"*. El ganador que él marcó es el que en el Drive
+se llama **"Mira lo que... .mp4"** = `17-11 - 4.mp4`, barra roja *MIRÁ LO QUE HACE LA BANANA CON TU
+COLESTEROL* (bebé-banana, cuerpo de Renata, molde `r008`). Confirmado mirando el cuadro, no el nombre.
+
+| # | Qué es | Cómo se hizo | Dur |
+|---|---|---|---|
+| **REN-1** | El ganador con un hook nuevo adelante: huevos en la mesada, *"Dejá el huevo tranquilo"* | `ren_hook.py`, sin HeyGen | 1:47 |
+| **REN-2** | Ídem con mate y bizcochitos, *"Esto sube más el colesterol que el asado"* | `ren_hook.py`, sin HeyGen | 1:46 |
+| **NUEVO-1** | Formato **"¿ESTO O ESTO?"** (su creativo de 0:51, 11 anuncios estrenados el 18/11) | `edit_eslo.py` + recorte RVM | 0:47 |
+| **NUEVO-2** | Formato **"EL SHOT"** (su creativo de 0:24, 10 anuncios desde el 16/11) | `edit_shot.py` | 0:24 |
+
+**Cómo se eligieron los dos formatos nuevos:** se raspó la biblioteca de nuevo (181 creativos visibles,
+agrupados por fecha y duración) y se bajó uno de cada duración que **no** estuviera entre los 285 ya
+relevados. De los seis nuevos, los dos con más variantes simultáneas y formato más distinto al nuestro
+fueron el de 0:51 (11 anuncios ese día) y el de 0:24 (10 anuncios).
+
+**Dos personajes nuevos:** un médico de ambo azul marino en cocina, parado (para el recorte del
+"¿esto o esto?") y el mismo con el vaso del shot en la mano y los ingredientes en la mesada. La segunda
+foto se generó **con la primera como referencia** (`medias: reference_image`) para que sea la misma cara.
+
+**Costo:** 17 imágenes = 17 créditos de Higgsfield · 2 renders de HeyGen con Avatar IV a 720p ·
+4 voces de Gemini TTS (gratis).
+
+**Lo que queda por decidir:** el texto del anuncio nombra el **Shot Liviano** con 4 ingredientes
+(remolacha, limón, jengibre, chía) y un plan de 21 días en 3 fases. El ebook tiene que entregar
+exactamente eso, o se cambian los bultos del copy.

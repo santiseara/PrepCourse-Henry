@@ -1,7 +1,9 @@
 import base64, json, os, sys, urllib.request, wave
 
 KEY = os.environ["GEMINI_API_KEY"]
-MODEL = os.environ.get("TTS_MODEL", "gemini-3.8-flash-tts")
+# 18/11/2026: gemini-3.8-flash-tts LEE EN VOZ ALTA el bloque de estilo (probado con una
+# frase de 7 palabras: 31 s en vez de 3,6 s). El 3.1 y el 2.5 no lo hacen.
+MODEL = os.environ.get("TTS_MODEL", "gemini-3.1-flash-tts-preview")
 VOICE = os.environ.get("TTS_VOICE", "Orus")
 
 def gen(text, out, style=None, temperature=float(os.environ.get("TTS_TEMP", 1.0))):

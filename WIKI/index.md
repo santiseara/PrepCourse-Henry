@@ -148,6 +148,8 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-17 — Hígado Liviano: la descripción de los ads](../OUTPUTS/2026-11-17-descripcion-higado-liviano.md) — una sola para los 10, calcada del texto único de Fausto Almeida (de las 60 tarjetas visibles, las 60 corren el mismo), más 3 variantes de primera línea para renovar · ver [[higado-liviano]]
+- [2026-11-17 — Planilla de los 12 anuncios de Fausto Almeida](../OUTPUTS/2026-11-17-planilla-fausto-almeida-12-anuncios.md) — plano por plano, con el hallazgo de que sus 285 creativos son **5 cuerpos de VSL con el hook cambiado** · ver [[higado-liviano]]
 - [2026-11-17 — Tarot en 2 días: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-17-guiones-tarot-2-dias-EN-tanda1.md) — una por familia del ganador: The Tower leída en orden, Death no significa que alguien se muere, "pick a card 1, 2 o 3", el mazo que sigue en la caja, lo que me hubiese gustado tener y el POV sin voz; en inglés y español con voseo, más la descripción única · ver [[tarot-2-dias]]
 - [2026-11-17 — Macetas de cemento: tanda 1 de 6 guiones](../OUTPUTS/2026-11-17-guiones-macetas-cemento-tanda1.md) — clon de Aula Digital 360: el ganador de 31 s más cinco hooks sobre el mismo cuerpo · ver [[macetas-de-cemento]]
 - [2026-11-17 — Macetas de cemento: descripción para ads](../OUTPUTS/2026-11-17-descripcion-macetas-cemento.md) — la calcada de una línea (como corren ellos) y una con emojis para testear · ver [[macetas-de-cemento]]

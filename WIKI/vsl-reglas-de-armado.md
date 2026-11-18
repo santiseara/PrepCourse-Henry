@@ -728,3 +728,65 @@ Pedido del 17/11: *"bajá un poco la música a todos, un poco nada más, no much
 
 ## Fuentes
 - Conversación del 2026-10-12. Guion: `OUTPUTS/2026-10-12-vsl-pilates-hormonal-guion.md`
+
+---
+
+## 13. Renovaciones y dos formatos nuevos de Fausto (18/11/2026, Hígado Liviano v6)
+
+### 13a. ⭐ Una renovación es un hook nuevo PEGADO ADELANTE del ganador
+El cuerpo validado no se toca ([[renovacion-de-creativos]]). Fausto hace exactamente eso: su `r011`
+arranca con una frase propia sobre una visual nueva y recién después entra el `Mirá lo que hace la
+banana` del cuerpo que ya corría. Dos renovaciones del ganador salen en **4 minutos y sin HeyGen**:
+una visual nueva + una línea de TTS + `barra_roja` + `concat` (`OUTPUTS/scripts-vsl/ren_hook.py`).
+No hace falta re-renderizar el avatar, porque la voz del hook va sobre b-roll, no sobre su cara.
+
+### 13b. 🔴 "Generar video" puede dejar el proyecto en BORRADOR
+El primero de los dos renders del 18/11 figuraba en *Mis videos* con su miniatura y parecía enviado:
+en **Proyectos** tenía el cartel **Borrador**. El clic en "Generar video" había caído mientras el
+diálogo todavía se acomodaba. **Después de cada envío hay que mirar Proyectos**: si dice *Borrador*,
+no se gastó ningún crédito y no hay nada renderizando.
+
+### 13c. 🔴 Retomar un borrador vuelve a Avatar 6 — confirmado y caro
+Santiago, el 18/11: *"Acordate de usar el avatar 4, usaste el 6, SIEMPRE usa el 4"*. Al reabrir el
+borrador el selector estaba en **Avatar 6 · Beta a 1080p**, no en el IV que yo había elegido cinco
+minutos antes. Es el mismo reseteo de §3c pero por otra puerta (ahí era cambiar de avatar; acá es
+retomar un borrador). **Regla:** el modelo se mira **en el mismo clic** que se manda a generar, siempre,
+aunque uno ya lo haya puesto en ese video.
+
+### 13d. La cuota de imágenes de la API de Gemini se agota aparte de la de voz
+`gemini-3.1-flash-image` y `gemini-2.5-flash-image` devolvieron **429 "quota exceeded"** con la voz
+funcionando perfecto en el mismo rato. El reemplazo barato es **Higgsfield `nano_banana`: 1 crédito por
+imagen**, `generate_image_batch` de a 12. De las 12 primeras, 2 volvieron `429 rate_limit_reached` y
+entraron en la segunda tanda: **hay que mirar `failed_count` y reenviar las que faltan**, no darlas por
+hechas. 17 imágenes = 17 créditos.
+
+### 13e. ⭐ El subtítulo quemado sale del transcriptor, y el transcriptor inventa
+Whisper escribió *"mal medidas no hacen nada"* por **"mal medido no hace nada"**, y *"30"* por
+**"treinta"**. Eso es lo que se quema en pantalla. Ahora `edit_eslo.encajar(ws, guion)` **alinea el
+guion real con los tiempos del transcriptor** (difflib) y deja las palabras del guion. Se le pasa al
+plan con `"guion": "<ruta del txt>"`.
+- Y para las **anclas**, el modelo `base` se come frases enteras: en el video de 24 s saltó de los 18,5 s
+  a los 22,0 s y se tragó el CTA. Con `WHISPER_MODEL=small` apareció completo. **En videos cortos, `small`.**
+
+### 13f. El avatar recortado va CHICO y DETRÁS de los carteles
+En su formato "¿ESTO O ESTO?" el presentador ocupa **~58 % del alto, abajo a la derecha**, y el marco
+verde y los carteles blancos pasan **por detrás** de él. Montado a tamaño completo tapaba las dos
+comidas y el anuncio perdía todo el sentido. El recorte sale con `matte.py` (Robust Video Matting) y se
+compone **después** de los paneles pero **antes** no: primero paneles, después marco/carteles/marcas,
+después el recorte, y al final el título y el botón.
+
+### 13g. 🔴 El conector de Drive SÍ toma rutas por referencia, y el tope real son ~7,4 MB
+Supera lo anotado el 2026-11-15. `base64Content: "sha256:<hash>:<ruta absoluta>"` sube el archivo sin
+meter el base64 en el contexto, y el archivo puede estar en el Escritorio.
+
+⚠️ **El error miente sobre el límite.** Dice *"Request payload size exceeds the limit: 10000000 bytes"*,
+pero **mide el payload ya pasado a base64**, que infla 4/3. Rebotaron archivos de 10,24 MB y de
+**9,89 MB**; el tope real de archivo es **10.000.000 / 1,333 ≈ 7,5 MB**. Por eso la tanda del 17/11
+entró a 6,7-7,2 MB. Se apunta a **6,9 MB** y se comprime en dos pasadas (`preset slower`, bitrate
+calculado por duración: `OUTPUTS/scripts-vsl/` → `comprimir.py` de la carpeta de la oferta).
+
+### 13h. 🔇 Mutear la página en CADA carga, no una vez
+Santiago tuvo que pedírmelo dos veces el mismo día. El parche de muteo **muere en cada navegación**, así
+que el `javascript_tool` que mutea (`video/audio` + `HTMLMediaElement.play` + `createGain`) va
+**inmediatamente después de cada `navigate`**, antes de cualquier captura o clic, y deja un
+`setInterval` de 200 ms para lo que aparezca después.

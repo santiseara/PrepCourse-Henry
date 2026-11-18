@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-11-18 · Hígado Liviano: 4 renovaciones (2 del ganador + 2 formatos nuevos de Fausto)
+
+Pedido: *"Necesito que hagamos 4 renovaciones, 2 de ese video, y quiero que copies otros 2 del
+competidor que te mandé de acá, que sean distintos"*. El ganador es el que en el Drive se llama
+**"Mira lo que... .mp4"** (`17-11 - 4.mp4`, bebé-banana / cuerpo de Renata), confirmado mirando el
+cuadro y no el nombre del archivo.
+
+- **REN-1 y REN-2:** hook nuevo pegado **adelante** del ganador, que es lo que hace él en `r011`.
+  El cuerpo validado no se toca. Script nuevo: `OUTPUTS/scripts-vsl/ren_hook.py`. Sin HeyGen.
+- **NUEVO-1 "¿ESTO O ESTO?"** (molde de su creativo de 0:51, 11 anuncios estrenados ese día):
+  pantalla partida comida/comida, cartel blanco, cruz roja y tilde verde, marco verde en la que gana
+  y el avatar **recortado** (Robust Video Matting) al 58 % abajo a la derecha.
+  Scripts nuevos: `gfx_eslo.py`, `edit_eslo.py`.
+- **NUEVO-2 "EL SHOT"** (molde de su creativo de 0:24): placa negra de tres líneas fija arriba,
+  subtítulo en mayúsculas con la palabra clave en amarillo y botón amarillo con chevrones.
+  Script nuevo: `edit_shot.py`.
+
+**Lo que se aprendió y quedó en la wiki (§13 de [[vsl-reglas-de-armado]]):** "Generar video" puede dejar
+el proyecto en **Borrador** (y al retomarlo el modelo vuelve a Avatar 6 — Santiago lo marcó: *"SIEMPRE
+usa el 4"*) · la cuota de imágenes de la API de Gemini se agota aparte de la de voz y el reemplazo es
+Higgsfield `nano_banana` a 1 crédito · el subtítulo quemado sale del transcriptor y el transcriptor
+inventa, así que ahora se **encaja el guion real** sobre sus tiempos · el conector de Drive mide el
+payload **en base64**, así que el tope real de archivo son ~7,4 MB, no 10 · y mutear la página en
+**cada** carga, no una vez.
+
 ## 2026-11-17 · Hígado Liviano v5: los 12 anuncios replicados de Fausto Almeida
 
 **Correcciones del 17/11 a la noche (v6).** Santiago: *"se ve cortada la visual, con bordes negros,

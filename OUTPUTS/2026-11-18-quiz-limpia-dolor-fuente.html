@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protocolo Limpia Dolor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+
+<script>
+/* ════════════════════════════════════════════════════════════════════
+   CONFIGURACIÓN — lo único que se toca
+   ════════════════════════════════════════════════════════════════════ */
+var CONFIG = {
+
+  /* Checkout de ImpulTienda. Relativo hasta que Santiago pase el definitivo:
+     en la tienda resuelve solo, así el quiz funciona desde el minuto cero.
+     Cuando llegue la URL real va ACÁ Y EN NINGÚN OTRO LADO.           */
+  CHECKOUT: "/checkout",
+
+  PIXEL_ID: "",            // ← pixel de Meta (vacío = no dispara nada)
+
+  PRECIO:        "17.990",
+  PRECIO_TACHADO:"186.930",
+  CUOTAS:        3,
+  CUOTA:         "5.997",
+  OFF:           "90",
+
+  /* Los 6 videos de testimonio van por URL porque pesan 1,9 MB en total
+     y no entran embebidos. Los archivos están en landing/media/.
+     Subilos a ImpulTienda y pegá acá la URL de cada uno.               */
+  VIDEO: {
+    hombre_1: "media/v1_hombre_rodilla.mp4",
+    mujer_1:  "media/v2_mujer_espalda.mp4",
+    hombre_2: "media/v3_hombre_columna.mp4",
+    mujer_2:  "media/v4_mujer_manos.mp4",
+    hombre_3: "media/v5_hombre_oferta.mp4",
+    mujer_3:  "media/v6_mujer_oferta.mp4"
+  },
+
+  AUDIO: { a1:"media/a1.mp3", a2:"media/a2.mp3", a3:"media/a3.mp3" },
+
+  IMG: {
+    portada:        "../imagenes/portada.webp",
+    genero_mujer:   "../imagenes/genero-mujer.webp",
+    genero_hombre:  "../imagenes/genero-hombre.webp",
+    figura_hombre:  "../imagenes/figura-hombre.webp",
+    figura_mujer:   "../imagenes/figura-mujer.webp",
+    parasito:       "../imagenes/parasito.webp",
+    bebida:         "../imagenes/bebida.webp",
+    antes_hombre:   "../imagenes/antes-hombre.webp",
+    despues_hombre: "../imagenes/despues-hombre.webp",
+    antes_mujer:    "../imagenes/antes-mujer.webp",
+    despues_mujer:  "../imagenes/despues-mujer.webp",
+    doctor:         "../imagenes/doctor.webp",
+    regalo:         "../imagenes/regalo.webp",
+    logo:           "../imagenes/logo.webp",
+    r_pablo:        "../imagenes/r-pablo.webp",
+    r_rita:         "../imagenes/r-rita.webp",
+    r_hugo:         "../imagenes/r-hugo.webp",
+    r_teresa:       "../imagenes/r-teresa.webp",
+    r_antonio:      "../imagenes/r-antonio.webp"
+  }
+};
+</script>
+
+<style>
+:root{
+  --verde:#16a34a; --verde-btn:#17a34a; --verde-hover:#15803d; --verde-sombra:#107536;
+  --verde-suave:rgba(22,163,74,.10); --verde-borde:rgba(22,163,74,.5);
+  --tinta:#030712; --gris:#6b7280; --gris2:#3f3f46; --linea:#e5e7eb;
+  --rojo:#dc2626; --papel:#fff;
+  --fuente:Inter,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--fuente);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--verde);outline-offset:2px}
+
+.wrap{max-width:28rem;margin:0 auto;padding:12px 12px 48px}
+/* ── cabecera ───────────────────────────────────────────── */
+.top{position:relative;padding-top:6px}
+.volver{position:absolute;left:0;top:2px;width:40px;height:40px;border:0;background:none;cursor:pointer;color:#111;display:grid;place-items:center;border-radius:50%;z-index:3}
+.volver svg{width:22px;height:22px}
+.volver.off{visibility:hidden;pointer-events:none}
+.marca{display:flex;justify-content:center;align-items:center;min-height:58px}
+.marca img{max-height:96px;width:auto}
+.barra{height:8px;border-radius:99px;background:#dcfce7;overflow:hidden;margin:14px 0 4px}
+.barra i{display:block;height:100%;width:0;background:var(--verde);border-radius:99px;transition:width .45s ease}
+
+/* ── bloques ────────────────────────────────────────────── */
+.paso{padding-top:14px;animation:ent .3s ease both}
+@keyframes ent{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.paso{animation:none}.barra i{transition:none}}
+.tx{margin:0 0 14px}
+.tx h2{font-size:1.45rem;line-height:1.22;font-weight:800;margin:0 0 6px;text-align:center;text-wrap:balance}
+.tx h3{font-size:1.18rem;line-height:1.28;font-weight:800;margin:0 0 6px;text-align:center;text-wrap:balance}
+.tx p{margin:6px 0;color:var(--gris);text-align:center}
+.tx p b,.tx p strong{color:var(--tinta)}
+.tx .v{color:var(--verde)}
+.tx .r{color:var(--rojo)}
+.tx .neg{background:#09090b;color:#fff;padding:0 4px;border-radius:3px}
+.tx .sub{text-decoration:underline}
+.tx.izq p,.tx.izq li{text-align:left}
+.gap{height:2rem}.gap1{height:1rem}.gap3{height:3rem}
+
+/* ── botones ────────────────────────────────────────────── */
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;width:100%;min-height:56px;
+  padding:10px 16px;border:0;border-radius:16px;background:var(--verde-btn);color:#fff;font-size:1rem;font-weight:500;
+  cursor:pointer;box-shadow:0 4px 0 var(--verde-sombra);transition:transform .1s ease,box-shadow .1s ease;text-decoration:none;line-height:1.25}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--verde-sombra)}
+.btn+.btn{margin-top:16px}
+.btn.pulso{animation:pulso 1.6s ease-in-out infinite}
+@keyframes pulso{0%,100%{transform:none}50%{transform:scale(1.025)}}
+@media (prefers-reduced-motion:reduce){.btn.pulso{animation:none}}
+.btn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:0 4px 0 var(--verde-sombra)}
+
+/* ── opciones ───────────────────────────────────────────── */
+.ops{display:grid;gap:12px;margin:0 0 6px}
+.ops.g2{grid-template-columns:1fr 1fr}
+.op{position:relative;display:flex;align-items:center;gap:12px;width:100%;min-height:60px;padding:12px;
+  border:1px solid var(--verde-borde);border-radius:16px;background:var(--verde-suave);color:var(--tinta);
+  font-size:1rem;text-align:left;cursor:pointer;transition:background .15s ease,transform .1s ease}
+.op:active{transform:scale(.99)}
+.op.on{background:rgba(22,163,74,.24);border-color:var(--verde);font-weight:600}
+.op .emo{font-size:1.5rem;line-height:1;flex:0 0 auto}
+.op .lb{flex:1}
+.op .ck{flex:0 0 auto;width:22px;height:22px;border:1px solid #9ca3af;border-radius:6px;background:#fff;display:grid;place-items:center}
+.op.on .ck{background:var(--verde);border-color:var(--verde)}
+.op .ck svg{width:14px;height:14px;opacity:0;color:#fff}
+.op.on .ck svg{opacity:1}
+.op .fl{flex:0 0 auto;width:28px;height:28px;border:1px solid #d4d4d8;border-radius:50%;display:grid;place-items:center;background:#fff;color:#52525b}
+.op .fl svg{width:13px;height:13px}
+/* opciones con foto (género) */
+.op.foto{flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden;background:#fff;border:1px solid var(--linea);box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.op.foto .ph{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden}
+.op.foto .ph img{width:100%;height:100%;object-fit:contain}
+.op.foto .pie{display:flex;align-items:center;gap:10px;padding:12px}
+.op.foto .pie .lb{font-size:1rem}
+
+/* ── lámina de síntomas ─────────────────────────────────── */
+.lam{position:relative;width:100%;aspect-ratio:1000/730;container-type:inline-size;margin:6px 0 4px}
+.lam>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.bub{position:absolute;background:#ff751f;color:#fff;font-weight:700;border-radius:14px;
+  padding:1.6cqw 2.6cqw;font-size:3.05cqw;line-height:1.18;text-align:center;display:grid;place-items:center}
+
+/* ── audio estilo WhatsApp ──────────────────────────────── */
+.wa{background:#efe7dd;border-radius:14px;padding:14px 12px}
+.wab{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:10px 12px;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.wab .pl{flex:0 0 auto;width:30px;height:30px;border:0;background:none;cursor:pointer;color:#54656f;display:grid;place-items:center}
+.wab .pl svg{width:22px;height:22px}
+.wa-mid{flex:1;min-width:0}
+.wa-tr{position:relative;height:22px;display:flex;align-items:center;gap:2px;overflow:hidden}
+.wa-tr b{display:block;flex:1 1 auto;background:#c8d1d6;border-radius:2px;min-width:2px}
+.wa-tr b.hecho{background:#53bdeb}
+.wa-time{font-size:.72rem;color:#667781;margin-top:3px}
+.wa-av{flex:0 0 auto;position:relative;width:46px;height:46px}
+.wa-av img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 18%;background:#fff}
+.wa-av i{position:absolute;right:-2px;bottom:-2px;width:18px;height:18px;border-radius:50%;background:#53bdeb;display:grid;place-items:center;color:#fff}
+.wa-av i svg{width:11px;height:11px}
+
+/* ── video ──────────────────────────────────────────────── */
+.vid{border-radius:16px;overflow:hidden;background:#000;max-width:300px;margin:0 auto}
+.vid video{width:100%;height:auto;display:block}
+.vid-nota{font-size:.75rem;color:#9ca3af;text-align:center;margin:6px 0 0}
+
+/* ── reseñas ────────────────────────────────────────────── */
+.res{border:1px solid var(--linea);border-radius:16px;padding:14px;background:#fff}
+.res+.res{margin-top:12px}
+.res-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.res-top img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.res-top b{display:block;font-size:.98rem}
+.res-top span{display:block;font-size:.8rem;color:var(--gris)}
+.res p{margin:0;color:var(--gris2);font-size:.95rem}
+.res .est{color:#f59e0b;letter-spacing:1px;font-size:.85rem;margin-top:8px}
+
+/* ── notificación ───────────────────────────────────────── */
+.nota{border-radius:16px;padding:14px;border:1px solid var(--linea);background:#fff}
+.nota.ok{background:#f0fdf4;border-color:var(--verde-borde)}
+.nota b{display:block;margin-bottom:4px}
+.nota p{margin:0;font-size:.95rem}
+
+/* ── métricas ───────────────────────────────────────────── */
+.met{margin:0 0 16px}
+.met-h{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;font-weight:700;font-size:.97rem;line-height:1.25}
+.met-t{position:relative;height:8px;border-radius:99px;background:var(--linea);margin-top:7px}
+.met-t i{position:absolute;left:0;top:0;height:100%;border-radius:99px;width:0;transition:width .9s ease}
+.met-t u{position:absolute;top:50%;width:17px;height:17px;border-radius:50%;background:#fff;border:1px solid #d4d4d8;
+  transform:translate(-50%,-50%);box-shadow:0 1px 2px rgba(0,0,0,.18);left:0;transition:left .9s ease}
+.met.rojo .met-t i{background:var(--rojo)} .met.verde .met-t i{background:var(--verde)}
+
+/* ── carga ──────────────────────────────────────────────── */
+.carga{margin:0 0 20px}
+.carga-h{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+.carga-t{height:8px;border-radius:99px;background:var(--linea);overflow:hidden}
+.carga-t i{display:block;height:100%;width:0;background:var(--verde);border-radius:99px}
+
+/* ── carrusel ───────────────────────────────────────────── */
+.car{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.car>*{flex:0 0 86%;scroll-snap-align:center}
+.pts{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.pts i{width:7px;height:7px;border-radius:50%;background:#d4d4d8}
+.pts i.on{background:var(--verde)}
+
+/* ── chat de WhatsApp dibujado ──────────────────────────── */
+.chat{border:1px solid var(--linea);border-radius:16px;overflow:hidden;background:#efe7dd}
+.chat-h{display:flex;align-items:center;gap:8px;background:#075e54;color:#fff;padding:9px 12px}
+.chat-h .av{width:30px;height:30px;border-radius:50%;background:#cfd8dc;display:grid;place-items:center;color:#075e54;font-weight:700;font-size:.85rem}
+.chat-h b{font-size:.92rem;font-weight:600;display:block;line-height:1.1}
+.chat-h span{font-size:.7rem;opacity:.8}
+.chat-b{padding:10px;display:flex;flex-direction:column;gap:7px}
+.msg{max-width:82%;padding:7px 9px;border-radius:9px;font-size:.84rem;line-height:1.35;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
+.msg.ellos{align-self:flex-start;background:#fff}
+.msg.yo{align-self:flex-end;background:#dcf8c6}
+.msg em{display:block;font-style:normal;font-size:.63rem;color:#667781;text-align:right;margin-top:2px}
+
+/* ── tabla comparativa ──────────────────────────────────── */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:8px;border:2px solid #1e3a8a;border-radius:12px;padding:8px;background:#fff;align-items:stretch}
+.vs-cab{border:2px solid #1e3a8a;border-radius:10px;padding:12px 8px;text-align:center;min-height:104px;display:grid;place-content:center;gap:6px}
+.vs-cab .ic{font-size:1.5rem;line-height:1}
+.vs-cab b{font-size:1.18rem;color:#1e3a8a;line-height:1.1}
+.vs-cab b .v{color:var(--verde)}
+.vs-it{display:flex;align-items:center;gap:7px;border:2px solid #1e3a8a;border-radius:10px;padding:8px 7px;font-size:.78rem;line-height:1.2;min-height:50px}
+.vs-it span{flex:0 0 auto;font-size:1rem}
+
+/* ── nota de divulgación ────────────────────────────────── */
+.nt{border:1px solid var(--linea);border-radius:16px;overflow:hidden;background:#fff}
+.nt-h{background:#f4f4f5;padding:8px 12px;font-size:.68rem;letter-spacing:.14em;font-weight:700;color:#52525b;border-bottom:1px solid var(--linea)}
+.nt-b{padding:14px}
+.nt-b h4{margin:0 0 8px;font-size:1.06rem;line-height:1.25}
+.nt-b img{border-radius:10px;margin:10px 0}
+.nt-b p{margin:8px 0;font-size:.9rem;color:var(--gris2)}
+.nt-b .pie{font-size:.72rem;color:#9ca3af;margin-top:10px}
+
+/* ── antes / después ────────────────────────────────────── */
+.ad{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ad-c{border:1px solid var(--linea);border-radius:16px;overflow:hidden;background:#fff}
+.ad-c h5{margin:0;padding:10px;text-align:center;font-size:1.05rem;border-bottom:1px solid var(--linea)}
+.ad-p{text-align:center;font-weight:700;font-size:.92rem;margin:10px 2px 0;line-height:1.25}
+
+/* ── oferta ─────────────────────────────────────────────── */
+.placa{background:var(--verde);border-radius:18px;padding:22px 16px;text-align:center;color:#fff;box-shadow:0 6px 0 var(--verde-sombra);position:relative}
+.placa b{display:block;font-size:1.5rem;line-height:1.2}
+.placa span{display:inline-block;margin-top:8px;background:#e9d5ff;color:#111;font-size:1.3rem;font-weight:700;padding:2px 10px;border-radius:4px}
+.placa i{position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);width:38px;height:38px;border-radius:50%;background:#2563eb;border:3px solid #93c5fd;display:grid;place-items:center;color:#fff}
+.stack{display:grid;gap:10px}
+.stack .it{border:1px solid var(--linea);border-radius:14px;padding:13px 12px;background:#fff;font-size:.95rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.precio{text-align:center;margin:18px 0}
+.precio .tach{color:var(--rojo);font-weight:800;font-size:1.35rem;text-decoration:line-through}
+.precio .por{color:var(--verde);font-weight:800;font-size:1.3rem;margin-top:2px}
+.precio .num{color:var(--verde);font-weight:800;font-size:2.4rem;line-height:1.1;margin-top:2px}
+.precio .cuo{color:var(--gris);font-size:.92rem;margin-top:8px}
+.caja-precio{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid var(--verde);border-radius:16px;padding:14px;background:#fff;cursor:pointer}
+.caja-precio b{font-size:1.05rem;line-height:1.35}
+.caja-precio .chip{background:#f4f4f5;border-radius:10px;padding:8px 10px;text-align:center;flex:0 0 auto}
+.caja-precio .chip small{display:block;font-size:.72rem;color:var(--gris)}
+.caja-precio .chip span{font-size:1.25rem;font-weight:800}
+.conf{text-align:center;margin:14px 0}
+.conf b{display:block}
+.conf span{color:var(--gris);font-size:.92rem}
+.gar{background:linear-gradient(135deg,#4a2f06,#b88a2b 55%,#f0d788);border-radius:16px;padding:16px;display:flex;align-items:center;gap:12px;color:#fff}
+.gar .sello{flex:0 0 auto;width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fde68a,#b45309);border:3px solid #fde68a;display:grid;place-items:center;text-align:center;line-height:1;color:#3b2306}
+.gar .sello b{display:block;font-size:1.7rem;font-weight:800}
+.gar .sello small{display:block;font-size:.5rem;letter-spacing:.08em;font-weight:700}
+.gar .tx2 b{display:block;font-size:1.08rem;font-style:italic;line-height:1.2}
+.gar .tx2 span{display:block;font-size:.85rem;font-style:italic;opacity:.95;margin-top:6px}
+.gar-txt{border:1px solid var(--linea);border-radius:16px;background:#f9fafb;padding:16px;font-size:.88rem;color:var(--gris2);text-align:center;line-height:1.55}
+.gar-txt b{color:var(--tinta)}
+.lista{margin:0;padding-left:20px;color:var(--gris2)}
+.lista li{margin:6px 0}
+.chk{margin:0;padding:0;list-style:none}
+.chk li{margin:9px 0;color:var(--gris2)}
+.aviso{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:12px;padding:10px 12px;font-size:.85rem;text-align:center}
+
+/* ── prueba social flotante ─────────────────────────────── */
+#psocial{position:fixed;left:10px;bottom:10px;z-index:60;max-width:270px;background:rgba(255,255,255,.96);
+  border:1px solid var(--linea);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.14);padding:9px 11px;
+  display:flex;gap:9px;align-items:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;pointer-events:none}
+#psocial.on{opacity:1;transform:none}
+#psocial .ini{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+#psocial b{display:block;font-size:.8rem;font-weight:600;line-height:1.2}
+#psocial span{display:block;font-size:.7rem;color:var(--gris)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <button class="volver off" id="volver" aria-label="Volver">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    </button>
+    <div class="marca" id="marca"></div>
+    <div class="barra" id="barra" hidden><i></i></div>
+  </div>
+  <main id="app"></main>
+</div>
+<div id="psocial"><div class="ini">A</div><div><b></b><span></span></div></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ═══ 1. imágenes: data URI → blob (se decodifican una sola vez) ═══ */
+var IMGRAW = {};
+(function(){
+  var C = CONFIG.IMG, k;
+  for (k in C) if (C.hasOwnProperty(k)) IMGRAW[k] = C[k];
+  for (k in C) {
+    if (!C.hasOwnProperty(k)) continue;
+    var v = C[k];
+    if (typeof v !== "string" || v.indexOf("data:") !== 0) continue;
+    try {
+      var coma = v.indexOf(","), tipo = v.slice(5, v.indexOf(";")), bin = atob(v.slice(coma + 1));
+      var arr = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      C[k] = URL.createObjectURL(new Blob([arr], {type: tipo}));
+    } catch (e) {}
+  }
+})();
+window.__pre = []; window.__preTotal = 0;
+(function(){
+  for (var k in CONFIG.IMG) {
+    if (!CONFIG.IMG.hasOwnProperty(k)) continue;
+    var im = new Image(); im.decoding = "sync"; im.src = CONFIG.IMG[k];
+    if (im.decode) { try { im.decode().catch(function(){}); } catch (e) {} }
+    window.__pre.push(im); window.__preTotal++;
+  }
+})();
+/* red de seguridad: si el blob falla (CSP), vuelve al data URI */
+document.addEventListener("error", function(ev){
+  var t = ev.target;
+  if (!t || t.tagName !== "IMG" || String(t.src).indexOf("blob:") !== 0) return;
+  var k = t.getAttribute("data-k");
+  if (k && IMGRAW[k]) t.src = IMGRAW[k];
+}, true);
+
+function IMGTAG(k, alt, extra){
+  var src = CONFIG.IMG[k] || "";
+  return '<img src="' + src + '" data-k="' + k + '" alt="' + (alt || "") + '" loading="eager" decoding="sync" fetchpriority="high"' + (extra || "") + '>';
+}
+
+/* ═══ 2. helpers ═══════════════════════════════════════════ */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function param(n){ try { return new URLSearchParams(location.search).get(n); } catch(e){ return null; } }
+function qs(){
+  try {
+    var p = new URLSearchParams(location.search);
+    p.delete("paso");                       /* parámetro interno de prueba */
+    return p.toString();
+  } catch(e){ return location.search.replace(/^\?/, ""); }
+}
+function checkoutHref(){
+  var base = CONFIG.CHECKOUT, extra = qs();
+  if (!extra) return base;
+  return base + (base.indexOf("?") > -1 ? "&" : "?") + extra;
+}
+var P = CONFIG;
+
+/* ═══ 3. pixel de Meta ════════════════════════════════════ */
+(function(){
+  if (!P.PIXEL_ID) { window.fbq = window.fbq || function(){}; return; }
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
+  'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', P.PIXEL_ID); fbq('track', 'PageView');
+})();
+
+/* ═══ 4. los textos del quiz ══════════════════════════════ */
+var SINTOMAS = [
+  ["Dolores de espalda<br>en general", 1.0, 8.2, 34.9],
+  ["Dolor en el hombro",              66.0, 12.5, 33.2],
+  ["Dolor en los pies",               68.9, 25.3, 30.0],
+  ["Dolor lumbar<br>o de cadera",      1.4, 33.0, 32.1],
+  ["Dolor en la columna",             64.9, 39.0, 30.4],
+  ["Dolores en las<br>articulaciones",69.0, 51.2, 27.3],
+  ["Dolor en la rodilla",              3.5, 53.3, 33.8],
+  ["Dolores en manos<br>y dedos",      4.8, 69.7, 29.8],
+  ["Dolor en el cuello",              64.0, 73.7, 32.2]
+];
+function lamina(g){
+  var h = '<div class="lam">' + IMGTAG(g === "mujer" ? "figura_mujer" : "figura_hombre", "Zonas de dolor");
+  for (var i = 0; i < SINTOMAS.length; i++){
+    var s = SINTOMAS[i];
+    h += '<div class="bub" style="left:' + s[1] + '%;top:' + s[2] + '%;width:' + s[3] + '%">' + s[0] + '</div>';
+  }
+  return h + '</div>';
+}
+
+var CHATS = [
+  {n:"María", ini:"M", msgs:[
+    ["ellos","Buenas tardes María! Hoy completaste 7 días desde que arrancaste el Protocolo. ¿Cómo venís?","15:20"],
+    ["yo","Hola!! Primero te quería agradecer a vos! Está todo muy bien... Gracias a Dios 🙏","15:31"],
+    ["yo","Lo que más me incomodaba era el dolor de rodilla, no me podía mover bien.","15:31"],
+    ["yo","Después de la bebida todo empezó a mejorar, estoy hace 2 días sin sentir nada de dolor... Y dormí toda la noche, sin despertarme ni una vez. Muchas gracias","15:33"],
+    ["ellos","Amén! Qué alegría leer eso! Estamos juntos 💪 Vamos con la próxima etapa, dale","15:35"]
+  ]},
+  {n:"Lourdes", ini:"L", msgs:[
+    ["ellos","Buen día Lourdes! ¿Cómo va el tratamiento? ¿Alguna novedad?","9:10"],
+    ["yo","Buen día gente! Sí, gracias a Dios!","9:21"],
+    ["yo","Hoy limpié toda la casa sin ningún dolor, me desperté bien temprano, con energía, dormí toda la noche. Sinceramente no sabía que era posible solo tomando una bebida, porque ni la kinesiología me ayudó","9:22"],
+    ["yo","Que Dios bendiga la vida de ustedes y el trabajo que hacen, muchísimas gracias, estoy hace 1 semana totalmente libre de dolores","9:23"],
+    ["ellos","Este tipo de mensaje es lo que nos mueve a seguir todos los días Lourdes! Felicitaciones por el resultado.","9:35"]
+  ]}
+];
+function chat(c){
+  var h = '<div class="chat"><div class="chat-h"><div class="av">' + c.ini + '</div><div><b>' + esc(c.n) + '</b><span>en línea</span></div></div><div class="chat-b">';
+  for (var i = 0; i < c.msgs.length; i++){
+    var m = c.msgs[i];
+    h += '<div class="msg ' + m[0] + '">' + esc(m[1]) + '<em>' + m[2] + '</em></div>';
+  }
+  return h + '</div></div>';
+}
+
+function wa(k){
+  var barras = "";
+  for (var i = 0; i < 38; i++){
+    var alt = 5 + ((i * 7) % 13) + (i % 3) * 2;
+    barras += '<b style="height:' + alt + 'px"></b>';
+  }
+  return '<div class="wa"><div class="wab">' +
+    '<button class="pl" type="button" data-wa="' + k + '" aria-label="Reproducir audio">' +
+      '<svg viewBox="0 0 24 24" fill="currentColor" class="ic-play"><path d="M8 5v14l11-7z"/></svg>' +
+    '</button>' +
+    '<div class="wa-mid"><div class="wa-tr">' + barras + '</div><div class="wa-time">0:00</div></div>' +
+    '<div class="wa-av">' + IMGTAG("doctor", "Doctor Rodrigo") +
+      '<i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11z"/></svg></i>' +
+    '</div>' +
+    '<audio preload="metadata" data-src="' + (CONFIG.AUDIO[k] || "") + '"></audio>' +
+  '</div></div>';
+}
+
+function video(k){
+  var u = CONFIG.VIDEO[k] || "";
+  if (!u) return "";
+  return '<div class="vid"><video src="' + u + '" playsinline controls preload="metadata"></video></div>' +
+         '<p class="vid-nota">Caso ilustrativo. Los resultados varían de persona a persona.</p>';
+}
+
+function resena(r){
+  return '<div class="res"><div class="res-top">' + IMGTAG(r.img, r.n) +
+    '<div><b>' + esc(r.n) + '</b><span>' + esc(r.c) + '</span></div></div>' +
+    '<p>' + esc(r.t) + '</p><div class="est">★★★★★</div></div>';
+}
+
+var R = {
+  pablo:  {img:"r_pablo",  n:"Pablo Gutiérrez", c:"Rosario, Santa Fe", t:"Solo tengo para agradecerle al Doctor, ya llevo 7 días desparasitándome y los dolores simplemente se me fueron. Me había caído más de 10 veces al piso, incluso con muletas. Hoy me agacho y hasta puedo trabajar. Que Dios los bendiga 👍👍"},
+  rita:   {img:"r_rita",   n:"Rita Medina", c:"La Plata, Buenos Aires", t:"Muchas gracias Rodrigo, ya llevo 8 días desparasitándome y los dolores simplemente se me fueron, estoy muy feliz por esta victoria en mi vida 😭😭 gracias, fuiste un ángel."},
+  hugo:   {img:"r_hugo",   n:"Hugo Benítez", c:"Córdoba, Córdoba", t:"Tenía artrosis en la rodilla y me había roto el ligamento. Nunca pensé que una simple desparasitación me podía ayudar, después de haber gastado una fortuna en suplementos y pomadas."},
+  teresa: {img:"r_teresa", n:"Teresa Ferreyra", c:"Mendoza, Mendoza", t:"Me decían Teresa la Dolorida, porque tenía fibromialgia, pico de loro y unos dolores terribles en los hombros, las manos y las piernas. Después de completar el Protocolo quedé totalmente libre. Me desperté una mañana sin ningún dolor y sigo así hasta hoy."},
+  antonio:{img:"r_antonio",n:"Antonio Rivas", c:"San Miguel de Tucumán", t:"Ya me habían puesto infiltraciones y tenía fecha de cirugía para la espalda, L1, L2, L3 y L4. Tenía miedo y quise probar una última cosa, que fue el tratamiento del Doctor Rodrigo. No le creí al principio: los dolores simplemente se me fueron de una semana para la otra. Le debo toda mi gratitud al equipo del Protocolo, muchas gracias."}
+};
+
+/* ═══ 5. los pasos ════════════════════════════════════════ */
+/* b = bloques. Tipos: tx, img, lam, btn, ops, gap, wa, video, res,
+   nota, met, carga, car, html, cta                               */
+var PASOS = [
+
+/* 0 · portada */
+{logo:false, barra:false, b:[
+ {t:"tx", h:'<h3><span class="neg">URGENTE:</span> <span class="v">UN TRUCO NATURAL CASERO DE 9 DÍAS ESTÁ SACANDO LOS DOLORES DE LAS ARTICULACIONES</span> Y ELIMINANDO LA <span class="sub">INFLAMACIÓN CAUSADA POR PARÁSITOS</span></h3><p>Personas de más de 50 años se están sacando todos los dolores articulares del cuerpo, y vuelven a correr, a agacharse, a subir escaleras y a dormir mejor. Todo gracias a una simple receta natural que elimina el parásito que carcome las articulaciones</p>'},
+ {t:"img", k:"portada"},
+ {t:"gap"},
+ {t:"btn", l:"¡QUIERO APRENDERLO TAMBIÉN!", pulso:true}
+]},
+
+/* 1 · mujer u hombre */
+{preg:true, b:[
+ {t:"tx", h:'<h2>Vamos a empezar tu evaluación</h2><h3>¡Elegí tu opción acá abajo!</h3>'},
+ {t:"ops", foto:true, g2:true, items:[
+   {l:"Mujer", k:"genero_mujer", genero:"mujer"},
+   {l:"Hombre", k:"genero_hombre", genero:"hombre"}
+ ]}
+]},
+
+/* 2 · etapa 1 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Sentís <span class="v" style="color:#ff751f">alguno de estos síntomas</span> hace más de 1 año?</h3>'},
+ {t:"lam"},
+ {t:"gap1"},
+ {t:"btn", l:"Siento más de 1 😓"},
+ {t:"btn", l:"Siento 2 o más 😬"}
+]},
+
+/* 3 · etapa 2 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Ya te <span class="v">desparasitaste</span> de alguna manera?</h2><p>Usando remedios o formas naturales.</p>'},
+ {t:"ops", items:[
+   {l:"<b>No, nunca me desparasité.</b>", e:"😐"},
+   {l:"<b>Sí, ya me desparasité.</b>", e:"😁"}
+ ]}
+]},
+
+/* 4 · etapa 3 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Ya hiciste <span class="v">alguna consulta</span> médica por tus dolores?</h2><p>Puede ser cualquier tipo de consulta profesional.</p>'},
+ {t:"gap1"},
+ {t:"btn", l:"Sí, hice varias"},
+ {t:"btn", l:"Sí, pero pocas veces"},
+ {t:"btn", l:"Nunca fui a nadie"}
+]},
+
+/* 5 · etapa 4 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Hace cuánto tiempo sentís estos dolores?</h2><p>Por favor, respondé con atención — esta información es clave para nuestro análisis.</p>'},
+ {t:"ops", flecha:true, items:[
+   {l:"Siento dolores hace menos de 3 meses..."},
+   {l:"Sufro con esto hace 6 meses"},
+   {l:"Convivo con esta tortura hace más de 1 año"},
+   {l:"Estoy sufriendo hace décadas con esta dolencia"}
+ ]}
+]},
+
+/* 6 · etapa 5 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Cuánto te complican estos dolores todos los días?</h2><p>Esta información es clave para un análisis más preciso de tu situación.</p>'},
+ {t:"ops", flecha:true, items:[
+   {l:"Poco, puedo dormir tranquilo y agacharme sin miedo, solo siento alguna puntada."},
+   {l:"Más o menos, siento que el cuerpo se me empieza a trabar, y movimientos comunes se volvieron un desafío de todos los días"},
+   {l:"Mucho, tengo miedo de subir escaleras, los dolores son parte de mi rutina, perdí la libertad de mi cuerpo."},
+   {l:"Demasiado, todos los días son una tortura constante, ¡no aguanto más!"}
+ ]}
+]},
+
+/* 7 · etapa 6 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Tenés alguna de estas condiciones?</h3><p>Pueden influir directamente en que tus dolores crezcan.</p><p>Para una orientación más precisa, respondé la pregunta de abajo. Elegí una o más:</p>'},
+ {t:"ops", multi:true, items:[
+   {l:"Artrosis"},{l:"Artritis"},{l:"Tendinitis o bursitis"},{l:"Lumbalgia mecánica"},
+   {l:"Cervicalgia mecánica o pico de loro"},{l:"Fascitis plantar o espolón de calcáneo"},{l:"Ninguna de las opciones"}
+ ]},
+ {t:"gap"},
+ {t:"btn", l:"Continuar", next:true}
+]},
+
+/* 8 · etapa 7 */
+{preg:true, b:[
+ {t:"tx", h:'<h3><span class="r">Si nunca hiciste una Desparasitación Natural, cuidado:</span> los parásitos se pueden multiplicar en tu cuerpo y llegar a órganos vitales como el cerebro, el corazón y los pulmones. No ignores ese riesgo, <span class="v">¡es clave desparasitarse por lo menos una vez al año!</span></h3><p><b class="sub">Mirá esta nota 👇</b></p>'},
+ {t:"html", h:'<div class="nt"><div class="nt-h">SALUD · NOTA DE DIVULGACIÓN</div><div class="nt-b">' +
+   '<h4>Un parásito intestinal detrás de los dolores articulares: qué advierten los especialistas</h4>' +
+   '[[IMG:parasito|Parásito intestinal visto al microscopio]]' +
+   '<p>Millones de personas conviven con parásitos intestinales sin saberlo. Después de estudiarlo, los especialistas señalan que, en muchos casos, los cuadros de dolor que se atribuyen al desgaste o a la edad están sostenidos por una inflamación de bajo grado que el organismo no logra apagar.</p>' +
+   '<p>El parásito se alimenta de los nutrientes que debían ir al músculo y al cartílago. El resultado es rigidez al levantarse, dolores que van y vienen, y articulaciones que se recuperan cada vez más lento.</p>' +
+   '<p>«Nunca imaginé que un parásito podía estar por detrás de todos mis síntomas», es la frase que más se repite entre quienes se desparasitan después de años de tratamientos.</p>' +
+   '<p class="pie">Nota de divulgación. No reemplaza la consulta con un profesional de la salud.</p>' +
+ '</div></div>'},
+ {t:"gap"},
+ {t:"btn", l:"Continuar", pulso:true}
+]},
+
+/* 9 · etapa 8 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Sos consciente de que <span class="v">la falta de cuidado con este tema</span> puede empeorar tus dolores y dejar secuelas que pueden ser irreversibles?</h3><p>Por favor, sé sincero.</p>'},
+ {t:"btn", l:"😔 Sí, sé lo grave que es tener parásitos viviendo en mi intestino"},
+ {t:"btn", l:"😰 No sabía que era tan grave, pero me quiero cuidar."}
+]},
+
+/* 10 · etapa 9 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Coincidís conmigo en que la mayoría de las veces la falta de <span class="v">actividad física y la mala alimentación no es culpa nuestra</span>, que nos tildan de desganados pero en realidad es porque tenemos las articulaciones inflamadas por los parásitos?</h3><p>Por favor, sé sincero, ¡te quiero ayudar!</p>'},
+ {t:"gap1"},
+ {t:"btn", l:"¡Sí, coincido!"},
+ {t:"btn", l:"Coincido en parte."}
+]},
+
+/* 11 · etapa 10 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Comiste alguno de estos alimentos en los últimos 3 meses?</h3><p>Respondé con atención, estamos evaluando cada respuesta.</p>'},
+ {t:"gap1"},
+ {t:"ops", multi:true, items:[
+   {l:"Leche"},{l:"Queso"},{l:"Papas fritas"},{l:"Salchicha"},{l:"Jamón"},{l:"Alcohol"}
+ ]},
+ {t:"gap"},
+ {t:"btn", l:"Continuar", next:true}
+]},
+
+/* 12 · etapa 11 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>De los <span class="v">síntomas de acá abajo</span>, ¿cuáles son los que más te molestan?</h3><p>Elegí uno o más.</p>'},
+ {t:"ops", multi:true, items:[
+   {l:"<b>Dolor constante</b>"},{l:"<b>Rigidez</b>"},{l:"<b>Hinchazón</b>"},{l:"<b>Crujidos o chasquidos</b>"},
+   {l:"<b>Trabazón</b>"},{l:"<b>Calor o enrojecimiento</b>"},{l:"<b>Pérdida de movilidad</b>"},
+   {l:"<b>Debilidad muscular</b>"},{l:"<b>Fatiga y cansancio</b>"}
+ ]},
+ {t:"gap"},
+ {t:"btn", l:"Continuar", next:true}
+]},
+
+/* 13 · etapa 12 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Estos síntomas te complican la vida?</h2><p>Sé sincero/a al responder.</p>'},
+ {t:"ops", flecha:true, items:[
+   {l:"😓 Sí, me impiden hacer cosas simples como caminar o dormir bien."},
+   {l:"😕 Me complican un poco, pero todavía puedo hacer mi vida."},
+   {l:"💔 Me están arruinando la calidad de vida, tengo miedo de volverme una carga para los demás."},
+   {l:"Antes hacía todo en casa, ahora necesito ayuda, cada vez pierdo más movilidad."}
+ ]}
+]},
+
+/* 14 · etapa 13 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿En qué momento del día <span class="r">te molestan más los dolores?</span></h2>'},
+ {t:"gap1"},
+ {t:"btn", l:"A la mañana, me cuesta levantarme de la cama y siento muchos dolores al despertarme."},
+ {t:"btn", l:"A la tarde, durante el día siento muchos dolores y me cuesta hacer muchas actividades del día a día."},
+ {t:"btn", l:"A la noche, me cuesta dormir y encontrar una posición cómoda al acostarme."}
+]},
+
+/* 15 · etapa 14 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Cuánto te <span class="v">afectan emocionalmente</span> estos dolores?</h2>'},
+ {t:"ops", flecha:true, items:[
+   {l:"😞 Me dejan triste y sin energía hasta para estar con mi familia"},
+   {l:"😡 Me dejan irritado/a, siento que nada sale bien, me siento cada vez menos útil."},
+   {l:"😔 Me hacen perder las ganas de salir de casa y de disfrutar la vida"},
+   {l:"🌙 Me afectan hasta el sueño, me despierto cansado/a todos los días"}
+ ]}
+]},
+
+/* 16 · etapa 15 — audio 1 + caso real */
+{preg:true, b:[
+ {t:"nota", ok:true, tit:"⚠️ Los resultados no mienten:", txt:'Tus síntomas están indicando algo muy peligroso – <b class="sub">¡Escuchá con atención!</b>'},
+ {t:"gap1"},
+ {t:"tx", h:'<p><b>Escuchá esta explicación corta 👇</b></p><p style="font-size:.9rem">Si el audio no arranca solo, tocalo.</p>'},
+ {t:"wa", k:"a1"},
+ {t:"gap1"},
+ {t:"tx", h:'<h3>Mirá este caso</h3><p>1 semana después de empezar la desparasitación</p>'},
+ {t:"video", slot:1},
+ {t:"gap1"},
+ {t:"res", r:{hombre:"pablo", mujer:"rita"}},
+ {t:"gap1"},
+ {t:"btn", l:"Continuar", pulso:true}
+]},
+
+/* 17 · etapa 16 */
+{preg:true, b:[
+ {t:"tx", h:'<h2>¿Te interesaría recibir un <span class="v">protocolo personalizado</span> para Desparasitación en 9 días?</h2>'},
+ {t:"gap1"},
+ {t:"btn", l:"✅ ¡Sí, lo quiero ya!"},
+ {t:"btn", l:"😃 Me interesa, pero quiero sacarme dudas."}
+]},
+
+/* 18 · etapa 17 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Qué tipos de tratamiento o medicamentos usaste para aliviar los dolores?</h3><p>(Elegí todos los que probaste)</p>'},
+ {t:"gap1"},
+ {t:"ops", multi:true, items:[
+   {l:"💊 Analgésicos (ej.: Tramadol, codeína, dipirona)"},
+   {l:"💢 Antiinflamatorios (ej.: Ibuprofeno, Diclofenac, Nimesulida)"},
+   {l:"😴 Relajantes musculares (ej.: Dorixina Relax, Mio-Relax)"},
+   {l:"🌿 Suplementos naturales"},
+   {l:"💉 Infiltraciones para el dolor"},
+   {l:"🚫 Nunca usé ningún tratamiento para el dolor"}
+ ]},
+ {t:"gap1"},
+ {t:"btn", l:"Continuar", next:true}
+]},
+
+/* 19 · etapa 18 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Probaste alguna de estas soluciones alternativas para aliviar el dolor pero <span class="r">sin éxito duradero?</span></h3>'},
+ {t:"gap1"},
+ {t:"ops", multi:true, items:[
+   {l:"🙏 Hice acupuntura, quiropraxia o masajes, pero los dolores volvieron."},
+   {l:"🧘 Hice kinesiología, elongación y ejercicios, pero el dolor siempre vuelve a los pocos días."},
+   {l:"🌿 Probé tés, hierbas o remedios naturales, sentí mejoría al principio pero no alcanzó."},
+   {l:"🩹 Usé pomadas, cremas y hasta suplementos, pero nada lo resolvió de verdad."},
+   {l:"🦵 Usé rodilleras, férulas o bastón, ayudó un poco pero no trató la causa."},
+   {l:"💸 Ya gasté tiempo y plata en varias de estas opciones, sin resultado duradero."},
+   {l:"🔍 Todavía no probé muchas cosas — estoy buscando algo que de verdad funcione y lo resuelva de una vez."}
+ ]},
+ {t:"gap1"},
+ {t:"btn", l:"Continuar", next:true}
+]},
+
+/* 20 · etapa 19 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Coincidís conmigo en que nuestra salud <span class="v">es nuestro bien más importante?</span></h3><p>sin ella no somos nada.</p>'},
+ {t:"gap1"},
+ {t:"btn", l:"✅ ¡Coincido!"},
+ {t:"btn", l:"😕 No coincido."}
+]},
+
+/* 21 · etapa 20 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿QUÉ HARÍAS SI, EN ESTE MISMO MOMENTO, TUS DOLORES CRÓNICOS DESAPARECIERAN Y TU VIDA VOLVIERA A LA NORMALIDAD?</h3><p>Ahora es momento de sentir la libertad. Imaginate ese momento y elegí entre las opciones de abajo:</p>'},
+ {t:"ops", flecha:true, items:[
+   {l:"🥳 ¡Lloraría de felicidad, sin poder creer que el dolor se fue para siempre!"},
+   {l:"😌 Sentiría un alivio enorme, como si un sueño imposible se hubiera hecho realidad, y empezaría a planear todo lo que el dolor me impedía hacer."},
+   {l:"💪 Sentiría una energía renovada y la certeza de que la culpa no era mía sino de los invasores, y que ahora soy libre para vivir."},
+   {l:"💃 Festejaría cada movimiento sin dolor, cada paso liviano, cada noche de sueño profundo."},
+   {l:"😄 Tendría miedo... ¿será verdad? Pero enseguida vendría la alegría de saber que sí."}
+ ]}
+]},
+
+/* 22 · etapa 21 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Te comprometés a seguir nuestro <span class="v">Protocolo de 9 Días</span> en tu casa?</h3><p>te voy a ayudar en todo lo que necesites.</p>'},
+ {t:"gap1"},
+ {t:"btn", l:"😍 ¡Sí, me comprometo!"},
+ {t:"btn", l:"😀 ¡Lo voy a intentar!"},
+ {t:"gap"},
+ {t:"car"}
+]},
+
+/* 23 · etapa 22 */
+{preg:true, b:[
+ {t:"tx", h:'<h3>¿Cuál sería la mejor parte de sacarte los dolores articulares?</h3>'},
+ {t:"ops", flecha:true, items:[
+   {l:"Poder caminar y moverme sin miedo"},
+   {l:"Dormir bien y despertarme descansado/a"},
+   {l:"Jugar y estar activo/a con la familia"},
+   {l:"Volver a tener libertad en el cuerpo"},
+   {l:"No depender más de nadie para nada"}
+ ]}
+]},
+
+/* 24 · etapa 23 — audio 2 + caso real */
+{preg:true, b:[
+ {t:"tx", h:'<h3>Escuchá el audio de acá abajo: 👇</h3><p style="font-size:.9rem">Si el AUDIO no arranca solo, tocalo.</p>'},
+ {t:"wa", k:"a2"},
+ {t:"gap1"},
+ {t:"tx", h:'<h3>Mirá este caso</h3><p>1 semana después de empezar la desparasitación</p>'},
+ {t:"video", slot:2},
+ {t:"gap"},
+ {t:"btn", l:"¡Generar mi Protocolo Personalizado! ✅", pulso:true}
+]},
+
+/* 25 · carga */
+{logo:true, barra:false, volver:false, b:[
+ {t:"img", k:"logo", est:"max-width:230px;margin:0 auto"},
+ {t:"tx", h:'<p style="font-size:1.05rem;color:#030712">Estoy analizando tus respuestas y generando</p><h3><span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:6px">tu protocolo personalizado.</span></h3>'},
+ {t:"gap"},
+ {t:"carga", items:[["Armando tu protocolo personalizado",3],["Estamos analizando tus respuestas",3]]}
+]},
+
+/* 26 · resultado */
+{barra:false, b:[
+ {t:"html", h:'<div class="vs">' +
+   '<div class="vs-cab"><div class="ic">❌</div><b>Remedios</b></div>' +
+   '<div class="vs-cab"><div class="ic">✅</div><b>Nuestro <span class="v">Protocolo de Preparación</span></b></div>' +
+   '<div class="vs-it"><span>❌</span>No termina con los parásitos.</div>' +
+   '<div class="vs-it"><span>✅</span>Termina con los parásitos en 9 días.</div>' +
+   '<div class="vs-it"><span>❌</span>Dañan tus órganos.</div>' +
+   '<div class="vs-it"><span>✅</span>Te sacás todos los dolores en 9 días.</div>' +
+   '<div class="vs-it"><span>❌</span>Le hacen muy mal a tu salud.</div>' +
+   '<div class="vs-it"><span>✅</span>Es 100% natural.</div>' +
+   '<div class="vs-it"><span>❌</span>Destruyen tu intestino.</div>' +
+   '<div class="vs-it"><span>✅</span>Receta simple y fácil de hacer.</div>' +
+ '</div>'},
+ {t:"gap1"},
+ {t:"tx", h:'<p><b>Acá abajo está el análisis de tu situación actual, <span class="v">basado en tus respuestas.</span> 👇</b></p>'},
+ {t:"met", items:[
+   ["Probabilidad de tener parásitos inflamatorios", 95, "rojo"],
+   ["Probabilidad de que los dolores empeoren en los próximos meses", 80, "rojo"],
+   ["Probabilidad de perder la libertad de moverte", 88, "rojo"],
+   ["Probabilidad de que aparezca otro dolor en otra zona del cuerpo", 95, "rojo"],
+   ["Probabilidad de sacarte los dolores sin la desparasitación", 5, "rojo"],
+   ["Probabilidad de terminar con todos los dolores del cuerpo con la desparasitación", 100, "verde"],
+   ["Probabilidad de eliminar parásitos en 2 días", 95, "verde"],
+   ["Probabilidad de eliminar los parásitos por completo", 100, "verde"]
+ ]},
+ {t:"tx", h:'<p><b><span class="v">Posible agente parasitario</span> según tus síntomas:</b></p><p><i><u>Ascaris lumbricoides</u></i></p>'},
+ {t:"img", k:"parasito"},
+ {t:"gap"},
+ {t:"nota", tit:"⚠️ ¡Atención!", txt:'<b>En nuestro Protocolo podés quedarte tranquilo:</b> <b class="v">ningún parásito va a salir vivo</b> de forma incómoda. Se eliminan ya muertos y deshechos, casi imperceptibles. ☺️'},
+ {t:"tx", h:'<p style="margin-top:18px"><b class="v">La desparasitación va a ocurrir primero</b> <b>a través de un licuado de jengibre con un ingrediente secreto que se consigue fácil en cualquier supermercado y que casi nadie usa.</b></p>'},
+ {t:"img", k:"bebida", est:"max-width:80%;margin:0 auto"},
+ {t:"gap1"},
+ {t:"btn", l:"¡Generar mi Protocolo de Tratamiento! ✅", pulso:true}
+]},
+
+/* 27 · oferta */
+{barra:false, oferta:true, b:[
+ {t:"tx", h:'<p>🤩 Protocolo <b class="sub">¡Generado con ÉXITO!</b></p>'},
+ {t:"html", h:'<div class="placa"><b>Tu protocolo</b><span>Exclusivo está listo</span><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></i></div>'},
+ {t:"gap"},
+ {t:"tx", h:'<h2><span class="v">Terminá con todos los dolores en 9 días</span> con esta bebida casera hecha con apenas 2 ingredientes naturales</h2><p>La preparación revelada por especialistas en salud articular, con las principales hierbas antiinflamatorias y los cuidados que ayudan a terminar con todos los dolores del cuerpo, mejorando tu movilidad y tu calidad de vida</p><p><b>sin remedios, sin cirugía, y con resultados visibles incluso después de los 70 años…</b></p>'},
+ {t:"gap"},
+ {t:"antes"},
+ {t:"gap3"},
+ {t:"tx", h:'<p><b>Escuchá el audio. Te voy a explicar <span class="v">cómo funciona el Protocolo de Desparasitación Articular.</span> 👇</b></p>'},
+ {t:"wa", k:"a3"},
+ {t:"gap1"},
+ {t:"nota", tit:'<span class="v">Atención</span>', txt:'Este protocolo fue desarrollado con mucho cuidado para vos, que convivís con los dolores y <b class="v">harías de todo para recuperar el control de tu cuerpo, dormir mejor y volver a sentirte libre.</b>'},
+ {t:"gap1"},
+ {t:"tx", izq:true, h:'<p>✅ Entonces, si convivís con síntomas como dolor al agacharte, al caminar o incluso en el día a día...</p><p>✅ Si ya no dormís una noche entera por culpa de los dolores...</p><p>✅ O si sentís que tu cuerpo ya no rinde igual — y los médicos te dicen que “es normal para tu edad”...</p><p>Y <b>no aguantás más vivir limitado</b>, con miedo de depender de pañales, sondas o una cirugía…</p><p><b>Entonces el protocolo natural de 9 días es para vos.</b></p>'},
+ {t:"gap"},
+ {t:"img", k:"logo", est:"max-width:68%;margin:0 auto"},
+ {t:"gap1"},
+ {t:"html", h:'<div class="stack">' +
+   '<div class="it">✅ Preparación para la desparasitación — $17.990</div>' +
+   '<div class="it">✅ Desparasitación completa — $26.990</div>' +
+   '<div class="it">✅ Acompañamiento individual — $45.990</div>' +
+   '<div class="it">✅ Guía alimentaria contra los parásitos — $12.990</div>' +
+   '<div class="it">✅ Consultas con el equipo — $13.990</div>' +
+   '<div class="it">✅ Mantenimiento anual del protocolo — $22.990</div>' +
+   '<div class="it">✅ Receta para la desparasitación articular en 9 días — $45.990</div>' +
+ '</div>'},
+ {t:"precio"},
+ {t:"gap1"},
+ {t:"cta", l:"¡Acceder a mi Protocolo Ahora! ✅"},
+ {t:"conf"},
+ {t:"gap1"},
+ {t:"html", h:'<div class="gar"><div class="sello"><div><b>6</b><small>MESES</small><small>GARANTÍA</small></div></div>' +
+   '<div class="tx2"><b>PRUEBA SEGURA 180 DÍAS DE GARANTÍA</b><span>Resultado garantizado o te devolvemos tu dinero.</span></div></div>'},
+ {t:"gap"},
+ {t:"video", slot:3},
+ {t:"gap1"},
+ {t:"tx", izq:true, h:'<p><b>En las primeras semanas siguiendo nuestro protocolo, vas a…</b></p><ul class="lista"><li>Sentir tu movilidad mejor, con más facilidad y menos esfuerzo.</li><li>Dormir mejor, sin tener que darte vuelta mil veces durante la noche.</li><li>Notar cómo vuelve de a poco tu calidad de vida, hasta liberarte del todo de los dolores.</li></ul>'},
+ {t:"gap"},
+ {t:"cajaprecio"},
+ {t:"gap"},
+ {t:"cta", l:"¡Acceder a mi Protocolo Ahora! ✅"},
+ {t:"gap"},
+ {t:"res", r:"hugo"},
+ {t:"res", r:"teresa"},
+ {t:"res", r:"antonio"},
+ {t:"gap"},
+ {t:"tx", izq:true, h:'<h3>Además te llevás, totalmente gratis, la “Guía Esencial de la Movilidad Duradera”, con contenidos como:</h3><p style="text-align:center"><b style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:4px">CONTENIDO GRABADO POR ESPECIALISTAS</b></p><ul class="chk"><li>✅ Los principales <b>enemigos ocultos</b> de tu rutina que te están robando la energía y la flexibilidad sin que te des cuenta.</li><li>✅ Hábitos simples y naturales que ayudan a recuperar el movimiento libre y la liviandad en tu día a día.</li><li>✅ Cómo identificar señales silenciosas de tensión e inflamación crónica, sin tener que vivir yendo al especialista.</li><li>✅ Estrategias naturales para fortalecer tus articulaciones, bajar el estrés y recuperar la confianza para vivir sin límites.</li></ul>'},
+ {t:"gap"},
+ {t:"cta", l:"¡Acceder a mi Protocolo Ahora! ✅"},
+ {t:"gap"},
+ {t:"tx", h:'<h3><span class="v">Y también te llevás un regalo sorpresa, totalmente gratis, si entrás hoy al grupo de personas que decidieron terminar con sus dolores este mismo mes.</span></h3>'},
+ {t:"img", k:"regalo"},
+ {t:"gap1"},
+ {t:"cta", l:"¡Acceder a mi Protocolo Ahora! ✅"},
+ {t:"gap"},
+ {t:"html", h:'<div class="gar-txt"><b>Tu riesgo es cero.</b><br>La Ley de Defensa del Consumidor (24.240) te da 10 días de arrepentimiento, pero nosotros confiamos tanto en la calidad de nuestro producto que lo <b>extendemos a 180 DÍAS</b>. Si cumplís el protocolo y no tenés resultados, <b>te devolvemos tu dinero sin burocracia.</b> ¡Hacé la prueba sin compromiso!</div>'},
+ {t:"gap"},
+ {t:"tx", izq:true, h:'<p><b>¿Cuántas veces escuchaste que es normal convivir con esto a tu edad?</b></p><p>La verdad es que tu cuerpo <b>todavía responde</b> — solo necesita <b>el estímulo correcto en el momento correcto</b>.</p><p>🌿 Este protocolo natural ya ayudó a cientos de personas que no podían dar ni 2 pasos sin una muleta a volver a moverse con total libertad, sin ningún dolor.</p><p>Y ahora puede ser tu turno.</p><p>✨ No dejes que la edad defina tu calidad de vida.</p><p>Tocá el botón de abajo y empezá hoy a recuperar el control de tu movilidad.</p>'},
+ {t:"gap"},
+ {t:"cta", l:"¡Acceder a mi Protocolo Ahora! ✅"},
+ {t:"gap"},
+ {t:"faq"}
+]}
+];
+
+/* ═══ 6. estado y render ══════════════════════════════════ */
+var app = document.getElementById("app"),
+    marca = document.getElementById("marca"),
+    barra = document.getElementById("barra"),
+    volver = document.getElementById("volver"),
+    estado = {i:0, genero:"hombre", multi:{}};
+
+function slotVideo(n){ return estado.genero + "_" + n; }
+
+function bloque(b, idx){
+  switch (b.t){
+    case "tx":   return '<div class="tx' + (b.izq ? " izq" : "") + '">' + b.h + '</div>';
+    case "html": return b.h.replace(/\[\[IMG:([a-z_]+)\|([^\]]*)\]\]/g, function(_, k, alt){ return IMGTAG(k, alt); });
+    case "img":  return IMGTAG(b.k, "", b.est ? ' style="' + b.est + '"' : "");
+    case "lam":  return lamina(estado.genero);
+    case "gap":  return '<div class="gap"></div>';
+    case "gap1": return '<div class="gap1"></div>';
+    case "gap3": return '<div class="gap3"></div>';
+    case "btn":  return '<button class="btn' + (b.pulso ? " pulso" : "") + '" type="button" data-act="' +
+                   (b.next ? "next" : "avanzar") + '">' + b.l + '</button>';
+    case "cta":  return '<button class="btn pulso js-cta" type="button" data-act="checkout">' + b.l + '</button>';
+    case "wa":   return wa(b.k);
+    case "video":return video(slotVideo(b.slot));
+    case "res":  return resena(R[typeof b.r === "string" ? b.r : b.r[estado.genero]]);
+    case "nota": return '<div class="nota' + (b.ok ? " ok" : "") + '"><b>' + b.tit + '</b><p>' + b.txt + '</p></div>';
+    case "car":  return '<div class="car" id="car">' + chat(CHATS[0]) + chat(CHATS[1]) + '</div><div class="pts" id="pts"><i class="on"></i><i></i></div>';
+    case "ops":  return ops(b, idx);
+    case "met":  return b.items.map(function(m){
+                   return '<div class="met ' + m[2] + '"><div class="met-h"><span>' + m[0] + '</span><span>' + m[1] + '%</span></div>' +
+                          '<div class="met-t" data-pct="' + m[1] + '"><i></i><u></u></div></div>';
+                 }).join("");
+    case "carga":return b.items.map(function(c, j){
+                   return '<div class="carga"><div class="carga-h"><span>' + c[0] + '</span><span class="pc">0%</span></div>' +
+                          '<div class="carga-t" data-seg="' + c[1] + '"><i></i></div></div>';
+                 }).join("");
+    case "antes":
+      var g = estado.genero;
+      return '<div class="ad">' +
+        '<div class="ad-c"><h5>Antes</h5>' + IMGTAG("antes_" + g, "Antes") + '</div>' +
+        '<div class="ad-c"><h5>Después</h5>' + IMGTAG("despues_" + g, "Después") + '</div></div>' +
+        '<div class="ad"><p class="ad-p">Este sos vos sufriendo con los parásitos.</p><p class="ad-p">Este sos vos libre de dolores.</p></div>' +
+        '<div class="ad" style="margin-top:14px">' +
+          '<div class="met verde" style="margin:0"><div class="met-t" data-pct="35"><i></i><u></u></div></div>' +
+          '<div class="met verde" style="margin:0"><div class="met-t" data-pct="95"><i></i><u></u></div></div>' +
+        '</div>';
+    case "precio":
+      return '<div class="precio"><div class="tach">Valor total: $' + P.PRECIO_TACHADO + '</div>' +
+        '<div class="por">Por apenas</div><div class="num">$' + P.PRECIO + '</div>' +
+        '<div class="cuo">en un solo pago · pesos (ARS)</div>' +
+        '<p class="cuo">o hasta <b>' + P.CUOTAS + ' cuotas de $' + P.CUOTA + '</b> con Mercado Pago</p></div>';
+    case "cajaprecio":
+      return '<div class="caja-precio" data-cta><b>PRUEBA 180 DÍAS<br>sin compromiso</b>' +
+        '<div class="chip"><small>por apenas ' + P.CUOTAS + 'x</small><span>$' + P.CUOTA + '</span></div></div>';
+    case "conf":
+      return '<div class="conf"><b>✅ Pago único</b><span>Sin mensualidades.</span></div>' +
+             '<div class="conf"><b>✅ Acceso inmediato</b><span>Te llega al correo apenas confirmás el pago.</span></div>';
+    case "faq":
+      return '<div class="gar-txt" style="text-align:left">' +
+        '<p style="margin:0 0 8px"><b>¿Es una suscripción?</b><br>No. Es un <b>pago único de $' + P.PRECIO + '</b>. No se renueva, no se descuenta nada después y no hay mensualidades.</p>' +
+        '<p style="margin:0 0 8px"><b>¿Cómo lo recibo?</b><br>Por correo electrónico, a los 2 minutos de confirmar el pago. El acceso es de por vida.</p>' +
+        '<p style="margin:0"><b>¿Necesito comprar algo más?</b><br>No. Los 2 ingredientes se consiguen en cualquier supermercado.</p></div>';
+  }
+  return "";
+}
+
+function ops(b, idx){
+  var h = '<div class="ops' + (b.g2 ? " g2" : "") + '" data-ops="' + idx + '"' + (b.multi ? ' data-multi="1"' : "") + '>';
+  for (var i = 0; i < b.items.length; i++){
+    var o = b.items[i];
+    if (b.foto){
+      h += '<button class="op foto" type="button" data-act="choose" data-i="' + i + '"' +
+           (o.genero ? ' data-genero="' + o.genero + '"' : "") + '>' +
+           '<span class="ph">' + IMGTAG(o.k, o.l) + '</span>' +
+           '<span class="pie"><span class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span><span class="lb">' + o.l + '</span></span></button>';
+    } else {
+      h += '<button class="op" type="button" data-act="' + (b.multi ? "toggle" : "choose") + '" data-i="' + i + '">' +
+           (o.e ? '<span class="emo">' + o.e + '</span>' : "") +
+           '<span class="lb">' + o.l + '</span>' +
+           (b.multi
+             ? '<span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>'
+             : (b.flecha ? '<span class="fl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>' : "")) +
+           '</button>';
+    }
+  }
+  return h + "</div>";
+}
+
+/* progreso: solo las pantallas de PREGUNTA */
+function progreso(){
+  var total = 0, pos = 0;
+  for (var k = 0; k < PASOS.length; k++){
+    if (!PASOS[k].preg) continue;
+    total++;
+    if (k <= estado.i) pos++;
+  }
+  var p = PASOS[estado.i];
+  if (!p.preg && estado.i > 1 && pos > 0) { /* mantiene el último valor */ }
+  return total ? Math.min(100, Math.round(pos / total * 100)) : 100;
+}
+
+var timers = [];
+function limpiarTimers(){ timers.forEach(function(t){ clearInterval(t); clearTimeout(t); }); timers = []; }
+
+function ir(i, guardar){
+  if (i < 0 || i >= PASOS.length) return;
+  limpiarTimers();
+  estado.i = i;
+  var p = PASOS[i], h = "";
+  for (var j = 0; j < p.b.length; j++) h += bloque(p.b[j], j);
+  app.innerHTML = h;
+
+  /* cabecera */
+  marca.innerHTML = (p.logo === false) ? "" : IMGTAG("logo", "Protocolo Desparasitación Articular");
+  var mostrarBarra = (p.barra !== false) && i > 0;
+  barra.hidden = !mostrarBarra;
+  if (mostrarBarra) barra.firstChild.style.width = progreso() + "%";
+  volver.className = "volver" + ((i === 0 || p.volver === false) ? " off" : "");
+
+  window.scrollTo(0, 0);
+  activar(p);
+  ligarCTAs();
+  if (p.oferta) prueba_social(true); else prueba_social(false);
+}
+
+/* ═══ 7. comportamientos por paso ═════════════════════════ */
+function activar(p){
+  /* métricas: se pintan con un rAF para que la transición se vea */
+  var mets = app.querySelectorAll(".met-t");
+  if (mets.length) requestAnimationFrame(function(){ requestAnimationFrame(function(){
+    for (var i = 0; i < mets.length; i++){
+      var pc = +mets[i].getAttribute("data-pct");
+      mets[i].querySelector("i").style.width = pc + "%";
+      mets[i].querySelector("u").style.left = pc + "%";
+    }
+  }); });
+
+  /* cargas encadenadas */
+  var cargas = app.querySelectorAll(".carga-t");
+  if (cargas.length){
+    var total = 0;
+    for (var c = 0; c < cargas.length; c++) total += +cargas[c].getAttribute("data-seg");
+    (function corre(n){
+      if (n >= cargas.length){ timers.push(setTimeout(function(){ ir(estado.i + 1, true); }, 350)); return; }
+      var el = cargas[n], seg = +el.getAttribute("data-seg") * 1000, t0 = Date.now(),
+          pc = el.parentNode.querySelector(".pc"), it = el.querySelector("i");
+      var iv = setInterval(function(){
+        if (!document.body.contains(el)) { clearInterval(iv); return; }
+        var f = Math.min(1, (Date.now() - t0) / seg);
+        it.style.width = (f * 100) + "%";
+        if (pc) pc.textContent = Math.round(f * 100) + "%";
+        if (f >= 1){ clearInterval(iv); corre(n + 1); }
+      }, 60);
+      timers.push(iv);
+    })(0);
+  }
+
+  /* carrusel: puntos */
+  var car = app.querySelector("#car"), pts = app.querySelector("#pts");
+  if (car && pts) car.addEventListener("scroll", function(){
+    var k = Math.round(car.scrollLeft / car.clientWidth);
+    for (var i = 0; i < pts.children.length; i++) pts.children[i].className = (i === k ? "on" : "");
+  });
+
+  /* audio de WhatsApp */
+  var reps = app.querySelectorAll(".wab");
+  for (var a = 0; a < reps.length; a++) (function(box){
+    var au = box.querySelector("audio"), bt = box.querySelector(".pl"),
+        tr = box.querySelector(".wa-tr"), tm = box.querySelector(".wa-time");
+    if (!au.getAttribute("src")) au.src = au.getAttribute("data-src");
+    var barras = tr.querySelectorAll("b");
+    function pinta(){
+      var d = au.duration || 0, f = d ? au.currentTime / d : 0, n = Math.floor(f * barras.length);
+      for (var i = 0; i < barras.length; i++) barras[i].className = (i < n ? "hecho" : "");
+      var s = Math.floor(au.currentTime || 0);
+      tm.textContent = Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
+    }
+    au.addEventListener("timeupdate", pinta);
+    au.addEventListener("loadedmetadata", function(){
+      var s = Math.floor(au.duration || 0);
+      tm.textContent = Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
+    });
+    function icono(){
+      bt.innerHTML = au.paused
+        ? '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
+    }
+    au.addEventListener("play", icono); au.addEventListener("pause", icono); au.addEventListener("ended", icono);
+    bt.addEventListener("click", function(){ if (au.paused) au.play().catch(function(){}); else au.pause(); });
+    /* intenta arrancar solo: hubo clic antes, así que el navegador suele dejar */
+    au.play().catch(function(){});
+  })(reps[a]);
+}
+
+/* ═══ 8. clics ════════════════════════════════════════════ */
+app.addEventListener("click", function(ev){
+  var el = ev.target.closest("[data-act]");
+  if (!el) return;
+  var act = el.getAttribute("data-act");
+
+  if (act === "checkout"){
+    try { fbq("track", "AddToCart"); } catch(e){}
+    window.location.href = checkoutHref();
+    return;
+  }
+  if (act === "avanzar"){ ir(estado.i + 1, true); return; }
+  if (act === "choose"){
+    var g = el.getAttribute("data-genero");
+    if (g) estado.genero = g;
+    el.classList.add("on");
+    setTimeout(function(){ ir(estado.i + 1, true); }, 150);
+    return;
+  }
+  if (act === "toggle"){ el.classList.toggle("on"); return; }
+  if (act === "next"){
+    var caja = app.querySelector("[data-multi]");
+    if (caja && !caja.querySelector(".op.on")){
+      caja.animate([{transform:"translateX(0)"},{transform:"translateX(-5px)"},{transform:"translateX(5px)"},{transform:"translateX(0)"}], {duration:240});
+      return;
+    }
+    ir(estado.i + 1, true);
+  }
+});
+volver.addEventListener("click", function(){ if (estado.i > 0) ir(estado.i - 1, true); });
+
+/* ═══ 9. CTAs al checkout — un solo lugar, idempotente ════ */
+function ligarCTAs(){
+  var sel = document.querySelectorAll("a.btn, button.btn.js-cta, [data-cta], [data-act=checkout]");
+  for (var i = 0; i < sel.length; i++){
+    var e = sel[i];
+    if (e.getAttribute("data-ligado")) continue;
+    e.setAttribute("data-ligado", "1");
+    if (e.tagName === "A"){ e.setAttribute("href", checkoutHref()); e.setAttribute("rel", "noopener"); continue; }
+    if (e.hasAttribute("data-cta") && e.getAttribute("data-act") !== "checkout"){
+      e.style.cursor = "pointer";
+      e.addEventListener("click", function(){
+        try { fbq("track", "AddToCart"); } catch(err){}
+        window.location.href = checkoutHref();
+      });
+    }
+  }
+}
+
+/* ═══ 10. prueba social discreta (solo en la oferta) ══════ */
+var NOMBRES = ["Claudia R.","Rubén D.","Marta S.","Jorge P.","Elsa M.","Héctor G.","Nilda F.","Oscar L.","Susana A.","Raúl B."];
+var CIUDADES = ["Rosario","Córdoba","La Plata","Mar del Plata","Mendoza","Salta","Bahía Blanca","Tucumán","Santa Fe","Neuquén"];
+var psTimer = null, cupos = 9, psIdx = 0;
+function prueba_social(on){
+  var el = document.getElementById("psocial");
+  if (psTimer){ clearInterval(psTimer); psTimer = null; }
+  el.classList.remove("on");
+  if (!on) return;
+  function mostrar(){
+    var n = NOMBRES[psIdx % NOMBRES.length], c = CIUDADES[psIdx % CIUDADES.length];
+    psIdx++;
+    if (cupos > 2) cupos--;
+    el.querySelector(".ini").textContent = n[0];
+    el.querySelector("b").textContent = n + " de " + c + " se sumó al Protocolo";
+    el.querySelector("span").textContent = "hace " + (2 + psIdx * 3) + " min · Quedan " + cupos + " cupos con descuento";
+    el.classList.add("on");
+    setTimeout(function(){ el.classList.remove("on"); }, 4500);
+  }
+  setTimeout(mostrar, 3500);
+  psTimer = setInterval(mostrar, 16000);
+}
+
+/* ═══ 11. arranque — SIEMPRE en la portada ════════════════ */
+try { localStorage.removeItem("ld_paso"); } catch(e){}
+var pedido = parseInt(param("paso"), 10);
+ligarCTAs();
+ir(pedido >= 0 && pedido < PASOS.length ? pedido : 0, false);
+
+})();
+</script>
+</body>
+</html>

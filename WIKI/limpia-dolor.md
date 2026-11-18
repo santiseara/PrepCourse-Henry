@@ -36,7 +36,7 @@ qué harías si → compromiso + chats → la mejor parte → **audio 2 + caso r
 ## Lo que se hizo propio
 
 - **Los 3 audios de WhatsApp del "Doctor Rodrigo"**, reescritos en castellano rioplatense y regrabados con **Orus**
-  (81 s, 50 s y 34 s, a `atempo=1.20`). La foto de perfil del doctor es la suya, que no tiene texto.
+  (75 s, 46 s y 31 s, a `atempo=1.30`). La foto de perfil del doctor es la suya, que no tiene texto.
   ⚠️ El audio 3 del original dice que el protocolo llega **por WhatsApp**; acá dice **por correo**, que es como entrega
   ImpulTienda y respeta la regla de no pedir contacto dentro del quiz.
 - **Los 6 videos de testimonio** generados con **Veo 3.1 Fast** por ApiMart (US$ 0,78 las 6 tomas de 8 s). Ver
@@ -61,8 +61,8 @@ Su checkout de **Payt**, su analítica y su `__NEXT_DATA__` de InLead (es su pla
 
 ```
 ~/Desktop/limpia-dolor/
-  landing/limpia-dolor-quiz.txt              1,21 MB · para pegar en el custom_html
-  landing/limpia-dolor-quiz-CON-VIDEOS.txt   3,42 MB · con los 6 videos embebidos
+  landing/limpia-dolor-quiz.txt              1,17 MB · para pegar en el custom_html
+  landing/limpia-dolor-quiz-CON-VIDEOS.txt   3,37 MB · con los 6 videos embebidos
   landing/limpia-dolor-PRUEBA.html           el mismo, para abrir en Chrome
   landing/quiz.html                          el fuente, con el bloque CONFIG arriba
   landing/media/                             3 mp3 + 6 mp4 listos para subir

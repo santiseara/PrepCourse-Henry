@@ -1,14 +1,16 @@
 # Quizzes: reglas de armado (checklist viva)
-### 🆕 2026-11-18 · La voz de un quiz también va a 1.20
-Santiago, sobre los audios del médico de [[limpia-dolor]]: *"quiero que a los audios del medico le metas un poco de
-velocidad, suena muy lento"*. La regla de velocidad del 5/11 estaba anotada para los **ads**; vale igual para
-**cualquier voz en off que entreguemos**, audios de WhatsApp dentro de un quiz incluidos.
+### 🆕 2026-11-18 · La voz de un quiz va a 1.30, no a 1.20
+Santiago pidió acelerar los audios del médico de [[limpia-dolor]] **dos veces**: *"le metas un poco de velocidad,
+suena muy lento"* y, con 1.20 ya puesto, *"metele un poco mas de velocidad a los audios, 1.3"*.
 
-- **`atempo=1.20` en ffmpeg**, que no toca el tono: no hay que regrabar nada.
-- **Se sale con 1.20 de entrada.** Un bloque de estilo que pide *"ritmo pausado, con pausas reales"* le saca al TTS
-  unas **145 palabras por minuto**, que leído parece prolijo y escuchado en el teléfono se siente lento. Con 1.20
-  quedan **~175 ppm**, que es una persona hablando normal.
-- Se mide, no se escucha: `palabras / duración × 60`. Debajo de 150 ppm, va acelerado.
+- **El número para una voz dentro de un quiz es `atempo=1.30`** (~190 palabras por minuto). La regla del 5/11, de
+  **1.20**, es la de la **voz en off de los ads** y sigue valiendo ahí.
+- Tiene sentido que sean distintas: en un ad la voz la sostiene el video; en un quiz la persona está mirando una
+  pantalla quieta, esperando para seguir, y 175 ppm todavía se siente lento.
+- **`atempo` no toca el tono**, así que acelerar nunca obliga a regrabar.
+- ⚠️ **Se acelera SIEMPRE desde el `.wav` original a 1.0**, nunca sobre el mp3 ya acelerado: encadenar 1.20 y 1.30 da
+  1.56 y la voz sale como un dibujo animado. Conviene dejar los wav crudos en el scratchpad hasta cerrar la entrega.
+- Se mide, no se escucha: `palabras / duración × 60`.
 
 ### 🆕 2026-11-18 · Un quiz de InLead SÍ se descifra: el algoritmo está en su propio bundle
 La regla del 12/10 decía *"InLead encripta el contenido en `__NEXT_DATA__` (campo `q`). **No descifrarlo por código**;
@@ -724,7 +726,8 @@ Santiago: *"El emoji de las baterías se ve muy mal."* Eran las opciones de nive
 | Fecha | Quiz | Corrección | Regla |
 |---|---|---|---|
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "este es el link de checkout, `https://protocolo-desparacitacion-intestinal.impultienda.ar/checkout`. Agregalo en todos los botones de cta de la ultima slide" | `curl -sIL` → **200 y 0 redirecciones** antes de ponerla. Va en **un solo lugar** (`CONFIG.CHECKOUT`, verificado: aparece 1 vez y no queda ningún `/checkout` suelto). Probado sobre una copia instrumentada: los **6 CTAs** salen con el host completo y los 6 parámetros, y sin parámetros queda el checkout exacto. ⚠️ **El subdominio no se deduce**: dice *desparacitacion* (con c) y *intestinal*, no *articular* |
-| 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "a los audios del medico le metas un poco de velocidad, suena muy lento" | **La voz de un quiz va a la misma velocidad que la de los ads: `atempo=1.20`** (regla del 2026-11-05). Los tres audios de WhatsApp pasaron de 148/138/149 a **177/166/178 palabras por minuto** (97→81 s, 60→50 s, 40→34 s). El `atempo` de ffmpeg no cambia el tono, así que no hay que regrabar. **Conviene salir con 1.20 de entrada**: el TTS con un estilo que pide "ritmo pausado" entrega ~145 ppm, que en pantalla se siente lento |
+| 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "metele un poco mas de velocidad a los audios, 1.3" (con 1.20 ya puesto) | **La voz de un quiz va a `atempo=1.30`**, no a 1.20 como la de los ads: 192/179/193 ppm (75 s, 46 s y 31 s). Se rehace **desde el wav original a 1.0**, nunca encadenando sobre el mp3 ya acelerado |
+| 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "a los audios del medico le metas un poco de velocidad, suena muy lento" | Primer paso: `atempo=1.20` (177/166/178 ppm). **No alcanzó** — ver la fila de abajo y la regla del 18/11: el número de un quiz es **1.30** |
 | 2026-11-18 | Quiz Protocolo Limpia Dolor (AR) | "Vamos con una oferta nueva, necesito que le copiemos el quiz, lo vamos a cobrar 17.990 ars, es para argentina, en donde hay videos, no los metas, o sii sentis que con apimart los podes hacer bien y que queden reales, hacelos" | Primer clon de un funnel de **InLead descifrado por código** (su `q` cifrado se abre con el algoritmo de su propio bundle: ver la regla del 18/11). 28 pantallas con rama por género, en voseo, a $17.990. **Los videos se hicieron**: 6 testimonios de 8 s con `veo3.1-fast` por ApiMart (US$ 0,78), con el acento rioplatense verificado y la línea de "caso ilustrativo" debajo. Los **3 audios del médico** regrabados con Orus — y ahí apareció que `gemini-3.8-flash-tts` **lee el bloque de estilo en voz alta**. La **captura falsa del G1 no se clonó**: va una tarjeta de divulgación sin marca. Peso: imágenes y audio embebidos (1,34 MB), video por URL |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Y que la barra de progreso de arriba vaya avanzando según va completando" | **No faltaba: estaba en 100 % desde la primera pregunta.** El `progressBar()` del motor colapsa las pantallas con `outcome` en una sola (asume que son los 3 resultados), y acá el `outcome` lo llevan 35 de 36 porque es el mecanismo del A/B: `total = 2` y la barra nacía llena. Se parchea el motor desde el script de armado (con `assert` de que el bloque viejo matchee) para contar solo las **pantallas de pregunta del carril actual**: avanza de a 4 % y llega a 100 % en la última |
 | 2026-11-16 | Quiz Reseteo del Nervio Vago (LATAM) | "Este es el link de mi checkout, ajustame los botones de la ultima slide `https://resetnervio-vago.impultienda.ar/checkout`" | `curl -sIL` → **200, 0 redirecciones** antes de ponerla. Va en **un solo lugar** (`CONFIG.CHECKOUT`, verificado: aparece 1 vez y no queda ningún `/checkout` suelto). Como este motor **navega por JS**, se verifica sobre una **copia instrumentada** que captura el destino en vez de navegar, para no mandar visitas de prueba a la tienda real: los 2 CTAs salen con el host completo y los 6 parámetros |

@@ -98,6 +98,14 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
   - Las tomas con **dos personajes muy juntos o con contacto** son las que más brazos duplican: se separan en el encuadre o se pide contacto explícito y simple (una mano en el hombro, no un abrazo).
   - El control visual **es por toma y cuadro por cuadro** (checklist de arriba), antes del montaje. Una toma con el cuerpo roto **se regenera**, no se corrige en edición ni se tapa con un corte.
 
+- **2026-11-18 · Una placa fija = una capa, no una entrada de ffmpeg.** Montando el anuncio 8 de
+  [[cabello-fuerte]] (9 placas sobre 171 s) ffmpeg murió con `-9`: cada `-loop 1 -i placa.png` retiene cuadros
+  de 1080×1920 y el sistema lo mata por memoria. **Todas las placas se componen en un solo MOV con alfa,
+  recortado a la franja útil**, igual que los subtítulos. Vale para cualquier montaje con más de 3 o 4 placas.
+- **2026-11-18 · Al calcar un creativo ajeno, el control de "quedó texto del original" va sobre los planos que
+  entran al video.** Saltear los índices de presentador (los reemplaza el avatar) antes de contar: si no, se
+  persiguen fantasmas. Detalle del limpiador de subtítulos quemados en [[cabello-fuerte]].
+
 ## Preguntas abiertas
 
 - ✅ **Resuelto el 11/11: sale de Veo 3.1 Fast por [[apimart]]** (mirá la Regla 0). Se probó `wan2.7-r2v` con voz de Gemini TTS como `reference_voice` y se descartó el mismo día: audio plano y visual que se nota. HeyGen queda para doblaje.

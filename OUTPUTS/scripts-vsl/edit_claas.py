@@ -56,31 +56,39 @@ def buscar(nombre):
 
 
 def bandas(mp4):
-    """Franjas lisas que a veces deja HeyGen arriba y abajo del lienzo 9:16.
-    18/11/2026: con los renders de Avatar IV a 720x1280 el detector da FALSO POSITIVO
-    (301 px arriba y abajo sobre un cuadro lleno), porque el escalado a 120x1920 alisa
-    los degrade del fondo. Esos renders ya vienen 9:16 limpios, asi que se apaga."""
-    return 0, 0
-    import tempfile
-    tmp = tempfile.mktemp(suffix='.raw')
-    subprocess.run([FF, '-nostdin', '-loglevel', 'error', '-ss', '5', '-i', mp4,
-                    '-frames:v', '1', '-vf', f'scale=120:{H},format=gray',
-                    '-f', 'rawvideo', tmp], capture_output=True)
-    try:
-        d = open(tmp, 'rb').read()
-    except OSError:
+    """Franjas lisas (de CUALQUIER tono) que HeyGen deja arriba y abajo del lienzo.
+    18/11/2026, segunda vuelta: el avatar "Doctor Lucas VSL" sale encajonado en blanco,
+    201 px arriba y 201 px abajo sobre 1280. La primera version media sobre un rescalado a
+    120x1920 (que alisa los degrade del fondo y da falso positivo) y solo buscaba NEGRO.
+    Esta mide en la resolucion nativa, acepta cualquier tono y mira 3 cuadros: una franja
+    de verdad esta en los tres. Devuelve (arriba, abajo) en pixeles del ORIGEN."""
+    # ojo: en esta Mac `ffprobe` es un shim que SOLO devuelve la duracion; el alto sale de ffmpeg -i
+    info = subprocess.run([FF, '-hide_banner', '-i', mp4], capture_output=True, text=True).stderr
+    m = re.search(r'Video:.*?(\d{2,5})x(\d{2,5})', info)
+    if not m:
         return 0, 0
-    finally:
-        if os.path.exists(tmp): os.remove(tmp)
-    W2 = 120
-    filas = [d[i*W2:(i+1)*W2] for i in range(len(d)//W2)]
-    if not filas: return 0, 0
-    liso = lambda f: (max(f) - min(f)) < 10
-    arr = 0
-    while arr < len(filas) and liso(filas[arr]): arr += 1
-    ab = 0
-    while ab < len(filas) - arr and liso(filas[len(filas)-1-ab]): ab += 1
-    if arr + ab < 40 or (len(filas) - arr - ab) < 400:
+    alto = int(m.group(2))
+    NC = 64
+    medidas = []
+    for t in ('4', '12', '25'):
+        d = subprocess.run([FF, '-nostdin', '-v', 'error', '-ss', t, '-i', mp4, '-frames:v', '1',
+                            '-vf', f'format=gray,scale={NC}:{alto}', '-f', 'rawvideo', '-'],
+                           capture_output=True).stdout
+        if len(d) < NC * alto:
+            continue
+        filas = [d[i*NC:(i+1)*NC] for i in range(alto)]
+        liso = lambda f: (max(f) - min(f)) <= 6
+        a = 0
+        while a < alto // 2 and liso(filas[a]): a += 1
+        b = 0
+        while b < alto // 2 and liso(filas[alto-1-b]): b += 1
+        medidas.append((a, b))
+    if not medidas:
+        return 0, 0
+    arr = min(m[0] for m in medidas)
+    ab = min(m[1] for m in medidas)
+    # menos de 20 px no vale la pena, y nunca dejar menos de la mitad del cuadro
+    if arr + ab < 20 or (alto - arr - ab) < alto * 0.5:
         return 0, 0
     return arr, ab
 
@@ -190,12 +198,13 @@ def montar(plan):
     av = plan['avatar']
     cuerpo = f'{T}/cuerpo.mp4'
     arr, ab = bandas(av)
-    # bandas() mide sobre el lienzo ya escalado a 1080x1920: primero se escala y despues se recorta
-    post = f'crop={W}:{H-arr-ab}:0:{arr},scale={W}:{H},' if (arr or ab) else ''
-    if post:
-        print(f'  recorto banda del render: {arr}px arriba, {ab}px abajo', flush=True)
+    # las franjas se sacan EN EL ORIGEN y recien despues se escala a pantalla completa,
+    # si no el recorte posterior deforma la cara (estira en vertical)
+    pre = f'crop=iw:ih-{arr+ab}:0:{arr},' if (arr or ab) else ''
+    if pre:
+        print(f'  recorto la caja del render: {arr}px arriba, {ab}px abajo', flush=True)
     run([FF, '-v', 'error', '-y', '-i', av, '-filter_complex',
-         f'[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},{post}setsar=1,'
+         f'[0:v]{pre}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,'
          f'setpts=PTS/{sp},fps={FPS}[v];[0:a]atempo={sp},aresample=48000[a]',
          '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
          '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', cuerpo])

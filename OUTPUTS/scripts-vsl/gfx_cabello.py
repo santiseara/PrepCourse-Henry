@@ -200,18 +200,42 @@ def ranking(activo=None, titulo='¿CAÍDA DE PELO?'):
     for i, ((txt, col), x) in enumerate(zip(cols, xs)):
         r = 52
         d.ellipse([x - r, 250 - r, x + r, 250 + r], fill=col + (255,))
-        marca = '✓' if i == 0 else ('👍' if i == 1 else '✕')
-        if i != 1:
-            d.text((x, 248), marca, font=fuente(MONT, 62), fill=BLANCO, anchor='mm')
+        # el tilde y la cruz se dibujan: la fuente no los trae
+        if i == 0:
+            d.line([(x - 24, 250), (x - 6, 270), (x + 26, 228)], fill=BLANCO, width=10,
+                   joint='curve')
+        elif i == 2:
+            d.line([(x - 22, 228), (x + 22, 272)], fill=BLANCO, width=10)
+            d.line([(x + 22, 228), (x - 22, 272)], fill=BLANCO, width=10)
+        else:
+            # el pulgar arriba sale del emoji del sistema; si falla, un pulgar dibujado
+            try:
+                # el emoji va en su propia capa: dibujarlo sobre el mismo lienzo
+                # rompe los textos que vienen despues
+                f_emoji = ImageFont.truetype('/System/Library/Fonts/Apple Color Emoji.ttc', 48)
+                cap = Image.new('RGBA', (120, 120), (0, 0, 0, 0))
+                ImageDraw.Draw(cap).text((60, 60), '\U0001F44D', font=f_emoji,
+                                         anchor='mm', embedded_color=True)
+                img.alpha_composite(cap, (int(x) - 60, 250 - 60))
+            except Exception:
+                d.line([(x - 16, 262), (x - 16, 236), (x - 2, 222)], fill=BLANCO,
+                       width=9, joint='curve')
+                d.rectangle([x - 20, 238, x + 22, 266], fill=BLANCO)
         color = LIMA if activo == i else BLANCO
         _contorno(d, x, 380, txt, fe, color, NEGRO, 5, anchor='mm')
     return img
 
 
-def titular_grande(texto, y=0.22, color=AMARILLO):
-    """g8 — el nombre del producto que se tacha (Minoxidil, Biotina...) en grande."""
+def titular_grande(texto, y=0.57, color=(190, 255, 60, 255)):
+    """g8 — el nombre del producto que se tacha (Minoxidil, Biotina...) en grande,
+    a la altura del pecho de la presentadora, como en el original.
+
+    Medido sobre el original: la palabra ocupa ~82 % del ancho y cae sobre el
+    pecho, no arriba: pegada al titulo del sticker se come la fila del ranking."""
     img = _lienzo(); d = ImageDraw.Draw(img)
-    f = fuente(MONT, 76)
+    f = fuente(MONT, 140)
+    while _ancho(d, texto, f) > W * 0.88 and f.size > 56:
+        f = fuente(MONT, f.size - 4)
     _contorno(d, W // 2, int(H * y), texto, f, color, NEGRO, 7, anchor='mm')
     return img
 

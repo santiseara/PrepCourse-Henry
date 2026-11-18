@@ -180,7 +180,9 @@ def subtitulos(palabras, out, estilo='grande', por_vez=3, clave=None, color='ama
     est = (f'Style: D,{fn},{TS},&H00FFFFFF,&H00000000,&H00000000,&H90000000,-1,0,0,0,'
            f'100,100,0,0,1,4,3,2,70,70,{MV},1')
     cab = ('[Script Info]\nScriptType: v4.00+\n'
-           f'PlayResX: {W}\nPlayResY: {H}\nWrapStyle: 2\n\n'
+           # WrapStyle 0 = corte inteligente. Con 2 (sin corte) los grupos largos
+           # ('SACARON LA COLOSTOMIA') se pasaban de 1080 y se cortaban contra los bordes.
+           f'PlayResX: {W}\nPlayResY: {H}\nWrapStyle: 0\n\n'
            '[V4+ Styles]\nFormat: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,'
            'OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,'
            'Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding\n'

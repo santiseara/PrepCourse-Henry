@@ -42,6 +42,35 @@ Orden de impresiones de la propia biblioteca, salteando el único estático.
 - **Chrome bloquea la segunda descarga por blob de la misma página.** Para bajar varios renders de HeyGen, sacar la URL firmada del `<video>` en base64 (la herramienta censura los query strings en claro) y bajarla con `curl`.
 - **Cambiar de avatar en HeyGen resetea el modelo a Avatar 6 · Pro.** Siempre elegir avatar primero y modelo después, y mirar el selector antes de generar ([[vsl-reglas-de-armado]] §3c).
 
+## Registro de correcciones (18/11/2026, al cerrar la tanda)
+
+- 🐞 **Las placas fijas van en UNA capa, no una entrada por placa.** El anuncio 8 lleva 9 placas (5 estados
+  del ranking + 4 titulares) sobre 171 s y ffmpeg se murió con `-9` (lo mató el sistema por memoria): cada
+  `-loop 1 -i placa.png` retiene cuadros de 1080×1920. `capa_extras()` arma la línea de tiempo de todas las
+  placas, compone lo que esté activo en cada tramo, **recorta a la franja útil** y entrega un solo MOV con
+  alfa. Igual que `capa_subtitulos()`, que ya lo hacía bien.
+- 🐞 **El titular verde del anuncio 8 va al pecho (y = 0,57), no arriba.** Pegado al título del sticker se come
+  la fila ÓPTIMO / BUENO / MALO. Medido sobre el original: la palabra ocupa **~82 % del ancho** (fuente 140,
+  no 76).
+- 🐞 **Los tiempos de las placas se anclan a NUESTRA voz, no a los del original.** Se buscan las palabras en
+  `alineacion/<guion>.json` (Minoxidil 5,94 · Biotina 15,14 · Shampoo anticaída 27,48 · Clase online 60,70).
+  Es la misma regla que ya costó cara en [[dieta-3-fases]] con los subtítulos.
+- 🐞 **`limpia_subs.py` no veía los subtítulos de letra blanca sobre caja de color ni sobre banda gris.** Pedía
+  contorno negro alrededor de cada letra y los daba por brillos de la imagen: sobrevivían enteros los
+  `PODE`, `GRATUITA`, `SEM ATACAR` y `NA PRÓXIMA TERÇA FEIRA`. Lo que se agregó:
+  - **anillo de color plano** vale igual que el anillo negro (`_anillo_plano`);
+  - **el recuadro de color se detecta como tal** (`cajas_de_color`): rectángulo lleno, ancho, con letras
+    blancas adentro — el detector de letras lo tomaba como una letra gigante y lo descartaba;
+  - el rectángulo **se estira hasta tapar la caja entera** (`_estirar_a_la_caja`, con tope de 44 px para que
+    un fondo liso no se coma media imagen);
+  - **los renglones cortos cuentan**: el piso de ancho bajó de 12 % a 4,5 % (el `NA` suelto del anuncio 3);
+  - el repintado va a **media resolución y desenfoque 3** (antes un tercio y 5): sobre textura fina —la piel
+    del folículo 3D— el borrón se notaba más que el subtítulo.
+- ⚠️ **El control de restos se hace sobre los planos que de verdad entran al video.** La primera revisión
+  marcó portugués en los anuncios 3, 4 y 7 y resultó que esos planos los reemplaza el avatar. Hay que
+  saltear los índices de `presentador` / `avatares[].idx` antes de contar. Lo que sí quedaba sucio era otra
+  cosa: un `raiz` quemado en un plano de b-roll del anuncio 2.
+
 ## Preguntas abiertas
 - ¿La landing y el quiz se replican también, o se manda a un checkout directo?
 - El creativo #6 es una animación 3D de un villano que estrangula el folículo: falta decidir si se genera con Veo o se reusa el del original.

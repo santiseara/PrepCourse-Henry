@@ -1,3 +1,27 @@
+## 2026-11-18 (noche) — Slime Shop Kit: los 6 ads del mercado inglés
+
+Santiago: *"Segui haciendo los ads de la oferta de ingles"*.
+
+- **Los 6 videos terminados** (17 a 24 s, 9 a 12 planos cada uno) con los guiones de
+  `OUTPUTS/2026-11-18-guiones-slime-shop-kit-tanda1.md`, clonando la edición de Mariana Williams Creations:
+  caja de hook blanca arriba, subtítulos de 3 palabras con la palabra activa en amarillo, cama musical,
+  100 % b-roll de slime y nada más. Masters en `~/Desktop/slime-shop-kit/anuncios/`.
+- **Herramientas nuevas:** `OUTPUTS/scripts-vsl/gen_slime_plans.py` (los 6 planes) y `edit_slime.py` (el render).
+- 🐞 **La regla de "no repetir fuente" se quedaba sin candidatos**: compara `clave[:1]` y este pool se numeró
+  `c00…c83`, así que todas las claves empiezan igual y el render moría con `min() arg is an empty sequence`.
+  Ahora la familia es el **autor de TikTok**, que el generador saca del comentario de cada línea del `vent_`.
+- 🐞 **Dos clips del pool estaban corruptos** y colgaban a ffmpeg al abrirlos (*Operation timed out*). Uno estaba
+  en el pool y se rebajó con `dl_tikwm.py`.
+- 🐞 **`scan_carteles.py` se saltaba los clips de rango completo sin avisar** (no escribía el JPG y los daba por
+  limpios). Corregido con `format=yuv420p` + `-pix_fmt yuvj420p`.
+- **El pool se limpió en dos pasadas: 41 ventanas de 84 afuera.** El OCR de Vision volteó 35 (tutoriales en
+  castellano y en inglés, marcas de agua de clip entero, un cartel de Play-Doh, un aviso de tienda, un teléfono
+  de pedidos) y la **revisión visual del pool entero** volteó 6 más que el OCR había dejado pasar: dos pibes en
+  una cocina sin slime, la cara de una creadora, una **marca de agua china** y tres carteles de tienda que la
+  salida del OCR mezclaba con las etiquetas de los frascos. Un séptimo se recortó (una paleta de sombras a los 22 s).
+- **Los 6 subidos al Drive** (*Ebook Dami / Ebook Slime Shop Kit (EN) / Videos terminados*), comprimidos a ~6,8 MB.
+- Wiki nueva: `WIKI/slime-shop-kit.md`, y 4 reglas nuevas en `WIKI/guiones-y-anuncios.md`.
+
 ## 2026-11-18 — Cabello Fuerte: replica de Fernanda Lucas para Argentina
 
 - Bajados en HD los 8 mejores creativos de la pagina `1114993291702956` (Fernanda Lucas, caida de pelo en mujeres de 45-65, Brasil).

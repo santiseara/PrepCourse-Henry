@@ -35,7 +35,8 @@ for k, (fn, a, b, ex) in VENT.items():
         p = f'{tmp}/{fn}_{t:.1f}.jpg'
         if not os.path.exists(p):
             subprocess.run([FF, '-y', '-ss', str(round(t, 2)), '-i', f'{CL}/{fn}.mp4',
-                            '-vf', 'scale=720:-1', '-frames:v', '1', p, '-loglevel', 'error'])
+                            '-vf', 'scale=720:-1,format=yuv420p', '-pix_fmt', 'yuvj420p',
+                            '-frames:v', '1', p, '-loglevel', 'error'])   # sin format/pix_fmt, los clips de rango completo no escriben el jpg y el cuadro se saltea sin avisar
         if os.path.exists(p):
             jobs.append((k, fn, t, p))
         t += PASO

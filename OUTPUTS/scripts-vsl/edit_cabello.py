@@ -165,6 +165,63 @@ def tarjetas_de(estilo, palabras):
     return limpio
 
 
+def capa_extras(extras, total, tmp, out):
+    """Todas las placas fijas en un solo MOV con alfa.
+
+    Se arma la linea de tiempo de los cortes de todas las placas, se compone
+    lo que este activo en cada tramo y se recorta a la franja util: una sola
+    entrada para ffmpeg en vez de una por placa.
+    """
+    hechas = []
+    for ex in extras:
+        t0 = ex['t0'] * total if ex['t0'] <= 1 else ex['t0']
+        t1 = ex['t1'] * total if ex['t1'] <= 1 else ex['t1']
+        hechas.append((min(t0, total), min(t1, total),
+                       getattr(G, ex['fn'])(*ex.get('args', []))))
+    cortes = sorted({0.0, total} | {t for (a, b, _) in hechas for t in (a, b)})
+    tramos = []           # (t0, t1, imagen o None)
+    for a, b in zip(cortes, cortes[1:]):
+        if b - a < 0.02:
+            continue
+        activas = [im for (x, y, im) in hechas if x <= a + 0.001 and y >= b - 0.001]
+        if not activas:
+            tramos.append((a, b, None))
+            continue
+        comp = activas[0].copy()
+        for im in activas[1:]:
+            comp = G.Image.alpha_composite(comp, im)
+        tramos.append((a, b, comp))
+    # franja util: la caja que contiene todo lo que se dibuja
+    y0, y1 = G.H, 0
+    for (_, _, im) in tramos:
+        if im is None:
+            continue
+        caja = im.getbbox()
+        if caja:
+            y0, y1 = min(y0, caja[1]), max(y1, caja[3])
+    if y1 <= y0:
+        y0, y1 = 0, 2
+    y0, y1 = max(0, y0 - 2), min(G.H, y1 + 2)
+    d = os.path.join(tmp, 'extras')
+    os.makedirs(d, exist_ok=True)
+    vacio_png = os.path.join(d, 'vacio.png')
+    G.Image.new('RGBA', (G.W, y1 - y0), (0, 0, 0, 0)).save(vacio_png)
+    lista = os.path.join(d, 'lista.txt')
+    with open(lista, 'w') as f:
+        p = vacio_png
+        for i, (a, b, im) in enumerate(tramos):
+            if im is None:
+                p = vacio_png
+            else:
+                p = os.path.join(d, f'{i:05d}.png')
+                im.crop((0, y0, G.W, y1)).save(p)
+            f.write(f"file '{os.path.abspath(p)}'\nduration {b - a:.3f}\n")
+        f.write(f"file '{os.path.abspath(p)}'\n")
+    run([FF, '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lista,
+         '-vf', f'fps={FPS},format=rgba', '-c:v', 'qtrle', '-t', f'{total:.3f}', out])
+    return y0
+
+
 # ------------------------------------------------------------------ montaje
 
 def montar(plan):
@@ -239,25 +296,27 @@ def _terminar(plan, gid, tmp, base, total, voz, D, k):
     if tarjetas:
         capa_subtitulos(tarjetas, total, tmp, subs)
     else:
-        run([FF, '-y', '-loglevel', 'error', '-f', 'lavfi',
-             '-i', f'color=c=black@0.0:s={G.W}x{BANDA_Y1-BANDA_Y0}:r={FPS}',
-             '-t', f'{total:.3f}', '-c:v', 'qtrle', '-pix_fmt', 'argb', subs])
+        # lavfi con alpha 0 sale negro opaco en qtrle: hay que partir de un PNG
+        d = os.path.join(tmp, 'subs'); os.makedirs(d, exist_ok=True)
+        vacio = os.path.join(d, 'vacio.png')
+        G.Image.new('RGBA', (G.W, BANDA_Y1 - BANDA_Y0), (0, 0, 0, 0)).save(vacio)
+        run([FF, '-y', '-loglevel', 'error', '-loop', '1', '-i', vacio,
+             '-t', f'{total:.3f}', '-vf', f'fps={FPS},format=rgba',
+             '-c:v', 'qtrle', subs])
 
-    # placas fijas (boton, caja de hook, ranking)
+    # placas fijas (boton, caja de hook, ranking): van todas en UNA capa.
+    # un -loop 1 por placa hace que ffmpeg retenga los cuadros de cada PNG de
+    # 1080x1920 y el anuncio 8, con 9 placas y 171 s, se lo llevo el OOM killer.
     extras = plan.get('extras', [])
     entradas = ['-i', base, '-i', subs, '-i', voz]
     fc = f'[0:v][1:v]overlay=0:{BANDA_Y0}[v1]'
-    n = 3
     ult = 'v1'
-    for j, ex in enumerate(extras):
-        png = f'{tmp}/ex{j}.png'
-        getattr(G, ex['fn'])(*ex.get('args', [])).save(png)
-        entradas += ['-i', png]
-        t0 = ex['t0'] * total if ex['t0'] <= 1 else ex['t0']
-        t1 = ex['t1'] * total if ex['t1'] <= 1 else ex['t1']
-        fc += f";[{ult}][{n}:v]overlay=0:0:enable='between(t,{t0:.2f},{t1:.2f})'[v{j+2}]"
-        ult = f'v{j+2}'
-        n += 1
+    if extras:
+        capa = f'{tmp}/extras.mov'
+        y0 = capa_extras(extras, total, tmp, capa)
+        entradas += ['-i', capa]
+        fc += f";[{ult}][3:v]overlay=0:{y0}[v2]"
+        ult = 'v2'
     fc += (f";[2:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
     out = plan['salida']
     run([FF, '-y', '-loglevel', 'error'] + entradas +

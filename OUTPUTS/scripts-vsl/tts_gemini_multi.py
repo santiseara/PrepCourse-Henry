@@ -26,7 +26,7 @@ body = {
 req = urllib.request.Request(
     f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={KEY}",
     data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
-with urllib.request.urlopen(req, timeout=300) as r:
+with urllib.request.urlopen(req, timeout=int(os.environ.get("TTS_TIMEOUT", "300"))) as r:
     d = json.load(r)
 pcm, rate = b"", 24000
 for p in d["candidates"][0]["content"]["parts"]:

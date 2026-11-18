@@ -27,7 +27,7 @@ def gen(text, out, style=None, temperature=float(os.environ.get("TTS_TEMP", 1.0)
         headers={"Content-Type": "application/json"},
     )
     try:
-        with urllib.request.urlopen(req, timeout=300) as r:
+        with urllib.request.urlopen(req, timeout=int(os.environ.get("TTS_TIMEOUT", "300"))) as r:
             d = json.load(r)
     except urllib.error.HTTPError as e:
         msg = e.read().decode("utf-8", "replace")

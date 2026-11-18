@@ -1,0 +1,1 @@
+Una investigación de Harvard descubrió una proteína que produce tu propio cuerpo y que traba la pérdida de peso, dispara la inflamación y abre las paredes del intestino. Mirá la presentación y aprendé una forma de silenciar esa proteína y recuperar tu salud bajando de peso de forma natural, en menos de 7 días.

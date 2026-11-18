@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-11-18 (tarde III) · Dieta de las 3 Fases: los 10 mejores de Eduardo Claas, calcados
+
+Santiago: *"Quiero sus 10 mejores videos. Exactamente iguales"* y, a mitad de camino,
+*"Copiale sus formatos ganadores, no quiero nada distinto"*.
+
+- **Raspada la biblioteca entera de Eduardo Claas** (`100535935119256`): 526 tarjetas, **563 anuncios activos**,
+  **493 creativos de video distintos** y **un solo texto** en casi todos. Bajados los 14 de más impresiones.
+- **Sus 493 creativos son 6 cuerpos de guion** con el hook cambiado. El mecanismo: la **zonulina** abre la pared
+  del intestino, las toxinas llegan al hígado y traban la quema de grasa; la salida es el **protocolo SER**
+  (Silenciar · Expurgar · Recolonizar), que en español conserva las iniciales.
+- **10 guiones nuevos en voseo**, uno por cada uno de sus 10 formatos de más impresiones
+  (`OUTPUTS/2026-11-18-guiones-dieta-3-fases-tanda1.md`), más la descripción única.
+- **Su firma gráfica replicada** en `OUTPUTS/scripts-vsl/gfx_claas.py`: placa amarilla, barra roja, placa negra de
+  titular, placa de informe, placa blanca, subtítulo de 2-4 palabras con la clave en amarillo o celeste,
+  pantalla partida y el cierre con la caja negra y las tres flechas rojas.
+- **B-roll:** 28 tomas 3D y de comida generadas con **Veo 3.1 Fast** por ApiMart (**US$ 3,92**).
+  Los tags de TikTok del nicho dieron 90 clips y servían 3 (texto quemado, caras, tema equivocado), y
+  **el b-roll de ellos no se puede sacar: la biblioteca sirve los videos a 360x640**.
+- **Voces:** Gemini TTS con Orus y Sulafat. 🐞 La cuota diaria del free tier obligó a cascadear
+  2.5 → 3.1 → 3.8, y **el recorte automático del bloque de estilo falló en g05 y g10** (Whisper no encontró las
+  primeras cuatro palabras): hubo que buscar el corte a mano. Un render de HeyGen se pagó dos veces por eso.
+- 🐞 **`bandas()` da falso positivo con los renders de Avatar IV a 720x1280**: mide sobre el lienzo escalado a
+  120x1920 y los degradé del fondo le parecen franjas lisas (301 px arriba y abajo sobre un cuadro lleno).
+  Queda apagado en `edit_claas.py`.
+- Wiki nueva: `WIKI/dieta-3-fases.md`, con la radiografía, los 6 cuerpos, la firma visual y **el riesgo de las
+  tres piezas que se replicaron tal cual** (el testimonio de la colostomía, el titular de cáncer de intestino y
+  el avatar de IA presentándose como nutricionista).
+
 ## 2026-11-18 (tarde II) · Limpia Dolor publicado: el quiz corriendo en la tienda
 
 Santiago, con la captura del error de ImpulTienda (*"El HTML pesa 3,1 MB y el máximo es 1,5 MB"*): *"entra a

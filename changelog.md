@@ -1,3 +1,13 @@
+## 2026-11-18 — Cabello Fuerte: replica de Fernanda Lucas para Argentina
+
+- Bajados en HD los 8 mejores creativos de la pagina `1114993291702956` (Fernanda Lucas, caida de pelo en mujeres de 45-65, Brasil).
+- Despiece completo: cortes, clasificacion presentador/b-roll, estilo de subtitulo de cada anuncio.
+- **Los 8 guiones traducidos** a castellano rioplatense (`OUTPUTS/2026-11-18-guiones-cabello-fuerte.md`) + la descripcion unica (`OUTPUTS/2026-11-18-descripcion-cabello-fuerte.md`).
+- Herramientas nuevas en `OUTPUTS/scripts-vsl/`: `gfx_cabello.py` (los 6 estilos de subtitulo del competidor), `edit_cabello.py` (reconstruye la linea de tiempo del original), `limpia_subs.py` (borra los subtitulos en portugues quemados del b-roll), `comprimir_drive.py`.
+- **Videos 1 y 3 terminados.** El 2 quedo con barras blancas del avatar de HeyGen (hay que rehacerlo con el avatar corregido).
+- Pendiente: voces 4 a 8 (se agoto la cuota diaria de Gemini TTS: 10 pedidos por dia por clave).
+- Wiki nueva: `WIKI/cabello-fuerte.md`.
+
 # Changelog
 
 ## 2026-11-18 (tarde III) · Dieta de las 3 Fases: los 10 mejores de Eduardo Claas, calcados

@@ -442,3 +442,5 @@
 4. **Pilates sin Vueltas no tiene b-roll ni datos de performance.** Falta decidir de dónde sale el material de estudio con reformers (stock o generado) y confirmar el precio frente a ClaseLista (US$ 9,90 por 150 clases). 👉 Revisar la Ads Library de ClaseLista en 2 o 3 días para ver si escala ([[pilates-sin-vueltas]]).
 5. **Los ads de piedras describen otro producto que la landing.** Los 3 ganadores dicen sal + harina y la landing vende yeso ([[scented-stones]]). Sugerencia: alinear los ads con la landing o confirmar cuál es el producto real. Faltan también los datos base: desde cuándo corre, si está en Impultienda con post-pago y qué tracking usa.
 6. **Lo último de la wiki previa:** los 2 temas ⏳ (`stack-de-herramientas`, `mentalidad-y-habitos`) y la skill `ad-builder`, que tu nomenclatura cita.
+
+- [[cabello-fuerte]] — replica de los 8 creativos de Fernanda Lucas (caida de pelo, mujeres 45-65) para Argentina.

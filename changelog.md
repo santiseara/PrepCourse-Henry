@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-11-18 (tarde) · Limpia Dolor: el checkout definitivo y los audios a 1.20
+
+Santiago: *"este es el link de checkout, `https://protocolo-desparacitacion-intestinal.impultienda.ar/checkout`.
+Agregalo en todos los botones de cta de la ultima slide. Y quiero que a los audios del medico le metas un poco de
+velocidad, suena muy lento."*
+
+- **Checkout** verificado con `curl -sIL` antes de ponerlo (**200, 0 redirecciones**) y escrito en **un solo lugar**
+  (`CONFIG.CHECKOUT`). Probado sobre una copia instrumentada: los **6 CTAs** salen con el host completo y los 6
+  parámetros, y sin parámetros queda el checkout exacto, sin `?` colgado. ⚠️ El subdominio **no se deduce del nombre
+  del producto**: dice *desparacitacion* (con c) e *intestinal*, no *articular*.
+- **Los 3 audios a `atempo=1.20`**: de 148/138/149 a **177/166/178 palabras por minuto** (97→81 s, 60→50 s, 40→34 s).
+  El `atempo` no cambia el tono, así que no hubo que regrabar. La regla de velocidad del 5/11 estaba anotada para los
+  ads: ahora vale para **toda voz en off que entreguemos**, y se sale con 1.20 de entrada.
+- El `.txt` bajó a **1,21 MB** (el de videos, a 3,42 MB).
+
 ## 2026-11-18 · Protocolo Limpia Dolor: el quiz clonado de un funnel de InLead, con videos hechos con IA
 
 Santiago: *"Vamos con una oferta nueva, necesito que le copiemos el quiz, lo vamos a cobrar 17.990 ars, es para

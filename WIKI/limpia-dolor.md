@@ -13,7 +13,7 @@
 | **Promesa** | sacarse todos los dolores en **9 días**, en casa, sin remedios y sin cirugía |
 | **Avatar** | 50+ con artrosis, artritis, lumbalgia, dolor de rodilla, hombro o columna; ya probó analgésicos, kinesiología, pomadas e infiltraciones |
 | **Precio** | **$17.990** pago único · tachado $186.930 (90 % OFF) · 3 cuotas de $5.997 |
-| **Checkout** | ⚠️ **pendiente.** Va relativo (`/checkout`) hasta que Santiago pase el subdominio de ImpulTienda |
+| **Checkout** | `https://protocolo-desparacitacion-intestinal.impultienda.ar/checkout` — puesto y verificado el 18/11 (200, 0 redirecciones; los 6 CTAs probados) |
 | **Fuente** | `https://minhareceita.online/` — funnel de **InLead** `136919`, *Dores Articulares - (PG WHITE)* |
 
 ## El quiz: 28 pantallas con rama por género
@@ -36,7 +36,7 @@ qué harías si → compromiso + chats → la mejor parte → **audio 2 + caso r
 ## Lo que se hizo propio
 
 - **Los 3 audios de WhatsApp del "Doctor Rodrigo"**, reescritos en castellano rioplatense y regrabados con **Orus**
-  (97 s, 60 s y 40 s). La foto de perfil del doctor es la suya, que no tiene texto.
+  (81 s, 50 s y 34 s, a `atempo=1.20`). La foto de perfil del doctor es la suya, que no tiene texto.
   ⚠️ El audio 3 del original dice que el protocolo llega **por WhatsApp**; acá dice **por correo**, que es como entrega
   ImpulTienda y respeta la regla de no pedir contacto dentro del quiz.
 - **Los 6 videos de testimonio** generados con **Veo 3.1 Fast** por ApiMart (US$ 0,78 las 6 tomas de 8 s). Ver
@@ -61,8 +61,8 @@ Su checkout de **Payt**, su analítica y su `__NEXT_DATA__` de InLead (es su pla
 
 ```
 ~/Desktop/limpia-dolor/
-  landing/limpia-dolor-quiz.txt              1,34 MB · para pegar en el custom_html
-  landing/limpia-dolor-quiz-CON-VIDEOS.txt   3,63 MB · con los 6 videos embebidos
+  landing/limpia-dolor-quiz.txt              1,21 MB · para pegar en el custom_html
+  landing/limpia-dolor-quiz-CON-VIDEOS.txt   3,42 MB · con los 6 videos embebidos
   landing/limpia-dolor-PRUEBA.html           el mismo, para abrir en Chrome
   landing/quiz.html                          el fuente, con el bloque CONFIG arriba
   landing/media/                             3 mp3 + 6 mp4 listos para subir
@@ -82,7 +82,6 @@ Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-l
 
 ## Preguntas abiertas
 
-- **El subdominio del checkout.** Hasta que llegue, el link es relativo.
 - **El nombre.** Puse *Protocolo Limpia Dolor* por el `<title>` del original (*Protocolo Limpa Dor*). Si querés otro,
   se cambia en un lugar.
 - **El producto**: falta el PDF/entregable real (la receta de 9 días, la guía alimentaria y el bonus de movilidad).

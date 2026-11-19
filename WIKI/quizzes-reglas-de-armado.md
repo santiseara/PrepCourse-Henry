@@ -1,4 +1,31 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-19 · Un quiz con las fotos adentro SÍ entra en ImpulTienda, si se comprime por rol
+Santiago, sobre la primera entrega del quiz de [[helados-que-venden]]: *"Fijate que no tengo el txt con las fotos,
+dejámelo solo, saca todo lo que no sirve"*. Había entregado el HTML con `baseImagenes` + una carpeta de 34 archivos
+para subir a Recursos, y lo que quiere es **un archivo y nada más**.
+
+La regla del 18/11 (*las imágenes van a Recursos porque ImpulTienda corta en 1,5 MB*) **no obliga a partir la
+entrega**: obliga a comprimir. Embebidas tal cual pesaban 5,26 MB; comprimiendo **por el tamaño real en el que se
+ven**, el archivo entero queda en **1,28 MB**:
+
+| rol | ancho | calidad WebP |
+|---|---|---|
+| portada / hero | 720 px | 70 |
+| mockups y fotos de puente | 620 px | 66 |
+| miniaturas (sabores, testimonios, tapas de producto y de bono) | 420 px | 64 |
+
+Dos detalles que hacen la diferencia:
+- **Las claves repetidas se embeben UNA vez.** El mapa de imágenes tenía 40 claves sobre 34 archivos (el carrusel
+  repite sabores): escribir el `data:` seis veces de más sumaba ~160 KB. Se resuelve con un IIFE —
+  `imagenes: (function(){var d={...}; d[31]=d[10]; … ; return d;})(),` — que además deja el archivo legible.
+- **Al embeber, se sacan el `baseImagenes` y la línea del motor que lo anteponía.** Si quedan, no rompen (el
+  prefijo se saltea con `indexOf('data:')`), pero dejan un `PEGA_ACA_…` colgado que parece un error.
+
+Y **"sacá todo lo que no sirve" es la carpeta, no el repo**: en el Escritorio queda el `.txt` solo, y lo que no se
+regenera con un script —las 8 imágenes rehechas a mano— se guarda en el repo
+(`OUTPUTS/scripts-quiz/helados-latam-img/`) antes de limpiar. Lo demás (el HTML del competidor, los intermedios)
+sale con `curl` y con los scripts de nuevo, así que va a la papelera, no a `rm`.
+
 ### 🆕 2026-11-19 · Pasar un quiz argentino a LATAM: la tilde se BORRA, la palabra se RETIPEA, la etiqueta se DESENFOCA
 El quiz de [[helados-que-venden]] traía **8 imágenes con texto argentino quemado** (la portada, el mockup de
 beneficios, dos tapas de producto, la tapa de un bono entero y las etiquetas de los potes). Generar todo de nuevo

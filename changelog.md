@@ -15,9 +15,11 @@ quedaron como regla en `WIKI/quizzes-reglas-de-armado.md`. El bono 5 era *carnet
 bromatología y monotributo* —que no existe fuera de Argentina—: se reemplazó por *Envasado y Entrega*
 con una tapa nueva dibujada por código.
 
-**Lo entregado.** `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt` (listo para pegar),
-`helados-que-venden-LATAM-PRUEBA.html`, la carpeta `imagenes/` (34 archivos para Diseño → Recursos) y
-la copia en `OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`.
+**Lo entregado.** **Un solo archivo**: `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt`, con las
+34 fotos adentro en base64. Santiago lo pidió así (*"no tengo el txt con las fotos, dejámelo solo, saca todo lo
+que no sirve"*): comprimiendo cada imagen por el tamaño en el que se ve, el archivo queda en **1,28 MB** y entra
+abajo del corte de 1,5 MB de ImpulTienda, sin subir nada a Recursos. Copia en
+`OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`.
 
 ## 2026-11-19 — Helados que Venden: la oferta argentina pasada a LATAM
 

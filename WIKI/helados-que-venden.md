@@ -83,18 +83,21 @@ un par no matchea** (regla del 14/11).
 - **Imágenes**: 40 claves, 34 archivos. Se reusaron las suyas; se rehicieron 7 (portada, beneficios,
   mockup de oferta, tapa de paletas, tapa del kit, tapa del bono 5 y la foto del vasito de fresa) y
   se dibujó un sello de pago neutro para reemplazar el de Mercado Pago / Naranja X / Cabal.
-  Van a **Diseño → Recursos** y la URL de la carpeta se pega en `CONFIG.baseImagenes`.
+  **Van embebidas en el propio archivo** (pedido de Santiago: *"no tengo el txt con las fotos,
+  dejámelo solo"*): comprimidas por rol (portada 720 px q70, mockups 620 px q66, miniaturas 420 px q64)
+  el entregable queda en **1,28 MB**, abajo del corte de 1,5 MB de ImpulTienda. No hay que subir nada
+  a Recursos. Las 8 imágenes rehechas, en calidad alta, están en `OUTPUTS/scripts-quiz/helados-latam-img/`.
 - **Neutro**: pote → vasito, frutilla → fresa, palitos → paletas, pan dulce → panettone,
   sin TACC → sin gluten, freezer → congelador, plata → dinero, Mercado Pago → medios de pago de tu país.
-- Entregables: `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt` (para pegar),
-  `helados-que-venden-LATAM-PRUEBA.html` (con las imágenes embebidas), `imagenes/` y
-  `OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`.
+- Entregable: **un solo archivo**, `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt`,
+  con todo adentro. Copia en `OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`. Los scripts:
+  `build_helados_latam.py` (los textos), `helados_comprimir_img.py` y `helados_empaquetar.py`.
 
 
 ## Preguntas abiertas
 
 - ¿Se queda el nombre **Helados que Venden** o lleva uno propio para LATAM?
-- Falta subir las imágenes a Recursos y pegar la URL en `baseImagenes`, y probar el quiz en vivo.
+- Falta pegarlo en ImpulTienda y probar el quiz en vivo.
 - ✅ Quiz y precio resueltos el 19/11: US$ 12 con checkout propio.
 - Backend: se clona de los 4 OTOs de [[scented-stones]] ([[backend-molde-de-piedras]]).
 

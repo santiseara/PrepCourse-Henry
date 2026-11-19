@@ -49,12 +49,12 @@ def pool_y_clips():
 
 
 VIDEOS = [
-    dict(n=1, tapa=('Atelier', 0), first='c07'),   # las flores difusoras en los floreros: muestra todo el catalogo de una
-    dict(n=2, tapa=('Atelier', 0), first='c06'),   # las cajas de souvenirs
-    dict(n=3, tapa=('Atelier', 0), first='c08'),   # el tag colgado de la percha
+    dict(n=1, tapa=('Atelier', 0), first='c06'),   # las flores difusoras en los floreros: muestra todo el catalogo de una
+    dict(n=2, tapa=('Atelier', 0), first='c05'),   # las cajas de souvenirs
+    dict(n=3, tapa=('Atelier', 0), first='c07'),   # el tag colgado de la percha
     dict(n=4, tapa=('method', 0), first='c00'),    # la mano mezclando el yeso en la mesada
-    dict(n=5, tapa=('Atelier', 0), first='c18'),   # los tags con flor prensada sobre lino
-    dict(n=6, tapa=('book', 0),    first='c11'),   # la flor blanca en la caja de regalo
+    dict(n=5, tapa=('Atelier', 0), first='c13'),   # los tags con flor prensada sobre lino
+    dict(n=6, tapa=('book', 0),    first='c14'),   # los tags con flor prensada sobre lino
 ]
 
 for v in VIDEOS:

@@ -56,7 +56,7 @@ VIDEOS = [
     dict(n=3, hi=AMARILLO, hook='SIN LECHE CONDENSADA|NI CREMA DE LECHE', hasta=('leche', 1), first='c28'),
     dict(n=4, hi=TURQUESA, hook='DESDE TU CASA|SIN SALIR A TRABAJAR',     hasta=('trabajar', 0), first='c33'),
     dict(n=5, hi=LIMA,     hook='UNA SOLA BASE|+50 SABORES EN UN DÍA',    hasta=('italiana', 0), first='c16'),
-    dict(n=6, hi=AMARILLO, hook='UNA OLLA|Y UN CONGELADOR',      hasta=('grande', 0),   first='c25'),
+    dict(n=6, hi=AMARILLO, hook='UNA OLLA|Y UN CONGELADOR',      hasta=('grande', 0),   first='c17'),
 ]
 
 for v in VIDEOS:
@@ -72,6 +72,6 @@ for v in VIDEOS:
         first=[v['first'], next(s[1] for s in pool if s[0] == v['first'])],
         seed=v['n'] * 907, usage='usage.json',
         whoosh=[], flash=0, clips=clips, pool=pool, anchors=[],
-        overlays=[dict(type='flecha', word='boton', occ=0, y=1180)])
+        overlays=[dict(type='flecha', word='botón', occ=0, y=1180)])
     json.dump(plan, open(f"{WK}/V{v['n']}.json", 'w'), ensure_ascii=False, indent=1)
     print("V%d listo - %d tramos" % (v['n'], len(pool)))

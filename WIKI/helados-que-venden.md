@@ -60,6 +60,10 @@ La frase bisagra: *"pensé que iba a perder calidad y pasó exactamente lo contr
 - Voz **Sulafat** a 1.20, cama musical activa a −10 dB.
 - Editor `OUTPUTS/scripts-vsl/edit_helados.py` (placa blanca de dos colores + flecha roja)
   y `gen_helados_plans.py`.
+- Entregados en Drive: **Ebook Dami → Ebook Helados que Venden (LATAM) → Videos terminados**
+  (`https://drive.google.com/drive/folders/1LFl3Zq1hDL1pnhWbEjogCBTIfIKB9MVq`). 28 a 33 s, 15 a 17 planos.
+- Pool: **88 clips bajados de TikTok, 22 sobrevivieron** (el ojo tiró 54 y el OCR 10 más). Vive en
+  `~/Movies/helados-clips` con un symlink en `work/clips`, fuera del Escritorio (iCloud).
 - **Neutro**: pote → vasito, frutilla → fresa, plata → dinero, freezer → congelador,
   delivery → a domicilio, y sin cifras en moneda ni Mercado Pago (cambia por país).
 

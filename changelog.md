@@ -1,3 +1,27 @@
+## 2026-11-19 — Helados que Venden: la oferta argentina pasada a LATAM
+
+Santiago pasó la biblioteca de `heladosquevenden.impultienda.ar`: *"ahora tenemos que hacer los ads para
+esta otra oferta, es para latam, esta solo tira en arg, así que agarremos todo lo validado y pasémoslo a
+latam, acento neutro, quiero 6 ads, busca visuales en tiktok"*.
+
+**Lo que es la oferta.** **Camila Torres - Desarrollo Personal**, 48 anuncios activos, el más viejo del
+9/11 y creativos estrenados el 18 y el 19/11: diez días y ya renovando. Vende el recetario de **helado en
+pote con base italiana** —leche, azúcar y leche en polvo, **sin leche condensada y sin crema de leche**—
+en un Combo 5x1 con 5 bonos, a un quiz de 2 preguntas en ImpulTienda.
+
+**Lo que se midió.** Los **48 ads corren un solo texto principal**: lo único que rota es el video. De los
+12 de más impresiones salieron **5 cuerpos fijos** con el hook rotando (el cuerpo A va en 6 de 12). Su
+montaje: 100 % b-roll de producción sin una sola cara, **placa blanca arriba de dos renglones** (el
+primero negro y el segundo rojo), subtítulos de 2-3 palabras con la palabra que suena **en color de
+texto** (rota turquesa, lima y amarillo), y una **flecha roja** cuando llega el CTA. Sin fichas, sin
+placa final y sin botón.
+
+**Lo entregado.** 6 guiones en neutro (uno por cuerpo), la descripción con 4 variantes cortas, las voces
+con Sulafat a 1.20 y los 6 videos con pool de TikTok. Nuevos: `WIKI/helados-que-venden.md`,
+`OUTPUTS/2026-11-19-guiones-helados-que-venden-LATAM-tanda1.md`,
+`OUTPUTS/2026-11-19-descripcion-helados-que-venden-LATAM.md`,
+`OUTPUTS/scripts-vsl/edit_helados.py` y `gen_helados_plans.py`.
+
 ## 2026-11-19 — The Aromatic Plaster Atelier: oferta nueva para el mercado inglés
 
 Santiago pasó la biblioteca de `Manualidades con Propósito` (page_id 1135159816352814): *"Vamos con una

@@ -1,4 +1,38 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-19 · Pasar un quiz argentino a LATAM: la tilde se BORRA, la palabra se RETIPEA, la etiqueta se DESENFOCA
+El quiz de [[helados-que-venden]] traía **8 imágenes con texto argentino quemado** (la portada, el mockup de
+beneficios, dos tapas de producto, la tapa de un bono entero y las etiquetas de los potes). Generar todo de nuevo
+con IA costaba créditos y escribe mal el castellano. Las tres técnicas que lo resolvieron, de más barata a más cara:
+
+1. **Borrar la tilde.** `VENDÉ → VENDE`, `Calculá → Calcula`, `necesitás → necesitas`. Se copia un bloque limpio
+   del fondo **de la misma columna** (el degradé de una tapa suele ser horizontal) sobre el acento y listo: queda
+   pixel-perfecto, sin tipografía que igualar. Media docena de palabras se arreglan así. ⚠️ La caja se mide **solo
+   sobre el acento**: si baja 3 px de más se come el techo de la letra y queda cortada.
+2. **Retipear la palabra.** Para `PALITOS → PALETAS`, `pote → vasito`, `Helados en Pote → Helados en Vasito`. Se mide
+   el bbox de la tinta, se rellena por columna con el color del fondo tomado de **una fila limpia de arriba** (nunca
+   de abajo: el renglón siguiente mancha y deja chorreras verticales), y se retipea con la fuente más parecida del
+   sistema. Equivalencias que funcionaron: **Georgia Bold** para el serif de tapa, **Montserrat Black/ExtraBold**
+   para el sans grueso, **Arial 15** para el cuerpo (clavó el ancho del original al píxel), **Brush Script** para el
+   manuscrito rosa. Para un lomo o un texto en itálica, se renderiza en una capa RGBA y se le aplica una
+   **AFFINE con shear 0,22** o un `rotate`, y recién ahí se pega.
+3. **Desenfocar.** Para la etiqueta de un frasco o un pote que dice el sabor en argentino (`FRUTILLA A LA CREMA`)
+   y es imposible de retipear por el tamaño y la perspectiva: Gaussian blur de 4-7 px **con máscara difuminada**
+   (rectángulo blanco a 6 px del borde + blur 7 sobre la máscara). Queda como profundidad de campo, no como censura.
+   Sin la máscara se ve el rectángulo y canta.
+
+**Y la tapa que cambia de CONTENIDO, no de palabra, se rehace entera.** El bono 5 era *Vendé Helados en Regla*
+(carnet de manipulador, bromatología, monotributo): eso **no existe fuera de Argentina**. Se reemplazó por
+*Envasado y Entrega* con una tapa nueva dibujada en Pillow sobre **el fondo original desenfocado** (blur 14), así
+conserva el ambiente y la paleta de las otras cuatro tapas sin generar una sola imagen.
+
+### 🆕 2026-11-19 · El precio no vive solo en el CONFIG: está hardcodeado como respaldo en 15 lugares del markup
+En el quiz de [[helados-que-venden]] el motor pisa los precios al cargar (`data-m="precio"`, `data-m="ahorro"`, …),
+así que cambiando `CONFIG.cifras` *parece* que alcanza. **No alcanza:** el valor viejo está escrito adentro de cada
+`<span data-m>` como respaldo y **parpadea** antes de que corra el JS — y en las tablas de valor (`$124.950`,
+`$177.900`, `Hoy pagás $16.990`) y en los `<template>` del botón, donde además había un **`pagás`** suelto.
+Regla: después de cambiar el CONFIG, se busca el formato de moneda viejo en el documento entero
+(`re.findall(r'\$[0-9]{1,3}\.[0-9]{3}', doc)`) y no se entrega hasta que la lista vuelve vacía.
+
 ### 🆕 2026-11-18 · ImpulTienda corta en 1,5 MB: las imágenes y los videos van a *Diseño → Recursos*
 Santiago, con el quiz de [[limpia-dolor]] ya pegado: *"Me dice esto, entra a impultienda y hacelo"* — y la captura:
 **"El HTML pesa 3,1 MB y el máximo es 1,5 MB. Tiene imágenes en base64 que no se pudieron convertir: subilas en

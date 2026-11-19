@@ -1,3 +1,24 @@
+## 2026-11-19 — Helados que Venden: el quiz pasado a LATAM (US$ 12)
+
+Santiago: *"Necesito que hagamos el mismo quiz para latam, hacemelo"*, y después el checkout
+(`https://helados-que-vendenn.impultienda.ar/checkout`) y el precio: **US$ 12**.
+
+**Cómo se hizo.** Su quiz es `custom_html` en ImpulTienda: viaja en texto plano en el HTML de la
+tienda. Se cortó el bloque (su `<style>` + su markup + su motor) y se reescribió con
+`OUTPUTS/scripts-quiz/build_helados_latam.py`, con ~90 pares de reemplazo verificados uno por uno.
+De su documento no se tocó **ni una regla de CSS**; la única línea nueva del motor es la que le pone
+`CONFIG.baseImagenes` adelante a las imágenes relativas.
+
+**Lo que costó.** Las imágenes: 8 traían texto argentino quemado. Se resolvieron sin gastar un crédito
+de IA, con tres técnicas nuevas (borrar la tilde, retipear la palabra, desenfocar la etiqueta) que
+quedaron como regla en `WIKI/quizzes-reglas-de-armado.md`. El bono 5 era *carnet de manipulador,
+bromatología y monotributo* —que no existe fuera de Argentina—: se reemplazó por *Envasado y Entrega*
+con una tapa nueva dibujada por código.
+
+**Lo entregado.** `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt` (listo para pegar),
+`helados-que-venden-LATAM-PRUEBA.html`, la carpeta `imagenes/` (34 archivos para Diseño → Recursos) y
+la copia en `OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`.
+
 ## 2026-11-19 — Helados que Venden: la oferta argentina pasada a LATAM
 
 Santiago pasó la biblioteca de `heladosquevenden.impultienda.ar`: *"ahora tenemos que hacer los ads para

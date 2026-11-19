@@ -67,10 +67,35 @@ La frase bisagra: *"pensé que iba a perder calidad y pasó exactamente lo contr
 - **Neutro**: pote → vasito, frutilla → fresa, plata → dinero, freezer → congelador,
   delivery → a domicilio, y sin cifras en moneda ni Mercado Pago (cambia por país).
 
+## El quiz (19/11/2026)
+
+**Su mismo documento**: su `<style>`, su markup y su motor, con los textos en neutro.
+Se bajó con `curl -sL` de la tienda (el bloque va en texto plano entre el `<body>` y los scripts
+de ImpulTienda) y se reescribió con `OUTPUTS/scripts-quiz/build_helados_latam.py`, que **falla si
+un par no matchea** (regla del 14/11).
+
+- **8 pantallas**: portada → 2 preguntas (tiempo disponible · qué te frena) → *¿necesito máquina?*
+  → *¿lleva leche condensada?* → testimonios y sabores → carga con plan armado → oferta.
+- **Precio: US$ 12** (valor total US$ 136,90, ahorro US$ 124,90). Checkout propio:
+  `https://helados-que-vendenn.impultienda.ar/checkout` (verificado 200, sin redirecciones).
+- **El bono 5 cambió de contenido**: *Vendé Helados en Regla* (carnet de manipulador, bromatología,
+  monotributo) **no existe fuera de Argentina** → *Envasado y Entrega* (envases, conservación, entrega).
+- **Imágenes**: 40 claves, 34 archivos. Se reusaron las suyas; se rehicieron 7 (portada, beneficios,
+  mockup de oferta, tapa de paletas, tapa del kit, tapa del bono 5 y la foto del vasito de fresa) y
+  se dibujó un sello de pago neutro para reemplazar el de Mercado Pago / Naranja X / Cabal.
+  Van a **Diseño → Recursos** y la URL de la carpeta se pega en `CONFIG.baseImagenes`.
+- **Neutro**: pote → vasito, frutilla → fresa, palitos → paletas, pan dulce → panettone,
+  sin TACC → sin gluten, freezer → congelador, plata → dinero, Mercado Pago → medios de pago de tu país.
+- Entregables: `~/Desktop/helados/landing/helados-que-venden-LATAM-quiz.txt` (para pegar),
+  `helados-que-venden-LATAM-PRUEBA.html` (con las imágenes embebidas), `imagenes/` y
+  `OUTPUTS/2026-11-19-quiz-helados-que-venden-LATAM.html`.
+
+
 ## Preguntas abiertas
 
 - ¿Se queda el nombre **Helados que Venden** o lleva uno propio para LATAM?
-- Landing y quiz propios (el de ellos es de 2 preguntas) y el precio en dólares.
+- Falta subir las imágenes a Recursos y pegar la URL en `baseImagenes`, y probar el quiz en vivo.
+- ✅ Quiz y precio resueltos el 19/11: US$ 12 con checkout propio.
 - Backend: se clona de los 4 OTOs de [[scented-stones]] ([[backend-molde-de-piedras]]).
 
 ## Relacionado

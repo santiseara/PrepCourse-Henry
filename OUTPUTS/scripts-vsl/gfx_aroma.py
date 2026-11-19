@@ -25,7 +25,8 @@ INK_S  = (122, 108, 98)
 LINE   = (205, 188, 170)
 
 def didot(s, it=False): return ImageFont.truetype('/System/Library/Fonts/Supplemental/Didot.ttc', s, index=2 if it else 0)
-def cochin(s, it=False): return ImageFont.truetype('/System/Library/Fonts/Supplemental/Cochin.ttc', s, index=1 if it else 0)
+def cochin(s, it=False): return ImageFont.truetype('/System/Library/Fonts/Supplemental/Cochin.ttc', s, index=0)
+def didot_it(s): return ImageFont.truetype('/System/Library/Fonts/Supplemental/Didot.ttc', s, index=2)
 
 def centro(d, y, txt, font, fill, sp=0):
     if sp:
@@ -39,14 +40,11 @@ def centro(d, y, txt, font, fill, sp=0):
     d.text(((W - a) / 2, y), txt, font=font, fill=fill)
     return a
 
-def ramita(d, cx, cy, s=1.0, col=LINE):
-    """Ramita de olivo a linea, como el ornamento de su tapa."""
-    d.line([(cx - 70*s, cy), (cx + 70*s, cy)], fill=col, width=max(1, int(2*s)))
-    for i in range(6):
-        t = -1 + i * 0.4
-        x = cx + t * 58 * s
-        for sg in (-1, 1):
-            d.ellipse([x - 9*s, cy + sg*3*s - 11*s, x + 13*s, cy + sg*3*s + 11*s], outline=col, width=max(1, int(2*s)))
+def filete(d, cx, cy, w=150, col=LINE):
+    """Filete con rombo al medio: el divisor de su tapa."""
+    d.line([(cx - w, cy), (cx - 16, cy)], fill=col, width=2)
+    d.line([(cx + 16, cy), (cx + w, cy)], fill=col, width=2)
+    d.polygon([(cx, cy - 8), (cx + 8, cy), (cx, cy + 8), (cx - 8, cy)], outline=col, fill=None, width=2)
 
 def grano(img, k=0.05):
     n = Image.effect_noise((img.width, img.height), 42).convert('L').filter(ImageFilter.GaussianBlur(0.7))
@@ -58,7 +56,7 @@ d = ImageDraw.Draw(im)
 
 # foto de producto: mitad inferior, con degradado suave hacia el crema
 foto = Image.open(FOTO).convert('RGB')
-fh = int(H * 0.52)
+fh = int(H * 0.50)
 r = max(W / foto.width, fh / foto.height)
 foto = foto.resize((int(foto.width * r), int(foto.height * r)), Image.LANCZOS)
 foto = foto.crop(((foto.width - W) // 2, (foto.height - fh) // 2, (foto.width - W) // 2 + W, (foto.height - fh) // 2 + fh))
@@ -69,11 +67,11 @@ for i in range(170):
 im.paste(foto, (0, H - fh), msk)
 
 y = 196
-centro(d, y, 'The', cochin(52, True), INK_S); y += 66
-centro(d, y, 'Art of', cochin(52, True), INK_S); y += 92
+centro(d, y, 'The', didot_it(50), INK_S); y += 62
+centro(d, y, 'Art of', didot_it(50), INK_S); y += 92
 centro(d, y, 'Aromatic Plaster', didot(92), INK); y += 112
 centro(d, y, 'Atelier', didot(92), INK); y += 126
-ramita(d, W // 2, y, 0.45); y += 40
+filete(d, W // 2, y + 10, 110); y += 46
 
 cuerpo = ['Learn to make aroma stones, scented tags',
           'and diffuser flowers with a premium finish,',
@@ -81,12 +79,12 @@ cuerpo = ['Learn to make aroma stones, scented tags',
 fb = cochin(29)
 for ln in cuerpo:
     centro(d, y, ln, fb, INK_S); y += 40
-y += 18
-ramita(d, W // 2, y, 0.75)
+y += 26
+filete(d, W // 2, y, 170)
 
 # sello redondo abajo a la izquierda
-sx, sy, sr = 128, H - 236, 62
-d.ellipse([sx - sr, sy - sr, sx + sr, sy + sr], fill=(243, 232, 222), outline=(214, 196, 180), width=2)
+sx, sy, sr = 136, H - 150, 66
+d.ellipse([sx - sr, sy - sr, sx + sr, sy + sr], fill=(249, 244, 237), outline=(205, 186, 168), width=2)
 fs = cochin(17)
 for i, ln in enumerate(['THE AROMATIC', 'PLASTER']):
     a = d.textlength(ln, font=fs); d.text((sx - a / 2, sy - 26 + i * 21), ln, font=fs, fill=INK_S)

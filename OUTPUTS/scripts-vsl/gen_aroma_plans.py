@@ -49,12 +49,12 @@ def pool_y_clips():
 
 
 VIDEOS = [
-    dict(n=1, tapa=('Atelier', 0)),
-    dict(n=2, tapa=('Atelier', 0)),
-    dict(n=3, tapa=('Atelier', 0)),
-    dict(n=4, tapa=('method', 0)),
-    dict(n=5, tapa=('Atelier', 0)),
-    dict(n=6, tapa=('book', 0)),
+    dict(n=1, tapa=('Atelier', 0), first='c07'),   # las flores difusoras en los floreros: muestra todo el catalogo de una
+    dict(n=2, tapa=('Atelier', 0), first='c06'),   # las cajas de souvenirs
+    dict(n=3, tapa=('Atelier', 0), first='c08'),   # el tag colgado de la percha
+    dict(n=4, tapa=('method', 0), first='c00'),    # la mano mezclando el yeso en la mesada
+    dict(n=5, tapa=('Atelier', 0), first='c18'),   # los tags con flor prensada sobre lino
+    dict(n=6, tapa=('book', 0),    first='c11'),   # la flor blanca en la caja de regalo
 ]
 
 for v in VIDEOS:
@@ -65,6 +65,7 @@ for v in VIDEOS:
         music='music/bed.wav', music_db=-10,
         hi=ROSA, hibox=NEGRO, hibord=0, capy=1400, pop=False, italic=True, margin=250,
         font='Montserrat ExtraBold', fsize=76, spacing=3, outline=6, shadow=4,
+        first=[v['first'], next(s[1] for s in pool if s[0] == v['first'])],
         seed=v['n'] * 613, usage='usage.json',
         whoosh=[], flash=0, clips=clips, pool=pool,
         anchors=[[v['tapa'][0], v['tapa'][1], 'tapa', 0.0]], overlays=[])

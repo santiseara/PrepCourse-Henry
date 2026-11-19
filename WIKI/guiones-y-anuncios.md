@@ -104,6 +104,24 @@ Dos cosas medidas armando [[higado-liviano]]:
   `comprimir_drive.py` apunta a 6,8 MB. Segunda cosa: **el conector solo lee archivos de las carpetas de la
   sesión**, igual que el uploader del navegador — desde el Escritorio contesta que el archivo "no existe".
 
+### 🆕 2026-11-19 · Dos trampas nuevas, medidas armando [[dip-art-hanako]]
+
+- ⛔ **El Escritorio de Santiago está en iCloud: no se renderiza desde ahí.** A mitad de una tanda, 55 de
+  173 clips de `~/Desktop/<oferta>/work/clips/` quedaron como **placeholder de iCloud** (0 bytes en disco) y
+  `ffmpeg -i` empezó a devolver `Error opening input: Operation timed out`, que en el editor sale como el
+  viejo `AttributeError: 'NoneType' ... Duration` y parece un mp4 truncado. **No es un archivo roto: es un
+  archivo que iCloud desalojó.** El `cp` al scratchpad falla igual (`fcopyfile failed: Operation timed out`)
+  y deja copias de 0 bytes. Regla: **el material de trabajo pesado (clips, voces, planes) se baja y se
+  renderiza en el scratchpad, que es disco local**; al Escritorio y al Drive van solo los entregables.
+  Si ya pasó, se vuelven a bajar los clips del pool con `dl_tikwm.py` directo al scratchpad: son 2 minutos.
+  Ayuda a que pase: el disco estaba al **95 %** (12 GB libres), que es cuando iCloud empieza a desalojar.
+- 🐞 **La hoja de 6 cuadros no alcanza para el texto chiquito del creador.** Dos clips japoneses (`c74`,
+  `c122`) pasaron el filtro de 6 cuadros y en el render aparecían con texto quemado chiquito
+  (*"小粒なお花が集まって咲く"*) — chico, pero en otro idioma que el ad, que es doble falta. El muestreo de 6
+  cuadros sirve para **descartar**, nunca para **aprobar**: el visto bueno sale de la **hoja de contactos del
+  render**, y lo que aparezca ahí se saca del pool y se vuelve a renderizar la tanda entera, para que el
+  reparto de planos quede consistente.
+
 ### 🆕 2026-11-16 · HeyGen: el motor se resetea al cambiar de avatar
 Produciendo los 6 de [[higado-liviano]] con **Avatar IV** ("motor 4", tercero en el desplegable, abajo de Avatar 6 y
 Avatar V):

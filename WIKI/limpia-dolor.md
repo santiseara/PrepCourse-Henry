@@ -231,3 +231,20 @@ subtitulos del #09 — pero los del #21 van en **`y 1100-1350`**. Resultado: el 
   subtitulo de ESE video**. Varia entre ads de la misma pagina.
 - Vale tambien para el color: el #21 subtitula en **verde**, no en amarillo, asi que el detector tiene que
   buscar el color de ese video.
+
+### El #21 es un podcast de dos personas: dos avatares y dos voces
+El **#21** (*Dor forte no ciatico e nas costas?*) alterna al **doctor mayor** con un **entrevistador joven**.
+- Van **dos avatares** (`ARTROSIS V12 AV1 mayor` y `AV3 joven limpio`) y **dos videos de avatar** que se
+  cortan en bloques y se intercalan, igual que en el #09.
+- Como en la cuenta hay **una sola voz masculina** (`damian`), el joven se resuelve asi: se genera su texto
+  con **Orus** por API y se le **sube el wav a HeyGen** (pestaña *Audio* del paso del guion, en vez de
+  escribir el guion). HeyGen le hace el lip sync igual y los dos personajes suenan distinto, sin estrenar
+  una voz nueva.
+- ⚠️ Sus subtitulos van en **verde**, no en amarillo, y **mas abajo** (`y ~1100-1300`) que los del #09.
+  El cierre no lleva texto: es **pantalla negra con tres flechas rojas**.
+
+### Los subtitulos no se pisan con la placa
+En el #09 la placa roja va de `y 1052` a `1363` y el subtitulo cae en `y 1190`: se superponen. En el
+original **no hay subtitulo mientras esta la placa**. Regla: al generar el .ass, **descartar los eventos que
+arrancan antes de que termine la placa**. En el #25 no hacia falta porque su placa esta mas arriba
+(`y 867-1038`) y no llega al subtitulo.

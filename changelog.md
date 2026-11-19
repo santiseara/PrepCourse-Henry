@@ -19,9 +19,8 @@ Santiago: *"lo de los bordes que se ven en el avatar del médico, se tiene que v
 - 🐞 **El conector de Drive solo sube un archivo por referencia si está dentro del directorio de trabajo del
   proyecto**: desde `~/Desktop/...` responde *"does not exist or can't be sent by reference"*. Se copia a una
   carpeta temporal del repo, se sube y se borra.
-- ⚠️ **No pude mandar los viejos a la papelera** (el permiso de borrado en Drive quedó denegado): los 9 anteriores
-  siguen en la misma carpeta renombrados **`VIEJO ...`**. Los que decían *(bordes)* son los 6 del avatar encajonado.
-  Conviene borrarlos a mano, o habilitar el permiso y los borro yo.
+- **Los 9 anteriores, a la papelera.** En la carpeta quedan solo los 10 nuevos, numerados 01 a 10.
+  (El primer intento de borrado lo frenó el permiso de la sesión; salió al reintentarlo.)
 - Wiki: dos correcciones nuevas en `WIKI/estilo-de-video-ia.md`.
 
 ## 2026-11-18 (noche) · Cabello Fuerte: los 8 anuncios terminados

@@ -1,3 +1,31 @@
+## 2026-11-19 — The Aromatic Plaster Atelier: oferta nueva para el mercado inglés
+
+Santiago pasó la biblioteca de `Manualidades con Propósito` (page_id 1135159816352814): *"Vamos con una
+oferta nueva, la vamos a hacer para inglés… la idea es que tmb nos apalanquemos de la oferta de piedras,
+por más de que esto no sea 100% igual a la de piedras, son similares. Las visuales sí quiero como la de
+ellos, podés buscar en TikTok. La edición tmb la quiero igual. Vamos con 6 testeos"*. Después puso el
+nombre: **The Aromatic Plaster Atelier**.
+
+- **La oferta:** ebook + videos paso a paso de **aromatizadores de yeso cerámico** — piedras aromáticas,
+  tags perfumados, **flores difusoras** y portavelas. 7 ads activos desde el 22/10, de 23 a 59 s.
+  Landing: tienda Shopify con 7 infoproductos, el principal a $17.999 ARS (~US$ 12), 75 % OFF,
+  6 bonos, 2 masterclass y garantía de 7 días.
+- **Los 7 ads transcritos** y sus **6 estructuras de guion** desarmadas: un solo material · una pieza
+  contra cien para un casamiento · las tres formas de aromatizar · la mesada de mi cocina · la chica de
+  los souvenirs · "¿dónde los compraste?". Las 4 y 6 son los guiones 2 y 3 de [[scented-stones]] con
+  otra ropa.
+- **Tanda 1:** los 6 guiones en inglés y español con voseo, `OUTPUTS/2026-11-19-guiones-aromatizadores-EN-tanda1.md`.
+  Las 6 voces grabadas con Sulafat y verificadas (arrancan por la primera palabra, sin leer el estilo).
+- **Su edición, medida y clonada:** sin caja de hook ni placa; subtítulos en mayúscula, sans bold
+  **itálica**, blancos con borde negro grueso, 2-3 palabras por renglón y hasta 3 renglones, con la
+  palabra que suena en **rosa fucsia**; la tapa del ebook en mano sobre el b-roll.
+  Herramientas nuevas: `edit_aroma.py`, `gen_aroma_plans.py`, `gfx_aroma.py`.
+- **Regla nueva (medida):** un producto puede existir en inglés como **mercadería** y no como **oficio**.
+  De 150 clips de `#aromastone` y compañía, **11 sin una letra** y 4 usables: el tag está ocupado por
+  packaging comercial, tiendas de Etsy y tutoriales japoneses. El plano de taller vive en los tags del
+  oficio (`#jesmonite`, `#yesoceramico`, `#aromatizadordegesso`, `#moldesdesilicona`), que no tienen
+  idioma. Anotada en [[guiones-y-anuncios]].
+
 ## 2026-11-19 — Dip Art by Hanako: los 6 ads para el mercado inglés
 
 Santiago pasó la biblioteca de `Dip Art by Hanako` (page_id 1199302383265773): *"Vamos a hacer los ads

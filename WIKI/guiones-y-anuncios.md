@@ -247,6 +247,9 @@ Avatar V):
 - 🐞 **2026-11-18 · tikwm en paralelo deja archivos truncados que pesan bien.** Bajando el pool de [[capillas-de-la-virgen]] con 4 hilos, **6 de 62 clips** quedaron con 1-3 MB en el `ls` y sin `Duration` para ffmpeg, y el render murió con el `AttributeError: 'NoneType' ... groups`. El serial de `dl_tikwm.py` tarda ~1,5 min por clip cuando tikwm está lento, así que el paralelo se usa igual, pero **después de bajar hay que pasarle `ffmpeg -i` a todo el pool** y rebajar lo que no abre (complementa la regla del 14/11 sobre iCloud).
 
 
+- **2026-11-19 · Un producto puede existir en inglés como MERCADERÍA y no como OFICIO, y ahí el tag en inglés no sirve.** Armando [[aromatic-plaster-atelier]], el OCR de Vision sobre **150 clips** de `#aromastone`, `#aromastones`, `#scentedstone`, `#gypsumflower`, `#plasterflower` y `#cardiffuser` dejó **11 sin una letra**, y mirándolos servían **4**. El tag en inglés está tomado por **packaging comercial** (Sure Scents, AIRBRC, Salt & Stone, Aromeo), tiendas de Etsy con marca de agua, reseñas de perfumería y tutoriales japoneses con texto quemado de punta a punta. En inglés la piedra aromática es un **producto que se compra**; el que la **fabrica** filma en español, portugués y coreano. Regla: cuando el producto se vende hecho en el mercado de destino, el tag en el idioma del ad devuelve **góndola**, no taller — hay que buscar el **tag del oficio en el idioma donde se fabrica** (`#jesmonite`, `#yesoceramico`, `#aromatizadordegesso`, `#gessoperfumado`, `#tagsaromaticos`, `#piedrasaromaticas`, `#moldesdesilicona`), porque el plano de manos, molde y yeso no tiene idioma. Complementa la del 8/11 de [[quesos-latam]] (el tag podrido se busca en otro idioma) con una causa nueva: no está podrido, está **ocupado por el comercio**.
+
+
 ## Relacionado
 [[scented-stones]] · [[angulos-publicitarios]] · [[biblioteca-de-prompts]] · [[como-trabajar-con-santiago]] · [[landings-funnels-y-upsells]]
 

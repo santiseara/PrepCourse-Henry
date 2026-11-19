@@ -96,6 +96,7 @@
 - 🆕 [[academia-del-trazo]] — Dibujo desde cero paso a paso (AR), modelada de Academia de Dibujo Creativo. Método de las 3 Capas, landing propia y los 6 ángulos que el original no corre.
 - 🆕 [[group-work-playbook]] — +150 dinámicas grupales en PDF (USD 27, mercado inglés), modelada de Talleres Listos. 6 módulos, 5 bonos y la DNA de sus ~160 ads.
 - 🆕 [[welmi]] — Contador de calorías con IA (637 ads activos, 9 idiomas, 7 meses corriendo). No es para cazar: es el manual del quiz de 35 pantallas, el paywall con boleto raspable, el upsell de 1 clic y la plantilla de copy de 6 líneas repetida 233 veces.
+- 🆕 [[dip-art-hanako]] — Flores de cristal con alambre y resina UV (AR, guía PDF + 7 bonos). La DNA de sus 7 videos: dos carriles (bizop y calma), la frase firma "no te dejo sola con la técnica" y **cero cifras de dinero**. La replicamos en inglés.
 - ✅ [[embudo-vsl-post-pago]] — OTOs con VSL de avatar, downsells con ruleta, escalera por mercado, guión en 8 puntos.
 
 ## Adquisición — Meta Ads
@@ -152,6 +153,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-19 — Dip Art by Hanako: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-19-guiones-dip-art-hanako-tanda1.md) — el margen, la obsesión que terminó en negocio, parece difícil solo parece, casi nadie las vende, un momento solo para vos y la técnica es la parte fácil; en inglés y español con voseo, sin una sola cifra de dinero como ellos · ver [[dip-art-hanako]]
 - [2026-11-18 — Capillas de la Virgen: la descripción de los ads](../OUTPUTS/2026-11-18-descripcion-capillas-virgen.md) — una sola para los seis (como corren ellos), más 3 variantes de testeo: la corta, la del regalo que se guarda y la estacional de Guadalupe y Navidad; en neutro, sin precio · ver [[capillas-de-la-virgen]]
 - [2026-11-18 — Capillas de la Virgen: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-18-guiones-capillas-virgen-tanda1.md) — los tres pasos, de una hoja a una capilla, el POV de la tarde de domingo, catequesis, el recuerdo de comunión y el antes/después; en neutro, con las cajas de hook, las fichas de paso y la descripción única · ver [[capillas-de-la-virgen]]
 - [2026-11-18 — Slime Shop Kit: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-18-guiones-slime-shop-kit-tanda1.md) — el negocito del slime, la mesa de la cocina, las otras mamás que ya venden, el local que no hace falta, la experiencia que los chicos piden y el proyecto de fiestas; en inglés y español con voseo, con las 6 cajas de hook y la descripción única · ver [[slime-shop-kit]]

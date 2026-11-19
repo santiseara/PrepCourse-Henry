@@ -1,3 +1,25 @@
+## 2026-11-19 — Dip Art by Hanako: los 6 ads para el mercado inglés
+
+Santiago pasó la biblioteca de `Dip Art by Hanako` (page_id 1199302383265773): *"Vamos a hacer los ads
+para esta oferta, quiero 6, la vamos a tirar en inglés. Apegate 100% a su comunicación y a sus patrones
+ganadores"*.
+
+- **La oferta:** guía digital en PDF de **dip art** (flores y accesorios tipo cristal con alambre y resina
+  UV, técnica japonesa), `dipartbyhanako.shop`, AR/LATAM. 9 ads activos, 7 en video de 32 a 48 s,
+  el más viejo del 10/10 (~40 días). 15 proyectos + 7 bonos, 50% OFF, sin precio en el ad.
+- **Los 7 videos bajados de la biblioteca y transcriptos enteros** con faster-whisper.
+- **Nueva página de wiki `dip-art-hanako.md`** con su DNA: dos carriles de ángulo que nunca se mezclan
+  (bizop/margen y calma/desconexión), la frase firma *"no te dejo sola con la técnica, te doy el sistema
+  completo para vender"* en 6 de los 7, cada entregable pegado a su "para que", escasez de oferta en lugar
+  de escasez de precio, el bono de esmalte de uñas para empezar sin lámpara UV, y **ni una sola cifra de
+  dinero en los 7 videos** (lo contrario de piedras: si se calca, se calca sin números).
+- **Tanda 1: 6 guiones en inglés y español con voseo** →
+  `OUTPUTS/2026-11-19-guiones-dip-art-hanako-tanda1.md`, copia en
+  `~/Desktop/dip-art/anuncios/`. Ángulos: el margen (calco de su ad más repetido), empezó como una
+  obsesión, parece difícil solo parece, casi nadie las vende y todos las quieren, un momento solo para vos,
+  y la técnica es la parte fácil.
+- Índice actualizado (tema + output).
+
 ## 2026-11-18 (noche II) — Capillas de la Virgen: los 6 ads para LATAM
 
 Santiago: *"ahora vamos con otra, la vamos a hacer para LATAM... Mismos guiones (Sus 6 mejores) y

@@ -1,3 +1,36 @@
+## 2026-11-18 (noche II) — Capillas de la Virgen: los 6 ads para LATAM
+
+Santiago: *"ahora vamos con otra, la vamos a hacer para LATAM... Mismos guiones (Sus 6 mejores) y
+mismas visuales, las buscas en tiktok asi no tenes que blurrear nada"*.
+
+- **La oferta:** *The Our Lady Chapel Kit* (`ourladychapels.impultienda.ar`, US$ 27) de **Mariana Williams
+  Creations**, la misma página del Slime Shop Kit: **120 capillas marianas de papel** en 12 advocaciones,
+  que se imprimen, se recortan y se doblan. ~35 anuncios activos, **15 creativos distintos**.
+- **Bajados sus 15 creativos** desde la biblioteca de anuncios (el `fetch` del blob dentro de la página y
+  una descarga con `<a download>`: el conector de localhost lo bloquea la CSP de Facebook) y
+  **transcriptos sus 6 de más impresiones**.
+- **Los 6 guiones calcados al español neutro** (`OUTPUTS/2026-11-18-guiones-capillas-virgen-tanda1.md`):
+  los tres pasos, de una hoja a una capilla, el POV de la tarde de domingo, catequesis, el recuerdo de
+  primera comunión y el antes/después. Más la descripción única y las cajas de hook.
+- **Su firma de montaje replicada** en `OUTPUTS/scripts-vsl/edit_capillas.py`: cajita blanca de hook,
+  **fichas azules de paso** ancladas a la palabra ("1. IMPRIME · 2. RECORTA Y DOBLA · 3. REZA O REGALA"),
+  subtítulos de 3 palabras con la palabra que suena en **dorado** y la placa blanca de cierre.
+- **Voces:** Gemini TTS con Sulafat. 🐞 La cuota diaria se agotó dos veces: V1-V3 con el 2.5, V4-V5 con el
+  3.1 y la V6 con el 3.8 **sin bloque de estilo** (verificada con Whisper).
+- **Pool de TikTok:** 183 clips bajados de 12 búsquedas y 3 tags; **quedaron 27**. El buscador de TikTok
+  (`/search/video?q=`) **sí abre en el navegador** y encuentra lo que el hashtag no (`nicho de papel virgen`,
+  `iglesia de papel cartulina maqueta`, `paper shrine virgin mary`). El nicho devocional en español está
+  **tomado por posts de oración con texto quemado**: se cayeron 28 por carteles y marcas de agua
+  (`@santaideiaoficial`, `MILA RECUERDOS`, "COMO FAZER UMA IGREJA EM MINIATURA") y 1 por una cara en cuadro.
+- 🐞 **tikwm en paralelo deja archivos truncados que pesan bien**: 6 clips con 1-3 MB y sin `Duration`
+  mataron el primer render. Ahora se barre el pool con `ffmpeg -i` antes de montar.
+- **Los 6 terminados** (18,8 a 23,3 s), cada uno abriendo con un plano del producto, subidos al Drive
+  (*Ebook Dami / Ebook Capillas de la Virgen (LATAM) / Videos terminados*).
+- Wiki nueva: `WIKI/capillas-de-la-virgen.md`, y 3 reglas nuevas en `WIKI/guiones-y-anuncios.md`.
+- ⚠️ **Lo que falta:** la landing en español y el producto (los 120 PDFs). Y una decisión: ellos usan
+  **renders de IA de su propio producto**; nuestro pool real cubre el proceso (imprimir, recortar, doblar)
+  y el entorno (altarcito, velas, comunión), con pocos planos de la capilla terminada.
+
 ## 2026-11-18 (noche) — Dieta de las 3 Fases: el avatar del médico, a cuadro completo
 
 Santiago: *"lo de los bordes que se ven en el avatar del médico, se tiene que ver completo"*.

@@ -152,6 +152,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-18 — Capillas de la Virgen: la descripción de los ads](../OUTPUTS/2026-11-18-descripcion-capillas-virgen.md) — una sola para los seis (como corren ellos), más 3 variantes de testeo: la corta, la del regalo que se guarda y la estacional de Guadalupe y Navidad; en neutro, sin precio · ver [[capillas-de-la-virgen]]
 - [2026-11-18 — Capillas de la Virgen: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-18-guiones-capillas-virgen-tanda1.md) — los tres pasos, de una hoja a una capilla, el POV de la tarde de domingo, catequesis, el recuerdo de comunión y el antes/después; en neutro, con las cajas de hook, las fichas de paso y la descripción única · ver [[capillas-de-la-virgen]]
 - [2026-11-18 — Slime Shop Kit: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-18-guiones-slime-shop-kit-tanda1.md) — el negocito del slime, la mesa de la cocina, las otras mamás que ya venden, el local que no hace falta, la experiencia que los chicos piden y el proyecto de fiestas; en inglés y español con voseo, con las 6 cajas de hook y la descripción única · ver [[slime-shop-kit]]
 - [2026-11-18 — Dieta de las 3 Fases: tanda 1 de 10 guiones](../OUTPUTS/2026-11-18-guiones-dieta-3-fases-tanda1.md) — uno por cada uno de los 10 formatos de más impresiones de Eduardo Claas, en voseo, 173 a 273 palabras · ver [[dieta-3-fases]]

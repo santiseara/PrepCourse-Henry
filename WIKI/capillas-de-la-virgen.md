@@ -31,6 +31,8 @@
 ## Lo nuestro (tanda 1, 2026-11-18)
 Los 6 guiones en **neutro, sin voseo y sin cifra en moneda** (`OUTPUTS/2026-11-18-guiones-capillas-virgen-tanda1.md`), con las cajas de hook, las fichas de paso (`1. IMPRIME · 2. RECORTA Y DOBLA · 3. REZA O REGALA`), la placa de cierre y la descripción única.
 
+**Descripción:** `OUTPUTS/2026-11-18-descripcion-capillas-virgen.md` — la calcada de ellos más 3 variantes de testeo (corta, el regalo que se guarda, estacional de Guadalupe y Navidad).
+
 **Montaje:** `OUTPUTS/scripts-vsl/gen_capillas_plans.py` + `edit_capillas.py` (clon de su firma: cajita blanca, fichas azules, subtítulo con la palabra en dorado). Voces Gemini TTS con **Sulafat**, velocidad 1.20. Cama musical propia (`music_calma.py`, 64 BPM).
 
 ## El pool de TikTok (la decisión importante)

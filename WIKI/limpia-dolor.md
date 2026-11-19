@@ -175,3 +175,59 @@ correcta**. Si se interrumpe un render, se borra el archivo y se rehace.
   reloj hay que buscarlo con `blackdetect` antes de recortarlo.
 - **Cortar con `-c copy` no cae en keyframe** y mete esos mismos cuadros negros al principio del clip:
   el reloj se recorta **recodificando**.
+
+### En los tramos de pantalla partida va NUESTRO avatar arriba (regla del 19/11)
+Santiago, al ver el primer corte: *"cuando el avatar está dividido, de pantalla dividida, se ve que dejaste
+el mismo, entonces claramente no coordina los labios… poner el avatar que hiciste con HeyGen arriba y
+dejando el b-roll abajo"*.
+- El original **alterna pantalla completa con pantalla partida** (presentador arriba, b-roll abajo). En el
+  #25 hay **cinco tramos partidos**, no solo la apertura: 0-5,5 s, 6,6-8,4 s, 8,4-11,6 s, 25-27,6 s y
+  38,9-45,5 s.
+- Si de esos tramos se superpone el recorte **entero** del original, arriba queda el presentador de ellos
+  hablando en portugués y **los labios no cierran**. Hay que superponer **solo la mitad de abajo** del
+  b-roll, a partir de la línea de division, y dejar que arriba se vea nuestro avatar.
+- **La línea se mide, no se estima**: se busca la fila con mayor discontinuidad vertical entre `y=700` y
+  `y=1300`. En el #25 dio **930 a 986 segun el clip**. Un `div: 0` en `broll_tiempos.json` significa que ese
+  b-roll va a pantalla completa (en el #25, las moleculas de la palta y el parasito).
+- El encuadre del avatar a pantalla completa **coincide** con el del original, asi que el recorte superior
+  calza sin reescalar. Lo unico que cambia es que nuestro plano es algo mas cerrado que el de la apertura
+  de ellos, que usa una toma mas abierta.
+
+### La musica de fondo
+La **musica de suspenso de Santiago** (la misma de [[higado-liviano]], `musica-de-suspense-335486`), a
+**0,15 con ducking** (`sidechaincompress` contra la voz): baja sola cuando habla y sube en los silencios y
+en la cola de reloj. Santiago: *"que no tape tanto el sonido, o sea, en un volumen mediano"*.
+En higado-liviano se habia usado fija al 0,20.
+
+### ⛔ El Escritorio esta en iCloud: renderizar en disco local
+Un `ffmpeg` largo que lee de `~/Desktop/` falla con **`Error opening input: Operation timed out`** en medio
+del render, aunque el archivo exista y tenga el tamaño correcto. Paso obligatorio: **copiar todos los
+insumos a una carpeta local** (el scratchpad de la sesion) y renderizar desde ahi; recien el entregable
+final se copia al Escritorio.
+
+### El cuadro base del avatar se BUSCA sin subtitulo, no se limpia (regla del 19/11)
+Para el avatar del #09 limpie el subtitulo del cuadro base con `delogo` y **HeyGen le quemo la marca gris en
+el pecho en todo el video**: inservible, hubo que rehacerlo y pagar el render dos veces.
+- Antes de crear un avatar, **barrer el video buscando un cuadro realmente limpio**: contar pixeles blancos
+  y amarillos en la banda del subtitulo (`y 880-1060`) cada medio segundo y quedarse con los que den **cero**.
+  En el #09 habia dos, a los **76,0 s y 77,5 s**; en un ad de 80 s siempre hay alguno entre frase y frase.
+- Solo si no aparece ninguno se limpia, y entonces la zona borrada tiene que quedar **tapada despues por el
+  subtitulo nuestro**; si queda por encima, se ve.
+
+### No todos los ads son "presentador a camara"
+El **#09** (*Acaba com dor na coluna… com menos de R$8*) es **voz en off sobre escena**: el doctor aparece a
+camara solo en los primeros 5 s y en los ultimos 15, y el resto son dos pacientes —doña Maria y don Antonio—
+haciendo pruebas de movilidad. Ademas **tiene tres voces**: el doctor y las cuatro lineas de los pacientes.
+- El doctor va con avatar y la voz `damian`; **las lineas de los pacientes se generan aparte** con las voces
+  de la casa (mujer **Sulafat**, hombre **Orus**) y se insertan en sus huecos.
+- Conviene medir el hueco de cada linea en el original antes de generarla, porque el castellano se estira:
+  la linea larga de Antonio entraba en 6,1 s y salio de 8,9 a 11,4 s segun el modelo y el estilo.
+
+### La franja del subtitulo se MIDE en cada video (19/11)
+Buscando el cuadro limpio del entrevistador del **#21** mire la franja `y 880-1120`, que es donde caen los
+subtitulos del #09 — pero los del #21 van en **`y 1100-1350`**. Resultado: el cuadro elegido tenia
+*"faz doutor"* y HeyGen lo quemo en el pecho del avatar en todo el video. Render perdido.
+- Antes de barrer en busca del cuadro limpio, **extraer un cuadro cualquiera y mirar a que altura esta el
+  subtitulo de ESE video**. Varia entre ads de la misma pagina.
+- Vale tambien para el color: el #21 subtitula en **verde**, no en amarillo, asi que el detector tiene que
+  buscar el color de ese video.

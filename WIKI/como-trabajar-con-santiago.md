@@ -155,3 +155,13 @@ Santiago, al ver que el clon del carozo de palta quedó en 59 MB: *"Dejámelo en
 - **No reemplaza la regla del 17/11**: la tanda sigue yendo al Drive sin preguntar y el peso no es excusa.
   Lo que cambia es que, cuando el máster supera los 10 MB, **se le avisa y se le ofrece** dejarlo en la
   carpeta en vez de subir una copia degradada. Si no dice nada, se sube comprimido.
+
+### Cuota de TTS por API (registro 2026-11-19)
+El tier gratis da **10 generaciones de TTS por dia y por modelo**. Al agotarse `gemini-3.1-flash-tts-preview`
+devuelve **429 "Generate content requests per day limit exceeded"**.
+- **El reemplazo que funciona es `gemini-2.5-flash-preview-tts`**: tiene cuota propia y **no lee en voz alta
+  el bloque de estilo** (probado el 19/11 con una linea de 20 palabras: 8,9 s, ritmo natural).
+- ⛔ **`gemini-3.8-flash-lite-tts` no sirve**: la misma linea le dio **18,1 s**, o sea que lee las
+  instrucciones.
+- Ojo con el estilo: pedirle *"hablando despacio"* alarga mucho la toma (11,4 s contra 8,9 s por la misma
+  linea). Si hay que calzar en un hueco medido, el estilo va **"ritmo normal de conversacion"**.

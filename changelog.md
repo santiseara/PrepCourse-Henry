@@ -1,3 +1,25 @@
+## 2026-11-18 (noche) · Cabello Fuerte: los 8 anuncios terminados
+
+- **Anuncio 8 cerrado.** Faltaba por un `-9` de ffmpeg (lo mataba el sistema por memoria): 9 placas en bucle,
+  cada una de 1080×1920. `edit_cabello.py` ahora las compone en **una sola capa** (`capa_extras()`), recortada
+  a la franja útil, igual que los subtítulos.
+- **El titular verde del 8 estaba arriba, encima de la fila del ranking.** Va al pecho (y = 0,57) y en fuente
+  140, como el original; los tiempos anclados a *nuestra* voz, no a la del brasileño.
+- 🐞 **`limpia_subs.py` no veía los subtítulos de letra blanca sobre caja de color ni sobre banda gris**
+  (`PODE`, `GRATUITA`, `SEM ATACAR`, `NA PRÓXIMA TERÇA FEIRA`): pedía contorno negro y los daba por brillos.
+  Se agregó el anillo de color plano, el detector del recuadro, el estirado hasta tapar la caja entera
+  (con tope de 44 px), los renglones cortos (el `NA` suelto) y repintado a media resolución con desenfoque 3.
+- ⚠️ **El control de restos hay que hacerlo sobre los planos que entran al video**: la primera revisión marcó
+  portugués en los anuncios 3, 4 y 7 y esos planos los reemplaza el avatar. Lo que sí quedaba sucio era un
+  `raiz` quemado en un plano de b-roll del anuncio 2.
+- **Re-limpiado todo el b-roll y re-renderizados los 7**, más el 8. Los ocho revisados cuadro por cuadro:
+  sin portugués y sin planos feos. Están en `~/Desktop/cabello-fuerte/anuncios/`.
+- ⛔ **No entran por el conector de Drive:** duran de 1:31 a 4:34 y pesan de 40 a 180 MB; el tope es de 10 MB y
+  recomprimir daría 80-250 kbps. Se subieron la carpeta y los dos `.txt`; los mp4 los arrastra Santiago.
+  Regla nueva en `WIKI/organizacion-y-registro.md`.
+- 🧹 El disco de la Mac se llenó (quedaban 122 MB): los temporales de `edit_cabello.py` suman ~6 GB por tanda.
+  Borrarlos al terminar.
+
 ## 2026-11-18 (noche) — Slime Shop Kit: los 6 ads del mercado inglés
 
 Santiago: *"Segui haciendo los ads de la oferta de ingles"*.

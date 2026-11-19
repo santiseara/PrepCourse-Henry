@@ -157,3 +157,16 @@ El camino que funciona:
 
 Lo que **no** sirve: el `file_upload` del navegador (topea en 10 MB), `rclone` y `gdrive` (no están instalados) y el
 Drive de escritorio (no está montado en esta Mac).
+
+### 🆕 2026-11-18 · El truco de recomprimir **no alcanza cuando el ad dura más de ~2 minutos**
+
+Probado con la tanda de [[cabello-fuerte]] (8 ads de 1:31 a 4:34, de 40 a 180 MB cada uno). El tope del conector es
+**10 MB de archivo** (probado: devuelve *"is over the 10 MB limit for uploads from here"*; y desde `~/Desktop` ni
+siquiera lee la ruta, hay que copiar al directorio de la sesión). La cuenta de bitrate que funciona con un ad de
+27 s acá da **80 a 250 kbps**: el video queda inservible, así que recomprimir deja de ser una salida.
+
+- **Hasta ~60 s de ad:** se recomprime y se sube con `create_file`, como dice arriba. Sigue siendo la regla.
+- **Más de ~2 min:** no hay forma por el conector. Trocear y recomponer en el navegador tampoco escala
+  (1 GB en partes de 700 KB son ~1.400 llamadas). La tanda queda en `~/Desktop/<oferta>/anuncios/` con los
+  nombres definitivos y **se le avisa a Santiago en una línea que la arrastre al Drive**, con el link de la
+  carpeta ya creada. La carpeta y los `.txt` (guiones y descripción) sí se suben solos.

@@ -57,20 +57,37 @@ qué harías si → compromiso + chats → la mejor parte → **audio 2 + caso r
 
 Su checkout de **Payt**, su analítica y su `__NEXT_DATA__` de InLead (es su plataforma).
 
-## Entregables (18/11/2026)
+## Entregables (18/11/2026, recortado el 19/11)
 
 ```
 ~/Desktop/limpia-dolor/
-  landing/limpia-dolor-quiz.txt    662 KB · lo que está pegado en la tienda
+  landing/limpia-dolor-quiz.txt    473 KB · lo que va pegado en la tienda
   landing/limpia-dolor-PRUEBA.html el mismo, para abrir en Chrome
   landing/quiz.html                el fuente, con el bloque CONFIG arriba
-  landing/media/                   3 mp3 + 6 mp4 (los mp4 ya subidos a Recursos)
+  landing/media/                   3 mp3 + 6 mp4 (a2.mp3, v3 y v4 ya no se usan)
   imagenes/                        19 webp (los 19 ya subidos a Recursos)
 ```
 
+### El recorte del 19/11: 28 pantallas → 25
+
+Santiago pidió sacar tres pasos del tramo final, y el quiz quedó **de la última pregunta derecho a la carga y a la
+oferta**:
+
+| iba | se sacó |
+|---|---|
+| 22 · *¿Te comprometés a seguir el Protocolo de 9 Días?* | el paso entero, con los dos botones y el carrusel de chats |
+| 24 · el **segundo audio** + el caso de 1 semana + *Generar mi Protocolo Personalizado* | el paso entero (queda un solo audio en el medio del quiz y el de la oferta) |
+| 26 · el **resumen** entre la carga y la oferta (tabla comparativa, medidores, *Ascaris lumbricoides*, la bebida) | el paso entero |
+
+Quedaron **25 pantallas (0–24)**, la barra de progreso llega a 100 % en la última pregunta y la carga encadena
+directo a la oferta. Barrido de huérfanos y la regla general en [[quizzes-reglas-de-armado]] (regla del 19/11).
+Lo que ya no se usa: `media/a2.mp3`, `media/v3_hombre_columna.mp4` y `media/v4_mujer_manos.mp4` (los dos mp4 siguen
+subidos a Recursos, no molestan).
+
 **Está en vivo** en `protocolo-desparacitacion-intestinal.impultienda.ar` desde el 18/11, pegado en
-*Diseño de tienda → Contenido → HTML propio*. Las **19 imágenes y los 6 videos viven en Diseño → Recursos**
-(`sb.impultienda.ar/storage/…/store-resources/43d7fdfe-…/`); **los 3 audios van embebidos**, porque Recursos no
+*Diseño de tienda → Contenido → HTML propio*. ⚠️ **Lo que está pegado es la versión de 28 pantallas: el recorte del
+19/11 todavía no se subió.** Las **19 imágenes y los 6 videos viven en Diseño → Recursos**
+(`sb.impultienda.ar/storage/…/store-resources/43d7fdfe-…/`); **los audios van embebidos**, porque Recursos no
 acepta mp3. Detalle en [[quizzes-reglas-de-armado]] (regla del 18/11).
 
 Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-limpia-dolor-fuente.html`.
@@ -79,6 +96,8 @@ Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-l
 
 - Las **28 pantallas** recorridas por código en un iframe de 390 px: cero desbordes, cero elementos de más de 392 px,
   cero imágenes rotas.
+- Tras el recorte del 19/11, las **25 pantallas** recorridas de nuevo en Chrome, clickeando paso por paso: cero
+  desbordes, cero imágenes rotas, cero errores de consola, los **6 CTAs** ligados y la carga saltando a la oferta.
 - **Barra de progreso** estrictamente creciente, 4 % → 100 %, contando solo las pantallas de pregunta.
 - **Checkout** probado sobre una copia instrumentada con un host absoluto de prueba: los **6 CTAs** salen con el host
   entero y los 6 parámetros, y sin parámetros queda el checkout exacto (sin `?` colgado). `paso` no se reenvía.
@@ -277,3 +296,18 @@ arriba queda **su boca moviendose en portugues** y los labios no cierran.
 Una hoja de cuadros y `volumedetect` **no detectan** ni un audio trabado ni unos labios desfasados.
 Antes de entregar: **transcribir el audio final** (si sale entrecortado o se pierde texto, hay un problema)
 y **mirar los tramos donde hay una cara hablando**.
+
+### Transcribir el audio final detecta lo que los cuadros no
+Verificando el v12 por transcripcion aparecio un error que no se ve en ninguna hoja de cuadros: el doctor
+contestaba **"Lo puede hacer" ANTES de que el joven le preguntara** "¿y lo puede hacer en casa?". Causa: al
+cortar el audio del avatar en bloques, el corte M2/M3 cayo **despues** de esa frase en vez de antes.
+- En un dialogo, el corte entre bloques va **en el silencio que separa las intervenciones**, y hay que
+  confirmar **con que palabra termina y con cual arranca** cada bloque, no solo que el corte caiga en una pausa.
+- El prompt que lo detecta: pedirle a Gemini que transcriba y que **avise en una linea `PROBLEMA:` si el
+  audio esta cortado, trabado, se superponen voces o cambia de voz de golpe**.
+
+### La banda no debe tapar el grafico
+Primera version del v12 arreglado: puse la banda de `y 1030` a `1630` y **tapo la licuadora, el jengibre y
+la taza**, que son justo lo que se quiere mostrar. Los subtitulos de ellos en el #21 estan en **y 1206-1246**
+—medido clip por clip—, o sea **exactamente donde va el nuestro**. Con una banda de `y 1165` a `1315`
+alcanza: tapa el de ellos, hace de fondo al nuestro y deja ver el grafico.

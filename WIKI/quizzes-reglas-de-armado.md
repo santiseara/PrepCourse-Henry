@@ -1,4 +1,33 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-19 · El tramo final del quiz se poda: de la última pregunta, carga y oferta — nada en el medio
+Santiago, sobre el quiz de [[limpia-dolor]] ya en vivo: *"saques la slide que le pregunta si se va a comprometer"*,
+*"la slide que le sigue, que tiene un audio… el segundo audio"* y *"la slide que va después de la pantalla de carga,
+que le da como un breve resumen de todo"* — *"quiero que después de la pantalla de carga salte en directo a la
+última slide"*.
+
+**Los tres pasos que se sacan al clonar un quiz de salud, y están en todos:**
+1. **El compromiso** (*"¿Te comprometés a seguir el Protocolo de X días?"* con los dos botones y el carrusel de
+   chats de WhatsApp). No califica ni segmenta: es un paso más entre la pregunta y la plata.
+2. **El segundo audio** (el anteúltimo), con su caso real y su botón de *Generar mi protocolo*. **El audio del
+   mecanismo va UNA vez** —el del medio del quiz— y el otro queda en la oferta. Dos audios seguidos antes del precio
+   cansan y el que está por comprar ya escuchó el argumento.
+3. **La pantalla de resultado/resumen** entre la carga y la oferta (la tabla comparativa, los medidores de
+   probabilidad, el agente parasitario y la foto de la bebida). Es un resumen de lo que ya dijo el quiz: le roba el
+   golpe a la oferta y agrega un clic.
+
+**El orden que queda: última pregunta → pantalla de carga → oferta.** La carga encadena con `ir(estado.i + 1)`, así
+que sacar el paso del medio basta: no hay que tocar el motor. Y la última pregunta es `ops`, o sea que avanza con el
+click de la opción — el CTA de *Generar mi protocolo* no hace falta.
+
+**El barrido de huérfanos de este recorte** (regla del 4/11, *"sacalo" es el paso entero*): `CHATS` y `chat()`,
+`case "car"` y `case "met"`, el CSS de `.car`/`.pts`, del chat dibujado y de la tabla `.vs`, el listener de los puntos
+del carrusel, y en el `CONFIG` el `a2` del audio, los dos videos del slot 2 y la imagen `bebida`. ⚠️ El CSS de
+`.met-t` **se queda**: lo usa el bloque `antes` de la oferta. Dejó el quiz en **993 líneas** y el `.txt` en
+**473 KB** (era 662 KB).
+
+Y **se renumeran los comentarios de paso** (`/* 23 · etapa 22 */` → `/* 22 · etapa 21 */`, …). Si no, el próximo
+recorte se hace sobre un mapa que miente.
+
 ### 🆕 2026-11-19 · Un quiz con las fotos adentro SÍ entra en ImpulTienda, si se comprime por rol
 Santiago, sobre la primera entrega del quiz de [[helados-que-venden]]: *"Fijate que no tengo el txt con las fotos,
 dejámelo solo, saca todo lo que no sirve"*. Había entregado el HTML con `baseImagenes` + una carpeta de 34 archivos

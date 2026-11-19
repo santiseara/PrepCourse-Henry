@@ -17,7 +17,9 @@ FF = os.path.expanduser("~/bin/ffmpeg")
 S = sys.argv[1] if len(sys.argv) > 1 else "/tmp/ciatico_render"
 
 # bloques de cada avatar, cortados en el medio de sus pausas
-MAYOR = [("M1", 0.00, 11.05), ("M2", 11.05, 37.60), ("M3", 37.60, 51.08)]
+# ⚠️ el corte M2/M3 va en el silencio de 35,92-36,60: si se corta despues, "Lo puede hacer"
+# queda al final de M2 y el mayor contesta ANTES de que el joven le pregunte.
+MAYOR = [("M1", 0.00, 11.05), ("M2", 11.05, 36.26), ("M3", 36.26, 51.08)]
 JOVEN = [("J1", 0.00, 4.00), ("J2", 4.00, 5.70), ("J3", 5.70, 13.00)]
 
 # orden del ad: (bloque, de que avatar, que b-roll encima o None = se ve el avatar)

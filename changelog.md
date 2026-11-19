@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-11-19 (noche) — Limpia Dolor: el quiz podado de 28 a 25 pantallas
+
+Santiago pidio sacar tres pasos del tramo final del quiz de desparasitacion: **el compromiso**
+(*"¿Te comprometes a seguir nuestro Protocolo de 9 Dias?"*), **el segundo audio** (el anteultimo, con el
+caso de 1 semana) y **el resumen que iba despues de la pantalla de carga** (tabla comparativa, medidores,
+el agente parasitario y la bebida). Ahora va **de la ultima pregunta a la carga y de la carga derecho a la
+oferta**.
+
+- Recortados los **5 archivos** a la vez: `~/Desktop/limpia-dolor/landing/{quiz.html, limpia-dolor-quiz.txt,
+  limpia-dolor-PRUEBA.html}` y las copias `OUTPUTS/2026-11-18-quiz-limpia-dolor{.txt,-fuente.html}`.
+  El `.txt` bajo de **662 KB a 473 KB** y el fuente de 1118 a **993 lineas**.
+- **Barrido de huerfanos**: `CHATS` y `chat()`, `case "car"` y `case "met"`, el CSS de `.car`/`.pts`, del chat
+  dibujado y de la tabla `.vs`, el listener de los puntos del carrusel, y en el `CONFIG` el audio `a2`, los dos
+  videos del slot 2 y la imagen `bebida`. El CSS de `.met-t` se queda: lo usa el bloque `antes` de la oferta.
+  Comentarios de paso renumerados.
+- **Verificado en Chrome**, clickeando las 25 pantallas una por una: cero desbordes, cero imagenes rotas, cero
+  errores de consola, barra de progreso hasta 100 % en la ultima pregunta, la carga saltando a la oferta y los
+  **6 CTAs** ligados al checkout.
+- WIKI: regla nueva del 19/11 en [[quizzes-reglas-de-armado]] (*el tramo final del quiz se poda*) y
+  [[limpia-dolor]] al dia. ⚠️ Lo que esta pegado en la tienda sigue siendo la version de 28 pantallas.
+
 ## 2026-11-19 (noche) — Limpia Dolor: los dos arreglos que pidio Santiago
 
 Miro los tres videos y encontro dos fallas que yo no habia visto porque **verifique cuadros y numeros en

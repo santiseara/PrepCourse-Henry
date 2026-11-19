@@ -167,3 +167,11 @@ música, así que **`silencedetect` da los cortes de frase reales** y se puede r
 ### Cuidado al matar procesos
 `pkill` sobre un `ffmpeg` que está escribiendo deja el MP4 **corrupto aunque el header diga la duración
 correcta**. Si se interrumpe un render, se borra el archivo y se rehace.
+
+### Dos trampas del tramo final (19/11/2026)
+- **El original tiene ~16 s de NEGRO entre el ad y el reloj.** Si se corta el reloj "desde donde termina el
+  ad" sale un video con 16 s en negro. En el `hd-25` el ad muere a los 79,6 s y **el reloj recién arranca a
+  los 96,6 s**. Nuestros videos aprobados (v6) van **del cierre directo al reloj, sin negro**, así que el
+  reloj hay que buscarlo con `blackdetect` antes de recortarlo.
+- **Cortar con `-c copy` no cae en keyframe** y mete esos mismos cuadros negros al principio del clip:
+  el reloj se recorta **recodificando**.

@@ -145,3 +145,13 @@ Directo, sin preámbulos · negritas y emojis de sección · 🇬🇧/🇪🇸 c
 ## Fuentes
 - RAW/2026-10-10-contexto-maestro-santiago.md (secciones 9 y 10)
 - RAW/2026-10-10-guiones-ganadores-scented-stones.md (notas de Santiago)
+
+## Si el video pesa más de 10 MB, lo sube él (registro 2026-11-19)
+Santiago, al ver que el clon del carozo de palta quedó en 59 MB: *"Dejámelo en la carpeta y lo subo"*.
+- El conector de Drive y el uploader de Chrome cortan en **10 MB**, así que lo que suba yo sale recomprimido.
+- Cuando la tanda convive en el Drive con videos sin comprimir (los de [[limpia-dolor]] pesan 35-63 MB),
+  **el máster va a `~/Desktop/<oferta>/anuncios/` y lo sube él**, para que no quede uno con menos bitrate
+  que el resto de la carpeta.
+- **No reemplaza la regla del 17/11**: la tanda sigue yendo al Drive sin preguntar y el peso no es excusa.
+  Lo que cambia es que, cuando el máster supera los 10 MB, **se le avisa y se le ofrece** dejarlo en la
+  carpeta en vez de subir una copia degradada. Si no dice nada, se sube comprimido.

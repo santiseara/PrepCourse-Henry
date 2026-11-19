@@ -99,3 +99,71 @@ Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-l
 
 - `https://minhareceita.online/` (quiz de InLead, descifrado el 18/11/2026)
 - Conversación del 2026-11-18
+
+## El original: Emma Miller (BR) y cómo se clonan sus ads (19/11/2026)
+
+**La página fuente** es **`Emma Miller`** (`view_all_page_id=508084695729778`), con **~490 anuncios activos**
+y **un solo texto** para todos (*"Dor nas juntas ao acordar? Rigidez depois de ficar muito tempo parado?…"*):
+testean creativo, no copy, igual que [[higado-liviano]] y [[dieta-3-fases]].
+En Argentina corre además `view_all_page_id=1172801672593830`, que vende el mismo **"Protocolo Limpia Dolor
+9 Días" a $19.999** y un "Protocolo Diabetes 14 días", casi todo con **imágenes estáticas** (solo 2 videos).
+
+### El molde de sus ads (medido)
+- **~80 s de anuncio + una cola de reloj girando** hasta los 5 o 10 minutos. El corte es exacto: el audio
+  muere a los 79,6 s y de ahí al final solo hay un reloj. Nuestros clones repiten eso con **~30 s de reloj**
+  (total ~110 s).
+- Placa de titular arriba (roja con texto blanco bold itálico, o blanca con texto negro, según el ad),
+  subtítulo quemado de 2-4 palabras en blanco con la palabra clave en **amarillo**, b-rolls y **renders 3D
+  médicos**, y cierre con placa + **tres flechas rojas**.
+
+### Cómo se baja su material
+El `<video>` de la Ads Library sirve **360x640**, que no alcanza. La buena está en el HTML de la página:
+el campo **`video_hd_url`** (hay uno por tarjeta, en el mismo orden que los `<video>`) da **720x1280**.
+Se baja desde la propia página con `fetch` + `blob` + `<a download>`, sin que la URL salga de Chrome.
+⚠️ El `fetch` a blob corta cerca de **16 MiB**; los ads completos entran porque pesan 8-40 MB.
+
+### El clon NO se genera de cero: se dobla
+Comparando nuestro **v6** contra su original (#14 *Artrose no joelho*), son **el mismo video cuadro por
+cuadro**. Lo único que cambia es la voz, la placa y los subtítulos. El flujo real, que está armado en la
+cuenta de HeyGen de Santiago (`searasantiago58@gmail.com`, plan Pro):
+1. Por cada ad se crea un **avatar de foto** del presentador, tomado de un cuadro limpio de su propio video,
+   con el nombre `ARTROSIS V<n> AV<n> <plano>` (ya hay 17, de V1 a V9; el V6 no tiene porque es 100 % animado).
+2. Se genera el **Vídeo de Avatar** con el guion en castellano, voz **`damian`** (el único clon masculino de
+   la cuenta) y **Avatar IV a 1080p** (nunca Avatar 6, que viene por defecto y es el caro).
+3. Se **monta localmente**: el avatar como base, encima los b-rolls y renders recortados del original en sus
+   tiempos, la placa y los subtítulos propios.
+
+### Borrar sus subtítulos en portugués (regla del 19/11)
+Los b-rolls traen el subtítulo portugués quemado y **hay que sacarlo bien**.
+- ⛔ **`delogo` no sirve**: deja rayas verticales muy visibles.
+- ⛔ **Blur solo tampoco**: queda el fantasma del texto.
+- ✅ Lo que funciona, y es lo que tiene el v6 aprobado: **recortar la banda, pasarle `gblur=sigma=50` +
+  `eq=brightness=-0.34:contrast=0.45`, superponerla y rematar los bordes con dos `drawbox` de alpha 0,10 y
+  0,16**. Queda una banda oscura difuminada que además hace de fondo al subtítulo nuevo.
+- La banda va **a medida de cada clip**: la mayoría lleva `y 1040→1270`, pero los que tienen el subtítulo en
+  dos líneas o más arriba necesitan arrancar en `y 920`. Hay que **mirar clip por clip**: el del viejito en
+  la cama se escapó en la primera pasada.
+- **La banda NO va sobre los planos del avatar**: ahí no hay nada que tapar y se ve como una franja negra
+  pegada. Nuestros subtítulos se leen solos con su contorno.
+
+### Las placas se calcan midiendo los píxeles rojos
+En vez de estimar a ojo, se mide la caja del original (detectando los píxeles rojos por fila) y se dibuja la
+nuestra con esas coordenadas exactas, **un poco más grande**, para que no asome el portugués por los costados.
+Medidas del #25 en 1080x1920: titular `x166 y867 746x114`, bajada `x6 y985 1068x53`, placa final `y866 h196`.
+Fuente: **Arial Bold Italic** con `borderw` del mismo blanco para engrosarla.
+
+### Los subtítulos nuestros, medidos del v3
+**y 1194–1246** (63,5 % del alto), letras de **53 px** (fuente ~72), **Rubik**, blanco con la palabra clave en
+**amarillo**, 2-3 palabras por bloque. Se queman con un **.ass** y el filtro `subtitles` (ffmpeg tiene libass),
+que es la única forma cómoda de pintar una sola palabra de otro color.
+
+### Los tiempos salen del audio, no se estiman
+Para calzar subtítulos y b-rolls hay que transcribir el audio **con marcas de tiempo**. La API de Gemini
+(`gemini-3.8-flash`) lo hace, pero **tarda muchos minutos con audio largo y devuelve 503 seguido**: conviene
+lanzarla temprano y en paralelo con el resto del trabajo. Como respaldo, el audio del avatar es voz limpia sin
+música, así que **`silencedetect` da los cortes de frase reales** y se puede repartir el guion sobre ellos.
+⚠️ Nunca estimar los tiempos escalando los del portugués: el ritmo no coincide frase a frase.
+
+### Cuidado al matar procesos
+`pkill` sobre un `ffmpeg` que está escribiendo deja el MP4 **corrupto aunque el header diga la duración
+correcta**. Si se interrumpe un render, se borra el archivo y se rehace.

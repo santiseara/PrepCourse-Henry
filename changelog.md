@@ -1,3 +1,36 @@
+# Changelog
+
+## 2026-11-19 — Limpia Dolor: el metodo de clonado de Emma Miller y el primer ad nuevo (el carozo de palta)
+
+**Por que:** la oferta [[limpia-dolor]] esta vendiendo y Santiago pidio escalarla con video, clonando ads del
+original que todavia no hubieramos hecho.
+
+**Lo que se descubrio:**
+- La pagina fuente es **Emma Miller** (BR, `view_all_page_id=508084695729778`), con **~490 anuncios activos**
+  y **un solo texto** para todos. En Argentina corre ademas `1172801672593830`, con el mismo producto a
+  $19.999 pero casi todo en imagenes estaticas.
+- Sus ads son **~80 s de anuncio + una cola de reloj girando** hasta los 5 o 10 minutos.
+- De sus **30 formatos de video** relevados, **8 ya estaban clonados** (estan en Drive, los subio Damian el
+  18/11). El ganador que marco Santiago es el **v6**, que arranca *"¿Pomada para tratar la artrosis?"*: la
+  rodilla animada en 3D contestandole con sarcasmo a cada tratamiento. **Quedan 14 sin clonar.**
+- **El clon no se genera de cero: se dobla.** Nuestro v6 es el original de ellos **cuadro por cuadro**; solo
+  cambian la voz, la placa y los subtitulos. El flujo esta armado en la cuenta de HeyGen de Santiago: avatar
+  de foto por plano (`ARTROSIS V<n> AV<n>`), voz `damian`, **Avatar IV a 1080p**, y montaje local.
+- La Ads Library sirve los videos en 360x640, pero el campo **`video_hd_url`** del HTML da **720x1280**.
+
+**Lo que se hizo:** el clon del **#25, *Artrose: como resolver em casa*** (el del carozo de palta), elegido
+por ser el mas cercano a la DNA del ganador. Guion transcreado al rioplatense, avatar nuevo
+`ARTROSIS V10 AV1 palto`, los 9 b-rolls y renders del original recortados y con **el subtitulo en portugues
+borrado**, placas rojas calcadas al pixel y subtitulos propios con los tiempos reales del audio.
+
+**Reglas nuevas** (en [[limpia-dolor]]): como borrar bien los subtitulos ajenos (el `delogo` deja rayas y el
+blur solo deja fantasma; va banda difuminada a medida de cada clip, y **nunca sobre el avatar**), como se
+calcan las placas midiendo los pixeles rojos, el estilo exacto de nuestro subtitulo (Rubik, y 1194-1246,
+clave en amarillo, por .ass), y que **`pkill` sobre un ffmpeg deja el MP4 corrupto aunque el header mienta**.
+
+**Archivos:** `OUTPUTS/2026-11-19-guion-limpia-dolor-carozo-de-palta.md`,
+`OUTPUTS/scripts-vsl/edit_carozo.py`, `OUTPUTS/scripts-vsl/subs_carozo.py`.
+
 ## 2026-11-19 — Helados que Venden: el quiz pasado a LATAM (US$ 12)
 
 Santiago: *"Necesito que hagamos el mismo quiz para latam, hacemelo"*, y después el checkout

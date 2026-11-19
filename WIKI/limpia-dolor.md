@@ -248,3 +248,32 @@ En el #09 la placa roja va de `y 1052` a `1363` y el subtitulo cae en `y 1190`: 
 original **no hay subtitulo mientras esta la placa**. Regla: al generar el .ass, **descartar los eventos que
 arrancan antes de que termine la placa**. En el #25 no hacia falta porque su placa esta mas arriba
 (`y 867-1038`) y no llega al subtitulo.
+
+## ⛔ Dos errores que Santiago encontró en la primera entrega (19/11, tarde)
+
+Santiago: *"El v11 está totalmente mal, el audio está totalmente trabado… Ni lo miraste"* y *"el v12 tiene el
+audio discoordinado con los labios… ya me cansé de decirte que tenés que usar siempre el avatar que vos
+hacés"*. Las dos cosas se escuchaban/veían al primer play y yo había verificado **solo cuadros y numeros**.
+
+### 1. Mezclar mono y estereo en el concat rompe el audio
+Las voces de los pacientes salian de `tts_gemini` en **mono** y los bloques del avatar en **estereo**. Al
+concatenarlas con el demuxer `concat`, el audio sale **trabado** y por tramos solo se oye una de las voces.
+- **Regla: toda pieza que entra a un concat se normaliza a `-ac 2 -ar 48000` antes.** No alcanza con que el
+  concat reencodee al final.
+- Si ya esta armado, no hace falta rehacer el video: se extrae el audio de cada pieza a wav estereo, se
+  concatenan los wav y se pega la pista al MP4 que ya tiene el video bien.
+
+### 2. Casi ningun "b-roll" de ellos es un b-roll: es el presentador hablando
+En el **#21**, de los 9 tramos que recorte como b-roll, **8 eran el presentador de ellos hablando** con un
+grafico encima (la licuadora, el reloj, la taza, la pierna, la caja de remedios). Superpuestos enteros,
+arriba queda **su boca moviendose en portugues** y los labios no cierran.
+- **Regla: el avatar nuestro es la base de TODO el video.** De los tramos de ellos se superpone **solo el
+  grafico**, recortando de su linea para abajo (`div` en el plan). El clip que no tenga un grafico
+  aprovechable **se descarta** y queda nuestro avatar hablando.
+- Es la misma causa que la correccion de pantalla partida del #25, pero ahi eran 5 tramos y acá son 8 de 9:
+  **hay que mirar clip por clip si aparece una cara hablando**, no asumir que un recorte es b-roll.
+
+### Y la regla de fondo: no se entrega sin mirar y escuchar
+Una hoja de cuadros y `volumedetect` **no detectan** ni un audio trabado ni unos labios desfasados.
+Antes de entregar: **transcribir el audio final** (si sale entrecortado o se pierde texto, hay un problema)
+y **mirar los tramos donde hay una cara hablando**.

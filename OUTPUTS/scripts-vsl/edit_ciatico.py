@@ -21,6 +21,24 @@ MAYOR = [("M1", 0.00, 11.05), ("M2", 11.05, 37.60), ("M3", 37.60, 51.08)]
 JOVEN = [("J1", 0.00, 4.00), ("J2", 4.00, 5.70), ("J3", 5.70, 13.00)]
 
 # orden del ad: (bloque, de que avatar, que b-roll encima o None = se ve el avatar)
+# Casi todos los "b-rolls" de este ad son **el presentador de ellos hablando** con un
+# grafico encima, no b-rolls puros. Si se superponen enteros, arriba queda su boca
+# moviendose en portugues. Por eso cada uno lleva `div`:
+#   div=0   -> el clip va a pantalla completa (es un b-roll de verdad)
+#   div=N   -> solo se superpone **de y=N para abajo**; arriba queda nuestro avatar
+#   None    -> el clip se descarta (es solo el presentador hablando, sin grafico que valga)
+BROLL = {
+    "01_espalda":      0,     # otro actor mostrando la espalda: va entero
+    "02_ibuprofeno":   None,  # es el mayor hablando
+    "03_reloj":        900,   # la licuadora con el jugo, abajo
+    "04_ingredientes": 1150,  # el reloj azul flotando
+    "05_parasito":     None,  # el mayor con un parasito translucido encima
+    "06_tension":      930,   # la taza de te, abajo
+    "07_rodilla":      1000,  # la pierna, abajo
+    "08_licuadora":    980,   # la caja de remedios, abajo
+    "09_boton":        None,  # es el joven hablando: queda nuestro avatar
+}
+
 PLAN = [
     ("M1", "mayor", ["01_espalda", "02_ibuprofeno"]),
     ("J1", "joven", None),
@@ -61,7 +79,7 @@ def main():
             run([FF, "-v", "error", "-y", "-ss", f"{a:.3f}", "-t", f"{d:.3f}", "-i", src,
                  "-vf", "fps=30,scale=1080:1920,setsar=1",
                  "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p",
-                 "-c:a", "aac", "-b:a", "160k", "-ar", "48000", out], f"{clave} ({d:.2f}s)")
+                 "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", out], f"{clave} ({d:.2f}s)")
         else:
             # el avatar es la base y los b-rolls se superponen uno tras otro
             ins = ["-ss", f"{a:.3f}", "-t", f"{d:.3f}", "-i", src]
@@ -71,9 +89,22 @@ def main():
             prev, t = "base", 0.0
             for j, n in enumerate(brolls, start=1):
                 db = min(dur(os.path.join(S, "broll", n + ".mp4")), max(0.1, d - t))
-                fc.append(f"[{j}:v]fps=30,scale=1080:1920,setsar=1,trim=0:{db:.3f},"
-                          f"setpts=PTS-STARTPTS+{t:.3f}/TB[b{j}]")
-                fc.append(f"[{prev}][b{j}]overlay=0:0:enable='between(t,{t:.3f},{t+db:.3f})'[v{j}]")
+                div = BROLL.get(n, 0)
+                if div is None:   # descartado: se ve nuestro avatar y el tiempo igual corre
+                    t += db
+                    if t >= d:
+                        break
+                    continue
+                if div:           # solo de la linea para abajo
+                    alto = 1920 - div
+                    fc.append(f"[{j}:v]fps=30,scale=1080:1920,setsar=1,crop=1080:{alto}:0:{div},"
+                              f"trim=0:{db:.3f},setpts=PTS-STARTPTS+{t:.3f}/TB[b{j}]")
+                    fc.append(f"[{prev}][b{j}]overlay=0:{div}:"
+                              f"enable='between(t,{t:.3f},{t+db:.3f})'[v{j}]")
+                else:             # pantalla completa
+                    fc.append(f"[{j}:v]fps=30,scale=1080:1920,setsar=1,trim=0:{db:.3f},"
+                              f"setpts=PTS-STARTPTS+{t:.3f}/TB[b{j}]")
+                    fc.append(f"[{prev}][b{j}]overlay=0:0:enable='between(t,{t:.3f},{t+db:.3f})'[v{j}]")
                 prev = f"v{j}"
                 t += db
                 if t >= d:
@@ -81,7 +112,7 @@ def main():
             fc.append(f"[{prev}]null[vf]")
             run([FF, "-v", "error", "-y"] + ins + ["-filter_complex", ";".join(fc),
                  "-map", "[vf]", "-map", "0:a", "-c:v", "libx264", "-preset", "medium", "-crf", "19",
-                 "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-ar", "48000",
+                 "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
                  "-t", f"{d:.3f}", out], f"{clave} ({d:.2f}s, {len(brolls)} b-rolls)")
         piezas.append(out)
 
@@ -91,7 +122,7 @@ def main():
             f.write(f"file '{p}'\n")
     run([FF, "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lista,
          "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-r", "30",
-         "-c:a", "aac", "-b:a", "160k", "-ar", "48000", os.path.join(S, "ad.mp4")], "union")
+         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", os.path.join(S, "ad.mp4")], "union")
     print("\nlisto ->", os.path.join(S, "ad.mp4"), f"({dur(os.path.join(S,'ad.mp4')):.2f}s)")
 
 

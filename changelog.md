@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-11-19 (noche) — Limpia Dolor: los dos arreglos que pidio Santiago
+
+Miro los tres videos y encontro dos fallas que yo no habia visto porque **verifique cuadros y numeros en
+vez de mirar y escuchar**:
+
+- **v11, audio trabado** (*"se escucha horrible… solo se escucha la voz de la mujer"*). Causa: las voces de
+  los pacientes salen de `tts_gemini` en **mono** y los bloques del avatar en **estereo**; el demuxer
+  `concat` con piezas de distinto numero de canales rompe la pista. Arreglado **sin tocar creditos**:
+  se extrajo el audio de cada pieza a wav estereo, se concatenaron y se pego la pista al video que ya
+  estaba bien. Verificado **transcribiendo el audio final**, que ahora sale completo y limpio.
+- **v12, labios desfasados** (*"ya me cansé de decirte que tenés que usar siempre el avatar que vos hacés"*).
+  Causa: de los 9 tramos que recorte como b-roll, **8 eran el presentador de ellos hablando** con un grafico
+  encima. Superpuestos enteros, arriba quedaba su boca en portugues. Arreglado: **nuestro avatar es la base
+  de todo el video** y de ellos baja **solo el grafico**, recortado de su linea para abajo; los tres sin
+  grafico aprovechable se descartan. Tampoco costo creditos.
+
+Las dos reglas quedaron en [[limpia-dolor]], junto con la de fondo: **no se entrega sin mirar y escuchar**;
+una hoja de cuadros y `volumedetect` no detectan ni un audio trabado ni unos labios desfasados.
+
+
 ## 2026-11-19 (tarde) — Limpia Dolor: tres ads clonados de Emma Miller
 
 Santiago: la oferta esta vendiendo y pidio escalarla con video, clonando ads del original **que no esten

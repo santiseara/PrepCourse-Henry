@@ -106,6 +106,22 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
   entran al video.** Saltear los índices de presentador (los reemplaza el avatar) antes de contar: si no, se
   persiguen fantasmas. Detalle del limpiador de subtítulos quemados en [[cabello-fuerte]].
 
+- **2026-11-18 · El avatar tiene que llenar el cuadro: ningún borde, de ningún color.** Pedido de Santiago sobre
+  la tanda de [[dieta-3-fases]]: *"lo de los bordes que se ven en el avatar del médico, se tiene que ver completo"*.
+  Los renders de **HeyGen Avatar IV** del "Doctor Lucas VSL" salen 720×1280 pero con **201 px de blanco puro
+  arriba y abajo**: el avatar queda encajonado y así se entregó la primera vuelta. Tres reglas que salen de ahí:
+  - El detector de franjas **mide en la resolución nativa del render, no sobre un escalado**: medir sobre un
+    lienzo reescalado alisa los degradé del fondo y da falso positivo (fue lo que hizo apagar el detector antes).
+  - Busca franjas lisas **de cualquier tono**, no solo negras, y las confirma en **3 cuadros distintos**: una
+    franja de verdad está en los tres.
+  - El recorte va **en el origen, antes de escalar** (`crop` y recién después `scale`+`crop` a 1080×1920). Al revés
+    —escalar y después recortar— la cara sale estirada en vertical.
+  Verificación: medir las filas lisas de los bordes en el mp4 terminado. El negro de los renders 3D sobre fondo
+  negro **no es un borde**, es la imagen; por eso se mide el render del avatar, no el video entero.
+- **2026-11-18 · Los subtítulos quemados van con `WrapStyle: 0`.** Con `WrapStyle: 2` (sin corte automático) los
+  grupos largos —*"SACARON LA COLOSTOMÍA"*— se pasan de los 1080 px y se cortan contra los bordes del cuadro.
+  Con 0 bajan solos a dos líneas y entran enteros.
+
 ## Preguntas abiertas
 
 - ✅ **Resuelto el 11/11: sale de Veo 3.1 Fast por [[apimart]]** (mirá la Regla 0). Se probó `wan2.7-r2v` con voz de Gemini TTS como `reference_voice` y se descartó el mismo día: audio plano y visual que se nota. HeyGen queda para doblaje.

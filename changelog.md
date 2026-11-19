@@ -1,3 +1,29 @@
+## 2026-11-18 (noche) — Dieta de las 3 Fases: el avatar del médico, a cuadro completo
+
+Santiago: *"lo de los bordes que se ven en el avatar del médico, se tiene que ver completo"*.
+
+- **Medidos los 10 renders de HeyGen**: 6 de ellos (los del avatar *Doctor Lucas VSL* — g02, g03, g04, g05, g07, g09)
+  traen **201 px de blanco puro arriba y abajo** sobre 720×1280. Los otros 4 (Doctor Cocina HL y Doctora Hígado
+  Liviano) vienen limpios.
+- `bandas()` en `OUTPUTS/scripts-vsl/edit_claas.py`, rehecho: mide **en la resolución nativa**, acepta franjas de
+  **cualquier tono** (antes solo negro) y confirma en **3 cuadros**. El recorte pasó a hacerse **en el origen,
+  antes de escalar**, porque al revés la cara sale estirada.
+- `gfx_claas.py`: los subtítulos quemados pasan a **`WrapStyle: 0`**. Con `2` los grupos largos
+  (*"SACARON LA COLOSTOMÍA"*) se cortaban contra los bordes del cuadro.
+- **Los 10 anuncios re-renderizados** con los dos arreglos y copiados a `~/Desktop/dieta-3-fases/anuncios/`,
+  pisando los de las 14:39. Control: medidas las filas lisas de los bordes en los 10 mp4 — no queda ninguna
+  franja; el negro que aparece en algunos tramos es el fondo de los renders 3D, no un borde.
+- 🐞 **El 09 nunca había llegado al Drive** en la entrega anterior: se subió ahora junto con los otros 9.
+- **Los 10 subidos al Drive** (Ebook Dami › Ebook Dieta de las 3 Fases (AR) › Videos terminados), comprimidos a
+  ~7 MB con `comprimir_drive.py`.
+- 🐞 **El conector de Drive solo sube un archivo por referencia si está dentro del directorio de trabajo del
+  proyecto**: desde `~/Desktop/...` responde *"does not exist or can't be sent by reference"*. Se copia a una
+  carpeta temporal del repo, se sube y se borra.
+- ⚠️ **No pude mandar los viejos a la papelera** (el permiso de borrado en Drive quedó denegado): los 9 anteriores
+  siguen en la misma carpeta renombrados **`VIEJO ...`**. Los que decían *(bordes)* son los 6 del avatar encajonado.
+  Conviene borrarlos a mano, o habilitar el permiso y los borro yo.
+- Wiki: dos correcciones nuevas en `WIKI/estilo-de-video-ia.md`.
+
 ## 2026-11-18 (noche) · Cabello Fuerte: los 8 anuncios terminados
 
 - **Anuncio 8 cerrado.** Faltaba por un `-9` de ffmpeg (lo mataba el sistema por memoria): 9 placas en bucle,

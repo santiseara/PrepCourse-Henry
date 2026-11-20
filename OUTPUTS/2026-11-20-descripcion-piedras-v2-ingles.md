@@ -5,6 +5,123 @@ hay adentro, bonus y garantía, CTA. Sin precio del producto (va "dirt cheap"), 
 Sigue la landing: yeso + aceite de fragancia + molde, sin horno.
 20/11/2026
 
+
+====================================================================
+🆕 VERSIÓN CORTA (pedida el 20/11) — es la que va
+====================================================================
+
+--- PRINCIPAL (EN) ---
+
+Less than a dollar to make. Six to twelve on the shelf. 🤍
+
+No kiln, no flame, no wax, no plug. You pour at night, they dry while you sleep.
+
+✔ The measured formula, so your first batch comes out smooth and white
+✔ What to charge per piece, per gift set and per bulk order
+✔ Your first 10 customers in 14 days, and what to say to them
+
+📩 Instant download, dirt cheap · 🛡️ 7 day guarantee
+👉 Tap Learn more and pour your first batch tonight.
+
+--- PRINCIPAL (ES) ---
+
+Menos de un dólar hacerla. Seis a doce en la vidriera. 🤍
+
+Sin horno, sin llama, sin cera, sin enchufe. Las volcás de noche, se secan mientras dormís.
+
+✔ La fórmula medida, para que la primera tanda salga lisa y blanca
+✔ Cuánto cobrar por pieza, por set de regalo y por pedido grande
+✔ Tus primeros 10 clientes en 14 días, y qué decirles
+
+📩 Descarga inmediata, baratísimo · 🛡️ 7 días de garantía
+👉 Tocá Más información y hacé tu primera tanda esta noche.
+
+--- A · LAS CUENTAS (EN) ---
+
+Two hundred pieces is two afternoons at the kitchen table. 🤍
+
+Less than a dollar each to make, six to twelve on the shelf, and one wedding order is eighty to a hundred and fifty pieces from a single customer.
+
+The method gives you the formula, the pricing and your first 10 customers in 14 days.
+
+📩 Instant download, dirt cheap · 🛡️ 7 day guarantee
+👉 Tap Learn more and run the numbers.
+
+--- A · LAS CUENTAS (ES) ---
+
+Doscientas piezas son dos tardes en la mesa de la cocina. 🤍
+
+Menos de un dólar cada una, seis a doce en la vidriera, y un solo pedido de boda son ochenta a ciento cincuenta piezas de un mismo cliente.
+
+El método te da la fórmula, los precios y tus primeros 10 clientes en 14 días.
+
+📩 Descarga inmediata, baratísimo · 🛡️ 7 días de garantía
+👉 Tocá Más información y hacé las cuentas.
+
+--- B · ANTI-HUSTLE (EN) ---
+
+You don't need a business. Just something that pays for your own little things. 🤍
+
+No storefront, no stock, no shipping, no website, nobody to approve you. The piece is finished before you ever have to sell it.
+
+📩 Instant download, dirt cheap · 🛡️ 7 day guarantee
+👉 Tap Learn more. Start tonight with what's in the cupboard.
+
+--- B · ANTI-HUSTLE (ES) ---
+
+No necesitás un negocio. Algo que te pague tus propios gustos, nada más. 🤍
+
+Sin local, sin stock, sin envíos, sin página web, sin que nadie te apruebe. La pieza está terminada antes de que tengas que venderla.
+
+📩 Descarga inmediata, baratísimo · 🛡️ 7 días de garantía
+👉 Tocá Más información. Empezá esta noche con lo que ya tenés.
+
+--- C · LA TEMPORADA (EN) ---
+
+Every shop on your street is about to run out of handmade gifts. 🤍
+
+Boutiques are closing their supplier lists, companies order gift boxes by the case, and every wedding wants eighty favors that look expensive.
+
+📩 Instant download, dirt cheap · 🛡️ 7 day guarantee
+👉 Tap Learn more before the season gets away.
+
+--- C · LA TEMPORADA (ES) ---
+
+Todas las tiendas de tu zona están por quedarse sin regalos hechos a mano. 🤍
+
+Las tiendas cierran sus listas de proveedores, las empresas piden cajas de regalo por caja, y cada boda quiere ochenta souvenirs que parezcan caros.
+
+📩 Descarga inmediata, baratísimo · 🛡️ 7 días de garantía
+👉 Tocá Más información antes de que se te pase la temporada.
+
+--- D · "NO SOY ARTESANA" (EN) ---
+
+You don't need one drop of talent. The mold does the shape. 🤍
+
+The crafty part is nine seconds of laying a dried flower on top. The rest is a proportion: how much water, how much plaster, how many drops.
+
+📩 Instant download, dirt cheap · 🛡️ 7 day guarantee
+👉 Tap Learn more and make the first one tonight.
+
+--- D · "NO SOY ARTESANA" (ES) ---
+
+No hace falta una gota de talento. La forma la hace el molde. 🤍
+
+La parte artesanal son nueve segundos de apoyar una flor seca. El resto es una proporción: cuánta agua, cuánto yeso, cuántas gotas.
+
+📩 Descarga inmediata, baratísimo · 🛡️ 7 días de garantía
+👉 Tocá Más información y hacé la primera esta noche.
+
+--- LÍNEA ÚNICA (EN / ES) ---
+
+The little stone that costs less than a dollar and sits in a boutique at twelve 🤍
+
+La piedrita que cuesta menos de un dólar y está en una tienda a doce 🤍
+
+====================================================================
+VERSIÓN LARGA (queda de banco)
+====================================================================
+
 ====================================================================
 DESCRIPCIÓN PRINCIPAL (EN)
 ====================================================================

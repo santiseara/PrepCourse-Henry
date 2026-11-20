@@ -1,3 +1,7 @@
+## 2026-11-20 — Slime Shop Kit: los TikToks de las visuales para el socio
+- Nuevo `OUTPUTS/2026-11-20-slime-shop-kit-tiktoks-para-el-socio.md`: los 38 links de TikTok del pool, en texto plano y sin nada de Drive, para que el socio se los pase a su editor y rearme los videos con visuales limpias.
+- Verificado contra `~/Desktop/slime-shop-kit/anuncios/work/usage.json`: los 6 ads de la tanda 1 y las 3 renovaciones usan exactamente esos 38 clips.
+
 ## 2026-11-20 — PIEDRAS V2: la tanda inglesa de piedras, rehecha
 
 - **Pedido:** *"hacemelos en ingles nuevamente"* + carpeta nueva en Drive **PIEDRAS V2**. Guion original sin cambios, 6 anuncios.

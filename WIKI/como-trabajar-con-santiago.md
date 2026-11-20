@@ -119,6 +119,15 @@ Santiago, después de que le entregara los 6 de [[tarot-2-dias]] diciendo que no
 - Antes de reemplazar, se **compara un cuadro** del original contra el comprimido. Si se degradó, se sube igual pero se avisa en una línea; no se deja de subir.
 - ⛔ **Lo que NO funciona** (probado el 17/11, no volver a intentarlo): servir los videos desde un `http://127.0.0.1` con CORS y hacerles `fetch` desde la página de Drive. Chrome bloquea el pedido **http** desde una página **https** y la promesa queda colgada sin error; el servidor no registra ni una petición. Tampoco hay Google Drive para escritorio en su Mac.
 
+## Las visuales para el socio son los links de TikTok, no el Drive (regla fija, 2026-11-20)
+Santiago, pidiendo las visuales de [[slime-shop-kit]]: *"Mándame los links de los TikToks que usaste para hacer las visuales. No me mandes el link de Drive de los videos. Necesito el link de las visuales de TikTok para pasárselas a mi socio y que él se las pueda pasar a su clave y que pueda hacer los videos con las visuales limpias."*
+- **"Las visuales" / "las visuales para mi socio" = la lista de links de TikTok del pool de ese video o de esa tanda.** No son los MP4 terminados ni la carpeta de Drive. El socio y su editor rearman los videos desde cero con las visuales limpias, así que lo que necesitan es la fuente.
+- **No se manda el link de Drive** en esa entrega, ni "por si acaso". Los MP4 terminados son otra cosa y van solo cuando pide la tanda.
+- Se entrega **en texto plano, un link por línea**, en bloque de código, guardado en `OUTPUTS/AAAA-MM-DD-<oferta>-tiktoks-para-el-socio.md` y al portapapeles con `pbcopy`. Sin tabla ni claves internas (`c07`, `c42`): esos códigos no le sirven a nadie afuera.
+- **La lista se verifica contra el render, no se escribe de memoria:** las claves usadas salen de `~/Desktop/<oferta>/anuncios/work/usage.json` y se traducen a URL con `pool_autores.txt` (`cuenta/id` → `https://www.tiktok.com/@<cuenta>/video/<id>`). Si varios videos comparten pool, se dice en una línea.
+- Se avisan **las tres cosas que el editor necesita saber**: cuántas cuentas distintas son (no se repite autor en cortes contiguos), que de cada TikTok sirve **una ventana limpia puntual** y no el video entero, y cuántos clips se cayeron por texto quemado o marca de agua ([[estilo-de-video-ia]]).
+- Primera vez aplicado: `OUTPUTS/2026-11-20-slime-shop-kit-tiktoks-para-el-socio.md` (38 links, 28 cuentas).
+
 ## Registro y nombres
 - Los cambios de presupuesto o de puja que me pases van a `OUTPUTS/AAAA-MM-DD-registro-<oferta>.md` ([[organizacion-y-registro]]).
 - Las tandas se entregan con nombres listos: `DD/M - N` ([[nomenclatura-del-metodo]]).

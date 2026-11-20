@@ -62,10 +62,16 @@ Guiones (EN + voseo) y banco de 6 hooks de reserva: `OUTPUTS/2026-11-20-renovaci
 - El backend: todavía no están armados los 4 OTOs. El molde es [[scented-stones]] (ver [[embudo-post-compra]] si se arma).
 - ¿Conviene una tanda 2 con formato estático (caja de preguntas de IG)? Ellos no lo usan.
 
+## Las visuales en bruto (para el socio)
+Los 6 ads de la tanda 1 y las 3 renovaciones comparten **un solo pool de 38 clips de TikTok de 28 cuentas**; lo único que cambia por video es el seed del orden de cortes. Verificado contra `work/usage.json`.
+- Lista de links lista para pasar: `OUTPUTS/2026-11-20-slime-shop-kit-tiktoks-para-el-socio.md` (38 URLs, texto plano, sin Drive).
+- Pool completo con claves y cuentas: `OUTPUTS/2026-11-20-slime-shop-kit-links-visuales.md`.
+- Se bajaron 84 clips y quedaron 43 ventanas limpias (41 se cayeron por texto quemado, marca de agua o revisión visual). Regla de entrega en [[como-trabajar-con-santiago]].
+
 ## Relacionado
 [[estilo-de-video-ia]] · [[guiones-y-anuncios]] · [[internacionalizacion]] · [[ceramic-recipes]] · [[scented-stones]]
 
 ## Fuentes
-- `OUTPUTS/2026-11-18-guiones-slime-shop-kit-tanda1.md`
+- `OUTPUTS/2026-11-18-guiones-slime-shop-kit-tanda1.md`, `OUTPUTS/2026-11-20-renovaciones-slime-shop-kit.md`
 - `~/Desktop/slime-shop-kit/anuncios/work/competencia/` (17 creativos de ellos) y `work/vent_slime.py`
 - `OUTPUTS/scripts-vsl/gen_slime_plans.py`, `edit_slime.py`, `scan_carteles.py`

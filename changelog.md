@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-11-20 (tarde) — Slime Shop Kit: 3 renovaciones del ad ganador
+
+El **01** ("Did you know slime and sensory dough...") esta trayendo ventas. Tres renovaciones con el
+**cuerpo y el CTA textuales** del ganador y un **formato de hook distinto** en cada una, todas del
+mismo angulo (el negocito desde casa): reaccion de un tercero, cuentas rapidas y declaracion
+contraintuitiva. Guiones EN + voseo y banco de 6 hooks en
+`OUTPUTS/2026-11-20-renovaciones-slime-shop-kit.md`.
+
+- **Voz:** Sulafat por API (`gemini-2.5-flash-preview-tts`), control de 7 palabras en 2,85 s (limpio),
+  las tres a 170-186 ppm. Speed 1.20. Videos de **17,9 / 19,0 / 20,3 s** contra los 18,5 s del ganador.
+- **La estetica cambio sin bajar un solo clip nuevo:** ventana corrida media ventana (`OFF 1.3`),
+  tope 8 por clip en vez de 6, el `usage.json` de la tanda 1 reusado para penalizar lo ya visto y
+  el corte de `[1.5, 2.0, 2.5]` a `[1.7, 2.2, 2.7]`. **Los 248 tramos del pool son todos nuevos.**
+- 🐞 **El tripode de filmacion y el pase de revista.** El primer render saco un **tripode negro**
+  asomando arriba. Estaba en casi todo el clip, y los **otros tres clips del mismo autor**
+  (@mushslime: c04, c08, c17, c30) tambien: el defecto es del creador, no del clip. Los cuatro afuera.
+- 🐞 **Una nota de recorte heredada estaba mal medida.** `c23` decia que la paleta de sombras entraba
+  "a los 22 s" y la ventana se habia fijado en 18,0. Entra a los **14**: salio quemada en el render de
+  R2. Ventana corregida a 13,5 en `vent_slime.py`.
+- 🐞 **Marca ajena en el plano de apertura.** R3 abria con el frasco *"SLIME BUTTER / EXTRA WHIPPED
+  BUTTERCREAM"* de otra tienda debajo de la caja de hook. Veto de los primeros 14 s de `c28` y del
+  frasco "MARKET COOLER" de `c25`. La tanda se re-renderizo entera tres veces hasta que las tres
+  hojas de contactos salieron limpias.
+- **Herramienta nueva:** `OUTPUTS/scripts-vsl/gen_slimeR_plans.py` (planes de renovacion, con dict `VETO`).
+- **Los 3 subidos al Drive** (*Ebook Dami / Ebook Slime Shop Kit (EN) / Videos terminados*),
+  comprimidos a 6,9-7,2 MB, cuadro comparado contra el master (indistinguible).
+- Tres reglas nuevas en `WIKI/guiones-y-anuncios.md` y la tanda R en `WIKI/slime-shop-kit.md`.
+
+
 ## 2026-11-20 — Slime Shop Kit: los links de las visuales, para el socio
 
 Santiago pidio los links de las visuales de slime para su socio. Se entregaron las dos cosas:

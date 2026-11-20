@@ -429,6 +429,16 @@ for k, o in enumerate(P.get('overlays', [])):
     if o['type'] == 'stamp': t1 = min(t1, min([c for c in cuts if c > t0 + 0.1] or [L]) - 0.02)   # el sello no pasa al plano siguiente
     ovs.append((pth, t0, t1, o['type'] not in ('end', 'button')))
 
+# dos precios seguidos no se pisan: el de antes muere cuando entra el siguiente
+_tipos = {}
+_base = len(ovs) - len(P.get('overlays', []))
+for k_, o in enumerate(P.get('overlays', [])):
+    _tipos[_base + k_] = o['type']
+_verdes = sorted([i for i in range(len(ovs)) if _tipos.get(i) == 'green'], key=lambda i: ovs[i][1])
+for a_, b_ in zip(_verdes, _verdes[1:]):
+    if ovs[a_][2] > ovs[b_][1] - 0.05:
+        ovs[a_] = (ovs[a_][0], ovs[a_][1], max(ovs[a_][1] + 0.7, ovs[b_][1] - 0.08), ovs[a_][3])
+
 for pf in P.get('fixed', []):      # chips de Aula Digital: pegados los L segundos, sin pop
     ovs.append((F(pf), 0.0, L, False))
 

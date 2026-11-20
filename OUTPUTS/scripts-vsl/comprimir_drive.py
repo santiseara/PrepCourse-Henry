@@ -7,7 +7,7 @@ import os, re, subprocess, sys
 FF = os.path.expanduser('~/bin/ffmpeg')
 SRC, DST = sys.argv[1], sys.argv[2]
 os.makedirs(DST, exist_ok=True)
-OBJ_MB = 6.8
+OBJ_MB = 5.2   # 20/11/2026: a 6,8 (archivo de 7,15 MB) el conector devuelve EPROTO; a 5,5 entra
 
 def dur(f):
     r = subprocess.run([FF, '-i', f], capture_output=True, text=True).stderr

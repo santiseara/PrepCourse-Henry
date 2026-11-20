@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-11-20 (noche) — Crochet Painting: oferta nueva clonada de crochetpaint.com, tanda 1 de 6 videos
+
+Santiago, con el link de la Biblioteca de Anuncios de `www.crochetpaint.com`: *"le vamos a copiar
+exactamente sus mejores hooks... Lo único que vamos a variar es un poco el cuerpo y el CTA del guión...
+no quiero que hagas un cuerpo totalmente nuevo... 6 videos para testear."*
+
+- **Desarme del ganador.** ~94 ads activos de **"Emily Carter"** (el más viejo del 26/10), un solo primary
+  text (*"The crochet technique that makes the same yarn worth 10x more 😍"*) y la **clase gratis** como
+  destino. Se bajaron y transcribieron sus **11 creativos de más impresiones**. La landing (USD 47, pago
+  único, garantía de 30 días) quedó leída entera. Todo en **`WIKI/crochet-painting.md`**.
+- **Entregado: `OUTPUTS/2026-11-20-guiones-crochet-painting-EN-tanda1.md`** — 6 guiones con **sus 6 hooks
+  textuales** (el perro que cruzó el arcoíris, los 54 años, los que se rieron, "todos creen que es un
+  cuadro", "nadie paga trescientos dólares por crochet" y los novecientos dólares tirados), cuerpo y CTA
+  reescritos sobre el mismo ángulo, en inglés y español con voseo.
+- **Entregados: 6 videos de 51 a 70 s** en el Drive (*Ebook Dami / Ebook Crochet Painting (EN) / Videos
+  terminados*) y los másters sin comprimir en `~/Desktop/crochet-paint/anuncios/`. Voz Sulafat a speed 1.20,
+  cortes de 1,7 a 2,7 s, cama musical de aromatizadores.
+- **Edición clonada de ellos** (`edit_crochet.py` + `gen_crochet_plans.py`, nuevos): **sin un solo
+  subtítulo**, precios en **verde lima `#30FA0A`** con borde negro anclados a la palabra que los dice, y
+  placa de cierre **fucsia `#EB348B`** de dos renglones (*"just tap / Learn More."*) con corazón.
+- **Pool de TikTok:** 193 clips de `#crochetportrait`, `#graphgan`, `#c2ccrochet`, `#pixelcrochet`,
+  `#tapestrycrochet` y `#crochetwallhanging`. El OCR dejó 57, la revisión visual bajó 10, la hoja del render
+  2 más y el OCR fino de 0,5 s otros 4. **Pool final: 41 clips.**
+- **Cuatro reglas nuevas en [[guiones-y-anuncios]]:** `ocrbin` lee por stdin y devuelve vacío si le pasás la
+  ruta como argumento (todo el pool parece limpio); el OCR de 1,5 s se come carteles que entran y salen, así
+  que a los clips recortados hay que pasarles 0,5 s; renombrar una tanda en el lugar la destruye (y el array
+  de zsh arranca en 1); y el techo real del conector de Drive es ~5,5 MB, no 7,3.
+
 ## 2026-11-20 (tarde) — El Secreto de la Insulina: el quiz brasileno propio, pasado a Argentina
 
 Santiago: *"quiero que me hagas exactamente este mismo quiz pero para argentina... Copiale todo, es

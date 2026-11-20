@@ -63,6 +63,16 @@
 - **Ingredientes (resuelto con la landing):** el producto es **yeso + aceite de fragancia + molde de silicona**, sin horno. Los 3 ganadores dicen *salt + flour* (masa de sal), o sea que los ads describen otro proceso que el producto que se vende. Riesgo de reclamos y reembolsos, y de rechazo por claim engañoso. Los guiones nuevos siguen la landing.
 - **Funnel:** los 3 mandan a "link below / Learn more", no a un quiz. Ver [[landings-funnels-y-upsells]].
 
+## 🇬🇧 PIEDRAS V2 — la tanda inglesa rehecha (20/11)
+Los **6 mejores** del ganador, de vuelta en inglés y con el guion original intacto: la abuela de 58, los 30 segundos,
+la contadora, la vecina, *I never* y las tres cosas. Misma imagen, misma cama, misma duración y **la voz original**:
+no se generó una sola toma de TTS, porque el `vocals.wav` que demucs separó en su día **es** la voz inglesa, y
+`vocals + no_vocals` devuelve el audio original exacto. Los MP4 ingleses ya no estaban en el disco; la imagen limpia
+se armó con el video portugués más la franja inpaintada del pase PT, y el guion se recuperó transcribiendo la propia
+voz aislada — `OUTPUTS/2026-11-20-piedras-v2-ingles-6-anuncios.md`, receta en [[internacionalizacion]].
+Quedan de banco los otros dos del pase brasileño: *If you're* (las mujeres de tu ciudad) y *I used to…* (la mesada).
+Archivos en `~/Desktop/scented-stones-ad/anuncios/ingles-v2/` y en Drive, `Ebook PIEDRAS V2 (INGLES)`.
+
 ## 🇧🇷 Brasil
 Ocho anuncios en portugués (BR1–BR8) son los ganadores en inglés doblados con voz Sulafat brasileña y subtítulos nuevos: misma imagen, misma cama, misma duración ([[internacionalizacion]]).
 ✅ **Renovaciones del 11/11 (R1–R3, tres variables nuevas, no doblajes):** la mejor clienta que **nunca revendió una piedra** (la inmobiliaria del barrio que pone una en cada departamento que muestra, treinta piezas, repone cada tres meses porque el aroma se apaga a las seis semanas, cuarenta reales la pieza sin pedir descuento), **no doy abasto con los pedidos de diciembre** (amigo secreto, Natal, presente corporativo y casamento, kit de tres en caja a ciento ochenta, cuarenta piezas en una noche, sesenta kits para una sola empresa) y **no tengo un pingo de talento manual** (la forma la hace el molde, la parte artesanal son nueve segundos, lo que hay que aprender es la proporción del yeso y cuánto cobrar) — `OUTPUTS/2026-11-11-renovaciones-piedras-brasil-R1-R3.md`. El visual salió del material que ya había (los propios ads BR, con zoom para dejar afuera el subtítulo quemado) más los seis B-rolls limpios: ni un clip nuevo ([[renovacion-de-creativos]]).

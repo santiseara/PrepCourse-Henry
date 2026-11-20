@@ -297,7 +297,34 @@ Pedido de Santiago: *"agarrá 6 de esos anuncios y únicamente blurreá sus subt
 - **El rectángulo de un sticker medido por umbral se queda corto** (deja afuera la foto de perfil del comentario, el escalón de la segunda línea del globo). La caja nueva se dibuja sobre la **unión** del rectángulo original y el texto nuevo.
 - ⚠️ **Es material filmado por otro:** hay riesgo de reclamo de copyright y de que Meta lo marque como contenido duplicado. Es una decisión de negocio, no un detalle técnico.
 
+## 🔙 Volver al idioma original: los stems guardan la voz, no hace falta TTS (2026-11-20, PIEDRAS V2)
+
+Pedido de Santiago: *"hacemelos en ingles nuevamente"* — la tanda inglesa de [[scented-stones]] rehecha como
+**PIEDRAS V2**, con el guion original sin tocar una palabra. Los MP4 ingleses ya no estaban en el disco, y
+aun así el pase salió **sin generar una sola voz**:
+
+- **El `vocals.wav` de demucs ES la voz original.** Guardado en `_assets/stems/htdemucs/origN/` desde el pase
+  portugués. Se usa tal cual: ya dura exactamente lo que el video, así que no hay trim, ni atempo, ni ajuste
+  de nivel, ni tomas que elegir, ni cuota de TTS que cuidar.
+- **`vocals + no_vocals` devuelve el audio original exacto.** Es una descomposición completa: al remezclarlos
+  con `amix` se recupera la mezcla del anuncio original, voz y cama incluidas.
+- **El guion perdido se recupera transcribiendo ese mismo wav.** Whisper medium sobre la voz aislada (sin
+  música encima) da el texto palabra por palabra **y sus tiempos reales**, así que el karaoke calza exacto sin
+  alineación forzada. Lo único que hay que corregir a mano son las erratas del transcriptor, no el guion:
+  en el pase inglés fueron dos (`four new order` → `orders`, que además era un typo del subtítulo quemado
+  original, y `you make salt, flour` → `you mix salt, flour`).
+- **La imagen limpia sigue saliendo del pase anterior**, como en el hebreo: video portugués + la franja
+  inpaintada `portugues/work/tmpN/band.mp4`, y los que llevan píldora opaca no necesitan ni eso (la píldora
+  nueva, dibujada 6 px más grande, tapa la portuguesa sin dejar borde).
+- **Las fuentes latinas del original ya estaban medidas** en el script del pase hebreo (`latfont`, `latwght`,
+  `latsize`): volver al inglés es usar esos valores en lugar de los hebreos y sacar el bidi.
+
+Moraleja operativa, que extiende la del 12/11: **los stems y las bandas limpias no son material de un idioma,
+son el máster**. Mientras estén en `_assets`, cualquier idioma ya hecho se puede volver a armar — el original
+incluido— aunque no quede ni un MP4. Script: `OUTPUTS/scripts-vsl/render_en2.py`.
+
 ## Fuentes
+- OUTPUTS/2026-11-20-piedras-v2-ingles-6-anuncios.md
 - OUTPUTS/2026-11-07-guiones-piedras-portugues-BR1-BR4.md
 - OUTPUTS/2026-11-03-guiones-piedras-polaco-PL1-PL4.md
 - OUTPUTS/2026-11-02-guiones-piedras-ruso-RU1-RU4.md

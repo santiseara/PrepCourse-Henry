@@ -1,3 +1,14 @@
+## 2026-11-20 — PIEDRAS V2: la tanda inglesa de piedras, rehecha
+
+- **Pedido:** *"hacemelos en ingles nuevamente"* + carpeta nueva en Drive **PIEDRAS V2**. Guion original sin cambios, 6 anuncios.
+- **Hecho:** los 6 mejores de [[scented-stones]] rehechos en inglés (`~/Desktop/scented-stones-ad/anuncios/ingles-v2/`,
+  `20-11 - 1` a `20-11 - 6`) y subidos a `Ebook Dami / Ebook PIEDRAS V2 (INGLES) / Videos terminados`.
+- **Lo nuevo del método:** no se generó voz. El `vocals.wav` de los stems es la voz inglesa original y
+  `vocals + no_vocals` recompone el audio exacto; el guion perdido se recuperó transcribiendo esa voz aislada.
+  Script nuevo `OUTPUTS/scripts-vsl/render_en2.py`.
+- **Archivos:** `OUTPUTS/2026-11-20-piedras-v2-ingles-6-anuncios.md`; reglas en `WIKI/internacionalizacion.md`
+  (registro del 20/11) y ficha en `WIKI/scented-stones.md`.
+
 # Changelog
 
 ## 2026-11-20 (noche) — Crochet Painting: oferta nueva clonada de crochetpaint.com, tanda 1 de 6 videos

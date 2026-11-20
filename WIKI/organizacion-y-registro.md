@@ -170,3 +170,18 @@ siquiera lee la ruta, hay que copiar al directorio de la sesión). La cuenta de 
   (1 GB en partes de 700 KB son ~1.400 llamadas). La tanda queda en `~/Desktop/<oferta>/anuncios/` con los
   nombres definitivos y **se le avisa a Santiago en una línea que la arrastre al Drive**, con el link de la
   carpeta ya creada. La carpeta y los `.txt` (guiones y descripción) sí se suben solos.
+
+## 🆕 2026-11-20 · Comprimir en paralelo, y el EPROTO que se arregla reintentando
+
+De la tanda PIEDRAS V2 ([[scented-stones]]), seis videos de 20 a 63 s:
+
+- **`comprimir_drive.py` procesa la carpeta de a uno y con `-preset veryslow` eso se arrastra** (el primer
+  video de 40 s tardó ~8 minutos). La Mac tiene **8 cores**: lanzando **un proceso por video en paralelo**
+  los cinco restantes salieron en el tiempo del más largo, no en la suma. Para una tanda de 5 o 6 conviene
+  siempre paralelizar; el script de carpeta queda para una pieza suelta.
+- ⚠️ **Nunca subir un MP4 que todavía se está escribiendo.** El archivo parcial ya tiene tamaño en el disco
+  pero `ffmpeg -i` devuelve **`moov atom not found`**: ese es el control antes de cada subida. Si la
+  duración no aparece, el archivo no está terminado.
+- **El `EPROTO: The TLS handshake failed` del conector no siempre es por tamaño.** Un archivo de 5,53 MB
+  lo devolvió una vez y **subió bien al segundo intento, sin tocarlo**. Regla: ante EPROTO, **reintentar una
+  vez** antes de recomprimir más chico. A 5,2-5,8 MB el conector entra.

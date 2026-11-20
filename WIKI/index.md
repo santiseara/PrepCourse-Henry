@@ -1,6 +1,6 @@
 # Índice del segundo cerebro
 
-> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-19.
+> Lo mantiene Claude. No editar a mano. Última actualización: 2026-11-20.
 > Dominio: **vender productos digitales low ticket con Meta Ads, salir rentable en el front y remonetizar con backend.**
 > ✅ = ya está en la WIKI · ⏳ = existe en tu wiki previa y todavía no lo subiste (la descripción viene de su índice).
 
@@ -156,6 +156,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-20 — Quiz El Secreto de la Insulina (AR, $16.990)](../OUTPUTS/2026-11-20-quiz-secreto-insulina-ar.html) — las **28 pantallas** del quiz brasileño propio (`segredo-insulina-quiz.vercel.app`, una SPA de React de Lovable) calcadas para Argentina: su mismo diseño sobre motor propio, las 14 fotos adentro, la captura falsa del G1 reemplazada por una tarjeta de divulgación sin marca, el logo retipeado y el checkout relativo hasta que llegue el definitivo · ver [[secreto-de-la-insulina]]
 - [2026-11-20 — Slime Shop Kit: 3 renovaciones del ad ganador](../OUTPUTS/2026-11-20-renovaciones-slime-shop-kit.md) — el 01 esta vendiendo: tres hooks nuevos en tres formatos distintos (la otra mama que pregunta, las cuentas rapidas, el slime que ya no es un juguete) sobre el cuerpo y el CTA textuales, en ingles y espanol con voseo, mas un banco de 6 hooks de reserva · ver [[slime-shop-kit]]
 - [2026-11-20 — Crochet Painting: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-20-guiones-crochet-painting-EN-tanda1.md) — los **6 hooks textuales** de los 6 ads con más impresiones de `crochetpaint.com` (el perro que cruzó el arcoíris, los 54 años, los que se rieron, "todos creen que es un cuadro", "nadie paga trescientos dólares por crochet" y los novecientos dólares tirados), con cuerpo y CTA reescritos sobre el mismo ángulo; en inglés y español con voseo · ver [[crochet-painting]]
 - [2026-11-20 — Slime Shop Kit: los links de las visuales de la tanda 1](../OUTPUTS/2026-11-20-slime-shop-kit-links-visuales.md) — para el socio: los 6 ads terminados en Drive (carpeta *Ebook Dami*) y las **38 visuales de TikTok** que usan, con cuenta y link de cada clip (28 cuentas distintas sobre el pool limpio de 43) · ver [[slime-shop-kit]]

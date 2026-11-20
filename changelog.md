@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-11-20 (tarde) — El Secreto de la Insulina: el quiz brasileno propio, pasado a Argentina
+
+Santiago: *"quiero que me hagas exactamente este mismo quiz pero para argentina... Copiale todo, es
+una oferta mia que la quiero cambiar de mercado, lo vamos a cobrar 16.990 ars"*. El original es
+**`segredo-insulina-quiz.vercel.app`**, una **SPA de React hecha en Lovable** (no hay HTML que clonar):
+el quiz entero sale del bundle `assets/index-*.js`, con las 28 pantallas como componentes JSX
+minificados y el checkout de Payt adentro.
+
+- **Entregado: `~/Desktop/secreto-insulina/landing/secreto-insulina-quiz.txt`** — **746 KB**, las 28
+  pantallas, motor propio en JS plano con el diseno calcado (tokens del `:root` del original, Poppins,
+  coral `25 100% 50%`, verde `145 63% 42%`), las **14 fotos embebidas** y el checkout **relativo**
+  (`/checkout`) hasta que Santiago pase el definitivo. Copia en `OUTPUTS/2026-11-20-quiz-secreto-insulina-ar.html`.
+- **Precio: $16.990**, tachado **$134.900** (el mismo multiplicador x7,94 del original) y **6 cuotas de
+  $2.832** con Mercado Pago. Las cifras del mecanismo, localizadas y con la aritmetica cerrada:
+  la mezcla **$1.500**, la lapicera **$300.000/mes**, el gasto semanal **$4.500**.
+- **El logo se retipeo, no se genero.** "SEGREDO DA" -> "SECRETO DE LA" sobre la misma parabola, con
+  Montserrat Black y el color exacto del original; **INSULINA quedo intacta**
+  (`OUTPUTS/scripts-quiz/logo_secreto_insulina.py`).
+- **La captura falsa del G1 (Globo) no se clono** (regla del 18/11): en su lugar va una **tarjeta de
+  divulgacion sin marca**, en HTML, con la volanta, el titular, la foto de la medica con su faja de
+  epigrafe y el pie *"No reemplaza la consulta con un profesional de la salud"*.
+- **Verificado en Chrome, no deducido:** las 28 pantallas sin imagenes rotas ni desbordes a 390 px,
+  barra de progreso estrictamente creciente de 3,57 % a 96,4 % (igual que el original), recorrido real
+  de punta a punta sin un solo error de consola, los **3 CTAs** con el host y los **6 parametros**
+  (probado sobre copia instrumentada), `/checkout` limpio sin parametros, y el boton de volver dentro
+  de las dos pantallas de carga sin arrastrar a la oferta.
+- **Reglas nuevas en `WIKI/quizzes-reglas-de-armado.md`:** como se desarma un quiz de Lovable que tiene
+  el contenido en JSX minificado, y el PNG de paleta con transparencia que se vuelve negro si se
+  convierte a RGB.
+
 ## 2026-11-20 (tarde) — Slime Shop Kit: 3 renovaciones del ad ganador
 
 El **01** ("Did you know slime and sensory dough...") esta trayendo ventas. Tres renovaciones con el

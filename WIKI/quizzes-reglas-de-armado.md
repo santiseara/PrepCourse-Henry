@@ -1,4 +1,61 @@
 # Quizzes: reglas de armado (checklist viva)
+### 🆕 2026-11-20 · Un quiz de Lovable en React se desarma por componentes, no por JSON
+El original de [[secreto-de-la-insulina]] (`segredo-insulina-quiz.vercel.app`) es una **SPA de React
+hecha en Lovable**, y a diferencia de los Lovable del 15/10 **no trae un array `STEPS` ni un `funnel`
+en texto plano**: cada pantalla es un **componente JSX minificado** dentro de `assets/index-*.js`.
+No hay JSON que parsear y tampoco hay HTML que clonar (no aplica la regla del 14/11).
+
+**Cómo se saca entero, sin abrir el navegador:**
+1. `curl` al `index.html` → sale el nombre del bundle y del CSS.
+2. En el bundle se busca **el `switch` del router** (`case 1: return u.jsx(EC,...)`): ahí está
+   **el orden de las 28 pantallas y el nombre minificado de cada componente**. Ojo que puede haber
+   componentes muertos (acá `CC`, una portada vieja de antes/después que quedó como `default`).
+3. Se localiza cada componente con `re.search(nombre + r'\s*=\s*\(')`, se ordenan por posición y se
+   corta de uno al siguiente: eso da **el código de cada paso completo**, con sus textos, sus catálogos
+   de opciones (`[{value,emoji,label}]`) y sus condicionales.
+4. Los **colores y la tipografía** salen del `:root` del CSS (acá en HSL sin `hsl()`, se copian tal cual)
+   y las clases propias (`.quiz-option`, `.btn-quiz`, `.gradient-text`, `.progress-bar-*`) también, que
+   es lo que hace que el clon se vea idéntico sin Tailwind.
+5. Las imágenes son `var X = "/assets/nombre-hash.ext"`: se listan con una regex y se bajan de una.
+
+**Lo que NO se copia:** su `/api/track` y su `quiz_id`, su `sessionStorage` de UTMs, los **dos links de
+checkout de Payt** y su A/B de precio (`priceVariant`).
+
+🐞 **Y se leen los condicionales, no solo los textos.** Acá la tabla de la estadística del paso 5 está
+indexada por `"30-39"/"40-49"/…` mientras que las edades del paso 2 son `"18-27"/"28-39"/"40-54"/"54+"`:
+**nunca matchea** y siempre cae al `||` por defecto (87,4 % / 40 años). Se replicó el comportamiento tal
+cual (regla de fidelidad: no se "arreglan" ni los errores), pero hay que **detectarlo y avisarlo**, no
+copiar la tabla creyendo que funciona.
+
+### 🆕 2026-11-20 · 🐞 Un PNG de paleta con transparencia se vuelve NEGRO si se convierte a RGB
+Al comprimir las imágenes del original, el chequeo era `'A' in im.getbands()`. Un PNG **modo `P`** con
+transparencia devuelve `('P',)`: no tiene banda `A`, así que caía en `convert('RGB')` y **el alfa se
+rellenaba de negro**. En el quiz quedó la lámina del paso del compromiso como una **caja negra** sobre
+el fondo crema, y no salta leyendo el código: hay que mirar la pantalla.
+
+**La condición correcta es `'A' in im.getbands() or im.mode == 'P'` → `convert('RGBA')`**, y el WebP se
+guarda con alfa. ⚠️ Lo mismo pasa al revés en la **hoja de contactos**: Pillow pinta el alfa de negro, así
+que una imagen que en la hoja se ve con fondo negro puede tener fondo **transparente** — antes de
+decidir si el fondo es parte del arte hay que mirar `getchannel('A').getextrema()`, no la miniatura.
+
+### 🆕 2026-11-20 · Mover una oferta propia de mercado no es traducir: los números se recalculan
+Pasando [[secreto-de-la-insulina]] de Brasil a Argentina, todo el mecanismo del quiz son **tres cifras**
+(lo que sale la mezcla, lo que sale la lapicera de Ozempic y el gasto semanal). En el original: R$ 5,
+R$ 1.000 y R$ 15 — o sea **la lapicera cuesta 200 mezclas** y la semana son 3 mezclas.
+
+- **Se mantienen las proporciones y se usan los números reales del mercado destino**, no el cambio:
+  mezcla **$1.500**, lapicera **$300.000/mes**, semana **$4.500**. Las dos primeras salían ya de la
+  radiografía propia del 17/10, así que el quiz y los ads hablan con la misma plata.
+- **Van las tres en el `CONFIG`**, nunca escritas en el markup: aparecen en la portada, en dos pantallas
+  del medio, en el diagnóstico dinámico y en el FAQ. Después se chequea que
+  `re.findall(r'\$[0-9]{1,3}(?:\.[0-9]{3})*', doc)` devuelva **solo** las cifras esperadas.
+- **El tachado se calcula con el multiplicador del original**, no se inventa: R$ 293,80 / R$ 37 = **7,94**,
+  así que $16.990 × 7,94 ≈ **$134.900**. Y las cuotas, precio ÷ cantidad redondeado hacia arriba
+  (16.990 ÷ 6 = 2.831,67 → **$2.832**), con la línea de Mercado Pago.
+- **Los nombres y las ciudades de los testimonios se cambian** (Rose de São Paulo → Rosa de Córdoba;
+  Maria/Rosana/Fernanda/Claudia → Marcela/Susana/Fernanda/Vanina) y **las fotos se reusan tal cual**:
+  no tienen una sola letra quemada.
+
 ### 🆕 2026-11-19 · El tramo final del quiz se poda: de la última pregunta, carga y oferta — nada en el medio
 Santiago, sobre el quiz de [[limpia-dolor]] ya en vivo: *"saques la slide que le pregunta si se va a comprometer"*,
 *"la slide que le sigue, que tiene un audio… el segundo audio"* y *"la slide que va después de la pantalla de carga,

@@ -155,6 +155,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-20 — Slime Shop Kit: los links de las visuales de la tanda 1](../OUTPUTS/2026-11-20-slime-shop-kit-links-visuales.md) — para el socio: los 6 ads terminados en Drive (carpeta *Ebook Dami*) y las **38 visuales de TikTok** que usan, con cuenta y link de cada clip (28 cuentas distintas sobre el pool limpio de 43) · ver [[slime-shop-kit]]
 - [2026-11-19 — Dip Art by Hanako: tanda 1 de 6 guiones para el mercado inglés](../OUTPUTS/2026-11-19-guiones-dip-art-hanako-tanda1.md) — el margen, la obsesión que terminó en negocio, parece difícil solo parece, casi nadie las vende, un momento solo para vos y la técnica es la parte fácil; en inglés y español con voseo, sin una sola cifra de dinero como ellos · ver [[dip-art-hanako]]
 - [2026-11-18 — Capillas de la Virgen: la descripción de los ads](../OUTPUTS/2026-11-18-descripcion-capillas-virgen.md) — una sola para los seis (como corren ellos), más 3 variantes de testeo: la corta, la del regalo que se guarda y la estacional de Guadalupe y Navidad; en neutro, sin precio · ver [[capillas-de-la-virgen]]
 - [2026-11-18 — Capillas de la Virgen: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-18-guiones-capillas-virgen-tanda1.md) — los tres pasos, de una hoja a una capilla, el POV de la tarde de domingo, catequesis, el recuerdo de comunión y el antes/después; en neutro, con las cajas de hook, las fichas de paso y la descripción única · ver [[capillas-de-la-virgen]]

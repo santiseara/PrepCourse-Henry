@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-11-20 — Slime Shop Kit: los links de las visuales, para el socio
+
+Santiago pidio los links de las visuales de slime para su socio. Se entregaron las dos cosas:
+
+- **Los 6 ads terminados** en Drive (*Ebook Dami / Ebook Slime Shop Kit (EN) / Videos terminados*),
+  con el link de cada archivo. La carpeta ya estaba compartida con el socio como **editor**, asi que
+  no hubo que compartir nada nuevo.
+- **Las 38 visuales de TikTok** que usan esos 6 ads, con cuenta y link de cada clip. Se reconstruyo
+  el mapa desde `V1.json` (clave `cXX` -> `src`), `pool_autores.txt` (autor/id) y `usage.json`
+  (que claves entraron de verdad en el montaje). Dato nuevo: de las **43 ventanas limpias** del pool,
+  los seis ads usan **38**, de **28 cuentas distintas**, y los 6 comparten el mismo pool
+  (lo que cambia por video es el seed del orden de cortes).
+- Output: `OUTPUTS/2026-11-20-slime-shop-kit-links-visuales.md`, enlazado en `WIKI/index.md`.
+  La nota quedo sumada a `WIKI/slime-shop-kit.md`.
+
 ## 2026-11-19 (noche) — Limpia Dolor: el quiz podado de 28 a 25 pantallas
 
 Santiago pidio sacar tres pasos del tramo final del quiz de desparasitacion: **el compromiso**

@@ -28,6 +28,8 @@ Seis guiones en inglés + voseo (`OUTPUTS/2026-11-18-guiones-slime-shop-kit-tand
 | 5 | La experiencia, no el producto | KIDS LOVE IT. PARENTS PAY FOR IT. |
 | 6 | Proyecto de fiestas (estacional) | A HOLIDAY PROJECT YOU CAN START THIS WEEK |
 
+**Las visuales, con fuente (20/11):** los seis ads usan **38 de las 43 ventanas limpias**, de **28 cuentas de TikTok** distintas, y los 6 comparten el mismo pool (cambia el seed del orden de cortes). La cuenta y el link de cada clip se reconstruyeron desde `V1.json` (clave `cXX` → `src`), `pool_autores.txt` (autor/id) y `usage.json` (qué clips entraron de verdad): `OUTPUTS/2026-11-20-slime-shop-kit-links-visuales.md`. Los 6 masters están en Drive (*Ebook Dami / Ebook Slime Shop Kit (EN) / Videos terminados*), carpeta ya compartida con el socio como editor.
+
 **Montaje:** `OUTPUTS/scripts-vsl/gen_slime_plans.py` (los 6 planes) + `edit_slime.py` (el render), con el pool de clips de TikTok en `~/Desktop/slime-shop-kit/anuncios/work/clips` y las ventanas limpias en `vent_slime.py`. Voces con Gemini TTS (Sulafat), velocidad 1.20.
 
 ## Lo que se aprendió armando esta tanda

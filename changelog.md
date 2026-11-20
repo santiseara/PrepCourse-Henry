@@ -11,7 +11,8 @@ minificados y el checkout de Payt adentro.
 - **Entregado: `~/Desktop/secreto-insulina/landing/secreto-insulina-quiz.txt`** — **746 KB**, las 28
   pantallas, motor propio en JS plano con el diseno calcado (tokens del `:root` del original, Poppins,
   coral `25 100% 50%`, verde `145 63% 42%`), las **14 fotos embebidas** y el checkout **relativo**
-  (`/checkout`) hasta que Santiago pase el definitivo. Copia en `OUTPUTS/2026-11-20-quiz-secreto-insulina-ar.html`.
+  **definitivo: `https://secretode-la-insulina.impultienda.ar/checkout`** (chequeado con `curl -sIL`: 200 y
+  0 redirecciones, y despues verificado en el navegador). Copia en `OUTPUTS/2026-11-20-quiz-secreto-insulina-ar.html`.
 - **Precio: $16.990**, tachado **$134.900** (el mismo multiplicador x7,94 del original) y **6 cuotas de
   $2.832** con Mercado Pago. Las cifras del mecanismo, localizadas y con la aritmetica cerrada:
   la mezcla **$1.500**, la lapicera **$300.000/mes**, el gasto semanal **$4.500**.

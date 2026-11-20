@@ -21,8 +21,13 @@
   **carga del análisis** → análisis listo (IMC + alertas + diagnóstico dinámico) → testimonios →
   **armando la rutina (8,5 s)** → oferta.
 - **Precio: $16.990**, tachado **$134.900** (el x7,94 del original), **6 cuotas de $2.832** con Mercado
-  Pago. Checkout **relativo `/checkout`** hasta que Santiago pase el definitivo: se cambia **una sola
-  línea**, `CONFIG.CHECKOUT`.
+  Pago. **Checkout definitivo puesto el 20/11: `https://secretode-la-insulina.impultienda.ar/checkout`**
+  (ojo con el subdominio: es `secretode-la-insulina`, todo junto el *secretode*). Chequeado con
+  `curl -sIL` antes de ponerlo (**200, 0 redirecciones**) y verificado después en el navegador: los **3
+  CTAs** nacen con el host entero y los 6 parámetros, siguen igual después de `pointerdown`/`mousedown`/
+  `touchstart` (el bug del host del 14/11 **no aparece**), la caja de precio navega bien sobre copia
+  instrumentada, y sin parámetros el `href` queda **exacto, sin un `?` colgado**. La URL está en
+  `CONFIG.CHECKOUT` **y en ningún otro lado**.
 - **Las tres cifras del mecanismo viven en el `CONFIG`:** mezcla `$1.500`, lapicera `$300.000`, semana `$4.500`.
 - **El logo se retipeó, no se regeneró:** "SEGREDO DA" → "SECRETO DE LA" sobre la misma parábola, con
   Montserrat Black y el color exacto (`#FE8602`); **INSULINA quedó intacta**
@@ -60,7 +65,6 @@
   yendo al scratchpad.
 
 ## Preguntas abiertas
-- **Link de checkout** (pendiente, lo pasa Santiago). Mientras tanto el quiz va con `/checkout` relativo.
 - ¿El paso del compromiso se saca (regla del 19/11) o queda?
 - ¿Marca propia o queda "El Secreto de la Insulina"?
 - Falta el pixel de Meta (`CONFIG.PIXEL_ID`, hoy vacío).

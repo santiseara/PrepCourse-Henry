@@ -23,8 +23,8 @@ cab = """<!--
   EL SECRETO DE LA INSULINA — quiz para ARGENTINA — 20/11/2026
   Calcado de segredo-insulina-quiz.vercel.app (la version brasilena propia).
   Todo adentro de este archivo: no hay que subir ninguna imagen.
-  Precio: $16.990 (6 cuotas de $2.832) · Checkout: relativo /checkout
-  Para poner el checkout definitivo: CONFIG.CHECKOUT, arriba de todo.
+  Precio: $16.990 (6 cuotas de $2.832)
+  Checkout: https://secretode-la-insulina.impultienda.ar/checkout (verificado: 200, 0 redirecciones)
   ===========================================================================
 -->
 """

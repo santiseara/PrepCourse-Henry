@@ -1,3 +1,9 @@
+## 2026-11-22 — Regla nueva: al Drive sube la tanda entera, no solo los videos
+
+- Entregué Laboratorio Wow con los 4 videos en el Drive y los 3 estáticos solo en `~/Desktop`. Santiago: *"no me subiste las fotos al drive"*.
+- **Hecho:** los 3 estáticos subidos a `Ebook Dami / Ebook Laboratorio Wow (ARGENTINA) / Fotos terminadas`, con nombre descriptivo en vez de la clave de trabajo.
+- **Regla fija nueva** en `WIKI/como-trabajar-con-santiago.md`: la regla del 17/11 vale para **todo creativo entregado** (videos, estáticos, carruseles, natives), con `Videos terminados` y `Fotos terminadas` al lado. Los estáticos van sin recomprimir y con nombre descriptivo, y hay que copiarlos al scratchpad porque el conector no lee del Escritorio.
+
 ## 2026-11-22 — Laboratorio Wow: la oferta polaca clonada para Argentina (4 videos + 3 estáticos)
 
 - **Pedido:** *"Vamos a hacer anuncios para esta oferta... necesito 4 videos y 3 fotos... apegándonos a su comunicación pero con guiones distintos. Las visuales que las saques de TikTok, experimentos reales, y que sean buenas. Y 3 fotos exactamente iguales a sus mejores fotos, para el mercado argentino."*

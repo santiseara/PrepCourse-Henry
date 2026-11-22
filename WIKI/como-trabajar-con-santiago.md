@@ -119,6 +119,18 @@ Santiago, después de que le entregara los 6 de [[tarot-2-dias]] diciendo que no
 - Antes de reemplazar, se **compara un cuadro** del original contra el comprimido. Si se degradó, se sube igual pero se avisa en una línea; no se deja de subir.
 - ⛔ **Lo que NO funciona** (probado el 17/11, no volver a intentarlo): servir los videos desde un `http://127.0.0.1` con CORS y hacerles `fetch` desde la página de Drive. Chrome bloquea el pedido **http** desde una página **https** y la promesa queda colgada sin error; el servidor no registra ni una petición. Tampoco hay Google Drive para escritorio en su Mac.
 
+## "La tanda" que sube al Drive son TODOS los creativos, no solo los videos (regla fija, 2026-11-22)
+Santiago, después de recibir Laboratorio Wow con los 4 videos en el Drive y los 3 estáticos solo en el Escritorio:
+*"no me subiste las fotos al drive"*.
+- La regla del 17/11 ("toda tanda terminada sube al Drive, sin preguntar") vale para **todo lo que se entrega
+  como creativo**: videos, estáticos, carruseles y natives. No es una regla de videos.
+- Estructura: `Ebook Dami / Ebook <Oferta> (<MERCADO>) /` con **`Videos terminados`** y **`Fotos terminadas`** al lado.
+- Los estáticos pesan 200-400 KB: van **tal cual, sin recomprimir**, y con **nombre descriptivo**
+  (`En que vaso va a flotar el huevo - A o B.jpg`), nunca con la clave de trabajo (`E1`, `E3`).
+- 🐞 El conector **solo lee de las carpetas de la sesión**: hay que copiar los JPG al scratchpad antes de
+  llamar a `create_file`, igual que con los MP4. Desde `~/Desktop` contesta que el archivo no existe.
+- La copia en `~/Desktop/<oferta>/anuncios/` se queda igual: el Escritorio es el taller, el Drive es la entrega.
+
 ## Las visuales para el socio son los links de TikTok, no el Drive (regla fija, 2026-11-20)
 Santiago, pidiendo las visuales de [[slime-shop-kit]]: *"Mándame los links de los TikToks que usaste para hacer las visuales. No me mandes el link de Drive de los videos. Necesito el link de las visuales de TikTok para pasárselas a mi socio y que él se las pueda pasar a su clave y que pueda hacer los videos con las visuales limpias."*
 - **"Las visuales" / "las visuales para mi socio" = la lista de links de TikTok del pool de ese video o de esa tanda.** No son los MP4 terminados ni la carpeta de Drive. El socio y su editor rearman los videos desde cero con las visuales limpias, así que lo que necesitan es la fuente.

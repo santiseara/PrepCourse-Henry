@@ -1,3 +1,10 @@
+## 2026-11-22 — The Home Catering Method: las descripciones de los ads
+
+- **Pedido:** *"Dame una descripcion para los ads de la oferta de finger que hicimos para ingles"* (= la oferta modelada sobre *Premium Finger Foods*).
+- **Hecho:** `OUTPUTS/2026-11-22-descripcion-home-catering-method.md` — principal EN/ES + 3 variantes por ángulo (las cantidades, el valor percibido, el pedido que te congela) + línea única, en la forma corta (mecanismo, 3 bullets ✅, bonos y garantía, CTA 👉). Copia en `~/Desktop/home-catering-method/anuncios/`.
+- **Criterio:** cero cifras de plata (nicho de dinero), sin precio (*dirt cheap*), y el copy entra por el territorio de **cobrar, cotizar y cantidades**, que ellos prometen en el ad y no tocan en el primary text en inglés.
+- **Pendiente:** confirmar la garantía de 7 días contra la landing de esta oferta.
+
 ## 2026-11-22 — The Home Catering Method: la tanda 1 renderizada y en Drive
 
 - **Hecho:** los 6 videos de la tanda 1 (35 a 42 s, voz Sulafat a speed 1.15, un corte por segundo, b-roll de comida sin caras, subtítulos abajo con palabra en amarillo), subidos a `Ebook Dami / Ebook The Home Catering Method (INGLES) / Videos terminados`.

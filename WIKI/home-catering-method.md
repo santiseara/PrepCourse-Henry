@@ -69,6 +69,13 @@ En `Mi unidad / Ebook Dami / Ebook The Home Catering Method (INGLES) / Videos te
 
 **Lo que quedó pendiente:** el **mockup del cierre** (el doc lo pide y no existe el archivo; los seis cierran sobre b-roll con el último subtítulo) y que las duraciones quedaron **abajo de la ventana de 40-48 s** de ellos por el speed 1.15 — para clavarla hay que alargar los guiones ~15 palabras y regenerar esas voces.
 
+## Las descripciones de los ads (22/11/2026)
+`OUTPUTS/2026-11-22-descripcion-home-catering-method.md` — forma corta de [[guiones-y-anuncios]] (mecanismo en la primera línea, 3 bullets ✅, bonos + garantía, CTA 👉), en inglés y español con voseo. Una principal para los seis videos y tres variantes por ángulo: **las cantidades** (video 3), **el valor percibido** (video 4) y **el pedido que te congela** (video 2), más la línea única.
+
+Lo que se respetó: **ni una cifra de plata** (es nicho de dinero), **sin precio** (va *dirt cheap*), los bonos nombrados con su nombre propio y el ángulo de cobrar/cotizar/cantidades, que en el primary text en inglés ellos no tocan.
+
+⚠️ Pendiente de confirmar: la línea de **7 días de garantía** se puso copiando el estándar de la casa; hay que verificarla contra la landing de esta oferta.
+
 ## Preguntas abiertas
 - Los 6 videos de la tanda 1 todavía no están renderizados (al 21/11 están los guiones).
 - El backend: con los mismos bumps de ellos el ticket va a 26-27. ¿Se clonan del molde de [[scented-stones]] o se arman propios? (ver [[embudo-post-compra]]).

@@ -1,3 +1,14 @@
+## 2026-11-22 — Laboratorio Wow: la oferta polaca clonada para Argentina (4 videos + 3 estáticos)
+
+- **Pedido:** *"Vamos a hacer anuncios para esta oferta... necesito 4 videos y 3 fotos... apegándonos a su comunicación pero con guiones distintos. Las visuales que las saques de TikTok, experimentos reales, y que sean buenas. Y 3 fotos exactamente iguales a sus mejores fotos, para el mercado argentino."*
+- **Leído:** los 62 anuncios activos de **Happy Kids Corner** (`laboratorium-wow.impultienda.ar`) en la Biblioteca de Meta —51 estáticos y 11 videos, los 11 transcriptos— y la landing polaca entera.
+- **Hecho:** `WIKI/laboratorio-wow.md` nueva · `OUTPUTS/2026-11-22-guiones-laboratorio-wow-AR-tanda1.md` (4 guiones + 3 descripciones) · 4 videos de ~30 s con voz Sulafat rioplatense · 3 estáticos réplica de sus 3 mejores, en argentino.
+- **Pool:** 112 clips de TikTok bajados de 10 búsquedas de objeto (magic milk, volcán de bicarbonato, lámpara de lava, walking water, pimienta y jabón, huevo que flota, tornado en botella, globo con bicarbonato, agua que cambia de color, experimentos caseros). OCR de Vision cuadro por segundo sobre el clip entero → 54 clips con ventana limpia; dos pasadas de mosaico dejaron **36 ventanas de 30 autores**.
+- **Lo que se cayó y por qué:** caras de chicos identificables (son chicos reales de TikTok, no avatares), creadores hablando a cámara, videos 3D/IA, marcas de agua de canal, un clip con letterbox quemado y otro con efecto de burbujas encima.
+- **Scripts nuevos:** `edit_wow.py` (clon de su edición: caja de hook de dos renglones con el segundo en rojo + subtítulos con **cada palabra en su caja**, negro sobre blanco y la activa al revés), `gen_wow_plans.py` y `gfx_wow.py` (la ficha del día, los colores de seguridad y el plan de 30 tardes, dibujados por código porque el producto en español todavía no existe).
+- **Las 2 fotos que necesitaban estudio** (los dos vasos con el huevo y la nena del "¿por qué?") salieron de **Nano Banana en AI Studio**, gratis y por navegador. Las 6 fotos de la grilla son cuadros reales de los TikToks del pool.
+- **Pendiente:** la landing argentina (los guiones y los insertos se escribieron con la landing polaca traducida) y el precio en pesos.
+
 ## 2026-11-21 — The Home Catering Method: la oferta modelada y los 6 guiones de testeo
 
 - **Pedido:** oferta nueva para el mercado inglés, modelada sobre `aperitivospremium.online` (*Premium Finger Foods*), con dos documentos de análisis propios. *"No queremos clonar más, queremos hacer las cosas bien y hacerlas con algún sentido y con alguna base, un sistema."*

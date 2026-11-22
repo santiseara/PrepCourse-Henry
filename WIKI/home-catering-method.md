@@ -13,6 +13,11 @@
 ## El formato de los ads (medido de ellos, NO se toca)
 44 s (40-48) · 115-138 palabras · **2,8 palabras/s, voz normal NO acelerada** · voz femenina cálida en off · b-roll de comida puro **sin una sola cara** · un corte por segundo (29-47) · subtítulos quemados **abajo**, 2-4 palabras, mayúsculas, una palabra en amarillo, **sin cajita blanca arriba** · el producto se nombra **recién pasado el segundo 12** · cierre con mockup en un celular.
 
+### 2026-11-21 · La voz va a `speed 1.15` (pedido de Santiago)
+*"Lo unico que quiero que ajustes de eso, es la voz, si la quiero en 1.15, va a quedar mejor"*. Reemplaza el "ritmo normal" del documento para esta oferta.
+
+**Y hay una consecuencia medida que conviene tener a mano:** el documento calcula el largo del guion a **2,8 palabras/s**, que es el ritmo del competidor. Pero **Gemini TTS no lee a 2,8 — lee a entre 164 y 196 palabras por minuto** (2,7 a 3,3 p/s) y la dispersión entre dos guiones del mismo largo llega a **8 segundos**. Con los guiones calculados para 44 s a 2,8 p/s, acelerarlos a 1,15 los deja en **35 a 42 s**, abajo de la ventana de 40-48 de ellos. Regla: cuando el largo del video importa, **la duracion se mide sobre el wav ya generado**, no se calcula desde las palabras; el conteo de palabras sirve para pedir el guion, no para prometer una duracion.
+
 ### ⚠️ Esta oferta invierte tres reglas fijas de [[guiones-y-anuncios]]
 A pedido expreso de Santiago (*"alineate 100 % a lo que dice el documento"*), para esta oferta mandan los documentos:
 | Regla general | Acá |

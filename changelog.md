@@ -1,3 +1,12 @@
+## 2026-11-21 — The Home Catering Method: la oferta modelada y los 6 guiones de testeo
+
+- **Pedido:** oferta nueva para el mercado inglés, modelada sobre `aperitivospremium.online` (*Premium Finger Foods*), con dos documentos de análisis propios. *"No queremos clonar más, queremos hacer las cosas bien y hacerlas con algún sentido y con alguna base, un sistema."*
+- **Leído:** los dos Google Docs (proceso de modelado + indicaciones para los videos) y la biblioteca de anuncios de ellos, verificada al 21/11 (~52 ads activos, dos páginas, 0:40 a 0:54).
+- **Hecho:** `WIKI/home-catering-method.md` nueva y `OUTPUTS/2026-11-21-guiones-home-catering-method-tanda1.md` con los **6 guiones de testeo** en inglés directo + español con voseo, tramos segundo por segundo, palabra en amarillo por tramo, y los 118-129 palabras / 41-46 s verificados contra la ventana medida de ellos.
+- **Lo nuevo del método:** se copia el **formato medido** del competidor y se cambia el **ángulo entero**. Los seis ángulos van al territorio que ellos prometen en el ad y no cumplen en el producto (*cuánto cobrar*), que en inglés ni siquiera tocan en el primary text.
+- **Tres reglas fijas invertidas solo para esta oferta** (mandan los documentos): voz a ritmo normal en vez de 1.20, subtítulos abajo sin cajita blanca arriba, y mockup en celular permitido en el cierre. Anotado en la página de la oferta.
+- **Pendiente:** el render de los 6 videos.
+
 ## 2026-11-20 — Regla nueva: "las visuales" son los links de TikTok, no el Drive
 - Pedido de Santiago: *"siempre que te pida las visuales para mi socio, me tenés que mandar los links de TikTok"*.
 - Regla fija nueva en `WIKI/como-trabajar-con-santiago.md` (cómo se arma la lista desde `usage.json` + `pool_autores.txt`, formato de entrega, qué avisarle al editor) y sección "Las visuales en bruto (para el socio)" en `WIKI/slime-shop-kit.md`.

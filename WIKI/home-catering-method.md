@@ -51,6 +51,24 @@ Reglas de escritura que se aplicaron: guion **escrito en inglés directo** (no t
 - ⛔ **El producto tiene que existir.** La landing promete por nombre los blueprints, las tablas, la calculadora, los guiones, la guía de estilo, el plan de preparación y el playbook. Si se entregan solo recetas, el comprador lo nota en cinco minutos y pide reembolso — y todo el argumento de la oferta es justamente que sí entrega lo que promete.
 - **Sin testimonios** hasta que existan reales. Los tres de ellos (nombre y ciudad) son casi con seguridad fabricados.
 
+## La tanda 1, entregada (22/11/2026)
+Seis videos de **35 a 42 s**, voz Sulafat a **speed 1.15**, 35 a 42 planos cada uno (**un corte por segundo** clavado), b-roll de comida sin una sola cara, subtítulos abajo con la palabra en amarillo y sin cajita. **Cero franjas negras**, verificado cuadro por cuadro sobre el render final.
+
+En `Mi unidad / Ebook Dami / Ebook The Home Catering Method (INGLES) / Videos terminados` — https://drive.google.com/drive/folders/1O3dpmMS4MHc-3M2S6s4k_SD2X2AG0Ulg
+
+| # | Hook | Duración | Link |
+|---|------|----------|------|
+| 1 | *You can cook. But what would you charge for a tray of fifty?* | 39,0 s | https://drive.google.com/file/d/1ivOQRwR9IjcPxsP_TcoS5dZ2D2tUdYxj/view |
+| 2 | *Someone asks you to make the food for their party* | 37,0 s | https://drive.google.com/file/d/1g74SergKYuOEjkhQ5-Ysw0YtWMDgZUr_/view |
+| 3 | *How many bites for thirty people?* | 35,3 s | https://drive.google.com/file/d/133L5fSrxXQ2Txgs8XNRdq6tzDWaFot9h/view |
+| 4 | *Same food, two trays* | 41,9 s | https://drive.google.com/file/d/1d4lG32opL1p5EMe6BNoioVIOAmwkvZcD/view |
+| 5 | *You don't need a free week* | 39,0 s | https://drive.google.com/file/d/1SmtUX2daSIaQnYONfvsSuw7Op5i4DN-V/view |
+| 6 | *The day someone asks you for a hundred* | 40,8 s | https://drive.google.com/file/d/1ltw2ZeMBK8vCuia1n4ah0n4qj4ghlsmM/view |
+
+**El pool:** 549 clips raspados de 5 tags en inglés (`grazingtable`, `fingerfood`, `charcuterieboard`, `partyfood`, `canapes`), filtrados a 150 (uno por cuenta), 139 bajados, y **50 sobrevivieron**: 70 cayeron por texto quemado, 2 por caras, 9 por el pase visual (personas de pie, un plano de parrilla, uno sin comida) y 6 por bandas negras internas. Masters sin comprimir en `~/Desktop/home-catering-method/anuncios/tanda1-V*.mp4`.
+
+**Lo que quedó pendiente:** el **mockup del cierre** (el doc lo pide y no existe el archivo; los seis cierran sobre b-roll con el último subtítulo) y que las duraciones quedaron **abajo de la ventana de 40-48 s** de ellos por el speed 1.15 — para clavarla hay que alargar los guiones ~15 palabras y regenerar esas voces.
+
 ## Preguntas abiertas
 - Los 6 videos de la tanda 1 todavía no están renderizados (al 21/11 están los guiones).
 - El backend: con los mismos bumps de ellos el ticket va a 26-27. ¿Se clonan del molde de [[scented-stones]] o se arman propios? (ver [[embudo-post-compra]]).

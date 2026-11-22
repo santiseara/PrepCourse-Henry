@@ -1,3 +1,11 @@
+## 2026-11-22 — The Home Catering Method: la tanda 1 renderizada y en Drive
+
+- **Hecho:** los 6 videos de la tanda 1 (35 a 42 s, voz Sulafat a speed 1.15, un corte por segundo, b-roll de comida sin caras, subtítulos abajo con palabra en amarillo), subidos a `Ebook Dami / Ebook The Home Catering Method (INGLES) / Videos terminados`.
+- **Pool:** 549 clips raspados de 5 tags en inglés → 150 (uno por cuenta) → 139 bajados → **50 limpios**. Cayeron 70 por texto quemado, 2 por caras, 9 por el pase visual y 6 por bandas negras internas.
+- **El costo del método barato:** se renderizó la tanda **cuatro veces** porque el filtro de clips se corrió con un muestreo de 3 cuadros y cada re-render destapaba un defecto nuevo. Tres reglas nuevas en `WIKI/guiones-y-anuncios.md`: filtro denso desde la primera pasada, las dos trampas de ffmpeg (`tile` descarta cuadros de distinto tamaño y corre el mapeo; `ocrbin` lee por stdin) y que `python3 -I` no ve los site-packages.
+- **Herramienta nueva:** `scan.swift` → `scanbin`, OCR + detección de caras con Vision de macOS en una sola pasada (el `cv2` de la Mac no trae `CascadeClassifier`).
+- **Pendiente:** el mockup del cierre y las duraciones, que quedaron abajo de la ventana de 40-48 s de ellos.
+
 ## 2026-11-22 — Regla nueva: al Drive sube la tanda entera, no solo los videos
 
 - Entregué Laboratorio Wow con los 4 videos en el Drive y los 3 estáticos solo en `~/Desktop`. Santiago: *"no me subiste las fotos al drive"*.

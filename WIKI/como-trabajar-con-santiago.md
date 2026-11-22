@@ -159,6 +159,7 @@ Directo, sin preámbulos · negritas y emojis de sección · 🇬🇧/🇪🇸 c
 | Variables | Versiones nuevas de la misma DNA |
 | Low ticket | Producto digital de $14 a $27 |
 | OTO | Upsell después del pago |
+| **BCL / B CL** | **Es "VSL".** Se lo come el dictado por voz. Si pide "un BCL", quiere el **VSL** (el video largo con avatar que va después del quiz). Aclarado el 2026-11-22: *"Es vsl, solo que me lo traduce mal"* |
 
 ## Relacionado
 [[guiones-y-anuncios]] · [[scented-stones]] · [[perfil-y-negocio]]

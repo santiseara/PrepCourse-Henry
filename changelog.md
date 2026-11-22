@@ -1,3 +1,35 @@
+## 2026-11-22 (noche) — VSL de Desparasitación Articular: el clon del VSL de chía
+
+**Por que:** Santiago pidio el VSL de la oferta de parasitos ([[limpia-dolor]]) calcado del VSL ganador de
+**Protocolo Chia 4S** (11:44, mujer a camara, post-quiz), con la comunicacion atada a los anuncios que ya
+corren, para que el que viene del ad no escuche otra cosa.
+
+**Como se leyo el ganador:** por **OCR de sus subtitulos quemados** (banda `y 465-575` de un 404x720, 2 fps,
+`ocrbin` de Vision) → 1.180 bloques con tiempo. Es mas exacto y mas rapido que Whisper, y da la estructura
+bloque por bloque. Whisper quedo de respaldo para los huecos.
+
+**Lo que se cruzo:** los **12 ads locales** de la oferta transcriptos (v1-v12) + los 14 del Drive
+`Ebook Dami / Ebook Parásitos` + el `limpia-dolor-quiz.txt` publicado (value stack de 7 items,
+precio, garantia de 180 dias, las 3 resenas textuales y el nombre **Doctor Rodrigo**).
+
+**Entregado:**
+- `OUTPUTS/2026-11-22-bcl-desparasitacion-articular-guion.md` — 2.946 palabras, ~11:30, 25 bloques 1:1
+  con el ganador. Las 4 fases de 4 semanas pasaron a **3 etapas de 3 dias: Soltar · Limpiar · Reconstruir**,
+  para no contradecir los 9 dias del quiz.
+- `OUTPUTS/2026-11-22-bcl-desparasitacion-articular-plan.md` — tabla de equivalencias, mapa de b-rolls
+  ancla por ancla y las 7 placas.
+- `~/Desktop/limpia-dolor/work/bcl/visuales/` — las **51 visuales** que paso Santiago, catalogadas y
+  renombradas por contenido.
+
+**Decisiones:** el nombre "Limpia Dolor" **no se dice nunca** (el producto es *Protocolo de Desparasitacion
+Articular de 9 dias*, como el logo del quiz); la **visual del jengibre se cayo** porque el quiz y los ads
+dicen *dos ingredientes* y contradice el pitch en pantalla; avatar = el doctor asiatico de los ads
+(`ARTROSIS V*`, ya en HeyGen) con voz `damian`, **Avatar IV**.
+
+**Pendiente:** el OK de Santiago para quemar los ~290 creditos de HeyGen.
+
+**Regla nueva:** **"BCL" es "VSL"** mal dictado — al glosario de [[como-trabajar-con-santiago]].
+
 ## 2026-11-22 — The Home Catering Method: las descripciones de los ads
 
 - **Pedido:** *"Dame una descripcion para los ads de la oferta de finger que hicimos para ingles"* (= la oferta modelada sobre *Premium Finger Foods*).

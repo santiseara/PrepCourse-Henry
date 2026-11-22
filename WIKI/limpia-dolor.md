@@ -103,6 +103,30 @@ Copia en `OUTPUTS/2026-11-18-quiz-limpia-dolor.txt` y `OUTPUTS/2026-11-18-quiz-l
   entero y los 6 parámetros, y sin parámetros queda el checkout exacto (sin `?` colgado). `paso` no se reenvía.
 - Las **19 imágenes** pasan a Blob y quedan decodificadas al arrancar.
 
+## El VSL post-quiz (2026-11-22)
+
+Clon 1:1 del VSL ganador de **Protocolo Chía 4S** (11:44, post-quiz), con la comunicación atada a los ads que ya
+corren. Guion, tabla de equivalencias y mapa de b-rolls en
+`OUTPUTS/2026-11-22-bcl-desparasitacion-articular-guion.md` y `…-plan.md`.
+
+| | |
+|---|---|
+| **Duración** | **15:35** (crudo 16:23, menos el recorte de silencios) · 1080x1920 · 30 fps |
+| **Avatar** | el doctor asiático de los ads (`ARTROSIS V*`), **Avatar IV**, voz `damian` |
+| **HeyGen** | 6 bloques de 667, 428, 526, 455, 346 y 524 palabras — **526 créditos** |
+| **Montaje** | 34 b-rolls de los 51 clips propios + **11 placas** + cama de suspenso con ducking |
+| **Entrega** | `~/Desktop/limpia-dolor/vsl/` — master y versión web de 720 para Panda Video |
+
+- El nombre **"Limpia Dolor" no se dice nunca**: el producto es *Protocolo de Desparasitación Articular de 9 días*,
+  que es lo que dice el logo del quiz.
+- Las **4 fases de 4 semanas** del ganador pasaron a **3 etapas de 3 días** (Soltar · Limpiar · Reconstruir), para
+  no contradecir los 9 días que promete el quiz.
+- El quiz **no nombra los ingredientes** (dice "se consiguen en cualquier supermercado"), así que el VSL puede decir
+  **carozo de palta y cúrcuma** como los ads, sin contradecirlo. La visual del jengibre quedó afuera por eso.
+- Dos zonas **venden con la cara, sin un solo corte**: el value stack con el precio, y el cierre desde
+  *"Yo ya hice mi parte"* hasta *"Te espero adentro"*.
+- Las reglas técnicas que salieron de este montaje están en [[vsl-reglas-de-armado]] (bloque del 22/11).
+
 ## Preguntas abiertas
 
 - **El nombre.** Puse *Protocolo Limpia Dolor* por el `<title>` del original (*Protocolo Limpa Dor*). Si querés otro,

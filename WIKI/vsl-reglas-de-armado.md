@@ -15,6 +15,45 @@ Nunca en serie. El orden para cualquier video con avatar (VSL, OTO o ad):
 6. Revisar con una hoja de contactos (1 cuadro cada 3 s) y un par de cuadros a resolución completa. Comprimir con crf 21 y maxrate 8M.
 - **Formatos de edición disponibles** (`edit_vsl_quiz.py`, 5.º campo del plan): `split` (avatar arriba y placa o B-roll abajo), `full` (B-roll solo), `gs` (avatar grande recortada delante del B-roll) y `pip` (B-roll con la avatar chiquita en la esquina). En un VSL largo conviene alternar los cuatro.
 
+## 0a-bis. 🆕 2026-11-22 · Bajar y controlar los bloques de HeyGen (Desparasitación Articular)
+Seis bloques, 16:23 de avatar, y todo lo que sigue se hizo sin tocar el botón de Download.
+
+- ⭐ **El master 1080x1920 se baja cambiando la URL.** El `<video>` de la página de un proyecto sirve
+  `resource2.heygen.ai/video/transcode/<id>/<v…>/**720x1280**_nocap.mp4`. Cambiando ese `720x1280` por
+  **`1080x1920`** (sin query string) `curl` baja el master vertical — 194 MB los 3:35 — y Chrome no bloquea nada.
+  El `<id>` sale de los `href="/videos/<id>"` de la lista de Proyectos; el `<v…>` solo aparece abriendo el video.
+  Complementa lo de [[patitas-felices]], que documentaba la de 720.
+- **El orden de los bloques se confirma con 11 s de cada uno.** La lista de Proyectos ordena por recencia, así que
+  **el más nuevo es el último que se mandó**: la numeración va al revés. Transcribir los primeros 11 s de cada mp4
+  con faster-whisper `tiny` lo confirma en 20 segundos, antes de concatenar.
+- ⭐ **El control de que ningún bloque se comió texto es el ppm, no la transcripción entera.**
+  Palabras del tramo del guion ÷ duración del render. Acá los seis dieron **170–188 ppm**, o sea ninguno derivó;
+  un bloque truncado se despega enseguida (una primera cuenta mal hecha daba 225 ppm y encendió la alarma).
+  Es el único chequeo que detecta el bloque malo **antes** de gastar una hora de montaje.
+- **Presupuestar Avatar IV a ~32 créditos por minuto, no a 25.** Los seis bloques (16:23) costaron
+  **526 créditos**: 115, 79, 92, 84, 66 y 90. La cuenta vieja de 25 cr/min daba 290 y se quedó corta.
+
+## 0a-ter. 🆕 2026-11-22 · Tres trampas del montaje que salieron en este VSL
+1. ⭐ **La alineación contra el guion tiene que reescribir también los bloques de LARGO DISTINTO.**
+   Hasta ahora solo se reescribían los tramos donde Whisper y el guion tenían la misma cantidad de palabras.
+   Whisper escribe los precios en cifras (`17 ,990` por *diecisiete mil novecientos noventa*) y oye
+   **"desparacitación"** donde el guion dice *desparasitación*: ese tramo quedaba crudo y el subtítulo quemado salía
+   con el error a la vista (**"LA DESPARACITACIÓN 17"** encima del value stack) y **el ancla no enganchaba**.
+   Acá se cayeron 4 anclas, una de ellas la del value stack, que además se llevaba puesta la zona sin cortes del precio.
+   La solución: en un `replace` de largo distinto, **repartir el tramo de tiempo entre las palabras del guion a
+   prorrata del largo de cada una**. Arregla el subtítulo y el ancla de una. Es el complemento de §4h.
+2. **Los subtítulos se callan debajo de una placa que ocupa la banda.** Con la banda en `y 1220`, las 3 reseñas,
+   el value stack, el botón y el cierre quedaban con el subtítulo escrito encima del texto de la tarjeta.
+   Se arma la lista de tramos mudos con las placas que invaden la banda y se saltean esos eventos del `.ass`.
+   Las que no molestan (título, las 3 etapas, el precio) conservan el subtítulo.
+3. ⚠️ **Matar el Python NO mata su ffmpeg.** `run()` usa `subprocess.run`, así que al frenar el editor el ffmpeg
+   queda **huérfano (ppid 1) y sigue escribiendo sobre el mp4 final**: acá estuvo 7 minutos pisando la salida del
+   render bueno. Al abortar un montaje hay que matar también el ffmpeg, y mirar que no quede ninguno sin `-ss`.
+
+- Y dos de higiene: **todo editor nuevo nace con el render por segmentos** de §4f (el de esta oferta nació con el
+  filtro único de 60 capas, que es justo lo que tardó 8 horas en Calistenia), y **se lanza con `python3 -u`**:
+  con la salida redirigida, Python la bufferea y el log queda vacío justo cuando hace falta mirarlo.
+
 ## 0b. Voces con Google AI Studio (2026-10-19, pedido de Santiago: "usá google AI studio para las voces")
 - ⛔ **Un ad de voz en off no gasta un solo crédito** (2026-10-22: "cuando hacemos de voz en off, no tenés que gastar créditos en NADA"). Ni la voz, ni imágenes, ni video generativo. Voz de AI Studio, B-roll de stock gratuito, planos de producto de los stills de la landing. Nada de Higgsfield ni ElevenLabs.
 - La voz la genero **yo** manejando Chrome, nunca se le pide a Santiago que la genere.

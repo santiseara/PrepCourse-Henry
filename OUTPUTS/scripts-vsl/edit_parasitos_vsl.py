@@ -229,8 +229,8 @@ for frase, clip in BROLL:
     t = find(frase)
     if t is None: continue
     if vedado(t): print('  · salteado (zona de cara):', frase); continue
-    if cortes and t - cortes[-1][0] < 8.0:
-        print('  · salteado (a menos de 8 s del anterior):', frase); continue
+    if cortes and t - cortes[-1][0] < 8.0 / SPEED:
+        print('  · salteado (muy cerca del anterior):', frase); continue
     cortes.append((t, clip))
 print('b-rolls:', len(cortes), 'de', len(BROLL))
 
@@ -238,7 +238,7 @@ placas = []
 for frase, png, seg in PLACAS:
     t = find(frase)
     if t is None: continue
-    placas.append((t, png, seg))
+    placas.append((t, png, seg / SPEED))
 print('placas:', len(placas), 'de', len(PLACAS))
 
 json.dump({'total': total, 'cortes': cortes, 'placas': placas},

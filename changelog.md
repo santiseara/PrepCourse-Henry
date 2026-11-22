@@ -10,8 +10,9 @@ Avatar IV sale a **~32 créditos por minuto**, no a 25). Faltaba bajarlos, monta
   con `curl`. Orden confirmado transcribiendo 11 s de cada uno (la lista de Proyectos ordena al revés).
 - **Control de integridad por ppm**: 170–188 ppm en los seis, o sea **ningún bloque se comió texto** — que era el
   riesgo con B1 (667 palabras) y B6 (524). La transcripción completa lo confirmó: **0 palabras inventadas**.
-- **Montaje**: 15:35, 1080x1920, **34 b-rolls**, **11 placas**, 1.069 bloques de subtítulo y cama de suspenso con
-  ducking. Entregado en `~/Desktop/limpia-dolor/vsl/` con master y versión web de 720 para Panda Video.
+- **Montaje**: 1080x1920, **34 b-rolls**, **11 placas**, 1.069 bloques de subtítulo y cama de suspenso con
+  ducking. Entregado primero a velocidad natural (15:35) y, con el VSL ya aprobado, **rehecho a `SPEED=1.25` a
+  pedido de Santiago: 12:28**, con las placas y el mínimo entre cortes escalados para que el montaje no cambie. Entregado en `~/Desktop/limpia-dolor/vsl/` con master y versión web de 720 para Panda Video.
 
 **Cuatro cosas que estuvieron mal y se arreglaron** (todas en [[vsl-reglas-de-armado]], bloque del 22/11):
 1. ⭐ **La alineación no reescribía los tramos de largo distinto.** Whisper oye *"desparacitación"* y escribe los

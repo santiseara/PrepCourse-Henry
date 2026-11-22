@@ -54,6 +54,19 @@ Seis bloques, 16:23 de avatar, y todo lo que sigue se hizo sin tocar el botón d
   filtro único de 60 capas, que es justo lo que tardó 8 horas en Calistenia), y **se lanza con `python3 -u`**:
   con la salida redirigida, Python la bufferea y el log queda vacío justo cuando hace falta mirarlo.
 
+## 0a-quater. 🆕 2026-11-22 · La velocidad del VSL la fija Santiago, y arrastra tres cosas
+Sobre el VSL de Desparasitación Articular, ya aprobado: *"ponele velocidad 1.25, a todo el video, despues deja
+todo igual"*. De 15:35 pasó a **12:28** (236 ppm). **El default es velocidad natural**: el atempo no se pone solo,
+se pregunta o se espera a que lo pida.
+- ⭐ **"Dejá todo igual" significa que el montaje no cambia, solo la velocidad.** Y para que no cambie hay que
+  **escalar por `1/SPEED` todo lo que esté atado a lo hablado**: la **duración de cada placa** (una placa de 30 s
+  sobre un tramo que ahora dura 24 s se queda 6 s colgada) y el **mínimo de segundos entre b-rolls** (con el umbral
+  fijo, la línea de tiempo comprimida tira abajo cortes que antes entraban y el corte deja de ser el mismo).
+- **Lo que NO se escala**: el largo de cada corte de b-roll (2–3 s es una regla visual del pool de 480x848, no del
+  habla) y el tamaño de los subtítulos.
+- **Control**: después del atempo tienen que salir **los mismos b-rolls, las mismas placas y los mismos bloques de
+  subtítulo** que en la versión aprobada. Acá: 34, 11 y 1.069 en las dos.
+
 ## 0b. Voces con Google AI Studio (2026-10-19, pedido de Santiago: "usá google AI studio para las voces")
 - ⛔ **Un ad de voz en off no gasta un solo crédito** (2026-10-22: "cuando hacemos de voz en off, no tenés que gastar créditos en NADA"). Ni la voz, ni imágenes, ni video generativo. Voz de AI Studio, B-roll de stock gratuito, planos de producto de los stills de la landing. Nada de Higgsfield ni ElevenLabs.
 - La voz la genero **yo** manejando Chrome, nunca se le pide a Santiago que la genere.

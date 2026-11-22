@@ -51,6 +51,15 @@
   se armó con los dos. Después de generar imágenes en una carpeta del Escritorio hay que borrar
   `*" 2".*` antes de armar los planes.
 
+- ⛔⛔ **2026-11-22 · "Horribles las visuales, usá las originales." El material dibujado por código NO
+  reemplaza al material del ganador.** Entregué la tanda 1 de [[ingles-mapas-mentales]] con las 15 páginas
+  del producto dibujadas en español (porque el material de ellos está en portugués) y Santiago las rechazó
+  de una. **Regla: el visual de un clon sale del creativo del ganador**, aunque esté en otro idioma, aunque
+  haya que recortarlo arriba del watermark y aunque queden pocos segundos limpios. El inserto dibujado sirve
+  como **pieza suelta dentro de un visual real** (lo de [[laboratorio-wow]]: 3 insertos entre clips de
+  TikTok), nunca como el visual entero de la tanda. Si el material del ganador no alcanza, se bajan más
+  creativos suyos, no se dibuja el reemplazo.
+
 ### 🆕 2026-11-22 · Cinco cosas medidas clonando [[ingles-mapas-mentales]] (Fluente com Legenda, BR→AR)
 
 - ⛔ **SE CAE la regla del 18/11 de que "la Biblioteca de Anuncios sirve los videos a 360x640".** Eso es lo que

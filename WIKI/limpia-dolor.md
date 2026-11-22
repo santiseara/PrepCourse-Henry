@@ -111,7 +111,7 @@ corren. Guion, tabla de equivalencias y mapa de b-rolls en
 
 | | |
 |---|---|
-| **Duración** | **15:35** (crudo 16:23, menos el recorte de silencios) · 1080x1920 · 30 fps |
+| **Duración** | **12:28** · 1080x1920 · 30 fps (crudo 16:23 → 15:35 recortado → `SPEED=1.25` a pedido de Santiago) |
 | **Avatar** | el doctor asiático de los ads (`ARTROSIS V*`), **Avatar IV**, voz `damian` |
 | **HeyGen** | 6 bloques de 667, 428, 526, 455, 346 y 524 palabras — **526 créditos** |
 | **Montaje** | 34 b-rolls de los 51 clips propios + **11 placas** + cama de suspenso con ducking |

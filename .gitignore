@@ -1,3 +1,7 @@
 
 # binario compilado de OCR (se rehace con: swiftc -O ocr_vision.swift -o ocrbin)
 OUTPUTS/scripts-vsl/ocrbin
+
+# binarios compilados del escaner de Vision (se rehacen con swiftc -O scan.swift -o scanbin)
+OUTPUTS/scripts-vsl/scanbin
+OUTPUTS/scripts-vsl/scanbin2

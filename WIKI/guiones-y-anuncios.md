@@ -19,8 +19,65 @@
 - **2026-11-22 · La geometría del estático se mide con numpy, no a ojo.** Para clonar su grilla se leyó el JPG de 600x600 buscando las filas y columnas casi blancas (los separadores) y el color plano de la barra: cabecera 0-36, grilla con cortes en x=195 y x=400 y en y=274, barra azul `#0016B6` de 535 a 599, título `#0818A7`. Escalado ×1,8 da el 1080 exacto. Tarda dos minutos y la réplica queda calcada; estimar las proporciones mirando la imagen no.
 
 - **2026-11-22 · El filtro de b-roll se corre DENSO la primera vez, no barato.** Armando la tanda de [[home-catering-method]] se validaron 139 clips con un muestreo de **3 cuadros por clip**, y cada re-render completo (que tarda ~50 min para 6 videos) destapaba un defecto que ese muestreo no cubría: primero texto quemado que el OCR no marcó, después personas de pie, después **bandas negras internas** (clips apaisados que el creador subió dentro de un lienzo 9:16). **Cuatro tandas renderizadas para una sola entrega.** Escanear **cada segundo de cada clip** cuesta segundos por clip; un re-render cuesta casi una hora. Regla: el filtro de pool se corre a 1 cuadro por segundo desde la primera pasada, y busca las tres cosas juntas — texto, caras y **bandas negras internas** (filas negras arriba/abajo: con más del 10 % del alto el clip se cae).
+- **2026-11-22 · El detector de bandas negras da FALSO POSITIVO con el b-roll de anatomía 3D.** Filtrando las 51 visuales del VSL de parásitos, tres clips dieron "BANDAS" (16 %, 20 % y 44 % del alto): el intestino bañado de dorado, el intestino completo y la **colonoscopía con el Ascaris** — justo los tres mejores planos del pool. No eran letterbox: es el **fondo negro del render 3D**, que llega hasta el borde del cuadro. Regla: la medición de bandas **no decide sola**; cuando marca, se arma una tira de cuadros del clip y se mira. Un plano de anatomía sobre negro, un plano nocturno o un fundido entran en el mismo caso. Lo que distingue una banda real es que el **borde es recto y constante en todos los cuadros** y el contenido está comprimido en el medio; el fondo negro cambia de forma cuadro a cuadro.
+- **2026-11-22 · Un pool de WhatsApp viene a 480x848: cortes de 2-3 s y nada más.** Las 51 visuales del VSL de parásitos llegaron por WhatsApp a **480x848** (9:16 exacto), que escalado a 1080x1920 es **2,25x**. Es la misma situación de la regla del 4/11 (464x832): se ve más blando que el avatar y **en un plano largo canta**. Con cortes de 2 a 3 segundos pasa desapercibido. Antes de armar el plan se mide el ancho real del pool, porque fija el largo máximo de cada corte.
 - **2026-11-22 · Dos trampas de ffmpeg que rompen la revisión en silencio.** (1) El filtro `tile` **descarta sin avisar los cuadros de distinto tamaño**: una hoja de contactos armada con `scale=W:-2` sobre clips de distinta relación pierde celdas y **corre el mapeo**, así que las claves que leés no son las que estás mirando — casi se tira material bueno por eso. Se arregla forzando tamaño fijo con `scale=W:H:force_original_aspect_ratio=decrease,pad=W:H:...` y **alto par** (con alto impar el filtro aborta con *"Error reinitializing filters"*). (2) `ocrbin` **lee las rutas por stdin**, una por línea, no como argumento: llamarlo con argumento devuelve vacío y **deja pasar todos los clips con texto quemado** sin un solo error. Se detecta porque el OCR no marca ni un clip en un nicho lleno de tutoriales.
 - **2026-11-22 · `python3 -I` no ve los site-packages del usuario.** El flag de aislamiento rompe `import cv2` (y cualquier dependencia instalada en `~/Library/Python`). Para un script propio que procesa archivos bajados, la protección que importa es **no correr el intérprete desde el directorio de los datos**: se deja el script en una carpeta aparte y se le pasan las rutas por argumento. Aparte: el `cv2` de esta Mac (5.0.0) **no trae `CascadeClassifier`**, así que la detección de caras va por Vision de macOS (`scan.swift`, compilado con `swiftc -O`), que además hace OCR en la misma pasada.
+
+- ⛔ **2026-11-22 · Las fuentes de la casa vivían en un scratchpad y se borraron.** `edit_wow.py` le pasa
+  a libass `fontsdir=$WOW_FONTS`, que apuntaba a una carpeta de sesión de hace semanas. Sin esos archivos,
+  **`Montserrat ExtraBold` cae en la Helvetica fina del sistema sin un solo aviso**: el subtítulo se
+  renderiza, pero liviano. Probado con un cuadro de control: Montserrat, `Rubik ExtraBold` y `Rubik` dan
+  los tres la misma letra fina; la única pesada que siempre está es `Arial Black`. Montserrat ExtraBold y
+  Barlow Condensed ExtraBold quedaron instaladas en **`OUTPUTS/scripts-vsl/fonts/`** (y en
+  `~/Library/Fonts`), y se corre el editor con `WOW_FONTS=.../scripts-vsl/fonts`. **Antes de una tanda:
+  un cuadro de control con el subtítulo**, que cuesta dos segundos.
+- ⛔ **2026-11-22 · En un nicho de papel escrito, el filtro de texto quemado no sirve.** Los 148 clips de
+  `#mapasmentales`, `#apuntes`, `#impresora`, `#papeleria` y `#estudiaringles` dieron **cero** aprobados con
+  el filtro del 22/11 (texto en más del 22 % de los cuadros): el tema del nicho **es** papel escrito, así
+  que el OCR marca todo. Tampoco alcanza con medir el tamaño del renglón ni con pedir que no sea ancho y
+  centrado — un apunte en primer plano es exactamente eso. Regla: cuando el producto es papel, texto o
+  pantalla, **el pool se elige a ojo**: hoja de contactos de 24 clips con 2 cuadros, y de los finalistas
+  una tira de 6 cuadros repartidos en todo el clip para cazar el cartel que aparece a mitad de camino.
+  Herramientas nuevas: `contactos.py` y `tiras.py`. De 148 quedaron 14.
+- **2026-11-22 · Si el producto todavía no existe en el idioma destino, el material se DIBUJA.** Para
+  [[ingles-mapas-mentales]] se dibujaron por código las 15 páginas del producto en español
+  (`gfx_ingles.py`), porque el ganador es brasileño y su material está en portugués. Dos cosas que
+  conviene copiar: **la hoja termina antes del borde de abajo** (en y=1500 de 1920) para que el subtítulo
+  quemado caiga sobre fondo oscuro y no tape el material, y de cada hoja salen **tres encuadres** (entera,
+  arriba, abajo) para que el corte cada 2,5 s tenga de dónde elegir sin repetir plano.
+- 🐞 **2026-11-22 · El Escritorio en iCloud duplica archivos con " 2" en el nombre.** Al regenerar las
+  páginas de [[ingles-mapas-mentales]] aparecieron 14 PNG `nombre 2.png` al lado de los buenos, y el pool
+  se armó con los dos. Después de generar imágenes en una carpeta del Escritorio hay que borrar
+  `*" 2".*` antes de armar los planes.
+
+### 🆕 2026-11-22 · Cinco cosas medidas clonando [[ingles-mapas-mentales]] (Fluente com Legenda, BR→AR)
+
+- ⛔ **SE CAE la regla del 18/11 de que "la Biblioteca de Anuncios sirve los videos a 360x640".** Eso es lo que
+  reproduce el `<video>` de la página, pero el payload trae **`video_hd_url` a 720x1280**. Se saca así: leer
+  `document.scripts` buscando `"video_hd_url":"..."` y aparearlo con el `"ad_archive_id"` más cercano hacia atrás
+  (los ~30 primeros vienen en el HTML); para los que cargan después, **enganchar `window.fetch` y
+  `XMLHttpRequest.prototype.send` ANTES de scrollear** y juntar lo mismo de cada respuesta. Se bajan con
+  `fetch(url) → blob → <a download>` desde la propia página. **La fuente 2 de la regla de las imágenes de mierda
+  ("sacarle el b-roll al ganador") vuelve a existir**: 720x1280 recortado y subido a 1080x1920 aguanta.
+- 🐞 **`javascript_tool` bloquea cualquier respuesta que contenga una URL firmada** (`[BLOCKED: Cookie/query
+  string data]`). Las URLs se guardan en una variable del navegador (`window.__x`) y se devuelve **solo metadata**
+  (ids, cantidades); las descargas se disparan adentro de la página.
+- ⛔ **Un watermark de texto blanco NO se tapa con blur: se recorta.** Probado sobre `@fluentecomlegenda`:
+  `gblur sigma 13`, `sigma 20` y `avgblur 28x4` con máscara difuminada **dejan la silueta legible** (el texto es de
+  alto contraste, el blur le conserva la forma) y además la banda borrosa **se nota** sobre un teclado. Lo que sirve
+  es **cortar el cuadro arriba del watermark**: está siempre a la misma altura (y ≈ 81 % del alto en los 24
+  creativos medidos), así que `crop=576:1024:72:0` sobre 720x1280 lo saca entero, sin un solo artefacto, y el
+  reencuadre hasta mejora la composición. Lo que queda es el `@usuario` **impreso en la hoja**, que mide ~1 % del
+  alto y es ilegible en el feed.
+- 🐞 **`xargs -P N -I {}` con un comando largo adentro revienta en silencio**: `xargs: command line cannot be
+  assembled, too long`, **exit 0** y cero archivos convertidos. El paralelismo va con un `.sh` chiquito aparte al
+  que se le pasan las rutas por argumento.
+- **El acento argentino del TTS no sale pidiendo "español rioplatense con voseo".** Primer intento con esa frase:
+  Gemini escuchó **español de España**. El segundo, nombrando el seseo y el sonido SH de la LL/Y, salió rioplatense
+  pero **"robótico"**. El que quedó agrega el personaje: *"una chica argentina de veintipico grabándose con el
+  celular en su casa… NO está leyendo: está hablando"* más *"entonación despareja y viva"* → rioplatense y
+  **natural**. Los tres controles costaron 3 de las 10 generaciones del día: vale la pena igual.
 
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.

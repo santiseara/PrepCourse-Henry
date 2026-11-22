@@ -1,3 +1,62 @@
+## 2026-11-22 (cierre) — El VSL de Desparasitación Articular, montado y entregado
+
+**Pedido:** *"Segui haciendo el vsl de parasitos"* → *"Dale, terminalo"*.
+
+**Lo que faltaba:** los 6 bloques ya estaban renderizados en HeyGen (526 créditos, no los ~290 presupuestados:
+Avatar IV sale a **~32 créditos por minuto**, no a 25). Faltaba bajarlos, montarlos y entregarlos.
+
+**Hecho:**
+- **Los 6 bloques bajados en 1080x1920** cambiando `720x1280_nocap` por `1080x1920_nocap` en la URL del `<video>`,
+  con `curl`. Orden confirmado transcribiendo 11 s de cada uno (la lista de Proyectos ordena al revés).
+- **Control de integridad por ppm**: 170–188 ppm en los seis, o sea **ningún bloque se comió texto** — que era el
+  riesgo con B1 (667 palabras) y B6 (524). La transcripción completa lo confirmó: **0 palabras inventadas**.
+- **Montaje**: 15:35, 1080x1920, **34 b-rolls**, **11 placas**, 1.069 bloques de subtítulo y cama de suspenso con
+  ducking. Entregado en `~/Desktop/limpia-dolor/vsl/` con master y versión web de 720 para Panda Video.
+
+**Cuatro cosas que estuvieron mal y se arreglaron** (todas en [[vsl-reglas-de-armado]], bloque del 22/11):
+1. ⭐ **La alineación no reescribía los tramos de largo distinto.** Whisper oye *"desparacitación"* y escribe los
+   precios en cifras: el subtítulo quemado salía **"LA DESPARACITACIÓN 17"** encima del value stack y **4 anclas no
+   enganchaban**, una de ellas la que abría la zona sin cortes del precio. Ahora el tramo de tiempo se reparte entre
+   las palabras del guion a prorrata.
+2. **Los subtítulos tapaban las placas de abajo** (las 3 reseñas, el value stack, el botón y el cierre): ahora se
+   callan debajo de la placa que invade la banda. 61 bloques menos.
+3. **El editor nació con el filtro único de 60 capas**, que es lo que tardó 8 horas en Calistenia: pasado al render
+   por segmentos en paralelo de §4f.
+4. ⚠️ **Matar el Python no mata su ffmpeg**: el huérfano estuvo 7 minutos escribiendo sobre el mp4 final.
+
+**Archivos:** `OUTPUTS/scripts-vsl/edit_parasitos_vsl.py`, `gfx_parasitos_vsl.py` y `entrega_vsl_parasitos.py`.
+
+## 2026-11-22 (noche) — Inglés con Mapas Mentales: la tanda 1, con el producto dibujado en español
+
+**El tapón:** el ganador que clonamos (*Fluente com Legenda*) es brasileño y **el cuerpo de todos sus mapas
+está en portugués**. De 1.300 s de sus creativos quedaban ~85 s usables para un ad argentino. No alcanzaba
+para seis videos, y lo que se veía era material de otro idioma.
+
+**La salida:** el material que se muestra en el ad es **el producto en español, dibujado por código**
+(`OUTPUTS/scripts-vsl/gfx_ingles.py`): 15 páginas a 2160x3840 con la DNA exacta de las suyas (título
+bilingüe, nivel, nodo central, y ramas de significado, estructura, dato rápido, error común ✗/✓ y mini
+ejercicio), más las de bonus (500 frases con pronunciación, Ruta de la Fluidez, phrasal verbs, expresiones,
+82 ebooks, los 5 bonus, niveles A1→C2 y la grilla de "+300"). Tres encuadres por página → **43 planos**.
+Es la misma salida que [[laboratorio-wow]]: si el producto en el idioma destino no existe, se dibuja.
+
+**Entregado:**
+- 6 videos de la tanda 1 (voz Sulafat rioplatense por API a speed 1.20, corte cada ~2,5 s, subtítulos de
+  3 palabras con la que suena en amarillo), en `Ebook Dami / Ebook Inglés con Mapas Mentales (ARGENTINA) /
+  Videos terminados`.
+- `OUTPUTS/2026-11-22-ingles-mapas-mentales-tanda1-plan.md` — qué muestra cada página y cómo se editó.
+- `WIKI/ingles-mapas-mentales.md` — página nueva de la oferta.
+
+**Tres reglas nuevas en `WIKI/guiones-y-anuncios.md`:**
+1. **Las fuentes de la casa vivían en un scratchpad borrado**: `Montserrat ExtraBold` caía en la Helvetica
+   fina del sistema sin un solo aviso. Quedan fijas en `OUTPUTS/scripts-vsl/fonts/`.
+2. **En un nicho de papel escrito el filtro de texto quemado no sirve**: de 148 clips de TikTok pasaron
+   **cero**, porque el tema *es* papel con letras. La selección se hizo a ojo con hojas de contactos
+   (`contactos.py`) y tiras de 6 cuadros por finalista (`tiras.py`); quedaron 14.
+3. **La hoja del producto termina antes del borde de abajo** (y=1500 de 1920) y se guarda al 86 % del
+   cuadro: así el zoom del editor no le come el texto y el subtítulo cae sobre fondo oscuro.
+
+**Pendiente:** precio en pesos y landing argentina; los 4 OTOs se clonan del molde de [[scented-stones]].
+
 ## 2026-11-22 (noche) — VSL de Desparasitación Articular: el clon del VSL de chía
 
 **Por que:** Santiago pidio el VSL de la oferta de parasitos ([[limpia-dolor]]) calcado del VSL ganador de

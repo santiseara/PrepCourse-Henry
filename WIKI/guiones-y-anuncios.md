@@ -51,6 +51,31 @@
   se armó con los dos. Después de generar imágenes en una carpeta del Escritorio hay que borrar
   `*" 2".*` antes de armar los planes.
 
+- **2026-11-22 · Cómo se limpia el creativo del ganador para reusarlo (el método, en orden).** Rehaciendo
+  [[ingles-mapas-mentales]] con sus propios videos, de 30 creativos a 720x1280 (1.175 s) quedaron **714 s
+  usables**. Lo que hay que sacar, y con qué:
+  1. **El watermark de abajo** → no se tapa, se recorta: `zoom=1.25` + `ybias=0` en el plan (equivale a
+     `crop=576:1024:72:0`) y el editor lo hace **sin recomprimir**.
+  2. **La cara del presentador y las capturas del área de miembros** → OCR + caras con Vision, 2 cuadros
+     por segundo (`vent_orig.py`).
+  3. **SU subtítulo quemado** (lo que más aparece y lo que más molesta: cae justo donde va el nuestro) →
+     🆕 **se detecta por el AMARILLO**. Su subtítulo lleva siempre una palabra resaltada en amarillo fuerte
+     y las hojas del producto son pastel: medido en la banda `y 0,60-0,80`, da **1.967 píxeles amarillos
+     con subtítulo y 0 sin él** (`amarillo_ingles.py`). El OCR no sirve para esto: en una hoja escrita
+     marca texto en todos los cuadros.
+  4. **Los stickers de comentario y de pregunta** ("Qual sua dúvida?", "Replying to @…") → OCR de la banda
+     de arriba buscando esas frases (`stickers_ingles.py`). Son 2 o 3 creativos de 30: se caen enteros.
+  5. **Su CTA quemado** ("Clique em Saiba Mais", "+300 Mapas Mentais do Básico ao Avançado") → se cae el
+     tramo, no el clip: casi siempre está en los últimos segundos.
+  6. **Su LOGO impreso en la hoja** → el `@usuario` chiquito al pie no molesta, pero el logo grande
+     cruzado sobre la página es la marca del competidor adentro del ad. Se busca con OCR cualquier texto
+     con la marca y **alto > 3,5 % del cuadro** (`marca_ingles.py`) y se cortan esos segundos de la
+     ventana. Apareció en **16 de 21** creativos, casi siempre en los primeros segundos: si no se filtra,
+     el último plano del ad termina siendo la marca del otro.
+  **El orden importa:** cada pasada se corre sobre lo que dejó la anterior, y la hoja de contactos se mira
+  igual al final. Las cuatro cosas de los puntos 3 a 6 **no se ven en el JSON**: aparecen recién cuando
+  mirás un render.
+
 - ⛔⛔ **2026-11-22 · "Horribles las visuales, usá las originales." El material dibujado por código NO
   reemplaza al material del ganador.** Entregué la tanda 1 de [[ingles-mapas-mentales]] con las 15 páginas
   del producto dibujadas en español (porque el material de ellos está en portugués) y Santiago las rechazó

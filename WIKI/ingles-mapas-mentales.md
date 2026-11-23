@@ -51,6 +51,27 @@ Medido sobre **24 de sus creativos de más impresiones (~1.300 segundos, 1 cuadr
   navegador) y filmar/componer planos propios. Mientras el producto argentino no exista, el ad muestra el
   material de otro idioma.
 
+## ⛔ Tanda 1 v1: el producto dibujado se cayó (2026-11-22)
+
+La primera versión de la tanda se armó con **las páginas del producto dibujadas por código en español**
+(`gfx_ingles.py`), porque el material de ellos está en portugués. Santiago la rechazó en una línea:
+*"Horribles las visuales, usá las originales"*. **El visual de un clon sale del creativo del ganador**
+(regla nueva en [[guiones-y-anuncios]]). Las páginas dibujadas quedan como base del **producto argentino**
+—son 15 hojas con la DNA de las suyas— pero no como visual de los ads.
+
+## Tanda 1 v2: sus creativos, limpiados (2026-11-22, noche)
+
+- **30 creativos suyos** bajados de la Biblioteca en **720x1280** (`video_hd_url`, los de más impresiones).
+- Limpieza en 5 pasos (detalle del método en [[guiones-y-anuncios]]): recorte del watermark con
+  `zoom=1.25/ybias=0` sin recomprimir, fuera caras y capturas del área de miembros, fuera **su subtítulo
+  quemado** (detectado por el amarillo de su palabra resaltada), fuera los 3 creativos con **sticker de
+  comentario** y fuera los tramos con su CTA. De 1.175 s quedaron **714 s**: 85 tramos de 17 creativos.
+- **Voces: 3 de mujer (Sulafat) en V1, V2 y V5 y 3 de hombre (Orus) en V3, V4 y V6**, mismos guiones.
+  V5 tiene que ser de mujer sí o sí: el guion dice *"yo, como profesora de inglés"*.
+- Cada hoja que ELLOS muestran entra **anclada a la palabra que la nombra** en nuestro guion: el OCR de
+  sus propios cuadros encuentra `MUCH E MANY`, `WAS E WERE`, `HAVE E HAS`, `500 FRASES`, `ROTA DA
+  FLUÊNCIA`, los niveles y los bonus.
+
 ## El producto en español se dibuja, no se pide prestado (2026-11-22)
 
 Como el material de ellos está en portugués, **el material que se ve en nuestros ads es el producto

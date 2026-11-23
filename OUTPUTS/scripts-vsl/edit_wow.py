@@ -130,7 +130,10 @@ for n in range(len(cuts) - 1):
                     + (6 if s[2] - s[1] < d * 0.75 else 0) + rnd.random())
         seg = min(cand, key=score)
     sid = f'{seg[0]}@{seg[1]}'; used.add(sid)
-    plan.append((seg[0], seg[1], seg[2], usage.get(sid, 0) % 2 == 1 and not P['clips'][seg[0]].get('still')))   # las fotos nunca se espejan (tienen texto)
+    # las fotos nunca se espejan (tienen texto). `noflip` en el plan apaga el espejo tambien para
+    # el video: si lo que se filma es material escrito, el plano espejado deja el texto al reves.
+    plan.append((seg[0], seg[1], seg[2], usage.get(sid, 0) % 2 == 1
+                 and not P['clips'][seg[0]].get('still') and not P.get('noflip')))
     usage[sid] = usage.get(sid, 0) + 1
 if upath: json.dump(usage, open(upath, 'w'), indent=0)
 print('planos:', ' '.join(f'{k}:{s:g}{"↔" if f else ""}' for k, s, e, f in plan))

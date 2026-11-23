@@ -33,20 +33,50 @@ for p in sorted(glob.glob(W + '/vent_final*.json')):
     vent.update(json.load(open(p)))
 
 # creativos que se caen enteros: sticker de comentario arriba y pantalla de Drive/navegador
-FUERA_CLIP = {'fl_1019815801137438', 'fl_1059287213603254'}
+FUERA_CLIP = {'fl_1019815801137438',   # sticker "Replying to lady_araujoo" en 38 s
+              'fl_1582187809861026',   # sticker "Qual sua duvida?"
+              'fl_2260021771240937',   # sticker "Eu nao sei nada de ingles..." en 64 s
+              'fl_1059287213603254'}   # pantalla del Drive con el menu en portugues
 # tramos con el CTA de ellos quemado ("Clique em Saiba Mais", "+300 Mapas Mentais do...")
 FUERA_TRAMO = [('fl_1077063898568963', 48.7), ('fl_1097359486340358', 32.2),
                ('fl_1108531905113632', 61.7), ('fl_1391104526346280', 40.7),
-               ('fl_1623484912489693', 38.7)]
+               ('fl_1623484912489693', 38.7),
+               ('fl_1804290747491270', 4.15)]   # barra del navegador en portugues
 
 # ------------------------------------------------------------------ pool
 clips, pool, idx = {}, [], {}
 k = 0
+# segundos donde se ve GRANDE su logo impreso en la hoja (marca_ingles.py)
+MARCA = {}
+for p_ in sorted(glob.glob(W + '/marca*.json')):
+    MARCA.update(json.load(open(p_)))
+
+
+def partir(vid, w):
+    """Corta la ventana sacando los segundos con la marca del ganador."""
+    malos = set(MARCA.get(vid, []))
+    if not malos:
+        return [w]
+    a, b, tx = w[0], w[1], (w[2] if len(w) > 2 else [])
+    fuera = sorted(x for x in malos if a - 1.2 <= x <= b + 0.2)
+    trozos, cur = [], a
+    for x in fuera:
+        if x - 0.5 - cur >= 2.5:
+            trozos.append([round(cur, 2), round(x - 0.5, 2), tx])
+        cur = max(cur, x + 1.5)
+    if b - cur >= 2.5:
+        trozos.append([round(cur, 2), round(b, 2), tx])
+    return trozos
+
+
 for vid, v in sorted(vent.items()):
     if vid in FUERA_CLIP:
         continue
-    ventanas = [w for w in (v.get('ventanas') or [])
-                if not any(vid == fv and abs(w[0] - ft) < 6 for fv, ft in FUERA_TRAMO)]
+    ventanas = []
+    for w in (v.get('ventanas') or []):
+        if any(vid == fv and abs(w[0] - ft) < 6 for fv, ft in FUERA_TRAMO):
+            continue
+        ventanas += partir(vid, w)
     if not ventanas:
         continue
     key = 'o%03d' % k; k += 1
@@ -153,7 +183,7 @@ for n in (1, 2, 3, 4, 5, 6):
     plan = dict(
         vo='voz/V%d.wav' % n, script='voz/V%d.txt' % n, lang='es',
         speed=1.20, silence=[0.30, 0.14], cut=[1.9, 2.5, 3.2],
-        nosfx=True, words=3,
+        nosfx=True, words=3, noflip=True,   # el material es texto: espejarlo lo deja al reves
         hook='', hook_until='',
         hi=AMARILLO, hibox=NEGRO, hibord=0, capy=1540, pop=False,
         font='Montserrat ExtraBold', fsize=58, spacing=6, outline=4, shadow=3,

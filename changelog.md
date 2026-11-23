@@ -1,3 +1,27 @@
+## 2026-11-23 (madrugada) — Inglés con Mapas Mentales: la tanda 1, rehecha con los creativos de ellos
+
+**Corrección de Santiago:** *"Horribles las visuales, usa las originales, y ponele a 3 voz de hombre y 3 voz
+de mujer, mismos guiones"*. Se cayó la versión con las páginas dibujadas por código y se rehizo la tanda
+entera con **sus propios creativos**.
+
+**Lo entregado (reemplaza los 6 archivos anteriores en el Drive, que quedaron en la papelera):**
+seis videos de 35 a 58 s, voz **Sulafat** en 1, 2 y 5 y **Orus** en 3, 4 y 6 (el 5 tiene que ser de mujer:
+el guion dice *"yo, como profesora de inglés"*), mismos guiones, corte cada ~2,2 s.
+
+**El visual:** 30 creativos suyos bajados en 720x1280 (1.175 s) → **714 s limpios**, 85 tramos de 17.
+Limpieza en 6 pasos, documentada en `WIKI/guiones-y-anuncios.md`: recorte del watermark con
+`zoom=1.25/ybias=0` (sin recomprimir), fuera caras y área de miembros, fuera **su subtítulo quemado**
+(se detecta por **el amarillo** de su palabra resaltada: 1.967 píxeles con subtítulo, 0 sin él), fuera los
+3 creativos con **sticker de comentario**, fuera los tramos con su CTA y fuera los segundos donde se ve
+**su logo** impreso grande en la hoja (aparecía en 16 de 21 creativos).
+
+**Bug del editor arreglado:** `edit_wow.py` **espejaba planos** para disimular la repetición entre videos.
+Con material escrito eso deja **los mapas al revés** (pasaba en 5 de 15 planos del video 6). Opción nueva
+`noflip` en el plan; las fotos ya estaban exentas, ahora también el video cuando lo filmado es texto.
+
+**Las páginas dibujadas no se tiran:** quedan como base del **producto argentino** (15 hojas con la DNA
+de las suyas, `gfx_ingles.py`).
+
 ## 2026-11-22 (cierre) — El VSL de Desparasitación Articular, montado y entregado
 
 **Pedido:** *"Segui haciendo el vsl de parasitos"* → *"Dale, terminalo"*.

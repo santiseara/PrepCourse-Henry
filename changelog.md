@@ -1,3 +1,18 @@
+## 2026-11-23 — The VRF Field System: la tanda 1, los 6 videos con sus tres formatos
+
+- Producidos los **6 ads de testeo** en inglés clonando los tres formatos de Carlos Medina / EXEMIO:
+  **voz en off sobre b-roll** (V1, V2, V4, V6), **avatar a cámara en sala de máquinas** (V3) y
+  **avatar chico recortado abajo sobre b-roll** (V5).
+- Voz Orus por API con Style de técnico estadounidense; las seis entre 164 y 186 palabras por minuto.
+- Avatar nuevo en HeyGen (**VRF TECNICO sala de maquinas**, Avatar IV, 720p vertical) desde una foto de
+  Nano Banana rehecha sin logos en la ropa. Recorte para el formato compuesto con RVM.
+- Pool: 152 clips de `#vrf`, `#brazing`, `#minisplit`, `#rooftopunit` y `#commercialhvac` → 71 con ventana
+  limpia por OCR + caras + bandas → **38 después de dos pases a ojo** (el tag de un oficio trae el verbo,
+  no el oficio: `#brazing` estaba lleno de cocina, motos y joyería).
+- Insertos del producto en inglés dibujados por código (`gfx_vrf.py`) y placa de cierre con los 3 bonos.
+- Nuevos en `OUTPUTS/scripts-vsl/`: **`edit_vrf.py`** (tres modos: vo, avatar, pip).
+- Reglas nuevas en `WIKI/guiones-y-anuncios.md` y producción documentada en `WIKI/vrf-field-system.md`.
+
 ## 2026-11-23 — The VRF Field System: oferta nueva para el mercado inglés
 
 - Oferta nueva: clon de **Manual de Sistemas VRF y VRV** (vrf.impultienda.ar, "Carlos Medina" / marca

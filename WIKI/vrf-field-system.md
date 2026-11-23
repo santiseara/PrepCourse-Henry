@@ -48,6 +48,48 @@ el hotel a las once, lo que cuesta un error, decirle que no al cliente, el traba
 en el techo no hay tiempo de buscar videos, y el siguiente paso desde los splits.
 `OUTPUTS/2026-11-23-guiones-vrf-field-system-EN-tanda1.md`
 
+## 🎬 Tanda 1 producida (23/11/2026) — los tres formatos de ellos
+| Video | Guion | Formato copiado | Cómo se hizo |
+|---|---|---|---|
+| V1 | El hotel a las once | **voz en off + b-roll** (el que más corren) | pool de TikTok, cortes de 1,9-2,9 s |
+| V2 | Lo que cuesta un error | voz en off + b-roll | pool de soldadura y manómetros |
+| V3 | Decirle que no al cliente | **avatar a cámara en sala de máquinas** | HeyGen Avatar IV, a pantalla completa |
+| V4 | El trabajo que mejor paga | voz en off + b-roll | pool de azoteas y edificios |
+| V5 | En el techo no hay tiempo | **avatar chico recortado abajo sobre b-roll** | el mismo avatar matteado con RVM |
+| V6 | El siguiente paso desde los splits | voz en off + b-roll | pool de interiores |
+
+- **Voz:** Orus por API (`gemini-2.5-flash-preview-tts`), Style de técnico estadounidense del Medio Oeste
+  hablándole a otro técnico. Control de 7 palabras: 2,65 s, limpio. Las seis voces salieron entre 164 y
+  186 palabras por minuto, o sea sin bloque de estilo leído.
+- **Avatar:** foto hecha con **Nano Banana en AI Studio** (gratis, por navegador), en plano medio y con la
+  ropa **sin un solo logo** — la primera versión salió con "CITY MECHANICAL" bordado y se rehízo, porque
+  una marca ajena legible no entra en el ad. HeyGen pidió una foto más cercana: la de cuerpo entero se
+  recortó a plano medio antes de subirla.
+- **Recorte del avatar para el formato compuesto:** `matte.py` con **RVM** (`rvm_mobilenetv3_fp32.onnx`).
+  El modelo no estaba en el disco: se baja del release v1.0.0 de RobustVideoMatting.
+- **Subtítulo clonado:** Barlow Condensed ExtraBold 112, mayúscula, blanco con borde negro y **la palabra
+  que suena en amarillo `#FFE400`**, tres palabras por grupo, a y=1395 (y a 1180 en el formato compuesto,
+  para que no choque con el avatar).
+- **Música:** una sola cama para la tanda (`music.py`) a **-12 dB**. Medido en sus ads: el piso de ruido
+  está 14-18 dB abajo del promedio, o sea que ellos también llevan cama.
+- **Insertos del producto en inglés, dibujados por código** (`gfx_vrf.py`): tabla de fallas, checklist,
+  cañerías/derivación en Y, los 8 módulos, la tapa y la placa de cierre con los 3 bonos y el botón.
+  Van anclados a la palabra que los nombra, **dentro de un visual real**, nunca como el visual entero.
+- **Editor:** `OUTPUTS/scripts-vsl/edit_vrf.py`, con los tres modos (`vo`, `avatar`, `pip`).
+
+### 🐞 Lo que costó plata o tiempo en esta tanda
+- **El pool de TikTok del oficio viene podrido.** De 152 clips bajados de `#vrf`, `#brazing`, `#minisplit`,
+  `#rooftopunit` y `#commercialhvac`, el filtro de OCR + caras + bandas dejó 71 con ventana limpia, y el
+  **pase a ojo bajó a 44**: `#brazing` está tomado por cocina, joyería, motos y hasta una radiografía
+  dental, y `#vrf` trae terrazas y arte fantástico. El filtro automático no sabe si el clip **es del
+  nicho**: eso se mira.
+- **tikwm estaba lento** (1 clip por minuto con un solo proceso). Con 5 procesos en paralelo subió a ~4 por
+  minuto y no hubo un solo archivo truncado en 152.
+- **Las descargas de blob desde TikTok se cortan después de la primera.** Chrome deja bajar un archivo y
+  bloquea el resto en silencio; los IDs se sacaron devolviéndolos por el resultado de la herramienta, de a
+  ~55 por llamada. Desde Facebook sí deja bajar de a muchos.
+- `dl_tikwm.py` arma la URL con **`@x` de autor**: alcanza con el ID numérico, no hace falta el usuario.
+
 ## Preguntas abiertas
 - ¿La landing inglesa va a decir 60 o 74 páginas? Los guiones dicen **sesenta**; si la landing dice otra cosa, se cambia esa línea.
 - ¿Backend? El ganador vende Inverter y Soldadura como OTO en el checkout. El molde nuestro sigue siendo el de [[scented-stones]] ([[embudo-vsl-post-pago]]).

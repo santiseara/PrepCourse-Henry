@@ -113,6 +113,33 @@
   celular en su casa… NO está leyendo: está hablando"* más *"entonación despareja y viva"* → rioplatense y
   **natural**. Los tres controles costaron 3 de las 10 generaciones del día: vale la pena igual.
 
+- **2026-11-23 · El tag de un OFICIO trae el verbo, no el oficio.** Armando [[vrf-field-system]], `#brazing`
+  devolvió cocina, joyería, motos y una radiografía dental: el tag es la **acción** (soldar), y la acción la
+  hace medio mundo fuera del nicho. Lo mismo `#vrf`, que trae terrazas. El que rindió fue el tag del
+  **oficio completo en inglés**: `#commercialhvac` y `#rooftopunit`. Regla: para un oficio, el tag se arma
+  con el oficio y su lugar de trabajo (`commercialhvac`, `rooftopunit`), no con la herramienta ni con la
+  sigla del producto. Y el filtro automático **no sabe si el clip es del nicho**: de 71 ventanas limpias,
+  el pase a ojo dejó 44.
+- 🐞 **2026-11-23 · Chrome deja bajar UN blob por sitio y bloquea los demás sin avisar.** En TikTok el
+  primer `<a download>` cayó en Descargas y los cinco siguientes no, con cero error en consola. En la
+  Biblioteca de Anuncios, en cambio, bajaron los 17 seguidos. Cuando hay que sacar datos de una página así,
+  se devuelven **por el resultado de la herramienta** (el tope real son ~1,2 KB por llamada, o sea unos 55
+  IDs numéricos) en vez de pelearse con la descarga.
+- **2026-11-23 · `dl_tikwm.py` no necesita el autor: arma la URL con `@x`.** Alcanza con el ID numérico, que
+  ocupa la mitad y entra el doble por llamada cuando hay que sacarlos del navegador.
+- **2026-11-23 · tikwm en 5 procesos no truncó nada.** La regla del 18/11 (4 hilos dejaron 6 de 62 clips
+  truncados) no se repitió en 152 clips con 5 procesos y `sleep 1.2` entre pedidos. De a uno iba a **1 clip
+  por minuto**; en paralelo, a 4. Se verifica igual con ffprobe antes de armar el pool.
+- **2026-11-23 · La ropa del avatar se revisa antes de subir la foto a HeyGen.** La primera foto del técnico
+  de [[vrf-field-system]] salió de Nano Banana con **"CITY MECHANICAL" bordado en la campera y una chapita
+  con el nombre**: una marca ajena legible adentro del ad. Se rehízo pidiendo *"jacket and polo completely
+  plain, no logo, no name tag, nothing written anywhere"*. Es la misma idea que la regla del 20/11 sobre el
+  plano de apertura, ahora en la ropa del avatar.
+- **2026-11-23 · HeyGen rechaza la foto de cuerpo entero: "el rostro se ve pequeño".** La foto 9:16 de un
+  avatar parado entero da ese aviso. Se recorta a **plano medio** (de la cabeza a la cintura) antes de
+  subirla y la toma: el render sale igual de cuerpo medio y con la cara grande, que es lo que pide §3 de
+  [[vsl-reglas-de-armado]].
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

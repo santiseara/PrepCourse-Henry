@@ -76,6 +76,8 @@ en el techo no hay tiempo de buscar videos, y el siguiente paso desde los splits
   cañerías/derivación en Y, los 8 módulos, la tapa y la placa de cierre con los 3 bonos y el botón.
   Van anclados a la palabra que los nombra, **dentro de un visual real**, nunca como el visual entero.
 - **Editor:** `OUTPUTS/scripts-vsl/edit_vrf.py`, con los tres modos (`vo`, `avatar`, `pip`).
+- **Costo:** **21 créditos de HeyGen** los dos videos con avatar (130 → 109), unos 10,5 por video de 40 s
+  a 720p con Avatar IV. Los cuatro de voz en off salieron gratis.
 
 ### 🐞 Lo que costó plata o tiempo en esta tanda
 - **El pool de TikTok del oficio viene podrido.** De 152 clips bajados de `#vrf`, `#brazing`, `#minisplit`,

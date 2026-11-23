@@ -159,6 +159,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-23 — Adiós Panza: la descripción corta de los ads](../OUTPUTS/2026-11-23-descripcion-ads-adios-panza.md) — promesa baja (se vende el plan), 3 ✅, los 9 bonus y el CTA al quiz, con los datos reales de la landing (30-40 min, 3 veces por semana) · ver [[silvia-fitness]]
 - [2026-11-22 — The Home Catering Method: descripciones para los ads](../OUTPUTS/2026-11-22-descripcion-home-catering-method.md) — la forma corta (mecanismo en la primera línea + 3 bullets + bonos/garantía + CTA) en inglés y español con voseo: la principal más tres variantes para rotar entre los 6 videos (las cantidades, el valor percibido y el pedido que te congela) y la línea única; sin precio y sin una sola cifra de plata, en el territorio de cobrar que ellos no tocan en inglés · ver [[home-catering-method]]
 - [2026-11-22 — Inglés con Mapas Mentales: cómo se armó la tanda 1](../OUTPUTS/2026-11-22-ingles-mapas-mentales-tanda1-plan.md) — las 15 páginas del producto dibujadas en español, el b-roll elegido a ojo (148 clips → 14) y los parámetros de edición · ver [[ingles-mapas-mentales]]
 - [2026-11-22 — Inglés con Mapas Mentales: los 6 guiones de la tanda 1](../OUTPUTS/2026-11-22-ingles-mapas-mentales-6-guiones.md) — los 6 ángulos del ganador brasileño en rioplatense (arrepentimiento, recién impreso, apuntes desparramados, much/many, was/were, la profesora, el olvido) · ver [[ingles-mapas-mentales]]

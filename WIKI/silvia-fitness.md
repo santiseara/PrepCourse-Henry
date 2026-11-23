@@ -33,6 +33,13 @@ Radiografía completa: `OUTPUTS/2026-11-16-radiografia-belu-fitness.md`. Videos,
 - **V7 = formato espejo**, una sola versión (*"A solo 45 días de estrenar bikini"*): Santiago pidió **una sola, la mejor**, no tres parecidas. Escena **M** recortada para que la cabeza quede a mitad de pantalla (si está cerca, los carteles le tapan la cara) y el precio a la altura de la cadera. Lo hace `build_mirror()` en `edit_silvia.py`.
 - 🐞 La escena del espejo con el cuerpo entero la frenó el filtro de Veo **6 veces** (M1 nunca salió, M2 sí): el V7 dura 8 s con una sola toma.
 
+### Descripciones (23/11)
+- Tercera descripción, la corta: `OUTPUTS/2026-11-23-descripcion-ads-adios-panza.md` (mecanismo + 3 ✅ +
+  los 9 bonus + CTA al quiz, promesa baja por la regla del 16/11).
+- ⚠️ **La frecuencia real de la oferta es 30 a 40 minutos, 3 veces por semana** (así lo dice la landing).
+  Las dos descripciones del 16/11 prometen *"20 minutos por día"*: si se usan, el ad promete una
+  frecuencia que el quiz no confirma. La del 23/11 ya va con el dato de la landing.
+
 ## Preguntas abiertas
 - Fotos de antes/después generadas.
 - Backend de Belu (no visto: hace falta pasar el checkout).

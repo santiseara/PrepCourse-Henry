@@ -1,3 +1,13 @@
+## 2026-11-23 — Adiós Panza: la descripción corta de los ads
+
+- `OUTPUTS/2026-11-23-descripcion-ads-adios-panza.md`: tercera descripción para los ads de Adiós Panza
+  (Silvia Fitness). Forma corta de la regla del 11/11 (mecanismo + 3 ✅ + regalo + CTA) con la promesa
+  baja de la regla del 16/11: se vende el plan, no el resultado en el cuerpo. Sin precio, sin cupos,
+  sin plazos. Más título de anuncio, descripción del enlace y 2 variantes de dos renglones.
+- Los datos se tomaron de la landing y no de la descripción vieja: **30 a 40 minutos, 3 veces por
+  semana**, 3 niveles, alimentación de nutricionista, 9 bonus. Queda anotado en [[silvia-fitness]] que
+  las descripciones del 16/11 dicen "20 minutos por día" y contradicen al quiz.
+
 ## 2026-11-23 (madrugada) — Inglés con Mapas Mentales: la tanda 1, rehecha con los creativos de ellos
 
 **Corrección de Santiago:** *"Horribles las visuales, usa las originales, y ponele a 3 voz de hombre y 3 voz

@@ -1,3 +1,19 @@
+## 2026-11-23 — The VRF Field System: oferta nueva para el mercado inglés
+
+- Oferta nueva: clon de **Manual de Sistemas VRF y VRV** (vrf.impultienda.ar, "Carlos Medina" / marca
+  EXEMIO), un manual visual de 60 páginas para que el técnico de aire residencial pase a climatización
+  comercial VRF/VRV. Nombre nuestro: **The VRF Field System**. Mercado destino: inglés.
+- Leídos: la landing entera y los ~65 ads activos de la biblioteca (el más viejo del 1/10/2026, 53 días).
+  Bajados y transcriptos **10 de sus videos** (muestra, no los 28) y armadas hojas de contacto para
+  desarmar la edición: dos formatos, avatar IA de cuerpo entero en sala de máquinas y avatar chico abajo
+  compuesto sobre b-roll de las hojas del manual, los dos con subtítulo quemado y palabra en amarillo.
+- `WIKI/vrf-field-system.md`: ficha del ganador, DNA de sus videos, los 10 ángulos que corre y el mapa
+  del mercado inglés (no hay competencia de infoproducto; los avisos de empleo pagan US$ 45-60 la hora
+  y piden VRF).
+- `OUTPUTS/2026-11-23-guiones-vrf-field-system-EN-tanda1.md`: **tanda 1, 6 guiones de testeo** en inglés
+  y español con voseo, un ángulo por guion y CTA rotado, sin precio.
+- `WIKI/index.md` actualizado (tema + output).
+
 ## 2026-11-23 — Adiós Panza: la descripción corta de los ads
 
 - `OUTPUTS/2026-11-23-descripcion-ads-adios-panza.md`: tercera descripción para los ads de Adiós Panza

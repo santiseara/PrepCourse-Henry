@@ -1,3 +1,27 @@
+## 2026-11-23 — Alivio en Cada Plato: oferta nueva para LATAM
+
+- Oferta nueva: clon de **הקלה בכל צלחת** (`hakala-bechol-tzalachat.impultienda.ar`, ImpulTienda), un
+  recetario digital antiinflamatorio israelí de **+500 recetas sin gluten y sin azúcar** para mujeres 40+
+  con hinchazón abdominal, pesadez y poca energía. US$ 17,99 (ancla US$ 50), 9 bonos, garantía de 30 días.
+  Nombre nuestro: **Alivio en Cada Plato**. Mercado destino: **LATAM** (español neutro, sin cifras en moneda).
+- Leídos los **32 ads activos** de la biblioteca: todos arrancados entre el **14 y el 22/11**, o sea la
+  oferta recién está escalando. Bajados y transcriptos **10 de sus 18 videos** (muestra, no todos) y
+  armadas hojas de contacto de 3 para desarmar la edición.
+- Hallazgo: corren **un solo texto principal y un solo título en los 32 anuncios**. Toda la variación está
+  en el video.
+- `WIKI/alivio-en-cada-plato.md`: ficha del ganador, su copy traducido, los siete bloques fijos de sus
+  guiones, los 6 ángulos que rota y su edición (b-roll de comida casera sin caras, subtítulo quemado con
+  palabra en color, insert de la tapa, chip rojo de 50 % al final).
+- Entregado: **tanda 1 de 6 guiones** en español neutro, uno por familia suya
+  (`OUTPUTS/2026-11-23-guiones-alivio-en-cada-plato-LATAM-tanda1.md`) y la descripción clonada
+  (`OUTPUTS/2026-11-23-descripcion-alivio-en-cada-plato-LATAM.md`). Carpeta
+  `~/Desktop/alivio-en-cada-plato/` con `imagenes/`, `landing/` y `anuncios/`.
+- Dos reglas nuevas en `WIKI/guiones-y-anuncios.md`: contar cuántos textos distintos corre el ganador antes
+  de escribir la descripción, y el hook de "un tercero que nota el cambio" como default en nichos de salud.
+- Procesado: `RAW/2026-11-23-explicacion-landing-recetas-saludables.pdf`.
+- Pendiente: landing propia y precio para LATAM (los guiones se escribieron contra el ganador, no contra una
+  página nuestra), decidir quiz o venta directa, y producir los 6 videos.
+
 ## 2026-11-23 — The VRF Field System: la tanda 1, los 6 videos con sus tres formatos
 
 - Producidos los **6 ads de testeo** en inglés clonando los tres formatos de Carlos Medina / EXEMIO:

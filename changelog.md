@@ -9,7 +9,10 @@
 - Nuevo editor `OUTPUTS/scripts-vsl/edit_fuga_pov.py` para el molde corto sin voz.
 - Nuevo bajador `OUTPUTS/scripts-vsl/dl_tiktok_ytdlp.py`: **tikwm se cayo (502) toda la tarde** y lo que
   lo reemplaza es yt-dlp forzando el hostname de la API movil de TikTok.
-- ⛔ **TikTok no dio un solo clip util para esta oferta**: 8 tags, 407 ids, 74 clips bajados, 0 utiles.
+- ⛔ **TikTok no dio un solo clip util para esta oferta**: 8 tags, 407 ids, **155 clips bajados y
+  filtrados uno por uno, 0 utiles**. tikwm volvio al final de la tarde y se bajaron los 81 que faltaban:
+  el veredicto no cambio. El unico candidato que paso el filtro resulto ser un juego de trivia en la TV
+  con filtros de glitch.
   Regla nueva en `WIKI/guiones-y-anuncios.md`.
 - ⛔ **El b-roll con texto del producto no se espeja**: `edit_fuga.py` ahora respeta `"flip": false`.
   Sin eso salia "ANABAC AL" por "LA CABANA". Regla nueva en `WIKI/guiones-y-anuncios.md`.

@@ -71,7 +71,7 @@ repartidos entre pareja, amigos, familia y grupo.
   Todos los encuadres van con **`"flip": false`**. Se ve recien en la hoja del render.
 - 🐞 **Dos de los clips IA tienen texto mal escrito.** El de los 7 desafíos dice *"DESAFÃO EXPRESS"* (tilde rota). Se arregla reencuadrando (`zoom 1.55`, `ybias 1.0`), no se tira el clip.
 - ⛔ **tikwm estuvo caído el 24/11** (502 sostenido durante media hora). **yt-dlp no es reemplazo**: la última versión que corre en el Python 3.9 del sistema es `2025.10.14` y ya no extrae TikTok. Pasar `--cookies-from-browser` no está permitido. Las páginas de video de TikTok sirven el stream por **blob/MSE**, así que tampoco se baja desde el navegador. **Si tikwm se cae, por ahora no hay plan B: se espera.**
-- ⛔ **TikTok no sirvio para esta oferta: 407 ids, 74 clips bajados, 0 utiles.** El nicho en TikTok son
+- ⛔ **TikTok no sirvio para esta oferta: 407 ids, 155 clips bajados, 0 utiles.** El nicho en TikTok son
   caras hablando a camara, Monopoly, juegos de vasos y texto quemado en todos los cuadros. Los 4 que
   pasaron el filtro de 6 cuadros se cayeron al mirarlos a 1 cuadro por segundo. **Lo que falta para variar
   visuales es generar b-roll nuevo con IA**, del mismo estilo que las 8 que ya hay.

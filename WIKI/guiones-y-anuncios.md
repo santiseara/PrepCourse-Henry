@@ -213,7 +213,8 @@
   el cronómetro del celular con los números invertidos. Regla: todo clip con texto, número o logo del
   producto va con **`"flip": false`** en el plan. Se nota recién en la hoja del render, no en el pool.
 - ⛔ **Para un producto que no existe en TikTok, TikTok no es la fuente (24/11/2026, [[fuga-perfecta]]).**
-  Se rasparon 8 tags, 407 ids, se bajaron 74 clips y se filtraron uno por uno: **sirvieron 0**. El nicho
+  Se rasparon 8 tags, 407 ids, se bajaron **155 clips** y se filtraron uno por uno contra hojas de
+  contactos: **sirvieron 0**. El nicho
   "escape room en casa" en TikTok son caras hablando a cámara, Monopoly, juegos de vasos y texto quemado
   en todos los cuadros. Y los 4 que pasaron el filtro de 6 cuadros se cayeron al mirarlos a 1 cuadro por
   segundo. Antes de raspar 400 ids conviene **bajar 10 del tag más prometedor y mirarlos**: si el nicho es

@@ -46,7 +46,7 @@ la IA escribió *"DESAFÃO EXPRESS"* con la tilde rota, y así queda fuera de cu
 
 ## ⛔ TikTok no sirvió para esta oferta
 
-Se raspraron **8 tags y 407 ids**, se bajaron **74 clips** y se filtraron uno por uno contra hojas de
+Se raspraron **8 tags y 407 ids**, se bajaron **155 clips** y se filtraron uno por uno contra hojas de
 contactos: **sirvieron 0**. El nicho en TikTok son caras hablando a cámara, Monopoly, juegos de vasos y
 texto quemado en todos los cuadros. Los 4 que pasaron el filtro grueso se cayeron al mirarlos a un cuadro
 por segundo. Detalle y la regla que sale de ahí en [[guiones-y-anuncios]] y [[fuga-perfecta]].

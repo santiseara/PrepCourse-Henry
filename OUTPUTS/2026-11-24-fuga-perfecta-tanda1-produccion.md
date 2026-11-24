@@ -37,22 +37,55 @@ abajo, jump cuts de 1 a 1,3 s).
 
 ## Las visuales
 
-Los 10 salen de **las 8 visuales que pasó Santiago**, convertidas en **16 encuadres y 46 ventanas**: de
-cada clip se saca un plano abierto y un plano de detalle (el sello de lacre, la pantalla del cronómetro,
-el candado, la lupa). Es el mismo truco de `twist-07`, que son 9 planos distintos del mismo kit.
+**21 clips base, 32 encuadres, 94 ventanas.** Son las **8 que pasó Santiago** (el producto: sobres con
+lacre, cronómetro, candado, las hojas de los desafíos, el sobre del SABOTEADOR) más **12 generados el
+mismo día** con el b-roll de gente, que es lo que faltaba:
 
-Dos reencuadres obligados: **v7** (las hojas de los desafíos) va a `zoom 1.55` y **v7z** a `1.95` porque
-la IA escribió *"DESAFÃO EXPRESS"* con la tilde rota, y así queda fuera de cuadro.
+| clip | qué es | para qué público |
+|---|---|---|
+| g01 | cuatro amigos discutiendo sobre el mapa | amigos |
+| g02 | pareja aburrida en el sofá con el control y la pizza | pareja (el hook contra Netflix) |
+| g03 | manos rompiendo el lacre a la luz de velas | todos |
+| g04 | grupo festejando, brazos arriba y choque de manos | el cierre |
+| g05 | mano escribiendo en una servilleta junto a la copa | todos |
+| g06fam | familia sobre la mesa con los sobres | familia |
+| g07 | cenital de la mesa: manos, mapa, sobres y café | todos |
+| g08 | pareja en el sillón leyendo una hoja | pareja |
+| g09 | el pinboard con hilos rojos y los amigos mirando | amigos |
+| g10 | dos amigas agarrándose la cabeza | amigos |
+| g11 | mano apoyando el celular contra una pila de libros | todos |
+| g12 | familia festejando | familia |
+
+**Cada video tiene su propio pool:** el producto siempre, más el b-roll del público de ese ángulo. Por eso
+el de familia abre con la familia y el de amigos con los amigos, y ninguno repite el reparto del anterior.
+
+**Generados con `seedance_2_0_mini` en Higgsfield: 8 créditos por clip de 8 s a 720x1280** — el mismo
+formato exacto que los 8 del cliente. Doce clips, **96 créditos de los 915** disponibles. El
+`seedance_2_5` cuesta 56 por clip, siete veces más, y no hacía falta.
+
+Dos reencuadres obligados en los del cliente: **v7** a `zoom 1.55` y **v7z** a `1.95`, porque la IA
+escribió *"DESAFÃO EXPRESS"* con la tilde rota y así queda fuera de cuadro.
+
+## La música
+
+Sale **del audio de sus propios anuncios**, no de un generador:
+
+- **Los 7 con voz** llevan la pista de intriga con cuerdas de `caso-05`, instrumental y sin voz cantada,
+  a −10 dB por debajo de la locución.
+- **Los 3 sin voz** llevan la de `caso-01`, pop indie con vocal femenina y cambio de energía en el
+  segundo 8, al frente. Dura 15,6 s, así que cubre los tres videos sin repetirse ni una vez.
+
+🐞 La Biblioteca sirve el audio en **HE-AAC a 48 kbps**: suena opaco. Se levanta por encima de 4,5 kHz y
+se le saca algo de 200-500 Hz (`scripts-vsl/cama2.py`). Para alargar no se busca el período del compás
+—estas pistas no cierran en loop y el empalme salta—: se repite entera con crossfade largo de 2 s.
 
 ## ⛔ TikTok no sirvió para esta oferta
 
-Se raspraron **8 tags y 407 ids**, se bajaron **155 clips** y se filtraron uno por uno contra hojas de
-contactos: **sirvieron 0**. El nicho en TikTok son caras hablando a cámara, Monopoly, juegos de vasos y
-texto quemado en todos los cuadros. Los 4 que pasaron el filtro grueso se cayeron al mirarlos a un cuadro
-por segundo. Detalle y la regla que sale de ahí en [[guiones-y-anuncios]] y [[fuga-perfecta]].
-
-**Lo que falta para variar visuales de verdad:** generar b-roll nuevo con IA, del mismo estilo que las 8
-que ya hay (familias y amigos alrededor de la mesa, manos abriendo sobres, el grupo festejando al salir).
+Se probaron **dos enfoques y 177 clips**: por producto (8 tags de juegos y escape rooms, 155 clips) y por
+ambiente (`cozynight`, `winenight`, `candlelight`, `cozyevening`, 22 clips). **Sirvieron 0 y 4
+respectivamente**, y los 4 de ambiente eran lámparas y chimeneas sin gente. El nicho en TikTok son caras
+hablando a cámara, Monopoly, juegos de vasos y texto quemado en todos los cuadros. Por eso el b-roll de
+gente se generó.
 
 ## Dos cosas que costaron un re-render
 

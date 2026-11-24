@@ -57,10 +57,15 @@ repartidos entre pareja, amigos, familia y grupo.
 - **Voz:** Sulafat a `speed 1.20`, estilo de amiga portena con energia. Guiones 1-4 con
   `gemini-2.5-flash-preview-tts` y 5-7 con `gemini-3.1-flash-tts-preview` (la cuota diaria es por modelo).
   Las siete entre **169 y 185 ppm**: ninguna leyo el bloque de estilo.
-- **Musica:** los de voz con `music.py` a −11 dB; los 3 sin voz con `music_activa.py` (marimba, bajo y
-  palmas a 104 BPM) al frente, que es lo mas cercano al pop acustico con palmas que corren ellos.
-- **Visuales:** las **8 que paso Santiago**, convertidas en **16 encuadres y 46 ventanas** (de cada clip,
-  un plano abierto y uno de detalle). Es el truco de `twist-07`, que son 9 planos del mismo kit.
+- **Musica:** sale **del audio de sus propios anuncios**, no de un generador (correccion de Santiago del
+  24/11: *"pusiste cualquier musica, es una verga"*). Los 7 con voz llevan la pista de intriga con cuerdas
+  de `caso-05` a −10 dB; los 3 sin voz, la de `caso-01` (pop indie con vocal femenina, 15,6 s) al frente.
+  Se limpian con `scripts-vsl/cama2.py`, porque la Biblioteca las sirve en HE-AAC a 48 kbps.
+- **Visuales: 21 clips, 32 encuadres, 94 ventanas.** Las 8 que paso Santiago (el producto) mas **12
+  generados con `seedance_2_0_mini` en Higgsfield** (8 creditos cada uno, 8 s a 720x1280, el mismo formato
+  que los suyos): la pareja aburrida con el control, los cuatro amigos sobre el mapa, la familia en la
+  mesa, el grupo festejando, el pinboard con hilos, el cenital de manos, el celular contra los libros.
+  **Cada video tiene su pool:** el producto siempre, mas el b-roll del publico de ese angulo.
 - **Entrega:** `Ebook Dami / Ebook Fuga Perfecta (AR) / Videos terminados`, masters en
   `~/Desktop/Fuga Perfecta/anuncios/` como `24-11 - N.mp4`.
 

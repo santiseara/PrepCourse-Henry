@@ -1,3 +1,23 @@
+## 2026-11-24 — Fuga Perfecta: la tanda 1 rehecha con b-roll propio y la musica de ellos
+
+Santiago rechazo la primera version por dos cosas y las dos tenia razon:
+
+- **"Usas en todos las mismas visuales."** Se habian usado solo las 8 que mando el. Se probo TikTok por
+  los dos lados —por producto (8 tags, 155 clips) y por ambiente (`cozynight`, `winenight`, `candlelight`,
+  `cozyevening`, 22 clips mas)— y no dio material usable. **Se generaron 12 clips nuevos** del mismo
+  estilo con `seedance_2_0_mini` en Higgsfield (8 creditos cada uno, 8 s a 720x1280, 96 de 915):
+  la pareja aburrida con el control, los amigos sobre el mapa, la familia en la mesa, el grupo festejando,
+  el pinboard con hilos, el cenital de manos, el celular contra los libros.
+  El pool paso de 16 encuadres y 46 ventanas a **32 encuadres y 94 ventanas**, y **cada video tiene su
+  propio pool** segun el publico de su angulo.
+- **"Pusiste cualquier musica."** Se cambiaron las camas sinteticas por **el audio de sus propios
+  anuncios**: la pista de intriga con cuerdas de `caso-05` por debajo de las locuciones y la de `caso-01`
+  (pop indie con vocal) en los tres sin voz. Nuevo script `OUTPUTS/scripts-vsl/cama2.py`, que limpia el
+  HE-AAC a 48 kbps con el que la Biblioteca sirve el audio y alarga con crossfade largo en vez de buscar
+  el periodo del compas.
+- Los 10 viejos salieron del Drive y se subieron los nuevos en su lugar.
+- Las dos reglas quedaron anotadas en `WIKI/guiones-y-anuncios.md`.
+
 ## 2026-11-24 — Fuga Perfecta: la tanda 1 completa (10 creativos) en el Drive
 
 - Producidos y entregados los **10 creativos de la tanda 1**: 7 del molde largo con voz (25-32 s) y

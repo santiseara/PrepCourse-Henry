@@ -219,6 +219,39 @@
   en todos los cuadros. Y los 4 que pasaron el filtro de 6 cuadros se cayeron al mirarlos a 1 cuadro por
   segundo. Antes de raspar 400 ids conviene **bajar 10 del tag más prometedor y mirarlos**: si el nicho es
   "producto que la gente no filma lindo", se va directo a la fuente 3 (b-roll generado) y se ahorra una tarde.
+
+### ⛔ 2026-11-24 · Dos correcciones de Santiago sobre [[fuga-perfecta]]
+
+**1. Las visuales que él manda son la vara, no el pool.** Santiago, al ver los 10 videos: *"Pero usás en
+todos las mismas visuales. Cuando te dije justamente que busques visuales en TikTok y que las utilices...
+usaste nada más las visuales que te mandé yo. Justamente te aclaré, no quiero que en todas uses estas
+visuales, es solamente para que tengas visuales buenas. Pero vos también tenés que buscar visuales del
+mismo estilo, de la misma onda."*
+- Cuando manda material de referencia, está fijando **el estándar de calidad y el estilo**, no entregando
+  el pool. Lo que se espera es **salir a conseguir más de eso mismo**.
+- Que una fuente falle **no es un final**: si TikTok no da el material, se va a la fuente siguiente y se
+  consigue igual. Lo que no se hace es entregar la tanda entera repartiendo los mismos clips y avisar
+  después. **El problema se resuelve, y se cuenta resuelto.**
+- 🎬 **Lo que funcionó acá: generar el b-roll faltante con `seedance_2_0_mini` en Higgsfield, 8 créditos
+  por clip de 8 s a 720x1280** (contra 56 del `seedance_2_5`). Doce clips costaron 96 créditos de 915.
+  Salen con el mismo look que los que manda él: cinematográfico, luz cálida, cámara en mano, sin texto.
+  En el prompt va siempre *"no on-screen text, no captions, no logos, no watermark"*.
+- El tope de Higgsfield es de **6 generaciones simultáneas**: el `generate_video_batch` de 12 rechaza 6.
+
+**2. La música sale del ganador que se modela, no de un generador.** Santiago: *"la música también te dije
+que sea similar o igual a la de los originales, de las páginas que te mandé. Pusiste cualquier música, es
+una verga."*
+- ⛔ **`music.py` y `music_activa.py` no se usan cuando hay un ganador que modelar.** La cama musical se
+  **saca del audio de sus propios anuncios** (`ffmpeg -vn` sobre los mp4 bajados de la Biblioteca).
+- Se elige entre sus pistas con criterio: para los ads **con locución**, una **instrumental sin voz
+  cantada** (en Fuga Perfecta, la de intriga con cuerdas de `caso-05`); para los ads **sin locución**, la
+  que **engancha en el primer segundo**, y ahí sí vale que tenga vocal (`caso-01`).
+- 🐞 **El audio de la Biblioteca viene en HE-AAC a 48 kbps**: suena opaco y metálico. Se levanta con un
+  realce por encima de 4,5 kHz y se le saca algo de 200-500 Hz. Script: `scripts-vsl/cama2.py`.
+- 🐞 **Para alargarla NO se busca el período del compás por autocorrelación**: estas pistas no cierran en
+  loop entero y el empalme da un salto rítmico. Se repite la pista completa con un **crossfade largo
+  (2 s) de potencia constante**. Mejor todavía: elegir una pista que ya dure lo que dura el video.
+
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 
 ### 🆕 2026-11-16 · Los tags de TikTok SÍ se abren en el navegador, y hay que elegirlos en inglés

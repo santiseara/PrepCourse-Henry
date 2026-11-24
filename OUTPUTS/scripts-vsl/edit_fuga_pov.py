@@ -100,7 +100,7 @@ need = int((L + 0.4) * sr_); xf = int(1.0 * sr_)
 while len(m_) < need:
     a2 = m_[int(4 * sr_):]; r_ = np.linspace(0, 1, xf)[:, None]
     m_ = np.concatenate([m_[:-xf], m_[-xf:] * (1 - r_) + a2[:xf] * r_, a2[xf:]])
-off = int(P.get('music_start', 0) * sr_)
+off = int(P.get("music_start", 0) * sr_)
 m_ = np.concatenate([m_[off:], m_[:off]])[:need]
 m_ = m_ / max(1e-6, np.abs(m_).max()) * 10 ** (P.get('music_db', -3) / 20)
 fo = int(1.0 * sr_); m_[-fo:] *= np.linspace(1, 0, fo)[:, None]

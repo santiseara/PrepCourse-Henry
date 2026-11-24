@@ -1,3 +1,24 @@
+## 2026-11-23 — Alivio en Cada Plato: la tanda 1 producida (6 videos)
+
+- Producidos los **6 ads de testeo** en espanol neutro clonando la edicion del ganador israeli:
+  voz en off de mujer sobre b-roll de comida casera, caja de hook roja, subtitulo quemado con la
+  palabra activa en color (uno por creativo), un insert de la tapa y chip rojo de descuento en 3 de 6.
+- Voz **Sulafat** por API con Style de mujer latinoamericana neutra. V1-V4 con `gemini-2.5-flash-preview-tts`;
+  la cuota del dia se agoto y V5-V6 salieron con `gemini-3.1-flash-tts-preview`. Las seis verificadas con
+  Whisper y el acento confirmado con Gemini (neutro latinoamericano en los dos modelos).
+- **Pool: 192 clips bajados, 41 entregados.** Tags `#mealprep`, `#healthybreakfast`, `#glutenfreerecipes`,
+  `#sugarfreedessert`, `#traybake`. Cuatro pasadas: filtro denso de ventana (72), pase a ojo (56),
+  hoja del render (54) y **conteo de caras sobre el clip entero** (41). 41 creadores distintos.
+- La tapa del producto se dibuja por codigo y se compone sobre un **cuadro real del pool**
+  (`gfx_alivio.py`), nunca una foto generada.
+- Nuevos en `OUTPUTS/scripts-vsl/`: **`edit_alivio.py`**, `gen_alivio_plans.py`, `gfx_alivio.py`,
+  `ventanas_alivio.py`, `autores_alivio.py`.
+- **Cuatro reglas nuevas** en `WIKI/guiones-y-anuncios.md`, las cuatro pagadas con re-renders:
+  una ventana limpia no es un clip limpio; el OCR lee en el render lo que no lee en el clip; el clip
+  culpable se busca por contenido y no se deduce de un plan de otra corrida; y el glob de zsh que no
+  matchea aborta el comando entero y deja la limpieza sin hacer.
+- Detalle: `OUTPUTS/2026-11-23-alivio-en-cada-plato-tanda1-produccion.md`.
+
 ## 2026-11-23 — The VRF Field System: descripciones para los ads
 - Nuevo: `OUTPUTS/2026-11-23-descripcion-ads-vrf-field-system.md` — descripción principal + 4 variantes por ángulo + línea única, en inglés y español con voseo.
 - `WIKI/vrf-field-system.md`: sección "Descripciones de los ads" con la forma usada y las dos reglas que la condicionan (sin precio, el dato de US$ 45-60/h como mercado laboral).

@@ -1,3 +1,22 @@
+## 2026-11-24 — Fuga Perfecta: la oferta nueva de salas de escape y el video 1
+
+- Leido el doc de la oferta **FUGA PERFECTA** (AR, clon de `casocriminal.shop`) con el angulo
+  ampliado a familias y amigos, no solo pareja.
+- Bajados y despiezados uno por uno **22 anuncios activos**: 10 de `casocriminal.shop` (88 activos)
+  y 12 de `atwistofdate.co.uk` (54 activos). Los dos corren **un solo copy** y varian solo el video.
+- Encontrados sus **dos moldes de edicion**: el corto de 7-16 s sin voz (musica viral + placa POV
+  arriba + banner de oferta abajo, jump cuts de 1 s) y el largo de 20-35 s con voz de mujer joven,
+  13 a 22 cortes y subtitulos palabra por palabra, sin placa final ni logo.
+- Nueva pagina `WIKI/fuga-perfecta.md` con los dos moldes medidos, los textos de sus placas y
+  el recurso del cronometro proyectado en la pared.
+- Nuevo editor `OUTPUTS/scripts-vsl/edit_fuga.py`: clon de `edit_alivio.py` con caja de hook blanca,
+  banner de oferta fijo abajo y paleta de lacre.
+- Escrita la **tanda 1 de 6 guiones** (`OUTPUTS/2026-11-24-guiones-fuga-perfecta-tanda1.md`) y
+  **producido el video 1** (31,8 s, 16 planos de 2 s, voz Sulafat a 1.20), entero con las 8 visuales
+  IA que paso Santiago. Subido a `Ebook Dami / Ebook Fuga Perfecta (AR) / Videos terminados`.
+- Raspadas **407 ids de TikTok** de 8 tags para el pool de familias y amigos. **tikwm estuvo caido
+  (502) toda la tarde** y yt-dlp ya no sirve en el Python 3.9 del sistema: queda pendiente bajarlos.
+
 ## 2026-11-24 — The VRF Field System: los links de las visuales de la tanda 1
 
 - Recuperadas las **cuentas de TikTok de los 37 clips** del b-roll de los 6 ads (los ids estaban en los

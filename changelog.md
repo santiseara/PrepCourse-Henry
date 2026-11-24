@@ -1,3 +1,11 @@
+## 2026-11-24 — The VRF Field System: los links de las visuales de la tanda 1
+
+- Recuperadas las **cuentas de TikTok de los 37 clips** del b-roll de los 6 ads (los ids estaban en los
+  planes de render pero sin autor; se resolvieron uno por uno contra tikwm).
+- Nuevo output: `OUTPUTS/2026-11-24-vrf-field-system-links-visuales.md`, los 37 links agrupados por tipo
+  de plano (soldadura, azotea, diagnostico, interiores, obra), listo para pasarle al socio.
+- `WIKI/index.md`: sumado a Outputs.
+
 ## 2026-11-23 — Alivio en Cada Plato: la tanda 1 producida (6 videos)
 
 - Producidos los **6 ads de testeo** en espanol neutro clonando la edicion del ganador israeli:

@@ -161,6 +161,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-24 — The VRF Field System: las visuales de la tanda 1 (links)](../OUTPUTS/2026-11-24-vrf-field-system-links-visuales.md) — los 37 clips de TikTok del b-roll de los 6 ads, agrupados por tipo de plano (soldadura, azotea, diagnóstico, interiores, obra) · ver [[vrf-field-system]]
 - [2026-11-23 — Alivio en Cada Plato: la tanda 1 producida (6 videos)](../OUTPUTS/2026-11-23-alivio-en-cada-plato-tanda1-produccion.md) — que angulo copia cada video, la voz, las cuatro pasadas del pool (192 clips a 41) y las cuatro reglas que costaron re-renders · ver [[alivio-en-cada-plato]]
 - [2026-11-23 — Alivio en Cada Plato: tanda 1 de 6 guiones para LATAM](../OUTPUTS/2026-11-23-guiones-alivio-en-cada-plato-LATAM-tanda1.md) — los 6 ángulos del ganador israelí en español neutro (la vecina del ascensor, el médico del chequeo, la jefa en el pasillo, el aumento que era el delivery, el grupo de WhatsApp y el domingo a la noche) · ver [[alivio-en-cada-plato]]
 - [2026-11-23 — Alivio en Cada Plato: la descripción de los ads](../OUTPUTS/2026-11-23-descripcion-alivio-en-cada-plato-LATAM.md) — el único texto principal que corren en los 32 anuncios, traducido · ver [[alivio-en-cada-plato]]

@@ -1,3 +1,8 @@
+## 2026-11-23 — The VRF Field System: descripciones para los ads
+- Nuevo: `OUTPUTS/2026-11-23-descripcion-ads-vrf-field-system.md` — descripción principal + 4 variantes por ángulo + línea única, en inglés y español con voseo.
+- `WIKI/vrf-field-system.md`: sección "Descripciones de los ads" con la forma usada y las dos reglas que la condicionan (sin precio, el dato de US$ 45-60/h como mercado laboral).
+- `WIKI/index.md`: output enlazado y línea del tema actualizada.
+
 ## 2026-11-23 — Alivio en Cada Plato: oferta nueva para LATAM
 
 - Oferta nueva: clon de **הקלה בכל צלחת** (`hakala-bechol-tzalachat.impultienda.ar`, ImpulTienda), un

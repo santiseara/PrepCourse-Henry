@@ -92,6 +92,15 @@ en el techo no hay tiempo de buscar videos, y el siguiente paso desde los splits
   ~55 por llamada. Desde Facebook sí deja bajar de a muchos.
 - `dl_tikwm.py` arma la URL con **`@x` de autor**: alcanza con el ID numérico, no hace falta el usuario.
 
+## 📝 Descripciones de los ads (23/11/2026)
+Forma corta en inglés y español con voseo: hook de situación, 3 bullets ✅ (cañerías/carga/Y-branch, el
+procedimiento como checklist, los códigos de error en la tabla del celular), los entregables (8 módulos,
+43 temas, 3 casos, códigos Daikin/Mitsubishi/LG/Samsung), los 3 bonos, 30 días de garantía y el CTA.
+**Sin precio** (ellos tampoco lo dicen en el ad) y **sin promesa de ingresos**: el dato de US$ 45-60 la
+hora se nombra como lo que publica el aviso de empleo, no como lo que vas a ganar. Cuatro variantes por
+ángulo: lo que cuesta un error, el trabajo que mejor paga, el hotel a las once y "yo esos no los toco".
+`OUTPUTS/2026-11-23-descripcion-ads-vrf-field-system.md`
+
 ## Preguntas abiertas
 - ¿La landing inglesa va a decir 60 o 74 páginas? Los guiones dicen **sesenta**; si la landing dice otra cosa, se cambia esa línea.
 - ¿Backend? El ganador vende Inverter y Soldadura como OTO en el checkout. El molde nuestro sigue siendo el de [[scented-stones]] ([[embudo-vsl-post-pago]]).

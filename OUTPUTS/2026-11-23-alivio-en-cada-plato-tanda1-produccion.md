@@ -35,7 +35,7 @@ Ellos ponen "50 % de descuento" porque su landing tiene el precio tachado. Nosot
 tenemos landing ni precio, asi que el chip dice solo "descuento por tiempo limitado", igual que la voz.
 Cuando haya precio y ancla se le pone el numero.
 
-EL POOL: 192 CLIPS BAJADOS, 41 ENTREGADOS
+EL POOL: 192 CLIPS BAJADOS, 39 ENTREGADOS
 Tags: #mealprep, #healthybreakfast, #glutenfreerecipes, #sugarfreedessert, #traybake.
 192 bajados con tikwm en 5 procesos, ninguno truncado (verificado con ffprobe).
 Filtro denso a 1 cuadro por segundo (texto con OCR de Vision + caras + bandas negras): 72 con
@@ -46,7 +46,11 @@ Hoja de contactos del RENDER: 54 (afuera un frasco con etiqueta VIS KRUIDEN en p
 cartel impreso de reposteria).
 Conteo de caras sobre el CLIP ENTERO: 41 (afuera 11 clips donde el creador aparece a camara en
 algun momento, aunque la ventana muestreada estuviera limpia).
-41 clips de 41 creadores distintos: no se repite autor en toda la tanda.
+OCR de la VENTANA a 1080 px y 2 cuadros/s, la escala a la que la ve el editor: 39 clips, con 16
+ventanas recortadas. Ahi aparecieron el paquete KIRKLAND, la salsa Pomarola justo en el CTA del V3
+y tres carteles del creador en ingles que el escaneo a 640 px no habia leido. El texto del utensilio
+(PYREX, la balanza, los ml de la jarra) se queda: el ganador tambien lo muestra.
+39 clips de 39 creadores distintos: no se repite autor en toda la tanda.
 
 LO QUE SE APRENDIO (ya esta en la WIKI)
 1. Una ventana limpia no garantiza un clip limpio. El filtro mira la ventana; el creador aparece
@@ -68,6 +72,11 @@ ARCHIVOS NUEVOS EN OUTPUTS/scripts-vsl/
   gfx_alivio.py         la tapa dibujada y compuesta sobre un cuadro real
   ventanas_alivio.py    el filtro denso del pool (texto + caras + bandas, 1 cuadro/s)
   autores_alivio.py     el autor de cada clip, para no repetir creador en cortes contiguos
+
+REVISION FINAL DEL RENDER (OCR a 1080 px, un cuadro por segundo de los 6 videos)
+  Cero caras en los seis.
+  Un solo defecto: V1, segundo 20, el clip trae "yogurt bowl" en ingles, chico y tenue, centrado.
+  Se entrega asi y queda a decision de Santiago rehacer ese video.
 
 ENTREGA
   ~/Desktop/alivio-en-cada-plato/anuncios/   los 6 mp4 y los guiones

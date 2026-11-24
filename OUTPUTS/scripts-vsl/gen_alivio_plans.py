@@ -21,7 +21,7 @@ sys.path.insert(0, WK)
 from vent_alivio import VENT
 
 SEG = 2.3          # largo de cada tramo candidato
-TOPE = 5           # maximo de recortes por clip
+TOPE = 8           # maximo de recortes por clip (subido el 23/11: tras recortar ventanas el pool queda chico)
 
 MAGENTA = '&H008C19E6&'    # #E6198C
 CELESTE = '&H00E6B419&'    # #19B4E6

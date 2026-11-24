@@ -33,25 +33,48 @@ Bajados y despiezados el 24/11: **10 ads de casocriminal.shop** (88 activos) y *
 - Estructura: dolor concreto → "probá esto" → qué es (se descarga e imprime al instante) → qué trae (enumerado y concreto) → cómo se siente → cuánto dura → cierre.
 - Hay un **formato listicle** que vale copiar: *"Cheap date ideas that DON'T involve food"* → 1, 2, 3 con precio y duración de cada uno en placa.
 
-## La tanda 1 (24/11/2026)
+## La tanda 1 (24/11/2026) — 10 creativos
 
-6 guiones en `OUTPUTS/2026-11-24-guiones-fuga-perfecta-tanda1.md`: 4 del molde B (voz) y 2 del molde A (sin voz), repartidos entre pareja, amigos y familia.
+Guiones en `OUTPUTS/2026-11-24-guiones-fuga-perfecta-tanda1.md`, despiece de la produccion en
+`OUTPUTS/2026-11-24-fuga-perfecta-tanda1-produccion.md`. **7 del molde B (voz) y 3 del molde A (sin voz)**,
+repartidos entre pareja, amigos, familia y grupo.
 
-1. Contra Netflix (pareja) — **producido**, 31,8 s, 16 planos
-2. El traidor (amigos)
-3. Listicle de las 3 salas
-4. Familia sin pantallas
-5. POV corto de pareja
-6. POV corto "no necesitás tablero"
+| # | Formato | Angulo | Publico | Dur. |
+|---|---|---|---|---|
+| 1 | Voz | Contra Netflix (el que mas corren) | Pareja | 31,8 s |
+| 2 | Voz | **El traidor**, nuestro angulo exclusivo | Amigos | 26,3 s |
+| 3 | Voz · listicle con placas numeradas | Las 3 salas, una por una | Grupo | 28,3 s |
+| 4 | Voz | Sin pantallas en la sobremesa | Familia | 26,0 s |
+| 5 | Voz | Reaccion de un tercero | Amigos | 25,1 s |
+| 6 | Voz · comparacion | Las cuentas contra una sala fisica | Grupo | 25,3 s |
+| 7 | Voz | La objecion ("pense que era una boludez") | Pareja | 25,1 s |
+| 8 | Sin voz · POV | Contra Netflix, el vagon | Pareja | 12,0 s |
+| 9 | Sin voz · POV | No necesitas tablero | Todos | 10,0 s |
+| 10 | Sin voz · POV, caja negra | Una hora sin celular | Familia | 14,0 s |
 
-- **Editor:** `OUTPUTS/scripts-vsl/edit_fuga.py` (clon de `edit_alivio.py` con caja de hook blanca, banner de oferta fijo abajo y paleta de lacre).
-- **Voz:** Sulafat a `speed 1.20`, estilo de amiga porteña, `gemini-2.5-flash-preview-tts` (control de 8 palabras: 2,69 s, limpio).
-- **Visuales:** las 8 que pasó Santiago (clips IA de 720x1280, 8 s) alcanzaron para el video 1 entero. Muestran el producto: sobres con lacre, cronómetro, candado de combinación, las hojas de los desafíos, el sobre del SABOTEADOR.
+- **Editores:** `OUTPUTS/scripts-vsl/edit_fuga.py` (molde largo, clon de `edit_alivio.py` con caja de hook
+  blanca, banner de oferta fijo abajo y paleta de lacre) y `edit_fuga_pov.py` (molde corto sin voz).
+- **Voz:** Sulafat a `speed 1.20`, estilo de amiga portena con energia. Guiones 1-4 con
+  `gemini-2.5-flash-preview-tts` y 5-7 con `gemini-3.1-flash-tts-preview` (la cuota diaria es por modelo).
+  Las siete entre **169 y 185 ppm**: ninguna leyo el bloque de estilo.
+- **Musica:** los de voz con `music.py` a −11 dB; los 3 sin voz con `music_activa.py` (marimba, bajo y
+  palmas a 104 BPM) al frente, que es lo mas cercano al pop acustico con palmas que corren ellos.
+- **Visuales:** las **8 que paso Santiago**, convertidas en **16 encuadres y 46 ventanas** (de cada clip,
+  un plano abierto y uno de detalle). Es el truco de `twist-07`, que son 9 planos del mismo kit.
+- **Entrega:** `Ebook Dami / Ebook Fuga Perfecta (AR) / Videos terminados`, masters en
+  `~/Desktop/Fuga Perfecta/anuncios/` como `24-11 - N.mp4`.
 
 ## Detalles / notas
 
+- ⛔ **El b-roll de esta oferta no se espeja.** El editor da vuelta un plano cuando lo repite; con estos
+  clips eso escribia *"ANABAC AL"* por *"LA CABANA"* y daba vuelta "ETAPA 5" y los numeros del cronometro.
+  Todos los encuadres van con **`"flip": false`**. Se ve recien en la hoja del render.
 - 🐞 **Dos de los clips IA tienen texto mal escrito.** El de los 7 desafíos dice *"DESAFÃO EXPRESS"* (tilde rota). Se arregla reencuadrando (`zoom 1.55`, `ybias 1.0`), no se tira el clip.
 - ⛔ **tikwm estuvo caído el 24/11** (502 sostenido durante media hora). **yt-dlp no es reemplazo**: la última versión que corre en el Python 3.9 del sistema es `2025.10.14` y ya no extrae TikTok. Pasar `--cookies-from-browser` no está permitido. Las páginas de video de TikTok sirven el stream por **blob/MSE**, así que tampoco se baja desde el navegador. **Si tikwm se cae, por ahora no hay plan B: se espera.**
+- ⛔ **TikTok no sirvio para esta oferta: 407 ids, 74 clips bajados, 0 utiles.** El nicho en TikTok son
+  caras hablando a camara, Monopoly, juegos de vasos y texto quemado en todos los cuadros. Los 4 que
+  pasaron el filtro de 6 cuadros se cayeron al mirarlos a 1 cuadro por segundo. **Lo que falta para variar
+  visuales es generar b-roll nuevo con IA**, del mismo estilo que las 8 que ya hay.
 - ✅ **Las páginas de tag de TikTok sí se raspan** (confirma la regla del 16/11). Rindieron: `familygamenight` (83), `familygamesnight` (87), `murdermysteryparty` (100), `escaperoomathome` (77), `gamenightwithfriends` (66), `juegosdemesa` (30). **No rindieron:** `gamenight` (página no disponible, el tag está ocupado por videojuegos) ni `boardgamenight`/`escaperoom`/`datenightathome` (la SPA no cargó). Total: **407 IDs únicos**.
 - Los despieces completos quedaron en el scratchpad de la sesión del 24/11.
 

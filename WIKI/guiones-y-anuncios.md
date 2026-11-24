@@ -206,6 +206,18 @@
   (45-60 s) suena acelerado: el nuevo valor por defecto es **1.20**.
 - **Música:** una sola cama musical para toda la tanda, `music_db` alrededor de -8. Que sea **buena**: pista con
   gancho y que acompañe el nicho, no un loop de relleno (pedido del 2026-11-15).
+- ⛔ **El b-roll con texto del producto NO se espeja (24/11/2026, [[fuga-perfecta]]).** El editor espeja
+  un plano cuando lo repite (`usage % 2`), para que no se note la repetición. Con b-roll de TikTok no
+  molesta, pero cuando el clip **muestra el producto con su nombre impreso** el espejado lo escribe al
+  revés: en la tanda de Fuga Perfecta salieron *"AÑABAC AL"* por *"LA CABAÑA"*, *"ETAPA 5"* dado vuelta y
+  el cronómetro del celular con los números invertidos. Regla: todo clip con texto, número o logo del
+  producto va con **`"flip": false`** en el plan. Se nota recién en la hoja del render, no en el pool.
+- ⛔ **Para un producto que no existe en TikTok, TikTok no es la fuente (24/11/2026, [[fuga-perfecta]]).**
+  Se rasparon 8 tags, 407 ids, se bajaron 74 clips y se filtraron uno por uno: **sirvieron 0**. El nicho
+  "escape room en casa" en TikTok son caras hablando a cámara, Monopoly, juegos de vasos y texto quemado
+  en todos los cuadros. Y los 4 que pasaron el filtro de 6 cuadros se cayeron al mirarlos a 1 cuadro por
+  segundo. Antes de raspar 400 ids conviene **bajar 10 del tag más prometedor y mirarlos**: si el nicho es
+  "producto que la gente no filma lindo", se va directo a la fuente 3 (b-roll generado) y se ahorra una tarde.
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 
 ### 🆕 2026-11-16 · Los tags de TikTok SÍ se abren en el navegador, y hay que elegirlos en inglés

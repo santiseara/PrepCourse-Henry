@@ -1,3 +1,20 @@
+## 2026-11-24 — Fuga Perfecta: la tanda 1 completa (10 creativos) en el Drive
+
+- Producidos y entregados los **10 creativos de la tanda 1**: 7 del molde largo con voz (25-32 s) y
+  3 del molde corto sin voz (10-14 s), repartidos entre pareja, amigos, familia y grupo.
+- Angulos nuevos escritos: la reaccion del grupo, las cuentas contra una sala fisica y la objecion
+  ("pense que eran cuatro acertijos impresos"). Mas el listicle de las 3 salas con placas numeradas.
+- Voces 5 a 7 con `gemini-3.1-flash-tts-preview` y las 2 a 4 regeneradas con mas energia a pedido de
+  Santiago. Las siete entre 169 y 185 ppm: ninguna leyo el bloque de estilo.
+- Nuevo editor `OUTPUTS/scripts-vsl/edit_fuga_pov.py` para el molde corto sin voz.
+- Nuevo bajador `OUTPUTS/scripts-vsl/dl_tiktok_ytdlp.py`: **tikwm se cayo (502) toda la tarde** y lo que
+  lo reemplaza es yt-dlp forzando el hostname de la API movil de TikTok.
+- ⛔ **TikTok no dio un solo clip util para esta oferta**: 8 tags, 407 ids, 74 clips bajados, 0 utiles.
+  Regla nueva en `WIKI/guiones-y-anuncios.md`.
+- ⛔ **El b-roll con texto del producto no se espeja**: `edit_fuga.py` ahora respeta `"flip": false`.
+  Sin eso salia "ANABAC AL" por "LA CABANA". Regla nueva en `WIKI/guiones-y-anuncios.md`.
+- Nuevo output: `OUTPUTS/2026-11-24-fuga-perfecta-tanda1-produccion.md`.
+
 ## 2026-11-24 — Fuga Perfecta: la oferta nueva de salas de escape y el video 1
 
 - Leido el doc de la oferta **FUGA PERFECTA** (AR, clon de `casocriminal.shop`) con el angulo

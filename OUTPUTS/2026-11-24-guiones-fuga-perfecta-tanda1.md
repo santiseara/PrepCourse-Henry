@@ -20,13 +20,38 @@ Si en tu casa la sobremesa dura dos minutos porque todos agarran el celular, pro
 
 Guion 5
 
-POV: el plan de esta noche no es Netflix. Tienen una hora para salir del vagón
-
-4 SALAS POR EL PRECIO DE 1
+Lo imprimí un sábado pensando que con mis amigos duraba diez minutos. A los cuarenta seguían peleándose por un número. Es una sala de escape que descargás, imprimís y jugás en tu casa. Cada sobre te da la combinación del siguiente, así que no se puede saltear ni hacer trampa. Uno agarró el cuaderno de pistas y los otros le gritaban que lo suelte. Salimos sobre la hora y al otro día seguían hablando del tema en el grupo. Baratísimo, y te llega al mail al instante. Link abajo.
 
 
 Guion 6
 
-No necesitás tablero: lo imprimís y arrancás
+Una sala de escape de las de verdad te sale dieciocho mil pesos por cabeza, hay que reservar con semanas y la jugás una sola vez. Esta la descargás, la imprimís y la tenés arriba de tu mesa en diez minutos. Son tres salas completas más siete desafíos cortos, de dos a seis jugadores, una hora cada una. Y la volvés a imprimir las veces que quieras, para los que vengan después. Hacé la cuenta: es muchísimo menos de lo que gastás en una salida. Link abajo.
 
-OFERTA SOLO HOY - 4X1 EN SALAS DE ESCAPE
+
+Guion 7
+
+Te voy a ser sincera: pensé que iban a ser cuatro acertijos impresos y nada más. Lo abrí y son siete sobres cerrados con lacre, un plano del tren, una lista de pasajeros y un cuaderno de pistas con tres niveles de ayuda. Pusimos el cronómetro en una hora. A los veinte minutos estábamos los dos parados, señalando papeles arriba de la mesa. No salimos. Y al día siguiente lo volvimos a intentar. Se imprime una vez y se juega todas las que quieras. Link abajo.
+
+
+Guion 8
+
+POV: el plan de esta noche no es Netflix. Tienen una hora para salir del vagón.
+
+HOY 4X1: 3 SALAS COMPLETAS + 7 DESAFÍOS EXPRESS
+SE DESCARGA, SE IMPRIME Y SE JUEGA ESTA NOCHE
+
+
+Guion 9
+
+No necesitás tablero: lo imprimís y arrancás.
+
+HOY 4X1: 3 SALAS COMPLETAS + 7 DESAFÍOS EXPRESS
+SE DESCARGA, SE IMPRIME Y SE JUEGA ESTA NOCHE
+
+
+Guion 10
+
+Una hora sin que nadie toque el celular. El celular era el reloj.
+
+HOY 4X1: 3 SALAS COMPLETAS + 7 DESAFÍOS EXPRESS
+SE DESCARGA, SE IMPRIME Y SE JUEGA ESTA NOCHE

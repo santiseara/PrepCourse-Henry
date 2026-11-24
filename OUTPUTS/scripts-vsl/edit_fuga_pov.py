@@ -106,7 +106,10 @@ m_ = m_ / max(1e-6, np.abs(m_).max()) * 10 ** (P.get('music_db', -3) / 20)
 fo = int(1.0 * sr_); m_[-fo:] *= np.linspace(1, 0, fo)[:, None]
 sf.write(f'{tmp}/music.wav', np.clip(m_, -1, 1), sr_)
 
-run([FF, '-v', 'error', '-y', '-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/ov.png', '-i', f'{tmp}/music.wav',
+# el PNG va con -loop 1: sin eso ffmpeg lo trata como un stream de un solo cuadro y la placa
+# y el banner se ven apenas el primer segundo (pasado el 24/11 en el V8)
+run([FF, '-v', 'error', '-y', '-i', f'{tmp}/cat.mp4', '-loop', '1', '-framerate', str(FPS),
+     '-t', f'{L:.2f}', '-i', f'{tmp}/ov.png', '-i', f'{tmp}/music.wav',
      '-filter_complex', '[0:v][1:v]overlay=0:0:format=auto[v]', '-map', '[v]', '-map', '2:a',
      '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
      '-t', f'{L:.2f}', '-movflags', '+faststart', OUT])

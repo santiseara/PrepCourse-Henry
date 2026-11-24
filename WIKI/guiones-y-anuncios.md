@@ -252,6 +252,11 @@ una verga."*
   loop entero y el empalme da un salto rítmico. Se repite la pista completa con un **crossfade largo
   (2 s) de potencia constante**. Mejor todavía: elegir una pista que ya dure lo que dura el video.
 
+- 🐞 **Una placa fija en PNG va con `-loop 1` en su `-i`** (24/11/2026, [[fuga-perfecta]]). Sin eso ffmpeg
+  trata el PNG como un stream de **un solo cuadro** y el `overlay` lo pinta apenas el primer segundo: en el
+  POV 8 la placa de arriba y el banner de la oferta desaparecían a los 1,2 s y el resto del video iba
+  limpio. Lo peor es que **es intermitente** —el POV 9, con el mismo código, salió bien—, así que no se
+  detecta mirando un solo render: va en la hoja de contactos de **cada** video.
 - **Revisión final:** hoja de contactos **del video renderizado**, no solo de los clips.
 
 ### 🆕 2026-11-16 · Los tags de TikTok SÍ se abren en el navegador, y hay que elegirlos en inglés

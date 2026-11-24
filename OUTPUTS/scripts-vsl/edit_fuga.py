@@ -474,10 +474,14 @@ if P.get('music'):
     import numpy as np, soundfile as sf
     m_, sr_ = sf.read(F(P['music'])); v_, _ = sf.read(f'{tmp}/vo.wav')
     if m_.ndim == 1: m_ = np.stack([m_, m_], 1)
-    need = int((L + 1) * sr_); xf = int(1.0 * sr_)
-    while len(m_) < need:      # loop con fundido de 1 s desde el segundo 4
-        a2 = m_[int(4 * sr_):]; r_ = np.linspace(0, 1, xf)[:, None]
-        m_ = np.concatenate([m_[:-xf], m_[-xf:] * (1 - r_) + a2[:xf] * r_, a2[xf:]])
+    need = int((L + 1) * sr_)
+    # NUNCA repetir la pista para llenar el video: el empalme se oye y se oye TODO el video
+    # (24/11/2026, Santiago sobre la tanda 1: "se repite la misma parte todo el video,
+    # la idea es que dejes correr esa canción"). La cama la arma cama3.py del instrumental
+    # de un ad largo del competidor, y tiene que venir ya mas larga que el video.
+    if len(m_) < need:
+        raise SystemExit(f"la cama {P['music']} tiene {len(m_)/sr_:.1f} s y el video pide "
+                         f"{need/sr_:.1f} s. Alargala con cama3.py sobre un ad mas largo.")
     m_ = m_[:need]
     rv = np.sqrt(np.mean(v_[v_.any(1) if v_.ndim > 1 else v_ != 0] ** 2)); rm = np.sqrt(np.mean(m_ ** 2))
     m_ = m_ * (rv / rm) * 10 ** (P.get('music_db', -8) / 20)

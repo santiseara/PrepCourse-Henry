@@ -54,13 +54,20 @@ repartidos entre pareja, amigos, familia y grupo.
 
 - **Editores:** `OUTPUTS/scripts-vsl/edit_fuga.py` (molde largo, clon de `edit_alivio.py` con caja de hook
   blanca, banner de oferta fijo abajo y paleta de lacre) y `edit_fuga_pov.py` (molde corto sin voz).
-- **Voz:** Sulafat a `speed 1.20`, estilo de amiga portena con energia. Guiones 1-4 con
-  `gemini-2.5-flash-preview-tts` y 5-7 con `gemini-3.1-flash-tts-preview` (la cuota diaria es por modelo).
-  Las siete entre **169 y 185 ppm**: ninguna leyo el bloque de estilo.
+- **Voz:** Sulafat a `speed 1.20` con `gemini-2.5-flash-preview-tts` y **un solo bloque de estilo**,
+  `voz/style.txt` (amiga portena contandole un plan que le encanto, ritmo normal de conversacion). Las
+  siete entre **167 y 188 ppm**: ninguna leyo el bloque de estilo. La primera tanda habia salido con dos
+  estilos distintos y se oia (correccion de Santiago del 24/11: *"quiero que todos tengan la voz de el
+  video que arranca Si las noches"*); los 2 a 7 se rehicieron con el estilo del 1.
 - **Musica:** sale **del audio de sus propios anuncios**, no de un generador (correccion de Santiago del
-  24/11: *"pusiste cualquier musica, es una verga"*). Los 7 con voz llevan la pista de intriga con cuerdas
-  de `caso-05` a −10 dB; los 3 sin voz, la de `caso-01` (pop indie con vocal femenina, 15,6 s) al frente.
-  Se limpian con `scripts-vsl/cama2.py`, porque la Biblioteca las sirve en HE-AAC a 48 kbps.
+  24/11: *"pusiste cualquier musica, es una verga"*), y va de **corrida continua, nunca en bucle**
+  (segunda correccion: *"se repite la misma parte todo el video, la idea es que dejes correr esa cancion"*).
+  Los 7 con voz llevan el **instrumental del ad largo de Caso Criminal de 35,9 s** (pizzicato, marimba y
+  tictac de cuenta regresiva), sacado con `scripts-vsl/stems.py` (demucs, dos stems) y cortado con
+  `scripts-vsl/cama3.py`: cada video su propia ventana (V1 del 0 al 33, V2 del 4,5 al 35, etc.), asi que
+  nunca se repite un compas. Los 3 sin voz llevan `caso-01` (pop indie con vocal femenina, 15,6 s) al
+  frente, que ya daba de sobra para 10-14 s. Todo se levanta en agudos porque la Biblioteca sirve el audio
+  en HE-AAC a 48 kbps. `cama2.py` (el que repetia la pista) queda obsoleto.
 - **Visuales: 21 clips, 32 encuadres, 94 ventanas.** Las 8 que paso Santiago (el producto) mas **12
   generados con `seedance_2_0_mini` en Higgsfield** (8 creditos cada uno, 8 s a 720x1280, el mismo formato
   que los suyos): la pareja aburrida con el control, los cuatro amigos sobre el mapa, la familia en la

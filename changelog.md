@@ -1,3 +1,25 @@
+## 2026-11-24 (tarde) — Fuga Perfecta: una sola voz y la musica de corrida, sin bucle
+
+Santiago aprobo las visuales y marco dos cosas mas: *"la musica de los que tienen guion, se repite la
+misma parte todo el video, la idea es que dejes correr esa cancion. Y otra cosa, quiero que todos tengan
+la voz de el video que arranca Si las noches"*. Las dos tenian causa concreta:
+
+- **La voz.** Los guiones 1 a 4 habian salido con `voz/style.txt` y los 5 a 7 con un `style2.txt` escrito
+  mas tarde, con otra indicacion de ritmo y de sonrisa. La voz (Sulafat) era la misma, el tono no.
+  Se rehicieron los **6 guiones** con el estilo del 1 y con `gemini-2.5-flash-preview-tts`, el mismo modelo.
+  Las siete entre 167 y 188 ppm, verificadas con `revisar_voz.py`.
+- **La musica.** La cama de los 7 era la pista de un ad de 10 s de Caso Criminal **repetida tres veces**
+  para llenar 30 s, y el empalme se oia. Se bajaron los **4 ads largos** de Caso Criminal (12 a 36 s), se
+  les saco la locucion con demucs (`scripts-vsl/stems.py`) y el instrumental de 35,9 s alcanza para los
+  siete: cada video se lleva **su propia ventana continua** (`scripts-vsl/cama3.py`). Medido por
+  autocorrelacion del espectro: la cama vieja daba un pico de 0,93 a los 22 s, las nuevas 0,79-0,85.
+  Los dos editores ahora **fallan** si la cama no alcanza, en vez de repetirla sin avisar.
+
+Los 3 POV no se tocaron: no tienen voz y su cama de 15,5 s ya cubria los 10-14 s de una sola corrida.
+
+Archivos: `WIKI/fuga-perfecta.md`, `WIKI/guiones-y-anuncios.md` (dos reglas nuevas),
+`OUTPUTS/scripts-vsl/cama3.py` y `stems.py` (nuevos), `edit_fuga.py` y `edit_fuga_pov.py` (parchados).
+
 ## 2026-11-24 — Fuga Perfecta: la tanda 1 rehecha con b-roll propio y la musica de ellos
 
 Santiago rechazo la primera version por dos cosas y las dos tenia razon:

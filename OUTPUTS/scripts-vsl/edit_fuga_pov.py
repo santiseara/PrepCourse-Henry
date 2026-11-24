@@ -96,12 +96,14 @@ ov.save(f'{tmp}/ov.png')
 import numpy as np, soundfile as sf
 m_, sr_ = sf.read(F(P['music']))
 if m_.ndim == 1: m_ = np.stack([m_, m_], 1)
-need = int((L + 0.4) * sr_); xf = int(1.0 * sr_)
-while len(m_) < need:
-    a2 = m_[int(4 * sr_):]; r_ = np.linspace(0, 1, xf)[:, None]
-    m_ = np.concatenate([m_[:-xf], m_[-xf:] * (1 - r_) + a2[:xf] * r_, a2[xf:]])
+need = int((L + 0.4) * sr_)
 off = int(P.get("music_start", 0) * sr_)
-m_ = np.concatenate([m_[off:], m_[:off]])[:need]
+# la pista NO se repite ni se da la vuelta para llenar el video: el empalme se oye
+# (24/11/2026, Santiago: "se repite la misma parte todo el video"). Tiene que venir mas larga.
+if len(m_) - off < need:
+    raise SystemExit(f"la cama {P['music']} tiene {len(m_)/sr_:.1f} s y desde el segundo "
+                     f"{off/sr_:.1f} el video pide {need/sr_:.1f} s. Usá un ad mas largo (cama3.py).")
+m_ = m_[off:off + need]
 m_ = m_ / max(1e-6, np.abs(m_).max()) * 10 ** (P.get('music_db', -3) / 20)
 fo = int(1.0 * sr_); m_[-fo:] *= np.linspace(1, 0, fo)[:, None]
 sf.write(f'{tmp}/music.wav', np.clip(m_, -1, 1), sr_)

@@ -63,7 +63,11 @@ hueco inglés:
   Los seis a 194-214 ppm en crudo y -15 a -19 dB: ninguno susurra. Normalizados a -16 LUFS.
 - **Pool:** clips de TikTok de `#yesitosparapintar`, `#yesitos`, `#gessinhosparapintar`,
   `#moldesdesilicona` y `#plastercraft`.
-- **Efectos de sonido:** de `~/SFX/alias` ([[efectos-de-sonido]]), pocos y en puntos clave.
+- **Efectos de sonido:** de `~/SFX/alias` ([[efectos-de-sonido]]), uno por video.
+- **Cama musical: la pista que mandó Santiago**, `nastelbom-advertising-424209` (Pixabay, 256 kbps),
+  guardada en `~/Desktop/mini-yesitos/anuncios/work/music/`. Se toma **desde el segundo 20**, que es
+  donde el arreglo está en pleno, 55 s con fundidos, pasa-altos a 70 Hz y dos huecos suaves
+  (−3 dB en 450 Hz y −2,5 dB en 2,6 kHz) para que no pelee con la voz.
 - Scripts: `OUTPUTS/scripts-vsl/gen_my_plans.py`, `edit_my.py`, `ventanas_yesitos.py`.
 - Carpeta: `~/Desktop/mini-yesitos/` con `anuncios/`, `imagenes/` y `landing/`.
 - **Entregados en el Drive** ([[organizacion-y-registro]]): `Mi unidad / Ebook Dami / Ebook Mini Plaster
@@ -72,6 +76,19 @@ hueco inglés:
   *29 days to Christmas* · *I need 25 kits by Saturday* · *Its not the mold its the finish*.
   https://drive.google.com/drive/folders/1rrJRA3rXtODPIBbT8f8Sy7NSwQf3RnkW
   Masteres en `~/Desktop/mini-yesitos/anuncios/` como `25-11 - 1` a `25-11 - 6` (42 a 49 s).
+
+## ⚠️ El `music_db` del editor NO es la distancia a la voz que uno escucha (registro 2026-11-25)
+Santiago pidió *"que se escuche pero que no tape la voz"*. El editor escala la música contra el **RMS
+de toda la pista de voz**, que incluye las pausas y las colas bajas, así que el número del plan queda
+**4 dB corto** respecto de lo que se oye sobre el habla.
+- Medido en esta tanda: con `music_db -11` la música quedaba **15,2 dB por debajo del habla real**
+  (inaudible); con **`-7` queda en −11,2 dB**, que es la banda donde se escucha y no tapa.
+- **Cómo se verifica, sin oír nada:** se leen `vo.wav` y `music.wav` de la carpeta `_tmp` del render,
+  se toman solo las muestras donde `|voz| > 0,02` (el habla de verdad) y se compara el RMS de las dos.
+  Objetivo **−11 a −12 dB**. Los seis de esta tanda dieron entre −10,8 y −11,8, con pico de −1,9 dB
+  (sin saturar).
+- Es la hermana de la regla de [[laser-profit-vault]] del mismo día, donde a −11 Santiago tampoco la
+  escuchaba y hubo que subir a −9.
 
 ## Preguntas abiertas
 - **¿El nombre queda en Mini Plaster Studio?**

@@ -26,6 +26,17 @@ carpeta de Drive."*
 - En esa tanda se usaron **dos**: `papel` cuando entra la lista de proyectos y `ding` en la placa final.
   Nada más, porque el formato es calmo: la regla dice de dónde sale el archivo, no que haya que meter más.
 
+### Registro 2026-11-25 (tarde II) — tercera vez que la pide en el mismo día
+Santiago, al pedir la tanda de [[mini-plaster-studio]]: *"si vas a usar efectos de sonido, tenés la
+carpeta subida que te mandé hace poco. Eso marcalo como regla. Siempre que uses efectos de sonido, que
+sean de la carpeta de Drive."*
+- `edit_my.py` nace ya con la biblioteca cableada (hereda de `edit_tam.py`): copia `~/SFX/alias/*.wav`
+  y **corta con error** si la carpeta no está. Ningún `edit_*.py` nuevo vuelve a llamar a `sfx.py`.
+- En esa tanda se usaron **cinco, uno por video**: `chaching` cuando aparece el precio de venta (V1 y
+  V2), `pop` en la tarjeta de los 30 souvenirs (V3), `ding` en la colección de Navidad (V4),
+  `llamada` cuando entra el mensaje del cliente (V5) y `tick` en el primer paso del acabado (V6).
+  Uno por pieza, en el punto donde el ad cambia de idea.
+
 ## Cómo se usa en el montaje
 
 Los editores (`edit_ugc_split.py` y los `edit_*.py` de `OUTPUTS/scripts-vsl/`) leen los efectos de la subcarpeta `sfx/` de la carpeta de trabajo y los buscan **por nombre `.wav`**. Entonces:

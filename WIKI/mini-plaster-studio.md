@@ -66,6 +66,12 @@ hueco inglés:
 - **Efectos de sonido:** de `~/SFX/alias` ([[efectos-de-sonido]]), pocos y en puntos clave.
 - Scripts: `OUTPUTS/scripts-vsl/gen_my_plans.py`, `edit_my.py`, `ventanas_yesitos.py`.
 - Carpeta: `~/Desktop/mini-yesitos/` con `anuncios/`, `imagenes/` y `landing/`.
+- **Entregados en el Drive** ([[organizacion-y-registro]]): `Mi unidad / Ebook Dami / Ebook Mini Plaster
+  Studio (INGLES) / Videos terminados`, los seis con el nombre del arranque de su hook — *Same five
+  figures* · *They dont sell one at a time* · *The party favor that doesnt end up in the bin* ·
+  *29 days to Christmas* · *I need 25 kits by Saturday* · *Its not the mold its the finish*.
+  https://drive.google.com/drive/folders/1rrJRA3rXtODPIBbT8f8Sy7NSwQf3RnkW
+  Masteres en `~/Desktop/mini-yesitos/anuncios/` como `25-11 - 1` a `25-11 - 6` (42 a 49 s).
 
 ## Preguntas abiertas
 - **¿El nombre queda en Mini Plaster Studio?**

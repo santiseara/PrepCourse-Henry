@@ -1,3 +1,28 @@
+## 2026-11-25 (tarde II) — Oferta nueva para el mercado ingles: Mini Plaster Studio
+
+Santiago mando el ganador argentino **Mini Yesitos para Pintar** (`miniyesitos.brujulanegocios.com`,
+fanpage *Creaciones con Alma*) para llevarlo al mercado ingles, con investigacion de ofertas similares
+y 6 anuncios de testeo.
+
+- **El ganador, despiezado.** ~61 ads activos desde el 28/10, con tandas nuevas hasta el 24/11. Se
+  bajaron sus **19 creativos de video (13 unicos) y se transcribieron los 13**, mas sus 21 textos
+  principales y la landing entera (AR$ 19.990 de AR$ 77.940, 127 paginas, 20 modulos, 5 bonos,
+  garantia 7 dias, grupo de WhatsApp). Salieron sus **10 angulos ordenados por impresiones**: el nº1
+  es **packaging y valor percibido**, y sus dos ads mas vistos lo corren como **estatico**, no video.
+- **Su montaje, medido cuadro a cuadro:** subtitulo de 2 palabras con la que suena en **pastilla
+  fucsia #EE57B8** y la otra en **amarillo palido #FFFFA8**, tarjetas crema #FEFDF8 con el numero
+  grande, la tapa del ebook en una tablet sobre la mesa y cierre sin placa de marca.
+- ⛔ **Su b-roll no se puede reusar:** la marca de agua *"CA · Creaciones con Alma"* esta **centrada y
+  semitransparente en todo el cuadro**, no al pie. El visual sale entero de TikTok.
+- **El mercado ingles esta un nivel entero atras.** El producto fisico se vende bien (PYO plaster kits
+  a **US$ 4-6** en Etsy, starter de 20 a US$ 29, mayorista en Faire, gondola en Hobby Lobby) pero **el
+  infoproducto no existe**: solo dos PDF de Etsy (US$ 9,15 y US$ 12,20) **sin un solo anuncio corriendo**.
+- **Tanda 1: 6 guiones** en ingles y espanol con voseo + texto principal unico, y **6 videos** clonando
+  su formato. Voces Sulafat (4 por API, **2 por AI Studio** porque la cuota del dia ya se habia ido en
+  The Artist Method), efectos de sonido de `~/SFX/alias`.
+- Nuevo en la WIKI: [[mini-plaster-studio]]. Nuevos scripts: `gen_my_plans.py`, `edit_my.py`,
+  `ventanas_yesitos.py`, `transcribir.py` (transcripcion por `gemini-3.5-transcribe`).
+
 ## 2026-11-25 (tarde) — Oferta nueva para el mercado ingles: The Laser Profit Vault
 
 Santiago mando el ganador argentino **Taller Laser Rentable** (`mikitlaser.auracreativadigital.com`)

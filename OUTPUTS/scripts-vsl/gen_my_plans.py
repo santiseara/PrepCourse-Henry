@@ -85,7 +85,9 @@ VIDEOS = [
          overlays=[dict(type='chip', text='1 · THIN STREAM · TAP · TOOTHPICK', icon='✓', word='toothpick', dur=2.4),
                    dict(type='chip', text='2 · DEMOLD COOL AND FIRM', icon='✓', word='firm', dur=2.4),
                    dict(type='chip', text='3 · FULL CURE · FINE SANDPAPER', icon='✓', word='sandpaper', dur=2.4),
-                   dict(FIN=1, word='Tap')],
+                   # occ=1: el guion dice "tap the mold on the table" antes del CTA, y con occ=0 la
+                   # placa final arrancaba a los 20 s y se comia dos chips
+                   dict(FIN=1, word='Tap', occ=1)],
          sfx=[['tick', 'toothpick', 0]]),
 ]
 

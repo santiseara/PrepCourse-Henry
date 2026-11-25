@@ -252,6 +252,23 @@
   3-8 kHz: cerca de 1 es la misma pista. En Taller Láser Rentable dio **0,1-0,2**, o sea una pista
   distinta por anuncio.
 
+- 🆕 **2026-11-25 · "Que se escuche pero que no tape la voz" = DUCKING, no bajarle el volumen.**
+  Santiago mandó su propia pista para [[laser-profit-vault]] con esa instrucción. `edit_laser.py`
+  acepta **`duck`** (dB de reducción): calcula la envolvente de `vo.wav`, la estira a la frecuencia
+  de la música, la pasa por un `maximum_filter1d` de 0,22 s (para que no suba entre palabra y
+  palabra) y suaviza con una caja de 0,09 s. Con **`music_db` −6 y `duck` 6** la cama queda **13 dB
+  bajo la voz**, que es el rango de un bed profesional, y sube en los silencios.
+  ⚠️ **El ducking rinde poco si la voz ya salió con los silencios recortados**: con `silence
+  [0.26, 0.12]` casi no quedan huecos y la diferencia medida entre "con voz" y "en el hueco" fue de
+  solo 1,8 dB. Lo que de verdad sube el nivel sin tapar es el **EQ**, no el ducking.
+- 🆕 **2026-11-25 · Una pista para celular se balancea, no se usa cruda.** La pista que mandó
+  Santiago tenía el **47 % de su energía abajo de 90 Hz**: en un parlante de teléfono eso no existe,
+  así que la cama "no se escucha" por más que le subas el volumen. Se mide y se reparte a algo
+  parecido a **14 / 26 / 33 / 21 / 6 %** en `<90 · 90-200 · 200-1k · 1-4k · 4-8k`, con el hueco en
+  **250-700 Hz** donde vive la voz. Y el tramo de la pista se elige **midiendo el nivel segundo a
+  segundo**: se arranca donde ya está en pleno, nunca en la intro ni en el fade final.
+  (La de Santiago cae después del segundo 133, así que la ventana buena arranca en el 27.)
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

@@ -77,13 +77,12 @@ qué trae → el método (qué cortar, cuánto cobrar, dónde venderlo) → urge
 - **Voz:** Orus (hombre), estilo de tipo del Medio Oeste grabando una nota de voz en el garage.
   `gemini-2.5-flash-preview-tts` dio 429 (cuota diaria compartida): se usó
   `gemini-3.1-flash-tts-preview`, verificado con el control de 7 palabras (3,76 s = limpio).
-- **Música:** ⛔ **de sus anuncios no se puede sacar.** Su audio viene en HE-AAC a **48 kbps** y es
-  **94 % voz**; al separarla queda retumbe más el resto de la voz, que es lo que Santiago oyó como
-  *"gente hablando de fondo"*. Probado y descartado: tramos sin locución (el más largo dura 1,6 s) y
-  cruzar varios ads suyos (cada uno usa una pista distinta). La tanda va con
-  **"Inspiring Happy Acoustic Folk" de Stockaudios** (Pixabay, 256 kbps, libre para uso comercial sin
-  atribución), desde el segundo 18, pasa-altos a 70 Hz y `music_db` −9. El mp3 queda en
-  `~/Desktop/laser-profit-vault/anuncios/musica/`.
+- **Música:** la pista la eligió **Santiago** (`atlasaudio-advertising-marketing-617541.mp3`, 256 kbps)
+  después de rebotar dos camas: la separada de los ads del ganador (su audio es 48 kbps y 94 % voz,
+  así que solo quedaba el resto de su locución) y una acústica de Pixabay (*"medio gay"*). Va desde el
+  **segundo 27**, pasa-altos a 80 Hz, rebalanceada para que se oiga en el celular (venía con el 47 % de
+  su energía abajo de 90 Hz), hueco en 250-700 Hz, **`music_db` −6 con `duck` 6 dB**. Queda 13 dB bajo
+  la voz. El mp3 está en `~/Desktop/laser-profit-vault/anuncios/musica/`.
 - **Efectos de sonido:** de `~/SFX/alias` ([[efectos-de-sonido]]), nunca sintetizados.
 - **Scripts:** `scripts-vsl/edit_laser.py`, `gen_laser_plans.py`, `ventanas_laser.py`.
 - **Pool:** 257 clips de TikTok de 6 tags (`lasercutting`, `glowforge`, `xtool`, `laserengraving`,

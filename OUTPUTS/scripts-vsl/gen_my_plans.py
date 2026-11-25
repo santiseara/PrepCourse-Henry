@@ -98,7 +98,7 @@ for v in VIDEOS:
     plan = dict(
         vo=f"vo/V{v['n']}.wav", script=f"V{v['n']}.txt", lang='en',
         speed=velocidad(v['n']), silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=2,
-        music='music/bed.wav', music_db=-15,
+        music='music/bed.wav', music_db=-11,   # 25/11: su pista de Pixabay, a -11 se escucha sin tapar la voz
         hi='&H00B857EE&', capy=1390,
         hook=v['hook'], hook_until=v['hook_until'],
         first=first, seed=v['n'] * 110,

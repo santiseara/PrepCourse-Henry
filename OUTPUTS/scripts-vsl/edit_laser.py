@@ -514,6 +514,24 @@ if P.get('music'):
     m_ = m_[:need]
     rv = np.sqrt(np.mean(v_[v_.any(1) if v_.ndim > 1 else v_ != 0] ** 2)); rm = np.sqrt(np.mean(m_ ** 2))
     m_ = m_ * (rv / rm) * 10 ** (P.get('music_db', -8) / 20)
+    # DUCKING (25/11): "que se escuche pero que no tape la voz". La cama baja sola mientras
+    # hay voz y vuelve al nivel pleno en los huecos, que es donde se tiene que lucir.
+    dk = P.get('duck', 0)
+    if dk:
+        from scipy.ndimage import maximum_filter1d
+        vv = v_.mean(1) if v_.ndim > 1 else v_
+        e = np.abs(vv)
+        w = max(1, int(0.03 * 48000))
+        e = np.convolve(e, np.ones(w) / w, 'same')
+        idx = np.minimum((np.arange(len(m_)) * (len(e) / max(len(m_), 1))).astype(int), len(e) - 1)
+        e = e[idx]
+        pos = e[e > 1e-5]
+        thr = np.percentile(pos, 55) if len(pos) else 1.0
+        hay = np.clip(e / (thr + 1e-9), 0, 1) ** 0.6
+        hay = maximum_filter1d(hay, size=max(3, int(0.22 * sr_)))      # cola: no sube entre palabras
+        k2 = max(3, int(0.09 * sr_))
+        hay = np.convolve(hay, np.ones(k2) / k2, 'same')               # sin escalones
+        m_ = m_ * (1.0 - (1.0 - 10 ** (-dk / 20)) * hay)[:, None]
     sf.write(f'{tmp}/music.wav', np.clip(m_, -1, 1), sr_); MVOL = 1.0
 else:
     run(['python3', os.path.join(DIR, 'music.py'), f'{L + 1:.2f}', f'{tmp}/music.wav']); MVOL = 0.10

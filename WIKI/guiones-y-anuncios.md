@@ -199,6 +199,35 @@
   muestra dos cajas vacías. Pasa igual con ✅, ☀️ y ✨. El corte quedó en **`0x2000`**. Se detecta en la
   hoja del render, no en el código.
 
+- ⛔⛔ **2026-11-25 · "Se escucha mal la música." El audio de un ad ajeno a 48 kbps NO da una cama
+  usable, y `cama2.py` lo empeora.** Santiago rebotó la tanda de [[laser-profit-vault]]. Medido:
+  el audio de sus ads viene en **HE-AAC a 48 kbps y es 94 % voz** (el 94 % de la energía entre 200 Hz
+  y 1 kHz, **0,3 % arriba de 4 kHz**). Al separarle la voz con demucs lo único que queda es un
+  **retumbe de subgraves** (65 % de la energía abajo de 200 Hz), y encima **`cama2.py` realza todo lo
+  que está arriba de 4,5 kHz** — que en HE-AAC está **sintetizado por SBR, no es audio real**. O sea
+  que amplifica el artefacto de la separación ×30. La cama entregada tenía 37 % abajo de 90 Hz y
+  6,8 % arriba de 8 kHz: subgraves más siseo.
+  **Las tres salidas que probé y lo que dieron:**
+  1. **Buscar tramos sin locución** en sus 13 ads → el más largo dura **1,6 s**. No alcanza.
+  2. **Cruzar varios ads** (la voz cambia, la música no, así que la mediana por bin la recupera
+     limpia) → **cada ad suyo usa una pista distinta**: la correlación entre pares da 0,1-0,2. Vale
+     la pena medirlo igual, porque cuando sí comparten pista esto da música perfecta y gratis.
+  3. **Separar con `htdemucs_ft` y levantar la banda de la melodía** → ⛔ **la melodía y la voz viven
+     en la misma banda**. Control con Whisper sobre la cama ya armada: realce de 1-4 kHz en **0,4 →
+     0 palabras**, en **0,8 → 37**, en **1,2 → 123**. Subir la melodía te mete **la voz en español del
+     competidor abajo de un ad en inglés**.
+  **La receta que queda** (`scripts-vsl/cama_laser.py`): separar con `htdemucs_ft`, **pasa-altos a
+  90 Hz** (fuera el retumbe), **pasa-bajos a 7 kHz** (fuera el SBR), bajar 90-420 Hz, subir 1-4 kHz
+  **como mucho 0,4**, y verificar con Whisper que la cama devuelva **0 palabras**. Queda un colchón
+  cálido sin melodía, que es todo lo que su audio contiene.
+  **Antes de prometer "la música del ganador", medir el bitrate del audio y la relación música/voz.**
+  Si el ad viene a 48 kbps y es casi todo voz, se avisa de entrada y se decide con Santiago.
+- 🆕 **2026-11-25 · Cambiarle la cama a una tanda ya montada cuesta minutos, no una hora.**
+  `edit_laser.py` acepta **`SOLO_AUDIO=1`**: `run()` saltea cualquier comando cuyo archivo de salida ya
+  exista en el `_tmp`, así que se reusan los cortes, el `cat.mp4`, el `ov.mov` y el `video.mp4`, y se
+  rehace solo lo que uno borró a mano (`music.wav`, `mix.wav` y el mp4 final). Los 6 salieron en el
+  tiempo de 6 mezclas. **Por eso las carpetas `_tmp` no se borran hasta que la tanda está aprobada.**
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

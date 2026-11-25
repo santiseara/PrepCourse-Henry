@@ -55,7 +55,14 @@ FONT = '/System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf'
 FONT_B = FD + '/Montserrat-ExtraBold.ttf'   # la caja de hook de ellos usa una geométrica bold, no Arial
 EMOJI = '/System/Library/Fonts/Apple Color Emoji.ttc'
 ICONF = '/System/Library/Fonts/Supplemental/Arial Unicode.ttf'
-def run(c): subprocess.run(c, check=True)
+SOLO_AUDIO = os.environ.get('SOLO_AUDIO') == '1'
+def run(c):
+    # con SOLO_AUDIO=1 se reusa lo que ya esta en la carpeta _tmp (cortes, cat.mp4, ov.mov,
+    # video.mp4) y solo se rehace lo que uno borro a mano: musica, mezcla y el mp4 final.
+    # Sirve para cambiarle la cama musical a una tanda sin volver a montar el video.
+    if SOLO_AUDIO and c and os.path.exists(c[-1]) and os.path.getsize(c[-1]) > 1000:
+        return
+    subprocess.run(c, check=True)
 def norm(w): return re.sub(r'[^\w]', '', w.lower())
 
 # 1) voz: recorte de silencios + velocidad, palabras alineadas al guion

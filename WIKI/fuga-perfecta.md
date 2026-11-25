@@ -108,3 +108,33 @@ repartidos entre pareja, amigos, familia y grupo.
 - Doc de la oferta: *FUGA PERFECTA — Documento de la oferta* (Google Docs, 24/11/2026)
 - Biblioteca de anuncios de Meta: `atwistofdate.co.uk` y `casocriminal.shop` (24/11/2026)
 - OUTPUTS/2026-11-24-guiones-fuga-perfecta-tanda1.md
+
+## Los estaticos (25/11/2026)
+
+Caso Criminal corre **3 anuncios de imagen** (todos pausados hoy; sus 88 activos son video) y A Twist Of
+Date **ninguno**. Los tres son la misma receta: fondo hueso, **cintas de peligro negras y amarillas con el
+nombre de la marca** cruzando arriba y abajo, pildora amarilla con el gancho, **titular condensado gigante**,
+los tres folders kraft con papeles asomando, un badge "4X1" (en lupa o redondo), un sello rojo de urgencia y
+la pildora blanca de prueba social con tres caritas y el tilde azul. Cambian solo el titular y donde va cada
+badge.
+
+El socio de Santiago ya hizo dos: una version oscura del molde de la lupa y una foto de living de noche.
+Las dos nuestras salen de **los otros dos moldes**, los que el socio no uso:
+- **`Ultimas horas - contador 4x1.png`** — molde del contador: pildora "3 SALAS + 7 DESAFIOS AL PRECIO DE 1",
+  titular "ULTIMAS HORAS", caja negra con "01:20:17", lupa con el 4X1, prueba social abajo.
+- **`Promo 4x1 - el plan que tu noche necesita.png`** — molde crema: prueba social arriba, pildora
+  "EL PLAN QUE TU NOCHE NECESITA", titular "PROMO 4X1", badge redondo 4X1 abajo a la izquierda y sello rojo
+  "LA OFERTA TERMINA HOY" abajo a la derecha.
+
+Producto adaptado: **tres sobres de papel madera cerrados con lacre rojo**, rotulados CONFIDENCIAL +
+EL VAGON / LA CABAÑA / EL BUNKER, con el plano del vagon, la lista de pasajeros (nombres y ciudades
+argentinas) y la hoja del cronometro asomando.
+
+- **Como se hicieron:** `gpt_image_2` en Higgsfield con el estatico de ellos como **imagen de referencia**
+  y la orden de conservar la grilla y cambiar solo marca, producto y textos. Dos pasadas: la primera a
+  `1k/medium` (1,25 creditos) para validar la composicion, la segunda a `2k/high` (7 creditos) corrigiendo
+  la ortografia. 1520x2688, exportadas a 1080x1920.
+- ⚠️ **La Ñ no la escribe.** Tres pasadas seguidas escribieron "LA CABANA". Se resolvio **dibujando la tilde
+  por codigo**: se resta la N de la Ñ en BarlowCondensed-ExtraBold para sacar el glifo de la tilde, se escala
+  al ancho de la N real (proporcion 18/27) y se estampa con el color de tinta medido sobre el propio trazo.
+- Los modelos de imagen de Gemini (nano banana incluido) tienen **cuota 0** en esta API key: no son opcion.

@@ -148,6 +148,42 @@
 - **2026-11-23 · Cuando el ganador corre UN SOLO texto principal, la descripción deja de ser variable.** Los **32 ads activos** de [[alivio-en-cada-plato]] (hebreo) comparten **un único `body` y un único título**: la variación entera vive en el video. Es la contracara de la regla del 8/11 de [[quesos-latam]] (el que corre sin descripción) con la misma lección: antes de escribir, contar cuántos textos distintos corre el ganador. Si corre uno solo, se clona ese y la tanda se diferencia por guion, no por copy. Se mide en una pasada: se juntan los `"body":{"text":"…"}` del payload de la biblioteca y se cuentan los únicos.
 - **2026-11-23 · El hook del storytime puede ser un TERCERO que nota el cambio, no una promesa.** En los 10 videos transcriptos de [[alivio-en-cada-plato]] ninguno abre prometiendo nada: abren con la vecina que entra al ascensor con otro jean, la jefa que para en el pasillo, el médico que dice "cambiá la alimentación" y nada más, el grupo de WhatsApp donde ella era el chiste. La promesa llega recién en el bloque 5 y **siempre en primera persona**. Es el ángulo "reacción de un tercero" de [[scented-stones]] llevado a un nicho de salud, y es lo que lo hace pasable en Meta: el espectador nunca recibe una promesa de kilos. En una oferta de peso o salud, este hook es el default; la promesa-primero del 29/10 queda para ingresos.
 
+### 🆕 2026-11-25 · Tres cosas medidas armando [[laser-profit-vault]]
+
+- ⛔ **El OCR del render NO se filtra por LÍNEA: se filtra texto por texto.** Para revisar el V1 saqué
+  los cuadros y descarté las líneas que contenían palabras de mi guion… y así se me escondió un
+  **logo azul enorme de "StartUp De Acá"** (un negocio ajeno, y encima en español en un ad en inglés),
+  porque el OCR lo devolvía en la **misma línea** que mi subtítulo, separado por `||`. La línea entera
+  se caía del filtro. Regla: cada línea del OCR se **parte por `||`** y cada texto se juzga solo; es mío
+  solo si **todas** sus palabras están en el guion o en las placas. Con eso aparecieron en el mismo
+  render el logo, un **Rust-Oleum Ultracover** de 1,5 s y los números de una regla. Herramienta:
+  `scripts/ocr_render.py`.
+- **La placa de cierre NO se ancla a la última palabra del guion.** Anclada a *"button"* ("Tap the
+  button" es el final del guion) duró **0,5 s**: entraba a los 40,5 s de un video de 40,9. El ganador
+  la tiene los últimos ~4 s. Se agregó `from_end` al editor: `t0 = L - segundos`. Vale para cualquier
+  placa de CTA: se mide **desde el final**, no desde una palabra.
+- **En un nicho de oficio, el pase a ojo tira la mitad de lo que aprueba el filtro.** De 257 clips de
+  TikTok el filtro denso dejó **93 con ventana limpia** y el pase a ojo los bajó a **47**: el tag de
+  láser está lleno de **láser industrial de metal** (chapa, plasma, fibra), que es otro oficio y otro
+  avatar. Y lo que no caza ningún filtro automático: **un arma** (una Glock y un cargador de fusil
+  grabados), **un cuchillo**, el **escudo del Barcelona**, un **personaje de Disney**, **Bugs Bunny**
+  y un **cartel en árabe**. En un nicho donde el producto es "grabar cualquier cosa", al pase a ojo hay
+  que sumarle *¿esto es una marca, un personaje con derechos o un arma?*.
+- **Las marcas de máquina SÍ se dejan.** Un "glowforge", un "xTool" o un "ATOMSTACK" legible en el
+  b-roll no molesta: el ganador también los muestra y el guion los nombra como compatibilidad. Lo que
+  se cae es la marca de **otro negocio** (el logo del creador, una tienda, un fabricante de pintura).
+
+- ⛔ **2026-11-25 · Una ventana aprobada a 1 cuadro/s puede tener un cartel de 2 s adentro: la segunda
+  pasada va a 3 cuadros/s.** En [[laser-profit-vault]] el filtro denso aprobó una ventana de 5,2 s de un
+  clip de feria y el OCR del render encontró adentro **"HOT DOG W/ MUSTARD $140"** durante dos segundos:
+  el cartel vivía **entre muestra y muestra** (a los 49,5 / 50,5 / 51,5 s, y el filtro miraba 49, 50, 51).
+  Al mirar ese clip entero a 2 cuadros/s resultó ser el **puesto completo de otra marca**
+  ("HANDY DANDY BRANDY", su dominio y sus precios en casi todos los cuadros). Regla: el filtro a
+  1 cuadro/s decide **qué clip entra**; antes de armar los planes, la **ventana ya aprobada** se vuelve a
+  escanear a **3 cuadros/s** y se recorta al tramo limpio más largo (`scripts-vsl/afinar.py`). Cuesta
+  minutos; descubrirlo en el render cuesta la tanda entera. Es la regla del 5/11 de [[orzzen-automatas]]
+  (los dos bordes de la ventana) llevada a **toda** la ventana.
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

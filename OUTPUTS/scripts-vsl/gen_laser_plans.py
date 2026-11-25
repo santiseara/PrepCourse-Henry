@@ -46,8 +46,8 @@ def pool_y_clips():
     return pool, clips
 
 
-END = dict(type='cta', l1='INSTANT ACCESS', l2='Tap the button 👇', y=1120,
-           word='button', occ=0)
+# su placa de cierre vive los ultimos ~4 s; anclada a "button" (ultima palabra) duraba 0,5 s
+END = dict(type='cta', l1='INSTANT ACCESS', l2='Tap the button 👇', y=1110, from_end=4.2)
 
 VIDEOS = [
     dict(n=1, hook='SAME LASER.|DIFFERENT RESULTS.', hasta=('wattage', 0), overlays=[

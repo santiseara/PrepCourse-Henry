@@ -420,9 +420,13 @@ if P.get('hook'):
     hu = wt(P['hook_until'], P.get('hook_until_occ', 0)) if P.get('hook_until') else None
     ovs.append((f'{tmp}/o_hook.png', 0, hu[1] + 0.15 if hu else (min(cuts[1] + 0.6, 2.8) if len(cuts) > 2 else 2.6), True))
 for k, o in enumerate(P.get('overlays', [])):
-    w = wt(o['word'], o.get('occ', 0))
-    if not w: continue
-    t0 = w[0] - 0.05; pth = f'{tmp}/o{k}.png'
+    if o.get('from_end') is not None:
+        t0 = max(0.0, L - float(o['from_end']))
+    else:
+        w = wt(o['word'], o.get('occ', 0))
+        if not w: continue
+        t0 = w[0] - 0.05
+    pth = f'{tmp}/o{k}.png'
     if o['type'] == 'step': png_step(o['text'], pth, o.get('y', 250)); hits.append(('pop', t0))
     elif o['type'] == 'box': png_box(o['text'], pth, o.get('y', 250), o.get('size', 58)); hits.append(('pop', t0))
     elif o['type'] == 'chip': png_chip(o['text'], o.get('icon', ''), pth); hits.append(('pop', t0))

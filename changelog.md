@@ -1,3 +1,34 @@
+## 2026-11-25 (tarde) — Oferta nueva para el mercado ingles: The Laser Profit Vault
+
+Santiago mando el ganador argentino **Taller Laser Rentable** (`mikitlaser.auracreativadigital.com`)
+para llevarlo al mercado ingles, con investigacion de ofertas similares en US/UK y 6 anuncios de testeo.
+
+- **El ganador, despiezado.** ~37 ads activos. Se bajaron **20 videos** (13 unicos) y se transcribieron
+  todos: corre **un solo texto principal** en los 37 (dos versiones que solo difieren en la linea de
+  garantia), asi que **toda la variacion vive en el video**. Salieron sus **9 angulos** ordenados por
+  cuanto los escala (el que escala, 16 de 20 videos: *"no es la maquina, es lo que cortan"*) y sus
+  **3 formatos de edicion**, medidos sobre hojas de contactos.
+- **El mercado ingles esta un nivel de sofisticacion atras.** Barrido de 6 busquedas en la Biblioteca:
+  ahi se vende **volumen puro** (*"2.5 MILLION+ files"*, *"26,000+ designs"*, *"13,00,000+"*) y nadie
+  vende el mecanismo. 🔴 Pero **`laserprofitworkshop.com` arranco el 22/11** con frases calcadas: alguien
+  mas esta haciendo el mismo arbitraje.
+- **5 huecos del mercado ingles** metidos en el copy: licencia comercial (la nombran todos en ingles y
+  **ninguno** en Argentina), calibracion y settings de LightBurn, margen con numeros, recuperar la
+  maquina y la feria de Navidad en lugar de Etsy.
+- **Tanda 1: 6 guiones** en ingles y espanol con voseo + **6 videos** clonando su formato B (voz en off,
+  100 % b-roll, titular amarillo sin caja, chips negros arriba, palabra que suena en amarillo, placa
+  amarilla de CTA).
+- **Produccion:** 257 clips de TikTok de 6 tags → filtro denso (texto, caras sobre el clip entero,
+  bandas) dejo 93 → **pase a ojo dejo 44**. Voz Orus por API (la cuota del 2.5 estaba agotada, se uso
+  el 3.1 verificado con el control de 7 palabras). **Cama musical sacada del audio de sus propios ads**
+  con demucs. **Efectos de sonido de `~/SFX/alias`**, ninguno sintetizado.
+- **Cruzado en:** `WIKI/laser-profit-vault.md` (nueva), `WIKI/guiones-y-anuncios.md` (3 reglas nuevas:
+  el OCR del render se filtra texto por texto y no por linea, la placa de cierre se ancla por segundos
+  desde el final, y que en un nicho de oficio el pase a ojo tira la mitad), `WIKI/index.md`.
+- **Scripts nuevos:** `edit_laser.py`, `gen_laser_plans.py`, `ventanas_laser.py`, `ocr_render.py`.
+- **Archivos:** `OUTPUTS/2026-11-25-analisis-taller-laser-rentable-mercado-ingles.md`,
+  `OUTPUTS/2026-11-25-guiones-laser-profit-vault.md`, `~/Desktop/laser-profit-vault/`.
+
 ## 2026-11-25 (noche) — The Artist Method: la voz susurraba, se rehizo la tanda entera
 
 Santiago reboto la tanda 1: *"Porque susurra la voz, que suene normal, como la que te dije ayer que me

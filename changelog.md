@@ -1,3 +1,25 @@
+## 2026-11-25 (noche) — The Artist Method: la voz susurraba, se rehizo la tanda entera
+
+Santiago reboto la tanda 1: *"Porque susurra la voz, que suene normal, como la que te dije ayer que me
+gusto"*. Tenia razon y la culpa era del bloque de Style, no de la voz.
+
+- **Lo que estaba mal:** yo habia escrito *"speaking softly and close to the microphone, calm, unhurried"*.
+  Sulafat obedecio al pie de la letra: 122 ppm y susurro. El estilo que el aprobo ayer en
+  [[fuga-perfecta]] dice lo contrario — hablando **rapido y vivo, a volumen normal**, *"talking, not
+  reading"*. Traducido al ingles y con los negativos explicitos (*never breathy, never whispered, never a
+  soft bedtime or meditation voice*) salio a 172-211 ppm y volumen normal.
+- **Se verificaron los 6, no uno.** Cinco salieron bien de una; **V3 no**, porque su guion habla de calma
+  y silencio y el modelo **lee el animo del contenido**. Se arreglo escribiendole el contraste a proposito:
+  *"the words talk about calm, but SHE IS NOT CALM: full chest voice throughout"*.
+- **El `speed 1.20` no es un numero, es un objetivo de ppm.** Con un estilo que ya lee rapido, 1.20
+  atropella. `gen_tam_plans.py` ahora mide cada wav y **despeja el speed** para caer en 167-188 ppm (la
+  banda del 24/11): dio **0,86 a 1,24** segun el video.
+- ⚠️ **La cuota de TTS se agoto**: los tres modelos usables (2.5-flash, 3.1-flash y 2.5-pro, este con
+  `limit: 0`) devolvieron 429. **V3 se saco por AI Studio desde su Chrome**, cambiando el modelo al mismo
+  3.1 que el resto (con el 3.8 por defecto la voz sale blanda igual).
+- **Cruzado en:** `como-trabajar-con-santiago.md` (regla fija nueva sobre la voz + registro de la cuota y
+  de los dos bugs de la UI de AI Studio) y `the-artist-method.md`.
+
 ## 2026-11-25 (tarde) — The Artist Method: oferta nueva de dibujo para el mercado ingles
 
 Santiago paso la fanpage de **Metodo Artista** (metododibujar.online, Argentina): *"Vamos con una oferta

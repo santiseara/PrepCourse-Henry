@@ -76,6 +76,36 @@ Santiago pasó su clave de Google AI Studio: *"para que no tengas que usar mi co
 - ⛔ **18/11/2026: el default pasó a `gemini-3.1-flash-tts-preview`, porque `gemini-3.8-flash-tts` LEE EN VOZ ALTA el bloque de estilo.** Esto se da vuelta con cada versión del modelo, así que **antes de cada tanda se corre un control de 7 palabras con el mismo estilo**: si dura 3-4 s está limpio, si dura 30 s está leyendo las instrucciones. Detalle en [[quizzes-reglas-de-armado]] (regla del 18/11).
 - **Si `gemini-2.5-flash-preview-tts` devuelve 429 (cuota), el reemplazo es `gemini-3.1-flash-tts-preview`** (registro del 2026-11-02, tanda rusa de piedras): con la misma voz Sulafat **no leyó las instrucciones de estilo en voz alta**. Verificar igual el primer wav antes de renderizar la tanda. `gemini-2.5-pro-preview-tts` comparte la cuota y también da 429.
 
+### ⛔ La voz no susurra: el estilo manda más que la velocidad (regla fija, 2026-11-25)
+Santiago, sobre la tanda 1 de [[the-artist-method]]: *"Porque susurra la voz, que suene normal, como la
+que te dije ayer que me gustó"*.
+- **Lo que la hace susurrar es el bloque de Style, no la voz.** Yo había escrito *"speaking softly and
+  close to the microphone, calm, unhurried"* y Sulafat obedeció: salió en susurro a 122 ppm.
+- **El estilo que funciona es el de [[fuga-perfecta]] del 24/11**, traducido: una mujer grabándose con el
+  celular para mostrarle algo que le encanta a una amiga, **hablando rápido y vivo, a volumen normal**,
+  con entonación despareja, *"talking, not reading"*, y los negativos explícitos: **never breathy, never
+  whispered, never a soft bedtime or meditation voice**. Con eso da 172-211 ppm en crudo y volumen normal.
+- **El control se hace sobre un guion entero, nunca sobre 7 palabras.** La frase corta dio "británico"
+  dos veces y "susurra" siempre; el guion completo dio General American y volumen normal. Y se pregunta
+  por **las tres cosas**: acento, volumen (¿susurra o habla normal?) y energía.
+- **Hay que verificar los 6, no uno.** En esta tanda cinco salieron bien y el sexto no: su texto hablaba
+  de calma y silencio, y el modelo **lee el ánimo del contenido**. Para esos se le escribe al estilo el
+  contraste a propósito: *"the words talk about calm, but SHE IS NOT CALM: full chest voice throughout"*.
+- **El `speed 1.20` no es un número fijo, es un objetivo de ppm.** Con un estilo que ya lee rápido, 1.20
+  atropella. Lo que se mantiene constante es el **ritmo final de 167-188 ppm**; el speed de cada video sale
+  de dividir. En `gen_tam_plans.py` eso quedó automático (`velocidad()` mide el wav y despeja).
+
+### Cuota de TTS: 10 por día y por modelo, y se acaba (registro 2026-11-25)
+Rehacer una tanda de 6 voces agota el día: `gemini-2.5-flash-preview-tts`, `gemini-3.1-flash-tts-preview`
+y `gemini-2.5-pro-preview-tts` (este con `limit: 0`) devolvieron todos 429.
+- **La salida es AI Studio desde su Chrome**, que tiene cuota aparte. En el playground de voz hay que
+  **cambiar el modelo al mismo que el resto de la tanda** (Gemini 3.1 Flash TTS Preview): con el 3.8 que
+  viene por defecto la voz sale blanda aunque el estilo diga lo contrario.
+- Con el 3.1 la UI cambia: el campo de estilo desaparece y el texto de dirección va en **"Scene"**.
+- 🐞 Al tipear en el desplegable de Style, el primer clic **elige el preset "Whisper"** y el texto del
+  guion se mete en el campo de estilo. Hay que apuntar al textbox por `ref` y cerrar con Escape antes de
+  escribir el guion.
+
 ## Créditos (regla fija, 2026-10-24)
 - **Siempre la opción más barata que sirva, en todo**: modelo, resolución y cantidad de generaciones. Santiago: *"acordate de usar siempre lo mas barato, para todo"*. El modelo caro solo si lo pide.
 - En HeyGen, **siempre Avatar IV**, nunca el modelo caro que viene por defecto ([[vsl-reglas-de-armado]] §3c).

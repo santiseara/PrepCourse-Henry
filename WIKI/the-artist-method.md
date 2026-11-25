@@ -30,8 +30,10 @@ Guiones en `OUTPUTS/2026-11-25-guiones-the-artist-method.md` (EN + ES voseo comp
 6. **Nunca supiste por dónde empezar / lo primero en años de lo que estás orgullosa** — *nuevo, del mercado inglés; el original no lo corre*
 
 ## Producción
-- **Voz: Sulafat por API**, `gemini-2.5-flash-preview-tts`, Style de mujer norteamericana hablando bajo y sin apuro. Acento verificado con `oir.py` sobre V1: *General American, natural y calmo*. ⚠️ El control de 7 palabras dio "británico" las dos veces: en una muestra tan corta el dictamen no sirve, hay que verificar sobre un guion entero.
-- `speed 1.20`, `silence [0.26, 0.12]`, cortes de 2,4 s, subtítulos de 2 palabras.
+- **Voz: Sulafat**, estilo de mujer norteamericana **hablando rápido y vivo, a volumen normal** (el de [[fuga-perfecta]] del 24/11 traducido al inglés, con los negativos explícitos: *never breathy, never whispered, never a soft bedtime voice*). V1, V2, V4, V5 y V6 por API con `gemini-3.1-flash-tts-preview`; **V3 por AI Studio desde su Chrome** con el mismo modelo, porque la cuota de API se agotó.
+- ⚠️ **La primera tanda salió susurrada** y Santiago la rebotó: *"Porque susurra la voz, que suene normal"*. La causa era mi bloque de Style (*"softly and close to the microphone"*), no la voz. Detalle y regla en [[como-trabajar-con-santiago]].
+- ⚠️ **V3 hay que forzarlo**: su texto habla de calma y silencio, y el modelo lee el ánimo del contenido. Sale bien solo con el contraste escrito a propósito (*"the words talk about calm, but SHE IS NOT CALM: full chest voice throughout"*).
+- **El speed es por video, no fijo.** `gen_tam_plans.py` mide cada wav y despeja el speed para que el montaje final caiga en **167-188 ppm**, la banda que validó Santiago. En esta tanda dio 0,86 a 1,24. `silence [0.26, 0.12]`, cortes de 2,4 s, subtítulos de 2 palabras.
 - **Cama musical:** `music_calma.py` (piano de fieltro + pad, 64 BPM, Am–F–C–G, sin percusión) a **−11 dB**, más baja que el default porque el formato es calmo.
 - **Pool:** los mismos **15 clips de TikTok** de manos dibujando de [[academia-del-trazo]] / [[drawing-world]] (ventanas y vetos ya revisados), 101 recortes.
 - **Efectos de sonido:** `papel` (la lista de proyectos) y `ding` (la placa final), los dos de `~/SFX/alias` ([[efectos-de-sonido]]). Nada más: el formato es calmo y el original no usa efectos.

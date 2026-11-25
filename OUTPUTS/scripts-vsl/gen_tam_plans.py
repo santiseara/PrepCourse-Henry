@@ -5,7 +5,7 @@ Modelada del ganador argentino Metodo Artista (metododibujar.online): mismo form
 ambar + chips terracota) y sus angulos ganadores. Mismo pool de 15 clips de TikTok que
 Academia del Trazo / The Drawing World (ventanas y vetos ya revisados).
 Uso: python3 gen_tam_plans.py   -> escribe V1.json .. V6.json en ~/Desktop/the-artist-method/anuncios/work/"""
-import os, json
+import os, json, wave
 
 WK = os.path.expanduser('~/Desktop/the-artist-method/anuncios/work')
 
@@ -36,6 +36,17 @@ FAM = {'A': 'esmit', 'B': 'dibujafacil', 'C': 'artejmc', 'D': 'grafitos', 'E': '
        'K': 'graphite', 'L': 'eli7', 'M': 'benito', 'N': 'fiinadys', 'O': 'azure'}
 SEG = 4.5
 TOPE = 8
+PPM = 178.0   # ritmo final objetivo: la banda que valido Santiago el 24/11 (167-188 ppm)
+
+
+def velocidad(n):
+    """Speed por video para que el montaje final caiga en PPM.
+    El estilo de voz del 25/11 lee entre 145 y 211 ppm en crudo segun el guion, asi que un
+    speed fijo (el 1.20 de la regla) deja unos arrastrados y otros atropellados. Medido:
+    a speed 1.00 el final sale a 0.988 del crudo (el editor recorta silencios)."""
+    w = wave.open(f'{WK}/vo/V{n}.wav')
+    crudo = len(open(f'{WK}/V{n}.txt').read().split()) / (w.getnframes() / w.getframerate()) * 60
+    return round(min(1.30, max(0.84, PPM / (crudo * 0.988))), 2)
 
 
 def pool_y_clips():
@@ -106,7 +117,7 @@ for v in VIDEOS:
         raise SystemExit(f"V{v['n']}: el primer plano {first} no esta en el pool.")
     plan = dict(
         vo=f"vo/V{v['n']}.wav", script=f"V{v['n']}.txt", lang='en',
-        speed=1.20, silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=2,
+        speed=velocidad(v['n']), silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=2,
         music='music/bed.wav', music_db=-11,
         hi='&H004BB2F0&', capy=1380,
         hook=v['hook'], hook_until=v['hook_until'],

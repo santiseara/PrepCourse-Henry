@@ -62,10 +62,13 @@ repartidos entre pareja, amigos, familia y grupo.
 - **Musica:** sale **del audio de sus propios anuncios**, no de un generador (correccion de Santiago del
   24/11: *"pusiste cualquier musica, es una verga"*), y va de **corrida continua, nunca en bucle**
   (segunda correccion: *"se repite la misma parte todo el video, la idea es que dejes correr esa cancion"*).
-  Los 7 con voz llevan el **instrumental del ad largo de Caso Criminal de 35,9 s** (pizzicato, marimba y
-  tictac de cuenta regresiva), sacado con `scripts-vsl/stems.py` (demucs, dos stems) y cortado con
-  `scripts-vsl/cama3.py`: cada video su propia ventana (V1 del 0 al 33, V2 del 4,5 al 35, etc.), asi que
-  nunca se repite un compas. Los 3 sin voz llevan `caso-01` (pop indie con vocal femenina, 15,6 s) al
+  Los 7 con voz llevan **"Daydream" del Gunter Kallmann Choir**, que es el tema que Caso Criminal usa en
+  `caso-05`: identificado con huella acustica, confirmado midiendo (cruce de cromas **0,981**, y el ad
+  arranca en el **segundo 3,97** del tema, a velocidad normal), y bajado entero de archive.org (3:20).
+  Los 7 arrancan en ese mismo segundo 3,97 y dejan correr el tema: sin bucle y sin cortes.
+  `scripts-vsl/cama3.py` con `CAMA_CRUDA=1` (el arreglo de agudos es solo para pistas arrancadas de un ad).
+  El camino de los stems (`scripts-vsl/stems.py`, demucs sobre sus ads largos) sirvio para descartar que
+  el tema estuviera mas largo en otro ad suyo: de los 198 que tienen, ninguno lo tiene. Los 3 sin voz llevan `caso-01` (pop indie con vocal femenina, 15,6 s) al
   frente, que ya daba de sobra para 10-14 s. Todo se levanta en agudos porque la Biblioteca sirve el audio
   en HE-AAC a 48 kbps. `cama2.py` (el que repetia la pista) queda obsoleto.
 - **Visuales: 21 clips, 32 encuadres, 94 ventanas.** Las 8 que paso Santiago (el producto) mas **12

@@ -5,7 +5,7 @@ Por que existe: cama2.py repetia una pista de 10 s para llenar 30 s y el empalme
 Aca la pista tiene que ser mas larga que el video: si no alcanza, el script CORTA y avisa,
 nunca repite. El instrumental sale de demucs sobre un ad con voz en off (ver stems.py).
 Uso: python3 cama3.py instrumental.wav salida.wav <segundos> [offset_seg]"""
-import sys, numpy as np, soundfile as sf
+import os, sys, numpy as np, soundfile as sf
 from scipy.signal import butter, sosfilt
 
 ent, sal, total = sys.argv[1], sys.argv[2], float(sys.argv[3])
@@ -13,10 +13,13 @@ OFF = float(sys.argv[4]) if len(sys.argv) > 4 else 0.0
 x, sr = sf.read(ent, dtype='float32')
 if x.ndim == 1: x = np.stack([x, x], 1)
 
-def hp(y, f): return sosfilt(butter(2, f, 'high', fs=sr, output='sos'), y, axis=0)
-def bp(y, a, b): return sosfilt(butter(2, [a, b], 'band', fs=sr, output='sos'), y, axis=0)
-x = x + 0.75 * hp(x, 4500) - 0.25 * bp(x, 200, 500)   # la Biblioteca sirve el audio a 48 kbps: + aire, - barro
-x = np.clip(x, -1, 1)
+# el arreglo de agudos es SOLO para pistas arrancadas de un ad (la Biblioteca las sirve a 48 kbps).
+# Si la pista es el tema original en calidad entera, levantar agudos la ensucia: CAMA_CRUDA=1 lo saltea.
+if os.environ.get('CAMA_CRUDA') != '1':
+    def hp(y, f): return sosfilt(butter(2, f, 'high', fs=sr, output='sos'), y, axis=0)
+    def bp(y, a, b): return sosfilt(butter(2, [a, b], 'band', fs=sr, output='sos'), y, axis=0)
+    x = x + 0.75 * hp(x, 4500) - 0.25 * bp(x, 200, 500)   # + aire, - barro
+    x = np.clip(x, -1, 1)
 
 need = int(total * sr); o = int(OFF * sr)
 if len(x) - o < need:

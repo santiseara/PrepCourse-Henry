@@ -228,6 +228,30 @@
   rehace solo lo que uno borró a mano (`music.wav`, `mix.wav` y el mp4 final). Los 6 salieron en el
   tiempo de 6 mezclas. **Por eso las carpetas `_tmp` no se borran hasta que la tanda está aprobada.**
 
+- ⛔⛔ **2026-11-25 · La regla de "la música sale del ganador" tiene una condición: que su audio la
+  tenga.** Santiago, después de dos intentos: *"Se escucha horrible, sin música, parece como si
+  estuvieran hablando de fondo, ponele buena música por favor"*. Tenía razón y lo que oía era el
+  **resto de la voz de ellos** que la separación no puede sacar. Antes de prometer la música del
+  ganador hay que **medir dos cosas en su mp4**: el **bitrate del audio** y la **relación música/voz**.
+  Si viene a 48 kbps y es 94 % voz (el caso de [[laser-profit-vault]]), **no hay cama ahí adentro** y
+  se avisa de entrada en vez de entregar dos tandas malas.
+  **La salida, cuando no la hay:** una pista real libre para uso comercial. **Pixabay**
+  (`pixabay.com/music`) sirve: sin atribución, mp3 a **256 kbps** y ancho de banda completo.
+  Se busca por el **mood del ganador**, no por el nicho (para láser/craft anduvo
+  *"Inspiring Happy Acoustic Folk"*: guitarras, piano, palmas). Se guarda el mp3 en
+  `~/Desktop/<oferta>/anuncios/musica/` con el nombre del autor.
+  🐞 **Chrome deja bajar UN blob por sitio**, así que las candidatas se bajan de a una, cada una
+  después de recargar.
+  **Cómo se arma la cama de una pista buena:** se mide el nivel **segundo a segundo** y se arranca
+  donde la pista ya está en pleno (no en la intro); **pasa-altos a 70 Hz** y un **hueco de −0,35 en
+  250-650 Hz** para que la voz se despegue; y **`music_db` −9**, no −11: a −11 Santiago dice que "no
+  se escucha música".
+- **2026-11-25 · Antes de separar la voz de un ad ajeno, fijarse si varios comparten pista.** Si la
+  comparten y arrancan igual, la **mediana por bin** entre varios recupera la música **limpia y gratis**
+  (la voz es distinta en cada uno, la música no). Se mide con la correlación de la envolvente en
+  3-8 kHz: cerca de 1 es la misma pista. En Taller Láser Rentable dio **0,1-0,2**, o sea una pista
+  distinta por anuncio.
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

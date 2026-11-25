@@ -84,7 +84,7 @@ for v in VIDEOS:
     plan = dict(
         vo=f"voces/V{v['n']}.wav", script=f"guiones/V{v['n']}.txt", lang='en',
         speed=1.20, silence=[0.26, 0.12], cut=[1.9, 2.2, 2.6], words=4,
-        music='music/bed.wav', music_db=-11,
+        music="music/bed.wav", music_db=-9,
         hi=AMARILLO, hibox=NEGRO, hibord=0, capy=1430, pop=True, italic=False, margin=60,
         font='Montserrat ExtraBold', fsize=66, spacing=2, outline=5, shadow=3,
         hook=v['hook'], hook_size=96, hook_y=200,

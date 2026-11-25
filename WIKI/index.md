@@ -101,6 +101,7 @@
 - ✅ [[creacion-de-productos-digitales]] — Producir rápido con Gamma, Sora y Claude sin bajar de 10/10, y el GPT como bonus.
 - ✅ [[aumento-de-aov]] — Backend: order bumps, upsells pre y post compra, KPIs y los 5 bumps que no se pisan.
 - 🆕 [[pan-sin-picos]] — Recetario de panes para diabéticos (AR), modelado de Mesa y Sabor. Quiz propio de 11 preguntas, personalizado y con receta de regalo.
+- 🆕 [[the-artist-method]] — Dibujo a lápiz desde cero en inglés, modelada de Método Artista (AR). Su ángulo nº1 es el ritual anti-celular para apagar la cabeza, y en inglés nadie vende dibujo como calma.
 - 🆕 [[drawing-world]] — Dibujo desde cero en inglés (drawing-world.impultienda.ar), modelada de Lumea Desenului: 430 ads en 13 días, 9 idiomas y el mercado inglés grande vacío.
 - 🆕 [[academia-del-trazo]] — Dibujo desde cero paso a paso (AR), modelada de Academia de Dibujo Creativo. Método de las 3 Capas, landing propia y los 6 ángulos que el original no corre.
 - 🆕 [[group-work-playbook]] — +150 dinámicas grupales en PDF (USD 27, mercado inglés), modelada de Talleres Listos. 6 módulos, 5 bonos y la DNA de sus ~160 ads.
@@ -163,6 +164,8 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-25 — Método Artista + radiografía del mercado inglés de dibujo](../OUTPUTS/2026-11-25-analisis-metodo-artista-y-mercado-ingles.md) — los 9 ads de más impresiones transcriptos, su oferta pieza por pieza, y la prueba de que en inglés el nicho sigue vacío y el ángulo de la calma no lo corre nadie · ver [[the-artist-method]]
+- [2026-11-25 — The Artist Method: tanda 1 de 6 guiones](../OUTPUTS/2026-11-25-guiones-the-artist-method.md) — el ritual de la noche, pantalla contra lápiz, diez minutos de paz, el peor consejo, nunca es tarde y el ángulo nuevo del orgullo · EN + ES voseo · ver [[the-artist-method]]
 - [2026-11-24 — The VRF Field System: las visuales de la tanda 1 (links)](../OUTPUTS/2026-11-24-vrf-field-system-links-visuales.md) — los 37 clips de TikTok del b-roll de los 6 ads, agrupados por tipo de plano (soldadura, azotea, diagnóstico, interiores, obra) · ver [[vrf-field-system]]
 - [2026-11-24 — Fuga Perfecta: la tanda 1 producida (10 creativos)](../OUTPUTS/2026-11-24-fuga-perfecta-tanda1-produccion.md) — que angulo copia cada video, voces y musica, las 8 visuales convertidas en 46 ventanas, y por que TikTok no dio un solo clip · ver [[fuga-perfecta]]
 - [2026-11-24 — Fuga Perfecta: tanda 1 de 10 guiones](../OUTPUTS/2026-11-24-guiones-fuga-perfecta-tanda1.md) — 7 guiones con voz (contra Netflix, el traidor, las 3 salas, familia sin pantallas, la reaccion del grupo, las cuentas y la objecion) y 3 placas del molde corto sin voz · ver [[fuga-perfecta]]

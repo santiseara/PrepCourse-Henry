@@ -1,3 +1,34 @@
+## 2026-11-25 (tarde) — The Artist Method: oferta nueva de dibujo para el mercado ingles
+
+Santiago paso la fanpage de **Metodo Artista** (metododibujar.online, Argentina): *"Vamos con una oferta
+nueva. Esta la vamos a tirar para el mercado de ingles. Quiero que te apegues a sus angulos ganadores y
+que tambien investigues ofertas similares... vamos con 6 anuncios de testeo"*. El nombre lo puso el:
+**The Artist Method**.
+
+- **El competidor, leido de verdad:** 20 ads activos desde el 4/11, los **9 de mas impresiones bajados y
+  transcriptos** con faster-whisper, y la landing entera. Su oferta son 220 proyectos en 8 niveles + 5
+  bonos, $19.990 ARS, garantia de 7 dias. **4 de sus 5 ads de mas impresiones corren un solo angulo:**
+  el ritual anti-celular antes de dormir. No vende aprender a dibujar, vende apagar la cabeza.
+- **El mercado ingles, verificado en la biblioteca** (frase exacta en US y GB): marcas personales
+  (Kirsty Partridge, Charly Clements), arte digital con Procreate, libros (21 Draw), apps y nichos
+  angostos (Japanese Doodling Class, Pigment & Papier, Draw Fantasy Maps). **Nadie corre el ebook low
+  ticket de lapiz desde cero**, igual que el 3/11 — y **el angulo de la calma no lo corre nadie** sobre
+  dibujo en ingles. De los ingleses se robaron las frases que si repiten: *"never knew where to start"*,
+  *"not talent"*, *"the first thing I've made in years that I'm actually proud of"*.
+- **Tanda 1: 6 guiones (EN + ES voseo) y 6 videos renderizados**, 29,8 a 48,4 s. Cinco sobre sus angulos
+  ganadores y **uno nuevo** (el orgullo / nunca supiste por donde empezar) que el original no corre.
+- **Produccion:** voz Sulafat por API (`gemini-2.5-flash-preview-tts`, acento General American verificado
+  con `oir.py` sobre el guion entero), `speed 1.20`, cama de `music_calma.py` a -11 dB, pool de los mismos
+  15 TikToks de manos dibujando de [[academia-del-trazo]], paleta terracota del ganador.
+  Scripts nuevos: `OUTPUTS/scripts-vsl/gen_tam_plans.py` y `edit_tam.py`.
+- ⚠️ **El control de voz de 7 palabras dijo "britanico" dos veces y el guion entero dio General American.**
+  En una muestra tan corta el dictamen de acento no sirve: hay que verificar sobre un guion completo.
+- **Nuevo:** `WIKI/the-artist-method.md`, `OUTPUTS/2026-11-25-analisis-metodo-artista-y-mercado-ingles.md`,
+  `OUTPUTS/2026-11-25-guiones-the-artist-method.md`.
+- **Cruzado en:** `efectos-de-sonido.md` (registro: la regla quedo cableada en el editor, no en el papel)
+  e `index.md`.
+- **Pendiente:** la oferta **no tiene landing**. Los ads no tienen donde caer todavia.
+
 ## 2026-11-25 — La biblioteca de efectos de sonido es la unica fuente de SFX
 
 Santiago paso su carpeta de Drive con sonidos: *"subila al cerebro y usa siempre los sonidos de la

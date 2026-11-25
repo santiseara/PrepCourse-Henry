@@ -13,6 +13,19 @@
 - Esto **no** quiere decir meterle efectos a todo. Siguen valiendo los límites que ya estaban: pocos y en momentos clave (unos 10 por VSL, 3–4 headlines con sonido por ad, ver [[vsl-reglas-de-armado]]) y **cero SFX** en los formatos donde ya estaba prohibido ([[estilo-de-video-ia]] punto 7, [[laboratorio-wow]], [[kit-de-radiestesia]], [[slime-shop-kit]], [[crochet-painting]], [[aromatic-plaster-atelier]]). La regla cambia **de dónde sale el archivo**, no cuántos van.
 - Si Santiago suma sonidos nuevos a la carpeta de Drive, se vuelven a bajar a `/Users/santiagoseara/SFX/` antes de la tanda siguiente.
 
+### Registro 2026-11-25 (tarde) — reconfirmada y cableada en el editor
+Santiago, al pedir la tanda de [[the-artist-method]]: *"si vas a usar efectos de sonido, tenés la carpeta
+subida que te mandé hace poco. Eso marcalo como regla. Siempre que uses efectos de sonido, que sean de la
+carpeta de Drive."*
+- **La regla ya no depende de que yo me acuerde.** `edit_tam.py` copia `~/SFX/alias/*.wav` a `sfx/` de la
+  carpeta temporal y **corta con error** si la biblioteca no está. La llamada a `sfx.py` quedó borrada del
+  editor, no solo retirada del papel. Los `edit_*.py` viejos siguen llamando a `sfx.py`: **hay que
+  parchearlos igual cuando se usen**.
+- La tabla de volúmenes del editor tenía solo 5 sonidos (`chaching`, `ding`, `pop`, `whoosh`, `sello`) y
+  reventaba con un `KeyError` al pedir cualquier otro. Ahora cubre 15 y cae a `0.26` por default.
+- En esa tanda se usaron **dos**: `papel` cuando entra la lista de proyectos y `ding` en la placa final.
+  Nada más, porque el formato es calmo: la regla dice de dónde sale el archivo, no que haya que meter más.
+
 ## Cómo se usa en el montaje
 
 Los editores (`edit_ugc_split.py` y los `edit_*.py` de `OUTPUTS/scripts-vsl/`) leen los efectos de la subcarpeta `sfx/` de la carpeta de trabajo y los buscan **por nombre `.wav`**. Entonces:

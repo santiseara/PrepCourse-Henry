@@ -23,7 +23,7 @@ Lo que esto implica en la práctica: **una toma = 8 s y 0 a 3 líneas de diálog
 4. **Una sola voz en todo el video**, con muestra de referencia fija, nunca descrita de nuevo en cada clip. Tonada publicitaria, enérgica, ~**185 palabras por minuto**.
 5. **Cero silencio.** Hay voz el 99 % del tiempo. Los únicos huecos son de medio segundo y marcan cambio de bloque.
 6. **Subtítulos karaoke obligatorios:** MAYÚSCULAS, sans bold, blanco con contorno negro grueso, **palabra activa en amarillo**, 2 a 4 palabras por placa, una placa cada 1,1-1,3 s, centrado abajo.
-7. **Una sola transición en todo el video** (un flash blanco de ~0,4 s) y sólo para cambiar de personaje o de bloque. Todo lo demás, corte seco. Cero whoosh, cero efecto de sonido.
+7. **Una sola transición en todo el video** (un flash blanco de ~0,4 s) y sólo para cambiar de personaje o de bloque. Todo lo demás, corte seco. Cero whoosh, cero efecto de sonido. *(Sigue valiendo después del 25/11: la biblioteca de [[efectos-de-sonido]] cambia de dónde sale el archivo cuando un formato lleva SFX, no habilita meterlos en este formato.)*
 8. **9:16, sin logo, sin marca de agua, sin placa final.** Termina en la cara del avatar.
 
 ## La prueba va adentro del plano

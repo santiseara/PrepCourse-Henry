@@ -131,6 +131,7 @@
 - 🆕 [[estilo-de-video-ia]] — ⭐ **La onda fija para cualquier video con IA (4/11)**: clips de 8 s desde una sola imagen de referencia, una voz a 185 ppm, cero silencio, subtítulos karaoke y la prueba adentro del plano. Sale del ad brasileño de pilates 50+.
 - ✅ [[ugc-y-video-generativo]] — Reglas fijas de UGC, avatares, testimonios para Sora 2 (14 s), Flow/VEO 3, avatar de VSL en HeyGen.
 - ✅ [[imagenes-y-mockups]] — NO FLAT COVERS, "Rules of $100K design", prompts de mockup e imagen, mockups transparentes para el checkout.
+- 🆕 [[efectos-de-sonido]] — ⭐ **La biblioteca de SFX de Santiago es la única fuente (25/11)**: 31 sonidos de su carpeta de Drive, copia local en `/Users/santiagoseara/SFX/` y 25 alias `.wav` listos para montar con los nombres que ya usan los scripts. `sfx.py` retirado.
 - ✅ [[natives-ganadoras]] — Las 3 natives ganadoras de piedras (imagen + descripción de 900 a 1.200 palabras), sus 13 patrones y la plantilla para armar nuevas.
 
 ## Conversión y operación

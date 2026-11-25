@@ -346,7 +346,14 @@ El recorte de silencios y el 1.3x se aplicaban al final, sobre el video ya rende
   - sello en la garantía;
   - "ding" en el tilde inicial;
   - "whoosh" al entrar la app y el testimonio.
-  Unos 10 en total. **No llenarlo de efectos.** Se sintetizan con `sfx.py`.
+  Unos 10 en total. **No llenarlo de efectos.**
+- **🆕 2026-11-25 · Los efectos salen SIEMPRE de la biblioteca de Santiago, ya no se sintetizan.**
+  Santiago: *"usa siempre los sonidos de la carpeta esta"* (su carpeta de Drive "efectos de sonido").
+  Copia local en `/Users/santiagoseara/SFX/`, versiones listas para montar en `/Users/santiagoseara/SFX/alias/`
+  con los mismos nombres que ya esperaban los scripts (`chaching.wav`, `ding.wav`, `pop.wav`, `whoosh.wav`,
+  `buzzer.wav`, `sello.wav`, `tick.wav`, `scribble.wav`). Se copian a `sfx/` de la carpeta de trabajo y listo.
+  **`sfx.py` queda retirado** (solo se recurre a él para un redoble, que la carpeta no tiene). Catálogo completo
+  y equivalencias en [[efectos-de-sonido]].
 - Los efectos van en el momento exacto de la palabra: se transcribe el video final con Whisper y se ubica cada uno sobre la palabra.
 
 ### 🆕 2026-10-29 · La cama musical por defecto es la de Herrero, a -8 dB

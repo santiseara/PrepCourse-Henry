@@ -1,3 +1,21 @@
+## 2026-11-25 — La biblioteca de efectos de sonido es la unica fuente de SFX
+
+Santiago paso su carpeta de Drive con sonidos: *"subila al cerebro y usa siempre los sonidos de la
+carpeta esta"*. Se bajaron los **31 archivos** de la carpeta "efectos de sonido" a
+`/Users/santiagoseara/SFX/` (9,1 MB, fuera del repo como el resto de los binarios) y se armaron
+**25 alias en `/Users/santiagoseara/SFX/alias/`**: wav 44,1 kHz estereo, sin el silencio del arranque
+(13 de los originales arrancaban mudos, `teclado.mp3` hasta 6,4 s), recortados a 0,2-4 s, a -16 LUFS
+con pico -1,5 dB y fundido de salida. Los alias llevan **los mismos nombres que ya esperaban los
+editores** (`chaching.wav`, `ding.wav`, `pop.wav`, `whoosh.wav`, `buzzer.wav`, `sello.wav`, `tick.wav`,
+`scribble.wav`), asi que ningun script se toca: se copian a `sfx/` de la carpeta de trabajo.
+
+- **Nuevo:** `WIKI/efectos-de-sonido.md` — la regla, el catalogo con duracion y uso de cada sonido, las
+  equivalencias con lo que pedia `sfx.py` y los volumenes de mezcla.
+- **`OUTPUTS/scripts-vsl/sfx.py` queda retirado.** Lo unico que tenia y la carpeta no es el redoble.
+- **Cruzado en:** `vsl-reglas-de-armado.md` (§4b, registro fechado), `estilo-de-video-ia.md` (punto 7:
+  la regla cambia de donde sale el archivo, no habilita SFX donde estaban prohibidos) e `index.md`.
+- **Falta en la carpeta:** redoble, high-five y risas (estos dos los pedia Fuga Perfecta).
+
 ## 2026-11-24 (tarde) — Fuga Perfecta: una sola voz y la musica de corrida, sin bucle
 
 Santiago aprobo las visuales y marco dos cosas mas: *"la musica de los que tienen guion, se repite la

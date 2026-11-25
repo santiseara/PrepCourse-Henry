@@ -99,8 +99,10 @@ Despiece completo con todos los links en `OUTPUTS/2026-11-25-visuales-fuga-perfe
 
 - **Las 8 de Flow (el producto)** → Drive, carpeta nueva **Ebook Fuga Perfecta (AR) / Contenido**
   (`1yYTu6sMN7kFUj5KSYS3C7CI82nqkvHQo`), numeradas 01 a 08 por lo que muestra cada una.
-- **Los 12 de Higgsfield (`seedance_2_0_mini`, el b-roll de gente)** siguen servidos por CloudFront y
-  los links directos están en el OUTPUT. Hay un 13° generado que quedó fuera del pool.
+- **Los 13 de Higgsfield (`seedance_2_0_mini`, el b-roll de gente)** van en la misma carpeta con
+  prefijo **IA**, para que se distingan de los del cliente de un vistazo. Santiago los pidió en el Drive
+  igual que los suyos: **las visuales de una oferta van completas a su carpeta, las del cliente y las
+  generadas.** Los links directos de CloudFront quedan en el OUTPUT.
 - **Copia local durable:** `~/Desktop/Fuga Perfecta/visuales/flow/` y `.../visuales/ia/`. Antes vivían
   solo en el scratchpad de la sesión del 24/11, que se borra solo: **el b-roll de una oferta se copia a
   su carpeta del Desktop el mismo día, no se deja en el scratchpad**.

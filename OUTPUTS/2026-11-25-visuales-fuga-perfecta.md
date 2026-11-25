@@ -22,7 +22,15 @@ https://drive.google.com/drive/folders/1yYTu6sMN7kFUj5KSYS3C7CI82nqkvHQo
 ⚠️ **v7 (las hojas) tiene la tilde rota de la IA**: dice *"DESAFÃO EXPRESS"*. En los ads se arregla
 reencuadrando (`zoom 1.55` / `1.95`), no se tira.
 
-## Los 12 de Higgsfield (b-roll de gente) — links directos
+## Los 13 de Higgsfield (b-roll de gente) — también en la carpeta Contenido
+
+Subidos el 25/11 a pedido de Santiago, con prefijo **IA** para que no se mezclen con los suyos:
+`IA 01` amigos sobre el mapa · `IA 02` pareja con el control · `IA 03` el lacre a la luz de velas ·
+`IA 04` grupo festejando · `IA 05` la servilleta · `IA 06` familia con los sobres · `IA 07` cenital ·
+`IA 08` pareja leyendo · `IA 09` pinboard · `IA 10` dos amigas · `IA 11` celular contra los libros ·
+`IA 12` familia festejando · `IA 13` el que no se usó.
+
+### Links directos de CloudFront
 
 Prefijo: `https://d8j0ntlcm91z4.cloudfront.net/user_3JMd1P4OP4kdbC3QfhPXsnXrTdX/`
 
@@ -53,5 +61,5 @@ La lista de los 407 IDs sigue guardada por si la querés mirar a ojo.
 
 ## Copia local
 
-`~/Desktop/Fuga Perfecta/visuales/flow/` (8) y `~/Desktop/Fuga Perfecta/visuales/ia/` (12).
+`~/Desktop/Fuga Perfecta/visuales/flow/` (8) y `~/Desktop/Fuga Perfecta/visuales/ia/` (13).
 Antes vivían solo en el scratchpad de la sesión del 24/11, que se borra solo.

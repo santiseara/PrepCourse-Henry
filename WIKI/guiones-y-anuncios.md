@@ -184,6 +184,21 @@
   minutos; descubrirlo en el render cuesta la tanda entera. Es la regla del 5/11 de [[orzzen-automatas]]
   (los dos bordes de la ventana) llevada a **toda** la ventana.
 
+- ⛔ **2026-11-25 · Lo que mata un ad en un nicho de "grabá cualquier cosa" NO es texto: es el OBJETO,
+  y ningún filtro automático lo ve.** En [[laser-profit-vault]], después del filtro denso, del pase a ojo
+  y de la segunda pasada a 3 cuadros/s, el render todavía traía un **vaso grabado con personajes de
+  Marvel** (se le ve el escudo del Capitán América) y un **cuchillo de chef ocupando todo el cuadro**.
+  Antes se habían caído por lo mismo una **Glock**, un **cargador de fusil**, el **escudo del Barcelona**,
+  **Bugs Bunny** y un **personaje de Disney**. El OCR no lee dibujos y el detector de caras no ve un arma.
+  Regla: en un nicho donde el producto es *grabar o cortar cualquier cosa* (láser, CNC, sublimación,
+  bordado, vinilo), al pase a ojo se le suma **una tira de 8 cuadros de cada finalista** y la pregunta
+  *¿lo que se está grabando es un arma, un personaje con derechos o el logo de una marca?*. De 257 clips
+  quedaron 36.
+- 🐞 **2026-11-25 · El emoji ⚙️ sale como cuadradito.** `png_chip` manda a la fuente de emoji solo lo que
+  está por encima de `0x1F000`, y **⚙️ es U+2699**: cae en Arial Unicode, que no lo tiene, y el chip
+  muestra dos cajas vacías. Pasa igual con ✅, ☀️ y ✨. El corte quedó en **`0x2000`**. Se detecta en la
+  hoja del render, no en el código.
+
 ## Estructura
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).

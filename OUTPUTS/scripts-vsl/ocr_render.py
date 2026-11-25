@@ -5,7 +5,7 @@ import os, re, sys, subprocess, glob, collections
 SP, VID, GUION = sys.argv[1], sys.argv[2], sys.argv[3]
 D = '/Users/santiagoseara/PrepCourse-Henry/OUTPUTS/scripts-vsl'
 FF = os.path.expanduser('~/bin/ffmpeg')
-tmp = SP + '/_ocr'; os.system('rm -rf ' + tmp); os.makedirs(tmp)
+tmp = SP + '/_ocr_' + os.path.basename(VID).split('.')[0]; os.system('rm -rf ' + tmp); os.makedirs(tmp)
 subprocess.run([FF,'-v','error','-y','-i',VID,'-vf','fps=2,scale=900:-2','-q:v','3',tmp+'/f_%03d.jpg'],check=True)
 mios = set(re.sub(r'[^a-z0-9]',' ', open(GUION).read().lower()).split())
 mios |= set('instant access tap the button ready to cut categories sheet dollars weekend market plywood '

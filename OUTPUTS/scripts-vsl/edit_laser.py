@@ -296,7 +296,7 @@ def png_box(txt, path, y=250, size=58):
 def png_chip(txt, icon, path):
     im = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(im); f = font(74, BC)
     t_ = txt.upper(); fi = font(52, ICONF)
-    emo = emoji_img(icon, 56) if icon and ord(icon[0]) > 0x1F000 else None
+    emo = emoji_img(icon, 56) if (icon and ord(icon[0]) > 0x2000) else None   # U+2699 (engranaje) cae fuera de 0x1F000 y salia como cuadradito
     iw = (emo.width + 16) if emo else ((d.textlength(icon, font=fi) + 16) if icon else 0)
     while d.textlength(t_, font=f) + iw > W - 150 and f.size > 40: f = font(f.size - 4, BC)
     tw = d.textlength(t_, font=f) + iw; bw, bh = tw + 70, 96

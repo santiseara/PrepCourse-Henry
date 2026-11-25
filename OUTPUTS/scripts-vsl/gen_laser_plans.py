@@ -64,7 +64,7 @@ VIDEOS = [
         dict(type='money', left='1 ORNAMENT', right='$18', word='eighteen', occ=0, dur=2.6),
     ]),
     dict(n=4, hook='STOP RUINING|GOOD SHEETS', hasta=('fault', 0), overlays=[
-        dict(type='chip', text='calibration + LightBurn settings', icon='⚙️', word='calibration', occ=0, dur=2.6),
+        dict(type='chip', text='calibration + LightBurn settings', icon='🔧', word='calibration', occ=0, dur=2.6),
         dict(type='money', left='PLYWOOD', right='$4 A SHEET', word='four', occ=0, dur=2.6),
     ]),
     dict(n=5, hook='WHAT YOU CUT IN NOVEMBER|YOU SELL IN DECEMBER', hasta=('sales', 0), overlays=[

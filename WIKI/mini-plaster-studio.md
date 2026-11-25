@@ -82,11 +82,12 @@ Santiago pidió *"que se escuche pero que no tape la voz"*. El editor escala la 
 de toda la pista de voz**, que incluye las pausas y las colas bajas, así que el número del plan queda
 **4 dB corto** respecto de lo que se oye sobre el habla.
 - Medido en esta tanda: con `music_db -11` la música quedaba **15,2 dB por debajo del habla real**
-  (inaudible); con **`-7` queda en −11,2 dB**, que es la banda donde se escucha y no tapa.
+  (inaudible); con `-7` quedaba en −11,2 dB y Santiago pidió *"bajale un poco, un poco nada más"*.
+  **Quedó en `-9`, que da −13 dB sobre el habla**: esa es la referencia para la próxima tanda.
 - **Cómo se verifica, sin oír nada:** se leen `vo.wav` y `music.wav` de la carpeta `_tmp` del render,
   se toman solo las muestras donde `|voz| > 0,02` (el habla de verdad) y se compara el RMS de las dos.
-  Objetivo **−11 a −12 dB**. Los seis de esta tanda dieron entre −10,8 y −11,8, con pico de −1,9 dB
-  (sin saturar).
+  **Objetivo −13 dB** (lo que aprobó Santiago). Los seis de esta tanda dieron entre −12,8 y −13,8.
+  Un escalón de 2 dB en el plan es lo que él llama *"un poco"*.
 - Es la hermana de la regla de [[laser-profit-vault]] del mismo día, donde a −11 Santiago tampoco la
   escuchaba y hubo que subir a −9.
 

@@ -98,8 +98,8 @@ for v in VIDEOS:
     plan = dict(
         vo=f"vo/V{v['n']}.wav", script=f"V{v['n']}.txt", lang='en',
         speed=velocidad(v['n']), silence=[0.26, 0.12], cut=[1.9, 2.4, 2.9], words=2,
-        music='music/bed.wav', music_db=-7,    # 25/11: su pista de Pixabay. El editor mide la voz entera, no solo el habla:
-        # a -7 la musica queda 11 dB por debajo del habla real, que es donde se escucha sin tapar
+        music='music/bed.wav', music_db=-9,    # 25/11: su pista de Pixabay. El editor mide la voz entera, no solo el habla:
+        # a -9 la musica queda 13 dB por debajo del habla real (Santiago, 25/11: "bajale un poco")
         hi='&H00B857EE&', capy=1390,
         hook=v['hook'], hook_until=v['hook_until'],
         first=first, seed=v['n'] * 110,

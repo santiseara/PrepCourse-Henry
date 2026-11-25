@@ -93,6 +93,19 @@ repartidos entre pareja, amigos, familia y grupo.
 - ✅ **Las páginas de tag de TikTok sí se raspan** (confirma la regla del 16/11). Rindieron: `familygamenight` (83), `familygamesnight` (87), `murdermysteryparty` (100), `escaperoomathome` (77), `gamenightwithfriends` (66), `juegosdemesa` (30). **No rindieron:** `gamenight` (página no disponible, el tag está ocupado por videojuegos) ni `boardgamenight`/`escaperoom`/`datenightathome` (la SPA no cargó). Total: **407 IDs únicos**.
 - Los despieces completos quedaron en el scratchpad de la sesión del 24/11.
 
+## Dónde están las visuales (25/11/2026)
+
+Despiece completo con todos los links en `OUTPUTS/2026-11-25-visuales-fuga-perfecta.md`.
+
+- **Las 8 de Flow (el producto)** → Drive, carpeta nueva **Ebook Fuga Perfecta (AR) / Contenido**
+  (`1yYTu6sMN7kFUj5KSYS3C7CI82nqkvHQo`), numeradas 01 a 08 por lo que muestra cada una.
+- **Los 12 de Higgsfield (`seedance_2_0_mini`, el b-roll de gente)** siguen servidos por CloudFront y
+  los links directos están en el OUTPUT. Hay un 13° generado que quedó fuera del pool.
+- **Copia local durable:** `~/Desktop/Fuga Perfecta/visuales/flow/` y `.../visuales/ia/`. Antes vivían
+  solo en el scratchpad de la sesión del 24/11, que se borra solo: **el b-roll de una oferta se copia a
+  su carpeta del Desktop el mismo día, no se deja en el scratchpad**.
+- **TikTok no tiene nada que pasar acá:** 407 IDs, 155 clips, 0 útiles (ver más arriba).
+
 ## Preguntas abiertas
 
 - ¿El contador de la landing va de 10 minutos (nuestra regla fija) o largo como el de ellos, que usan más de 12 horas?

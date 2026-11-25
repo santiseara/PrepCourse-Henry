@@ -1,3 +1,15 @@
+## 2026-11-25 (noche) — Fuga Perfecta: las visuales entregadas
+
+- Santiago pidio todas las visuales de la oferta. Las **8 que hizo en Flow** (el producto) subidas a una
+  carpeta nueva **Contenido** dentro de `Ebook Fuga Perfecta (AR)`, numeradas 01 a 08.
+- Los **12 clips de Higgsfield** (`seedance_2_0_mini`, el b-roll de gente) se mapearon uno a uno con sus
+  generaciones por tamano de archivo y se pasaron los links directos de CloudFront. Aparecio un 13°
+  generado que nunca entro al pool.
+- **TikTok: cero.** 407 ids, 155 clips bajados, 0 utiles. No hay links que pasar.
+- Las 20 visuales estaban **solo en el scratchpad del 24/11**: copiadas a
+  `~/Desktop/Fuga Perfecta/visuales/`. Regla nueva en `WIKI/fuga-perfecta.md`.
+- Nuevo: `OUTPUTS/2026-11-25-visuales-fuga-perfecta.md`.
+
 ## 2026-11-25 (tarde II) — Oferta nueva para el mercado ingles: Mini Plaster Studio
 
 Santiago mando el ganador argentino **Mini Yesitos para Pintar** (`miniyesitos.brujulanegocios.com`,

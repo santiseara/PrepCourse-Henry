@@ -1,3 +1,15 @@
+## 2026-11-26 (II) — The 3D Method: los videos del Drive renombrados por su hook
+
+Santiago: *"Poneles el nombre con los hooks"*. Los habia subido como `26-11 - 1.mp4` a `26-11 - 6.mp4`,
+que es el nombre de **tanda** del Escritorio, no el de **entrega**.
+
+- Los 6 renombrados en `Ebook The 3D Method (EN) / Videos terminados` por el arranque de su hook, sin
+  numero ni fecha y sin apostrofos ni signos de pregunta, como la tanda de [[laser-profit-vault]].
+- Los masters del Escritorio **se quedan con `DD-M - N`**: son dos nombres a proposito, uno para cargar
+  el ad en Meta y otro para que el sepa cual es cada video sin abrirlo.
+- Registro con fecha en [[organizacion-y-registro]], con el chequeo barato: **si el nombre en el Drive
+  tiene un numero, esta mal**.
+
 ## 2026-11-26 — Oferta nueva para el mercado ingles: The 3D Method
 
 Santiago mando el ganador argentino **Metodo 3D - Juan Avalos** (`metodo3d.shop`) para llevarlo al

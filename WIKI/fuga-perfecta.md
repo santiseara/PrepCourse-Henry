@@ -108,6 +108,43 @@ Despiece completo con todos los links en `OUTPUTS/2026-11-25-visuales-fuga-perfe
   su carpeta del Desktop el mismo día, no se deja en el scratchpad**.
 - **TikTok no tiene nada que pasar acá:** 407 IDs, 155 clips, 0 útiles (ver más arriba).
 
+## Renovaciones (25/11/2026): 3 variables del Guion 2
+
+Pedido de Santiago: *"3 renovaciones, y quiero que sean todas variables del video que empieza como 'Es un
+juego..'. Variables buenas, respetando estructura, ángulo y sentido"*. Guiones en
+`OUTPUTS/2026-11-25-guiones-fuga-perfecta-renovaciones.md`.
+
+| # | Hook | Formato del hook | Dur. |
+|---|---|---|---|
+| R1 | *Hay un sobre en este juego que no se abre delante de nadie* | la regla secreta | 30,1 s |
+| R2 | *Esta noche uno de tus amigos te va a mentir en la cara, y lo vas a invitar vos* | acusación en segunda persona | 26,1 s |
+| R3 | *Terminamos el juego y seguíamos discutiendo quién nos había estado frenando* | storytime / lo de después | 28,6 s |
+
+- **El cuerpo no se toca** ([[renovacion-de-creativos]]): sobre a solas → en uno dice lo contrario → que
+  nadie salga y que no se note → mentir con los números, la etapa equivocada, perder tiempo → se descubre
+  cuando el reloj llega a cero → lo imprimís hoy y lo jugás esta noche.
+- **El `usage` es COMPARTIDO entre las tres** (`usage_ren.json`), no uno por video. Así el repartidor de
+  planos evita lo que ya usó la anterior y las tres salen con b-roll distinto: es la respuesta directa a
+  la corrección del 24/11 (*"usás en todos las mismas visuales"*). Con un usage por video el pool arranca
+  de cero cada vez y los tres eligen lo mismo.
+- **Voz:** Sulafat, `style.txt` de la tanda del 24/11, `speed 1.20`. ⚠️ **Las tres salieron de modelos
+  distintos porque la cuota diaria se agotó en medio**: R1 con `gemini-2.5-flash-preview-tts`, R2 con
+  `gemini-3.1-flash-tts-preview` y R3 con `gemini-3.8-flash-tts` (que lee el style en voz alta: se cortó
+  el wav en el segundo 18,22, donde arranca la primera palabra del guion). Medido antes de aceptarlas:
+  F0 de 200, 210 y 218 Hz, una dispersión **menor que la que ya tenía la tanda del 24/11** entre sus
+  propios videos (184 a 195 Hz), así que no se oye el cambio de modelo.
+- **Música:** la misma de la tanda, "Daydream" del Gunter Kallmann Choir, corrida continua desde el
+  segundo 3,97, `CAMA_CRUDA=1`. Medida contra el habla: **−14,0 / −13,8 / −13,6 dB**, en la referencia
+  de −13 dB que aprobó.
+- ⛔ **El recorte `v3z@0.1` se cayó del pool.** Es el zoom 1,7 sobre el arranque de la carta de madera:
+  textura crema desenfocada donde no se lee nada, y en el primer R2 ocupaba casi 3 s seguidos. Se vio en
+  la hoja del render, no en el pool.
+- Scripts: `OUTPUTS/scripts-vsl/gen_fuga_ren.py` (clona `plan2.json` y le cambia voz, hook, anclas y
+  semilla) y el mismo `edit_fuga.py`, que **se parcheó para leer los efectos de `~/SFX/alias`** en vez de
+  llamar a `sfx.py` ([[efectos-de-sonido]]); esta tanda no lleva ninguno, igual que la del 24/11.
+- **Entrega:** `Ebook Fuga Perfecta (AR) / Videos terminados`, másters en
+  `~/Desktop/Fuga Perfecta/anuncios/` como `25-11 - R1.mp4` a `R3.mp4`.
+
 ## Preguntas abiertas
 
 - ¿El contador de la landing va de 10 minutos (nuestra regla fija) o largo como el de ellos, que usan más de 12 horas?

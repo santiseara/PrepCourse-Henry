@@ -30,6 +30,10 @@ carpeta de Drive."*
 Santiago, al pedir la tanda de [[mini-plaster-studio]]: *"si vas a usar efectos de sonido, tenés la
 carpeta subida que te mandé hace poco. Eso marcalo como regla. Siempre que uses efectos de sonido, que
 sean de la carpeta de Drive."*
+- **`edit_fuga.py` parcheado el 25/11 (noche)**, al renovar [[fuga-perfecta]]: era uno de los viejos que
+  todavía llamaba a `sfx.py`. Ahora copia `~/SFX/alias/*.wav` y corta con error si falta, y su tabla de
+  volúmenes pasó de 5 sonidos a 20 con `DEF_VOL = 0.26` (antes `VOL[s_]` reventaba con `KeyError`).
+  La tanda no usa ningún efecto: el molde largo del ganador no lleva.
 - `edit_my.py` nace ya con la biblioteca cableada (hereda de `edit_tam.py`): copia `~/SFX/alias/*.wav`
   y **corta con error** si la carpeta no está. Ningún `edit_*.py` nuevo vuelve a llamar a `sfx.py`.
 - En esa tanda se usaron **cinco, uno por video**: `chaching` cuando aparece el precio de venta (V1 y

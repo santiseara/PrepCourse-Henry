@@ -1,3 +1,14 @@
+## 2026-11-25 (noche II) — Fuga Perfecta: 3 renovaciones del guion del traidor
+
+- Variables del Guion 2 con el cuerpo validado intacto y tres formatos de hook: la regla secreta, la
+  acusacion en segunda persona y el storytime de lo que paso despues. 30,1 / 26,1 / 28,6 s.
+- **Usage compartido entre los tres videos**, para que no repitan planos entre si.
+- La cuota diaria de TTS se agoto a mitad de camino: una voz por modelo (2.5, 3.1 y 3.8), verificado por
+  F0 que la dispersion es menor que la que ya tenia la tanda del 24/11.
+- `edit_fuga.py` parcheado para leer los efectos de `~/SFX/alias` y con tabla de volumenes de 20 sonidos.
+- Se cayo del pool el recorte `v3z@0.1` (crema desenfocada, casi 3 s seguidos en el primer R2).
+- Nuevo: `OUTPUTS/2026-11-25-guiones-fuga-perfecta-renovaciones.md`, `OUTPUTS/scripts-vsl/gen_fuga_ren.py`.
+
 ## 2026-11-25 (noche II) — The Artist Method: las descripciones de los ads
 
 - Descripciones para los 6 videos de la tanda 1, en **ingles y espanol con voseo**: un principal con el

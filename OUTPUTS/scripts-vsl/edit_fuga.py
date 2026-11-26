@@ -488,8 +488,21 @@ if P.get('music'):
     sf.write(f'{tmp}/music.wav', np.clip(m_, -1, 1), sr_); MVOL = 1.0
 else:
     run(['python3', os.path.join(DIR, 'music.py'), f'{L + 1:.2f}', f'{tmp}/music.wav']); MVOL = 0.10
-if not os.path.exists(f'{tmp}/sfx/whoosh.wav'): run(['python3', os.path.join(DIR, 'sfx.py'), f'{tmp}/sfx'])
-VOL = {'chaching': 0.30, 'ding': 0.26, 'pop': 0.26, 'whoosh': 0.30, 'sello': 0.40}
+# 25/11/2026: los efectos salen SIEMPRE de la biblioteca de Santiago (~/SFX/alias), nunca sintetizados.
+# sfx.py quedo retirado. Ver WIKI/efectos-de-sonido.md.
+ALIAS = os.path.expanduser('~/SFX/alias')
+if not os.path.exists(f'{tmp}/sfx/whoosh.wav'):
+    if not os.path.isdir(ALIAS):
+        raise SystemExit('falta la biblioteca de efectos en ~/SFX/alias (ver WIKI/efectos-de-sonido.md)')
+    os.makedirs(f'{tmp}/sfx', exist_ok=True)
+    import shutil
+    for _f in os.listdir(ALIAS):
+        if _f.endswith('.wav'): shutil.copy(os.path.join(ALIAS, _f), f'{tmp}/sfx/{_f}')
+VOL = {'chaching': 0.30, 'ding': 0.26, 'pop': 0.26, 'whoosh': 0.30, 'sello': 0.40,
+       'papel': 0.26, 'tick': 0.22, 'swoosh': 0.26, 'scribble': 0.22, 'burbuja': 0.22,
+       'texto': 0.24, 'camara': 0.24, 'sorpresa': 0.24, 'flare': 0.24, 'impacto': 0.26,
+       'llamada': 0.26, 'alarma': 0.26, 'boom': 0.30, 'subdrop': 0.30, 'glitch': 0.24}
+DEF_VOL = 0.26
 if isinstance(P.get('whoosh', []), list): hits += [('whoosh', cuts[i] - 0.18) for i in P.get('whoosh', []) if 0 < i < len(cuts) - 1]
 for snd, word, occ in P.get('sfx', []):
     w = wt(word, occ)
@@ -531,7 +544,7 @@ ains = ['-i', f'{tmp}/vo.wav', '-i', f'{tmp}/music.wav'] + sum([['-i', f'{tmp}/s
 afc = [f"[1:a]aresample=48000,volume={MVOL},afade=t=out:st={max(0, L - 1.2):.2f}:d=1.2[m]"]
 for k, (s_, t) in enumerate(hits):
     ms = int(max(0, t) * 1000)
-    afc.append(f"[{2 + k}:a]aresample=48000,volume={VOL[s_]},adelay={ms}|{ms}[w{k}]")
+    afc.append(f"[{2 + k}:a]aresample=48000,volume={VOL.get(s_, DEF_VOL)},adelay={ms}|{ms}[w{k}]")
 afc.append(f"[0:a]apad=pad_dur=1[vo];[vo][m]{''.join(f'[w{k}]' for k in range(len(hits)))}amix=inputs={2 + len(hits)}:duration=first:normalize=0[a]")
 run([FF, '-v', 'error', '-y'] + ains + ['-filter_complex', ';'.join(afc), '-map', '[a]', '-t', f'{L:.2f}', f'{tmp}/mix.wav'])
 run([FF, '-v', 'error', '-y', '-i', f'{tmp}/video.mp4', '-i', f'{tmp}/mix.wav', '-map', '0:v', '-map', '1:a',

@@ -29,6 +29,13 @@ Guiones en `OUTPUTS/2026-11-25-guiones-the-artist-method.md` (EN + ES voseo comp
 5. Nunca es tarde (el león) — *sus ángulos nº3 y nº4 fundidos*
 6. **Nunca supiste por dónde empezar / lo primero en años de lo que estás orgullosa** — *nuevo, del mercado inglés; el original no lo corre*
 
+## Descripciones para los ads (2026-11-25)
+`OUTPUTS/2026-11-25-descripcion-the-artist-method.md` (EN + ES voseo). Forma corta de la regla del 11/11 ([[guiones-y-anuncios]]): mecanismo en la primera línea, 3 bullets con ✅, bonos + garantía, CTA. Un principal con el ángulo nº1 (el ritual anti-celular) y tres variantes de dos renglones: ritual de la noche, "nunca supiste por dónde empezar" y el peor consejo.
+- **Sin prueba social:** el original corre "+3.600 descargas ⭐⭐⭐⭐⭐" en la descripción del enlace; nosotros somos marca nueva y no hay descargas que contar, así que no va ningún número de ese tipo.
+- **Acá el copy lleva mecanismo y bonos aunque el original no los lleve**, porque la tanda sale sin landing: el texto principal tiene que hacer de página.
+- Sin precio (regla del 5/11) y con la garantía de 30 días en todas las piezas.
+- ⚠️ Falta contar cuántos `body` únicos corre el ganador (regla del 23/11): si corre uno solo, la variación va al video y se clona un texto en los 6 ads.
+
 ## Producción
 - **Voz: Sulafat**, estilo de mujer norteamericana **hablando rápido y vivo, a volumen normal** (el de [[fuga-perfecta]] del 24/11 traducido al inglés, con los negativos explícitos: *never breathy, never whispered, never a soft bedtime voice*). V1, V2, V4, V5 y V6 por API con `gemini-3.1-flash-tts-preview`; **V3 por AI Studio desde su Chrome** con el mismo modelo, porque la cuota de API se agotó.
 - ⚠️ **La primera tanda salió susurrada** y Santiago la rebotó: *"Porque susurra la voz, que suene normal"*. La causa era mi bloque de Style (*"softly and close to the microphone"*), no la voz. Detalle y regla en [[como-trabajar-con-santiago]].

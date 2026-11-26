@@ -1,3 +1,14 @@
+## 2026-11-25 (noche II) — The Artist Method: las descripciones de los ads
+
+- Descripciones para los 6 videos de la tanda 1, en **ingles y espanol con voseo**: un principal con el
+  angulo nº1 del ganador (el ritual anti-celular) y tres variantes de dos renglones (ritual de la noche,
+  "nunca supiste por donde empezar", el peor consejo), mas la linea unica.
+- Forma corta de la regla del 11/11: mecanismo + 3 bullets + bonos y garantia + CTA. **Sin precio** y
+  **sin prueba social** (marca nueva: el "+3.600 descargas" del original no se clona).
+- Como la tanda sale **sin landing**, el copy lleva el mecanismo y los 5 bonos para hacer de pagina.
+- Nuevo: `OUTPUTS/2026-11-25-descripcion-the-artist-method.md`. Actualizados `WIKI/the-artist-method.md`
+  y `WIKI/index.md`.
+
 ## 2026-11-25 (noche) — Fuga Perfecta: las visuales entregadas
 
 - Santiago pidio todas las visuales de la oferta. Las **8 que hizo en Flow** (el producto) subidas a una

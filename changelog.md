@@ -72,6 +72,12 @@ Santiago mando el ganador argentino **orbitadigital2026.com** (AcademiaPractica.
   musica a -12,7/-13,3 dB sobre el habla.
 - 🐞 `comprimir_drive.py` con `-preset veryslow` tarda mas de una hora por video a 1080x1920;
   con `-preset medium` los 6 salieron en 60 segundos, mismo tamano.
+- ⛔ **Corregido el mismo dia: la voz pasa a HOMBRE (Orus).** Santiago: *"Es un nicho de hombres,
+  cuando es asi la voz tiene que ser de hombre"*. El sexo de la voz lo decide el nicho, no el ganador
+  (que corre locutora mujer). Los 6 regenerados, re-renderizados y reemplazados en el Drive.
+- 🐞 **Orus en `gemini-3.1-flash-tts-preview` sale a 195 Hz** (indistinguible de Sulafat, 213 Hz);
+  en `gemini-2.5-flash-preview-tts` da **122-136 Hz**. Y preguntarle a Gemini si la voz es de hombre
+  o de mujer **no sirve**: el sexo se mide con el F0 por cepstrum.
 - Nuevo en la WIKI: [[puertas-de-acm]]. Nuevos scripts: `gen_acm_plans.py`, `edit_acm.py`,
   `ventanas_acm.py`, `cama_acm.py`. Guiones en
   `OUTPUTS/2026-11-26-guiones-puertas-acm-LATAM-tanda1.md`.

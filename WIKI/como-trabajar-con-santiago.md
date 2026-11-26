@@ -67,6 +67,26 @@ Santiago: *"Usa las voces que siempre usas, si es de hombre usa de hombre, si es
 - Solo se estrena una voz nueva **si él la pide**. Extiende la regla del 27/10 ("usá siempre las voces que te digo que sirven, no innoves una nueva cada vez") a todas las ofertas y herramientas.
 
 
+### ⛔ El sexo de la voz lo decide el NICHO, no el ganador (REGLA FIJA, 2026-11-26)
+Santiago, sobre la tanda 1 de [[puertas-de-acm]]: *"Es un nicho de hombres, cuando es así la voz tiene
+que ser de hombre, ajustalo con alguna que quede bien."*
+- Yo había puesto **mujer** porque el ganador corre locutora (le medí el F0 a sus ads: 198-219 Hz) y la
+  regla decía "según el avatar de la oferta". **Clonar su locutora no es el criterio.** Si el que compra
+  es un herrero, un carpintero, un tornero o un albañil, la voz va de **hombre**, aunque el ganador la
+  use de mujer. Al revés también: nicho de mujeres → mujer.
+- Las voces no cambian: **hombre → Orus, mujer → Sulafat**. Lo que cambia es cuál de las dos se elige.
+
+### 🐞 Orus suena a mujer en el modelo 3.1: el sexo de la voz se MIDE (2026-11-26)
+Con **`gemini-3.1-flash-tts-preview`**, Orus salió a **195 Hz de F0** — 18 Hz por debajo de Sulafat, o
+sea indistinguible de una voz de mujer. Con **`gemini-2.5-flash-preview-tts`** la misma voz y el mismo
+bloque de estilo dan **122-136 Hz**, que es un hombre de verdad.
+- **Para una voz de hombre, el modelo es `gemini-2.5-flash-preview-tts`.** El 3.1 queda para mujer.
+- ⛔ **Preguntarle a Gemini "¿es hombre o mujer?" NO sirve**: con la pregunta corta contestó "HOMBRE"
+  para las dos voces, y con la pregunta larga contestó "Hombre" hasta para Sulafat. Lo único que
+  distingue es **el F0 por cepstrum** sobre el wav: hombre 110-145 Hz, mujer 190-225 Hz. Una
+  autocorrelación simple tampoco sirve, engancha el primer armónico y da ~220 Hz para las dos.
+- Se mide **antes de generar la tanda**, con un control de un renglón, y se verifican **los seis** después.
+
 ## La voz en off sale por API, no por el navegador (regla fija, 2026-11-02)
 Santiago pasó su clave de Google AI Studio: *"para que no tengas que usar mi compu y puedas trabajar mucho más rápido"*.
 - **`OUTPUTS/scripts-vsl/tts_gemini.py`** con `GEMINI_API_KEY` (guardada en `~/.config/herrero/gemini.env`, fuera del repo). Modelo **`gemini-2.5-flash-preview-tts`**: los TTS 3.x **leen en voz alta las instrucciones de estilo** cuando se usan por API, así que no sirven.

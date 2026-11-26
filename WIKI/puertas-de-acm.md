@@ -45,7 +45,7 @@
 - **Registro: español neutro LATAM con tuteo**, decidido por Santiago. Vocabulario traducido: **amoladora → esmeriladora**, **agujereadora → taladro**, *tocá → toca*, *recibís → recibes*. El resto del copy es palabra por palabra el de ellos.
 - **6 guiones.** Los hooks de los Guiones 1 y 2 son **los dos creativos duplicados del ganador, intactos**; los otros 4 también son hooks suyos. Las 6 estructuras de cuerpo son las suyas, rotadas.
 - **Un solo texto principal** para los 6, como lo corre el ganador.
-- **Voz:** Sulafat (regla de [[como-trabajar-con-santiago]]: el ganador tiene locutora mujer). Estilo neutro latinoamericano, volumen normal y energía alta; los 6 verificados en acento, volumen y energía, a -13,8/-16,1 dB de RMS de habla.
+- **Voz:** **Orus** (hombre). Primero salió con Sulafat por clonar a su locutora, y Santiago lo corrigió: *"Es un nicho de hombres, cuando es así la voz tiene que ser de hombre"*. Los 6 a **124-136 Hz de F0**, con `gemini-2.5-flash-preview-tts` (con el 3.1 Orus sale a 195 Hz y no suena a hombre). Estilo neutro latinoamericano — un tipo de taller explicándole algo útil a otro—, volumen normal y energía alta; los 6 verificados en F0, acento, volumen y energía, a -13,9/-16,8 dB de RMS de habla.
 - **Cama musical:** `atlasaudio-advertising-marketing-617541.mp3`, la pista que mandó Santiago para [[laser-profit-vault]] ([[guiones-y-anuncios]], regla del 26/11), preparada con `cama_acm.py`.
 - **Pool:** TikTok, tags `#portasdeacm`, `#portadeacm`, `#acm` y `#aluminiocomposto` — Santiago pidió visuales de TikTok **para no arrastrar subtítulos**, y además el b-roll de ellos viene con subtítulo quemado en todos los cuadros.
 - Scripts: `OUTPUTS/scripts-vsl/gen_acm_plans.py`, `edit_acm.py`, `ventanas_acm.py`, `cama_acm.py`.

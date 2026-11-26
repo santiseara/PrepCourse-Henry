@@ -55,6 +55,11 @@ Santiago mando el ganador argentino **orbitadigital2026.com** (AcademiaPractica.
   ni de un generador. Las dos validadas son `atlasaudio-advertising-marketing-617541.mp3` (oficio y
   taller) y `nastelbom-advertising-424209.mp3` (manualidades y hogar). Anotada en
   `WIKI/guiones-y-anuncios.md` con el procedimiento de preparacion.
+- **Entregados en el Drive**: `Ebook Dami / Ebook Puertas de ACM (LATAM) / Videos terminados`
+  (https://drive.google.com/drive/folders/1hOBBvRq57Gr3RsvHFhOilYjdyDtXPTl9). 38,5 a 25,8 s,
+  musica a -12,7/-13,3 dB sobre el habla.
+- 🐞 `comprimir_drive.py` con `-preset veryslow` tarda mas de una hora por video a 1080x1920;
+  con `-preset medium` los 6 salieron en 60 segundos, mismo tamano.
 - Nuevo en la WIKI: [[puertas-de-acm]]. Nuevos scripts: `gen_acm_plans.py`, `edit_acm.py`,
   `ventanas_acm.py`, `cama_acm.py`. Guiones en
   `OUTPUTS/2026-11-26-guiones-puertas-acm-LATAM-tanda1.md`.

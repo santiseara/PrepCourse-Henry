@@ -185,3 +185,15 @@ De la tanda PIEDRAS V2 ([[scented-stones]]), seis videos de 20 a 63 s:
 - **El `EPROTO: The TLS handshake failed` del conector no siempre es por tamaño.** Un archivo de 5,53 MB
   lo devolvió una vez y **subió bien al segundo intento, sin tocarlo**. Regla: ante EPROTO, **reintentar una
   vez** antes de recomprimir más chico. A 5,2-5,8 MB el conector entra.
+
+### ⛔ 2026-11-26 · Lo subí con `DD-M - N` y Santiago tuvo que pedirlo: *"Poneles el nombre con los hooks"*
+
+La tanda 1 de [[the-3d-method]] se subió al Drive como `26-11 - 1.mp4` … `26-11 - 6.mp4`, que es el
+nombre de **tanda** del Escritorio, no el de **entrega**. La regla de arriba ya lo decía y la pisé igual.
+- **En el Drive el archivo se llama como arranca el hook**, tal cual se escucha y sin número ni fecha:
+  `Want to print something everyone asks you for.mp4`. Se le sacan los apóstrofos y los signos de
+  pregunta (`youre`, `theyre`), como quedó en la tanda de [[laser-profit-vault]] del 25/11.
+- **En el Escritorio sigue el `DD-M - N`.** Son dos nombres distintos para el mismo video a propósito:
+  el Escritorio es el taller y el nombre sirve para cargar el ad en Meta; el Drive es la entrega y el
+  nombre sirve para que él sepa cuál es cada uno sin abrirlos.
+- El chequeo barato antes de cerrar una entrega: **si el nombre en el Drive tiene un número, está mal**.

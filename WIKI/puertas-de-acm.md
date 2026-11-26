@@ -49,7 +49,20 @@
 - **Cama musical:** `atlasaudio-advertising-marketing-617541.mp3`, la pista que mandó Santiago para [[laser-profit-vault]] ([[guiones-y-anuncios]], regla del 26/11), preparada con `cama_acm.py`.
 - **Pool:** TikTok, tags `#portasdeacm`, `#portadeacm`, `#acm` y `#aluminiocomposto` — Santiago pidió visuales de TikTok **para no arrastrar subtítulos**, y además el b-roll de ellos viene con subtítulo quemado en todos los cuadros.
 - Scripts: `OUTPUTS/scripts-vsl/gen_acm_plans.py`, `edit_acm.py`, `ventanas_acm.py`, `cama_acm.py`.
+- **Duraciones:** 38,5 · 40,3 · 29,2 · 31,4 · 25,8 · 29,6 s, dentro de su rango de 22-39 s.
+- **Música a −12,7/−13,3 dB sobre el habla**, que es la referencia que aprobó Santiago el 25/11
+  (`music_db -4` con `duck 6` en este editor, que escala contra el RMS de toda la pista de voz).
+- **Entregados en el Drive** ([[organizacion-y-registro]]): `Mi unidad / Ebook Dami / Ebook Puertas de
+  ACM (LATAM) / Videos terminados`, cada uno con el arranque de su hook —
+  *Esmeriladora. Taladro. Cinta métrica* · *Hoy puedes empezar a fabricar puertas de ACM* ·
+  *Sabes medir, cortar y armar un marco* · *El error que más dinero te hace perder con ACM* ·
+  *Un video te muestra cómo cortar el ACM* · *No necesitas fabricar una puerta desde cero*.
+  https://drive.google.com/drive/folders/1hOBBvRq57Gr3RsvHFhOilYjdyDtXPTl9
+  Másteres en `~/Desktop/puertas-acm/anuncios/` como `26-11 - 1` a `26-11 - 6`.
 - Carpeta: `~/Desktop/puertas-acm/`. Guiones en `OUTPUTS/2026-11-26-guiones-puertas-acm-LATAM-tanda1.md`.
+- 🐞 **`comprimir_drive.py` con `-preset veryslow` tarda más de una hora por video a 1080x1920.**
+  Con `-preset medium` y las mismas dos pasadas los 6 salieron en **60 segundos en total**, a 5,2 MB
+  cada uno. A este bitrate (~1,2 Mbps) el preset casi no se nota: lo que manda es el objetivo de tamaño.
 
 ## Preguntas abiertas
 - Landing propia para LATAM: la de ellos cobra en AR$ y dice "Pensado para Argentina". Falta precio y procesador por país.

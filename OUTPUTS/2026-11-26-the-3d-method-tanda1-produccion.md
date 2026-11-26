@@ -67,8 +67,15 @@ de dividir: 0,89 / 0,90 / 1,00 / 0,99 / 0,94 / 0,97. El ganador lee a 205-213 pp
 
 ## Entrega
 
-- Drive: `Ebook Dami / Ebook The 3D Method (EN) / Videos terminados`, `26-11 - 1.mp4` a `26-11 - 6.mp4`.
-- Másters sin comprimir en `~/Desktop/the-3d-method/anuncios/`.
+- Drive: `Ebook Dami / Ebook The 3D Method (EN) / Videos terminados`, cada uno nombrado por el arranque
+  de su hook (corrección de Santiago del 26/11: *"Poneles el nombre con los hooks"*; se habían subido
+  como `26-11 - N`):
+  `Want to print something everyone asks you for` · `Let me show you the math on printing Christmas
+  ornaments` · `Three mistakes youre making if you just started 3D printing` · `You know those dragons
+  that move like theyre alive` · `What would you pay for ninety thousand designs to print in 3D` ·
+  `You dont have to print the hardest thing out there`.
+- Másters sin comprimir en `~/Desktop/the-3d-method/anuncios/` como `26-11 - 1.mp4` a `26-11 - 6.mp4`
+  (ahí el nombre de tanda sí va, es el que se carga en Meta).
 - 🐞 El conector corta en **~5,43 MB** de archivo: el V5 a 5.447.131 bytes dio `EPROTO` cuatro veces
   seguidas y entró recién a 5.036.943. El `EPROTO` también aparece de forma intermitente en archivos
   que sí entran; se reintenta y al segundo o tercer intento pasa.

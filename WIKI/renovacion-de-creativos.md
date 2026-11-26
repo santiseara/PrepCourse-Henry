@@ -23,6 +23,23 @@ Toda la técnica se apoya en separar el creativo en dos:
 
 Es la misma lógica modular de [[guiones-de-video-ads]] (pasos 1–2 variables, 3–7 fijos), aplicada aquí a video ya editado.
 
+## Registro 2026-11-26 · Cuándo una renovación NO cambia la edición
+
+En [[mini-plaster-studio]] la tanda 1 llevaba **US$ 111 de gasto, 1.175 de alcance y frecuencia 1,26**.
+Con esos números **no hay saturación**: el CPC no subió, el público ni se vio una vez y media. Es el
+caso de la **forma nº 1** de esta página en su versión más barata — hook nuevo, cuerpo intacto, visual
+nuevo al arranque — y **no** el de la regla del 27/10 de [[guiones-y-anuncios]] ("renovar también es
+cambiar la edición"), que se aplica a un ganador **gastado**, con el segmento quemado.
+
+El chequeo barato, antes de rehacer la estética: **si la frecuencia está por debajo de 2 y el CPC no
+subió, lo que falta no es estética, es presupuesto.** Rehacer el montaje ahí es trabajo que no compra
+nada, y encima pierde la comparación: si cambian el hook y la edición a la vez, el test no dice cuál
+de los dos movió la aguja.
+
+Lo que sí se varía, y es gratis: el **orden de los planos**. Los cuatro videos salen del mismo pool
+con un `usage.json` compartido, que penaliza ×10 un recorte ya usado; así cuatro videos con el mismo
+cuerpo no comparten un solo plano aunque la edición sea idéntica.
+
 ## Las cuatro formas de renovar
 
 ### 1. Nuevos hooks del mismo ángulo

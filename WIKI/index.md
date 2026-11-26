@@ -168,6 +168,8 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-26 — Mini Plaster Studio: las visuales para el socio](../OUTPUTS/2026-11-26-mini-plaster-studio-tiktoks-para-el-socio.md) — los 30 links de TikTok del pool de los 10 anuncios, con la ventana limpia de cada uno y 12 de reserva · ver [[mini-plaster-studio]]
+- [2026-11-26 — Mini Plaster Studio: 4 renovaciones](../OUTPUTS/2026-11-26-renovaciones-mini-plaster-studio.md) — hooks nuevos, más virales y orgánicos, sobre el cuerpo de *29 days to Christmas*, que es el video que mejor convierte · EN + ES voseo + banco de 5 hooks · ver [[mini-plaster-studio]]
 - [2026-11-26 — The 3D Method: tanda 1 de producción](../OUTPUTS/2026-11-26-the-3d-method-tanda1-produccion.md) — los 6 videos, el montaje clonado cuadro a cuadro, el pool de 875 ids de TikTok que quedó en 59 clips, y el bug del `concat` que deja al `overlay` sin placa en 21 de 780 cuadros · ver [[the-3d-method]]
 - [2026-11-26 · Guiones Puertas de ACM LATAM tanda 1](../OUTPUTS/2026-11-26-guiones-puertas-acm-LATAM-tanda1.md) — los 6 guiones, el texto principal unico y el titular del enlace.
 - [2026-11-26 — The 3D Method: tanda 1 de 6 guiones](../OUTPUTS/2026-11-26-guiones-the-3d-method.md) — los 6 hooks ganadores de Método 3D (el cuerpo validado, la cuenta del adorno navideño, los 3 errores, los flexis, el value stack y lo de todos los días) · EN + ES voseo + texto principal · ver [[the-3d-method]]

@@ -77,6 +77,54 @@ hueco inglés:
   https://drive.google.com/drive/folders/1rrJRA3rXtODPIBbT8f8Sy7NSwQf3RnkW
   Masteres en `~/Desktop/mini-yesitos/anuncios/` como `25-11 - 1` a `25-11 - 6` (42 a 49 s).
 
+## Cómo le fue a la tanda 1 en Meta (leído el 2026-11-26)
+US$ 111 gastados, **1.175 de alcance** y frecuencia 1,26: todavía es una prueba chica, no hay fatiga
+de creativo. La oferta **convierte**; lo que falta es volumen.
+
+| Conjunto | Creativo | CPA |
+|---|---|---|
+| Foto 3 | estático | **US$ 9,16** — la mejor pieza de toda la cuenta |
+| CJTO 3 | Video 4 · *29 days to Christmas* | **US$ 10,77** — el mejor video |
+| CJTO 4 | Video 3 · *The party favor…* | US$ 13,31 |
+| CJTO 1 | Video 6 · *It's not the mold…* | US$ 16,07 |
+| CJTO 5 | Video 2 · *They don't sell one at a time* | US$ 17,20 |
+| CJTO 6 y CJTO 2 | Videos 1 y 5 | sin ventas |
+
+Dos lecturas: **los estáticos rinden más que los videos** (y es el ángulo nº1 del ganador, que lo
+corre como foto), y con US$ 10-20 por conjunto no va a haber volumen por más que el hook rompa.
+
+## Renovación (2026-11-26): 4 hooks nuevos sobre el cuerpo que convierte
+Santiago: *"la oferta tiene buena conversión, pero poco volumen, necesitamos hacer hooks más virales,
+más orgánicos, que suenen más llamativos"*. **Regla que se aplicó:** una renovación cambia el hook y
+**no toca el cuerpo validado**. Los cuatro llevan el cuerpo del Guion 4 (Navidad) palabra por palabra,
+porque es el video de mejor CPA y la ventana estacional está abierta.
+
+Guiones en `OUTPUTS/2026-11-26-renovaciones-mini-plaster-studio.md` (EN + ES voseo + banco de 5 hooks).
+Los cuatro registros, elegidos para que suene a creador y no a anuncio:
+1. **La cuenta que no cierra en la cabeza** — *"A five dollar bag of plaster pours about forty little
+   Christmas ornaments. Forty."*
+2. **El mensaje que te va a llegar** — *"In about three weeks somebody in your phone is going to ask
+   who makes handmade teacher gifts."*
+3. **La opinión fuerte** — *"Nobody needs another plastic toy that is in the bin by January."*
+4. **Lo que todos están mirando mal** — *"Everyone is selling Christmas ornaments right now. Almost
+   nobody is selling the one the kid paints themselves."*
+
+- Mismo formato, misma voz (Sulafat, 242-273 Hz, el rango de la tanda 1), misma cama `nastelbom` a
+  `music_db -9`, mismo pool de 30 ventanas de TikTok.
+- **`usage_r.json` compartido entre los cuatro**, para que cuatro videos con el mismo cuerpo no
+  compartan un solo plano. El plano de apertura va fijado a mano en el generador: el automático le
+  daba a R1 un cuadro negro ([[prohibido-imagenes-malas]]).
+- Script: `OUTPUTS/scripts-vsl/gen_my_renov.py` (usa `edit_my.py` y `vent_yesitos.py` sin cambios).
+
+## Las visuales para el socio (2026-11-26)
+Santiago pidió *"las visuales"* ([[visuales-de-tiktok]]): se le mandaron **los 30 links de TikTok del
+pool**, los mismos que alimentan los 10 videos (V1–V6 y R1–R4), con la ventana limpia de cada uno en
+segundos. 26 cuentas distintas. **Nunca el Drive de los MP4.**
+`OUTPUTS/2026-11-26-mini-plaster-studio-tiktoks-para-el-socio.md`.
+- Trazabilidad del filtro: **180 TikToks analizados → 42 con ventana limpia → 30 al pool**; 138 se
+  cayeron por texto quemado (precios, nombre de la cuenta, subtítulos del creador). Las 12 aprobadas
+  que no entraron quedan como reserva en el mismo output.
+
 ## ⚠️ El `music_db` del editor NO es la distancia a la voz que uno escucha (registro 2026-11-25)
 Santiago pidió *"que se escuche pero que no tape la voz"*. El editor escala la música contra el **RMS
 de toda la pista de voz**, que incluye las pausas y las colas bajas, así que el número del plan queda

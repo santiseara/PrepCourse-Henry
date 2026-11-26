@@ -1,3 +1,38 @@
+## 2026-11-26 (IV) — Mini Plaster Studio: las visuales para el socio
+
+Santiago: *"Mandame las visuales de la oferta de mini yesos. Mandamelas como siempre, con los links."*
+
+- Se mandaron **los 30 links de TikTok del pool** (26 cuentas distintas), los mismos que alimentan los
+  10 anuncios de la oferta (V1-V6 del 25/11 y R1-R4 de la renovacion del 26/11), en texto plano, un
+  link por linea, y al portapapeles. **Ni el Drive de los MP4** ([[visuales-de-tiktok]]).
+- Se agrego la **ventana limpia de cada TikTok en segundos**, porque de cada uno sirve un solo tramo:
+  el resto tiene texto quemado del creador.
+- Trazabilidad del filtro: 180 clips analizados, 42 con ventana limpia, 30 al pool, 138 caidos por
+  texto quemado. Las 12 aprobadas que no entraron quedaron listadas como reserva.
+- `OUTPUTS/2026-11-26-mini-plaster-studio-tiktoks-para-el-socio.md`, enlazado en `WIKI/index.md` y
+  registrado en [[mini-plaster-studio]].
+
+## 2026-11-26 (III) — Mini Plaster Studio: 4 renovaciones sobre el cuerpo que convierte
+
+Santiago, con la captura de Meta: *"consiguio varias ventas, nada muy loco, pero la oferta tiene buena
+conversion, pero poco volumen, necesitamos hacer hooks mas virales, mas organicos, que suenen mas
+llamativos, la tenemos que romper, quiero 4 renovaciones"*.
+
+- **Lo que dijeron los numeros:** US$ 111 de gasto, 1.175 de alcance, frecuencia 1,26. El mejor video
+  es el Guion 4 (*29 days to Christmas*) a **US$ 10,77**, y la mejor pieza de toda la cuenta es un
+  **estatico** a US$ 9,16. Tabla completa en [[mini-plaster-studio]].
+- **Las 4 renovaciones cambian solo el hook** y llevan el cuerpo del Guion 4 palabra por palabra:
+  la cuenta de los 40 adornos, el mensaje que te va a llegar, el juguete de plastico que en enero
+  esta en la basura, y "todos venden adornos, nadie vende el que el chico pinta".
+  `OUTPUTS/2026-11-26-renovaciones-mini-plaster-studio.md` (EN + ES voseo + banco de 5 hooks).
+- **Regla nueva en [[renovacion-de-creativos]]:** con frecuencia por debajo de 2 y el CPC quieto no hay
+  saturacion, asi que la renovacion **no** rehace la estetica (eso es para un ganador gastado, regla
+  del 27/10). Lo que si se varia, y es gratis, es el orden de los planos, con un `usage.json`
+  compartido entre los cuatro.
+- Script nuevo: `OUTPUTS/scripts-vsl/gen_my_renov.py`. Y `comprimir_drive_rapido.py`, que es el
+  `comprimir_drive.py` con `-preset medium`: el `veryslow` tarda mas de una hora por video y al
+  bitrate de Drive no se nota.
+
 ## 2026-11-26 (II) — The 3D Method: los videos del Drive renombrados por su hook
 
 Santiago: *"Poneles el nombre con los hooks"*. Los habia subido como `26-11 - 1.mp4` a `26-11 - 6.mp4`,

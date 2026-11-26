@@ -115,6 +115,14 @@ Los cuatro registros, elegidos para que suene a creador y no a anuncio:
   compartan un solo plano. El plano de apertura va fijado a mano en el generador: el automático le
   daba a R1 un cuadro negro ([[prohibido-imagenes-malas]]).
 - Script: `OUTPUTS/scripts-vsl/gen_my_renov.py` (usa `edit_my.py` y `vent_yesitos.py` sin cambios).
+- **Duraciones:** 43,8 · 46,3 · 45,8 · 46,8 s, con 19 a 21 planos cada uno. **Música a −13,0/−13,3 dB
+  sobre el habla**, clavada en la referencia que aprobó Santiago el 25/11.
+- **Entregados en el Drive**, en la misma `Ebook Dami / Ebook Mini Plaster Studio (INGLES) / Videos
+  terminados` de la tanda 1, con el arranque de su hook — *A five dollar bag of plaster* ·
+  *Somebody in your phone is going to ask* · *Nobody needs another plastic toy* ·
+  *Everyone is selling Christmas ornaments*.
+  https://drive.google.com/drive/folders/1rrJRA3rXtODPIBbT8f8Sy7NSwQf3RnkW
+  Másteres en `~/Desktop/mini-yesitos/anuncios/` como `26-11 - 1` a `26-11 - 4`.
 
 ## Las visuales para el socio (2026-11-26)
 Santiago pidió *"las visuales"* ([[visuales-de-tiktok]]): se le mandaron **los 30 links de TikTok del

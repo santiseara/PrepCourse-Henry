@@ -1,3 +1,64 @@
+## 2026-11-26 — Oferta nueva para el mercado ingles: The 3D Method
+
+Santiago mando el ganador argentino **Metodo 3D - Juan Avalos** (`metodo3d.shop`) para llevarlo al
+mercado ingles, pidiendo apegarse **100 % a su comunicacion** y usar **sus hooks ganadores**.
+
+- **El ganador, despiezado.** 99 ads activos desde el 28/10. Se bajaron sus **112 creativos de video
+  y se transcribieron 24**, mas sus 52 textos unicos y la landing entera (AR$ 17.990 de 39.990,
+  +90.000 STL, 12 categorias, curso, 5 bonos, garantia 30 dias).
+- **Tienen UN cuerpo validado y lo que renuevan es el hook:** el mismo cuerpo aparece en **10 de sus
+  20 ads de mas impresiones**. Y corren **un solo texto principal** (29 de 99). La variacion vive
+  entera en el video.
+- **Su montaje, medido cuadro a cuadro:** banner fijo de dos pastillas (roja #D81C1B + amarilla
+  #FDD400) pegado todo el video, titular con el renglon 2 en pastilla roja, pastillas rojas
+  numeradas, pastilla verde para el numero de plata, subtitulos de 3 palabras con la activa en
+  amarillo y barra de progreso abajo.
+- **Voz de hombre** en todos (F0 110-124 Hz medido sobre 5 de sus ads) -> Orus.
+- **Tanda 1: 6 guiones** en ingles y espanol con voseo + texto principal, y **6 videos** de 26 a 42 s
+  clonando su formato. Musica: **la pista que mando Santiago** (`atlasaudio-advertising-marketing`),
+  efectos de `~/SFX/alias`.
+- **Pool:** 875 ids de TikTok de 8 tags -> 817 bajados -> 88 con ventana limpia -> 81 afinados a
+  3 cuadros/s -> 62 tras el pase a ojo -> **59 tras la hoja del render**. Se cayeron Spider-Man,
+  Majin Buu, Mr. Krabs, Garfield, Pokemon, LEGO, una figura **KAWS** y unos munecos de **Naruto**.
+- ⛔ **Bug nuevo, vale para cualquier tanda:** el `concat` de los cortes deja timestamps irregulares y
+  el `overlay` **descarta la placa** en esos cuadros (21 de 780 sin banner). Meterla como entrada
+  propia con `-loop 1` no alcanza: hay que normalizar **todo a CFR** antes de superponer.
+- Nuevo en la WIKI: [[the-3d-method]]. Nuevos: `OUTPUTS/2026-11-26-guiones-the-3d-method.md`,
+  `OUTPUTS/2026-11-26-the-3d-method-tanda1-produccion.md`, `scripts-vsl/edit_m3d.py`,
+  `gen_m3d_plans.py`, `ventanas_m3d.py`, `afinar_m3d.py`, `vent_a_py.py`.
+
+## 2026-11-26 — Oferta nueva LATAM: Guia Puertas de ACM Rentables
+
+Santiago mando el ganador argentino **orbitadigital2026.com** (AcademiaPractica.com) para llevarlo a
+**LATAM en espanol neutro**, con los hooks duplicados intactos y 6 anuncios de testeo.
+
+- **El ganador, despiezado.** ~31 ads activos, **todos arrancados entre el 18 y el 25/11**: oferta
+  nueva escalando. Se bajaron sus **20 videos** (19 con audio, los 19 transcriptos) y sus **5 estaticos**,
+  y se leyo la landing entera (AR$ 19.990 de 149.990, PDF de 7 capitulos + 3 bonos, garantia 7 dias,
+  Carlos Sanchez, "Pensado para Argentina").
+- **Los duplicados, que es lo que pidio respetar:** 5 ads con el mismo estatico y el mismo texto arriba
+  de todo por impresiones, y **dos creativos de video con "4 anuncios usan este contenido y texto"**.
+  Su hook madre — *"Amoladora. Agujereadora. Cinta metrica. ¿Tenes estas tres herramientas?"* — es
+  ademas el **texto principal de 12 de los 31 ads**. Va intacto en los Guiones 1 y 2.
+- **Sus 6 textos principales, sus 8 estructuras de cuerpo y su montaje medido:** subtitulo de 2-3
+  palabras en mayuscula con la que suena en **cian #38E8DB**, pastilla **verde lima #CFF80E** con el
+  nombre del producto al medio del cuadro, sin titular y sin placa de cierre. Voz en off de **mujer**
+  (F0 198-219 Hz, 185-196 ppm), verificada midiendo su audio.
+- **Registro: espanol neutro LATAM con tuteo**, decidido por Santiago. amoladora → esmeriladora,
+  agujereadora → taladro, toca el boton. El resto del copy es palabra por palabra el de ellos.
+- **Tanda 1: 6 guiones** + un solo texto principal, y **6 videos** clonando su formato B.
+- **Produccion:** 466 ids de TikTok de `#portasdeacm`, `#portadeacm`, `#acm` y `#aluminiocomposto`,
+  253 clips bajados, 109 con ventana limpia (filtro denso a 1 cuadro/s) y **63 al pase a ojo**
+  (se cayeron recitales y pileta, que los trae `#acm` por ACM Awards, puertas de madera, portones
+  enrollables y stickers quemados). Voces Sulafat por API, efectos de `~/SFX/alias`.
+- 🆕 **Regla de musica nueva (⛔⛔):** la cama sale de **las pistas que mando Santiago**, no del ganador
+  ni de un generador. Las dos validadas son `atlasaudio-advertising-marketing-617541.mp3` (oficio y
+  taller) y `nastelbom-advertising-424209.mp3` (manualidades y hogar). Anotada en
+  `WIKI/guiones-y-anuncios.md` con el procedimiento de preparacion.
+- Nuevo en la WIKI: [[puertas-de-acm]]. Nuevos scripts: `gen_acm_plans.py`, `edit_acm.py`,
+  `ventanas_acm.py`, `cama_acm.py`. Guiones en
+  `OUTPUTS/2026-11-26-guiones-puertas-acm-LATAM-tanda1.md`.
+
 ## 2026-11-25 (noche II) — Fuga Perfecta: 3 renovaciones del guion del traidor
 
 - Variables del Guion 2 con el cuerpo validado intacto y tres formatos de hook: la regla secreta, la

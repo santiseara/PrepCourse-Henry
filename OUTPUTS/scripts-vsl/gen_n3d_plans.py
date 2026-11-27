@@ -83,7 +83,7 @@ VIDEOS = [
          hook='COBRÁ ANTES|DE IMPRIMIR', hasta=('puede', 0),
          overlays=[
              dict(type='money', left='COBRÁS PRIMERO', right='IMPRIMÍS DESPUÉS', word='revés', occ=0, dur=2.8, y=980),
-             dict(type='chip', text='imprimís solo lo vendido', icon='✅', word='vendido', occ=0, dur=2.6),
+             dict(type='chip', text='imprimís solo lo vendido', icon='✅', word='foto', occ=1, dur=2.6),
          ]),
     # V4 - el puesto de la feria
     dict(n=4, banner=BANNER,

@@ -171,6 +171,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-27 — Navidad 3D: tanda 1 de producción](../OUTPUTS/2026-11-27-navidad-3d-tanda1-produccion.md) — los 6 videos con voz de mujer, el pool de 148 TikToks que quedó en 51, los dos ads de competidores que se colaron hasta la pasada densa, y el bug del concat que congela el fondo 17 segundos · ver [[navidad-3d]]
 - [2026-11-27 — Navidad 3D: tanda 1 de 6 guiones](../OUTPUTS/2026-11-27-guiones-navidad-3d-AR-tanda1.md) — hook → problema → solución → CTA, sin precio, cada uno sobre un reloj distinto, más el texto principal único y el banco de hooks · ver [[navidad-3d]]
 - [2026-11-27 — Ateliê 3D: qué le funciona y el método nuevo](../OUTPUTS/2026-11-27-analisis-atelie-3d-y-metodo-nuevo.md) — las 6 cosas que le funcionan a la whale brasileña, la tabla de lo que hacen ellos contra lo que hacemos nosotros, y las 10 reglas del método nuevo · ver [[atelie-3d]] y [[metodo-de-trabajo-ganador]]
 - [2026-11-26 — Mini Plaster Studio: las visuales para el socio](../OUTPUTS/2026-11-26-mini-plaster-studio-tiktoks-para-el-socio.md) — los 30 links de TikTok del pool de los 10 anuncios, con la ventana limpia de cada uno y 12 de reserva · ver [[mini-plaster-studio]]

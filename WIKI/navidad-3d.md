@@ -52,6 +52,18 @@ diferencia es el **precio de entrada bajo** y el **pack específico de Navidad**
   **La tanda queda: V2, V3, V6, V8, V9 y V10.**
 - Un solo texto principal para los 6, como hace el ganador.
 
+## Tanda 1 entregada (27/11/2026)
+
+6 videos de 38,9 a 46,9 s en `~/Desktop/navidad-3d/anuncios/`. Voz de **Sulafat** (mujer, porteña),
+cama de Atlas rebalanceada, montaje clonado de [[atelie-3d]] con banner fijo, pastilla verde por
+cada cifra de plata y subtitulos de 3 palabras. Detalle:
+`OUTPUTS/2026-11-27-navidad-3d-tanda1-produccion.md`.
+
+**Pool:** 148 TikToks de `#3dprintedchristmas` -> 77 tras el filtro denso -> 56 tras el pase a ojo,
+mas 22 de maquina y filamento de [[the-3d-method]] -> **51 tras la pasada densa de 6 cuadros**, que
+volteo dos ads de competidores enteros (uno con su WhatsApp quemado), Minnie, Mario, Bob Esponja,
+Pikachu, un Nazgul, el Grinch, Snoopy y R2-D2.
+
 ## Pendiente
 
 - Aprobación de los guiones. **Nada de edición hasta entonces** (Santiago, 27/11).

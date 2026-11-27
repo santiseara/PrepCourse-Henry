@@ -35,6 +35,10 @@ diferencia es el **precio de entrada bajo** y el **pack específico de Navidad**
   distinto**: las horas de máquina por pieza, la semana en que se cierran los pedidos de empresa,
   el primero que publica se lleva los pedidos del grupo, la ventana de tres semanas del producto,
   el 15/12 como fecha de corte, y la temporada que corre mientras buscás archivos.
+- **v3 (27/11):** hooks **agresivos y de ingresos** en los 6 y largo de **~48 segundos** (Santiago:
+  *"hooks bien agresivos dirigidos a generar ingresos... hacelos un poco más largos"*). La cuenta
+  que los sostiene es **un rollo de filamento = unos cuarenta adornos**, que deja mostrar el margen
+  sin decir un solo precio.
 - Un solo texto principal para los 6, como hace el ganador.
 
 ## Pendiente

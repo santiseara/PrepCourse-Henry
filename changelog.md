@@ -1,3 +1,19 @@
+## 2026-11-27 (III) — Navidad 3D: hooks agresivos de ingresos y guiones más largos
+
+Santiago, sobre la v2: *"Quiero hooks bien 'agresivos' dirigidos a generar ingresos, apuntalos ahí,
+y hacelos un poco más largos."*
+
+- **v3 de la tanda 1:** los 6 hooks rehechos con la plata en la primera frase y el largo subido de
+  ~30 a **~48 segundos** (132 a 144 palabras, tanda pareja).
+- **El hallazgo:** se puede mostrar el margen **sin decir un solo precio** usando el rendimiento del
+  insumo — *"un rollo de filamento son cuarenta adornos de Navidad"*. Cada uno sabe lo que le sale el
+  rollo y lo que pagan un adorno en una feria, así que la cuenta la hace el espectador.
+- **Regla nueva en [[guiones-y-anuncios]] (27/11):** hooks agresivos = la plata en la primera frase;
+  se confronta la situación (el mes, el archivo, el orden de las cosas), nunca a la persona; largo
+  nuevo de 45-50 s; y si un guion se va de largo se recorta el problema, no la solución.
+- `OUTPUTS/2026-11-27-guiones-navidad-3d-AR-tanda1.md` (v3), [[navidad-3d]] actualizada.
+- ⏸️ Sigue sin tocarse la edición.
+
 ## 2026-11-27 (II) — Navidad 3D: la oferta nueva para Argentina y la tanda 1 de guiones
 
 Santiago eligió clonar [[atelie-3d]] **para Argentina**: *"Tenemos que hacer ads de la que te acabo

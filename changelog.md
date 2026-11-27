@@ -1,3 +1,22 @@
+## 2026-11-27 (IV) — Navidad 3D: tres guiones nuevos y la receta del hook que aprueba
+
+Santiago: *"El 2, 3 y el 6 son los mejores, haceme 3 más, que sean más alineados a generar ingresos,
+pero con hooks buenos y llamativos."*
+
+- **Aprobados:** V2 (el aguinaldo lo gasta alguien), V3 (treinta piezas de un solo pedido, cobradas
+  por adelantado) y V6 (cobrar antes de imprimir).
+- **Nuevos, con la misma receta:** **V7** el acto de fin de curso y las 25 madres que compran el
+  regalo de la seño la misma semana · **V8** el puesto de la feria navideña que se paga con los
+  primeros seis adornos · **V9** las publicaciones de Mercado Libre que ya vendieron esta semana.
+- ⭐ **Regla nueva en [[guiones-y-anuncios]]:** el hook de ingresos que aprueba lleva **plata
+  concreta + un comprador con nombre + un mecanismo de cobro**, o sea una **escena de cobro** que se
+  ve. Lo que descartó fue la cuenta fría del insumo, el hook abstracto y el que le reprocha al
+  espectador. Y dónde buscar la escena: donde el mercado ya juntó la plata y la fecha en que la
+  gasta (aguinaldo, pedido de empresa, acto de fin de curso, feria, Mercado Libre).
+- `OUTPUTS/2026-11-27-guiones-navidad-3d-AR-tanda1.md` reorganizado: aprobados arriba, nuevos en el
+  medio, descartados al final como banco.
+- ⏸️ Sigue sin tocarse la edición.
+
 ## 2026-11-27 (III) — Navidad 3D: hooks agresivos de ingresos y guiones más largos
 
 Santiago, sobre la v2: *"Quiero hooks bien 'agresivos' dirigidos a generar ingresos, apuntalos ahí,

@@ -1,34 +1,16 @@
-# Navidad 3D (Argentina) — tanda 1 de 6 guiones (v3)
+# Navidad 3D (Argentina) — tanda 1 (v4)
 
 Clonada de **Ateliê 3D** (Brasil, ~120 ads activos desde el 20/10).
 
-**Estructura fija: hook → problema/situación → solución → CTA.** ~45 segundos (~125 palabras).
-**Sin precio.** Hooks agresivos y apuntados a ingresos. La urgencia no se menciona: es el argumento,
-y cada guion corre sobre un reloj distinto.
+**Estructura fija: hook → problema/situación → solución → CTA.** ~48 segundos (132-145 palabras).
+**Sin precio.** Hook agresivo con la plata en la primera frase. La urgencia no se menciona: es el
+argumento, y cada guion corre sobre un reloj distinto.
 
 Avatar: el que ya tiene la impresora 3D y la tiene juntando polvo.
 
-> **La cuenta que usan varios, y es real:** un rollo de filamento rinde unos **cuarenta adornos** de
-> Navidad. No hace falta decir un solo precio: cada uno sabe lo que le sale el rollo y lo que pagan
-> un adorno en una feria.
-
----
-
-## V1 · Un rollo, cuarenta adornos
-
-**Hook.** Un rollo de filamento son cuarenta adornos de Navidad. Pensá un segundo lo que te sale el
-rollo, y lo que pagan por un solo adorno en cualquier feria. Esa diferencia es tuya, y dura tres
-semanas.
-
-**Problema.** Pero esa cuenta la cobra solo el que llega con las piezas hechas. Tu impresora tarda
-unas horas por adorno: el que arranca esta semana llega a diciembre con el estante lleno y elige qué
-encargos tomar. El que arranca el 15 imprime a las corridas y termina diciendo que no.
-
-**Solución.** Yo ya hice la parte lenta: más de 400 modelos de Navidad listos para bajar y mandar a
-imprimir esta misma noche, con la foto de cada uno. No hace falta saber modelar: los abrís en el
-mismo programa que ya usás.
-
-**CTA.** Sale menos que un rollo de filamento. Te dejo el link abajo. 👇
+**Estado:** ✅ aprobados por Santiago el 27/11 los V2, V3 y V6 · 🆕 V7, V8 y V9 nuevos, con la misma
+receta de los aprobados: **plata concreta, un comprador con nombre y un mecanismo de cobro que se
+entiende solo**.
 
 ---
 
@@ -68,42 +50,6 @@ arreglada.
 
 ---
 
-## V4 · Ocho horas mientras dormís
-
-**Hook.** Tu impresora puede trabajar ocho horas mientras dormís. En diciembre, esas ocho horas
-valen plata; en febrero no valen nada.
-
-**Problema.** Esa es toda la diferencia: no es el talento, es el mes. Hay tres semanas al año en las
-que la gente paga contenta por un adorno que no está en ningún local, y son estas. El que las usa
-imprime de noche y vende de día. El que las deja pasar vuelve a tener la máquina juntando polvo
-hasta el año que viene, igual que ahora.
-
-**Solución.** Lo único que hace falta es el archivo. En el pack hay más de 400 modelos de Navidad
-listos para fatiar e imprimir, con nueve articulados que salen de la máquina armados y en
-movimiento, que son los que no para nadie de pedir.
-
-**CTA.** Cuesta menos que un café. Link abajo. 👇
-
----
-
-## V5 · La máquina todavía no se pagó sola
-
-**Hook.** Si tu impresora 3D todavía no se pagó sola, no es por la impresora. Es porque la estuviste
-usando el mes equivocado.
-
-**Problema.** Once meses del año tenés que salir a convencer a alguien de que le sirve una pieza
-impresa. En diciembre no: la gente ya salió a buscar adornos, ya tiene la plata separada y compra el
-primero que ve. Lo único que te pide el mercado es tener la pieza hecha antes que el otro. Y eso se
-decide ahora, no el 20.
-
-**Solución.** Más de 400 archivos de Navidad listos para bajar, que andan en cualquier impresora y
-en cualquier programa, con la foto de cada modelo y una calculadora que te dice cuánto cobrar cada
-pieza antes de imprimirla.
-
-**CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇
-
----
-
 ## V6 · Vendé antes de imprimir
 
 **Hook.** La forma más rápida de hacer plata con una impresora 3D en Navidad es cobrar antes de
@@ -119,6 +65,60 @@ mandar. Subís la foto del reno, del arbolito o del muñeco de nieve, preguntás
 imprimís solamente lo que ya está vendido.
 
 **CTA.** Baratísimo, acceso inmediato. Tocá Más información. 👇
+
+---
+
+## V7 · El acto de fin de curso
+
+**Hook.** En cada grado hay veinticinco madres buscando el mismo regalo para la seño. Y lo compran
+todas la misma semana.
+
+**Problema.** Es la semana que viene: entre los actos de fin de curso, las despedidas y los souvenirs
+para los compañeritos, en diciembre un colegio mueve más regalos chicos que cualquier local. Siempre
+hay una mamá que organiza y le pregunta al grupo qué compran. Si para ese día vos tenés una pieza
+hecha y una foto, el pedido es tuyo y es de veinte piezas de una. Si la tenés el 15, ya compraron
+las tazas.
+
+**Solución.** En el pack hay más de 400 modelos de Navidad listos para imprimir, con la foto de cada
+uno: elegís el adorno, lo imprimís esta noche y mañana lo mandás al grupo del grado.
+
+**CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇
+
+---
+
+## V8 · El puesto de la feria
+
+**Hook.** Un puesto en una feria navideña se paga con los primeros seis adornos que vendés. Todo lo
+que venga después de ese sexto, es tuyo.
+
+**Problema.** Los fines de semana de diciembre la gente va a las ferias con la plata en la mano y
+buscando algo que no sea lo mismo de siempre. Pero el puesto se reserva ahora y se paga igual esté
+lleno o vacío: el que llega con la mesa llena se va con todo vendido, y el que llega con ocho piezas
+porque empezó tarde paga el mismo puesto para mirar pasar a la gente.
+
+**Solución.** Para llenar una mesa necesitás variedad y tiempo de máquina, nada más. Son más de 400
+modelos de Navidad listos para bajar y mandar a imprimir hoy mismo: arbolitos, bolas, renos,
+pesebres y articulados.
+
+**CTA.** Sale menos que un rollo de filamento. Te dejo el link abajo. 👇
+
+---
+
+## V9 · Las publicaciones que ya están vendiendo
+
+**Hook.** Entrá a Mercado Libre y buscá "adorno navideño 3D". Vas a ver un montón de publicaciones
+que ya vendieron esta semana. No son diseñadores: son tipos con una impresora igual a la tuya.
+
+**Problema.** Lo único que hicieron fue subir la foto antes que vos. Y en diciembre eso es todo:
+las primeras publicaciones se llevan las preguntas, las ventas y las reputaciones, y las que suben
+el 18 aparecen en la página cuatro. Cada día que tu impresora está apagada, la lista se llena con
+los adornos de otro.
+
+**Solución.** Más de 400 modelos de Navidad listos para imprimir, con la foto de cada uno para que
+elijas sin perder la noche buscando. Imprimís las tres primeras hoy y mañana ya tenés tus
+publicaciones arriba.
+
+**CTA.** Baratísimo, acceso al toque. Tocá Más información. 👇
 
 ---
 
@@ -152,19 +152,79 @@ Piezas para vender por encargo, en ferias, por WhatsApp o en Mercado Libre hasta
 
 | Guion | Hook (ingresos) | El reloj | Comprador |
 |---|---|---|---|
-| V1 | un rollo = 40 adornos, esa diferencia es tuya | horas de máquina × días que quedan | el que quiere stock |
-| V2 | el aguinaldo lo gasta alguien | el aguinaldo se gasta entre el 10 y el 24 | el vecindario / WhatsApp |
-| V3 | 30 piezas de un solo pedido, cobradas por adelantado | la semana en que se cierran los pedidos de empresa | oficinas, colegios, negocios |
-| V4 | 8 horas de máquina mientras dormís valen plata en diciembre | la ventana de tres semanas del producto | el que quiere producir de noche |
-| V5 | la máquina todavía no se pagó sola | once meses contra uno | el que ya intentó vender y no pegó |
-| V6 | cobrar antes de imprimir | el filamento que se gasta al pedo | el que tiene miedo de perder plata |
+| V2 ✅ | el aguinaldo lo gasta alguien | se gasta entre el 10 y el 24 | el vecindario / WhatsApp |
+| V3 ✅ | 30 piezas de un solo pedido, cobradas por adelantado | la semana en que se cierran los pedidos de empresa | oficinas, colegios, negocios |
+| V6 ✅ | cobrar antes de imprimir | el filamento que se gasta al pedo | el que tiene miedo de perder plata |
+| V7 🆕 | 25 madres comprando el mismo regalo la misma semana | el acto de fin de curso | el grado / la seño |
+| V8 🆕 | el puesto se paga con los primeros seis adornos | el puesto se reserva ahora y se paga igual | la feria navideña |
+| V9 🆕 | publicaciones que ya vendieron esta semana | las primeras publicaciones se llevan todo | Mercado Libre |
 
 ---
 
 ## Banco de hooks (tanda 2)
 
+- "El primer adorno que entregues ya pagó esto. Lo que venga después es ganancia limpia."
 - "El 26 de diciembre estos archivos no valen nada. Hoy valen todo lo que puedas imprimir hasta el 24."
 - "Hay gente facturando con una impresora de escritorio más en estas tres semanas que en todo el resto del año."
-- "Tu impresora puede pagarte las fiestas enteras y la tenés usándola de adorno."
-- "Mientras buscás el modelo perfecto, se te va la única temporada que vende sola."
 - "Cuarenta adornos por rollo. Esa es toda la cuenta del negocio."
+- "Tu impresora puede pagarte las fiestas enteras y la tenés usándola de adorno."
+
+---
+
+## Descartados de la v3 (27/11)
+
+Santiago: *"El 2, 3 y el 6 son los mejores"*. Los otros tres quedan acá como banco; lo que les faltó
+es **una escena de cobro concreta**: V1 es una cuenta fría, V4 es abstracto y V5 le reprocha al
+espectador que la máquina no se haya pagado sola.
+
+## V1 · Un rollo, cuarenta adornos
+
+**Hook.** Un rollo de filamento son cuarenta adornos de Navidad. Pensá un segundo lo que te sale el
+rollo, y lo que pagan por un solo adorno en cualquier feria. Esa diferencia es tuya, y dura tres
+semanas.
+
+**Problema.** Pero esa cuenta la cobra solo el que llega con las piezas hechas. Tu impresora tarda
+unas horas por adorno: el que arranca esta semana llega a diciembre con el estante lleno y elige qué
+encargos tomar. El que arranca el 15 imprime a las corridas y termina diciendo que no.
+
+**Solución.** Yo ya hice la parte lenta: más de 400 modelos de Navidad listos para bajar y mandar a
+imprimir esta misma noche, con la foto de cada uno. No hace falta saber modelar: los abrís en el
+mismo programa que ya usás.
+
+**CTA.** Sale menos que un rollo de filamento. Te dejo el link abajo. 👇
+
+---
+
+## V4 · Ocho horas mientras dormís
+
+**Hook.** Tu impresora puede trabajar ocho horas mientras dormís. En diciembre, esas ocho horas
+valen plata; en febrero no valen nada.
+
+**Problema.** Esa es toda la diferencia: no es el talento, es el mes. Hay tres semanas al año en las
+que la gente paga contenta por un adorno que no está en ningún local, y son estas. El que las usa
+imprime de noche y vende de día. El que las deja pasar vuelve a tener la máquina juntando polvo
+hasta el año que viene, igual que ahora.
+
+**Solución.** Lo único que hace falta es el archivo. En el pack hay más de 400 modelos de Navidad
+listos para fatiar e imprimir, con nueve articulados que salen de la máquina armados y en
+movimiento, que son los que no para nadie de pedir.
+
+**CTA.** Cuesta menos que un café. Link abajo. 👇
+
+---
+
+## V5 · La máquina todavía no se pagó sola
+
+**Hook.** Si tu impresora 3D todavía no se pagó sola, no es por la impresora. Es porque la estuviste
+usando el mes equivocado.
+
+**Problema.** Once meses del año tenés que salir a convencer a alguien de que le sirve una pieza
+impresa. En diciembre no: la gente ya salió a buscar adornos, ya tiene la plata separada y compra el
+primero que ve. Lo único que te pide el mercado es tener la pieza hecha antes que el otro. Y eso se
+decide ahora, no el 20.
+
+**Solución.** Más de 400 archivos de Navidad listos para bajar, que andan en cualquier impresora y
+en cualquier programa, con la foto de cada modelo y una calculadora que te dice cuánto cobrar cada
+pieza antes de imprimirla.
+
+**CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇

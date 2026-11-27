@@ -39,6 +39,10 @@ diferencia es el **precio de entrada bajo** y el **pack específico de Navidad**
   *"hooks bien agresivos dirigidos a generar ingresos... hacelos un poco más largos"*). La cuenta
   que los sostiene es **un rollo de filamento = unos cuarenta adornos**, que deja mostrar el margen
   sin decir un solo precio.
+- **v4 (27/11):** Santiago aprobó **V2 (el aguinaldo), V3 (treinta piezas de un solo pedido) y V6
+  (vendé antes de imprimir)** y pidió tres más. Nuevos: **V7 el acto de fin de curso y el regalo
+  para la seño · V8 el puesto de la feria navideña · V9 las publicaciones de Mercado Libre que ya
+  vendieron**. Los tres descartados quedan como banco al final del output.
 - Un solo texto principal para los 6, como hace el ganador.
 
 ## Pendiente

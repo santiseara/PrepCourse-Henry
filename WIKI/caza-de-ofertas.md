@@ -486,3 +486,14 @@ Santiago, al pedir la caza: *"No me mandes nada si no tiene mínimo 50 anuncios 
 5. **Las keywords de nicho se gastan en semanas.** `receitas na airfryer` pasó de 877 (08/11) a **45** y `mesmo começando do zero` de 11.938 a 5.800. El banco hay que re-medirlo en cada caza, no reusarlo a ciegas.
 6. **Técnica, sin la API:** el arsenal se cuenta por la UI con `view_all_page_id` + `country=ALL` leyendo el `~N resultados`, y los seguidores abriendo `facebook.com/<page_id>` (el texto dice "X mil seguidores", hay que capturar el "mil"). El `page_id` sale del HTML de la Biblioteca emparejando `page_id` con `page_name`.
 7. **Muertas de esta tanda:** `artesanato para vender` (2), `salgados para vender` (10), `banho de descarrego` (19), `marmitas fit` (900 pero es marmitaria local, no infoproducto), `aulas gravadas` (6.300, posgrados y formación profesional).
+
+### ⛔ 2026-11-27 (bis) · El destino tiene que ser landing con checkout, no WhatsApp
+
+Santiago, al ver la shortlist: *"Son solo de whatsapp? No me sirve de wpp, si es asi segui buscando"*.
+
+- **Filtro nuevo, se aplica antes de escribir la shortlist:** si el ad manda a WhatsApp, la oferta no entra, aunque tenga 830 anuncios activos. Se cayó **Luana Oliveira** (830 ads, la más grande de la tanda) por esto.
+- **El WhatsApp como medio de *entrega* sí vale.** Chefe Fernanda Araujo entrega "na mesma hora no e-mail e no WhatsApp" pero vende en `receitasproteicaspobre.com.br`: eso es checkout, pasa.
+- **Dos keywords que filtran por destino, no por nicho:** `pagamento único` (~20.000 ads en BR) es la mejor para aislar al que tiene landing y checkout — el que lo escribe cobra en una página, no por chat. `receba no seu e-mail` (~140) aísla entrega digital por mail. Las dos sirven en cualquier nicho.
+- **Trampa técnica: el display link de la Biblioteca miente.** Fiora Ferrara muestra `INSTAGRAM.COM.BR` y en realidad manda a **landings propias en Vercel, una por producto** (`trilhosderenda`, `joiasdejardim`, `banheirocharmoso`, `buque-secreto`…). El destino real se saca del **href del botón CTA**: es un redirect de Facebook con el parámetro `u`, y ahí está el dominio verdadero. Hay que mirar eso siempre antes de dar una oferta por buena.
+- **Lista final de la tanda:** Fiora Ferrara 350 ads / 4.981 seg (la mejor: VSL de 0:44–1:13 y landing por producto), Certiva Concursos 210 / 441 / R$27,90, Carla Figurinhas 84 / 151 / R$5,99, Rafa Planilhas 70 / 61 / R$29,90, Chefe Fernanda Araujo 57 / 5.236.
+- **Fuera por modelo, no por filtro:** Clube de Psicologia (170 ads, 1.556 seg) es **suscripción mensual**, no pago único. Se menciona aparte, nunca dentro de la shortlist.

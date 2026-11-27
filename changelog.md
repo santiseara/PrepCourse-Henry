@@ -1,3 +1,18 @@
+## 2026-11-27 (XIII) — La caza de Brasil, corregida: nada de WhatsApp
+
+Santiago: *"Son solo de whatsapp? No me sirve de wpp, si es asi segui buscando"*.
+
+- **Luana Oliveira (830 ads) descartada:** manda todo a WhatsApp. Filtro nuevo: el destino tiene que ser
+  landing con checkout. El WhatsApp como medio de entrega sí vale.
+- **Lista final:** Fiora Ferrara 350 ads / 4.981 seg (landings propias en Vercel, una por producto),
+  Certiva Concursos 210 / 441 / R$27,90, Carla Figurinhas 84 / 151 / R$5,99, Rafa Planilhas 70 / 61 /
+  R$29,90, Chefe Fernanda Araujo 57 / 5.236.
+- **Trampa técnica nueva:** el display link de la Biblioteca miente (Fiora muestra INSTAGRAM.COM.BR). El
+  destino real sale del href del botón CTA, en el parámetro `u` del redirect de Facebook.
+- **Keywords de destino:** `pagamento único` (~20.000) aísla al que tiene checkout; `receba no seu e-mail` (~140).
+- Fuera por modelo: Clube de Psicologia (170 ads) es suscripción mensual.
+- Actualizados `OUTPUTS/2026-11-27-caza-brasil-cinco-ofertas-nuevas.md` y `WIKI/caza-de-ofertas.md`.
+
 ## 2026-11-27 (XII) — Caza Brasil: cinco ofertas nuevas y el filtro de 10.000 seguidores
 
 Santiago pidió la caza en Brasil con filtros duros: *"mínimo 50 anuncios activos… nada de marca personal

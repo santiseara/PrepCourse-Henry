@@ -1,3 +1,39 @@
+## 2026-11-27 (IX) — Pack Tesoro del Soldador: la oferta nueva LATAM y los 10 videos de la tanda 1
+
+Santiago, con tres links de anuncios y la biblioteca entera: *"Quiero que hagamos exactamente lo que a ellos
+les está funcionando. No nos inventemos guiones, no nos cambiemos cosas. Pongamos exactamente las mismas
+palabras que utilizan ellos en todo."* Y el nombre: *"Así se llama el producto: Pack Tesoro del Soldador."*
+
+- **Ganador: Welder's Treasure Pack** (`welders-treasure.online`, página "Daniel Brooks"). **493 anuncios
+  activos y 163 videos únicos**, los 162 que se pudieron bajar transcriptos. Idiomas: fr 170 · en 115 ·
+  de 102 · it 96. **Cero en español.** 330 de los 493 son estáticos.
+- ⭐ **La señal que ordenó la tanda:** los **9 videos en inglés del 7/10** son los **mismos 9 que tradujeron
+  a francés y alemán el 16/10**, y siguen activos siete semanas después. Es lo único que tradujeron tres
+  veces. **Los 3 links que mandó Santiago son 3 de esos 9.** La ola del 19 al 26/11 (110 videos) es un solo
+  ángulo repetido: *el cliente te pide algo que no tenés y perdés el trabajo*.
+- **Tanda 1 = esos 9 + el mejor de la ola nueva** (el de la pérgola, 2 copias en inglés + versión francesa),
+  traducidos casi literales al español neutro. `OUTPUTS/2026-11-27-guiones-tesoro-del-soldador-LATAM.md`.
+  Son **10 y no 6** porque Santiago pidió *"vamos a hacer 10 anuncios de testeo"*.
+- **10 videos renderizados**, de 24 a 41 s, con su edición: subtítulo de 3 palabras blanco con la activa en
+  amarillo a 0,78 del alto, fichas de plano en pantalla, mockup con resplandor y placa de cierre.
+  **Dos son con avatar** (el 5 y el 9, que ellos también corren con cara), en HeyGen **Avatar IV**, 720p,
+  con PIP abajo a la derecha, igual que ellos.
+- **Mockup en español** hecho **editando el PNG original de ellos** (`imagenes/mockup-pack-tesoro-del-soldador.png`)
+  y **6 fichas de plano propias** en milímetros (portón corredizo, portón de dos hojas, baranda, remolque,
+  pérgola y mesa pata X).
+- **B-roll:** 1.050 TikToks de 7 tags, 210 bajados, **39 limpios** tras OCR (Vision), detector de caras
+  (Vision), bandas negras y nitidez.
+- ⭐ **Regla nueva:** la **voz de hombre grave** sale de `gemini-3.8-flash-tts` con un estilo que pide voz de
+  pecho (**121-141 Hz**, igual que los 105-136 del ganador); el 2.5 con el estilo de siempre daba 145-153 Hz
+  y Santiago lo cazó: *"Acordate de usar una buena voz de hombre, como la de ellos."* El 3.8 lee el estilo en
+  voz alta y se corta con Whisper. Detalle en [[guiones-y-anuncios]].
+- 🐞 Dos trampas del editor: las **fichas se espejaban** (bandera `noflip` nueva) y **se comían el video**
+  (6 de 13 planos en el V9) hasta que se sembró `usage.json` con conteo alto para sus ventanas.
+- **Entregado:** `~/Desktop/tesoro-del-soldador/` y Drive → *Ebook Dami / Ebook Pack Tesoro del Soldador
+  (LATAM) / Videos terminados* (los 10, recomprimidos a 5,4 MB).
+- **Falta:** landing, producto, bonos, backend y precio. Y el avatar es el técnico de VRF, no un soldador:
+  se puede hacer uno propio gratis si Santiago quiere.
+
 ## 2026-11-27 (VIII) — ABA Tools: oferta nueva para LATAM y la tanda 1 de 6 guiones
 
 Santiago: *"Vamos con una oferta nueva, quiero que utilices el mismo razonamiento que utilizaste para hacer

@@ -1,3 +1,31 @@
+## 2026-11-27 (VIII) — ABA Tools: oferta nueva para LATAM y la tanda 1 de 6 guiones
+
+Santiago: *"Vamos con una oferta nueva, quiero que utilices el mismo razonamiento que utilizaste para hacer
+la de soldador, pero para esta … Vamos con 6 ads de testeo, la vamos a tirar en el mercado de latam."*
+Y despues, acotando el blanco: *"es esta pagina, porque en esa hay varias ofertas … q=en.abatools.pro"*.
+
+- **Ganador: ABA Tools** (`abatools.pro`, page id `108617997275390`). **129 ads relevados, todos activos**,
+  el primero del **18/06/2026**. ~160 activos en la pagina y **~97 apuntando solo a `en.abatools.pro`**.
+- **Seis ofertas del mismo molde, una por idioma y por profesion** (ABA EN/IT, logopedia IT, recursos
+  terapeuticos IT, terapia ocupacional FR, toolkit de autismo EN). **Ninguna en espanol**: arbitraje directo.
+- **Su copy, medido:** un solo texto principal para los 61 ads de la oferta inglesa, y **el hook es la unica
+  variable** — 4 de 10 ads transcriptos comparten el cuerpo palabra por palabra. Dos formatos: **45-55 s** y
+  un **VSL de 3 minutos** dentro del feed (~30 ads). Dos cohortes: 28 del 15/10 vivos 43 dias despues y ~30
+  nuevos del 25-26/11.
+- **Su montaje:** 9:16, b-roll de sesiones de terapia, voz en off, pastilla azul fija arriba a la izquierda,
+  **subtitulo de una sola palabra** en itálica blanca abajo y placa negra final *Click on Learn More*.
+- **Tanda 1: 6 guiones en espanol neutro LATAM** con sus 6 hooks mas fuertes sobre su cuerpo fijo, mas el
+  texto principal traducido y 2 hooks de banco. `OUTPUTS/2026-11-27-guiones-aba-tools-LATAM-tanda1.md`.
+- ⛔ **El VSL de 3 minutos no se copia**: la regla fija es **maximo 1:30 por video**. Queda anotado aparte.
+- 🐞 **`gemini-2.5-flash` ya no esta disponible para la API y `gemini-3.8-flash` devolvio 503.** El ASR que
+  anduvo es **`gemini-3.5-transcribe`** (10 por dia: a los 4 archivos dio 429). El resto se transcribio con
+  **faster-whisper local**, que hay que correr **sin `python3 -I`** porque el flag no ve los site-packages
+  del usuario.
+- 🐞 **La Biblioteca de Anuncios no pagina con `window.scrollTo`**: hay que combinarlo con un `WheelEvent`
+  despachado a mano. Y el interceptor de `fetch`/XHR se instala despues de la carga, asi que la **primera
+  pagina se pierde**: se recupera cambiando el orden en *Ordenar por* y volviendo, que refetchea desde cero.
+- Carpeta y material: `~/Desktop/aba-tools/`. Wiki nueva: `WIKI/actividades-aba-naturalistas.md`.
+
 ## 2026-11-27 (VII) — Navidad 3D: los 6 videos de la tanda 1, al Drive
 
 Santiago: *"Bien, vamos con esos, armame los 6, voz de mujer, buena edicion, y buena musica."*

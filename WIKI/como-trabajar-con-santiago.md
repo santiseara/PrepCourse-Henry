@@ -237,3 +237,28 @@ devuelve **429 "Generate content requests per day limit exceeded"**.
   instrucciones.
 - Ojo con el estilo: pedirle *"hablando despacio"* alarga mucho la toma (11,4 s contra 8,9 s por la misma
   linea). Si hay que calzar en un hueco medido, el estilo va **"ritmo normal de conversacion"**.
+
+### El ASR por API cambió de modelo (registro 2026-11-27)
+Transcribiendo los ads de [[actividades-aba-naturalistas]]: **`gemini-2.5-flash` ya no está disponible para
+claves nuevas** (404, "no longer available to new users") y **`gemini-3.8-flash` devolvió 503** por demanda.
+- **El modelo de ASR que anda es `gemini-3.5-transcribe`** (`ASR_MODEL=gemini-3.5-transcribe` sobre
+  `scripts-vsl/transcribir.py`). Tiene la misma cuota chica del tier gratis: a los **4 archivos dio 429**.
+- **El reemplazo gratis e ilimitado es faster-whisper local** (`WhisperModel("small", device="cpu",
+  compute_type="int8")`, `vad_filter=True`). Calidad suficiente para modelar un guion ajeno.
+- ⛔ Hay que correrlo **sin `python3 -I`**: el flag de aislamiento no ve los site-packages de
+  `~/Library/Python` y `faster_whisper` no importa. El script se deja en una carpeta aparte de los datos y
+  se le pasan las rutas por argumento (es la regla del 22/11 de [[guiones-y-anuncios]]).
+
+### Bajar TODOS los ads de un anunciante de la Biblioteca (registro 2026-11-27)
+Para despiezar un ganador con 100+ ads, el método que funcionó:
+1. Abrir la página del anunciante en su Chrome e **inyectar un interceptor** de `window.fetch` y de
+   `XMLHttpRequest` que guarde el texto de toda respuesta de `/api/graphql/`.
+2. ⛔ **`window.scrollTo` solo no pagina**: hay que acompañarlo con un `WheelEvent` despachado a mano
+   (`window.dispatchEvent(new WheelEvent('wheel',{deltaY:2200,bubbles:true}))`) y esperar ~700 ms por vuelta.
+3. ⛔ **La primera página se pierde** porque el interceptor se instala después de la carga. Se recupera
+   **cambiando el orden en *Ordenar por* y volviendo**: cada cambio refetchea desde cero.
+4. Recorrer los JSON buscando todo objeto con `ad_archive_id` + `snapshot` y quedarse con id, fecha de
+   inicio, texto principal, título, link, CTA y las URLs de video.
+5. El **id del video** para deduplicar sale de decodificar el parámetro `efg` de la URL (base64 → JSON con
+   `xpv_asset_id` y `duration_s`). Así se ve de una si corren 125 creativos distintos o 10 duplicados.
+6. El JSON sale del navegador con un `Blob` + `<a download>`, que lo deja en `~/Downloads`.

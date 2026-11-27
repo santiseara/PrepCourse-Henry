@@ -1,3 +1,20 @@
+## 2026-11-27 (XI) — Palabras clave del mercado inglés: el eje es la entrega y la licencia
+
+Santiago: *"están apareciendo cosas buenas, pero no encuentro ofertas tan potentes de low ticket… no sé si
+estoy filtrando de la forma errónea. Quiero que me des palabras claves para el mercado inglés."*
+
+- **Banco nuevo:** `OUTPUTS/2026-11-27-keywords-ingles-low-ticket.md`. 18 footprints que pescan y 9 en lista
+  negra, con el número de ads activos de cada una (frase exacta, country=US).
+- **La mejor es `commercial license included` (~470).** Devuelve casi puro bundle digital low ticket. Le
+  siguen `keep 100% of the profits` (~89), `step by step plans` (~100), `payhip` (~680), `print at home`
+  (~1.600), `printable PDF` (~1.100).
+- **`instant access`, la que venía usando, está quemada:** ~24.000 ads en US de coaching, apps y SaaS.
+- **Regla:** en inglés el número chico es mejor. Y el footprint de checkout existe (payhip, gumroad,
+  stan.store), igual que kiwify/cakto en Brasil; `whop` no sirve, lo copó el mundo de las apuestas.
+- **Corrección de método (reemplaza al "sí suma" del 08/11):** si pide palabras clave, no se corre la
+  búsqueda por iniciativa propia. Se entregan las palabras y listo.
+- Registrado en `WIKI/caza-de-ofertas.md` (dos entradas nuevas) y enlazado en `WIKI/index.md`.
+
 ## 2026-11-27 (X) — Tesoro del Soldador: los dos avatares, recortados contra pantalla verde
 
 Santiago, sobre la tanda ya entregada: *"Quedaron muy bien, pero el único ajuste… los videos del avatar

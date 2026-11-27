@@ -441,3 +441,30 @@ Santiago, después de que le entregara un banco con infantil imprimible, fe, mat
 - **Emagrecimento:** el dinero está en la **receta en PDF**, no en el peso. `receitas na airfryer` (877) y `receitas proteicas` (576) devuelven página tras página de R$10 con el mismo título repetido 8 o 15 veces (Vitrine Nossa Saúde, Eliane Morais, Chef Bia, la flota "Pegar receitas 👉"). `mounjaro natural` (680) sigue viva con Flávia Campos, 15 ads.
 - **Manifestação:** `mapa astral` (931) es la mejor del nicho y la más low ticket que vimos — **R$9,00, R$27 y R$29,90 en el título del creativo**, en páginas distintas corriendo lo mismo (Entrelinhas Descubra, 64 Portais, Lua Jade). `lei da atração` (986) destapa la flota de Kamily Rebelatto en 4 fanpages. El ángulo nivel 3 del nicho ya está escrito por ellos: *"a lei da atração não é suficiente"*, *"faz lei da atração, mas o dinheiro não fica?"*.
 - **Muertas confirmadas:** `ozempic caseiro` (0), `áudio subliminar` (1), `oração a Santo Expedito` (4, frase larga), `numerologia do nome` (222.226 de basura), `carteira do dinheiro` (305.599), `hora espelhada` y `quem nunca vendeu nada` (microdramas), `cardápio de 7 dias` (apps de delivery).
+
+### ⛔ 2026-11-27 · Si pide palabras clave, no se corre la búsqueda (corrige la regla del 08/11)
+
+Santiago, mientras le medía los footprints en inglés en la Biblioteca: *"Te dije que me des palabras clave, no que hagas la búsqueda vos"*.
+
+- **Corrige el "lo que sí suma" del 08/11.** Validar las keywords en la Biblioteca **no se hace por iniciativa propia**. Pedido de palabras → se entregan las palabras y nada más: ni barrido, ni conteos, ni qué destapa cada una, salvo que él pida validarlas.
+- Si ya tengo números medidos de antes, se ponen al lado de la palabra (eso no cuesta nada). Lo que no va es **frenar la entrega para ir a medir**.
+
+### Banco de footprints del mercado inglés (27/11/2026)
+
+Lo medido antes del corte, en `OUTPUTS/2026-11-27-keywords-ingles-low-ticket.md` (frase exacta, activos, country=US). **El eje que pesca en inglés no es la promesa ni el precio: es la entrega y la licencia.**
+
+| Keyword | Ads activos | Qué devuelve |
+|---|---|---|
+| `commercial license included` | ~470 | **La mejor del mercado inglés.** Leather Blueprint, Creative Meadow (26.000 SVG), cutifystudio, Pattern Loft, Minerva Guides |
+| `keep 100% of the profits` | ~89 | Chica y limpísima: Tina Ghazi, Sarah Clarke, The Leather Academy |
+| `step by step plans` | ~100 | Planos por oficio: GarageDesign, Winfield Collection, Woodwork with Jimmy |
+| `print at home` | ~1.600 | Patrones, imprimibles, itinerarios |
+| `payhip` | ~680 | El checkout: quien lo usa vende un PDF. Equivalente inglés de kiwify/cakto |
+| `printable PDF` | ~1.100 | Imprimible puro (maestras, crochet planners) |
+| `instant download` | ~9.500 | Entrega digital — mejor que `instant access` |
+| `mega bundle` | ~1.500 | Material para maestras (TPT y su flota) |
+
+**Lista negra del inglés (medida el 27/11):** `instant access` (~24.000 — la que venía usando: coaching, apps, SaaS), `lifetime access` (~21.000, certificaciones de coach), `take the quiz` (~30.000, nutra y real estate), `here's what you get` (~6.800), `no monthly fees` (~8.500, bancos), `one time payment` (~7.500, licencias de software), `whop` (~730, discords de apuestas), `free presentation` (~2.500, VSL de nutra y high ticket), `watch this short video` (~2.200, servicios locales).
+
+- **Regla que sale de esto:** en inglés, cuanto más chico el número, más limpio. **470 y 89 resultados valen más que 24.000**: con una frase amplia la Library rankea por relevancia solo las primeras filas y después tira lo que más se publicó ese día.
+- **El footprint de checkout en inglés existe y funciona:** `payhip`, `gumroad`, `stan.store`. Confirma el hallazgo del 27/10 (entrar por el checkout, no por el nicho) en el mercado anglo. `whop` **no** sirve: lo copó el mundo de las apuestas.

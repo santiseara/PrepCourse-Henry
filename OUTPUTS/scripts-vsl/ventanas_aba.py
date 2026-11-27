@@ -28,7 +28,7 @@ WK_N = int(sys.argv[3]) if len(sys.argv) > 3 else 1
 S = os.path.dirname(os.path.abspath(__file__))
 FF = os.path.expanduser('~/bin/ffmpeg')
 SCAN = os.path.join(S, 'scanbin')
-MIN_VENT = 4.5          # una ventana util no baja de esto
+MIN_VENT = float(os.environ.get('MIN_VENT', '4.5'))   # una ventana util no baja de esto
 tmp = os.path.join(W, '_vent%s%d' % (os.environ.get('SUF',''), WK_I)); os.makedirs(tmp, exist_ok=True)
 
 # El enemigo del pitch: lo que vendemos es SIN harina y SIN azucar, asi que un plano que
@@ -42,6 +42,7 @@ MARCA = ('link in bio', 'link en bio', 'follow me', 'follow for', 'subscribe', '
          'envios', 'env\u00edos', 'descuento', 'pedidos por', 'pedidos', 'whatsapp', 'wsp',
          'disponible', 'precio', 'promo', 'tienda', 'comprar', 'venta', 'catalogo',
          'cat\u00e1logo', 'imprimible', 'descargable', 'pdf gratis', 'gratis en', 'linkk')
+TEXTO_SUCIO = os.environ.get('TEXTO_SUCIO','1') == '1'
 TOPE_CARAS = 8    # cuadros con cara en el CLIP ENTERO antes de tirarlo (regla del 23/11)
 UMBRAL_ENTERO = 0.22   # un cartel que vive en menos de esto se recorta con la ventana, no tira el clip
 
@@ -119,7 +120,12 @@ for i, p in enumerate(clips, 1):
             if any(mm in tl for mm in MARCA):
                 n_marca += 1; ej_marca = ej_marca or t[:40]
         # el ad es en INGLES: un cartel en otro alfabeto tira el cuadro igual que uno en ingles
-        sucio[k] = bool(ts) or caras > 0 or bandas(frames[k]) > 0.10
+        # 27/11: en este nicho el PRODUCTO es papel escrito (pictogramas, fichas, laminas),
+        # asi que el OCR marca texto en casi todos los cuadros y el filtro barre el pool entero
+        # (regla del 22/11). Aca el texto solo ensucia si es marca del creador; lo que decide
+        # es la CARA (nicho de infancia) y las bandas. El cartel quemado se caza despues a ojo.
+        sucio[k] = (bool(ts) if TEXTO_SUCIO else any(any(mm in t.lower() for mm in MARCA) for t in ts)) \
+                   or caras > 0 or bandas(frames[k]) > 0.10
         if caras > 0: n_caras += 1
     nf = max(len(frames), 1)
     fuera_entero = ''

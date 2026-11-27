@@ -14,8 +14,12 @@ pantalla verde como los originales de ellos."*
   al borde derecho. V05 quedó en escala 0,715 (x 566, y 1005) y V09 en 0,716 (x 565, y 1004).
 - `edit_soldador.py` suma la bandera **`key`** en el bloque `avatar`. El overlay va antes del `ass`, así el
   subtítulo pasa por encima de la cara igual que en el de ellos.
-- V05 y V09 re-renderizados (40,1 s y 24,8 s), copiados a `~/Desktop/tesoro-del-soldador/anuncios/` y
-  **reemplazados en el Drive** (los dos viejos a la papelera). Regla nueva en [[guiones-y-anuncios]].
+- ⛔ **Trampa cazada en el camino:** re-renderizar solo esos dos les **cambió el b-roll**, porque
+  `usage.json` es compartido y el editor lo escribe. Se repuso el contador a su estado inicial y se
+  corrieron **los 10 en orden**: los 8 que no se tocan salieron **byte por byte idénticos** (verificado con
+  `shasum`), así que al Drive subieron solo los dos. Regla nueva en [[guiones-y-anuncios]].
+- V05 (40,1 s) y V09 (24,8 s) copiados a `~/Desktop/tesoro-del-soldador/anuncios/` y **reemplazados en el
+  Drive** (los viejos a la papelera).
 
 ## 2026-11-27 (IX) — Pack Tesoro del Soldador: la oferta nueva LATAM y los 10 videos de la tanda 1
 

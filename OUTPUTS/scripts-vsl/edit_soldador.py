@@ -10,7 +10,7 @@ Su edicion, tal cual:
   - FICHAS DE PLANO: grabacion de pantalla del PDF sobre fondo gris oscuro (van al pool como clip).
   - MOCKUP del pack con resplandor, 1 o 2 veces, anclado a donde la voz nombra el producto.
   - Placa de cierre con el CTA.
-Lo que cambia contra edit_acm.py: overlay "mockup", capa de avatar en PIP abajo a la derecha
+Lo que cambia contra edit_acm.py: overlay "mockup", capa de avatar recortado abajo a la derecha
 (su formato con cara) y subtitulo amarillo sin caja.
 Uso: python3 edit_soldador.py plan.json salida.mp4
 
@@ -654,7 +654,12 @@ run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/ov.txt
 # en dos pasos: con todo junto en un solo filtro, ffmpeg tiraba pedazos de audio (la voz quedaba 1-2 s más corta)
 AV = P.get('avatar')
 av_in = ['-i', F(AV['src'])] if AV else []
-if AV:
+if AV and AV.get('key'):
+    # avatar ya recortado (ProRes 4444 con alfa): solo se escala y se pega, sin caja
+    sc, ax, ay = AV['s'], AV['x'], AV['y']
+    pre = (f"[2:v]fps={FPS},scale=iw*{sc}:ih*{sc},format=rgba,setsar=1[av];"
+           f"[0:v][1:v]overlay=0:0:format=auto[ovv];[ovv][av]overlay={ax}:{ay}:shortest=0:format=auto[ov];")
+elif AV:
     ax, ay = AV.get('x', 615), AV.get('y', 1230)
     aw, ah = AV.get('w', 465), AV.get('h', 690)
     pre = (f"[2:v]fps={FPS},scale=w='max({aw}/iw,{ah}/ih)*iw':h=-2:eval=init,"

@@ -1,3 +1,22 @@
+## 2026-11-27 (X) — Tesoro del Soldador: los dos avatares, recortados contra pantalla verde
+
+Santiago, sobre la tanda ya entregada: *"Quedaron muy bien, pero el único ajuste… los videos del avatar
+los pongas con pantalla verde. Yo no quiero que sea el fondo del avatar original. Quiero que estén tipo
+pantalla verde como los originales de ellos."*
+
+- En el ad del ganador el tipo de la gorra **no tiene recuadro**: está contra pantalla verde y keyeado, así
+  que flota sobre el b-roll. Los nuestros salían con la sala de máquinas del avatar metida en una cajita.
+- **Se recortó local, sin gastar un crédito de HeyGen:** Vision de macOS (`VNGeneratePersonSegmentationRequest`
+  en `.accurate`) sobre los mp4 ya rendidos → ProRes 4444 con alfa. Scripts nuevos en `OUTPUTS/scripts-vsl/`:
+  `recorte_persona.swift`, `avatar_recortar.sh` y `avatar_ubicar.py`.
+- **La posición se midió en el ganador** corriendo el mismo segmentador sobre sus cuadros: en 720x1280 la
+  silueta va de x 408 a 719 y de y 840 a 1279. En 1080x1920 eso es alto 660 con el tope en y=1260, pegada
+  al borde derecho. V05 quedó en escala 0,715 (x 566, y 1005) y V09 en 0,716 (x 565, y 1004).
+- `edit_soldador.py` suma la bandera **`key`** en el bloque `avatar`. El overlay va antes del `ass`, así el
+  subtítulo pasa por encima de la cara igual que en el de ellos.
+- V05 y V09 re-renderizados (40,1 s y 24,8 s), copiados a `~/Desktop/tesoro-del-soldador/anuncios/` y
+  **reemplazados en el Drive** (los dos viejos a la papelera). Regla nueva en [[guiones-y-anuncios]].
+
 ## 2026-11-27 (IX) — Pack Tesoro del Soldador: la oferta nueva LATAM y los 10 videos de la tanda 1
 
 Santiago, con tres links de anuncios y la biblioteca entera: *"Quiero que hagamos exactamente lo que a ellos

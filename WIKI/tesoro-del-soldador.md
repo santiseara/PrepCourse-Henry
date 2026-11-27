@@ -39,7 +39,7 @@ La ola del 19 al 26/11 (unos 110 videos) es **un solo ángulo repetido**: *el cl
 - **Subtítulos** de 2-3 palabras, mayúscula, blancos con borde negro, la palabra que suena en **amarillo**, sin caja, centrados a **0,78 del alto** (en los de avatar, a 0,69).
 - **Fichas de plano**: grabación de pantalla del PDF sobre fondo gris oscuro, con barra naranja "WELDER'S TREASURE PACK | PROJECT 06", título, vistas frontal/lateral/superior, "CUT LIST & MATERIALS", "BUILD STEPS" numerados en naranja y "FINISH".
 - **Mockup** del pack con resplandor, una o dos veces, y al final otra vez con el CTA.
-- Formato con cara: **el avatar va en PIP abajo a la derecha** (43 % del ancho, 36 % del alto), no es un talking head.
+- Formato con cara: **el avatar va recortado abajo a la derecha**, filmado contra pantalla verde y keyeado — sin recuadro y sin fondo propio. Medido con Vision sobre sus cuadros: en 720x1280 la silueta va de x 408 a 719 (pegada al borde derecho) y de y 840 a 1279 (pegada al piso). No es un talking head.
 - Cierran con grabación de pantalla de la landing.
 
 ## Lo que hicimos (tanda 1, 2026-11-27)
@@ -49,7 +49,8 @@ La ola del 19 al 26/11 (unos 110 videos) es **un solo ángulo repetido**: *el cl
 - **6 fichas de plano propias** en español y en milímetros (`fichas_es/gen_fichas.py` + `pantalla.py`): portón corredizo, portón de dos hojas, baranda de escalera, remolque de dos ejes, pérgola de acero y mesa industrial pata X. Se entregan como clip de "grabación de pantalla" con fondo gris, sombra, inclinación de 1,1° y desplazamiento lento.
 - **B-roll:** 1.050 TikToks de 7 tags (`herreria`, `soldadura`, `portones`, `estructurasmetalicas`, `muebleindustrial`, `trailercasero`, `pergolametalica`), 210 bajados, **39 limpios** después de OCR (Vision), detector de caras (Vision), bandas negras y nitidez.
 - **Avatar:** HeyGen **Avatar IV**, 720p vertical, audio subido (no gasta voz). El personaje es **"VRF TECNICO sala de maquinas"**, el único de oficio que quedaba en la cuenta: el avatar "HERRERO" de [[herrero-de-finde]] **ya no está**.
-- **Editor:** `OUTPUTS/scripts-vsl/edit_soldador.py` (copia de `edit_acm.py`) con tipo de overlay `mockup`, capa de **avatar en PIP** y subtítulo amarillo sin caja.
+- **Recorte del avatar (27/11, pedido de Santiago):** los dos videos con cara salían con la sala de máquinas del avatar metida en una cajita. Se recortó la persona con **Vision de macOS** (`scripts-vsl/recorte_persona.swift` + `avatar_recortar.sh`), sin volver a generar nada en HeyGen, y se ubicó con `avatar_ubicar.py` en la misma posición que el ganador (alto 660, tope en y=1260, pegado al borde derecho). V05: escala 0,715 en x=566 y=1005. V09: 0,716 en x=565 y=1004.
+- **Editor:** `OUTPUTS/scripts-vsl/edit_soldador.py` (copia de `edit_acm.py`) con tipo de overlay `mockup`, capa de **avatar recortado** (bandera `key`) y subtítulo amarillo sin caja.
 - **Música:** `atlasaudio-advertising-marketing-617541.mp3` (la de oficio y taller), preparada con `cama_acm.py`, a −11 dB con ducking de 5.
 
 ## Preguntas abiertas

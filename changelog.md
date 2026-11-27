@@ -1,3 +1,24 @@
+## 2026-11-27 (II) — Navidad 3D: la oferta nueva para Argentina y la tanda 1 de guiones
+
+Santiago eligió clonar [[atelie-3d]] **para Argentina**: *"Tenemos que hacer ads de la que te acabo
+de mandar, la vamos a tirar en Arg. Empecemos por los guiones, y los vamos mejorando."* Y confirmó
+que **la landing la arma el socio**.
+
+- **Por qué Argentina:** el calendario de Navidad del ganador no llega en el mercado inglés este año
+  (28 días y el envío por correo cierra ~10/12); en Argentina la venta es local y se entrega en mano
+  hasta el 23/12.
+- ⛔ **Tanda 1 v1 rechazada.** Santiago: *"No me gustan, no me generan nada de urgencia, el precio no
+  quiero que esté. La estructura debería ser: hook-problema/situación-solución-cta."*
+- **Regla nueva en [[guiones-y-anuncios]] (27/11):** la estructura es **hook → problema/situación →
+  solución → CTA**, **sin precio**, y **la urgencia es el argumento, no el cierre**. Se construye con
+  el **reloj del negocio del comprador** (horas de máquina por pieza × días que quedan, la semana en
+  que se cierran los pedidos grandes, la fecha después de la cual nadie espera una producción, la
+  ventana del año en que el producto se vende, el primero que publica se lleva los pedidos), y cada
+  guion de la tanda corre sobre un reloj distinto.
+- **Tanda 1 v2:** 6 guiones + un solo texto principal + banco de 5 hooks en
+  `OUTPUTS/2026-11-27-guiones-navidad-3d-AR-tanda1.md`. Nuevo en la WIKI: [[navidad-3d]].
+- ⏸️ **Sigue sin tocarse la edición** hasta que apruebe los guiones.
+
 ## 2026-11-27 — Ateliê 3D despiezada y el diagnóstico de por qué no vende nada
 
 Santiago: *"analizá realmente qué es lo que le está funcionando, no nos está funcionando ninguna

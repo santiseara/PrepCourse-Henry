@@ -276,6 +276,11 @@
   (La de Santiago cae después del segundo 133, así que la ventana buena arranca en el 27.)
 
 ## Estructura
+- ⛔⛔ **2026-11-27 · La estructura es HOOK → PROBLEMA/SITUACIÓN → SOLUCIÓN → CTA, y la urgencia es el argumento, no el cierre.** Santiago, rechazando la tanda 1 de [[navidad-3d]]: *"No me gustan, no me generan nada de urgencia, el precio no quiero que esté. La estructura debería ser: hook-problema/situación-solución-cta. Pero tenemos que generar algún tipo de urgencia/interés para que quieran ir directo a comprar."*
+  - **El error que cometí:** poner el calendario (la estacionalidad) como adorno del final. En el ganador el reloj **es** el cuerpo del guion.
+  - **La urgencia se construye con el reloj del negocio del comprador**, no con un descuento ni con un cupo: cuántas horas tarda su máquina por pieza × los días que quedan, la semana en que se cierran los pedidos grandes, la fecha después de la cual nadie espera una producción, la ventana del año en que el producto se vende, y el hecho de que el primero que publica se lleva los pedidos.
+  - **Cada guion de la tanda corre sobre un reloj distinto**, igual que cada uno lleva un comprador distinto (regla del 13/10).
+  - **Sin precio en el guion.** Vuelve a valer la regla de abajo sin excepción: "baratísimo", "menos que un café", y en un nicho con insumo, el ancla relativa **"menos que un rollo de filamento"**. En la tanda rechazada el precio estaba en los 6 porque el ganador brasileño lo dice; no se clona eso.
 - **Hook → Body → CTA**, como máximo **30 segundos**. ⚠️ Tres páginas de tu método piden probar formatos largos de 1:30 a 3 minutos: [[angulos-publicitarios]], [[guiones-de-video-ads]] y [[optimizacion-de-roas]]. Lo tomo como formato por defecto, no como prohibición. A confirmar.
 - **3 guiones completos y distintos por tanda**, nunca pieza por pieza. ⚠️ Tus prompts `guiones-7-pasos` y `nivel-de-conciencia` entregan 1 completo + 2 solo de hook (modular). Criterio que aplico: si pedís "guiones", van **3 completos** (tu regla). Si pedís "hooks" o "renovar", va el formato modular ([[renovacion-de-creativos]]).
 - Hooks con estructuras distintas, bodies variados y CTAs que rotan.

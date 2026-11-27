@@ -58,7 +58,9 @@ def pool_y_clips():
 
 
 # Su banner fijo de arriba: renglon rojo con la oferta, renglon amarillo con las condiciones.
-BANNER = dict(l1='+400 ARCHIVOS STL DE NAVIDAD', l2='PAGO ÚNICO · ACCESO INMEDIATO', y=96, size=46)
+# 27/11: Santiago: "bajalos un poco, hay formatos donde no se ven" + que se vayan a los 10-15 s.
+# y=270 lo deja debajo de la UI de Reels/Stories (que se come ~14 % de arriba), y until=12 lo apaga.
+BANNER = dict(l1='+400 ARCHIVOS STL DE NAVIDAD', l2='PAGO ÚNICO · ACCESO INMEDIATO', y=270, size=46, until=12)
 
 # Su cierre vive los ultimos ~4 s y se mide DESDE EL FINAL (regla del 25/11), no por palabra.
 END = dict(type='cta', l1='ACCESO INMEDIATO', l2='Tocá Más información', y=1150, from_end=4.2)
@@ -120,7 +122,7 @@ for v in VIDEOS:
         hi=AMARILLO, hibox=NEGRO, hibord=0, capy=1480, pop=True, italic=False, margin=60,
         font='Montserrat ExtraBold', fsize=70, spacing=2, outline=5, shadow=3,
         banner=v['banner'],
-        hook=v['hook'], hook_size=104, hook_y=290,
+        hook=v['hook'], hook_size=104, hook_y=500,
         hook_until=v['hasta'][0], hook_until_occ=v['hasta'][1],
         chip_y=1300, step_size=118, progress=True,
         seed=v['n'] * 1301, usage='usage.json',

@@ -602,12 +602,14 @@ run([FF, '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{tmp}/ov.txt
 # en dos pasos: con todo junto en un solo filtro, ffmpeg tiraba pedazos de audio (la voz quedaba 1-2 s más corta)
 ban = P.get('banner') and os.path.exists(f'{tmp}/o_banner.png')
 cmd_v = [FF, '-v', 'error', '-y', '-i', f'{tmp}/cat.mp4', '-i', f'{tmp}/ov.mov']
-if ban: cmd_v += ['-framerate', str(FPS), '-loop', '1', '-t', f'{L:.2f}', '-i', f'{tmp}/o_banner.png']
+BAN_T = float(P.get('banner', {}).get('until', 0) or L)   # 27/11: Santiago lo quiere fuera a los ~12 s
+if ban: cmd_v += ['-framerate', str(FPS), '-loop', '1', '-t', f'{min(BAN_T, L):.2f}', '-i', f'{tmp}/o_banner.png']
 # ⛔ 26/11: el concat de los cortes deja timestamps irregulares y el overlay DESCARTA la placa
 # en esos cuadros (medido: 21 de 780 sin banner). Se normaliza todo a CFR antes de superponer.
 fc = f"[0:v]fps=fps={FPS}:round=near,setpts=N/{FPS}/TB[b];[1:v]setpts=N/{FPS}/TB[o];"
 fc += "[b][o]overlay=0:0:format=auto:eof_action=repeat[ov];"
-fc += (f"[2:v]setpts=N/{FPS}/TB[bn];[ov][bn]overlay=0:0:format=auto:eof_action=repeat[ov2];" if ban else "")
+fc += (f"[2:v]setpts=N/{FPS}/TB[bn];[ov][bn]overlay=0:0:format=auto:eof_action=pass:"
+       f"enable='lte(t\,{min(BAN_T, L):.2f})'[ov2];" if ban else "")
 src = '[ov2]' if ban else '[ov]'
 fc += f"{src}ass={tmp}/subs.ass:fontsdir={FD}[s0];"
 fc += (f"color=c=0x{'%02X%02X%02X' % ORANGE}:s={W}x14:r={FPS}[pb];[s0][pb]overlay=x='-W+W*t/{L:.3f}':y={H-14}:shortest=1[v]" if P.get('progress') else "[s0]null[v]")

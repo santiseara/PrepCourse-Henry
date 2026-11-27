@@ -25,8 +25,9 @@ dicen el guion palabra por palabra: era el ASR. Regla en [[guiones-y-anuncios]].
 
 ## Montaje (clon de Ateliê 3D)
 
-Banner fijo de dos pastillas arriba (roja `#D81C1B` + amarilla `#FDD400`): *+400 ARCHIVOS STL DE
-NAVIDAD · PAGO ÚNICO · ACCESO INMEDIATO*. Titular de dos renglones con el segundo en pastilla roja.
+Banner de dos pastillas arriba (roja `#D81C1B` + amarilla `#FDD400`): *+400 ARCHIVOS STL DE
+NAVIDAD · PAGO ÚNICO · ACCESO INMEDIATO*, **en y=270 (14 % del alto, debajo de la UI de Reels) y
+apagado a los 12 s** por pedido de Santiago del 27/11; el titular baja a y=500 para no pisarse. Titular de dos renglones con el segundo en pastilla roja.
 **Pastilla verde para cada cifra de plata**, pastilla con ícono para el beneficio. Subtítulos de 3
 palabras con la que suena en amarillo. Barra de progreso abajo. Cierre *ACCESO INMEDIATO / Tocá Más
 información* los últimos 4,2 s, medido desde el final.

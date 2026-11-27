@@ -1,3 +1,31 @@
+## 2026-11-27 — Ateliê 3D despiezada y el diagnóstico de por qué no vende nada
+
+Santiago: *"analizá realmente qué es lo que le está funcionando, no nos está funcionando ninguna
+oferta de las que tiramos... estamos haciendo claramente algo mal... desarrollemos un método de
+trabajo ganador, que todo lo que tiremos al menos venda"*.
+
+- **El competidor (page id 1358703690661118):** Ateliê 3D, Brasil, STL de Navidad. ~120 ads activos,
+  los de más impresiones **desde el 20/10 sin tocarlos** (38 días). Se bajaron y transcribieron
+  **12 de sus videos** (muestra, no los 120) y se leyó su landing entera.
+- **Lo que le funciona:** vende **la cuenta del negocio**, no los archivos (el producto aparece a
+  los 18-20 s); el **R$ 10 del ad es anzuelo** y la landing cobra **R$ 37,90**, con un modal de
+  rescate a **R$ 27** si elegís el básico; **deadline operativo** (calendario de producción de
+  Navidad) en vez de descuento; la **calculadora de lucro por pieza** como mecanismo, en 7 de 12
+  videos; un solo cuerpo de texto para casi todos los ads; y **no renueva creativos: suma**.
+- **El diagnóstico, con los hechos del repo:** 30 altas de oferta nueva entre el 16/10 y el 26/11
+  (una cada 1,4 días), las **6 carpetas `landing/` del Escritorio vacías**, la última landing
+  armada el 20/11, y nuestra propia wiki diciendo desde hace un mes que *casi nunca es el anuncio,
+  es la landing* ([[lectura-de-resultados]]) y que *hobby no tiene urgencia de compra* ([[ofertas]]).
+- **Nuevo en la WIKI:** [[atelie-3d]] (sus 12 hooks, su estructura de video de 6 pasos, las 14
+  secciones de su landing) y [[metodo-de-trabajo-ganador]] (el diagnóstico y las 10 reglas nuevas:
+  una oferta a la vez, la promesa escrita como una cuenta, deadline real, checklist de 5 piezas,
+  escalera de precio en la landing, corte escrito antes de lanzar).
+- **Gaps 1 y 2 del índice reescritos:** no hay una sola landing, y no tenemos los números de las
+  últimas 10 ofertas.
+- `OUTPUTS/2026-11-27-analisis-atelie-3d-y-metodo-nuevo.md`.
+- ⏸️ **Nada de producción:** Santiago pidió ir paso a paso y no arrancar la edición hasta aprobar
+  los guiones. Queda esperando su decisión sobre qué oferta se termina primero.
+
 ## 2026-11-26 (IV) — Mini Plaster Studio: las visuales para el socio
 
 Santiago: *"Mandame las visuales de la oferta de mini yesos. Mandamelas como siempre, con los links."*

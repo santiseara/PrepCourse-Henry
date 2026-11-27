@@ -8,8 +8,10 @@ argumento, y cada guion corre sobre un reloj distinto.
 
 Avatar: el que ya tiene la impresora 3D y la tiene juntando polvo.
 
-**Estado:** ✅ aprobados por Santiago el 27/11 los V2, V3 y V6 · 🆕 V7, V8 y V9 nuevos, con la misma
-receta de los aprobados: **plata concreta, un comprador con nombre y un mecanismo de cobro que se
+**Estado al 27/11:** ✅ aprobados **V2, V3, V6, V8 y V9** · 🆕 **V10** nuevo, el más agresivo, con las
+cantidades puestas · ⛔ V1, V4, V5 y V7 al banco del final.
+
+La receta de los aprobados: **plata concreta, un comprador con nombre y un mecanismo de cobro que se
 entiende solo**.
 
 ---
@@ -68,24 +70,6 @@ imprimís solamente lo que ya está vendido.
 
 ---
 
-## V7 · El acto de fin de curso
-
-**Hook.** En cada grado hay veinticinco madres buscando el mismo regalo para la seño. Y lo compran
-todas la misma semana.
-
-**Problema.** Es la semana que viene: entre los actos de fin de curso, las despedidas y los souvenirs
-para los compañeritos, en diciembre un colegio mueve más regalos chicos que cualquier local. Siempre
-hay una mamá que organiza y le pregunta al grupo qué compran. Si para ese día vos tenés una pieza
-hecha y una foto, el pedido es tuyo y es de veinte piezas de una. Si la tenés el 15, ya compraron
-las tazas.
-
-**Solución.** En el pack hay más de 400 modelos de Navidad listos para imprimir, con la foto de cada
-uno: elegís el adorno, lo imprimís esta noche y mañana lo mandás al grupo del grado.
-
-**CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇
-
----
-
 ## V8 · El puesto de la feria
 
 **Hook.** Un puesto en una feria navideña se paga con los primeros seis adornos que vendés. Todo lo
@@ -122,6 +106,25 @@ publicaciones arriba.
 
 ---
 
+## V10 · Cien adornos hasta Nochebuena
+
+**Hook.** De acá a Nochebuena tu impresora puede hacer cien adornos sin que vos muevas un dedo.
+Cien. ¿Cuántos tenés hechos hasta ahora?
+
+**Problema.** Cuatro por noche, veintiocho por semana, y la máquina trabaja sola mientras dormís:
+son dos rollos de filamento para todo diciembre. Y la demanda no es el problema: en estas tres
+semanas la gente compra adornos en la feria, en Mercado Libre y en el grupo del colegio. El
+problema es llegar con las piezas hechas: cada noche que la impresora está apagada son cuatro
+piezas menos para vender, y esas no se recuperan en enero.
+
+**Solución.** Lo único que falta es el archivo. Más de 400 modelos de Navidad listos para bajar y
+mandar a imprimir esta misma noche, con la foto de cada uno y nueve articulados que salen de la
+máquina armados y en movimiento.
+
+**CTA.** Sale menos que un rollo de filamento. Te dejo el link abajo. 👇
+
+---
+
 ## Texto principal (uno solo para los 6, como hace el ganador)
 
 🎄🖨️ Un rollo de filamento son cuarenta adornos de Navidad. Quedan menos de cuatro semanas para
@@ -155,7 +158,7 @@ Piezas para vender por encargo, en ferias, por WhatsApp o en Mercado Libre hasta
 | V2 ✅ | el aguinaldo lo gasta alguien | se gasta entre el 10 y el 24 | el vecindario / WhatsApp |
 | V3 ✅ | 30 piezas de un solo pedido, cobradas por adelantado | la semana en que se cierran los pedidos de empresa | oficinas, colegios, negocios |
 | V6 ✅ | cobrar antes de imprimir | el filamento que se gasta al pedo | el que tiene miedo de perder plata |
-| V7 🆕 | 25 madres comprando el mismo regalo la misma semana | el acto de fin de curso | el grado / la seño |
+| V10 🆕 | cien adornos hasta Nochebuena, cuatro por noche | cada noche apagada son 4 piezas menos | el que quiere producir |
 | V8 🆕 | el puesto se paga con los primeros seis adornos | el puesto se reserva ahora y se paga igual | la feria navideña |
 | V9 🆕 | publicaciones que ya vendieron esta semana | las primeras publicaciones se llevan todo | Mercado Libre |
 
@@ -173,9 +176,10 @@ Piezas para vender por encargo, en ferias, por WhatsApp o en Mercado Libre hasta
 
 ## Descartados de la v3 (27/11)
 
-Santiago: *"El 2, 3 y el 6 son los mejores"*. Los otros tres quedan acá como banco; lo que les faltó
-es **una escena de cobro concreta**: V1 es una cuenta fría, V4 es abstracto y V5 le reprocha al
-espectador que la máquina no se haya pagado sola.
+Santiago: *"El 2, 3 y el 6 son los mejores"* y después *"El 9 y el 8 me gustaron"*. Los que quedaron
+afuera van acá como banco. Lo que les faltó es **una escena de cobro concreta**: V1 es una cuenta
+fría, V4 es abstracto, V5 le reprocha al espectador que la máquina no se haya pagado sola, y V7 (el
+acto de fin de curso) pone al comprador antes que a la plata.
 
 ## V1 · Un rollo, cuarenta adornos
 
@@ -226,5 +230,23 @@ decide ahora, no el 20.
 **Solución.** Más de 400 archivos de Navidad listos para bajar, que andan en cualquier impresora y
 en cualquier programa, con la foto de cada modelo y una calculadora que te dice cuánto cobrar cada
 pieza antes de imprimirla.
+
+**CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇
+
+---
+
+## V7 · El acto de fin de curso
+
+**Hook.** En cada grado hay veinticinco madres buscando el mismo regalo para la seño. Y lo compran
+todas la misma semana.
+
+**Problema.** Es la semana que viene: entre los actos de fin de curso, las despedidas y los souvenirs
+para los compañeritos, en diciembre un colegio mueve más regalos chicos que cualquier local. Siempre
+hay una mamá que organiza y le pregunta al grupo qué compran. Si para ese día vos tenés una pieza
+hecha y una foto, el pedido es tuyo y es de veinte piezas de una. Si la tenés el 15, ya compraron
+las tazas.
+
+**Solución.** En el pack hay más de 400 modelos de Navidad listos para imprimir, con la foto de cada
+uno: elegís el adorno, lo imprimís esta noche y mañana lo mandás al grupo del grado.
 
 **CTA.** Es baratísimo y lo bajás al instante. Link abajo. 👇

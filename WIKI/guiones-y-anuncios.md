@@ -276,6 +276,9 @@
   (La de Santiago cae después del segundo 133, así que la ventana buena arranca en el 27.)
 
 ## Estructura
+- 🔢 **2026-11-27 · Las cantidades específicas SÍ entran, y tienen que cerrar entre sí.** Santiago: *"vamos con uno más, más potente, más agresivo, más generar ingresos, cantidades en específico podés poner"*. En V10 de [[navidad-3d]]: **cuatro adornos por noche · veintiocho por semana · cien hasta Nochebuena · dos rollos de filamento**. Los cuatro números son el mismo número mirado de cuatro formas, y por eso suena a cuenta de alguien que lo hace, no a promesa.
+  - **Cantidades de producción (piezas, horas, pedidos, rollos) sí; precios en pesos no**, mientras no los confirme Santiago: un precio inventado en un mercado con inflación se nota y hunde el ad. El margen se muestra con el rendimiento del insumo.
+  - **La pregunta al final del hook es lo que lo vuelve agresivo** sin culpar a nadie: *"Cien. ¿Cuántos tenés hechos hasta ahora?"*
 - ⭐ **2026-11-27 · La receta del hook de ingresos que aprueba: PLATA CONCRETA + UN COMPRADOR CON NOMBRE + UN MECANISMO DE COBRO.** De los 6 de [[navidad-3d]] eligió tres: el aguinaldo que alguien va a gastar, *"treinta piezas de un solo pedido, cobradas por adelantado"* y *"cobrar antes de imprimir"*. Los tres tienen una **escena de cobro** que se ve: quién paga, cuánto y cuándo.
   - **Lo que descartó, y por qué:** la cuenta fría del insumo ("un rollo son cuarenta adornos"), el hook abstracto ("ocho horas mientras dormís") y el que le reprocha al espectador ("tu máquina todavía no se pagó sola"). Un número solo no alcanza: hay que poner la escena donde ese número se cobra.
   - **Dónde buscar la escena:** el lugar donde el mercado ya junta la plata y la fecha en que la gasta — el aguinaldo, el pedido de empresa de fin de año, el acto de fin de curso y el regalo para la maestra, el puesto de la feria, la publicación de Mercado Libre que ya vendió. Cada guion, una escena distinta.

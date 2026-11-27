@@ -1,3 +1,18 @@
+## 2026-11-27 (V) — Navidad 3D: la tanda cerrada en seis y las cantidades específicas
+
+Santiago: *"El 9 y el 8 me gustaron, vamos con uno más, más potente, más agresivo, más generar
+ingresos, cantidades en específico podés poner."*
+
+- **La tanda queda: V2, V3, V6, V8, V9 y V10.** V1, V4, V5 y V7 al banco del final del output.
+- **V10, el nuevo:** *"De acá a Nochebuena tu impresora puede hacer cien adornos sin que vos muevas
+  un dedo. Cien. ¿Cuántos tenés hechos hasta ahora?"*
+- 🔢 **Regla nueva en [[guiones-y-anuncios]]:** las cantidades específicas entran y **tienen que
+  cerrar entre sí** — cuatro por noche, veintiocho por semana, cien hasta Nochebuena, dos rollos:
+  es el mismo número mirado de cuatro formas, y por eso suena a cuenta de alguien que lo hace y no a
+  promesa. **Cantidades de producción sí; precios en pesos no**, mientras Santiago no los confirme.
+  Y la pregunta al final del hook es lo que lo vuelve agresivo sin culpar a nadie.
+- ⏸️ Sigue sin tocarse la edición.
+
 ## 2026-11-27 (IV) — Navidad 3D: tres guiones nuevos y la receta del hook que aprueba
 
 Santiago: *"El 2, 3 y el 6 son los mejores, haceme 3 más, que sean más alineados a generar ingresos,

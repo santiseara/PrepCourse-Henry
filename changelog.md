@@ -1,3 +1,23 @@
+## 2026-11-27 (VII) — Navidad 3D: los 6 videos de la tanda 1, al Drive
+
+Santiago: *"Bien, vamos con esos, armame los 6, voz de mujer, buena edicion, y buena musica."*
+
+- **6 videos de 38,9 a 46,9 s** en `~/Desktop/navidad-3d/anuncios/` y en
+  `Ebook Dami / Ebook Navidad 3D (AR) / Videos terminados`, nombrados por su hook.
+- **Voz: Sulafat (mujer)**, portena de treintipico, `gemini-2.5-flash-preview-tts`.
+  Ritmo objetivo 200 ppm (el del nicho), speed 0,98 a 1,15. Musica: la pista de Atlas rebalanceada.
+- **Pool:** 148 TikToks de `#3dprintedchristmas` -> 77 tras el filtro denso -> 56 tras el pase a ojo
+  + 22 de maquina y filamento de [[the-3d-method]] -> **51 tras la pasada densa de 6 cuadros**.
+- ⛔ **Bug nuevo, vale para cualquier tanda: el `concat` con `-c copy` congela el fondo en la
+  composicion final.** 17 segundos de un mismo plano en el V3, con los cortes y el `cat.mp4`
+  perfectos por separado. Se arregla re-encodeando el concat a CFR real. Y el chequeo que lo caza:
+  cuadros extraidos **por numero de cuadro** comparando tamanios, nunca por hash ni con `-ss`.
+- ⛔ **La pasada densa de 6 cuadros por clip no es opcional.** Despues del filtro automatico y de la
+  hoja de contactos seguian vivos **dos ads de competidores enteros** (uno con su WhatsApp quemado),
+  Minnie Mouse, un fondo de Super Mario, Bob Esponja, Pikachu, un Nazgul y cinco textos del creador.
+- `OUTPUTS/2026-11-27-navidad-3d-tanda1-produccion.md`. Scripts nuevos: `scripts-vsl/edit_n3d.py`,
+  `gen_n3d_plans.py`, `ventanas_n3d.py`.
+
 ## 2026-11-27 (VI) — Navidad 3D: V10 con la cuenta en pesos, sacada de Mercado Libre
 
 Santiago, rechazando la versión con la cuenta en unidades: *"No, muy malo, te dije que des alguna

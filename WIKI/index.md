@@ -173,6 +173,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-27 — Descripción de los ads del Pack Tesoro del Soldador](../OUTPUTS/2026-11-27-descripcion-ads-tesoro-del-soldador.md) — el único texto principal que corren en los 493 anuncios, traducido literal al español neutro, sin la línea del precio porque la tanda sale multipaís · ver [[tesoro-del-soldador]]
 - [2026-11-27 — Palabras clave del mercado inglés para low ticket](../OUTPUTS/2026-11-27-keywords-ingles-low-ticket.md) — los footprints de entrega y licencia que pescan infoproducto en inglés (`commercial license included`, `keep 100% of the profits`, `payhip`), la lista negra con `instant access` a la cabeza y por qué el número chico vale más · ver [[caza-de-ofertas]]
 - [2026-11-27 — Navidad 3D: tanda 1 de producción](../OUTPUTS/2026-11-27-navidad-3d-tanda1-produccion.md) — los 6 videos con voz de mujer, el pool de 148 TikToks que quedó en 51, los dos ads de competidores que se colaron hasta la pasada densa, y el bug del concat que congela el fondo 17 segundos · ver [[navidad-3d]]
 - [2026-11-27 — Navidad 3D: tanda 1 de 6 guiones](../OUTPUTS/2026-11-27-guiones-navidad-3d-AR-tanda1.md) — hook → problema → solución → CTA, sin precio, cada uno sobre un reloj distinto, más el texto principal único y el banco de hooks · ver [[navidad-3d]]

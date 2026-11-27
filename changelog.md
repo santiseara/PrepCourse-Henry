@@ -1,3 +1,17 @@
+## 2026-11-27 (XII) — Descripción de los ads del Pack Tesoro del Soldador
+
+Santiago: *"Dame una descripción para los ads de la oferta de soldador que hicimos hoy"* → *"Que sea similar
+a la original"*.
+
+- **Nuevo:** `OUTPUTS/2026-11-27-descripcion-ads-tesoro-del-soldador.md`.
+- Medido sobre los 493 anuncios activos de Welder's Treasure: corren **un solo body y un solo título**,
+  el mismo traducido a inglés (125 copias), francés (170), alemán (102) e italiano (96). Se clonó literal
+  al **español neutro**, con el vocabulario de los 10 guiones (planos de herrería, portones, cocheras,
+  muebles estilo industrial).
+- **Se sacó la línea `Starting at $9`:** el precio LATAM no está definido y la tanda sale multipaís
+  (regla del 8/11). Queda una variante con precio para cuando se fije y salga a un solo país.
+- Se sumó el registro a `WIKI/tesoro-del-soldador.md`.
+
 ## 2026-11-27 (XI) — Palabras clave del mercado inglés: el eje es la entrega y la licencia
 
 Santiago: *"están apareciendo cosas buenas, pero no encuentro ofertas tan potentes de low ticket… no sé si

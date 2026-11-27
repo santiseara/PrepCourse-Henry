@@ -53,6 +53,8 @@ La ola del 19 al 26/11 (unos 110 videos) es **un solo ángulo repetido**: *el cl
 - **Editor:** `OUTPUTS/scripts-vsl/edit_soldador.py` (copia de `edit_acm.py`) con tipo de overlay `mockup`, capa de **avatar recortado** (bandera `key`) y subtítulo amarillo sin caja.
 - **Música:** `atlasaudio-advertising-marketing-617541.mp3` (la de oficio y taller), preparada con `cama_acm.py`, a −11 dB con ducking de 5.
 
+- **Descripción de los ads (27/11):** ellos corren **un solo texto principal y un solo título** en los 493 anuncios, traducido a los 4 idiomas. Se clonó literal al español neutro (`OUTPUTS/2026-11-27-descripcion-ads-tesoro-del-soldador.md`): título *"🔥 Más de 4.000 planos de herrería"* y body *"El pack que todo soldador debería tener en el taller"* + 3 ✅ + CTA. **Se sacó la línea del precio** (`Starting at $9`) porque el precio LATAM no está definido y la tanda sale multipaís; queda una variante con precio para cuando se fije y salga a un solo país.
+
 ## Preguntas abiertas
 - Falta **landing, producto, bonos y backend**. El producto son 4.000 planos: hay que decidir si se compran, se arman o se clonan.
 - Precio en LATAM sin definir (el de ellos es US$ 9 / US$ 17).

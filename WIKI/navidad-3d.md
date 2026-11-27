@@ -46,6 +46,9 @@ diferencia es el **precio de entrada bajo** y el **pack específico de Navidad**
 - **v5 (27/11):** aprobados también **V8 (el puesto de la feria)** y **V9 (las publicaciones de
   Mercado Libre)**; V7 al banco. Nuevo **V10**, el más agresivo, con las cantidades puestas: cuatro
   adornos por noche, veintiocho por semana, cien hasta Nochebuena, dos rollos de filamento.
+  **Rechazado** (*"te dije que des alguna cifra"*) y rehecho con la cuenta en pesos sacada de Mercado
+  Libre: *"Un adorno te sale menos de quinientos pesos de plástico. En Mercado Libre se venden a diez
+  mil"*, con el rollo a veintidós mil y cuarenta adornos por rollo.
   **La tanda queda: V2, V3, V6, V8, V9 y V10.**
 - Un solo texto principal para los 6, como hace el ganador.
 

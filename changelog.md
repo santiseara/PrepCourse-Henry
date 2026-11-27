@@ -1,3 +1,21 @@
+## 2026-11-27 (VI) — Navidad 3D: V10 con la cuenta en pesos, sacada de Mercado Libre
+
+Santiago, rechazando la versión con la cuenta en unidades: *"No, muy malo, te dije que des alguna
+cifra"*.
+
+- **Los precios se buscan, no se piden ni se esquivan.** Dos minutos en Mercado Libre Argentina al
+  27/11: **filamento PLA 1 kg entre 21.000 y 26.000**, y **adornos navideños impresos en 3D
+  publicados entre 17.900 y 35.999** (un set de 7 piezas a 100.000).
+- **V10 rehecho:** *"Un adorno de Navidad te sale menos de quinientos pesos de plástico. En Mercado
+  Libre se venden a diez mil. Frená el video, entrá y fijate vos mismo."* + *"un rollo cuesta
+  veintidós mil pesos y te da cuarenta adornos"*.
+- 💰⛔ **Regla nueva en [[guiones-y-anuncios]], que reemplaza a la que había escrito horas antes
+  ("precios en pesos no"):** la cuenta va en pesos; el insumo y el producto terminado se sacan del
+  mercado donde el comprador ya vende. Las cifras tienen que **cerrar entre sí** (22.000 ÷ 40 ≈ 500)
+  y elegirse **por debajo** de lo que muestra el mercado, para que el que verifica encuentre más y
+  no menos. Y el *"fijate vos mismo"* es parte del hook: manda al espectador a buscar la prueba.
+- ⏸️ Sigue sin tocarse la edición.
+
 ## 2026-11-27 (V) — Navidad 3D: la tanda cerrada en seis y las cantidades específicas
 
 Santiago: *"El 9 y el 8 me gustaron, vamos con uno más, más potente, más agresivo, más generar

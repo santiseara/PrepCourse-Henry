@@ -3,7 +3,8 @@
 Clonada de **Ateliê 3D** (Brasil, ~120 ads activos desde el 20/10).
 
 **Estructura fija: hook → problema/situación → solución → CTA.** ~48 segundos (132-145 palabras).
-**Sin precio.** Hook agresivo con la plata en la primera frase. La urgencia no se menciona: es el
+**Sin precio del producto**, pero **con las cifras del negocio del comprador** (precios reales de Mercado
+Libre Argentina al 27/11). Hook agresivo con la plata en la primera frase. La urgencia no se menciona: es el
 argumento, y cada guion corre sobre un reloj distinto.
 
 Avatar: el que ya tiene la impresora 3D y la tiene juntando polvo.
@@ -106,22 +107,23 @@ publicaciones arriba.
 
 ---
 
-## V10 · Cien adornos hasta Nochebuena
+## V10 · Quinientos pesos de plástico
 
-**Hook.** De acá a Nochebuena tu impresora puede hacer cien adornos sin que vos muevas un dedo.
-Cien. ¿Cuántos tenés hechos hasta ahora?
+**Hook.** Un adorno de Navidad te sale menos de quinientos pesos de plástico. En Mercado Libre se
+venden a diez mil. Frená el video, entrá y fijate vos mismo.
 
-**Problema.** Cuatro por noche, veintiocho por semana, y la máquina trabaja sola mientras dormís:
-son dos rollos de filamento para todo diciembre. Y la demanda no es el problema: en estas tres
-semanas la gente compra adornos en la feria, en Mercado Libre y en el grupo del colegio. El
-problema es llegar con las piezas hechas: cada noche que la impresora está apagada son cuatro
-piezas menos para vender, y esas no se recuperan en enero.
+**Problema.** Un rollo de filamento cuesta veintidós mil pesos y te da cuarenta adornos. Cuarenta.
+Aunque vendas la mitad, ese rollo te devuelve diez veces lo que pagaste. Y no hay que convencer a
+nadie: la gente ya está comprando adornos en la feria, en Mercado Libre y en el grupo del colegio.
+El único que se queda afuera es el que llega sin piezas hechas, porque la máquina tarda unas horas
+por adorno y el 24 no se mueve.
 
 **Solución.** Lo único que falta es el archivo. Más de 400 modelos de Navidad listos para bajar y
-mandar a imprimir esta misma noche, con la foto de cada uno y nueve articulados que salen de la
-máquina armados y en movimiento.
+mandar a imprimir esta misma noche, con la foto de cada uno y nueve articulados que salen armados y
+en movimiento.
 
 **CTA.** Sale menos que un rollo de filamento. Te dejo el link abajo. 👇
+
 
 ---
 
@@ -158,7 +160,7 @@ Piezas para vender por encargo, en ferias, por WhatsApp o en Mercado Libre hasta
 | V2 ✅ | el aguinaldo lo gasta alguien | se gasta entre el 10 y el 24 | el vecindario / WhatsApp |
 | V3 ✅ | 30 piezas de un solo pedido, cobradas por adelantado | la semana en que se cierran los pedidos de empresa | oficinas, colegios, negocios |
 | V6 ✅ | cobrar antes de imprimir | el filamento que se gasta al pedo | el que tiene miedo de perder plata |
-| V10 🆕 | cien adornos hasta Nochebuena, cuatro por noche | cada noche apagada son 4 piezas menos | el que quiere producir |
+| V10 🆕 | 500 pesos de plástico contra 10.000 de venta; un rollo = 40 adornos | el 24 no se mueve | el que quiere la cuenta cruda |
 | V8 🆕 | el puesto se paga con los primeros seis adornos | el puesto se reserva ahora y se paga igual | la feria navideña |
 | V9 🆕 | publicaciones que ya vendieron esta semana | las primeras publicaciones se llevan todo | Mercado Libre |
 

@@ -468,3 +468,21 @@ Lo medido antes del corte, en `OUTPUTS/2026-11-27-keywords-ingles-low-ticket.md`
 
 - **Regla que sale de esto:** en inglés, cuanto más chico el número, más limpio. **470 y 89 resultados valen más que 24.000**: con una frase amplia la Library rankea por relevancia solo las primeras filas y después tira lo que más se publicó ese día.
 - **El footprint de checkout en inglés existe y funciona:** `payhip`, `gumroad`, `stan.store`. Confirma el hallazgo del 27/10 (entrar por el checkout, no por el nicho) en el mercado anglo. `whop` **no** sirve: lo copó el mundo de las apuestas.
+
+## Registro 27/11/2026 — el filtro de seguidores y la caza de las cinco de Brasil
+
+Santiago, al pedir la caza: *"No me mandes nada si no tiene mínimo 50 anuncios activos. No me mandes nada si es una página de algún famoso, de alguna marca personal que tiene más de 10.000 seguidores… si no vende un infoproducto, no me mandes nada. Si vende un producto físico, no me mandes nada. Si no encontrás, no me digas que no encontraste. Seguí buscando. No me mandes nada que ya me hayas mandado, quiero el nombre y el link de la página en el ads library."*
+
+**Filtro nuevo, que se suma a los de siempre: menos de 10.000 seguidores en la fanpage.** Reemplaza al criterio difuso de "nada de marcas personales": ahora se mide. Y **la entrega lleva siempre el link de la Biblioteca con `view_all_page_id`**, no solo el nombre.
+
+**Las cinco entregadas** (detalle en `OUTPUTS/2026-11-27-caza-brasil-cinco-ofertas-nuevas.md`): Luana Oliveira 830 ads / 7.928 seg / R$10 a WhatsApp; Fiora Ferrara 350 / 4.981 / crochê; Certiva Concursos 210 / 441 / R$27,90; Carla Figurinhas 84 / 151 / R$5,99; Chefe Fernanda Araujo 57 / 5.236 / receitas.
+
+### Lo que enseñó esta caza
+
+1. **La duplicación del creativo predice el arsenal, y es gratis.** Cuántas veces se repite el mismo copy en **una sola búsqueda**: x13 o más → siempre 50+ ads en la página (Luana x22 → 830, Chefe Fernanda x17 → 57, Certiva x16 → 210, Carla x14 → 84). x2–x4 → página chica, no vale el conteo. **Es el filtro para decidir a quién contarle el arsenal**, en vez de contar todo lo que aparece.
+2. **El filtro de 10.000 seguidores mata a los arsenales grandes "legítimos".** Se cayeron las cuatro páginas con más ads del barrido: Simplo 130 (42 mil), ElloCursos Psicologia 380 (38 mil), Academia de Pregadores 60 (95 mil), Fernanda Nascimento 50 (35 mil). Lo que queda arriba de 50 ads **y** abajo de 10.000 seguidores es el front faceless puro: nombre de mujer o de "clube", 150–8.000 seguidores, precio en el creativo.
+3. **El mejor eje de Brasil es el precio en el texto: `apenas R$ 10` (15.000 ads).** Ahí vive toda la flota de fronts de oficio con PDF de R$10 (Júnio pedreiro, Bigode Eletricista, Panela da Vó Lucia, Segredos da Cozinha). `acesso imediato` (35.000) es el `instant access` brasileño y funciona igual.
+4. **`kiwify` como keyword ya no sirve (17.000 ads, todos con 2–4).** El footprint de checkout se atomizó: hoy lo usa cualquier infoproductor chico. El precio en el texto lo reemplaza.
+5. **Las keywords de nicho se gastan en semanas.** `receitas na airfryer` pasó de 877 (08/11) a **45** y `mesmo começando do zero` de 11.938 a 5.800. El banco hay que re-medirlo en cada caza, no reusarlo a ciegas.
+6. **Técnica, sin la API:** el arsenal se cuenta por la UI con `view_all_page_id` + `country=ALL` leyendo el `~N resultados`, y los seguidores abriendo `facebook.com/<page_id>` (el texto dice "X mil seguidores", hay que capturar el "mil"). El `page_id` sale del HTML de la Biblioteca emparejando `page_id` con `page_name`.
+7. **Muertas de esta tanda:** `artesanato para vender` (2), `salgados para vender` (10), `banho de descarrego` (19), `marmitas fit` (900 pero es marmitaria local, no infoproducto), `aulas gravadas` (6.300, posgrados y formación profesional).

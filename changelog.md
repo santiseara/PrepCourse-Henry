@@ -1,3 +1,20 @@
+## 2026-11-27 (XII) — Caza Brasil: cinco ofertas nuevas y el filtro de 10.000 seguidores
+
+Santiago pidió la caza en Brasil con filtros duros: *"mínimo 50 anuncios activos… nada de marca personal
+con más de 10.000 seguidores… si no vende un infoproducto, no me mandes nada… si no encontrás, seguí
+buscando… quiero el nombre y el link de la página en el ads library."*
+
+- **Entregadas cinco** (`OUTPUTS/2026-11-27-caza-brasil-cinco-ofertas-nuevas.md`): Luana Oliveira 830 ads /
+  7.928 seguidores / R$10 a WhatsApp, Fiora Ferrara 350 / 4.981 / crochê, Certiva Concursos 210 / 441 /
+  R$27,90, Carla Figurinhas 84 / 151 / R$5,99, Chefe Fernanda Araujo 57 / 5.236 / receitas proteicas.
+- **Filtro nuevo:** menos de 10.000 seguidores, medido en la fanpage. Tumbó a las cuatro páginas con más
+  ads del barrido (Simplo 42 mil, ElloCursos 38 mil, Academia de Pregadores 95 mil, Fernanda Nascimento 35 mil).
+- **Hallazgo de método:** la cantidad de veces que se repite el mismo creativo en una búsqueda predice el
+  arsenal (x13+ → siempre 50+ ads). Sirve para elegir a quién contarle el arsenal.
+- **Keywords:** `apenas R$ 10` (15.000) y `acesso imediato` (35.000) son los dos mejores ejes de Brasil.
+  `kiwify` murió como keyword (17.000 atomizados). `receitas na airfryer` se desplomó de 877 a 45.
+- Registrado en `WIKI/caza-de-ofertas.md` y enlazado en `WIKI/index.md`.
+
 ## 2026-11-27 (XII) — Descripción de los ads del Pack Tesoro del Soldador
 
 Santiago: *"Dame una descripción para los ads de la oferta de soldador que hicimos hoy"* → *"Que sea similar

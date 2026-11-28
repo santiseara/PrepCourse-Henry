@@ -1,3 +1,13 @@
+## 2026-11-28 — Caminata Japonesa: el quiz clonado de Caminata Oriental
+
+Santiago: *"la idea sería copiar exactamente el mismo quiz que tienen ellos… primero haceme el quiz"*.
+
+- **Original:** `test.caminata-oriental.com`, HTML propio con los pasos en texto plano en `app.js`. 33 pantallas → oferta, sin VSL. $8.799.
+- **Clon sobre su HTML** con `OUTPUTS/scripts-quiz/build_caminata_japonesa.py` (18 pares que fallan si no matchean, barrido de rastros). Fuera su pixel, su `track.php` y su `quiz_session`. Checkout relativo hasta que pase el real, con el `new URL()` parcheado para que lo acepte.
+- **7 imágenes con marca rehechas con Pillow** (logo, *Tu plan incluye*, firma de la carga, citas de los 3 testimonios y 5 textos de la maqueta girada). Fuentes nuevas en `OUTPUTS/scripts-quiz/fonts/` (Inter, Fraunces, Dancing Script).
+- Verificado en 390 px: 33 pantallas, 0 errores, 0 rotas, los 3 CTAs a `/checkout` con UTMs. **949 KB.**
+- Wiki nueva: [[caminata-japonesa]].
+
 ## 2026-11-27 (IX) — ABA Tools: los 6 videos de la tanda 1, al Drive
 
 Santiago: *"Bien, armamelos"*.

@@ -1,3 +1,7 @@
+## 2026-11-28 — +500 Actividades ABA: descripción de los ads
+
+- `OUTPUTS/2026-11-28-descripcion-ads-aba-tools-LATAM.md` (copia en `~/Desktop/aba-tools/anuncios/descripcion-ads.md`): A = el único texto que corre el ganador en sus 61 ads en inglés, traducido; B y C cortas; 6 variantes de dos renglones. Español neutro con tuteo, sin precio ni promesas clínicas.
+
 ## 2026-11-28 — Caminata Japonesa: el quiz clonado de Caminata Oriental
 
 Santiago: *"la idea sería copiar exactamente el mismo quiz que tienen ellos… primero haceme el quiz"*.

@@ -174,6 +174,7 @@
 - ✅ [[prep-course-henry]] — Origen del repo: práctica del Prep Course de Henry.
 
 ## Outputs
+- [2026-11-28 — Descripción de los ads de +500 Actividades ABA (LATAM)](../OUTPUTS/2026-11-28-descripcion-ads-aba-tools-LATAM.md) — el texto único del ganador traducido, dos cortas (mecanismo y terapia de mesa) y seis de dos renglones, una por hook de la tanda · ver [[actividades-aba-naturalistas]]
 - `OUTPUTS/2026-11-28-quiz-caminata-japonesa.html` — quiz de Caminata Japonesa ([[caminata-japonesa]])
 - [2026-11-27 — Caza Brasil: cinco ofertas nuevas](../OUTPUTS/2026-11-27-caza-brasil-cinco-ofertas-nuevas.md) — Luana Oliveira (830 ads, R$10), Fiora Ferrara, Certiva Concursos, Carla Figurinhas y Chefe Fernanda Araujo, con links de la Biblioteca, las caídas por el filtro de 10.000 seguidores y las keywords de la tanda · ver [[caza-de-ofertas]]
 - [2026-11-27 — Descripción de los ads del Pack Tesoro del Soldador](../OUTPUTS/2026-11-27-descripcion-ads-tesoro-del-soldador.md) — el único texto principal que corren en los 493 anuncios, traducido literal al español neutro, sin la línea del precio porque la tanda sale multipaís · ver [[tesoro-del-soldador]]

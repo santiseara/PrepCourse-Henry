@@ -122,6 +122,12 @@ La regla general sigue ([[guiones-y-anuncios]]): nada de stock, nada de mockups,
   grupos largos —*"SACARON LA COLOSTOMÍA"*— se pasan de los 1080 px y se cortan contra los bordes del cuadro.
   Con 0 bajan solos a dos líneas y entran enteros.
 
+- **2026-11-28 · Veo: cero silencios y velocidad 1,25 (corrección de Santiago sobre el ad 1 de [[caminata-japonesa]]).** *"Cortá un poco más los silencios. No quiero que se escuchen silencios. Y metele un poquito de velocidad… un 1.2, 1.3… que se vea más dinámico, pero que tampoco se vea irreal."* El ad 1 iba a `VEL=1.18` con `PAUSA=0.35` y colchones de 0,25 s antes y 0,35 s después de cada tramo hablado. **Lo nuevo por defecto en un ad de Veo: `VEL=1.25`**, huecos internos de más de 0,22 s recortados, y **colchones de 0,08 s antes y 0,15 s después** de cada línea (en `montar_cj.py`, no en el `bordes.json`). El 1,30 queda como techo: más arriba la boca se ve acelerada.
+- **2026-11-28 · Lo que "se traba" al final: dos tomas seguidas que arrancan de la MISMA foto.** Santiago: *"Cuidado al final que medio como que se traban un poco los videos… tratemos de que no pase más."* No había un solo cuadro congelado (`freezedetect` limpio). Lo que pasaba: F1 y F2 arrancaban las dos de la foto de la escena F, y G1 y G2 de la foto G, así que **en cada corte el personaje vuelve a la pose inicial** y se ve como un salto para atrás. Encima G2 se cortó desde el segundo 0, cuando Veo todavía está saliendo de la foto fija. Reglas:
+  - **Dos tomas consecutivas de la misma escena nunca arrancan de la misma imagen**: la segunda va con `"prev"` (último cuadro de la anterior). Si el filtro obliga a arrancar de la foto, se intercala otra escena en el medio.
+  - **Nunca se corta antes de 0,4 s de una toma**: los primeros cuadros son el morph desde la foto. En la acción del prompt va *"she waits one second before speaking"*, así el habla nunca arranca en el segundo 0.
+  - Un intercambio corto de dos personajes al final (pregunta + respuesta de 3 palabras) va **en una sola toma**, no en dos.
+
 ## Preguntas abiertas
 
 - ✅ **Resuelto el 11/11: sale de Veo 3.1 Fast por [[apimart]]** (mirá la Regla 0). Se probó `wan2.7-r2v` con voz de Gemini TTS como `reference_voice` y se descartó el mismo día: audio plano y visual que se nota. HeyGen queda para doblaje.

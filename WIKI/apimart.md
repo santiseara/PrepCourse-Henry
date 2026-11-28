@@ -105,6 +105,11 @@ Para [[limpia-dolor]] había que reemplazar 4 videos de pacientes reales de un q
 - Verificación del audio: se le manda el mp3 a Gemini y se le pregunta la variedad de español y si suena sintético.
 - Las reglas completas están en [[quizzes-reglas-de-armado]] (regla del 18/11).
 
+## 28/11 · Veo 3.1 Fast ahora cuesta US$ 0,60 la toma, y hay una cuenta por oferta
+- `veo3.1-fast` (8 s, 9:16) cobró **US$ 0,60 por toma** en [[caminata-japonesa]], no los 0,13 de noviembre: **un ad de 16 tomas son ~US$ 10**. Avisar el costo antes de una tanda de 6.
+- Las imágenes siguen baratas: retrato con `gpt-image-2` US$ 0,0085, edición con `gemini-nano-banana-2.1-ext` US$ 0,014.
+- **Cuenta de Juan Piñeiro** (la que pidió Santiago para Caminata Japonesa): `~/.config/apimart/juan.env`. Se carga con `set -a; . ~/.config/apimart/juan.env; set +a`. La de `~/.config/apimart/env` es otra cuenta.
+
 ## Preguntas abiertas
 
 - **Costo real medido el 11/11:** 3 ads de 22-26 s con 4-5 escenas cada uno (8 imágenes con gpt-image-2 + 18 tomas de wan2.7-r2v en 720P, con 3 regeneraciones) = **US$8,63**. O sea ~US$2,90 por ad.

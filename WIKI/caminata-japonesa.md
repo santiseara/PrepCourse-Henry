@@ -35,7 +35,24 @@
 ## Estado
 - ✅ Quiz: `~/Desktop/caminata-japonesa/landing/caminata-japonesa-quiz.txt` (+ `PRUEBA.html`) y `OUTPUTS/2026-11-28-quiz-caminata-japonesa.html`.
 - ⏳ Checkout y precio: los pasa Santiago. **Hoy queda el precio de ellos ($8.799).**
-- ⏳ Ads: analizar los ~58 de ellos (situación y guion más repetidos), hacer **uno** con Veo 3 en ApiMart (cuenta de Juan Pineiro) y esperar su corrección.
+- ✅ **Ad 1 «La pileta» (28/11), esperando la corrección de Santiago:** `~/Desktop/caminata-japonesa/anuncios/28-11 - 1 La pileta.mp4` (72 s de habla + 60 s de contador = 2:12, 1080x1920). Guion: `OUTPUTS/2026-11-28-caminata-japonesa-guion-1-la-pileta.md`. Proyecto: `~/Desktop/caminata-japonesa/work/v1/`.
+- ⏳ Los otros 5 de la tanda, **recién después de su corrección**.
+
+## Los ads del original (despiece del 28/11)
+- **53 ads activos levantados, 43 con video, todos creativos distintos** (ninguno duplicado), casi todos de **80 a 250 s**. Se bajó y transcribió una muestra de 10 (los de más impresiones).
+- **La fórmula, en 4 de los 5 largos:** escena de **humillación con fecha** (la mamá de una amiga dice que mejor no vaya a la pileta · el ex va a estar en la fiesta · el ex va a la graduación de la hija con la novia nueva · "ese vestido no es para tu cuerpo") → **"Dame 28 días. El lunes arranco el reto de Caminata Tai Chi"** → **diario frente al espejo** Día 1 / 7 / 14 / 21 / 28 con placa **"DÍA N de 28" + barra de progreso** arriba y la misma mujer adelgazando → "Tocá el enlace de abajo" → (a veces) la llegada al evento → **contador rojo de 1 minuto** "APROVECHÁ AHORA MISMO · HACÉ CLICK EN MÁS INFORMACIÓN".
+- **El diario es un cuerpo fijo que repiten casi palabra por palabra** en todos ("Tengo 52 años, dos rodillas que se quejan y cero ganas de gimnasio… Día 7: subí la escalera del tren… Día 14: me entró la calza… Día 21: me vi en una vidriera… Día 28: lo terminé"). **Lo que rota es la escena de humillación.** Igual que [[the-3d-method]]: cuerpo validado, hook nuevo.
+- Otros formatos que corren: chica en la playa con la amiga, señora en la cocina con planilla de altura y peso, "la app de Caminata Oriental es gratis" con cartel, y placas de "último día gratis".
+- Prometen **"bajé 14 kilos"**: nosotros **sin número de kilos** (políticas de Meta, regla de la skill `mini-novela`).
+
+## Cómo se hizo el ad 1 (28/11)
+- **ApiMart con la cuenta de Juan Piñeiro**: clave guardada en `~/.config/apimart/juan.env` (600, fuera del repo), sacada del panel con su sesión de Chrome. ⚠️ **La clave vieja de `~/.config/apimart/env` es de OTRA cuenta** (google_132885, US$ 3,81): no se usa para esta oferta.
+- Skill `mini-novela`: 5 retratos (Marta antes / mitad / después, Sofi, Graciela) + 7 escenas. **El truco de que el living no cambie entre días:** el cuadro del Día 1 se copia como "personaje" `espejo` y entra de **referencia 2** en las escenas C-F ("exactly the same living room, mirror and framing as reference 2"). Salió el mismo living en los cinco días.
+- **16 tomas de `veo3.1-fast` a US$ 0,60 cada una** (no 0,13: el precio subió). Total del ad: **~US$ 10,40** (saldo de Juan: 50 → 39,63).
+- 🐞 **El filtro de Veo bloqueó 4 veces** (sin cobrar): "se pone de costado para mostrar la calza", "la mira de arriba abajo" y la escena de la pileta con gente de fondo. Se destrabó con un gesto neutro, la escena **solo con las dos mujeres adultas vestidas** y la frase más suave.
+- 🐞 **`verif.py` alucinó "no no no no…" sobre una toma buena** (G1): se escuchó con Whisper sin VAD, la frase estaba perfecta, y se cargó el borde a mano en `bordes.json` en vez de pagar otra.
+- 🐞 **Veo dijo la última frase dos veces** (G2) y el corte del aligner cayó a mitad de la palabra ("…nata japonesa"): se transcribió cada tramo por separado y se quedó el limpio.
+- Montaje: `montar_cj.py` (copia de `montar.py` con la placa **DÍA N de 28 + barra amarilla** centrada arriba), `SUBS=ad PPP=2 VEL=1.18 PAUSA=0.35`, 1080x1920. Guion contra audio **0,997**. Contador: `contador.py` (Pillow, 60 cuadros de 1 s).
 
 ## Preguntas abiertas
 - ¿Qué precio va? ¿Se mantienen los 148.223 clientas y los "8 a 11 minutos"?

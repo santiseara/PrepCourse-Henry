@@ -1,3 +1,12 @@
+## 2026-11-28 (II) — Caminata Japonesa: el ad 1 «La pileta», para corregir
+
+Santiago: *"Primero igual quiero que me hagas uno solo para que yo lo corrija"*.
+
+- Despiece de los 53 ads de Caminata Oriental (10 transcriptos): escena de humillación con fecha + "dame 28 días" + diario frente al espejo Día 1→28 con barra + contador de 1 minuto. El diario es un cuerpo fijo; rota la escena.
+- **Ad 1 = su ad de más impresiones** (la pileta), con Veo 3.1 Fast en ApiMart **desde la cuenta de Juan Piñeiro** (clave nueva en `~/.config/apimart/juan.env`). 72 s de habla + contador = 2:12. `~/Desktop/caminata-japonesa/anuncios/28-11 - 1 La pileta.mp4`.
+- Veo cuesta ahora **US$ 0,60 la toma**: el ad salió ~US$ 10,40.
+- WIKI: [[caminata-japonesa]] (despiece + cómo se hizo) y [[apimart]] (precio nuevo y cuenta de Juan).
+
 ## 2026-11-28 — +500 Actividades ABA: descripción de los ads
 
 - `OUTPUTS/2026-11-28-descripcion-ads-aba-tools-LATAM.md` (copia en `~/Desktop/aba-tools/anuncios/descripcion-ads.md`): A = el único texto que corre el ganador en sus 61 ads en inglés, traducido; B y C cortas; 6 variantes de dos renglones. Español neutro con tuteo, sin precio ni promesas clínicas.

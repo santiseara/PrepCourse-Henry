@@ -1,3 +1,24 @@
+## 2026-11-27 (IX) — ABA Tools: los 6 videos de la tanda 1, al Drive
+
+Santiago: *"Bien, armamelos"*.
+
+- **6 videos de 51,3 a 57,0 s** en `~/Desktop/aba-tools/anuncios/` y en
+  `Ebook Dami / Ebook +500 Actividades ABA (LATAM) / Videos terminados`, nombrados por su hook.
+  https://drive.google.com/drive/folders/1odlAWtYrgOtDIxW4V2weztfdTBj2nPOL
+- **Voz Sulafat (mujer)**, F0 193-208 Hz, acento neutro latinoamericano, volumen normal, 170 ppm.
+- **Editor nuevo `edit_aba.py`**, clon del formato A del ganador: pastilla azul `#0074FC` de dos cajas
+  arriba todo el video, **subtitulo de UNA palabra** en italica, cortes de 2,4-3,4 s y **placa negra
+  final de 5 s** con la flecha violeta. La cola de silencio va por `tail` en el plan, **despues** del
+  `silenceremove` (si se agrega antes, el filtro se la come).
+- ⛔ **El nicho mas sucio que tocamos: 494 TikToks para 33 clips limpios.** Los tags en espanol del
+  oficio son creadores explicando con texto quemado y caras de chicos; los de demostracion en ingles
+  (`#busybook`, `#sensoryplay`, `#finemotorskills`) son manos y materiales. **El filtro automatico no
+  alcanzo: tres rondas de OCR sobre el render** para cazar 26 clips mas con cartel. Script nuevo
+  `culpables.py`, que mapea cada texto del OCR al clip que lo trajo.
+- 🐞 **Chrome bloquea la segunda descarga por blob de una misma pestana.** La lista de TikToks salio
+  por un `<textarea>` + `cmd+A`/`cmd+C` con el tool de teclado y `pbpaste`.
+- Scripts nuevos: `scripts-vsl/edit_aba.py`, `gen_aba_plans.py`, `ventanas_aba.py`.
+
 ## 2026-11-27 (XIII) — La caza de Brasil, corregida: nada de WhatsApp
 
 Santiago: *"Son solo de whatsapp? No me sirve de wpp, si es asi segui buscando"*.

@@ -59,10 +59,36 @@ Sus 8 hooks medidos:
 - Guiones en `OUTPUTS/2026-11-27-guiones-aba-tools-LATAM-tanda1.md` y en `~/Desktop/aba-tools/anuncios/guiones.md`.
 - Material relevado en `~/Desktop/aba-tools/anuncios/work/`: `aba_tools_ads.json` (129 ads), 10 videos bajados, 10 transcripciones, hojas de contacto y la landing en `~/Desktop/aba-tools/landing/landing_en.html`.
 
-### Decisiones pendientes para la producción
-- **Voz: mujer (Sulafat)**, por la regla del 26/11 — el sexo lo decide el nicho, y el de terapia infantil, logopedia y psicopedagogía es de mujeres.
-- **Pool de TikTok:** ojo con la regla del 22/11 de [[laboratorio-wow]] — en nichos de infancia **no entran caras de chicos reales**. Acá es el riesgo principal: el b-roll del ganador está lleno de chicos identificables. Hay que armar el pool con **manos, materiales y mesa**, o usar su propio b-roll recortado.
-- **Cama musical:** `nastelbom-advertising-424209.mp3`, la liviana ([[guiones-y-anuncios]], regla del 26/11).
+
+## Los 6 videos de la tanda 1 (27/11/2026)
+
+- **6 videos de 51,3 a 57,0 s** en `~/Desktop/aba-tools/anuncios/` como `27-11 - 1` a `27-11 - 6`, y en
+  `Ebook Dami / Ebook +500 Actividades ABA (LATAM) / Videos terminados`, nombrados por su hook.
+  https://drive.google.com/drive/folders/1odlAWtYrgOtDIxW4V2weztfdTBj2nPOL
+- **Voz: Sulafat (mujer)**, `gemini-3.1-flash-tts-preview`, estilo de terapeuta latinoamericana
+  grabando un audio para una colega. Los seis verificados: **F0 193-208 Hz**, RMS de habla
+  −13,3/−15,1 dB, acento neutro latinoamericano, volumen normal y energía alta. Ritmo objetivo
+  **170 ppm** (el de su locutora), speed 0,95 a 1,17.
+- **Montaje clonado del ganador** (`edit_aba.py`, nuevo): pastilla azul `#0074FC` de dos cajas arriba
+  con *+500 ACTIVIDADES ABA / NATURALISTAS* todo el video, **subtítulo de UNA palabra** blanco en
+  itálica en y 0,78, cortes de 2,4-3,4 s y **placa negra final de 5 s** con *Toca en / Más información*
+  y la flecha violeta. La cola de 5 s se agrega con `tail` en el plan, **después** del `silenceremove`.
+- **Cama musical:** `nastelbom-advertising-424209.mp3`, rebalanceada con `cama_acm.py`.
+
+### ⛔ El pool: 494 TikToks para 33 clips limpios
+Es el nicho más sucio que tocamos. Lo que aprendimos:
+- **Los tags en español del oficio no sirven** (`#terapiaaba`, `#materialterapeutico`,
+  `#estimulaciontemprana`, `#terapiaocupacional`, `#materialdidactico`): son creadores **explicando con
+  texto quemado** y mostrando **caras de chicos reales**. De 236 clips quedaron **13**, elegidos a ojo.
+- **Los tags de demostración en inglés sí**: `#busybook`, `#sensoryplay`, `#finemotorskills`. Son manos,
+  materiales y mesa, sin cara y sin cartel. De 258 clips el filtro estricto dejó **50**.
+- El filtro automático **no alcanza**: hicieron falta **tres rondas de OCR sobre el render** para cazar
+  26 clips más con cartel (`DETECTIVE NAVIDEÑO`, `Día 5 haciendo actividades lúdicas`, `ALE`,
+  `Terapia Ocupacional en ACV`, `MacBook Air`, `former preschool teacher`…). El script que mapea cada
+  texto del OCR al clip que lo trajo quedó en `culpables.py`.
+- Lo que **no** se cae: el texto **del material** (las tarjetas de CONEJO, CAJA, MAR). Ése es el producto.
+
+### Decisiones pendientes
 
 ## Preguntas abiertas
 - Landing propia en español: falta precio por país y procesador.
